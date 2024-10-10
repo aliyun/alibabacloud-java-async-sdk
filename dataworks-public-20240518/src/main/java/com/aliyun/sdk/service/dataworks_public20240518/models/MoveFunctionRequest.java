@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MoveFunctionRequest} extends {@link RequestModel}
  *
  * <p>MoveFunctionRequest</p>
@@ -98,7 +99,7 @@ public class MoveFunctionRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,7 +108,10 @@ public class MoveFunctionRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>543217824470354XXXX</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
@@ -116,7 +120,10 @@ public class MoveFunctionRequest extends Request {
         }
 
         /**
-         * Path.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root/demo</p>
          */
         public Builder path(String path) {
             this.putBodyParameter("Path", path);
@@ -125,7 +132,10 @@ public class MoveFunctionRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder projectId(String projectId) {
             this.putBodyParameter("ProjectId", projectId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDeploymentsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDeploymentsResponseBody</p>
@@ -70,6 +71,12 @@ public class ListDeploymentsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDeploymentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDeploymentsResponseBody</p>
+     */
     public static class Stages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -181,7 +188,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * 阶段代号
+             * <p>阶段代号</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEV_CHECK</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -189,7 +199,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * 阶段描述
+             * <p>阶段描述</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -197,7 +207,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * 阶段详细信息
+             * <p>阶段详细信息</p>
              */
             public Builder detail(java.util.Map < String, ? > detail) {
                 this.detail = detail;
@@ -205,7 +215,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * 阶段信息
+             * <p>阶段信息</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -213,7 +223,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * 阶段名称
+             * <p>阶段名称</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -221,7 +231,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * 阶段状态
+             * <p>阶段状态</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -229,7 +242,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * 步骤
+             * <p>步骤</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder step(Integer step) {
                 this.step = step;
@@ -237,7 +253,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * 阶段类型
+             * <p>阶段类型</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHECK</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -251,6 +270,12 @@ public class ListDeploymentsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDeploymentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDeploymentsResponseBody</p>
+     */
     public static class Deployments extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
@@ -362,7 +387,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 发布包创建时间戳
+             * <p>发布包创建时间戳</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1702736654000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -370,7 +398,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * 创建人
+             * <p>创建人</p>
+             * 
+             * <strong>example:</strong>
+             * <p>110755000425XXXX</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -378,7 +409,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * 发布流程Id
+             * <p>发布流程Id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddf354a5-03df-48fc-94c1-cc973f79XXXX</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -386,7 +420,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * 阶段信息
+             * <p>阶段信息</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -394,7 +428,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * <p>修改时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1702736654000</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -402,7 +439,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * 项目Id
+             * <p>项目Id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44683</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -410,7 +450,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * 步骤详情
+             * <p>步骤详情</p>
              */
             public Builder stages(java.util.List < Stages> stages) {
                 this.stages = stages;
@@ -418,7 +458,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * 发布流程状态
+             * <p>发布流程状态</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -432,6 +475,12 @@ public class ListDeploymentsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDeploymentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDeploymentsResponseBody</p>
+     */
     public static class PagingInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Deployments")
         private java.util.List < Deployments> deployments;

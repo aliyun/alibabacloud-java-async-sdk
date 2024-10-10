@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWorkflowDefinitionResponseBody} extends {@link TeaModel}
  *
  * <p>GetWorkflowDefinitionResponseBody</p>
@@ -70,6 +71,12 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetWorkflowDefinitionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkflowDefinitionResponseBody</p>
+     */
     public static class WorkflowDefinition extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;

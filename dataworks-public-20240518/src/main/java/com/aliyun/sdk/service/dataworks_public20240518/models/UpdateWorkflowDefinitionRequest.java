@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateWorkflowDefinitionRequest} extends {@link RequestModel}
  *
  * <p>UpdateWorkflowDefinitionRequest</p>
@@ -98,7 +99,8 @@ public class UpdateWorkflowDefinitionRequest extends Request {
         } 
 
         /**
-         * 代表region的资源属性字段
+         * <p>代表region的资源属性字段</p>
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,7 +109,10 @@ public class UpdateWorkflowDefinitionRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>652567824470354XXXX</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
@@ -116,7 +121,10 @@ public class UpdateWorkflowDefinitionRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         public Builder projectId(String projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -125,7 +133,7 @@ public class UpdateWorkflowDefinitionRequest extends Request {
         }
 
         /**
-         * Spec.
+         * <p>This parameter is required.</p>
          */
         public Builder spec(String spec) {
             this.putBodyParameter("Spec", spec);

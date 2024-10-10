@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFunctionRequest} extends {@link RequestModel}
  *
  * <p>GetFunctionRequest</p>
@@ -82,7 +83,7 @@ public class GetFunctionRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -91,7 +92,10 @@ public class GetFunctionRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>860438872620113XXXX</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

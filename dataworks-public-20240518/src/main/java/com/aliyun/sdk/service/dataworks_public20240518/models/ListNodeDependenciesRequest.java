@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNodeDependenciesRequest} extends {@link RequestModel}
  *
  * <p>ListNodeDependenciesRequest</p>
@@ -113,7 +114,7 @@ public class ListNodeDependenciesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -122,7 +123,10 @@ public class ListNodeDependenciesRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>860438872620113XXXX</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -149,7 +153,10 @@ public class ListNodeDependenciesRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);

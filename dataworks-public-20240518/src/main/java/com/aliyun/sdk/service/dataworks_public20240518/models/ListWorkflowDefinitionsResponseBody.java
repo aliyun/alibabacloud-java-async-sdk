@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWorkflowDefinitionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListWorkflowDefinitionsResponseBody</p>
@@ -70,6 +71,12 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListWorkflowDefinitionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkflowDefinitionsResponseBody</p>
+     */
     public static class Runtime extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Command")
         private String command;
@@ -97,7 +104,10 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             private String command; 
 
             /**
-             * 脚本所属类型
+             * <p>脚本所属类型</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WORKFLOW</p>
              */
             public Builder command(String command) {
                 this.command = command;
@@ -111,6 +121,12 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWorkflowDefinitionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkflowDefinitionsResponseBody</p>
+     */
     public static class Script extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -162,7 +178,10 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             private Runtime runtime; 
 
             /**
-             * 工作流脚本的id
+             * <p>工作流脚本的id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>698002781368644XXXX</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -170,7 +189,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * 工作流的脚本路径
+             * <p>工作流的脚本路径</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -178,7 +197,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * 脚本的运行时信息
+             * <p>脚本的运行时信息</p>
              */
             public Builder runtime(Runtime runtime) {
                 this.runtime = runtime;
@@ -192,6 +211,12 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWorkflowDefinitionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkflowDefinitionsResponseBody</p>
+     */
     public static class WorkflowDefinitions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
@@ -316,7 +341,10 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * 工作流的创建时间
+             * <p>工作流的创建时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1698057323000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -324,7 +352,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * 工作流的描述
+             * <p>工作流的描述</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -332,7 +360,10 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * 工作流定义的唯一ID
+             * <p>工作流定义的唯一ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>463497880880954XXXX</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -340,7 +371,10 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * 工作流的最近修改时间
+             * <p>工作流的最近修改时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1698057323000</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -348,7 +382,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * 工作流的名称
+             * <p>工作流的名称</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -356,7 +390,10 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * 工作流的责任人
+             * <p>工作流的责任人</p>
+             * 
+             * <strong>example:</strong>
+             * <p>110755000425XXXX</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -364,7 +401,11 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * 工作流定义的所属项目空间
+             * <p>工作流定义的所属项目空间</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4710</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -372,7 +413,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * 工作流的脚本信息
+             * <p>工作流的脚本信息</p>
              */
             public Builder script(Script script) {
                 this.script = script;
@@ -380,7 +421,10 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * 工作流类型，可选值：CycleWorkflow、ManualWorkflow，分别表示周期工作流和手动工作流
+             * <p>工作流类型，可选值：CycleWorkflow、ManualWorkflow，分别表示周期工作流和手动工作流</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CycleWorkflow</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -394,6 +438,12 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWorkflowDefinitionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkflowDefinitionsResponseBody</p>
+     */
     public static class PagingInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AbolishDeploymentRequest} extends {@link RequestModel}
  *
  * <p>AbolishDeploymentRequest</p>
@@ -83,7 +84,7 @@ public class AbolishDeploymentRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -92,7 +93,10 @@ public class AbolishDeploymentRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1606087c-9ac4-43f0-83a8-0b5ced21XXXX</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
@@ -101,7 +105,10 @@ public class AbolishDeploymentRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(String projectId) {
             this.putBodyParameter("ProjectId", projectId);

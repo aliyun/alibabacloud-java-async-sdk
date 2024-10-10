@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNodesResponseBody} extends {@link TeaModel}
  *
  * <p>ListNodesResponseBody</p>
@@ -70,6 +71,12 @@ public class ListNodesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNodesResponseBody</p>
+     */
     public static class DataSource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -109,7 +116,10 @@ public class ListNodesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * 数据源名称
+             * <p>数据源名称</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps_first</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -117,7 +127,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 数据源类型
+             * <p>数据源类型</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -131,6 +144,12 @@ public class ListNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNodesResponseBody</p>
+     */
     public static class NodeOutputs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
@@ -158,7 +177,10 @@ public class ListNodesResponseBody extends TeaModel {
             private String data; 
 
             /**
-             * 节点输出
+             * <p>节点输出</p>
+             * 
+             * <strong>example:</strong>
+             * <p>623731286945488XXXX</p>
              */
             public Builder data(String data) {
                 this.data = data;
@@ -172,6 +194,12 @@ public class ListNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNodesResponseBody</p>
+     */
     public static class Tables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Guid")
         private String guid;
@@ -199,7 +227,10 @@ public class ListNodesResponseBody extends TeaModel {
             private String guid; 
 
             /**
-             * 表id
+             * <p>表id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.autotest.test_output_table_1</p>
              */
             public Builder guid(String guid) {
                 this.guid = guid;
@@ -213,6 +244,12 @@ public class ListNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNodesResponseBody</p>
+     */
     public static class Node extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Output")
         private String output;
@@ -240,7 +277,10 @@ public class ListNodesResponseBody extends TeaModel {
             private String output; 
 
             /**
-             * 节点输出
+             * <p>节点输出</p>
+             * 
+             * <strong>example:</strong>
+             * <p>623731286945488XXXX</p>
              */
             public Builder output(String output) {
                 this.output = output;
@@ -254,6 +294,12 @@ public class ListNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNodesResponseBody</p>
+     */
     public static class Variables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ArtifactType")
         private String artifactType;
@@ -353,7 +399,10 @@ public class ListNodesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * 制品类型
+             * <p>制品类型</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Variable</p>
              */
             public Builder artifactType(String artifactType) {
                 this.artifactType = artifactType;
@@ -361,7 +410,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 变量id
+             * <p>变量id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>543211286945488XXXX</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -369,7 +421,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 变量名
+             * <p>变量名</p>
+             * 
+             * <strong>example:</strong>
+             * <p>input</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -377,7 +432,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 变量所属节点
+             * <p>变量所属节点</p>
              */
             public Builder node(Node node) {
                 this.node = node;
@@ -385,7 +440,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 范围
+             * <p>范围</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NodeParameter</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -393,7 +451,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 类型
+             * <p>类型</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Constant</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -401,7 +462,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 变量值
+             * <p>变量值</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -415,6 +479,12 @@ public class ListNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNodesResponseBody</p>
+     */
     public static class Inputs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeOutputs")
         private java.util.List < NodeOutputs> nodeOutputs;
@@ -466,7 +536,7 @@ public class ListNodesResponseBody extends TeaModel {
             private java.util.List < Variables> variables; 
 
             /**
-             * 节点输出列表
+             * <p>节点输出列表</p>
              */
             public Builder nodeOutputs(java.util.List < NodeOutputs> nodeOutputs) {
                 this.nodeOutputs = nodeOutputs;
@@ -474,7 +544,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 表列表
+             * <p>表列表</p>
              */
             public Builder tables(java.util.List < Tables> tables) {
                 this.tables = tables;
@@ -482,7 +552,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 变量列表
+             * <p>变量列表</p>
              */
             public Builder variables(java.util.List < Variables> variables) {
                 this.variables = variables;
@@ -496,6 +566,12 @@ public class ListNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNodesResponseBody</p>
+     */
     public static class OutputsNodeOutputs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
@@ -523,7 +599,10 @@ public class ListNodesResponseBody extends TeaModel {
             private String data; 
 
             /**
-             * 节点输出
+             * <p>节点输出</p>
+             * 
+             * <strong>example:</strong>
+             * <p>860438872620113XXXX</p>
              */
             public Builder data(String data) {
                 this.data = data;
@@ -537,6 +616,12 @@ public class ListNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNodesResponseBody</p>
+     */
     public static class OutputsTables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Guid")
         private String guid;
@@ -564,7 +649,10 @@ public class ListNodesResponseBody extends TeaModel {
             private String guid; 
 
             /**
-             * 表id
+             * <p>表id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.autotest.test_output_table_1</p>
              */
             public Builder guid(String guid) {
                 this.guid = guid;
@@ -578,6 +666,12 @@ public class ListNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNodesResponseBody</p>
+     */
     public static class VariablesNode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Output")
         private String output;
@@ -605,7 +699,10 @@ public class ListNodesResponseBody extends TeaModel {
             private String output; 
 
             /**
-             * 节点输出
+             * <p>节点输出</p>
+             * 
+             * <strong>example:</strong>
+             * <p>860438872620113XXXX</p>
              */
             public Builder output(String output) {
                 this.output = output;
@@ -619,6 +716,12 @@ public class ListNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNodesResponseBody</p>
+     */
     public static class OutputsVariables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ArtifactType")
         private String artifactType;
@@ -718,7 +821,10 @@ public class ListNodesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * 制品类型
+             * <p>制品类型</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Variable</p>
              */
             public Builder artifactType(String artifactType) {
                 this.artifactType = artifactType;
@@ -726,7 +832,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 变量id
+             * <p>变量id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>623731286945488XXXX</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -734,7 +843,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 变量名
+             * <p>变量名</p>
+             * 
+             * <strong>example:</strong>
+             * <p>output</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -742,7 +854,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 变量所属节点
+             * <p>变量所属节点</p>
              */
             public Builder node(VariablesNode node) {
                 this.node = node;
@@ -750,7 +862,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 范围
+             * <p>范围</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NodeParameter</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -758,7 +873,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 类型
+             * <p>类型</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Constant</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -766,7 +884,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 变量值
+             * <p>变量值</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -780,6 +901,12 @@ public class ListNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNodesResponseBody</p>
+     */
     public static class Outputs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeOutputs")
         private java.util.List < OutputsNodeOutputs> nodeOutputs;
@@ -831,7 +958,7 @@ public class ListNodesResponseBody extends TeaModel {
             private java.util.List < OutputsVariables> variables; 
 
             /**
-             * 节点输出列表
+             * <p>节点输出列表</p>
              */
             public Builder nodeOutputs(java.util.List < OutputsNodeOutputs> nodeOutputs) {
                 this.nodeOutputs = nodeOutputs;
@@ -839,7 +966,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 表列表
+             * <p>表列表</p>
              */
             public Builder tables(java.util.List < OutputsTables> tables) {
                 this.tables = tables;
@@ -847,7 +974,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 变量列表
+             * <p>变量列表</p>
              */
             public Builder variables(java.util.List < OutputsVariables> variables) {
                 this.variables = variables;
@@ -861,6 +988,12 @@ public class ListNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNodesResponseBody</p>
+     */
     public static class RuntimeResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
@@ -888,7 +1021,10 @@ public class ListNodesResponseBody extends TeaModel {
             private String resourceGroupId; 
 
             /**
-             * 资源组id
+             * <p>资源组id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S_resgrop_xxx</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -902,6 +1038,12 @@ public class ListNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNodesResponseBody</p>
+     */
     public static class Runtime extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Command")
         private String command;
@@ -929,7 +1071,10 @@ public class ListNodesResponseBody extends TeaModel {
             private String command; 
 
             /**
-             * 脚本所属类型
+             * <p>脚本所属类型</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ODPS_SQL</p>
              */
             public Builder command(String command) {
                 this.command = command;
@@ -943,6 +1088,12 @@ public class ListNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNodesResponseBody</p>
+     */
     public static class Script extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -994,7 +1145,10 @@ public class ListNodesResponseBody extends TeaModel {
             private Runtime runtime; 
 
             /**
-             * 脚本的id
+             * <p>脚本的id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>853573334108680XXXX</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1002,7 +1156,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 脚本路径
+             * <p>脚本路径</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root/demo</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -1010,7 +1167,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 脚本的运行时信息
+             * <p>脚本的运行时信息</p>
              */
             public Builder runtime(Runtime runtime) {
                 this.runtime = runtime;
@@ -1024,6 +1181,12 @@ public class ListNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNodesResponseBody</p>
+     */
     public static class Strategy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceMode")
         private String instanceMode;
@@ -1099,7 +1262,10 @@ public class ListNodesResponseBody extends TeaModel {
             private Integer timeout; 
 
             /**
-             * 生成实例的模式
+             * <p>生成实例的模式</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T+1</p>
              */
             public Builder instanceMode(String instanceMode) {
                 this.instanceMode = instanceMode;
@@ -1107,7 +1273,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 重试时间间隔
+             * <p>重试时间间隔</p>
+             * 
+             * <strong>example:</strong>
+             * <p>180000</p>
              */
             public Builder rerunInterval(Integer rerunInterval) {
                 this.rerunInterval = rerunInterval;
@@ -1115,7 +1284,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 允许重跑的模式
+             * <p>允许重跑的模式</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Allowed</p>
              */
             public Builder rerunMode(String rerunMode) {
                 this.rerunMode = rerunMode;
@@ -1123,7 +1295,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 重试次数
+             * <p>重试次数</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder rerunTimes(Integer rerunTimes) {
                 this.rerunTimes = rerunTimes;
@@ -1131,7 +1306,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 超时时间
+             * <p>超时时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -1145,6 +1323,12 @@ public class ListNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNodesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -1184,7 +1368,10 @@ public class ListNodesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * 标签键
+             * <p>标签键</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1192,7 +1379,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 标签值
+             * <p>标签值</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1206,6 +1396,12 @@ public class ListNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNodesResponseBody</p>
+     */
     public static class Trigger extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cron")
         private String cron;
@@ -1293,7 +1489,10 @@ public class ListNodesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * 触发器的cron表达式
+             * <p>触发器的cron表达式</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00 00 00 * * ?</p>
              */
             public Builder cron(String cron) {
                 this.cron = cron;
@@ -1301,7 +1500,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 结束时间，格式为yyyy-MM-dd HH:mm:ss
+             * <p>结束时间，格式为yyyy-MM-dd HH:mm:ss</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9999-01-01 00:00:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -1309,7 +1511,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 触发器id
+             * <p>触发器id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>543680677872062XXXX</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1317,7 +1522,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 开始时间，格式为yyyy-MM-dd HH:mm:ss
+             * <p>开始时间，格式为yyyy-MM-dd HH:mm:ss</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1970-01-01 00:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1325,7 +1533,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 时区
+             * <p>时区</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia/Shanghai</p>
              */
             public Builder timezone(String timezone) {
                 this.timezone = timezone;
@@ -1333,7 +1544,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 触发器类型
+             * <p>触发器类型</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Scheduler</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1347,6 +1561,12 @@ public class ListNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNodesResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
@@ -1566,7 +1786,10 @@ public class ListNodesResponseBody extends TeaModel {
             private Trigger trigger; 
 
             /**
-             * 节点的创建时间
+             * <p>节点的创建时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1722910655000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1574,7 +1797,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 数据源信息
+             * <p>数据源信息</p>
              */
             public Builder dataSource(DataSource dataSource) {
                 this.dataSource = dataSource;
@@ -1582,7 +1805,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 描述
+             * <p>描述</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1590,7 +1813,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 触发器id
+             * <p>触发器id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>543680677872062XXXX</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1598,7 +1824,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 节点输入
+             * <p>节点输入</p>
              */
             public Builder inputs(Inputs inputs) {
                 this.inputs = inputs;
@@ -1606,7 +1832,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 属性修改时间
+             * <p>属性修改时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1722910655000</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -1614,7 +1843,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 节点名
+             * <p>节点名</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1622,7 +1854,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 节点输出
+             * <p>节点输出</p>
              */
             public Builder outputs(Outputs outputs) {
                 this.outputs = outputs;
@@ -1630,7 +1862,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 节点的责任人
+             * <p>节点的责任人</p>
+             * 
+             * <strong>example:</strong>
+             * <p>110755000425XXXX</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -1654,7 +1889,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 资源组信息
+             * <p>资源组信息</p>
              */
             public Builder runtimeResource(RuntimeResource runtimeResource) {
                 this.runtimeResource = runtimeResource;
@@ -1662,7 +1897,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 工作流的脚本信息
+             * <p>工作流的脚本信息</p>
              */
             public Builder script(Script script) {
                 this.script = script;
@@ -1670,7 +1905,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 调度策略
+             * <p>调度策略</p>
              */
             public Builder strategy(Strategy strategy) {
                 this.strategy = strategy;
@@ -1678,7 +1913,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 标签信息
+             * <p>标签信息</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -1686,7 +1921,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 调度任务Id
+             * <p>调度任务Id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>88888888888</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -1694,7 +1932,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 触发器信息
+             * <p>触发器信息</p>
              */
             public Builder trigger(Trigger trigger) {
                 this.trigger = trigger;
@@ -1708,6 +1946,12 @@ public class ListNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNodesResponseBody</p>
+     */
     public static class PagingInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Nodes")
         private java.util.List < Nodes> nodes;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourceResponseBody} extends {@link TeaModel}
  *
  * <p>GetResourceResponseBody</p>
@@ -70,6 +71,12 @@ public class GetResourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceResponseBody</p>
+     */
     public static class Resource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;

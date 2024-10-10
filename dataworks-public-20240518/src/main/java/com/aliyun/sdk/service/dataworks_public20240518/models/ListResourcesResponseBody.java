@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListResourcesResponseBody</p>
@@ -70,6 +71,12 @@ public class ListResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourcesResponseBody</p>
+     */
     public static class DataSource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -109,7 +116,10 @@ public class ListResourcesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * 数据源名称
+             * <p>数据源名称</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps_first</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -117,7 +127,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * 数据源类型
+             * <p>数据源类型</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -131,6 +144,12 @@ public class ListResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourcesResponseBody</p>
+     */
     public static class Runtime extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Command")
         private String command;
@@ -158,7 +177,10 @@ public class ListResourcesResponseBody extends TeaModel {
             private String command; 
 
             /**
-             * 脚本所属类型
+             * <p>脚本所属类型</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ODPS_PYTHON</p>
              */
             public Builder command(String command) {
                 this.command = command;
@@ -172,6 +194,12 @@ public class ListResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourcesResponseBody</p>
+     */
     public static class Script extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -223,7 +251,10 @@ public class ListResourcesResponseBody extends TeaModel {
             private Runtime runtime; 
 
             /**
-             * 工作流脚本的id
+             * <p>工作流脚本的id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123348864897630XXXX</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -231,7 +262,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * 工作流的脚本路径
+             * <p>工作流的脚本路径</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root/demo</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -239,7 +273,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * 脚本的运行时信息
+             * <p>脚本的运行时信息</p>
              */
             public Builder runtime(Runtime runtime) {
                 this.runtime = runtime;
@@ -253,6 +287,12 @@ public class ListResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourcesResponseBody</p>
+     */
     public static class Resources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
@@ -432,7 +472,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * 函数注册到的数据源信息
+             * <p>函数注册到的数据源信息</p>
              */
             public Builder dataSource(DataSource dataSource) {
                 this.dataSource = dataSource;
@@ -440,7 +480,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * 代表资源组的资源属性字段
+             * <p>代表资源组的资源属性字段</p>
+             * 
+             * <strong>example:</strong>
+             * <p>631478864897630XXXX</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -448,7 +491,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * 资源文件的最近修改时间
+             * <p>资源文件的最近修改时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1724505917000</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -456,7 +502,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * 代表资源名称的资源属性字段
+             * <p>代表资源名称的资源属性字段</p>
+             * 
+             * <strong>example:</strong>
+             * <p>math.py</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -464,7 +513,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * 资源文件的责任人
+             * <p>资源文件的责任人</p>
+             * 
+             * <strong>example:</strong>
+             * <p>110755000425XXXX</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -472,7 +524,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * 资源文件的项目id
+             * <p>资源文件的项目id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>344247</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -480,7 +535,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * 工作流的脚本信息
+             * <p>工作流的脚本信息</p>
              */
             public Builder script(Script script) {
                 this.script = script;
@@ -488,7 +543,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * 文件目标存储路径
+             * <p>文件目标存储路径</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XXX/unknown/ide/1/XXX/20240820200851_963a9da676de44ef8d06a6576a8c4d6a.py</p>
              */
             public Builder sourcePath(String sourcePath) {
                 this.sourcePath = sourcePath;
@@ -496,7 +554,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * 文件资源来源存储类型
+             * <p>文件资源来源存储类型</p>
+             * 
+             * <strong>example:</strong>
+             * <p>local</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -504,7 +565,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * 文件来源路径
+             * <p>文件来源路径</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XXX/unknown/ide/1/XXX/20240820200851_963a9da676de44ef8d06a6576a8c4d6a.py</p>
              */
             public Builder targetPath(String targetPath) {
                 this.targetPath = targetPath;
@@ -512,7 +576,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * 文件目标存储类型
+             * <p>文件目标存储类型</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -520,7 +587,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * 资源类型
+             * <p>资源类型</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jar</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -534,6 +604,12 @@ public class ListResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourcesResponseBody</p>
+     */
     public static class PagingInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;

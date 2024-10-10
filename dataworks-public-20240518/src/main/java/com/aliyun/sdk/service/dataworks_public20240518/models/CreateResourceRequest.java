@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateResourceRequest} extends {@link RequestModel}
  *
  * <p>CreateResourceRequest</p>
@@ -83,7 +84,8 @@ public class CreateResourceRequest extends Request {
         } 
 
         /**
-         * 代表region的资源属性字段
+         * <p>代表region的资源属性字段</p>
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -92,7 +94,11 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * 资源文件的项目id
+         * <p>资源文件的项目id</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder projectId(String projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -101,7 +107,7 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * Spec.
+         * <p>This parameter is required.</p>
          */
         public Builder spec(String spec) {
             this.putBodyParameter("Spec", spec);

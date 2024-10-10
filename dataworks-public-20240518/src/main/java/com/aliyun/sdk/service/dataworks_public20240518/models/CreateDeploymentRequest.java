@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDeploymentRequest} extends {@link RequestModel}
  *
  * <p>CreateDeploymentRequest</p>
@@ -112,7 +113,8 @@ public class CreateDeploymentRequest extends Request {
         } 
 
         /**
-         * 区域id
+         * <p>区域id</p>
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -130,7 +132,7 @@ public class CreateDeploymentRequest extends Request {
         }
 
         /**
-         * ObjectIds.
+         * <p>This parameter is required.</p>
          */
         public Builder objectIds(java.util.List < String > objectIds) {
             String objectIdsShrink = shrink(objectIds, "ObjectIds", "json");
@@ -140,7 +142,11 @@ public class CreateDeploymentRequest extends Request {
         }
 
         /**
-         * 项目Id
+         * <p>项目Id</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(String projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -149,7 +155,10 @@ public class CreateDeploymentRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Online</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);
