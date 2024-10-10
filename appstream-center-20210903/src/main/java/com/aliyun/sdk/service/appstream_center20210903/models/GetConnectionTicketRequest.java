@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConnectionTicketRequest} extends {@link RequestModel}
  *
  * <p>GetConnectionTicketRequest</p>
@@ -446,7 +447,10 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudApp</p>
          */
         public Builder productType(String productType) {
             this.putBodyParameter("ProductType", productType);

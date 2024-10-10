@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRunningAppsResponseBody} extends {@link TeaModel}
  *
  * <p>ListRunningAppsResponseBody</p>
@@ -49,7 +50,10 @@ public class ListRunningAppsResponseBody extends TeaModel {
         private java.util.List < RunningCloudApps> runningCloudApps; 
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2DC3521C-3820-5EA5-9A9A-00BB7AF4E8E5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListRunningAppsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRunningAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRunningAppsResponseBody</p>
+     */
     public static class RunningCloudApps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPublishedAppInfoResponseBody} extends {@link TeaModel}
  *
  * <p>ListPublishedAppInfoResponseBody</p>
@@ -61,7 +62,7 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * appModels
+         * <p>appModels</p>
          */
         public Builder appModels(java.util.List < AppModels> appModels) {
             this.appModels = appModels;
@@ -77,7 +78,10 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DB70F8FE-63A3-587B-8560-CEC258E8B944</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPublishedAppInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPublishedAppInfoResponseBody</p>
+     */
     public static class AppModels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppCenterImageId")
         private String appCenterImageId;

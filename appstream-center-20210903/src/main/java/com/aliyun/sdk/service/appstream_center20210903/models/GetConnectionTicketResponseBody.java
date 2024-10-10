@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConnectionTicketResponseBody} extends {@link TeaModel}
  *
  * <p>GetConnectionTicketResponseBody</p>
@@ -19,6 +20,9 @@ public class GetConnectionTicketResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("AppInstancePersistentId")
     private String appInstancePersistentId;
+
+    @com.aliyun.core.annotation.NameInMap("BindQueueInfo")
+    private BindQueueInfo bindQueueInfo;
 
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
@@ -60,6 +64,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         this.appInstanceGroupId = builder.appInstanceGroupId;
         this.appInstanceId = builder.appInstanceId;
         this.appInstancePersistentId = builder.appInstancePersistentId;
+        this.bindQueueInfo = builder.bindQueueInfo;
         this.code = builder.code;
         this.loginToken = builder.loginToken;
         this.message = builder.message;
@@ -101,6 +106,13 @@ public class GetConnectionTicketResponseBody extends TeaModel {
      */
     public String getAppInstancePersistentId() {
         return this.appInstancePersistentId;
+    }
+
+    /**
+     * @return bindQueueInfo
+     */
+    public BindQueueInfo getBindQueueInfo() {
+        return this.bindQueueInfo;
     }
 
     /**
@@ -191,6 +203,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         private String appInstanceGroupId; 
         private String appInstanceId; 
         private String appInstancePersistentId; 
+        private BindQueueInfo bindQueueInfo; 
         private String code; 
         private String loginToken; 
         private String message; 
@@ -225,6 +238,14 @@ public class GetConnectionTicketResponseBody extends TeaModel {
          */
         public Builder appInstancePersistentId(String appInstancePersistentId) {
             this.appInstancePersistentId = appInstancePersistentId;
+            return this;
+        }
+
+        /**
+         * BindQueueInfo.
+         */
+        public Builder bindQueueInfo(BindQueueInfo bindQueueInfo) {
+            this.bindQueueInfo = bindQueueInfo;
             return this;
         }
 
@@ -277,7 +298,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AD2D0761-1FE5-549D-B169-D3F8D19C6CDD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -330,6 +354,159 @@ public class GetConnectionTicketResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetConnectionTicketResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConnectionTicketResponseBody</p>
+     */
+    public static class BindQueueInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Length")
+        private Integer length;
+
+        @com.aliyun.core.annotation.NameInMap("Rank")
+        private Integer rank;
+
+        @com.aliyun.core.annotation.NameInMap("RemainingTimeMin")
+        private Integer remainingTimeMin;
+
+        @com.aliyun.core.annotation.NameInMap("RequestKey")
+        private String requestKey;
+
+        @com.aliyun.core.annotation.NameInMap("TargetId")
+        private String targetId;
+
+        @com.aliyun.core.annotation.NameInMap("WaitTimeMin")
+        private Integer waitTimeMin;
+
+        private BindQueueInfo(Builder builder) {
+            this.length = builder.length;
+            this.rank = builder.rank;
+            this.remainingTimeMin = builder.remainingTimeMin;
+            this.requestKey = builder.requestKey;
+            this.targetId = builder.targetId;
+            this.waitTimeMin = builder.waitTimeMin;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BindQueueInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return length
+         */
+        public Integer getLength() {
+            return this.length;
+        }
+
+        /**
+         * @return rank
+         */
+        public Integer getRank() {
+            return this.rank;
+        }
+
+        /**
+         * @return remainingTimeMin
+         */
+        public Integer getRemainingTimeMin() {
+            return this.remainingTimeMin;
+        }
+
+        /**
+         * @return requestKey
+         */
+        public String getRequestKey() {
+            return this.requestKey;
+        }
+
+        /**
+         * @return targetId
+         */
+        public String getTargetId() {
+            return this.targetId;
+        }
+
+        /**
+         * @return waitTimeMin
+         */
+        public Integer getWaitTimeMin() {
+            return this.waitTimeMin;
+        }
+
+        public static final class Builder {
+            private Integer length; 
+            private Integer rank; 
+            private Integer remainingTimeMin; 
+            private String requestKey; 
+            private String targetId; 
+            private Integer waitTimeMin; 
+
+            /**
+             * Length.
+             */
+            public Builder length(Integer length) {
+                this.length = length;
+                return this;
+            }
+
+            /**
+             * Rank.
+             */
+            public Builder rank(Integer rank) {
+                this.rank = rank;
+                return this;
+            }
+
+            /**
+             * RemainingTimeMin.
+             */
+            public Builder remainingTimeMin(Integer remainingTimeMin) {
+                this.remainingTimeMin = remainingTimeMin;
+                return this;
+            }
+
+            /**
+             * RequestKey.
+             */
+            public Builder requestKey(String requestKey) {
+                this.requestKey = requestKey;
+                return this;
+            }
+
+            /**
+             * TargetId.
+             */
+            public Builder targetId(String targetId) {
+                this.targetId = targetId;
+                return this;
+            }
+
+            /**
+             * WaitTimeMin.
+             */
+            public Builder waitTimeMin(Integer waitTimeMin) {
+                this.waitTimeMin = waitTimeMin;
+                return this;
+            }
+
+            public BindQueueInfo build() {
+                return new BindQueueInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetConnectionTicketResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConnectionTicketResponseBody</p>
+     */
     public static class Policy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResolutionAdaptive")
         private String resolutionAdaptive;

@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of GetConnectionTicket  GetConnectionTicketRequest
+     * @return GetConnectionTicketResponse
+     */
     @Override
     public CompletableFuture<GetConnectionTicketResponse> getConnectionTicket(GetConnectionTicketRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListLFUApp  ListLFUAppRequest
+     * @return ListLFUAppResponse
+     */
     @Override
     public CompletableFuture<ListLFUAppResponse> listLFUApp(ListLFUAppRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPublishedAppInfo  ListPublishedAppInfoRequest
+     * @return ListPublishedAppInfoResponse
+     */
     @Override
     public CompletableFuture<ListPublishedAppInfoResponse> listPublishedAppInfo(ListPublishedAppInfoRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRunningApps  ListRunningAppsRequest
+     * @return ListRunningAppsResponse
+     */
     @Override
     public CompletableFuture<ListRunningAppsResponse> listRunningApps(ListRunningAppsRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopApp  StopAppRequest
+     * @return StopAppResponse
+     */
     @Override
     public CompletableFuture<StopAppResponse> stopApp(StopAppRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of Unbind  UnbindRequest
+     * @return UnbindResponse
+     */
     @Override
     public CompletableFuture<UnbindResponse> unbind(UnbindRequest request) {
         try {

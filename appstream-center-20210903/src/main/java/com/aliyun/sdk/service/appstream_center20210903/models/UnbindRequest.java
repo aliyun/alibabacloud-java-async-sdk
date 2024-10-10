@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnbindRequest} extends {@link RequestModel}
  *
  * <p>UnbindRequest</p>
@@ -234,7 +235,10 @@ public class UnbindRequest extends Request {
         }
 
         /**
-         * AppInstanceGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aig-e1l4kqqykxt4uzdx9</p>
          */
         public Builder appInstanceGroupId(String appInstanceGroupId) {
             this.putBodyParameter("AppInstanceGroupId", appInstanceGroupId);
@@ -306,7 +310,10 @@ public class UnbindRequest extends Request {
         }
 
         /**
-         * LoginToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1e9c8e83d83ea11270871640059145702bde8c5be8c6b9a854ffb6a43bd2673c19a5551c83800724e024f488dbfb0b247</p>
          */
         public Builder loginToken(String loginToken) {
             this.putBodyParameter("LoginToken", loginToken);
@@ -315,7 +322,10 @@ public class UnbindRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudApp</p>
          */
         public Builder productType(String productType) {
             this.putBodyParameter("ProductType", productType);
@@ -324,7 +334,10 @@ public class UnbindRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11040139-4fb4-4b35-9b44-6c07c746a43e</p>
          */
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("SessionId", sessionId);
