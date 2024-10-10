@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckDevicesResponseBody} extends {@link TeaModel}
  *
  * <p>CheckDevicesResponseBody</p>
@@ -70,6 +71,12 @@ public class CheckDevicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CheckDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>CheckDevicesResponseBody</p>
+     */
     public static class DeviceCheckInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Available")
         private Boolean available;
@@ -131,6 +138,12 @@ public class CheckDevicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CheckDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>CheckDevicesResponseBody</p>
+     */
     public static class DeviceCheckInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeviceCheckInfo")
         private java.util.List < DeviceCheckInfo> deviceCheckInfo;

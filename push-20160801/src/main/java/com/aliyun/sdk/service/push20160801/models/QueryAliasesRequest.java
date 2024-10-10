@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAliasesRequest} extends {@link RequestModel}
  *
  * <p>QueryAliasesRequest</p>
@@ -69,7 +70,10 @@ public class QueryAliasesRequest extends Request {
         } 
 
         /**
-         * AppKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23267207</p>
          */
         public Builder appKey(Long appKey) {
             this.putQueryParameter("AppKey", appKey);
@@ -78,7 +82,10 @@ public class QueryAliasesRequest extends Request {
         }
 
         /**
-         * DeviceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e2ba19de97604f55b165576****</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);

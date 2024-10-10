@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckCertificateResponseBody} extends {@link TeaModel}
  *
  * <p>CheckCertificateResponseBody</p>
@@ -130,6 +131,12 @@ public class CheckCertificateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CheckCertificateResponseBody} extends {@link TeaModel}
+     *
+     * <p>CheckCertificateResponseBody</p>
+     */
     public static class DevelopmentCertInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExipreTime")
         private Long exipreTime;
@@ -191,6 +198,12 @@ public class CheckCertificateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CheckCertificateResponseBody} extends {@link TeaModel}
+     *
+     * <p>CheckCertificateResponseBody</p>
+     */
     public static class ProductionCertInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExipreTime")
         private Long exipreTime;

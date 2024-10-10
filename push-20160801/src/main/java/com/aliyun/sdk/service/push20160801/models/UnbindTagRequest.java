@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnbindTagRequest} extends {@link RequestModel}
  *
  * <p>UnbindTagRequest</p>
@@ -99,7 +100,10 @@ public class UnbindTagRequest extends Request {
         } 
 
         /**
-         * AppKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23267207</p>
          */
         public Builder appKey(Long appKey) {
             this.putQueryParameter("AppKey", appKey);
@@ -108,7 +112,10 @@ public class UnbindTagRequest extends Request {
         }
 
         /**
-         * ClientKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e2ba19de97604f55b16557673****</p>
          */
         public Builder clientKey(String clientKey) {
             this.putQueryParameter("ClientKey", clientKey);
@@ -117,7 +124,10 @@ public class UnbindTagRequest extends Request {
         }
 
         /**
-         * KeyType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEVICE</p>
          */
         public Builder keyType(String keyType) {
             this.putQueryParameter("KeyType", keyType);
@@ -126,7 +136,10 @@ public class UnbindTagRequest extends Request {
         }
 
         /**
-         * TagName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_tag1,test_tag2</p>
          */
         public Builder tagName(String tagName) {
             this.putQueryParameter("TagName", tagName);

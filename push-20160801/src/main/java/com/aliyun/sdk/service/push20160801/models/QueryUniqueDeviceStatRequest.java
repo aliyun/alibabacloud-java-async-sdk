@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryUniqueDeviceStatRequest} extends {@link RequestModel}
  *
  * <p>QueryUniqueDeviceStatRequest</p>
@@ -99,7 +100,10 @@ public class QueryUniqueDeviceStatRequest extends Request {
         } 
 
         /**
-         * AppKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23267207</p>
          */
         public Builder appKey(Long appKey) {
             this.putQueryParameter("AppKey", appKey);
@@ -108,7 +112,10 @@ public class QueryUniqueDeviceStatRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-07-26T00:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -117,7 +124,10 @@ public class QueryUniqueDeviceStatRequest extends Request {
         }
 
         /**
-         * Granularity.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAY</p>
          */
         public Builder granularity(String granularity) {
             this.putQueryParameter("Granularity", granularity);
@@ -126,7 +136,10 @@ public class QueryUniqueDeviceStatRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-07-25T00:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

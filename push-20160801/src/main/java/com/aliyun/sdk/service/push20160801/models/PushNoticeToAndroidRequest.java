@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PushNoticeToAndroidRequest} extends {@link RequestModel}
  *
  * <p>PushNoticeToAndroidRequest</p>
@@ -156,7 +157,10 @@ public class PushNoticeToAndroidRequest extends Request {
         } 
 
         /**
-         * AppKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23267207</p>
          */
         public Builder appKey(Long appKey) {
             this.putQueryParameter("AppKey", appKey);
@@ -165,7 +169,10 @@ public class PushNoticeToAndroidRequest extends Request {
         }
 
         /**
-         * Body.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>body</p>
          */
         public Builder body(String body) {
             this.putQueryParameter("Body", body);
@@ -201,7 +208,10 @@ public class PushNoticeToAndroidRequest extends Request {
         }
 
         /**
-         * Target.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);
@@ -210,7 +220,10 @@ public class PushNoticeToAndroidRequest extends Request {
         }
 
         /**
-         * TargetValue.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder targetValue(String targetValue) {
             this.putQueryParameter("TargetValue", targetValue);
@@ -219,7 +232,10 @@ public class PushNoticeToAndroidRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>title</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

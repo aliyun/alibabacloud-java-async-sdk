@@ -94,6 +94,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of BindAlias  BindAliasRequest
+     * @return BindAliasResponse
+     */
     @Override
     public CompletableFuture<BindAliasResponse> bindAlias(BindAliasRequest request) {
         try {
@@ -108,6 +112,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BindPhone  BindPhoneRequest
+     * @return BindPhoneResponse
+     */
     @Override
     public CompletableFuture<BindPhoneResponse> bindPhone(BindPhoneRequest request) {
         try {
@@ -122,6 +130,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BindTag  BindTagRequest
+     * @return BindTagResponse
+     */
     @Override
     public CompletableFuture<BindTagResponse> bindTag(BindTagRequest request) {
         try {
@@ -136,6 +148,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelPush  CancelPushRequest
+     * @return CancelPushResponse
+     */
     @Override
     public CompletableFuture<CancelPushResponse> cancelPush(CancelPushRequest request) {
         try {
@@ -150,6 +166,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckCertificate  CheckCertificateRequest
+     * @return CheckCertificateResponse
+     */
     @Override
     public CompletableFuture<CheckCertificateResponse> checkCertificate(CheckCertificateRequest request) {
         try {
@@ -165,9 +185,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI CheckDevice is deprecated, please use Push::2016-08-01::CheckDevices instead.  * @param request  the request parameters of CheckDevice  CheckDeviceRequest
+     * @return CheckDeviceResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<CheckDeviceResponse> checkDevice(CheckDeviceRequest request) {
         try {
@@ -182,6 +203,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckDevices  CheckDevicesRequest
+     * @return CheckDevicesResponse
+     */
     @Override
     public CompletableFuture<CheckDevicesResponse> checkDevices(CheckDevicesRequest request) {
         try {
@@ -196,6 +221,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CompleteContinuouslyPush  CompleteContinuouslyPushRequest
+     * @return CompleteContinuouslyPushResponse
+     */
     @Override
     public CompletableFuture<CompleteContinuouslyPushResponse> completeContinuouslyPush(CompleteContinuouslyPushRequest request) {
         try {
@@ -210,6 +239,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ContinuouslyPush  ContinuouslyPushRequest
+     * @return ContinuouslyPushResponse
+     */
     @Override
     public CompletableFuture<ContinuouslyPushResponse> continuouslyPush(ContinuouslyPushRequest request) {
         try {
@@ -225,9 +258,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI ListSummaryApps is deprecated, please use Mhub::2017-08-25::ListApps instead.  * @param request  the request parameters of ListSummaryApps  ListSummaryAppsRequest
+     * @return ListSummaryAppsResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<ListSummaryAppsResponse> listSummaryApps(ListSummaryAppsRequest request) {
         try {
@@ -242,6 +276,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTags  ListTagsRequest
+     * @return ListTagsResponse
+     */
     @Override
     public CompletableFuture<ListTagsResponse> listTags(ListTagsRequest request) {
         try {
@@ -256,6 +294,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of MassPush  MassPushRequest
+     * @return MassPushResponse
+     */
     @Override
     public CompletableFuture<MassPushResponse> massPush(MassPushRequest request) {
         try {
@@ -270,6 +312,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of Push  PushRequest
+     * @return PushResponse
+     */
     @Override
     public CompletableFuture<PushResponse> push(PushRequest request) {
         try {
@@ -284,6 +330,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PushMessageToAndroid  PushMessageToAndroidRequest
+     * @return PushMessageToAndroidResponse
+     */
     @Override
     public CompletableFuture<PushMessageToAndroidResponse> pushMessageToAndroid(PushMessageToAndroidRequest request) {
         try {
@@ -298,6 +348,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PushMessageToiOS  PushMessageToiOSRequest
+     * @return PushMessageToiOSResponse
+     */
     @Override
     public CompletableFuture<PushMessageToiOSResponse> pushMessageToiOS(PushMessageToiOSRequest request) {
         try {
@@ -312,6 +366,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PushNoticeToAndroid  PushNoticeToAndroidRequest
+     * @return PushNoticeToAndroidResponse
+     */
     @Override
     public CompletableFuture<PushNoticeToAndroidResponse> pushNoticeToAndroid(PushNoticeToAndroidRequest request) {
         try {
@@ -326,6 +384,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PushNoticeToiOS  PushNoticeToiOSRequest
+     * @return PushNoticeToiOSResponse
+     */
     @Override
     public CompletableFuture<PushNoticeToiOSResponse> pushNoticeToiOS(PushNoticeToiOSRequest request) {
         try {
@@ -340,6 +402,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryAliases  QueryAliasesRequest
+     * @return QueryAliasesResponse
+     */
     @Override
     public CompletableFuture<QueryAliasesResponse> queryAliases(QueryAliasesRequest request) {
         try {
@@ -354,6 +420,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryDeviceInfo  QueryDeviceInfoRequest
+     * @return QueryDeviceInfoResponse
+     */
     @Override
     public CompletableFuture<QueryDeviceInfoResponse> queryDeviceInfo(QueryDeviceInfoRequest request) {
         try {
@@ -368,6 +438,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryDeviceStat  QueryDeviceStatRequest
+     * @return QueryDeviceStatResponse
+     */
     @Override
     public CompletableFuture<QueryDeviceStatResponse> queryDeviceStat(QueryDeviceStatRequest request) {
         try {
@@ -382,6 +456,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryDevicesByAccount  QueryDevicesByAccountRequest
+     * @return QueryDevicesByAccountResponse
+     */
     @Override
     public CompletableFuture<QueryDevicesByAccountResponse> queryDevicesByAccount(QueryDevicesByAccountRequest request) {
         try {
@@ -396,6 +474,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryDevicesByAlias  QueryDevicesByAliasRequest
+     * @return QueryDevicesByAliasResponse
+     */
     @Override
     public CompletableFuture<QueryDevicesByAliasResponse> queryDevicesByAlias(QueryDevicesByAliasRequest request) {
         try {
@@ -410,6 +492,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryPushRecords  QueryPushRecordsRequest
+     * @return QueryPushRecordsResponse
+     */
     @Override
     public CompletableFuture<QueryPushRecordsResponse> queryPushRecords(QueryPushRecordsRequest request) {
         try {
@@ -424,6 +510,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryPushStatByApp  QueryPushStatByAppRequest
+     * @return QueryPushStatByAppResponse
+     */
     @Override
     public CompletableFuture<QueryPushStatByAppResponse> queryPushStatByApp(QueryPushStatByAppRequest request) {
         try {
@@ -438,6 +528,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryPushStatByMsg  QueryPushStatByMsgRequest
+     * @return QueryPushStatByMsgResponse
+     */
     @Override
     public CompletableFuture<QueryPushStatByMsgResponse> queryPushStatByMsg(QueryPushStatByMsgRequest request) {
         try {
@@ -452,6 +546,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryTags  QueryTagsRequest
+     * @return QueryTagsResponse
+     */
     @Override
     public CompletableFuture<QueryTagsResponse> queryTags(QueryTagsRequest request) {
         try {
@@ -466,6 +564,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryUniqueDeviceStat  QueryUniqueDeviceStatRequest
+     * @return QueryUniqueDeviceStatResponse
+     */
     @Override
     public CompletableFuture<QueryUniqueDeviceStatResponse> queryUniqueDeviceStat(QueryUniqueDeviceStatRequest request) {
         try {
@@ -480,6 +582,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveTag  RemoveTagRequest
+     * @return RemoveTagResponse
+     */
     @Override
     public CompletableFuture<RemoveTagResponse> removeTag(RemoveTagRequest request) {
         try {
@@ -494,6 +600,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnbindAlias  UnbindAliasRequest
+     * @return UnbindAliasResponse
+     */
     @Override
     public CompletableFuture<UnbindAliasResponse> unbindAlias(UnbindAliasRequest request) {
         try {
@@ -508,6 +618,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnbindPhone  UnbindPhoneRequest
+     * @return UnbindPhoneResponse
+     */
     @Override
     public CompletableFuture<UnbindPhoneResponse> unbindPhone(UnbindPhoneRequest request) {
         try {
@@ -522,6 +636,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnbindTag  UnbindTagRequest
+     * @return UnbindTagResponse
+     */
     @Override
     public CompletableFuture<UnbindTagResponse> unbindTag(UnbindTagRequest request) {
         try {

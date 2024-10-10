@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAliasesResponseBody} extends {@link TeaModel}
  *
  * <p>QueryAliasesResponseBody</p>
@@ -70,6 +71,12 @@ public class QueryAliasesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryAliasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAliasesResponseBody</p>
+     */
     public static class AliasInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
@@ -111,6 +118,12 @@ public class QueryAliasesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAliasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAliasesResponseBody</p>
+     */
     public static class AliasInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliasInfo")
         private java.util.List < AliasInfo> aliasInfo;

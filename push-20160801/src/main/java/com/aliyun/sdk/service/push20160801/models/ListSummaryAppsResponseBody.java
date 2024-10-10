@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSummaryAppsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSummaryAppsResponseBody</p>
@@ -70,6 +71,12 @@ public class ListSummaryAppsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSummaryAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSummaryAppsResponseBody</p>
+     */
     public static class SummaryAppInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppKey")
         private Long appKey;
@@ -131,6 +138,12 @@ public class ListSummaryAppsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSummaryAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSummaryAppsResponseBody</p>
+     */
     public static class SummaryAppInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SummaryAppInfo")
         private java.util.List < SummaryAppInfo> summaryAppInfo;

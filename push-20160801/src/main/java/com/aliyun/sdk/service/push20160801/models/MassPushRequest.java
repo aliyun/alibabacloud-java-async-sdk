@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MassPushRequest} extends {@link RequestModel}
  *
  * <p>MassPushRequest</p>
@@ -69,7 +70,10 @@ public class MassPushRequest extends Request {
         } 
 
         /**
-         * AppKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23267207</p>
          */
         public Builder appKey(Long appKey) {
             this.putQueryParameter("AppKey", appKey);
@@ -78,7 +82,7 @@ public class MassPushRequest extends Request {
         }
 
         /**
-         * PushTask.
+         * <p>This parameter is required.</p>
          */
         public Builder pushTask(java.util.List < PushTask> pushTask) {
             this.putBodyParameter("PushTask", pushTask);
@@ -93,6 +97,12 @@ public class MassPushRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link MassPushRequest} extends {@link TeaModel}
+     *
+     * <p>MassPushRequest</p>
+     */
     public static class PushTask extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AndroidActivity")
         private String androidActivity;
@@ -240,11 +250,23 @@ public class MassPushRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("HarmonyActionType")
         private String harmonyActionType;
 
+        @com.aliyun.core.annotation.NameInMap("HarmonyBadgeAddNum")
+        private Integer harmonyBadgeAddNum;
+
+        @com.aliyun.core.annotation.NameInMap("HarmonyBadgeSetNum")
+        private Integer harmonyBadgeSetNum;
+
         @com.aliyun.core.annotation.NameInMap("HarmonyCategory")
         private String harmonyCategory;
 
         @com.aliyun.core.annotation.NameInMap("HarmonyExtParameters")
         private String harmonyExtParameters;
+
+        @com.aliyun.core.annotation.NameInMap("HarmonyExtensionExtraData")
+        private String harmonyExtensionExtraData;
+
+        @com.aliyun.core.annotation.NameInMap("HarmonyExtensionPush")
+        private Boolean harmonyExtensionPush;
 
         @com.aliyun.core.annotation.NameInMap("HarmonyImageUrl")
         private String harmonyImageUrl;
@@ -406,8 +428,12 @@ public class MassPushRequest extends Request {
             this.expireTime = builder.expireTime;
             this.harmonyAction = builder.harmonyAction;
             this.harmonyActionType = builder.harmonyActionType;
+            this.harmonyBadgeAddNum = builder.harmonyBadgeAddNum;
+            this.harmonyBadgeSetNum = builder.harmonyBadgeSetNum;
             this.harmonyCategory = builder.harmonyCategory;
             this.harmonyExtParameters = builder.harmonyExtParameters;
+            this.harmonyExtensionExtraData = builder.harmonyExtensionExtraData;
+            this.harmonyExtensionPush = builder.harmonyExtensionPush;
             this.harmonyImageUrl = builder.harmonyImageUrl;
             this.harmonyInboxContent = builder.harmonyInboxContent;
             this.harmonyNotificationSlotType = builder.harmonyNotificationSlotType;
@@ -784,6 +810,20 @@ public class MassPushRequest extends Request {
         }
 
         /**
+         * @return harmonyBadgeAddNum
+         */
+        public Integer getHarmonyBadgeAddNum() {
+            return this.harmonyBadgeAddNum;
+        }
+
+        /**
+         * @return harmonyBadgeSetNum
+         */
+        public Integer getHarmonyBadgeSetNum() {
+            return this.harmonyBadgeSetNum;
+        }
+
+        /**
          * @return harmonyCategory
          */
         public String getHarmonyCategory() {
@@ -795,6 +835,20 @@ public class MassPushRequest extends Request {
          */
         public String getHarmonyExtParameters() {
             return this.harmonyExtParameters;
+        }
+
+        /**
+         * @return harmonyExtensionExtraData
+         */
+        public String getHarmonyExtensionExtraData() {
+            return this.harmonyExtensionExtraData;
+        }
+
+        /**
+         * @return harmonyExtensionPush
+         */
+        public Boolean getHarmonyExtensionPush() {
+            return this.harmonyExtensionPush;
         }
 
         /**
@@ -1097,8 +1151,12 @@ public class MassPushRequest extends Request {
             private String expireTime; 
             private String harmonyAction; 
             private String harmonyActionType; 
+            private Integer harmonyBadgeAddNum; 
+            private Integer harmonyBadgeSetNum; 
             private String harmonyCategory; 
             private String harmonyExtParameters; 
+            private String harmonyExtensionExtraData; 
+            private Boolean harmonyExtensionPush; 
             private String harmonyImageUrl; 
             private String harmonyInboxContent; 
             private String harmonyNotificationSlotType; 
@@ -1473,7 +1531,10 @@ public class MassPushRequest extends Request {
             }
 
             /**
-             * Body.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello</p>
              */
             public Builder body(String body) {
                 this.body = body;
@@ -1481,7 +1542,10 @@ public class MassPushRequest extends Request {
             }
 
             /**
-             * DeviceType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL</p>
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -1513,6 +1577,22 @@ public class MassPushRequest extends Request {
             }
 
             /**
+             * HarmonyBadgeAddNum.
+             */
+            public Builder harmonyBadgeAddNum(Integer harmonyBadgeAddNum) {
+                this.harmonyBadgeAddNum = harmonyBadgeAddNum;
+                return this;
+            }
+
+            /**
+             * HarmonyBadgeSetNum.
+             */
+            public Builder harmonyBadgeSetNum(Integer harmonyBadgeSetNum) {
+                this.harmonyBadgeSetNum = harmonyBadgeSetNum;
+                return this;
+            }
+
+            /**
              * HarmonyCategory.
              */
             public Builder harmonyCategory(String harmonyCategory) {
@@ -1525,6 +1605,22 @@ public class MassPushRequest extends Request {
              */
             public Builder harmonyExtParameters(String harmonyExtParameters) {
                 this.harmonyExtParameters = harmonyExtParameters;
+                return this;
+            }
+
+            /**
+             * HarmonyExtensionExtraData.
+             */
+            public Builder harmonyExtensionExtraData(String harmonyExtensionExtraData) {
+                this.harmonyExtensionExtraData = harmonyExtensionExtraData;
+                return this;
+            }
+
+            /**
+             * HarmonyExtensionPush.
+             */
+            public Builder harmonyExtensionPush(Boolean harmonyExtensionPush) {
+                this.harmonyExtensionPush = harmonyExtensionPush;
                 return this;
             }
 
@@ -1633,7 +1729,10 @@ public class MassPushRequest extends Request {
             }
 
             /**
-             * PushType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MESSAGE</p>
              */
             public Builder pushType(String pushType) {
                 this.pushType = pushType;
@@ -1665,7 +1764,10 @@ public class MassPushRequest extends Request {
             }
 
             /**
-             * Target.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEVICE</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -1673,7 +1775,10 @@ public class MassPushRequest extends Request {
             }
 
             /**
-             * TargetValue.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>deviceid1,deviceid2</p>
              */
             public Builder targetValue(String targetValue) {
                 this.targetValue = targetValue;

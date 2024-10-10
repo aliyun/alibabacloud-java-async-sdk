@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CompleteContinuouslyPushRequest} extends {@link RequestModel}
  *
  * <p>CompleteContinuouslyPushRequest</p>
@@ -69,7 +70,10 @@ public class CompleteContinuouslyPushRequest extends Request {
         } 
 
         /**
-         * AppKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23267207</p>
          */
         public Builder appKey(Long appKey) {
             this.putQueryParameter("AppKey", appKey);
@@ -78,7 +82,10 @@ public class CompleteContinuouslyPushRequest extends Request {
         }
 
         /**
-         * MessageId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4010290149170430</p>
          */
         public Builder messageId(String messageId) {
             this.putQueryParameter("MessageId", messageId);

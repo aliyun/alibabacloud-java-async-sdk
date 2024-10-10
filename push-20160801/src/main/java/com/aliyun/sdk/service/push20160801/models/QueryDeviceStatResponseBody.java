@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDeviceStatResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDeviceStatResponseBody</p>
@@ -70,6 +71,12 @@ public class QueryDeviceStatResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDeviceStatResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceStatResponseBody</p>
+     */
     public static class AppDeviceStat extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
@@ -151,6 +158,12 @@ public class QueryDeviceStatResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDeviceStatResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceStatResponseBody</p>
+     */
     public static class AppDeviceStats extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppDeviceStat")
         private java.util.List < AppDeviceStat> appDeviceStat;

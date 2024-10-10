@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPushStatByAppResponseBody} extends {@link TeaModel}
  *
  * <p>QueryPushStatByAppResponseBody</p>
@@ -70,6 +71,12 @@ public class QueryPushStatByAppResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryPushStatByAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPushStatByAppResponseBody</p>
+     */
     public static class AppPushStat extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AcceptCount")
         private Long acceptCount;
@@ -311,6 +318,12 @@ public class QueryPushStatByAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryPushStatByAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPushStatByAppResponseBody</p>
+     */
     public static class AppPushStats extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppPushStat")
         private java.util.List < AppPushStat> appPushStat;

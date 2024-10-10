@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTagsResponseBody} extends {@link TeaModel}
  *
  * <p>QueryTagsResponseBody</p>
@@ -70,6 +71,12 @@ public class QueryTagsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTagsResponseBody</p>
+     */
     public static class TagInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagName")
         private String tagName;
@@ -111,6 +118,12 @@ public class QueryTagsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTagsResponseBody</p>
+     */
     public static class TagInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagInfo")
         private java.util.List < TagInfo> tagInfo;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveTagRequest} extends {@link RequestModel}
  *
  * <p>RemoveTagRequest</p>
@@ -69,7 +70,10 @@ public class RemoveTagRequest extends Request {
         } 
 
         /**
-         * AppKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23267207</p>
          */
         public Builder appKey(Long appKey) {
             this.putQueryParameter("AppKey", appKey);
@@ -78,7 +82,10 @@ public class RemoveTagRequest extends Request {
         }
 
         /**
-         * TagName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_tag</p>
          */
         public Builder tagName(String tagName) {
             this.putQueryParameter("TagName", tagName);

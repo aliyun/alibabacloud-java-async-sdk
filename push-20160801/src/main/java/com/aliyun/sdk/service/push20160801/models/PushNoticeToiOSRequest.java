@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PushNoticeToiOSRequest} extends {@link RequestModel}
  *
  * <p>PushNoticeToiOSRequest</p>
@@ -156,7 +157,10 @@ public class PushNoticeToiOSRequest extends Request {
         } 
 
         /**
-         * ApnsEnv.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEV</p>
          */
         public Builder apnsEnv(String apnsEnv) {
             this.putQueryParameter("ApnsEnv", apnsEnv);
@@ -165,7 +169,10 @@ public class PushNoticeToiOSRequest extends Request {
         }
 
         /**
-         * AppKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24780725</p>
          */
         public Builder appKey(Long appKey) {
             this.putQueryParameter("AppKey", appKey);
@@ -174,7 +181,10 @@ public class PushNoticeToiOSRequest extends Request {
         }
 
         /**
-         * Body.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello World</p>
          */
         public Builder body(String body) {
             this.putQueryParameter("Body", body);
@@ -201,7 +211,10 @@ public class PushNoticeToiOSRequest extends Request {
         }
 
         /**
-         * Target.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);
@@ -210,7 +223,10 @@ public class PushNoticeToiOSRequest extends Request {
         }
 
         /**
-         * TargetValue.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder targetValue(String targetValue) {
             this.putQueryParameter("TargetValue", targetValue);

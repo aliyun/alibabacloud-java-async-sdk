@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PushRequest} extends {@link RequestModel}
  *
  * <p>PushRequest</p>
@@ -214,12 +215,28 @@ public class PushRequest extends Request {
     private String harmonyActionType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HarmonyBadgeAddNum")
+    private Integer harmonyBadgeAddNum;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HarmonyBadgeSetNum")
+    private Integer harmonyBadgeSetNum;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HarmonyCategory")
     private String harmonyCategory;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HarmonyExtParameters")
     private String harmonyExtParameters;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HarmonyExtensionExtraData")
+    private String harmonyExtensionExtraData;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HarmonyExtensionPush")
+    private Boolean harmonyExtensionPush;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HarmonyImageUrl")
@@ -440,8 +457,12 @@ public class PushRequest extends Request {
         this.expireTime = builder.expireTime;
         this.harmonyAction = builder.harmonyAction;
         this.harmonyActionType = builder.harmonyActionType;
+        this.harmonyBadgeAddNum = builder.harmonyBadgeAddNum;
+        this.harmonyBadgeSetNum = builder.harmonyBadgeSetNum;
         this.harmonyCategory = builder.harmonyCategory;
         this.harmonyExtParameters = builder.harmonyExtParameters;
+        this.harmonyExtensionExtraData = builder.harmonyExtensionExtraData;
+        this.harmonyExtensionPush = builder.harmonyExtensionPush;
         this.harmonyImageUrl = builder.harmonyImageUrl;
         this.harmonyInboxContent = builder.harmonyInboxContent;
         this.harmonyNotificationSlotType = builder.harmonyNotificationSlotType;
@@ -835,6 +856,20 @@ public class PushRequest extends Request {
     }
 
     /**
+     * @return harmonyBadgeAddNum
+     */
+    public Integer getHarmonyBadgeAddNum() {
+        return this.harmonyBadgeAddNum;
+    }
+
+    /**
+     * @return harmonyBadgeSetNum
+     */
+    public Integer getHarmonyBadgeSetNum() {
+        return this.harmonyBadgeSetNum;
+    }
+
+    /**
      * @return harmonyCategory
      */
     public String getHarmonyCategory() {
@@ -846,6 +881,20 @@ public class PushRequest extends Request {
      */
     public String getHarmonyExtParameters() {
         return this.harmonyExtParameters;
+    }
+
+    /**
+     * @return harmonyExtensionExtraData
+     */
+    public String getHarmonyExtensionExtraData() {
+        return this.harmonyExtensionExtraData;
+    }
+
+    /**
+     * @return harmonyExtensionPush
+     */
+    public Boolean getHarmonyExtensionPush() {
+        return this.harmonyExtensionPush;
     }
 
     /**
@@ -1184,8 +1233,12 @@ public class PushRequest extends Request {
         private String expireTime; 
         private String harmonyAction; 
         private String harmonyActionType; 
+        private Integer harmonyBadgeAddNum; 
+        private Integer harmonyBadgeSetNum; 
         private String harmonyCategory; 
         private String harmonyExtParameters; 
+        private String harmonyExtensionExtraData; 
+        private Boolean harmonyExtensionPush; 
         private String harmonyImageUrl; 
         private String harmonyInboxContent; 
         private String harmonyNotificationSlotType; 
@@ -1282,8 +1335,12 @@ public class PushRequest extends Request {
             this.expireTime = request.expireTime;
             this.harmonyAction = request.harmonyAction;
             this.harmonyActionType = request.harmonyActionType;
+            this.harmonyBadgeAddNum = request.harmonyBadgeAddNum;
+            this.harmonyBadgeSetNum = request.harmonyBadgeSetNum;
             this.harmonyCategory = request.harmonyCategory;
             this.harmonyExtParameters = request.harmonyExtParameters;
+            this.harmonyExtensionExtraData = request.harmonyExtensionExtraData;
+            this.harmonyExtensionPush = request.harmonyExtensionPush;
             this.harmonyImageUrl = request.harmonyImageUrl;
             this.harmonyInboxContent = request.harmonyInboxContent;
             this.harmonyNotificationSlotType = request.harmonyNotificationSlotType;
@@ -1706,7 +1763,10 @@ public class PushRequest extends Request {
         }
 
         /**
-         * AppKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23267207</p>
          */
         public Builder appKey(Long appKey) {
             this.putQueryParameter("AppKey", appKey);
@@ -1715,7 +1775,10 @@ public class PushRequest extends Request {
         }
 
         /**
-         * Body.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello</p>
          */
         public Builder body(String body) {
             this.putQueryParameter("Body", body);
@@ -1724,7 +1787,10 @@ public class PushRequest extends Request {
         }
 
         /**
-         * DeviceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder deviceType(String deviceType) {
             this.putQueryParameter("DeviceType", deviceType);
@@ -1760,6 +1826,24 @@ public class PushRequest extends Request {
         }
 
         /**
+         * HarmonyBadgeAddNum.
+         */
+        public Builder harmonyBadgeAddNum(Integer harmonyBadgeAddNum) {
+            this.putQueryParameter("HarmonyBadgeAddNum", harmonyBadgeAddNum);
+            this.harmonyBadgeAddNum = harmonyBadgeAddNum;
+            return this;
+        }
+
+        /**
+         * HarmonyBadgeSetNum.
+         */
+        public Builder harmonyBadgeSetNum(Integer harmonyBadgeSetNum) {
+            this.putQueryParameter("HarmonyBadgeSetNum", harmonyBadgeSetNum);
+            this.harmonyBadgeSetNum = harmonyBadgeSetNum;
+            return this;
+        }
+
+        /**
          * HarmonyCategory.
          */
         public Builder harmonyCategory(String harmonyCategory) {
@@ -1774,6 +1858,24 @@ public class PushRequest extends Request {
         public Builder harmonyExtParameters(String harmonyExtParameters) {
             this.putQueryParameter("HarmonyExtParameters", harmonyExtParameters);
             this.harmonyExtParameters = harmonyExtParameters;
+            return this;
+        }
+
+        /**
+         * HarmonyExtensionExtraData.
+         */
+        public Builder harmonyExtensionExtraData(String harmonyExtensionExtraData) {
+            this.putQueryParameter("HarmonyExtensionExtraData", harmonyExtensionExtraData);
+            this.harmonyExtensionExtraData = harmonyExtensionExtraData;
+            return this;
+        }
+
+        /**
+         * HarmonyExtensionPush.
+         */
+        public Builder harmonyExtensionPush(Boolean harmonyExtensionPush) {
+            this.putQueryParameter("HarmonyExtensionPush", harmonyExtensionPush);
+            this.harmonyExtensionPush = harmonyExtensionPush;
             return this;
         }
 
@@ -1895,7 +1997,10 @@ public class PushRequest extends Request {
         }
 
         /**
-         * PushType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MESSAGE</p>
          */
         public Builder pushType(String pushType) {
             this.putQueryParameter("PushType", pushType);
@@ -1976,7 +2081,10 @@ public class PushRequest extends Request {
         }
 
         /**
-         * Target.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);
@@ -1985,7 +2093,10 @@ public class PushRequest extends Request {
         }
 
         /**
-         * TargetValue.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder targetValue(String targetValue) {
             this.putQueryParameter("TargetValue", targetValue);

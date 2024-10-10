@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PushMessageToAndroidRequest} extends {@link RequestModel}
  *
  * <p>PushMessageToAndroidRequest</p>
@@ -142,7 +143,10 @@ public class PushMessageToAndroidRequest extends Request {
         } 
 
         /**
-         * AppKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23267207</p>
          */
         public Builder appKey(Long appKey) {
             this.putQueryParameter("AppKey", appKey);
@@ -151,7 +155,10 @@ public class PushMessageToAndroidRequest extends Request {
         }
 
         /**
-         * Body.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my body</p>
          */
         public Builder body(String body) {
             this.putQueryParameter("Body", body);
@@ -178,7 +185,10 @@ public class PushMessageToAndroidRequest extends Request {
         }
 
         /**
-         * Target.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);
@@ -187,7 +197,10 @@ public class PushMessageToAndroidRequest extends Request {
         }
 
         /**
-         * TargetValue.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder targetValue(String targetValue) {
             this.putQueryParameter("TargetValue", targetValue);
@@ -196,7 +209,10 @@ public class PushMessageToAndroidRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my title</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPushRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>QueryPushRecordsResponseBody</p>
@@ -150,6 +151,12 @@ public class QueryPushRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryPushRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPushRecordsResponseBody</p>
+     */
     public static class PushInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppKey")
         private Long appKey;
@@ -371,6 +378,12 @@ public class QueryPushRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryPushRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPushRecordsResponseBody</p>
+     */
     public static class PushInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PushInfo")
         private java.util.List < PushInfo> pushInfo;

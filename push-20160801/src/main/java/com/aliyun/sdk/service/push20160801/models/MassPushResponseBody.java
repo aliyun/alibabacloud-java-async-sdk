@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MassPushResponseBody} extends {@link TeaModel}
  *
  * <p>MassPushResponseBody</p>
@@ -70,6 +71,12 @@ public class MassPushResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link MassPushResponseBody} extends {@link TeaModel}
+     *
+     * <p>MassPushResponseBody</p>
+     */
     public static class MessageIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MessageId")
         private java.util.List < String > messageId;
