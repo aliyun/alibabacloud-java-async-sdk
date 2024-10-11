@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadStreamByURLRequest} extends {@link RequestModel}
  *
  * <p>UploadStreamByURLRequest</p>
@@ -126,10 +127,12 @@ public class UploadStreamByURLRequest extends Request {
         } 
 
         /**
-         * The quality of the video stream.
-         * <p>
+         * <p>The quality of the video stream.</p>
+         * <p>For more information about valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/124671.html">Parameters for media assets</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about valid values of this parameter, see [Parameters for media assets](~~124671~~).
+         * <strong>example:</strong>
+         * <p>HD</p>
          */
         public Builder definition(String definition) {
             this.putQueryParameter("Definition", definition);
@@ -138,14 +141,15 @@ public class UploadStreamByURLRequest extends Request {
         }
 
         /**
-         * The file name extension of the transcoded stream.
-         * <p>
+         * <p>The file name extension of the transcoded stream.</p>
+         * <p>For more information, see the Supported media file formats section in <a href="https://help.aliyun.com/document_detail/55396.html">Overview</a>.</p>
+         * <p>If you set a value for this parameter, the file name extension specified in StreamURL is overwritten.</p>
+         * <blockquote>
+         * <p> This parameter is required if you do not specify a file name extension in StreamURL.</p>
+         * </blockquote>
          * 
-         * For more information, see the Supported media file formats section in [Overview](~~55396~~).
-         * 
-         * If you set a value for this parameter, the file name extension specified in StreamURL is overwritten.
-         * 
-         * >  This parameter is required if you do not specify a file name extension in StreamURL.
+         * <strong>example:</strong>
+         * <p>mp4</p>
          */
         public Builder fileExtension(String fileExtension) {
             this.putQueryParameter("FileExtension", fileExtension);
@@ -154,21 +158,26 @@ public class UploadStreamByURLRequest extends Request {
         }
 
         /**
-         * The HDR type of the transcoded stream. Valid values:
-         * <p>
+         * <p>The HDR type of the transcoded stream. Valid values:</p>
+         * <ul>
+         * <li>HDR</li>
+         * <li>HDR10</li>
+         * <li>HLG</li>
+         * <li>DolbyVision</li>
+         * <li>HDRVivid</li>
+         * <li>SDR+</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The HDR type of the transcoded stream is not case-sensitive.</p>
+         * </li>
+         * <li><p>You can leave this parameter empty for non-HDR streams.</p>
+         * </li>
+         * </ul>
          * 
-         * *   HDR
-         * *   HDR10
-         * *   HLG
-         * *   DolbyVision
-         * *   HDRVivid
-         * *   SDR+
-         * 
-         * > 
-         * 
-         * *   The HDR type of the transcoded stream is not case-sensitive.
-         * 
-         * *   You can leave this parameter empty for non-HDR streams.
+         * <strong>example:</strong>
+         * <p>HDR10</p>
          */
         public Builder HDRType(String HDRType) {
             this.putQueryParameter("HDRType", HDRType);
@@ -177,7 +186,11 @@ public class UploadStreamByURLRequest extends Request {
         }
 
         /**
-         * The media ID in ApsaraVideo VOD.
+         * <p>The media ID in ApsaraVideo VOD.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca3a8f6e49*****57b65806709586</p>
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);
@@ -186,10 +199,12 @@ public class UploadStreamByURLRequest extends Request {
         }
 
         /**
-         * The URL of the transcoded stream.
-         * <p>
+         * <p>The URL of the transcoded stream.</p>
+         * <p>If URL authentication is required, you must pass authentication information in this parameter and make sure that the URL can be accessed over the Internet.</p>
+         * <p>This parameter is required.</p>
          * 
-         * If URL authentication is required, you must pass authentication information in this parameter and make sure that the URL can be accessed over the Internet.
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/lesson-01.mp4">https://example.com/lesson-01.mp4</a></p>
          */
         public Builder streamURL(String streamURL) {
             this.putQueryParameter("StreamURL", streamURL);
@@ -198,10 +213,13 @@ public class UploadStreamByURLRequest extends Request {
         }
 
         /**
-         * The user-defined parameter. For more information, see the "UserData: specifies the custom configurations for media upload" section of the [Request parameters](~~86952~~) topic.
-         * <p>
+         * <p>The user-defined parameter. For more information, see the &quot;UserData: specifies the custom configurations for media upload&quot; section of the <a href="https://help.aliyun.com/document_detail/86952.html">Request parameters</a> topic.</p>
+         * <blockquote>
+         * <p> The callback configurations you specify for this parameter take effect only after you specify the HTTP callback URL and select specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see <a href="https://help.aliyun.com/document_detail/86071.html">Configure callback settings</a>.</p>
+         * </blockquote>
          * 
-         * >  The callback configurations you specify for this parameter take effect only after you specify the HTTP callback URL and select specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see [Configure callback settings](~~86071~~).
+         * <strong>example:</strong>
+         * <p>{&quot;MessageCallback&quot;:{&quot;CallbackURL&quot;:&quot;<a href="http://aliyundoc.com%22%7D">http://aliyundoc.com&quot;}</a>, &quot;Extend&quot;:{&quot;localId&quot;:&quot;xxx&quot;,&quot;test&quot;:&quot;www&quot;}}</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddVodStorageForAppResponseBody} extends {@link TeaModel}
  *
  * <p>AddVodStorageForAppResponseBody</p>
@@ -49,7 +50,10 @@ public class AddVodStorageForAppResponseBody extends TeaModel {
         private String storageLocation; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4A*****F6-D7393642CA58</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class AddVodStorageForAppResponseBody extends TeaModel {
         }
 
         /**
-         * The address of the VOD bucket.
+         * <p>The address of the VOD bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>out-****.oss-cn-shanghai.aliyuncs.com</p>
          */
         public Builder storageLocation(String storageLocation) {
             this.storageLocation = storageLocation;

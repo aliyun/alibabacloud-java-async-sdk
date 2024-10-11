@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodDomainUsageDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVodDomainUsageDataResponseBody</p>
@@ -121,7 +122,10 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
         private UsageDataPerInterval usageDataPerInterval; 
 
         /**
-         * The billable region where the data was collected.
+         * <p>The billable region where the data was collected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         public Builder area(String area) {
             this.area = area;
@@ -129,7 +133,10 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The time interval between the entries returned. Unit: seconds.
+         * <p>The time interval between the entries returned. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -137,7 +144,10 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -145,7 +155,10 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the time range during which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+         * <p>The end of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-10T12:20:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -153,7 +166,10 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B955107D-E658-4E77-****-E0AC3D31693E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -161,7 +177,10 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The start of the time range during which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+         * <p>The start of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-10T10:20:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -169,11 +188,14 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the data. Valid values:
-         * <p>
+         * <p>The type of the data. Valid values:</p>
+         * <ul>
+         * <li><strong>bps</strong>: bandwidth</li>
+         * <li><strong>traf</strong>: traffic</li>
+         * </ul>
          * 
-         * *   **bps**: bandwidth
-         * *   **traf**: traffic
+         * <strong>example:</strong>
+         * <p>static</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -181,7 +203,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The traffic or bandwidth data returned at each interval.
+         * <p>The traffic or bandwidth data returned at each interval.</p>
          */
         public Builder usageDataPerInterval(UsageDataPerInterval usageDataPerInterval) {
             this.usageDataPerInterval = usageDataPerInterval;
@@ -194,6 +216,12 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVodDomainUsageDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodDomainUsageDataResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
@@ -233,7 +261,10 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The timestamp of the returned data. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The timestamp of the returned data. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-12-10T10:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -241,7 +272,10 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * The traffic or bandwidth data. Unit: bit/s.
+             * <p>The traffic or bandwidth data. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2592.3920000000003</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -255,6 +289,12 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodDomainUsageDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodDomainUsageDataResponseBody</p>
+     */
     public static class UsageDataPerInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;

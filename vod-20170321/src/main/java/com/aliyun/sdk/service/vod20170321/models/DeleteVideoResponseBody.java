@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteVideoResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteVideoResponseBody</p>
@@ -61,9 +62,10 @@ public class DeleteVideoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IDs of the videos that cannot be deleted.
-         * <p>
-         * > Generally, videos cannot be deleted if you do not have the required [permissions](~~113600~~).
+         * <p>The IDs of the videos that cannot be deleted.</p>
+         * <blockquote>
+         * <p>Generally, videos cannot be deleted if you do not have the required <a href="https://help.aliyun.com/document_detail/113600.html">permissions</a>.</p>
+         * </blockquote>
          */
         public Builder forbiddenVideoIds(java.util.List < String > forbiddenVideoIds) {
             this.forbiddenVideoIds = forbiddenVideoIds;
@@ -71,9 +73,10 @@ public class DeleteVideoResponseBody extends TeaModel {
         }
 
         /**
-         * The IDs of the videos that do not exist.
-         * <p>
-         * > If the list of videos to be deleted contains one or more videos that do not exist, the IDs of these non-existing videos are returned. If none of the videos in the list exists, a 404 error is returned.
+         * <p>The IDs of the videos that do not exist.</p>
+         * <blockquote>
+         * <p>If the list of videos to be deleted contains one or more videos that do not exist, the IDs of these non-existing videos are returned. If none of the videos in the list exists, a 404 error is returned.</p>
+         * </blockquote>
          */
         public Builder nonExistVideoIds(java.util.List < String > nonExistVideoIds) {
             this.nonExistVideoIds = nonExistVideoIds;
@@ -81,7 +84,10 @@ public class DeleteVideoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E4EBD2BF-5EB0-4476-8829-9D94E1B1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

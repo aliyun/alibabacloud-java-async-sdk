@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodCertificateListRequest} extends {@link RequestModel}
  *
  * <p>DescribeVodCertificateListRequest</p>
@@ -81,7 +82,10 @@ public class DescribeVodCertificateListRequest extends Request {
         } 
 
         /**
-         * The domain name for CDN.
+         * <p>The domain name for CDN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

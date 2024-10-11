@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyVodDomainOwnerResponseBody} extends {@link TeaModel}
  *
  * <p>VerifyVodDomainOwnerResponseBody</p>
@@ -49,7 +50,10 @@ public class VerifyVodDomainOwnerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The verification content.
+         * <p>The verification content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>verify_dffeb661*********a59c32cd91f</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -57,7 +61,10 @@ public class VerifyVodDomainOwnerResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E4EBD2BF-5EB0-4476-8829-9D94E1B1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

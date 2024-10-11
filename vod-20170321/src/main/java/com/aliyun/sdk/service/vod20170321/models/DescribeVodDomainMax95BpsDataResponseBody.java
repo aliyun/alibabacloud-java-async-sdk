@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodDomainMax95BpsDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVodDomainMax95BpsDataResponseBody</p>
@@ -190,6 +191,12 @@ public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVodDomainMax95BpsDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodDomainMax95BpsDataResponseBody</p>
+     */
     public static class Max95Detail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Area")
         private String area;
@@ -291,6 +298,12 @@ public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodDomainMax95BpsDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodDomainMax95BpsDataResponseBody</p>
+     */
     public static class DetailData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Max95Detail")
         private java.util.List < Max95Detail> max95Detail;

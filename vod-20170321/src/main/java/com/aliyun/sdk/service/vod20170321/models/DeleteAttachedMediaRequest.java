@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAttachedMediaRequest} extends {@link RequestModel}
  *
  * <p>DeleteAttachedMediaRequest</p>
@@ -54,11 +55,15 @@ public class DeleteAttachedMediaRequest extends Request {
         } 
 
         /**
-         * The ID of the auxiliary media asset that you want to delete.
-         * <p>
+         * <p>The ID of the auxiliary media asset that you want to delete.</p>
+         * <ul>
+         * <li>Separate multiple IDs with commas (,). You can specify up to 20 IDs.</li>
+         * <li>You can obtain the ID from the response to the <a href="~~CreateUploadAttachedMedia~~">CreateUploadAttachedMedia</a> operation that you call to obtain the upload URL and credential.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Separate multiple IDs with commas (,). You can specify up to 20 IDs.
-         * *   You can obtain the ID from the response to the [CreateUploadAttachedMedia](~~CreateUploadAttachedMedia~~) operation that you call to obtain the upload URL and credential.
+         * <strong>example:</strong>
+         * <p>8bc8e94fe4e55abde85718****,eb186180e989dd56****</p>
          */
         public Builder mediaIds(String mediaIds) {
             this.putQueryParameter("MediaIds", mediaIds);

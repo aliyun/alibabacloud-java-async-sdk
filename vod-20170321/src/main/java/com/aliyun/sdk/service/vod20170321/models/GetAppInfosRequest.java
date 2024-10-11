@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAppInfosRequest} extends {@link RequestModel}
  *
  * <p>GetAppInfosRequest</p>
@@ -54,11 +55,15 @@ public class GetAppInfosRequest extends Request {
         } 
 
         /**
-         * The IDs of applications. You can obtain application IDs from the response to the [CreateAppInfo](~~113266~~) or [ListAppInfo](~~114000~~) operation.
-         * <p>
+         * <p>The IDs of applications. You can obtain application IDs from the response to the <a href="https://help.aliyun.com/document_detail/113266.html">CreateAppInfo</a> or <a href="https://help.aliyun.com/document_detail/114000.html">ListAppInfo</a> operation.</p>
+         * <ul>
+         * <li>You can specify a maximum of 10 application IDs.</li>
+         * <li>Separate application IDs with commas (,).</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   You can specify a maximum of 10 application IDs.
-         * *   Separate application IDs with commas (,).
+         * <strong>example:</strong>
+         * <p>app-****</p>
          */
         public Builder appIds(String appIds) {
             this.putQueryParameter("AppIds", appIds);

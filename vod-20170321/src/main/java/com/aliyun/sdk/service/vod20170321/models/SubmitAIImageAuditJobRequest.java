@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitAIImageAuditJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitAIImageAuditJobRequest</p>
@@ -139,14 +140,20 @@ public class SubmitAIImageAuditJobRequest extends Request {
         } 
 
         /**
-         * The configuration information about the review job.
-         * <p>
+         * <p>The configuration information about the review job.</p>
+         * <ul>
+         * <li>Other configuration items of the review job. Only the ResourceType field is supported. This field is used to specify the type of media files. You can adjust review standards and rules based on the type of media files.</li>
+         * <li>The value of ResourceType can contain only letters, digits, and underscores (_).</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>You can specify a value for the ResourceType field based on the preceding limits. After you specify a value for the ResourceType field, you must <a href="https://yida.alibaba-inc.com/o/ticketapply">submit a ticket</a>. The value takes effect after Alibaba Cloud processes your ticket.</li>
+         * <li>If you want to change moderation policies and rules based on ResourceType, <a href="https://yida.alibaba-inc.com/o/ticketapply">submit a ticket</a> to contact technical support.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   Other configuration items of the review job. Only the ResourceType field is supported. This field is used to specify the type of media files. You can adjust review standards and rules based on the type of media files.
-         * *   The value of ResourceType can contain only letters, digits, and underscores (\_).
-         * 
-         * > *   You can specify a value for the ResourceType field based on the preceding limits. After you specify a value for the ResourceType field, you must [submit a ticket](https://yida.alibaba-inc.com/o/ticketapply). The value takes effect after Alibaba Cloud processes your ticket.
-         * >*   If you want to change moderation policies and rules based on ResourceType, [submit a ticket](https://yida.alibaba-inc.com/o/ticketapply) to contact technical support.
+         * <strong>example:</strong>
+         * <p>{&quot;ResourceType&quot;:&quot;****_short_video&quot;}</p>
          */
         public Builder mediaAuditConfiguration(String mediaAuditConfiguration) {
             this.putQueryParameter("MediaAuditConfiguration", mediaAuditConfiguration);
@@ -155,10 +162,12 @@ public class SubmitAIImageAuditJobRequest extends Request {
         }
 
         /**
-         * The ID of the image.
-         * <p>
+         * <p>The ID of the image.</p>
+         * <p>The unique ID of the image is returned after the image is uploaded to ApsaraVideo VOD.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The unique ID of the image is returned after the image is uploaded to ApsaraVideo VOD.
+         * <strong>example:</strong>
+         * <p>f1aa3024aee64*****6dc8ca20dbc320</p>
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);
@@ -203,11 +212,15 @@ public class SubmitAIImageAuditJobRequest extends Request {
         }
 
         /**
-         * The ID of the AI template. You can use one of the following methods to obtain the ID:
-         * <p>
+         * <p>The ID of the AI template. You can use one of the following methods to obtain the ID:</p>
+         * <ul>
+         * <li>Obtain the value of TemplateId from the response to the <a href="https://help.aliyun.com/document_detail/102930.html">AddAITemplate</a> operation that you call to create an AI template.</li>
+         * <li>Obtain the value of TemplateId from the response to the <a href="https://help.aliyun.com/document_detail/102936.html">ListAITemplate</a> operation that you call to create an AI template.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Obtain the value of TemplateId from the response to the [AddAITemplate](~~102930~~) operation that you call to create an AI template.
-         * *   Obtain the value of TemplateId from the response to the [ListAITemplate](~~102936~~) operation that you call to create an AI template.
+         * <strong>example:</strong>
+         * <p>VOD-0003-00****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

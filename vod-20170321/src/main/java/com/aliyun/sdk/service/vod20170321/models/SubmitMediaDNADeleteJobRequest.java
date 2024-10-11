@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitMediaDNADeleteJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitMediaDNADeleteJobRequest</p>
@@ -110,7 +111,11 @@ public class SubmitMediaDNADeleteJobRequest extends Request {
         } 
 
         /**
-         * The ID of the video.
+         * <p>The ID of the video.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>656eaaa8c43a4597******1f09a36</p>
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);

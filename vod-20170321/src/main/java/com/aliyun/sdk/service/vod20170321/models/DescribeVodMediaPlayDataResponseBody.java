@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodMediaPlayDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVodMediaPlayDataResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.pageNo = pageNo;
@@ -93,7 +97,10 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,7 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder qoeInfoList(java.util.List < QoeInfoList> qoeInfoList) {
             this.qoeInfoList = qoeInfoList;
@@ -109,7 +116,10 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4AF6-D7393642CA58****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVodMediaPlayDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodMediaPlayDataResponseBody</p>
+     */
     public static class QoeInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DAU")
         private Float DAU;
@@ -241,7 +260,10 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
             private String videoTitle; 
 
             /**
-             * The number of visits to the audio or video per day.
+             * <p>The number of visits to the audio or video per day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder DAU(Float DAU) {
                 this.DAU = DAU;
@@ -249,7 +271,10 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the media file (VideoId).
+             * <p>The ID of the media file (VideoId).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9ae2af636ca6c10412f44891fc****</p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -257,7 +282,10 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
             }
 
             /**
-             * The total playback duration of the audio or video. Unit: seconds.
+             * <p>The total playback duration of the audio or video. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2400</p>
              */
             public Builder playDuration(Float playDuration) {
                 this.playDuration = playDuration;
@@ -265,7 +293,10 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
             }
 
             /**
-             * The average playback duration of the audio or video per viewer. Unit: seconds.
+             * <p>The average playback duration of the audio or video per viewer. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder playDurationPerUv(Float playDurationPerUv) {
                 this.playDurationPerUv = playDurationPerUv;
@@ -273,7 +304,10 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of times that the audio or video was played per viewer.
+             * <p>The average number of times that the audio or video was played per viewer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder playPerVv(Float playPerVv) {
                 this.playPerVv = playPerVv;
@@ -281,7 +315,10 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of times the audio or video has been played.
+             * <p>The total number of times the audio or video has been played.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder playSuccessVv(Float playSuccessVv) {
                 this.playSuccessVv = playSuccessVv;
@@ -289,7 +326,10 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the audio or video file. Unit: seconds.
+             * <p>The duration of the audio or video file. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>246</p>
              */
             public Builder videoDuration(Float videoDuration) {
                 this.videoDuration = videoDuration;
@@ -297,7 +337,10 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the audio or video file.
+             * <p>The name of the audio or video file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>title</p>
              */
             public Builder videoTitle(String videoTitle) {
                 this.videoTitle = videoTitle;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateImageInfosResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateImageInfosResponseBody</p>
@@ -49,7 +50,7 @@ public class UpdateImageInfosResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IDs of the images that do not exist.
+         * <p>The IDs of the images that do not exist.</p>
          */
         public Builder nonExistImageIds(NonExistImageIds nonExistImageIds) {
             this.nonExistImageIds = nonExistImageIds;
@@ -57,7 +58,10 @@ public class UpdateImageInfosResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4AF6-D7393642CA58****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class UpdateImageInfosResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateImageInfosResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateImageInfosResponseBody</p>
+     */
     public static class NonExistImageIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private java.util.List < String > imageId;

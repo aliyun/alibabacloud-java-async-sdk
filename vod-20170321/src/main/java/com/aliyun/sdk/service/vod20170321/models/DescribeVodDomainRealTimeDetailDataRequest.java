@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodDomainRealTimeDetailDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeVodDomainRealTimeDetailDataRequest</p>
@@ -169,7 +170,11 @@ public class DescribeVodDomainRealTimeDetailDataRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name. You can specify a maximum of 20 accelerated domain names in each call. Separate domain names with commas (,).
+         * <p>The accelerated domain name. You can specify a maximum of 20 accelerated domain names in each call. Separate domain names with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -178,10 +183,12 @@ public class DescribeVodDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * The end of the time range to query.
-         * <p>
+         * <p>The end of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2019-11-30T05:40:00Z.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2019-11-30T05:40:00Z.
+         * <strong>example:</strong>
+         * <p>2019-01-23T12:40:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -190,10 +197,12 @@ public class DescribeVodDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * The type of data that you want to query. You can specify multiple data types and separate them with commas (,). Valid values:
-         * <p>
+         * <p>The type of data that you want to query. You can specify multiple data types and separate them with commas (,). Valid values:</p>
+         * <p>qps: the number of queries per second bps: bandwidth data http_code: HTTP status codes</p>
+         * <p>This parameter is required.</p>
          * 
-         * qps: the number of queries per second bps: bandwidth data http_code: HTTP status codes
+         * <strong>example:</strong>
+         * <p>bps</p>
          */
         public Builder field(String field) {
             this.putQueryParameter("Field", field);
@@ -202,7 +211,10 @@ public class DescribeVodDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * The name of the Internet service provider (ISP).
+         * <p>The name of the Internet service provider (ISP).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>unicom</p>
          */
         public Builder ispNameEn(String ispNameEn) {
             this.putQueryParameter("IspNameEn", ispNameEn);
@@ -211,7 +223,10 @@ public class DescribeVodDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * The name of the region. If you do not specify a region, data in all regions is queried.
+         * <p>The name of the region. If you do not specify a region, data in all regions is queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>shanghai</p>
          */
         public Builder locationNameEn(String locationNameEn) {
             this.putQueryParameter("LocationNameEn", locationNameEn);
@@ -220,10 +235,11 @@ public class DescribeVodDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * Specifies whether to return a summary value. Valid values:
-         * <p>
+         * <p>Specifies whether to return a summary value. Valid values:</p>
+         * <p>true false (default)</p>
          * 
-         * true false (default)
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder merge(String merge) {
             this.putQueryParameter("Merge", merge);
@@ -232,13 +248,15 @@ public class DescribeVodDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * Specifies whether to return a summary value. Valid values:
-         * <p>
+         * <p>Specifies whether to return a summary value. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: groups the results by domain name and merges the results by region and ISP.</li>
+         * <li><strong>false</strong>: groups the results by domain name.</li>
+         * </ul>
+         * <p>Default value: <strong>false</strong>.</p>
          * 
-         * *   **true**: groups the results by domain name and merges the results by region and ISP.
-         * *   **false**: groups the results by domain name.
-         * 
-         * Default value: **false**.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder mergeLocIsp(String mergeLocIsp) {
             this.putQueryParameter("MergeLocIsp", mergeLocIsp);
@@ -256,10 +274,12 @@ public class DescribeVodDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
-         * <p>
+         * <p>The beginning of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2019-11-30T05:33:00Z.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2019-11-30T05:33:00Z.
+         * <strong>example:</strong>
+         * <p>2019-01-23T12:35:12Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

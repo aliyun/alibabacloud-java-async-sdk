@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVideoListRequest} extends {@link RequestModel}
  *
  * <p>GetVideoListRequest</p>
@@ -151,12 +152,15 @@ public class GetVideoListRequest extends Request {
         } 
 
         /**
-         * The ID of the category. You can use one of the following methods to obtain the category ID:
-         * <p>
+         * <p>The ID of the category. You can use one of the following methods to obtain the category ID:</p>
+         * <ul>
+         * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Configuration Management</strong> &gt; <strong>Media Management</strong> &gt; <strong>Categories</strong> to view the category ID.</li>
+         * <li>Obtain the value of CateId from the response to the <a href="https://help.aliyun.com/document_detail/56401.html">AddCategory</a> operation.</li>
+         * <li>Obtain the value of CateId from the response to the <a href="https://help.aliyun.com/document_detail/56406.html">GetCategories</a> operation.</li>
+         * </ul>
          * 
-         * *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Management** > **Categories** to view the category ID.
-         * *   Obtain the value of CateId from the response to the [AddCategory](~~56401~~) operation.
-         * *   Obtain the value of CateId from the response to the [GetCategories](~~56406~~) operation.
+         * <strong>example:</strong>
+         * <p>781111</p>
          */
         public Builder cateId(Long cateId) {
             this.putQueryParameter("CateId", cateId);
@@ -165,7 +169,10 @@ public class GetVideoListRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-01-11T12:59:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -174,7 +181,10 @@ public class GetVideoListRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -183,7 +193,10 @@ public class GetVideoListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**. Maximum value: **100**.
+         * <p>The number of entries to return on each page. Default value: <strong>10</strong>. Maximum value: <strong>100</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -192,11 +205,14 @@ public class GetVideoListRequest extends Request {
         }
 
         /**
-         * The sorting method of the results. Valid values:
-         * <p>
+         * <p>The sorting method of the results. Valid values:</p>
+         * <ul>
+         * <li><strong>CreationTime:Desc</strong> (default): The results are sorted in reverse chronological order based on the creation time.</li>
+         * <li><strong>CreationTime:Asc</strong>: The results are sorted in chronological order based on the creation time.</li>
+         * </ul>
          * 
-         * *   **CreationTime:Desc** (default): The results are sorted in reverse chronological order based on the creation time.
-         * *   **CreationTime:Asc**: The results are sorted in chronological order based on the creation time.
+         * <strong>example:</strong>
+         * <p>CreationTime:Asc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -205,7 +221,10 @@ public class GetVideoListRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-01-11T12:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -214,20 +233,22 @@ public class GetVideoListRequest extends Request {
         }
 
         /**
-         * The status of the video. You can specify multiple video statuses and separate them with commas (,). Valid values:
-         * <p>
+         * <p>The status of the video. You can specify multiple video statuses and separate them with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>Uploading</strong>: The video is being uploaded.</li>
+         * <li><strong>UploadFail</strong>: The video failed to be uploaded.</li>
+         * <li><strong>UploadSucc</strong>: The video has been uploaded.</li>
+         * <li><strong>Transcoding</strong>: The video is being transcoded.</li>
+         * <li><strong>TranscodeFail</strong>: The video failed to be transcoded.</li>
+         * <li><strong>checking</strong>: The video is being reviewed.</li>
+         * <li><strong>Blocked</strong>: The video is blocked.</li>
+         * <li><strong>Normal</strong>: The video is normal.</li>
+         * <li><strong>ProduceFail</strong>: The video failed to be produced.</li>
+         * </ul>
+         * <p>For more information about each video status, see the &quot;Status: the status of a video&quot; section of the <a href="~~52839#section-p7c-jgy-070~~">Basic data types</a> topic.</p>
          * 
-         * *   **Uploading**: The video is being uploaded.
-         * *   **UploadFail**: The video failed to be uploaded.
-         * *   **UploadSucc**: The video has been uploaded.
-         * *   **Transcoding**: The video is being transcoded.
-         * *   **TranscodeFail**: The video failed to be transcoded.
-         * *   **checking**: The video is being reviewed.
-         * *   **Blocked**: The video is blocked.
-         * *   **Normal**: The video is normal.
-         * *   **ProduceFail**: The video failed to be produced.
-         * 
-         * For more information about each video status, see the "Status: the status of a video" section of the [Basic data types](~~52839#section-p7c-jgy-070~~) topic.
+         * <strong>example:</strong>
+         * <p>Uploading,Normal</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -236,7 +257,10 @@ public class GetVideoListRequest extends Request {
         }
 
         /**
-         * The storage address of the media file.
+         * <p>The storage address of the media file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>out-****.oss-cn-shanghai.aliyuncs.com</p>
          */
         public Builder storageLocation(String storageLocation) {
             this.putQueryParameter("StorageLocation", storageLocation);

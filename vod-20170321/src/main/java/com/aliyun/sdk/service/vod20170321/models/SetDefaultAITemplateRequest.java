@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDefaultAITemplateRequest} extends {@link RequestModel}
  *
  * <p>SetDefaultAITemplateRequest</p>
@@ -54,7 +55,11 @@ public class SetDefaultAITemplateRequest extends Request {
         } 
 
         /**
-         * TemplateId.
+         * <p>The ID of the AI template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1706a0063dd733f6a823ef32e0a5****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

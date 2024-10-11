@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAuditSecurityIpResponseBody} extends {@link TeaModel}
  *
  * <p>ListAuditSecurityIpResponseBody</p>
@@ -49,7 +50,10 @@ public class ListAuditSecurityIpResponseBody extends TeaModel {
         private java.util.List < SecurityIpList> securityIpList; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>664BBD08-C7DB-4E*****73-9D0958D9A899</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ListAuditSecurityIpResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the review security group.
+         * <p>The details of the review security group.</p>
          */
         public Builder securityIpList(java.util.List < SecurityIpList> securityIpList) {
             this.securityIpList = securityIpList;
@@ -70,6 +74,12 @@ public class ListAuditSecurityIpResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAuditSecurityIpResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAuditSecurityIpResponseBody</p>
+     */
     public static class SecurityIpList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -133,7 +143,10 @@ public class ListAuditSecurityIpResponseBody extends TeaModel {
             private String securityGroupName; 
 
             /**
-             * The time when the review security group was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the review security group was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-05-22T06:54:23Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -141,7 +154,10 @@ public class ListAuditSecurityIpResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses in the review security group.
+             * <p>The IP addresses in the review security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30.27.14.0/24,30.39.127.245</p>
              */
             public Builder ips(String ips) {
                 this.ips = ips;
@@ -149,7 +165,10 @@ public class ListAuditSecurityIpResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the review security group was last modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the review security group was last modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-05-22T06:55:14Z</p>
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -157,7 +176,10 @@ public class ListAuditSecurityIpResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the review security group.
+             * <p>The name of the review security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default</p>
              */
             public Builder securityGroupName(String securityGroupName) {
                 this.securityGroupName = securityGroupName;

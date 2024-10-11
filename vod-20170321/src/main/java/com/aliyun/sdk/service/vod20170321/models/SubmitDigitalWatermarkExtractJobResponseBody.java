@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitDigitalWatermarkExtractJobResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitDigitalWatermarkExtractJobResponseBody</p>
@@ -49,7 +50,10 @@ public class SubmitDigitalWatermarkExtractJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the watermark extraction job.
+         * <p>The ID of the watermark extraction job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ad90a501b1b9472374ad005046****</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -57,7 +61,10 @@ public class SubmitDigitalWatermarkExtractJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-****-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

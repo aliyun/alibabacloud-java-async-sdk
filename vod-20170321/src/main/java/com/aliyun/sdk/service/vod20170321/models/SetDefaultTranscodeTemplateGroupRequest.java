@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDefaultTranscodeTemplateGroupRequest} extends {@link RequestModel}
  *
  * <p>SetDefaultTranscodeTemplateGroupRequest</p>
@@ -54,7 +55,11 @@ public class SetDefaultTranscodeTemplateGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the transcoding template group.
+         * <p>The ID of the transcoding template group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d58079958be8d*****b699ab7ab6e1bf</p>
          */
         public Builder transcodeTemplateGroupId(String transcodeTemplateGroupId) {
             this.putQueryParameter("TranscodeTemplateGroupId", transcodeTemplateGroupId);

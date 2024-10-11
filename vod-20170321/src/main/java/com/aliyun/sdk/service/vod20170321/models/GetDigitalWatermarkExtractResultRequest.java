@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDigitalWatermarkExtractResultRequest} extends {@link RequestModel}
  *
  * <p>GetDigitalWatermarkExtractResultRequest</p>
@@ -139,11 +140,15 @@ public class GetDigitalWatermarkExtractResultRequest extends Request {
         } 
 
         /**
-         * The type of the watermark. Valid values:
-         * <p>
+         * <p>The type of the watermark. Valid values:</p>
+         * <ul>
+         * <li><strong>TraceMark</strong>: user-tracing watermark</li>
+         * <li><strong>CopyrightMark</strong>: copyright watermark</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **TraceMark**: user-tracing watermark
-         * *   **CopyrightMark**: copyright watermark
+         * <strong>example:</strong>
+         * <p>TraceMark</p>
          */
         public Builder extractType(String extractType) {
             this.putQueryParameter("ExtractType", extractType);
@@ -152,11 +157,14 @@ public class GetDigitalWatermarkExtractResultRequest extends Request {
         }
 
         /**
-         * The ID of the watermark extraction job.
-         * <p>
+         * <p>The ID of the watermark extraction job.</p>
+         * <ul>
+         * <li>You can obtain the ID from the response to the <a href="~~SubmitDigitalWatermarkExtractJob~~">SubmitDigitalWatermarkExtractJob</a> operation.</li>
+         * <li>If you specify this parameter, the result of the specified watermark extraction job is returned. If you leave this parameter empty, the results of all watermark extraction jobs submitted for the video are returned.</li>
+         * </ul>
          * 
-         * *   You can obtain the ID from the response to the [SubmitDigitalWatermarkExtractJob](~~SubmitDigitalWatermarkExtractJob~~) operation.
-         * *   If you specify this parameter, the result of the specified watermark extraction job is returned. If you leave this parameter empty, the results of all watermark extraction jobs submitted for the video are returned.
+         * <strong>example:</strong>
+         * <p>2bf4390af9e5491c09cc720ad****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -165,11 +173,15 @@ public class GetDigitalWatermarkExtractResultRequest extends Request {
         }
 
         /**
-         * The ID of the video from which you want to query the watermark content. You can specify only one ID. You can use one of the following methods to obtain the ID:
-         * <p>
+         * <p>The ID of the video from which you want to query the watermark content. You can specify only one ID. You can use one of the following methods to obtain the ID:</p>
+         * <ul>
+         * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong> to view the video ID.</li>
+         * <li>Obtain the VideoId from the response to the <a href="~~SearchMedia~~">SearchMedia</a> operation.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Media Files** > **Audio/Video** to view the video ID.
-         * *   Obtain the VideoId from the response to the [SearchMedia](~~SearchMedia~~) operation.
+         * <strong>example:</strong>
+         * <p>93ab850b4f6f54b6e91d24d81d4****</p>
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAppInfoRequest} extends {@link RequestModel}
  *
  * <p>UpdateAppInfoRequest</p>
@@ -96,11 +97,15 @@ public class UpdateAppInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the application.
-         * <p>
+         * <p>The ID of the application.</p>
+         * <ul>
+         * <li>Default value: <strong>app-1000000</strong>.</li>
+         * <li>For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Default value: **app-1000000**.
-         * *   For more information, see [Overview](~~113600~~).
+         * <strong>example:</strong>
+         * <p>app-****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -109,11 +114,14 @@ public class UpdateAppInfoRequest extends Request {
         }
 
         /**
-         * The name of the application.
-         * <p>
+         * <p>The name of the application.</p>
+         * <ul>
+         * <li>The name can contain up to 128 characters in length, including Chinese letters, digits, and periods (.), dash (-), and at character (@).</li>
+         * <li>The name can contain only UTF-8 characters.</li>
+         * </ul>
          * 
-         * *   The name can contain up to 128 characters in length, including Chinese letters, digits, and periods (.), dash (-), and at character (@).
-         * *   The name can contain only UTF-8 characters.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -122,11 +130,14 @@ public class UpdateAppInfoRequest extends Request {
         }
 
         /**
-         * The description of the application.
-         * <p>
+         * <p>The description of the application.</p>
+         * <ul>
+         * <li>The description can contain up to 512 characters in length.</li>
+         * <li>The description can contain only UTF-8 characters.</li>
+         * </ul>
          * 
-         * *   The description can contain up to 512 characters in length.
-         * *   The description can contain only UTF-8 characters.
+         * <strong>example:</strong>
+         * <p>my first app.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -135,11 +146,14 @@ public class UpdateAppInfoRequest extends Request {
         }
 
         /**
-         * The status of the application. Valid values:
-         * <p>
+         * <p>The status of the application. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong></li>
+         * <li><strong>Disable</strong></li>
+         * </ul>
          * 
-         * *   **Normal**
-         * *   **Disable**
+         * <strong>example:</strong>
+         * <p>Disable</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

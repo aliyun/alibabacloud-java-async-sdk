@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDynamicImageResponseBody} extends {@link TeaModel}
  *
  * <p>ListDynamicImageResponseBody</p>
@@ -49,7 +50,7 @@ public class ListDynamicImageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of animated stickers.
+         * <p>The list of animated stickers.</p>
          */
         public Builder dynamicImageList(java.util.List < DynamicImageList> dynamicImageList) {
             this.dynamicImageList = dynamicImageList;
@@ -57,7 +58,10 @@ public class ListDynamicImageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>570189B6-572E-4953-13B4278EE0D8****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListDynamicImageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDynamicImageResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDynamicImageResponseBody</p>
+     */
     public static class DynamicImageList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -217,7 +227,10 @@ public class ListDynamicImageResponseBody extends TeaModel {
             private String width; 
 
             /**
-             * The time when the animated sticker was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the animated sticker was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-07-28T02:01:06Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -225,7 +238,10 @@ public class ListDynamicImageResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the animated sticker. Unit: seconds.
+             * <p>The duration of the animated sticker. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -233,7 +249,10 @@ public class ListDynamicImageResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the animated sticker.
+             * <p>The ID of the animated sticker.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2b4e51df60323ef43d6e336ecf****</p>
              */
             public Builder dynamicImageId(String dynamicImageId) {
                 this.dynamicImageId = dynamicImageId;
@@ -241,7 +260,10 @@ public class ListDynamicImageResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the animated sticker file. Unit: byte.
+             * <p>The size of the animated sticker file. Unit: byte.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>119866</p>
              */
             public Builder fileSize(String fileSize) {
                 this.fileSize = fileSize;
@@ -249,7 +271,10 @@ public class ListDynamicImageResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the animated sticker file.
+             * <p>The URL of the animated sticker file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.aliyundoc.com/2e114f110059*****0c3193918fd449a/image/dynamic/2b4e51df60*****323ef43d6e336ecf.webp?auth_key=1597296785-0-0-4a48e85*****bd2bb358e0b3cade">https://example.aliyundoc.com/2e114f110059*****0c3193918fd449a/image/dynamic/2b4e51df60*****323ef43d6e336ecf.webp?auth_key=1597296785-0-0-4a48e85*****bd2bb358e0b3cade</a></p>
              */
             public Builder fileURL(String fileURL) {
                 this.fileURL = fileURL;
@@ -257,7 +282,10 @@ public class ListDynamicImageResponseBody extends TeaModel {
             }
 
             /**
-             * The format of the animated sticker. Valid values: gif and webp.
+             * <p>The format of the animated sticker. Valid values: gif and webp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>webp</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -265,7 +293,10 @@ public class ListDynamicImageResponseBody extends TeaModel {
             }
 
             /**
-             * The frame rate of the animated sticker. Unit: frames per second.
+             * <p>The frame rate of the animated sticker. Unit: frames per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -273,7 +304,10 @@ public class ListDynamicImageResponseBody extends TeaModel {
             }
 
             /**
-             * The height of the animated sticker. Unit: pixel.
+             * <p>The height of the animated sticker. Unit: pixel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>360</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -281,7 +315,10 @@ public class ListDynamicImageResponseBody extends TeaModel {
             }
 
             /**
-             * The job ID for creating the animated sticker.
+             * <p>The job ID for creating the animated sticker.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2bf4390af9e5491c09cc720ad****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -289,7 +326,10 @@ public class ListDynamicImageResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the video.
+             * <p>The ID of the video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2e114f1100590c3193918fd449a****</p>
              */
             public Builder videoId(String videoId) {
                 this.videoId = videoId;
@@ -297,7 +337,10 @@ public class ListDynamicImageResponseBody extends TeaModel {
             }
 
             /**
-             * The width of the animated sticker. Unit: pixel.
+             * <p>The width of the animated sticker. Unit: pixel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>640</p>
              */
             public Builder width(String width) {
                 this.width = width;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RestoreMediaResponseBody} extends {@link TeaModel}
  *
  * <p>RestoreMediaResponseBody</p>
@@ -73,7 +74,7 @@ public class RestoreMediaResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The IDs of the media asset that failed to be processed.
+         * <p>The IDs of the media asset that failed to be processed.</p>
          */
         public Builder forbiddenList(ForbiddenList forbiddenList) {
             this.forbiddenList = forbiddenList;
@@ -81,7 +82,7 @@ public class RestoreMediaResponseBody extends TeaModel {
         }
 
         /**
-         * The IDs of the media assets that failed to be obtained.
+         * <p>The IDs of the media assets that failed to be obtained.</p>
          */
         public Builder ignoredList(IgnoredList ignoredList) {
             this.ignoredList = ignoredList;
@@ -89,7 +90,10 @@ public class RestoreMediaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8E70E3F8-E2EE-47BC-4677-379D6F28****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +101,10 @@ public class RestoreMediaResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -110,6 +117,12 @@ public class RestoreMediaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RestoreMediaResponseBody} extends {@link TeaModel}
+     *
+     * <p>RestoreMediaResponseBody</p>
+     */
     public static class MediaForbiddenReasonDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
@@ -149,7 +162,10 @@ public class RestoreMediaResponseBody extends TeaModel {
             private String reason; 
 
             /**
-             * The ID of the media asset.
+             * <p>The ID of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fa10ee70898671edb99f6eb3690d****</p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -157,7 +173,10 @@ public class RestoreMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The reason for the failure.
+             * <p>The reason for the failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Forbidden.RestoreMedia</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -171,6 +190,12 @@ public class RestoreMediaResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RestoreMediaResponseBody} extends {@link TeaModel}
+     *
+     * <p>RestoreMediaResponseBody</p>
+     */
     public static class ForbiddenList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MediaForbiddenReasonDTO")
         private java.util.List < MediaForbiddenReasonDTO> mediaForbiddenReasonDTO;
@@ -212,6 +237,12 @@ public class RestoreMediaResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RestoreMediaResponseBody} extends {@link TeaModel}
+     *
+     * <p>RestoreMediaResponseBody</p>
+     */
     public static class IgnoredList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MediaId")
         private java.util.List < String > mediaId;
@@ -239,7 +270,10 @@ public class RestoreMediaResponseBody extends TeaModel {
             private java.util.List < String > mediaId; 
 
             /**
-             * The ID of the media asset.
+             * <p>The ID of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fa10ee70898671edb99f6eb3690d****</p>
              */
             public Builder mediaId(java.util.List < String > mediaId) {
                 this.mediaId = mediaId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCategoryRequest} extends {@link RequestModel}
  *
  * <p>UpdateCategoryRequest</p>
@@ -69,11 +70,15 @@ public class UpdateCategoryRequest extends Request {
         } 
 
         /**
-         * The ID of the category. You can specify only one ID. You can use one of the following methods to obtain the ID:
-         * <p>
+         * <p>The ID of the category. You can specify only one ID. You can use one of the following methods to obtain the ID:</p>
+         * <ul>
+         * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. Choose <strong>Configuration Management</strong> &gt; <strong>Media Management</strong> &gt; <strong>Categories</strong>. On the <strong>Audio and Video / Image Category</strong> or <strong>Short Video Material Category</strong> tab, view the category ID.</li>
+         * <li>Obtain the category ID from the response to the <a href="~~AddCategory~~">AddCategory</a> operation.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). Choose **Configuration Management** > **Media Management** > **Categories**. On the **Audio and Video / Image Category** or **Short Video Material Category** tab, view the category ID.
-         * *   Obtain the category ID from the response to the [AddCategory](~~AddCategory~~) operation.
+         * <strong>example:</strong>
+         * <p>10020****</p>
          */
         public Builder cateId(Long cateId) {
             this.putQueryParameter("CateId", cateId);
@@ -82,11 +87,15 @@ public class UpdateCategoryRequest extends Request {
         }
 
         /**
-         * The name of the category.
-         * <p>
+         * <p>The name of the category.</p>
+         * <ul>
+         * <li>The value can be up to 64 bytes in length.</li>
+         * <li>The value must be encoded in UTF-8.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The value can be up to 64 bytes in length.
-         * *   The value must be encoded in UTF-8.
+         * <strong>example:</strong>
+         * <p>beauty</p>
          */
         public Builder cateName(String cateName) {
             this.putQueryParameter("CateName", cateName);

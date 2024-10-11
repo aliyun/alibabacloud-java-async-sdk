@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DecryptKMSDataKeyRequest} extends {@link RequestModel}
  *
  * <p>DecryptKMSDataKeyRequest</p>
@@ -110,7 +111,11 @@ public class DecryptKMSDataKeyRequest extends Request {
         } 
 
         /**
-         * The ciphertext to be decrypted.
+         * <p>The ciphertext to be decrypted.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DZhOWVmZDktM2QxNi00ODk0LWJkNGYtMWZjNDNmM2YyYWJmaaSl+TztSIMe43nbTH/Z1Wr4XfLftKhAciUmDQXuMRl4WTvKhxjMThjK****</p>
          */
         public Builder cipherText(String cipherText) {
             this.putQueryParameter("CipherText", cipherText);

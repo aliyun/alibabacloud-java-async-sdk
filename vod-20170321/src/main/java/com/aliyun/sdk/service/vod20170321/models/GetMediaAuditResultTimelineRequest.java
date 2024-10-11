@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMediaAuditResultTimelineRequest} extends {@link RequestModel}
  *
  * <p>GetMediaAuditResultTimelineRequest</p>
@@ -54,7 +55,11 @@ public class GetMediaAuditResultTimelineRequest extends Request {
         } 
 
         /**
-         * The ID of the video.
+         * <p>The ID of the video.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93ab850b4f6f*****54b6e91d24d81d4</p>
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodAIDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVodAIDataResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The statistics on video AI.
+         * <p>The statistics on video AI.</p>
          */
         public Builder AIData(AIData AIData) {
             this.AIData = AIData;
@@ -69,11 +70,14 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
         }
 
         /**
-         * The time granularity at which the data was queried. Valid values:
-         * <p>
+         * <p>The time granularity at which the data was queried. Valid values:</p>
+         * <ul>
+         * <li><strong>hour</strong></li>
+         * <li><strong>day</strong></li>
+         * </ul>
          * 
-         * *   **hour**
-         * *   **day**
+         * <strong>example:</strong>
+         * <p>day</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -81,7 +85,10 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C370DAF1-C838-4288-****-9A87633D248E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -94,6 +101,12 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVodAIDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodAIDataResponseBody</p>
+     */
     public static class DataItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -133,12 +146,15 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The type of video AI. Valid values:
-             * <p>
+             * <p>The type of video AI. Valid values:</p>
+             * <ul>
+             * <li><strong>AIVideoCensor</strong>: automated review</li>
+             * <li><strong>AIVideoFPShot</strong>: media fingerprinting</li>
+             * <li><strong>AIVideoTag</strong>: smart tagging</li>
+             * </ul>
              * 
-             * *   **AIVideoCensor**: automated review
-             * *   **AIVideoFPShot**: media fingerprinting
-             * *   **AIVideoTag**: smart tagging
+             * <strong>example:</strong>
+             * <p>AIVideoCensor</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -146,7 +162,10 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
             }
 
             /**
-             * The processing duration. Unit: seconds.
+             * <p>The processing duration. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -160,6 +179,12 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodAIDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodAIDataResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataItem")
         private java.util.List < DataItem> dataItem;
@@ -201,6 +226,12 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodAIDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodAIDataResponseBody</p>
+     */
     public static class AIDataItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private Data data;
@@ -240,7 +271,7 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * The statistics on video AI of each type.
+             * <p>The statistics on video AI of each type.</p>
              */
             public Builder data(Data data) {
                 this.data = data;
@@ -248,7 +279,10 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the returned data. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+             * <p>The timestamp of the returned data. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-02-01T13:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -262,6 +296,12 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodAIDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodAIDataResponseBody</p>
+     */
     public static class AIData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AIDataItem")
         private java.util.List < AIDataItem> AIDataItem;

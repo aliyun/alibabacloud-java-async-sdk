@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodDomainSrcBpsDataResponse} extends {@link TeaModel}
  *
  * <p>DescribeVodDomainSrcBpsDataResponse</p>

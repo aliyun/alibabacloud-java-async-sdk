@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAuditSecurityIpRequest} extends {@link RequestModel}
  *
  * <p>ListAuditSecurityIpRequest</p>
@@ -53,7 +54,10 @@ public class ListAuditSecurityIpRequest extends Request {
         } 
 
         /**
-         * The name of the review security group in which you want to query IP addresses. If you do not specify this parameter, IP addresses in all review security groups are queried.
+         * <p>The name of the review security group in which you want to query IP addresses. If you do not specify this parameter, IP addresses in all review security groups are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         public Builder securityGroupName(String securityGroupName) {
             this.putQueryParameter("SecurityGroupName", securityGroupName);

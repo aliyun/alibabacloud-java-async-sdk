@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMezzaninesResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteMezzaninesResponseBody</p>
@@ -61,7 +62,7 @@ public class DeleteMezzaninesResponseBody extends TeaModel {
         private java.util.List < String > unRemoveableVideoIds; 
 
         /**
-         * The IDs of the audio or video files that do not exist.
+         * <p>The IDs of the audio or video files that do not exist.</p>
          */
         public Builder nonExistVideoIds(java.util.List < String > nonExistVideoIds) {
             this.nonExistVideoIds = nonExistVideoIds;
@@ -69,7 +70,10 @@ public class DeleteMezzaninesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4AF6-D7393642CA58****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,10 +81,10 @@ public class DeleteMezzaninesResponseBody extends TeaModel {
         }
 
         /**
-         * The IDs of the audio or video files whose source files cannot be deleted.
-         * <p>
-         * 
-         * >  In most cases, source files cannot be deleted if they are used for original-quality playback or you do not have required permissions to delete them. For more information, see [Overview](~~113600~~).
+         * <p>The IDs of the audio or video files whose source files cannot be deleted.</p>
+         * <blockquote>
+         * <p> In most cases, source files cannot be deleted if they are used for original-quality playback or you do not have required permissions to delete them. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</p>
+         * </blockquote>
          */
         public Builder unRemoveableVideoIds(java.util.List < String > unRemoveableVideoIds) {
             this.unRemoveableVideoIds = unRemoveableVideoIds;

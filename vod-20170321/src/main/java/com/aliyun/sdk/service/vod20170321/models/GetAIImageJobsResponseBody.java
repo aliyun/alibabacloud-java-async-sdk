@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAIImageJobsResponseBody} extends {@link TeaModel}
  *
  * <p>GetAIImageJobsResponseBody</p>
@@ -49,7 +50,7 @@ public class GetAIImageJobsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The image AI processing jobs.
+         * <p>The image AI processing jobs.</p>
          */
         public Builder AIImageJobList(java.util.List < AIImageJobList> AIImageJobList) {
             this.AIImageJobList = AIImageJobList;
@@ -57,7 +58,10 @@ public class GetAIImageJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7721B494-1F78-4E*****E8-A7CEE7315BFA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetAIImageJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAIImageJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAIImageJobsResponseBody</p>
+     */
     public static class AIImageJobList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AIImageResult")
         private String AIImageResult;
@@ -205,10 +215,13 @@ public class GetAIImageJobsResponseBody extends TeaModel {
             private String videoId; 
 
             /**
-             * The Object Storage Service (OSS) URL of the image file.
-             * <p>
+             * <p>The Object Storage Service (OSS) URL of the image file.</p>
+             * <blockquote>
+             * <p>This parameter does not include the complete authentication information. To obtain the authentication information, you must generate a signed URL. Alternatively, you can call the <a href="~~ListAIImageInfo~~">ListAIImageInfo</a> operation to obtain the image information.</p>
+             * </blockquote>
              * 
-             * > This parameter does not include the complete authentication information. To obtain the authentication information, you must generate a signed URL. Alternatively, you can call the [ListAIImageInfo](~~ListAIImageInfo~~) operation to obtain the image information.
+             * <strong>example:</strong>
+             * <p>[{&quot;Score&quot;:5.035636554444242,&quot;Url&quot;:&quot;<a href="http://outin-*****.oss-cn-shanghai.aliyuncs.com/357a8748c577*****789d2726e6436aa/image/ai/b0a7612554d*****5cbe3-00001.gif%22%7D%5D">http://outin-*****.oss-cn-shanghai.aliyuncs.com/357a8748c577*****789d2726e6436aa/image/ai/b0a7612554d*****5cbe3-00001.gif&quot;}]</a></p>
              */
             public Builder AIImageResult(String AIImageResult) {
                 this.AIImageResult = AIImageResult;
@@ -216,7 +229,10 @@ public class GetAIImageJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The error code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -224,7 +240,10 @@ public class GetAIImageJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the image AI processing job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the image AI processing job was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-15T03:30:03Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -232,7 +251,10 @@ public class GetAIImageJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image AI processing job.
+             * <p>The ID of the image AI processing job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cf08a2c6e11e*****de1711b738b9067</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -240,7 +262,10 @@ public class GetAIImageJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -248,11 +273,14 @@ public class GetAIImageJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the job. Valid values:
-             * <p>
+             * <p>The status of the job. Valid values:</p>
+             * <ul>
+             * <li><strong>success</strong></li>
+             * <li><strong>fail</strong></li>
+             * </ul>
              * 
-             * *   **success**
-             * *   **fail**
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -260,7 +288,10 @@ public class GetAIImageJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the AI template that was used to submit the job.
+             * <p>The configurations of the AI template that was used to submit the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Format&quot;:&quot;gif&quot;,&quot;SetDefaultCover&quot;:&quot;true&quot;}</p>
              */
             public Builder templateConfig(String templateConfig) {
                 this.templateConfig = templateConfig;
@@ -268,7 +299,10 @@ public class GetAIImageJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the AI template.
+             * <p>The ID of the AI template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5a86a00f15194*****d7fe7de1b4a173</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -276,14 +310,16 @@ public class GetAIImageJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The user data.
-             * <p>
+             * <p>The user data.</p>
+             * <ul>
+             * <li>The value must be a JSON string.</li>
+             * <li>The MessageCallback or Extend parameter is returned.</li>
+             * <li>The value contains a maximum of 512 bytes.</li>
+             * </ul>
+             * <p>For more information, see the &quot;UserData: specifies the custom configurations for media upload&quot; section of the <a href="https://help.aliyun.com/document_detail/86952.html">Request parameters</a> topic.</p>
              * 
-             * *   The value must be a JSON string.
-             * *   The MessageCallback or Extend parameter is returned.
-             * *   The value contains a maximum of 512 bytes.
-             * 
-             * For more information, see the "UserData: specifies the custom configurations for media upload" section of the [Request parameters](~~86952~~) topic.
+             * <strong>example:</strong>
+             * <p>{&quot;Extend&quot;:{&quot;localId&quot;:&quot;****&quot;,&quot;test&quot;:&quot;www&quot;}}</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -291,7 +327,10 @@ public class GetAIImageJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the video.
+             * <p>The ID of the video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>357a8748c577*****789d2726e6436aa</p>
              */
             public Builder videoId(String videoId) {
                 this.videoId = videoId;

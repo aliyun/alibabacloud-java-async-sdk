@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateVodTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateVodTemplateResponseBody</p>
@@ -49,7 +50,10 @@ public class UpdateVodTemplateResponseBody extends TeaModel {
         private String vodTemplateId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4A*****F6-D7393642CA58</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class UpdateVodTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the snapshot template.
+         * <p>The ID of the snapshot template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8c75a02e339b*****0b0d2c48171a22</p>
          */
         public Builder vodTemplateId(String vodTemplateId) {
             this.vodTemplateId = vodTemplateId;

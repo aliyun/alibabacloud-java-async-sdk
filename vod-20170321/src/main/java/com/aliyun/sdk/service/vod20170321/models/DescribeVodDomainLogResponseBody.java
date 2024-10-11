@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodDomainLogResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVodDomainLogResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of CDN logs.
+         * <p>The details of CDN logs.</p>
          */
         public Builder domainLogDetails(DomainLogDetails domainLogDetails) {
             this.domainLogDetails = domainLogDetails;
@@ -57,7 +58,10 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>077D0284-F041-4A41-4D3C-B48377FD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVodDomainLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodDomainLogResponseBody</p>
+     */
     public static class LogInfoDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
@@ -145,7 +155,10 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * The end of the time range during which data was queried. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+             * <p>The end of the time range during which data was queried. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-05-31T05:00:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -153,7 +166,10 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the log file.
+             * <p>The name of the log file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com_2018_03_25_180000_19****.gz</p>
              */
             public Builder logName(String logName) {
                 this.logName = logName;
@@ -161,7 +177,10 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the log file.
+             * <p>The path of the log file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com/2018_03_25/example.com_2018_03_25_180000_19****.gz?Expires=1522659931&amp;OSSAccessKeyId=<strong><strong>&amp;Signature=</strong></strong></p>
              */
             public Builder logPath(String logPath) {
                 this.logPath = logPath;
@@ -169,7 +188,10 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the log file.
+             * <p>The size of the log file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2645401</p>
              */
             public Builder logSize(Long logSize) {
                 this.logSize = logSize;
@@ -177,7 +199,10 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range during which data was queried. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+             * <p>The beginning of the time range during which data was queried. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-05-31T04:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -191,6 +216,12 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodDomainLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodDomainLogResponseBody</p>
+     */
     public static class LogInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogInfoDetail")
         private java.util.List < LogInfoDetail> logInfoDetail;
@@ -232,6 +263,12 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodDomainLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodDomainLogResponseBody</p>
+     */
     public static class PageInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Long pageNumber;
@@ -283,7 +320,10 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -291,7 +331,10 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -299,7 +342,10 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder total(Long total) {
                 this.total = total;
@@ -313,6 +359,12 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodDomainLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodDomainLogResponseBody</p>
+     */
     public static class DomainLogDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
@@ -376,7 +428,10 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             private PageInfos pageInfos; 
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -384,7 +439,10 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned on the current page.
+             * <p>The total number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder logCount(Long logCount) {
                 this.logCount = logCount;
@@ -392,7 +450,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * The queried CDN logs.
+             * <p>The queried CDN logs.</p>
              */
             public Builder logInfos(LogInfos logInfos) {
                 this.logInfos = logInfos;
@@ -400,7 +458,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * The pagination information.
+             * <p>The pagination information.</p>
              */
             public Builder pageInfos(PageInfos pageInfos) {
                 this.pageInfos = pageInfos;
@@ -414,6 +472,12 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodDomainLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodDomainLogResponseBody</p>
+     */
     public static class DomainLogDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainLogDetail")
         private java.util.List < DomainLogDetail> domainLogDetail;

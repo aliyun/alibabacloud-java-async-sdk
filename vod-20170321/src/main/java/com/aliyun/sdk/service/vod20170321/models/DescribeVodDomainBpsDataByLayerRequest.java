@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodDomainBpsDataByLayerRequest} extends {@link RequestModel}
  *
  * <p>DescribeVodDomainBpsDataByLayerRequest</p>
@@ -151,7 +152,10 @@ public class DescribeVodDomainBpsDataByLayerRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name. You can specify a maximum of 500 accelerated domain names. Separate multiple domain names with commas (,).
+         * <p>The accelerated domain name. You can specify a maximum of 500 accelerated domain names. Separate multiple domain names with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -160,10 +164,11 @@ public class DescribeVodDomainBpsDataByLayerRequest extends Request {
         }
 
         /**
-         * The end of the time range to query.
-         * <p>
+         * <p>The end of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <strong>example:</strong>
+         * <p>2019-01-23T12:40:12Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -172,10 +177,11 @@ public class DescribeVodDomainBpsDataByLayerRequest extends Request {
         }
 
         /**
-         * The time interval between the data entries. Unit: seconds.
-         * <p>
+         * <p>The time interval between the data entries. Unit: seconds.</p>
+         * <p>The time granularity varies based on the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see the supported time granularity described in Usage notes.</p>
          * 
-         * The time granularity varies based on the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see the supported time granularity described in Usage notes.
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -184,7 +190,10 @@ public class DescribeVodDomainBpsDataByLayerRequest extends Request {
         }
 
         /**
-         * The name of the Internet service provider (ISP).
+         * <p>The name of the Internet service provider (ISP).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>unicom</p>
          */
         public Builder ispNameEn(String ispNameEn) {
             this.putQueryParameter("IspNameEn", ispNameEn);
@@ -193,10 +202,11 @@ public class DescribeVodDomainBpsDataByLayerRequest extends Request {
         }
 
         /**
-         * The layer at which you want to query the data.
-         * <p>
+         * <p>The layer at which you want to query the data.</p>
+         * <p>Network layer: IPv4 and IPv6. Application layer: http, https, and quic. all: specifies that both the network and application layers are included. Default value: all.</p>
          * 
-         * Network layer: IPv4 and IPv6. Application layer: http, https, and quic. all: specifies that both the network and application layers are included. Default value: all.
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         public Builder layer(String layer) {
             this.putQueryParameter("Layer", layer);
@@ -205,7 +215,10 @@ public class DescribeVodDomainBpsDataByLayerRequest extends Request {
         }
 
         /**
-         * The name of the region.
+         * <p>The name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>beijing</p>
          */
         public Builder locationNameEn(String locationNameEn) {
             this.putQueryParameter("LocationNameEn", locationNameEn);
@@ -223,10 +236,11 @@ public class DescribeVodDomainBpsDataByLayerRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
-         * <p>
+         * <p>The beginning of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <strong>example:</strong>
+         * <p>2019-01-23T12:35:12Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

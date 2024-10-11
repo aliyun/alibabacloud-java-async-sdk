@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTranscodeTemplateGroupResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateTranscodeTemplateGroupResponseBody</p>
@@ -49,7 +50,10 @@ public class UpdateTranscodeTemplateGroupResponseBody extends TeaModel {
         private String transcodeTemplateGroupId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4A*****F6-D7393642CA58</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class UpdateTranscodeTemplateGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the transcoding template group.
+         * <p>The ID of the transcoding template group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34e908aa4024a*****f7821c31f93a2a</p>
          */
         public Builder transcodeTemplateGroupId(String transcodeTemplateGroupId) {
             this.transcodeTemplateGroupId = transcodeTemplateGroupId;

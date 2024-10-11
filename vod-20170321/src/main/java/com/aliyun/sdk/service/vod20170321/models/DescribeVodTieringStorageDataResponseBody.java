@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodTieringStorageDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVodTieringStorageDataResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeVodTieringStorageDataResponseBody extends TeaModel {
         private java.util.List < StorageData> storageData; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4AF6-D7393642CA58****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeVodTieringStorageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The storage usage data returned.
+         * <p>The storage usage data returned.</p>
          */
         public Builder storageData(java.util.List < StorageData> storageData) {
             this.storageData = storageData;
@@ -70,6 +74,12 @@ public class DescribeVodTieringStorageDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVodTieringStorageDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodTieringStorageDataResponseBody</p>
+     */
     public static class StorageData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LessthanMonthDatasize")
         private Long lessthanMonthDatasize;
@@ -145,7 +155,10 @@ public class DescribeVodTieringStorageDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * The data that is stored less than a month. Unit: bytes.
+             * <p>The data that is stored less than a month. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder lessthanMonthDatasize(Long lessthanMonthDatasize) {
                 this.lessthanMonthDatasize = lessthanMonthDatasize;
@@ -153,7 +166,10 @@ public class DescribeVodTieringStorageDataResponseBody extends TeaModel {
             }
 
             /**
-             * The region in which data is queried.
+             * <p>The region in which data is queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -161,7 +177,10 @@ public class DescribeVodTieringStorageDataResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type.
+             * <p>The storage type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IA</p>
              */
             public Builder storageClass(String storageClass) {
                 this.storageClass = storageClass;
@@ -169,7 +188,10 @@ public class DescribeVodTieringStorageDataResponseBody extends TeaModel {
             }
 
             /**
-             * The storage usage. Unit: bytes.
+             * <p>The storage usage. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder storageUtilization(Long storageUtilization) {
                 this.storageUtilization = storageUtilization;
@@ -177,7 +199,10 @@ public class DescribeVodTieringStorageDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the data returned. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-29T01:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

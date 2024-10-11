@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachAppPolicyToIdentityResponseBody} extends {@link TeaModel}
  *
  * <p>AttachAppPolicyToIdentityResponseBody</p>
@@ -61,7 +62,7 @@ public class AttachAppPolicyToIdentityResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The names of the policies that failed to be granted to the RAM user or RAM role.
+         * <p>The names of the policies that failed to be granted to the RAM user or RAM role.</p>
          */
         public Builder failedPolicyNames(java.util.List < String > failedPolicyNames) {
             this.failedPolicyNames = failedPolicyNames;
@@ -69,7 +70,7 @@ public class AttachAppPolicyToIdentityResponseBody extends TeaModel {
         }
 
         /**
-         * The names of the policies that were not found.
+         * <p>The names of the policies that were not found.</p>
          */
         public Builder nonExistPolicyNames(java.util.List < String > nonExistPolicyNames) {
             this.nonExistPolicyNames = nonExistPolicyNames;
@@ -77,7 +78,10 @@ public class AttachAppPolicyToIdentityResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4A13-****-D7393642CA58</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePlayVideoStatisResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePlayVideoStatisResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
         private VideoPlayStatisDetails videoPlayStatisDetails; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A92D3600-A3E7-43D6-****-B6E3B4A1FE6B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
         }
 
         /**
-         * The daily playback statistics on the video.
+         * <p>The daily playback statistics on the video.</p>
          */
         public Builder videoPlayStatisDetails(VideoPlayStatisDetails videoPlayStatisDetails) {
             this.videoPlayStatisDetails = videoPlayStatisDetails;
@@ -70,6 +74,12 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePlayVideoStatisResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePlayVideoStatisResponseBody</p>
+     */
     public static class VideoPlayStatisDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Date")
         private String date;
@@ -157,7 +167,10 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
             private String vv; 
 
             /**
-             * The date. The time follows the ISO 8601 standard in the *YYYY-MM-DD*T*hh:mm:ss* format. The time is displayed in UTC.
+             * <p>The date. The time follows the ISO 8601 standard in the <em>YYYY-MM-DD</em>T<em>hh:mm:ss</em> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20170120</p>
              */
             public Builder date(String date) {
                 this.date = date;
@@ -165,7 +178,10 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
             }
 
             /**
-             * The total playback duration. Unit: milliseconds.
+             * <p>The total playback duration. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>967277</p>
              */
             public Builder playDuration(String playDuration) {
                 this.playDuration = playDuration;
@@ -173,7 +189,10 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
             }
 
             /**
-             * The distribution of the playback duration.
+             * <p>The distribution of the playback duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&lt;=1m:79.2%;&gt;1&lt;=5m:16.7%;&gt;5&lt;=10m:4.2%</p>
              */
             public Builder playRange(String playRange) {
                 this.playRange = playRange;
@@ -181,7 +200,10 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
             }
 
             /**
-             * The video title.
+             * <p>The video title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Four streams (one stream encrypted): LD-HLS + SD-MP4 + HD-HLS-encrypted + UHD-MP4</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -189,7 +211,10 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
             }
 
             /**
-             * The number of unique visitors.
+             * <p>The number of unique visitors.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder uv(String uv) {
                 this.uv = uv;
@@ -197,7 +222,10 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
             }
 
             /**
-             * The number of video views.
+             * <p>The number of video views.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24</p>
              */
             public Builder vv(String vv) {
                 this.vv = vv;
@@ -211,6 +239,12 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePlayVideoStatisResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePlayVideoStatisResponseBody</p>
+     */
     public static class VideoPlayStatisDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VideoPlayStatisDetail")
         private java.util.List < VideoPlayStatisDetail> videoPlayStatisDetail;

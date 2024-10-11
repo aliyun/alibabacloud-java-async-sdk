@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefreshMediaPlayUrlsResponseBody} extends {@link TeaModel}
  *
  * <p>RefreshMediaPlayUrlsResponseBody</p>
@@ -73,7 +74,10 @@ public class RefreshMediaPlayUrlsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IDs of the media files that cannot be operated on. In most cases, media files cannot be operated on because you are not authorized to perform the operations. For more information, see [Overview](~~113600~~).
+         * <p>The IDs of the media files that cannot be operated on. In most cases, media files cannot be operated on because you are not authorized to perform the operations. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a6e49sfgd23p5g9ja7095863****</p>
          */
         public Builder forbiddenMediaIds(String forbiddenMediaIds) {
             this.forbiddenMediaIds = forbiddenMediaIds;
@@ -81,7 +85,10 @@ public class RefreshMediaPlayUrlsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the refresh or prefetch task.
+         * <p>The ID of the refresh or prefetch task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>41d465e31957****</p>
          */
         public Builder mediaRefreshJobId(String mediaRefreshJobId) {
             this.mediaRefreshJobId = mediaRefreshJobId;
@@ -89,7 +96,10 @@ public class RefreshMediaPlayUrlsResponseBody extends TeaModel {
         }
 
         /**
-         * The IDs of the media files that do not exist.
+         * <p>The IDs of the media files that do not exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca3a8f6e4957b658067095869****</p>
          */
         public Builder nonExistMediaIds(String nonExistMediaIds) {
             this.nonExistMediaIds = nonExistMediaIds;
@@ -97,7 +107,10 @@ public class RefreshMediaPlayUrlsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4AF6-04D5-D7393642****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

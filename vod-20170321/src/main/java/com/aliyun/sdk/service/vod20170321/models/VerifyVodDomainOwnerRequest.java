@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyVodDomainOwnerRequest} extends {@link RequestModel}
  *
  * <p>VerifyVodDomainOwnerRequest</p>
@@ -83,7 +84,11 @@ public class VerifyVodDomainOwnerRequest extends Request {
         } 
 
         /**
-         * The domain name of which you want to verify the ownership. You can specify only one domain name in each call.
+         * <p>The domain name of which you want to verify the ownership. You can specify only one domain name in each call.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -101,11 +106,15 @@ public class VerifyVodDomainOwnerRequest extends Request {
         }
 
         /**
-         * The verification method. Valid values:
-         * <p>
+         * <p>The verification method. Valid values:</p>
+         * <ul>
+         * <li><strong>dnsCheck</strong>: uses a Domain Name System (DNS) record</li>
+         * <li><strong>fileCheck</strong>: uses a verification file</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **dnsCheck**: uses a Domain Name System (DNS) record
-         * *   **fileCheck**: uses a verification file
+         * <strong>example:</strong>
+         * <p>dnsCheck</p>
          */
         public Builder verifyType(String verifyType) {
             this.putQueryParameter("VerifyType", verifyType);

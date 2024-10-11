@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodDomainMax95BpsDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeVodDomainMax95BpsDataRequest</p>

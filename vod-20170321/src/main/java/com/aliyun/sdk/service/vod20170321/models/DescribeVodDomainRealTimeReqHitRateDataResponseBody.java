@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodDomainRealTimeReqHitRateDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVodDomainRealTimeReqHitRateDataResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeVodDomainRealTimeReqHitRateDataResponseBody extends TeaMode
         private String requestId; 
 
         /**
-         * The returned results.
+         * <p>The returned results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class DescribeVodDomainRealTimeReqHitRateDataResponseBody extends TeaMode
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70A26B11-3673-479C-AEA8-E03FC5D3496D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeVodDomainRealTimeReqHitRateDataResponseBody extends TeaMode
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVodDomainRealTimeReqHitRateDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodDomainRealTimeReqHitRateDataResponseBody</p>
+     */
     public static class ReqHitRateDataModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReqHitRate")
         private Float reqHitRate;
@@ -109,7 +119,10 @@ public class DescribeVodDomainRealTimeReqHitRateDataResponseBody extends TeaMode
             private String timeStamp; 
 
             /**
-             * The cache hit ratio that is calculated based on requests. The cache hit ratio is measured in percentage.
+             * <p>The cache hit ratio that is calculated based on requests. The cache hit ratio is measured in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.8956940476262277</p>
              */
             public Builder reqHitRate(Float reqHitRate) {
                 this.reqHitRate = reqHitRate;
@@ -117,7 +130,10 @@ public class DescribeVodDomainRealTimeReqHitRateDataResponseBody extends TeaMode
             }
 
             /**
-             * The timestamp of the data returned. The time follows the ISO 8601 standard. The time is displayed in UTC.
+             * <p>The timestamp of the data returned. The time follows the ISO 8601 standard. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-02T11:26:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -131,6 +147,12 @@ public class DescribeVodDomainRealTimeReqHitRateDataResponseBody extends TeaMode
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodDomainRealTimeReqHitRateDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodDomainRealTimeReqHitRateDataResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReqHitRateDataModel")
         private java.util.List < ReqHitRateDataModel> reqHitRateDataModel;

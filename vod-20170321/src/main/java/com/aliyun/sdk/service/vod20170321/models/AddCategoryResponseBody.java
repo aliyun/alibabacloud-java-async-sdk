@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddCategoryResponseBody} extends {@link TeaModel}
  *
  * <p>AddCategoryResponseBody</p>
@@ -49,7 +50,7 @@ public class AddCategoryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the category.
+         * <p>The information about the category.</p>
          */
         public Builder category(Category category) {
             this.category = category;
@@ -57,7 +58,10 @@ public class AddCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4AF6-D7393642CA58****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class AddCategoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddCategoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddCategoryResponseBody</p>
+     */
     public static class Category extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CateId")
         private Long cateId;
@@ -145,7 +155,10 @@ public class AddCategoryResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The ID of the category. You can use the value of this parameter when you call the [UpdateCategory](~~UpdateCategory~~), [DeleteCategory](~~DeleteCategory~~), and [GetCategories](~~GetCategories~~) operations.
+             * <p>The ID of the category. You can use the value of this parameter when you call the <a href="~~UpdateCategory~~">UpdateCategory</a>, <a href="~~DeleteCategory~~">DeleteCategory</a>, and <a href="~~GetCategories~~">GetCategories</a> operations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10020</p>
              */
             public Builder cateId(Long cateId) {
                 this.cateId = cateId;
@@ -153,7 +166,10 @@ public class AddCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the category.
+             * <p>The name of the category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -161,12 +177,15 @@ public class AddCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the category. Valid values:
-             * <p>
+             * <p>The level of the category. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: level 1 category</li>
+             * <li><strong>1</strong>: level 2 category</li>
+             * <li><strong>1</strong>: level 3 category</li>
+             * </ul>
              * 
-             * *   **0**: level 1 category
-             * *   **1**: level 2 category
-             * *   **1**: level 3 category
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder level(Long level) {
                 this.level = level;
@@ -174,7 +193,10 @@ public class AddCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parent category.
+             * <p>The ID of the parent category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100012</p>
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;
@@ -182,11 +204,14 @@ public class AddCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the category. Valid values:
-             * <p>
+             * <p>The type of the category. Valid values:</p>
+             * <ul>
+             * <li><strong>default</strong>: audio, video, and image files</li>
+             * <li><strong>material</strong>: short video materials</li>
+             * </ul>
              * 
-             * *   **default**: audio, video, and image files
-             * *   **material**: short video materials
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder type(String type) {
                 this.type = type;

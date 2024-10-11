@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVodTemplateRequest} extends {@link RequestModel}
  *
  * <p>GetVodTemplateRequest</p>
@@ -54,7 +55,11 @@ public class GetVodTemplateRequest extends Request {
         } 
 
         /**
-         * The ID of the snapshot template.
+         * <p>The ID of the snapshot template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7c49f2f4c0969*****fcd446690</p>
          */
         public Builder vodTemplateId(String vodTemplateId) {
             this.putQueryParameter("VodTemplateId", vodTemplateId);

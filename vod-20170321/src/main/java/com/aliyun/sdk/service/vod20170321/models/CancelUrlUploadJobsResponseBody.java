@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelUrlUploadJobsResponseBody} extends {@link TeaModel}
  *
  * <p>CancelUrlUploadJobsResponseBody</p>
@@ -61,7 +62,7 @@ public class CancelUrlUploadJobsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IDs of canceled jobs.
+         * <p>The IDs of canceled jobs.</p>
          */
         public Builder canceledJobs(java.util.List < String > canceledJobs) {
             this.canceledJobs = canceledJobs;
@@ -69,7 +70,7 @@ public class CancelUrlUploadJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The jobs that do not exist.
+         * <p>The jobs that do not exist.</p>
          */
         public Builder nonExists(java.util.List < String > nonExists) {
             this.nonExists = nonExists;
@@ -77,7 +78,10 @@ public class CancelUrlUploadJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4D5C-3C3D-D7393642****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitAIImageJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitAIImageJobRequest</p>
@@ -153,10 +154,13 @@ public class SubmitAIImageJobRequest extends Request {
         } 
 
         /**
-         * The ID of the pipeline that is used for the AI processing job.
-         * <p>
+         * <p>The ID of the pipeline that is used for the AI processing job.</p>
+         * <blockquote>
+         * <p> This parameter is optional if you specify a default pipeline ID. If you want to use a separate pipeline to submit multiple AI processing jobs., submit a ticket or contact Alibaba Cloud after-sales engineers. For more information about how to submit a ticket, see <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is optional if you specify a default pipeline ID. If you want to use a separate pipeline to submit multiple AI processing jobs., submit a ticket or contact Alibaba Cloud after-sales engineers. For more information about how to submit a ticket, see [Contact us](~~464625~~).
+         * <strong>example:</strong>
+         * <p>6492025b8f*****6ba5bb755a33438</p>
          */
         public Builder AIPipelineId(String AIPipelineId) {
             this.putQueryParameter("AIPipelineId", AIPipelineId);
@@ -165,11 +169,15 @@ public class SubmitAIImageJobRequest extends Request {
         }
 
         /**
-         * The ID of the AI template. You can use one of the following methods to obtain the ID:
-         * <p>
+         * <p>The ID of the AI template. You can use one of the following methods to obtain the ID:</p>
+         * <ul>
+         * <li>Obtain the value of TemplateId from the response to the <a href="https://help.aliyun.com/document_detail/102930.html">AddAITemplate</a> that you call to create the template.</li>
+         * <li>Obtain the value of TemplateId from the response to the <a href="https://help.aliyun.com/document_detail/102936.html">ListAITemplate</a> operation after you create the template.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Obtain the value of TemplateId from the response to the [AddAITemplate](~~102930~~) that you call to create the template.
-         * *   Obtain the value of TemplateId from the response to the [ListAITemplate](~~102936~~) operation after you create the template.
+         * <strong>example:</strong>
+         * <p>ef1a8842cb9f*****cea80cad902e416</p>
          */
         public Builder AITemplateId(String AITemplateId) {
             this.putQueryParameter("AITemplateId", AITemplateId);
@@ -214,14 +222,16 @@ public class SubmitAIImageJobRequest extends Request {
         }
 
         /**
-         * The user data.
-         * <p>
+         * <p>The user data.</p>
+         * <ul>
+         * <li>The value must be a JSON string.</li>
+         * <li>You must specify the MessageCallback or Extend parameter.</li>
+         * <li>The value can contain a maximum of 512 bytes.</li>
+         * </ul>
+         * <p>For more information, see the &quot;UserData: specifies the custom configurations for media upload&quot; section of the <a href="https://help.aliyun.com/document_detail/86952.html">Request parameters</a> topic.</p>
          * 
-         * *   The value must be a JSON string.
-         * *   You must specify the MessageCallback or Extend parameter.
-         * *   The value can contain a maximum of 512 bytes.
-         * 
-         * For more information, see the "UserData: specifies the custom configurations for media upload" section of the [Request parameters](~~86952~~) topic.
+         * <strong>example:</strong>
+         * <p>{&quot;Extend&quot;:{&quot;localId&quot;:&quot;****&quot;,&quot;test&quot;:&quot;www&quot;}}</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -230,12 +240,16 @@ public class SubmitAIImageJobRequest extends Request {
         }
 
         /**
-         * The ID of the video. You can use one of the following methods to obtain the ID:
-         * <p>
+         * <p>The ID of the video. You can use one of the following methods to obtain the ID:</p>
+         * <ul>
+         * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD</a> console. In the left-side navigation pane, choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong>. On the Video and Audio page, view the ID of the video file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.</li>
+         * <li>Obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you call to upload the video.</li>
+         * <li>Obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation after you upload the video.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Log on to the [ApsaraVideo VOD](https://vod.console.aliyun.com) console. In the left-side navigation pane, choose **Media Files** > **Audio/Video**. On the Video and Audio page, view the ID of the video file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.
-         * *   Obtain the value of VideoId from the response to the [CreateUploadVideo](~~55407~~) operation that you call to upload the video.
-         * *   Obtain the value of VideoId from the response to the [SearchMedia](~~86044~~) operation after you upload the video.
+         * <strong>example:</strong>
+         * <p>357a8748c5774*****89d2726e6436aa</p>
          */
         public Builder videoId(String videoId) {
             this.putQueryParameter("VideoId", videoId);

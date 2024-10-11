@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAIImageInfoResponseBody} extends {@link TeaModel}
  *
  * <p>ListAIImageInfoResponseBody</p>
@@ -49,7 +50,7 @@ public class ListAIImageInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The image files that are uploaded for AI processing.
+         * <p>The image files that are uploaded for AI processing.</p>
          */
         public Builder AIImageInfoList(java.util.List < AIImageInfoList> AIImageInfoList) {
             this.AIImageInfoList = AIImageInfoList;
@@ -57,7 +58,10 @@ public class ListAIImageInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D73420CD-D221-9122-5B8FA995A511****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListAIImageInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAIImageInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAIImageInfoResponseBody</p>
+     */
     public static class AIImageInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AIImageInfoId")
         private String AIImageInfoId;
@@ -181,7 +191,10 @@ public class ListAIImageInfoResponseBody extends TeaModel {
             private String videoId; 
 
             /**
-             * The ID of the image information.
+             * <p>The ID of the image information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b89a6aabf1b6197ebd6fe6cf29****</p>
              */
             public Builder AIImageInfoId(String AIImageInfoId) {
                 this.AIImageInfoId = AIImageInfoId;
@@ -189,7 +202,10 @@ public class ListAIImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the file was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-15T03:30:03Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -197,7 +213,7 @@ public class ListAIImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the image file.
+             * <p>The URL of the image file.</p>
              */
             public Builder fileURL(String fileURL) {
                 this.fileURL = fileURL;
@@ -205,7 +221,10 @@ public class ListAIImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The format of the image. Valid values: **gif** and **png**.
+             * <p>The format of the image. Valid values: <strong>gif</strong> and <strong>png</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gif</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -213,7 +232,10 @@ public class ListAIImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image AI processing job.
+             * <p>The ID of the image AI processing job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cf08a2c6e11ee1711b738b9067****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -221,7 +243,10 @@ public class ListAIImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The score of the image.
+             * <p>The score of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.035636554444242</p>
              */
             public Builder score(String score) {
                 this.score = score;
@@ -229,7 +254,10 @@ public class ListAIImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The data version ID.
+             * <p>The data version ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b547f3f0e199c3b457369f3cf****</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -237,7 +265,10 @@ public class ListAIImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the video.
+             * <p>The ID of the video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>357a8748c5789d2726e6436aa****</p>
              */
             public Builder videoId(String videoId) {
                 this.videoId = videoId;

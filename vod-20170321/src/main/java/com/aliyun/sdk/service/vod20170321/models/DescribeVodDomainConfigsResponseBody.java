@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodDomainConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVodDomainConfigsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The configurations of the domain name.
+         * <p>The configurations of the domain name.</p>
          */
         public Builder domainConfigs(DomainConfigs domainConfigs) {
             this.domainConfigs = domainConfigs;
@@ -57,7 +58,10 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F8AA0364-0FDB-4AD5-****-D69FAB8924ED</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVodDomainConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodDomainConfigsResponseBody</p>
+     */
     public static class FunctionArg extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ArgName")
         private String argName;
@@ -109,7 +119,10 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
             private String argValue; 
 
             /**
-             * The parameter name.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>file_type</p>
              */
             public Builder argName(String argName) {
                 this.argName = argName;
@@ -117,7 +130,10 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The parameter value.
+             * <p>The parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>txt</p>
              */
             public Builder argValue(String argValue) {
                 this.argValue = argValue;
@@ -131,6 +147,12 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodDomainConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodDomainConfigsResponseBody</p>
+     */
     public static class FunctionArgs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FunctionArg")
         private java.util.List < FunctionArg> functionArg;
@@ -172,6 +194,12 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodDomainConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodDomainConfigsResponseBody</p>
+     */
     public static class DomainConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigId")
         private String configId;
@@ -235,7 +263,10 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The configuration ID.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5003576</p>
              */
             public Builder configId(String configId) {
                 this.configId = configId;
@@ -243,7 +274,7 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The feature parameters.
+             * <p>The feature parameters.</p>
              */
             public Builder functionArgs(FunctionArgs functionArgs) {
                 this.functionArgs = functionArgs;
@@ -251,7 +282,10 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The feature name.
+             * <p>The feature name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>set_req_host_header</p>
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -259,13 +293,16 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration status. Valid values:
-             * <p>
+             * <p>The configuration status. Valid values:</p>
+             * <ul>
+             * <li><strong>success</strong></li>
+             * <li><strong>testing</strong></li>
+             * <li><strong>failed</strong></li>
+             * <li><strong>configuring</strong></li>
+             * </ul>
              * 
-             * *   **success**
-             * *   **testing**
-             * *   **failed**
-             * *   **configuring**
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -279,6 +316,12 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodDomainConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodDomainConfigsResponseBody</p>
+     */
     public static class DomainConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainConfig")
         private java.util.List < DomainConfig> domainConfig;

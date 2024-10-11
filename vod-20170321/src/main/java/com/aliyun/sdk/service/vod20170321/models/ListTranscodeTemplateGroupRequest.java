@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTranscodeTemplateGroupRequest} extends {@link RequestModel}
  *
  * <p>ListTranscodeTemplateGroupRequest</p>
@@ -53,7 +54,10 @@ public class ListTranscodeTemplateGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).
+         * <p>The ID of the application. Default value: <strong>app-1000000</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);

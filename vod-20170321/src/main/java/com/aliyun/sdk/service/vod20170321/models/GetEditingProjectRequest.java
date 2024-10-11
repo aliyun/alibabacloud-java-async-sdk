@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEditingProjectRequest} extends {@link RequestModel}
  *
  * <p>GetEditingProjectRequest</p>
@@ -128,7 +129,11 @@ public class GetEditingProjectRequest extends Request {
         }
 
         /**
-         * The ID of the online editing project.
+         * <p>The ID of the online editing project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fb2101bf24b27*****54cb318787dc</p>
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);

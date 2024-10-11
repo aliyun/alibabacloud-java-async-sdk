@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCategoriesResponseBody} extends {@link TeaModel}
  *
  * <p>GetCategoriesResponseBody</p>
@@ -73,7 +74,7 @@ public class GetCategoriesResponseBody extends TeaModel {
         private Long subTotal; 
 
         /**
-         * The information about the category.
+         * <p>The information about the category.</p>
          */
         public Builder category(Category category) {
             this.category = category;
@@ -81,7 +82,10 @@ public class GetCategoriesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4AF6-D7393642CA58****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -89,7 +93,7 @@ public class GetCategoriesResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the subcategory.
+         * <p>The details of the subcategory.</p>
          */
         public Builder subCategories(SubCategories subCategories) {
             this.subCategories = subCategories;
@@ -97,7 +101,10 @@ public class GetCategoriesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of subcategories.
+         * <p>The total number of subcategories.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3795</p>
          */
         public Builder subTotal(Long subTotal) {
             this.subTotal = subTotal;
@@ -110,6 +117,12 @@ public class GetCategoriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCategoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCategoriesResponseBody</p>
+     */
     public static class Category extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CateId")
         private Long cateId;
@@ -185,7 +198,10 @@ public class GetCategoriesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The ID of the category.
+             * <p>The ID of the category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder cateId(Long cateId) {
                 this.cateId = cateId;
@@ -193,7 +209,10 @@ public class GetCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the category.
+             * <p>The name of the category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>film</p>
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -201,12 +220,15 @@ public class GetCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the category. Valid values:
-             * <p>
+             * <p>The level of the category. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: level 1 category</li>
+             * <li><strong>1</strong>: level 2 category</li>
+             * <li><strong>2</strong>: level 3 category</li>
+             * </ul>
              * 
-             * *   **0**: level 1 category
-             * *   **1**: level 2 category
-             * *   **2**: level 3 category
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder level(Long level) {
                 this.level = level;
@@ -214,7 +236,10 @@ public class GetCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parent category.
+             * <p>The ID of the parent category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100012****</p>
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;
@@ -222,11 +247,14 @@ public class GetCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the category. Valid values:
-             * <p>
+             * <p>The type of the category. Valid values:</p>
+             * <ul>
+             * <li><strong>default</strong>: audio, video, and image files</li>
+             * <li><strong>material</strong>: short video materials</li>
+             * </ul>
              * 
-             * *   **default**: audio, video, and image files
-             * *   **material**: short video materials
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -240,6 +268,12 @@ public class GetCategoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCategoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCategoriesResponseBody</p>
+     */
     public static class SubCategoriesCategory extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CateId")
         private Long cateId;
@@ -327,7 +361,10 @@ public class GetCategoriesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The ID of the category.
+             * <p>The ID of the category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder cateId(Long cateId) {
                 this.cateId = cateId;
@@ -335,7 +372,10 @@ public class GetCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the category.
+             * <p>The name of the category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>film</p>
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -343,12 +383,15 @@ public class GetCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the category. Valid values:
-             * <p>
+             * <p>The level of the category. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: level 1 category</li>
+             * <li><strong>1</strong>: level 2 category</li>
+             * <li><strong>2</strong>: level 3 category</li>
+             * </ul>
              * 
-             * *   **0**: level 1 category
-             * *   **1**: level 2 category
-             * *   **2**: level 3 category
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder level(Long level) {
                 this.level = level;
@@ -356,7 +399,10 @@ public class GetCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parent category.
+             * <p>The ID of the parent category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10020****</p>
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;
@@ -364,7 +410,10 @@ public class GetCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of subcategories.
+             * <p>The total number of subcategories.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder subTotal(Long subTotal) {
                 this.subTotal = subTotal;
@@ -372,11 +421,14 @@ public class GetCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the subcategory. Valid values:
-             * <p>
+             * <p>The type of the subcategory. Valid values:</p>
+             * <ul>
+             * <li><strong>default</strong>: audio, video, and image files</li>
+             * <li><strong>material</strong>: short video materials</li>
+             * </ul>
              * 
-             * *   **default**: audio, video, and image files
-             * *   **material**: short video materials
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -390,6 +442,12 @@ public class GetCategoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCategoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCategoriesResponseBody</p>
+     */
     public static class SubCategories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private java.util.List < SubCategoriesCategory> category;
@@ -417,7 +475,7 @@ public class GetCategoriesResponseBody extends TeaModel {
             private java.util.List < SubCategoriesCategory> category; 
 
             /**
-             * The information about the category.
+             * <p>The information about the category.</p>
              */
             public Builder category(java.util.List < SubCategoriesCategory> category) {
                 this.category = category;

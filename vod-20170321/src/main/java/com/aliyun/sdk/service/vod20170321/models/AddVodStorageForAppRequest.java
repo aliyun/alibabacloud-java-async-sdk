@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddVodStorageForAppRequest} extends {@link RequestModel}
  *
  * <p>AddVodStorageForAppRequest</p>
@@ -82,7 +83,11 @@ public class AddVodStorageForAppRequest extends Request {
         } 
 
         /**
-         * The IDs of applications. You can obtain the application ID from the `AppId` parameter in the response to the [CreateAppInfo](~~CreateAppInfo~~) or [ListAppInfo](~~ListAppInfo~~) operation.
+         * <p>The IDs of applications. You can obtain the application ID from the <code>AppId</code> parameter in the response to the <a href="~~CreateAppInfo~~">CreateAppInfo</a> or <a href="~~ListAppInfo~~">ListAppInfo</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -91,7 +96,10 @@ public class AddVodStorageForAppRequest extends Request {
         }
 
         /**
-         * The address of an Object Storage Service (OSS) bucket. This parameter does not take effect. You can call this operation to add only VOD buckets.
+         * <p>The address of an Object Storage Service (OSS) bucket. This parameter does not take effect. You can call this operation to add only VOD buckets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>out-****.oss-cn-shanghai.aliyuncs.com</p>
          */
         public Builder storageLocation(String storageLocation) {
             this.putQueryParameter("StorageLocation", storageLocation);
@@ -100,7 +108,10 @@ public class AddVodStorageForAppRequest extends Request {
         }
 
         /**
-         * The storage class. Default value: **vod_oss_bucket**.
+         * <p>The storage class. Default value: <strong>vod_oss_bucket</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vod_oss_bucket</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);

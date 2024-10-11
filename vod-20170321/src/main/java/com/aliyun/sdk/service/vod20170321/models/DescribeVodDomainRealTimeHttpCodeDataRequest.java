@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodDomainRealTimeHttpCodeDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeVodDomainRealTimeHttpCodeDataRequest</p>
@@ -124,12 +125,16 @@ public class DescribeVodDomainRealTimeHttpCodeDataRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name.
-         * <p>
+         * <p>The accelerated domain name.</p>
+         * <ul>
+         * <li>You can specify multiple domain names and separate them with commas (,). You can specify at most 100 domain names in each call.</li>
+         * <li>If you specify multiple domain names, merged data is returned.</li>
+         * <li>To obtain the accelerated domain name, perform the following steps: Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Configuration Management &gt; CDN Configuration &gt; Domain Names</strong>. On the Domain Names page, view the accelerated domain names. Alternatively, you can call the <a href="~~DescribeVodUserDomains~~">DescribeVodUserDomains</a> operation to query the accelerated domain names.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   You can specify multiple domain names and separate them with commas (,). You can specify at most 100 domain names in each call.
-         * *   If you specify multiple domain names, merged data is returned.
-         * *   To obtain the accelerated domain name, perform the following steps: Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management > CDN Configuration > Domain Names**. On the Domain Names page, view the accelerated domain names. Alternatively, you can call the [DescribeVodUserDomains](~~DescribeVodUserDomains~~) operation to query the accelerated domain names.
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -138,12 +143,14 @@ public class DescribeVodDomainRealTimeHttpCodeDataRequest extends Request {
         }
 
         /**
-         * The end of the time range to query.
-         * <p>
+         * <p>The end of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p> The end time must be later than the start time.</p>
+         * </blockquote>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * 
-         * >  The end time must be later than the start time.
+         * <strong>example:</strong>
+         * <p>2019-11-30T05:40:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -152,7 +159,10 @@ public class DescribeVodDomainRealTimeHttpCodeDataRequest extends Request {
         }
 
         /**
-         * The name of the ISP. If you do not set this parameter, all ISPs are queried.
+         * <p>The name of the ISP. If you do not set this parameter, all ISPs are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>unicom</p>
          */
         public Builder ispNameEn(String ispNameEn) {
             this.putQueryParameter("IspNameEn", ispNameEn);
@@ -161,7 +171,10 @@ public class DescribeVodDomainRealTimeHttpCodeDataRequest extends Request {
         }
 
         /**
-         * The name of the region. If you do not set this parameter, data in all regions is queried.
+         * <p>The name of the region. If you do not set this parameter, data in all regions is queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>shanghai</p>
          */
         public Builder locationNameEn(String locationNameEn) {
             this.putQueryParameter("LocationNameEn", locationNameEn);
@@ -179,10 +192,11 @@ public class DescribeVodDomainRealTimeHttpCodeDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
-         * <p>
+         * <p>The beginning of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <strong>example:</strong>
+         * <p>2019-11-30T05:39:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

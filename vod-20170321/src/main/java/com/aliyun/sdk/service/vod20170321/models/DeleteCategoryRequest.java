@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCategoryRequest} extends {@link RequestModel}
  *
  * <p>DeleteCategoryRequest</p>
@@ -54,13 +55,18 @@ public class DeleteCategoryRequest extends Request {
         } 
 
         /**
-         * The ID of the category. You can specify only one ID. You can use one of the following methods to obtain the ID:
-         * <p>
+         * <p>The ID of the category. You can specify only one ID. You can use one of the following methods to obtain the ID:</p>
+         * <ul>
+         * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. Choose <strong>Configuration Management</strong> &gt; <strong>Media Management</strong> &gt; <strong>Categories</strong>. On the Audio and Video / Image Category or Short Video Material Category tab, view the category ID.</li>
+         * <li>Obtain the category ID from the response to the <a href="~~AddCategory~~">AddCategory</a> operation.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you specify the ID of a parent category, all subcategories under the parent category are deleted at the same time.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). Choose **Configuration Management** > **Media Management** > **Categories**. On the Audio and Video / Image Category or Short Video Material Category tab, view the category ID.
-         * *   Obtain the category ID from the response to the [AddCategory](~~AddCategory~~) operation.
-         * 
-         * >  If you specify the ID of a parent category, all subcategories under the parent category are deleted at the same time.
+         * <strong>example:</strong>
+         * <p>3300****</p>
          */
         public Builder cateId(Long cateId) {
             this.putQueryParameter("CateId", cateId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodAIDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeVodAIDataRequest</p>
@@ -111,12 +112,15 @@ public class DescribeVodAIDataRequest extends Request {
         } 
 
         /**
-         * The type of video AI. If you leave this parameter empty, statistics on video AI of all types are returned. Separate multiple types with commas (,). Valid values:
-         * <p>
+         * <p>The type of video AI. If you leave this parameter empty, statistics on video AI of all types are returned. Separate multiple types with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>AIVideoCensor</strong>: automated review</li>
+         * <li><strong>AIVideoFPShot</strong>: media fingerprinting</li>
+         * <li><strong>AIVideoTag</strong>: smart tagging</li>
+         * </ul>
          * 
-         * *   **AIVideoCensor**: automated review
-         * *   **AIVideoFPShot**: media fingerprinting
-         * *   **AIVideoTag**: smart tagging
+         * <strong>example:</strong>
+         * <p>AIVideoCensor</p>
          */
         public Builder AIType(String AIType) {
             this.putQueryParameter("AIType", AIType);
@@ -125,7 +129,11 @@ public class DescribeVodAIDataRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
+         * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-02-01T15:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -143,13 +151,16 @@ public class DescribeVodAIDataRequest extends Request {
         }
 
         /**
-         * The region in which you want to query data. If you leave this parameter empty, data in all regions is returned. Separate multiple regions with commas (,). Valid values:
-         * <p>
+         * <p>The region in which you want to query data. If you leave this parameter empty, data in all regions is returned. Separate multiple regions with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>cn-shanghai</strong>: China (Shanghai)</li>
+         * <li><strong>cn-beijing</strong>: China (Beijing)</li>
+         * <li><strong>eu-central-1</strong>: Germany (Frankfurt)</li>
+         * <li><strong>ap-southeast-1</strong>: Singapore</li>
+         * </ul>
          * 
-         * *   **cn-shanghai**: China (Shanghai)
-         * *   **cn-beijing**: China (Beijing)
-         * *   **eu-central-1**: Germany (Frankfurt)
-         * *   **ap-southeast-1**: Singapore
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -158,7 +169,11 @@ public class DescribeVodAIDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-02-01T13:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

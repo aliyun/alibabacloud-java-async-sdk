@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefreshMediaPlayUrlsRequest} extends {@link RequestModel}
  *
  * <p>RefreshMediaPlayUrlsRequest</p>
@@ -167,10 +168,13 @@ public class RefreshMediaPlayUrlsRequest extends Request {
         } 
 
         /**
-         * Specifies the resolutions of the media streams you want to refresh or prefetch. You can specify multiple resolutions. Separate multiple resolutions with commas (,). If you leave this parameter empty, media streams in all resolutions are refreshed or prefetched by default.
-         * <p>
+         * <p>Specifies the resolutions of the media streams you want to refresh or prefetch. You can specify multiple resolutions. Separate multiple resolutions with commas (,). If you leave this parameter empty, media streams in all resolutions are refreshed or prefetched by default.</p>
+         * <blockquote>
+         * <p> The value must be supported in the <strong>Definition</strong> section in <a href="https://help.aliyun.com/document_detail/124671.html">Parameters for media assets</a>.</p>
+         * </blockquote>
          * 
-         * >  The value must be supported in the **Definition** section in [Parameters for media assets](~~124671~~).
+         * <strong>example:</strong>
+         * <p>HD, SD</p>
          */
         public Builder definitions(String definitions) {
             this.putQueryParameter("Definitions", definitions);
@@ -179,15 +183,18 @@ public class RefreshMediaPlayUrlsRequest extends Request {
         }
 
         /**
-         * The formats of the media streams you want to refresh or prefetch. You can specify multiple formats. Separate multiple formats with commas (,). If you leave this parameter empty, media streams in all formats are refreshed or prefetched by default. Valid values:
-         * <p>
+         * <p>The formats of the media streams you want to refresh or prefetch. You can specify multiple formats. Separate multiple formats with commas (,). If you leave this parameter empty, media streams in all formats are refreshed or prefetched by default. Valid values:</p>
+         * <ul>
+         * <li><strong>mp4</strong></li>
+         * <li><strong>m3u8</strong></li>
+         * <li><strong>mp3</strong></li>
+         * <li><strong>flv</strong></li>
+         * <li><strong>webm</strong></li>
+         * <li><strong>ts</strong></li>
+         * </ul>
          * 
-         * *   **mp4**
-         * *   **m3u8**
-         * *   **mp3**
-         * *   **flv**
-         * *   **webm**
-         * *   **ts**
+         * <strong>example:</strong>
+         * <p>mp4,m3u8</p>
          */
         public Builder formats(String formats) {
             this.putQueryParameter("Formats", formats);
@@ -196,12 +203,16 @@ public class RefreshMediaPlayUrlsRequest extends Request {
         }
 
         /**
-         * The IDs of the media files that you want to refresh or prefetch. You can specify a maximum of 20 IDs. Separate multiple IDs with commas (,). You can use one of the following methods to obtain the ID:
-         * <p>
+         * <p>The IDs of the media files that you want to refresh or prefetch. You can specify a maximum of 20 IDs. Separate multiple IDs with commas (,). You can use one of the following methods to obtain the ID:</p>
+         * <ul>
+         * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD</a> console. In the left-side navigation pane, choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong>. On the Video and Audio page, view the ID of the audio or video file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.</li>
+         * <li>Obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you call to upload media files.</li>
+         * <li>Obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation that you call to query the media ID after the media file is uploaded.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Log on to the [ApsaraVideo VOD](https://vod.console.aliyun.com) console. In the left-side navigation pane, choose **Media Files** > **Audio/Video**. On the Video and Audio page, view the ID of the audio or video file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.
-         * *   Obtain the value of VideoId from the response to the [CreateUploadVideo](~~55407~~) operation that you call to upload media files.
-         * *   Obtain the value of VideoId from the response to the [SearchMedia](~~86044~~) operation that you call to query the media ID after the media file is uploaded.
+         * <strong>example:</strong>
+         * <p>ca3a8f6e4957b658067095869****, a6e49sfgd23p5g9ja7095863****</p>
          */
         public Builder mediaIds(String mediaIds) {
             this.putQueryParameter("MediaIds", mediaIds);
@@ -210,11 +221,14 @@ public class RefreshMediaPlayUrlsRequest extends Request {
         }
 
         /**
-         * Specifies the type of the refresh or prefetch operation. Default value: Single. Valid values:
-         * <p>
+         * <p>Specifies the type of the refresh or prefetch operation. Default value: Single. Valid values:</p>
+         * <ul>
+         * <li><strong>Single</strong>: Only one latest transcoded stream is refreshed or prefetched for each resolution and format.</li>
+         * <li><strong>Multiple</strong>: All transcoded streams are refreshed or prefetched for each resolution and format.</li>
+         * </ul>
          * 
-         * *   **Single**: Only one latest transcoded stream is refreshed or prefetched for each resolution and format.
-         * *   **Multiple**: All transcoded streams are refreshed or prefetched for each resolution and format.
+         * <strong>example:</strong>
+         * <p>Single</p>
          */
         public Builder resultType(String resultType) {
             this.putQueryParameter("ResultType", resultType);
@@ -223,7 +237,10 @@ public class RefreshMediaPlayUrlsRequest extends Request {
         }
 
         /**
-         * Specifies the number of the playback URLs of the TS files for the M3U8 media stream you want to refresh or prefetch. After you set this parameter, only the playback URLs of the first N TS files will be refreshed or prefetched. Valid values: 1 to 20. Default value: 5.
+         * <p>Specifies the number of the playback URLs of the TS files for the M3U8 media stream you want to refresh or prefetch. After you set this parameter, only the playback URLs of the first N TS files will be refreshed or prefetched. Valid values: 1 to 20. Default value: 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder sliceCount(Integer sliceCount) {
             this.putQueryParameter("SliceCount", sliceCount);
@@ -232,11 +249,14 @@ public class RefreshMediaPlayUrlsRequest extends Request {
         }
 
         /**
-         * Specifies whether to refresh or prefetch the playback URLs of the TS files of the M3U8 media stream. Default value: false. Valid values:
-         * <p>
+         * <p>Specifies whether to refresh or prefetch the playback URLs of the TS files of the M3U8 media stream. Default value: false. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong></li>
+         * <li><strong>true</strong></li>
+         * </ul>
          * 
-         * *   **false**
-         * *   **true**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder sliceFlag(Boolean sliceFlag) {
             this.putQueryParameter("SliceFlag", sliceFlag);
@@ -245,11 +265,14 @@ public class RefreshMediaPlayUrlsRequest extends Request {
         }
 
         /**
-         * Specifies the types of media streams you want to refresh or prefetch. You can specify multiple types. Separate multiple types with commas (,). If you leave this parameter empty, media streams in all types are refreshed or prefetched by default. Valid values:
-         * <p>
+         * <p>Specifies the types of media streams you want to refresh or prefetch. You can specify multiple types. Separate multiple types with commas (,). If you leave this parameter empty, media streams in all types are refreshed or prefetched by default. Valid values:</p>
+         * <ul>
+         * <li><strong>video</strong></li>
+         * <li><strong>audio</strong></li>
+         * </ul>
          * 
-         * *   **video**
-         * *   **audio**
+         * <strong>example:</strong>
+         * <p>video</p>
          */
         public Builder streamType(String streamType) {
             this.putQueryParameter("StreamType", streamType);
@@ -258,11 +281,15 @@ public class RefreshMediaPlayUrlsRequest extends Request {
         }
 
         /**
-         * The type of the task that you want to create. Valid values:
-         * <p>
+         * <p>The type of the task that you want to create. Valid values:</p>
+         * <ul>
+         * <li><strong>Refresh</strong></li>
+         * <li><strong>Preload</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Refresh**
-         * *   **Preload**
+         * <strong>example:</strong>
+         * <p>Preload</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);
@@ -271,11 +298,16 @@ public class RefreshMediaPlayUrlsRequest extends Request {
         }
 
         /**
-         * The custom configurations such as callback configurations and upload acceleration configurations. The value must be a JSON string. For more information, see the "UserData: specifies the custom configurations for media upload" section in the [Request parameter](~~86952~~) topic.
-         * <p>
+         * <p>The custom configurations such as callback configurations and upload acceleration configurations. The value must be a JSON string. For more information, see the &quot;UserData: specifies the custom configurations for media upload&quot; section in the <a href="https://help.aliyun.com/document_detail/86952.html">Request parameter</a> topic.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The callback configurations take effect only after you specify the HTTP callback URL and select specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see <a href="https://help.aliyun.com/document_detail/86071.html">Configure callback settings</a>.</li>
+         * <li>To enable the upload acceleration feature, submit a ticket. For more information, see <a href="https://help.aliyun.com/document_detail/55396.html">Overview</a>. For more information about how to submit a ticket, see <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * >*   The callback configurations take effect only after you specify the HTTP callback URL and select specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see [Configure callback settings](~~86071~~).
-         * >*   To enable the upload acceleration feature, submit a ticket. For more information, see [Overview](~~55396~~). For more information about how to submit a ticket, see [Contact us](~~464625~~).
+         * <strong>example:</strong>
+         * <p>{&quot;MessageCallback&quot;:{&quot;CallbackURL&quot;:&quot;<a href="http://example.aliyundoc.com%22%7D">http://example.aliyundoc.com&quot;}</a>, &quot;Extend&quot;:{&quot;localId&quot;:&quot;xxx&quot;,&quot;test&quot;:&quot;www&quot;}}</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

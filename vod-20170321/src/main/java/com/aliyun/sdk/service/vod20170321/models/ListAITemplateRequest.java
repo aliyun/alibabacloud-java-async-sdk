@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAITemplateRequest} extends {@link RequestModel}
  *
  * <p>ListAITemplateRequest</p>
@@ -54,11 +55,15 @@ public class ListAITemplateRequest extends Request {
         } 
 
         /**
-         * The type of the AI template. Valid values:
-         * <p>
+         * <p>The type of the AI template. Valid values:</p>
+         * <ul>
+         * <li><strong>AIMediaAudit</strong>: automated review</li>
+         * <li><strong>AIImage</strong>: smart thumbnail</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **AIMediaAudit**: automated review
-         * *   **AIImage**: smart thumbnail
+         * <strong>example:</strong>
+         * <p>AIMediaAudit</p>
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

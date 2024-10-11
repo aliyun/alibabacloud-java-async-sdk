@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePlayUserTotalResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePlayUserTotalResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
         private UserPlayStatisTotals userPlayStatisTotals; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1FAFB884-D5A7-47D1-****-8928AA9C8720</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The daily playback statistics.
+         * <p>The daily playback statistics.</p>
          */
         public Builder userPlayStatisTotals(UserPlayStatisTotals userPlayStatisTotals) {
             this.userPlayStatisTotals = userPlayStatisTotals;
@@ -70,6 +74,12 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePlayUserTotalResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePlayUserTotalResponseBody</p>
+     */
     public static class Uv extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Android")
         private String android;
@@ -133,7 +143,10 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             private String iOS; 
 
             /**
-             * The total number of unique visitors who use ApsaraVideo Player SDK for Android.
+             * <p>The total number of unique visitors who use ApsaraVideo Player SDK for Android.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder android(String android) {
                 this.android = android;
@@ -141,7 +154,10 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of unique visitors who use the Flash player.
+             * <p>The total number of unique visitors who use the Flash player.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder flash(String flash) {
                 this.flash = flash;
@@ -149,7 +165,10 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of unique visitors who use the HTML5 player.
+             * <p>The total number of unique visitors who use the HTML5 player.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder HTML5(String HTML5) {
                 this.HTML5 = HTML5;
@@ -157,7 +176,10 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of unique visitors who use ApsaraVideo Player SDK for iOS.
+             * <p>The total number of unique visitors who use ApsaraVideo Player SDK for iOS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder iOS(String iOS) {
                 this.iOS = iOS;
@@ -171,6 +193,12 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePlayUserTotalResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePlayUserTotalResponseBody</p>
+     */
     public static class Vv extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Android")
         private String android;
@@ -234,7 +262,10 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             private String iOS; 
 
             /**
-             * The total number of video views played by using ApsaraVideo Player SDK for Android.
+             * <p>The total number of video views played by using ApsaraVideo Player SDK for Android.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>161</p>
              */
             public Builder android(String android) {
                 this.android = android;
@@ -242,7 +273,10 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of video views played by using the Flash player.
+             * <p>The total number of video views played by using the Flash player.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder flash(String flash) {
                 this.flash = flash;
@@ -250,7 +284,10 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of video views played by using the HTML5 player.
+             * <p>The total number of video views played by using the HTML5 player.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder HTML5(String HTML5) {
                 this.HTML5 = HTML5;
@@ -258,7 +295,10 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of video views played by using ApsaraVideo Player SDK for iOS.
+             * <p>The total number of video views played by using ApsaraVideo Player SDK for iOS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder iOS(String iOS) {
                 this.iOS = iOS;
@@ -272,6 +312,12 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePlayUserTotalResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePlayUserTotalResponseBody</p>
+     */
     public static class UserPlayStatisTotal extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Date")
         private String date;
@@ -347,7 +393,10 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             private Vv vv; 
 
             /**
-             * The date. The date is displayed in the yyyy-MM-dd format.
+             * <p>The date. The date is displayed in the yyyy-MM-dd format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20170120</p>
              */
             public Builder date(String date) {
                 this.date = date;
@@ -355,7 +404,10 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total playback duration. Unit: milliseconds.
+             * <p>The total playback duration. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9340070</p>
              */
             public Builder playDuration(String playDuration) {
                 this.playDuration = playDuration;
@@ -363,7 +415,10 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The distribution of the playback duration.
+             * <p>The distribution of the playback duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&lt;=1m:74.3%;&gt;1&lt;=5m:22.8%;&gt;5&lt;=10m:1.0%;&gt;10&lt;=15m:1.0%;&gt;15&lt;=30m:1.0%&quot;</p>
              */
             public Builder playRange(String playRange) {
                 this.playRange = playRange;
@@ -371,7 +426,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of unique visitors.
+             * <p>The total number of unique visitors.</p>
              */
             public Builder uv(Uv uv) {
                 this.uv = uv;
@@ -379,7 +434,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of video views.
+             * <p>The total number of video views.</p>
              */
             public Builder vv(Vv vv) {
                 this.vv = vv;
@@ -393,6 +448,12 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePlayUserTotalResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePlayUserTotalResponseBody</p>
+     */
     public static class UserPlayStatisTotals extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserPlayStatisTotal")
         private java.util.List < UserPlayStatisTotal> userPlayStatisTotal;

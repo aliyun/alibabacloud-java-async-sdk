@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitWorkflowJobResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitWorkflowJobResponseBody</p>
@@ -37,7 +38,10 @@ public class SubmitWorkflowJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A01C8FF4-C106-4431-418F973DADB7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

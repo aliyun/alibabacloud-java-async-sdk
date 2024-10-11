@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteEditingProjectMaterialsRequest} extends {@link RequestModel}
  *
  * <p>DeleteEditingProjectMaterialsRequest</p>
@@ -140,7 +141,11 @@ public class DeleteEditingProjectMaterialsRequest extends Request {
         } 
 
         /**
-         * MaterialIds.
+         * <p>The material ID. Separate multiple material IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9e3101bf24bf41c*****123318788ca</p>
          */
         public Builder materialIds(String materialIds) {
             this.putQueryParameter("MaterialIds", materialIds);
@@ -149,7 +154,16 @@ public class DeleteEditingProjectMaterialsRequest extends Request {
         }
 
         /**
-         * MaterialType.
+         * <p>The type of the material. Valid values:</p>
+         * <ul>
+         * <li><strong>video</strong></li>
+         * <li><strong>audio</strong></li>
+         * <li><strong>image</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>video</p>
          */
         public Builder materialType(String materialType) {
             this.putQueryParameter("MaterialType", materialType);
@@ -176,7 +190,11 @@ public class DeleteEditingProjectMaterialsRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The ID of the online editing project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>198236101*****1093374</p>
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);

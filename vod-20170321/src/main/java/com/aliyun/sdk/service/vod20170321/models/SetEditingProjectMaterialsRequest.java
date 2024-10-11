@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetEditingProjectMaterialsRequest} extends {@link RequestModel}
  *
  * <p>SetEditingProjectMaterialsRequest</p>
@@ -125,7 +126,11 @@ public class SetEditingProjectMaterialsRequest extends Request {
         } 
 
         /**
-         * The ID of the media asset. You can specify IDs of media assets such as videos, images, or auxiliary media assets. Separate multiple IDs with commas (,).
+         * <p>The ID of the media asset. You can specify IDs of media assets such as videos, images, or auxiliary media assets. Separate multiple IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9e3101bf24bf41c*****123318788ca</p>
          */
         public Builder materialIds(String materialIds) {
             this.putQueryParameter("MaterialIds", materialIds);
@@ -152,7 +157,11 @@ public class SetEditingProjectMaterialsRequest extends Request {
         }
 
         /**
-         * The ID of the online editing project.
+         * <p>The ID of the online editing project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fb2101bf24bf4*****754cb318787dc</p>
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);

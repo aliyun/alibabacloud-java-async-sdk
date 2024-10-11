@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteVodSpecificConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteVodSpecificConfigResponseBody</p>
@@ -37,7 +38,10 @@ public class DeleteVodSpecificConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-****-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

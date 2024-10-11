@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWatermarkRequest} extends {@link RequestModel}
  *
  * <p>GetWatermarkRequest</p>
@@ -54,11 +55,15 @@ public class GetWatermarkRequest extends Request {
         } 
 
         /**
-         * The ID of the watermark template. You can specify only one watermark template ID. You can obtain the ID by using one of the following methods:
-         * <p>
+         * <p>The ID of the watermark template. You can specify only one watermark template ID. You can obtain the ID by using one of the following methods:</p>
+         * <ul>
+         * <li>Obtain the watermark template ID from the response to the <a href="~~AddWatermark~~">AddWatermark</a> operation that you call to create a watermark template.</li>
+         * <li>Obtain the watermark template ID from the response to the <a href="~~ListWatermark~~">ListWatermark</a> operation that you call to query all watermarks within your account.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Obtain the watermark template ID from the response to the [AddWatermark](~~AddWatermark~~) operation that you call to create a watermark template.
-         * *   Obtain the watermark template ID from the response to the [ListWatermark](~~ListWatermark~~) operation that you call to query all watermarks within your account.
+         * <strong>example:</strong>
+         * <p>9bcc8bfadb843f*****09a2671d0df97</p>
          */
         public Builder watermarkId(String watermarkId) {
             this.putQueryParameter("WatermarkId", watermarkId);

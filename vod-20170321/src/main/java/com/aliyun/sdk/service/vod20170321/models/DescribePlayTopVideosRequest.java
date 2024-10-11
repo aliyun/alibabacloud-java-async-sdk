@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePlayTopVideosRequest} extends {@link RequestModel}
  *
  * <p>DescribePlayTopVideosRequest</p>
@@ -97,7 +98,11 @@ public class DescribePlayTopVideosRequest extends Request {
         } 
 
         /**
-         * The time to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The time to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-06-29T13:00:00Z</p>
          */
         public Builder bizDate(String bizDate) {
             this.putQueryParameter("BizDate", bizDate);
@@ -115,7 +120,10 @@ public class DescribePlayTopVideosRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -124,7 +132,10 @@ public class DescribePlayTopVideosRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. The default value is **100**. The maximum value is **1000**.
+         * <p>The number of entries to return on each page. The default value is <strong>100</strong>. The maximum value is <strong>1000</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

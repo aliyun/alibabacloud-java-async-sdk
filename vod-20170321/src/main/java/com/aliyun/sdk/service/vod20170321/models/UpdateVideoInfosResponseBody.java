@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateVideoInfosResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateVideoInfosResponseBody</p>
@@ -61,7 +62,7 @@ public class UpdateVideoInfosResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IDs of the videos that cannot be modified. Generally, videos cannot be modified if you do not have required [permissions](~~113600~~).
+         * <p>The IDs of the videos that cannot be modified. Generally, videos cannot be modified if you do not have required <a href="https://help.aliyun.com/document_detail/113600.html">permissions</a>.</p>
          */
         public Builder forbiddenVideoIds(java.util.List < String > forbiddenVideoIds) {
             this.forbiddenVideoIds = forbiddenVideoIds;
@@ -69,7 +70,7 @@ public class UpdateVideoInfosResponseBody extends TeaModel {
         }
 
         /**
-         * The IDs of the videos that do not exist.
+         * <p>The IDs of the videos that do not exist.</p>
          */
         public Builder nonExistVideoIds(java.util.List < String > nonExistVideoIds) {
             this.nonExistVideoIds = nonExistVideoIds;
@@ -77,7 +78,10 @@ public class UpdateVideoInfosResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4AF6-D7393642CA58****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

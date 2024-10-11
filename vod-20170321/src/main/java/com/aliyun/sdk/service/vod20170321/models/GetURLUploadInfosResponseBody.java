@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetURLUploadInfosResponseBody} extends {@link TeaModel}
  *
  * <p>GetURLUploadInfosResponseBody</p>
@@ -61,7 +62,7 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
         private java.util.List < URLUploadInfoList> URLUploadInfoList; 
 
         /**
-         * The job IDs or upload URLs that do not exist.
+         * <p>The job IDs or upload URLs that do not exist.</p>
          */
         public Builder nonExists(java.util.List < String > nonExists) {
             this.nonExists = nonExists;
@@ -69,7 +70,10 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4AF6-D7393642CA58****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,7 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
         }
 
         /**
-         * The information about URL-based upload jobs. For more information, see the "URLUploadInfo: the information about a URL-based upload job" section of the [Basic structures](~~52839~~) topic.
+         * <p>The information about URL-based upload jobs. For more information, see the &quot;URLUploadInfo: the information about a URL-based upload job&quot; section of the <a href="https://help.aliyun.com/document_detail/52839.html">Basic structures</a> topic.</p>
          */
         public Builder URLUploadInfoList(java.util.List < URLUploadInfoList> URLUploadInfoList) {
             this.URLUploadInfoList = URLUploadInfoList;
@@ -90,6 +94,12 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetURLUploadInfosResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetURLUploadInfosResponseBody</p>
+     */
     public static class URLUploadInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CompleteTime")
         private String completeTime;
@@ -225,7 +235,10 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
             private String userData; 
 
             /**
-             * The time when the upload job was complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the upload job was complete. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-01T01:11:01Z</p>
              */
             public Builder completeTime(String completeTime) {
                 this.completeTime = completeTime;
@@ -233,7 +246,10 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the upload job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the upload job was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-01T01:01:01Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -241,7 +257,10 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The error code returned.
+             * <p>The error code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -249,7 +268,10 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned.
+             * <p>The error message returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>error_message</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -257,7 +279,10 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the uploaded media file. Unit: byte.
+             * <p>The size of the uploaded media file. Unit: byte.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24</p>
              */
             public Builder fileSize(String fileSize) {
                 this.fileSize = fileSize;
@@ -265,7 +290,10 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the upload job.
+             * <p>The ID of the upload job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86c1925fba0****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -273,7 +301,10 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the uploaded media file.
+             * <p>The ID of the uploaded media file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>93ab850b4f6f54b6e91d24d81d4****</p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -281,7 +312,10 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the URL-based upload job. For more information about the valid values and value description of the parameter, see the "Status: the status of a video" section of the [Basic structures](~~52839~~) topic.
+             * <p>The status of the URL-based upload job. For more information about the valid values and value description of the parameter, see the &quot;Status: the status of a video&quot; section of the <a href="https://help.aliyun.com/document_detail/52839.html">Basic structures</a> topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -289,10 +323,13 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The upload URL of the source file.
-             * <p>
+             * <p>The upload URL of the source file.</p>
+             * <blockquote>
+             * <p>A maximum of 100 URLs can be returned.</p>
+             * </blockquote>
              * 
-             * > A maximum of 100 URLs can be returned.
+             * <strong>example:</strong>
+             * <p>http://****.mp4</p>
              */
             public Builder uploadURL(String uploadURL) {
                 this.uploadURL = uploadURL;
@@ -300,7 +337,10 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The custom configurations. The value is a JSON string. For more information, see the "UserData: specifies the custom configurations for media upload" section of the [Request parameters](~~86952~~) topic.
+             * <p>The custom configurations. The value is a JSON string. For more information, see the &quot;UserData: specifies the custom configurations for media upload&quot; section of the <a href="https://help.aliyun.com/document_detail/86952.html">Request parameters</a> topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;MessageCallback&quot;:&quot;{&quot;CallbackURL&quot;:&quot;<a href="http://example.aliyundoc.com%22%7D">http://example.aliyundoc.com&quot;}</a>&quot;, &quot;Extend&quot;:&quot;{&quot;localId&quot;:&quot;***&quot;, &quot;test&quot;:&quot;www&quot;}&quot;}</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteVodSpecificConfigRequest} extends {@link RequestModel}
  *
  * <p>DeleteVodSpecificConfigRequest</p>
@@ -111,7 +112,11 @@ public class DeleteVodSpecificConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the configuration.
+         * <p>The ID of the configuration.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2317****</p>
          */
         public Builder configId(String configId) {
             this.putQueryParameter("ConfigId", configId);
@@ -120,7 +125,11 @@ public class DeleteVodSpecificConfigRequest extends Request {
         }
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -129,11 +138,14 @@ public class DeleteVodSpecificConfigRequest extends Request {
         }
 
         /**
-         * The environment from which the domain name configurations are deleted. Valid values:
-         * <p>
+         * <p>The environment from which the domain name configurations are deleted. Valid values:</p>
+         * <ul>
+         * <li>online: production environment</li>
+         * <li>gray: simulation environment</li>
+         * </ul>
          * 
-         * *   online: production environment
-         * *   gray: simulation environment
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitPreprocessJobsResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitPreprocessJobsResponseBody</p>
@@ -49,7 +50,7 @@ public class SubmitPreprocessJobsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the job.
+         * <p>The information about the job.</p>
          */
         public Builder preprocessJobs(PreprocessJobs preprocessJobs) {
             this.preprocessJobs = preprocessJobs;
@@ -57,7 +58,10 @@ public class SubmitPreprocessJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E4EBD2BF-5EB0-4476-8829-9D94E1B1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class SubmitPreprocessJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitPreprocessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitPreprocessJobsResponseBody</p>
+     */
     public static class PreprocessJob extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
@@ -97,7 +107,10 @@ public class SubmitPreprocessJobsResponseBody extends TeaModel {
             private String jobId; 
 
             /**
-             * The ID of the job.
+             * <p>The ID of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bb396607fd11fee9effbb99c4****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -111,6 +124,12 @@ public class SubmitPreprocessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitPreprocessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitPreprocessJobsResponseBody</p>
+     */
     public static class PreprocessJobs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PreprocessJob")
         private java.util.List < PreprocessJob> preprocessJob;

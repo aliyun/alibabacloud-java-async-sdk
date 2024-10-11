@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitTranscodeJobsResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitTranscodeJobsResponseBody</p>
@@ -61,7 +62,10 @@ public class SubmitTranscodeJobsResponseBody extends TeaModel {
         private String transcodeTaskId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E4EBD2BF-5EB0-4476-8829-9D94E1B1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,10 +73,10 @@ public class SubmitTranscodeJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the transcoding job.
-         * <p>
-         * 
-         * >  This parameter is not returned for HLS packaging tasks. You must asynchronously receive the transcoding result.
+         * <p>The information about the transcoding job.</p>
+         * <blockquote>
+         * <p> This parameter is not returned for HLS packaging tasks. You must asynchronously receive the transcoding result.</p>
+         * </blockquote>
          */
         public Builder transcodeJobs(TranscodeJobs transcodeJobs) {
             this.transcodeJobs = transcodeJobs;
@@ -80,7 +84,10 @@ public class SubmitTranscodeJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the transcoding task that was submitted.
+         * <p>The ID of the transcoding task that was submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9f4a0df7da2c8a81c8c0408c84****</p>
          */
         public Builder transcodeTaskId(String transcodeTaskId) {
             this.transcodeTaskId = transcodeTaskId;
@@ -93,6 +100,12 @@ public class SubmitTranscodeJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitTranscodeJobsResponseBody</p>
+     */
     public static class TranscodeJob extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
@@ -120,10 +133,13 @@ public class SubmitTranscodeJobsResponseBody extends TeaModel {
             private String jobId; 
 
             /**
-             * The ID of the transcoding job.
-             * <p>
+             * <p>The ID of the transcoding job.</p>
+             * <blockquote>
+             * <p> This parameter is not returned for HLS packaging tasks. You must asynchronously receive the transcoding result.</p>
+             * </blockquote>
              * 
-             * >  This parameter is not returned for HLS packaging tasks. You must asynchronously receive the transcoding result.
+             * <strong>example:</strong>
+             * <p>d8921ce8505716cfe86fb112c4****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -137,6 +153,12 @@ public class SubmitTranscodeJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitTranscodeJobsResponseBody</p>
+     */
     public static class TranscodeJobs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TranscodeJob")
         private java.util.List < TranscodeJob> transcodeJob;

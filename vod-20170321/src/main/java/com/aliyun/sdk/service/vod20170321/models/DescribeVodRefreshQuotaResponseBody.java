@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodRefreshQuotaResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVodRefreshQuotaResponseBody</p>
@@ -133,7 +134,10 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         private String blockRemain; 
 
         /**
-         * The maximum number of Object Storage Service (OSS) buckets that can be refreshed each day.
+         * <p>The maximum number of Object Storage Service (OSS) buckets that can be refreshed each day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder blockQuota(String blockQuota) {
             this.blockQuota = blockQuota;
@@ -141,7 +145,10 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of directories of files that can be refreshed each day.
+         * <p>The maximum number of directories of files that can be refreshed each day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder dirQuota(String dirQuota) {
             this.dirQuota = dirQuota;
@@ -149,7 +156,10 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The remaining number of directories of files that can be refreshed on the current day.
+         * <p>The remaining number of directories of files that can be refreshed on the current day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99</p>
          */
         public Builder dirRemain(String dirRemain) {
             this.dirRemain = dirRemain;
@@ -157,7 +167,10 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of URLs of files that can be prefetched each day.
+         * <p>The maximum number of URLs of files that can be prefetched each day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder preloadQuota(String preloadQuota) {
             this.preloadQuota = preloadQuota;
@@ -165,7 +178,10 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The remaining number of URLs of files that can be prefetched on the current day.
+         * <p>The remaining number of URLs of files that can be prefetched on the current day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder preloadRemain(String preloadRemain) {
             this.preloadRemain = preloadRemain;
@@ -173,7 +189,10 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42E0554B-80F4-4921-****-ACFB22CAAAD0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -181,7 +200,10 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of URLs of files that can be refreshed each day.
+         * <p>The maximum number of URLs of files that can be refreshed each day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         public Builder urlQuota(String urlQuota) {
             this.urlQuota = urlQuota;
@@ -189,7 +211,10 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The remaining number of URLs of files that can be refreshed on the current day.
+         * <p>The remaining number of URLs of files that can be refreshed on the current day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1996</p>
          */
         public Builder urlRemain(String urlRemain) {
             this.urlRemain = urlRemain;
@@ -197,7 +222,10 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The remaining number of OSS buckets that can be refreshed on the current day.
+         * <p>The remaining number of OSS buckets that can be refreshed on the current day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder blockRemain(String blockRemain) {
             this.blockRemain = blockRemain;

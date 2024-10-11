@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodDomainCertificateInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeVodDomainCertificateInfoRequest</p>
@@ -68,7 +69,11 @@ public class DescribeVodDomainCertificateInfoRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

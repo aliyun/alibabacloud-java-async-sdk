@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodSSLCertificateListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVodSSLCertificateListResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVodSSLCertificateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodSSLCertificateListResponseBody</p>
+     */
     public static class Cert extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertId")
         private Long certId;
@@ -231,6 +238,12 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodSSLCertificateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodSSLCertificateListResponseBody</p>
+     */
     public static class CertList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cert")
         private java.util.List < Cert> cert;
@@ -272,6 +285,12 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodSSLCertificateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodSSLCertificateListResponseBody</p>
+     */
     public static class CertificateListModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertList")
         private CertList certList;

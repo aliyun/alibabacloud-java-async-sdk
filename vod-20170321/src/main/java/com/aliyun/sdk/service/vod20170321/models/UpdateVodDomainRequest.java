@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateVodDomainRequest} extends {@link RequestModel}
  *
  * <p>UpdateVodDomainRequest</p>
@@ -110,7 +111,11 @@ public class UpdateVodDomainRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * <p>The domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -137,7 +142,10 @@ public class UpdateVodDomainRequest extends Request {
         }
 
         /**
-         * Sources.
+         * <p>The information about the addresses of origin servers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;content&quot;:&quot;1.1.1.1&quot;,&quot;type&quot;:&quot;ipaddr&quot;,&quot;priority&quot;:&quot;20&quot;,&quot;port&quot;:80}]</p>
          */
         public Builder sources(String sources) {
             this.putQueryParameter("Sources", sources);
@@ -146,7 +154,10 @@ public class UpdateVodDomainRequest extends Request {
         }
 
         /**
-         * TopLevelDomain.
+         * <p>The top-level domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder topLevelDomain(String topLevelDomain) {
             this.putQueryParameter("TopLevelDomain", topLevelDomain);

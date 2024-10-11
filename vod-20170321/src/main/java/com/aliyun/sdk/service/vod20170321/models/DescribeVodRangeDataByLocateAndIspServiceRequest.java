@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodRangeDataByLocateAndIspServiceRequest} extends {@link RequestModel}
  *
  * <p>DescribeVodRangeDataByLocateAndIspServiceRequest</p>
@@ -126,7 +127,11 @@ public class DescribeVodRangeDataByLocateAndIspServiceRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -135,7 +140,11 @@ public class DescribeVodRangeDataByLocateAndIspServiceRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-29T03:55:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -144,7 +153,10 @@ public class DescribeVodRangeDataByLocateAndIspServiceRequest extends Request {
         }
 
         /**
-         * The name of the ISP. If you leave this parameter empty, all ISPs are queried.
+         * <p>The name of the ISP. If you leave this parameter empty, all ISPs are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>unicom</p>
          */
         public Builder ispNameEn(String ispNameEn) {
             this.putQueryParameter("IspNameEn", ispNameEn);
@@ -153,7 +165,10 @@ public class DescribeVodRangeDataByLocateAndIspServiceRequest extends Request {
         }
 
         /**
-         * The name of the region. If you leave this parameter empty, data in all regions is queried.
+         * <p>The name of the region. If you leave this parameter empty, data in all regions is queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>beijing</p>
          */
         public Builder locationNameEn(String locationNameEn) {
             this.putQueryParameter("LocationNameEn", locationNameEn);
@@ -171,7 +186,11 @@ public class DescribeVodRangeDataByLocateAndIspServiceRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-29T03:50:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

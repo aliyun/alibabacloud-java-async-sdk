@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MoveAppResourceResponseBody} extends {@link TeaModel}
  *
  * <p>MoveAppResourceResponseBody</p>
@@ -61,7 +62,7 @@ public class MoveAppResourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IDs of the resources that failed to be migrated.
+         * <p>The IDs of the resources that failed to be migrated.</p>
          */
         public Builder failedResourceIds(java.util.List < String > failedResourceIds) {
             this.failedResourceIds = failedResourceIds;
@@ -69,7 +70,7 @@ public class MoveAppResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The IDs of the resources that were not found.
+         * <p>The IDs of the resources that were not found.</p>
          */
         public Builder nonExistResourceIds(java.util.List < String > nonExistResourceIds) {
             this.nonExistResourceIds = nonExistResourceIds;
@@ -77,7 +78,10 @@ public class MoveAppResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4A13-BEF6-****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMezzanineInfoRequest} extends {@link RequestModel}
  *
  * <p>GetMezzanineInfoRequest</p>
@@ -96,11 +97,14 @@ public class GetMezzanineInfoRequest extends Request {
         } 
 
         /**
-         * The type of additional information. Separate multiple values with commas (,). By default, only the basic information is returned. Valid values:
-         * <p>
+         * <p>The type of additional information. Separate multiple values with commas (,). By default, only the basic information is returned. Valid values:</p>
+         * <ul>
+         * <li><strong>video</strong>: video stream information</li>
+         * <li><strong>audio</strong>: audio stream information</li>
+         * </ul>
          * 
-         * *   **video**: video stream information
-         * *   **audio**: audio stream information
+         * <strong>example:</strong>
+         * <p>video</p>
          */
         public Builder additionType(String additionType) {
             this.putQueryParameter("AdditionType", additionType);
@@ -109,24 +113,32 @@ public class GetMezzanineInfoRequest extends Request {
         }
 
         /**
-         * The validity period of the mezzanine file URL. Unit: seconds. Default value: **1800**. Minimum value: **1**.
-         * <p>
-         * 
-         * *   If the OutputType parameter is set to **cdn**:
-         * 
-         *     *   The mezzanine file URL has a validity period only if URL signing is enabled. Otherwise, the mezzanine file URL is permanently valid.
-         *     *   Minimum value: **1**.
-         *     *   Maximum Value: unlimited.
-         *     *   Default value: If you do not set this parameter, the default validity period that is specified in URL signing is used.
-         * 
+         * <p>The validity period of the mezzanine file URL. Unit: seconds. Default value: <strong>1800</strong>. Minimum value: <strong>1</strong>.</p>
+         * <ul>
+         * <li><p>If the OutputType parameter is set to <strong>cdn</strong>:</p>
+         * <ul>
+         * <li>The mezzanine file URL has a validity period only if URL signing is enabled. Otherwise, the mezzanine file URL is permanently valid.</li>
+         * <li>Minimum value: <strong>1</strong>.</li>
+         * <li>Maximum Value: unlimited.</li>
+         * <li>Default value: If you do not set this parameter, the default validity period that is specified in URL signing is used.</li>
+         * </ul>
+         * </li>
+         * </ul>
          * <!---->
          * 
-         * *   If the OutputType parameter is set to **oss**:
+         * <ul>
+         * <li><p>If the OutputType parameter is set to <strong>oss</strong>:</p>
+         * <ul>
+         * <li>The mezzanine file URL has a validity period only if the permissions on the Object Storage Service (OSS) bucket are private. Otherwise, the mezzanine file URL is permanently valid.</li>
+         * <li>Minimum value: <strong>1</strong>.</li>
+         * <li>Maximum value: <strong>2592000</strong> (30 days). The maximum value is limited to reduce security risks of the origin.</li>
+         * <li>Default value: If you do not set this parameter, the default value is <strong>3600</strong>.</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         *     *   The mezzanine file URL has a validity period only if the permissions on the Object Storage Service (OSS) bucket are private. Otherwise, the mezzanine file URL is permanently valid.
-         *     *   Minimum value: **1**.
-         *     *   Maximum value: **2592000** (30 days). The maximum value is limited to reduce security risks of the origin.
-         *     *   Default value: If you do not set this parameter, the default value is **3600**.
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder authTimeout(Long authTimeout) {
             this.putQueryParameter("AuthTimeout", authTimeout);
@@ -135,13 +147,17 @@ public class GetMezzanineInfoRequest extends Request {
         }
 
         /**
-         * The type of the mezzanine file URL. Valid values:
-         * <p>
+         * <p>The type of the mezzanine file URL. Valid values:</p>
+         * <ul>
+         * <li><strong>oss</strong>: OSS URL</li>
+         * <li><strong>cdn</strong> (default): Content Delivery Network (CDN) URL</li>
+         * </ul>
+         * <blockquote>
+         * <p>If the mezzanine file is stored in a bucket of the in type, only an OSS URL is returned.</p>
+         * </blockquote>
          * 
-         * - **oss**: OSS URL
-         * - **cdn** (default): Content Delivery Network (CDN) URL
-         * 
-         * > If the mezzanine file is stored in a bucket of the in type, only an OSS URL is returned.
+         * <strong>example:</strong>
+         * <p>oss</p>
          */
         public Builder outputType(String outputType) {
             this.putQueryParameter("OutputType", outputType);
@@ -150,7 +166,11 @@ public class GetMezzanineInfoRequest extends Request {
         }
 
         /**
-         * The ID of the video.
+         * <p>The ID of the video.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1f1a6fc03ca04814031b8a6559e****</p>
          */
         public Builder videoId(String videoId) {
             this.putQueryParameter("VideoId", videoId);

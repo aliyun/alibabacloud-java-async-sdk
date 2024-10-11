@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadMediaByURLResponseBody} extends {@link TeaModel}
  *
  * <p>UploadMediaByURLResponseBody</p>
@@ -49,7 +50,10 @@ public class UploadMediaByURLResponseBody extends TeaModel {
         private java.util.List < UploadJobs> uploadJobs; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4AF6-D7393642CA58****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class UploadMediaByURLResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the upload job.
+         * <p>The ID of the upload job.</p>
          */
         public Builder uploadJobs(java.util.List < UploadJobs> uploadJobs) {
             this.uploadJobs = uploadJobs;
@@ -70,6 +74,12 @@ public class UploadMediaByURLResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UploadMediaByURLResponseBody} extends {@link TeaModel}
+     *
+     * <p>UploadMediaByURLResponseBody</p>
+     */
     public static class UploadJobs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
@@ -109,7 +119,10 @@ public class UploadMediaByURLResponseBody extends TeaModel {
             private String sourceURL; 
 
             /**
-             * The ID of the upload job.
+             * <p>The ID of the upload job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ad90a501b1b94fb72374ad005046****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -117,7 +130,10 @@ public class UploadMediaByURLResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the source file that is uploaded in the upload job.
+             * <p>The URL of the source file that is uploaded in the upload job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example****.mp4">http://example****.mp4</a></p>
              */
             public Builder sourceURL(String sourceURL) {
                 this.sourceURL = sourceURL;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTranscodeTemplateGroupRequest} extends {@link RequestModel}
  *
  * <p>UpdateTranscodeTemplateGroupRequest</p>
@@ -96,11 +97,14 @@ public class UpdateTranscodeTemplateGroupRequest extends Request {
         } 
 
         /**
-         * The lock status of the transcoding template group. Valid values:
-         * <p>
+         * <p>The lock status of the transcoding template group. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: The transcoding template group is locked and cannot be modified.</li>
+         * <li><strong>Disabled</strong> (default): The transcoding template group is not locked.</li>
+         * </ul>
          * 
-         * *   **Enabled**: The transcoding template group is locked and cannot be modified.
-         * *   **Disabled** (default): The transcoding template group is not locked.
+         * <strong>example:</strong>
+         * <p>Disabled</p>
          */
         public Builder locked(String locked) {
             this.putQueryParameter("Locked", locked);
@@ -109,11 +113,14 @@ public class UpdateTranscodeTemplateGroupRequest extends Request {
         }
 
         /**
-         * The name of the transcoding template group.
-         * <p>
+         * <p>The name of the transcoding template group.</p>
+         * <ul>
+         * <li>The name cannot exceed 128 bytes.</li>
+         * <li>The value must be encoded in UTF-8.</li>
+         * </ul>
          * 
-         * *   The name cannot exceed 128 bytes.
-         * *   The value must be encoded in UTF-8.
+         * <strong>example:</strong>
+         * <p>transcodetemplate</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -122,7 +129,11 @@ public class UpdateTranscodeTemplateGroupRequest extends Request {
         }
 
         /**
-         * The ID of the transcoding template group.
+         * <p>The ID of the transcoding template group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4c71a339fe*****52b4fa6f4527</p>
          */
         public Builder transcodeTemplateGroupId(String transcodeTemplateGroupId) {
             this.putQueryParameter("TranscodeTemplateGroupId", transcodeTemplateGroupId);
@@ -131,7 +142,10 @@ public class UpdateTranscodeTemplateGroupRequest extends Request {
         }
 
         /**
-         * The configurations of the transcoding template. The value must be a JSON string. For more information about the data structure, see [TranscodeTemplate](~~52839#title-9mb-8o2-uu6~~).
+         * <p>The configurations of the transcoding template. The value must be a JSON string. For more information about the data structure, see <a href="~~52839#title-9mb-8o2-uu6~~">TranscodeTemplate</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Video&quot;:{&quot;Bitrate&quot;:&quot;400&quot;,&quot;Codec&quot;:&quot;H.264&quot;,&quot;Fps&quot;:&quot;30&quot;},&quot;Audio&quot;:{&quot;Codec&quot;:&quot;AAC&quot;,&quot;Bitrate&quot;:&quot;64&quot;,&quot;Definition&quot;:&quot;SD&quot;,&quot;EncryptType&quot;:&quot;Private&quot;,&quot;Container&quot;:{&quot;Format&quot;:&quot;m3u8&quot;},&quot;PackageType&quot;:&quot;HLSPackage&quot;}}]</p>
          */
         public Builder transcodeTemplateList(String transcodeTemplateList) {
             this.putQueryParameter("TranscodeTemplateList", transcodeTemplateList);

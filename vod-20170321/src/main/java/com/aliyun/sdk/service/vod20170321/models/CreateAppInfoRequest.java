@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAppInfoRequest} extends {@link RequestModel}
  *
  * <p>CreateAppInfoRequest</p>
@@ -82,11 +83,15 @@ public class CreateAppInfoRequest extends Request {
         } 
 
         /**
-         * The name of the application. The application name must be unique.
-         * <p>
+         * <p>The name of the application. The application name must be unique.</p>
+         * <ul>
+         * <li>The name can contain letters, digits, periods (.), hyphens (-), and at signs (@). The name can be up to 128 characters in length.</li>
+         * <li>The value must be encoded in UTF-8.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name can contain letters, digits, periods (.), hyphens (-), and at signs (@). The name can be up to 128 characters in length.
-         * *   The value must be encoded in UTF-8.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -95,11 +100,14 @@ public class CreateAppInfoRequest extends Request {
         }
 
         /**
-         * The description of the application.
-         * <p>
+         * <p>The description of the application.</p>
+         * <ul>
+         * <li>The description can contain up to 512 characters in length.</li>
+         * <li>The value must be encoded in UTF-8.</li>
+         * </ul>
          * 
-         * *   The description can contain up to 512 characters in length.
-         * *   The value must be encoded in UTF-8.
+         * <strong>example:</strong>
+         * <p>myfirstapp</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -108,7 +116,10 @@ public class CreateAppInfoRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzko7fsuj****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAIImageInfosRequest} extends {@link RequestModel}
  *
  * <p>DeleteAIImageInfosRequest</p>
@@ -54,11 +55,15 @@ public class DeleteAIImageInfosRequest extends Request {
         } 
 
         /**
-         * The IDs of the images that are submitted for AI processing. You can obtain the value of AIImageInfoId from the response to the [ListAIImageInfo](~~ListAIImageInfo~~) operation.
-         * <p>
+         * <p>The IDs of the images that are submitted for AI processing. You can obtain the value of AIImageInfoId from the response to the <a href="~~ListAIImageInfo~~">ListAIImageInfo</a> operation.</p>
+         * <ul>
+         * <li>You can specify a maximum of 10 IDs.</li>
+         * <li>Separate multiple IDs with commas (,).</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * - You can specify a maximum of 10 IDs.
-         * - Separate multiple IDs with commas (,).
+         * <strong>example:</strong>
+         * <p>b89a6aabf144*****6197ebd6fe6cf29</p>
          */
         public Builder AIImageInfoIds(String AIImageInfoIds) {
             this.putQueryParameter("AIImageInfoIds", AIImageInfoIds);

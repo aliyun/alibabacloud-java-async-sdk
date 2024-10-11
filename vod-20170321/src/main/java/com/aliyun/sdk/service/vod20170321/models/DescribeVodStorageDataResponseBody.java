@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodStorageDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVodStorageDataResponseBody</p>
@@ -61,11 +62,14 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
         private StorageData storageData; 
 
         /**
-         * The time granularity at which the data was queried. Valid values:
-         * <p>
+         * <p>The time granularity at which the data was queried. Valid values:</p>
+         * <ul>
+         * <li><strong>hour</strong></li>
+         * <li><strong>day</strong></li>
+         * </ul>
          * 
-         * *   **hour**
-         * *   **day**
+         * <strong>example:</strong>
+         * <p>day</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -73,7 +77,10 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C370DAF1-C838-4288-****-9A87633D248E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,7 +88,7 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The storage usage data returned.
+         * <p>The storage usage data returned.</p>
          */
         public Builder storageData(StorageData storageData) {
             this.storageData = storageData;
@@ -94,6 +101,12 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVodStorageDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodStorageDataResponseBody</p>
+     */
     public static class StorageDataItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetworkOut")
         private String networkOut;
@@ -145,7 +158,10 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * The outbound traffic. Unit: bytes. The outbound traffic is generated when videos are directly downloaded or played from OSS buckets without Alibaba Cloud CDN acceleration.
+             * <p>The outbound traffic. Unit: bytes. The outbound traffic is generated when videos are directly downloaded or played from OSS buckets without Alibaba Cloud CDN acceleration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111111</p>
              */
             public Builder networkOut(String networkOut) {
                 this.networkOut = networkOut;
@@ -153,7 +169,10 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
             }
 
             /**
-             * The detailed usage data of storage-related resources. Unit: bytes.
+             * <p>The detailed usage data of storage-related resources. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111111</p>
              */
             public Builder storageUtilization(String storageUtilization) {
                 this.storageUtilization = storageUtilization;
@@ -161,7 +180,10 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the returned data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The timestamp of the returned data. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-02-01T15:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -175,6 +197,12 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodStorageDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodStorageDataResponseBody</p>
+     */
     public static class StorageData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StorageDataItem")
         private java.util.List < StorageDataItem> storageDataItem;

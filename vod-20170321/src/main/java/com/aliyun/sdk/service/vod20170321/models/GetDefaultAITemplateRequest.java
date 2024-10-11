@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDefaultAITemplateRequest} extends {@link RequestModel}
  *
  * <p>GetDefaultAITemplateRequest</p>
@@ -54,7 +55,11 @@ public class GetDefaultAITemplateRequest extends Request {
         } 
 
         /**
-         * The type of the AI template. Set the value to **AIMediaAudit**, which specifies the automated review.
+         * <p>The type of the AI template. Set the value to <strong>AIMediaAudit</strong>, which specifies the automated review.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AIMediaAudit</p>
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

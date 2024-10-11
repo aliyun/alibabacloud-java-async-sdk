@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetCrossdomainContentRequest} extends {@link RequestModel}
  *
  * <p>SetCrossdomainContentRequest</p>
@@ -139,7 +140,11 @@ public class SetCrossdomainContentRequest extends Request {
         } 
 
         /**
-         * The content of the cross-domain policy file. The file must be in the XML format and can contain up to 2,048 characters.
+         * <p>The content of the cross-domain policy file. The file must be in the XML format and can contain up to 2,048 characters.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&lt;cross-domain-policy&gt;&lt;allow-access-from domain=&quot;<em>&quot;/&gt;&lt;allow-http-request-headers-from domain=&quot;</em>&quot; headers=&quot;*&quot; secure=&quot;false&quot;/&gt;&lt;/cross-domain-policy&gt;</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -184,7 +189,10 @@ public class SetCrossdomainContentRequest extends Request {
         }
 
         /**
-         * The ID of the resource owner.
+         * <p>The ID of the resource owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3461111</p>
          */
         public Builder resourceRealOwnerId(String resourceRealOwnerId) {
             this.putQueryParameter("ResourceRealOwnerId", resourceRealOwnerId);
@@ -193,7 +201,11 @@ public class SetCrossdomainContentRequest extends Request {
         }
 
         /**
-         * The URL of the Object Storage Service (OSS) bucket.
+         * <p>The URL of the Object Storage Service (OSS) bucket.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>outin-67870fd5b****1e98a3900163e1c35d5.oss-cn-shanghai.aliyuncs.com</p>
          */
         public Builder storageLocation(String storageLocation) {
             this.putQueryParameter("StorageLocation", storageLocation);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitAIMediaAuditJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitAIMediaAuditJobRequest</p>
@@ -110,12 +111,15 @@ public class SubmitAIMediaAuditJobRequest extends Request {
         } 
 
         /**
-         * The configuration information about the review job.
-         * <p>
+         * <p>The configuration information about the review job.</p>
+         * <ul>
+         * <li>Other configuration items of the review job. Only the ResourceType field is supported. This field is used to specify the type of media files. You can adjust review standards and rules based on the type of media files.</li>
+         * <li>If you want to modify the review standard and rules based on ResourceType, submit a ticket. For more information, see <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</li>
+         * <li>The value of ResourceType can contain only letters, digits, and underscores (_).</li>
+         * </ul>
          * 
-         * *   Other configuration items of the review job. Only the ResourceType field is supported. This field is used to specify the type of media files. You can adjust review standards and rules based on the type of media files.
-         * *   If you want to modify the review standard and rules based on ResourceType, submit a ticket. For more information, see [Contact us](~~464625~~).
-         * *   The value of ResourceType can contain only letters, digits, and underscores (\_).
+         * <strong>example:</strong>
+         * <p>{&quot;ResourceType&quot;:&quot;****_movie&quot;}</p>
          */
         public Builder mediaAuditConfiguration(String mediaAuditConfiguration) {
             this.putQueryParameter("MediaAuditConfiguration", mediaAuditConfiguration);
@@ -124,7 +128,11 @@ public class SubmitAIMediaAuditJobRequest extends Request {
         }
 
         /**
-         * The ID of the video file. To obtain the file ID, log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com) and choose **Review Management** > **Content Moderation** in the left-side navigation pane.
+         * <p>The ID of the video file. To obtain the file ID, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Review Management</strong> &gt; <strong>Content Moderation</strong> in the left-side navigation pane.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fe028d09441afffb138cd7ee****</p>
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);
@@ -133,7 +141,10 @@ public class SubmitAIMediaAuditJobRequest extends Request {
         }
 
         /**
-         * The type of the media file. Only **video** is supported.
+         * <p>The type of the media file. Only <strong>video</strong> is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>video</p>
          */
         public Builder mediaType(String mediaType) {
             this.putQueryParameter("MediaType", mediaType);
@@ -142,13 +153,17 @@ public class SubmitAIMediaAuditJobRequest extends Request {
         }
 
         /**
-         * The ID of the AI template. You can use one of the following methods to obtain the ID of the AI template:
-         * <p>
+         * <p>The ID of the AI template. You can use one of the following methods to obtain the ID of the AI template:</p>
+         * <ul>
+         * <li>Obtain the value of TemplateId from the response to the <a href="https://help.aliyun.com/document_detail/102930.html">AddAITemplate</a> operation that you call to create an AI template.</li>
+         * <li>Obtain the value of TemplateId from the response to the <a href="https://help.aliyun.com/document_detail/102936.html">ListAITemplate</a> operation that you call to create an AI template.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you do not specify an ID, the ID of the default AI template is used.</p>
+         * </blockquote>
          * 
-         * *   Obtain the value of TemplateId from the response to the [AddAITemplate](~~102930~~) operation that you call to create an AI template.
-         * *   Obtain the value of TemplateId from the response to the [ListAITemplate](~~102936~~) operation that you call to create an AI template.
-         * 
-         * >  If you do not specify an ID, the ID of the default AI template is used.
+         * <strong>example:</strong>
+         * <p>a07a7f7d7d10eb9fd999e56ecc****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -157,10 +172,13 @@ public class SubmitAIMediaAuditJobRequest extends Request {
         }
 
         /**
-         * The custom settings. The value must be a JSON string. You can configure settings such as message callbacks. For more information, see [UserData](~~86952~~).
-         * <p>
+         * <p>The custom settings. The value must be a JSON string. You can configure settings such as message callbacks. For more information, see <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</p>
+         * <blockquote>
+         * <p> To use the callback configurations specified by this parameter, you must configure an HTTP callback URL and specify the types of the callback events in the ApsaraVideo VOD console. Otherwise, the callback configurations do not take effect. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see <a href="https://help.aliyun.com/document_detail/86071.html">Configure callback settings</a>.</p>
+         * </blockquote>
          * 
-         * >  To use the callback configurations specified by this parameter, you must configure an HTTP callback URL and specify the types of the callback events in the ApsaraVideo VOD console. Otherwise, the callback configurations do not take effect. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see [Configure callback settings](~~86071~~).
+         * <strong>example:</strong>
+         * <p>{&quot;MessageCallback&quot;:{&quot;CallbackURL&quot;:&quot;<a href="http://test.test.com%22%7D,%22Extend%22:%7B%22localId%22:%22xxx%22,%22test%22:%22www%22%7D%7D">http://test.test.com&quot;},&quot;Extend&quot;:{&quot;localId&quot;:&quot;xxx&quot;,&quot;test&quot;:&quot;www&quot;}}</a></p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

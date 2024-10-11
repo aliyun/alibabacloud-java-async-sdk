@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEditingProjectMaterialsResponseBody} extends {@link TeaModel}
  *
  * <p>GetEditingProjectMaterialsResponseBody</p>
@@ -49,7 +50,7 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The materials.
+         * <p>The materials.</p>
          */
         public Builder materialList(MaterialList materialList) {
             this.materialList = materialList;
@@ -57,7 +58,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>746FFA07-8BBB-46B1-3E94E3B2915E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetEditingProjectMaterialsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEditingProjectMaterialsResponseBody</p>
+     */
     public static class Snapshots extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Snapshot")
         private java.util.List < String > snapshot;
@@ -111,6 +121,12 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetEditingProjectMaterialsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEditingProjectMaterialsResponseBody</p>
+     */
     public static class Sprites extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Sprite")
         private java.util.List < String > sprite;
@@ -152,6 +168,12 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetEditingProjectMaterialsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEditingProjectMaterialsResponseBody</p>
+     */
     public static class Material extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CateId")
         private Integer cateId;
@@ -371,7 +393,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * The category ID of the material.
+             * <p>The category ID of the material.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100005****</p>
              */
             public Builder cateId(Integer cateId) {
                 this.cateId = cateId;
@@ -379,7 +404,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * The category name of the material.
+             * <p>The category name of the material.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -387,7 +415,7 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * The thumbnail URL of the material.
+             * <p>The thumbnail URL of the material.</p>
              */
             public Builder coverURL(String coverURL) {
                 this.coverURL = coverURL;
@@ -395,7 +423,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the material was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the material was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-10-19 10:48:17</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -403,7 +434,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the material.
+             * <p>The description of the material.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test2</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -411,7 +445,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the material. The value is rounded to four decimal places. Unit: seconds.
+             * <p>The duration of the material. The value is rounded to four decimal places. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15.16</p>
              */
             public Builder duration(Float duration) {
                 this.duration = duration;
@@ -419,7 +456,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the material.
+             * <p>The ID of the material.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>85befc4118b84c6723e53b80b1****</p>
              */
             public Builder materialId(String materialId) {
                 this.materialId = materialId;
@@ -427,12 +467,15 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the material. Valid values:
-             * <p>
+             * <p>The type of the material. Valid values:</p>
+             * <ul>
+             * <li><strong>video</strong></li>
+             * <li><strong>audio</strong></li>
+             * <li><strong>image</strong></li>
+             * </ul>
              * 
-             * *   **video**
-             * *   **audio**
-             * *   **image**
+             * <strong>example:</strong>
+             * <p>video</p>
              */
             public Builder materialType(String materialType) {
                 this.materialType = materialType;
@@ -440,7 +483,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the material was last updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the material was last updated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-10-19 10:48:17</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -448,7 +494,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the mezzanine file. Unit: byte.
+             * <p>The size of the mezzanine file. Unit: byte.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1682694</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -456,7 +505,7 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * The URLs of material snapshots. The value is an array.
+             * <p>The URLs of material snapshots. The value is an array.</p>
              */
             public Builder snapshots(Snapshots snapshots) {
                 this.snapshots = snapshots;
@@ -464,7 +513,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the sprite.
+             * <p>The source of the sprite.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -472,7 +524,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the sprite.
+             * <p>The configuration of the sprite.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder spriteConfig(String spriteConfig) {
                 this.spriteConfig = spriteConfig;
@@ -480,7 +535,7 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * The URLs of material sprites. The value is an array.
+             * <p>The URLs of material sprites. The value is an array.</p>
              */
             public Builder sprites(Sprites sprites) {
                 this.sprites = sprites;
@@ -488,13 +543,16 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the material. Valid values:
-             * <p>
+             * <p>The status of the material. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong>: The material is in draft.</li>
+             * <li><strong>Producing</strong>: The material is being produced.</li>
+             * <li><strong>Produced</strong>: The material was produced.</li>
+             * <li><strong>ProduceFailed</strong>: The material failed to be produced.</li>
+             * </ul>
              * 
-             * *   **Normal**: The material is in draft.
-             * *   **Producing**: The material is being produced.
-             * *   **Produced**: The material was produced.
-             * *   **ProduceFailed**: The material failed to be produced.
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -502,7 +560,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the material. Multiple tags are separated by commas (,).
+             * <p>The tag of the material. Multiple tags are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>editing test</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -510,7 +571,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the material.
+             * <p>The title of the material.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -524,6 +588,12 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetEditingProjectMaterialsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEditingProjectMaterialsResponseBody</p>
+     */
     public static class MaterialList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Material")
         private java.util.List < Material> material;

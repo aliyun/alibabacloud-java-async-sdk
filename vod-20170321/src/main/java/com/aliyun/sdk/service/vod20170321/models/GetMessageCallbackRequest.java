@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMessageCallbackRequest} extends {@link RequestModel}
  *
  * <p>GetMessageCallbackRequest</p>
@@ -67,7 +68,10 @@ public class GetMessageCallbackRequest extends Request {
         } 
 
         /**
-         * The ID of the application. If you do not set this parameter, the default value **app-1000000** is used.
+         * <p>The ID of the application. If you do not set this parameter, the default value <strong>app-1000000</strong> is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-1000000</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);

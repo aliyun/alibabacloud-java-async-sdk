@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMediaAuditResultResponseBody} extends {@link TeaModel}
  *
  * <p>GetMediaAuditResultResponseBody</p>
@@ -49,7 +50,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The review results.
+         * <p>The review results.</p>
          */
         public Builder mediaAuditResult(MediaAuditResult mediaAuditResult) {
             this.mediaAuditResult = mediaAuditResult;
@@ -57,7 +58,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB7D7232-1AB2-40FE-B8D5-****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMediaAuditResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditResultResponseBody</p>
+     */
     public static class AudioResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -133,19 +143,22 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             private String suggestion; 
 
             /**
-             * The category of the review result.
-             * <p>
+             * <p>The category of the review result.</p>
+             * <ul>
+             * <li><strong>normal</strong></li>
+             * <li><strong>spam</strong></li>
+             * <li><strong>ad</strong></li>
+             * <li><strong>politics</strong></li>
+             * <li><strong>terrorism</strong></li>
+             * <li><strong>abuse</strong></li>
+             * <li><strong>porn</strong></li>
+             * <li><strong>flood</strong></li>
+             * <li><strong>contraband</strong></li>
+             * <li><strong>meaningless</strong></li>
+             * </ul>
              * 
-             * *   **normal**
-             * *   **spam**
-             * *   **ad**
-             * *   **politics**
-             * *   **terrorism**
-             * *   **abuse**
-             * *   **porn**
-             * *   **flood**
-             * *   **contraband**
-             * *   **meaningless**
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -153,7 +166,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The review scenario. The value is **antispam**.
+             * <p>The review scenario. The value is <strong>antispam</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>antispam</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -161,7 +177,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The score.
+             * <p>The score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99.91</p>
              */
             public Builder score(String score) {
                 this.score = score;
@@ -169,12 +188,15 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The recommendation for review results. Valid values:
-             * <p>
+             * <p>The recommendation for review results. Valid values:</p>
+             * <ul>
+             * <li><strong>block</strong></li>
+             * <li><strong>review</strong></li>
+             * <li><strong>pass</strong></li>
+             * </ul>
              * 
-             * *   **block**
-             * *   **review**
-             * *   **pass**
+             * <strong>example:</strong>
+             * <p>pass</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -188,6 +210,12 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaAuditResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditResultResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -251,31 +279,33 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             private String suggestion; 
 
             /**
-             * The category of the review result.
-             * <p>
+             * <p>The category of the review result.</p>
+             * <p>Valid values if scene is <strong>porn</strong>:</p>
+             * <ul>
+             * <li><strong>porn</strong></li>
+             * <li><strong>sexy</strong></li>
+             * <li><strong>normal</strong></li>
+             * </ul>
+             * <p>Valid values if scene is <strong>terrorism</strong>:</p>
+             * <ul>
+             * <li><strong>normal</strong></li>
+             * <li><strong>bloody</strong></li>
+             * <li><strong>explosion</strong></li>
+             * <li><strong>outfit</strong></li>
+             * <li><strong>logo</strong></li>
+             * <li><strong>weapon</strong></li>
+             * <li><strong>politics</strong></li>
+             * <li><strong>violence</strong></li>
+             * <li><strong>crowd</strong></li>
+             * <li><strong>parade</strong></li>
+             * <li><strong>carcrash</strong></li>
+             * <li><strong>flag</strong></li>
+             * <li><strong>location</strong></li>
+             * <li><strong>others</strong></li>
+             * </ul>
              * 
-             * Valid values if scene is **porn**:
-             * 
-             * *   **porn**
-             * *   **sexy**
-             * *   **normal**
-             * 
-             * Valid values if scene is **terrorism**:
-             * 
-             * *   **normal**
-             * *   **bloody**
-             * *   **explosion**
-             * *   **outfit**
-             * *   **logo**
-             * *   **weapon**
-             * *   **politics**
-             * *   **violence**
-             * *   **crowd**
-             * *   **parade**
-             * *   **carcrash**
-             * *   **flag**
-             * *   **location**
-             * *   **others**
+             * <strong>example:</strong>
+             * <p>porn</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -283,11 +313,14 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The review scenario. Valid values:
-             * <p>
+             * <p>The review scenario. Valid values:</p>
+             * <ul>
+             * <li><strong>terrorism</strong></li>
+             * <li><strong>porn</strong></li>
+             * </ul>
              * 
-             * *   **terrorism**
-             * *   **porn**
+             * <strong>example:</strong>
+             * <p>porn</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -295,7 +328,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The score of the image of the category that is indicated by Label.
+             * <p>The score of the image of the category that is indicated by Label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.00000</p>
              */
             public Builder score(String score) {
                 this.score = score;
@@ -303,12 +339,15 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The recommendation for review results. Valid values:
-             * <p>
+             * <p>The recommendation for review results. Valid values:</p>
+             * <ul>
+             * <li><strong>block</strong></li>
+             * <li><strong>review</strong></li>
+             * <li><strong>pass</strong></li>
+             * </ul>
              * 
-             * *   **block**
-             * *   **review**
-             * *   **pass**
+             * <strong>example:</strong>
+             * <p>pass</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -322,6 +361,12 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaAuditResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditResultResponseBody</p>
+     */
     public static class ImageResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -397,12 +442,15 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The category of the review result. Separate multiple values with commas (,). Valid values:
-             * <p>
+             * <p>The category of the review result. Separate multiple values with commas (,). Valid values:</p>
+             * <ul>
+             * <li><strong>porn</strong></li>
+             * <li><strong>terrorism</strong></li>
+             * <li><strong>normal</strong></li>
+             * </ul>
              * 
-             * *   **porn**
-             * *   **terrorism**
-             * *   **normal**
+             * <strong>example:</strong>
+             * <p>porn</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -410,7 +458,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * Details of image review results.
+             * <p>Details of image review results.</p>
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -418,12 +466,15 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The recommendation for review results. Valid values:
-             * <p>
+             * <p>The recommendation for review results. Valid values:</p>
+             * <ul>
+             * <li><strong>block</strong></li>
+             * <li><strong>review</strong></li>
+             * <li><strong>pass</strong></li>
+             * </ul>
              * 
-             * *   **block**
-             * *   **review**
-             * *   **pass**
+             * <strong>example:</strong>
+             * <p>pass</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -431,7 +482,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the image. The value is **cover**.
+             * <p>The type of the image. The value is <strong>cover</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cover</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -439,7 +493,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the image.
+             * <p>The URL of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.test.com/****.jpg">http://www.test.com/****.jpg</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -453,6 +510,12 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaAuditResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditResultResponseBody</p>
+     */
     public static class TextResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -540,7 +603,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The text content for review.
+             * <p>The text content for review.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hot line 123****</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -548,16 +614,19 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the review result. Valid values:
-             * <p>
+             * <p>The category of the review result. Valid values:</p>
+             * <ul>
+             * <li><strong>spam</strong></li>
+             * <li><strong>ad</strong></li>
+             * <li><strong>abuse</strong></li>
+             * <li><strong>flood</strong></li>
+             * <li><strong>contraband</strong></li>
+             * <li><strong>meaningless</strong></li>
+             * <li><strong>normal</strong></li>
+             * </ul>
              * 
-             * - **spam**
-             * - **ad**
-             * - **abuse**
-             * - **flood**
-             * - **contraband**
-             * - **meaningless**
-             * - **normal**
+             * <strong>example:</strong>
+             * <p>ad</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -565,7 +634,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The review scenario. The value is **antispam**.
+             * <p>The review scenario. The value is <strong>antispam</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>antispam</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -573,7 +645,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The score of the image of the category that is indicated by Label.
+             * <p>The score of the image of the category that is indicated by Label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.00000</p>
              */
             public Builder score(String score) {
                 this.score = score;
@@ -581,12 +656,15 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The recommendation for review results. Valid values:
-             * <p>
+             * <p>The recommendation for review results. Valid values:</p>
+             * <ul>
+             * <li><strong>block</strong></li>
+             * <li><strong>review</strong></li>
+             * <li><strong>pass</strong></li>
+             * </ul>
              * 
-             * - **block**
-             * - **review**
-             * - **pass**
+             * <strong>example:</strong>
+             * <p>pass</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -594,7 +672,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the text. The value is **title**.
+             * <p>The type of the text. The value is <strong>title</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>title</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -608,6 +689,12 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaAuditResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditResultResponseBody</p>
+     */
     public static class CounterList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -647,7 +734,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             private String label; 
 
             /**
-             * The number of frames.
+             * <p>The number of frames.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -655,11 +745,14 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the review result. Valid values:
-             * <p>
+             * <p>The category of the review result. Valid values:</p>
+             * <ul>
+             * <li><strong>ad</strong></li>
+             * <li><strong>normal</strong></li>
+             * </ul>
              * 
-             * - **ad**
-             * - **normal**
+             * <strong>example:</strong>
+             * <p>ad</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -673,6 +766,12 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaAuditResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditResultResponseBody</p>
+     */
     public static class TopList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -736,11 +835,14 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The category of the review result. 
-             * <p>
+             * <p>The category of the review result. </p>
+             * <ul>
+             * <li><strong>ad</strong></li>
+             * <li><strong>normal</strong></li>
+             * </ul>
              * 
-             * - **ad**
-             * - **normal**
+             * <strong>example:</strong>
+             * <p>ad</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -748,7 +850,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The score of the image of the category that is indicated by Label.
+             * <p>The score of the image of the category that is indicated by Label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder score(String score) {
                 this.score = score;
@@ -756,7 +861,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The position in the video. Unit: milliseconds.
+             * <p>The position in the video. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -764,7 +872,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the image.
+             * <p>The URL of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://temp-testbucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg">http://temp-testbucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -778,6 +889,12 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaAuditResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditResultResponseBody</p>
+     */
     public static class AdResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AverageScore")
         private String averageScore;
@@ -865,7 +982,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             private java.util.List < TopList> topList; 
 
             /**
-             * The average score of the review results.
+             * <p>The average score of the review results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder averageScore(String averageScore) {
                 this.averageScore = averageScore;
@@ -873,7 +993,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The statistics about tag frames.
+             * <p>The statistics about tag frames.</p>
              */
             public Builder counterList(java.util.List < CounterList> counterList) {
                 this.counterList = counterList;
@@ -881,11 +1001,14 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the review result. Valid values:
-             * <p>
+             * <p>The category of the review result. Valid values:</p>
+             * <ul>
+             * <li><strong>ad</strong></li>
+             * <li><strong>normal</strong></li>
+             * </ul>
              * 
-             * - **ad**
-             * - **normal**
+             * <strong>example:</strong>
+             * <p>ad</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -893,7 +1016,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The highest review score.
+             * <p>The highest review score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxScore(String maxScore) {
                 this.maxScore = maxScore;
@@ -901,12 +1027,15 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The recommendation for review results. Valid values:
-             * <p>
+             * <p>The recommendation for review results. Valid values:</p>
+             * <ul>
+             * <li><strong>block</strong></li>
+             * <li><strong>review</strong></li>
+             * <li><strong>pass</strong></li>
+             * </ul>
              * 
-             * - **block**
-             * - **review**
-             * - **pass**
+             * <strong>example:</strong>
+             * <p>block</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -914,7 +1043,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the image with the highest score of the category that is indicated by Label.
+             * <p>The information about the image with the highest score of the category that is indicated by Label.</p>
              */
             public Builder topList(java.util.List < TopList> topList) {
                 this.topList = topList;
@@ -928,6 +1057,12 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaAuditResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditResultResponseBody</p>
+     */
     public static class LiveResultCounterList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -967,7 +1102,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             private String label; 
 
             /**
-             * The number of frames.
+             * <p>The number of frames.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -975,11 +1113,14 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the review result. Valid values:
-             * <p>
+             * <p>The category of the review result. Valid values:</p>
+             * <ul>
+             * <li><strong>live</strong>: The content contains undesirable scenes.</li>
+             * <li><strong>normal</strong>: normal content.</li>
+             * </ul>
              * 
-             * - **live**: The content contains undesirable scenes.
-             * - **normal**: normal content.
+             * <strong>example:</strong>
+             * <p>live</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -993,6 +1134,12 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaAuditResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditResultResponseBody</p>
+     */
     public static class LiveResultTopList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -1056,11 +1203,14 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The category of the review result. Valid values:
-             * <p>
+             * <p>The category of the review result. Valid values:</p>
+             * <ul>
+             * <li><strong>live</strong>: The content contains undesirable scenes.</li>
+             * <li><strong>normal</strong>: normal content.</li>
+             * </ul>
              * 
-             * - **live**: The content contains undesirable scenes.
-             * - **normal**: normal content.
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -1068,7 +1218,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The score of the image of the category that is indicated by Label.
+             * <p>The score of the image of the category that is indicated by Label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder score(String score) {
                 this.score = score;
@@ -1076,7 +1229,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The position in the video. Unit: milliseconds.
+             * <p>The position in the video. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -1084,7 +1240,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the image.
+             * <p>The URL of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://temp-testbucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg">http://temp-testbucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1098,6 +1257,12 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaAuditResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditResultResponseBody</p>
+     */
     public static class LiveResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AverageScore")
         private String averageScore;
@@ -1185,7 +1350,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             private java.util.List < LiveResultTopList> topList; 
 
             /**
-             * The average score of the review results.
+             * <p>The average score of the review results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder averageScore(String averageScore) {
                 this.averageScore = averageScore;
@@ -1193,7 +1361,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The statistics about tag frames.
+             * <p>The statistics about tag frames.</p>
              */
             public Builder counterList(java.util.List < LiveResultCounterList> counterList) {
                 this.counterList = counterList;
@@ -1201,11 +1369,14 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the review result. Valid values:
-             * <p>
+             * <p>The category of the review result. Valid values:</p>
+             * <ul>
+             * <li><strong>live</strong>: The content contains undesirable scenes.</li>
+             * <li><strong>normal</strong>: normal content.</li>
+             * </ul>
              * 
-             * - **live**: The content contains undesirable scenes.
-             * - **normal**: normal content.
+             * <strong>example:</strong>
+             * <p>live</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -1213,7 +1384,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The highest review score.
+             * <p>The highest review score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxScore(String maxScore) {
                 this.maxScore = maxScore;
@@ -1221,12 +1395,15 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The recommendation for review results. Valid values:
-             * <p>
+             * <p>The recommendation for review results. Valid values:</p>
+             * <ul>
+             * <li><strong>block</strong></li>
+             * <li><strong>review</strong></li>
+             * <li><strong>pass</strong></li>
+             * </ul>
              * 
-             * - **block**
-             * - **review**
-             * - **pass**
+             * <strong>example:</strong>
+             * <p>block</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -1234,7 +1411,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the image with the highest score of the category that is indicated by Label.
+             * <p>The information about the image with the highest score of the category that is indicated by Label.</p>
              */
             public Builder topList(java.util.List < LiveResultTopList> topList) {
                 this.topList = topList;
@@ -1248,6 +1425,12 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaAuditResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditResultResponseBody</p>
+     */
     public static class LogoResultCounterList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -1287,7 +1470,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             private String label; 
 
             /**
-             * The number of frames.
+             * <p>The number of frames.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -1295,11 +1481,14 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the review result. Valid values:
-             * <p>
+             * <p>The category of the review result. Valid values:</p>
+             * <ul>
+             * <li><strong>logo</strong></li>
+             * <li><strong>normal</strong></li>
+             * </ul>
              * 
-             * - **logo**
-             * - **normal**
+             * <strong>example:</strong>
+             * <p>logo</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -1313,6 +1502,12 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaAuditResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditResultResponseBody</p>
+     */
     public static class LogoResultTopList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -1376,11 +1571,14 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The category of the review result.
-             * <p>
+             * <p>The category of the review result.</p>
+             * <ul>
+             * <li><strong>logo</strong></li>
+             * <li><strong>normal</strong></li>
+             * </ul>
              * 
-             * - **logo**
-             * - **normal**
+             * <strong>example:</strong>
+             * <p>logo</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -1388,7 +1586,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The score of the image of the category that is indicated by Label.
+             * <p>The score of the image of the category that is indicated by Label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder score(String score) {
                 this.score = score;
@@ -1396,7 +1597,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The position in the video. Unit: milliseconds.
+             * <p>The position in the video. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -1404,7 +1608,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the image.
+             * <p>The URL of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://temp-testbucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg">http://temp-testbucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1418,6 +1625,12 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaAuditResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditResultResponseBody</p>
+     */
     public static class LogoResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AverageScore")
         private String averageScore;
@@ -1505,7 +1718,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             private java.util.List < LogoResultTopList> topList; 
 
             /**
-             * The average score of the review results.
+             * <p>The average score of the review results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder averageScore(String averageScore) {
                 this.averageScore = averageScore;
@@ -1513,7 +1729,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The statistics about tag frames.
+             * <p>The statistics about tag frames.</p>
              */
             public Builder counterList(java.util.List < LogoResultCounterList> counterList) {
                 this.counterList = counterList;
@@ -1521,11 +1737,14 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the review result. Valid values:
-             * <p>
+             * <p>The category of the review result. Valid values:</p>
+             * <ul>
+             * <li><strong>logo</strong></li>
+             * <li><strong>normal</strong></li>
+             * </ul>
              * 
-             * - **logo**
-             * - **normal**
+             * <strong>example:</strong>
+             * <p>logo</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -1533,7 +1752,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The highest review score.
+             * <p>The highest review score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxScore(String maxScore) {
                 this.maxScore = maxScore;
@@ -1541,12 +1763,15 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The recommendation for review results. Valid values:
-             * <p>
+             * <p>The recommendation for review results. Valid values:</p>
+             * <ul>
+             * <li><strong>block</strong></li>
+             * <li><strong>review</strong></li>
+             * <li><strong>pass</strong></li>
+             * </ul>
              * 
-             * - **block**
-             * - **review**
-             * - **pass**
+             * <strong>example:</strong>
+             * <p>block</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -1554,7 +1779,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the image with the highest score of the category that is indicated by Label.
+             * <p>The information about the image with the highest score of the category that is indicated by Label.</p>
              */
             public Builder topList(java.util.List < LogoResultTopList> topList) {
                 this.topList = topList;
@@ -1568,6 +1793,12 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaAuditResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditResultResponseBody</p>
+     */
     public static class PornResultCounterList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -1607,7 +1838,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             private String label; 
 
             /**
-             * The number of frames.
+             * <p>The number of frames.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -1615,12 +1849,15 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the review result. Valid values:
-             * <p>
+             * <p>The category of the review result. Valid values:</p>
+             * <ul>
+             * <li><strong>porn</strong></li>
+             * <li><strong>sexy</strong></li>
+             * <li><strong>normal</strong></li>
+             * </ul>
              * 
-             * - **porn**
-             * - **sexy**
-             * - **normal**
+             * <strong>example:</strong>
+             * <p>porn</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -1634,6 +1871,12 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaAuditResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditResultResponseBody</p>
+     */
     public static class PornResultTopList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -1697,12 +1940,15 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The category of the review result. Valid values:
-             * <p>
+             * <p>The category of the review result. Valid values:</p>
+             * <ul>
+             * <li><strong>porn</strong></li>
+             * <li><strong>sexy</strong></li>
+             * <li><strong>normal</strong></li>
+             * </ul>
              * 
-             * - **porn**
-             * - **sexy**
-             * - **normal**
+             * <strong>example:</strong>
+             * <p>porn</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -1710,7 +1956,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The score of the image of the category that is indicated by Label.
+             * <p>The score of the image of the category that is indicated by Label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.0000</p>
              */
             public Builder score(String score) {
                 this.score = score;
@@ -1718,7 +1967,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The position in the video. Unit: milliseconds.
+             * <p>The position in the video. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3005</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -1726,7 +1978,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the image.
+             * <p>The URL of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://temp-testbucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg">http://temp-testbucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1740,6 +1995,12 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaAuditResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditResultResponseBody</p>
+     */
     public static class PornResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AverageScore")
         private String averageScore;
@@ -1827,7 +2088,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             private java.util.List < PornResultTopList> topList; 
 
             /**
-             * The average score of the review results.
+             * <p>The average score of the review results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder averageScore(String averageScore) {
                 this.averageScore = averageScore;
@@ -1835,7 +2099,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The statistics about tag frames.
+             * <p>The statistics about tag frames.</p>
              */
             public Builder counterList(java.util.List < PornResultCounterList> counterList) {
                 this.counterList = counterList;
@@ -1843,12 +2107,15 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the review result. Valid values:
-             * <p>
+             * <p>The category of the review result. Valid values:</p>
+             * <ul>
+             * <li><strong>porn</strong></li>
+             * <li><strong>sexy</strong></li>
+             * <li><strong>normal</strong></li>
+             * </ul>
              * 
-             * - **porn**
-             * - **sexy**
-             * - **normal**
+             * <strong>example:</strong>
+             * <p>porn</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -1856,7 +2123,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The highest review score.
+             * <p>The highest review score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxScore(String maxScore) {
                 this.maxScore = maxScore;
@@ -1864,7 +2134,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The recommendation for review results.
+             * <p>The recommendation for review results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pass</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -1872,7 +2145,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the image with the highest score of the category that is indicated by Label.
+             * <p>The information about the image with the highest score of the category that is indicated by Label.</p>
              */
             public Builder topList(java.util.List < PornResultTopList> topList) {
                 this.topList = topList;
@@ -1886,6 +2159,12 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaAuditResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditResultResponseBody</p>
+     */
     public static class TerrorismResultCounterList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -1925,7 +2204,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             private String label; 
 
             /**
-             * The number of frames.
+             * <p>The number of frames.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -1933,23 +2215,26 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the review result. Valid values:
-             * <p>
+             * <p>The category of the review result. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong></li>
+             * <li><strong>bloody</strong></li>
+             * <li><strong>explosion</strong></li>
+             * <li><strong>outfit</strong></li>
+             * <li><strong>logo</strong></li>
+             * <li><strong>weapon</strong></li>
+             * <li><strong>politics</strong></li>
+             * <li><strong>violence</strong></li>
+             * <li><strong>crowd</strong></li>
+             * <li><strong>parade</strong></li>
+             * <li><strong>carcrash</strong></li>
+             * <li><strong>flag</strong></li>
+             * <li><strong>location</strong></li>
+             * <li><strong>others</strong></li>
+             * </ul>
              * 
-             * - **normal**
-             * - **bloody**
-             * - **explosion**
-             * - **outfit**
-             * - **logo**
-             * - **weapon**
-             * - **politics**
-             * - **violence**
-             * - **crowd**
-             * - **parade**
-             * - **carcrash**
-             * - **flag**
-             * - **location**
-             * - **others**
+             * <strong>example:</strong>
+             * <p>outfit</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -1963,6 +2248,12 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaAuditResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditResultResponseBody</p>
+     */
     public static class TerrorismResultTopList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -2026,23 +2317,26 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The category of the review result. Valid values:
-             * <p>
+             * <p>The category of the review result. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong></li>
+             * <li><strong>bloody</strong></li>
+             * <li><strong>explosion</strong></li>
+             * <li><strong>outfit</strong></li>
+             * <li><strong>logo</strong></li>
+             * <li><strong>weapon</strong></li>
+             * <li><strong>politics</strong></li>
+             * <li><strong>violence</strong></li>
+             * <li><strong>crowd</strong></li>
+             * <li><strong>parade</strong></li>
+             * <li><strong>carcrash</strong></li>
+             * <li><strong>flag</strong></li>
+             * <li><strong>location</strong></li>
+             * <li><strong>others</strong></li>
+             * </ul>
              * 
-             * - **normal**
-             * - **bloody**
-             * - **explosion**
-             * - **outfit**
-             * - **logo**
-             * - **weapon**
-             * - **politics**
-             * - **violence**
-             * - **crowd**
-             * - **parade**
-             * - **carcrash**
-             * - **flag**
-             * - **location**
-             * - **others**
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -2050,7 +2344,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The score of the image of the category that is indicated by Label.
+             * <p>The score of the image of the category that is indicated by Label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.000</p>
              */
             public Builder score(String score) {
                 this.score = score;
@@ -2058,7 +2355,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The position in the video. Unit: milliseconds.
+             * <p>The position in the video. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3005</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -2066,7 +2366,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the image.
+             * <p>The URL of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://temp-testbucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg">http://temp-testbucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -2080,6 +2383,12 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaAuditResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditResultResponseBody</p>
+     */
     public static class TerrorismResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AverageScore")
         private String averageScore;
@@ -2167,7 +2476,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             private java.util.List < TerrorismResultTopList> topList; 
 
             /**
-             * The average score of the review results.
+             * <p>The average score of the review results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder averageScore(String averageScore) {
                 this.averageScore = averageScore;
@@ -2175,7 +2487,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The statistics about tag frames.
+             * <p>The statistics about tag frames.</p>
              */
             public Builder counterList(java.util.List < TerrorismResultCounterList> counterList) {
                 this.counterList = counterList;
@@ -2183,23 +2495,26 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the review result. Valid values:
-             * <p>
+             * <p>The category of the review result. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong></li>
+             * <li><strong>bloody</strong></li>
+             * <li><strong>explosion</strong></li>
+             * <li><strong>outfit</strong></li>
+             * <li><strong>logo</strong></li>
+             * <li><strong>weapon</strong></li>
+             * <li><strong>politics</strong></li>
+             * <li><strong>violence</strong></li>
+             * <li><strong>crowd</strong></li>
+             * <li><strong>parade</strong></li>
+             * <li><strong>carcrash</strong></li>
+             * <li><strong>flag</strong></li>
+             * <li><strong>location</strong></li>
+             * <li><strong>others</strong></li>
+             * </ul>
              * 
-             * - **normal**
-             * - **bloody**
-             * - **explosion**
-             * - **outfit**
-             * - **logo**
-             * - **weapon**
-             * - **politics**
-             * - **violence**
-             * - **crowd**
-             * - **parade**
-             * - **carcrash**
-             * - **flag**
-             * - **location**
-             * - **others**
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -2207,7 +2522,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The highest review score.
+             * <p>The highest review score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxScore(String maxScore) {
                 this.maxScore = maxScore;
@@ -2215,12 +2533,15 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The recommendation for review results. Valid values:
-             * <p>
+             * <p>The recommendation for review results. Valid values:</p>
+             * <ul>
+             * <li><strong>block</strong></li>
+             * <li><strong>review</strong></li>
+             * <li><strong>pass</strong></li>
+             * </ul>
              * 
-             * - **block**
-             * - **review**
-             * - **pass**
+             * <strong>example:</strong>
+             * <p>pass</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -2228,7 +2549,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the image with the highest score of the category that is indicated by Label.
+             * <p>The information about the image with the highest score of the category that is indicated by Label.</p>
              */
             public Builder topList(java.util.List < TerrorismResultTopList> topList) {
                 this.topList = topList;
@@ -2242,6 +2563,12 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaAuditResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditResultResponseBody</p>
+     */
     public static class VideoResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdResult")
         private AdResult adResult;
@@ -2341,7 +2668,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             private TerrorismResult terrorismResult; 
 
             /**
-             * The results of ad review.
+             * <p>The results of ad review.</p>
              */
             public Builder adResult(AdResult adResult) {
                 this.adResult = adResult;
@@ -2349,12 +2676,15 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the review result. Separate multiple values with commas (,). Valid values: 
-             * <p>
+             * <p>The category of the review result. Separate multiple values with commas (,). Valid values: </p>
+             * <ul>
+             * <li><strong>porn</strong></li>
+             * <li><strong>terrorism</strong></li>
+             * <li><strong>normal</strong></li>
+             * </ul>
              * 
-             * - **porn**
-             * - **terrorism**
-             * - **normal**
+             * <strong>example:</strong>
+             * <p>porn</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -2362,7 +2692,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The results of undesired content review.
+             * <p>The results of undesired content review.</p>
              */
             public Builder liveResult(LiveResult liveResult) {
                 this.liveResult = liveResult;
@@ -2370,7 +2700,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The results of logo review.
+             * <p>The results of logo review.</p>
              */
             public Builder logoResult(LogoResult logoResult) {
                 this.logoResult = logoResult;
@@ -2378,7 +2708,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The results of pornographic content review.
+             * <p>The results of pornographic content review.</p>
              */
             public Builder pornResult(PornResult pornResult) {
                 this.pornResult = pornResult;
@@ -2386,12 +2716,15 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The recommendation for review results. Valid values:
-             * <p>
+             * <p>The recommendation for review results. Valid values:</p>
+             * <ul>
+             * <li><strong>block</strong></li>
+             * <li><strong>review</strong></li>
+             * <li><strong>pass</strong></li>
+             * </ul>
              * 
-             * - **block**
-             * - **review**
-             * - **pass**
+             * <strong>example:</strong>
+             * <p>pass</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -2399,7 +2732,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The results of terrorist content review.
+             * <p>The results of terrorist content review.</p>
              */
             public Builder terrorismResult(TerrorismResult terrorismResult) {
                 this.terrorismResult = terrorismResult;
@@ -2413,6 +2746,12 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaAuditResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditResultResponseBody</p>
+     */
     public static class MediaAuditResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AbnormalModules")
         private String abnormalModules;
@@ -2512,12 +2851,15 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             private VideoResult videoResult; 
 
             /**
-             * The content that violates the regulations. Separate multiple values with commas (,). Valid values:
-             * <p>
+             * <p>The content that violates the regulations. Separate multiple values with commas (,). Valid values:</p>
+             * <ul>
+             * <li><strong>video</strong></li>
+             * <li><strong>image-cover</strong></li>
+             * <li><strong>text-title</strong></li>
+             * </ul>
              * 
-             * *   **video**
-             * *   **image-cover**
-             * *   **text-title**
+             * <strong>example:</strong>
+             * <p>video</p>
              */
             public Builder abnormalModules(String abnormalModules) {
                 this.abnormalModules = abnormalModules;
@@ -2525,7 +2867,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The results of audio review.
+             * <p>The results of audio review.</p>
              */
             public Builder audioResult(java.util.List < AudioResult> audioResult) {
                 this.audioResult = audioResult;
@@ -2533,7 +2875,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The results of image review.
+             * <p>The results of image review.</p>
              */
             public Builder imageResult(java.util.List < ImageResult> imageResult) {
                 this.imageResult = imageResult;
@@ -2541,12 +2883,15 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the review result. Separate multiple values with commas (,). Valid values:
-             * <p>
+             * <p>The category of the review result. Separate multiple values with commas (,). Valid values:</p>
+             * <ul>
+             * <li><strong>porn</strong></li>
+             * <li><strong>terrorism</strong></li>
+             * <li><strong>normal</strong></li>
+             * </ul>
              * 
-             * *   **porn**
-             * *   **terrorism**
-             * *   **normal**
+             * <strong>example:</strong>
+             * <p>porn</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -2554,12 +2899,15 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The recommendation for review results. Valid values:
-             * <p>
+             * <p>The recommendation for review results. Valid values:</p>
+             * <ul>
+             * <li><strong>block</strong></li>
+             * <li><strong>review</strong></li>
+             * <li><strong>pass</strong></li>
+             * </ul>
              * 
-             * *   **block**
-             * *   **review**
-             * *   **pass**
+             * <strong>example:</strong>
+             * <p>pass</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -2567,7 +2915,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The results of text review.
+             * <p>The results of text review.</p>
              */
             public Builder textResult(java.util.List < TextResult> textResult) {
                 this.textResult = textResult;
@@ -2575,7 +2923,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             }
 
             /**
-             * The results of video review.
+             * <p>The results of video review.</p>
              */
             public Builder videoResult(VideoResult videoResult) {
                 this.videoResult = videoResult;

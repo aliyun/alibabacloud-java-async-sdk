@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodTieringStorageRetrievalDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVodTieringStorageRetrievalDataResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeVodTieringStorageRetrievalDataResponseBody extends TeaModel
         private java.util.List < RetrievalData> retrievalData; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4A13-BEF6-D73936****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeVodTieringStorageRetrievalDataResponseBody extends TeaModel
         }
 
         /**
-         * The data retrieval information.
+         * <p>The data retrieval information.</p>
          */
         public Builder retrievalData(java.util.List < RetrievalData> retrievalData) {
             this.retrievalData = retrievalData;
@@ -70,6 +74,12 @@ public class DescribeVodTieringStorageRetrievalDataResponseBody extends TeaModel
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVodTieringStorageRetrievalDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodTieringStorageRetrievalDataResponseBody</p>
+     */
     public static class RetrievalData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CABulkRetrievalData")
         private Long CABulkRetrievalData;
@@ -169,7 +179,10 @@ public class DescribeVodTieringStorageRetrievalDataResponseBody extends TeaModel
             private String timeStamp; 
 
             /**
-             * The retrieved Cold Archive data in the bulk mode.
+             * <p>The retrieved Cold Archive data in the bulk mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder CABulkRetrievalData(Long CABulkRetrievalData) {
                 this.CABulkRetrievalData = CABulkRetrievalData;
@@ -177,7 +190,10 @@ public class DescribeVodTieringStorageRetrievalDataResponseBody extends TeaModel
             }
 
             /**
-             * The retrieved Cold Archive data in the expedited mode.
+             * <p>The retrieved Cold Archive data in the expedited mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder CAHighPriorRetrievalData(Long CAHighPriorRetrievalData) {
                 this.CAHighPriorRetrievalData = CAHighPriorRetrievalData;
@@ -185,7 +201,10 @@ public class DescribeVodTieringStorageRetrievalDataResponseBody extends TeaModel
             }
 
             /**
-             * The retrieved Cold Archive data in the standard mode.
+             * <p>The retrieved Cold Archive data in the standard mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder CAStdRetrievalData(Long CAStdRetrievalData) {
                 this.CAStdRetrievalData = CAStdRetrievalData;
@@ -193,7 +212,10 @@ public class DescribeVodTieringStorageRetrievalDataResponseBody extends TeaModel
             }
 
             /**
-             * The storage region.
+             * <p>The storage region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -201,7 +223,10 @@ public class DescribeVodTieringStorageRetrievalDataResponseBody extends TeaModel
             }
 
             /**
-             * The data retrieval information.
+             * <p>The data retrieval information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder retrievalData(Long retrievalData) {
                 this.retrievalData = retrievalData;
@@ -209,7 +234,10 @@ public class DescribeVodTieringStorageRetrievalDataResponseBody extends TeaModel
             }
 
             /**
-             * The storage type.
+             * <p>The storage type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IA</p>
              */
             public Builder storageClass(String storageClass) {
                 this.storageClass = storageClass;
@@ -217,7 +245,10 @@ public class DescribeVodTieringStorageRetrievalDataResponseBody extends TeaModel
             }
 
             /**
-             * The timestamp of the returned data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The timestamp of the returned data. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-06-02T10:20:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

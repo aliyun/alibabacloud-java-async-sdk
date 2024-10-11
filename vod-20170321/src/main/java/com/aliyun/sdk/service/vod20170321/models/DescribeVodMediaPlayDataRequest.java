@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodMediaPlayDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeVodMediaPlayDataRequest</p>
@@ -167,12 +168,15 @@ public class DescribeVodMediaPlayDataRequest extends Request {
         } 
 
         /**
-         * The ID of the media file (VideoId). You can specify this parameter to query all playback data of a media file. You can specify only one media ID. You can use one of the following methods to obtain the ID:
-         * <p>
+         * <p>The ID of the media file (VideoId). You can specify this parameter to query all playback data of a media file. You can specify only one media ID. You can use one of the following methods to obtain the ID:</p>
+         * <ul>
+         * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong>. On the page that appears, view the media ID.</li>
+         * <li>Obtain the value of the VideoId parameter in the response to the <a href="~~CreateUploadVideo~~">CreateUploadVideo</a> operation that you called to upload the audio or video file.</li>
+         * <li>Obtain the value of VideoId by calling the <a href="~~SearchMedia~~">SearchMedia</a> operation. This method is applicable to files that have been uploaded.</li>
+         * </ul>
          * 
-         * *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Media Files** > **Audio/Video**. On the page that appears, view the media ID.
-         * *   Obtain the value of the VideoId parameter in the response to the [CreateUploadVideo](~~CreateUploadVideo~~) operation that you called to upload the audio or video file.
-         * *   Obtain the value of VideoId by calling the [SearchMedia](~~SearchMedia~~) operation. This method is applicable to files that have been uploaded.
+         * <strong>example:</strong>
+         * <p>9ae2af636ca6c10412f44891fc****</p>
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);
@@ -181,13 +185,16 @@ public class DescribeVodMediaPlayDataRequest extends Request {
         }
 
         /**
-         * The name of the metric. This parameter must be specified together with the `OrderType` parameter. You can specify this parameter to sort the returned data in ascending or descending order based on specific metrics. Valid values:
-         * <p>
+         * <p>The name of the metric. This parameter must be specified together with the <code>OrderType</code> parameter. You can specify this parameter to sort the returned data in ascending or descending order based on specific metrics. Valid values:</p>
+         * <ul>
+         * <li><strong>PlaySuccessVv</strong>: the total number of views.</li>
+         * <li><strong>PlayPerVv</strong>: the average views per viewer.</li>
+         * <li><strong>PlayDuration</strong>: the total playback duration.</li>
+         * <li><strong>PlayDurationPerUv</strong>: the average playback duration per viewer.</li>
+         * </ul>
          * 
-         * *   **PlaySuccessVv**: the total number of views.
-         * *   **PlayPerVv**: the average views per viewer.
-         * *   **PlayDuration**: the total playback duration.
-         * *   **PlayDurationPerUv**: the average playback duration per viewer.
+         * <strong>example:</strong>
+         * <p>PlaySuccessVv</p>
          */
         public Builder orderName(String orderName) {
             this.putQueryParameter("OrderName", orderName);
@@ -196,11 +203,14 @@ public class DescribeVodMediaPlayDataRequest extends Request {
         }
 
         /**
-         * The sort type. This parameter must be specified together with the `OrderName` parameter. You can specify this parameter to sort the returned data in ascending or descending order based on specific metrics. Valid values:
-         * <p>
+         * <p>The sort type. This parameter must be specified together with the <code>OrderName</code> parameter. You can specify this parameter to sort the returned data in ascending or descending order based on specific metrics. Valid values:</p>
+         * <ul>
+         * <li><strong>ASC</strong>: The returned data is sorted in ascending order.</li>
+         * <li><strong>DESC</strong>: The returned data is sorted in descending order.</li>
+         * </ul>
          * 
-         * *   **ASC**: The returned data is sorted in ascending order.
-         * *   **DESC**: The returned data is sorted in descending order.
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -209,14 +219,17 @@ public class DescribeVodMediaPlayDataRequest extends Request {
         }
 
         /**
-         * The operating system of the player. You can specify this parameter to query all playback data generated on a specific operating system. Valid values:
-         * <p>
+         * <p>The operating system of the player. You can specify this parameter to query all playback data generated on a specific operating system. Valid values:</p>
+         * <ul>
+         * <li><strong>Android</strong></li>
+         * <li><strong>iOS</strong></li>
+         * <li><strong>Windows</strong></li>
+         * <li><strong>macOS</strong></li>
+         * <li><strong>Linux</strong></li>
+         * </ul>
          * 
-         * *   **Android**
-         * *   **iOS**
-         * *   **Windows**
-         * *   **macOS**
-         * *   **Linux**
+         * <strong>example:</strong>
+         * <p>Android</p>
          */
         public Builder os(String os) {
             this.putQueryParameter("Os", os);
@@ -225,7 +238,11 @@ public class DescribeVodMediaPlayDataRequest extends Request {
         }
 
         /**
-         * The number of the page. You can specify a page number to return data from the specified page.
+         * <p>The number of the page. You can specify a page number to return data from the specified page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -234,7 +251,11 @@ public class DescribeVodMediaPlayDataRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: 100.
+         * <p>The number of entries per page. Maximum value: 100.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -243,11 +264,16 @@ public class DescribeVodMediaPlayDataRequest extends Request {
         }
 
         /**
-         * The playback time. Specify the value in the yyyyMMdd format.
-         * <p>
+         * <p>The playback time. Specify the value in the yyyyMMdd format.</p>
+         * <blockquote>
+         * <ul>
+         * <li>You can query data only by day.</li>
+         * <li>You can query only data within the last 30 days.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > *   You can query data only by day.
-         * > *   You can query only data within the last 30 days.
+         * <strong>example:</strong>
+         * <p>20240322</p>
          */
         public Builder playDate(String playDate) {
             this.putQueryParameter("PlayDate", playDate);
@@ -256,17 +282,19 @@ public class DescribeVodMediaPlayDataRequest extends Request {
         }
 
         /**
-         * The region in which ApsaraVideo VOD is activated. You can specify this parameter to query all playback data generated only in a specific region. Valid values:
-         * <p>
+         * <p>The region in which ApsaraVideo VOD is activated. You can specify this parameter to query all playback data generated only in a specific region. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-beijing</strong>: China (Beijing)</li>
+         * <li><strong>cn-shanghai</strong>: China (Shanghai)</li>
+         * <li><strong>cn-shenzhen</strong>: China (Shenzhen)</li>
+         * <li><strong>ap-northeast-1</strong>: Japan (Tokyo)</li>
+         * <li><strong>ap-southeast-1</strong>: Singapore</li>
+         * <li><strong>ap-southeast-5</strong>: Indonesia (Jakarta)</li>
+         * <li><strong>eu-central-1</strong>: Germany (Frankfurt)</li>
+         * </ul>
          * 
-         * *   **cn-beijing**: China (Beijing)
-         * *   **cn-shanghai**: China (Shanghai)
-         * *   **cn-shenzhen**: China (Shenzhen)
-         * *   **ap-northeast-1**: Japan (Tokyo)
-         * *   **ap-southeast-1**: Singapore
-         * *   **ap-southeast-5**: Indonesia (Jakarta)
-         * *   **eu-central-1**: Germany (Frankfurt)
-         * *   **ap-south-1**: India (Mumbai) (disabled)
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -275,11 +303,14 @@ public class DescribeVodMediaPlayDataRequest extends Request {
         }
 
         /**
-         * The type of the player SDK. You can specify this parameter to query all playback data generated by using a specific type of player SDK. Valid values:
-         * <p>
+         * <p>The type of the player SDK. You can specify this parameter to query all playback data generated by using a specific type of player SDK. Valid values:</p>
+         * <ul>
+         * <li><strong>Native</strong>: ApsaraVideo Player SDK for Android or ApsaraVideo Player SDK for iOS</li>
+         * <li><strong>Web</strong>: ApsaraVideo Player SDK for Web</li>
+         * </ul>
          * 
-         * *   **Native**: ApsaraVideo Player SDK for Android or ApsaraVideo Player SDK for iOS
-         * *   **Web**: ApsaraVideo Player SDK for Web
+         * <strong>example:</strong>
+         * <p>Native</p>
          */
         public Builder terminalType(String terminalType) {
             this.putQueryParameter("TerminalType", terminalType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodTranscodeDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVodTranscodeDataResponseBody</p>
@@ -61,11 +62,14 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
         private TranscodeData transcodeData; 
 
         /**
-         * The interval at which the data was queried. Valid values:
-         * <p>
+         * <p>The interval at which the data was queried. Valid values:</p>
+         * <ul>
+         * <li><strong>hour</strong></li>
+         * <li><strong>day</strong></li>
+         * </ul>
          * 
-         * *   **hour**
-         * *   **day**
+         * <strong>example:</strong>
+         * <p>day</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -73,7 +77,10 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C370DAF1-C838-4288-****-9A87633D248E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,7 +88,7 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
         }
 
         /**
-         * The transcoding statistics returned.
+         * <p>The transcoding statistics returned.</p>
          */
         public Builder transcodeData(TranscodeData transcodeData) {
             this.transcodeData = transcodeData;
@@ -94,6 +101,12 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVodTranscodeDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodTranscodeDataResponseBody</p>
+     */
     public static class DataItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -133,12 +146,15 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The transcoding specification. Valid values:
-             * <p>
+             * <p>The transcoding specification. Valid values:</p>
+             * <ul>
+             * <li><strong>Audio</strong>: audio transcoding</li>
+             * <li><strong>Segmentation</strong>: container format conversion</li>
+             * <li><strong>H264.LD, H264.SD, H264.HD, H264.2K, H264.4K, and more</strong></li>
+             * </ul>
              * 
-             * *   **Audio**: audio transcoding
-             * *   **Segmentation**: container format conversion
-             * *   **H264.LD, H264.SD, H264.HD, H264.2K, H264.4K, and more**
+             * <strong>example:</strong>
+             * <p>H264.SD</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -146,7 +162,10 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
             }
 
             /**
-             * The transcoding duration. Unit: seconds.
+             * <p>The transcoding duration. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -160,6 +179,12 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodTranscodeDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodTranscodeDataResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataItem")
         private java.util.List < DataItem> dataItem;
@@ -201,6 +226,12 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodTranscodeDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodTranscodeDataResponseBody</p>
+     */
     public static class TranscodeDataItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private Data data;
@@ -240,7 +271,7 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * The statistics on transcoding of different specifications.
+             * <p>The statistics on transcoding of different specifications.</p>
              */
             public Builder data(Data data) {
                 this.data = data;
@@ -248,7 +279,10 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the returned data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The timestamp of the returned data. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-02-01T16:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -262,6 +296,12 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodTranscodeDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodTranscodeDataResponseBody</p>
+     */
     public static class TranscodeData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TranscodeDataItem")
         private java.util.List < TranscodeDataItem> transcodeDataItem;

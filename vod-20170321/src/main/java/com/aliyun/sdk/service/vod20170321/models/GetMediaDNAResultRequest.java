@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMediaDNAResultRequest} extends {@link RequestModel}
  *
  * <p>GetMediaDNAResultRequest</p>
@@ -110,7 +111,11 @@ public class GetMediaDNAResultRequest extends Request {
         } 
 
         /**
-         * The ID of the video.
+         * <p>The ID of the video.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88c6ca184c0e*****a5b665e2a126797</p>
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);

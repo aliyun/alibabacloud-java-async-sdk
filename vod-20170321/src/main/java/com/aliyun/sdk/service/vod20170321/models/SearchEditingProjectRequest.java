@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchEditingProjectRequest} extends {@link RequestModel}
  *
  * <p>SearchEditingProjectRequest</p>
@@ -193,7 +194,10 @@ public class SearchEditingProjectRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. The query is performed based on the time range during which the required online editing projects were created. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>The end of the time range to query. The query is performed based on the time range during which the required online editing projects were created. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-01-11T13:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -220,7 +224,10 @@ public class SearchEditingProjectRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -229,7 +236,10 @@ public class SearchEditingProjectRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**. Maximum value: **100**.
+         * <p>The number of entries to return on each page. Default value: <strong>10</strong>. Maximum value: <strong>100</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -256,10 +266,14 @@ public class SearchEditingProjectRequest extends Request {
         }
 
         /**
-         * The sorting rule of results. Valid values:
-         * <p>
-         * *   **CreationTime:Desc**: sorts the results based on the creation time in descending order. This is the default value.
-         * *   **CreationTime:Asc**: sorts the results based on the creation time in ascending order.
+         * <p>The sorting rule of results. Valid values:</p>
+         * <ul>
+         * <li><strong>CreationTime:Desc</strong>: sorts the results based on the creation time in descending order. This is the default value.</li>
+         * <li><strong>CreationTime:Asc</strong>: sorts the results based on the creation time in ascending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CreationTime:Desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -268,7 +282,10 @@ public class SearchEditingProjectRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The query is performed based on the time range during which the required online editing projects were created. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>The beginning of the time range to query. The query is performed based on the time range during which the required online editing projects were created. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-01-11T12:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -277,12 +294,16 @@ public class SearchEditingProjectRequest extends Request {
         }
 
         /**
-         * The status of the online editing project. Separate multiple states with commas (,). By default, all online editing projects are queried. Valid values:
-         * <p>
-         * *   **Normal**: indicates that the online editing project is in draft.
-         * *   **Producing**: indicates that the video is being produced.
-         * *   **Produced**: indicates that the video was produced.
-         * *   **ProduceFailed**: indicates that the video failed to be produced.
+         * <p>The status of the online editing project. Separate multiple states with commas (,). By default, all online editing projects are queried. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong>: indicates that the online editing project is in draft.</li>
+         * <li><strong>Producing</strong>: indicates that the video is being produced.</li>
+         * <li><strong>Produced</strong>: indicates that the video was produced.</li>
+         * <li><strong>ProduceFailed</strong>: indicates that the video failed to be produced.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -291,7 +312,10 @@ public class SearchEditingProjectRequest extends Request {
         }
 
         /**
-         * The title of the online editing project.
+         * <p>The title of the online editing project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

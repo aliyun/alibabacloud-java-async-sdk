@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DecryptKMSDataKeyResponseBody} extends {@link TeaModel}
  *
  * <p>DecryptKMSDataKeyResponseBody</p>
@@ -61,7 +62,10 @@ public class DecryptKMSDataKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the customer master key (CMK) that was used to decrypt the ciphertext.
+         * <p>The ID of the customer master key (CMK) that was used to decrypt the ciphertext.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202b9877-5a25-46e3-a763-e20791b5****</p>
          */
         public Builder keyId(String keyId) {
             this.keyId = keyId;
@@ -69,7 +73,10 @@ public class DecryptKMSDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The plaintext that is generated after decryption.
+         * <p>The plaintext that is generated after decryption.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tRYXuCwgja12xxO1N/gZERDDCLw9doZEQiPDk/Bv****</p>
          */
         public Builder plaintext(String plaintext) {
             this.plaintext = plaintext;
@@ -77,7 +84,10 @@ public class DecryptKMSDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4A*****F6-D7393642CA58</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

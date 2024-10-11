@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMediaAuditResultDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetMediaAuditResultDetailResponseBody</p>
@@ -49,7 +50,7 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about review results.
+         * <p>Details about review results.</p>
          */
         public Builder mediaAuditResultDetail(MediaAuditResultDetail mediaAuditResultDetail) {
             this.mediaAuditResultDetail = mediaAuditResultDetail;
@@ -57,7 +58,10 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6438BD76-D523-46FC-956F-****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMediaAuditResultDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditResultDetailResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdLabel")
         private String adLabel;
@@ -229,20 +239,23 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The category of the review result. Valid values:
-             * <p>
+             * <p>The category of the review result. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong>: normal content.</li>
+             * <li><strong>ad</strong>: other ads.</li>
+             * <li><strong>politics</strong>: political content in text.</li>
+             * <li><strong>porn</strong>: pornographic content in text.</li>
+             * <li><strong>abuse</strong>: verbal abuse in text.</li>
+             * <li><strong>terrorism</strong>: terrorist content in text.</li>
+             * <li><strong>contraband</strong>: prohibited content in text.</li>
+             * <li><strong>spam</strong>: spam content in text.</li>
+             * <li><strong>npx</strong>: illegal ad</li>
+             * <li><strong>qrcode</strong>: QR code.</li>
+             * <li><strong>programCode</strong>: mini program code.</li>
+             * </ul>
              * 
-             * *   **normal**: normal content.
-             * *   **ad**: other ads.
-             * *   **politics**: political content in text.
-             * *   **porn**: pornographic content in text.
-             * *   **abuse**: verbal abuse in text.
-             * *   **terrorism**: terrorist content in text.
-             * *   **contraband**: prohibited content in text.
-             * *   **spam**: spam content in text.
-             * *   **npx**: illegal ad
-             * *   **qrcode**: QR code.
-             * *   **programCode**: mini program code.
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder adLabel(String adLabel) {
                 this.adLabel = adLabel;
@@ -250,7 +263,10 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The score of the video snapshot in the ad review result. Valid values: `[0,100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
+             * <p>The score of the video snapshot in the ad review result. Valid values: <code>[0,100]</code>. The value is rounded down to 10 decimal places. The score is representative of the confidence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder adScore(String adScore) {
                 this.adScore = adScore;
@@ -258,14 +274,17 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the review result. Valid values:
-             * <p>
+             * <p>The category of the review result. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong>: normal content.</li>
+             * <li><strong>meaningless</strong>: meaningless content, such as a black or white screen.</li>
+             * <li><strong>PIP</strong>: picture-in-picture.</li>
+             * <li><strong>smoking</strong>: smoking.</li>
+             * <li><strong>drivelive</strong>: live broadcasting in a running vehicle.</li>
+             * </ul>
              * 
-             * *   **normal**: normal content.
-             * *   **meaningless**: meaningless content, such as a black or white screen.
-             * *   **PIP**: picture-in-picture.
-             * *   **smoking**: smoking.
-             * *   **drivelive**: live broadcasting in a running vehicle.
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder liveLabel(String liveLabel) {
                 this.liveLabel = liveLabel;
@@ -273,7 +292,10 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The score of the video snapshot in the undesirable content review result. Valid values: `[0,100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
+             * <p>The score of the video snapshot in the undesirable content review result. Valid values: <code>[0,100]</code>. The value is rounded down to 10 decimal places. The score is representative of the confidence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder liveScore(String liveScore) {
                 this.liveScore = liveScore;
@@ -281,12 +303,15 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the review result. Valid values:
-             * <p>
+             * <p>The category of the review result. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong>: normal content.</li>
+             * <li><strong>TV</strong>: controlled TV station logo.</li>
+             * <li><strong>trademark</strong>: trademark.</li>
+             * </ul>
              * 
-             * *   **normal**: normal content.
-             * *   **TV**: controlled TV station logo.
-             * *   **trademark**: trademark.
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder logoLabel(String logoLabel) {
                 this.logoLabel = logoLabel;
@@ -294,7 +319,10 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The score of the video snapshot in the logo review result. Valid values: `[0,100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
+             * <p>The score of the video snapshot in the logo review result. Valid values: <code>[0,100]</code>. The value is rounded down to 10 decimal places. The score is representative of the confidence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder logoScore(String logoScore) {
                 this.logoScore = logoScore;
@@ -302,12 +330,15 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the review result. Valid values:
-             * <p>
+             * <p>The category of the review result. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong></li>
+             * <li><strong>porn</strong></li>
+             * <li><strong>sexy</strong></li>
+             * </ul>
              * 
-             * *   **normal**
-             * *   **porn**
-             * *   **sexy**
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder pornLabel(String pornLabel) {
                 this.pornLabel = pornLabel;
@@ -315,7 +346,10 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The score of the video snapshot in the pornographic content review result. Valid values: `[0,100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
+             * <p>The score of the video snapshot in the pornographic content review result. Valid values: <code>[0,100]</code>. The value is rounded down to 10 decimal places. The score is representative of the confidence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.00</p>
              */
             public Builder pornScore(String pornScore) {
                 this.pornScore = pornScore;
@@ -323,23 +357,26 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the review result. Valid values:
-             * <p>
+             * <p>The category of the review result. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong></li>
+             * <li><strong>bloody</strong></li>
+             * <li><strong>explosion</strong></li>
+             * <li><strong>outfit</strong></li>
+             * <li><strong>logo</strong></li>
+             * <li><strong>weapon</strong></li>
+             * <li><strong>politics</strong></li>
+             * <li><strong>violence</strong></li>
+             * <li><strong>crowd</strong></li>
+             * <li><strong>parade</strong></li>
+             * <li><strong>carcrash</strong></li>
+             * <li><strong>flag</strong></li>
+             * <li><strong>location</strong></li>
+             * <li><strong>others</strong></li>
+             * </ul>
              * 
-             * *   **normal**
-             * *   **bloody**
-             * *   **explosion**
-             * *   **outfit**
-             * *   **logo**
-             * *   **weapon**
-             * *   **politics**
-             * *   **violence**
-             * *   **crowd**
-             * *   **parade**
-             * *   **carcrash**
-             * *   **flag**
-             * *   **location**
-             * *   **others**
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder terrorismLabel(String terrorismLabel) {
                 this.terrorismLabel = terrorismLabel;
@@ -347,7 +384,10 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The score of the video snapshot in the terrorist content review result. Valid values: `[0,100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
+             * <p>The score of the video snapshot in the terrorist content review result. Valid values: <code>[0,100]</code>. The value is rounded down to 10 decimal places. The score is representative of the confidence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.00</p>
              */
             public Builder terrorismScore(String terrorismScore) {
                 this.terrorismScore = terrorismScore;
@@ -355,7 +395,10 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the snapshot in the video. Unit: milliseconds.
+             * <p>The timestamp of the snapshot in the video. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3005</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -363,7 +406,10 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the video snapshot.
+             * <p>The URL of the video snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://temp-testbucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg">http://temp-testbucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -377,6 +423,12 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaAuditResultDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditResultDetailResponseBody</p>
+     */
     public static class MediaAuditResultDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;
@@ -416,7 +468,7 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
             private Integer total; 
 
             /**
-             * The review results returned.
+             * <p>The review results returned.</p>
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;
@@ -424,7 +476,10 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of snapshots returned.
+             * <p>The total number of snapshots returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodDomainConfigsRequest} extends {@link RequestModel}
  *
  * <p>DescribeVodDomainConfigsRequest</p>
@@ -97,7 +98,11 @@ public class DescribeVodDomainConfigsRequest extends Request {
         } 
 
         /**
-         * The domain name for CDN.
+         * <p>The domain name for CDN.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -106,7 +111,11 @@ public class DescribeVodDomainConfigsRequest extends Request {
         }
 
         /**
-         * The feature name. Separate multiple names with commas (,). For more information, see **Feature description**.
+         * <p>The feature name. Separate multiple names with commas (,). For more information, see <strong>Feature description</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>filetype_based_ttl_set,set_req_host_header</p>
          */
         public Builder functionNames(String functionNames) {
             this.putQueryParameter("FunctionNames", functionNames);

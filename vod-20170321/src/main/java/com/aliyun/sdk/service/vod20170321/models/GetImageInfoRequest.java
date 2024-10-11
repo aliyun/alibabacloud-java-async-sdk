@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetImageInfoRequest} extends {@link RequestModel}
  *
  * <p>GetImageInfoRequest</p>
@@ -82,22 +83,28 @@ public class GetImageInfoRequest extends Request {
         } 
 
         /**
-         * The time when the image URL expires. Unit: seconds.
-         * <p>
+         * <p>The time when the image URL expires. Unit: seconds.</p>
+         * <ul>
+         * <li><p>If you set OutputType to cdn:</p>
+         * <ul>
+         * <li>This parameter takes effect only if URL authentication is enabled. Otherwise, the image URL does not expire.</li>
+         * <li>Minimum value: 1.</li>
+         * <li>Maximum value: unlimited.</li>
+         * <li>Default value: If you leave this parameter empty, the default validity period that is specified in URL signing is used.</li>
+         * </ul>
+         * </li>
+         * <li><p>If you set OutputType to oss:</p>
+         * <ul>
+         * <li>This parameter takes effect only when the ACL of the Object Storage Service (OSS) bucket is private. Otherwise, the image URL does not expire.</li>
+         * <li>Minimum value: 1.</li>
+         * <li>If you store the image in the VOD bucket, the maximum value of this parameter is <strong>2592000</strong> (30 days). If you store the image in an OSS bucket, the maximum value of this parameter is <strong>129600</strong> (36 hours). The maximum value is limited to reduce security risks of the origin.</li>
+         * <li>Default value: 3600.</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         * *   If you set OutputType to cdn:
-         * 
-         *     *   This parameter takes effect only if URL authentication is enabled. Otherwise, the image URL does not expire.
-         *     *   Minimum value: 1.
-         *     *   Maximum value: unlimited.
-         *     *   Default value: If you leave this parameter empty, the default validity period that is specified in URL signing is used.
-         * 
-         * *   If you set OutputType to oss:
-         * 
-         *     *   This parameter takes effect only when the ACL of the Object Storage Service (OSS) bucket is private. Otherwise, the image URL does not expire.
-         *     *   Minimum value: 1.
-         *     *   If you store the image in the VOD bucket, the maximum value of this parameter is **2592000** (30 days). If you store the image in an OSS bucket, the maximum value of this parameter is **129600** (36 hours). The maximum value is limited to reduce security risks of the origin.
-         *     *   Default value: 3600.
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder authTimeout(Long authTimeout) {
             this.putQueryParameter("AuthTimeout", authTimeout);
@@ -106,12 +113,16 @@ public class GetImageInfoRequest extends Request {
         }
 
         /**
-         * The ID of the image. You can use one of the following methods to obtain the ID:
-         * <p>
+         * <p>The ID of the image. You can use one of the following methods to obtain the ID:</p>
+         * <ul>
+         * <li>Log on to the <a href="https://vod.console.aliyun.com/">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose Media Files &gt; Image. On the Image page, view the image ID.</li>
+         * <li>Obtain the image ID from the response to the <a href="~~CreateUploadImage~~">CreateUploadImage</a> operation that you call to obtain the upload URL and credential.</li>
+         * <li>Obtain the image ID from the response to the <a href="~~SearchMedia~~">SearchMedia</a> operation that you call to query the image.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/). In the left-side navigation pane, choose Media Files > Image. On the Image page, view the image ID.
-         * *   Obtain the image ID from the response to the [CreateUploadImage](~~CreateUploadImage~~) operation that you call to obtain the upload URL and credential.
-         * *   Obtain the image ID from the response to the [SearchMedia](~~SearchMedia~~) operation that you call to query the image.
+         * <strong>example:</strong>
+         * <p>3e34733b40b9a96ccf5c1ff6f69****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -120,11 +131,14 @@ public class GetImageInfoRequest extends Request {
         }
 
         /**
-         * The type of the output image URL. Valid values:
-         * <p>
+         * <p>The type of the output image URL. Valid values:</p>
+         * <ul>
+         * <li>oss: OSS URL</li>
+         * <li>cdn: CDN URL</li>
+         * </ul>
          * 
-         * *   oss: OSS URL
-         * *   cdn: CDN URL
+         * <strong>example:</strong>
+         * <p>cdn</p>
          */
         public Builder outputType(String outputType) {
             this.putQueryParameter("OutputType", outputType);

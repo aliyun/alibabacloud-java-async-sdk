@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitAIImageJobResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitAIImageJobResponseBody</p>
@@ -49,7 +50,10 @@ public class SubmitAIImageJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the image AI processing job.
+         * <p>The ID of the image AI processing job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cf08a2c6e11e*****de1711b738b9067</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -57,7 +61,10 @@ public class SubmitAIImageJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>218A6807-A21E-43*****54-C0512880B0B0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

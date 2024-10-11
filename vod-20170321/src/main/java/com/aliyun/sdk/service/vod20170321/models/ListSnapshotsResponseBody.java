@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSnapshotsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSnapshotsResponseBody</p>
@@ -49,7 +50,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the snapshot.
+         * <p>The information about the snapshot.</p>
          */
         public Builder mediaSnapshot(MediaSnapshot mediaSnapshot) {
             this.mediaSnapshot = mediaSnapshot;
@@ -57,7 +58,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4AF6-D7393642CA58****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListSnapshotsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSnapshotsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSnapshotsResponseBody</p>
+     */
     public static class Snapshot extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Index")
         private Long index;
@@ -109,7 +119,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The index of the snapshot.
+             * <p>The index of the snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Long index) {
                 this.index = index;
@@ -117,7 +130,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the snapshot.
+             * <p>The URL of the snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example.aliyundoc.com/snapshot/sample00001****.jpg">http://example.aliyundoc.com/snapshot/sample00001****.jpg</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -131,6 +147,12 @@ public class ListSnapshotsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSnapshotsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSnapshotsResponseBody</p>
+     */
     public static class Snapshots extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Snapshot")
         private java.util.List < Snapshot> snapshot;
@@ -172,6 +194,12 @@ public class ListSnapshotsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSnapshotsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSnapshotsResponseBody</p>
+     */
     public static class MediaSnapshot extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -247,7 +275,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * The time when the snapshot job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the snapshot job was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-20T12:23:45Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -255,7 +286,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the snapshot job.
+             * <p>The ID of the snapshot job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ad90a501b1b9472374ad005046****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -263,7 +297,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The rule used to generate snapshot URLs.
+             * <p>The rule used to generate snapshot URLs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example.aliyundoc.com/snapshot/sample%7BSnapshotCount%7D.jpg">http://example.aliyundoc.com/snapshot/sample{SnapshotCount}.jpg</a></p>
              */
             public Builder regular(String regular) {
                 this.regular = regular;
@@ -271,7 +308,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the snapshot.
+             * <p>The details of the snapshot.</p>
              */
             public Builder snapshots(Snapshots snapshots) {
                 this.snapshots = snapshots;
@@ -279,7 +316,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of snapshots.
+             * <p>The total number of snapshots.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder total(Long total) {
                 this.total = total;

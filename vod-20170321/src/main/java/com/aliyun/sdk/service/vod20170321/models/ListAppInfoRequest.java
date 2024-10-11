@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAppInfoRequest} extends {@link RequestModel}
  *
  * <p>ListAppInfoRequest</p>
@@ -95,7 +96,10 @@ public class ListAppInfoRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. By default, pages start from page 1.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -104,7 +108,10 @@ public class ListAppInfoRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**. Maximum value: **100**.
+         * <p>The number of entries per page. Default value: <strong>10</strong>. Maximum value: <strong>100</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -113,7 +120,10 @@ public class ListAppInfoRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzko7fsuj****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -122,11 +132,14 @@ public class ListAppInfoRequest extends Request {
         }
 
         /**
-         * The status of the application. After an application is created, it enters the **Normal** state. Valid values:
-         * <p>
+         * <p>The status of the application. You can specify the status of the applications that you want to query. After an application is created, it enters the <strong>Normal</strong> state. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong></li>
+         * <li><strong>Disable</strong></li>
+         * </ul>
          * 
-         * *   **Normal**
-         * *   **Disable**
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

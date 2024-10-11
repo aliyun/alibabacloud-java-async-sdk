@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAITemplateResponseBody} extends {@link TeaModel}
  *
  * <p>ListAITemplateResponseBody</p>
@@ -49,7 +50,10 @@ public class ListAITemplateResponseBody extends TeaModel {
         private java.util.List < TemplateInfoList> templateInfoList; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75B7BC67-FB8C-4653-4788-F4B01ED2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ListAITemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the AI templates.
+         * <p>The information about the AI templates.</p>
          */
         public Builder templateInfoList(java.util.List < TemplateInfoList> templateInfoList) {
             this.templateInfoList = templateInfoList;
@@ -70,6 +74,12 @@ public class ListAITemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAITemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAITemplateResponseBody</p>
+     */
     public static class TemplateInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -181,7 +191,10 @@ public class ListAITemplateResponseBody extends TeaModel {
             private String templateType; 
 
             /**
-             * The time when the AI template was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the AI template was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-07-08T06:50:45Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -189,11 +202,14 @@ public class ListAITemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the template is the default AI template. Valid values:
-             * <p>
+             * <p>Indicates whether the template is the default AI template. Valid values:</p>
+             * <ul>
+             * <li><strong>Default</strong></li>
+             * <li><strong>NotDefault</strong></li>
+             * </ul>
              * 
-             * *   **Default**
-             * *   **NotDefault**
+             * <strong>example:</strong>
+             * <p>NoDefault</p>
              */
             public Builder isDefault(String isDefault) {
                 this.isDefault = isDefault;
@@ -201,7 +217,10 @@ public class ListAITemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the AI template was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the AI template was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-07-08T06:58:45Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -209,11 +228,14 @@ public class ListAITemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the AI template. Valid values:
-             * <p>
+             * <p>The source of the AI template. Valid values:</p>
+             * <ul>
+             * <li><strong>System</strong></li>
+             * <li><strong>Custom</strong></li>
+             * </ul>
              * 
-             * *   **System**
-             * *   **Custom**
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -221,7 +243,10 @@ public class ListAITemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The detailed configurations of the AI template. The value is a JSON string. For more information, see [AITemplateConfig](~~89863#title-vd3-499-o36~~).
+             * <p>The detailed configurations of the AI template. The value is a JSON string. For more information, see <a href="~~89863#title-vd3-499-o36~~">AITemplateConfig</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;AuditRange&quot;:[&quot;text-title&quot;,&quot;video&quot;],&quot;AuditContent&quot;:[&quot;screen&quot;],&quot;AuditItem&quot;:[&quot;terrorism&quot;,&quot;porn&quot;],&quot;AuditAutoBlock&quot;:&quot;yes&quot;}</p>
              */
             public Builder templateConfig(String templateConfig) {
                 this.templateConfig = templateConfig;
@@ -229,7 +254,10 @@ public class ListAITemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the AI template.
+             * <p>The ID of the AI template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1706a0063dd733f6a823ef32e0a5****</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -237,7 +265,10 @@ public class ListAITemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the AI template.
+             * <p>The name of the AI template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DemoAITemplate</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -245,11 +276,14 @@ public class ListAITemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the AI template. Valid values:
-             * <p>
+             * <p>The type of the AI template. Valid values:</p>
+             * <ul>
+             * <li><strong>AIMediaAudit</strong>: automated review</li>
+             * <li><strong>AIImage</strong>: smart thumbnail</li>
+             * </ul>
              * 
-             * *   **AIMediaAudit**: automated review
-             * *   **AIImage**: smart thumbnail
+             * <strong>example:</strong>
+             * <p>AIMediaAudit</p>
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMediaAuditResultTimelineResponseBody} extends {@link TeaModel}
  *
  * <p>GetMediaAuditResultTimelineResponseBody</p>
@@ -49,7 +50,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The collection of review result timelines.
+         * <p>The collection of review result timelines.</p>
          */
         public Builder mediaAuditResultTimeline(MediaAuditResultTimeline mediaAuditResultTimeline) {
             this.mediaAuditResultTimeline = mediaAuditResultTimeline;
@@ -57,7 +58,10 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6438BD76-D523-46FC-956F-****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMediaAuditResultTimelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditResultTimelineResponseBody</p>
+     */
     public static class Ad extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -121,20 +131,23 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             private String timestamp; 
 
             /**
-             * The category of the review result. Valid values:
-             * <p>
+             * <p>The category of the review result. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong>: normal content.</li>
+             * <li><strong>ad</strong>: other ads.</li>
+             * <li><strong>politics</strong>: political content in text.</li>
+             * <li><strong>porn</strong>: pornographic content in text.</li>
+             * <li><strong>abuse</strong>: abuse in text.</li>
+             * <li><strong>terrorism</strong>: terrorist content in text.</li>
+             * <li><strong>contraband</strong>: prohibited content in text.</li>
+             * <li><strong>spam</strong>: spam content.</li>
+             * <li><strong>npx</strong>: illegal ad.</li>
+             * <li><strong>qrcode</strong>: QR code.</li>
+             * <li><strong>programCode</strong>: mini program code.</li>
+             * </ul>
              * 
-             * *   **normal**: normal content.
-             * *   **ad**: other ads.
-             * *   **politics**: political content in text.
-             * *   **porn**: pornographic content in text.
-             * *   **abuse**: abuse in text.
-             * *   **terrorism**: terrorist content in text.
-             * *   **contraband**: prohibited content in text.
-             * *   **spam**: spam content.
-             * *   **npx**: illegal ad.
-             * *   **qrcode**: QR code.
-             * *   **programCode**: mini program code.
+             * <strong>example:</strong>
+             * <p>ad</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -142,7 +155,10 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The score of the video snapshot in the ad review result. Valid values: `[0,100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
+             * <p>The score of the video snapshot in the ad review result. Valid values: <code>[0,100]</code>. The value is rounded down to 10 decimal places. The score is representative of the confidence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder score(String score) {
                 this.score = score;
@@ -150,7 +166,10 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the snapshot in the video. Unit: milliseconds.
+             * <p>The timestamp of the snapshot in the video. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -164,6 +183,12 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaAuditResultTimelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditResultTimelineResponseBody</p>
+     */
     public static class Live extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -215,14 +240,17 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             private String timestamp; 
 
             /**
-             * The categories of undesired content review results. Valid values:
-             * <p>
+             * <p>The categories of undesired content review results. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong>: normal content.</li>
+             * <li><strong>meaningless</strong>: meaningless content, such as a black or white screen.</li>
+             * <li><strong>PIP</strong>: picture-in-picture.</li>
+             * <li><strong>smoking</strong>: smoking.</li>
+             * <li><strong>drivelive</strong>: live broadcasting in a running vehicle.</li>
+             * </ul>
              * 
-             * *   **normal**: normal content.
-             * *   **meaningless**: meaningless content, such as a black or white screen.
-             * *   **PIP**: picture-in-picture.
-             * *   **smoking**: smoking.
-             * *   **drivelive**: live broadcasting in a running vehicle.
+             * <strong>example:</strong>
+             * <p>pip</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -230,7 +258,10 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The score of the video snapshot in the undesirable content review result. Valid values: `[0,100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
+             * <p>The score of the video snapshot in the undesirable content review result. Valid values: <code>[0,100]</code>. The value is rounded down to 10 decimal places. The score is representative of the confidence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder score(String score) {
                 this.score = score;
@@ -238,7 +269,10 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the snapshot in the video. Unit: milliseconds.
+             * <p>The timestamp of the snapshot in the video. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -252,6 +286,12 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaAuditResultTimelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditResultTimelineResponseBody</p>
+     */
     public static class Logo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -303,12 +343,15 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             private String timestamp; 
 
             /**
-             * The category of the review result. Valid values:
-             * <p>
+             * <p>The category of the review result. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong>: normal content.</li>
+             * <li><strong>TV</strong>: controlled TV station logo.</li>
+             * <li><strong>trademark</strong>: trademark.</li>
+             * </ul>
              * 
-             * *   **normal**: normal content.
-             * *   **TV**: controlled TV station logo.
-             * *   **trademark**: trademark.
+             * <strong>example:</strong>
+             * <p>logo</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -316,7 +359,10 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The score of the video snapshot in the logo review result. Valid values: `[0,100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
+             * <p>The score of the video snapshot in the logo review result. Valid values: <code>[0,100]</code>. The value is rounded down to 10 decimal places. The score is representative of the confidence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder score(String score) {
                 this.score = score;
@@ -324,7 +370,10 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the snapshot in the video. Unit: milliseconds.
+             * <p>The timestamp of the snapshot in the video. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -338,6 +387,12 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaAuditResultTimelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditResultTimelineResponseBody</p>
+     */
     public static class Porn extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -389,12 +444,15 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             private String timestamp; 
 
             /**
-             * The category of the review result. Valid values:
-             * <p>
+             * <p>The category of the review result. Valid values:</p>
+             * <ul>
+             * <li><strong>porn</strong></li>
+             * <li><strong>sexy</strong></li>
+             * <li><strong>normal</strong></li>
+             * </ul>
              * 
-             * *   **porn**
-             * *   **sexy**
-             * *   **normal**
+             * <strong>example:</strong>
+             * <p>porn</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -402,7 +460,10 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The score of the video snapshot in the pornographic content review result. Valid values: `[0,100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
+             * <p>The score of the video snapshot in the pornographic content review result. Valid values: <code>[0,100]</code>. The value is rounded down to 10 decimal places. The score is representative of the confidence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.00</p>
              */
             public Builder score(String score) {
                 this.score = score;
@@ -410,7 +471,10 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the snapshot in the video. Unit: milliseconds.
+             * <p>The timestamp of the snapshot in the video. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3005</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -424,6 +488,12 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaAuditResultTimelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditResultTimelineResponseBody</p>
+     */
     public static class Terrorism extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -475,23 +545,26 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             private String timestamp; 
 
             /**
-             * The category of the review result. Valid values:
-             * <p>
+             * <p>The category of the review result. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong></li>
+             * <li><strong>bloody</strong></li>
+             * <li><strong>explosion</strong></li>
+             * <li><strong>outfit</strong></li>
+             * <li><strong>logo</strong></li>
+             * <li><strong>weapon</strong></li>
+             * <li><strong>politics</strong></li>
+             * <li><strong>violence</strong></li>
+             * <li><strong>crowd</strong></li>
+             * <li><strong>parade</strong></li>
+             * <li><strong>carcrash</strong></li>
+             * <li><strong>flag</strong></li>
+             * <li><strong>location</strong></li>
+             * <li><strong>others</strong></li>
+             * </ul>
              * 
-             * *   **normal**
-             * *   **bloody**
-             * *   **explosion**
-             * *   **outfit**
-             * *   **logo**
-             * *   **weapon**
-             * *   **politics**
-             * *   **violence**
-             * *   **crowd**
-             * *   **parade**
-             * *   **carcrash**
-             * *   **flag**
-             * *   **location**
-             * *   **others**
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -499,7 +572,10 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The score of the video snapshot in the terrorist content review result. Valid values: `[0,100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
+             * <p>The score of the video snapshot in the terrorist content review result. Valid values: <code>[0,100]</code>. The value is rounded down to 10 decimal places. The score is representative of the confidence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.00</p>
              */
             public Builder score(String score) {
                 this.score = score;
@@ -507,7 +583,10 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the snapshot in the video. Unit: milliseconds.
+             * <p>The timestamp of the snapshot in the video. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3005</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -521,6 +600,12 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaAuditResultTimelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditResultTimelineResponseBody</p>
+     */
     public static class MediaAuditResultTimeline extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ad")
         private java.util.List < Ad> ad;
@@ -596,7 +681,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             private java.util.List < Terrorism> terrorism; 
 
             /**
-             * The collection of ad timelines.
+             * <p>The collection of ad timelines.</p>
              */
             public Builder ad(java.util.List < Ad> ad) {
                 this.ad = ad;
@@ -604,7 +689,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The collection of undesirable content timelines.
+             * <p>The collection of undesirable content timelines.</p>
              */
             public Builder live(java.util.List < Live> live) {
                 this.live = live;
@@ -612,7 +697,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The collection of logo timelines.
+             * <p>The collection of logo timelines.</p>
              */
             public Builder logo(java.util.List < Logo> logo) {
                 this.logo = logo;
@@ -620,7 +705,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The collection of pornographic content timelines.
+             * <p>The collection of pornographic content timelines.</p>
              */
             public Builder porn(java.util.List < Porn> porn) {
                 this.porn = porn;
@@ -628,7 +713,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The collection of terrorist content timelines.
+             * <p>The collection of terrorist content timelines.</p>
              */
             public Builder terrorism(java.util.List < Terrorism> terrorism) {
                 this.terrorism = terrorism;

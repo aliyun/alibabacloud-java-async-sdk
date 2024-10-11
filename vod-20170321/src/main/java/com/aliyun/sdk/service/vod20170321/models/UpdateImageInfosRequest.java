@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateImageInfosRequest} extends {@link RequestModel}
  *
  * <p>UpdateImageInfosRequest</p>
@@ -54,10 +55,14 @@ public class UpdateImageInfosRequest extends Request {
         } 
 
         /**
-         * The new information about the one or more images. You can modify the information about up to 20 images at a time. For more information about the parameter structure, see the **UpdateContent** section.
-         * <p>
+         * <p>The new information about the one or more images. You can modify the information about up to 20 images at a time. For more information about the parameter structure, see the <strong>UpdateContent</strong> section.</p>
+         * <blockquote>
+         * <p> The values of the nested parameters Title, Description, and Tags under the UpdateContent parameter cannot contain emoticons.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The values of the nested parameters Title, Description, and Tags under the UpdateContent parameter cannot contain emoticons.
+         * <strong>example:</strong>
+         * <p>[{&quot;ImageId&quot;:&quot;ff8fe57e3461416c6a267a4e09****&quot;,&quot;Title&quot;:&quot;test title&quot;,&quot;Description&quot;:&quot;test description&quot;,&quot;Tags&quot;:&quot;tag1,tag2&quot;}]</p>
          */
         public Builder updateContent(String updateContent) {
             this.putQueryParameter("UpdateContent", updateContent);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetVodDomainCertificateRequest} extends {@link RequestModel}
  *
  * <p>SetVodDomainCertificateRequest</p>
@@ -139,7 +140,10 @@ public class SetVodDomainCertificateRequest extends Request {
         } 
 
         /**
-         * The name of the certificate.
+         * <p>The name of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cert_name</p>
          */
         public Builder certName(String certName) {
             this.putQueryParameter("CertName", certName);
@@ -148,7 +152,11 @@ public class SetVodDomainCertificateRequest extends Request {
         }
 
         /**
-         * The domain name that is secured by the certificate. The domain name must use HTTPS acceleration.
+         * <p>The domain name that is secured by the certificate. The domain name must use HTTPS acceleration.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -166,7 +174,10 @@ public class SetVodDomainCertificateRequest extends Request {
         }
 
         /**
-         * The private key. This parameter is required only if you enable the SSL certificate.
+         * <p>The private key. This parameter is required only if you enable the SSL certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder SSLPri(String SSLPri) {
             this.putQueryParameter("SSLPri", SSLPri);
@@ -175,11 +186,15 @@ public class SetVodDomainCertificateRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the SSL certificate. Default value: off. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the SSL certificate. Default value: off. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **on**
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder SSLProtocol(String SSLProtocol) {
             this.putQueryParameter("SSLProtocol", SSLProtocol);
@@ -188,7 +203,10 @@ public class SetVodDomainCertificateRequest extends Request {
         }
 
         /**
-         * The content of the certificate. This parameter is required only if you enable the SSL certificate.
+         * <p>The content of the certificate. This parameter is required only if you enable the SSL certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder SSLPub(String SSLPub) {
             this.putQueryParameter("SSLPub", SSLPub);

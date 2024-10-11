@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddEditingProjectMaterialsRequest} extends {@link RequestModel}
  *
  * <p>AddEditingProjectMaterialsRequest</p>
@@ -140,10 +141,14 @@ public class AddEditingProjectMaterialsRequest extends Request {
         } 
 
         /**
-         * The ID of the material. Separate multiple material IDs with commas (,). You can specify up to 10 IDs.
-         * <p>
+         * <p>Separate multiple material IDs with commas (,). You can specify up to 10 IDs.</p>
+         * <blockquote>
+         * <p> If you specify multiple materials, make sure that the materials are of the same type as specified in MaterialType.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  If you specify multiple materials, make sure that the materials are of the same type as specified in MaterialType.
+         * <strong>example:</strong>
+         * <p>d3251979f9fd41f2acb29ccda5a6f772</p>
          */
         public Builder materialIds(String materialIds) {
             this.putQueryParameter("MaterialIds", materialIds);
@@ -152,12 +157,16 @@ public class AddEditingProjectMaterialsRequest extends Request {
         }
 
         /**
-         * The type of the material. Valid values:
-         * <p>
+         * <p>The type of the material. Valid values:</p>
+         * <ul>
+         * <li><strong>video</strong></li>
+         * <li><strong>audio</strong></li>
+         * <li><strong>image</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **video**
-         * *   **audio**
-         * *   **image**
+         * <strong>example:</strong>
+         * <p>video</p>
          */
         public Builder materialType(String materialType) {
             this.putQueryParameter("MaterialType", materialType);
@@ -184,7 +193,11 @@ public class AddEditingProjectMaterialsRequest extends Request {
         }
 
         /**
-         * The ID of the online editing project.
+         * <p>The ID of the online editing project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>afa31b483b5c41609185de0e1b790579</p>
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);

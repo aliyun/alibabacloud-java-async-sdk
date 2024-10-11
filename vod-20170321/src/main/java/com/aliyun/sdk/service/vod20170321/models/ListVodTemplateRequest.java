@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVodTemplateRequest} extends {@link RequestModel}
  *
  * <p>ListVodTemplateRequest</p>
@@ -68,7 +69,10 @@ public class ListVodTemplateRequest extends Request {
         } 
 
         /**
-         * The ID of the application. Set the value to **app-1000000**. For more information, see [Overview](~~113600~~).
+         * <p>The ID of the application. Set the value to <strong>app-1000000</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -77,7 +81,11 @@ public class ListVodTemplateRequest extends Request {
         }
 
         /**
-         * The type of the template. Set the value to **Snapshot**.
+         * <p>The type of the template. Set the value to <strong>Snapshot</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Snapshot</p>
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

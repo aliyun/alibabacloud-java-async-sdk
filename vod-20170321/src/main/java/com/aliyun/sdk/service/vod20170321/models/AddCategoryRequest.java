@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddCategoryRequest} extends {@link RequestModel}
  *
  * <p>AddCategoryRequest</p>
@@ -82,11 +83,15 @@ public class AddCategoryRequest extends Request {
         } 
 
         /**
-         * The name of the category.
-         * <p>
+         * <p>The name of the category.</p>
+         * <ul>
+         * <li>The value can be up to 64 bytes in length.</li>
+         * <li>The value must be encoded in UTF-8.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The value can be up to 64 bytes in length.
-         * *   The value must be encoded in UTF-8.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder cateName(String cateName) {
             this.putQueryParameter("CateName", cateName);
@@ -95,13 +100,17 @@ public class AddCategoryRequest extends Request {
         }
 
         /**
-         * The ID of the parent category.
-         * <p>
+         * <p>The ID of the parent category.</p>
+         * <p>To obtain the category ID, perform the following steps: Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. Choose <strong>Configuration Management</strong> &gt; <strong>Media Management</strong> &gt; <strong>Categories</strong>. On the <strong>Audio and Video / Image Category</strong> or <strong>Short Video Material Category</strong> tab, view the category ID.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If you specify this parameter, the system creates a subcategory under the parent category. If you leave this parameter empty, the system creates a level 1 category.</li>
+         * <li>You cannot modify, add, or delete level 1 categories of short video materials. You can create only subcategories under level 1 categories for short video materials. This parameter is required when you set <code>Type</code> to <code>material</code>.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * To obtain the category ID, perform the following steps: Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). Choose **Configuration Management** > **Media Management** > **Categories**. On the **Audio and Video / Image Category** or **Short Video Material Category** tab, view the category ID.
-         * 
-         * > *   If you specify this parameter, the system creates a subcategory under the parent category. If you leave this parameter empty, the system creates a level 1 category.
-         * >*   You cannot modify, add, or delete level 1 categories of short video materials. You can create only subcategories under level 1 categories for short video materials. This parameter is required when you set `Type` to `material`.
+         * <strong>example:</strong>
+         * <p>100012****</p>
          */
         public Builder parentId(Long parentId) {
             this.putQueryParameter("ParentId", parentId);
@@ -110,11 +119,14 @@ public class AddCategoryRequest extends Request {
         }
 
         /**
-         * The type of the category. Valid values:
-         * <p>
+         * <p>The type of the category. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong> (default): audio, video, and image files</li>
+         * <li><strong>material</strong>: short video materials</li>
+         * </ul>
          * 
-         * *   **default** (default): audio, video, and image files
-         * *   **material**: short video materials
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

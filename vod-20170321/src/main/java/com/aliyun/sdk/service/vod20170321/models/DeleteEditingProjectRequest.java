@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteEditingProjectRequest} extends {@link RequestModel}
  *
  * <p>DeleteEditingProjectRequest</p>
@@ -128,7 +129,11 @@ public class DeleteEditingProjectRequest extends Request {
         }
 
         /**
-         * The ID of the online editing project. Separate multiple IDs with commas (,).
+         * <p>The ID of the online editing project. Separate multiple IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fb2101bf24bf41*****cb318787dc</p>
          */
         public Builder projectIds(String projectIds) {
             this.putQueryParameter("ProjectIds", projectIds);

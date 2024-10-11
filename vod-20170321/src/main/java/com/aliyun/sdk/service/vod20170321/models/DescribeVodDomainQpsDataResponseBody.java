@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodDomainQpsDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVodDomainQpsDataResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeVodDomainQpsDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * The time interval between the data entries returned. Unit: seconds.
+         * <p>The time interval between the data entries returned. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -105,7 +109,10 @@ public class DescribeVodDomainQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -113,7 +120,10 @@ public class DescribeVodDomainQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the time range during which data was queried. The time follows the ISO 8601 standard in the *YYYY-MM-DD**Thh:mm:ss* format. The time is displayed in UTC.
+         * <p>The end of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>YYYY-MM-DD**Thh:mm:ss</em> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-02T15:59:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -121,7 +131,7 @@ public class DescribeVodDomainQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The list of QPS records at each interval.
+         * <p>The list of QPS records at each interval.</p>
          */
         public Builder qpsDataInterval(QpsDataInterval qpsDataInterval) {
             this.qpsDataInterval = qpsDataInterval;
@@ -129,7 +139,10 @@ public class DescribeVodDomainQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4AF6-D7393642CA58*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class DescribeVodDomainQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The beginning of the time range during which data was queried. The time follows the ISO 8601 standard in the *YYYY-MM-DD**Thh:mm:ss* format. The time is displayed in UTC.
+         * <p>The beginning of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>YYYY-MM-DD**Thh:mm:ss</em> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-02T15:50:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -150,6 +166,12 @@ public class DescribeVodDomainQpsDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVodDomainQpsDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodDomainQpsDataResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccDomesticValue")
         private String accDomesticValue;
@@ -321,7 +343,10 @@ public class DescribeVodDomainQpsDataResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The number of requests in the Chinese mainland.
+             * <p>The number of requests in the Chinese mainland.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder accDomesticValue(String accDomesticValue) {
                 this.accDomesticValue = accDomesticValue;
@@ -329,7 +354,10 @@ public class DescribeVodDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The number of requests outside the Chinese mainland.
+             * <p>The number of requests outside the Chinese mainland.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder accOverseasValue(String accOverseasValue) {
                 this.accOverseasValue = accOverseasValue;
@@ -337,7 +365,10 @@ public class DescribeVodDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of requests.
+             * <p>The total number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder accValue(String accValue) {
                 this.accValue = accValue;
@@ -345,7 +376,10 @@ public class DescribeVodDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The QPS data in the Chinese mainland.
+             * <p>The QPS data in the Chinese mainland.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder domesticValue(String domesticValue) {
                 this.domesticValue = domesticValue;
@@ -353,7 +387,10 @@ public class DescribeVodDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The QPS that is calculated based on the HTTPS requests sent to POPs in the Chinese mainland.
+             * <p>The QPS that is calculated based on the HTTPS requests sent to POPs in the Chinese mainland.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder httpsAccDomesticValue(String httpsAccDomesticValue) {
                 this.httpsAccDomesticValue = httpsAccDomesticValue;
@@ -361,7 +398,10 @@ public class DescribeVodDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The number of HTTPS requests sent to POPs outside the Chinese mainland.
+             * <p>The number of HTTPS requests sent to POPs outside the Chinese mainland.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder httpsAccOverseasValue(String httpsAccOverseasValue) {
                 this.httpsAccOverseasValue = httpsAccOverseasValue;
@@ -369,7 +409,10 @@ public class DescribeVodDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The number of HTTPS requests sent to POPs.
+             * <p>The number of HTTPS requests sent to POPs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder httpsAccValue(String httpsAccValue) {
                 this.httpsAccValue = httpsAccValue;
@@ -377,7 +420,10 @@ public class DescribeVodDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The QPS that is calculated based on the HTTPS requests sent to POPs in the Chinese mainland.
+             * <p>The QPS that is calculated based on the HTTPS requests sent to POPs in the Chinese mainland.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder httpsDomesticValue(String httpsDomesticValue) {
                 this.httpsDomesticValue = httpsDomesticValue;
@@ -385,7 +431,10 @@ public class DescribeVodDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The QPS that is calculated based on the HTTPS requests sent to POPs outside the Chinese mainland.
+             * <p>The QPS that is calculated based on the HTTPS requests sent to POPs outside the Chinese mainland.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder httpsOverseasValue(String httpsOverseasValue) {
                 this.httpsOverseasValue = httpsOverseasValue;
@@ -393,7 +442,10 @@ public class DescribeVodDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The QPS that is calculated based on the HTTPS requests sent to points of presence (POPs).
+             * <p>The QPS that is calculated based on the HTTPS requests sent to points of presence (POPs).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder httpsValue(String httpsValue) {
                 this.httpsValue = httpsValue;
@@ -401,7 +453,10 @@ public class DescribeVodDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The QPS data outside the Chinese mainland.
+             * <p>The QPS data outside the Chinese mainland.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder overseasValue(String overseasValue) {
                 this.overseasValue = overseasValue;
@@ -409,7 +464,10 @@ public class DescribeVodDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the data returned. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+             * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-06-27 10:10:58</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -417,7 +475,10 @@ public class DescribeVodDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The total QPS.
+             * <p>The total QPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -431,6 +492,12 @@ public class DescribeVodDomainQpsDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodDomainQpsDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodDomainQpsDataResponseBody</p>
+     */
     public static class QpsDataInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;

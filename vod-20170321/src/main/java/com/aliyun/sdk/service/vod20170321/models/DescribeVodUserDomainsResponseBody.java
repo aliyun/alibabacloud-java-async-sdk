@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodUserDomainsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVodUserDomainsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The detailed information about each domain name for CDN. The returned information is displayed in the format that is specified by the PageData parameter.
+         * <p>The detailed information about each domain name for CDN. The returned information is displayed in the format that is specified by the PageData parameter.</p>
          */
         public Builder domains(Domains domains) {
             this.domains = domains;
@@ -93,7 +94,10 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E4EBD2BF-5EB0-4476-****-9D94E1B15267</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVodUserDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodUserDomainsResponseBody</p>
+     */
     public static class Source extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -193,7 +212,10 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The address of the origin server.
+             * <p>The address of the origin server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.1</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -201,7 +223,10 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The port number. Valid values: **443** and **80**.
+             * <p>The port number. Valid values: <strong>443</strong> and <strong>80</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -209,7 +234,10 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the origin server.
+             * <p>The priority of the origin server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -217,12 +245,15 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the origin server. Valid values:
-             * <p>
+             * <p>The type of the origin server. Valid values:</p>
+             * <ul>
+             * <li><strong>ipaddr</strong>: an IP address.</li>
+             * <li><strong>domain</strong>: an origin domain name</li>
+             * <li><strong>oss</strong>: the OSS domain of an Object Storage Service (OSS) bucket</li>
+             * </ul>
              * 
-             * *   **ipaddr**: an IP address.
-             * *   **domain**: an origin domain name
-             * *   **oss**: the OSS domain of an Object Storage Service (OSS) bucket
+             * <strong>example:</strong>
+             * <p>oss</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -236,6 +267,12 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodUserDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodUserDomainsResponseBody</p>
+     */
     public static class Sources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Source")
         private java.util.List < Source> source;
@@ -277,6 +314,12 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodUserDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodUserDomainsResponseBody</p>
+     */
     public static class PageData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cname")
         private String cname;
@@ -400,7 +443,10 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             private String sslProtocol; 
 
             /**
-             * The CNAME that is assigned to the domain name for CDN.
+             * <p>The CNAME that is assigned to the domain name for CDN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>learn.developer.aliyundoc.com</p>
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -408,7 +454,10 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks.
+             * <p>The remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhejiang ICP Filing No. ****</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -416,7 +465,10 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name for CDN.
+             * <p>The domain name for CDN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.aliyundoc.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -424,15 +476,18 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the domain name for CDN. Valid values:
-             * <p>
+             * <p>The status of the domain name for CDN. Valid values:</p>
+             * <ul>
+             * <li><strong>online</strong>: indicates that the domain name is enabled.</li>
+             * <li><strong>offline</strong>: indicates that the domain name is disabled.</li>
+             * <li><strong>configuring</strong>: indicates that the domain name is being configured.</li>
+             * <li><strong>configure_failed</strong>: indicates that the domain name failed to be configured.</li>
+             * <li><strong>checking</strong>: indicates that the domain name is under review.</li>
+             * <li><strong>check_failed</strong>: indicates that the domain name failed the review.</li>
+             * </ul>
              * 
-             * *   **online**: indicates that the domain name is enabled.
-             * *   **offline**: indicates that the domain name is disabled.
-             * *   **configuring**: indicates that the domain name is being configured.
-             * *   **configure_failed**: indicates that the domain name failed to be configured.
-             * *   **checking**: indicates that the domain name is under review.
-             * *   **check_failed**: indicates that the domain name failed the review.
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder domainStatus(String domainStatus) {
                 this.domainStatus = domainStatus;
@@ -440,7 +495,10 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the domain name for CDN was added. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the domain name for CDN was added. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-08-29T08:40:53Z</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -448,7 +506,10 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the domain name for CDN was modified. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The last time when the domain name for CDN was modified. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-29T09:24:12Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -456,7 +517,10 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the accelerated domain name was in a sandbox.
+             * <p>Indicates whether the accelerated domain name was in a sandbox.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder sandbox(String sandbox) {
                 this.sandbox = sandbox;
@@ -464,7 +528,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the origin server.
+             * <p>The information about the origin server.</p>
              */
             public Builder sources(Sources sources) {
                 this.sources = sources;
@@ -472,11 +536,14 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether HTTPS is enabled.
-             * <p>
+             * <p>Indicates whether HTTPS is enabled.</p>
+             * <ul>
+             * <li><strong>on</strong>: HTTPS is enabled.</li>
+             * <li><strong>off</strong>: HTTPS is not eabled.</li>
+             * </ul>
              * 
-             * *   **on**: HTTPS is enabled.
-             * *   **off**: HTTPS is not eabled.
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder sslProtocol(String sslProtocol) {
                 this.sslProtocol = sslProtocol;
@@ -490,6 +557,12 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodUserDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodUserDomainsResponseBody</p>
+     */
     public static class Domains extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageData")
         private java.util.List < PageData> pageData;

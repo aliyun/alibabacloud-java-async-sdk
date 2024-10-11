@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PreloadVodObjectCachesRequest} extends {@link RequestModel}
  *
  * <p>PreloadVodObjectCachesRequest</p>
@@ -124,7 +125,14 @@ public class PreloadVodObjectCachesRequest extends Request {
         } 
 
         /**
-         * Area.
+         * <p>The acceleration region in which you want to prefetch content. If you do not specify a region, the value overseas is used.</p>
+         * <ul>
+         * <li><strong>domestic</strong>: Chinese mainland</li>
+         * <li><strong>overseas</strong>: outside the Chinese mainland</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>domestic</p>
          */
         public Builder area(String area) {
             this.putQueryParameter("Area", area);
@@ -133,7 +141,14 @@ public class PreloadVodObjectCachesRequest extends Request {
         }
 
         /**
-         * L2Preload.
+         * <p>Specifies whether to prefetch content to POPs. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: prefetches content to nodes that include L2 DCDN nodes.</li>
+         * <li><strong>false</strong>: prefetches content to L2 POPs or L3 POPs.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder l2Preload(Boolean l2Preload) {
             this.putQueryParameter("L2Preload", l2Preload);
@@ -142,7 +157,11 @@ public class PreloadVodObjectCachesRequest extends Request {
         }
 
         /**
-         * The URL of the file to be prefetched. Separate multiple URLs with line breaks (\n or \r\n).
+         * <p>The URL of the file to be prefetched. Separate multiple URLs with line breaks (\n or \r\n).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vod.test.com/test.txt</p>
          */
         public Builder objectPath(String objectPath) {
             this.putQueryParameter("ObjectPath", objectPath);
@@ -169,7 +188,14 @@ public class PreloadVodObjectCachesRequest extends Request {
         }
 
         /**
-         * WithHeader.
+         * <p>The custom header for prefetch in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;Accept-Encoding&quot;: [
+         *             &quot;gzip, deflate, br&quot;
+         *       ]
+         * }</p>
          */
         public Builder withHeader(String withHeader) {
             this.putQueryParameter("WithHeader", withHeader);

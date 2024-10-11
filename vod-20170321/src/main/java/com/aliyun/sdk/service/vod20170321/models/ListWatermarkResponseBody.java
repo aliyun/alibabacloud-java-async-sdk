@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWatermarkResponseBody} extends {@link TeaModel}
  *
  * <p>ListWatermarkResponseBody</p>
@@ -49,7 +50,10 @@ public class ListWatermarkResponseBody extends TeaModel {
         private java.util.List < WatermarkInfos> watermarkInfos; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4A*****F6-D7393642CA58</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ListWatermarkResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the watermark template.
+         * <p>The information about the watermark template.</p>
          */
         public Builder watermarkInfos(java.util.List < WatermarkInfos> watermarkInfos) {
             this.watermarkInfos = watermarkInfos;
@@ -70,6 +74,12 @@ public class ListWatermarkResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListWatermarkResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWatermarkResponseBody</p>
+     */
     public static class WatermarkInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -181,7 +191,10 @@ public class ListWatermarkResponseBody extends TeaModel {
             private String watermarkId; 
 
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app-****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -189,7 +202,10 @@ public class ListWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the watermark template was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the watermark template was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-11-07T09:05:52Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -197,10 +213,13 @@ public class ListWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the watermark file. The URL is an Object Storage Service (OSS) URL or an Alibaba Cloud CDN URL.
-             * <p>
+             * <p>The URL of the watermark file. The URL is an Object Storage Service (OSS) URL or an Alibaba Cloud CDN URL.</p>
+             * <blockquote>
+             * <p> This parameter is returned only for image watermark templates.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only for image watermark templates.
+             * <strong>example:</strong>
+             * <p><a href="https://outin-3262681cd*****89f4b3e7.oss-cn-shanghai.aliyuncs.com/image/cover/8CC8B715E6F8A72EC6B-6-2.png?Expires=1541600583&OSSAccessKeyId=****&Signature=gmf1eYMoDVg%2BHQCb4UGozB">https://outin-3262681cd*****89f4b3e7.oss-cn-shanghai.aliyuncs.com/image/cover/8CC8B715E6F8A72EC6B-6-2.png?Expires=1541600583&amp;OSSAccessKeyId=****&amp;Signature=gmf1eYMoDVg%2BHQCb4UGozB</a>****</p>
              */
             public Builder fileUrl(String fileUrl) {
                 this.fileUrl = fileUrl;
@@ -208,11 +227,14 @@ public class ListWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the watermark template is the default one. Valid values:
-             * <p>
+             * <p>Indicates whether the watermark template is the default one. Valid values:</p>
+             * <ul>
+             * <li><strong>Default</strong></li>
+             * <li><strong>NotDefault</strong></li>
+             * </ul>
              * 
-             * *   **Default**
-             * *   **NotDefault**
+             * <strong>example:</strong>
+             * <p>NotDefault</p>
              */
             public Builder isDefault(String isDefault) {
                 this.isDefault = isDefault;
@@ -220,7 +242,10 @@ public class ListWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the watermark template.
+             * <p>The name of the watermark template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -228,11 +253,14 @@ public class ListWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the watermark template.
-             * <p>
+             * <p>The type of the watermark template.</p>
+             * <ul>
+             * <li><strong>Image</strong>: image watermark template</li>
+             * <li><strong>Text</strong>: text watermark template</li>
+             * </ul>
              * 
-             * *   **Image**: image watermark template
-             * *   **Text**: text watermark template
+             * <strong>example:</strong>
+             * <p>Text</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -240,7 +268,10 @@ public class ListWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration information of the watermark such as the display position and special effects. The value is a JSON string. The configuration parameters for image and text watermarks are different. For more information about the parameter structure, see [WatermarkConfig](~~98618#section-h01-44s-2lr~~).
+             * <p>The configuration information of the watermark such as the display position and special effects. The value is a JSON string. The configuration parameters for image and text watermarks are different. For more information about the parameter structure, see <a href="~~98618#section-h01-44s-2lr~~">WatermarkConfig</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;FontColor&quot;: &quot;Blue&quot;,&quot;FontSize&quot;: 80,&quot;Content&quot;: &quot;test watermark&quot;}</p>
              */
             public Builder watermarkConfig(String watermarkConfig) {
                 this.watermarkConfig = watermarkConfig;
@@ -248,7 +279,10 @@ public class ListWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the watermark template.
+             * <p>The ID of the watermark template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9bcc8bfadb843*****109a2671d0df97</p>
              */
             public Builder watermarkId(String watermarkId) {
                 this.watermarkId = watermarkId;

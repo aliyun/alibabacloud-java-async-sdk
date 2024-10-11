@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodDomainRealTimeHttpCodeDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVodDomainRealTimeHttpCodeDataResponseBody</p>
@@ -97,10 +98,11 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
         private String startTime; 
 
         /**
-         * The time interval at which data is returned. Unit: seconds.
-         * <p>
+         * <p>The time interval at which data is returned. Unit: seconds.</p>
+         * <p>The returned value varies based on the time range per query. Valid values: 60 (1 minute), 300 (5 minutes), and 3600 (1 hour). For more information, see the <strong>Time granularity</strong> section in the <strong>API documentation</strong>.</p>
          * 
-         * The returned value varies based on the time range per query. Valid values: 60 (1 minute), 300 (5 minutes), and 3600 (1 hour). For more information, see the **Time granularity** section in the **API documentation**.
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -108,7 +110,10 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
         }
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -116,7 +121,10 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
         }
 
         /**
-         * The end of the time range.
+         * <p>The end of the time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-11-30T05:40:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -124,7 +132,7 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
         }
 
         /**
-         * The proportion of each HTTP status code in each time interval.
+         * <p>The proportion of each HTTP status code in each time interval.</p>
          */
         public Builder realTimeHttpCodeData(RealTimeHttpCodeData realTimeHttpCodeData) {
             this.realTimeHttpCodeData = realTimeHttpCodeData;
@@ -132,7 +140,10 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BC858082-736F-4A25-867B-E5B67C85ACF7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -140,7 +151,10 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
         }
 
         /**
-         * The beginning of the time range.
+         * <p>The beginning of the time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-11-30T05:39:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -153,6 +167,12 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVodDomainRealTimeHttpCodeDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodDomainRealTimeHttpCodeDataResponseBody</p>
+     */
     public static class RealTimeCodeProportionData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -204,7 +224,10 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
             private String proportion; 
 
             /**
-             * The HTTP status code.
+             * <p>The HTTP status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -212,7 +235,10 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
             }
 
             /**
-             * The number of the HTTP status codes.
+             * <p>The number of the HTTP status codes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder count(String count) {
                 this.count = count;
@@ -220,7 +246,10 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
             }
 
             /**
-             * The proportion of the HTTP status code in percentage.
+             * <p>The proportion of the HTTP status code in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>28.4496124031008</p>
              */
             public Builder proportion(String proportion) {
                 this.proportion = proportion;
@@ -234,6 +263,12 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodDomainRealTimeHttpCodeDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodDomainRealTimeHttpCodeDataResponseBody</p>
+     */
     public static class Value extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RealTimeCodeProportionData")
         private java.util.List < RealTimeCodeProportionData> realTimeCodeProportionData;
@@ -275,6 +310,12 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodDomainRealTimeHttpCodeDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodDomainRealTimeHttpCodeDataResponseBody</p>
+     */
     public static class UsageData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
@@ -314,7 +355,10 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
             private Value value; 
 
             /**
-             * The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
+             * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-11-30T05:39:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -322,7 +366,7 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
             }
 
             /**
-             * The proportion of each HTTP status code is displayed in a data list.
+             * <p>The proportion of each HTTP status code is displayed in a data list.</p>
              */
             public Builder value(Value value) {
                 this.value = value;
@@ -336,6 +380,12 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodDomainRealTimeHttpCodeDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodDomainRealTimeHttpCodeDataResponseBody</p>
+     */
     public static class RealTimeHttpCodeData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UsageData")
         private java.util.List < UsageData> usageData;

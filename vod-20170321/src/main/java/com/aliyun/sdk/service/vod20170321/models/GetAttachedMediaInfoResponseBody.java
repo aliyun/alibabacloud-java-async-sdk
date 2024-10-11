@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAttachedMediaInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetAttachedMediaInfoResponseBody</p>
@@ -61,7 +62,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the media assets.
+         * <p>The information about the media assets.</p>
          */
         public Builder attachedMediaList(java.util.List < AttachedMediaList> attachedMediaList) {
             this.attachedMediaList = attachedMediaList;
@@ -69,7 +70,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The IDs of the auxiliary media assets that do not exist.
+         * <p>The IDs of the auxiliary media assets that do not exist.</p>
          */
         public Builder nonExistMediaIds(java.util.List < String > nonExistMediaIds) {
             this.nonExistMediaIds = nonExistMediaIds;
@@ -77,7 +78,10 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>221BCB57-B217-42BF-619BD13378F9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAttachedMediaInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAttachedMediaInfoResponseBody</p>
+     */
     public static class Categories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CateId")
         private Long cateId;
@@ -153,7 +163,10 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             private Long parentId; 
 
             /**
-             * The ID of the category.
+             * <p>The ID of the category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000224338</p>
              */
             public Builder cateId(Long cateId) {
                 this.cateId = cateId;
@@ -161,7 +174,10 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the category.
+             * <p>The name of the category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>category test</p>
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -169,7 +185,10 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the category.
+             * <p>The level of the category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder level(Long level) {
                 this.level = level;
@@ -177,7 +196,10 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parent category.
+             * <p>The ID of the parent category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000224336</p>
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;
@@ -191,6 +213,12 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAttachedMediaInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAttachedMediaInfoResponseBody</p>
+     */
     public static class AttachedMediaList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -350,7 +378,10 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             private String URL; 
 
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app-*****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -358,7 +389,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The categories.
+             * <p>The categories.</p>
              */
             public Builder categories(java.util.List < Categories> categories) {
                 this.categories = categories;
@@ -366,7 +397,10 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the auxiliary media asset was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the auxiliary media asset was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-01T10:00:00Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -374,10 +408,13 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the auxiliary media asset.
-             * <p>
+             * <p>The description of the auxiliary media asset.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when a description is specified for the auxiliary media asset.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only when a description is specified for the auxiliary media asset.
+             * <strong>example:</strong>
+             * <p>description test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -385,7 +422,10 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the auxiliary media asset.
+             * <p>The ID of the auxiliary media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0222e203cf80f9c22870a4d2c****</p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -393,7 +433,10 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the auxiliary media asset was last updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the auxiliary media asset was last updated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-05-31T11:42:20Z</p>
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -401,12 +444,15 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the auxiliary media asset. Valid values:
-             * <p>
+             * <p>The status of the auxiliary media asset. Valid values:</p>
+             * <ul>
+             * <li><strong>Uploading</strong></li>
+             * <li><strong>Normal</strong></li>
+             * <li><strong>UploadFail</strong></li>
+             * </ul>
              * 
-             * *   **Uploading**
-             * *   **Normal**
-             * *   **UploadFail**
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -414,7 +460,10 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The storage address of the auxiliary media asset.
+             * <p>The storage address of the auxiliary media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>outin-bfefbb9*****c7426.oss-cn-shanghai.aliyuncs.com</p>
              */
             public Builder storageLocation(String storageLocation) {
                 this.storageLocation = storageLocation;
@@ -422,10 +471,13 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the auxiliary media asset.
-             * <p>
+             * <p>The tags of the auxiliary media asset.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when tags are specified for the auxiliary media asset.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only when tags are specified for the auxiliary media asset.
+             * <strong>example:</strong>
+             * <p>tag1,tag2</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -433,7 +485,10 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the auxiliary media asset.
+             * <p>The title of the auxiliary media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>subtitle test</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -441,12 +496,15 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the auxiliary media asset.
-             * <p>
+             * <p>The type of the auxiliary media asset.</p>
+             * <ul>
+             * <li><strong>watermark</strong></li>
+             * <li><strong>subtitle</strong></li>
+             * <li><strong>material</strong></li>
+             * </ul>
              * 
-             * *   **watermark**
-             * *   **subtitle**
-             * *   **material**
+             * <strong>example:</strong>
+             * <p>subtitle</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -454,10 +512,13 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the auxiliary media asset.
-             * <p>
+             * <p>The URL of the auxiliary media asset.</p>
+             * <blockquote>
+             * <p> If a CDN domain name is specified, a CDN URL is returned. Otherwise, an OSS URL is returned.</p>
+             * </blockquote>
              * 
-             * >  If a CDN domain name is specified, a CDN URL is returned. Otherwise, an OSS URL is returned.
+             * <strong>example:</strong>
+             * <p><a href="https://al*****.cn/subtitle/9843C2*****4E186F19B6.vtt?auth_key=159099f60e0b7fd59">https://al*****.cn/subtitle/9843C2*****4E186F19B6.vtt?auth_key=159099f60e0b7fd59</a>****</p>
              */
             public Builder URL(String URL) {
                 this.URL = URL;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddEditingProjectRequest} extends {@link RequestModel}
  *
  * <p>AddEditingProjectRequest</p>
@@ -166,7 +167,10 @@ public class AddEditingProjectRequest extends Request {
         } 
 
         /**
-         * The thumbnail URL of the online editing project. If you leave this parameter empty and materials exist on the video track in the timeline, the thumbnail of the first material is used by default.
+         * <p>The thumbnail URL of the online editing project. If you leave this parameter empty and materials exist on the video track in the timeline, the thumbnail of the first material is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://demo.aliyundoc.com/6AB4D0E1E1C74468883516C2349D1FC2-6-2.png">https://demo.aliyundoc.com/6AB4D0E1E1C74468883516C2349D1FC2-6-2.png</a></p>
          */
         public Builder coverURL(String coverURL) {
             this.putQueryParameter("CoverURL", coverURL);
@@ -175,7 +179,10 @@ public class AddEditingProjectRequest extends Request {
         }
 
         /**
-         * The description of the online editing project.
+         * <p>The description of the online editing project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testtimeline001desciption</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -184,7 +191,10 @@ public class AddEditingProjectRequest extends Request {
         }
 
         /**
-         * The region in which ApsaraVideo VOD is activated.
+         * <p>The region in which ApsaraVideo VOD is activated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder division(String division) {
             this.putQueryParameter("Division", division);
@@ -229,10 +239,11 @@ public class AddEditingProjectRequest extends Request {
         }
 
         /**
-         * The timeline of the online editing project in JSON format. For more information about the structure, see [Timeline](~~52839~~).
-         * <p>
+         * <p>The timeline of the online editing project in JSON format. For more information about the structure, see <a href="https://help.aliyun.com/document_detail/52839.html">Timeline</a>.</p>
+         * <p>If you leave this parameter empty, an empty timeline is created and the duration of the online editing project is zero.</p>
          * 
-         * If you leave this parameter empty, an empty timeline is created and the duration of the online editing project is zero.
+         * <strong>example:</strong>
+         * <p>{&quot;VideoTracks&quot;:[{&quot;VideoTrackClips&quot;:[{&quot;MediaId&quot;:&quot;cc3308ac5006aed55a54328bc3443****&quot;},{&quot;MediaId&quot;:&quot;95948ddba24446b6aed5db985e78****&quot;}]}]}</p>
          */
         public Builder timeline(String timeline) {
             this.putQueryParameter("Timeline", timeline);
@@ -241,7 +252,11 @@ public class AddEditingProjectRequest extends Request {
         }
 
         /**
-         * The title of the online editing project.
+         * <p>The title of the online editing project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testtimeline</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

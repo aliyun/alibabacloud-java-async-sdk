@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAttachedMediaResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteAttachedMediaResponseBody</p>
@@ -49,7 +50,7 @@ public class DeleteAttachedMediaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IDs of the auxiliary media assets that failed to be deleted.
+         * <p>The IDs of the auxiliary media assets that failed to be deleted.</p>
          */
         public Builder nonExistMediaIds(java.util.List < String > nonExistMediaIds) {
             this.nonExistMediaIds = nonExistMediaIds;
@@ -57,7 +58,10 @@ public class DeleteAttachedMediaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4AF6-D7393642CA58****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

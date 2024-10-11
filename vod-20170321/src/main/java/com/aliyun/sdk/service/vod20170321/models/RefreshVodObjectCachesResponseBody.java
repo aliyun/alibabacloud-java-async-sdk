@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefreshVodObjectCachesResponseBody} extends {@link TeaModel}
  *
  * <p>RefreshVodObjectCachesResponseBody</p>
@@ -49,10 +50,11 @@ public class RefreshVodObjectCachesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the refresh task. Multiple IDs are separated by commas (,). Refresh tasks are merged based on the following rules:
-         * <p>
+         * <p>The ID of the refresh task. Multiple IDs are separated by commas (,). Refresh tasks are merged based on the following rules:</p>
+         * <p>If the tasks are set for the same accelerated domain name, submitted within the same second, and refresh content based on URLs instead of directories, the tasks IDs are merged into the same task ID (RefreshTaskId). If the number of these tasks exceeds 2,000, every 2,000 tasks IDs are merged into the same task ID (RefreshTaskId).</p>
          * 
-         * If the tasks are set for the same accelerated domain name, submitted within the same second, and refresh content based on URLs instead of directories, the tasks IDs are merged into the same task ID (RefreshTaskId). If the number of these tasks exceeds 2,000, every 2,000 tasks IDs are merged into the same task ID (RefreshTaskId).
+         * <strong>example:</strong>
+         * <p>70422*****2904</p>
          */
         public Builder refreshTaskId(String refreshTaskId) {
             this.refreshTaskId = refreshTaskId;
@@ -60,7 +62,10 @@ public class RefreshVodObjectCachesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D61E4801-EAFF-4A63-****-FBF6CE1CFD1C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

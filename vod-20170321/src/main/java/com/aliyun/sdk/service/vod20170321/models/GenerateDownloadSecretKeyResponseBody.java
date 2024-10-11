@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateDownloadSecretKeyResponseBody} extends {@link TeaModel}
  *
  * <p>GenerateDownloadSecretKeyResponseBody</p>
@@ -49,7 +50,10 @@ public class GenerateDownloadSecretKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The key file for secure download.
+         * <p>The key file for secure download.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder appEncryptKey(String appEncryptKey) {
             this.appEncryptKey = appEncryptKey;
@@ -57,7 +61,10 @@ public class GenerateDownloadSecretKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E99B9BAD-7F9D-552B-A689-B72E92EA040E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

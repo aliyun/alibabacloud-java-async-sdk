@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodDomainCertificateInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVodDomainCertificateInfoResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The certificate information about the domain name.
+         * <p>The certificate information.</p>
          */
         public Builder certInfos(CertInfos certInfos) {
             this.certInfos = certInfos;
@@ -57,7 +58,10 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5C1E43DC-9E51-4771-****-7D5ECEB547A1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVodDomainCertificateInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodDomainCertificateInfoResponseBody</p>
+     */
     public static class CertInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertDomainName")
         private String certDomainName;
@@ -265,7 +275,10 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The domain name that matches the certificate.
+             * <p>The domain name that matches the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder certDomainName(String certDomainName) {
                 this.certDomainName = certDomainName;
@@ -273,7 +286,10 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the certificate expires. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time at which the certificate expires. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-06-03T13:03:39Z</p>
              */
             public Builder certExpireTime(String certExpireTime) {
                 this.certExpireTime = certExpireTime;
@@ -281,7 +297,10 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CertId.
+             * <p>The ID of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13227737-cn-hangzhou</p>
              */
             public Builder certId(String certId) {
                 this.certId = certId;
@@ -289,7 +308,10 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The validity period of the certificate. Unit: months or years.
+             * <p>The validity period of the certificate. Unit: months or years.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3 months</p>
              */
             public Builder certLife(String certLife) {
                 this.certLife = certLife;
@@ -297,7 +319,10 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The certificate name.
+             * <p>The certificate name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cert-example.com</p>
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -305,7 +330,10 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The certificate authority (CA) that issued the certificate.
+             * <p>The certificate authority (CA) that issued the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Let&quot;s Encrypt</p>
              */
             public Builder certOrg(String certOrg) {
                 this.certOrg = certOrg;
@@ -313,7 +341,10 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CertRegion.
+             * <p>The region where the certificate is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder certRegion(String certRegion) {
                 this.certRegion = certRegion;
@@ -321,7 +352,10 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CertStartTime.
+             * <p>The time when the certificate became effective.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-26T20:23:38Z</p>
              */
             public Builder certStartTime(String certStartTime) {
                 this.certStartTime = certStartTime;
@@ -329,12 +363,15 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the certificate. Valid values:
-             * <p>
+             * <p>The type of the certificate. Valid values:</p>
+             * <ul>
+             * <li><strong>free</strong>: a free certificate.</li>
+             * <li><strong>cas</strong>: a certificate that is purchased from Certificate Management Service.</li>
+             * <li><strong>upload</strong>: a user-uploaded certificate.</li>
+             * </ul>
              * 
-             * *   **free**: a free certificate.
-             * *   **cas**: a certificate that is purchased from Certificate Management Service.
-             * *   **upload**: a user-uploaded certificate.
+             * <strong>example:</strong>
+             * <p>free</p>
              */
             public Builder certType(String certType) {
                 this.certType = certType;
@@ -342,7 +379,10 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CertUpdateTime.
+             * <p>The time at which the certificate was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-26T20:23:38Z</p>
              */
             public Builder certUpdateTime(String certUpdateTime) {
                 this.certUpdateTime = certUpdateTime;
@@ -350,7 +390,16 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DomainCnameStatus.
+             * <p>The CNAME status of the domain name.</p>
+             * <ul>
+             * <li><strong>ok</strong>: The domain name points to the CNAME assigned by Alibaba Cloud CDN.</li>
+             * <li><strong>cname_error</strong>: An error occurred and the domain name cannot point to the CNAME.</li>
+             * <li><strong>op_domain_cname_error</strong> : An error occurred to the CNAME of the top-level domain. The domain name cannot point to the CNAME.</li>
+             * <li><strong>unsupport_wildcard</strong>: The wildcard domain name is not supported.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder domainCnameStatus(String domainCnameStatus) {
                 this.domainCnameStatus = domainCnameStatus;
@@ -358,7 +407,10 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The accelerated domain name whose ICP filing status you want to update.
+             * <p>The accelerated domain name whose ICP filing status you want to update.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -366,7 +418,10 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ServerCertificate.
+             * <p>The public key of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder serverCertificate(String serverCertificate) {
                 this.serverCertificate = serverCertificate;
@@ -374,11 +429,14 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the SSL certificate.
-             * <p>
+             * <p>The status of the SSL certificate.</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**
-             * *   **off**
+             * <strong>example:</strong>
+             * <p>checking</p>
              */
             public Builder serverCertificateStatus(String serverCertificateStatus) {
                 this.serverCertificateStatus = serverCertificateStatus;
@@ -386,18 +444,22 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the certificate.
-             * <p>
+             * <p>The status of the certificate.</p>
+             * <ul>
+             * <li><strong>success</strong>: The certificate is in effect.</li>
+             * <li><strong>checking</strong>: The system is checking whether the domain name is added to ApsaraVideo VOD.</li>
+             * <li><strong>cname_error</strong>: The domain name is not added to ApsaraVideo VOD.</li>
+             * <li><strong>domain_invalid</strong>: The domain name contains invalid characters.</li>
+             * <li><strong>unsupport_wildcard</strong>: The domain name is a wildcard domain name. Wildcard domain names are not supported.</li>
+             * <li><strong>applying</strong>: The certificate application is in progress.</li>
+             * <li><strong>failed</strong>: The certificate application failed.</li>
+             * </ul>
+             * <blockquote>
+             * <p> A value is returned for this parameter only when you set <code>CertType</code> to <code>free</code>. Otherwise, an empty value is returned for this parameter.</p>
+             * </blockquote>
              * 
-             * *   **success**: The certificate is in effect.
-             * *   **checking**: The system is checking whether the domain name is added to ApsaraVideo VOD.
-             * *   **cname_error**: The domain name is not added to ApsaraVideo VOD.
-             * *   **domain_invalid**: The domain name contains invalid characters.
-             * *   **unsupport_wildcard**: The domain name is a wildcard domain name. Wildcard domain names are not supported.
-             * *   **applying**: The certificate application is in progress.
-             * *   **failed**: The certificate application failed.
-             * 
-             * >  A value is returned for this parameter only when you set `CertType` to `free`. Otherwise, an empty value is returned for this parameter.
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -411,6 +473,12 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodDomainCertificateInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodDomainCertificateInfoResponseBody</p>
+     */
     public static class CertInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertInfo")
         private java.util.List < CertInfo> certInfo;

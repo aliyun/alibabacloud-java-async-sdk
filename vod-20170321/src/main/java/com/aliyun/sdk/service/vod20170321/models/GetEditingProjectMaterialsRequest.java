@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEditingProjectMaterialsRequest} extends {@link RequestModel}
  *
  * <p>GetEditingProjectMaterialsRequest</p>
@@ -138,12 +139,15 @@ public class GetEditingProjectMaterialsRequest extends Request {
         } 
 
         /**
-         * The type of the material. Valid values:
-         * <p>
+         * <p>The type of the material. Valid values:</p>
+         * <ul>
+         * <li><strong>video</strong></li>
+         * <li><strong>audio</strong></li>
+         * <li><strong>image</strong></li>
+         * </ul>
          * 
-         * *   **video**
-         * *   **audio**
-         * *   **image**
+         * <strong>example:</strong>
+         * <p>video</p>
          */
         public Builder materialType(String materialType) {
             this.putQueryParameter("MaterialType", materialType);
@@ -170,11 +174,15 @@ public class GetEditingProjectMaterialsRequest extends Request {
         }
 
         /**
-         * The ID of the online editing project. You can use one of the following methods to obtain the ID of the online editing project:
-         * <p>
+         * <p>The ID of the online editing project. You can use one of the following methods to obtain the ID of the online editing project:</p>
+         * <ul>
+         * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Production Center</strong> &gt; <strong>Video Editing</strong> to obtain the ID of the specified online editing project.</li>
+         * <li>Call the <strong>AddEditingProject</strong> operation. The value of the response parameter ProjectId is the ID of the specified online editing project.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Production Center** > **Video Editing** to obtain the ID of the specified online editing project.
-         * *   Call the **AddEditingProject** operation. The value of the response parameter ProjectId is the ID of the specified online editing project.
+         * <strong>example:</strong>
+         * <p>1982361011093374****</p>
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -201,11 +209,14 @@ public class GetEditingProjectMaterialsRequest extends Request {
         }
 
         /**
-         * The type of the material. Valid values:
-         * <p>
+         * <p>The type of the material. Valid values:</p>
+         * <ul>
+         * <li><strong>video</strong></li>
+         * <li><strong>audio</strong></li>
+         * </ul>
          * 
-         * *   **video**
-         * *   **audio**
+         * <strong>example:</strong>
+         * <p>video</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

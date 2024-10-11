@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAIMediaAuditJobRequest} extends {@link RequestModel}
  *
  * <p>GetAIMediaAuditJobRequest</p>
@@ -54,7 +55,11 @@ public class GetAIMediaAuditJobRequest extends Request {
         } 
 
         /**
-         * The ID of the intelligent review job.
+         * <p>The ID of the intelligent review job.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bdbc266af6894*****943a70176d92e9</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

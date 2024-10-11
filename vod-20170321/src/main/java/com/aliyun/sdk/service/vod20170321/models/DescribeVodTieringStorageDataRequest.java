@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodTieringStorageDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeVodTieringStorageDataRequest</p>
@@ -109,7 +110,10 @@ public class DescribeVodTieringStorageDataRequest extends Request {
         } 
 
         /**
-         * The end time at which data is obtained. The end time must be later than the start time. The difference cannot exceed 31 days. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>The end time at which data is obtained. The end time must be later than the start time. The difference cannot exceed 31 days. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-29T02:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -127,7 +131,10 @@ public class DescribeVodTieringStorageDataRequest extends Request {
         }
 
         /**
-         * The region in which you want to query data. If you leave this parameter empty, data in all regions is returned. Separate multiple regions with commas (,).
+         * <p>The region in which you want to query data. If you leave this parameter empty, data in all regions is returned. Separate multiple regions with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -136,7 +143,10 @@ public class DescribeVodTieringStorageDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If you leave this parameter empty, data in the last 24 hours is queried.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If you leave this parameter empty, data in the last 24 hours is queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-29T01:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -145,12 +155,15 @@ public class DescribeVodTieringStorageDataRequest extends Request {
         }
 
         /**
-         * The storage type. By default, all storage types are returned. Valid values:
-         * <p>
+         * <p>The storage type. By default, all storage types are returned. Valid values:</p>
+         * <ul>
+         * <li><strong>IA</strong></li>
+         * <li><strong>Archive</strong></li>
+         * <li><strong>ColdArchive</strong></li>
+         * </ul>
          * 
-         * *   **IA**
-         * *   **Archive**
-         * *   **ColdArchive**
+         * <strong>example:</strong>
+         * <p>IA</p>
          */
         public Builder storageClass(String storageClass) {
             this.putQueryParameter("StorageClass", storageClass);

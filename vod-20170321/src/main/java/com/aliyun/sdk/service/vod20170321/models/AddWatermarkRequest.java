@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddWatermarkRequest} extends {@link RequestModel}
  *
  * <p>AddWatermarkRequest</p>
@@ -112,7 +113,10 @@ public class AddWatermarkRequest extends Request {
         } 
 
         /**
-         * The ID of the application. Default value: **app-1000000**. If you have activated the multi-application service, specify the ID of the application to add the watermark template in the specified application. For more information, see [Overview](~~113600~~).
+         * <p>The ID of the application. Default value: <strong>app-1000000</strong>. If you have activated the multi-application service, specify the ID of the application to add the watermark template in the specified application. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -121,11 +125,16 @@ public class AddWatermarkRequest extends Request {
         }
 
         /**
-         * The URL of the watermark file. The URL must be an Object Storage Service (OSS) URL and cannot contain the information used for URL signing.
-         * <p>
+         * <p>The URL of the watermark file. The URL must be an Object Storage Service (OSS) URL and cannot contain the information used for URL signing.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is required if you set <code>Type</code> to <code>Image</code>.</li>
+         * <li>You can obtain the URL from the <code>FileURL</code> parameter in the response to the <a href="~~CreateUploadAttachedMedia~~">CreateUploadAttachedMedia</a> operation that you call to upload the watermark image to ApsaraVideo VOD.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > *   This parameter is required if you set `Type` to `Image`.
-         * > *  You can obtain the URL from the `FileURL` parameter in the response to the [CreateUploadAttachedMedia](~~CreateUploadAttachedMedia~~) operation that you call to upload the watermark image to ApsaraVideo VOD.
+         * <strong>example:</strong>
+         * <p><a href="http://outin-326268*****63e1403e7.oss-cn-shanghai.aliyuncs.com/image/cover/C99345*****E7FDEC-6-2.png">http://outin-326268*****63e1403e7.oss-cn-shanghai.aliyuncs.com/image/cover/C99345*****E7FDEC-6-2.png</a></p>
          */
         public Builder fileUrl(String fileUrl) {
             this.putQueryParameter("FileUrl", fileUrl);
@@ -134,12 +143,16 @@ public class AddWatermarkRequest extends Request {
         }
 
         /**
-         * The name of the watermark template.
-         * <p>
+         * <p>The name of the watermark template.</p>
+         * <ul>
+         * <li>Only letters and digits are supported.</li>
+         * <li>The name cannot exceed 128 bytes.</li>
+         * <li>The value must be encoded in UTF-8.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Only letters and digits are supported.
-         * *   The name cannot exceed 128 bytes.
-         * *   The value must be encoded in UTF-8.
+         * <strong>example:</strong>
+         * <p>watermark</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -148,11 +161,15 @@ public class AddWatermarkRequest extends Request {
         }
 
         /**
-         * The type of the watermark template. Valid values:
-         * <p>
+         * <p>The type of the watermark template. Valid values:</p>
+         * <ul>
+         * <li><strong>Image</strong> (default): image watermark template</li>
+         * <li><strong>Text</strong>: text watermark template</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Image** (default): image watermark template
-         * *   **Text**: text watermark template
+         * <strong>example:</strong>
+         * <p>Text</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -161,7 +178,11 @@ public class AddWatermarkRequest extends Request {
         }
 
         /**
-         * The configuration information of the watermark such as the display position and special effects. The value must be a JSON string. The configuration parameters for image and text watermarks are different. For more information about the parameter structure, see [WatermarkConfig](~~98618#section-h01-44s-2lr~~).
+         * <p>The configuration information of the watermark such as the display position and special effects. The value must be a JSON string. The configuration parameters for image and text watermarks are different. For more information about the parameter structure, see <a href="~~98618#section-h01-44s-2lr~~">WatermarkConfig</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Width&quot;:&quot;55&quot;,&quot;Height&quot;:&quot;55&quot;,&quot;Dx&quot;:&quot;9&quot;,&quot;Dy&quot;:&quot;9&quot;,&quot;ReferPos&quot;:&quot;BottonLeft&quot;}</p>
          */
         public Builder watermarkConfig(String watermarkConfig) {
             this.putQueryParameter("WatermarkConfig", watermarkConfig);

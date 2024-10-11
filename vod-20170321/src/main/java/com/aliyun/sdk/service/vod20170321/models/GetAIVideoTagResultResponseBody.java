@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAIVideoTagResultResponseBody} extends {@link TeaModel}
  *
  * <p>GetAIVideoTagResultResponseBody</p>
@@ -49,7 +50,10 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
         private VideoTagResult videoTagResult; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8829B4DB-AFD9-4FF6-12965DBFFA14****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
         public Builder videoTagResult(VideoTagResult videoTagResult) {
             this.videoTagResult = videoTagResult;
@@ -70,6 +74,12 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAIVideoTagResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAIVideoTagResultResponseBody</p>
+     */
     public static class Category extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
@@ -97,7 +107,10 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             private String tag; 
 
             /**
-             * The tag string.
+             * <p>The tag string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Retouching</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -111,6 +124,12 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAIVideoTagResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAIVideoTagResultResponseBody</p>
+     */
     public static class Keyword extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
@@ -150,7 +169,10 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             private java.util.List < String > times; 
 
             /**
-             * The tag string.
+             * <p>The tag string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cushion</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -158,7 +180,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             }
 
             /**
-             * The points in time when the tags are displayed. Unit: milliseconds.
+             * <p>The points in time when the tags are displayed. Unit: milliseconds.</p>
              */
             public Builder times(java.util.List < String > times) {
                 this.times = times;
@@ -172,6 +194,12 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAIVideoTagResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAIVideoTagResultResponseBody</p>
+     */
     public static class Location extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
@@ -211,7 +239,10 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             private java.util.List < String > times; 
 
             /**
-             * The tag string.
+             * <p>The tag string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -219,7 +250,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             }
 
             /**
-             * The points in time when the tags are displayed. Unit: milliseconds.
+             * <p>The points in time when the tags are displayed. Unit: milliseconds.</p>
              */
             public Builder times(java.util.List < String > times) {
                 this.times = times;
@@ -233,6 +264,12 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAIVideoTagResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAIVideoTagResultResponseBody</p>
+     */
     public static class Person extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FaceUrl")
         private String faceUrl;
@@ -284,10 +321,13 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             private java.util.List < String > times; 
 
             /**
-             * The URL of the profile photo.
-             * <p>
+             * <p>The URL of the profile photo.</p>
+             * <blockquote>
+             * <p>This parameter is returned only when a figure tag was used.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only when a figure tag was used.
+             * <strong>example:</strong>
+             * <p><a href="http://example.com/aivideotag/8829B4DB-AFD9-4F*****F6-12965DBFFA14/Index_****.jpg">http://example.com/aivideotag/8829B4DB-AFD9-4F*****F6-12965DBFFA14/Index_****.jpg</a></p>
              */
             public Builder faceUrl(String faceUrl) {
                 this.faceUrl = faceUrl;
@@ -295,7 +335,10 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             }
 
             /**
-             * The tag string.
+             * <p>The tag string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>John</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -303,7 +346,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             }
 
             /**
-             * The points in time when the tags are displayed. Unit: milliseconds.
+             * <p>The points in time when the tags are displayed. Unit: milliseconds.</p>
              */
             public Builder times(java.util.List < String > times) {
                 this.times = times;
@@ -317,6 +360,12 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAIVideoTagResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAIVideoTagResultResponseBody</p>
+     */
     public static class Time extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
@@ -356,7 +405,10 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             private java.util.List < String > times; 
 
             /**
-             * The tag string.
+             * <p>The tag string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Milliseconds</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -364,7 +416,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             }
 
             /**
-             * The points in time when the tags are displayed. Unit: milliseconds.
+             * <p>The points in time when the tags are displayed. Unit: milliseconds.</p>
              */
             public Builder times(java.util.List < String > times) {
                 this.times = times;
@@ -378,6 +430,12 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAIVideoTagResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAIVideoTagResultResponseBody</p>
+     */
     public static class VideoTagResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private java.util.List < Category> category;
@@ -453,7 +511,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             private java.util.List < Time> time; 
 
             /**
-             * The video categories.
+             * <p>The video categories.</p>
              */
             public Builder category(java.util.List < Category> category) {
                 this.category = category;
@@ -461,7 +519,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             }
 
             /**
-             * The keyword tags.
+             * <p>The keyword tags.</p>
              */
             public Builder keyword(java.util.List < Keyword> keyword) {
                 this.keyword = keyword;
@@ -469,7 +527,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             }
 
             /**
-             * The location tags.
+             * <p>The location tags.</p>
              */
             public Builder location(java.util.List < Location> location) {
                 this.location = location;
@@ -477,7 +535,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             }
 
             /**
-             * The figure tags.
+             * <p>The figure tags.</p>
              */
             public Builder person(java.util.List < Person> person) {
                 this.person = person;
@@ -485,7 +543,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             }
 
             /**
-             * The time tags.
+             * <p>The time tags.</p>
              */
             public Builder time(java.util.List < Time> time) {
                 this.time = time;

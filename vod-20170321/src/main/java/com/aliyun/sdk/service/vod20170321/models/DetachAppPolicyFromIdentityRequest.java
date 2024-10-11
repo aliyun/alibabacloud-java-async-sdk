@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachAppPolicyFromIdentityRequest} extends {@link RequestModel}
  *
  * <p>DetachAppPolicyFromIdentityRequest</p>
@@ -98,11 +99,14 @@ public class DetachAppPolicyFromIdentityRequest extends Request {
         } 
 
         /**
-         * The ID of the application. This parameter is optional if you set PolicyNames to VODAppAdministratorAccess. This parameter is required if you set PolicyNames to a value other than VODAppAdministratorAccess.
-         * <p>
+         * <p>The ID of the application. This parameter is optional if you set PolicyNames to VODAppAdministratorAccess. This parameter is required if you set PolicyNames to a value other than VODAppAdministratorAccess.</p>
+         * <ul>
+         * <li>Default value: <strong>app-1000000</strong>.</li>
+         * <li>For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</li>
+         * </ul>
          * 
-         * *   Default value: **app-1000000**.
-         * *   For more information, see [Overview](~~113600~~).
+         * <strong>example:</strong>
+         * <p>app-****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -111,11 +115,15 @@ public class DetachAppPolicyFromIdentityRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user or the name of the RAM role.
-         * <p>
+         * <p>The ID of the RAM user or the name of the RAM role.</p>
+         * <ul>
+         * <li>Specifies the ID of the RAM user for this parameter if you set IdentityType to RamUser.</li>
+         * <li>Specifies the name of the RAM role for this parameter if you set IdentityType to RamRole.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Specifies the ID of the RAM user for this parameter if you set IdentityType to RamUser.
-         * *   Specifies the name of the RAM role for this parameter if you set IdentityType to RamRole.
+         * <strong>example:</strong>
+         * <p>test****name</p>
          */
         public Builder identityName(String identityName) {
             this.putQueryParameter("IdentityName", identityName);
@@ -124,11 +132,15 @@ public class DetachAppPolicyFromIdentityRequest extends Request {
         }
 
         /**
-         * The type of the identity. Valid values:
-         * <p>
+         * <p>The type of the identity. Valid values:</p>
+         * <ul>
+         * <li><strong>RamUser</strong>: RAM user</li>
+         * <li><strong>RamRole</strong>: RAM role</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **RamUser**: RAM user
-         * *   **RamRole**: RAM role
+         * <strong>example:</strong>
+         * <p>RamUser</p>
          */
         public Builder identityType(String identityType) {
             this.putQueryParameter("IdentityType", identityType);
@@ -137,12 +149,16 @@ public class DetachAppPolicyFromIdentityRequest extends Request {
         }
 
         /**
-         * The name of the policy. Separate multiple names with commas (,). Only system policies are supported.
-         * <p>
+         * <p>The name of the policy. Separate multiple names with commas (,). Only system policies are supported.</p>
+         * <ul>
+         * <li><strong>VODAppFullAccess</strong>: permissions to manage all resources in an application</li>
+         * <li><strong>VODAppReadOnlyAccess</strong>: permissions to read all resources in an application</li>
+         * <li><strong>VODAppAdministratorAccess</strong>: permissions of the application administrator</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **VODAppFullAccess**: permissions to manage all resources in an application
-         * *   **VODAppReadOnlyAccess**: permissions to read all resources in an application
-         * *   **VODAppAdministratorAccess**: permissions of the application administrator
+         * <strong>example:</strong>
+         * <p>VODAppFullAccess</p>
          */
         public Builder policyNames(String policyNames) {
             this.putQueryParameter("PolicyNames", policyNames);

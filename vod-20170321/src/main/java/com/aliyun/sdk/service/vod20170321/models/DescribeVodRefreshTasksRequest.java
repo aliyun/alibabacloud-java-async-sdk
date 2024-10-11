@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodRefreshTasksRequest} extends {@link RequestModel}
  *
  * <p>DescribeVodRefreshTasksRequest</p>
@@ -195,7 +196,10 @@ public class DescribeVodRefreshTasksRequest extends Request {
         } 
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -204,7 +208,10 @@ public class DescribeVodRefreshTasksRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-01-01T12:30:20Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -213,7 +220,10 @@ public class DescribeVodRefreshTasksRequest extends Request {
         }
 
         /**
-         * The path of the object. The path is used as a condition for exact matching.
+         * <p>The path of the object. The path is used as a condition for exact matching.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example.com/***.txt">http://example.com/***.txt</a></p>
          */
         public Builder objectPath(String objectPath) {
             this.putQueryParameter("ObjectPath", objectPath);
@@ -222,14 +232,18 @@ public class DescribeVodRefreshTasksRequest extends Request {
         }
 
         /**
-         * The type of the task. Valid values:
-         * <p>
+         * <p>The type of the task. Valid values:</p>
+         * <ul>
+         * <li><strong>file</strong>: refreshes one or more files.</li>
+         * <li><strong>directory</strong>: refreshes files in the specified directories.</li>
+         * <li><strong>preload</strong>: prefetches one or more files.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you specify the DomainName or Status parameter, you must also specify the ObjectType parameter.</p>
+         * </blockquote>
          * 
-         * *   **file**: refreshes one or more files.
-         * *   **directory**: refreshes files in the specified directories.
-         * *   **preload**: prefetches one or more files.
-         * 
-         * > If you specify the DomainName or Status parameter, you must also specify the ObjectType parameter.
+         * <strong>example:</strong>
+         * <p>file</p>
          */
         public Builder objectType(String objectType) {
             this.putQueryParameter("ObjectType", objectType);
@@ -247,7 +261,10 @@ public class DescribeVodRefreshTasksRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -256,7 +273,10 @@ public class DescribeVodRefreshTasksRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**. Maximum value: **50**.
+         * <p>The number of entries to return on each page. Default value: <strong>20</strong>. Maximum value: <strong>50</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -274,10 +294,13 @@ public class DescribeVodRefreshTasksRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
-         * <p>
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>You can query data that is collected in the last three days.</p>
+         * </blockquote>
          * 
-         * > You can query data that is collected in the last three days.
+         * <strong>example:</strong>
+         * <p>2017-01-01T12:12:20Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -286,12 +309,15 @@ public class DescribeVodRefreshTasksRequest extends Request {
         }
 
         /**
-         * The status of the task. Valid values:
-         * <p>
+         * <p>The status of the task. Valid values:</p>
+         * <ul>
+         * <li><strong>Complete</strong>: The task is complete.</li>
+         * <li><strong>Refreshing</strong>: The task is in progress.</li>
+         * <li><strong>Failed</strong>: The task failed.</li>
+         * </ul>
          * 
-         * *   **Complete**: The task is complete.
-         * *   **Refreshing**: The task is in progress.
-         * *   **Failed**: The task failed.
+         * <strong>example:</strong>
+         * <p>Complete</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -300,7 +326,10 @@ public class DescribeVodRefreshTasksRequest extends Request {
         }
 
         /**
-         * The ID of the task that you want to query.
+         * <p>The ID of the task that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70422****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

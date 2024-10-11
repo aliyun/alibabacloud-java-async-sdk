@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodDomainRealTimeByteHitRateDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeVodDomainRealTimeByteHitRateDataRequest</p>
@@ -96,7 +97,11 @@ public class DescribeVodDomainRealTimeByteHitRateDataRequest extends Request {
         } 
 
         /**
-         * You can specify multiple domain names and separate them with commas (,). You can specify at most 100 domain names in each call.
+         * <p>You can specify multiple domain names and separate them with commas (,). You can specify at most 100 domain names in each call.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -105,12 +110,14 @@ public class DescribeVodDomainRealTimeByteHitRateDataRequest extends Request {
         }
 
         /**
-         * The end of the time range to query.
-         * <p>
+         * <p>The end of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p> The end time must be later than the start time.</p>
+         * </blockquote>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * 
-         * >  The end time must be later than the start time.
+         * <strong>example:</strong>
+         * <p>2020-05-15T09:15:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -128,10 +135,11 @@ public class DescribeVodDomainRealTimeByteHitRateDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
-         * <p>
+         * <p>The beginning of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <strong>example:</strong>
+         * <p>2020-05-15T09:13:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

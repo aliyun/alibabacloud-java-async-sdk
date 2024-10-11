@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLiveRecordVideoRequest} extends {@link RequestModel}
  *
  * <p>ListLiveRecordVideoRequest</p>
@@ -151,7 +152,10 @@ public class ListLiveRecordVideoRequest extends Request {
         } 
 
         /**
-         * The name of the application that was used to record the live stream.
+         * <p>The name of the application that was used to record the live stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testApp</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -160,7 +164,10 @@ public class ListLiveRecordVideoRequest extends Request {
         }
 
         /**
-         * The domain name of the recorded live stream.
+         * <p>The domain name of the recorded live stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -169,7 +176,10 @@ public class ListLiveRecordVideoRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The query is performed based on the time range during which the required live streams were recorded. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>The end of the time range to query. The query is performed based on the time range during which the required live streams were recorded. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-01-11T13:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -178,7 +188,10 @@ public class ListLiveRecordVideoRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -187,7 +200,10 @@ public class ListLiveRecordVideoRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **100**. Default value: **10**.
+         * <p>The number of entries to return on each page. Maximum value: <strong>100</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -196,11 +212,14 @@ public class ListLiveRecordVideoRequest extends Request {
         }
 
         /**
-         * The sorting rule of the results. Valid values:
-         * <p>
+         * <p>The sorting rule of the results. Valid values:</p>
+         * <ul>
+         * <li><strong>CreationTime:Desc</strong>: The results are sorted in reverse chronological order based on the creation time.</li>
+         * <li><strong>CreationTime:Asc</strong>: The results are sorted in chronological order based on the creation time.</li>
+         * </ul>
          * 
-         * *   **CreationTime:Desc**: The results are sorted in reverse chronological order based on the creation time.
-         * *   **CreationTime:Asc**: The results are sorted in chronological order based on the creation time.
+         * <strong>example:</strong>
+         * <p>CreationTime:Desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -209,7 +228,10 @@ public class ListLiveRecordVideoRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The query is performed based on the time range during which the required live streams were recorded. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>The beginning of the time range to query. The query is performed based on the time range during which the required live streams were recorded. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-01-11T12:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -218,7 +240,10 @@ public class ListLiveRecordVideoRequest extends Request {
         }
 
         /**
-         * The name of the recorded live stream.
+         * <p>The name of the recorded live stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>live-test</p>
          */
         public Builder streamName(String streamName) {
             this.putQueryParameter("StreamName", streamName);

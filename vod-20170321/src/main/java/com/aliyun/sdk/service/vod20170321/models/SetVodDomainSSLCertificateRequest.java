@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetVodDomainSSLCertificateRequest} extends {@link RequestModel}
  *
  * <p>SetVodDomainSSLCertificateRequest</p>
@@ -231,7 +232,10 @@ public class SetVodDomainSSLCertificateRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -267,7 +271,10 @@ public class SetVodDomainSSLCertificateRequest extends Request {
         }
 
         /**
-         * SSLProtocol.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder SSLProtocol(String SSLProtocol) {
             this.putQueryParameter("SSLProtocol", SSLProtocol);

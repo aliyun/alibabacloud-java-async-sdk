@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitMediaDNADeleteJobResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitMediaDNADeleteJobResponseBody</p>
@@ -49,7 +50,10 @@ public class SubmitMediaDNADeleteJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the job.
+         * <p>The ID of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6805B2EC-CE87-****-8FF6-9C0E97719A26</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -57,7 +61,10 @@ public class SubmitMediaDNADeleteJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e5b1a2e7bee******b632c2710b9423f</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
