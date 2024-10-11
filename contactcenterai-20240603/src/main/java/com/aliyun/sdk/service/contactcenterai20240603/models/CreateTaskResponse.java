@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RunCompletionResponse} extends {@link TeaModel}
+ * {@link CreateTaskResponse} extends {@link TeaModel}
  *
- * <p>RunCompletionResponse</p>
+ * <p>CreateTaskResponse</p>
  */
-public class RunCompletionResponse extends Response {
+public class CreateTaskResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class RunCompletionResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private RunCompletionResponseBody body;
+    private CreateTaskResponseBody body;
 
-    private RunCompletionResponse(BuilderImpl builder) {
+    private CreateTaskResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static RunCompletionResponse create() {
+    public static CreateTaskResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class RunCompletionResponse extends Response {
     /**
      * @return body
      */
-    public RunCompletionResponseBody getBody() {
+    public CreateTaskResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<RunCompletionResponse, Builder> {
+    public interface Builder extends Response.Builder<CreateTaskResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(RunCompletionResponseBody body);
+        Builder body(CreateTaskResponseBody body);
 
         @Override
-        RunCompletionResponse build();
+        CreateTaskResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<RunCompletionResponse, Builder>
+            extends Response.BuilderImpl<CreateTaskResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private RunCompletionResponseBody body; 
+        private CreateTaskResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(RunCompletionResponse response) {
+        private BuilderImpl(CreateTaskResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class RunCompletionResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(RunCompletionResponseBody body) {
+        public Builder body(CreateTaskResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public RunCompletionResponse build() {
-            return new RunCompletionResponse(this);
+        public CreateTaskResponse build() {
+            return new CreateTaskResponse(this);
         } 
 
     } 

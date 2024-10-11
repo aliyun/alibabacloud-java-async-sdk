@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetTaskResultResponseBody} extends {@link TeaModel}
+ * {@link CreateTaskResponseBody} extends {@link TeaModel}
  *
- * <p>GetTaskResultResponseBody</p>
+ * <p>CreateTaskResponseBody</p>
  */
-public class GetTaskResultResponseBody extends TeaModel {
+public class CreateTaskResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
@@ -21,7 +21,7 @@ public class GetTaskResultResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("success")
     private String success;
 
-    private GetTaskResultResponseBody(Builder builder) {
+    private CreateTaskResponseBody(Builder builder) {
         this.data = builder.data;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -31,7 +31,7 @@ public class GetTaskResultResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetTaskResultResponseBody create() {
+    public static CreateTaskResponseBody create() {
         return builder().build();
     }
 
@@ -85,32 +85,24 @@ public class GetTaskResultResponseBody extends TeaModel {
             return this;
         }
 
-        public GetTaskResultResponseBody build() {
-            return new GetTaskResultResponseBody(this);
+        public CreateTaskResponseBody build() {
+            return new CreateTaskResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link GetTaskResultResponseBody} extends {@link TeaModel}
+     * {@link CreateTaskResponseBody} extends {@link TeaModel}
      *
-     * <p>GetTaskResultResponseBody</p>
+     * <p>CreateTaskResponseBody</p>
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("taskId")
         private String taskId;
 
-        @com.aliyun.core.annotation.NameInMap("taskStatus")
-        private String taskStatus;
-
-        @com.aliyun.core.annotation.NameInMap("text")
-        private String text;
-
         private Data(Builder builder) {
             this.taskId = builder.taskId;
-            this.taskStatus = builder.taskStatus;
-            this.text = builder.text;
         }
 
         public static Builder builder() {
@@ -128,46 +120,14 @@ public class GetTaskResultResponseBody extends TeaModel {
             return this.taskId;
         }
 
-        /**
-         * @return taskStatus
-         */
-        public String getTaskStatus() {
-            return this.taskStatus;
-        }
-
-        /**
-         * @return text
-         */
-        public String getText() {
-            return this.text;
-        }
-
         public static final class Builder {
             private String taskId; 
-            private String taskStatus; 
-            private String text; 
 
             /**
              * taskId.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
-                return this;
-            }
-
-            /**
-             * taskStatus.
-             */
-            public Builder taskStatus(String taskStatus) {
-                this.taskStatus = taskStatus;
-                return this;
-            }
-
-            /**
-             * text.
-             */
-            public Builder text(String text) {
-                this.text = text;
                 return this;
             }
 

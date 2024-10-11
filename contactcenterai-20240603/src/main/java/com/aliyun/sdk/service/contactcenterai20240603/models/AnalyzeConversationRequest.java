@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AnalyzeConversationRequest} extends {@link RequestModel}
  *
  * <p>AnalyzeConversationRequest</p>
@@ -226,7 +227,10 @@ public class AnalyzeConversationRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-368******3ifum</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -235,7 +239,10 @@ public class AnalyzeConversationRequest extends Request {
         }
 
         /**
-         * appId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a070a49c681f4a95a0f0*********35c</p>
          */
         public Builder appId(String appId) {
             this.putPathParameter("appId", appId);
@@ -262,7 +269,7 @@ public class AnalyzeConversationRequest extends Request {
         }
 
         /**
-         * dialogue.
+         * <p>This parameter is required.</p>
          */
         public Builder dialogue(Dialogue dialogue) {
             this.putBodyParameter("dialogue", dialogue);
@@ -298,7 +305,7 @@ public class AnalyzeConversationRequest extends Request {
         }
 
         /**
-         * resultTypes.
+         * <p>This parameter is required.</p>
          */
         public Builder resultTypes(java.util.List < String > resultTypes) {
             this.putBodyParameter("resultTypes", resultTypes);
@@ -325,7 +332,10 @@ public class AnalyzeConversationRequest extends Request {
         }
 
         /**
-         * stream.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder stream(Boolean stream) {
             this.putBodyParameter("stream", stream);
@@ -349,6 +359,12 @@ public class AnalyzeConversationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AnalyzeConversationRequest} extends {@link TeaModel}
+     *
+     * <p>AnalyzeConversationRequest</p>
+     */
     public static class CategoryTags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tagDesc")
         private String tagDesc;
@@ -410,6 +426,12 @@ public class AnalyzeConversationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AnalyzeConversationRequest} extends {@link TeaModel}
+     *
+     * <p>AnalyzeConversationRequest</p>
+     */
     public static class Sentences extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("role")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -451,7 +473,10 @@ public class AnalyzeConversationRequest extends Request {
             private String text; 
 
             /**
-             * role.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -459,7 +484,7 @@ public class AnalyzeConversationRequest extends Request {
             }
 
             /**
-             * text.
+             * <p>This parameter is required.</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -473,6 +498,12 @@ public class AnalyzeConversationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AnalyzeConversationRequest} extends {@link TeaModel}
+     *
+     * <p>AnalyzeConversationRequest</p>
+     */
     public static class Dialogue extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("sentences")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -513,7 +544,7 @@ public class AnalyzeConversationRequest extends Request {
             private String sessionId; 
 
             /**
-             * sentences.
+             * <p>This parameter is required.</p>
              */
             public Builder sentences(java.util.List < Sentences> sentences) {
                 this.sentences = sentences;
@@ -535,6 +566,12 @@ public class AnalyzeConversationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AnalyzeConversationRequest} extends {@link TeaModel}
+     *
+     * <p>AnalyzeConversationRequest</p>
+     */
     public static class ExamplesSentences extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("chatId")
         private String chatId;
@@ -596,7 +633,7 @@ public class AnalyzeConversationRequest extends Request {
             }
 
             /**
-             * role.
+             * <p>This parameter is required.</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -604,7 +641,7 @@ public class AnalyzeConversationRequest extends Request {
             }
 
             /**
-             * text.
+             * <p>This parameter is required.</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -618,6 +655,12 @@ public class AnalyzeConversationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AnalyzeConversationRequest} extends {@link TeaModel}
+     *
+     * <p>AnalyzeConversationRequest</p>
+     */
     public static class Examples extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("output")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -659,7 +702,7 @@ public class AnalyzeConversationRequest extends Request {
             private java.util.List < ExamplesSentences> sentences; 
 
             /**
-             * output.
+             * <p>This parameter is required.</p>
              */
             public Builder output(String output) {
                 this.output = output;
@@ -667,7 +710,7 @@ public class AnalyzeConversationRequest extends Request {
             }
 
             /**
-             * sentences.
+             * <p>This parameter is required.</p>
              */
             public Builder sentences(java.util.List < ExamplesSentences> sentences) {
                 this.sentences = sentences;
@@ -681,6 +724,12 @@ public class AnalyzeConversationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AnalyzeConversationRequest} extends {@link TeaModel}
+     *
+     * <p>AnalyzeConversationRequest</p>
+     */
     public static class EnumValues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("desc")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -722,7 +771,7 @@ public class AnalyzeConversationRequest extends Request {
             private String enumValue; 
 
             /**
-             * desc.
+             * <p>This parameter is required.</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -730,7 +779,7 @@ public class AnalyzeConversationRequest extends Request {
             }
 
             /**
-             * enumValue.
+             * <p>This parameter is required.</p>
              */
             public Builder enumValue(String enumValue) {
                 this.enumValue = enumValue;
@@ -744,6 +793,12 @@ public class AnalyzeConversationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AnalyzeConversationRequest} extends {@link TeaModel}
+     *
+     * <p>AnalyzeConversationRequest</p>
+     */
     public static class Fields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
@@ -817,7 +872,7 @@ public class AnalyzeConversationRequest extends Request {
             }
 
             /**
-             * desc.
+             * <p>This parameter is required.</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -833,7 +888,7 @@ public class AnalyzeConversationRequest extends Request {
             }
 
             /**
-             * name.
+             * <p>This parameter is required.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -847,6 +902,12 @@ public class AnalyzeConversationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AnalyzeConversationRequest} extends {@link TeaModel}
+     *
+     * <p>AnalyzeConversationRequest</p>
+     */
     public static class InspectionContents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -888,7 +949,7 @@ public class AnalyzeConversationRequest extends Request {
             private String title; 
 
             /**
-             * content.
+             * <p>This parameter is required.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -896,7 +957,7 @@ public class AnalyzeConversationRequest extends Request {
             }
 
             /**
-             * title.
+             * <p>This parameter is required.</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -910,6 +971,12 @@ public class AnalyzeConversationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AnalyzeConversationRequest} extends {@link TeaModel}
+     *
+     * <p>AnalyzeConversationRequest</p>
+     */
     public static class ServiceInspection extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("inspectionContents")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -964,7 +1031,7 @@ public class AnalyzeConversationRequest extends Request {
             private String sceneIntroduction; 
 
             /**
-             * inspectionContents.
+             * <p>This parameter is required.</p>
              */
             public Builder inspectionContents(java.util.List < InspectionContents> inspectionContents) {
                 this.inspectionContents = inspectionContents;
@@ -972,7 +1039,7 @@ public class AnalyzeConversationRequest extends Request {
             }
 
             /**
-             * inspectionIntroduction.
+             * <p>This parameter is required.</p>
              */
             public Builder inspectionIntroduction(String inspectionIntroduction) {
                 this.inspectionIntroduction = inspectionIntroduction;
@@ -980,7 +1047,7 @@ public class AnalyzeConversationRequest extends Request {
             }
 
             /**
-             * sceneIntroduction.
+             * <p>This parameter is required.</p>
              */
             public Builder sceneIntroduction(String sceneIntroduction) {
                 this.sceneIntroduction = sceneIntroduction;
@@ -994,6 +1061,12 @@ public class AnalyzeConversationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AnalyzeConversationRequest} extends {@link TeaModel}
+     *
+     * <p>AnalyzeConversationRequest</p>
+     */
     public static class UserProfiles extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -1033,7 +1106,7 @@ public class AnalyzeConversationRequest extends Request {
             private String value; 
 
             /**
-             * name.
+             * <p>This parameter is required.</p>
              */
             public Builder name(String name) {
                 this.name = name;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunCompletionMessageRequest} extends {@link RequestModel}
  *
  * <p>RunCompletionMessageRequest</p>
@@ -126,7 +127,10 @@ public class RunCompletionMessageRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-ik******RVYCKzt</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -135,7 +139,10 @@ public class RunCompletionMessageRequest extends Request {
         }
 
         /**
-         * appId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>097d65c9c7004f8dad2b454850ac232b</p>
          */
         public Builder appId(String appId) {
             this.putPathParameter("appId", appId);
@@ -153,7 +160,7 @@ public class RunCompletionMessageRequest extends Request {
         }
 
         /**
-         * Messages.
+         * <p>This parameter is required.</p>
          */
         public Builder messages(java.util.List < Messages> messages) {
             this.putBodyParameter("Messages", messages);
@@ -186,6 +193,12 @@ public class RunCompletionMessageRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RunCompletionMessageRequest} extends {@link TeaModel}
+     *
+     * <p>RunCompletionMessageRequest</p>
+     */
     public static class Messages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -227,7 +240,7 @@ public class RunCompletionMessageRequest extends Request {
             private String role; 
 
             /**
-             * Content.
+             * <p>This parameter is required.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -235,7 +248,10 @@ public class RunCompletionMessageRequest extends Request {
             }
 
             /**
-             * Role.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder role(String role) {
                 this.role = role;

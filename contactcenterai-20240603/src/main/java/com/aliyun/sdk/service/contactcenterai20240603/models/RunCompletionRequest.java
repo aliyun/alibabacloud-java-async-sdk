@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunCompletionRequest} extends {@link RequestModel}
  *
  * <p>RunCompletionRequest</p>
@@ -169,7 +170,10 @@ public class RunCompletionRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-ik******RVYCKzt</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -178,7 +182,10 @@ public class RunCompletionRequest extends Request {
         }
 
         /**
-         * appId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>097d65c9c7004f8dad2b454850ac232b</p>
          */
         public Builder appId(String appId) {
             this.putPathParameter("appId", appId);
@@ -196,7 +203,7 @@ public class RunCompletionRequest extends Request {
         }
 
         /**
-         * Dialogue.
+         * <p>This parameter is required.</p>
          */
         public Builder dialogue(Dialogue dialogue) {
             this.putBodyParameter("Dialogue", dialogue);
@@ -241,7 +248,7 @@ public class RunCompletionRequest extends Request {
         }
 
         /**
-         * TemplateIds.
+         * <p>This parameter is required.</p>
          */
         public Builder templateIds(java.util.List < Long > templateIds) {
             this.putBodyParameter("TemplateIds", templateIds);
@@ -256,6 +263,12 @@ public class RunCompletionRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RunCompletionRequest} extends {@link TeaModel}
+     *
+     * <p>RunCompletionRequest</p>
+     */
     public static class Sentences extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChatId")
         private String chatId;
@@ -317,7 +330,10 @@ public class RunCompletionRequest extends Request {
             }
 
             /**
-             * Role.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -325,7 +341,7 @@ public class RunCompletionRequest extends Request {
             }
 
             /**
-             * Text.
+             * <p>This parameter is required.</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -339,6 +355,12 @@ public class RunCompletionRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunCompletionRequest} extends {@link TeaModel}
+     *
+     * <p>RunCompletionRequest</p>
+     */
     public static class Dialogue extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Sentences")
         private java.util.List < Sentences> sentences;
@@ -400,6 +422,12 @@ public class RunCompletionRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunCompletionRequest} extends {@link TeaModel}
+     *
+     * <p>RunCompletionRequest</p>
+     */
     public static class EnumValues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
@@ -448,7 +476,7 @@ public class RunCompletionRequest extends Request {
             }
 
             /**
-             * EnumValue.
+             * <p>This parameter is required.</p>
              */
             public Builder enumValue(String enumValue) {
                 this.enumValue = enumValue;
@@ -462,6 +490,12 @@ public class RunCompletionRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunCompletionRequest} extends {@link TeaModel}
+     *
+     * <p>RunCompletionRequest</p>
+     */
     public static class Fields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -550,7 +584,7 @@ public class RunCompletionRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>This parameter is required.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -564,6 +598,12 @@ public class RunCompletionRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunCompletionRequest} extends {@link TeaModel}
+     *
+     * <p>RunCompletionRequest</p>
+     */
     public static class InspectionContents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -612,7 +652,7 @@ public class RunCompletionRequest extends Request {
             }
 
             /**
-             * Title.
+             * <p>This parameter is required.</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -626,6 +666,12 @@ public class RunCompletionRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunCompletionRequest} extends {@link TeaModel}
+     *
+     * <p>RunCompletionRequest</p>
+     */
     public static class ServiceInspection extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InspectionContents")
         private java.util.List < InspectionContents> inspectionContents;

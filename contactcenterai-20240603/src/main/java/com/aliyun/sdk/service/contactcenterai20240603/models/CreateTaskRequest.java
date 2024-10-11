@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateConversationAnalysisTaskRequest} extends {@link RequestModel}
+ * {@link CreateTaskRequest} extends {@link RequestModel}
  *
- * <p>CreateConversationAnalysisTaskRequest</p>
+ * <p>CreateTaskRequest</p>
  */
-public class CreateConversationAnalysisTaskRequest extends Request {
+public class CreateTaskRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("workspaceId")
     private String workspaceId;
@@ -25,12 +25,8 @@ public class CreateConversationAnalysisTaskRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("autoSplit")
-    private Integer autoSplit;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("clientChannel")
-    private Integer clientChannel;
+    @com.aliyun.core.annotation.NameInMap("dialogue")
+    private Dialogue dialogue;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("examples")
@@ -39,11 +35,6 @@ public class CreateConversationAnalysisTaskRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("fields")
     private java.util.List < Fields> fields;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("fileName")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String fileName;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("modelCode")
@@ -55,55 +46,43 @@ public class CreateConversationAnalysisTaskRequest extends Request {
     private java.util.List < String > resultTypes;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("sceneName")
-    private String sceneName;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("serviceChannel")
-    private Integer serviceChannel;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("serviceChannelKeywords")
-    private java.util.List < String > serviceChannelKeywords;
-
-    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("serviceInspection")
     private ServiceInspection serviceInspection;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("taskType")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String taskType;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("templateIds")
     private java.util.List < String > templateIds;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("voiceFileUrl")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String voiceFileUrl;
+    @com.aliyun.core.annotation.NameInMap("transcription")
+    private Transcription transcription;
 
-    private CreateConversationAnalysisTaskRequest(Builder builder) {
+    private CreateTaskRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
         this.appId = builder.appId;
         this.regionId = builder.regionId;
-        this.autoSplit = builder.autoSplit;
-        this.clientChannel = builder.clientChannel;
+        this.dialogue = builder.dialogue;
         this.examples = builder.examples;
         this.fields = builder.fields;
-        this.fileName = builder.fileName;
         this.modelCode = builder.modelCode;
         this.resultTypes = builder.resultTypes;
-        this.sceneName = builder.sceneName;
-        this.serviceChannel = builder.serviceChannel;
-        this.serviceChannelKeywords = builder.serviceChannelKeywords;
         this.serviceInspection = builder.serviceInspection;
+        this.taskType = builder.taskType;
         this.templateIds = builder.templateIds;
-        this.voiceFileUrl = builder.voiceFileUrl;
+        this.transcription = builder.transcription;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateConversationAnalysisTaskRequest create() {
+    public static CreateTaskRequest create() {
         return builder().build();
     }
 
@@ -134,17 +113,10 @@ public class CreateConversationAnalysisTaskRequest extends Request {
     }
 
     /**
-     * @return autoSplit
+     * @return dialogue
      */
-    public Integer getAutoSplit() {
-        return this.autoSplit;
-    }
-
-    /**
-     * @return clientChannel
-     */
-    public Integer getClientChannel() {
-        return this.clientChannel;
+    public Dialogue getDialogue() {
+        return this.dialogue;
     }
 
     /**
@@ -162,13 +134,6 @@ public class CreateConversationAnalysisTaskRequest extends Request {
     }
 
     /**
-     * @return fileName
-     */
-    public String getFileName() {
-        return this.fileName;
-    }
-
-    /**
      * @return modelCode
      */
     public String getModelCode() {
@@ -183,31 +148,17 @@ public class CreateConversationAnalysisTaskRequest extends Request {
     }
 
     /**
-     * @return sceneName
-     */
-    public String getSceneName() {
-        return this.sceneName;
-    }
-
-    /**
-     * @return serviceChannel
-     */
-    public Integer getServiceChannel() {
-        return this.serviceChannel;
-    }
-
-    /**
-     * @return serviceChannelKeywords
-     */
-    public java.util.List < String > getServiceChannelKeywords() {
-        return this.serviceChannelKeywords;
-    }
-
-    /**
      * @return serviceInspection
      */
     public ServiceInspection getServiceInspection() {
         return this.serviceInspection;
+    }
+
+    /**
+     * @return taskType
+     */
+    public String getTaskType() {
+        return this.taskType;
     }
 
     /**
@@ -218,52 +169,44 @@ public class CreateConversationAnalysisTaskRequest extends Request {
     }
 
     /**
-     * @return voiceFileUrl
+     * @return transcription
      */
-    public String getVoiceFileUrl() {
-        return this.voiceFileUrl;
+    public Transcription getTranscription() {
+        return this.transcription;
     }
 
-    public static final class Builder extends Request.Builder<CreateConversationAnalysisTaskRequest, Builder> {
+    public static final class Builder extends Request.Builder<CreateTaskRequest, Builder> {
         private String workspaceId; 
         private String appId; 
         private String regionId; 
-        private Integer autoSplit; 
-        private Integer clientChannel; 
+        private Dialogue dialogue; 
         private Examples examples; 
         private java.util.List < Fields> fields; 
-        private String fileName; 
         private String modelCode; 
         private java.util.List < String > resultTypes; 
-        private String sceneName; 
-        private Integer serviceChannel; 
-        private java.util.List < String > serviceChannelKeywords; 
         private ServiceInspection serviceInspection; 
+        private String taskType; 
         private java.util.List < String > templateIds; 
-        private String voiceFileUrl; 
+        private Transcription transcription; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateConversationAnalysisTaskRequest request) {
+        private Builder(CreateTaskRequest request) {
             super(request);
             this.workspaceId = request.workspaceId;
             this.appId = request.appId;
             this.regionId = request.regionId;
-            this.autoSplit = request.autoSplit;
-            this.clientChannel = request.clientChannel;
+            this.dialogue = request.dialogue;
             this.examples = request.examples;
             this.fields = request.fields;
-            this.fileName = request.fileName;
             this.modelCode = request.modelCode;
             this.resultTypes = request.resultTypes;
-            this.sceneName = request.sceneName;
-            this.serviceChannel = request.serviceChannel;
-            this.serviceChannelKeywords = request.serviceChannelKeywords;
             this.serviceInspection = request.serviceInspection;
+            this.taskType = request.taskType;
             this.templateIds = request.templateIds;
-            this.voiceFileUrl = request.voiceFileUrl;
+            this.transcription = request.transcription;
         } 
 
         /**
@@ -294,20 +237,11 @@ public class CreateConversationAnalysisTaskRequest extends Request {
         }
 
         /**
-         * autoSplit.
+         * dialogue.
          */
-        public Builder autoSplit(Integer autoSplit) {
-            this.putBodyParameter("autoSplit", autoSplit);
-            this.autoSplit = autoSplit;
-            return this;
-        }
-
-        /**
-         * clientChannel.
-         */
-        public Builder clientChannel(Integer clientChannel) {
-            this.putBodyParameter("clientChannel", clientChannel);
-            this.clientChannel = clientChannel;
+        public Builder dialogue(Dialogue dialogue) {
+            this.putBodyParameter("dialogue", dialogue);
+            this.dialogue = dialogue;
             return this;
         }
 
@@ -333,18 +267,6 @@ public class CreateConversationAnalysisTaskRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>audio.mp3</p>
-         */
-        public Builder fileName(String fileName) {
-            this.putBodyParameter("fileName", fileName);
-            this.fileName = fileName;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
          * <p>tyxmTurbo</p>
          */
         public Builder modelCode(String modelCode) {
@@ -363,38 +285,23 @@ public class CreateConversationAnalysisTaskRequest extends Request {
         }
 
         /**
-         * sceneName.
-         */
-        public Builder sceneName(String sceneName) {
-            this.putBodyParameter("sceneName", sceneName);
-            this.sceneName = sceneName;
-            return this;
-        }
-
-        /**
-         * serviceChannel.
-         */
-        public Builder serviceChannel(Integer serviceChannel) {
-            this.putBodyParameter("serviceChannel", serviceChannel);
-            this.serviceChannel = serviceChannel;
-            return this;
-        }
-
-        /**
-         * serviceChannelKeywords.
-         */
-        public Builder serviceChannelKeywords(java.util.List < String > serviceChannelKeywords) {
-            this.putBodyParameter("serviceChannelKeywords", serviceChannelKeywords);
-            this.serviceChannelKeywords = serviceChannelKeywords;
-            return this;
-        }
-
-        /**
          * serviceInspection.
          */
         public Builder serviceInspection(ServiceInspection serviceInspection) {
             this.putBodyParameter("serviceInspection", serviceInspection);
             this.serviceInspection = serviceInspection;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
+         */
+        public Builder taskType(String taskType) {
+            this.putBodyParameter("taskType", taskType);
+            this.taskType = taskType;
             return this;
         }
 
@@ -408,34 +315,28 @@ public class CreateConversationAnalysisTaskRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://a.b.com/inner.mp3">http://a.b.com/inner.mp3</a></p>
+         * transcription.
          */
-        public Builder voiceFileUrl(String voiceFileUrl) {
-            this.putBodyParameter("voiceFileUrl", voiceFileUrl);
-            this.voiceFileUrl = voiceFileUrl;
+        public Builder transcription(Transcription transcription) {
+            this.putBodyParameter("transcription", transcription);
+            this.transcription = transcription;
             return this;
         }
 
         @Override
-        public CreateConversationAnalysisTaskRequest build() {
-            return new CreateConversationAnalysisTaskRequest(this);
+        public CreateTaskRequest build() {
+            return new CreateTaskRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link CreateConversationAnalysisTaskRequest} extends {@link TeaModel}
+     * {@link CreateTaskRequest} extends {@link TeaModel}
      *
-     * <p>CreateConversationAnalysisTaskRequest</p>
+     * <p>CreateTaskRequest</p>
      */
     public static class Sentences extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("chatId")
-        private String chatId;
-
         @com.aliyun.core.annotation.NameInMap("role")
         @com.aliyun.core.annotation.Validation(required = true)
         private String role;
@@ -445,7 +346,6 @@ public class CreateConversationAnalysisTaskRequest extends Request {
         private String text;
 
         private Sentences(Builder builder) {
-            this.chatId = builder.chatId;
             this.role = builder.role;
             this.text = builder.text;
         }
@@ -456,13 +356,6 @@ public class CreateConversationAnalysisTaskRequest extends Request {
 
         public static Sentences create() {
             return builder().build();
-        }
-
-        /**
-         * @return chatId
-         */
-        public String getChatId() {
-            return this.chatId;
         }
 
         /**
@@ -480,17 +373,8 @@ public class CreateConversationAnalysisTaskRequest extends Request {
         }
 
         public static final class Builder {
-            private String chatId; 
             private String role; 
             private String text; 
-
-            /**
-             * chatId.
-             */
-            public Builder chatId(String chatId) {
-                this.chatId = chatId;
-                return this;
-            }
 
             /**
              * <p>This parameter is required.</p>
@@ -520,9 +404,149 @@ public class CreateConversationAnalysisTaskRequest extends Request {
     }
     /**
      * 
-     * {@link CreateConversationAnalysisTaskRequest} extends {@link TeaModel}
+     * {@link CreateTaskRequest} extends {@link TeaModel}
      *
-     * <p>CreateConversationAnalysisTaskRequest</p>
+     * <p>CreateTaskRequest</p>
+     */
+    public static class Dialogue extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("sentences")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List < Sentences> sentences;
+
+        @com.aliyun.core.annotation.NameInMap("sessionId")
+        private String sessionId;
+
+        private Dialogue(Builder builder) {
+            this.sentences = builder.sentences;
+            this.sessionId = builder.sessionId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Dialogue create() {
+            return builder().build();
+        }
+
+        /**
+         * @return sentences
+         */
+        public java.util.List < Sentences> getSentences() {
+            return this.sentences;
+        }
+
+        /**
+         * @return sessionId
+         */
+        public String getSessionId() {
+            return this.sessionId;
+        }
+
+        public static final class Builder {
+            private java.util.List < Sentences> sentences; 
+            private String sessionId; 
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder sentences(java.util.List < Sentences> sentences) {
+                this.sentences = sentences;
+                return this;
+            }
+
+            /**
+             * sessionId.
+             */
+            public Builder sessionId(String sessionId) {
+                this.sessionId = sessionId;
+                return this;
+            }
+
+            public Dialogue build() {
+                return new Dialogue(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTaskRequest</p>
+     */
+    public static class ExamplesSentences extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("role")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String role;
+
+        @com.aliyun.core.annotation.NameInMap("text")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String text;
+
+        private ExamplesSentences(Builder builder) {
+            this.role = builder.role;
+            this.text = builder.text;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExamplesSentences create() {
+            return builder().build();
+        }
+
+        /**
+         * @return role
+         */
+        public String getRole() {
+            return this.role;
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        public static final class Builder {
+            private String role; 
+            private String text; 
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
+             */
+            public Builder role(String role) {
+                this.role = role;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            public ExamplesSentences build() {
+                return new ExamplesSentences(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTaskRequest</p>
      */
     public static class Examples extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("output")
@@ -530,7 +554,7 @@ public class CreateConversationAnalysisTaskRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("sentences")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < Sentences> sentences;
+        private java.util.List < ExamplesSentences> sentences;
 
         private Examples(Builder builder) {
             this.output = builder.output;
@@ -555,13 +579,13 @@ public class CreateConversationAnalysisTaskRequest extends Request {
         /**
          * @return sentences
          */
-        public java.util.List < Sentences> getSentences() {
+        public java.util.List < ExamplesSentences> getSentences() {
             return this.sentences;
         }
 
         public static final class Builder {
             private String output; 
-            private java.util.List < Sentences> sentences; 
+            private java.util.List < ExamplesSentences> sentences; 
 
             /**
              * output.
@@ -574,7 +598,7 @@ public class CreateConversationAnalysisTaskRequest extends Request {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder sentences(java.util.List < Sentences> sentences) {
+            public Builder sentences(java.util.List < ExamplesSentences> sentences) {
                 this.sentences = sentences;
                 return this;
             }
@@ -588,9 +612,9 @@ public class CreateConversationAnalysisTaskRequest extends Request {
     }
     /**
      * 
-     * {@link CreateConversationAnalysisTaskRequest} extends {@link TeaModel}
+     * {@link CreateTaskRequest} extends {@link TeaModel}
      *
-     * <p>CreateConversationAnalysisTaskRequest</p>
+     * <p>CreateTaskRequest</p>
      */
     public static class EnumValues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("desc")
@@ -657,9 +681,9 @@ public class CreateConversationAnalysisTaskRequest extends Request {
     }
     /**
      * 
-     * {@link CreateConversationAnalysisTaskRequest} extends {@link TeaModel}
+     * {@link CreateTaskRequest} extends {@link TeaModel}
      *
-     * <p>CreateConversationAnalysisTaskRequest</p>
+     * <p>CreateTaskRequest</p>
      */
     public static class Fields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
@@ -767,9 +791,9 @@ public class CreateConversationAnalysisTaskRequest extends Request {
     }
     /**
      * 
-     * {@link CreateConversationAnalysisTaskRequest} extends {@link TeaModel}
+     * {@link CreateTaskRequest} extends {@link TeaModel}
      *
-     * <p>CreateConversationAnalysisTaskRequest</p>
+     * <p>CreateTaskRequest</p>
      */
     public static class InspectionContents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
@@ -836,9 +860,9 @@ public class CreateConversationAnalysisTaskRequest extends Request {
     }
     /**
      * 
-     * {@link CreateConversationAnalysisTaskRequest} extends {@link TeaModel}
+     * {@link CreateTaskRequest} extends {@link TeaModel}
      *
-     * <p>CreateConversationAnalysisTaskRequest</p>
+     * <p>CreateTaskRequest</p>
      */
     public static class ServiceInspection extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("inspectionContents")
@@ -919,6 +943,161 @@ public class CreateConversationAnalysisTaskRequest extends Request {
 
             public ServiceInspection build() {
                 return new ServiceInspection(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTaskRequest</p>
+     */
+    public static class Transcription extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("autoSplit")
+        private Integer autoSplit;
+
+        @com.aliyun.core.annotation.NameInMap("clientChannel")
+        private Integer clientChannel;
+
+        @com.aliyun.core.annotation.NameInMap("fileName")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String fileName;
+
+        @com.aliyun.core.annotation.NameInMap("serviceChannel")
+        private Integer serviceChannel;
+
+        @com.aliyun.core.annotation.NameInMap("serviceChannelKeywords")
+        private java.util.List < String > serviceChannelKeywords;
+
+        @com.aliyun.core.annotation.NameInMap("voiceFileUrl")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String voiceFileUrl;
+
+        private Transcription(Builder builder) {
+            this.autoSplit = builder.autoSplit;
+            this.clientChannel = builder.clientChannel;
+            this.fileName = builder.fileName;
+            this.serviceChannel = builder.serviceChannel;
+            this.serviceChannelKeywords = builder.serviceChannelKeywords;
+            this.voiceFileUrl = builder.voiceFileUrl;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Transcription create() {
+            return builder().build();
+        }
+
+        /**
+         * @return autoSplit
+         */
+        public Integer getAutoSplit() {
+            return this.autoSplit;
+        }
+
+        /**
+         * @return clientChannel
+         */
+        public Integer getClientChannel() {
+            return this.clientChannel;
+        }
+
+        /**
+         * @return fileName
+         */
+        public String getFileName() {
+            return this.fileName;
+        }
+
+        /**
+         * @return serviceChannel
+         */
+        public Integer getServiceChannel() {
+            return this.serviceChannel;
+        }
+
+        /**
+         * @return serviceChannelKeywords
+         */
+        public java.util.List < String > getServiceChannelKeywords() {
+            return this.serviceChannelKeywords;
+        }
+
+        /**
+         * @return voiceFileUrl
+         */
+        public String getVoiceFileUrl() {
+            return this.voiceFileUrl;
+        }
+
+        public static final class Builder {
+            private Integer autoSplit; 
+            private Integer clientChannel; 
+            private String fileName; 
+            private Integer serviceChannel; 
+            private java.util.List < String > serviceChannelKeywords; 
+            private String voiceFileUrl; 
+
+            /**
+             * autoSplit.
+             */
+            public Builder autoSplit(Integer autoSplit) {
+                this.autoSplit = autoSplit;
+                return this;
+            }
+
+            /**
+             * clientChannel.
+             */
+            public Builder clientChannel(Integer clientChannel) {
+                this.clientChannel = clientChannel;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sss.mp3</p>
+             */
+            public Builder fileName(String fileName) {
+                this.fileName = fileName;
+                return this;
+            }
+
+            /**
+             * serviceChannel.
+             */
+            public Builder serviceChannel(Integer serviceChannel) {
+                this.serviceChannel = serviceChannel;
+                return this;
+            }
+
+            /**
+             * serviceChannelKeywords.
+             */
+            public Builder serviceChannelKeywords(java.util.List < String > serviceChannelKeywords) {
+                this.serviceChannelKeywords = serviceChannelKeywords;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://1111.com/sss.mp3">http://1111.com/sss.mp3</a></p>
+             */
+            public Builder voiceFileUrl(String voiceFileUrl) {
+                this.voiceFileUrl = voiceFileUrl;
+                return this;
+            }
+
+            public Transcription build() {
+                return new Transcription(this);
             } 
 
         } 

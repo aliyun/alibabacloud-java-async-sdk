@@ -40,6 +40,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AnalyzeConversation  AnalyzeConversationRequest
+     * @return AnalyzeConversationResponse
+     */
     @Override
     public CompletableFuture<AnalyzeConversationResponse> analyzeConversation(AnalyzeConversationRequest request) {
         try {
@@ -79,6 +83,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         return new ResponseIterable<>(iterator);
     }
 
+    /**
+     * @param request the request parameters of CreateConversationAnalysisTask  CreateConversationAnalysisTaskRequest
+     * @return CreateConversationAnalysisTaskResponse
+     */
     @Override
     public CompletableFuture<CreateConversationAnalysisTaskResponse> createConversationAnalysisTask(CreateConversationAnalysisTaskRequest request) {
         try {
@@ -93,6 +101,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateTask  CreateTaskRequest
+     * @return CreateTaskResponse
+     */
+    @Override
+    public CompletableFuture<CreateTaskResponse> createTask(CreateTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateTask").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/ccai/app/{appId}/createTask").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetTaskResult  GetTaskResultRequest
+     * @return GetTaskResultResponse
+     */
     @Override
     public CompletableFuture<GetTaskResultResponse> getTaskResult(GetTaskResultRequest request) {
         try {
@@ -107,6 +137,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RunCompletion  RunCompletionRequest
+     * @return RunCompletionResponse
+     */
     @Override
     public CompletableFuture<RunCompletionResponse> runCompletion(RunCompletionRequest request) {
         try {
@@ -131,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         return new ResponseIterable<>(iterator);
     }
 
+    /**
+     * @param request the request parameters of RunCompletionMessage  RunCompletionMessageRequest
+     * @return RunCompletionMessageResponse
+     */
     @Override
     public CompletableFuture<RunCompletionMessageResponse> runCompletionMessage(RunCompletionMessageRequest request) {
         try {
