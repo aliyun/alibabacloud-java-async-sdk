@@ -56,6 +56,7 @@ public class DescribeDBInstanceSSLRequest extends Request {
 
         /**
          * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-bp12ga6v69h86****</p>

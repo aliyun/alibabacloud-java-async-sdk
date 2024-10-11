@@ -71,6 +71,7 @@ public class ModifySQLCollectorPolicyRequest extends Request {
 
         /**
          * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-xxxxxxxx</p>
@@ -87,6 +88,7 @@ public class ModifySQLCollectorPolicyRequest extends Request {
          * <li>Enable: enables SQL collection.</li>
          * <li>Disabled: disables SQL collection.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>Enable</p>

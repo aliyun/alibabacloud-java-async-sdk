@@ -92,6 +92,7 @@ public class ModifyAccountDescriptionRequest extends Request {
          * <li>The description can contain letters, underscores (_), hyphens (-), and digits.</li>
          * <li>The description must be 2 to 256 characters in length.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>testAccoutdescribe</p>
@@ -104,6 +105,7 @@ public class ModifyAccountDescriptionRequest extends Request {
 
         /**
          * <p>The name of the database account.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>testAccout</p>
@@ -117,8 +119,9 @@ public class ModifyAccountDescriptionRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-bp12ga6v69h86****</p>

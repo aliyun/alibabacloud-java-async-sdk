@@ -263,8 +263,9 @@ public class UpgradeDBInstanceRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-rj***************</p>
@@ -276,7 +277,7 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The specifications of each compute node. For information about the supported specifications, see <a href="~~35406~~">Instance specifications</a>.</p>
+         * <p>The specifications of each compute node. For information about the supported specifications, see <a href="https://help.aliyun.com/document_detail/35406.html">Instance specifications</a>.</p>
          * <blockquote>
          * <p>This parameter is available only for instances in elastic storage mode.</p>
          * </blockquote>
@@ -326,7 +327,7 @@ public class UpgradeDBInstanceRequest extends Request {
         /**
          * <p>The region ID of the instance.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -339,7 +340,7 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see <a href="~~151181~~">View basic information of a resource group</a>.</p>
+         * <p>The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-bp67acfmxazb4p****</p>
@@ -422,7 +423,7 @@ public class UpgradeDBInstanceRequest extends Request {
          * <blockquote>
          * </blockquote>
          * <ul>
-         * <li><p>The supported changes to compute node configurations vary based on the instance resource type. For more information, see the &quot;Usage notes&quot; section of the <a href="~~50956~~">Change compute node configurations</a> topic.</p>
+         * <li><p>The supported changes to compute node configurations vary based on the instance resource type. For more information, see the &quot;Usage notes&quot; section of the <a href="https://help.aliyun.com/document_detail/50956.html">Change compute node configurations</a> topic.</p>
          * </li>
          * <li><p>After you specify a change type, only the corresponding parameters take effect. For example, if you set <strong>UpgradeType</strong> to 0, the parameter that is used to change the number of compute nodes takes effect, but the parameter that is used to change the number of coordinator nodes does not.</p>
          * </li>

@@ -108,7 +108,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the performance metric. For more information, see <a href="~~86943~~">Performance parameters</a>.</p>
+         * <p>The name of the performance metric. For more information, see <a href="https://help.aliyun.com/document_detail/86943.html">Performance parameters</a>.</p>
          */
         public Builder performanceKeys(java.util.List < PerformanceKeys> performanceKeys) {
             this.performanceKeys = performanceKeys;
@@ -345,7 +345,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             private String unit; 
 
             /**
-             * <p>The name of the performance metric. For more information, see <a href="~~86943~~">Performance parameters</a>.</p>
+             * <p>The name of the performance metric. For more information, see <a href="https://help.aliyun.com/document_detail/86943.html">Performance parameters</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>adbpg_group_cpu_used_percent</p>

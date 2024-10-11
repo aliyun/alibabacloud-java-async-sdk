@@ -155,8 +155,9 @@ public class ModifySecurityIpsRequest extends Request {
         /**
          * <p>The ID of the instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the instance IDs of all AnalyticDB for PostgreSQL instances in a specific region.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the instance IDs of all AnalyticDB for PostgreSQL instances in a specific region.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-bp12ga6v69h86****</p>
@@ -185,7 +186,7 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs. For more information about how to obtain the ID of a resource group, see <a href="~~151181~~">View basic information of a resource group</a>.</p>
+         * <p>The ID of the resource group to which the instance belongs. For more information about how to obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-bp67acfmxazb4p****</p>
@@ -203,9 +204,10 @@ public class ModifySecurityIpsRequest extends Request {
          * <li>10.23.12.24. This is a standard IP address.</li>
          * <li>10.23.12.24/24. This is a CIDR block. The value <code>/24</code> indicates that the prefix of the CIDR block is 24-bit long. You can replace 24 with a value in the range of <code>1 to 32</code>.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>10.10.<strong>.</strong></p>
+         * <p><code>10.10.**.**</code></p>
          */
         public Builder securityIPList(String securityIPList) {
             this.putQueryParameter("SecurityIPList", securityIPList);

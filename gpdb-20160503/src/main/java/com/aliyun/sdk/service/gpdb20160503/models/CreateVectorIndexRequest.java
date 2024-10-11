@@ -215,7 +215,10 @@ public class CreateVectorIndexRequest extends Request {
         } 
 
         /**
-         * Collection.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>document</p>
          */
         public Builder collection(String collection) {
             this.putQueryParameter("Collection", collection);
@@ -224,7 +227,10 @@ public class CreateVectorIndexRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -233,7 +239,10 @@ public class CreateVectorIndexRequest extends Request {
         }
 
         /**
-         * Dimension.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder dimension(Integer dimension) {
             this.putQueryParameter("Dimension", dimension);
@@ -285,7 +294,10 @@ public class CreateVectorIndexRequest extends Request {
         }
 
         /**
-         * ManagerAccount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testaccount</p>
          */
         public Builder managerAccount(String managerAccount) {
             this.putQueryParameter("ManagerAccount", managerAccount);
@@ -294,7 +306,10 @@ public class CreateVectorIndexRequest extends Request {
         }
 
         /**
-         * ManagerAccountPassword.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testpassword</p>
          */
         public Builder managerAccountPassword(String managerAccountPassword) {
             this.putQueryParameter("ManagerAccountPassword", managerAccountPassword);
@@ -357,7 +372,10 @@ public class CreateVectorIndexRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -274,6 +274,7 @@ public class CreateCollectionRequest extends Request {
          * <blockquote>
          * <p> The name must comply with the naming conventions of PostgreSQL objects.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>document</p>
@@ -287,7 +288,7 @@ public class CreateCollectionRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a specific region.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a specific region.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -302,7 +303,7 @@ public class CreateCollectionRequest extends Request {
         /**
          * <p>The number of vector dimensions.</p>
          * <blockquote>
-         * <p> If you specify this parameter, an index is created. When you call the <a href="~~2401493~~">UpsertCollectionData</a> operation, make sure that the length of the Rows.Vector parameter is the same as the value of this parameter. If you do not specify this parameter, you can call the <a href="~~2401499~~">CreateVectorIndex</a> operation to create an index.</p>
+         * <p> If you specify this parameter, an index is created. When you call the <a href="https://help.aliyun.com/document_detail/2401493.html">UpsertCollectionData</a> operation, make sure that the length of the Rows.Vector parameter is the same as the value of this parameter. If you do not specify this parameter, you can call the <a href="https://help.aliyun.com/document_detail/2401499.html">CreateVectorIndex</a> operation to create an index.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -363,7 +364,10 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * ManagerAccount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testaccount</p>
          */
         public Builder managerAccount(String managerAccount) {
             this.putQueryParameter("ManagerAccount", managerAccount);
@@ -372,7 +376,10 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * ManagerAccountPassword.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testpassword</p>
          */
         public Builder managerAccountPassword(String managerAccountPassword) {
             this.putQueryParameter("ManagerAccountPassword", managerAccountPassword);
@@ -393,6 +400,7 @@ public class CreateCollectionRequest extends Request {
          * <p>**</p>
          * <p><strong>Warning</strong>
          * Reserved fields such as id, vector, to_tsvector, and source cannot be used.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;title&quot;:&quot;text&quot;,&quot;content&quot;:&quot;text&quot;,&quot;response&quot;:&quot;int&quot;}</p>
@@ -415,7 +423,7 @@ public class CreateCollectionRequest extends Request {
         /**
          * <p>The name of the namespace.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~2401495~~">CreateNamespace</a> operation to create a namespace and call the <a href="~~2401502~~">ListNamespaces</a> operation to query a list of namespaces.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -463,6 +471,7 @@ public class CreateCollectionRequest extends Request {
 
         /**
          * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

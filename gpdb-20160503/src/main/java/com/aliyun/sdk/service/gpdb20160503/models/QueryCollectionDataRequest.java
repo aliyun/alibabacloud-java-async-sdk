@@ -312,8 +312,9 @@ public class QueryCollectionDataRequest extends Request {
         /**
          * <p>The name of the collection.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~2401503~~">ListCollections</a> operation to query a list of collections.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> operation to query a list of collections.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>document</p>
@@ -342,7 +343,7 @@ public class QueryCollectionDataRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -472,7 +473,7 @@ public class QueryCollectionDataRequest extends Request {
         /**
          * <p>The name of the namespace.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~2401502~~">ListNamespaces</a> operation to query a list of namespaces.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -485,7 +486,10 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
-         * NamespacePassword.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testpassword</p>
          */
         public Builder namespacePassword(String namespacePassword) {
             this.putQueryParameter("NamespacePassword", namespacePassword);
@@ -540,6 +544,7 @@ public class QueryCollectionDataRequest extends Request {
 
         /**
          * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -561,7 +566,10 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
-         * TopK.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder topK(Long topK) {
             this.putQueryParameter("TopK", topK);
@@ -570,7 +578,7 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
-         * <p>The vector data. The length of the value must be the same as that of the Dimension parameter in the <a href="~~2401497~~">CreateCollection</a> operation.</p>
+         * <p>The vector data. The length of the value must be the same as that of the Dimension parameter in the <a href="https://help.aliyun.com/document_detail/2401497.html">CreateCollection</a> operation.</p>
          * <blockquote>
          * <p> If you leave this parameter empty, only full-text search results are returned.</p>
          * </blockquote>

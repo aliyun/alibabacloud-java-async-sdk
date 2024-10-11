@@ -97,7 +97,10 @@ public class ListExternalDataServicesRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp10g78o9807yv9h3</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -124,7 +127,7 @@ public class ListExternalDataServicesRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

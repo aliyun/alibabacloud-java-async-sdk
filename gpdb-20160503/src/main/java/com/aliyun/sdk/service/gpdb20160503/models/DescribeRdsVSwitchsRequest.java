@@ -186,7 +186,7 @@ public class DescribeRdsVSwitchsRequest extends Request {
         /**
          * <p>The ID of the region.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent region list and zone list.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list and zone list.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -242,7 +242,7 @@ public class DescribeRdsVSwitchsRequest extends Request {
          * <blockquote>
          * </blockquote>
          * <ul>
-         * <li><p>You can call the <a href="~~208327~~">DescribeRdsVpcs</a> operation to query the available VPC IDs.</p>
+         * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/208327.html">DescribeRdsVpcs</a> operation to query the available VPC IDs.</p>
          * </li>
          * <li><p>This parameter must be specified.</p>
          * </li>
@@ -260,7 +260,7 @@ public class DescribeRdsVSwitchsRequest extends Request {
         /**
          * <p>The ID of the zone.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent region list and zone list.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list and zone list.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

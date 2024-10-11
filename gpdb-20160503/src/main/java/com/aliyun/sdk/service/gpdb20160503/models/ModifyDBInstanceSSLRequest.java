@@ -97,6 +97,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
 
         /**
          * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-xxxxxxxxxxx</p>
@@ -114,6 +115,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
          * <li>1: enables SSL encryption.</li>
          * <li>2: updates SSL encryption.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

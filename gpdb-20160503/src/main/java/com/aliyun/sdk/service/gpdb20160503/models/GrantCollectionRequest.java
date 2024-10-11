@@ -175,8 +175,9 @@ public class GrantCollectionRequest extends Request {
         /**
          * <p>The name of the collection.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~2401497~~">CreateCollection</a> operation to create a vector collection and call the <a href="~~2401503~~">ListCollections</a> operation to query a list of vector collections.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2401497.html">CreateCollection</a> operation to create a vector collection and call the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> operation to query a list of vector collections.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>document</p>
@@ -190,8 +191,9 @@ public class GrantCollectionRequest extends Request {
         /**
          * <p>The ID of the instance in reserved storage mode.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-xxxxxxxxx</p>
@@ -204,6 +206,7 @@ public class GrantCollectionRequest extends Request {
 
         /**
          * <p>The name of the namespace to which you want to grant the vector collection permissions.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>othernamespace</p>
@@ -221,6 +224,7 @@ public class GrantCollectionRequest extends Request {
          * <li>ro: the read-only permission.</li>
          * <li>none: the delete permission.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>rw</p>
@@ -234,8 +238,9 @@ public class GrantCollectionRequest extends Request {
         /**
          * <p>The name of the manager account that has the rds_superuser permission.</p>
          * <blockquote>
-         * <p> You can create an account on the Account Management page of the AnalyticDB for PostgreSQL console or by calling the <a href="~~2361789~~">CreateAccount</a> operation.</p>
+         * <p> You can create an account on the Account Management page of the AnalyticDB for PostgreSQL console or by calling the <a href="https://help.aliyun.com/document_detail/2361789.html">CreateAccount</a> operation.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>testaccount</p>
@@ -248,6 +253,7 @@ public class GrantCollectionRequest extends Request {
 
         /**
          * <p>The password of the manager account.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>testpassword</p>
@@ -261,7 +267,7 @@ public class GrantCollectionRequest extends Request {
         /**
          * <p>The name of the namespace.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~2401502~~">ListNamespaces</a> operation to query a list of namespaces.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -284,6 +290,7 @@ public class GrantCollectionRequest extends Request {
 
         /**
          * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

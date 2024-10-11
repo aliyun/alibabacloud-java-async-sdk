@@ -204,7 +204,8 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance. You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -216,7 +217,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -248,6 +249,7 @@ public class UntagResourcesRequest extends Request {
          * <li><code>instance</code>: reserved storage mode</li>
          * <li><code>ALIYUN::GPDB::INSTANCE</code>: elastic storage mode</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>instance</p>

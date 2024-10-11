@@ -101,8 +101,9 @@ public class ModifyDBInstanceMaintainTimeRequest extends Request {
         /**
          * <p>The ID of the instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-bp***************</p>
@@ -115,6 +116,7 @@ public class ModifyDBInstanceMaintainTimeRequest extends Request {
 
         /**
          * <p>The end time of the maintenance window. The end time must be later than the start time. Specify the time in the HH:mmZ format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>03:00Z</p>
@@ -139,6 +141,7 @@ public class ModifyDBInstanceMaintainTimeRequest extends Request {
 
         /**
          * <p>The start time of the maintenance window. Specify the time in the HH:mmZ format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>02:00Z</p>

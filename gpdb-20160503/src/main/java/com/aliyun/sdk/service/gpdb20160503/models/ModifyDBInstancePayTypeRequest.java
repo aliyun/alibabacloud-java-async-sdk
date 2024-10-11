@@ -99,6 +99,7 @@ public class ModifyDBInstancePayTypeRequest extends Request {
 
         /**
          * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-bp***************</p>
@@ -115,6 +116,7 @@ public class ModifyDBInstancePayTypeRequest extends Request {
          * <li>Postpaid: pay-as-you-go.</li>
          * <li>Prepaid: subscription.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>Postpaid</p>

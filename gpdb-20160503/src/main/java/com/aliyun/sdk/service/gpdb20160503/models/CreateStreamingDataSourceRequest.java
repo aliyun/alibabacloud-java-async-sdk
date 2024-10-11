@@ -143,7 +143,10 @@ public class CreateStreamingDataSourceRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateExternalDataSource</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -152,7 +155,10 @@ public class CreateStreamingDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceConfig.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;broker_list&quot;:&quot;broker0:9091,broker1:9091&quot;,&quot;topic&quot;:&quot;topic&quot;}</p>
          */
         public Builder dataSourceConfig(String dataSourceConfig) {
             this.putQueryParameter("DataSourceConfig", dataSourceConfig);
@@ -170,7 +176,10 @@ public class CreateStreamingDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-kafka</p>
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putQueryParameter("DataSourceName", dataSourceName);
@@ -179,7 +188,10 @@ public class CreateStreamingDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kafka</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -198,6 +210,7 @@ public class CreateStreamingDataSourceRequest extends Request {
 
         /**
          * <p>The real-time data service ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

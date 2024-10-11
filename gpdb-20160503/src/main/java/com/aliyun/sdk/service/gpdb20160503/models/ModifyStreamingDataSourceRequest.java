@@ -114,8 +114,9 @@ public class ModifyStreamingDataSourceRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~196830~~">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-k2j36a3172b102593</p>
@@ -152,6 +153,7 @@ public class ModifyStreamingDataSourceRequest extends Request {
 
         /**
          * <p>The data source ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>57</p>
@@ -165,7 +167,7 @@ public class ModifyStreamingDataSourceRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

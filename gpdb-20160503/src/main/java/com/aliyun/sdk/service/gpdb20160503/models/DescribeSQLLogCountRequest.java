@@ -227,8 +227,9 @@ public class DescribeSQLLogCountRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-xxxxxxxx</p>
@@ -256,6 +257,7 @@ public class DescribeSQLLogCountRequest extends Request {
          * <blockquote>
          * <p>The end time must be later than the start time. The maximum time range that can be specified is seven days.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-14T11:22Z</p>
@@ -386,6 +388,7 @@ public class DescribeSQLLogCountRequest extends Request {
 
         /**
          * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-12T11:22Z</p>

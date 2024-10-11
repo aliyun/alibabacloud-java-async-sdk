@@ -97,7 +97,7 @@ public class DeleteDBInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. For more information, see <a href="~~327176~~">How to ensure idempotence</a>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. For more information, see <a href="https://help.aliyun.com/document_detail/327176.html">How to ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>0c593ea1-3bea-11e9-b96b-88**********</p>
@@ -111,8 +111,9 @@ public class DeleteDBInstanceRequest extends Request {
         /**
          * <p>The ID of the instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-bp***************</p>

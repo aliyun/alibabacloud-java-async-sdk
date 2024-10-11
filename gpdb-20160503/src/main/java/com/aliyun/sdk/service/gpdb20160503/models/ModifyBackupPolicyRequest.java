@@ -140,6 +140,7 @@ public class ModifyBackupPolicyRequest extends Request {
 
         /**
          * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-bp***************</p>
@@ -178,6 +179,7 @@ public class ModifyBackupPolicyRequest extends Request {
          * <li>Saturday</li>
          * <li>Sunday</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>Tuesday, Thursday, Saturday</p>
@@ -190,6 +192,7 @@ public class ModifyBackupPolicyRequest extends Request {
 
         /**
          * <p>The backup window. Specify the backup window in the HH:mmZ-HH:mmZ format. The backup window must be in UTC. Default value: 00:00-01:00.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>15:00Z-16:00Z</p>

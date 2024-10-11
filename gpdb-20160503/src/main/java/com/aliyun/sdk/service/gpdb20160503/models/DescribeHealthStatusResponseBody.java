@@ -85,7 +85,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
 
         /**
          * <p>The queried performance metrics. Each performance metric consists of the parameter name, status, and metric value. The metric information is returned only for the performance parameters specified by <strong>Key</strong>. For example, if you set <strong>Key</strong> to <strong>adbpg_status</strong>, only the metric information of <strong>adbpg_status</strong> is returned.</p>
-         * <p>For more information about performance parameters, see <a href="~~86943~~">Performance parameters</a>.</p>
+         * <p>For more information about performance parameters, see <a href="https://help.aliyun.com/document_detail/86943.html">Performance parameters</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;node_master_connection_status&quot;:{&quot;Status&quot;:&quot;healthy&quot;,&quot;Value&quot;:1.6}}</p>

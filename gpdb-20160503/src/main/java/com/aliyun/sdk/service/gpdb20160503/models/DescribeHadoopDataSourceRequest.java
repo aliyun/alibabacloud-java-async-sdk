@@ -84,6 +84,7 @@ public class DescribeHadoopDataSourceRequest extends Request {
 
         /**
          * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-xxx</p>

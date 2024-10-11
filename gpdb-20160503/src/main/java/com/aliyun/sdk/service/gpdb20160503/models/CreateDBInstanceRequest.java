@@ -46,6 +46,10 @@ public class CreateDBInstanceRequest extends Request {
     private String DBInstanceMode;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeployMode")
+    private String deployMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableSSL")
     private Boolean enableSSL;
 
@@ -145,6 +149,14 @@ public class CreateDBInstanceRequest extends Request {
     private String srcDbInstanceName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StandbyVSwitchId")
+    private String standbyVSwitchId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StandbyZoneId")
+    private String standbyZoneId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StorageSize")
     private Long storageSize;
 
@@ -187,6 +199,7 @@ public class CreateDBInstanceRequest extends Request {
         this.DBInstanceDescription = builder.DBInstanceDescription;
         this.DBInstanceGroupCount = builder.DBInstanceGroupCount;
         this.DBInstanceMode = builder.DBInstanceMode;
+        this.deployMode = builder.deployMode;
         this.enableSSL = builder.enableSSL;
         this.encryptionKey = builder.encryptionKey;
         this.encryptionType = builder.encryptionType;
@@ -211,6 +224,8 @@ public class CreateDBInstanceRequest extends Request {
         this.serverlessMode = builder.serverlessMode;
         this.serverlessResource = builder.serverlessResource;
         this.srcDbInstanceName = builder.srcDbInstanceName;
+        this.standbyVSwitchId = builder.standbyVSwitchId;
+        this.standbyZoneId = builder.standbyZoneId;
         this.storageSize = builder.storageSize;
         this.storageType = builder.storageType;
         this.tag = builder.tag;
@@ -288,6 +303,13 @@ public class CreateDBInstanceRequest extends Request {
      */
     public String getDBInstanceMode() {
         return this.DBInstanceMode;
+    }
+
+    /**
+     * @return deployMode
+     */
+    public String getDeployMode() {
+        return this.deployMode;
     }
 
     /**
@@ -459,6 +481,20 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     /**
+     * @return standbyVSwitchId
+     */
+    public String getStandbyVSwitchId() {
+        return this.standbyVSwitchId;
+    }
+
+    /**
+     * @return standbyZoneId
+     */
+    public String getStandbyZoneId() {
+        return this.standbyZoneId;
+    }
+
+    /**
      * @return storageSize
      */
     public Long getStorageSize() {
@@ -523,6 +559,7 @@ public class CreateDBInstanceRequest extends Request {
         private String DBInstanceDescription; 
         private String DBInstanceGroupCount; 
         private String DBInstanceMode; 
+        private String deployMode; 
         private Boolean enableSSL; 
         private String encryptionKey; 
         private String encryptionType; 
@@ -547,6 +584,8 @@ public class CreateDBInstanceRequest extends Request {
         private String serverlessMode; 
         private Integer serverlessResource; 
         private String srcDbInstanceName; 
+        private String standbyVSwitchId; 
+        private String standbyZoneId; 
         private Long storageSize; 
         private String storageType; 
         private java.util.List < Tag> tag; 
@@ -570,6 +609,7 @@ public class CreateDBInstanceRequest extends Request {
             this.DBInstanceDescription = request.DBInstanceDescription;
             this.DBInstanceGroupCount = request.DBInstanceGroupCount;
             this.DBInstanceMode = request.DBInstanceMode;
+            this.deployMode = request.deployMode;
             this.enableSSL = request.enableSSL;
             this.encryptionKey = request.encryptionKey;
             this.encryptionType = request.encryptionType;
@@ -594,6 +634,8 @@ public class CreateDBInstanceRequest extends Request {
             this.serverlessMode = request.serverlessMode;
             this.serverlessResource = request.serverlessResource;
             this.srcDbInstanceName = request.srcDbInstanceName;
+            this.standbyVSwitchId = request.standbyVSwitchId;
+            this.standbyZoneId = request.standbyZoneId;
             this.storageSize = request.storageSize;
             this.storageType = request.storageType;
             this.tag = request.tag;
@@ -607,7 +649,7 @@ public class CreateDBInstanceRequest extends Request {
         /**
          * <p>The ID of the backup set.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~210093~~">DescribeDataBackups</a> operation to query the IDs of all backup sets in the instance.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/210093.html">DescribeDataBackups</a> operation to query the IDs of all backup sets in the instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -620,7 +662,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. For more information, see <a href="~~327176~~">Ensure idempotence</a>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. For more information, see <a href="https://help.aliyun.com/document_detail/327176.html">Ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>0c593ea1-3bea-11e9-b96b-88**********</p>
@@ -670,7 +712,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The instance type of the instance. For information, see <a href="~~86942~~">Instance types</a>.</p>
+         * <p>The instance type of the instance. For information, see <a href="https://help.aliyun.com/document_detail/86942.html">Instance types</a>.</p>
          * <blockquote>
          * <p>This parameter must be specified when you create an instance in reserved storage mode.</p>
          * </blockquote>
@@ -721,6 +763,7 @@ public class CreateDBInstanceRequest extends Request {
          * <blockquote>
          * <p>This parameter must be specified.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>StorageElastic</p>
@@ -728,6 +771,15 @@ public class CreateDBInstanceRequest extends Request {
         public Builder DBInstanceMode(String DBInstanceMode) {
             this.putQueryParameter("DBInstanceMode", DBInstanceMode);
             this.DBInstanceMode = DBInstanceMode;
+            return this;
+        }
+
+        /**
+         * DeployMode.
+         */
+        public Builder deployMode(String deployMode) {
+            this.putQueryParameter("DeployMode", deployMode);
+            this.deployMode = deployMode;
             return this;
         }
 
@@ -776,6 +828,7 @@ public class CreateDBInstanceRequest extends Request {
 
         /**
          * <p>The database engine of the instance. Set the value to gpdb.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gpdb</p>
@@ -792,6 +845,7 @@ public class CreateDBInstanceRequest extends Request {
          * <li>6.0</li>
          * <li>7.0</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>6.0</p>
@@ -978,7 +1032,8 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region. You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -1003,7 +1058,7 @@ public class CreateDBInstanceRequest extends Request {
 
         /**
          * <p>The IP address whitelist of the instance.</p>
-         * <p>A value of 127.0.0.1 denies access from any external IP address. You can call the <a href="~~86928~~">ModifySecurityIps</a> operation to modify the IP address whitelist after you create an instance.</p>
+         * <p>A value of 127.0.0.1 denies access from any external IP address. You can call the <a href="https://help.aliyun.com/document_detail/86928.html">ModifySecurityIps</a> operation to modify the IP address whitelist after you create an instance.</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.0.1</p>
@@ -1111,7 +1166,7 @@ public class CreateDBInstanceRequest extends Request {
         /**
          * <p>The ID of the source instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1120,6 +1175,24 @@ public class CreateDBInstanceRequest extends Request {
         public Builder srcDbInstanceName(String srcDbInstanceName) {
             this.putQueryParameter("SrcDbInstanceName", srcDbInstanceName);
             this.srcDbInstanceName = srcDbInstanceName;
+            return this;
+        }
+
+        /**
+         * StandbyVSwitchId.
+         */
+        public Builder standbyVSwitchId(String standbyVSwitchId) {
+            this.putQueryParameter("StandbyVSwitchId", standbyVSwitchId);
+            this.standbyVSwitchId = standbyVSwitchId;
+            return this;
+        }
+
+        /**
+         * StandbyZoneId.
+         */
+        public Builder standbyZoneId(String standbyZoneId) {
+            this.putQueryParameter("StandbyZoneId", standbyZoneId);
+            this.standbyZoneId = standbyZoneId;
             return this;
         }
 
@@ -1243,7 +1316,8 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The zone ID of the read-only instance. You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent zone list.</p>
+         * <p>The zone ID of the read-only instance. You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent zone list.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>

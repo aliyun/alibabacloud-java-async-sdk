@@ -87,7 +87,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
 
         /**
          * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
-         * <p>You can call the <a href="~~86910~~">DescribeDBInstanceAttribute</a> operation to query the endpoint that is used to connect to the instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86910.html">DescribeDBInstanceAttribute</a> operation to query the endpoint that is used to connect to the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-bp***************.gpdb.rds.aliyuncs.com</p>
@@ -121,7 +121,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
 
         /**
          * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
-         * <p>You can call the <a href="~~86910~~">DescribeDBInstanceAttribute</a> operation to query the port number that is used to connect to the instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86910.html">DescribeDBInstanceAttribute</a> operation to query the port number that is used to connect to the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>5432</p>

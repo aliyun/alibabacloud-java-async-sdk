@@ -144,8 +144,9 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query details about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query details about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-bp12ga6v69h86****</p>
@@ -161,6 +162,7 @@ public class DescribeDBClusterPerformanceRequest extends Request {
          * <blockquote>
          * <p>The end time must be later than the start time. The maximum time range that can be specified is seven days.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-03T15:10Z</p>
@@ -172,7 +174,8 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The performance metric that you want to query. Separate multiple values with commas (,). For more information, see <a href="~~86943~~">Performance parameters</a>.</p>
+         * <p>The performance metric that you want to query. Separate multiple values with commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/86943.html">Performance parameters</a>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>adbpg_conn_count</p>
@@ -203,7 +206,7 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The nodes for which you want to query performance metrics. Separate multiple values with commas (,). Example: <code>master-10******1,master-10******2</code>. You can call the <a href="~~390136~~">DescribeDBClusterNode</a> operation to query the names of nodes.</p>
+         * <p>The nodes for which you want to query performance metrics. Separate multiple values with commas (,). Example: <code>master-10******1,master-10******2</code>. You can call the <a href="https://help.aliyun.com/document_detail/390136.html">DescribeDBClusterNode</a> operation to query the names of nodes.</p>
          * <p>You can also filter the nodes based on their metric values. Valid values:</p>
          * <ul>
          * <li><strong>top10</strong>: the 10 nodes that have the highest metric values.</li>
@@ -238,6 +241,7 @@ public class DescribeDBClusterPerformanceRequest extends Request {
          * <blockquote>
          * <p>You can query monitoring information only within the last 30 days.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-03T15:00Z</p>

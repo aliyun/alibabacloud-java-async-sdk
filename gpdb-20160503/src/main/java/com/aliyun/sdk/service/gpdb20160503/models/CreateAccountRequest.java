@@ -160,6 +160,7 @@ public class CreateAccountRequest extends Request {
          * <li>The name cannot start with gp.</li>
          * <li>The name must be 2 to 16 characters in length.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>testacc02</p>
@@ -177,6 +178,7 @@ public class CreateAccountRequest extends Request {
          * <li>Special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></li>
          * <li>The password must be 8 to 32 characters in length.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>Pw123456</p>
@@ -202,8 +204,9 @@ public class CreateAccountRequest extends Request {
         /**
          * <p>The ID of the instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-bp***************</p>

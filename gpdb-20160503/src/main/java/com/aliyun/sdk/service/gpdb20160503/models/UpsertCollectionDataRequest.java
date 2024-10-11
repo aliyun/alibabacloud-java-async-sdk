@@ -156,6 +156,7 @@ public class UpsertCollectionDataRequest extends Request {
 
         /**
          * <p>The name of the collection.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>document</p>
@@ -169,7 +170,7 @@ public class UpsertCollectionDataRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -195,6 +196,7 @@ public class UpsertCollectionDataRequest extends Request {
 
         /**
          * <p>The password of the namespace.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>testpassword</p>
@@ -217,8 +219,9 @@ public class UpsertCollectionDataRequest extends Request {
         /**
          * <p>The region ID of the instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -329,7 +332,7 @@ public class UpsertCollectionDataRequest extends Request {
             }
 
             /**
-             * Vector.
+             * <p>This parameter is required.</p>
              */
             public Builder vector(java.util.List < Double > vector) {
                 this.vector = vector;

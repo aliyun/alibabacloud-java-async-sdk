@@ -261,6 +261,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceStorage")
         private Long DBInstanceStorage;
 
+        @com.aliyun.core.annotation.NameInMap("DeployMode")
+        private String deployMode;
+
         @com.aliyun.core.annotation.NameInMap("EncryptionKey")
         private String encryptionKey;
 
@@ -357,6 +360,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ServerlessResource")
         private Integer serverlessResource;
 
+        @com.aliyun.core.annotation.NameInMap("StandbyZoneId")
+        private String standbyZoneId;
+
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
@@ -411,6 +417,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.DBInstanceNetType = builder.DBInstanceNetType;
             this.DBInstanceStatus = builder.DBInstanceStatus;
             this.DBInstanceStorage = builder.DBInstanceStorage;
+            this.deployMode = builder.deployMode;
             this.encryptionKey = builder.encryptionKey;
             this.encryptionType = builder.encryptionType;
             this.engine = builder.engine;
@@ -443,6 +450,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.segmentCounts = builder.segmentCounts;
             this.serverlessMode = builder.serverlessMode;
             this.serverlessResource = builder.serverlessResource;
+            this.standbyZoneId = builder.standbyZoneId;
             this.startTime = builder.startTime;
             this.storagePerNode = builder.storagePerNode;
             this.storageSize = builder.storageSize;
@@ -602,6 +610,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public Long getDBInstanceStorage() {
             return this.DBInstanceStorage;
+        }
+
+        /**
+         * @return deployMode
+         */
+        public String getDeployMode() {
+            return this.deployMode;
         }
 
         /**
@@ -829,6 +844,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return standbyZoneId
+         */
+        public String getStandbyZoneId() {
+            return this.standbyZoneId;
+        }
+
+        /**
          * @return startTime
          */
         public String getStartTime() {
@@ -926,6 +948,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String DBInstanceNetType; 
             private String DBInstanceStatus; 
             private Long DBInstanceStorage; 
+            private String deployMode; 
             private String encryptionKey; 
             private String encryptionType; 
             private String engine; 
@@ -958,6 +981,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private Integer segmentCounts; 
             private String serverlessMode; 
             private Integer serverlessResource; 
+            private String standbyZoneId; 
             private String startTime; 
             private Integer storagePerNode; 
             private Long storageSize; 
@@ -1225,6 +1249,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder DBInstanceStorage(Long DBInstanceStorage) {
                 this.DBInstanceStorage = DBInstanceStorage;
+                return this;
+            }
+
+            /**
+             * DeployMode.
+             */
+            public Builder deployMode(String deployMode) {
+                this.deployMode = deployMode;
                 return this;
             }
 
@@ -1639,6 +1671,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder serverlessResource(Integer serverlessResource) {
                 this.serverlessResource = serverlessResource;
+                return this;
+            }
+
+            /**
+             * StandbyZoneId.
+             */
+            public Builder standbyZoneId(String standbyZoneId) {
+                this.standbyZoneId = standbyZoneId;
                 return this;
             }
 

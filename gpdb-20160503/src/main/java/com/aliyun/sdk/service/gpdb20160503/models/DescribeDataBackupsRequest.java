@@ -171,7 +171,7 @@ public class DescribeDataBackupsRequest extends Request {
         /**
          * <p>The ID of the backup set. If you specify BackupId, the details of the backup set are returned.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~210093~~">DescribeDataBackups</a> operation to query the information about all backup sets of an instance, including backup set IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/210093.html">DescribeDataBackups</a> operation to query the information about all backup sets of an instance, including backup set IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -220,8 +220,9 @@ public class DescribeDataBackupsRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-bp***************</p>

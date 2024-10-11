@@ -162,6 +162,7 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         /**
          * <p>The prefix of the endpoint.</p>
          * <p>Specify a prefix for the endpoint. Example: <code>gp-bp12ga6v69h86****</code>. In this example, the endpoint is <code>gp-bp12ga6v69h86****.gpdb.rds.aliyuncs.com</code>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-bp12ga6v69h86****</p>
@@ -175,8 +176,9 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         /**
          * <p>The ID of the instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-bp12ga6v69h86****</p>
@@ -198,6 +200,7 @@ public class AllocateInstancePublicConnectionRequest extends Request {
 
         /**
          * <p>The port number. Example: 5432.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>5432</p>

@@ -98,6 +98,7 @@ public class ListStreamingDataSourcesRequest extends Request {
 
         /**
          * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-bp10g78o9807yv9h3</p>
@@ -141,7 +142,7 @@ public class ListStreamingDataSourcesRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -256,7 +256,10 @@ public class CreateDocumentCollectionRequest extends Request {
         } 
 
         /**
-         * Collection.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>document</p>
          */
         public Builder collection(String collection) {
             this.putQueryParameter("Collection", collection);
@@ -265,7 +268,10 @@ public class CreateDocumentCollectionRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -375,7 +381,10 @@ public class CreateDocumentCollectionRequest extends Request {
         }
 
         /**
-         * ManagerAccount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testaccount</p>
          */
         public Builder managerAccount(String managerAccount) {
             this.putQueryParameter("ManagerAccount", managerAccount);
@@ -384,7 +393,10 @@ public class CreateDocumentCollectionRequest extends Request {
         }
 
         /**
-         * ManagerAccountPassword.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testpassword</p>
          */
         public Builder managerAccountPassword(String managerAccountPassword) {
             this.putQueryParameter("ManagerAccountPassword", managerAccountPassword);
@@ -395,16 +407,14 @@ public class CreateDocumentCollectionRequest extends Request {
         /**
          * <p>The metadata of the vector data, which is a JSON string in the MAP format. The key specifies the field name, and the value specifies the data type.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>For information about the supported data types, see <a href="https://icms.alibaba-inc.com/content/gpdb/analyticdb-for-postgresql?l=2&m=16474&n=3533845">Data types</a>.</p>
-         * </li>
-         * <li><p>The money data type is not supported.</p>
-         * </li>
+         * <li>For information about the supported data types, see <a href="https://www.alibabacloud.com/help/en/analyticdb/analyticdb-for-postgresql/developer-reference/data-types?spm=a2c63.p38356.0.0.69b31bceLRFnrR">Data types</a>.</li>
+         * <li>The money data type is not supported.</li>
          * </ul>
-         * <p>**</p>
-         * <p><strong>Warning</strong>
-         * Reserved fields such as id, vector, doc_name, content, loader_metadata, source, and to_tsvector cannot be used.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p>Warning: Reserved fields such as id, vector, doc_name, content, loader_metadata, source, and to_tsvector cannot be used.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>{&quot;title&quot;:&quot;text&quot;,&quot;page&quot;:&quot;int&quot;}</p>
@@ -468,7 +478,10 @@ public class CreateDocumentCollectionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

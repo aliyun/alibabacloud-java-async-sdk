@@ -86,8 +86,9 @@ public class ModifyParametersRequest extends Request {
         /**
          * <p>The ID of the instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-bp***************</p>
@@ -116,7 +117,8 @@ public class ModifyParametersRequest extends Request {
 
         /**
          * <p>The name and value of the parameter to be modified. Specify the parameter in the <code>&lt;Parameter name&gt;:&lt;Parameter value&gt;</code> format.</p>
-         * <p>You can call the <a href="~~208310~~">DescribeParameters</a> operation to query the parameters that can be modified.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/208310.html">DescribeParameters</a> operation to query the parameters that can be modified.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;statement_timeout&quot;:&quot;11800010&quot;}</p>

@@ -101,6 +101,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
 
         /**
          * <p>The endpoint prefix of the instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-test</p>
@@ -113,6 +114,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
 
         /**
          * <p>The current endpoint of the instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-t4n2qg19bnn98****-master.gpdb.rds.aliyuncs.com</p>
@@ -125,6 +127,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
 
         /**
          * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-t4n2qg19bnn98****</p>
@@ -137,6 +140,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
 
         /**
          * <p>The port number. Example: 5432.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>5432</p>

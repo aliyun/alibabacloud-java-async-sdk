@@ -86,8 +86,9 @@ public class ModifyDBResourceGroupRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-xxxxxxxxx</p>
@@ -109,6 +110,7 @@ public class ModifyDBResourceGroupRequest extends Request {
 
         /**
          * <p>The information about the resource group.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder resourceGroupItems(java.util.List < ResourceGroupItems> resourceGroupItems) {
             String resourceGroupItemsShrink = shrink(resourceGroupItems, "ResourceGroupItems", "json");
@@ -186,6 +188,7 @@ public class ModifyDBResourceGroupRequest extends Request {
              * <li><p>Concurrency: the maximum number of concurrent transactions or parallel queries that are allowed for a resource group. Default value: 20.</p>
              * </li>
              * </ul>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;CpuRateLimit&quot;:&quot;10&quot;,&quot;MemoryLimit&quot;:&quot;12&quot;,&quot;MemorySharedQuota&quot;:&quot;20&quot;,&quot;MemorySpillRatio&quot;:&quot;75&quot;,&quot;Concurrency&quot;:&quot;3&quot;}</p>
@@ -197,6 +200,7 @@ public class ModifyDBResourceGroupRequest extends Request {
 
             /**
              * <p>The name of the resource group.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>testgroup</p>

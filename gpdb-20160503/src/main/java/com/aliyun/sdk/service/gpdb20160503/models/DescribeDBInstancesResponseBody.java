@@ -621,7 +621,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
             /**
              * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
-             * <p>You can call the <a href="~~86910~~">DescribeDBInstanceAttribute</a> operation to query the access mode of an instance.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/86910.html">DescribeDBInstanceAttribute</a> operation to query the access mode of an instance.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -713,7 +713,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the instance. For more information, see <a href="~~86944~~">Instance statuses</a>.</p>
+             * <p>The status of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/86944.html">Instance statuses</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>

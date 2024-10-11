@@ -173,8 +173,9 @@ public class CreateDBInstancePlanRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-bp12ga6v69h86****</p>
@@ -196,6 +197,7 @@ public class CreateDBInstancePlanRequest extends Request {
 
         /**
          * <p>The execution information of the plan. Specify the parameter in the JSON format. The parameter value varies based on the values of <strong>PlanType</strong> and <strong>PlanScheduleType</strong>. The following section describes the PlanConfig parameter.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;pause&quot;:{&quot;planCronTime&quot;:&quot;0 0 12 1/1 * ? &quot;},&quot;resume&quot;:{&quot;planCronTime&quot;:&quot;0 0 0 1/1 * ? &quot;}}</p>
@@ -240,6 +242,7 @@ public class CreateDBInstancePlanRequest extends Request {
 
         /**
          * <p>The name of the plan.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>test-plan</p>
@@ -256,6 +259,7 @@ public class CreateDBInstancePlanRequest extends Request {
          * <li><strong>Postpone</strong>: The plan is executed later.</li>
          * <li><strong>Regular</strong>: The plan is executed periodically.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>Regular</p>
@@ -299,6 +303,7 @@ public class CreateDBInstancePlanRequest extends Request {
          * <li>You can specify the value to ModifySpec only for instances in elastic storage mode.</li>
          * </ul>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>PauseResume</p>

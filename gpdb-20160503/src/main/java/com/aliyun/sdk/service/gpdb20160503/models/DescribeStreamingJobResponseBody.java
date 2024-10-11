@@ -358,6 +358,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
 
         /**
          * <p>The time when the job was created.</p>
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
          * <p>2019-09-08T16:00:00Z</p>
@@ -518,6 +519,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
 
         /**
          * <p>The time when the job was last modified.</p>
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
          * <p>2019-09-08T17:00:00Z</p>

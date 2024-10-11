@@ -150,8 +150,9 @@ public class DescribeDBVersionInfosRequest extends Request {
         /**
          * <p>The region ID of the instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -163,7 +164,7 @@ public class DescribeDBVersionInfosRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see <a href="~~151181~~">View basic information of a resource group</a>.</p>
+         * <p>The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-bp67acfmxazb4p****</p>

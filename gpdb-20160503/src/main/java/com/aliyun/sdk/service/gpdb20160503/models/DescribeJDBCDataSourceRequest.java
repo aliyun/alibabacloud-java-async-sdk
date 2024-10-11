@@ -70,7 +70,10 @@ public class DescribeJDBCDataSourceRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-xxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -80,6 +83,7 @@ public class DescribeJDBCDataSourceRequest extends Request {
 
         /**
          * <p>The data source ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>

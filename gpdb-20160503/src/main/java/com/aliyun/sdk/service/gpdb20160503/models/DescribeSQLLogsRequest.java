@@ -257,8 +257,9 @@ public class DescribeSQLLogsRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-xxxxxxxx</p>
@@ -286,6 +287,7 @@ public class DescribeSQLLogsRequest extends Request {
          * <blockquote>
          * <p>The end time must be later than the start time. The maximum time range that can be specified is seven days.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-03-17T06:30Z</p>
@@ -445,6 +447,7 @@ public class DescribeSQLLogsRequest extends Request {
 
         /**
          * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-03-10T06:30Z</p>

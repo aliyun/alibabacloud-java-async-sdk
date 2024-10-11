@@ -185,6 +185,7 @@ public class UpdateCollectionDataMetadataRequest extends Request {
 
         /**
          * <p>The name of the collection.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>document</p>
@@ -198,7 +199,7 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -234,6 +235,7 @@ public class UpdateCollectionDataMetadataRequest extends Request {
 
         /**
          * <p>The data to be updated, which is a JSON string in the MAP format. In the JSON string, key specifies the field name and value specifies the new data value.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -262,6 +264,7 @@ public class UpdateCollectionDataMetadataRequest extends Request {
 
         /**
          * <p>The password of the namespace.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>testpassword</p>
@@ -284,8 +287,9 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

@@ -158,8 +158,9 @@ public class GetUpsertCollectionDataJobRequest extends Request {
         /**
          * <p>The name of the collection.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~2401503~~">ListCollections</a> operation to query a list of collections.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> operation to query a list of collections.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>document</p>
@@ -173,7 +174,7 @@ public class GetUpsertCollectionDataJobRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -187,6 +188,7 @@ public class GetUpsertCollectionDataJobRequest extends Request {
 
         /**
          * <p>The ID of the vector data upload job. You can call the <code>UpsertCollectionDataAsync</code> operation to query the job ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>231460f8-75dc-405e-a669-0c5204887e91</p>
@@ -217,6 +219,7 @@ public class GetUpsertCollectionDataJobRequest extends Request {
          * <blockquote>
          * <p> The value of this parameter is specified when you call the CreateNamespace operation.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>testpassword</p>
@@ -238,6 +241,7 @@ public class GetUpsertCollectionDataJobRequest extends Request {
 
         /**
          * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

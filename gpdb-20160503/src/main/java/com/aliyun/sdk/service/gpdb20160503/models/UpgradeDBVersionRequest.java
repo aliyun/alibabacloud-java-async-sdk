@@ -140,6 +140,7 @@ public class UpgradeDBVersionRequest extends Request {
 
         /**
          * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-wz9kmr708m155j***</p>

@@ -85,6 +85,7 @@ public class DeleteHadoopDataSourceRequest extends Request {
 
         /**
          * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-xxxxxxx</p>
@@ -97,6 +98,7 @@ public class DeleteHadoopDataSourceRequest extends Request {
 
         /**
          * <p>The service ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>

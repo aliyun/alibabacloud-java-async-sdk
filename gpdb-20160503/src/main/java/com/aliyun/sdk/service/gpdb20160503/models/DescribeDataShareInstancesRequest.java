@@ -166,8 +166,9 @@ public class DescribeDataShareInstancesRequest extends Request {
         /**
          * <p>The region ID of the instance.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -179,7 +180,7 @@ public class DescribeDataShareInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see <a href="~~151181~~">View basic information of a resource group</a>.</p>
+         * <p>The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-bp67acfmxazb4p****</p>
@@ -193,7 +194,7 @@ public class DescribeDataShareInstancesRequest extends Request {
         /**
          * <p>The keyword used to filter instances, which can be an instance ID or instance description.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs and instance descriptions.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs and instance descriptions.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

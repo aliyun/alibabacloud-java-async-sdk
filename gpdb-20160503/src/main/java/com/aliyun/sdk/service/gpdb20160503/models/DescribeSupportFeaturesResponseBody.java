@@ -86,8 +86,8 @@ public class DescribeSupportFeaturesResponseBody extends TeaModel {
         /**
          * <p>The features supported by the instance. Valid values:</p>
          * <ul>
-         * <li>sample_data: sample dataset. For more information, see <a href="~~452278~~">Sample dataset</a>.</li>
-         * <li>diagnose_and_optimize: diagnostics and optimization. For more information, see <a href="~~323453~~">Diagnostics and optimization</a>.</li>
+         * <li>sample_data: sample dataset. For more information, see <a href="https://help.aliyun.com/document_detail/452278.html">Sample dataset</a>.</li>
+         * <li>diagnose_and_optimize: diagnostics and optimization. For more information, see <a href="https://help.aliyun.com/document_detail/323453.html">Diagnostics and optimization</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>

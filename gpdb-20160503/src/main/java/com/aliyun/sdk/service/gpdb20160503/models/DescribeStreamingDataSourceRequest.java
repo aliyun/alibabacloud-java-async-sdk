@@ -84,7 +84,10 @@ public class DescribeStreamingDataSourceRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp10g78o9807yv9h3</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -93,7 +96,10 @@ public class DescribeStreamingDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder dataSourceId(Integer dataSourceId) {
             this.putQueryParameter("DataSourceId", dataSourceId);

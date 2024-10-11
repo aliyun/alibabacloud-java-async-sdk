@@ -174,7 +174,8 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region. You can call the <a href="~~86912~~">DescribeRegions</a> operation to query region IDs.</p>
+         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query region IDs.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -187,6 +188,7 @@ public class TagResourcesRequest extends Request {
 
         /**
          * <p>The ID of an instance. Valid values of N: 1 to 50.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-xxxxxxxxxx</p>
@@ -221,6 +223,7 @@ public class TagResourcesRequest extends Request {
          * <li><code>instance</code>: reserved storage mode</li>
          * <li><code>ALIYUN::GPDB::INSTANCE</code>: elastic storage mode</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>instance</p>
@@ -233,6 +236,7 @@ public class TagResourcesRequest extends Request {
 
         /**
          * <p>The list of tags.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -295,6 +299,7 @@ public class TagResourcesRequest extends Request {
 
             /**
              * <p>The key of a tag. Valid values of N: 1 to 20. This parameter value cannot be an empty string. A tag key can contain a maximum of 128 characters. It cannot start with <code>aliyun</code> or<code> acs:</code> and cannot contain <code>http://</code> or<code> https://</code>.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -306,6 +311,7 @@ public class TagResourcesRequest extends Request {
 
             /**
              * <p>The value of a tag. Valid values of N: 1 to 20. This parameter value can be an empty string. A tag value can contain a maximum of 128 characters. It cannot start with <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

@@ -85,6 +85,7 @@ public class DeleteStreamingDataServiceRequest extends Request {
 
         /**
          * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-bp10g78o9807yv9h3</p>
@@ -106,6 +107,7 @@ public class DeleteStreamingDataServiceRequest extends Request {
 
         /**
          * <p>The service ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

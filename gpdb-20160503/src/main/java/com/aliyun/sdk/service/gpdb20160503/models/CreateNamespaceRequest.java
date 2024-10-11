@@ -158,7 +158,7 @@ public class CreateNamespaceRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~196830~~">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -173,8 +173,9 @@ public class CreateNamespaceRequest extends Request {
         /**
          * <p>The name of the manager account that has the rds_superuser permission.</p>
          * <blockquote>
-         * <p> You can create an account on the Account Management page of the AnalyticDB for PostgreSQL console or by calling the <a href="~~2361789~~">CreateAccount</a> operation.</p>
+         * <p> You can create an account on the Account Management page of the AnalyticDB for PostgreSQL console or by calling the <a href="https://help.aliyun.com/document_detail/2361789.html">CreateAccount</a> operation.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>testaccount</p>
@@ -187,6 +188,7 @@ public class CreateNamespaceRequest extends Request {
 
         /**
          * <p>The password of the manager account.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>testpassword</p>
@@ -214,6 +216,7 @@ public class CreateNamespaceRequest extends Request {
 
         /**
          * <p>The password of the namespace.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>testpassword2</p>
@@ -235,6 +238,7 @@ public class CreateNamespaceRequest extends Request {
 
         /**
          * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

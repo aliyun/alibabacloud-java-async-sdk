@@ -129,6 +129,7 @@ public class DescribeDataSharePerformanceRequest extends Request {
          * <li><strong>adbpg_datashare_topic_count</strong>: the number of shared topics.</li>
          * <li><strong>adbpg_datashare_data_size_mb</strong>: the amount of data shared.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>adbpg_datashare_topic_count</p>
@@ -142,8 +143,9 @@ public class DescribeDataSharePerformanceRequest extends Request {
         /**
          * <p>The region ID of the instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

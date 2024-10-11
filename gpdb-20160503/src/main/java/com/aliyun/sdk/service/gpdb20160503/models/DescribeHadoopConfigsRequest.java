@@ -107,6 +107,7 @@ public class DescribeHadoopConfigsRequest extends Request {
          * <li>mapred-site</li>
          * <li>hive-site</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>hdfs-site</p>
@@ -119,6 +120,7 @@ public class DescribeHadoopConfigsRequest extends Request {
 
         /**
          * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-xxxxxxx</p>
@@ -131,6 +133,7 @@ public class DescribeHadoopConfigsRequest extends Request {
 
         /**
          * <p>The E-MapReduce (EMR) Hadoop cluster ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>c-xxx</p>

@@ -145,8 +145,9 @@ public class DeleteDocumentRequest extends Request {
         /**
          * <p>The name of the document collection.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~2618448~~">CreateDocumentCollection</a> operation to create a document collection and call the <a href="~~2618452~~">ListDocumentCollections</a> operation to query a list of document collections.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation to create a document collection and call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to query a list of document collections.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>document</p>
@@ -158,7 +159,10 @@ public class DeleteDocumentRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -169,8 +173,9 @@ public class DeleteDocumentRequest extends Request {
         /**
          * <p>The name of the document.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~2618453~~">ListDocuments</a> operation to query a list of documents.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2618453.html">ListDocuments</a> operation to query a list of documents.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>music.txt</p>
@@ -184,7 +189,7 @@ public class DeleteDocumentRequest extends Request {
         /**
          * <p>The name of the namespace. Default value: public.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~2401495~~">CreateNamespace</a> operation to create a namespace and call the <a href="~~2401502~~">ListNamespaces</a> operation to query a list of namespaces.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -199,8 +204,9 @@ public class DeleteDocumentRequest extends Request {
         /**
          * <p>The password of the namespace.</p>
          * <blockquote>
-         * <p> This value is specified when you call the <a href="~~2401495~~">CreateNamespace</a> operation.</p>
+         * <p> This value is specified when you call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>testpassword</p>
@@ -221,7 +227,10 @@ public class DeleteDocumentRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

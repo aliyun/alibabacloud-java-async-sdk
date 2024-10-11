@@ -102,6 +102,7 @@ public class ReleaseInstancePublicConnectionRequest extends Request {
         /**
          * <p>The public endpoint of the instance.</p>
          * <p>You can log on to the AnalyticDB for PostgreSQL console and go to the <strong>Basic Information</strong> page of the instance to view the <strong>public endpoint</strong> in the <strong>Database Connection</strong> section.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-bp12ga6v69h86****.gpdb.rds.aliyuncs.com</p>
@@ -115,8 +116,9 @@ public class ReleaseInstancePublicConnectionRequest extends Request {
         /**
          * <p>The ID of the instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-bp12ga6v69h86****</p>

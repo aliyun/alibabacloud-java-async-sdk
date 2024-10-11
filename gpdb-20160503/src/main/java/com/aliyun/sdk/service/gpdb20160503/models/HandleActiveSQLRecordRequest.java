@@ -85,6 +85,7 @@ public class HandleActiveSQLRecordRequest extends Request {
 
         /**
          * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-bp***************</p>
@@ -114,6 +115,7 @@ public class HandleActiveSQLRecordRequest extends Request {
 
         /**
          * <p>The process IDs. A process ID is a unique identifier of a query.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;3003925,3003928&quot;</p>

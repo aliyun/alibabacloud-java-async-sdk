@@ -84,7 +84,10 @@ public class DescribeIMVInfosRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -93,7 +96,10 @@ public class DescribeIMVInfosRequest extends Request {
         }
 
         /**
-         * Database.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb</p>
          */
         public Builder database(String database) {
             this.putQueryParameter("Database", database);

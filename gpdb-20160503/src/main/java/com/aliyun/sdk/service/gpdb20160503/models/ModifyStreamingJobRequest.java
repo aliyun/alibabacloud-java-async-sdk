@@ -352,6 +352,7 @@ public class ModifyStreamingJobRequest extends Request {
 
         /**
          * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ModifyStreamingJob</p>
@@ -577,6 +578,7 @@ public class ModifyStreamingJobRequest extends Request {
 
         /**
          * <p>The job ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

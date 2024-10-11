@@ -86,6 +86,7 @@ public class ResetAccountPasswordRequest extends Request {
 
         /**
          * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>testaccount_1</p>
@@ -98,6 +99,7 @@ public class ResetAccountPasswordRequest extends Request {
 
         /**
          * <p>The name of the account.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>Testaccount_1</p>
@@ -114,6 +116,7 @@ public class ResetAccountPasswordRequest extends Request {
          * <li>The instance is in the running state.</li>
          * <li>The instance is not locked.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-t4nf48vf15713****</p>

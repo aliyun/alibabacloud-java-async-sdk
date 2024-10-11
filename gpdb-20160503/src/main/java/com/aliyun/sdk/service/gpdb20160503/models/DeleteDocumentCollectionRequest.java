@@ -128,7 +128,10 @@ public class DeleteDocumentCollectionRequest extends Request {
         } 
 
         /**
-         * Collection.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>document</p>
          */
         public Builder collection(String collection) {
             this.putQueryParameter("Collection", collection);
@@ -137,7 +140,10 @@ public class DeleteDocumentCollectionRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -148,7 +154,7 @@ public class DeleteDocumentCollectionRequest extends Request {
         /**
          * <p>The name of the namespace. Default value: public.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~2401495~~">CreateNamespace</a> operation to create a namespace and call the <a href="~~2401502~~">ListNamespaces</a> operation to query a list of namespaces.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -163,8 +169,9 @@ public class DeleteDocumentCollectionRequest extends Request {
         /**
          * <p>The password of the namespace.</p>
          * <blockquote>
-         * <p> This value is specified when you call the <a href="~~2401495~~">CreateNamespace</a> operation.</p>
+         * <p> This value is specified when you call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>testpassword</p>
@@ -186,6 +193,7 @@ public class DeleteDocumentCollectionRequest extends Request {
 
         /**
          * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

@@ -100,8 +100,9 @@ public class UpgradeExtensionsRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-xxxxxxxxx</p>
@@ -123,6 +124,7 @@ public class UpgradeExtensionsRequest extends Request {
 
         /**
          * <p>The extensions that you want to update. Separate multiple extensions with commas (,).</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>citext,dblink</p>
