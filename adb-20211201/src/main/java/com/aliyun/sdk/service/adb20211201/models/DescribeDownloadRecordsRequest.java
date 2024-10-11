@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDownloadRecordsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDownloadRecordsRequest</p>
@@ -83,10 +84,14 @@ public class DescribeDownloadRecordsRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
+         * <strong>example:</strong>
+         * <p>amv-8vb6ha79k6e****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -95,13 +100,16 @@ public class DescribeDownloadRecordsRequest extends Request {
         }
 
         /**
-         * The language of the returned data. Valid values:
-         * <p>
+         * <p>The language of the returned data. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: simplified Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * <li><strong>ja</strong>: Japanese.</li>
+         * <li><strong>zh-tw</strong>: traditional Chinese.</li>
+         * </ul>
          * 
-         * *   **zh**: simplified Chinese.
-         * *   **en**: English.
-         * *   **ja**: Japanese.
-         * *   **zh-tw**: traditional Chinese.
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -110,7 +118,11 @@ public class DescribeDownloadRecordsRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster.
+         * <p>The region ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

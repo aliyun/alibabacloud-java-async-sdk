@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSparkAppWebUiAddressRequest} extends {@link RequestModel}
  *
  * <p>GetSparkAppWebUiAddressRequest</p>
@@ -68,10 +69,14 @@ public class GetSparkAppWebUiAddressRequest extends Request {
         } 
 
         /**
-         * The Spark application ID.
-         * <p>
+         * <p>The Spark application ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/455888.html">ListSparkApps</a> operation to query Spark application IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [ListSparkApps](~~455888~~) operation to query Spark application IDs.
+         * <strong>example:</strong>
+         * <p>s202205201533hz1209892000****</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -80,10 +85,13 @@ public class GetSparkAppWebUiAddressRequest extends Request {
         }
 
         /**
-         * The cluster ID.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
+         * <strong>example:</strong>
+         * <p>amv-uf6g8w25jacm7****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

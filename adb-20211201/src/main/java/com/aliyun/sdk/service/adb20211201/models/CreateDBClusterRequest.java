@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDBClusterRequest} extends {@link RequestModel}
  *
  * <p>CreateDBClusterRequest</p>
@@ -14,6 +15,10 @@ public class CreateDBClusterRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BackupSetId")
     private String backupSetId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloneSourceRegionId")
+    private String cloneSourceRegionId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ComputeResource")
@@ -116,6 +121,7 @@ public class CreateDBClusterRequest extends Request {
     private CreateDBClusterRequest(Builder builder) {
         super(builder);
         this.backupSetId = builder.backupSetId;
+        this.cloneSourceRegionId = builder.cloneSourceRegionId;
         this.computeResource = builder.computeResource;
         this.DBClusterDescription = builder.DBClusterDescription;
         this.DBClusterNetworkType = builder.DBClusterNetworkType;
@@ -159,6 +165,13 @@ public class CreateDBClusterRequest extends Request {
      */
     public String getBackupSetId() {
         return this.backupSetId;
+    }
+
+    /**
+     * @return cloneSourceRegionId
+     */
+    public String getCloneSourceRegionId() {
+        return this.cloneSourceRegionId;
     }
 
     /**
@@ -324,6 +337,7 @@ public class CreateDBClusterRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateDBClusterRequest, Builder> {
         private String backupSetId; 
+        private String cloneSourceRegionId; 
         private String computeResource; 
         private String DBClusterDescription; 
         private String DBClusterNetworkType; 
@@ -355,6 +369,7 @@ public class CreateDBClusterRequest extends Request {
         private Builder(CreateDBClusterRequest request) {
             super(request);
             this.backupSetId = request.backupSetId;
+            this.cloneSourceRegionId = request.cloneSourceRegionId;
             this.computeResource = request.computeResource;
             this.DBClusterDescription = request.DBClusterDescription;
             this.DBClusterNetworkType = request.DBClusterNetworkType;
@@ -381,10 +396,13 @@ public class CreateDBClusterRequest extends Request {
         } 
 
         /**
-         * The ID of the backup set that you want to use to restore data.
-         * <p>
+         * <p>The ID of the backup set that you want to use to restore data.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/612318.html">DescribeBackups</a> operation to query the backup sets of the cluster.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeBackups](~~612318~~) operation to query the backup sets of the cluster.
+         * <strong>example:</strong>
+         * <p>1880808684</p>
          */
         public Builder backupSetId(String backupSetId) {
             this.putQueryParameter("BackupSetId", backupSetId);
@@ -393,10 +411,22 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The amount of reserved computing resources. Unit: ACUs. Valid values: 0 to 4096. The value must be in increments of 16 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.
-         * <p>
+         * CloneSourceRegionId.
+         */
+        public Builder cloneSourceRegionId(String cloneSourceRegionId) {
+            this.putQueryParameter("CloneSourceRegionId", cloneSourceRegionId);
+            this.cloneSourceRegionId = cloneSourceRegionId;
+            return this;
+        }
+
+        /**
+         * <p>The amount of reserved computing resources. Valid values: 0ACU to 4096ACU. The value must be in increments of 16ACU. Each ACU is approximately equal to 1 core and 4 GB memory.</p>
+         * <blockquote>
+         * <p> This parameter must be specified with a unit.</p>
+         * </blockquote>
          * 
-         * >  This parameter must be specified with a unit.
+         * <strong>example:</strong>
+         * <p>16ACU</p>
          */
         public Builder computeResource(String computeResource) {
             this.putQueryParameter("ComputeResource", computeResource);
@@ -405,11 +435,14 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The description of the cluster.
-         * <p>
+         * <p>The description of the cluster.</p>
+         * <ul>
+         * <li>The description cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The description must be 2 to 256 characters in length</li>
+         * </ul>
          * 
-         * *   The description cannot start with `http://` or `https://`.
-         * *   The description must be 2 to 256 characters in length
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder DBClusterDescription(String DBClusterDescription) {
             this.putQueryParameter("DBClusterDescription", DBClusterDescription);
@@ -418,7 +451,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The network type of the cluster. Only **VPC** is supported.
+         * <p>The network type of the cluster. Only <strong>VPC</strong> is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder DBClusterNetworkType(String DBClusterNetworkType) {
             this.putQueryParameter("DBClusterNetworkType", DBClusterNetworkType);
@@ -427,7 +463,11 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The version of the cluster. Set the value to **5.0**.
+         * <p>The version of the cluster. Set the value to <strong>5.0</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.0</p>
          */
         public Builder DBClusterVersion(String DBClusterVersion) {
             this.putQueryParameter("DBClusterVersion", DBClusterVersion);
@@ -445,11 +485,14 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to allocate all reserved computing resources to the user_default resource group. Valid values:
-         * <p>
+         * <p>Specifies whether to allocate all reserved computing resources to the user_default resource group. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong> (default)</li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true** (default)
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableDefaultResourcePool(Boolean enableDefaultResourcePool) {
             this.putQueryParameter("EnableDefaultResourcePool", enableDefaultResourcePool);
@@ -467,11 +510,15 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The billing method of the cluster. Valid values:
-         * <p>
+         * <p>The billing method of the cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+         * <li><strong>Prepaid</strong>: subscription.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Postpaid**: pay-as-you-go.
-         * *   **Prepaid**: subscription.
+         * <strong>example:</strong>
+         * <p>Prepaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -480,13 +527,17 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The subscription type of the subscription cluster. Valid values:
-         * <p>
+         * <p>The subscription type of the subscription cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>Year</strong>: subscription on a yearly basis.</li>
+         * <li><strong>Month</strong>: subscription on a monthly basis.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter must be specified when PayType is set to Prepaid.</p>
+         * </blockquote>
          * 
-         * *   **Year**: subscription on a yearly basis.
-         * *   **Month**: subscription on a monthly basis.
-         * 
-         * >  This parameter must be specified when PayType is set to Prepaid.
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -504,10 +555,14 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The region ID.
-         * <p>
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeRegions](~~454314~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -534,7 +589,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-4690g37929****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -543,7 +601,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The point in time to which you want to restore data from the backup set.
+         * <p>The point in time to which you want to restore data from the backup set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-09-20T03:13:56Z</p>
          */
         public Builder restoreToTime(String restoreToTime) {
             this.putQueryParameter("RestoreToTime", restoreToTime);
@@ -552,11 +613,14 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The method that you want to use to restore data. Valid values:
-         * <p>
+         * <p>The method that you want to use to restore data. Valid values:</p>
+         * <ul>
+         * <li><strong>backup</strong>: restores data from a backup set. You must also specify the <strong>BackupSetId</strong> and <strong>SourceDBClusterId</strong> parameters.</li>
+         * <li><strong>timepoint</strong>: restores data to a point in time. You must also specify the <strong>RestoreToTime</strong> and <strong>SourceDBClusterId</strong> parameters.</li>
+         * </ul>
          * 
-         * *   **backup**: restores data from a backup set. You must also specify the **BackupSetId** and **SourceDBClusterId** parameters.
-         * *   **timepoint**: restores data to a point in time. You must also specify the **RestoreToTime** and **SourceDBClusterId** parameters.
+         * <strong>example:</strong>
+         * <p>backup</p>
          */
         public Builder restoreType(String restoreType) {
             this.putQueryParameter("RestoreType", restoreType);
@@ -565,7 +629,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The ID of the source AnalyticDB for MySQL Data Warehouse Edition cluster. If you want to restore a Data Lakehouse Edition cluster from a Data Warehouse Edition cluster, you must specify this parameter.
+         * <p>The ID of the source AnalyticDB for MySQL Data Warehouse Edition cluster. If you want to restore a Data Lakehouse Edition cluster from a Data Warehouse Edition cluster, you must specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp1r053byu48p****</p>
          */
         public Builder sourceDbClusterId(String sourceDbClusterId) {
             this.putQueryParameter("SourceDbClusterId", sourceDbClusterId);
@@ -574,10 +641,13 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The amount of reserved storage resources. Unit: AnalyticDB compute units (ACUs). Valid values: 0 to 2064. The value must be in increments of 24 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.
-         * <p>
+         * <p>The amount of reserved storage resources. Valid values: 0ACU to 2064ACU. The value must be in increments of 24ACU. Each ACU is approximately equal to 1 core and 4 GB memory.</p>
+         * <blockquote>
+         * <p> This parameter must be specified with a unit.</p>
+         * </blockquote>
          * 
-         * >  This parameter must be specified with a unit.
+         * <strong>example:</strong>
+         * <p>24ACU</p>
          */
         public Builder storageResource(String storageResource) {
             this.putQueryParameter("StorageResource", storageResource);
@@ -586,7 +656,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The tags to add to the cluster.
+         * <p>The tags to add to the cluster.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -595,13 +665,17 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The subscription duration of the subscription cluster.
-         * <p>
+         * <p>The subscription duration of the subscription cluster.</p>
+         * <ul>
+         * <li>Valid values when <strong>Period</strong> is set to Year: 1 to 3 (integer).</li>
+         * <li>Valid values when <strong>Period</strong> is set to Month: 1 to 9 (integer).</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter must be specified when PayType is set to <strong>Prepaid</strong>.</p>
+         * </blockquote>
          * 
-         * *   Valid values when **Period** is set to Year: 1 to 3 (integer).
-         * *   Valid values when **Period** is set to Month: 1 to 9 (integer).
-         * 
-         * >  This parameter must be specified when PayType is set to **Prepaid**.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder usedTime(String usedTime) {
             this.putQueryParameter("UsedTime", usedTime);
@@ -610,7 +684,11 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The virtual private cloud (VPC) ID of the cluster.
+         * <p>The virtual private cloud (VPC) ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1at5ze0t5u3xtqn****</p>
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -619,7 +697,11 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The vSwitch ID of the cluster.
+         * <p>The vSwitch ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1aadw9k19x6cis9****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -628,10 +710,14 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The zone ID.
-         * <p>
+         * <p>The zone ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent zone list.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeRegions](~~454314~~) operation to query the most recent zone list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -646,6 +732,12 @@ public class CreateDBClusterRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDBClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDBClusterRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -685,10 +777,13 @@ public class CreateDBClusterRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the cluster. You can use tags to filter clusters. Valid values of N: 1 to 20. The values that you specify for N must be unique and consecutive integers that start from 1. Each value of `Tag.N.Key` is paired with a value of `Tag.N.Value`.
-             * <p>
+             * <p>The key of tag N to add to the cluster. You can use tags to filter clusters. Valid values of N: 1 to 20. The values that you specify for N must be unique and consecutive integers that start from 1. Each value of <code>Tag.N.Key</code> is paired with a value of <code>Tag.N.Value</code>.</p>
+             * <blockquote>
+             * <p> The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</p>
+             * </blockquote>
              * 
-             * >  The tag key can be up to 64 characters in length and cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
+             * <strong>example:</strong>
+             * <p>testkey1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -696,10 +791,13 @@ public class CreateDBClusterRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the cluster. You can use tags to filter clusters. Valid values of N: 1 to 20. The values that you specify for N must be unique and consecutive integers that start from 1. Each value of `Tag.N.Key` is paired with a value of `Tag.N.Value`.
-             * <p>
+             * <p>The value of tag N to add to the cluster. You can use tags to filter clusters. Valid values of N: 1 to 20. The values that you specify for N must be unique and consecutive integers that start from 1. Each value of <code>Tag.N.Key</code> is paired with a value of <code>Tag.N.Value</code>.</p>
+             * <blockquote>
+             * <p> The tag value can be up to 64 characters in length and cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</p>
+             * </blockquote>
              * 
-             * >  The tag value can be up to 64 characters in length and cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder value(String value) {
                 this.value = value;

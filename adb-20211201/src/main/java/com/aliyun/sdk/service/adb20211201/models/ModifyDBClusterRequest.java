@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBClusterRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBClusterRequest</p>
@@ -31,6 +32,10 @@ public class ModifyDBClusterRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductForm")
+    private String productForm;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -59,6 +64,7 @@ public class ModifyDBClusterRequest extends Request {
         this.enableDefaultResourcePool = builder.enableDefaultResourcePool;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.productForm = builder.productForm;
         this.regionId = builder.regionId;
         this.reservedNodeCount = builder.reservedNodeCount;
         this.reservedNodeSize = builder.reservedNodeSize;
@@ -115,6 +121,13 @@ public class ModifyDBClusterRequest extends Request {
     }
 
     /**
+     * @return productForm
+     */
+    public String getProductForm() {
+        return this.productForm;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -155,6 +168,7 @@ public class ModifyDBClusterRequest extends Request {
         private Boolean enableDefaultResourcePool; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String productForm; 
         private String regionId; 
         private Integer reservedNodeCount; 
         private String reservedNodeSize; 
@@ -172,6 +186,7 @@ public class ModifyDBClusterRequest extends Request {
             this.enableDefaultResourcePool = request.enableDefaultResourcePool;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.productForm = request.productForm;
             this.regionId = request.regionId;
             this.reservedNodeCount = request.reservedNodeCount;
             this.reservedNodeSize = request.reservedNodeSize;
@@ -180,10 +195,13 @@ public class ModifyDBClusterRequest extends Request {
         } 
 
         /**
-         * The reserved computing resources. Unit: ACUs. Valid values: 0 to 4096. The value must be in increments of 16 ACUs. Each ACU is approximately equal to 1 core and 4 GB memory.
-         * <p>
+         * <p>The reserved computing resources. Valid values: 0ACU to 4096ACU. The value must be in increments of 16ACU. Each ACU is approximately equal to 1 core and 4 GB memory.</p>
+         * <blockquote>
+         * <p> This parameter must be specified with a unit.</p>
+         * </blockquote>
          * 
-         * >  This parameter must be specified with a unit.
+         * <strong>example:</strong>
+         * <p>16ACU</p>
          */
         public Builder computeResource(String computeResource) {
             this.putQueryParameter("ComputeResource", computeResource);
@@ -192,10 +210,14 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
-         * <p>
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBClusters](~~454250~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
+         * <strong>example:</strong>
+         * <p>amv-bp1r053byu48p****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -204,11 +226,14 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to allocate all reserved computing resources to the user_default resource group. Valid values:
-         * <p>
+         * <p>Specifies whether to allocate all reserved computing resources to the user_default resource group. Valid values:</p>
+         * <ul>
+         * <li>true (default)</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true (default)
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableDefaultResourcePool(Boolean enableDefaultResourcePool) {
             this.putQueryParameter("EnableDefaultResourcePool", enableDefaultResourcePool);
@@ -235,10 +260,22 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster.
-         * <p>
+         * ProductForm.
+         */
+        public Builder productForm(String productForm) {
+            this.putQueryParameter("ProductForm", productForm);
+            this.productForm = productForm;
+            return this;
+        }
+
+        /**
+         * <p>The region ID of the cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeRegions](~~454314~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -274,10 +311,13 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * The reserved storage resources. Unit: ACUs. Valid values: 0 to 2064. The value must be in increments of 24 ACUs. Each ACU is approximately equal to 1 core and 4 GB memory.
-         * <p>
+         * <p>The reserved storage resources. Valid values: 0ACU to 2064ACU. The value must be in increments of 24ACU. Each ACU is approximately equal to 1 core and 4 GB memory.</p>
+         * <blockquote>
+         * <p> This parameter must be specified with a unit.</p>
+         * </blockquote>
          * 
-         * >  This parameter must be specified with a unit.
+         * <strong>example:</strong>
+         * <p>24ACU</p>
          */
         public Builder storageResource(String storageResource) {
             this.putQueryParameter("StorageResource", storageResource);

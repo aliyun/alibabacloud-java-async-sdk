@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetViewObjectsRequest} extends {@link RequestModel}
  *
  * <p>GetViewObjectsRequest</p>
@@ -167,7 +168,11 @@ public class GetViewObjectsRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-bp1xxxxxxxx47</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -176,7 +181,10 @@ public class GetViewObjectsRequest extends Request {
         }
 
         /**
-         * The owner of the view.
+         * <p>The owner of the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         public Builder filterOwner(String filterOwner) {
             this.putQueryParameter("FilterOwner", filterOwner);
@@ -185,7 +193,10 @@ public class GetViewObjectsRequest extends Request {
         }
 
         /**
-         * The name of the view.
+         * <p>The name of the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_filter</p>
          */
         public Builder filterViewName(String filterViewName) {
             this.putQueryParameter("FilterViewName", filterViewName);
@@ -194,16 +205,14 @@ public class GetViewObjectsRequest extends Request {
         }
 
         /**
-         * The type of the view.
-         * <p>
+         * <p>The type of the view.</p>
+         * <p>Valid values:</p>
+         * <p>-VIRTUAL_VIEW</p>
+         * <p>-MATERIALIZED_VIEW</p>
+         * <p>Default value: null.</p>
          * 
-         * Valid values:
-         * 
-         * \-VIRTUAL_VIEW
-         * 
-         * \-MATERIALIZED_VIEW
-         * 
-         * Default value: null.
+         * <strong>example:</strong>
+         * <p>VIRTUAL_VIEW</p>
          */
         public Builder filterViewType(String filterViewType) {
             this.putQueryParameter("FilterViewType", filterViewType);
@@ -212,19 +221,18 @@ public class GetViewObjectsRequest extends Request {
         }
 
         /**
-         * The order in which you want to sort the query results. Valid values for Type:
-         * <p>
+         * <p>The order in which you want to sort the query results. Valid values for Type:</p>
+         * <ul>
+         * <li>Asc</li>
+         * <li>Desc</li>
+         * </ul>
+         * <p>Valid values for Field: -ViewName</p>
+         * <p>-CreateTime</p>
+         * <p>-UpdateTime</p>
+         * <p>Default value: {&quot;Type&quot;: &quot;Desc&quot;,&quot;Field&quot;: &quot;ViewName&quot;}.</p>
          * 
-         * *   Asc
-         * *   Desc
-         * 
-         * Valid values for Field: -ViewName
-         * 
-         * \-CreateTime
-         * 
-         * \-UpdateTime
-         * 
-         * Default value: {"Type": "Desc","Field": "ViewName"}.
+         * <strong>example:</strong>
+         * <p>{&quot;Type&quot;: &quot;Desc&quot;,&quot;Field&quot;: &quot;ViewName&quot;}</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -233,7 +241,10 @@ public class GetViewObjectsRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -242,12 +253,15 @@ public class GetViewObjectsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values:
-         * <p>
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong> (default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
          * 
-         * *   **30** (default)
-         * *   **50**
-         * *   **100**
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -256,7 +270,11 @@ public class GetViewObjectsRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster.
+         * <p>The region ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -265,7 +283,10 @@ public class GetViewObjectsRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb_demo</p>
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("SchemaName", schemaName);

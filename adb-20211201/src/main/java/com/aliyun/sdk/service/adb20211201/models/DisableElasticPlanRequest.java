@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisableElasticPlanRequest} extends {@link RequestModel}
  *
  * <p>DisableElasticPlanRequest</p>
@@ -69,10 +70,14 @@ public class DisableElasticPlanRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBClusters](~~454250~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
+         * <strong>example:</strong>
+         * <p>amv-wz9509beptiz****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -81,10 +86,14 @@ public class DisableElasticPlanRequest extends Request {
         }
 
         /**
-         * The name of the scaling plan.
-         * <p>
+         * <p>The name of the scaling plan.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/601334.html">DescribeElasticPlans</a> operation to query the names of scaling plans.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeElasticPlans](~~601334~~) operation to query the names of scaling plans.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder elasticPlanName(String elasticPlanName) {
             this.putQueryParameter("ElasticPlanName", elasticPlanName);

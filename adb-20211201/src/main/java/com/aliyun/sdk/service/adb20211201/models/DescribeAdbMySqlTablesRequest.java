@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAdbMySqlTablesRequest} extends {@link RequestModel}
  *
  * <p>DescribeAdbMySqlTablesRequest</p>
@@ -83,7 +84,11 @@ public class DescribeAdbMySqlTablesRequest extends Request {
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp11q28kvl688****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -92,10 +97,14 @@ public class DescribeAdbMySqlTablesRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster.
-         * <p>
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeRegions](~~454314~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -104,7 +113,10 @@ public class DescribeAdbMySqlTablesRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb_demo</p>
          */
         public Builder schema(String schema) {
             this.putQueryParameter("Schema", schema);

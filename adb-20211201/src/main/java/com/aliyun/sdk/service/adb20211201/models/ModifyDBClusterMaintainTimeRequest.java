@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBClusterMaintainTimeRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBClusterMaintainTimeRequest</p>
@@ -69,7 +70,11 @@ public class ModifyDBClusterMaintainTimeRequest extends Request {
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp1r053byu48p****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -78,10 +83,14 @@ public class ModifyDBClusterMaintainTimeRequest extends Request {
         }
 
         /**
-         * The maintenance window of the cluster. It must be in the hh:mmZ-hh:mmZ format.
-         * <p>
+         * <p>The maintenance window of the cluster. It must be in the hh:mmZ-hh:mmZ format.</p>
+         * <blockquote>
+         * <p>The interval must be 1 hour and start and end at the beginning of an hour.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The interval must be 1 hour and start and end at the beginning of an hour.
+         * <strong>example:</strong>
+         * <p>22:00Z-23:00Z</p>
          */
         public Builder maintainTime(String maintainTime) {
             this.putQueryParameter("MaintainTime", maintainTime);

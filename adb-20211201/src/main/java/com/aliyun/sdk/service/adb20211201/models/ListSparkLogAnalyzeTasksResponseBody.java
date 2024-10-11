@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSparkLogAnalyzeTasksResponseBody} extends {@link TeaModel}
  *
  * <p>ListSparkLogAnalyzeTasksResponseBody</p>
@@ -49,7 +50,7 @@ public class ListSparkLogAnalyzeTasksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class ListSparkLogAnalyzeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1DF5AF5B-C803-1861-A0FF-63666A557709</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListSparkLogAnalyzeTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSparkLogAnalyzeTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSparkLogAnalyzeTasksResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Long pageNumber;
@@ -133,7 +143,10 @@ public class ListSparkLogAnalyzeTasksResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -141,7 +154,10 @@ public class ListSparkLogAnalyzeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -149,7 +165,7 @@ public class ListSparkLogAnalyzeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The queried Spark log analysis tasks.
+             * <p>The queried Spark log analysis tasks.</p>
              */
             public Builder taskList(java.util.List < SparkAnalyzeLogTask > taskList) {
                 this.taskList = taskList;
@@ -157,7 +173,10 @@ public class ListSparkLogAnalyzeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

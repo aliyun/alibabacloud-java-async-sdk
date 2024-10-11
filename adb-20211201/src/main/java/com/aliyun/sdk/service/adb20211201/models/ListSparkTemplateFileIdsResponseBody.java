@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSparkTemplateFileIdsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSparkTemplateFileIdsResponseBody</p>
@@ -49,7 +50,7 @@ public class ListSparkTemplateFileIdsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IDs of Spark template files.
+         * <p>The IDs of Spark template files.</p>
          */
         public Builder data(java.util.List < Long > data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class ListSparkTemplateFileIdsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

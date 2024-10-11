@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Filters} extends {@link TeaModel}
  *
  * <p>Filters</p>
@@ -170,6 +171,12 @@ public class Filters extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link Filters} extends {@link TeaModel}
+     *
+     * <p>Filters</p>
+     */
     public static class ExecutionTimeRange extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxTimeInSeconds")
         private Long maxTimeInSeconds;
@@ -231,6 +238,12 @@ public class Filters extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Filters} extends {@link TeaModel}
+     *
+     * <p>Filters</p>
+     */
     public static class SubmitTimeRange extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxTimeInMills")
         private Long maxTimeInMills;
@@ -292,6 +305,12 @@ public class Filters extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Filters} extends {@link TeaModel}
+     *
+     * <p>Filters</p>
+     */
     public static class TermiatedTimeRange extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxTimeInMills")
         private Long maxTimeInMills;

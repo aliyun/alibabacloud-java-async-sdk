@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link KillSparkLogAnalyzeTaskResponseBody} extends {@link TeaModel}
  *
  * <p>KillSparkLogAnalyzeTaskResponseBody</p>
@@ -49,7 +50,7 @@ public class KillSparkLogAnalyzeTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the Spark log analysis task.
+         * <p>The information about the Spark log analysis task.</p>
          */
         public Builder data(SparkAnalyzeLogTask data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class KillSparkLogAnalyzeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1DF5AF5B-C803-1861-A0FF-63666A557709</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

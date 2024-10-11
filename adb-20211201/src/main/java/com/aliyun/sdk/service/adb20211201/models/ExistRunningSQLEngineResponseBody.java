@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExistRunningSQLEngineResponseBody} extends {@link TeaModel}
  *
  * <p>ExistRunningSQLEngineResponseBody</p>
@@ -49,13 +50,15 @@ public class ExistRunningSQLEngineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether a running SQL engine exists in the resource group.
-         * <p>
+         * <p>Indicates whether a running SQL engine exists in the resource group.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>True</strong></li>
+         * <li><strong>False</strong></li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   **True**
-         * *   **False**
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -63,7 +66,10 @@ public class ExistRunningSQLEngineResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FA675D68-14A4-5D9C-8820-92537D9F447E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

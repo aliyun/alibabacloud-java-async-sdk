@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetViewObjectsResponseBody} extends {@link TeaModel}
  *
  * <p>GetViewObjectsResponseBody</p>
@@ -85,7 +86,7 @@ public class GetViewObjectsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -93,7 +94,10 @@ public class GetViewObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: **1**.
+         * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,12 +105,15 @@ public class GetViewObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page. Valid values:
-         * <p>
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong> (default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
          * 
-         * *   **30** (default)
-         * *   **50**
-         * *   **100**
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -114,7 +121,10 @@ public class GetViewObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +132,10 @@ public class GetViewObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -135,6 +148,12 @@ public class GetViewObjectsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetViewObjectsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetViewObjectsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Long pageNumber;
@@ -198,7 +217,10 @@ public class GetViewObjectsResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The page number. Pages start from page 1. Default value: **1**.
+             * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -206,12 +228,15 @@ public class GetViewObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page. Valid values:
-             * <p>
+             * <p>The number of entries per page. Valid values:</p>
+             * <ul>
+             * <li><strong>30</strong> (default)</li>
+             * <li><strong>50</strong></li>
+             * <li><strong>100</strong></li>
+             * </ul>
              * 
-             * *   **30** (default)
-             * *   **50**
-             * *   **100**
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -219,7 +244,7 @@ public class GetViewObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The queried views.
+             * <p>The queried views.</p>
              */
             public Builder tableSummaryModels(java.util.List < TableSummaryModel > tableSummaryModels) {
                 this.tableSummaryModels = tableSummaryModels;
@@ -227,7 +252,10 @@ public class GetViewObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

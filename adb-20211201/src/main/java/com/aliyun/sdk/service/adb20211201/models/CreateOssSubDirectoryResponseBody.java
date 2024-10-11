@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOssSubDirectoryResponseBody} extends {@link TeaModel}
  *
  * <p>CreateOssSubDirectoryResponseBody</p>
@@ -85,7 +86,7 @@ public class CreateOssSubDirectoryResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -93,7 +94,10 @@ public class CreateOssSubDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The response code. The status code 200 indicates that the request was successful.
+         * <p>The response code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -101,11 +105,14 @@ public class CreateOssSubDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <ul>
+         * <li>If the request was successful, a <strong>success</strong> message is returned.</li>
+         * <li>If the request failed, an error message is returned.</li>
+         * </ul>
          * 
-         * *   If the request was successful, a **success** message is returned.
-         * *   If the request failed, an error message is returned.
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +120,10 @@ public class CreateOssSubDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3A0DE2E0-A37B-5EE4-9136-C4C473714802</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +131,14 @@ public class CreateOssSubDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,6 +151,12 @@ public class CreateOssSubDirectoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateOssSubDirectoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateOssSubDirectoryResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientCRC")
         private Long clientCRC;
@@ -201,7 +220,10 @@ public class CreateOssSubDirectoryResponseBody extends TeaModel {
             private Long serverCRC; 
 
             /**
-             * The cyclic redundancy check (CRC) value on the client.
+             * <p>The cyclic redundancy check (CRC) value on the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder clientCRC(Long clientCRC) {
                 this.clientCRC = clientCRC;
@@ -209,7 +231,10 @@ public class CreateOssSubDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the OSS path.
+             * <p>The tag of the OSS path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder eTag(String eTag) {
                 this.eTag = eTag;
@@ -217,7 +242,10 @@ public class CreateOssSubDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The request ID.
+             * <p>The request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3A0DE2E0-A37B-5EE4-9136-C4C473714802</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -225,7 +253,10 @@ public class CreateOssSubDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The CRC-64 value on the OSS bucket.
+             * <p>The CRC-64 value on the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder serverCRC(Long serverCRC) {
                 this.serverCRC = serverCRC;

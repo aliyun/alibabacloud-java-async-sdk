@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOssSubDirectoryRequest} extends {@link RequestModel}
  *
  * <p>CreateOssSubDirectoryRequest</p>
@@ -69,10 +70,14 @@ public class CreateOssSubDirectoryRequest extends Request {
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
-         * <p>
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region, including cluster IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBClusters](~~612397~~) operation to query the information about all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region, including cluster IDs.
+         * <strong>example:</strong>
+         * <p>amv-bp149vz49b36t****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putBodyParameter("DBClusterId", DBClusterId);
@@ -81,7 +86,11 @@ public class CreateOssSubDirectoryRequest extends Request {
         }
 
         /**
-         * The OSS path where you want to create a subdirectory.
+         * <p>The OSS path where you want to create a subdirectory.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://testBucketName/das_lakehouse</p>
          */
         public Builder path(String path) {
             this.putBodyParameter("Path", path);

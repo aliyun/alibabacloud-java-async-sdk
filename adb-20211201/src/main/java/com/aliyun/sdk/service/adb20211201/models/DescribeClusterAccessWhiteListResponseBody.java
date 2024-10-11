@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterAccessWhiteListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClusterAccessWhiteListResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeClusterAccessWhiteListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The queried IP address whitelists.
+         * <p>The queried IP address whitelists.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -57,7 +58,10 @@ public class DescribeClusterAccessWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>370D09FD-442A-5225-AAD3-7362CAE39177</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeClusterAccessWhiteListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClusterAccessWhiteListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterAccessWhiteListResponseBody</p>
+     */
     public static class IPArray extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBClusterIPArrayAttribute")
         private String DBClusterIPArrayAttribute;
@@ -121,10 +131,13 @@ public class DescribeClusterAccessWhiteListResponseBody extends TeaModel {
             private String securityIPList; 
 
             /**
-             * The attribute of the whitelist.
-             * <p>
+             * <p>The attribute of the whitelist.</p>
+             * <blockquote>
+             * <p>Whitelists with the <strong>hidden</strong> attribute are not displayed in the console. Those whitelists are used to access Data Transmission Service (DTS) and PolarDB.</p>
+             * </blockquote>
              * 
-             * > Whitelists with the **hidden** attribute are not displayed in the console. Those whitelists are used to access Data Transmission Service (DTS) and PolarDB.
+             * <strong>example:</strong>
+             * <p>hidden</p>
              */
             public Builder DBClusterIPArrayAttribute(String DBClusterIPArrayAttribute) {
                 this.DBClusterIPArrayAttribute = DBClusterIPArrayAttribute;
@@ -132,10 +145,11 @@ public class DescribeClusterAccessWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IP address whitelist.
-             * <p>
+             * <p>The name of the IP address whitelist.</p>
+             * <p>Each cluster supports up to 50 IP address whitelists.</p>
              * 
-             * Each cluster supports up to 50 IP address whitelists.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder DBClusterIPArrayName(String DBClusterIPArrayName) {
                 this.DBClusterIPArrayName = DBClusterIPArrayName;
@@ -143,7 +157,10 @@ public class DescribeClusterAccessWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses in the IP address whitelist. Up to 500 IP addresses can be returned. Multiple IP addresses are separated by commas (,).
+             * <p>The IP addresses in the IP address whitelist. Up to 500 IP addresses can be returned. Multiple IP addresses are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.xx.xx</p>
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -157,6 +174,12 @@ public class DescribeClusterAccessWhiteListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterAccessWhiteListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterAccessWhiteListResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IPArray")
         private java.util.List < IPArray> IPArray;

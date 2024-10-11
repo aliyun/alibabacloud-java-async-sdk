@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyClusterConnectionStringRequest} extends {@link RequestModel}
  *
  * <p>ModifyClusterConnectionStringRequest</p>
@@ -98,11 +99,15 @@ public class ModifyClusterConnectionStringRequest extends Request {
         } 
 
         /**
-         * The prefix of the public endpoint.
-         * <p>
+         * <p>The prefix of the public endpoint.</p>
+         * <ul>
+         * <li>The prefix can contain lowercase letters, digits, and hyphens (-). It must start with a lowercase letter.</li>
+         * <li>The prefix can be up to 30 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The prefix can contain lowercase letters, digits, and hyphens (-). It must start with a lowercase letter.
-         * *   The prefix can be up to 30 characters in length.
+         * <strong>example:</strong>
+         * <p>test-123</p>
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -111,7 +116,11 @@ public class ModifyClusterConnectionStringRequest extends Request {
         }
 
         /**
-         * The public endpoint of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * <p>The public endpoint of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp11q28kvl688****.ads.aliyuncs.com</p>
          */
         public Builder currentConnectionString(String currentConnectionString) {
             this.putQueryParameter("CurrentConnectionString", currentConnectionString);
@@ -120,7 +129,11 @@ public class ModifyClusterConnectionStringRequest extends Request {
         }
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp11q28kvl688****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -129,7 +142,10 @@ public class ModifyClusterConnectionStringRequest extends Request {
         }
 
         /**
-         * The port number. Set the value to **3306**.
+         * <p>The port number. Set the value to <strong>3306</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);

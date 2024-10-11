@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePerformanceViewsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePerformanceViewsResponseBody</p>
@@ -61,7 +62,21 @@ public class DescribePerformanceViewsResponseBody extends TeaModel {
         private java.util.List < Views> views; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if Resource Access Management (RAM) permission verification failed.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,
+         *     &quot;AuthPrincipalOwnerId&quot;: &quot;1**<em><strong><strong><strong><strong><strong><strong><strong>7&quot;,
+         *     &quot;EncodedDiagnosticMessage&quot;: &quot;AQIBIAAAAOPdwKY2QLOvgMEc7SkkoJfj1kvZwsaRqNYMh10Tv0wTe0fCzaCdrvgazfNb0EnJKETgXyhR+3BIQjx9WAqZryejBsp1Bl4qI5En/D9dEhcXAtKCxCmE2kZCiEzpy8BoEUt+bs0DmlaGWO5xkEpttypLIB4rUhDvZd+zwPg4EXk4KSSWSWsurxtqDkKEMshKlQFBTKvJcKwyhk62IeYly4hQ+5IpXjkh1GQXuDRCQ==&quot;,
+         *     &quot;AuthPrincipalType&quot;: &quot;SubUser&quot;,
+         *     &quot;AuthPrincipalDisplayName&quot;: &quot;2</strong></strong></strong></strong></strong></strong></strong></em>9&quot;,
+         *     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,
+         *     &quot;AuthAction&quot;: &quot;adb:DescribeExcessivePrimaryKeys&quot;
+         * }</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -69,7 +84,10 @@ public class DescribePerformanceViewsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3A8F6106-6AFD-5A34-9C80-8DE2C42D06E8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +95,7 @@ public class DescribePerformanceViewsResponseBody extends TeaModel {
         }
 
         /**
-         * Views.
+         * <p>the list of view.</p>
          */
         public Builder views(java.util.List < Views> views) {
             this.views = views;
@@ -90,6 +108,12 @@ public class DescribePerformanceViewsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePerformanceViewsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePerformanceViewsResponseBody</p>
+     */
     public static class Views extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -141,7 +165,10 @@ public class DescribePerformanceViewsResponseBody extends TeaModel {
             private String viewName; 
 
             /**
-             * CreateTime.
+             * <p>The time when created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-06-18T07:06:53.000+00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -149,7 +176,10 @@ public class DescribePerformanceViewsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-06-18T07:07:32.000+00:00</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -157,7 +187,10 @@ public class DescribePerformanceViewsResponseBody extends TeaModel {
             }
 
             /**
-             * ViewName.
+             * <p>The name of the view.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Basic</p>
              */
             public Builder viewName(String viewName) {
                 this.viewName = viewName;

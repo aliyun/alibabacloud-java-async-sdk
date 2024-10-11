@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSQLPatternsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSQLPatternsResponseBody</p>
@@ -105,7 +106,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -113,7 +117,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,7 +128,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         }
 
         /**
-         * The queried SQL pattern.
+         * <p>The queried SQL patterns.</p>
          */
         public Builder patternDetails(java.util.List < PatternDetails> patternDetails) {
             this.patternDetails = patternDetails;
@@ -129,7 +136,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F3174013-5B7A-5A47-9FE0-6B5D397BD86B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +147,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -150,6 +163,12 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSQLPatternsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSQLPatternsResponseBody</p>
+     */
     public static class PatternDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessIp")
         private String accessIp;
@@ -537,7 +556,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * The IP address of the SQL client that commits the SQL pattern.
+             * <p>The IP address of the SQL client that commits the SQL pattern.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.xx.xx</p>
              */
             public Builder accessIp(String accessIp) {
                 this.accessIp = accessIp;
@@ -545,7 +567,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * The average execution duration of the SQL pattern within the query time range. Unit: milliseconds.
+             * <p>The average execution duration of the SQL pattern within the query time range. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234.78</p>
              */
             public Builder averageExecutionTime(Double averageExecutionTime) {
                 this.averageExecutionTime = averageExecutionTime;
@@ -561,7 +586,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * The average peak memory usage of the SQL pattern within the query time range. Unit: bytes.
+             * <p>The average peak memory usage of the SQL pattern within the query time range. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234.22</p>
              */
             public Builder averagePeakMemory(Double averagePeakMemory) {
                 this.averagePeakMemory = averagePeakMemory;
@@ -569,7 +597,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * The average total amount of time consumed by the SQL pattern within the query time range. Unit: milliseconds.
+             * <p>The average total amount of time consumed by the SQL pattern within the query time range. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder averageQueryTime(Double averageQueryTime) {
                 this.averageQueryTime = averageQueryTime;
@@ -585,7 +616,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * The average amount of data scanned based on the SQL pattern within the query time range. Unit: bytes.
+             * <p>The average amount of data scanned based on the SQL pattern within the query time range. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234149.23</p>
              */
             public Builder averageScanSize(Double averageScanSize) {
                 this.averageScanSize = averageScanSize;
@@ -593,13 +627,17 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the execution of the SQL pattern can be intercepted. Valid values:
-             * <p>
+             * <p>Indicates whether the execution of the SQL pattern can be intercepted. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p> Only SELECT and INSERT statements can be intercepted.</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false**
-             * 
-             * >  Only SELECT and INSERT statements can be intercepted.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder blockable(Boolean blockable) {
                 this.blockable = blockable;
@@ -607,7 +645,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of failed queries executed in association with the SQL pattern within the query time range.
+             * <p>The number of failed queries executed in association with the SQL pattern within the query time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18</p>
              */
             public Builder failedCount(Long failedCount) {
                 this.failedCount = failedCount;
@@ -615,7 +656,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum execution duration of the SQL pattern within the query time range. Unit: milliseconds.
+             * <p>The maximum execution duration of the SQL pattern within the query time range. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2142</p>
              */
             public Builder maxExecutionTime(Long maxExecutionTime) {
                 this.maxExecutionTime = maxExecutionTime;
@@ -631,7 +675,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum peak memory usage of the SQL pattern within the query time range. Unit: bytes.
+             * <p>The maximum peak memory usage of the SQL pattern within the query time range. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234149</p>
              */
             public Builder maxPeakMemory(Long maxPeakMemory) {
                 this.maxPeakMemory = maxPeakMemory;
@@ -639,7 +686,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum total amount of time consumed by the SQL pattern within the query time range. Unit: milliseconds.
+             * <p>The maximum total amount of time consumed by the SQL pattern within the query time range. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2341</p>
              */
             public Builder maxQueryTime(Long maxQueryTime) {
                 this.maxQueryTime = maxQueryTime;
@@ -655,7 +705,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum amount of data scanned based on the SQL pattern within the query time range. Unit: bytes.
+             * <p>The maximum amount of data scanned based on the SQL pattern within the query time range. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32212254</p>
              */
             public Builder maxScanSize(Long maxScanSize) {
                 this.maxScanSize = maxScanSize;
@@ -679,7 +732,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * The earliest commit time of the SQL pattern within the query time range.
+             * <p>The earliest commit time of the SQL pattern within the query time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-06 05:06:00</p>
              */
             public Builder patternCreationTime(String patternCreationTime) {
                 this.patternCreationTime = patternCreationTime;
@@ -687,7 +743,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SQL pattern.
+             * <p>The ID of the SQL pattern.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5575924945138******</p>
              */
             public Builder patternId(String patternId) {
                 this.patternId = patternId;
@@ -711,7 +770,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of queries executed in association with the SQL pattern within the query time range.
+             * <p>The number of queries executed in association with the SQL pattern within the query time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>345</p>
              */
             public Builder queryCount(Long queryCount) {
                 this.queryCount = queryCount;
@@ -735,7 +797,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * The statement of the SQL pattern.
+             * <p>The statement of the SQL pattern.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT * FROM KEPLER_META_NODE_STATIC_INFO WHERE elastic_node = ? OR (elastic_node = ? AND enable = ?)</p>
              */
             public Builder SQLPattern(String SQLPattern) {
                 this.SQLPattern = SQLPattern;
@@ -775,7 +840,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * The tables scanned based on the SQL pattern.
+             * <p>The tables scanned based on the SQL pattern.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tpch.orders</p>
              */
             public Builder tables(String tables) {
                 this.tables = tables;
@@ -783,7 +851,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database account that is used to commit the SQL pattern.
+             * <p>The name of the database account that is used to commit the SQL pattern.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder user(String user) {
                 this.user = user;

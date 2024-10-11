@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperatorNode} extends {@link TeaModel}
  *
  * <p>OperatorNode</p>
@@ -190,6 +191,12 @@ public class OperatorNode extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link OperatorNode} extends {@link TeaModel}
+     *
+     * <p>OperatorNode</p>
+     */
     public static class Stats extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bytes")
         private Long bytes;

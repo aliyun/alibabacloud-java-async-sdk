@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocateClusterPublicConnectionRequest} extends {@link RequestModel}
  *
  * <p>AllocateClusterPublicConnectionRequest</p>
@@ -82,11 +83,14 @@ public class AllocateClusterPublicConnectionRequest extends Request {
         } 
 
         /**
-         * The prefix of the public endpoint.
-         * <p>
+         * <p>The prefix of the public endpoint.</p>
+         * <ul>
+         * <li>The prefix can contain lowercase letters, digits, and hyphens (-). It must start with a lowercase letter.</li>
+         * <li>The prefix can be up to 30 characters in length.</li>
+         * </ul>
          * 
-         * *   The prefix can contain lowercase letters, digits, and hyphens (-). It must start with a lowercase letter.
-         * *   The prefix can be up to 30 characters in length.
+         * <strong>example:</strong>
+         * <p>test12</p>
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -95,7 +99,11 @@ public class AllocateClusterPublicConnectionRequest extends Request {
         }
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp1z5d2q71is2****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -104,11 +112,14 @@ public class AllocateClusterPublicConnectionRequest extends Request {
         }
 
         /**
-         * The database engine of the cluster. Valid values:
-         * <p>
+         * <p>The database engine of the cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>AnalyticDB</strong> (default): the AnalyticDB for MySQL engine.</li>
+         * <li><strong>Clickhouse</strong>: the wide table engine.</li>
+         * </ul>
          * 
-         * *   **AnalyticDB** (default): the AnalyticDB for MySQL engine.
-         * *   **Clickhouse**: the wide table engine.
+         * <strong>example:</strong>
+         * <p>Clickhouse</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);

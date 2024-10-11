@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteProcessInstanceRequest} extends {@link RequestModel}
  *
  * <p>DeleteProcessInstanceRequest</p>
@@ -99,10 +100,14 @@ public class DeleteProcessInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
-         * <p>
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBClusters](~~612397~~) operation to query the IDs of all AnalyticDB for MySQL clusters within a region.
+         * <strong>example:</strong>
+         * <p>am-wz9rq819u71ig****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -111,7 +116,11 @@ public class DeleteProcessInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the workflow instance.
+         * <p>The ID of the workflow instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4017</p>
          */
         public Builder processInstanceId(Long processInstanceId) {
             this.putQueryParameter("ProcessInstanceId", processInstanceId);
@@ -120,7 +129,11 @@ public class DeleteProcessInstanceRequest extends Request {
         }
 
         /**
-         * The project ID, which is the unique identifier of the project.
+         * <p>The project ID, which is the unique identifier of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9839028042592</p>
          */
         public Builder projectCode(Long projectCode) {
             this.putQueryParameter("ProjectCode", projectCode);
@@ -129,7 +142,11 @@ public class DeleteProcessInstanceRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster.
+         * <p>The region ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

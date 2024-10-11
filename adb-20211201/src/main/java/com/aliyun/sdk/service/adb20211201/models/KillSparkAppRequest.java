@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link KillSparkAppRequest} extends {@link RequestModel}
  *
  * <p>KillSparkAppRequest</p>
@@ -68,7 +69,11 @@ public class KillSparkAppRequest extends Request {
         } 
 
         /**
-         * The ID of the Spark application that you want to terminate.
+         * <p>The ID of the Spark application that you want to terminate.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s202204132018hzprec1ac****</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -77,10 +82,13 @@ public class KillSparkAppRequest extends Request {
         }
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
-         * <p>
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBClusters](~~454250~~) operation to query the IDs of all AnalyticDB for MySQL clusters within a region.
+         * <strong>example:</strong>
+         * <p>amv-bp1ub9grke1****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

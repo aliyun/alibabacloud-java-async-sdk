@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterNetInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeClusterNetInfoRequest</p>
@@ -68,10 +69,14 @@ public class DescribeClusterNetInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
-         * <p>
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region, including cluster IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region, including cluster IDs.
+         * <strong>example:</strong>
+         * <p>amv-wz9dqvn0o7****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -80,11 +85,14 @@ public class DescribeClusterNetInfoRequest extends Request {
         }
 
         /**
-         * The database engine of the cluster. Valid values:
-         * <p>
+         * <p>The database engine of the cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>AnalyticDB</strong> (default): the AnalyticDB for MySQL engine.</li>
+         * <li><strong>Clickhouse</strong>: the wide table engine.</li>
+         * </ul>
          * 
-         * *   **AnalyticDB** (default): the AnalyticDB for MySQL engine.
-         * *   **Clickhouse**: the wide table engine.
+         * <strong>example:</strong>
+         * <p>Clickhouse</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);

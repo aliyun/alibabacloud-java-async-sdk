@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSparkSQLEngineStateRequest} extends {@link RequestModel}
  *
  * <p>GetSparkSQLEngineStateRequest</p>
@@ -69,7 +70,11 @@ public class GetSparkSQLEngineStateRequest extends Request {
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp11q28kvl688****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putBodyParameter("DBClusterId", DBClusterId);
@@ -78,7 +83,11 @@ public class GetSparkSQLEngineStateRequest extends Request {
         }
 
         /**
-         * The name of the job resource group.
+         * <p>The name of the job resource group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_instance</p>
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putBodyParameter("ResourceGroupName", resourceGroupName);

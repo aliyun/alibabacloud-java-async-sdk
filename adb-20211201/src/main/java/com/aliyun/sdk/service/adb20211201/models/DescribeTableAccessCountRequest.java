@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTableAccessCountRequest} extends {@link RequestModel}
  *
  * <p>DescribeTableAccessCountRequest</p>
@@ -139,10 +140,14 @@ public class DescribeTableAccessCountRequest extends Request {
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
-         * <p>
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBClusters](~~454250~~) operation to query the IDs of all AnalyticDB for MySQL clusters within a region.
+         * <strong>example:</strong>
+         * <p>amv-2ze627uzpkh8a8****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -151,21 +156,28 @@ public class DescribeTableAccessCountRequest extends Request {
         }
 
         /**
-         * The order by which to sort query results. Specify the parameter value in the JSON string format. Example: `[{"Field":"TableSchema","Type":"Asc"}]`. Fields in the request parameter:
-         * <p>
+         * <p>The order by which to sort query results. Specify the parameter value in the JSON string format. Example: <code>[{&quot;Field&quot;:&quot;TableSchema&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</code>. Fields in the request parameter:</p>
+         * <ul>
+         * <li><p><code>Field</code> specifies the field by which to sort the query results. Valid values:</p>
+         * <ul>
+         * <li><code>TableSchema</code>: the name of the database to which the table belongs.</li>
+         * <li><code>TableName</code>: the name of the table.</li>
+         * <li><code>AccessCount</code>: the number of accesses to the table.</li>
+         * </ul>
+         * </li>
+         * <li><p><code>Type</code> specifies the sorting order. Valid values:</p>
+         * <ul>
+         * <li><code>Asc</code>: ascending order.</li>
+         * <li><code>Desc</code>: descending order.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p> If you do not specify this parameter, query results are sorted in ascending order based on the database and the table.</p>
+         * </blockquote>
          * 
-         * *   `Field` specifies the field by which to sort the query results. Valid values:
-         * 
-         *     *   `TableSchema`: the name of the database to which the table belongs.
-         *     *   `TableName`: the name of the table.
-         *     *   `AccessCount`: the number of accesses to the table.
-         * 
-         * *   `Type` specifies the sorting order. Valid values:
-         * 
-         *     *   `Asc`: ascending order.
-         *     *   `Desc`: descending order.
-         * 
-         * >  If you do not specify this parameter, query results are sorted in ascending order based on the database and the table.
+         * <strong>example:</strong>
+         * <p>[{&quot;Field&quot;:&quot;TableSchema&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -174,7 +186,10 @@ public class DescribeTableAccessCountRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from 1. Default value: **1**.
+         * <p>The page number. Pages start from 1. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -183,13 +198,16 @@ public class DescribeTableAccessCountRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values:
-         * <p>
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>10</strong> (default)</li>
+         * <li><strong>30</strong></li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
          * 
-         * *   **10** (default)
-         * *   **30**
-         * *   **50**
-         * *   **100**
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -198,7 +216,11 @@ public class DescribeTableAccessCountRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster.
+         * <p>The region ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -207,10 +229,13 @@ public class DescribeTableAccessCountRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * <p>
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p> Only data within the last 30 days can be queried.</p>
+         * </blockquote>
          * 
-         * >  Only data within the last 30 days can be queried.
+         * <strong>example:</strong>
+         * <p>2022-09-25T12:10:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -219,10 +244,13 @@ public class DescribeTableAccessCountRequest extends Request {
         }
 
         /**
-         * The name of the table.
-         * <p>
+         * <p>The name of the table.</p>
+         * <blockquote>
+         * <p> If you leave this parameter empty, the number of accesses to all tables in the cluster on a date is returned.</p>
+         * </blockquote>
          * 
-         * >  If you leave this parameter empty, the number of accesses to all tables in the cluster on a date is returned.
+         * <strong>example:</strong>
+         * <p>CUSTOMER</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

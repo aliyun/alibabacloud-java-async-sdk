@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDBResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteDBResourceGroupRequest</p>
@@ -69,7 +70,11 @@ public class DeleteDBResourceGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp11q28kvl688****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -78,10 +83,14 @@ public class DeleteDBResourceGroupRequest extends Request {
         }
 
         /**
-         * The name of the resource group.
-         * <p>
+         * <p>The name of the resource group.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/612410.html">DescribeDBResourceGroup</a> operation to query the information about resource groups of an AnalyticDB for MySQL cluster, including resource group names.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBResourceGroup](~~612410~~) operation to query the information about resource groups of an AnalyticDB for MySQL cluster, including resource group names.
+         * <strong>example:</strong>
+         * <p>test_group</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);

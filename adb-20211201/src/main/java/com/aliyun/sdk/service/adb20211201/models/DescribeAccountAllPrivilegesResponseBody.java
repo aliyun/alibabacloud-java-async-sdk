@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccountAllPrivilegesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAccountAllPrivilegesResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details of the permissions.
+         * <p>Details of the permissions.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3BB185E9-BB54-1727-B876-13243E4C0EB5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAccountAllPrivilegesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccountAllPrivilegesResponseBody</p>
+     */
     public static class PrivilegeObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Column")
         private String column;
@@ -133,7 +143,10 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
             private String table; 
 
             /**
-             * The name of the column.
+             * <p>The name of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id</p>
              */
             public Builder column(String column) {
                 this.column = column;
@@ -141,7 +154,10 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tdb1</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -149,7 +165,10 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the permission object.
+             * <p>The description of the permission object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id of table</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -157,7 +176,10 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table1</p>
              */
             public Builder table(String table) {
                 this.table = table;
@@ -171,6 +193,12 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAccountAllPrivilegesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccountAllPrivilegesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrivilegeObject")
         private PrivilegeObject privilegeObject;
@@ -222,7 +250,7 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
             private java.util.List < String > privileges; 
 
             /**
-             * The objects on which the permission takes effect, including databases, tables, and columns. If Global is returned for the PrivilegeType parameter, an empty string is returned for this parameter.
+             * <p>The objects on which the permission takes effect, including databases, tables, and columns. If Global is returned for the PrivilegeType parameter, an empty string is returned for this parameter.</p>
              */
             public Builder privilegeObject(PrivilegeObject privilegeObject) {
                 this.privilegeObject = privilegeObject;
@@ -230,7 +258,10 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
             }
 
             /**
-             * The permission level of the database account. You can call the `DescribeEnabledPrivileges` operation to query the permission level of the database account.
+             * <p>The permission level of the database account. You can call the <code>DescribeEnabledPrivileges</code> operation to query the permission level of the database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Global</p>
              */
             public Builder privilegeType(String privilegeType) {
                 this.privilegeType = privilegeType;
@@ -238,7 +269,7 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the permission, which is the same as the permission name returned by the `DescribeEnabledPrivileges` operation.
+             * <p>The name of the permission, which is the same as the permission name returned by the <code>DescribeEnabledPrivileges</code> operation.</p>
              */
             public Builder privileges(java.util.List < String > privileges) {
                 this.privileges = privileges;
@@ -252,6 +283,12 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAccountAllPrivilegesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccountAllPrivilegesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Marker")
         private String marker;
@@ -303,7 +340,10 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
             private Boolean truncated; 
 
             /**
-             * Indicates the position where the results are truncated. When a value of `true` is returned for the `Truncated` parameter, this parameter is present and contains the value to use for the Marker parameter in a subsequent call.
+             * <p>Indicates the position where the results are truncated. When a value of <code>true</code> is returned for the <code>Truncated</code> parameter, this parameter is present and contains the value to use for the Marker parameter in a subsequent call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0573e74fd1ccb01739993a691e876074db6e1b6ad79f54115f0e98528432ba6a523cfec5780ade5189299cc3396f6ff7</p>
              */
             public Builder marker(String marker) {
                 this.marker = marker;
@@ -311,7 +351,7 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
             }
 
             /**
-             * The permissions.
+             * <p>The permissions.</p>
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -319,7 +359,10 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the results are truncated. If the results are truncated, a value of `true` is returned. In this case, you must call this operation again to obtain all the results until a value of `false` is returned for this parameter.
+             * <p>Indicates whether the results are truncated. If the results are truncated, a value of <code>true</code> is returned. In this case, you must call this operation again to obtain all the results until a value of <code>false</code> is returned for this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder truncated(Boolean truncated) {
                 this.truncated = truncated;

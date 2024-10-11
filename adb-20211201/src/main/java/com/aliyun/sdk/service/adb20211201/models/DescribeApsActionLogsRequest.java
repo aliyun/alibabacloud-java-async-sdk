@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApsActionLogsRequest} extends {@link RequestModel}
  *
  * <p>DescribeApsActionLogsRequest</p>
@@ -242,10 +243,14 @@ public class DescribeApsActionLogsRequest extends Request {
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
-         * <p>
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBClusters](~~454250~~) operation to query the IDs of all AnalyticDB for MySQL clusters within a region.
+         * <strong>example:</strong>
+         * <p>amv-bp1r053byu48p****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -254,10 +259,14 @@ public class DescribeApsActionLogsRequest extends Request {
         }
 
         /**
-         * The end time of the logs to be queried. Specify the time in the ISO 8601 standard in the **yyyy-MM-ddTHH:mm:ssZ** format. The time must be in UTC.
-         * <p>
+         * <p>The end time of the logs to be queried. Specify the time in the ISO 8601 standard in the <strong>yyyy-MM-ddTHH:mm:ssZ</strong> format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p> The end time must be later than the start time. The maximum time range that can be specified is 30 days.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The end time must be later than the start time. The maximum time range that can be specified is 30 days.
+         * <strong>example:</strong>
+         * <p>2023-02-11T09:30:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -266,7 +275,10 @@ public class DescribeApsActionLogsRequest extends Request {
         }
 
         /**
-         * The keyword that you want to use for fuzzy match in the query.
+         * <p>The keyword that you want to use for fuzzy match in the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table_test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -293,7 +305,10 @@ public class DescribeApsActionLogsRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -302,12 +317,15 @@ public class DescribeApsActionLogsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values:
-         * <p>
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong> (default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
          * 
-         * *   **30** (default)
-         * *   **50**
-         * *   **100**
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -316,10 +334,14 @@ public class DescribeApsActionLogsRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster.
-         * <p>
+         * <p>The region ID of the cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeRegions](~~454314~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -346,14 +368,18 @@ public class DescribeApsActionLogsRequest extends Request {
         }
 
         /**
-         * The phase during which the logs to be queried were generated. Valid values:
-         * <p>
+         * <p>The phase during which the logs to be queried were generated. Valid values:</p>
+         * <ul>
+         * <li><strong>StructureMigrate</strong>: schema migration.</li>
+         * <li><strong>FullDataSync</strong>: full data synchronization.</li>
+         * <li><strong>IncrementalSync</strong>: incremental data synchronization.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you do not specify this parameter, logs of all the phases are queried.</p>
+         * </blockquote>
          * 
-         * *   **StructureMigrate**: schema migration.
-         * *   **FullDataSync**: full data synchronization.
-         * *   **IncrementalSync**: incremental data synchronization.
-         * 
-         * >  If you do not specify this parameter, logs of all the phases are queried.
+         * <strong>example:</strong>
+         * <p>FullDataSync</p>
          */
         public Builder stage(String stage) {
             this.putQueryParameter("Stage", stage);
@@ -362,7 +388,11 @@ public class DescribeApsActionLogsRequest extends Request {
         }
 
         /**
-         * The start time of the logs to be queried. Specify the time in the ISO 8601 standard in the **yyyy-MM-ddTHH:mm:ssZ** format. The time must be in UTC.
+         * <p>The start time of the logs to be queried. Specify the time in the ISO 8601 standard in the <strong>yyyy-MM-ddTHH:mm:ssZ</strong> format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-11T08:30:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -371,14 +401,18 @@ public class DescribeApsActionLogsRequest extends Request {
         }
 
         /**
-         * The types of the logs. Separate multiple log types with commas (,). Valid values:
-         * <p>
+         * <p>The types of the logs. Separate multiple log types with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>INFO</strong></li>
+         * <li><strong>WARN</strong></li>
+         * <li><strong>ERROR</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> If you do not specify this parameter, logs of all types are queried.</p>
+         * </blockquote>
          * 
-         * *   **INFO**
-         * *   **WARN**
-         * *   **ERROR**
-         * 
-         * >  If you do not specify this parameter, logs of all types are queried.
+         * <strong>example:</strong>
+         * <p>INFO,WARN,ERROR</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);
@@ -387,7 +421,11 @@ public class DescribeApsActionLogsRequest extends Request {
         }
 
         /**
-         * The ID of the real-time data ingestion job.
+         * <p>The ID of the real-time data ingestion job.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aps-hz109vpvt4fg8528d****</p>
          */
         public Builder workloadId(String workloadId) {
             this.putQueryParameter("WorkloadId", workloadId);

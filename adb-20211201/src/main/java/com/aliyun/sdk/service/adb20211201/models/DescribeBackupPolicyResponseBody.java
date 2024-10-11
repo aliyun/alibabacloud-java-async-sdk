@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupPolicyResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of days for which data backup files are retained.
+         * <p>The number of days for which data backup files are retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder backupRetentionPeriod(Integer backupRetentionPeriod) {
             this.backupRetentionPeriod = backupRetentionPeriod;
@@ -105,11 +109,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether log backup is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether log backup is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>Enable</strong></li>
+         * <li><strong>Disable</strong></li>
+         * </ul>
          * 
-         * *   **Enable**
-         * *   **Disable**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableBackupLog(String enableBackupLog) {
             this.enableBackupLog = enableBackupLog;
@@ -117,7 +124,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The number of days for which the log backup files are retained.
+         * <p>The number of days for which the log backup files are retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder logBackupRetentionPeriod(Integer logBackupRetentionPeriod) {
             this.logBackupRetentionPeriod = logBackupRetentionPeriod;
@@ -125,16 +135,19 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The cycle based on which backups are performed. If more than one day of the week are specified, the days of the week are separated by commas (,). Valid value:
-         * <p>
+         * <p>The cycle based on which backups are performed. If more than one day of the week is specified, the days of the week are separated by commas (,). Valid value:</p>
+         * <ul>
+         * <li>Monday</li>
+         * <li>Tuesday</li>
+         * <li>Wednesday</li>
+         * <li>Thursday</li>
+         * <li>Friday</li>
+         * <li>Saturday</li>
+         * <li>Sunday</li>
+         * </ul>
          * 
-         * *   Monday
-         * *   Tuesday
-         * *   Wednesday
-         * *   Thursday
-         * *   Friday
-         * *   Saturday
-         * *   Sunday
+         * <strong>example:</strong>
+         * <p>Wednesday,Saturday</p>
          */
         public Builder preferredBackupPeriod(String preferredBackupPeriod) {
             this.preferredBackupPeriod = preferredBackupPeriod;
@@ -142,7 +155,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The data backup time. The time is in the HH:mmZ-HH:mmZ format. The time is displayed in UTC.
+         * <p>The data backup time. The time is in the HH:mmZ-HH:mmZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15:00Z-16:00Z</p>
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.preferredBackupTime = preferredBackupTime;
@@ -150,7 +166,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

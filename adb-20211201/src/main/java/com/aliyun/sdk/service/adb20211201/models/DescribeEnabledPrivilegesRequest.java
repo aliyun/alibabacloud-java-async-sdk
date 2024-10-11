@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnabledPrivilegesRequest} extends {@link RequestModel}
  *
  * <p>DescribeEnabledPrivilegesRequest</p>
@@ -83,10 +84,13 @@ public class DescribeEnabledPrivilegesRequest extends Request {
         } 
 
         /**
-         * The name of the database account.
-         * <p>
+         * <p>The name of the database account.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/612430.html">DescribeAccounts</a> operation to query the information about database accounts for a cluster, including the account name.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeAccounts](~~612430~~) operation to query the information about database accounts for a cluster, including the account name.
+         * <strong>example:</strong>
+         * <p>test_accout</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -95,7 +99,11 @@ public class DescribeEnabledPrivilegesRequest extends Request {
         }
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp14t95lun0w****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -104,7 +112,11 @@ public class DescribeEnabledPrivilegesRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster.
+         * <p>The region ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

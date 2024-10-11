@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSqlPatternResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSqlPatternResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The queried SQL pattern.
+         * <p>The queried SQL pattern.</p>
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -93,7 +94,10 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DB1F6C23-CBCA-5260-9366-BA7BB5EBF6F1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSqlPatternResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSqlPatternResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessIP")
         private String accessIP;
@@ -337,10 +356,13 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * The IP address of the client.
-             * <p>
+             * <p>The IP address of the client.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when <strong>Type</strong> is set to <strong>accessip</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only when **Type** is set to **accessip**.
+             * <strong>example:</strong>
+             * <p>100.104.xx.xx</p>
              */
             public Builder accessIP(String accessIP) {
                 this.accessIP = accessIP;
@@ -348,7 +370,10 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * The average execution duration of the SQL pattern within the query time range. Unit: milliseconds.
+             * <p>The average execution duration of the SQL pattern within the query time range. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0625</p>
              */
             public Builder avgCpuTime(String avgCpuTime) {
                 this.avgCpuTime = avgCpuTime;
@@ -356,7 +381,10 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * The average peak memory usage of the SQL pattern within the query time range. Unit: KB.
+             * <p>The average peak memory usage of the SQL pattern within the query time range. Unit: KB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>240048</p>
              */
             public Builder avgPeakMemory(String avgPeakMemory) {
                 this.avgPeakMemory = avgPeakMemory;
@@ -364,7 +392,10 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * The average amount of data scanned based on the SQL pattern within the query time range. Unit: KB.
+             * <p>The average amount of data scanned based on the SQL pattern within the query time range. Unit: KB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>244</p>
              */
             public Builder avgScanSize(String avgScanSize) {
                 this.avgScanSize = avgScanSize;
@@ -372,7 +403,10 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of scanned rows.
+             * <p>The average number of scanned rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder avgStageCount(String avgStageCount) {
                 this.avgStageCount = avgStageCount;
@@ -380,7 +414,10 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of tasks.
+             * <p>The average number of tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder avgTaskCount(String avgTaskCount) {
                 this.avgTaskCount = avgTaskCount;
@@ -388,7 +425,10 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+             * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amv-bp1ej1nq9n6****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -396,7 +436,10 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum execution duration of the SQL pattern within the query time range. Unit: milliseconds.
+             * <p>The maximum execution duration of the SQL pattern within the query time range. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17</p>
              */
             public Builder maxCpuTime(String maxCpuTime) {
                 this.maxCpuTime = maxCpuTime;
@@ -404,7 +447,10 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum peak memory usage of the SQL pattern within the query time range. Unit: KB.
+             * <p>The maximum peak memory usage of the SQL pattern within the query time range. Unit: KB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>480096</p>
              */
             public Builder maxPeakMemory(String maxPeakMemory) {
                 this.maxPeakMemory = maxPeakMemory;
@@ -412,7 +458,10 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum amount of data scanned based on the SQL pattern within the query time range. Unit: KB.
+             * <p>The maximum amount of data scanned based on the SQL pattern within the query time range. Unit: KB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder maxScanSize(String maxScanSize) {
                 this.maxScanSize = maxScanSize;
@@ -420,7 +469,10 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of stages.
+             * <p>The maximum number of stages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder maxStageCount(String maxStageCount) {
                 this.maxStageCount = maxStageCount;
@@ -428,7 +480,10 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of tasks.
+             * <p>The maximum number of tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder maxTaskCount(String maxTaskCount) {
                 this.maxTaskCount = maxTaskCount;
@@ -436,7 +491,10 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL pattern.
+             * <p>The SQL pattern.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT table_name, table_schema AS schema_name, create_time, create_time AS last_ddl_time, table_comment AS description , ceil((data_length + index_length) / ? / ?) AS store_capacity , data_length AS data_bytes, index_length AS index_bytes, table_collation AS collation, auto_increment, table_rows AS num_rows , engine FROM information_schema.tables WHERE table_type != ? AND table_schema = ? AND table_name IN (?) ORDER BY 1</p>
              */
             public Builder pattern(String pattern) {
                 this.pattern = pattern;
@@ -444,7 +502,10 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * The number of queries performed in association with the SQL pattern within the query time range.
+             * <p>The number of queries performed in association with the SQL pattern within the query time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder queryCount(String queryCount) {
                 this.queryCount = queryCount;
@@ -452,7 +513,10 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * The start date of the query.
+             * <p>The start date of the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-30</p>
              */
             public Builder reportDate(String reportDate) {
                 this.reportDate = reportDate;
@@ -460,10 +524,13 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * The username.
-             * <p>
+             * <p>The username.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when <strong>Type</strong> is left empty or set to <strong>user</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only when **Type** is left empty or set to **user**.
+             * <strong>example:</strong>
+             * <p>test_acc</p>
              */
             public Builder user(String user) {
                 this.user = user;

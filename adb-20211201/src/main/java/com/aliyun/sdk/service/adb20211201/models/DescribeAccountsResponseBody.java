@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccountsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAccountsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The queried database accounts.
+         * <p>The queried database accounts.</p>
          */
         public Builder accountList(AccountList accountList) {
             this.accountList = accountList;
@@ -57,7 +58,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9CCFAAB4-97B7-5800-B9F2-685EB596E3EF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeAccountsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccountsResponseBody</p>
+     */
     public static class DBAccount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountDescription")
         private String accountDescription;
@@ -157,7 +167,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
             private String ramUsers; 
 
             /**
-             * The description of the database account.
+             * <p>The description of the database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_accout_des</p>
              */
             public Builder accountDescription(String accountDescription) {
                 this.accountDescription = accountDescription;
@@ -165,7 +178,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database account.
+             * <p>The name of the database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_accout</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -173,12 +189,15 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the database account. Valid values:
-             * <p>
+             * <p>The status of the database account. Valid values:</p>
+             * <ul>
+             * <li><strong>Creating</strong></li>
+             * <li><strong>Available</strong></li>
+             * <li><strong>Deleting</strong></li>
+             * </ul>
              * 
-             * *   **Creating**
-             * *   **Available**
-             * *   **Deleting**
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
@@ -186,11 +205,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database account. Valid values:
-             * <p>
+             * <p>The type of the database account. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong>: standard account.</li>
+             * <li><strong>Super</strong>: privileged account.</li>
+             * </ul>
              * 
-             * *   **Normal**: standard account.
-             * *   **Super**: privileged account.
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -198,11 +220,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine of the cluster. Valid values:
-             * <p>
+             * <p>The database engine of the cluster. Valid values:</p>
+             * <ul>
+             * <li><strong>AnalyticDB</strong>: the AnalyticDB for MySQL engine.</li>
+             * <li><strong>Clickhouse</strong>: the wide table engine.</li>
+             * </ul>
              * 
-             * *   **AnalyticDB**: the AnalyticDB for MySQL engine.
-             * *   **Clickhouse**: the wide table engine.
+             * <strong>example:</strong>
+             * <p>Clickhouse</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -210,7 +235,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Resource Access Management (RAM) user.
+             * <p>The ID of the Resource Access Management (RAM) user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1958134230****</p>
              */
             public Builder ramUsers(String ramUsers) {
                 this.ramUsers = ramUsers;
@@ -224,6 +252,12 @@ public class DescribeAccountsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccountsResponseBody</p>
+     */
     public static class AccountList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBAccount")
         private java.util.List < DBAccount> DBAccount;

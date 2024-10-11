@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSparkAppsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSparkAppsResponseBody</p>
@@ -85,7 +86,7 @@ public class ListSparkAppsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -93,7 +94,10 @@ public class ListSparkAppsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class ListSparkAppsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class ListSparkAppsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D65A809F-34CE-4550-9BC1-0ED21ETG380</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListSparkAppsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListSparkAppsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSparkAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSparkAppsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppInfoList")
         private java.util.List < SparkAppInfo > appInfoList;
@@ -193,21 +212,21 @@ public class ListSparkAppsResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * Details of the applications. Fields in the response parameter:
-             * <p>
-             * 
-             * - **Data**: the data of the Spark application template.
-             * - **EstimateExecutionCpuTimeInSeconds**: the amount of time it takes to consume CPU resources for running the Spark application. Unit: milliseconds.
-             * - **LogRootPath**: the storage path of log files.
-             * - **LastAttemptId**: the most recent attempt ID.
-             * - **WebUiAddress**: the web UI URL.
-             * - **SubmittedTimeInMillis**: the time when the Spark application was submitted. The time is displayed in the UNIX timestamp format. Unit: milliseconds.
-             * - **StartedTimeInMillis**: the time when the Spark application was created. The time is displayed in the UNIX timestamp format. Unit: milliseconds.
-             * - **LastUpdatedTimeInMillis**: the time when the Spark application was last updated. The time is displayed in the UNIX timestamp format. Unit: milliseconds.
-             * - **TerminatedTimeInMillis**: the time when the Spark application task was terminated. The time is displayed in the UNIX timestamp format. Unit: milliseconds.
-             * - **DBClusterId**: the ID of the cluster on which the Spark application runs.
-             * - **ResourceGroupName**: the name of the job resource group.
-             * - **DurationInMillis**: the amount of time it takes to run the Spark application. Unit: milliseconds.
+             * <p>Details of the applications. Fields in the response parameter:</p>
+             * <ul>
+             * <li><strong>Data</strong>: the data of the Spark application template.</li>
+             * <li><strong>EstimateExecutionCpuTimeInSeconds</strong>: the amount of time it takes to consume CPU resources for running the Spark application. Unit: milliseconds.</li>
+             * <li><strong>LogRootPath</strong>: the storage path of log files.</li>
+             * <li><strong>LastAttemptId</strong>: the most recent attempt ID.</li>
+             * <li><strong>WebUiAddress</strong>: the web UI URL.</li>
+             * <li><strong>SubmittedTimeInMillis</strong>: the time when the Spark application was submitted. The time is displayed in the UNIX timestamp format. Unit: milliseconds.</li>
+             * <li><strong>StartedTimeInMillis</strong>: the time when the Spark application was created. The time is displayed in the UNIX timestamp format. Unit: milliseconds.</li>
+             * <li><strong>LastUpdatedTimeInMillis</strong>: the time when the Spark application was last updated. The time is displayed in the UNIX timestamp format. Unit: milliseconds.</li>
+             * <li><strong>TerminatedTimeInMillis</strong>: the time when the Spark application task was terminated. The time is displayed in the UNIX timestamp format. Unit: milliseconds.</li>
+             * <li><strong>DBClusterId</strong>: the ID of the cluster on which the Spark application runs.</li>
+             * <li><strong>ResourceGroupName</strong>: the name of the job resource group.</li>
+             * <li><strong>DurationInMillis</strong>: the amount of time it takes to run the Spark application. Unit: milliseconds.</li>
+             * </ul>
              */
             public Builder appInfoList(java.util.List < SparkAppInfo > appInfoList) {
                 this.appInfoList = appInfoList;
@@ -215,7 +234,10 @@ public class ListSparkAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -223,7 +245,10 @@ public class ListSparkAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -231,7 +256,10 @@ public class ListSparkAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

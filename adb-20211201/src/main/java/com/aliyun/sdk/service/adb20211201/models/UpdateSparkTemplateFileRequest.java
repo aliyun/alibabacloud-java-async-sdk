@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSparkTemplateFileRequest} extends {@link RequestModel}
  *
  * <p>UpdateSparkTemplateFileRequest</p>
@@ -97,10 +98,13 @@ public class UpdateSparkTemplateFileRequest extends Request {
         } 
 
         /**
-         * The template data to be updated.
-         * <p>
+         * <p>The template data to be updated.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the application template is not updated. For information about how to configure a Spark application template, see <a href="https://help.aliyun.com/document_detail/452402.html">Configure a Spark application</a>.</p>
+         * </blockquote>
          * 
-         * >  If you do not specify this parameter, the application template is not updated. For information about how to configure a Spark application template, see [Configure a Spark application](~~452402~~).
+         * <strong>example:</strong>
+         * <p>set spark.driver.resourceSpec=medium;set spark.executor.instances=2;set spark.executor.resourceSpec=medium;set spark.app.name=Spark SQL Test;</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -109,7 +113,11 @@ public class UpdateSparkTemplateFileRequest extends Request {
         }
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-pz5vp4585l466****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putBodyParameter("DBClusterId", DBClusterId);
@@ -118,10 +126,14 @@ public class UpdateSparkTemplateFileRequest extends Request {
         }
 
         /**
-         * The application template ID.
-         * <p>
+         * <p>The application template ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/456205.html">GetSparkTemplateFullTree</a> operation to query the application template ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [GetSparkTemplateFullTree](~~456205~~) operation to query the application template ID.
+         * <strong>example:</strong>
+         * <p>718056</p>
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);
@@ -130,7 +142,10 @@ public class UpdateSparkTemplateFileRequest extends Request {
         }
 
         /**
-         * The name of the job resource group.
+         * <p>The name of the job resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb</p>
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putBodyParameter("ResourceGroupName", resourceGroupName);

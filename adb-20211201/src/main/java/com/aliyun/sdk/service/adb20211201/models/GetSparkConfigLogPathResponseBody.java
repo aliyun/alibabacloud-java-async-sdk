@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSparkConfigLogPathResponseBody} extends {@link TeaModel}
  *
  * <p>GetSparkConfigLogPathResponseBody</p>
@@ -49,7 +50,7 @@ public class GetSparkConfigLogPathResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The queried Spark log configuration.
+         * <p>The queried Spark log configuration.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetSparkConfigLogPathResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1919-xxx-ssdfsdff</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetSparkConfigLogPathResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSparkConfigLogPathResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSparkConfigLogPathResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultLogPath")
         private String defaultLogPath;
@@ -145,7 +155,10 @@ public class GetSparkConfigLogPathResponseBody extends TeaModel {
             private String recordedLogPath; 
 
             /**
-             * The default log path.
+             * <p>The default log path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://aliyun-oa-adb-spark-1111-oss-cn-hanghzou/spark-logs</p>
              */
             public Builder defaultLogPath(String defaultLogPath) {
                 this.defaultLogPath = defaultLogPath;
@@ -153,7 +166,10 @@ public class GetSparkConfigLogPathResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a log path exists.
+             * <p>Indicates whether a log path exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isLogPathExists(Boolean isLogPathExists) {
                 this.isLogPathExists = isLogPathExists;
@@ -161,7 +177,10 @@ public class GetSparkConfigLogPathResponseBody extends TeaModel {
             }
 
             /**
-             * The last modification time.
+             * <p>The last modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1675654361000</p>
              */
             public Builder modifiedTimestamp(String modifiedTimestamp) {
                 this.modifiedTimestamp = modifiedTimestamp;
@@ -169,7 +188,10 @@ public class GetSparkConfigLogPathResponseBody extends TeaModel {
             }
 
             /**
-             * The account ID of the modifier.
+             * <p>The account ID of the modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10130223128xxx</p>
              */
             public Builder modifiedUid(String modifiedUid) {
                 this.modifiedUid = modifiedUid;
@@ -177,7 +199,10 @@ public class GetSparkConfigLogPathResponseBody extends TeaModel {
             }
 
             /**
-             * The recorded log path.
+             * <p>The recorded log path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://test/spark-logs/</p>
              */
             public Builder recordedLogPath(String recordedLogPath) {
                 this.recordedLogPath = recordedLogPath;

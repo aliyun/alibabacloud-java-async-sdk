@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSparkAppAttemptLogRequest} extends {@link RequestModel}
  *
  * <p>GetSparkAppAttemptLogRequest</p>
@@ -97,10 +98,14 @@ public class GetSparkAppAttemptLogRequest extends Request {
         } 
 
         /**
-         * The ID of the log.
-         * <p>
+         * <p>The ID of the log.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/455887.html">ListSparkAppAttempts</a> operation to query the information about the retry attempts of a Spark application, including the retry log IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [ListSparkAppAttempts](~~455887~~) operation to query the information about the retry attempts of a Spark application, including the retry log IDs.
+         * <strong>example:</strong>
+         * <p>s202207151211hz****-0001</p>
          */
         public Builder attemptId(String attemptId) {
             this.putBodyParameter("AttemptId", attemptId);
@@ -109,7 +114,10 @@ public class GetSparkAppAttemptLogRequest extends Request {
         }
 
         /**
-         * The number of log entries to return. Valid values: 1 to 500. Default value: 300.
+         * <p>The number of log entries to return. Valid values: 1 to 500. Default value: 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder logLength(Long logLength) {
             this.putBodyParameter("LogLength", logLength);
@@ -118,7 +126,10 @@ public class GetSparkAppAttemptLogRequest extends Request {
         }
 
         /**
-         * The log offset.
+         * <p>The log offset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -127,7 +138,10 @@ public class GetSparkAppAttemptLogRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

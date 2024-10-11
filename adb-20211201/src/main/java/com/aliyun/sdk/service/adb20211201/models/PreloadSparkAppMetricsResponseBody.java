@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PreloadSparkAppMetricsResponseBody} extends {@link TeaModel}
  *
  * <p>PreloadSparkAppMetricsResponseBody</p>
@@ -49,7 +50,7 @@ public class PreloadSparkAppMetricsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class PreloadSparkAppMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>84489769-3065-5A28-A4CB-977CD426F1C3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class PreloadSparkAppMetricsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PreloadSparkAppMetricsResponseBody} extends {@link TeaModel}
+     *
+     * <p>PreloadSparkAppMetricsResponseBody</p>
+     */
     public static class ScanMetrics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OutputRowsCount")
         private Long outputRowsCount;
@@ -109,7 +119,10 @@ public class PreloadSparkAppMetricsResponseBody extends TeaModel {
             private Long totalReadFileSizeInByte; 
 
             /**
-             * The number of rows scanned.
+             * <p>The number of rows scanned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder outputRowsCount(Long outputRowsCount) {
                 this.outputRowsCount = outputRowsCount;
@@ -117,7 +130,10 @@ public class PreloadSparkAppMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the scanned data. Unit: bytes.
+             * <p>The size of the scanned data. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder totalReadFileSizeInByte(Long totalReadFileSizeInByte) {
                 this.totalReadFileSizeInByte = totalReadFileSizeInByte;
@@ -131,6 +147,12 @@ public class PreloadSparkAppMetricsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PreloadSparkAppMetricsResponseBody} extends {@link TeaModel}
+     *
+     * <p>PreloadSparkAppMetricsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -206,7 +228,10 @@ public class PreloadSparkAppMetricsResponseBody extends TeaModel {
             private ScanMetrics scanMetrics; 
 
             /**
-             * The ID of the Spark application.
+             * <p>The ID of the Spark application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s202212181815shaccb8be0000253</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -214,7 +239,10 @@ public class PreloadSparkAppMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * The retry ID of the Spark application.
+             * <p>The retry ID of the Spark application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s202301061000hz57d797b0000201-0001</p>
              */
             public Builder attemptId(String attemptId) {
                 this.attemptId = attemptId;
@@ -222,7 +250,10 @@ public class PreloadSparkAppMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * The event log path.
+             * <p>The event log path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://path/to/eventLog</p>
              */
             public Builder eventLogPath(String eventLogPath) {
                 this.eventLogPath = eventLogPath;
@@ -230,11 +261,14 @@ public class PreloadSparkAppMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether parsing is complete. Valid values:
-             * <p>
+             * <p>Indicates whether parsing is complete. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder finished(Boolean finished) {
                 this.finished = finished;
@@ -242,7 +276,7 @@ public class PreloadSparkAppMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * The metrics.
+             * <p>The metrics.</p>
              */
             public Builder scanMetrics(ScanMetrics scanMetrics) {
                 this.scanMetrics = scanMetrics;

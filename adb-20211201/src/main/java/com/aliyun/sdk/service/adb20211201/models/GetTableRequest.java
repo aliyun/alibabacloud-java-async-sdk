@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTableRequest} extends {@link RequestModel}
  *
  * <p>GetTableRequest</p>
@@ -97,7 +98,11 @@ public class GetTableRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-*******</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -106,7 +111,10 @@ public class GetTableRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbName</p>
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -115,7 +123,11 @@ public class GetTableRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the cluster resides.
+         * <p>The ID of the region in which the cluster resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -124,7 +136,10 @@ public class GetTableRequest extends Request {
         }
 
         /**
-         * The name of the table.
+         * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tableName</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

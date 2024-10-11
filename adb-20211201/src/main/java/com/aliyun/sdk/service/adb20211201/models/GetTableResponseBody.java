@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTableResponseBody} extends {@link TeaModel}
  *
  * <p>GetTableResponseBody</p>
@@ -85,7 +86,10 @@ public class GetTableResponseBody extends TeaModel {
         private TableModel table; 
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -93,7 +97,10 @@ public class GetTableResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -101,7 +108,10 @@ public class GetTableResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,10 @@ public class GetTableResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the query succeeded.
+         * <p>Indicates whether the query succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -117,7 +130,7 @@ public class GetTableResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the table.
+         * <p>The information about the table.</p>
          */
         public Builder table(TableModel table) {
             this.table = table;

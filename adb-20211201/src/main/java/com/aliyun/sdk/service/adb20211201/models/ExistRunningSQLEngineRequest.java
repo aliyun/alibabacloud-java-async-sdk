@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExistRunningSQLEngineRequest} extends {@link RequestModel}
  *
  * <p>ExistRunningSQLEngineRequest</p>
@@ -69,10 +70,14 @@ public class ExistRunningSQLEngineRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBClusters](~~612397~~) operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.
+         * <strong>example:</strong>
+         * <p>amv-bp1cit7z8j****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putBodyParameter("DBClusterId", DBClusterId);
@@ -81,10 +86,14 @@ public class ExistRunningSQLEngineRequest extends Request {
         }
 
         /**
-         * The name of the resource group.
-         * <p>
+         * <p>The name of the resource group.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/459446.html">DescribeDBResourceGroup</a> operation to query the name of the resource group for a cluster.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBResourceGroup](~~459446~~) operation to query the name of the resource group for a cluster.
+         * <strong>example:</strong>
+         * <p>spark_test</p>
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putBodyParameter("ResourceGroupName", resourceGroupName);

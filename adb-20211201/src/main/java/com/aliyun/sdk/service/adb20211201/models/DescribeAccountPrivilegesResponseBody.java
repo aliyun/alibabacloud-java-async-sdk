@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccountPrivilegesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAccountPrivilegesResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Details of the permissions.
+         * <p>Details of the permissions.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -93,7 +94,10 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DA32480A-E3E5-1BE7-BA98-724551DC04C8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAccountPrivilegesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccountPrivilegesResponseBody</p>
+     */
     public static class PrivilegeObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Column")
         private String column;
@@ -193,7 +212,10 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
             private String table; 
 
             /**
-             * The name of the column.
+             * <p>The name of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>column1</p>
              */
             public Builder column(String column) {
                 this.column = column;
@@ -201,7 +223,10 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>db1</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -209,7 +234,10 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the permission object.
+             * <p>The description of the permission object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a test column</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -217,7 +245,10 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tabl1</p>
              */
             public Builder table(String table) {
                 this.table = table;
@@ -231,6 +262,12 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAccountPrivilegesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccountPrivilegesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrivilegeObject")
         private PrivilegeObject privilegeObject;
@@ -282,7 +319,7 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
             private java.util.List < String > privileges; 
 
             /**
-             * The objects on which the permission takes effect, including databases, tables, columns, and additional descriptions.
+             * <p>The objects on which the permission takes effect, including databases, tables, columns, and additional descriptions.</p>
              */
             public Builder privilegeObject(PrivilegeObject privilegeObject) {
                 this.privilegeObject = privilegeObject;
@@ -290,7 +327,10 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
             }
 
             /**
-             * The permission level of the permission. Valid values: `Global`, `Database`, `Table`, and `Column`. You can call the `DescribeEnabledPrivileges` parameter to query the permission level of a specific permission.
+             * <p>The permission level of the permission. Valid values: <code>Global</code>, <code>Database</code>, <code>Table</code>, and <code>Column</code>. You can call the <code>DescribeEnabledPrivileges</code> parameter to query the permission level of a specific permission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Column</p>
              */
             public Builder privilegeType(String privilegeType) {
                 this.privilegeType = privilegeType;
@@ -298,7 +338,7 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the permission. You can call the `DescribeEnabledPrivileges` operation to query the name of the permission.
+             * <p>The name of the permission. You can call the <code>DescribeEnabledPrivileges</code> operation to query the name of the permission.</p>
              */
             public Builder privileges(java.util.List < String > privileges) {
                 this.privileges = privileges;

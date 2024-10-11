@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSparkAppAttemptsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSparkAppAttemptsResponseBody</p>
@@ -49,7 +50,7 @@ public class ListSparkAppAttemptsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class ListSparkAppAttemptsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListSparkAppAttemptsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSparkAppAttemptsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSparkAppAttemptsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttemptInfoList")
         private java.util.List < SparkAttemptInfo > attemptInfoList;
@@ -133,50 +143,52 @@ public class ListSparkAppAttemptsResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The information about the attempts. Fields in the response parameter:
-             * <p>
-             * 
-             * *   **AttemptId**: the attempt ID.
-             * 
-             * *   **State**: the state of the Spark application. Valid values:
-             * 
-             *     *   **SUBMITTED**
-             *     *   **STARTING**
-             *     *   **RUNNING**
-             *     *   **FAILING**
-             *     *   **FAILED**
-             *     *   **KILLING**
-             *     *   **KILLED**
-             *     *   **SUCCEEDING**
-             *     *   **COMPLETED**
-             *     *   **FATAL**
-             *     *   **UNKNOWN**
-             * 
-             * *   **Message**: the alert message that is returned. If no alert is generated, null is returned.
-             * 
-             * *   **Data**: the data of the Spark application template.
-             * 
-             * *   **EstimateExecutionCpuTimeInSeconds**: the amount of time it takes to consume CPU resources for running the Spark application. Unit: milliseconds.
-             * 
-             * *   **LogRootPath**: the storage path of log files.
-             * 
-             * *   **LastAttemptId**: the ID of the last attempt.
-             * 
-             * *   **WebUiAddress**: the web UI address.
-             * 
-             * *   **SubmittedTimeInMillis**: the time when the Spark application was submitted. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-             * 
-             * *   **StartedTimeInMillis**: the time when the Spark application was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-             * 
-             * *   **LastUpdatedTimeInMillis**: the time when the Spark application was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-             * 
-             * *   **TerminatedTimeInMillis**: the time when the Spark application task was terminated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-             * 
-             * *   **DBClusterId**: the ID of the cluster on which the Spark application runs.
-             * 
-             * *   **ResourceGroupName**: the name of the job resource group.
-             * 
-             * *   **DurationInMillis**: the amount of time it takes to run the Spark application. Unit: milliseconds.
+             * <p>The information about the attempts. Fields in the response parameter:</p>
+             * <ul>
+             * <li><p><strong>AttemptId</strong>: the attempt ID.</p>
+             * </li>
+             * <li><p><strong>State</strong>: the state of the Spark application. Valid values:</p>
+             * <ul>
+             * <li><strong>SUBMITTED</strong></li>
+             * <li><strong>STARTING</strong></li>
+             * <li><strong>RUNNING</strong></li>
+             * <li><strong>FAILING</strong></li>
+             * <li><strong>FAILED</strong></li>
+             * <li><strong>KILLING</strong></li>
+             * <li><strong>KILLED</strong></li>
+             * <li><strong>SUCCEEDING</strong></li>
+             * <li><strong>COMPLETED</strong></li>
+             * <li><strong>FATAL</strong></li>
+             * <li><strong>UNKNOWN</strong></li>
+             * </ul>
+             * </li>
+             * <li><p><strong>Message</strong>: the alert message that is returned. If no alert is generated, null is returned.</p>
+             * </li>
+             * <li><p><strong>Data</strong>: the data of the Spark application template.</p>
+             * </li>
+             * <li><p><strong>EstimateExecutionCpuTimeInSeconds</strong>: the amount of time it takes to consume CPU resources for running the Spark application. Unit: milliseconds.</p>
+             * </li>
+             * <li><p><strong>LogRootPath</strong>: the storage path of log files.</p>
+             * </li>
+             * <li><p><strong>LastAttemptId</strong>: the ID of the last attempt.</p>
+             * </li>
+             * <li><p><strong>WebUiAddress</strong>: the web UI address.</p>
+             * </li>
+             * <li><p><strong>SubmittedTimeInMillis</strong>: the time when the Spark application was submitted. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * </li>
+             * <li><p><strong>StartedTimeInMillis</strong>: the time when the Spark application was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * </li>
+             * <li><p><strong>LastUpdatedTimeInMillis</strong>: the time when the Spark application was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * </li>
+             * <li><p><strong>TerminatedTimeInMillis</strong>: the time when the Spark application task was terminated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * </li>
+             * <li><p><strong>DBClusterId</strong>: the ID of the cluster on which the Spark application runs.</p>
+             * </li>
+             * <li><p><strong>ResourceGroupName</strong>: the name of the job resource group.</p>
+             * </li>
+             * <li><p><strong>DurationInMillis</strong>: the amount of time it takes to run the Spark application. Unit: milliseconds.</p>
+             * </li>
+             * </ul>
              */
             public Builder attemptInfoList(java.util.List < SparkAttemptInfo > attemptInfoList) {
                 this.attemptInfoList = attemptInfoList;
@@ -184,7 +196,10 @@ public class ListSparkAppAttemptsResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -192,7 +207,10 @@ public class ListSparkAppAttemptsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -200,7 +218,10 @@ public class ListSparkAppAttemptsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

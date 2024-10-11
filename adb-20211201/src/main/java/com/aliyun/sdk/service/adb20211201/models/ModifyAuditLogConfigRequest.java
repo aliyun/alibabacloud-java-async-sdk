@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAuditLogConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyAuditLogConfigRequest</p>
@@ -154,13 +155,18 @@ public class ModifyAuditLogConfigRequest extends Request {
         } 
 
         /**
-         * The status to which you want to change the SQL audit feature. Valid values:
-         * <p>
+         * <p>The status to which you want to change the SQL audit feature. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> After you disable the SQL audit feature, all SQL audit logs are deleted. You must query and export SQL audit logs before you disable SQL audit. For more information, see <a href="https://help.aliyun.com/document_detail/612426.html">DescribeAuditLogRecords</a>. When you re-enable SQL audit, audit logs that are generated from the time when SQL audit was last enabled are available for queries.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **on**
-         * *   **off**
-         * 
-         * >  After you disable the SQL audit feature, all SQL audit logs are deleted. You must query and export SQL audit logs before you disable SQL audit. For more information, see [DescribeAuditLogRecords](~~612426~~). When you re-enable SQL audit, audit logs that are generated from the time when SQL audit was last enabled are available for queries.
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder auditLogStatus(String auditLogStatus) {
             this.putQueryParameter("AuditLogStatus", auditLogStatus);
@@ -169,10 +175,14 @@ public class ModifyAuditLogConfigRequest extends Request {
         }
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
-         * <p>
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDBClusters](~~454250~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
+         * <strong>example:</strong>
+         * <p>amv-t4nj8619bz2w3****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -208,10 +218,14 @@ public class ModifyAuditLogConfigRequest extends Request {
         }
 
         /**
-         * The region ID.
-         * <p>
+         * <p>The region ID of the cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeRegions](~~454314~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

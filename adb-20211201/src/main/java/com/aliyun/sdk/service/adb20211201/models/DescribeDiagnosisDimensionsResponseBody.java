@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiagnosisDimensionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDiagnosisDimensionsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
         private java.util.List < String > userNames; 
 
         /**
-         * The queried source IP addresses.
+         * <p>The queried source IP addresses.</p>
          */
         public Builder clientIps(java.util.List < String > clientIps) {
             this.clientIps = clientIps;
@@ -93,7 +94,7 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
         }
 
         /**
-         * The queried database names.
+         * <p>The queried database names.</p>
          */
         public Builder databases(java.util.List < String > databases) {
             this.databases = databases;
@@ -101,7 +102,10 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEA97C6B-D7A4-5E69-9EFC-D7F88737CED5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +113,7 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
         }
 
         /**
-         * The queried resource group names.
+         * <p>The queried resource group names.</p>
          */
         public Builder resourceGroups(java.util.List < String > resourceGroups) {
             this.resourceGroups = resourceGroups;
@@ -117,7 +121,7 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
         }
 
         /**
-         * The queried usernames.
+         * <p>The queried usernames.</p>
          */
         public Builder userNames(java.util.List < String > userNames) {
             this.userNames = userNames;

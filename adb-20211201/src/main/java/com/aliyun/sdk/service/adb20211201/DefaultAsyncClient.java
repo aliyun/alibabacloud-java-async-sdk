@@ -85,8 +85,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of AllocateClusterPublicConnection  AllocateClusterPublicConnectionRequest
+     * @return AllocateClusterPublicConnectionResponse
      */
     @Override
     public CompletableFuture<AllocateClusterPublicConnectionResponse> allocateClusterPublicConnection(AllocateClusterPublicConnectionRequest request) {
@@ -103,8 +106,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of AttachUserENI  AttachUserENIRequest
+     * @return AttachUserENIResponse
      */
     @Override
     public CompletableFuture<AttachUserENIResponse> attachUserENI(AttachUserENIRequest request) {
@@ -121,8 +127,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of BindAccount  BindAccountRequest
+     * @return BindAccountResponse
      */
     @Override
     public CompletableFuture<BindAccountResponse> bindAccount(BindAccountRequest request) {
@@ -139,8 +148,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of BindDBResourceGroupWithUser  BindDBResourceGroupWithUserRequest
+     * @return BindDBResourceGroupWithUserResponse
      */
     @Override
     public CompletableFuture<BindDBResourceGroupWithUserResponse> bindDBResourceGroupWithUser(BindDBResourceGroupWithUserRequest request) {
@@ -157,8 +169,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of CheckBindRamUser  CheckBindRamUserRequest
+     * @return CheckBindRamUserResponse
      */
     @Override
     public CompletableFuture<CheckBindRamUserResponse> checkBindRamUser(CheckBindRamUserRequest request) {
@@ -175,8 +190,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of CheckSampleDataSet  CheckSampleDataSetRequest
+     * @return CheckSampleDataSetResponse
      */
     @Override
     public CompletableFuture<CheckSampleDataSetResponse> checkSampleDataSet(CheckSampleDataSetRequest request) {
@@ -193,8 +211,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of CreateAccount  CreateAccountRequest
+     * @return CreateAccountResponse
      */
     @Override
     public CompletableFuture<CreateAccountResponse> createAccount(CreateAccountRequest request) {
@@ -211,8 +232,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of CreateDBCluster  CreateDBClusterRequest
+     * @return CreateDBClusterResponse
      */
     @Override
     public CompletableFuture<CreateDBClusterResponse> createDBCluster(CreateDBClusterRequest request) {
@@ -229,8 +253,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</p>
+     * 
+     * @param request the request parameters of CreateDBResourceGroup  CreateDBResourceGroupRequest
+     * @return CreateDBResourceGroupResponse
      */
     @Override
     public CompletableFuture<CreateDBResourceGroupResponse> createDBResourceGroup(CreateDBResourceGroupRequest request) {
@@ -247,8 +274,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of CreateElasticPlan  CreateElasticPlanRequest
+     * @return CreateElasticPlanResponse
      */
     @Override
     public CompletableFuture<CreateElasticPlanResponse> createElasticPlan(CreateElasticPlanRequest request) {
@@ -265,10 +295,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      *
+     * <b>description</b> :
+     * <p>  General endpoint: <code>adb.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateOssSubDirectory  CreateOssSubDirectoryRequest
+     * @return CreateOssSubDirectoryResponse
      */
     @Override
     public CompletableFuture<CreateOssSubDirectoryResponse> createOssSubDirectory(CreateOssSubDirectoryRequest request) {
@@ -284,6 +319,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreatePerformanceView  CreatePerformanceViewRequest
+     * @return CreatePerformanceViewResponse
+     */
     @Override
     public CompletableFuture<CreatePerformanceViewResponse> createPerformanceView(CreatePerformanceViewRequest request) {
         try {
@@ -299,10 +338,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateSparkTemplate  CreateSparkTemplateRequest
+     * @return CreateSparkTemplateResponse
      */
     @Override
     public CompletableFuture<CreateSparkTemplateResponse> createSparkTemplate(CreateSparkTemplateRequest request) {
@@ -319,8 +365,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of DeleteAccount  DeleteAccountRequest
+     * @return DeleteAccountResponse
      */
     @Override
     public CompletableFuture<DeleteAccountResponse> deleteAccount(DeleteAccountRequest request) {
@@ -337,10 +386,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### [](#)
-      * *   You can call this operation to delete only subscription clusters.
-      * *   For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <h3><a href="#"></a></h3>
+     * <ul>
+     * <li>You can call this operation to delete only subscription clusters.</li>
+     * <li>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteDBCluster  DeleteDBClusterRequest
+     * @return DeleteDBClusterResponse
      */
     @Override
     public CompletableFuture<DeleteDBClusterResponse> deleteDBCluster(DeleteDBClusterRequest request) {
@@ -357,8 +411,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of DeleteDBResourceGroup  DeleteDBResourceGroupRequest
+     * @return DeleteDBResourceGroupResponse
      */
     @Override
     public CompletableFuture<DeleteDBResourceGroupResponse> deleteDBResourceGroup(DeleteDBResourceGroupRequest request) {
@@ -375,8 +432,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of DeleteElasticPlan  DeleteElasticPlanRequest
+     * @return DeleteElasticPlanResponse
      */
     @Override
     public CompletableFuture<DeleteElasticPlanResponse> deleteElasticPlan(DeleteElasticPlanRequest request) {
@@ -392,6 +452,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeletePerformanceView  DeletePerformanceViewRequest
+     * @return DeletePerformanceViewResponse
+     */
     @Override
     public CompletableFuture<DeletePerformanceViewResponse> deletePerformanceView(DeletePerformanceViewRequest request) {
         try {
@@ -407,9 +471,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteProcessInstance  DeleteProcessInstanceRequest
+     * @return DeleteProcessInstanceResponse
      */
     @Override
     public CompletableFuture<DeleteProcessInstanceResponse> deleteProcessInstance(DeleteProcessInstanceRequest request) {
@@ -426,10 +495,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteSparkTemplate  DeleteSparkTemplateRequest
+     * @return DeleteSparkTemplateResponse
      */
     @Override
     public CompletableFuture<DeleteSparkTemplateResponse> deleteSparkTemplate(DeleteSparkTemplateRequest request) {
@@ -446,10 +522,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteSparkTemplateFile  DeleteSparkTemplateFileRequest
+     * @return DeleteSparkTemplateFileResponse
      */
     @Override
     public CompletableFuture<DeleteSparkTemplateFileResponse> deleteSparkTemplateFile(DeleteSparkTemplateFileRequest request) {
@@ -466,8 +549,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of DescribeAccountAllPrivileges  DescribeAccountAllPrivilegesRequest
+     * @return DescribeAccountAllPrivilegesResponse
      */
     @Override
     public CompletableFuture<DescribeAccountAllPrivilegesResponse> describeAccountAllPrivileges(DescribeAccountAllPrivilegesRequest request) {
@@ -484,8 +570,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of DescribeAccountPrivilegeObjects  DescribeAccountPrivilegeObjectsRequest
+     * @return DescribeAccountPrivilegeObjectsResponse
      */
     @Override
     public CompletableFuture<DescribeAccountPrivilegeObjectsResponse> describeAccountPrivilegeObjects(DescribeAccountPrivilegeObjectsRequest request) {
@@ -501,6 +590,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAccountPrivileges  DescribeAccountPrivilegesRequest
+     * @return DescribeAccountPrivilegesResponse
+     */
     @Override
     public CompletableFuture<DescribeAccountPrivilegesResponse> describeAccountPrivileges(DescribeAccountPrivilegesRequest request) {
         try {
@@ -516,8 +609,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of DescribeAccounts  DescribeAccountsRequest
+     * @return DescribeAccountsResponse
      */
     @Override
     public CompletableFuture<DescribeAccountsResponse> describeAccounts(DescribeAccountsRequest request) {
@@ -534,9 +630,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeAdbMySqlColumns  DescribeAdbMySqlColumnsRequest
+     * @return DescribeAdbMySqlColumnsResponse
      */
     @Override
     public CompletableFuture<DescribeAdbMySqlColumnsResponse> describeAdbMySqlColumns(DescribeAdbMySqlColumnsRequest request) {
@@ -553,9 +654,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeAdbMySqlSchemas  DescribeAdbMySqlSchemasRequest
+     * @return DescribeAdbMySqlSchemasResponse
      */
     @Override
     public CompletableFuture<DescribeAdbMySqlSchemasResponse> describeAdbMySqlSchemas(DescribeAdbMySqlSchemasRequest request) {
@@ -572,9 +678,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeAdbMySqlTables  DescribeAdbMySqlTablesRequest
+     * @return DescribeAdbMySqlTablesResponse
      */
     @Override
     public CompletableFuture<DescribeAdbMySqlTablesResponse> describeAdbMySqlTables(DescribeAdbMySqlTablesRequest request) {
@@ -591,9 +702,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeAllDataSource  DescribeAllDataSourceRequest
+     * @return DescribeAllDataSourceResponse
      */
     @Override
     public CompletableFuture<DescribeAllDataSourceResponse> describeAllDataSource(DescribeAllDataSourceRequest request) {
@@ -610,10 +726,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      *
+     * <b>description</b> :
+     * <p>  General endpoint: <code>adb.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeApsActionLogs  DescribeApsActionLogsRequest
+     * @return DescribeApsActionLogsResponse
      */
     @Override
     public CompletableFuture<DescribeApsActionLogsResponse> describeApsActionLogs(DescribeApsActionLogsRequest request) {
@@ -630,9 +751,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeApsResourceGroups  DescribeApsResourceGroupsRequest
+     * @return DescribeApsResourceGroupsResponse
      */
     @Override
     public CompletableFuture<DescribeApsResourceGroupsResponse> describeApsResourceGroups(DescribeApsResourceGroupsRequest request) {
@@ -649,9 +775,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL audit was disabled and re-enabled, only SQL audit logs from the time when SQL audit was re-enabled can be queried. The following operations are not recorded in SQL audit logs: **INSERT INTO VALUES**, **REPLACE INTO VALUES**, and **UPSERT INTO VALUES**.
-      * *   For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>  SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL audit was disabled and re-enabled, only SQL audit logs from the time when SQL audit was re-enabled can be queried. The following operations are not recorded in SQL audit logs: <strong>INSERT INTO VALUES</strong>, <strong>REPLACE INTO VALUES</strong>, and <strong>UPSERT INTO VALUES</strong>.</p>
+     * <ul>
+     * <li>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeAuditLogRecords  DescribeAuditLogRecordsRequest
+     * @return DescribeAuditLogRecordsResponse
      */
     @Override
     public CompletableFuture<DescribeAuditLogRecordsResponse> describeAuditLogRecords(DescribeAuditLogRecordsRequest request) {
@@ -668,8 +799,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of DescribeBackupPolicy  DescribeBackupPolicyRequest
+     * @return DescribeBackupPolicyResponse
      */
     @Override
     public CompletableFuture<DescribeBackupPolicyResponse> describeBackupPolicy(DescribeBackupPolicyRequest request) {
@@ -686,8 +820,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of DescribeBackups  DescribeBackupsRequest
+     * @return DescribeBackupsResponse
      */
     @Override
     public CompletableFuture<DescribeBackupsResponse> describeBackups(DescribeBackupsRequest request) {
@@ -704,8 +841,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of DescribeClusterAccessWhiteList  DescribeClusterAccessWhiteListRequest
+     * @return DescribeClusterAccessWhiteListResponse
      */
     @Override
     public CompletableFuture<DescribeClusterAccessWhiteListResponse> describeClusterAccessWhiteList(DescribeClusterAccessWhiteListRequest request) {
@@ -722,8 +862,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of DescribeClusterNetInfo  DescribeClusterNetInfoRequest
+     * @return DescribeClusterNetInfoResponse
      */
     @Override
     public CompletableFuture<DescribeClusterNetInfoResponse> describeClusterNetInfo(DescribeClusterNetInfoRequest request) {
@@ -740,8 +883,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of DescribeClusterResourceDetail  DescribeClusterResourceDetailRequest
+     * @return DescribeClusterResourceDetailResponse
      */
     @Override
     public CompletableFuture<DescribeClusterResourceDetailResponse> describeClusterResourceDetail(DescribeClusterResourceDetailRequest request) {
@@ -757,6 +903,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeClusterResourceUsage  DescribeClusterResourceUsageRequest
+     * @return DescribeClusterResourceUsageResponse
+     */
     @Override
     public CompletableFuture<DescribeClusterResourceUsageResponse> describeClusterResourceUsage(DescribeClusterResourceUsageRequest request) {
         try {
@@ -772,9 +922,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeColumns  DescribeColumnsRequest
+     * @return DescribeColumnsResponse
      */
     @Override
     public CompletableFuture<DescribeColumnsResponse> describeColumns(DescribeColumnsRequest request) {
@@ -791,8 +946,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</p>
+     * 
+     * @param request the request parameters of DescribeComputeResourceUsage  DescribeComputeResourceUsageRequest
+     * @return DescribeComputeResourceUsageResponse
      */
     @Override
     public CompletableFuture<DescribeComputeResourceUsageResponse> describeComputeResourceUsage(DescribeComputeResourceUsageRequest request) {
@@ -809,8 +967,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of DescribeDBClusterAttribute  DescribeDBClusterAttributeRequest
+     * @return DescribeDBClusterAttributeResponse
      */
     @Override
     public CompletableFuture<DescribeDBClusterAttributeResponse> describeDBClusterAttribute(DescribeDBClusterAttributeRequest request) {
@@ -827,8 +988,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of DescribeDBClusterHealthStatus  DescribeDBClusterHealthStatusRequest
+     * @return DescribeDBClusterHealthStatusResponse
      */
     @Override
     public CompletableFuture<DescribeDBClusterHealthStatusResponse> describeDBClusterHealthStatus(DescribeDBClusterHealthStatusRequest request) {
@@ -845,8 +1009,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of DescribeDBClusterPerformance  DescribeDBClusterPerformanceRequest
+     * @return DescribeDBClusterPerformanceResponse
      */
     @Override
     public CompletableFuture<DescribeDBClusterPerformanceResponse> describeDBClusterPerformance(DescribeDBClusterPerformanceRequest request) {
@@ -863,8 +1030,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of DescribeDBClusterSpaceSummary  DescribeDBClusterSpaceSummaryRequest
+     * @return DescribeDBClusterSpaceSummaryResponse
      */
     @Override
     public CompletableFuture<DescribeDBClusterSpaceSummaryResponse> describeDBClusterSpaceSummary(DescribeDBClusterSpaceSummaryRequest request) {
@@ -881,8 +1051,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of DescribeDBClusterStatus  DescribeDBClusterStatusRequest
+     * @return DescribeDBClusterStatusResponse
      */
     @Override
     public CompletableFuture<DescribeDBClusterStatusResponse> describeDBClusterStatus(DescribeDBClusterStatusRequest request) {
@@ -899,8 +1072,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of DescribeDBClusters  DescribeDBClustersRequest
+     * @return DescribeDBClustersResponse
      */
     @Override
     public CompletableFuture<DescribeDBClustersResponse> describeDBClusters(DescribeDBClustersRequest request) {
@@ -917,8 +1093,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of DescribeDBResourceGroup  DescribeDBResourceGroupRequest
+     * @return DescribeDBResourceGroupResponse
      */
     @Override
     public CompletableFuture<DescribeDBResourceGroupResponse> describeDBResourceGroup(DescribeDBResourceGroupRequest request) {
@@ -935,8 +1114,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</p>
+     * 
+     * @param request the request parameters of DescribeDiagnosisDimensions  DescribeDiagnosisDimensionsRequest
+     * @return DescribeDiagnosisDimensionsResponse
      */
     @Override
     public CompletableFuture<DescribeDiagnosisDimensionsResponse> describeDiagnosisDimensions(DescribeDiagnosisDimensionsRequest request) {
@@ -953,8 +1135,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</p>
+     * 
+     * @param request the request parameters of DescribeDiagnosisRecords  DescribeDiagnosisRecordsRequest
+     * @return DescribeDiagnosisRecordsResponse
      */
     @Override
     public CompletableFuture<DescribeDiagnosisRecordsResponse> describeDiagnosisRecords(DescribeDiagnosisRecordsRequest request) {
@@ -971,8 +1156,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</p>
+     * 
+     * @param request the request parameters of DescribeDiagnosisSQLInfo  DescribeDiagnosisSQLInfoRequest
+     * @return DescribeDiagnosisSQLInfoResponse
      */
     @Override
     public CompletableFuture<DescribeDiagnosisSQLInfoResponse> describeDiagnosisSQLInfo(DescribeDiagnosisSQLInfoRequest request) {
@@ -989,8 +1177,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</p>
+     * 
+     * @param request the request parameters of DescribeDownloadRecords  DescribeDownloadRecordsRequest
+     * @return DescribeDownloadRecordsResponse
      */
     @Override
     public CompletableFuture<DescribeDownloadRecordsResponse> describeDownloadRecords(DescribeDownloadRecordsRequest request) {
@@ -1007,8 +1198,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of DescribeElasticPlanAttribute  DescribeElasticPlanAttributeRequest
+     * @return DescribeElasticPlanAttributeResponse
      */
     @Override
     public CompletableFuture<DescribeElasticPlanAttributeResponse> describeElasticPlanAttribute(DescribeElasticPlanAttributeRequest request) {
@@ -1025,8 +1219,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</p>
+     * 
+     * @param request the request parameters of DescribeElasticPlanJobs  DescribeElasticPlanJobsRequest
+     * @return DescribeElasticPlanJobsResponse
      */
     @Override
     public CompletableFuture<DescribeElasticPlanJobsResponse> describeElasticPlanJobs(DescribeElasticPlanJobsRequest request) {
@@ -1043,8 +1240,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of DescribeElasticPlanSpecifications  DescribeElasticPlanSpecificationsRequest
+     * @return DescribeElasticPlanSpecificationsResponse
      */
     @Override
     public CompletableFuture<DescribeElasticPlanSpecificationsResponse> describeElasticPlanSpecifications(DescribeElasticPlanSpecificationsRequest request) {
@@ -1061,8 +1261,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of DescribeElasticPlans  DescribeElasticPlansRequest
+     * @return DescribeElasticPlansResponse
      */
     @Override
     public CompletableFuture<DescribeElasticPlansResponse> describeElasticPlans(DescribeElasticPlansRequest request) {
@@ -1078,6 +1281,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEnabledPrivileges  DescribeEnabledPrivilegesRequest
+     * @return DescribeEnabledPrivilegesResponse
+     */
     @Override
     public CompletableFuture<DescribeEnabledPrivilegesResponse> describeEnabledPrivileges(DescribeEnabledPrivilegesRequest request) {
         try {
@@ -1092,6 +1299,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeExcessivePrimaryKeys  DescribeExcessivePrimaryKeysRequest
+     * @return DescribeExcessivePrimaryKeysResponse
+     */
     @Override
     public CompletableFuture<DescribeExcessivePrimaryKeysResponse> describeExcessivePrimaryKeys(DescribeExcessivePrimaryKeysRequest request) {
         try {
@@ -1107,8 +1318,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of DescribeJobResourceUsage  DescribeJobResourceUsageRequest
+     * @return DescribeJobResourceUsageResponse
      */
     @Override
     public CompletableFuture<DescribeJobResourceUsageResponse> describeJobResourceUsage(DescribeJobResourceUsageRequest request) {
@@ -1125,10 +1339,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      *
+     * <b>description</b> :
+     * <p>  General endpoint: <code>adb.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribePatternPerformance  DescribePatternPerformanceRequest
+     * @return DescribePatternPerformanceResponse
      */
     @Override
     public CompletableFuture<DescribePatternPerformanceResponse> describePatternPerformance(DescribePatternPerformanceRequest request) {
@@ -1144,6 +1363,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePerformanceViewAttribute  DescribePerformanceViewAttributeRequest
+     * @return DescribePerformanceViewAttributeResponse
+     */
     @Override
     public CompletableFuture<DescribePerformanceViewAttributeResponse> describePerformanceViewAttribute(DescribePerformanceViewAttributeRequest request) {
         try {
@@ -1158,6 +1381,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePerformanceViews  DescribePerformanceViewsRequest
+     * @return DescribePerformanceViewsResponse
+     */
     @Override
     public CompletableFuture<DescribePerformanceViewsResponse> describePerformanceViews(DescribePerformanceViewsRequest request) {
         try {
@@ -1173,8 +1400,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
+     * @return DescribeRegionsResponse
      */
     @Override
     public CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request) {
@@ -1191,10 +1421,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      *
+     * <b>description</b> :
+     * <p>  General endpoint: <code>adb.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeSQLPatterns  DescribeSQLPatternsRequest
+     * @return DescribeSQLPatternsResponse
      */
     @Override
     public CompletableFuture<DescribeSQLPatternsResponse> describeSQLPatterns(DescribeSQLPatternsRequest request) {
@@ -1211,9 +1446,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeSchemas  DescribeSchemasRequest
+     * @return DescribeSchemasResponse
      */
     @Override
     public CompletableFuture<DescribeSchemasResponse> describeSchemas(DescribeSchemasRequest request) {
@@ -1230,9 +1470,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeSparkCodeLog  DescribeSparkCodeLogRequest
+     * @return DescribeSparkCodeLogResponse
      */
     @Override
     public CompletableFuture<DescribeSparkCodeLogResponse> describeSparkCodeLog(DescribeSparkCodeLogRequest request) {
@@ -1249,9 +1494,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeSparkCodeOutput  DescribeSparkCodeOutputRequest
+     * @return DescribeSparkCodeOutputResponse
      */
     @Override
     public CompletableFuture<DescribeSparkCodeOutputResponse> describeSparkCodeOutput(DescribeSparkCodeOutputRequest request) {
@@ -1268,9 +1518,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeSparkCodeWebUi  DescribeSparkCodeWebUiRequest
+     * @return DescribeSparkCodeWebUiResponse
      */
     @Override
     public CompletableFuture<DescribeSparkCodeWebUiResponse> describeSparkCodeWebUi(DescribeSparkCodeWebUiRequest request) {
@@ -1287,8 +1542,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of DescribeSqlPattern  DescribeSqlPatternRequest
+     * @return DescribeSqlPatternResponse
      */
     @Override
     public CompletableFuture<DescribeSqlPatternResponse> describeSqlPattern(DescribeSqlPatternRequest request) {
@@ -1304,6 +1562,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</p>
+     * 
+     * @param request the request parameters of DescribeStorageResourceUsage  DescribeStorageResourceUsageRequest
+     * @return DescribeStorageResourceUsageResponse
+     */
     @Override
     public CompletableFuture<DescribeStorageResourceUsageResponse> describeStorageResourceUsage(DescribeStorageResourceUsageRequest request) {
         try {
@@ -1319,8 +1584,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</p>
+     * 
+     * @param request the request parameters of DescribeTableAccessCount  DescribeTableAccessCountRequest
+     * @return DescribeTableAccessCountResponse
      */
     @Override
     public CompletableFuture<DescribeTableAccessCountResponse> describeTableAccessCount(DescribeTableAccessCountRequest request) {
@@ -1337,9 +1605,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeTables  DescribeTablesRequest
+     * @return DescribeTablesResponse
      */
     @Override
     public CompletableFuture<DescribeTablesResponse> describeTables(DescribeTablesRequest request) {
@@ -1356,8 +1629,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of DescribeUserQuota  DescribeUserQuotaRequest
+     * @return DescribeUserQuotaResponse
      */
     @Override
     public CompletableFuture<DescribeUserQuotaResponse> describeUserQuota(DescribeUserQuotaRequest request) {
@@ -1374,8 +1650,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of DetachUserENI  DetachUserENIRequest
+     * @return DetachUserENIResponse
      */
     @Override
     public CompletableFuture<DetachUserENIResponse> detachUserENI(DetachUserENIRequest request) {
@@ -1392,8 +1671,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of DisableElasticPlan  DisableElasticPlanRequest
+     * @return DisableElasticPlanResponse
      */
     @Override
     public CompletableFuture<DisableElasticPlanResponse> disableElasticPlan(DisableElasticPlanRequest request) {
@@ -1410,8 +1692,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</p>
+     * 
+     * @param request the request parameters of DownloadDiagnosisRecords  DownloadDiagnosisRecordsRequest
+     * @return DownloadDiagnosisRecordsResponse
      */
     @Override
     public CompletableFuture<DownloadDiagnosisRecordsResponse> downloadDiagnosisRecords(DownloadDiagnosisRecordsRequest request) {
@@ -1428,8 +1713,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of EnableElasticPlan  EnableElasticPlanRequest
+     * @return EnableElasticPlanResponse
      */
     @Override
     public CompletableFuture<EnableElasticPlanResponse> enableElasticPlan(EnableElasticPlanRequest request) {
@@ -1446,10 +1734,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      *
+     * <b>description</b> :
+     * <p>  General endpoint: <code>adb.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ExistRunningSQLEngine  ExistRunningSQLEngineRequest
+     * @return ExistRunningSQLEngineResponse
      */
     @Override
     public CompletableFuture<ExistRunningSQLEngineResponse> existRunningSQLEngine(ExistRunningSQLEngineRequest request) {
@@ -1466,9 +1759,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetDatabaseObjects  GetDatabaseObjectsRequest
+     * @return GetDatabaseObjectsResponse
      */
     @Override
     public CompletableFuture<GetDatabaseObjectsResponse> getDatabaseObjects(GetDatabaseObjectsRequest request) {
@@ -1485,10 +1783,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetSparkAppAttemptLog  GetSparkAppAttemptLogRequest
+     * @return GetSparkAppAttemptLogResponse
      */
     @Override
     public CompletableFuture<GetSparkAppAttemptLogResponse> getSparkAppAttemptLog(GetSparkAppAttemptLogRequest request) {
@@ -1505,10 +1810,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetSparkAppInfo  GetSparkAppInfoRequest
+     * @return GetSparkAppInfoResponse
      */
     @Override
     public CompletableFuture<GetSparkAppInfoResponse> getSparkAppInfo(GetSparkAppInfoRequest request) {
@@ -1525,10 +1837,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetSparkAppLog  GetSparkAppLogRequest
+     * @return GetSparkAppLogResponse
      */
     @Override
     public CompletableFuture<GetSparkAppLogResponse> getSparkAppLog(GetSparkAppLogRequest request) {
@@ -1545,10 +1864,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetSparkAppMetrics  GetSparkAppMetricsRequest
+     * @return GetSparkAppMetricsResponse
      */
     @Override
     public CompletableFuture<GetSparkAppMetricsResponse> getSparkAppMetrics(GetSparkAppMetricsRequest request) {
@@ -1565,10 +1891,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetSparkAppState  GetSparkAppStateRequest
+     * @return GetSparkAppStateResponse
      */
     @Override
     public CompletableFuture<GetSparkAppStateResponse> getSparkAppState(GetSparkAppStateRequest request) {
@@ -1585,10 +1918,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      *
+     * <b>description</b> :
+     * <p>  General endpoint: <code>adb.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetSparkAppWebUiAddress  GetSparkAppWebUiAddressRequest
+     * @return GetSparkAppWebUiAddressResponse
      */
     @Override
     public CompletableFuture<GetSparkAppWebUiAddressResponse> getSparkAppWebUiAddress(GetSparkAppWebUiAddressRequest request) {
@@ -1605,10 +1943,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetSparkConfigLogPath  GetSparkConfigLogPathRequest
+     * @return GetSparkConfigLogPathResponse
      */
     @Override
     public CompletableFuture<GetSparkConfigLogPathResponse> getSparkConfigLogPath(GetSparkConfigLogPathRequest request) {
@@ -1625,10 +1970,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetSparkDefinitions  GetSparkDefinitionsRequest
+     * @return GetSparkDefinitionsResponse
      */
     @Override
     public CompletableFuture<GetSparkDefinitionsResponse> getSparkDefinitions(GetSparkDefinitionsRequest request) {
@@ -1645,10 +1997,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      *
+     * <b>description</b> :
+     * <p>  General endpoint: <code>adb.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetSparkLogAnalyzeTask  GetSparkLogAnalyzeTaskRequest
+     * @return GetSparkLogAnalyzeTaskResponse
      */
     @Override
     public CompletableFuture<GetSparkLogAnalyzeTaskResponse> getSparkLogAnalyzeTask(GetSparkLogAnalyzeTaskRequest request) {
@@ -1665,10 +2022,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetSparkSQLEngineState  GetSparkSQLEngineStateRequest
+     * @return GetSparkSQLEngineStateResponse
      */
     @Override
     public CompletableFuture<GetSparkSQLEngineStateResponse> getSparkSQLEngineState(GetSparkSQLEngineStateRequest request) {
@@ -1685,10 +2049,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetSparkTemplateFileContent  GetSparkTemplateFileContentRequest
+     * @return GetSparkTemplateFileContentResponse
      */
     @Override
     public CompletableFuture<GetSparkTemplateFileContentResponse> getSparkTemplateFileContent(GetSparkTemplateFileContentRequest request) {
@@ -1705,10 +2076,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetSparkTemplateFolderTree  GetSparkTemplateFolderTreeRequest
+     * @return GetSparkTemplateFolderTreeResponse
      */
     @Override
     public CompletableFuture<GetSparkTemplateFolderTreeResponse> getSparkTemplateFolderTree(GetSparkTemplateFolderTreeRequest request) {
@@ -1725,10 +2103,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetSparkTemplateFullTree  GetSparkTemplateFullTreeRequest
+     * @return GetSparkTemplateFullTreeResponse
      */
     @Override
     public CompletableFuture<GetSparkTemplateFullTreeResponse> getSparkTemplateFullTree(GetSparkTemplateFullTreeRequest request) {
@@ -1744,6 +2129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTable  GetTableRequest
+     * @return GetTableResponse
+     */
     @Override
     public CompletableFuture<GetTableResponse> getTable(GetTableRequest request) {
         try {
@@ -1759,9 +2148,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetTableColumns  GetTableColumnsRequest
+     * @return GetTableColumnsResponse
      */
     @Override
     public CompletableFuture<GetTableColumnsResponse> getTableColumns(GetTableColumnsRequest request) {
@@ -1778,9 +2172,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetTableDDL  GetTableDDLRequest
+     * @return GetTableDDLResponse
      */
     @Override
     public CompletableFuture<GetTableDDLResponse> getTableDDL(GetTableDDLRequest request) {
@@ -1796,6 +2195,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTableObjects  GetTableObjectsRequest
+     * @return GetTableObjectsResponse
+     */
     @Override
     public CompletableFuture<GetTableObjectsResponse> getTableObjects(GetTableObjectsRequest request) {
         try {
@@ -1811,9 +2214,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetViewDDL  GetViewDDLRequest
+     * @return GetViewDDLResponse
      */
     @Override
     public CompletableFuture<GetViewDDLResponse> getViewDDL(GetViewDDLRequest request) {
@@ -1830,9 +2238,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetViewObjects  GetViewObjectsRequest
+     * @return GetViewObjectsResponse
      */
     @Override
     public CompletableFuture<GetViewObjectsResponse> getViewObjects(GetViewObjectsRequest request) {
@@ -1849,10 +2262,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of KillSparkApp  KillSparkAppRequest
+     * @return KillSparkAppResponse
      */
     @Override
     public CompletableFuture<KillSparkAppResponse> killSparkApp(KillSparkAppRequest request) {
@@ -1869,10 +2289,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      *
+     * <b>description</b> :
+     * <p>  General endpoint: <code>adb.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of KillSparkLogAnalyzeTask  KillSparkLogAnalyzeTaskRequest
+     * @return KillSparkLogAnalyzeTaskResponse
      */
     @Override
     public CompletableFuture<KillSparkLogAnalyzeTaskResponse> killSparkLogAnalyzeTask(KillSparkLogAnalyzeTaskRequest request) {
@@ -1889,10 +2314,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of KillSparkSQLEngine  KillSparkSQLEngineRequest
+     * @return KillSparkSQLEngineResponse
      */
     @Override
     public CompletableFuture<KillSparkSQLEngineResponse> killSparkSQLEngine(KillSparkSQLEngineRequest request) {
@@ -1909,10 +2341,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListSparkAppAttempts  ListSparkAppAttemptsRequest
+     * @return ListSparkAppAttemptsResponse
      */
     @Override
     public CompletableFuture<ListSparkAppAttemptsResponse> listSparkAppAttempts(ListSparkAppAttemptsRequest request) {
@@ -1928,6 +2367,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSparkApps  ListSparkAppsRequest
+     * @return ListSparkAppsResponse
+     */
     @Override
     public CompletableFuture<ListSparkAppsResponse> listSparkApps(ListSparkAppsRequest request) {
         try {
@@ -1943,10 +2386,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      *
+     * <b>description</b> :
+     * <p>  General endpoint: <code>adb.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListSparkLogAnalyzeTasks  ListSparkLogAnalyzeTasksRequest
+     * @return ListSparkLogAnalyzeTasksResponse
      */
     @Override
     public CompletableFuture<ListSparkLogAnalyzeTasksResponse> listSparkLogAnalyzeTasks(ListSparkLogAnalyzeTasksRequest request) {
@@ -1963,10 +2411,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListSparkTemplateFileIds  ListSparkTemplateFileIdsRequest
+     * @return ListSparkTemplateFileIdsResponse
      */
     @Override
     public CompletableFuture<ListSparkTemplateFileIdsResponse> listSparkTemplateFileIds(ListSparkTemplateFileIdsRequest request) {
@@ -1983,8 +2438,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of LoadSampleDataSet  LoadSampleDataSetRequest
+     * @return LoadSampleDataSetResponse
      */
     @Override
     public CompletableFuture<LoadSampleDataSetResponse> loadSampleDataSet(LoadSampleDataSetRequest request) {
@@ -2001,8 +2459,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of ModifyAccountDescription  ModifyAccountDescriptionRequest
+     * @return ModifyAccountDescriptionResponse
      */
     @Override
     public CompletableFuture<ModifyAccountDescriptionResponse> modifyAccountDescription(ModifyAccountDescriptionRequest request) {
@@ -2019,8 +2480,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of ModifyAccountPrivileges  ModifyAccountPrivilegesRequest
+     * @return ModifyAccountPrivilegesResponse
      */
     @Override
     public CompletableFuture<ModifyAccountPrivilegesResponse> modifyAccountPrivileges(ModifyAccountPrivilegesRequest request) {
@@ -2037,8 +2501,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of ModifyAuditLogConfig  ModifyAuditLogConfigRequest
+     * @return ModifyAuditLogConfigResponse
      */
     @Override
     public CompletableFuture<ModifyAuditLogConfigResponse> modifyAuditLogConfig(ModifyAuditLogConfigRequest request) {
@@ -2055,8 +2522,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of ModifyBackupPolicy  ModifyBackupPolicyRequest
+     * @return ModifyBackupPolicyResponse
      */
     @Override
     public CompletableFuture<ModifyBackupPolicyResponse> modifyBackupPolicy(ModifyBackupPolicyRequest request) {
@@ -2073,8 +2543,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</p>
+     * 
+     * @param request the request parameters of ModifyClusterAccessWhiteList  ModifyClusterAccessWhiteListRequest
+     * @return ModifyClusterAccessWhiteListResponse
      */
     @Override
     public CompletableFuture<ModifyClusterAccessWhiteListResponse> modifyClusterAccessWhiteList(ModifyClusterAccessWhiteListRequest request) {
@@ -2091,8 +2564,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of ModifyClusterConnectionString  ModifyClusterConnectionStringRequest
+     * @return ModifyClusterConnectionStringResponse
      */
     @Override
     public CompletableFuture<ModifyClusterConnectionStringResponse> modifyClusterConnectionString(ModifyClusterConnectionStringRequest request) {
@@ -2109,14 +2585,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### [](#)
-      * *   During a scaling event, you are not allowed to execute the `SUBMIT JOB` statement to submit asynchronous jobs. If your business requires asynchronous jobs, perform scaling during appropriate periods.
-      * *   When you scale a cluster, data in the cluster is migrated for redistribution. The amount of time that is required to migrate data is proportional to the data volume. During a scaling event, the services provided by the cluster are not interrupted. When you downgrade cluster specifications, data migration may require up to dozens of hours to complete. Proceed with caution especially if your cluster contains a large amount of data.
-      * *   If the cluster has a built-in dataset loaded, make sure that the cluster has reserved storage resources of at least 24 AnalyticDB compute units (ACUs). Otherwise, the built-in dataset cannot be used.
-      * *   When the scaling process is about to end, transient connections may occur. We recommend that you scale your cluster during off-peak hours or make sure that your application is configured to automatically reconnect to your cluster.
-      * *   You can change an AnalyticDB for MySQL cluster from Data Warehouse Edition to Data Lakehouse Edition, but not the other way around. For more information, see Change a cluster from Data Warehouse Edition to Data Lakehouse Edition.
-      * *   For information about the endpoints of the current service, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <h3><a href="#"></a></h3>
+     * <ul>
+     * <li>During a scaling event, you are not allowed to execute the <code>SUBMIT JOB</code> statement to submit asynchronous jobs. If your business requires asynchronous jobs, perform scaling during appropriate periods.</li>
+     * <li>When you scale a cluster, data in the cluster is migrated for redistribution. The amount of time that is required to migrate data is proportional to the data volume. During a scaling event, the services provided by the cluster are not interrupted. When you downgrade cluster specifications, data migration may require up to dozens of hours to complete. Proceed with caution especially if your cluster contains a large amount of data.</li>
+     * <li>If the cluster has a built-in dataset loaded, make sure that the cluster has reserved storage resources of at least 24 AnalyticDB compute units (ACUs). Otherwise, the built-in dataset cannot be used.</li>
+     * <li>When the scaling process is about to end, transient connections may occur. We recommend that you scale your cluster during off-peak hours or make sure that your application is configured to automatically reconnect to your cluster.</li>
+     * <li>You can change an AnalyticDB for MySQL cluster from Data Warehouse Edition to Data Lakehouse Edition, but not the other way around. For more information, see Change a cluster from Data Warehouse Edition to Data Lakehouse Edition.</li>
+     * <li>For information about the endpoints of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyDBCluster  ModifyDBClusterRequest
+     * @return ModifyDBClusterResponse
      */
     @Override
     public CompletableFuture<ModifyDBClusterResponse> modifyDBCluster(ModifyDBClusterRequest request) {
@@ -2133,8 +2614,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of ModifyDBClusterDescription  ModifyDBClusterDescriptionRequest
+     * @return ModifyDBClusterDescriptionResponse
      */
     @Override
     public CompletableFuture<ModifyDBClusterDescriptionResponse> modifyDBClusterDescription(ModifyDBClusterDescriptionRequest request) {
@@ -2151,8 +2635,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of ModifyDBClusterMaintainTime  ModifyDBClusterMaintainTimeRequest
+     * @return ModifyDBClusterMaintainTimeResponse
      */
     @Override
     public CompletableFuture<ModifyDBClusterMaintainTimeResponse> modifyDBClusterMaintainTime(ModifyDBClusterMaintainTimeRequest request) {
@@ -2169,8 +2656,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of ModifyDBResourceGroup  ModifyDBResourceGroupRequest
+     * @return ModifyDBResourceGroupResponse
      */
     @Override
     public CompletableFuture<ModifyDBResourceGroupResponse> modifyDBResourceGroup(ModifyDBResourceGroupRequest request) {
@@ -2187,8 +2677,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</p>
+     * 
+     * @param request the request parameters of ModifyElasticPlan  ModifyElasticPlanRequest
+     * @return ModifyElasticPlanResponse
      */
     @Override
     public CompletableFuture<ModifyElasticPlanResponse> modifyElasticPlan(ModifyElasticPlanRequest request) {
@@ -2204,6 +2697,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyPerformanceView  ModifyPerformanceViewRequest
+     * @return ModifyPerformanceViewResponse
+     */
     @Override
     public CompletableFuture<ModifyPerformanceViewResponse> modifyPerformanceView(ModifyPerformanceViewRequest request) {
         try {
@@ -2219,10 +2716,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of PreloadSparkAppMetrics  PreloadSparkAppMetricsRequest
+     * @return PreloadSparkAppMetricsResponse
      */
     @Override
     public CompletableFuture<PreloadSparkAppMetricsResponse> preloadSparkAppMetrics(PreloadSparkAppMetricsRequest request) {
@@ -2239,8 +2743,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of ReleaseClusterPublicConnection  ReleaseClusterPublicConnectionRequest
+     * @return ReleaseClusterPublicConnectionResponse
      */
     @Override
     public CompletableFuture<ReleaseClusterPublicConnectionResponse> releaseClusterPublicConnection(ReleaseClusterPublicConnectionRequest request) {
@@ -2257,10 +2764,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of RenameSparkTemplateFile  RenameSparkTemplateFileRequest
+     * @return RenameSparkTemplateFileResponse
      */
     @Override
     public CompletableFuture<RenameSparkTemplateFileResponse> renameSparkTemplateFile(RenameSparkTemplateFileRequest request) {
@@ -2277,8 +2791,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of ResetAccountPassword  ResetAccountPasswordRequest
+     * @return ResetAccountPasswordResponse
      */
     @Override
     public CompletableFuture<ResetAccountPasswordResponse> resetAccountPassword(ResetAccountPasswordRequest request) {
@@ -2295,10 +2812,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of SetSparkAppLogRootPath  SetSparkAppLogRootPathRequest
+     * @return SetSparkAppLogRootPathResponse
      */
     @Override
     public CompletableFuture<SetSparkAppLogRootPathResponse> setSparkAppLogRootPath(SetSparkAppLogRootPathRequest request) {
@@ -2315,10 +2839,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of StartSparkSQLEngine  StartSparkSQLEngineRequest
+     * @return StartSparkSQLEngineResponse
      */
     @Override
     public CompletableFuture<StartSparkSQLEngineResponse> startSparkSQLEngine(StartSparkSQLEngineRequest request) {
@@ -2335,10 +2866,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of SubmitSparkApp  SubmitSparkAppRequest
+     * @return SubmitSparkAppResponse
      */
     @Override
     public CompletableFuture<SubmitSparkAppResponse> submitSparkApp(SubmitSparkAppRequest request) {
@@ -2355,10 +2893,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      *
+     * <b>description</b> :
+     * <p>  General endpoint: <code>adb.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of SubmitSparkLogAnalyzeTask  SubmitSparkLogAnalyzeTaskRequest
+     * @return SubmitSparkLogAnalyzeTaskResponse
      */
     @Override
     public CompletableFuture<SubmitSparkLogAnalyzeTaskResponse> submitSparkLogAnalyzeTask(SubmitSparkLogAnalyzeTaskRequest request) {
@@ -2375,8 +2918,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of UnbindAccount  UnbindAccountRequest
+     * @return UnbindAccountResponse
      */
     @Override
     public CompletableFuture<UnbindAccountResponse> unbindAccount(UnbindAccountRequest request) {
@@ -2393,8 +2939,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-      *
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of UnbindDBResourceGroupWithUser  UnbindDBResourceGroupWithUserRequest
+     * @return UnbindDBResourceGroupWithUserResponse
      */
     @Override
     public CompletableFuture<UnbindDBResourceGroupWithUserResponse> unbindDBResourceGroupWithUser(UnbindDBResourceGroupWithUserRequest request) {
@@ -2411,10 +2960,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-      *
+     * <b>description</b> :
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <ul>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpdateSparkTemplateFile  UpdateSparkTemplateFileRequest
+     * @return UpdateSparkTemplateFileResponse
      */
     @Override
     public CompletableFuture<UpdateSparkTemplateFileResponse> updateSparkTemplateFile(UpdateSparkTemplateFileRequest request) {

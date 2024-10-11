@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePerformanceViewResponseBody} extends {@link TeaModel}
  *
  * <p>CreatePerformanceViewResponseBody</p>
@@ -61,7 +62,21 @@ public class CreatePerformanceViewResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if Resource Access Management (RAM) permission verification failed.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,
+         *     &quot;AuthPrincipalOwnerId&quot;: &quot;1**<em><strong><strong><strong><strong><strong><strong><strong>7&quot;,
+         *     &quot;EncodedDiagnosticMessage&quot;: &quot;AQIBIAAAAOPdwKY2QLOvgMEc7SkkoJfj1kvZwsaRqNYMh10Tv0wTe0fCzaCdrvgazfNb0EnJKETgXyhR+3BIQjx9WAqZryejBsp1Bl4qI5En/D9dEhcXAtKCxCmE2kZCiEzpy8BoEUt+bs0DmlaGWO5xkEpttypLIB4rUhDvZd+zwPg4EXk4KSSWSWsurxtqDkKEMshKlQFBTKvJcKwyhk62IeYly4hQ+5IpXjkh1GQXuDRCQ==&quot;,
+         *     &quot;AuthPrincipalType&quot;: &quot;SubUser&quot;,
+         *     &quot;AuthPrincipalDisplayName&quot;: &quot;2</strong></strong></strong></strong></strong></strong></strong></em>9&quot;,
+         *     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,
+         *     &quot;AuthAction&quot;: &quot;adb:DescribeExcessivePrimaryKeys&quot;
+         * }</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -69,11 +84,14 @@ public class CreatePerformanceViewResponseBody extends TeaModel {
         }
 
         /**
-         * The creation result. Valid values:
-         * <p>
+         * <p>The creation result. Valid values:</p>
+         * <ul>
+         * <li><strong>SUCCESS</strong></li>
+         * <li><strong>FAILED</strong></li>
+         * </ul>
          * 
-         * *   **SUCCESS**
-         * *   **FAILED**
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder createStatus(String createStatus) {
             this.createStatus = createStatus;
@@ -81,7 +99,10 @@ public class CreatePerformanceViewResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E031AABF-BD56-5966-A063-4283EF18DB45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

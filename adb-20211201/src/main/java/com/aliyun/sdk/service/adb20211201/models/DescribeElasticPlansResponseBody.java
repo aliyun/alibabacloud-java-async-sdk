@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeElasticPlansResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeElasticPlansResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeElasticPlansResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The queried scaling plans.
+         * <p>The queried scaling plans.</p>
          */
         public Builder elasticPlans(java.util.List < ElasticPlans> elasticPlans) {
             this.elasticPlans = elasticPlans;
@@ -93,7 +94,10 @@ public class DescribeElasticPlansResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeElasticPlansResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeElasticPlansResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5C433C2-001F-58E3-99F5-3274C14DF8BD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeElasticPlansResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeElasticPlansResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeElasticPlansResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeElasticPlansResponseBody</p>
+     */
     public static class ElasticPlans extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoScale")
         private Boolean autoScale;
@@ -229,11 +248,14 @@ public class DescribeElasticPlansResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Indicates whether **Proportional Default Scaling for EIUs** is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether <strong>Proportional Default Scaling for EIUs</strong> is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoScale(Boolean autoScale) {
                 this.autoScale = autoScale;
@@ -241,7 +263,10 @@ public class DescribeElasticPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the scaling plan.
+             * <p>The name of the scaling plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder elasticPlanName(String elasticPlanName) {
                 this.elasticPlanName = elasticPlanName;
@@ -249,11 +274,14 @@ public class DescribeElasticPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the scaling plan was immediately enabled after the plan is created. Valid values:
-             * <p>
+             * <p>Indicates whether the scaling plan is immediately enabled after the plan is created. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -261,10 +289,13 @@ public class DescribeElasticPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the next scheduling is performed.
-             * <p>
+             * <p>The time when the next scheduling is performed.</p>
+             * <blockquote>
+             * <p>The time is in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+             * </blockquote>
              * 
-             * > The time is in the yyyy-MM-ddTHH:mm:ssZ format.
+             * <strong>example:</strong>
+             * <p>2022-01-01T12:01:00Z</p>
              */
             public Builder nextScheduleTime(String nextScheduleTime) {
                 this.nextScheduleTime = nextScheduleTime;
@@ -272,10 +303,13 @@ public class DescribeElasticPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource group.
-             * <p>
+             * <p>The name of the resource group.</p>
+             * <blockquote>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/459446.html">DescribeDBResourceGroup</a> operation to query the name of a resource group within a cluster.</p>
+             * </blockquote>
              * 
-             * > You can call the [DescribeDBResourceGroup](~~459446~~) operation to query the name of a resource group within a cluster.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder resourceGroupName(String resourceGroupName) {
                 this.resourceGroupName = resourceGroupName;
@@ -283,7 +317,10 @@ public class DescribeElasticPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of elastic resources after scaling.
+             * <p>The amount of elastic resources after scaling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32ACU</p>
              */
             public Builder targetSize(String targetSize) {
                 this.targetSize = targetSize;
@@ -291,11 +328,14 @@ public class DescribeElasticPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the scaling plan. Valid values:
-             * <p>
+             * <p>The type of the scaling plan. Valid values:</p>
+             * <ul>
+             * <li><strong>EXECUTOR</strong>: the interactive resource group type, which specifies the computing resource type.</li>
+             * <li><strong>WORKER</strong>: the EIU type.</li>
+             * </ul>
              * 
-             * *   EXECUTOR: interactive resource group.
-             * *   WORKER: EIU.
+             * <strong>example:</strong>
+             * <p>EXECUTOR</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindDBResourceGroupWithUserRequest} extends {@link RequestModel}
  *
  * <p>BindDBResourceGroupWithUserRequest</p>
@@ -84,7 +85,11 @@ public class BindDBResourceGroupWithUserRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-bp1ub9grke1****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -93,7 +98,11 @@ public class BindDBResourceGroupWithUserRequest extends Request {
         }
 
         /**
-         * The name of the resource group.
+         * <p>The name of the resource group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -102,7 +111,11 @@ public class BindDBResourceGroupWithUserRequest extends Request {
         }
 
         /**
-         * The name of the database account. It can be a standard account or a privileged account.
+         * <p>The name of the database account. It can be a standard account or a privileged account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>accout</p>
          */
         public Builder groupUser(String groupUser) {
             this.putQueryParameter("GroupUser", groupUser);

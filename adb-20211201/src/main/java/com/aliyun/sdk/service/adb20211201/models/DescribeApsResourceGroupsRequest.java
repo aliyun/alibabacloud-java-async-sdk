@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApsResourceGroupsRequest} extends {@link RequestModel}
  *
  * <p>DescribeApsResourceGroupsRequest</p>
@@ -82,10 +83,14 @@ public class DescribeApsResourceGroupsRequest extends Request {
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
-         * <p>
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBClusters](~~612397~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
+         * <strong>example:</strong>
+         * <p>amv-bp1t6rym21****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putBodyParameter("DBClusterId", DBClusterId);
@@ -94,10 +99,13 @@ public class DescribeApsResourceGroupsRequest extends Request {
         }
 
         /**
-         * The region ID.
-         * <p>
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeRegions](~~454314~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -106,7 +114,10 @@ public class DescribeApsResourceGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the data synchronization job.
+         * <p>The ID of the data synchronization job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aps-hz1686v37sx****</p>
          */
         public Builder workloadId(String workloadId) {
             this.putBodyParameter("WorkloadId", workloadId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeElasticPlanJobsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeElasticPlanJobsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The queried scaling plan jobs.
+         * <p>The queried scaling plan jobs.</p>
          */
         public Builder jobs(java.util.List < Jobs> jobs) {
             this.jobs = jobs;
@@ -93,7 +94,10 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5C433C2-001F-58E3-99F5-3274C14DF8BD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of scaling plan jobs.
+         * <p>The total number of scaling plan jobs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeElasticPlanJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeElasticPlanJobsResponseBody</p>
+     */
     public static class Jobs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ElasticAcu")
         private String elasticAcu;
@@ -277,13 +296,16 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The amount of elastic resources.
-             * <p>
+             * <p>The amount of elastic resources.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li>If Type is set to EXECUTOR, ElasticAcu indicates the amount of elastic resources in the current resource group.</li>
+             * <li>If Type is set to WORKER, ElasticAcu indicates the total amount of elastic storage resources in the current cluster.</li>
+             * </ul>
              * 
-             * > 
-             * 
-             * *   If Type is set to EXECUTOR, ElasticAcu indicates the amount of elastic resources in the current resource group.
-             * *   If Type is set to WORKER, ElasticAcu indicates the total amount of elastic storage resources in the current cluster.
+             * <strong>example:</strong>
+             * <p>16ACU</p>
              */
             public Builder elasticAcu(String elasticAcu) {
                 this.elasticAcu = elasticAcu;
@@ -291,7 +313,10 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the scaling plan.
+             * <p>The name of the scaling plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder elasticPlanName(String elasticPlanName) {
                 this.elasticPlanName = elasticPlanName;
@@ -299,10 +324,13 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the scaling plan job.
-             * <p>
+             * <p>The end time of the scaling plan job.</p>
+             * <blockquote>
+             * <p> The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+             * </blockquote>
              * 
-             * >  The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+             * <strong>example:</strong>
+             * <p>2022-01-01T12:01:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -310,13 +338,16 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of compute nodes or storage replica sets.
-             * <p>
+             * <p>The number of compute nodes or storage replica sets.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li>If Type is set to EXECUTOR, InstanceSize indicates the number of compute nodes in the cluster.</li>
+             * <li>If Type is set to EXECUTOR, InstanceSize indicates the number of storage replica sets in the cluster.</li>
+             * </ul>
              * 
-             * > 
-             * 
-             * *   If Type is set to EXECUTOR, InstanceSize indicates the number of compute nodes in the cluster.
-             * *   If Type is set to EXECUTOR, InstanceSize indicates the number of storage replica sets in the cluster.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder instanceSize(Integer instanceSize) {
                 this.instanceSize = instanceSize;
@@ -324,13 +355,16 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of reserved resources.
-             * <p>
+             * <p>The amount of reserved resources.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li>If Type is set to EXECUTOR, ReserveAcu indicates the amount of reserved resources in the current resource group.</li>
+             * <li>If Type is set to WORKER, ReserveAcu indicates the total amount of reserved storage resources in the current cluster.</li>
+             * </ul>
              * 
-             * > 
-             * 
-             * *   If Type is set to EXECUTOR, ReserveAcu indicates the amount of reserved resources in the current resource group.
-             * *   If Type is set to WORKER, ReserveAcu indicates the total amount of reserved storage resources in the current cluster.
+             * <strong>example:</strong>
+             * <p>16ACU</p>
              */
             public Builder reserveAcu(String reserveAcu) {
                 this.reserveAcu = reserveAcu;
@@ -338,7 +372,10 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource group.
+             * <p>The name of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder resourceGroupName(String resourceGroupName) {
                 this.resourceGroupName = resourceGroupName;
@@ -346,10 +383,13 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the scaling plan job.
-             * <p>
+             * <p>The start time of the scaling plan job.</p>
+             * <blockquote>
+             * <p> The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+             * </blockquote>
              * 
-             * >  The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+             * <strong>example:</strong>
+             * <p>2022-01-01T11:01:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -357,12 +397,15 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the scaling plan job. Valid values:
-             * <p>
+             * <p>The state of the scaling plan job. Valid values:</p>
+             * <ul>
+             * <li>RUNNING</li>
+             * <li>SUCCESSFUL</li>
+             * <li>FAILED</li>
+             * </ul>
              * 
-             * *   RUNNING
-             * *   SUCCESSFUL
-             * *   FAILED
+             * <strong>example:</strong>
+             * <p>SUCCESSFUL</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -370,7 +413,10 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The desired specifications of elastic resources after scaling.
+             * <p>The desired specifications of elastic resources after scaling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32ACU</p>
              */
             public Builder targetSize(String targetSize) {
                 this.targetSize = targetSize;
@@ -378,13 +424,16 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The total amount of resources.
-             * <p>
+             * <p>The total amount of resources.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li>If Type is set to EXECUTOR, TotalAcu indicates the total amount of computing resources in the current resource group.</li>
+             * <li>If Type is set to WORKER, TotalAcu indicates the total amount of storage resources in the cluster.</li>
+             * </ul>
              * 
-             * > 
-             * 
-             * *   If Type is set to EXECUTOR, TotalAcu indicates the total amount of computing resources in the current resource group.
-             * *   If Type is set to WORKER, TotalAcu indicates the total amount of storage resources in the cluster.
+             * <strong>example:</strong>
+             * <p>32ACU</p>
              */
             public Builder totalAcu(String totalAcu) {
                 this.totalAcu = totalAcu;
@@ -392,11 +441,14 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the scaling plan job. Valid values:
-             * <p>
+             * <p>The type of the scaling plan job. Valid values:</p>
+             * <ul>
+             * <li>EXECUTOR: the interactive resource group type, which indicates the computing resource type.</li>
+             * <li>WORKER: the EIU type.</li>
+             * </ul>
              * 
-             * *   EXECUTOR: the interactive resource group type, which indicates the computing resource type.
-             * *   WORKER: the EIU type.
+             * <strong>example:</strong>
+             * <p>EXECUTOR</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckSampleDataSetResponseBody} extends {@link TeaModel}
  *
  * <p>CheckSampleDataSetResponseBody</p>
@@ -49,7 +50,10 @@ public class CheckSampleDataSetResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0CE655C3-C211-513D-A42F-D4AE2D1A867C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,13 +61,16 @@ public class CheckSampleDataSetResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the built-in dataset. Valid values:
-         * <p>
+         * <p>The state of the built-in dataset. Valid values:</p>
+         * <ul>
+         * <li><strong>SUCCEED</strong>: The dataset is loaded.</li>
+         * <li><strong>INIT</strong>: The dataset is being loaded.</li>
+         * <li><strong>FAILED</strong>: The dataset failed to be loaded.</li>
+         * <li><strong>UNINITIALIZED</strong>: The dataset is not loaded.</li>
+         * </ul>
          * 
-         * *   **SUCCEED**: The dataset is loaded.
-         * *   **INIT**: The dataset is being loaded.
-         * *   **FAILED**: The dataset failed to be loaded.
-         * *   **UNINITIALIZED**: The dataset is not loaded.
+         * <strong>example:</strong>
+         * <p>UNINITIALIZED</p>
          */
         public Builder status(String status) {
             this.status = status;

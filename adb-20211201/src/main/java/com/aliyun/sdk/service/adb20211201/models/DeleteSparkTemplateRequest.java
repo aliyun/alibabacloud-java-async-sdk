@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSparkTemplateRequest} extends {@link RequestModel}
  *
  * <p>DeleteSparkTemplateRequest</p>
@@ -69,7 +70,11 @@ public class DeleteSparkTemplateRequest extends Request {
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp11q28kvl688****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putBodyParameter("DBClusterId", DBClusterId);
@@ -78,14 +83,19 @@ public class DeleteSparkTemplateRequest extends Request {
         }
 
         /**
-         * The directory ID of the template files that you want to delete.
-         * <p>
+         * <p>The directory ID of the template files that you want to delete.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/456205.html">GetSparkTemplateFullTree</a> operation to query the directory ID of template files.</p>
+         * </li>
+         * <li><p>When you specify a directory ID, the directory and all template files that are included in the directory are deleted.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * > 
-         * 
-         * *   You can call the [GetSparkTemplateFullTree](~~456205~~) operation to query the directory ID of template files.
-         * 
-         * *   When you specify a directory ID, the directory and all template files that are included in the directory are deleted.
+         * <strong>example:</strong>
+         * <p>725204</p>
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);

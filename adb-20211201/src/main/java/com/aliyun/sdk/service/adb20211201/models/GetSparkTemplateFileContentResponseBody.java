@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSparkTemplateFileContentResponseBody} extends {@link TeaModel}
  *
  * <p>GetSparkTemplateFileContentResponseBody</p>
@@ -49,7 +50,7 @@ public class GetSparkTemplateFileContentResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetSparkTemplateFileContentResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D65A809F-34CE-4550-9BC1-0ED21ETG380</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetSparkTemplateFileContentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSparkTemplateFileContentResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSparkTemplateFileContentResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppType")
         private String appType;
@@ -145,12 +155,15 @@ public class GetSparkTemplateFileContentResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The application type. Valid values:
-             * <p>
+             * <p>The application type. Valid values:</p>
+             * <ul>
+             * <li><strong>SQL</strong></li>
+             * <li><strong>STREAMING</strong></li>
+             * <li><strong>BATCH</strong></li>
+             * </ul>
              * 
-             * *   **SQL**
-             * *   **STREAMING**
-             * *   **BATCH**
+             * <strong>example:</strong>
+             * <p>SQL</p>
              */
             public Builder appType(String appType) {
                 this.appType = appType;
@@ -158,7 +171,10 @@ public class GetSparkTemplateFileContentResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the application template.
+             * <p>The content of the application template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>set spark.driver.resourceSpec=medium;set spark.executor.instances=2;set spark.executor.resourceSpec=medium;set spark.app.name=Spark SQL Test;</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -166,7 +182,10 @@ public class GetSparkTemplateFileContentResponseBody extends TeaModel {
             }
 
             /**
-             * The application template ID.
+             * <p>The application template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>725204</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -174,7 +193,10 @@ public class GetSparkTemplateFileContentResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource group.
+             * <p>The name of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder resourceGroupName(String resourceGroupName) {
                 this.resourceGroupName = resourceGroupName;
@@ -182,11 +204,14 @@ public class GetSparkTemplateFileContentResponseBody extends TeaModel {
             }
 
             /**
-             * The file type. Valid values:
-             * <p>
+             * <p>The file type. Valid values:</p>
+             * <ul>
+             * <li><strong>folder</strong></li>
+             * <li><strong>file</strong></li>
+             * </ul>
              * 
-             * *   **folder**
-             * *   **file**
+             * <strong>example:</strong>
+             * <p>file</p>
              */
             public Builder type(String type) {
                 this.type = type;

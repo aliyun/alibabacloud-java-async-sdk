@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAuditLogRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAuditLogRecordsResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-t4nj8619bz2w3****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -105,7 +109,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The queried SQL audit logs.
+         * <p>The queried SQL audit logs.</p>
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -113,7 +117,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -121,7 +128,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -129,7 +139,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8A564B7F-8C00-43C0-8EC5-919FBB70573</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6974</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -150,6 +166,12 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAuditLogRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAuditLogRecordsResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnId")
         private String connId;
@@ -285,7 +307,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * The connection ID.
+             * <p>The connection ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14356****</p>
              */
             public Builder connId(String connId) {
                 this.connId = connId;
@@ -293,7 +318,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database on which the SQL statement was executed.
+             * <p>The name of the database on which the SQL statement was executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adb_demo</p>
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -301,7 +329,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the execution of the SQL statement. The time is displayed in the ISO 8601 standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.
+             * <p>The start time of the execution of the SQL statement. The time is displayed in the ISO 8601 standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-12 10:10:00</p>
              */
             public Builder executeTime(String executeTime) {
                 this.executeTime = executeTime;
@@ -309,7 +340,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address and port number of the client that is used to execute the SQL statement.
+             * <p>The IP address and port number of the client that is used to execute the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.104.XX.XX:43908</p>
              */
             public Builder hostAddress(String hostAddress) {
                 this.hostAddress = hostAddress;
@@ -317,7 +351,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The task ID.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202106081752021720161662490345362390</p>
              */
             public Builder processID(String processID) {
                 this.processID = processID;
@@ -325,7 +362,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement.
+             * <p>The SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT * FROM adb_hdfs_import_source</p>
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -333,7 +373,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the SQL statement.
+             * <p>The type of the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT</p>
              */
             public Builder SQLType(String SQLType) {
                 this.SQLType = SQLType;
@@ -341,11 +384,14 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the SQL statement was successfully executed. Valid values:
-             * <p>
+             * <p>Indicates whether the SQL statement was successfully executed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder succeed(String succeed) {
                 this.succeed = succeed;
@@ -353,7 +399,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of time that is consumed to execute the SQL statement. Unit: milliseconds.
+             * <p>The amount of time that is consumed to execute the SQL statement. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>216</p>
              */
             public Builder totalTime(String totalTime) {
                 this.totalTime = totalTime;
@@ -361,7 +410,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The username that is used to execute the SQL statement.
+             * <p>The username that is used to execute the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder user(String user) {
                 this.user = user;

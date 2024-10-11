@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeElasticPlanSpecificationsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeElasticPlanSpecificationsResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeElasticPlanSpecificationsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class DescribeElasticPlanSpecificationsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class DescribeElasticPlanSpecificationsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5C433C2-001F-58E3-99F5-3274C14DF8BD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class DescribeElasticPlanSpecificationsResponseBody extends TeaModel {
         }
 
         /**
-         * The queried resource specifications.
+         * <p>The queried resource specifications.</p>
          */
         public Builder specifications(java.util.List < String > specifications) {
             this.specifications = specifications;
@@ -117,7 +127,10 @@ public class DescribeElasticPlanSpecificationsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

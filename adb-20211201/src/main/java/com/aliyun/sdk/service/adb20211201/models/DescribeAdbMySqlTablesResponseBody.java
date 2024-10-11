@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAdbMySqlTablesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAdbMySqlTablesResponseBody</p>
@@ -85,11 +86,14 @@ public class DescribeAdbMySqlTablesResponseBody extends TeaModel {
         private java.util.List < String > tables; 
 
         /**
-         * The message returned for the operation. Valid values:
-         * <p>
+         * <p>The message returned for the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>Success</strong> is returned if the operation is successful.</li>
+         * <li>An error message is returned if the operation fails.</li>
+         * </ul>
          * 
-         * *   **Success** is returned if the operation is successful.
-         * *   An error message is returned if the operation fails.
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +101,10 @@ public class DescribeAdbMySqlTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7A7D49E3-5585-5DF8-B62C-75C46B4991DC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -105,7 +112,10 @@ public class DescribeAdbMySqlTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb_demo</p>
          */
         public Builder schema(String schema) {
             this.schema = schema;
@@ -113,11 +123,14 @@ public class DescribeAdbMySqlTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The operation is successful.</li>
+         * <li><strong>false</strong>: The operation fails.</li>
+         * </ul>
          * 
-         * *   **true**: The operation is successful.
-         * *   **false**: The operation fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -125,7 +138,7 @@ public class DescribeAdbMySqlTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The names of tables.
+         * <p>The names of tables.</p>
          */
         public Builder tables(java.util.List < String > tables) {
             this.tables = tables;

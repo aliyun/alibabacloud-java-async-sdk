@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTableDDLResponseBody} extends {@link TeaModel}
  *
  * <p>GetTableDDLResponseBody</p>
@@ -49,7 +50,10 @@ public class GetTableDDLResponseBody extends TeaModel {
         private String SQL; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>863D51B7-5321-41D8-A0B6-A088B0******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,12 @@ public class GetTableDDLResponseBody extends TeaModel {
         }
 
         /**
-         * The SQL statement.
+         * <p>The SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>create table (
+         *  id varchar(32)
+         * );</p>
          */
         public Builder SQL(String SQL) {
             this.SQL = SQL;

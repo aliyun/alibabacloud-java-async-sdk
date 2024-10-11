@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApsResourceGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApsResourceGroupsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The queried resource groups.
+         * <p>The queried resource groups.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -93,7 +94,10 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -101,11 +105,14 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <ul>
+         * <li>If the request was successful, a success message is returned.</li>
+         * <li>If the request failed, an error message is returned.</li>
+         * </ul>
          * 
-         * *   If the request was successful, a success message is returned.
-         * *   If the request failed, an error message is returned.
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +120,10 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6FC370D7-1D4C-5A8E-805E-F73366382C66</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +131,14 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,6 +151,12 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeApsResourceGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApsResourceGroupsResponseBody</p>
+     */
     public static class ResourceGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Available")
         private Boolean available;
@@ -237,11 +256,14 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
             private Integer minComputeResource; 
 
             /**
-             * Indicates whether the resource group is available. Valid values:
-             * <p>
+             * <p>Indicates whether the resource group is available. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder available(Boolean available) {
                 this.available = available;
@@ -257,7 +279,10 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource group.
+             * <p>The name of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -265,13 +290,17 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource group. Valid values:
-             * <p>
+             * <p>The type of the resource group. Valid values:</p>
+             * <ul>
+             * <li><strong>Interactive</strong></li>
+             * <li><strong>Job</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p> For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource groups</a>.</p>
+             * </blockquote>
              * 
-             * *   **Interactive**
-             * *   **Job**
-             * 
-             * >  For more information about resource groups, see [Resource groups](~~428610~~).
+             * <strong>example:</strong>
+             * <p>Job</p>
              */
             public Builder groupType(String groupType) {
                 this.groupType = groupType;
@@ -279,7 +308,10 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of remaining computing resources. Unit: ACUs.
+             * <p>The amount of remaining computing resources. Unit: ACUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>512</p>
              */
             public Builder leftComputeResource(Integer leftComputeResource) {
                 this.leftComputeResource = leftComputeResource;
@@ -287,11 +319,14 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum amount of reserved computing resources. Unit: ACUs.
-             * <p>
+             * <p>The maximum amount of reserved computing resources. Unit: ACUs.</p>
+             * <ul>
+             * <li>If the value of GroupType is <strong>Interactive</strong>, the amount of reserved computing resources that are not allocated in the cluster is returned in increments of 16 ACUs.</li>
+             * <li>If the value of GroupType is <strong>Job</strong>, the amount of reserved computing resources that are not allocated in the cluster is returned in increments of 8 ACUs.</li>
+             * </ul>
              * 
-             * *   If the value of GroupType is **Interactive**, the amount of reserved computing resources that are not allocated in the cluster is returned in increments of 16 ACUs.
-             * *   If the value of GroupType is **Job**, the amount of reserved computing resources that are not allocated in the cluster is returned in increments of 8 ACUs.
+             * <strong>example:</strong>
+             * <p>512</p>
              */
             public Builder maxComputeResource(Integer maxComputeResource) {
                 this.maxComputeResource = maxComputeResource;
@@ -299,11 +334,14 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum amount of reserved computing resources. Unit: ACUs.
-             * <p>
+             * <p>The minimum amount of reserved computing resources. Unit: ACUs.</p>
+             * <ul>
+             * <li>If the value of GroupType is <strong>Interactive</strong>, 16 is returned.</li>
+             * <li>If the value of GroupType is <strong>Job</strong>, 0 is returned.</li>
+             * </ul>
              * 
-             * *   If the value of GroupType is **Interactive**, 16 is returned.
-             * *   If the value of GroupType is **Job**, 0 is returned.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder minComputeResource(Integer minComputeResource) {
                 this.minComputeResource = minComputeResource;
@@ -317,6 +355,12 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeApsResourceGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApsResourceGroupsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceGroups")
         private java.util.List < ResourceGroups> resourceGroups;
@@ -356,7 +400,7 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
             private Long step; 
 
             /**
-             * The queried resource groups.
+             * <p>The queried resource groups.</p>
              */
             public Builder resourceGroups(java.util.List < ResourceGroups> resourceGroups) {
                 this.resourceGroups = resourceGroups;
@@ -364,11 +408,14 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The step size of resources. Unit: AnalyticDB compute units (ACUs).
-             * <p>
+             * <p>The step size of resources. Unit: AnalyticDB compute units (ACUs).</p>
+             * <ul>
+             * <li>If the value of GroupType is <strong>Interactive</strong>, 16 is returned.</li>
+             * <li>If the value of GroupType is <strong>Job</strong>, 8 is returned.</li>
+             * </ul>
              * 
-             * *   If the value of GroupType is **Interactive**, 16 is returned.
-             * *   If the value of GroupType is **Job**, 8 is returned.
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder step(Long step) {
                 this.step = step;

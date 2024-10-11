@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindAccountRequest} extends {@link RequestModel}
  *
  * <p>BindAccountRequest</p>
@@ -84,7 +85,11 @@ public class BindAccountRequest extends Request {
         } 
 
         /**
-         * The standard account of the cluster.
+         * <p>The standard account of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_accout</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -93,7 +98,11 @@ public class BindAccountRequest extends Request {
         }
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-wz99d9nh532****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -102,7 +111,11 @@ public class BindAccountRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * <p>The ID of the RAM user.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1444832459****</p>
          */
         public Builder ramUser(String ramUser) {
             this.putQueryParameter("RamUser", ramUser);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeElasticPlanSpecificationsRequest} extends {@link RequestModel}
  *
  * <p>DescribeElasticPlanSpecificationsRequest</p>
@@ -83,10 +84,14 @@ public class DescribeElasticPlanSpecificationsRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBClusters](~~454250~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
+         * <strong>example:</strong>
+         * <p>amv-wz9509beptiz****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -95,14 +100,18 @@ public class DescribeElasticPlanSpecificationsRequest extends Request {
         }
 
         /**
-         * The name of the resource group.
-         * <p>
+         * <p>The name of the resource group.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter must be specified only when you query the resource specifications that are supported by an interactive resource group.</p>
+         * </li>
+         * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/459446.html">DescribeDBResourceGroup</a> operation to query the name of a resource group within a cluster.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   This parameter must be specified only when you query the resource specifications that are supported by an interactive resource group.
-         * 
-         * *   You can call the [DescribeDBResourceGroup](~~459446~~) operation to query the name of a resource group within a cluster.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putQueryParameter("ResourceGroupName", resourceGroupName);
@@ -111,11 +120,15 @@ public class DescribeElasticPlanSpecificationsRequest extends Request {
         }
 
         /**
-         * The type of the scaling plan. Valid values:
-         * <p>
+         * <p>The type of the scaling plan. Valid values:</p>
+         * <ul>
+         * <li>EXECUTOR: the interactive resource group type, which specifies the computing resource type.</li>
+         * <li>WORKER: the elastic I/O unit (EIU) type.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   EXECUTOR: the interactive resource group type, which specifies the computing resource type.
-         * *   WORKER: the elastic I/O unit (EIU) type.
+         * <strong>example:</strong>
+         * <p>EXECUTOR</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

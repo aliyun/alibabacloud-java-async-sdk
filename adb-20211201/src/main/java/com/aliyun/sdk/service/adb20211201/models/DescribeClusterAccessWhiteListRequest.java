@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterAccessWhiteListRequest} extends {@link RequestModel}
  *
  * <p>DescribeClusterAccessWhiteListRequest</p>
@@ -17,12 +18,17 @@ public class DescribeClusterAccessWhiteListRequest extends Request {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
     private DescribeClusterAccessWhiteListRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
     }
 
@@ -47,6 +53,13 @@ public class DescribeClusterAccessWhiteListRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -55,6 +68,7 @@ public class DescribeClusterAccessWhiteListRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeClusterAccessWhiteListRequest, Builder> {
         private String DBClusterId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
 
         private Builder() {
@@ -64,15 +78,29 @@ public class DescribeClusterAccessWhiteListRequest extends Request {
         private Builder(DescribeClusterAccessWhiteListRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp11q28kvl688****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

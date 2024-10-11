@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyClusterAccessWhiteListResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyClusterAccessWhiteListResponseBody</p>
@@ -61,7 +62,10 @@ public class ModifyClusterAccessWhiteListResponseBody extends TeaModel {
         private Integer taskId; 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp11q28kvl688****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -69,7 +73,10 @@ public class ModifyClusterAccessWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>370D09FD-442A-5225-AAD3-7362CAE39177</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class ModifyClusterAccessWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1564657730</p>
          */
         public Builder taskId(Integer taskId) {
             this.taskId = taskId;

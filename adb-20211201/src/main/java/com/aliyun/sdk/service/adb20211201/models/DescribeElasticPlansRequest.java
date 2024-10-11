@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeElasticPlansRequest} extends {@link RequestModel}
  *
  * <p>DescribeElasticPlansRequest</p>
@@ -140,10 +141,14 @@ public class DescribeElasticPlansRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBClusters](~~612397~~) operation to query the IDs of all AnalyticDB for MySQL clusters within a region.
+         * <strong>example:</strong>
+         * <p>amv-wz9509beptiz****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -152,10 +157,13 @@ public class DescribeElasticPlansRequest extends Request {
         }
 
         /**
-         * The name of the scaling plan.
-         * <p>
+         * <p>The name of the scaling plan.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, all scaling plans are queried.</p>
+         * </blockquote>
          * 
-         * > If you do not specify this parameter, all scaling plans are queried.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder elasticPlanName(String elasticPlanName) {
             this.putQueryParameter("ElasticPlanName", elasticPlanName);
@@ -164,11 +172,14 @@ public class DescribeElasticPlansRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the scaling plans that are immediately enabled after the plans are created. Valid values:
-         * <p>
+         * <p>Specifies whether to query the scaling plans that are immediately enabled after the plans are created. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.putQueryParameter("Enabled", enabled);
@@ -177,7 +188,11 @@ public class DescribeElasticPlansRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -186,7 +201,11 @@ public class DescribeElasticPlansRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -195,11 +214,16 @@ public class DescribeElasticPlansRequest extends Request {
         }
 
         /**
-         * The name of the resource group.
-         * <p>
+         * <p>The name of the resource group.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If you do not specify this parameter, the scaling plans of all resource groups are queried, covering the interactive resource group type and the elastic I/O unit (EIU) type.</li>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/459446.html">DescribeDBResourceGroup</a> operation to query the name of a resource group within a cluster.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > *   If you do not specify this parameter, the scaling plans of all resource groups are queried, covering the interactive resource group type and the elastic I/O unit (EIU) type.
-         * >*   You can call the [DescribeDBResourceGroup](~~459446~~) operation to query the name of a resource group within a cluster.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putQueryParameter("ResourceGroupName", resourceGroupName);
@@ -208,10 +232,14 @@ public class DescribeElasticPlansRequest extends Request {
         }
 
         /**
-         * The type of the scaling plan. Valid values:
-         * <p>
+         * <p>The type of the scaling plan. Valid values:</p>
+         * <ul>
+         * <li><strong>EXECUTOR</strong>: the interactive resource group type, which specifies the computing resource type.</li>
+         * <li><strong>WORKER</strong>: the EIU type.</li>
+         * </ul>
          * 
-         * EXECUTOR: the interactive resource group type, which specifies the computing resource type. WORKER: the EIU type.
+         * <strong>example:</strong>
+         * <p>EXECUTOR</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

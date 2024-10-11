@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPerformanceViewResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyPerformanceViewResponseBody</p>
@@ -61,7 +62,18 @@ public class ModifyPerformanceViewResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details about the access denial. This parameter is returned only if Resource Access Management (RAM) permission verification failed.
+         * <p>The details about the access denial. This parameter is returned only if Resource Access Management (RAM) permission verification failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,
+         *     &quot;AuthPrincipalOwnerId&quot;: &quot;1**<em><strong><strong><strong><strong><strong><strong><strong>7&quot;,
+         *     &quot;EncodedDiagnosticMessage&quot;: &quot;AQIBIAAAAOPdwKY2QLOvgMEc7SkkoJfj1kvZwsaRqNYMh10Tv0wTe0fCzaCdrvgazfNb0EnJKETgXyhR+3BIQjx9WAqZryejBsp1Bl4qI5En/D9dEhcXAtKCxCmE2kZCiEzpy8BoEUt+bs0DmlaGWO5xkEpttypLIB4rUhDvZd+zwPg4EXk4KSSWSWsurxtqDkKEMshKlQFBTKvJcKwyhk62IeYly4hQ+5IpXjkh1GQXuDRCQ==&quot;,
+         *     &quot;AuthPrincipalType&quot;: &quot;SubUser&quot;,
+         *     &quot;AuthPrincipalDisplayName&quot;: &quot;2</strong></strong></strong></strong></strong></strong></strong></em>9&quot;,
+         *     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,
+         *     &quot;AuthAction&quot;: &quot;adb:DescribeExcessivePrimaryKeys&quot;
+         * }</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -69,11 +81,14 @@ public class ModifyPerformanceViewResponseBody extends TeaModel {
         }
 
         /**
-         * The modification result. Valid values:
-         * <p>
+         * <p>The modification result. Valid values:</p>
+         * <ul>
+         * <li><strong>SUCCESS</strong></li>
+         * <li><strong>FAILED</strong></li>
+         * </ul>
          * 
-         * *   **SUCCESS**
-         * *   **FAILED**
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder modifyStatus(String modifyStatus) {
             this.modifyStatus = modifyStatus;
@@ -81,7 +96,10 @@ public class ModifyPerformanceViewResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C7EDB8E4-9769-4233-88C7-DCA4C9******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

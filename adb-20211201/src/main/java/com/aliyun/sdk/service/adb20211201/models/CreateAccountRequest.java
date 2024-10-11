@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAccountRequest} extends {@link RequestModel}
  *
  * <p>CreateAccountRequest</p>
@@ -127,11 +128,14 @@ public class CreateAccountRequest extends Request {
         } 
 
         /**
-         * The description of the account.
-         * <p>
+         * <p>The description of the account.</p>
+         * <ul>
+         * <li>The description cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The description can be up to 256 characters in length.</li>
+         * </ul>
          * 
-         * *   The description cannot start with `http://` or `https://`.
-         * *   The description can be up to 256 characters in length.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder accountDescription(String accountDescription) {
             this.putQueryParameter("AccountDescription", accountDescription);
@@ -140,13 +144,17 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The name of the database account.
-         * <p>
+         * <p>The name of the database account.</p>
+         * <ul>
+         * <li>The name must start with a lowercase letter and end with a lowercase letter or a digit.</li>
+         * <li>The name can contain lowercase letters, digits, and underscores (_).</li>
+         * <li>The name must be 2 to 16 characters in length.</li>
+         * <li>Reserved account names such as root, admin, and opsadmin cannot be used.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name must start with a lowercase letter and end with a lowercase letter or a digit.
-         * *   The name can contain lowercase letters, digits, and underscores (\_).
-         * *   The name must be 2 to 16 characters in length.
-         * *   Reserved account names such as root, admin, and opsadmin cannot be used.
+         * <strong>example:</strong>
+         * <p>test_accout</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -155,12 +163,16 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The password of the database account.
-         * <p>
+         * <p>The password of the database account.</p>
+         * <ul>
+         * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+         * <li>Special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></li>
+         * <li>The password must be 8 to 32 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
-         * *   Special characters include `! @ # $ % ^ & * ( ) _ + - =`
-         * *   The password must be 8 to 32 characters in length.
+         * <strong>example:</strong>
+         * <p>Test_accout1</p>
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -169,11 +181,15 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The type of the database account. Valid values:
-         * <p>
+         * <p>The type of the database account. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong>: standard account.</li>
+         * <li><strong>Super</strong>: privileged account.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Normal**: standard account.
-         * *   **Super**: privileged account.
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder accountType(String accountType) {
             this.putQueryParameter("AccountType", accountType);
@@ -182,7 +198,11 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp11q28kvl688****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -191,11 +211,14 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The database engine of the cluster. Valid values:
-         * <p>
+         * <p>The database engine of the cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>AnalyticDB</strong> (default): the AnalyticDB for MySQL engine.</li>
+         * <li><strong>Clickhouse</strong>: the wide table engine.</li>
+         * </ul>
          * 
-         * *   **AnalyticDB** (default): the AnalyticDB for MySQL engine.
-         * *   **Clickhouse**: the wide table engine.
+         * <strong>example:</strong>
+         * <p>Clickhouse</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);

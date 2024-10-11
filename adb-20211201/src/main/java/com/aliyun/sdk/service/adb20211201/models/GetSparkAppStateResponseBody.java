@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSparkAppStateResponseBody} extends {@link TeaModel}
  *
  * <p>GetSparkAppStateResponseBody</p>
@@ -49,7 +50,7 @@ public class GetSparkAppStateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetSparkAppStateResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D65A809F-34CE-4550-9BC1-0ED21ETG380</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetSparkAppStateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSparkAppStateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSparkAppStateResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -145,7 +155,10 @@ public class GetSparkAppStateResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The Spark application ID.
+             * <p>The Spark application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s202204191546hzpread6a896000****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -153,7 +166,10 @@ public class GetSparkAppStateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -161,7 +177,10 @@ public class GetSparkAppStateResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+             * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amv-clusterxxx</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -169,7 +188,10 @@ public class GetSparkAppStateResponseBody extends TeaModel {
             }
 
             /**
-             * The alert message returned for the operation, such as task execution failure or insufficient resources. If no alert occurs, null is returned.
+             * <p>The alert message returned for the operation, such as task execution failure or insufficient resources. If no alert occurs, null is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Insufficient resources.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -177,20 +199,23 @@ public class GetSparkAppStateResponseBody extends TeaModel {
             }
 
             /**
-             * The execution state of the application. Valid values:
-             * <p>
+             * <p>The execution state of the application. Valid values:</p>
+             * <ul>
+             * <li><strong>SUBMITTED</strong></li>
+             * <li><strong>STARTING</strong></li>
+             * <li><strong>RUNNING</strong></li>
+             * <li><strong>FAILING</strong></li>
+             * <li><strong>FAILED</strong></li>
+             * <li><strong>KILLING</strong></li>
+             * <li><strong>KILLED</strong></li>
+             * <li><strong>SUCCEEDING</strong></li>
+             * <li><strong>COMPLETED</strong></li>
+             * <li><strong>FATAL</strong></li>
+             * <li><strong>UNKNOWN</strong></li>
+             * </ul>
              * 
-             * *   **SUBMITTED**
-             * *   **STARTING**
-             * *   **RUNNING**
-             * *   **FAILING**
-             * *   **FAILED**
-             * *   **KILLING**
-             * *   **KILLED**
-             * *   **SUCCEEDING**
-             * *   **COMPLETED**
-             * *   **FATAL**
-             * *   **UNKNOWN**
+             * <strong>example:</strong>
+             * <p>COMPLETED</p>
              */
             public Builder state(String state) {
                 this.state = state;

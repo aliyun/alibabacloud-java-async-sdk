@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStorageResourceUsageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeStorageResourceUsageResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeStorageResourceUsageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -69,7 +73,7 @@ public class DescribeStorageResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The queried resource usage.
+         * <p>The queried resource usage.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -77,7 +81,10 @@ public class DescribeStorageResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEAW</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class DescribeStorageResourceUsageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeStorageResourceUsageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStorageResourceUsageResponseBody</p>
+     */
     public static class AcuInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -129,11 +142,14 @@ public class DescribeStorageResourceUsageResponseBody extends TeaModel {
             private java.util.List < String > values; 
 
             /**
-             * The resource usage metric. Valid values:
-             * <p>
+             * <p>The resource usage metric. Valid values:</p>
+             * <ul>
+             * <li><code>TotalAcuNumber</code>: the total number of ACUs.</li>
+             * <li><code>ReservedAcuNumber</code>: the number of ACUs for the reserved resources.</li>
+             * </ul>
              * 
-             * *   `TotalAcuNumber`: the total number of ACUs.
-             * *   `ReservedAcuNumber`: the number of ACUs for the reserved resources.
+             * <strong>example:</strong>
+             * <p>TotalAcuNumber</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -141,7 +157,7 @@ public class DescribeStorageResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The values of the metric at specific points in time.
+             * <p>The values of the metric at specific points in time.</p>
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;
@@ -155,6 +171,12 @@ public class DescribeStorageResourceUsageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeStorageResourceUsageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStorageResourceUsageResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AcuInfo")
         private java.util.List < AcuInfo> acuInfo;
@@ -218,7 +240,7 @@ public class DescribeStorageResourceUsageResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * The AnalyticDB compute unit (ACU) usage of the cluster.
+             * <p>The AnalyticDB compute unit (ACU) usage of the cluster.</p>
              */
             public Builder acuInfo(java.util.List < AcuInfo> acuInfo) {
                 this.acuInfo = acuInfo;
@@ -226,7 +248,10 @@ public class DescribeStorageResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+             * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amv-bp1bg858bo8c****</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -234,7 +259,10 @@ public class DescribeStorageResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The end time of the query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-23T01:06:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -242,7 +270,10 @@ public class DescribeStorageResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+             * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-22T01:06:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

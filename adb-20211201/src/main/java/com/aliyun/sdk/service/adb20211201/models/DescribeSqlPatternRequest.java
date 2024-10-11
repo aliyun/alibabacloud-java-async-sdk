@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSqlPatternRequest} extends {@link RequestModel}
  *
  * <p>DescribeSqlPatternRequest</p>
@@ -153,10 +154,14 @@ public class DescribeSqlPatternRequest extends Request {
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
-         * <p>
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDBClusters](~~454250~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
+         * <strong>example:</strong>
+         * <p>amv-bp1ej1nq9n6****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -165,36 +170,44 @@ public class DescribeSqlPatternRequest extends Request {
         }
 
         /**
-         * The order by which to sort query results. Specify the parameter value in the JSON string format. Example: `[{"Field":"Pattern","Type":"Asc"}]`. Parameters:
-         * <p>
+         * <p>The order by which to sort query results. Specify the parameter value in the JSON string format. Example: <code>[{&quot;Field&quot;:&quot;Pattern&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</code>. Parameters:</p>
+         * <ul>
+         * <li><p><code>Field</code> specifies the field by which to sort the query results. Valid values:</p>
+         * <ul>
+         * <li><code>Pattern</code>: the SQL pattern.</li>
+         * <li><code>AccessIP</code>: the IP address of the client.</li>
+         * <li><code>User</code>: the username.</li>
+         * <li><code>QueryCount</code>: the number of queries performed in association with the SQL pattern within the time range to query.</li>
+         * <li><code>AvgPeakMemory</code>: the average peak memory usage of the SQL pattern within the time range to query. Unit: KB.</li>
+         * <li><code>MaxPeakMemory</code>: the maximum peak memory usage of the SQL pattern within the time range to query. Unit: KB.</li>
+         * <li><code>AvgCpuTime</code>: the average execution duration of the SQL pattern within the time range to query. Unit: milliseconds.</li>
+         * <li><code>MaxCpuTime</code>: the maximum execution duration of the SQL pattern within the time range to query. Unit: milliseconds.</li>
+         * <li><code>AvgStageCount</code>: the average number of stages.</li>
+         * <li><code>MaxStageCount</code>: the maximum number of stages.</li>
+         * <li><code>AvgTaskCount</code>: the average number of tasks.</li>
+         * <li><code>MaxTaskCount</code>: the maximum number of tasks.</li>
+         * <li><code>AvgScanSize</code>: the average amount of data scanned based on the SQL pattern within the time range to query. Unit: KB.</li>
+         * <li><code>MaxScanSize</code>: the maximum amount of data scanned based on the SQL pattern within the time range to query. Unit: KB.</li>
+         * </ul>
+         * </li>
+         * <li><p><code>Type</code> specifies the sorting order. Valid values:</p>
+         * <ul>
+         * <li><code>Asc</code>: ascending order.</li>
+         * <li><code>Desc</code>: descending order.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If you do not specify this parameter, query results are sorted in ascending order of <code>Pattern</code>.</p>
+         * </li>
+         * <li><p>If you want to sort query results by <code>AccessIP</code>, you must set the <code>Type</code> parameter to <code>accessip</code>. If you want to sort query results by <code>User</code>, you must leave the <code>Type</code> parameter empty or set it to <code>user</code>.</p>
+         * </li>
+         * </ul>
          * 
-         * *   `Field` specifies the field by which to sort the query results. Valid values:
-         * 
-         *     *   `Pattern`: the SQL pattern.
-         *     *   `AccessIP`: the IP address of the client.
-         *     *   `User`: the username.
-         *     *   `QueryCount`: the number of queries performed in association with the SQL pattern within the time range to query.
-         *     *   `AvgPeakMemory`: the average peak memory usage of the SQL pattern within the time range to query. Unit: KB.
-         *     *   `MaxPeakMemory`: the maximum peak memory usage of the SQL pattern within the time range to query. Unit: KB.
-         *     *   `AvgCpuTime`: the average execution duration of the SQL pattern within the time range to query. Unit: milliseconds.
-         *     *   `MaxCpuTime`: the maximum execution duration of the SQL pattern within the time range to query. Unit: milliseconds.
-         *     *   `AvgStageCount`: the average number of stages.
-         *     *   `MaxStageCount`: the maximum number of stages.
-         *     *   `AvgTaskCount`: the average number of tasks.
-         *     *   `MaxTaskCount`: the maximum number of tasks.
-         *     *   `AvgScanSize`: the average amount of data scanned based on the SQL pattern within the time range to query. Unit: KB.
-         *     *   `MaxScanSize`: the maximum amount of data scanned based on the SQL pattern within the time range to query. Unit: KB.
-         * 
-         * *   `Type` specifies the sorting order. Valid values:
-         * 
-         *     *   `Asc`: ascending order.
-         *     *   `Desc`: descending order.
-         * 
-         * > 
-         * 
-         * *   If you do not specify this parameter, query results are sorted in ascending order of `Pattern`.
-         * 
-         * *   If you want to sort query results by `AccessIP`, you must set the `Type` parameter to `accessip`. If you want to sort query results by `User`, you must leave the `Type` parameter empty or set it to `user`.
+         * <strong>example:</strong>
+         * <p>[{&quot;Field&quot;:&quot;Pattern&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -203,7 +216,10 @@ public class DescribeSqlPatternRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -212,13 +228,16 @@ public class DescribeSqlPatternRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values:
-         * <p>
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>10</strong> (default)</li>
+         * <li><strong>30</strong></li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
          * 
-         * *   **10** (default)
-         * *   **30**
-         * *   **50**
-         * *   **100**
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -227,7 +246,11 @@ public class DescribeSqlPatternRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster.
+         * <p>The region ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -236,10 +259,13 @@ public class DescribeSqlPatternRequest extends Request {
         }
 
         /**
-         * The keyword that is used for the query.
-         * <p>
+         * <p>The keyword that is used for the query.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, all SQL patterns of the AnalyticDB for MySQL cluster within the time period specified by <code>StartTime</code> are returned.</p>
+         * </blockquote>
          * 
-         * > If you do not specify this parameter, all SQL patterns of the AnalyticDB for MySQL cluster within the time period specified by `StartTime` are returned.
+         * <strong>example:</strong>
+         * <p>SELECT</p>
          */
         public Builder sqlPattern(String sqlPattern) {
             this.putQueryParameter("SqlPattern", sqlPattern);
@@ -248,10 +274,13 @@ public class DescribeSqlPatternRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd format. The time must be in UTC.
-         * <p>
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>Only data within the last 30 days can be queried.</p>
+         * </blockquote>
          * 
-         * > Only data within the last 30 days can be queried.
+         * <strong>example:</strong>
+         * <p>2022-08-30T12:10:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -260,13 +289,17 @@ public class DescribeSqlPatternRequest extends Request {
         }
 
         /**
-         * The dimension by which to aggregate the SQL patterns. Valid values:
-         * <p>
+         * <p>The dimension by which to aggregate the SQL patterns. Valid values:</p>
+         * <ul>
+         * <li><code>user</code>: aggregates the SQL patterns by user.</li>
+         * <li><code>accessip</code>: aggregates the SQL patterns by client IP address.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the SQL patterns are aggregated by <code>user</code>.</p>
+         * </blockquote>
          * 
-         * *   `user`: aggregates the SQL patterns by user.
-         * *   `accessip`: aggregates the SQL patterns by client IP address.
-         * 
-         * > If you do not specify this parameter, the SQL patterns are aggregated by `user`.
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

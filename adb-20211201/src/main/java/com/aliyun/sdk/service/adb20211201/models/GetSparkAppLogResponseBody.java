@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSparkAppLogResponseBody} extends {@link TeaModel}
  *
  * <p>GetSparkAppLogResponseBody</p>
@@ -49,7 +50,7 @@ public class GetSparkAppLogResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The queried log.
+         * <p>The queried log.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetSparkAppLogResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C3A9594F-1D40-4472-A96C-8FB8AA20D38C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetSparkAppLogResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSparkAppLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSparkAppLogResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
@@ -133,7 +143,10 @@ public class GetSparkAppLogResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
+             * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amv-clusterxxx</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -141,7 +154,10 @@ public class GetSparkAppLogResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the log.
+             * <p>The content of the log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22/04/22 15:30:49 INFO Utils: Start the dump task because s202206061441hz22a35ab000****-0001 app end, the interval is 238141ms;22/04/22 15:30:49 INFO AbstractConnector: Stopped Spark@5e774d9d{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}</p>
              */
             public Builder logContent(String logContent) {
                 this.logContent = logContent;
@@ -149,7 +165,10 @@ public class GetSparkAppLogResponseBody extends TeaModel {
             }
 
             /**
-             * The number of log entries. A value of 0 indicates that no valid logs are returned.
+             * <p>The number of log entries. A value of 0 indicates that no valid logs are returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3517972480</p>
              */
             public Builder logSize(Integer logSize) {
                 this.logSize = logSize;
@@ -157,7 +176,10 @@ public class GetSparkAppLogResponseBody extends TeaModel {
             }
 
             /**
-             * The alert message returned for the request, such as task execution failure or insufficient resources. If no alert occurs, null is returned.
+             * <p>The alert message returned for the request, such as task execution failure or insufficient resources. If no alert occurs, null is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WARNING:  log file maybe deleted, please check oss path: oss://TestBucketName/applog/</p>
              */
             public Builder message(String message) {
                 this.message = message;

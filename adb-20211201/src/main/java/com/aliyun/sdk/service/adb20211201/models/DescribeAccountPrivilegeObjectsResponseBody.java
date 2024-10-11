@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccountPrivilegeObjectsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAccountPrivilegeObjectsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeAccountPrivilegeObjectsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The permissions.
+         * <p>The permissions.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -93,7 +94,10 @@ public class DescribeAccountPrivilegeObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeAccountPrivilegeObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeAccountPrivilegeObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34B2AD29-682F-1C14-B3AA-9EF1A96084B8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeAccountPrivilegeObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeAccountPrivilegeObjectsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAccountPrivilegeObjectsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccountPrivilegeObjectsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Column")
         private String column;
@@ -193,7 +212,10 @@ public class DescribeAccountPrivilegeObjectsResponseBody extends TeaModel {
             private String table; 
 
             /**
-             * The name of the column. This parameter is returned when PrivilegeType is set to Column.
+             * <p>The name of the column. This parameter is returned when PrivilegeType is set to Column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>column1</p>
              */
             public Builder column(String column) {
                 this.column = column;
@@ -201,7 +223,10 @@ public class DescribeAccountPrivilegeObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database. This parameter is returned when PrivilegeType is set to Database, Table, or Column.
+             * <p>The name of the database. This parameter is returned when PrivilegeType is set to Database, Table, or Column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tdb1</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -209,7 +234,10 @@ public class DescribeAccountPrivilegeObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The description that is specified when you create a table or column. This parameter is returned only when PrivilegeType is set to Database or Table, indicating the database description or table description.
+             * <p>The description that is specified when you create a table or column. This parameter is returned only when PrivilegeType is set to Database or Table, indicating the database description or table description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a test db</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -217,7 +245,10 @@ public class DescribeAccountPrivilegeObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table. This parameter is returned when PrivilegeType is set to Table or Column.
+             * <p>The name of the table. This parameter is returned when PrivilegeType is set to Table or Column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table1</p>
              */
             public Builder table(String table) {
                 this.table = table;

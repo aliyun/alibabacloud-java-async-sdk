@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnabledPrivilegesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEnabledPrivilegesResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The queried permission level and permissions.
+         * <p>The queried permission level and permissions.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>246F42E0-A475-15FF-96D2-8DC47FC2F289</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEnabledPrivilegesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnabledPrivilegesResponseBody</p>
+     */
     public static class Privileges extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -109,7 +119,7 @@ public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
             private String key; 
 
             /**
-             * The description of the permission.
+             * <p>The description of the permission.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -117,7 +127,10 @@ public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the permission.
+             * <p>The name of the permission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -131,6 +144,12 @@ public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnabledPrivilegesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnabledPrivilegesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -185,7 +204,8 @@ public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
             private String scope; 
 
             /**
-             * The description of the permission level.
+             * <p>The description of the permission level.</p>
+             * <p>This parameter is required.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -193,7 +213,8 @@ public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
             }
 
             /**
-             * The queried permissions.
+             * <p>The queried permissions.</p>
+             * <p>This parameter is required.</p>
              */
             public Builder privileges(java.util.List < Privileges> privileges) {
                 this.privileges = privileges;
@@ -201,7 +222,11 @@ public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
             }
 
             /**
-             * The permission level.
+             * <p>The permission level.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Global</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;

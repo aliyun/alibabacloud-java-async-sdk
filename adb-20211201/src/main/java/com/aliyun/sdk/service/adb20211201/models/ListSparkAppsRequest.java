@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSparkAppsRequest} extends {@link RequestModel}
  *
  * <p>ListSparkAppsRequest</p>
@@ -98,7 +99,11 @@ public class ListSparkAppsRequest extends Request {
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp11q28kvl688****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -107,7 +112,11 @@ public class ListSparkAppsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.
+         * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -116,12 +125,15 @@ public class ListSparkAppsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10. Valid values:
-         * <p>
+         * <p>The number of entries to return on each page. Default value: 10. Valid values:</p>
+         * <ul>
+         * <li><strong>10</strong></li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
          * 
-         * - **10**
-         * - **50**
-         * - **100**
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -130,7 +142,10 @@ public class ListSparkAppsRequest extends Request {
         }
 
         /**
-         * The name of the job resource group.
+         * <p>The name of the job resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_instance</p>
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putQueryParameter("ResourceGroupName", resourceGroupName);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePerformanceViewAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePerformanceViewAttributeResponseBody</p>
@@ -109,7 +110,21 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
         private String viewName; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if Resource Access Management (RAM) permission verification failed.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,
+         *     &quot;AuthPrincipalOwnerId&quot;: &quot;1**<em><strong><strong><strong><strong><strong><strong><strong>7&quot;,
+         *     &quot;EncodedDiagnosticMessage&quot;: &quot;AQIBIAAAAOPdwKY2QLOvgMEc7SkkoJfj1kvZwsaRqNYMh10Tv0wTe0fCzaCdrvgazfNb0EnJKETgXyhR+3BIQjx9WAqZryejBsp1Bl4qI5En/D9dEhcXAtKCxCmE2kZCiEzpy8BoEUt+bs0DmlaGWO5xkEpttypLIB4rUhDvZd+zwPg4EXk4KSSWSWsurxtqDkKEMshKlQFBTKvJcKwyhk62IeYly4hQ+5IpXjkh1GQXuDRCQ==&quot;,
+         *     &quot;AuthPrincipalType&quot;: &quot;SubUser&quot;,
+         *     &quot;AuthPrincipalDisplayName&quot;: &quot;2</strong></strong></strong></strong></strong></strong></strong></em>9&quot;,
+         *     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,
+         *     &quot;AuthAction&quot;: &quot;adb:DescribeExcessivePrimaryKeys&quot;
+         * }</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -117,7 +132,10 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * CreateFromViewType.
+         * <p>The type of the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Basic</p>
          */
         public Builder createFromViewType(String createFromViewType) {
             this.createFromViewType = createFromViewType;
@@ -125,7 +143,13 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp198m028ih55xxxx</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -133,7 +157,14 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * FillOriginViewKeys.
+         * <p>Specifies whether to populate the names of the metrics in the original monitoring view when you view the monitoring view. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder fillOriginViewKeys(Boolean fillOriginViewKeys) {
             this.fillOriginViewKeys = fillOriginViewKeys;
@@ -141,7 +172,10 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E031AABF-BD56-5966-A063-4283EF18DB45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -149,7 +183,7 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ViewDetail.
+         * <p>The information about the monitoring view.</p>
          */
         public Builder viewDetail(ViewDetail viewDetail) {
             this.viewDetail = viewDetail;
@@ -157,7 +191,10 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ViewName.
+         * <p>The name of the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Basic</p>
          */
         public Builder viewName(String viewName) {
             this.viewName = viewName;
@@ -170,6 +207,12 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePerformanceViewAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePerformanceViewAttributeResponseBody</p>
+     */
     public static class Keys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeyName")
         private String keyName;
@@ -209,7 +252,10 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
             private Boolean selected; 
 
             /**
-             * KeyName.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AnalyticDB_CPU</p>
              */
             public Builder keyName(String keyName) {
                 this.keyName = keyName;
@@ -217,7 +263,14 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Selected.
+             * <p>Specifies whether to select the metric. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder selected(Boolean selected) {
                 this.selected = selected;
@@ -231,6 +284,12 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePerformanceViewAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePerformanceViewAttributeResponseBody</p>
+     */
     public static class Categories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -270,7 +329,16 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
             private java.util.List < Keys> keys; 
 
             /**
-             * Category.
+             * <p>The name of the metric category. Valid values:</p>
+             * <ul>
+             * <li><strong>Node</strong></li>
+             * <li><strong>DiskData</strong></li>
+             * <li><strong>WorkLoad</strong></li>
+             * <li><strong>ResourceGroup</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Node</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -278,7 +346,7 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Keys.
+             * <p>The metrics.</p>
              */
             public Builder keys(java.util.List < Keys> keys) {
                 this.keys = keys;
@@ -292,6 +360,12 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePerformanceViewAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePerformanceViewAttributeResponseBody</p>
+     */
     public static class ViewDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Categories")
         private java.util.List < Categories> categories;
@@ -343,7 +417,7 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
             private Integer chartsPerLine; 
 
             /**
-             * Categories.
+             * <p>The metric category.</p>
              */
             public Builder categories(java.util.List < Categories> categories) {
                 this.categories = categories;
@@ -351,7 +425,14 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ChartLinked.
+             * <p>Specifies whether to enable the filter interaction feature. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder chartLinked(Boolean chartLinked) {
                 this.chartLinked = chartLinked;
@@ -359,7 +440,10 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ChartsPerLine.
+             * <p>The number of charts to display in each row.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder chartsPerLine(Integer chartsPerLine) {
                 this.chartsPerLine = chartsPerLine;

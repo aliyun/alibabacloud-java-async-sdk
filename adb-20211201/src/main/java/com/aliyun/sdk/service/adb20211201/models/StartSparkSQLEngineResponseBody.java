@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartSparkSQLEngineResponseBody} extends {@link TeaModel}
  *
  * <p>StartSparkSQLEngineResponseBody</p>
@@ -49,7 +50,7 @@ public class StartSparkSQLEngineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class StartSparkSQLEngineResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D65A809F-34CE-4550-9BC1-0ED21ETG380</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class StartSparkSQLEngineResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link StartSparkSQLEngineResponseBody} extends {@link TeaModel}
+     *
+     * <p>StartSparkSQLEngineResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -121,7 +131,10 @@ public class StartSparkSQLEngineResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The ID of the Spark job.
+             * <p>The ID of the Spark job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s202301xxxx</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -129,7 +142,10 @@ public class StartSparkSQLEngineResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Spark application.
+             * <p>The name of the Spark application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SQLEngine1</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -137,13 +153,16 @@ public class StartSparkSQLEngineResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the Spark SQL engine. Valid values:
-             * <p>
+             * <p>The state of the Spark SQL engine. Valid values:</p>
+             * <ul>
+             * <li>SUBMITTED</li>
+             * <li>STARTING</li>
+             * <li>RUNNING</li>
+             * <li>FAILED</li>
+             * </ul>
              * 
-             * *   SUBMITTED
-             * *   STARTING
-             * *   RUNNING
-             * *   FAILED
+             * <strong>example:</strong>
+             * <p>SUBMITTED</p>
              */
             public Builder state(String state) {
                 this.state = state;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSparkDefinitionsRequest} extends {@link RequestModel}
  *
  * <p>GetSparkDefinitionsRequest</p>
@@ -53,7 +54,10 @@ public class GetSparkDefinitionsRequest extends Request {
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-clusterxxx</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putBodyParameter("DBClusterId", DBClusterId);

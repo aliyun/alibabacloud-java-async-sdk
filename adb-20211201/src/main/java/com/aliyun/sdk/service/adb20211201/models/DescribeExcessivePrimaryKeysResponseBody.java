@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExcessivePrimaryKeysResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeExcessivePrimaryKeysResponseBody</p>
@@ -123,7 +124,18 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * The queried information about the request denial.
+         * <p>The queried information about the request denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,
+         *     &quot;AuthPrincipalOwnerId&quot;: &quot;1906102576997697&quot;,
+         *     &quot;EncodedDiagnosticMessage&quot;: &quot;AQIBIAAAAOPdwKY2QLOvgMEc7SkkoJfj1kvZwsaRqNYMh10Tv0wTe0fCzaCdrvgazfNb0EnJKETgXyhR+3BIQjx9WAqZryejBsp1Bl4qI5En/D9dEhcXAtKCxCmE2kZCiEzpy8BoEUt+bs0DmlaGWO5xkEpttypLIB4rUhDvZd+zwPg4EXk4KSSWSWsurxtqDkKEMshKlQFBTKvJcNqPqHV6lwR4INiAGjIvK1ngXxN1O+6ORRB6A8YvztEOGywOk81ZmuNk0YrNy+qk7+UVDTHeXKsy8h9e/ePY/LMidj0RCmDpo/YpCumd0UGe0qEPe2U+UJAm/+UHlnEFLVg6BP3yIB5D++MCy7mgWm8Kwyhk62IeYly4hQ+5IpXjkh1GQXuDgLVVPVpxEek9n30vnCUL4KsaMgfa7dgojb+3TM8xGsD2zVK5STJNrsXclscIJEqyNXd7CBYiRJVZi1HPO6drN9WW0chLpCSTgjO8n0bNanZaxXKumW9PSwV58UoSFASeMWfZK3TLngX+oq8nGmnTwcJosVjfF4RGzAnS1IXt0Q9N2WHDnpwyLBU/nOz7Hsy8IZ+h+OVjsBTXSM9688/vOF707a5mNzpETvQeGRcua3A5livcKAM2cML0yeUs/Zyj/+BGqtVa+wektspDHC/CECh6R5lxQjRmUdPawY8VDs2onmdLuEH8DdmYt+Yv/jBFBUMWOyAluzkPYcX5nuQKouCIUJUFTSbsJsuH5CTIh7Ls5rbmkj+T1qTVz8gnDR8LxwaqoMSna+elXgVyOOxXtMkenVntsmoC3p/4G7yTPL1hu8JyWGIIvZHZGGLXGEH7FeSuMV8buKxPGFWG3arG8e9LGvDdz5dgTien4y6G5AQ0o1iQdXDos5VWdH3u7k5PrsvdEOpvMi6uSd8a42na80FsYlgGlwM5upydcWUC5Un2HCkJpT1xgk2L6shdVTrK6bidRrqE784FhW9bBQePzGaxSupPENZya0VUctRt+7uq3QwIn4y5jzjgX0E0jgmqPrgiVDjBesMQZYfGPCGysWYWYzfoh+G6V7N2VVGtNnGUwNWzM0WJBPONAgxPv+AmixFRCQ==&quot;,
+         *     &quot;AuthPrincipalType&quot;: &quot;SubUser&quot;,
+         *     &quot;AuthPrincipalDisplayName&quot;: &quot;202515810214480629&quot;,
+         *     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,
+         *     &quot;AuthAction&quot;: &quot;adb:DescribeExcessivePrimaryKeys&quot;
+         *   }</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -131,7 +143,10 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-bp1ub9grke1****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -139,7 +154,7 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The queried detection items and detection results.
+         * <p>The queried detection items and detection results.</p>
          */
         public Builder detectionItems(java.util.List < DetectionItems> detectionItems) {
             this.detectionItems = detectionItems;
@@ -147,7 +162,10 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -155,12 +173,15 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page. Valid values:
-         * <p>
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong> (default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
          * 
-         * *   **30** (default)
-         * *   **50**
-         * *   **100**
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -168,7 +189,10 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>863D51B7-5321-41D8-A0B6-A088B0******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -176,7 +200,7 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The queried tables that have excessive primary key fields.
+         * <p>The queried tables that have excessive primary key fields.</p>
          */
         public Builder tables(java.util.List < Tables> tables) {
             this.tables = tables;
@@ -184,7 +208,10 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -197,6 +224,12 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeExcessivePrimaryKeysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExcessivePrimaryKeysResponseBody</p>
+     */
     public static class DetectionItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
@@ -248,7 +281,10 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The detection result.
+             * <p>The detection result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -256,7 +292,10 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the detection item.
+             * <p>The name of the detection item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -264,7 +303,12 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level of the detection result.
+             * <p>The severity level of the detection result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL
+             * WARNNING
+             * CRITICAL</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -278,6 +322,12 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeExcessivePrimaryKeysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExcessivePrimaryKeysResponseBody</p>
+     */
     public static class Tables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColumnCount")
         private Integer columnCount;
@@ -389,7 +439,10 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
             private Long totalSize; 
 
             /**
-             * The total number of columns.
+             * <p>The total number of columns.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21</p>
              */
             public Builder columnCount(Integer columnCount) {
                 this.columnCount = columnCount;
@@ -397,7 +450,10 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The queried primary key fields.
+             * <p>The queried primary key fields.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder primaryKeyColumns(String primaryKeyColumns) {
                 this.primaryKeyColumns = primaryKeyColumns;
@@ -405,7 +461,10 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The number of primary key fields.
+             * <p>The number of primary key fields.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder primaryKeyCount(Integer primaryKeyCount) {
                 this.primaryKeyCount = primaryKeyCount;
@@ -413,7 +472,10 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The data size of primary key indexes. Unit: bytes.
+             * <p>The data size of primary key indexes. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder primaryKeyIndexSize(Long primaryKeyIndexSize) {
                 this.primaryKeyIndexSize = primaryKeyIndexSize;
@@ -421,7 +483,10 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adb_demo</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -429,10 +494,13 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The percentage of the table size. Unit: %.
-             * <p>
+             * <p>The percentage of the table size. Unit: %.</p>
+             * <blockquote>
+             * <p> Formula: Table storage percentage = Total data size of a table/Total data size of the cluster × 100%.</p>
+             * </blockquote>
              * 
-             * >  Formula: Table storage percentage = Total data size of a table/Total data size of the cluster × 100%.
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder spaceRatio(Double spaceRatio) {
                 this.spaceRatio = spaceRatio;
@@ -440,7 +508,10 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table
+             * <p>The name of the table</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -448,10 +519,13 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The cold data size. Unit: bytes.
-             * <p>
+             * <p>The cold data size. Unit: bytes.</p>
+             * <blockquote>
+             * <p> Formula: Cold data size = Data size of table records + Data size of regular indexes + Data size of primary key indexes + Data size of other data.</p>
+             * </blockquote>
              * 
-             * >  Formula: Cold data size = Data size of table records + Data size of regular indexes + Data size of primary key indexes + Data size of other data.
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;

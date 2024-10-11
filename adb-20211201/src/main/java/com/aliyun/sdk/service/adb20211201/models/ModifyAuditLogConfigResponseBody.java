@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAuditLogConfigResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyAuditLogConfigResponseBody</p>
@@ -49,7 +50,10 @@ public class ModifyAuditLogConfigResponseBody extends TeaModel {
         private Boolean updateSucceed; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CDC59E56-BD07-56CA-A05F-B7907DE5C862</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +61,14 @@ public class ModifyAuditLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the status of SQL audit is updated. Valid values:
-         * <p>
+         * <p>Indicates whether the status of SQL audit is updated. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder updateSucceed(Boolean updateSucceed) {
             this.updateSucceed = updateSucceed;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiagnosisSQLInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDiagnosisSQLInfoResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         private java.util.List < StageInfos> stageInfos; 
 
         /**
-         * The queried execution information, including the SQL statement, statistics, execution plan, and operator information.
+         * <p>The queried execution information, including the SQL statement, statistics, execution plan, and operator information.</p>
          */
         public Builder diagnosisSQLInfo(String diagnosisSQLInfo) {
             this.diagnosisSQLInfo = diagnosisSQLInfo;
@@ -69,7 +70,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The queried execution information by stage.
+         * <p>The queried execution information by stage.</p>
          */
         public Builder stageInfos(java.util.List < StageInfos> stageInfos) {
             this.stageInfos = stageInfos;
@@ -90,6 +94,12 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDiagnosisSQLInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDiagnosisSQLInfoResponseBody</p>
+     */
     public static class StageInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InputDataSize")
         private Long inputDataSize;
@@ -213,7 +223,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The total amount of input data in the stage. Unit: bytes.
+             * <p>The total amount of input data in the stage. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2341</p>
              */
             public Builder inputDataSize(Long inputDataSize) {
                 this.inputDataSize = inputDataSize;
@@ -221,7 +234,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of input rows in the stage.
+             * <p>The total number of input rows in the stage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2341</p>
              */
             public Builder inputRows(Long inputRows) {
                 this.inputRows = inputRows;
@@ -229,7 +245,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The total amount of time consumed by all operators in the stage. Unit: milliseconds.
+             * <p>The total amount of time consumed by all operators in the stage. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2341</p>
              */
             public Builder operatorCost(Long operatorCost) {
                 this.operatorCost = operatorCost;
@@ -237,7 +256,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The total amount of output data in the stage. Unit: bytes.
+             * <p>The total amount of output data in the stage. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2341</p>
              */
             public Builder outputDataSize(Long outputDataSize) {
                 this.outputDataSize = outputDataSize;
@@ -245,7 +267,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of output rows in the stage.
+             * <p>The total number of output rows in the stage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2341</p>
              */
             public Builder outputRows(Long outputRows) {
                 this.outputRows = outputRows;
@@ -253,7 +278,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The total peak memory of the stage. Unit: bytes.
+             * <p>The total peak memory of the stage. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2341</p>
              */
             public Builder peakMemory(Long peakMemory) {
                 this.peakMemory = peakMemory;
@@ -261,7 +289,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The execution progress of the stage.
+             * <p>The execution progress of the stage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.3</p>
              */
             public Builder progress(Double progress) {
                 this.progress = progress;
@@ -269,7 +300,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The stage ID.
+             * <p>The stage ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Stage[26]</p>
              */
             public Builder stageId(String stageId) {
                 this.stageId = stageId;
@@ -277,7 +311,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the stage.
+             * <p>The state of the stage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder state(String state) {
                 this.state = state;

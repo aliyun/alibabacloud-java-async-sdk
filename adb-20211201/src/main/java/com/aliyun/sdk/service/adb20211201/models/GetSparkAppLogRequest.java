@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSparkAppLogRequest} extends {@link RequestModel}
  *
  * <p>GetSparkAppLogRequest</p>
@@ -111,10 +112,14 @@ public class GetSparkAppLogRequest extends Request {
         } 
 
         /**
-         * The Spark application ID.
-         * <p>
+         * <p>The Spark application ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/612475.html">ListSparkApps</a> operation to query the Spark application ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [ListSparkApps](~~612475~~) operation to query the Spark application ID.
+         * <strong>example:</strong>
+         * <p>s202206061441hz22a35ab000****</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -123,10 +128,13 @@ public class GetSparkAppLogRequest extends Request {
         }
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
-         * <p>
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBClusters](~~454250~~) operation to query the IDs of all AnalyticDB for MySQL clusters within a region.
+         * <strong>example:</strong>
+         * <p>amv-2ze6fl8ud7t***</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -135,7 +143,10 @@ public class GetSparkAppLogRequest extends Request {
         }
 
         /**
-         * The number of log entries to return. Valid values: 1 to 500. Default value: 300.
+         * <p>The number of log entries to return. Valid values: 1 to 500. Default value: 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder logLength(Long logLength) {
             this.putBodyParameter("LogLength", logLength);
@@ -144,7 +155,10 @@ public class GetSparkAppLogRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -153,7 +167,10 @@ public class GetSparkAppLogRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

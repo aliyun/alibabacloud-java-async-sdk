@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePerformanceViewRequest} extends {@link RequestModel}
  *
  * <p>CreatePerformanceViewRequest</p>
@@ -183,7 +184,10 @@ public class CreatePerformanceViewRequest extends Request {
         } 
 
         /**
-         * CreateFromViewType.
+         * <p>The type of the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Basic</p>
          */
         public Builder createFromViewType(String createFromViewType) {
             this.putQueryParameter("CreateFromViewType", createFromViewType);
@@ -192,10 +196,14 @@ public class CreatePerformanceViewRequest extends Request {
         }
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
-         * <p>
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBClusters](~~612397~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region.
+         * <strong>example:</strong>
+         * <p>amv-bp1ub9grke1****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -204,11 +212,14 @@ public class CreatePerformanceViewRequest extends Request {
         }
 
         /**
-         * Specifies whether to populate the names of the metrics in the original monitoring view when you view the monitoring view. Valid values:
-         * <p>
+         * <p>Specifies whether to populate the names of the metrics in the original monitoring view when you view the monitoring view. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder fillOriginViewKeys(Boolean fillOriginViewKeys) {
             this.putQueryParameter("FillOriginViewKeys", fillOriginViewKeys);
@@ -235,10 +246,14 @@ public class CreatePerformanceViewRequest extends Request {
         }
 
         /**
-         * The region ID.
-         * <p>
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -265,7 +280,8 @@ public class CreatePerformanceViewRequest extends Request {
         }
 
         /**
-         * The information about the monitoring view.
+         * <p>The information about the monitoring view.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder viewDetail(ViewDetail viewDetail) {
             String viewDetailShrink = shrink(viewDetail, "ViewDetail", "json");
@@ -275,7 +291,11 @@ public class CreatePerformanceViewRequest extends Request {
         }
 
         /**
-         * ViewName.
+         * <p>The name of the view.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>viewname</p>
          */
         public Builder viewName(String viewName) {
             this.putQueryParameter("ViewName", viewName);
@@ -290,6 +310,12 @@ public class CreatePerformanceViewRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePerformanceViewRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePerformanceViewRequest</p>
+     */
     public static class Keys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeyName")
         private String keyName;
@@ -329,7 +355,10 @@ public class CreatePerformanceViewRequest extends Request {
             private Boolean selected; 
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AnalyticDB_CPU</p>
              */
             public Builder keyName(String keyName) {
                 this.keyName = keyName;
@@ -337,11 +366,14 @@ public class CreatePerformanceViewRequest extends Request {
             }
 
             /**
-             * Specifies whether to select the metric. Valid values:
-             * <p>
+             * <p>Specifies whether to select the metric. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder selected(Boolean selected) {
                 this.selected = selected;
@@ -355,6 +387,12 @@ public class CreatePerformanceViewRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreatePerformanceViewRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePerformanceViewRequest</p>
+     */
     public static class Categories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -394,13 +432,16 @@ public class CreatePerformanceViewRequest extends Request {
             private java.util.List < Keys> keys; 
 
             /**
-             * The name of the metric category. Valid values:
-             * <p>
+             * <p>The name of the metric category. Valid values:</p>
+             * <ul>
+             * <li><strong>Node</strong></li>
+             * <li><strong>DiskData</strong></li>
+             * <li><strong>WorkLoad</strong></li>
+             * <li><strong>ResourceGroup</strong></li>
+             * </ul>
              * 
-             * *   **Node**
-             * *   **DiskData**
-             * *   **WorkLoad**
-             * *   **ResourceGroup**
+             * <strong>example:</strong>
+             * <p>Node</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -408,7 +449,7 @@ public class CreatePerformanceViewRequest extends Request {
             }
 
             /**
-             * The metrics.
+             * <p>The metrics.</p>
              */
             public Builder keys(java.util.List < Keys> keys) {
                 this.keys = keys;
@@ -422,6 +463,12 @@ public class CreatePerformanceViewRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreatePerformanceViewRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePerformanceViewRequest</p>
+     */
     public static class ViewDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Categories")
         private java.util.List < Categories> categories;
@@ -473,7 +520,7 @@ public class CreatePerformanceViewRequest extends Request {
             private Integer chartsPerLine; 
 
             /**
-             * The metric categories.
+             * <p>The metric categories.</p>
              */
             public Builder categories(java.util.List < Categories> categories) {
                 this.categories = categories;
@@ -481,11 +528,14 @@ public class CreatePerformanceViewRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable the filter interaction feature. Valid values:
-             * <p>
+             * <p>Specifies whether to enable the filter interaction feature. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder chartLinked(Boolean chartLinked) {
                 this.chartLinked = chartLinked;
@@ -493,7 +543,10 @@ public class CreatePerformanceViewRequest extends Request {
             }
 
             /**
-             * The number of charts to display in each row.
+             * <p>The number of charts to display in each row.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder chartsPerLine(Integer chartsPerLine) {
                 this.chartsPerLine = chartsPerLine;

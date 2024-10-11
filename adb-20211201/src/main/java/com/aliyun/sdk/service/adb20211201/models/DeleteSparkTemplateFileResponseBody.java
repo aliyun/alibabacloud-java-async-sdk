@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSparkTemplateFileResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteSparkTemplateFileResponseBody</p>
@@ -49,7 +50,7 @@ public class DeleteSparkTemplateFileResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The deletion result.
+         * <p>The deletion result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class DeleteSparkTemplateFileResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C3A9594F-1D40-4472-A96C-8FB8AA20D38C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DeleteSparkTemplateFileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteSparkTemplateFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteSparkTemplateFileResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Succeeded")
         private Boolean succeeded;
@@ -97,11 +107,14 @@ public class DeleteSparkTemplateFileResponseBody extends TeaModel {
             private Boolean succeeded; 
 
             /**
-             * Indicates whether the template file is deleted. Valid values:
-             * <p>
+             * <p>Indicates whether the template file is deleted. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder succeeded(Boolean succeeded) {
                 this.succeeded = succeeded;

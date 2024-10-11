@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBResourceGroupRequest</p>
@@ -110,7 +111,11 @@ public class DescribeDBResourceGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp11q28kvl688****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -119,10 +124,13 @@ public class DescribeDBResourceGroupRequest extends Request {
         }
 
         /**
-         * The name of the resource group.
-         * <p>
+         * <p>The name of the resource group.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the information about all resource groups in the cluster is returned.</p>
+         * </blockquote>
          * 
-         * > If you do not specify this parameter, the information about all resource groups in the cluster is returned.
+         * <strong>example:</strong>
+         * <p>test_group</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -131,13 +139,17 @@ public class DescribeDBResourceGroupRequest extends Request {
         }
 
         /**
-         * The type of the resource group. Valid values:
-         * <p>
+         * <p>The type of the resource group. Valid values:</p>
+         * <ul>
+         * <li><strong>Interactive</strong></li>
+         * <li><strong>Job</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview</a>.</p>
+         * </blockquote>
          * 
-         * *   **Interactive**
-         * *   **Job**
-         * 
-         * > For information about resource groups of Data Lakehouse Edition, see [Resource groups](~~428610~~).
+         * <strong>example:</strong>
+         * <p>Job</p>
          */
         public Builder groupType(String groupType) {
             this.putQueryParameter("GroupType", groupType);
@@ -146,10 +158,13 @@ public class DescribeDBResourceGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster.
-         * <p>
+         * <p>The region ID of the cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/612393.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeRegions](~~612393~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

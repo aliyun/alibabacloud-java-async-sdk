@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSchemasResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSchemasResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeSchemasResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The queried databases.
+         * <p>The queried databases.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -57,7 +58,10 @@ public class DescribeSchemasResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25B56BC7-4978-40B3-9E48-4B7067******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeSchemasResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSchemasResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSchemasResponseBody</p>
+     */
     public static class Schema extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
@@ -109,7 +119,10 @@ public class DescribeSchemasResponseBody extends TeaModel {
             private String schemaName; 
 
             /**
-             * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+             * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amv-bp11q28kvl688****</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -117,7 +130,10 @@ public class DescribeSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adb_demo</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -131,6 +147,12 @@ public class DescribeSchemasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSchemasResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSchemasResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Schema")
         private java.util.List < Schema> schema;

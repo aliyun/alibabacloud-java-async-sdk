@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetSparkAppLogRootPathRequest} extends {@link RequestModel}
  *
  * <p>SetSparkAppLogRootPathRequest</p>
@@ -82,7 +83,11 @@ public class SetSparkAppLogRootPathRequest extends Request {
         } 
 
         /**
-         * The database ID.
+         * <p>The database ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-dbclusterid</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putBodyParameter("DBClusterId", DBClusterId);
@@ -91,7 +96,10 @@ public class SetSparkAppLogRootPathRequest extends Request {
         }
 
         /**
-         * The Object Storage Service (OSS) log path.
+         * <p>The Object Storage Service (OSS) log path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://path/to/log</p>
          */
         public Builder ossLogPath(String ossLogPath) {
             this.putBodyParameter("OssLogPath", ossLogPath);
@@ -100,7 +108,10 @@ public class SetSparkAppLogRootPathRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the default OSS log path.
+         * <p>Specifies whether to use the default OSS log path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder useDefaultOss(Boolean useDefaultOss) {
             this.putBodyParameter("UseDefaultOss", useDefaultOss);

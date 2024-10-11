@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitSparkLogAnalyzeTaskRequest} extends {@link RequestModel}
  *
  * <p>SubmitSparkLogAnalyzeTaskRequest</p>
@@ -54,7 +55,11 @@ public class SubmitSparkLogAnalyzeTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the Spark application.
+         * <p>The ID of the Spark application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s202301121553hzd9c6f7xxxx</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);

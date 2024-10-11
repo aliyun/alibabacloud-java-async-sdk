@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateElasticPlanRequest} extends {@link RequestModel}
  *
  * <p>CreateElasticPlanRequest</p>
@@ -183,17 +184,22 @@ public class CreateElasticPlanRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable **Default Proportional Scaling for EIUs**. Valid values:
-         * <p>
+         * <p>Specifies whether to enable <strong>Default Proportional Scaling for EIUs</strong>. Valid values:</p>
+         * <ul>
+         * <li>true. In this case, storage resources are scaled along with computing resources, and the TargetSize and CronExpression parameters are not supported.</li>
+         * <li>false</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter must be specified when Type is set to WORKER. This parameter is not required when Type is set to EXECUTOR.</p>
+         * </li>
+         * <li><p>You can enable Default Proportional Scaling for EIUs for only a single scaling plan of a cluster.</p>
+         * </li>
+         * </ul>
          * 
-         * *   true. In this case, storage resources are scaled along with computing resources, and the TargetSize and CronExpression parameters are not supported.
-         * *   false
-         * 
-         * > 
-         * 
-         * *   This parameter must be specified when Type is set to WORKER. This parameter is not required when Type is set to EXECUTOR.
-         * 
-         * *   You can enable Default Proportional Scaling for EIUs for only a single scaling plan of a cluster.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoScale(Boolean autoScale) {
             this.putQueryParameter("AutoScale", autoScale);
@@ -202,7 +208,10 @@ public class CreateElasticPlanRequest extends Request {
         }
 
         /**
-         * A CORN expression that specifies the scaling cycle and time for the scaling plan.
+         * <p>A CORN expression that specifies the scaling cycle and time for the scaling plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 20 14 * * ?</p>
          */
         public Builder cronExpression(String cronExpression) {
             this.putQueryParameter("CronExpression", cronExpression);
@@ -211,10 +220,14 @@ public class CreateElasticPlanRequest extends Request {
         }
 
         /**
-         * The cluster ID.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBClusters](~~454250~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
+         * <strong>example:</strong>
+         * <p>amv-wz9509beptiz****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -223,10 +236,14 @@ public class CreateElasticPlanRequest extends Request {
         }
 
         /**
-         * The name of the scaling plan.
-         * <p>
+         * <p>The name of the scaling plan.</p>
+         * <blockquote>
+         * <p> The name must be 2 to 30 characters in length and can contain letters, digits, and underscores (_). The name must start with a letter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The name must be 2 to 30 characters in length and can contain letters, digits, and underscores (\_). The name must start with a letter.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder elasticPlanName(String elasticPlanName) {
             this.putQueryParameter("ElasticPlanName", elasticPlanName);
@@ -235,11 +252,15 @@ public class CreateElasticPlanRequest extends Request {
         }
 
         /**
-         * Specifies whether to immediately enable the scaling plan after the plan is created. Valid values:
-         * <p>
+         * <p>Specifies whether to immediately enable the scaling plan after the plan is created. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.putQueryParameter("Enabled", enabled);
@@ -248,10 +269,13 @@ public class CreateElasticPlanRequest extends Request {
         }
 
         /**
-         * The end time of the scaling plan.
-         * <p>
+         * <p>The end time of the scaling plan.</p>
+         * <blockquote>
+         * <p> Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * </blockquote>
          * 
-         * >  Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <strong>example:</strong>
+         * <p>2025-01-01T12:01:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -260,14 +284,18 @@ public class CreateElasticPlanRequest extends Request {
         }
 
         /**
-         * The name of the resource group.
-         * <p>
+         * <p>The name of the resource group.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If you want to create a scaling plan that uses interactive resource groups, you must specify this parameter. If you want to create a scaling plan that uses elastic I/O units (EIUs), you do not need to specify this parameter.</p>
+         * </li>
+         * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/459446.html">DescribeDBResourceGroup</a> operation to query the resource group name for a cluster.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   If you want to create a scaling plan that uses interactive resource groups, you must specify this parameter. If you want to create a scaling plan that uses elastic I/O units (EIUs), you do not need to specify this parameter.
-         * 
-         * *   You can call the [DescribeDBResourceGroup](~~459446~~) operation to query the resource group name for a cluster.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putQueryParameter("ResourceGroupName", resourceGroupName);
@@ -276,10 +304,13 @@ public class CreateElasticPlanRequest extends Request {
         }
 
         /**
-         * The start time of the scaling plan.
-         * <p>
+         * <p>The start time of the scaling plan.</p>
+         * <blockquote>
+         * <p> Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * </blockquote>
          * 
-         * >  Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <strong>example:</strong>
+         * <p>2022-01-01T12:01:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -288,14 +319,18 @@ public class CreateElasticPlanRequest extends Request {
         }
 
         /**
-         * The desired specifications of elastic resources after scaling.
-         * <p>
+         * <p>The desired specifications of elastic resources after scaling.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If the scaling plan uses <strong>EIUs</strong> and <strong>Default Proportional Scaling for EIUs</strong> is enabled, you do not need to specify this parameter. In other cases, you must specify this parameter.</p>
+         * </li>
+         * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/601278.html">DescribeElasticPlanSpecifications</a> operation to query the specifications that are supported for scaling plans.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   If the scaling plan uses **EIUs** and **Default Proportional Scaling for EIUs** is enabled, you do not need to specify this parameter. In other cases, you must specify this parameter.
-         * 
-         * *   You can call the [DescribeElasticPlanSpecifications](~~601278~~) operation to query the specifications that are supported for scaling plans.
+         * <strong>example:</strong>
+         * <p>32ACU</p>
          */
         public Builder targetSize(String targetSize) {
             this.putQueryParameter("TargetSize", targetSize);
@@ -304,11 +339,15 @@ public class CreateElasticPlanRequest extends Request {
         }
 
         /**
-         * The type of the scaling plan. Valid values:
-         * <p>
+         * <p>The type of the scaling plan. Valid values:</p>
+         * <ul>
+         * <li>EXECUTOR: the interactive resource group type, which indicates the computing resource type.</li>
+         * <li>WORKER: the EIU type.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   EXECUTOR: the interactive resource group type, which indicates the computing resource type.
-         * *   WORKER: the EIU type.
+         * <strong>example:</strong>
+         * <p>EXECUTOR</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

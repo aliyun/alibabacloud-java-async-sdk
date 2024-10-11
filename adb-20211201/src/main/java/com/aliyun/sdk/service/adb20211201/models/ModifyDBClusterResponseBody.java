@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBClusterResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDBClusterResponseBody</p>
@@ -61,7 +62,10 @@ public class ModifyDBClusterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp1r053byu48p****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -69,7 +73,10 @@ public class ModifyDBClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The order ID.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2035629****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -77,7 +84,10 @@ public class ModifyDBClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0D6BF3E2-41D8-57F6-9A62-A13A70377952</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

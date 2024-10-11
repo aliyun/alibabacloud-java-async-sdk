@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBClusterDescriptionRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBClusterDescriptionRequest</p>
@@ -69,11 +70,15 @@ public class ModifyDBClusterDescriptionRequest extends Request {
         } 
 
         /**
-         * The description of the cluster.
-         * <p>
+         * <p>The description of the cluster.</p>
+         * <ul>
+         * <li>The description cannot start with <code>http://</code> or <code>https</code>.</li>
+         * <li>The description must be 2 to 256 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The description cannot start with `http://` or `https`.
-         * *   The description must be 2 to 256 characters in length.
+         * <strong>example:</strong>
+         * <p>adb_test</p>
          */
         public Builder DBClusterDescription(String DBClusterDescription) {
             this.putQueryParameter("DBClusterDescription", DBClusterDescription);
@@ -82,7 +87,11 @@ public class ModifyDBClusterDescriptionRequest extends Request {
         }
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp1r053byu48p****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

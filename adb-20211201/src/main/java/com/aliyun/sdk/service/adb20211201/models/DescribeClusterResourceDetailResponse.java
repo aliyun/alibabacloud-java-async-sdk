@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterResourceDetailResponse} extends {@link TeaModel}
  *
  * <p>DescribeClusterResourceDetailResponse</p>

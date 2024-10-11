@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAdbMySqlSchemasResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAdbMySqlSchemasResponseBody</p>
@@ -73,11 +74,14 @@ public class DescribeAdbMySqlSchemasResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <ul>
+         * <li>If the request was successful, a <strong>success</strong> message is returned.</li>
+         * <li>If the request failed, an error message is returned.</li>
+         * </ul>
          * 
-         * *   If the request was successful, a **success** message is returned.
-         * *   If the request failed, an error message is returned.
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -85,7 +89,10 @@ public class DescribeAdbMySqlSchemasResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -93,7 +100,7 @@ public class DescribeAdbMySqlSchemasResponseBody extends TeaModel {
         }
 
         /**
-         * The queried databases.
+         * <p>The queried databases.</p>
          */
         public Builder schemas(java.util.List < String > schemas) {
             this.schemas = schemas;
@@ -101,11 +108,14 @@ public class DescribeAdbMySqlSchemasResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDownloadRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDownloadRecordsResponseBody</p>
@@ -69,7 +70,7 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The queried download tasks.
+         * <p>The queried download tasks.</p>
          */
         public Builder records(java.util.List < Records> records) {
             this.records = records;
@@ -77,7 +78,10 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D761DA51-12F8-5457-AAA9-F52B9F436D2D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDownloadRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDownloadRecordsResponseBody</p>
+     */
     public static class Records extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DownloadId")
         private Long downloadId;
@@ -165,7 +175,10 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The download job ID.
+             * <p>The download job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>636890</p>
              */
             public Builder downloadId(Long downloadId) {
                 this.downloadId = downloadId;
@@ -173,7 +186,10 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if the download job failed.
+             * <p>The error message returned if the download job failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The query result is empty.</p>
              */
             public Builder exceptionMsg(String exceptionMsg) {
                 this.exceptionMsg = exceptionMsg;
@@ -181,7 +197,10 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the downloaded file.
+             * <p>The name of the downloaded file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20210806094635-20210806095135</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -189,12 +208,15 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the download job. Valid values:
-             * <p>
+             * <p>The status of the download job. Valid values:</p>
+             * <ul>
+             * <li><strong>running</strong></li>
+             * <li><strong>finished</strong></li>
+             * <li><strong>failed</strong></li>
+             * </ul>
              * 
-             * *   **running**
-             * *   **finished**
-             * *   **failed**
+             * <strong>example:</strong>
+             * <p>finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -202,7 +224,7 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The download URL of the file.
+             * <p>The download URL of the file.</p>
              */
             public Builder url(String url) {
                 this.url = url;

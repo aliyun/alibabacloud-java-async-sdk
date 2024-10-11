@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSparkSQLEngineStateResponseBody} extends {@link TeaModel}
  *
  * <p>GetSparkSQLEngineStateResponseBody</p>
@@ -49,7 +50,7 @@ public class GetSparkSQLEngineStateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The state information about the Spark SQL engine.
+         * <p>The state information about the Spark SQL engine.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetSparkSQLEngineStateResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxx-xx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetSparkSQLEngineStateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSparkSQLEngineStateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSparkSQLEngineStateResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -181,7 +191,10 @@ public class GetSparkSQLEngineStateResponseBody extends TeaModel {
             private String submittedTimeInMillis; 
 
             /**
-             * The ID of the Spark application.
+             * <p>The ID of the Spark application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s202207151211hz0c****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -189,7 +202,10 @@ public class GetSparkSQLEngineStateResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the Spark application.
+             * <p>The configuration of the Spark application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;key1&quot;: &quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;}</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -197,7 +213,10 @@ public class GetSparkSQLEngineStateResponseBody extends TeaModel {
             }
 
             /**
-             * The third-party JAR package.
+             * <p>The third-party JAR package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://test-bucket/test.jar</p>
              */
             public Builder jars(String jars) {
                 this.jars = jars;
@@ -205,7 +224,10 @@ public class GetSparkSQLEngineStateResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of started Spark executors.
+             * <p>The maximum number of started Spark executors.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder maxExecutor(String maxExecutor) {
                 this.maxExecutor = maxExecutor;
@@ -213,7 +235,10 @@ public class GetSparkSQLEngineStateResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum number of started Spark executors.
+             * <p>The minimum number of started Spark executors.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minExecutor(String minExecutor) {
                 this.minExecutor = minExecutor;
@@ -221,7 +246,10 @@ public class GetSparkSQLEngineStateResponseBody extends TeaModel {
             }
 
             /**
-             * The slot number of the Spark application.
+             * <p>The slot number of the Spark application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder slotNum(String slotNum) {
                 this.slotNum = slotNum;
@@ -229,20 +257,23 @@ public class GetSparkSQLEngineStateResponseBody extends TeaModel {
             }
 
             /**
-             * The execution state of the application. Valid values:
-             * <p>
+             * <p>The execution state of the application. Valid values:</p>
+             * <ul>
+             * <li>SUBMITTED</li>
+             * <li>STARTING</li>
+             * <li>RUNNING</li>
+             * <li>FAILING</li>
+             * <li>FAILED</li>
+             * <li>KILLING</li>
+             * <li>KILLED</li>
+             * <li>SUCCEEDING</li>
+             * <li>COMPLETED</li>
+             * <li>FATAL</li>
+             * <li>UNKNOWN</li>
+             * </ul>
              * 
-             * *   SUBMITTED
-             * *   STARTING
-             * *   RUNNING
-             * *   FAILING
-             * *   FAILED
-             * *   KILLING
-             * *   KILLED
-             * *   SUCCEEDING
-             * *   COMPLETED
-             * *   FATAL
-             * *   UNKNOWN
+             * <strong>example:</strong>
+             * <p>COMPLETED</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -250,7 +281,10 @@ public class GetSparkSQLEngineStateResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the Spark SQL application was submitted. Unit: milliseconds.
+             * <p>The timestamp when the Spark SQL application was submitted. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1651213645000</p>
              */
             public Builder submittedTimeInMillis(String submittedTimeInMillis) {
                 this.submittedTimeInMillis = submittedTimeInMillis;

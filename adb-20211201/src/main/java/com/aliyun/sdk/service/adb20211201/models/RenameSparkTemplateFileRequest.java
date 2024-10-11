@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenameSparkTemplateFileRequest} extends {@link RequestModel}
  *
  * <p>RenameSparkTemplateFileRequest</p>
@@ -84,7 +85,11 @@ public class RenameSparkTemplateFileRequest extends Request {
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-d*****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -93,7 +98,11 @@ public class RenameSparkTemplateFileRequest extends Request {
         }
 
         /**
-         * The template file ID.
+         * <p>The template file ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -102,7 +111,11 @@ public class RenameSparkTemplateFileRequest extends Request {
         }
 
         /**
-         * The name of the template file that you want to rename.
+         * <p>The name of the template file that you want to rename.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>new_template_name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

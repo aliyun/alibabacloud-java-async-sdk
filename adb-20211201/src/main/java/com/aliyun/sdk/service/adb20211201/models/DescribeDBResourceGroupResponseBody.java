@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBResourceGroupResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBResourceGroupResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The queried resource group.
+         * <p>The queried resource groups.</p>
          */
         public Builder groupsInfo(java.util.List < GroupsInfo> groupsInfo) {
             this.groupsInfo = groupsInfo;
@@ -57,7 +58,10 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A94B6C02-7BD4-5D67-9776-3AC8317E8DD3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBResourceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBResourceGroupResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
@@ -121,7 +131,10 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             private String targetGroupName; 
 
             /**
-             * The name of the resource group.
+             * <p>The name of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_default</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -129,7 +142,10 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The execution duration of the query. Unit: milliseconds.
+             * <p>The execution duration of the query. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>180000</p>
              */
             public Builder queryTime(String queryTime) {
                 this.queryTime = queryTime;
@@ -137,7 +153,10 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the destination resource group.
+             * <p>The name of the destination resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job</p>
              */
             public Builder targetGroupName(String targetGroupName) {
                 this.targetGroupName = targetGroupName;
@@ -151,6 +170,12 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBResourceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBResourceGroupResponseBody</p>
+     */
     public static class GroupsInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterMode")
         private String clusterMode;
@@ -188,6 +213,9 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxComputeResource")
         private String maxComputeResource;
 
+        @com.aliyun.core.annotation.NameInMap("MaxGpuQuantity")
+        private Integer maxGpuQuantity;
+
         @com.aliyun.core.annotation.NameInMap("Message")
         @com.aliyun.core.annotation.Validation(required = true)
         private String message;
@@ -198,14 +226,23 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MinComputeResource")
         private String minComputeResource;
 
+        @com.aliyun.core.annotation.NameInMap("MinGpuQuantity")
+        private Integer minGpuQuantity;
+
         @com.aliyun.core.annotation.NameInMap("Rules")
         private java.util.List < Rules> rules;
 
         @com.aliyun.core.annotation.NameInMap("RunningClusterCount")
         private Integer runningClusterCount;
 
+        @com.aliyun.core.annotation.NameInMap("SpecName")
+        private String specName;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
+
+        @com.aliyun.core.annotation.NameInMap("TargetResourceGroupName")
+        private String targetResourceGroupName;
 
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
@@ -223,12 +260,16 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             this.groupUsers = builder.groupUsers;
             this.maxClusterCount = builder.maxClusterCount;
             this.maxComputeResource = builder.maxComputeResource;
+            this.maxGpuQuantity = builder.maxGpuQuantity;
             this.message = builder.message;
             this.minClusterCount = builder.minClusterCount;
             this.minComputeResource = builder.minComputeResource;
+            this.minGpuQuantity = builder.minGpuQuantity;
             this.rules = builder.rules;
             this.runningClusterCount = builder.runningClusterCount;
+            this.specName = builder.specName;
             this.status = builder.status;
+            this.targetResourceGroupName = builder.targetResourceGroupName;
             this.updateTime = builder.updateTime;
         }
 
@@ -325,6 +366,13 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxGpuQuantity
+         */
+        public Integer getMaxGpuQuantity() {
+            return this.maxGpuQuantity;
+        }
+
+        /**
          * @return message
          */
         public String getMessage() {
@@ -346,6 +394,13 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return minGpuQuantity
+         */
+        public Integer getMinGpuQuantity() {
+            return this.minGpuQuantity;
+        }
+
+        /**
          * @return rules
          */
         public java.util.List < Rules> getRules() {
@@ -360,10 +415,24 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return specName
+         */
+        public String getSpecName() {
+            return this.specName;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return targetResourceGroupName
+         */
+        public String getTargetResourceGroupName() {
+            return this.targetResourceGroupName;
         }
 
         /**
@@ -386,16 +455,23 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             private String groupUsers; 
             private Integer maxClusterCount; 
             private String maxComputeResource; 
+            private Integer maxGpuQuantity; 
             private String message; 
             private Integer minClusterCount; 
             private String minComputeResource; 
+            private Integer minGpuQuantity; 
             private java.util.List < Rules> rules; 
             private Integer runningClusterCount; 
+            private String specName; 
             private String status; 
+            private String targetResourceGroupName; 
             private String updateTime; 
 
             /**
-             * A reserved parameter.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>N/A</p>
              */
             public Builder clusterMode(String clusterMode) {
                 this.clusterMode = clusterMode;
@@ -403,7 +479,10 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>N/A</p>
              */
             public Builder clusterSizeResource(String clusterSizeResource) {
                 this.clusterSizeResource = clusterSizeResource;
@@ -411,7 +490,10 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource group was created. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC.
+             * <p>The time when the resource group was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-29T03:34:30Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -419,7 +501,10 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum amount of elastic computing resources. Unit: ACUs.
+             * <p>The minimum amount of elastic computing resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16ACU</p>
              */
             public Builder elasticMinComputeResource(String elasticMinComputeResource) {
                 this.elasticMinComputeResource = elasticMinComputeResource;
@@ -427,13 +512,15 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the preemptible instance feature is enabled for the resource group. After the preemptible instance feature is enabled, you are charged for resources at a lower unit price but the resources are probably released. Valid values:
-             * <p>
+             * <p>Indicates whether the preemptible instance feature is enabled for the resource group. After the preemptible instance feature is enabled, you are charged for resources at a lower unit price but the resources are probably released. Valid values:</p>
+             * <ul>
+             * <li><strong>True</strong></li>
+             * <li><strong>False</strong></li>
+             * </ul>
+             * <p>The True value is returned only for job resource groups.</p>
              * 
-             * *   **True**
-             * *   **False**
-             * 
-             * The True value is returned only for job resource groups.
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder enableSpot(String enableSpot) {
                 this.enableSpot = enableSpot;
@@ -457,7 +544,10 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource group.
+             * <p>The name of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -465,13 +555,17 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource group. Valid values:
-             * <p>
+             * <p>The type of the resource group. Valid values:</p>
+             * <ul>
+             * <li><strong>Interactive</strong></li>
+             * <li><strong>Job</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p> For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource groups</a>.</p>
+             * </blockquote>
              * 
-             * *   **Interactive**
-             * *   **Job**
-             * 
-             * >  For more information about resource groups, see [Resource groups](~~428610~~).
+             * <strong>example:</strong>
+             * <p>Job</p>
              */
             public Builder groupType(String groupType) {
                 this.groupType = groupType;
@@ -479,7 +573,10 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The Resource Access Management (RAM) user that is associated with the resource group.
+             * <p>The Resource Access Management (RAM) user that is associated with the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testb,testc</p>
              */
             public Builder groupUsers(String groupUsers) {
                 this.groupUsers = groupUsers;
@@ -487,7 +584,10 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>N/A</p>
              */
             public Builder maxClusterCount(Integer maxClusterCount) {
                 this.maxClusterCount = maxClusterCount;
@@ -495,7 +595,10 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum amount of reserved computing resources. Unit: ACUs.
+             * <p>The maximum amount of reserved computing resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>512ACU</p>
              */
             public Builder maxComputeResource(String maxComputeResource) {
                 this.maxComputeResource = maxComputeResource;
@@ -503,7 +606,15 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * MaxGpuQuantity.
+             */
+            public Builder maxGpuQuantity(Integer maxGpuQuantity) {
+                this.maxGpuQuantity = maxGpuQuantity;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -511,7 +622,10 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>N/A</p>
              */
             public Builder minClusterCount(Integer minClusterCount) {
                 this.minClusterCount = minClusterCount;
@@ -519,7 +633,10 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum amount of reserved computing resources. Unit: AnalyticDB compute units (ACUs).
+             * <p>The minimum amount of reserved computing resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0ACU</p>
              */
             public Builder minComputeResource(String minComputeResource) {
                 this.minComputeResource = minComputeResource;
@@ -527,7 +644,15 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The job resubmission rules.
+             * MinGpuQuantity.
+             */
+            public Builder minGpuQuantity(Integer minGpuQuantity) {
+                this.minGpuQuantity = minGpuQuantity;
+                return this;
+            }
+
+            /**
+             * <p>The job resubmission rules.</p>
              */
             public Builder rules(java.util.List < Rules> rules) {
                 this.rules = rules;
@@ -535,7 +660,10 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>N/A</p>
              */
             public Builder runningClusterCount(Integer runningClusterCount) {
                 this.runningClusterCount = runningClusterCount;
@@ -543,12 +671,23 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the resource group. Valid values:
-             * <p>
+             * SpecName.
+             */
+            public Builder specName(String specName) {
+                this.specName = specName;
+                return this;
+            }
+
+            /**
+             * <p>The status of the resource group. Valid values:</p>
+             * <ul>
+             * <li><strong>creating</strong>: The resource group is being created.</li>
+             * <li><strong>ok</strong>: The resource group is created.</li>
+             * <li><strong>pendingdelete</strong>: The resource group is pending to be deleted.</li>
+             * </ul>
              * 
-             * *   **creating**: The resource group is being created.
-             * *   **ok**: The resource group is created.
-             * *   **pendingdelete**: The resource group is pending to be deleted.
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -556,7 +695,18 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource group was updated. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC.
+             * TargetResourceGroupName.
+             */
+            public Builder targetResourceGroupName(String targetResourceGroupName) {
+                this.targetResourceGroupName = targetResourceGroupName;
+                return this;
+            }
+
+            /**
+             * <p>The time when the resource group was updated. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-31T03:34:30Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

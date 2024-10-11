@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterResourceDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClusterResourceDetailResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -69,7 +73,7 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the cluster resource usage.
+         * <p>The queried resource usage.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -77,7 +81,10 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClusterResourceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterResourceDetailResponseBody</p>
+     */
     public static class ResourceGroupList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterMode")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -262,7 +275,11 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * A reserved parameter.
+             * <p>A reserved parameter.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder clusterMode(String clusterMode) {
                 this.clusterMode = clusterMode;
@@ -270,7 +287,10 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder clusterSizeResource(String clusterSizeResource) {
                 this.clusterSizeResource = clusterSizeResource;
@@ -278,13 +298,15 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the preemptible instance feature is enabled for the resource group. After the preemptible instance feature is enabled, you are charged for resources at a lower unit price but the resources are probably released. Valid values:
-             * <p>
+             * <p>Indicates whether the preemptible instance feature is enabled for the resource group. After the preemptible instance feature is enabled, you are charged for resources at a lower unit price but the resources are probably released. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <p>The True value is returned only for job resource groups.</p>
              * 
-             * *   **true**
-             * *   **false**
-             * 
-             * The True value is returned only for job resource groups.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableSpot(Boolean enableSpot) {
                 this.enableSpot = enableSpot;
@@ -292,7 +314,10 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxClusterCount(Integer maxClusterCount) {
                 this.maxClusterCount = maxClusterCount;
@@ -300,7 +325,10 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum amount of reserved computing resources. Unit: ACUs.
+             * <p>The maximum amount of reserved computing resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128ACU</p>
              */
             public Builder maxComputeResource(String maxComputeResource) {
                 this.maxComputeResource = maxComputeResource;
@@ -308,7 +336,10 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder minClusterCount(Integer minClusterCount) {
                 this.minClusterCount = minClusterCount;
@@ -316,7 +347,10 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum amount of reserved computing resources. Unit: ACUs.
+             * <p>The minimum amount of reserved computing resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16ACU</p>
              */
             public Builder minComputeResource(String minComputeResource) {
                 this.minComputeResource = minComputeResource;
@@ -324,7 +358,10 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17</p>
              */
             public Builder poolId(Long poolId) {
                 this.poolId = poolId;
@@ -332,7 +369,10 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource group.
+             * <p>The name of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testadb</p>
              */
             public Builder poolName(String poolName) {
                 this.poolName = poolName;
@@ -340,7 +380,10 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource group.
+             * <p>The type of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>interactive</p>
              */
             public Builder poolType(String poolType) {
                 this.poolType = poolType;
@@ -348,7 +391,10 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The user of the resource group.
+             * <p>The user of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user1</p>
              */
             public Builder poolUsers(String poolUsers) {
                 this.poolUsers = poolUsers;
@@ -356,7 +402,10 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder runningClusterCount(Integer runningClusterCount) {
                 this.runningClusterCount = runningClusterCount;
@@ -364,12 +413,15 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the resource group. Valid values:
-             * <p>
+             * <p>The status of the resource group. Valid values:</p>
+             * <ul>
+             * <li><strong>running</strong></li>
+             * <li><strong>deleting</strong></li>
+             * <li><strong>scaling</strong></li>
+             * </ul>
              * 
-             * *   **running**
-             * *   **deleting**
-             * *   **scaling**
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -383,6 +435,12 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterResourceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterResourceDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComputeResource")
         private String computeResource;
@@ -458,7 +516,10 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             private String storageResource; 
 
             /**
-             * The amount of reserved computing resources. Unit: AnalyticDB compute units (ACUs). Valid values: 0 to 4096. The value must be in increments of 16 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.
+             * <p>The amount of reserved computing resources. Unit: AnalyticDB compute units (ACUs). Valid values: 0 to 4096. The value must be in increments of 16 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16ACU</p>
              */
             public Builder computeResource(String computeResource) {
                 this.computeResource = computeResource;
@@ -466,7 +527,10 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amv-adbxxxxx</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -474,7 +538,10 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of idle reserved computing resources. Unit: ACUs. Valid values: 0 to 4096. The value must be in increments of 16 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.
+             * <p>The amount of idle reserved computing resources. Unit: ACUs. Valid values: 0 to 4096. The value must be in increments of 16 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0ACU</p>
              */
             public Builder freeComputeResource(String freeComputeResource) {
                 this.freeComputeResource = freeComputeResource;
@@ -482,7 +549,7 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The resource groups.
+             * <p>The resource groups.</p>
              */
             public Builder resourceGroupList(java.util.List < ResourceGroupList> resourceGroupList) {
                 this.resourceGroupList = resourceGroupList;
@@ -490,7 +557,10 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of reserved storage resources. Unit: ACUs. Valid values: 0 to 2064. The value must be in increments of 24 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.
+             * <p>The amount of reserved storage resources. Unit: ACUs. Valid values: 0 to 2064. The value must be in increments of 24 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24ACU</p>
              */
             public Builder storageResource(String storageResource) {
                 this.storageResource = storageResource;

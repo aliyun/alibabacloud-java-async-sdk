@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSparkLogAnalyzeTaskRequest} extends {@link RequestModel}
  *
  * <p>GetSparkLogAnalyzeTaskRequest</p>
@@ -54,7 +55,11 @@ public class GetSparkLogAnalyzeTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the Spark log analysis task. You can call the ListSparkLogAnalyzeTasks operation to query the IDs of all Spark log analysis tasks that are submitted in the current cluster.
+         * <p>The ID of the Spark log analysis task. You can call the ListSparkLogAnalyzeTasks operation to query the IDs of all Spark log analysis tasks that are submitted in the current cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder taskId(Long taskId) {
             this.putBodyParameter("TaskId", taskId);

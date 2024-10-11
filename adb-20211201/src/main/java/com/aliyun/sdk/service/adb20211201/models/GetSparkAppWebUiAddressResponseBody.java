@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSparkAppWebUiAddressResponseBody} extends {@link TeaModel}
  *
  * <p>GetSparkAppWebUiAddressResponseBody</p>
@@ -49,7 +50,7 @@ public class GetSparkAppWebUiAddressResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetSparkAppWebUiAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D65A809F-34CE-4550-9BC1-0ED21ETG380</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetSparkAppWebUiAddressResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSparkAppWebUiAddressResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSparkAppWebUiAddressResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -133,7 +143,10 @@ public class GetSparkAppWebUiAddressResponseBody extends TeaModel {
             private String webUiAddress; 
 
             /**
-             * The Spark application ID.
+             * <p>The Spark application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s202205201533hz1209892000****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -141,7 +154,10 @@ public class GetSparkAppWebUiAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The database ID.
+             * <p>The database ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amv-clusterxxx</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -149,7 +165,10 @@ public class GetSparkAppWebUiAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The expiration time. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1655801973000</p>
              */
             public Builder expirationTimeInMillis(Long expirationTimeInMillis) {
                 this.expirationTimeInMillis = expirationTimeInMillis;
@@ -157,7 +176,10 @@ public class GetSparkAppWebUiAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the web UI for the Spark application.
+             * <p>The URL of the web UI for the Spark application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://adbsparkui-cn-hangzhou.aliyuncs.com/?token=">https://adbsparkui-cn-hangzhou.aliyuncs.com/?token=</a>****</p>
              */
             public Builder webUiAddress(String webUiAddress) {
                 this.webUiAddress = webUiAddress;

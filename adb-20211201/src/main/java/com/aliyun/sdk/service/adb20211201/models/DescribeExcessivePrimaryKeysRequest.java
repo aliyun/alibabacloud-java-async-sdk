@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExcessivePrimaryKeysRequest} extends {@link RequestModel}
  *
  * <p>DescribeExcessivePrimaryKeysRequest</p>
@@ -211,10 +212,14 @@ public class DescribeExcessivePrimaryKeysRequest extends Request {
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
-         * <p>
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region.
+         * <strong>example:</strong>
+         * <p>am-bp1xxxxxxxx47</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -223,7 +228,10 @@ public class DescribeExcessivePrimaryKeysRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time must be in UTC.
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-06-01T16:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -232,13 +240,16 @@ public class DescribeExcessivePrimaryKeysRequest extends Request {
         }
 
         /**
-         * The language of file titles and error messages. Valid values:
-         * <p>
+         * <p>The language of file titles and error messages. Valid values:</p>
+         * <ul>
+         * <li><strong>zh (default)</strong>: simplified Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * <li><strong>ja</strong>: Japanese.</li>
+         * <li><strong>zh-tw</strong>: traditional Chinese.</li>
+         * </ul>
          * 
-         * *   **zh (default)**: simplified Chinese.
-         * *   **en**: English.
-         * *   **ja**: Japanese.
-         * *   **zh-tw**: traditional Chinese.
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -247,26 +258,25 @@ public class DescribeExcessivePrimaryKeysRequest extends Request {
         }
 
         /**
-         * The order in which table fields are sorted. Specify the value in the JSON format.
-         * <p>
+         * <p>The order in which table fields are sorted. Specify the value in the JSON format.</p>
+         * <p>Example:</p>
+         * <pre><code>[
          * 
-         * Example:
+         *     {
          * 
-         *     [
+         *         &quot;Field&quot;:&quot;Name&quot;,
          * 
-         *         {
+         *         &quot;Type&quot;:&quot;Asc&quot;
          * 
-         *             "Field":"Name",
+         *     }
          * 
-         *             "Type":"Asc"
+         * ]
+         * </code></pre>
+         * <p>In the preceding code, Field specifies the field that is used to sort the table data. Set the value to Name. Type specifies the sorting order. Valid values: Desc and Asc.</p>
+         * <p>Field and Type are case-insensitive.</p>
          * 
-         *         }
-         * 
-         *     ]
-         * 
-         * In the preceding code, Field specifies the field that is used to sort the table data. Set the value to Name. Type specifies the sorting order. Valid values: Desc and Asc.
-         * 
-         * Field and Type are case-insensitive.
+         * <strong>example:</strong>
+         * <p>[{&quot;Field&quot;:&quot;TableName&quot;, &quot;Type&quot;: &quot;Desc&quot; }]</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -293,7 +303,10 @@ public class DescribeExcessivePrimaryKeysRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -302,12 +315,15 @@ public class DescribeExcessivePrimaryKeysRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values:
-         * <p>
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong> (default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
          * 
-         * *   **30** (default)
-         * *   **50**
-         * *   **100**
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -316,10 +332,14 @@ public class DescribeExcessivePrimaryKeysRequest extends Request {
         }
 
         /**
-         * The region ID.
-         * <p>
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -346,7 +366,10 @@ public class DescribeExcessivePrimaryKeysRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-06-01T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

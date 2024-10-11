@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccountsRequest} extends {@link RequestModel}
  *
  * <p>DescribeAccountsRequest</p>
@@ -96,10 +97,13 @@ public class DescribeAccountsRequest extends Request {
         } 
 
         /**
-         * The name of the database account.
-         * <p>
+         * <p>The name of the database account.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the information about all database accounts in the cluster is returned.</p>
+         * </blockquote>
          * 
-         * > If you do not specify this parameter, the information about all database accounts in the cluster is returned.
+         * <strong>example:</strong>
+         * <p>test_accout</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -108,7 +112,11 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp11q28kvl688****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -117,11 +125,14 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * The database engine of the cluster. Valid values:
-         * <p>
+         * <p>The database engine of the cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>AnalyticDB</strong> (default): the AnalyticDB for MySQL engine.</li>
+         * <li><strong>Clickhouse</strong>: the wide table engine.</li>
+         * </ul>
          * 
-         * *   **AnalyticDB** (default): the AnalyticDB for MySQL engine.
-         * *   **Clickhouse**: the wide table engine.
+         * <strong>example:</strong>
+         * <p>Clickhouse</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);

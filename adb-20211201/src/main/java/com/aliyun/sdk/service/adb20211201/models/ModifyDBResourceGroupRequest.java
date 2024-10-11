@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBResourceGroupRequest</p>
@@ -51,6 +52,10 @@ public class ModifyDBResourceGroupRequest extends Request {
     private String maxComputeResource;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxGpuQuantity")
+    private Integer maxGpuQuantity;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MinClusterCount")
     private Integer minClusterCount;
 
@@ -59,12 +64,24 @@ public class ModifyDBResourceGroupRequest extends Request {
     private String minComputeResource;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinGpuQuantity")
+    private Integer minGpuQuantity;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Rules")
     private java.util.List < Rules> rules;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpecName")
+    private String specName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetResourceGroupName")
+    private String targetResourceGroupName;
 
     private ModifyDBResourceGroupRequest(Builder builder) {
         super(builder);
@@ -77,10 +94,14 @@ public class ModifyDBResourceGroupRequest extends Request {
         this.groupType = builder.groupType;
         this.maxClusterCount = builder.maxClusterCount;
         this.maxComputeResource = builder.maxComputeResource;
+        this.maxGpuQuantity = builder.maxGpuQuantity;
         this.minClusterCount = builder.minClusterCount;
         this.minComputeResource = builder.minComputeResource;
+        this.minGpuQuantity = builder.minGpuQuantity;
         this.regionId = builder.regionId;
         this.rules = builder.rules;
+        this.specName = builder.specName;
+        this.targetResourceGroupName = builder.targetResourceGroupName;
     }
 
     public static Builder builder() {
@@ -160,6 +181,13 @@ public class ModifyDBResourceGroupRequest extends Request {
     }
 
     /**
+     * @return maxGpuQuantity
+     */
+    public Integer getMaxGpuQuantity() {
+        return this.maxGpuQuantity;
+    }
+
+    /**
      * @return minClusterCount
      */
     public Integer getMinClusterCount() {
@@ -171,6 +199,13 @@ public class ModifyDBResourceGroupRequest extends Request {
      */
     public String getMinComputeResource() {
         return this.minComputeResource;
+    }
+
+    /**
+     * @return minGpuQuantity
+     */
+    public Integer getMinGpuQuantity() {
+        return this.minGpuQuantity;
     }
 
     /**
@@ -187,6 +222,20 @@ public class ModifyDBResourceGroupRequest extends Request {
         return this.rules;
     }
 
+    /**
+     * @return specName
+     */
+    public String getSpecName() {
+        return this.specName;
+    }
+
+    /**
+     * @return targetResourceGroupName
+     */
+    public String getTargetResourceGroupName() {
+        return this.targetResourceGroupName;
+    }
+
     public static final class Builder extends Request.Builder<ModifyDBResourceGroupRequest, Builder> {
         private String clusterMode; 
         private String clusterSizeResource; 
@@ -197,10 +246,14 @@ public class ModifyDBResourceGroupRequest extends Request {
         private String groupType; 
         private Integer maxClusterCount; 
         private String maxComputeResource; 
+        private Integer maxGpuQuantity; 
         private Integer minClusterCount; 
         private String minComputeResource; 
+        private Integer minGpuQuantity; 
         private String regionId; 
         private java.util.List < Rules> rules; 
+        private String specName; 
+        private String targetResourceGroupName; 
 
         private Builder() {
             super();
@@ -217,14 +270,21 @@ public class ModifyDBResourceGroupRequest extends Request {
             this.groupType = request.groupType;
             this.maxClusterCount = request.maxClusterCount;
             this.maxComputeResource = request.maxComputeResource;
+            this.maxGpuQuantity = request.maxGpuQuantity;
             this.minClusterCount = request.minClusterCount;
             this.minComputeResource = request.minComputeResource;
+            this.minGpuQuantity = request.minGpuQuantity;
             this.regionId = request.regionId;
             this.rules = request.rules;
+            this.specName = request.specName;
+            this.targetResourceGroupName = request.targetResourceGroupName;
         } 
 
         /**
-         * A reserved parameter.
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N/A</p>
          */
         public Builder clusterMode(String clusterMode) {
             this.putQueryParameter("ClusterMode", clusterMode);
@@ -233,7 +293,10 @@ public class ModifyDBResourceGroupRequest extends Request {
         }
 
         /**
-         * A reserved parameter.
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N/A</p>
          */
         public Builder clusterSizeResource(String clusterSizeResource) {
             this.putQueryParameter("ClusterSizeResource", clusterSizeResource);
@@ -242,7 +305,11 @@ public class ModifyDBResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp1r053byu48p****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -251,11 +318,14 @@ public class ModifyDBResourceGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the spot instance feature for the resource group. After you enable the spot instance feature, you are charged for resources at a lower unit price but the resources are probably released. You can enable the spot instance feature only for job resource groups. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the spot instance feature for the resource group. After you enable the spot instance feature, you are charged for resources at a lower unit price but the resources are probably released. You can enable the spot instance feature only for job resource groups. Valid values:</p>
+         * <ul>
+         * <li><strong>True</strong></li>
+         * <li><strong>False</strong></li>
+         * </ul>
          * 
-         * *   **True**
-         * *   **False**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableSpot(Boolean enableSpot) {
             this.putQueryParameter("EnableSpot", enableSpot);
@@ -274,10 +344,14 @@ public class ModifyDBResourceGroupRequest extends Request {
         }
 
         /**
-         * The name of the resource group.
-         * <p>
+         * <p>The name of the resource group.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/459446.html">DescribeDBResourceGroup</a> operation to query the name of a resource group in a cluster.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDBResourceGroup](~~459446~~) operation to query the name of a resource group in a cluster.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -286,13 +360,18 @@ public class ModifyDBResourceGroupRequest extends Request {
         }
 
         /**
-         * The type of the resource group. Valid values:
-         * <p>
+         * <p>The type of the resource group. Valid values:</p>
+         * <ul>
+         * <li><strong>Interactive</strong></li>
+         * <li><strong>Job</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>For information about resource groups of Data Lakehouse Edition, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource groups</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Interactive**
-         * *   **Job**
-         * 
-         * > For information about resource groups of Data Lakehouse Edition, see [Resource groups](~~428610~~).
+         * <strong>example:</strong>
+         * <p>Interactive</p>
          */
         public Builder groupType(String groupType) {
             this.putQueryParameter("GroupType", groupType);
@@ -301,7 +380,10 @@ public class ModifyDBResourceGroupRequest extends Request {
         }
 
         /**
-         * A reserved parameter.
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N/A</p>
          */
         public Builder maxClusterCount(Integer maxClusterCount) {
             this.putQueryParameter("MaxClusterCount", maxClusterCount);
@@ -310,11 +392,14 @@ public class ModifyDBResourceGroupRequest extends Request {
         }
 
         /**
-         * The maximum amount of reserved computing resources. Unit: ACU.
-         * <p>
+         * <p>The maximum amount of reserved computing resources.</p>
+         * <ul>
+         * <li>If GroupType is set to Interactive, the maximum amount of reserved computing resources refers to the amount of resources that are not allocated in the cluster. Set this parameter to a value in increments of 16ACU.</li>
+         * <li>If GroupType is set to Job, the maximum amount of reserved computing resources refers to the amount of resources that are not allocated in the cluster. Set this parameter to a value in increments of 8ACU.</li>
+         * </ul>
          * 
-         * *   If GroupType is set to Interactive, the maximum amount of reserved computing resources refers to the amount of resources that are not allocated in the cluster. Set this parameter to a value in increments of 16 ACUs.
-         * *   If GroupType is set to Job, the maximum amount of reserved computing resources refers to the amount of resources that are not allocated in the cluster. Set this parameter to a value in increments of 8 ACUs.
+         * <strong>example:</strong>
+         * <p>48ACU</p>
          */
         public Builder maxComputeResource(String maxComputeResource) {
             this.putQueryParameter("MaxComputeResource", maxComputeResource);
@@ -323,7 +408,19 @@ public class ModifyDBResourceGroupRequest extends Request {
         }
 
         /**
-         * A reserved parameter.
+         * MaxGpuQuantity.
+         */
+        public Builder maxGpuQuantity(Integer maxGpuQuantity) {
+            this.putQueryParameter("MaxGpuQuantity", maxGpuQuantity);
+            this.maxGpuQuantity = maxGpuQuantity;
+            return this;
+        }
+
+        /**
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N/A</p>
          */
         public Builder minClusterCount(Integer minClusterCount) {
             this.putQueryParameter("MinClusterCount", minClusterCount);
@@ -332,11 +429,14 @@ public class ModifyDBResourceGroupRequest extends Request {
         }
 
         /**
-         * The minimum amount of reserved computing resources. Unit: AnalyticDB compute units (ACUs).
-         * <p>
+         * <p>The minimum amount of reserved computing resources.</p>
+         * <ul>
+         * <li>If the GroupType parameter is set to Interactive, set the value to 16ACU.</li>
+         * <li>If GroupType is set to Job, set the value to 0ACU.</li>
+         * </ul>
          * 
-         * *   If the GroupType parameter is set to Interactive, set the value to 16ACU.
-         * *   If GroupType is set to Job, set the value to 0ACU.
+         * <strong>example:</strong>
+         * <p>0ACU</p>
          */
         public Builder minComputeResource(String minComputeResource) {
             this.putQueryParameter("MinComputeResource", minComputeResource);
@@ -345,10 +445,22 @@ public class ModifyDBResourceGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster.
-         * <p>
+         * MinGpuQuantity.
+         */
+        public Builder minGpuQuantity(Integer minGpuQuantity) {
+            this.putQueryParameter("MinGpuQuantity", minGpuQuantity);
+            this.minGpuQuantity = minGpuQuantity;
+            return this;
+        }
+
+        /**
+         * <p>The region ID of the cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeRegions](~~454314~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -357,12 +469,30 @@ public class ModifyDBResourceGroupRequest extends Request {
         }
 
         /**
-         * The job resubmission rules.
+         * <p>The job resubmission rules.</p>
          */
         public Builder rules(java.util.List < Rules> rules) {
             String rulesShrink = shrink(rules, "Rules", "json");
             this.putQueryParameter("Rules", rulesShrink);
             this.rules = rules;
+            return this;
+        }
+
+        /**
+         * SpecName.
+         */
+        public Builder specName(String specName) {
+            this.putQueryParameter("SpecName", specName);
+            this.specName = specName;
+            return this;
+        }
+
+        /**
+         * TargetResourceGroupName.
+         */
+        public Builder targetResourceGroupName(String targetResourceGroupName) {
+            this.putQueryParameter("TargetResourceGroupName", targetResourceGroupName);
+            this.targetResourceGroupName = targetResourceGroupName;
             return this;
         }
 
@@ -373,6 +503,12 @@ public class ModifyDBResourceGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyDBResourceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyDBResourceGroupRequest</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
@@ -424,7 +560,10 @@ public class ModifyDBResourceGroupRequest extends Request {
             private String targetGroupName; 
 
             /**
-             * The name of the resource group.
+             * <p>The name of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_default</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -432,7 +571,10 @@ public class ModifyDBResourceGroupRequest extends Request {
             }
 
             /**
-             * The execution duration of the query. Unit: milliseconds.
+             * <p>The execution duration of the query. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>180000</p>
              */
             public Builder queryTime(String queryTime) {
                 this.queryTime = queryTime;
@@ -440,7 +582,10 @@ public class ModifyDBResourceGroupRequest extends Request {
             }
 
             /**
-             * The name of the destination resource group.
+             * <p>The name of the destination resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job</p>
              */
             public Builder targetGroupName(String targetGroupName) {
                 this.targetGroupName = targetGroupName;

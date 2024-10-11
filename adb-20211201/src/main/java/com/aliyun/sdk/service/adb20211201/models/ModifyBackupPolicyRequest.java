@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyBackupPolicyRequest} extends {@link RequestModel}
  *
  * <p>ModifyBackupPolicyRequest</p>
@@ -183,10 +184,13 @@ public class ModifyBackupPolicyRequest extends Request {
         } 
 
         /**
-         * The number of days for which to retain full backup files. Valid values: 7 to 730.
-         * <p>
+         * <p>The number of days for which to retain full backup files. Valid values: 7 to 730.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the default value 7 is used.</p>
+         * </blockquote>
          * 
-         * >  If you do not specify this parameter, the default value 7 is used.
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder backupRetentionPeriod(String backupRetentionPeriod) {
             this.putQueryParameter("BackupRetentionPeriod", backupRetentionPeriod);
@@ -195,7 +199,11 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-bp1xxxxxxxx47</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -204,13 +212,17 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable log backup. Valid values:
-         * <p>
+         * <p>Specifies whether to enable log backup. Valid values:</p>
+         * <ul>
+         * <li><strong>Enable</strong></li>
+         * <li><strong>Disable</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the default value Enable is used.</p>
+         * </blockquote>
          * 
-         * *   **Enable**
-         * *   **Disable**
-         * 
-         * >  If you do not specify this parameter, the default value Enable is used.
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder enableBackupLog(String enableBackupLog) {
             this.putQueryParameter("EnableBackupLog", enableBackupLog);
@@ -219,10 +231,13 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * The number of days for which to retain log backup files. Valid values: 7 to 730.
-         * <p>
+         * <p>The number of days for which to retain log backup files. Valid values: 7 to 730.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the default value 7 is used.</p>
+         * </blockquote>
          * 
-         * >  If you do not specify this parameter, the default value 7 is used.
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder logBackupRetentionPeriod(Integer logBackupRetentionPeriod) {
             this.putQueryParameter("LogBackupRetentionPeriod", logBackupRetentionPeriod);
@@ -249,18 +264,23 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * The days of the week on which to perform a full backup. Separate multiple values with commas (,). Valid values:
-         * <p>
+         * <p>The days of the week on which to perform a full backup. Separate multiple values with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>Monday</strong></li>
+         * <li><strong>Tuesday</strong></li>
+         * <li><strong>Wednesday</strong></li>
+         * <li><strong>Thursday</strong></li>
+         * <li><strong>Friday</strong></li>
+         * <li><strong>Saturday</strong></li>
+         * <li><strong>Sunday</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> To ensure data security, we recommend that you specify at least two values.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Monday**
-         * *   **Tuesday**
-         * *   **Wednesday**
-         * *   **Thursday**
-         * *   **Friday**
-         * *   **Saturday**
-         * *   **Sunday**
-         * 
-         * >  To ensure data security, we recommend that you specify at least two values.
+         * <strong>example:</strong>
+         * <p>Monday,Wednesday,Friday,Sunday</p>
          */
         public Builder preferredBackupPeriod(String preferredBackupPeriod) {
             this.putQueryParameter("PreferredBackupPeriod", preferredBackupPeriod);
@@ -269,10 +289,14 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * The start time to perform a full backup. Specify the time in the HH:mmZ-HH:mmZ format. The time must be in UTC.
-         * <p>
+         * <p>The start time to perform a full backup. Specify the time in the HH:mmZ-HH:mmZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p> The time range must be 1 hour.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The time range must be 1 hour.
+         * <strong>example:</strong>
+         * <p>18:00Z-19:00Z</p>
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.putQueryParameter("PreferredBackupTime", preferredBackupTime);

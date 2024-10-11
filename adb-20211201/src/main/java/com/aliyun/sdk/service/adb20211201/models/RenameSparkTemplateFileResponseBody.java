@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenameSparkTemplateFileResponseBody} extends {@link TeaModel}
  *
  * <p>RenameSparkTemplateFileResponseBody</p>
@@ -49,7 +50,7 @@ public class RenameSparkTemplateFileResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class RenameSparkTemplateFileResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16D332C4-ACEB-526A-9B53-2B708FED594A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class RenameSparkTemplateFileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RenameSparkTemplateFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>RenameSparkTemplateFileResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Succeeded")
         private Boolean succeeded;
@@ -97,11 +107,14 @@ public class RenameSparkTemplateFileResponseBody extends TeaModel {
             private Boolean succeeded; 
 
             /**
-             * Indicates whether the request was successful. Valid values:
-             * <p>
+             * <p>Indicates whether the request was successful. Valid values:</p>
+             * <ul>
+             * <li>True</li>
+             * <li>False</li>
+             * </ul>
              * 
-             * *   True
-             * *   False
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder succeeded(Boolean succeeded) {
                 this.succeeded = succeeded;
