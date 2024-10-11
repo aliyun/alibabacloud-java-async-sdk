@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterAccessWhiteListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBClusterAccessWhiteListResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details about the IP address whitelist.
+         * <p>The details about the IP address whitelist.</p>
          */
         public Builder DBClusterAccessWhiteList(DBClusterAccessWhiteList DBClusterAccessWhiteList) {
             this.DBClusterAccessWhiteList = DBClusterAccessWhiteList;
@@ -57,7 +58,10 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>905F13A4-5097-4897-A84D-527EC75FFF4F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBClusterAccessWhiteListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterAccessWhiteListResponseBody</p>
+     */
     public static class IPArray extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBClusterIPArrayAttribute")
         private String DBClusterIPArrayAttribute;
@@ -121,7 +131,10 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
             private String securityIPList; 
 
             /**
-             * The attribute of the IP address whitelist.
+             * <p>The attribute of the IP address whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder DBClusterIPArrayAttribute(String DBClusterIPArrayAttribute) {
                 this.DBClusterIPArrayAttribute = DBClusterIPArrayAttribute;
@@ -129,7 +142,10 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IP address whitelist.
+             * <p>The name of the IP address whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder DBClusterIPArrayName(String DBClusterIPArrayName) {
                 this.DBClusterIPArrayName = DBClusterIPArrayName;
@@ -137,7 +153,10 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses in the IP address whitelist.
+             * <p>The IP addresses in the IP address whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.xx.xx,192.168.xx.xx</p>
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -151,6 +170,12 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBClusterAccessWhiteListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterAccessWhiteListResponseBody</p>
+     */
     public static class DBClusterAccessWhiteList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IPArray")
         private java.util.List < IPArray> IPArray;

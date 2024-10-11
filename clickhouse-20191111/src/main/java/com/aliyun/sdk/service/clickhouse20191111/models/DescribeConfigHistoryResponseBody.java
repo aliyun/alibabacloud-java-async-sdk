@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeConfigHistoryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeConfigHistoryResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The change records of the configuration parameters.
+         * <p>The change records of the configuration parameters.</p>
          */
         public Builder configHistoryItems(java.util.List < ConfigHistoryItems> configHistoryItems) {
             this.configHistoryItems = configHistoryItems;
@@ -57,7 +58,10 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D0CEC6AC-7760-409A-A0D5-E6CD8660E9CC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeConfigHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeConfigHistoryResponseBody</p>
+     */
     public static class ConfigHistoryItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChangeId")
         private String changeId;
@@ -145,7 +155,10 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             private String time; 
 
             /**
-             * The ID of the change record.
+             * <p>The ID of the change record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder changeId(String changeId) {
                 this.changeId = changeId;
@@ -153,7 +166,10 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID (UID) of the Alibaba Cloud account.
+             * <p>The user ID (UID) of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>253460731706911258</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -161,7 +177,10 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The reason for the setting modification of the configuration parameters.
+             * <p>The reason for the setting modification of the configuration parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -169,11 +188,14 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the setting modification of the configuration parameters took effect. Valid values:
-             * <p>
+             * <p>Indicates whether the setting modification of the configuration parameters took effect. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -181,7 +203,10 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the values of the configuration parameters were changed. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time when the values of the configuration parameters were changed. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-22T10:00:00Z</p>
              */
             public Builder time(String time) {
                 this.time = time;

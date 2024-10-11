@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TransferVersionRequest} extends {@link RequestModel}
  *
  * <p>TransferVersionRequest</p>
@@ -242,7 +243,11 @@ public class TransferVersionRequest extends Request {
         } 
 
         /**
-         * The ID of the source ApsaraDB for ClickHouse cluster.
+         * <p>The ID of the source ApsaraDB for ClickHouse cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp1tm8zf130ew****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -278,7 +283,10 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -287,12 +295,15 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values:
-         * <p>
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong> (default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
          * 
-         * *   **30** (default)
-         * *   **50**
-         * *   **100**
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -301,7 +312,11 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -328,7 +343,11 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * The database account that is used to log on to the database in the source ApsaraDB for ClickHouse cluster.
+         * <p>The database account that is used to log on to the database in the source ApsaraDB for ClickHouse cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder sourceAccount(String sourceAccount) {
             this.putQueryParameter("SourceAccount", sourceAccount);
@@ -337,7 +356,11 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * The password that corresponds to the database account for logging on to the database in the source ApsaraDB for ClickHouse cluster.
+         * <p>The password that corresponds to the database account for logging on to the database in the source ApsaraDB for ClickHouse cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456Aa</p>
          */
         public Builder sourcePassword(String sourcePassword) {
             this.putQueryParameter("SourcePassword", sourcePassword);
@@ -346,7 +369,11 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * The database account that is used to log on to the database in the destination ApsaraDB for ClickHouse cluster.
+         * <p>The database account that is used to log on to the database in the destination ApsaraDB for ClickHouse cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test01</p>
          */
         public Builder targetAccount(String targetAccount) {
             this.putQueryParameter("TargetAccount", targetAccount);
@@ -355,7 +382,11 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * The ID of the destination ApsaraDB for ClickHouse cluster.
+         * <p>The ID of the destination ApsaraDB for ClickHouse cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp14b39djx7zg****</p>
          */
         public Builder targetDbClusterId(String targetDbClusterId) {
             this.putQueryParameter("TargetDbClusterId", targetDbClusterId);
@@ -364,7 +395,11 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * The password that corresponds to the database account for logging on to the database in the destination ApsaraDB for ClickHouse cluster.
+         * <p>The password that corresponds to the database account for logging on to the database in the destination ApsaraDB for ClickHouse cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456Ff</p>
          */
         public Builder targetPassword(String targetPassword) {
             this.putQueryParameter("TargetPassword", targetPassword);

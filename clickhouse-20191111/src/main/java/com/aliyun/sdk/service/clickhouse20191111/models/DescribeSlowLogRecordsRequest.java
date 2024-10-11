@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSlowLogRecordsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSlowLogRecordsRequest</p>
@@ -199,7 +200,11 @@ public class DescribeSlowLogRecordsRequest extends Request {
         } 
 
         /**
-         * The cluster ID. You can call the [DescribeDBClusters](~~170879~~) operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.
+         * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp1z58t881wcx****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -208,10 +213,14 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd hh:mm:ss format. The time must be in UTC.
-         * <p>
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd hh:mm:ss format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p> The end time must be later than the start time. The specified time range that can be specified must be less than seven days.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The end time must be later than the start time. The specified time range that can be specified must be less than seven days.
+         * <strong>example:</strong>
+         * <p>2022-05-27 16:00:00</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -238,7 +247,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: **1**.
+         * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -247,12 +259,15 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values:
-         * <p>
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong> (default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
          * 
-         * *   **30** (default)
-         * *   **50**
-         * *   **100**
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -261,7 +276,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The minimum query duration. The minimum value is **1000**, and the default value is **1000**. Unit: milliseconds. Queries that last longer than this duration are returned in response parameters.
+         * <p>The minimum query duration. The minimum value is <strong>1000</strong>, and the default value is <strong>1000</strong>. Unit: milliseconds. Queries that last longer than this duration are returned in response parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder queryDurationMs(Integer queryDurationMs) {
             this.putQueryParameter("QueryDurationMs", queryDurationMs);
@@ -270,7 +288,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -297,7 +318,11 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd hh:mm:ss format. The time must be in Coordinated Universal Time (UTC).
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd hh:mm:ss format. The time must be in Coordinated Universal Time (UTC).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-20 16:00:00</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAccountDescriptionRequest} extends {@link RequestModel}
  *
  * <p>ModifyAccountDescriptionRequest</p>
@@ -140,7 +141,10 @@ public class ModifyAccountDescriptionRequest extends Request {
         } 
 
         /**
-         * AccountDescription.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ceshi</p>
          */
         public Builder accountDescription(String accountDescription) {
             this.putQueryParameter("AccountDescription", accountDescription);
@@ -149,7 +153,10 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * AccountName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -158,7 +165,10 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp108z124a8o7****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

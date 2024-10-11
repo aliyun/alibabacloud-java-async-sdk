@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDBClusterRequest} extends {@link RequestModel}
  *
  * <p>DeleteDBClusterRequest</p>
@@ -110,7 +111,11 @@ public class DeleteDBClusterRequest extends Request {
         } 
 
         /**
-         * The ID of the pay-as-you-go ApsaraDB for ClickHouse cluster.
+         * <p>The ID of the pay-as-you-go ApsaraDB for ClickHouse cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp108z124a8o7****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

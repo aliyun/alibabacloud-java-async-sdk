@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckMonitorAlertResponseBody} extends {@link TeaModel}
  *
  * <p>CheckMonitorAlertResponseBody</p>
@@ -61,7 +62,10 @@ public class CheckMonitorAlertResponseBody extends TeaModel {
         private String state; 
 
         /**
-         * The parameters that are used to configure the monitoring and alerting feature.
+         * <p>The parameters that are used to configure the monitoring and alerting feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{   &quot;monitor&quot;:{     &quot;key1&quot;:&quot;value1&quot;,     &quot;key2&quot;:&quot;value2&quot;   },   &quot;alert&quot;:{     &quot;key1&quot;:&quot;value1&quot;,     &quot;key2&quot;:&quot;value2&quot;   } }</p>
          */
         public Builder parameter(String parameter) {
             this.parameter = parameter;
@@ -69,7 +73,10 @@ public class CheckMonitorAlertResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94F92113-FF63-5E57-8401-6FE123AD11DD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,11 +84,14 @@ public class CheckMonitorAlertResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the monitoring and alerting feature is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether the monitoring and alerting feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>enable</strong>: The monitoring and alerting feature is enabled.</li>
+         * <li><strong>disable</strong>: The monitoring and alerting feature is disabled.</li>
+         * </ul>
          * 
-         * *   **enable**: The monitoring and alerting feature is enabled.
-         * *   **disable**: The monitoring and alerting feature is disabled.
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         public Builder state(String state) {
             this.state = state;

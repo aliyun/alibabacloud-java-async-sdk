@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSyndbRequest} extends {@link RequestModel}
  *
  * <p>DeleteSyndbRequest</p>
@@ -125,7 +126,11 @@ public class DeleteSyndbRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp158i5wvj436****</p>
          */
         public Builder dbClusterId(String dbClusterId) {
             this.putQueryParameter("DbClusterId", dbClusterId);
@@ -170,7 +175,11 @@ public class DeleteSyndbRequest extends Request {
         }
 
         /**
-         * The name of the database in the ApsaraDB RDS for MySQL instance. The database is used for data synchronization.
+         * <p>The name of the database in the ApsaraDB RDS for MySQL instance. The database is used for data synchronization.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database</p>
          */
         public Builder synDb(String synDb) {
             this.putQueryParameter("SynDb", synDb);

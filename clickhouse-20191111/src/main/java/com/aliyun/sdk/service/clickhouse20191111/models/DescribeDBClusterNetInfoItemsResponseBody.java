@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterNetInfoItemsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBClusterNetInfoItemsResponseBody</p>
@@ -74,7 +75,10 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The network type of the cluster. Only VPC is supported.
+         * <p>The network type of the cluster. Only VPC is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder clusterNetworkType(String clusterNetworkType) {
             this.clusterNetworkType = clusterNetworkType;
@@ -82,11 +86,15 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether Server Load Balancer (SLB) is activated in the VPC. Valid values:
-         * <p>
+         * <p>Indicates whether Server Load Balancer (SLB) is activated in the VPC. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableSLB(Boolean enableSLB) {
             this.enableSLB = enableSLB;
@@ -94,7 +102,7 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
         }
 
         /**
-         * The network information about the cluster.
+         * <p>The network information about the cluster.</p>
          */
         public Builder netInfoItems(NetInfoItems netInfoItems) {
             this.netInfoItems = netInfoItems;
@@ -102,7 +110,10 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9A23C87D-87DF-4DA0-A50E-CB13F4F7923D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -115,6 +126,12 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBClusterNetInfoItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterNetInfoItemsResponseBody</p>
+     */
     public static class NetInfoItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
@@ -238,7 +255,10 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The endpoint that is used to connect to the database.
+             * <p>The endpoint that is used to connect to the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-bp1554t789i8e****.clickhouse.ads.aliyuncs.com</p>
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -246,7 +266,10 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP port number.
+             * <p>The HTTP port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8123</p>
              */
             public Builder httpPort(String httpPort) {
                 this.httpPort = httpPort;
@@ -254,7 +277,10 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTPS port number.
+             * <p>The HTTPS port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8443</p>
              */
             public Builder httpsPort(String httpsPort) {
                 this.httpsPort = httpsPort;
@@ -262,7 +288,10 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.255.234.251</p>
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -270,7 +299,10 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The port number that is used in Java Database Connectivity (JDBC).
+             * <p>The port number that is used in Java Database Connectivity (JDBC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder jdbcPort(String jdbcPort) {
                 this.jdbcPort = jdbcPort;
@@ -278,7 +310,10 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The port of the MySQL instance.
+             * <p>The port of the MySQL instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9004</p>
              */
             public Builder mySQLPort(String mySQLPort) {
                 this.mySQLPort = mySQLPort;
@@ -286,11 +321,14 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the endpoint. Valid values:
-             * <p>
+             * <p>The network type of the endpoint. Valid values:</p>
+             * <ul>
+             * <li>Public: public endpoint</li>
+             * <li>VPC: VPC</li>
+             * </ul>
              * 
-             * *   Public: public endpoint
-             * *   VPC: VPC
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -298,10 +336,13 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID.
-             * <p>
+             * <p>The vSwitch ID.</p>
+             * <blockquote>
+             * <p> If the value of the NetType parameter is set to Public, an empty string is returned.</p>
+             * </blockquote>
              * 
-             * >  If the value of the NetType parameter is set to Public, an empty string is returned.
+             * <strong>example:</strong>
+             * <p>vsw-bp1gzt31twhlo0sa5****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -309,10 +350,13 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The virtual private cloud (VPC) ID.
-             * <p>
+             * <p>The virtual private cloud (VPC) ID.</p>
+             * <blockquote>
+             * <p> If the value of the NetType parameter is set to Public, an empty string is returned.</p>
+             * </blockquote>
              * 
-             * >  If the value of the NetType parameter is set to Public, an empty string is returned.
+             * <strong>example:</strong>
+             * <p>vpc-bp175iuvg8nxqraf2****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -326,6 +370,12 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBClusterNetInfoItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterNetInfoItemsResponseBody</p>
+     */
     public static class NetInfoItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetInfoItem")
         private java.util.List < NetInfoItem> netInfoItem;

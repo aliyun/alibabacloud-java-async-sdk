@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRDSToClickhouseDbResponseBody} extends {@link TeaModel}
  *
  * <p>CreateRDSToClickhouseDbResponseBody</p>
@@ -73,7 +74,10 @@ public class CreateRDSToClickhouseDbResponseBody extends TeaModel {
         private Long status; 
 
         /**
-         * If -1 is returned for the **Status** parameter, the cause of the creation failure is returned.
+         * <p>If -1 is returned for the <strong>Status</strong> parameter, the cause of the creation failure is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ClickHouse exception, code: 49, host: 100.100.79.102, port: 14540; Code: 49, e.displayText() = DB::Exception: Logical error: there is no global context (version 20.8.17.25)n</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -81,7 +85,7 @@ public class CreateRDSToClickhouseDbResponseBody extends TeaModel {
         }
 
         /**
-         * Duplicate tables in the synchronization task.
+         * <p>Duplicate tables in the synchronization task.</p>
          */
         public Builder repeatedDbs(java.util.List < String > repeatedDbs) {
             this.repeatedDbs = repeatedDbs;
@@ -89,7 +93,10 @@ public class CreateRDSToClickhouseDbResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66676F54-1994-5DCF-993F-74536649628A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,12 +104,15 @@ public class CreateRDSToClickhouseDbResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the synchronization task was created. Valid values:
-         * <p>
+         * <p>Indicates whether the synchronization task was created. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Created.</li>
+         * <li><strong>0</strong>: Creation failed. The tables in the synchronization task are duplicate. The duplicate tables are returned for the <strong>RepeatedDbs</strong> parameter.</li>
+         * <li><strong>-1</strong>: Creation failed. The cause why the creation failed is returned for the <strong>ErrorMsg</strong> parameter.</li>
+         * </ul>
          * 
-         * *   **1**: Created.
-         * *   **0**: Creation failed. The tables in the synchronization task are duplicate. The duplicate tables are returned for the **RepeatedDbs** parameter.
-         * *   **-1**: Creation failed. The cause why the creation failed is returned for the **ErrorMsg** parameter.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Long status) {
             this.status = status;

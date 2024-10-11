@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeColumnsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeColumnsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details of the columns.
+         * <p>Details of the columns.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -57,7 +58,10 @@ public class DescribeColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66428721-FFEC-5023-B4E5-3BD1B67837E0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeColumnsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeColumnsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeColumnsResponseBody</p>
+     */
     public static class Column extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoIncrementColumn")
         private Boolean autoIncrementColumn;
@@ -169,11 +179,14 @@ public class DescribeColumnsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Indicates whether the column is an auto-increment column. Valid values:
-             * <p>
+             * <p>Indicates whether the column is an auto-increment column. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoIncrementColumn(Boolean autoIncrementColumn) {
                 this.autoIncrementColumn = autoIncrementColumn;
@@ -181,7 +194,10 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * The column name.
+             * <p>The column name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -189,7 +205,10 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-2zeux3ua25242****</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -197,11 +216,14 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the column is the primary key of the table. Valid values:
-             * <p>
+             * <p>Indicates whether the column is the primary key of the table. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder primaryKey(Boolean primaryKey) {
                 this.primaryKey = primaryKey;
@@ -209,7 +231,10 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * The database name.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>database</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -217,7 +242,10 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * The table name.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -225,7 +253,10 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * The column type.
+             * <p>The column type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>String</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -239,6 +270,12 @@ public class DescribeColumnsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeColumnsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeColumnsResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Column")
         private java.util.List < Column> column;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupsResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupsResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupEndTime")
         private String backupEndTime;

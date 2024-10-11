@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBClusterAccessWhiteListRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBClusterAccessWhiteListRequest</p>
@@ -185,7 +186,10 @@ public class ModifyDBClusterAccessWhiteListRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp1qx68m06981****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -239,7 +243,10 @@ public class ModifyDBClusterAccessWhiteListRequest extends Request {
         }
 
         /**
-         * SecurityIps.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.xx.xx</p>
          */
         public Builder securityIps(String securityIps) {
             this.putQueryParameter("SecurityIps", securityIps);

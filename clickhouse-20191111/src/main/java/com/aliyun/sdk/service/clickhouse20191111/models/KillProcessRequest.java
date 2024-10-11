@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link KillProcessRequest} extends {@link RequestModel}
  *
  * <p>KillProcessRequest</p>
@@ -138,7 +139,11 @@ public class KillProcessRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp108z124a8o7****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -147,10 +152,13 @@ public class KillProcessRequest extends Request {
         }
 
         /**
-         * The query statement or query statements that you want to stop executing. If you want to stop executing multiple query statements, separate the statements with commas (,).
-         * <p>
+         * <p>The query statement or query statements that you want to stop executing. If you want to stop executing multiple query statements, separate the statements with commas (,).</p>
+         * <blockquote>
+         * <p> If you do not set this parameter, all query statements are stopped by default.</p>
+         * </blockquote>
          * 
-         * >  If you do not set this parameter, all query statements are stopped by default.
+         * <strong>example:</strong>
+         * <p>SELECT * FROM <code>test01</code> ;</p>
          */
         public Builder initialQueryId(String initialQueryId) {
             this.putQueryParameter("InitialQueryId", initialQueryId);
@@ -177,7 +185,10 @@ public class KillProcessRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

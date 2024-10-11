@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResetAccountPasswordRequest} extends {@link RequestModel}
  *
  * <p>ResetAccountPasswordRequest</p>
@@ -140,7 +141,11 @@ public class ResetAccountPasswordRequest extends Request {
         } 
 
         /**
-         * The name of the database account.
+         * <p>The name of the database account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -149,15 +154,21 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * The new password for the database account.
-         * <p>
+         * <p>The new password for the database account.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The password must contain at least three types of the following characters: uppercase letters, lowercase letters, digits, and special characters.</p>
+         * </li>
+         * <li><p>The password can contain the following special characters: ! @ # $ % ^ &amp; * ( ) _ + - =</p>
+         * </li>
+         * <li><p>The password must be 8 to 32 characters in length.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * > 
-         * 
-         * *   The password must contain at least three types of the following characters: uppercase letters, lowercase letters, digits, and special characters.
-         * 
-         * *   The password can contain the following special characters: ! @ # $ % ^ & \* ( ) \_ + - =
-         * *   The password must be 8 to 32 characters in length.
+         * <strong>example:</strong>
+         * <p>123456Ff</p>
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -166,7 +177,11 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp108z124a8o7****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

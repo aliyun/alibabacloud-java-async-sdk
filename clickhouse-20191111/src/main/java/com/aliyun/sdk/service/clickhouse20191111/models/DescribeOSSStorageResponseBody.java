@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOSSStorageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeOSSStorageResponseBody</p>
@@ -85,11 +86,14 @@ public class DescribeOSSStorageResponseBody extends TeaModel {
         private String storageUsage; 
 
         /**
-         * Indicates whether tiered storage of hot data and cold data is supported. Valid values:
-         * <p>
+         * <p>Indicates whether tiered storage of hot data and cold data is supported. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Tiered storage of hot data and cold data is supported.</li>
+         * <li><strong>false</strong>: Tiered storage of hot data and cold data is not supported.</li>
+         * </ul>
          * 
-         * *   **true**: Tiered storage of hot data and cold data is supported.
-         * *   **false**: Tiered storage of hot data and cold data is not supported.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder coldStorage(Boolean coldStorage) {
             this.coldStorage = coldStorage;
@@ -97,7 +101,10 @@ public class DescribeOSSStorageResponseBody extends TeaModel {
         }
 
         /**
-         * The parameters for tiered storage of hot data and cold data.
+         * <p>The parameters for tiered storage of hot data and cold data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{ &quot;currentValue&quot;:&quot;0.1&quot;, &quot;defaultValue&quot;:&quot;0.1&quot;, &quot;desc&quot;:&quot;Ratio of free disk space. When the ratio exceeds the value of configuration parameter, ClickHouse start to move data to the cold storage&quot;, &quot;name&quot;:&quot;move_factor&quot;, &quot;restart&quot;:true, &quot;valueRange&quot;:&quot;(0, 1]&quot; },{ &quot;currentValue&quot;:&quot;true&quot;, &quot;defaultValue&quot;:&quot;true&quot;, &quot;desc&quot;:&quot;Disables merging of data parts on cold storage&quot;, &quot;name&quot;:&quot;prefer_not_to_merge&quot;, &quot;restart&quot;:true, &quot;valueRange&quot;:&quot;true|false&quot; }]</p>
          */
         public Builder policy(String policy) {
             this.policy = policy;
@@ -105,7 +112,10 @@ public class DescribeOSSStorageResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aadbb456-ebf7-4ed8-9671-fad9f3846ca4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,12 +123,15 @@ public class DescribeOSSStorageResponseBody extends TeaModel {
         }
 
         /**
-         * The state of tiered storage of hot data and cold data. Valid values:
-         * <p>
+         * <p>The state of tiered storage of hot data and cold data. Valid values:</p>
+         * <ul>
+         * <li><strong>CREATING</strong>: Tiered storage of hot data and cold data is being enabled.</li>
+         * <li><strong>DISABLE</strong>: Tiered storage of hot data and cold data is not enabled.</li>
+         * <li><strong>ENABLE</strong>: Tiered storage of hot data and cold data is enabled.</li>
+         * </ul>
          * 
-         * *   **CREATING**: Tiered storage of hot data and cold data is being enabled.
-         * *   **DISABLE**: Tiered storage of hot data and cold data is not enabled.
-         * *   **ENABLE**: Tiered storage of hot data and cold data is enabled.
+         * <strong>example:</strong>
+         * <p>ENABLE</p>
          */
         public Builder state(String state) {
             this.state = state;
@@ -126,7 +139,10 @@ public class DescribeOSSStorageResponseBody extends TeaModel {
         }
 
         /**
-         * The space used for tiered storage of hot data and cold data. Unit: GB.
+         * <p>The space used for tiered storage of hot data and cold data. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.00</p>
          */
         public Builder storageUsage(String storageUsage) {
             this.storageUsage = storageUsage;

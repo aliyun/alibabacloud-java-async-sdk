@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBClusterRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBClusterRequest</p>
@@ -197,26 +198,33 @@ public class ModifyDBClusterRequest extends Request {
         } 
 
         /**
-         * The specifications of the cluster.
-         * <p>
+         * <p>The specifications of the cluster.</p>
+         * <ul>
+         * <li><p>Valid values when the cluster is of Single-replica Edition:</p>
+         * <ul>
+         * <li><strong>S4-NEW</strong></li>
+         * <li><strong>S8</strong></li>
+         * <li><strong>S16</strong></li>
+         * <li><strong>S32</strong></li>
+         * <li><strong>S64</strong></li>
+         * <li><strong>S104</strong></li>
+         * </ul>
+         * </li>
+         * <li><p>Valid values when the cluster is of Double-replica Edition:</p>
+         * <ul>
+         * <li><strong>C4-NEW</strong></li>
+         * <li><strong>C8</strong></li>
+         * <li><strong>C16</strong></li>
+         * <li><strong>C32</strong></li>
+         * <li><strong>C64</strong></li>
+         * <li><strong>C104</strong></li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Valid values when the cluster is of Single-replica Edition:
-         * 
-         *     *   **S4-NEW**
-         *     *   **S8**
-         *     *   **S16**
-         *     *   **S32**
-         *     *   **S64**
-         *     *   **S104**
-         * 
-         * *   Valid values when the cluster is of Double-replica Edition:
-         * 
-         *     *   **C4-NEW**
-         *     *   **C8**
-         *     *   **C16**
-         *     *   **C32**
-         *     *   **C64**
-         *     *   **C104**
+         * <strong>example:</strong>
+         * <p>S4-NEW</p>
          */
         public Builder DBClusterClass(String DBClusterClass) {
             this.putQueryParameter("DBClusterClass", DBClusterClass);
@@ -225,7 +233,10 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp19lo45sy98x****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -234,11 +245,15 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * The number of nodes in the cluster.
-         * <p>
+         * <p>The number of nodes in the cluster.</p>
+         * <ul>
+         * <li>If the cluster is of Single-replica Edition, the value must be an integer that ranges from 1 to 48.</li>
+         * <li>If the cluster is of Double-replica Edition, the value must be an integer that ranges from 1 to 24.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If the cluster is of Single-replica Edition, the value must be an integer that ranges from 1 to 48.
-         * *   If the cluster is of Double-replica Edition, the value must be an integer that ranges from 1 to 24.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder DBNodeGroupCount(String DBNodeGroupCount) {
             this.putQueryParameter("DBNodeGroupCount", DBNodeGroupCount);
@@ -247,12 +262,15 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * The storage capacity of a single node of the cluster. Unit: GB.
-         * <p>
+         * <p>The storage capacity of a single node of the cluster. Unit: GB.</p>
+         * <p>Valid values: 100 to 32000.</p>
+         * <blockquote>
+         * <p> This value is a multiple of 100.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values: 100 to 32000.
-         * 
-         * >  This value is a multiple of 100.
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder DBNodeStorage(String DBNodeStorage) {
             this.putQueryParameter("DBNodeStorage", DBNodeStorage);
@@ -297,7 +315,11 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

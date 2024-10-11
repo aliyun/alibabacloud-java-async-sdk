@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccountAuthorityResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAccountAuthorityResponseBody</p>
@@ -121,7 +122,10 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         private java.util.List < String > totalDictionaries; 
 
         /**
-         * The name of the database account.
+         * <p>The name of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder accountName(String accountName) {
             this.accountName = accountName;
@@ -129,7 +133,7 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         }
 
         /**
-         * Databases to which permissions have been granted.
+         * <p>Databases to which permissions have been granted.</p>
          */
         public Builder allowDatabases(java.util.List < String > allowDatabases) {
             this.allowDatabases = allowDatabases;
@@ -137,7 +141,7 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         }
 
         /**
-         * Dictionaries to which permissions have been granted.
+         * <p>Dictionaries to which permissions have been granted.</p>
          */
         public Builder allowDictionaries(java.util.List < String > allowDictionaries) {
             this.allowDictionaries = allowDictionaries;
@@ -145,11 +149,14 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the database account has DDL permissions. Valid values:
-         * <p>
+         * <p>Indicates whether the database account has DDL permissions. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: has DDL permissions.</li>
+         * <li><strong>false</strong>: does not have DDL permissions.</li>
+         * </ul>
          * 
-         * *   **true**: has DDL permissions.
-         * *   **false**: does not have DDL permissions.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ddlAuthority(Boolean ddlAuthority) {
             this.ddlAuthority = ddlAuthority;
@@ -157,11 +164,14 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the database account has DML permissions. Valid values:
-         * <p>
+         * <p>Indicates whether the database account has DML permissions. Valid values:</p>
+         * <ul>
+         * <li><strong>all</strong></li>
+         * <li><strong>readOnly,modify</strong></li>
+         * </ul>
          * 
-         * *   **all**
-         * *   **readOnly,modify**
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder dmlAuthority(String dmlAuthority) {
             this.dmlAuthority = dmlAuthority;
@@ -169,7 +179,10 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F5178C10-1407-4987-9133-DE4DC9119F75</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,7 +190,7 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         }
 
         /**
-         * All databases.
+         * <p>All databases.</p>
          */
         public Builder totalDatabases(java.util.List < String > totalDatabases) {
             this.totalDatabases = totalDatabases;
@@ -185,7 +198,7 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         }
 
         /**
-         * All dictionaries.
+         * <p>All dictionaries.</p>
          */
         public Builder totalDictionaries(java.util.List < String > totalDictionaries) {
             this.totalDictionaries = totalDictionaries;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBClusterMaintainTimeRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBClusterMaintainTimeRequest</p>
@@ -125,7 +126,11 @@ public class ModifyDBClusterMaintainTimeRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp108z124a8o7****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -134,12 +139,15 @@ public class ModifyDBClusterMaintainTimeRequest extends Request {
         }
 
         /**
-         * The maintenance window of the cluster. Specify the time in the HH:mmZ-HH:mmZ format. The time must be in Coordinated Universal Time (UTC).
-         * <p>
+         * <p>The maintenance window of the cluster. Specify the time in the HH:mmZ-HH:mmZ format. The time must be in Coordinated Universal Time (UTC).</p>
+         * <p>For example, a value of 00:00Z-01:00Z indicates that routine maintenance can be performed on the cluster from 08:00 (UTC+8) to 09:00 (UTC+8).</p>
+         * <blockquote>
+         * <p> You can set the start time and end time of the maintenance window to the time on the hour, and the maintenance window is 1 hour.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * For example, a value of 00:00Z-01:00Z indicates that routine maintenance can be performed on the cluster from 08:00 (UTC+8) to 09:00 (UTC+8).
-         * 
-         * >  You can set the start time and end time of the maintenance window to the time on the hour, and the maintenance window is 1 hour.
+         * <strong>example:</strong>
+         * <p>00:00Z-01:00Z</p>
          */
         public Builder maintainTime(String maintainTime) {
             this.putQueryParameter("MaintainTime", maintainTime);

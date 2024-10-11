@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSynDbTablesRequest} extends {@link RequestModel}
  *
  * <p>DescribeSynDbTablesRequest</p>
@@ -125,7 +126,11 @@ public class DescribeSynDbTablesRequest extends Request {
         } 
 
         /**
-         * The ID of the ApsaraDB for ClickHouse cluster.
+         * <p>The ID of the ApsaraDB for ClickHouse cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp158i5wvj436****</p>
          */
         public Builder dbClusterId(String dbClusterId) {
             this.putQueryParameter("DbClusterId", dbClusterId);
@@ -170,7 +175,11 @@ public class DescribeSynDbTablesRequest extends Request {
         }
 
         /**
-         * The name of the ApsaraDB RDS for MySQL instance.
+         * <p>The name of the ApsaraDB RDS for MySQL instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database</p>
          */
         public Builder synDb(String synDb) {
             this.putQueryParameter("SynDb", synDb);

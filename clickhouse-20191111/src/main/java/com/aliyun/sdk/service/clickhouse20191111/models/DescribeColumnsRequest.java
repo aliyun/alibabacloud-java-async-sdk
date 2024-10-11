@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeColumnsRequest} extends {@link RequestModel}
  *
  * <p>DescribeColumnsRequest</p>
@@ -140,7 +141,11 @@ public class DescribeColumnsRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-2zeux3ua25242****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -185,7 +190,11 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * The database name. You can call the [DescribeSchemas](~~350931~~) operation to query database names.
+         * <p>The database name. You can call the <a href="https://help.aliyun.com/document_detail/350931.html">DescribeSchemas</a> operation to query database names.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database</p>
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("SchemaName", schemaName);
@@ -194,7 +203,11 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * The table name. You can call the [DescribeTables](~~350932~~) operation to query table names.
+         * <p>The table name. You can call the <a href="https://help.aliyun.com/document_detail/350932.html">DescribeTables</a> operation to query table names.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

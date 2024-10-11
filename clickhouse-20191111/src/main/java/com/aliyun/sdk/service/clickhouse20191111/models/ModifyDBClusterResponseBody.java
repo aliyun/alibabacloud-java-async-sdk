@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBClusterResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDBClusterResponseBody</p>
@@ -49,7 +50,7 @@ public class ModifyDBClusterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the cluster.
+         * <p>The information about the cluster.</p>
          */
         public Builder DBCluster(DBCluster DBCluster) {
             this.DBCluster = DBCluster;
@@ -57,7 +58,10 @@ public class ModifyDBClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BA30A000-3A4D-5B97-9420-E5D0D49F7016</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ModifyDBClusterResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyDBClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyDBClusterResponseBody</p>
+     */
     public static class DBCluster extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dbClusterId")
         private String dbClusterId;
@@ -109,7 +119,10 @@ public class ModifyDBClusterResponseBody extends TeaModel {
             private String orderId; 
 
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-bp19lo45sy98x****</p>
              */
             public Builder dbClusterId(String dbClusterId) {
                 this.dbClusterId = dbClusterId;
@@ -117,7 +130,10 @@ public class ModifyDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The order ID.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21417210003****</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;

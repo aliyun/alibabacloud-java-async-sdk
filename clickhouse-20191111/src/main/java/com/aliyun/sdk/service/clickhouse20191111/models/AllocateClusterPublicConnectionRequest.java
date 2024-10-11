@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocateClusterPublicConnectionRequest} extends {@link RequestModel}
  *
  * <p>AllocateClusterPublicConnectionRequest</p>
@@ -124,7 +125,10 @@ public class AllocateClusterPublicConnectionRequest extends Request {
         } 
 
         /**
-         * The prefix of the endpoint that is used to connect to the database. Set the value to the cluster ID.
+         * <p>The prefix of the endpoint that is used to connect to the database. Set the value to the cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp108z124a8o7****</p>
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -133,7 +137,11 @@ public class AllocateClusterPublicConnectionRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp108z124a8o7****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

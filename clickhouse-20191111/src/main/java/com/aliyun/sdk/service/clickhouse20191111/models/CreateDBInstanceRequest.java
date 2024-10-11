@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDBInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateDBInstanceRequest</p>
@@ -470,10 +471,13 @@ public class CreateDBInstanceRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable auto-renewal.
-         * <p>
+         * <p>Specifies whether to enable auto-renewal.</p>
+         * <blockquote>
+         * <p> This parameter is valid only if the value of PayType is set to Prepaid.</p>
+         * </blockquote>
          * 
-         * >  This parameter is valid only if the value of PayType is set to Prepaid.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -482,10 +486,13 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the backup set. You can call the [DescribeBackups](~~360339~~) operation to query the backup sets.
-         * <p>
+         * <p>The ID of the backup set. You can call the <a href="https://help.aliyun.com/document_detail/360339.html">DescribeBackups</a> operation to query the backup sets.</p>
+         * <blockquote>
+         * <p> If you want to restore the data of an ApsaraDB for ClickHouse cluster, this parameter is required.</p>
+         * </blockquote>
          * 
-         * >  If you want to restore the data of an ApsaraDB for ClickHouse cluster, this parameter is required.
+         * <strong>example:</strong>
+         * <p>b-12af23adsf</p>
          */
         public Builder backupSetID(String backupSetID) {
             this.putQueryParameter("BackupSetID", backupSetID);
@@ -494,7 +501,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. The value is a string and can be up to 64 ASCII characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. The value is a string and can be up to 64 ASCII characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AB</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -503,11 +513,15 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The edition of the cluster. Valid values:
-         * <p>
+         * <p>The edition of the cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>Basic</strong>: Single-replica Edition</li>
+         * <li><strong>HighAvailability</strong>: Double-replica Edition</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Basic**: Single-replica Edition
-         * *   **HighAvailability**: Double-replica Edition
+         * <strong>example:</strong>
+         * <p>Basic</p>
          */
         public Builder DBClusterCategory(String DBClusterCategory) {
             this.putQueryParameter("DBClusterCategory", DBClusterCategory);
@@ -516,26 +530,35 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The specifications of the cluster.
-         * <p>
+         * <p>The specifications of the cluster.</p>
+         * <ul>
+         * <li><p>Valid values when the cluster is of Single-replica Edition: </p>
+         * <ul>
+         * <li><strong>S4</strong>: 4 CPU cores and 16 GB of memory </li>
+         * <li><strong>S8</strong>: 8 CPU cores and 32 GB of memory</li>
+         * <li><strong>S16</strong>: 16 CPU cores and 64 GB of memory</li>
+         * </ul>
+         * <ul>
+         * <li><strong>S32</strong>: 32 CPU cores and 128 GB of memory</li>
+         * <li><strong>S64</strong>: 64 CPU cores and 256 GB of memory</li>
+         * <li><strong>S104</strong>: 104 CPU cores and 384 GB of memory</li>
+         * </ul>
+         * </li>
+         * <li><p>Valid values when the cluster is of Double-replica Edition: </p>
+         * <ul>
+         * <li><strong>C4</strong>: 4 CPU cores and 16 GB of memory </li>
+         * <li><strong>C8</strong>: 8 CPU cores and 32 GB of memory </li>
+         * <li><strong>C16</strong>: 16 CPU cores and 64 GB of memory </li>
+         * <li><strong>C32</strong>: 32 CPU cores and 128 GB of memory </li>
+         * <li><strong>C64</strong>: 64 CPU cores and 256 GB of memory </li>
+         * <li><strong>C104</strong>: 104 CPU cores and 384 GB of memory</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Valid values when the cluster is of Single-replica Edition: 
-         * 
-         *     - **S4**: 4 CPU cores and 16 GB of memory 
-         *     - **S8**: 8 CPU cores and 32 GB of memory
-         *     -  **S16**: 16 CPU cores and 64 GB of memory
-         *     *   **S32**: 32 CPU cores and 128 GB of memory
-         *     *   **S64**: 64 CPU cores and 256 GB of memory
-         *     *   **S104**: 104 CPU cores and 384 GB of memory
-         * 
-         * *   Valid values when the cluster is of Double-replica Edition: 
-         * 
-         *     - **C4**: 4 CPU cores and 16 GB of memory 
-         *     - **C8**: 8 CPU cores and 32 GB of memory 
-         *     - **C16**: 16 CPU cores and 64 GB of memory 
-         *     - **C32**: 32 CPU cores and 128 GB of memory 
-         *     - **C64**: 64 CPU cores and 256 GB of memory 
-         *     - **C104**: 104 CPU cores and 384 GB of memory
+         * <strong>example:</strong>
+         * <p>S8</p>
          */
         public Builder DBClusterClass(String DBClusterClass) {
             this.putQueryParameter("DBClusterClass", DBClusterClass);
@@ -544,7 +567,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The description of the cluster.
+         * <p>The description of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder DBClusterDescription(String DBClusterDescription) {
             this.putQueryParameter("DBClusterDescription", DBClusterDescription);
@@ -553,7 +579,11 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The network type of the cluster. Only Virtual Private Cloud (VPC) is supported.
+         * <p>The network type of the cluster. Only Virtual Private Cloud (VPC) is supported.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder DBClusterNetworkType(String DBClusterNetworkType) {
             this.putQueryParameter("DBClusterNetworkType", DBClusterNetworkType);
@@ -562,11 +592,15 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The kernel version. Valid values:
-         * <p>
+         * <p>The kernel version. Valid values:</p>
+         * <ul>
+         * <li><strong>21.8.10.19</strong></li>
+         * <li><strong>22.8.5.29</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **21.8.10.19**
-         * *   **22.8.5.29**
+         * <strong>example:</strong>
+         * <p>21.8.10.19</p>
          */
         public Builder DBClusterVersion(String DBClusterVersion) {
             this.putQueryParameter("DBClusterVersion", DBClusterVersion);
@@ -575,11 +609,15 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The number of nodes.
-         * <p>
+         * <p>The number of nodes.</p>
+         * <ul>
+         * <li>Valid values when the cluster is of Single-replica Edition: 1 to 48.</li>
+         * <li>Valid values when the cluster is of Double-replica Edition: 1 to 24.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Valid values when the cluster is of Single-replica Edition: 1 to 48.
-         * *   Valid values when the cluster is of Double-replica Edition: 1 to 24.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder DBNodeGroupCount(String DBNodeGroupCount) {
             this.putQueryParameter("DBNodeGroupCount", DBNodeGroupCount);
@@ -588,10 +626,14 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The storage capacity of a single node. Valid values: 100 to 32000. Unit: GB.
-         * <p>
+         * <p>The storage capacity of a single node. Valid values: 100 to 32000. Unit: GB.</p>
+         * <blockquote>
+         * <p> This value is a multiple of 100.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  This value is a multiple of 100.
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder DBNodeStorage(String DBNodeStorage) {
             this.putQueryParameter("DBNodeStorage", DBNodeStorage);
@@ -600,13 +642,17 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The storage type of the cluster. Valid values:
-         * <p>
+         * <p>The storage type of the cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>CloudESSD</strong>: The cluster uses an enhanced SSD (ESSD) of performance level 1 (PL1).</li>
+         * <li><strong>CloudESSD_PL2</strong>: The cluster uses an ESSD of PL2.</li>
+         * <li><strong>CloudESSD_PL3</strong>: The cluster uses an ESSD of PL3.</li>
+         * <li><strong>CloudEfficiency</strong>: The cluster uses an ultra disk.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **CloudESSD**: The cluster uses an enhanced SSD (ESSD) of performance level 1 (PL1).
-         * *   **CloudESSD_PL2**: The cluster uses an ESSD of PL2.
-         * *   **CloudESSD_PL3**: The cluster uses an ESSD of PL3.
-         * *   **CloudEfficiency**: The cluster uses an ultra disk.
+         * <strong>example:</strong>
+         * <p>CloudESSD_PL2</p>
          */
         public Builder dbNodeStorageType(String dbNodeStorageType) {
             this.putQueryParameter("DbNodeStorageType", dbNodeStorageType);
@@ -615,12 +661,14 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * You must specify this parameter when EncryptionType is set to CloudDisk.
-         * <p>
+         * <p>You must specify this parameter when EncryptionType is set to CloudDisk.</p>
+         * <p>The ID of the key that is used to encrypt data on disks. You can obtain the ID of the key from the Key Management Service (KMS) console. You can also create a key.</p>
+         * <blockquote>
+         * <p> If EncryptionType is empty, you do not need to specify this parameter.</p>
+         * </blockquote>
          * 
-         * The ID of the key that is used to encrypt data on disks. You can obtain the ID of the key from the Key Management Service (KMS) console. You can also create a key.
-         * 
-         * >  If EncryptionType is empty, you do not need to specify this parameter.
+         * <strong>example:</strong>
+         * <p>0d2470df-da7b-4786-b981-9a164dae****</p>
          */
         public Builder encryptionKey(String encryptionKey) {
             this.putQueryParameter("EncryptionKey", encryptionKey);
@@ -629,10 +677,13 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The encryption type. Set the value to **CloudDisk**, which indicates that only disk encryption is supported.
-         * <p>
+         * <p>The encryption type. Set the value to <strong>CloudDisk</strong>, which indicates that only disk encryption is supported.</p>
+         * <blockquote>
+         * <p> If this parameter is not specified, data is not encrypted.</p>
+         * </blockquote>
          * 
-         * >  If this parameter is not specified, data is not encrypted.
+         * <strong>example:</strong>
+         * <p>CloudDisk</p>
          */
         public Builder encryptionType(String encryptionType) {
             this.putQueryParameter("EncryptionType", encryptionType);
@@ -659,11 +710,15 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The billing method of the cluster. Valid values:
-         * <p>
+         * <p>The billing method of the cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>Postpaid</strong>: The cluster uses the pay-as-you-go billing method.</li>
+         * <li><strong>Prepaid</strong>: The cluster uses the subscription billing method.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Postpaid**: The cluster uses the pay-as-you-go billing method.
-         * *   **Prepaid**: The cluster uses the subscription billing method.
+         * <strong>example:</strong>
+         * <p>Prepaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -672,13 +727,15 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The unit of the subscription duration. This parameter is required when PayType is set to Prepaid.
-         * <p>
+         * <p>The unit of the subscription duration. This parameter is required when PayType is set to Prepaid.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>Year</strong></li>
+         * <li><strong>Month</strong></li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   **Year**
-         * *   **Month**
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -687,7 +744,11 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -696,7 +757,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the cluster belongs.
+         * <p>The ID of the resource group to which the cluster belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-4690g37929****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -723,10 +787,13 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the source cluster. You can call the [DescribeDBClusters](~~170879~~) operation to query backup set IDs.
-         * <p>
+         * <p>The ID of the source cluster. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query backup set IDs.</p>
+         * <blockquote>
+         * <p> If you want to restore the data of an ApsaraDB for ClickHouse cluster, this parameter is required.</p>
+         * </blockquote>
          * 
-         * >  If you want to restore the data of an ApsaraDB for ClickHouse cluster, this parameter is required.
+         * <strong>example:</strong>
+         * <p>cc-bp1lxbo89u950****</p>
          */
         public Builder sourceDBClusterId(String sourceDBClusterId) {
             this.putQueryParameter("SourceDBClusterId", sourceDBClusterId);
@@ -735,13 +802,15 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The subscription duration of the subscription cluster. This parameter is required when PayType is set to Prepaid.
-         * <p>
+         * <p>The subscription duration of the subscription cluster. This parameter is required when PayType is set to Prepaid.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>If Period is set to Year, the value of UsedTime must be an integer that ranges from 1 to 3.</li>
+         * <li>If Period is set to Month, the value of UsedTime must be an integer that ranges from 1 to 9.</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   If Period is set to Year, the value of UsedTime must be an integer that ranges from 1 to 3.
-         * *   If Period is set to Month, the value of UsedTime must be an integer that ranges from 1 to 9.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder usedTime(String usedTime) {
             this.putQueryParameter("UsedTime", usedTime);
@@ -750,7 +819,11 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The VPC ID.
+         * <p>The VPC ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp175iuvg8nxqraf2****</p>
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -759,7 +832,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The vSwitch in the secondary zone for the VPC.
+         * <p>The vSwitch in the secondary zone for the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1gzt31twhlo0sa5****</p>
          */
         public Builder vSwitchBak(String vSwitchBak) {
             this.putQueryParameter("VSwitchBak", vSwitchBak);
@@ -768,7 +844,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The vSwitch in secondary zone 2 for the VPC.
+         * <p>The vSwitch in secondary zone 2 for the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1gzt31twhlo0sa5****</p>
          */
         public Builder vSwitchBak2(String vSwitchBak2) {
             this.putQueryParameter("VSwitchBak2", vSwitchBak2);
@@ -777,7 +856,11 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The vSwitch ID.
+         * <p>The vSwitch ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1gzt31twhlo0sa5****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -786,7 +869,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * Secondary zone 2.
+         * <p>Secondary zone 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-j</p>
          */
         public Builder zondIdBak2(String zondIdBak2) {
             this.putQueryParameter("ZondIdBak2", zondIdBak2);
@@ -795,7 +881,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The zone ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent zone list.
+         * <p>The zone ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent zone list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -804,7 +893,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The secondary zone.
+         * <p>The secondary zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-k</p>
          */
         public Builder zoneIdBak(String zoneIdBak) {
             this.putQueryParameter("ZoneIdBak", zoneIdBak);

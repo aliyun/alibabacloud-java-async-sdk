@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyMinorVersionGreadeTypeRequest} extends {@link RequestModel}
  *
  * <p>ModifyMinorVersionGreadeTypeRequest</p>
@@ -125,7 +126,10 @@ public class ModifyMinorVersionGreadeTypeRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp1qx68m06981****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -134,7 +138,10 @@ public class ModifyMinorVersionGreadeTypeRequest extends Request {
         }
 
         /**
-         * MaintainAutoType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder maintainAutoType(Boolean maintainAutoType) {
             this.putQueryParameter("MaintainAutoType", maintainAutoType);

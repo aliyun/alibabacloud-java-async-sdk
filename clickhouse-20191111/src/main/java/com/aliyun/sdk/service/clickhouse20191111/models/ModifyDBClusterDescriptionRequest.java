@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBClusterDescriptionRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBClusterDescriptionRequest</p>
@@ -125,11 +126,15 @@ public class ModifyDBClusterDescriptionRequest extends Request {
         } 
 
         /**
-         * The cluster name. When you set the cluster name, take note of the following rules:
-         * <p>
+         * <p>The cluster name. When you set the cluster name, take note of the following rules:</p>
+         * <ul>
+         * <li>The cluster name cannot start with http:// or https://.</li>
+         * <li>The cluster name must be 2 to 256 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The cluster name cannot start with http:// or https://.
-         * *   The cluster name must be 2 to 256 characters in length.
+         * <strong>example:</strong>
+         * <p>ClusterDescriptionTest</p>
          */
         public Builder DBClusterDescription(String DBClusterDescription) {
             this.putQueryParameter("DBClusterDescription", DBClusterDescription);
@@ -138,7 +143,11 @@ public class ModifyDBClusterDescriptionRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp108z124a8o7****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

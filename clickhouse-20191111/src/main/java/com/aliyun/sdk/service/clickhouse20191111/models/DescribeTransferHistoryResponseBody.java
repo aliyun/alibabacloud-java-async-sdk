@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTransferHistoryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTransferHistoryResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The migration information.
+         * <p>The migration information.</p>
          */
         public Builder historyDetails(HistoryDetails historyDetails) {
             this.historyDetails = historyDetails;
@@ -57,7 +58,10 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05321590-BB65-4720-8CB6-8218E041CDD0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTransferHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTransferHistoryResponseBody</p>
+     */
     public static class HistoryDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisableWriteWindows")
         private String disableWriteWindows;
@@ -177,7 +187,10 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the data migration.
+             * <p>The progress of the data migration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100%</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -193,7 +206,10 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the source cluster.
+             * <p>The ID of the source cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-bp108z124a8o7****</p>
              */
             public Builder sourceDBCluster(String sourceDBCluster) {
                 this.sourceDBCluster = sourceDBCluster;
@@ -201,11 +217,14 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the data migration task. Valid values:
-             * <p>
+             * <p>The status of the data migration task. Valid values:</p>
+             * <ul>
+             * <li><strong>Finished</strong>: The data migration task is complete.</li>
+             * <li><strong>Processing</strong>: The data migration task is in progress.</li>
+             * </ul>
              * 
-             * *   **Finished**: The data migration task is complete.
-             * *   **Processing**: The data migration task is in progress.
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -221,7 +240,10 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the destination cluster.
+             * <p>The ID of the destination cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-bp13zkh9uw523****</p>
              */
             public Builder targetDBCluster(String targetDBCluster) {
                 this.targetDBCluster = targetDBCluster;
@@ -235,6 +257,12 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTransferHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTransferHistoryResponseBody</p>
+     */
     public static class HistoryDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HistoryDetail")
         private java.util.List < HistoryDetail> historyDetail;

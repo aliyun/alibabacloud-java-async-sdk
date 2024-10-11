@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckModifyConfigNeedRestartResponseBody} extends {@link TeaModel}
  *
  * <p>CheckModifyConfigNeedRestartResponseBody</p>
@@ -49,11 +50,14 @@ public class CheckModifyConfigNeedRestartResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the cluster was restarted after you modified the configuration parameters. Valid values:
-         * <p>
+         * <p>Indicates whether the cluster was restarted after you modified the configuration parameters. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The cluster was restarted.</li>
+         * <li><strong>false</strong>: The cluster was not restarted.</li>
+         * </ul>
          * 
-         * *   **true**: The cluster was restarted.
-         * *   **false**: The cluster was not restarted.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder needRestart(Boolean needRestart) {
             this.needRestart = needRestart;
@@ -61,7 +65,10 @@ public class CheckModifyConfigNeedRestartResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06798FEE-BEF2-5FAF-A30D-728973BBE97C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

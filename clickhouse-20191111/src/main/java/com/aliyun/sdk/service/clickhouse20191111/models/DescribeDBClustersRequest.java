@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClustersRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBClustersRequest</p>
@@ -208,7 +209,10 @@ public class DescribeDBClustersRequest extends Request {
         } 
 
         /**
-         * The description of the cluster.
+         * <p>The description of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp108z124a8o7****</p>
          */
         public Builder DBClusterDescription(String DBClusterDescription) {
             this.putQueryParameter("DBClusterDescription", DBClusterDescription);
@@ -217,10 +221,13 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * The cluster ID.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the information about all clusters is queried.</p>
+         * </blockquote>
          * 
-         * >  If you do not specify this parameter, the information about all clusters is queried.
+         * <strong>example:</strong>
+         * <p>cc-bp108z124a8o7****</p>
          */
         public Builder DBClusterIds(String DBClusterIds) {
             this.putQueryParameter("DBClusterIds", DBClusterIds);
@@ -229,14 +236,17 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * The state of the cluster. Valid values:
-         * <p>
+         * <p>The state of the cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>Preparing</strong>: The cluster is being prepared.</li>
+         * <li><strong>Creating</strong>: The cluster is being created.</li>
+         * <li><strong>Running</strong>: The cluster is running.</li>
+         * <li><strong>Deleting</strong>: The cluster is being deleted.</li>
+         * <li><strong>SCALING_OUT</strong>: The storage capacity of the cluster is being expanded.</li>
+         * </ul>
          * 
-         * *   **Preparing**: The cluster is being prepared.
-         * *   **Creating**: The cluster is being created.
-         * *   **Running**: The cluster is running.
-         * *   **Deleting**: The cluster is being deleted.
-         * *   **SCALING_OUT**: The storage capacity of the cluster is being expanded.
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder DBClusterStatus(String DBClusterStatus) {
             this.putQueryParameter("DBClusterStatus", DBClusterStatus);
@@ -263,7 +273,10 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -272,12 +285,15 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page. Valid values:
-         * <p>
+         * <p>The number of entries returned per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong> (default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
          * 
-         * *   **30** (default)
-         * *   **50**
-         * *   **100**
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -286,7 +302,11 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -295,7 +315,10 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the cluster belongs.
+         * <p>The ID of the resource group to which the cluster belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-4690g37929****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -322,7 +345,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -337,6 +360,12 @@ public class DescribeDBClustersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBClustersRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClustersRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -376,7 +405,10 @@ public class DescribeDBClustersRequest extends Request {
             private String value; 
 
             /**
-             * The tag name.
+             * <p>The tag name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>department</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -384,7 +416,10 @@ public class DescribeDBClustersRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>it</p>
              */
             public Builder value(String value) {
                 this.value = value;

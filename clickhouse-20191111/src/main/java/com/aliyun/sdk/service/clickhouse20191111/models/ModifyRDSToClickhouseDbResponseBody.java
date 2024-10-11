@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyRDSToClickhouseDbResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyRDSToClickhouseDbResponseBody</p>
@@ -73,7 +74,10 @@ public class ModifyRDSToClickhouseDbResponseBody extends TeaModel {
         private Long status; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errorCode(Long errorCode) {
             this.errorCode = errorCode;
@@ -81,9 +85,13 @@ public class ModifyRDSToClickhouseDbResponseBody extends TeaModel {
         }
 
         /**
-         * *   If the value **1** is returned for the **Status** parameter, the system does not return the ErrorMsg parameter.
-         * <p>
-         * *   If the value **0** is returned for the **Status** parameter, the ErrorMsg parameter returns the cause for the modification failure.
+         * <ul>
+         * <li>If the value <strong>1</strong> is returned for the <strong>Status</strong> parameter, the system does not return the ErrorMsg parameter.</li>
+         * <li>If the value <strong>0</strong> is returned for the <strong>Status</strong> parameter, the ErrorMsg parameter returns the cause for the modification failure.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ClickHouse exception, code: 49, host: 100.100.118.132, port: 49670; Code: 49, e.displayText() = DB::Exception: Logical error: there is no global context (version 20.8.17.25)n</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -91,7 +99,10 @@ public class ModifyRDSToClickhouseDbResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>746CD303-0B82-5E8D-886D-93A9FAF3A876</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -99,11 +110,14 @@ public class ModifyRDSToClickhouseDbResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the modification was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the modification was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: The modification was successful.</li>
+         * <li><strong>0</strong>: The modification failed.</li>
+         * </ul>
          * 
-         * *   **1**: The modification was successful.
-         * *   **0**: The modification failed.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Long status) {
             this.status = status;

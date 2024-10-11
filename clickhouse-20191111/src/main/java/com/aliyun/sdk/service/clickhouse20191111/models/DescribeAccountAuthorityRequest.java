@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccountAuthorityRequest} extends {@link RequestModel}
  *
  * <p>DescribeAccountAuthorityRequest</p>
@@ -138,7 +139,10 @@ public class DescribeAccountAuthorityRequest extends Request {
         } 
 
         /**
-         * The name of the database account.
+         * <p>The name of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -147,7 +151,11 @@ public class DescribeAccountAuthorityRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp1p816075e21****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -174,7 +182,10 @@ public class DescribeAccountAuthorityRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -84,6 +84,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AllocateClusterPublicConnection  AllocateClusterPublicConnectionRequest
+     * @return AllocateClusterPublicConnectionResponse
+     */
     @Override
     public CompletableFuture<AllocateClusterPublicConnectionResponse> allocateClusterPublicConnection(AllocateClusterPublicConnectionRequest request) {
         try {
@@ -98,6 +102,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckClickhouseToRDS  CheckClickhouseToRDSRequest
+     * @return CheckClickhouseToRDSResponse
+     */
     @Override
     public CompletableFuture<CheckClickhouseToRDSResponse> checkClickhouseToRDS(CheckClickhouseToRDSRequest request) {
         try {
@@ -113,8 +121,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of CheckModifyConfigNeedRestart  CheckModifyConfigNeedRestartRequest
+     * @return CheckModifyConfigNeedRestartResponse
      */
     @Override
     public CompletableFuture<CheckModifyConfigNeedRestartResponse> checkModifyConfigNeedRestart(CheckModifyConfigNeedRestartRequest request) {
@@ -130,6 +143,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckMonitorAlert  CheckMonitorAlertRequest
+     * @return CheckMonitorAlertResponse
+     */
     @Override
     public CompletableFuture<CheckMonitorAlertResponse> checkMonitorAlert(CheckMonitorAlertRequest request) {
         try {
@@ -144,6 +161,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckScaleOutBalanced  CheckScaleOutBalancedRequest
+     * @return CheckScaleOutBalancedResponse
+     */
     @Override
     public CompletableFuture<CheckScaleOutBalancedResponse> checkScaleOutBalanced(CheckScaleOutBalancedRequest request) {
         try {
@@ -158,6 +179,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckServiceLinkedRole  CheckServiceLinkedRoleRequest
+     * @return CheckServiceLinkedRoleResponse
+     */
     @Override
     public CompletableFuture<CheckServiceLinkedRoleResponse> checkServiceLinkedRole(CheckServiceLinkedRoleRequest request) {
         try {
@@ -172,6 +197,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAccount  CreateAccountRequest
+     * @return CreateAccountResponse
+     */
     @Override
     public CompletableFuture<CreateAccountResponse> createAccount(CreateAccountRequest request) {
         try {
@@ -186,6 +215,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAccountAndAuthority  CreateAccountAndAuthorityRequest
+     * @return CreateAccountAndAuthorityResponse
+     */
     @Override
     public CompletableFuture<CreateAccountAndAuthorityResponse> createAccountAndAuthority(CreateAccountAndAuthorityRequest request) {
         try {
@@ -201,8 +234,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  This operation is available only for the ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation is available only for the ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of CreateBackupPolicy  CreateBackupPolicyRequest
+     * @return CreateBackupPolicyResponse
      */
     @Override
     public CompletableFuture<CreateBackupPolicyResponse> createBackupPolicy(CreateBackupPolicyRequest request) {
@@ -218,6 +256,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDBInstance  CreateDBInstanceRequest
+     * @return CreateDBInstanceResponse
+     */
     @Override
     public CompletableFuture<CreateDBInstanceResponse> createDBInstance(CreateDBInstanceRequest request) {
         try {
@@ -232,6 +274,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateMonitorDataReport  CreateMonitorDataReportRequest
+     * @return CreateMonitorDataReportResponse
+     */
     @Override
     public CompletableFuture<CreateMonitorDataReportResponse> createMonitorDataReport(CreateMonitorDataReportRequest request) {
         try {
@@ -247,8 +293,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Only an ApsaraDB for ClickHouse cluster of V20.8 or later supports tiered storage of hot data and cold data. If your data is in an ApsaraDB for ClickHouse cluster of a version earlier than V20.8 and you want to use tiered storage of hot data and cold data to store the data, you can migrate the data to an ApsaraDB for ClickHouse cluster of V20.8 or later and use tiered storage of hot data and cold data. For more information about how to migrate data between ApsaraDB for ClickHouse clusters, see [Migrate data between ApsaraDB for ClickHouse clusters](~~276926~~).
-      *
+     * <b>description</b> :
+     * <p>Only an ApsaraDB for ClickHouse cluster of V20.8 or later supports tiered storage of hot data and cold data. If your data is in an ApsaraDB for ClickHouse cluster of a version earlier than V20.8 and you want to use tiered storage of hot data and cold data to store the data, you can migrate the data to an ApsaraDB for ClickHouse cluster of V20.8 or later and use tiered storage of hot data and cold data. For more information about how to migrate data between ApsaraDB for ClickHouse clusters, see <a href="https://help.aliyun.com/document_detail/276926.html">Migrate data between ApsaraDB for ClickHouse clusters</a>.</p>
+     * 
+     * @param request the request parameters of CreateOSSStorage  CreateOSSStorageRequest
+     * @return CreateOSSStorageResponse
      */
     @Override
     public CompletableFuture<CreateOSSStorageResponse> createOSSStorage(CreateOSSStorageRequest request) {
@@ -265,8 +314,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  For an ApsaraDB for ClickHouse cluster of V20.8 or later that was created before December 1, 2021, you must manually enable the MySQL port. For an ApsaraDB for ClickHouse cluster of V20.8 or later that was created after December 1, 2021, the MySQL port is automatically enabled.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> For an ApsaraDB for ClickHouse cluster of V20.8 or later that was created before December 1, 2021, you must manually enable the MySQL port. For an ApsaraDB for ClickHouse cluster of V20.8 or later that was created after December 1, 2021, the MySQL port is automatically enabled.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of CreatePortsForClickHouse  CreatePortsForClickHouseRequest
+     * @return CreatePortsForClickHouseResponse
      */
     @Override
     public CompletableFuture<CreatePortsForClickHouseResponse> createPortsForClickHouse(CreatePortsForClickHouseRequest request) {
@@ -283,8 +337,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  This operation is only applicable to ApsaraDB for ClickHouse clusters.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation is only applicable to ApsaraDB for ClickHouse clusters.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of CreateRDSToClickhouseDb  CreateRDSToClickhouseDbRequest
+     * @return CreateRDSToClickhouseDbResponse
      */
     @Override
     public CompletableFuture<CreateRDSToClickhouseDbResponse> createRDSToClickhouseDb(CreateRDSToClickhouseDbRequest request) {
@@ -301,8 +360,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  This operation is applicable only to ApsaraDB for ClickHouse clusters of V20.8 or later that were created after December 1, 2021,
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation is applicable only to ApsaraDB for ClickHouse clusters of V20.8 or later that were created after December 1, 2021,</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of CreateSQLAccount  CreateSQLAccountRequest
+     * @return CreateSQLAccountResponse
      */
     @Override
     public CompletableFuture<CreateSQLAccountResponse> createSQLAccount(CreateSQLAccountRequest request) {
@@ -318,6 +382,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateServiceLinkedRole  CreateServiceLinkedRoleRequest
+     * @return CreateServiceLinkedRoleResponse
+     */
     @Override
     public CompletableFuture<CreateServiceLinkedRoleResponse> createServiceLinkedRole(CreateServiceLinkedRoleRequest request) {
         try {
@@ -333,8 +401,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  After you delete a database account, you cannot use the account to log on to the ApsaraDB for ClickHouse cluster. Exercise caution when performing this operation.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> After you delete a database account, you cannot use the account to log on to the ApsaraDB for ClickHouse cluster. Exercise caution when performing this operation.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DeleteAccount  DeleteAccountRequest
+     * @return DeleteAccountResponse
      */
     @Override
     public CompletableFuture<DeleteAccountResponse> deleteAccount(DeleteAccountRequest request) {
@@ -351,8 +424,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * **Warning** After an ApsaraDB for ClickHouse cluster is deleted, all data in the cluster is deleted and cannot be recovered. Exercise caution when performing this operation.
-      *
+     * <b>description</b> :
+     * <p><em>Warning</em>* After an ApsaraDB for ClickHouse cluster is deleted, all data in the cluster is deleted and cannot be recovered. Exercise caution when performing this operation.</p>
+     * 
+     * @param request the request parameters of DeleteDBCluster  DeleteDBClusterRequest
+     * @return DeleteDBClusterResponse
      */
     @Override
     public CompletableFuture<DeleteDBClusterResponse> deleteDBCluster(DeleteDBClusterRequest request) {
@@ -368,6 +444,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteSyndb  DeleteSyndbRequest
+     * @return DeleteSyndbResponse
+     */
     @Override
     public CompletableFuture<DeleteSyndbResponse> deleteSyndb(DeleteSyndbRequest request) {
         try {
@@ -382,6 +462,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAccountAuthority  DescribeAccountAuthorityRequest
+     * @return DescribeAccountAuthorityResponse
+     */
     @Override
     public CompletableFuture<DescribeAccountAuthorityResponse> describeAccountAuthority(DescribeAccountAuthorityRequest request) {
         try {
@@ -396,6 +480,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAccounts  DescribeAccountsRequest
+     * @return DescribeAccountsResponse
+     */
     @Override
     public CompletableFuture<DescribeAccountsResponse> describeAccounts(DescribeAccountsRequest request) {
         try {
@@ -410,6 +498,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAllDataSource  DescribeAllDataSourceRequest
+     * @return DescribeAllDataSourceResponse
+     */
     @Override
     public CompletableFuture<DescribeAllDataSourceResponse> describeAllDataSource(DescribeAllDataSourceRequest request) {
         try {
@@ -424,6 +516,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAllDataSources  DescribeAllDataSourcesRequest
+     * @return DescribeAllDataSourcesResponse
+     */
     @Override
     public CompletableFuture<DescribeAllDataSourcesResponse> describeAllDataSources(DescribeAllDataSourcesRequest request) {
         try {
@@ -439,8 +535,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  This operation is available only for the ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation is available only for the ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeBackupPolicy  DescribeBackupPolicyRequest
+     * @return DescribeBackupPolicyResponse
      */
     @Override
     public CompletableFuture<DescribeBackupPolicyResponse> describeBackupPolicy(DescribeBackupPolicyRequest request) {
@@ -456,6 +557,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBackups  DescribeBackupsRequest
+     * @return DescribeBackupsResponse
+     */
     @Override
     public CompletableFuture<DescribeBackupsResponse> describeBackups(DescribeBackupsRequest request) {
         try {
@@ -470,6 +575,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeColumns  DescribeColumnsRequest
+     * @return DescribeColumnsResponse
+     */
     @Override
     public CompletableFuture<DescribeColumnsResponse> describeColumns(DescribeColumnsRequest request) {
         try {
@@ -485,8 +594,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeConfigHistory  DescribeConfigHistoryRequest
+     * @return DescribeConfigHistoryResponse
      */
     @Override
     public CompletableFuture<DescribeConfigHistoryResponse> describeConfigHistory(DescribeConfigHistoryRequest request) {
@@ -503,8 +617,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeConfigVersionDifference  DescribeConfigVersionDifferenceRequest
+     * @return DescribeConfigVersionDifferenceResponse
      */
     @Override
     public CompletableFuture<DescribeConfigVersionDifferenceResponse> describeConfigVersionDifference(DescribeConfigVersionDifferenceRequest request) {
@@ -520,6 +639,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBClusterAccessWhiteList  DescribeDBClusterAccessWhiteListRequest
+     * @return DescribeDBClusterAccessWhiteListResponse
+     */
     @Override
     public CompletableFuture<DescribeDBClusterAccessWhiteListResponse> describeDBClusterAccessWhiteList(DescribeDBClusterAccessWhiteListRequest request) {
         try {
@@ -534,6 +657,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBClusterAttribute  DescribeDBClusterAttributeRequest
+     * @return DescribeDBClusterAttributeResponse
+     */
     @Override
     public CompletableFuture<DescribeDBClusterAttributeResponse> describeDBClusterAttribute(DescribeDBClusterAttributeRequest request) {
         try {
@@ -548,6 +675,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBClusterConfig  DescribeDBClusterConfigRequest
+     * @return DescribeDBClusterConfigResponse
+     */
     @Override
     public CompletableFuture<DescribeDBClusterConfigResponse> describeDBClusterConfig(DescribeDBClusterConfigRequest request) {
         try {
@@ -563,8 +694,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeDBClusterConfigInXML  DescribeDBClusterConfigInXMLRequest
+     * @return DescribeDBClusterConfigInXMLResponse
      */
     @Override
     public CompletableFuture<DescribeDBClusterConfigInXMLResponse> describeDBClusterConfigInXML(DescribeDBClusterConfigInXMLRequest request) {
@@ -580,6 +716,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBClusterNetInfoItems  DescribeDBClusterNetInfoItemsRequest
+     * @return DescribeDBClusterNetInfoItemsResponse
+     */
     @Override
     public CompletableFuture<DescribeDBClusterNetInfoItemsResponse> describeDBClusterNetInfoItems(DescribeDBClusterNetInfoItemsRequest request) {
         try {
@@ -595,9 +735,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can query the performance data of a specified cluster over a specific time range based on the performance metrics. The data is collected every 30 seconds.
-      * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created before December 1, 2021.
-      *
+     * <b>description</b> :
+     * <p>You can query the performance data of a specified cluster over a specific time range based on the performance metrics. The data is collected every 30 seconds.</p>
+     * <blockquote>
+     * <p> You can call this operation only for ApsaraDB for ClickHouse clusters that were created before December 1, 2021.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeDBClusterPerformance  DescribeDBClusterPerformanceRequest
+     * @return DescribeDBClusterPerformanceResponse
      */
     @Override
     public CompletableFuture<DescribeDBClusterPerformanceResponse> describeDBClusterPerformance(DescribeDBClusterPerformanceRequest request) {
@@ -613,6 +758,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBClusters  DescribeDBClustersRequest
+     * @return DescribeDBClustersResponse
+     */
     @Override
     public CompletableFuture<DescribeDBClustersResponse> describeDBClusters(DescribeDBClustersRequest request) {
         try {
@@ -627,6 +776,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBConfig  DescribeDBConfigRequest
+     * @return DescribeDBConfigResponse
+     */
     @Override
     public CompletableFuture<DescribeDBConfigResponse> describeDBConfig(DescribeDBConfigRequest request) {
         try {
@@ -641,6 +794,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeOSSStorage  DescribeOSSStorageRequest
+     * @return DescribeOSSStorageResponse
+     */
     @Override
     public CompletableFuture<DescribeOSSStorageResponse> describeOSSStorage(DescribeOSSStorageRequest request) {
         try {
@@ -655,6 +812,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeProcessList  DescribeProcessListRequest
+     * @return DescribeProcessListResponse
+     */
     @Override
     public CompletableFuture<DescribeProcessListResponse> describeProcessList(DescribeProcessListRequest request) {
         try {
@@ -669,6 +830,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
     @Override
     public CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request) {
         try {
@@ -683,6 +848,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSchemas  DescribeSchemasRequest
+     * @return DescribeSchemasResponse
+     */
     @Override
     public CompletableFuture<DescribeSchemasResponse> describeSchemas(DescribeSchemasRequest request) {
         try {
@@ -697,6 +866,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSlowLogRecords  DescribeSlowLogRecordsRequest
+     * @return DescribeSlowLogRecordsResponse
+     */
     @Override
     public CompletableFuture<DescribeSlowLogRecordsResponse> describeSlowLogRecords(DescribeSlowLogRecordsRequest request) {
         try {
@@ -711,6 +884,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSynDbTables  DescribeSynDbTablesRequest
+     * @return DescribeSynDbTablesResponse
+     */
     @Override
     public CompletableFuture<DescribeSynDbTablesResponse> describeSynDbTables(DescribeSynDbTablesRequest request) {
         try {
@@ -725,6 +902,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSynDbs  DescribeSynDbsRequest
+     * @return DescribeSynDbsResponse
+     */
     @Override
     public CompletableFuture<DescribeSynDbsResponse> describeSynDbs(DescribeSynDbsRequest request) {
         try {
@@ -739,6 +920,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeTables  DescribeTablesRequest
+     * @return DescribeTablesResponse
+     */
     @Override
     public CompletableFuture<DescribeTablesResponse> describeTables(DescribeTablesRequest request) {
         try {
@@ -754,8 +939,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  You can call this operation to query information about only data migration from an ApsaraDB for ClickHouse cluster of an earlier version to an ApsaraDB for ClickHouse cluster of a later version.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can call this operation to query information about only data migration from an ApsaraDB for ClickHouse cluster of an earlier version to an ApsaraDB for ClickHouse cluster of a later version.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeTransferHistory  DescribeTransferHistoryRequest
+     * @return DescribeTransferHistoryResponse
      */
     @Override
     public CompletableFuture<DescribeTransferHistoryResponse> describeTransferHistory(DescribeTransferHistoryRequest request) {
@@ -771,6 +961,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of KillProcess  KillProcessRequest
+     * @return KillProcessResponse
+     */
     @Override
     public CompletableFuture<KillProcessResponse> killProcess(KillProcessRequest request) {
         try {
@@ -785,6 +979,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAccountAuthority  ModifyAccountAuthorityRequest
+     * @return ModifyAccountAuthorityResponse
+     */
     @Override
     public CompletableFuture<ModifyAccountAuthorityResponse> modifyAccountAuthority(ModifyAccountAuthorityRequest request) {
         try {
@@ -799,6 +997,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAccountDescription  ModifyAccountDescriptionRequest
+     * @return ModifyAccountDescriptionResponse
+     */
     @Override
     public CompletableFuture<ModifyAccountDescriptionResponse> modifyAccountDescription(ModifyAccountDescriptionRequest request) {
         try {
@@ -814,8 +1016,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  This operation is available only for the ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation is available only for the ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ModifyBackupPolicy  ModifyBackupPolicyRequest
+     * @return ModifyBackupPolicyResponse
      */
     @Override
     public CompletableFuture<ModifyBackupPolicyResponse> modifyBackupPolicy(ModifyBackupPolicyRequest request) {
@@ -831,6 +1038,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBCluster  ModifyDBClusterRequest
+     * @return ModifyDBClusterResponse
+     */
     @Override
     public CompletableFuture<ModifyDBClusterResponse> modifyDBCluster(ModifyDBClusterRequest request) {
         try {
@@ -845,6 +1056,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBClusterAccessWhiteList  ModifyDBClusterAccessWhiteListRequest
+     * @return ModifyDBClusterAccessWhiteListResponse
+     */
     @Override
     public CompletableFuture<ModifyDBClusterAccessWhiteListResponse> modifyDBClusterAccessWhiteList(ModifyDBClusterAccessWhiteListRequest request) {
         try {
@@ -859,6 +1074,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBClusterConfig  ModifyDBClusterConfigRequest
+     * @return ModifyDBClusterConfigResponse
+     */
     @Override
     public CompletableFuture<ModifyDBClusterConfigResponse> modifyDBClusterConfig(ModifyDBClusterConfigRequest request) {
         try {
@@ -874,8 +1093,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ModifyDBClusterConfigInXML  ModifyDBClusterConfigInXMLRequest
+     * @return ModifyDBClusterConfigInXMLResponse
      */
     @Override
     public CompletableFuture<ModifyDBClusterConfigInXMLResponse> modifyDBClusterConfigInXML(ModifyDBClusterConfigInXMLRequest request) {
@@ -891,6 +1115,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBClusterDescription  ModifyDBClusterDescriptionRequest
+     * @return ModifyDBClusterDescriptionResponse
+     */
     @Override
     public CompletableFuture<ModifyDBClusterDescriptionResponse> modifyDBClusterDescription(ModifyDBClusterDescriptionRequest request) {
         try {
@@ -905,6 +1133,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBClusterMaintainTime  ModifyDBClusterMaintainTimeRequest
+     * @return ModifyDBClusterMaintainTimeResponse
+     */
     @Override
     public CompletableFuture<ModifyDBClusterMaintainTimeResponse> modifyDBClusterMaintainTime(ModifyDBClusterMaintainTimeRequest request) {
         try {
@@ -919,6 +1151,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBConfig  ModifyDBConfigRequest
+     * @return ModifyDBConfigResponse
+     */
     @Override
     public CompletableFuture<ModifyDBConfigResponse> modifyDBConfig(ModifyDBConfigRequest request) {
         try {
@@ -933,6 +1169,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyMinorVersionGreadeType  ModifyMinorVersionGreadeTypeRequest
+     * @return ModifyMinorVersionGreadeTypeResponse
+     */
     @Override
     public CompletableFuture<ModifyMinorVersionGreadeTypeResponse> modifyMinorVersionGreadeType(ModifyMinorVersionGreadeTypeRequest request) {
         try {
@@ -948,8 +1188,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  This operation is applicable only to ApsaraDB for ClickHouse clusters.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation is applicable only to ApsaraDB for ClickHouse clusters.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ModifyRDSToClickhouseDb  ModifyRDSToClickhouseDbRequest
+     * @return ModifyRDSToClickhouseDbResponse
      */
     @Override
     public CompletableFuture<ModifyRDSToClickhouseDbResponse> modifyRDSToClickhouseDb(ModifyRDSToClickhouseDbRequest request) {
@@ -965,6 +1210,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReleaseClusterPublicConnection  ReleaseClusterPublicConnectionRequest
+     * @return ReleaseClusterPublicConnectionResponse
+     */
     @Override
     public CompletableFuture<ReleaseClusterPublicConnectionResponse> releaseClusterPublicConnection(ReleaseClusterPublicConnectionRequest request) {
         try {
@@ -979,6 +1228,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResetAccountPassword  ResetAccountPasswordRequest
+     * @return ResetAccountPasswordResponse
+     */
     @Override
     public CompletableFuture<ResetAccountPasswordResponse> resetAccountPassword(ResetAccountPasswordRequest request) {
         try {
@@ -993,6 +1246,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RestartInstance  RestartInstanceRequest
+     * @return RestartInstanceResponse
+     */
     @Override
     public CompletableFuture<RestartInstanceResponse> restartInstance(RestartInstanceRequest request) {
         try {
@@ -1008,11 +1265,18 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)Prerequisites
-      * *   The IP address of the source ApsaraDB for ClickHouse cluster is added to the IP address whitelist of the destination ApsaraDB for ClickHouse cluster.
-      * *   The IP address of the destination ApsaraDB for ClickHouse cluster is added to the IP address whitelist of the source ApsaraDB for ClickHouse cluster.
-      * >  You can execute the `select * from system.clusters;` statement to query the IP address of an ApsaraDB for ClickHouse cluster.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a>Prerequisites</h2>
+     * <ul>
+     * <li>The IP address of the source ApsaraDB for ClickHouse cluster is added to the IP address whitelist of the destination ApsaraDB for ClickHouse cluster.</li>
+     * <li>The IP address of the destination ApsaraDB for ClickHouse cluster is added to the IP address whitelist of the source ApsaraDB for ClickHouse cluster.<blockquote>
+     * <p> You can execute the <code>select * from system.clusters;</code> statement to query the IP address of an ApsaraDB for ClickHouse cluster.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of TransferVersion  TransferVersionRequest
+     * @return TransferVersionResponse
      */
     @Override
     public CompletableFuture<TransferVersionResponse> transferVersion(TransferVersionRequest request) {
@@ -1029,8 +1293,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were purchased after December 1, 2021.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can call this operation only for ApsaraDB for ClickHouse clusters that were purchased after December 1, 2021.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of UpgradeMinorVersion  UpgradeMinorVersionRequest
+     * @return UpgradeMinorVersionResponse
      */
     @Override
     public CompletableFuture<UpgradeMinorVersionResponse> upgradeMinorVersion(UpgradeMinorVersionRequest request) {

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSynDbTablesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSynDbTablesResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeSynDbTablesResponseBody extends TeaModel {
         private java.util.List < String > tables; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>851D11EA-681C-5B38-A065-C3F90BBD49DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeSynDbTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The queried tables.
+         * <p>The queried tables.</p>
          */
         public Builder tables(java.util.List < String > tables) {
             this.tables = tables;

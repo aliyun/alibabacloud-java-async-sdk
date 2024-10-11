@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAllDataSourceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAllDataSourceResponseBody</p>
@@ -73,7 +74,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         private Tables tables; 
 
         /**
-         * The information about the columns.
+         * <p>The information about the columns.</p>
          */
         public Builder columns(Columns columns) {
             this.columns = columns;
@@ -81,7 +82,10 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05321590-BB65-4720-8CB6-8218E041CDD0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -89,7 +93,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the databases.
+         * <p>The information about the databases.</p>
          */
         public Builder schemas(Schemas schemas) {
             this.schemas = schemas;
@@ -97,7 +101,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the tables.
+         * <p>The information about the tables.</p>
          */
         public Builder tables(Tables tables) {
             this.tables = tables;
@@ -110,6 +114,12 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAllDataSourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAllDataSourceResponseBody</p>
+     */
     public static class Column extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoIncrementColumn")
         private Boolean autoIncrementColumn;
@@ -209,11 +219,14 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Indicates whether the column is an auto-increment column. Valid values:
-             * <p>
+             * <p>Indicates whether the column is an auto-increment column. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoIncrementColumn(Boolean autoIncrementColumn) {
                 this.autoIncrementColumn = autoIncrementColumn;
@@ -221,7 +234,10 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The column name.
+             * <p>The column name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -229,7 +245,10 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-bp108z124a8o7****</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -237,11 +256,14 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the column is the primary key of the table. Valid values:
-             * <p>
+             * <p>Indicates whether the column is the primary key of the table. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder primaryKey(Boolean primaryKey) {
                 this.primaryKey = primaryKey;
@@ -249,7 +271,10 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The database name.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>database</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -257,7 +282,10 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The table name.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -265,7 +293,10 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the column.
+             * <p>The type of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>String</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -279,6 +310,12 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAllDataSourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAllDataSourceResponseBody</p>
+     */
     public static class Columns extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Column")
         private java.util.List < Column> column;
@@ -320,6 +357,12 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAllDataSourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAllDataSourceResponseBody</p>
+     */
     public static class Schema extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
@@ -359,7 +402,10 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             private String schemaName; 
 
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-bp108z124a8o7****</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -367,7 +413,10 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The database name.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>database</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -381,6 +430,12 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAllDataSourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAllDataSourceResponseBody</p>
+     */
     public static class Schemas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Schema")
         private java.util.List < Schema> schema;
@@ -422,6 +477,12 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAllDataSourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAllDataSourceResponseBody</p>
+     */
     public static class Table extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
@@ -473,7 +534,10 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-bp108z124a8o7****</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -481,7 +545,10 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The database name.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>database</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -489,7 +556,10 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The table name.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -503,6 +573,12 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAllDataSourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAllDataSourceResponseBody</p>
+     */
     public static class Tables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Table")
         private java.util.List < Table> table;

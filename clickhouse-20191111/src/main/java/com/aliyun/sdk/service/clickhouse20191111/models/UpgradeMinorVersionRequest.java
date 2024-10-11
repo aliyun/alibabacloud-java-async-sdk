@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeMinorVersionRequest} extends {@link RequestModel}
  *
  * <p>UpgradeMinorVersionRequest</p>
@@ -153,7 +154,11 @@ public class UpgradeMinorVersionRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp108z124a8o7****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -198,13 +203,18 @@ public class UpgradeMinorVersionRequest extends Request {
         }
 
         /**
-         * Specifies whether to update the minor engine version of the ApsaraDB for ClickHouse cluster immediately. Valid values:
-         * <p>
+         * <p>Specifies whether to update the minor engine version of the ApsaraDB for ClickHouse cluster immediately. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: updates the minor engine version of the ApsaraDB for ClickHouse cluster immediately.</li>
+         * <li><strong>false</strong>: updates the minor engine version of the ApsaraDB for ClickHouse cluster at the specified time or within the specified maintenance window.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you want to update the minor engine version of the ApsaraDB for ClickHouse cluster at the specified time, <strong>UpgradeTime</strong> is required.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **true**: updates the minor engine version of the ApsaraDB for ClickHouse cluster immediately.
-         * *   **false**: updates the minor engine version of the ApsaraDB for ClickHouse cluster at the specified time or within the specified maintenance window.
-         * 
-         * >  If you want to update the minor engine version of the ApsaraDB for ClickHouse cluster at the specified time, **UpgradeTime** is required.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder upgradeImmediately(Boolean upgradeImmediately) {
             this.putQueryParameter("UpgradeImmediately", upgradeImmediately);
@@ -213,10 +223,13 @@ public class UpgradeMinorVersionRequest extends Request {
         }
 
         /**
-         * The update time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in Coordinated Universal Time (UTC).
-         * <p>
+         * <p>The update time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in Coordinated Universal Time (UTC).</p>
+         * <blockquote>
+         * <p> If you do not set this parameter, the minor engine version of an ApsaraDB for ClickHouse cluster is updated within the specified maintenance window.</p>
+         * </blockquote>
          * 
-         * >  If you do not set this parameter, the minor engine version of an ApsaraDB for ClickHouse cluster is updated within the specified maintenance window.
+         * <strong>example:</strong>
+         * <p>2022-08-07T16:38Z</p>
          */
         public Builder upgradeTime(String upgradeTime) {
             this.putQueryParameter("UpgradeTime", upgradeTime);
@@ -225,10 +238,13 @@ public class UpgradeMinorVersionRequest extends Request {
         }
 
         /**
-         * The minor engine version to which you want to update.
-         * <p>
+         * <p>The minor engine version to which you want to update.</p>
+         * <blockquote>
+         * <p> By default, UpgradeVersion is not set and the minor engine version of the ApsaraDB for ClickHouse cluster is updated to the latest version.</p>
+         * </blockquote>
          * 
-         * >  By default, UpgradeVersion is not set and the minor engine version of the ApsaraDB for ClickHouse cluster is updated to the latest version.
+         * <strong>example:</strong>
+         * <p>1.37.0</p>
          */
         public Builder upgradeVersion(String upgradeVersion) {
             this.putQueryParameter("UpgradeVersion", upgradeVersion);

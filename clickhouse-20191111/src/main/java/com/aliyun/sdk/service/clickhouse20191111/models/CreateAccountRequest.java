@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAccountRequest} extends {@link RequestModel}
  *
  * <p>CreateAccountRequest</p>
@@ -154,14 +155,18 @@ public class CreateAccountRequest extends Request {
         } 
 
         /**
-         * The description of the database account.
-         * <p>
+         * <p>The description of the database account.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The description cannot start with http:// or https://.</p>
+         * </li>
+         * <li><p>The description must be 0 to 256 characters in length.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   The description cannot start with http:// or https://.
-         * 
-         * *   The description must be 0 to 256 characters in length.
+         * <strong>example:</strong>
+         * <p>ceshi</p>
          */
         public Builder accountDescription(String accountDescription) {
             this.putQueryParameter("AccountDescription", accountDescription);
@@ -170,16 +175,23 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The name of the database account.
-         * <p>
+         * <p>The name of the database account.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The name must be unique in the cluster.</p>
+         * </li>
+         * <li><p>The name can contain lowercase letters, digits, and underscores (_).</p>
+         * </li>
+         * <li><p>The name must start with a lowercase letter and end with a lowercase letter or a digit.</p>
+         * </li>
+         * <li><p>The name must be 2 to 64 characters in length.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * > 
-         * 
-         * *   The name must be unique in the cluster.
-         * 
-         * *   The name can contain lowercase letters, digits, and underscores (\_).
-         * *   The name must start with a lowercase letter and end with a lowercase letter or a digit.
-         * *   The name must be 2 to 64 characters in length.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -188,15 +200,21 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The password of the database account.
-         * <p>
+         * <p>The password of the database account.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The password must contain at least three types of the following characters: uppercase letters, lowercase letters, digits, and special characters.</p>
+         * </li>
+         * <li><p>The password can contain the following special characters: ! @ # $ % ^ &amp; * ( ) _ + - =</p>
+         * </li>
+         * <li><p>The password must be 8 to 32 characters in length.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * > 
-         * 
-         * *   The password must contain at least three types of the following characters: uppercase letters, lowercase letters, digits, and special characters.
-         * 
-         * *   The password can contain the following special characters: ! @ # $ % ^ & \* ( ) \_ + - =
-         * *   The password must be 8 to 32 characters in length.
+         * <strong>example:</strong>
+         * <p>123789Ff!</p>
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -205,7 +223,11 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp108z124a8o7****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

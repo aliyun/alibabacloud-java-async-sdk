@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAccountAndAuthorityRequest} extends {@link RequestModel}
  *
  * <p>CreateAccountAndAuthorityRequest</p>
@@ -265,7 +266,10 @@ public class CreateAccountAndAuthorityRequest extends Request {
         }
 
         /**
-         * AccountName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -274,7 +278,10 @@ public class CreateAccountAndAuthorityRequest extends Request {
         }
 
         /**
-         * AccountPassword.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456Aa</p>
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -283,7 +290,10 @@ public class CreateAccountAndAuthorityRequest extends Request {
         }
 
         /**
-         * AllowDatabases.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db1</p>
          */
         public Builder allowDatabases(String allowDatabases) {
             this.putQueryParameter("AllowDatabases", allowDatabases);
@@ -292,7 +302,10 @@ public class CreateAccountAndAuthorityRequest extends Request {
         }
 
         /**
-         * AllowDictionaries.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dt1</p>
          */
         public Builder allowDictionaries(String allowDictionaries) {
             this.putQueryParameter("AllowDictionaries", allowDictionaries);
@@ -301,7 +314,10 @@ public class CreateAccountAndAuthorityRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp1p816075e21****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -310,7 +326,10 @@ public class CreateAccountAndAuthorityRequest extends Request {
         }
 
         /**
-         * DdlAuthority.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ddlAuthority(Boolean ddlAuthority) {
             this.putQueryParameter("DdlAuthority", ddlAuthority);
@@ -319,7 +338,10 @@ public class CreateAccountAndAuthorityRequest extends Request {
         }
 
         /**
-         * DmlAuthority.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder dmlAuthority(String dmlAuthority) {
             this.putQueryParameter("DmlAuthority", dmlAuthority);

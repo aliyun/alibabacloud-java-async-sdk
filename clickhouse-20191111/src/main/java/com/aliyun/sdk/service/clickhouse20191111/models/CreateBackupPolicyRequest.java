@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBackupPolicyRequest} extends {@link RequestModel}
  *
  * <p>CreateBackupPolicyRequest</p>
@@ -168,7 +169,10 @@ public class CreateBackupPolicyRequest extends Request {
         } 
 
         /**
-         * The retention period for the backup data. By default, the backup data is retained for seven days. Valid values: 7 to 730. Unit: day.
+         * <p>The retention period for the backup data. By default, the backup data is retained for seven days. Valid values: 7 to 730. Unit: day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder backupRetentionPeriod(String backupRetentionPeriod) {
             this.putQueryParameter("BackupRetentionPeriod", backupRetentionPeriod);
@@ -177,7 +181,11 @@ public class CreateBackupPolicyRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp108z124a8o7****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -204,16 +212,20 @@ public class CreateBackupPolicyRequest extends Request {
         }
 
         /**
-         * The day of a week when the system regularly backs up data. If you specify multiple days of a week, separate them with commas (,). Valid values:
-         * <p>
+         * <p>The day of a week when the system regularly backs up data. If you specify multiple days of a week, separate them with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>Monday</strong></li>
+         * <li><strong>Tuesday</strong></li>
+         * <li><strong>Wednesday</strong></li>
+         * <li><strong>Thursday</strong></li>
+         * <li><strong>Friday</strong></li>
+         * <li><strong>Saturday</strong></li>
+         * <li><strong>Sunday</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Monday**
-         * *   **Tuesday**
-         * *   **Wednesday**
-         * *   **Thursday**
-         * *   **Friday**
-         * *   **Saturday**
-         * *   **Sunday**
+         * <strong>example:</strong>
+         * <p>Monday,Friday</p>
          */
         public Builder preferredBackupPeriod(String preferredBackupPeriod) {
             this.putQueryParameter("PreferredBackupPeriod", preferredBackupPeriod);
@@ -222,10 +234,12 @@ public class CreateBackupPolicyRequest extends Request {
         }
 
         /**
-         * The backup window. Specify the time in the ISO 8601 standard in the HH:mmZ-HH:mmZ format. The time must be in Coordinated Universal Time (UTC).
-         * <p>
+         * <p>The backup window. Specify the time in the ISO 8601 standard in the HH:mmZ-HH:mmZ format. The time must be in Coordinated Universal Time (UTC).</p>
+         * <p>For example, if you set the backup window to 00:00Z-01:00Z, the data of the cluster can be backed up from 08:00 (UTC+8) to 09:00 (UTC+8).</p>
+         * <p>This parameter is required.</p>
          * 
-         * For example, if you set the backup window to 00:00Z-01:00Z, the data of the cluster can be backed up from 08:00 (UTC+8) to 09:00 (UTC+8).
+         * <strong>example:</strong>
+         * <p>10:00Z-11:00Z</p>
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.putQueryParameter("PreferredBackupTime", preferredBackupTime);
@@ -234,7 +248,10 @@ public class CreateBackupPolicyRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

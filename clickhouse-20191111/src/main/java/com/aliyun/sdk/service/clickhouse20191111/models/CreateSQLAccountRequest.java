@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSQLAccountRequest} extends {@link RequestModel}
  *
  * <p>CreateSQLAccountRequest</p>
@@ -169,11 +170,11 @@ public class CreateSQLAccountRequest extends Request {
         } 
 
         /**
-         * The description of the database account.
-         * <p>
-         * 
-         * *   The description cannot start with http:// or https://.
-         * *   The description can be up to 256 characters in length or be an empty string.
+         * <p>The description of the database account.</p>
+         * <ul>
+         * <li>The description cannot start with http:// or https://.</li>
+         * <li>The description can be up to 256 characters in length or be an empty string.</li>
+         * </ul>
          */
         public Builder accountDescription(String accountDescription) {
             this.putQueryParameter("AccountDescription", accountDescription);
@@ -182,13 +183,17 @@ public class CreateSQLAccountRequest extends Request {
         }
 
         /**
-         * The name of the database account.
-         * <p>
+         * <p>The name of the database account.</p>
+         * <ul>
+         * <li>The name must be unique in the cluster.</li>
+         * <li>The name can contain lowercase letters, digits, or underscores (_).</li>
+         * <li>The name must start with a lowercase letter and end with a lowercase letter or a digit.</li>
+         * <li>The name must be 2 to 64 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name must be unique in the cluster.
-         * *   The name can contain lowercase letters, digits, or underscores (\_).
-         * *   The name must start with a lowercase letter and end with a lowercase letter or a digit.
-         * *   The name must be 2 to 64 characters in length.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -197,12 +202,16 @@ public class CreateSQLAccountRequest extends Request {
         }
 
         /**
-         * The password of the database account.
-         * <p>
+         * <p>The password of the database account.</p>
+         * <ul>
+         * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+         * <li>Special characters include ! @ # $ % ^ &amp; * ( ) _ + - =</li>
+         * <li>The password must be 8 to 32 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
-         * *   Special characters include ! @ # $ % ^ & \* ( ) \_ + - =
-         * *   The password must be 8 to 32 characters in length.
+         * <strong>example:</strong>
+         * <p>Test1234</p>
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -211,11 +220,15 @@ public class CreateSQLAccountRequest extends Request {
         }
 
         /**
-         * The type of the database account. Valid values:
-         * <p>
+         * <p>The type of the database account. Valid values:</p>
+         * <ul>
+         * <li><strong>Super</strong>: privileged account.</li>
+         * <li><strong>Normal</strong>: standard account.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Super**: privileged account.
-         * *   **Normal**: standard account.
+         * <strong>example:</strong>
+         * <p>Super</p>
          */
         public Builder accountType(String accountType) {
             this.putQueryParameter("AccountType", accountType);
@@ -224,7 +237,11 @@ public class CreateSQLAccountRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp1p816075e21****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

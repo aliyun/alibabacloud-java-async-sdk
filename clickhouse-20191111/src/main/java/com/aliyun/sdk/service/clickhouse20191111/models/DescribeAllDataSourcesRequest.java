@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAllDataSourcesRequest} extends {@link RequestModel}
  *
  * <p>DescribeAllDataSourcesRequest</p>
@@ -138,7 +139,11 @@ public class DescribeAllDataSourcesRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp108z124a8o7****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -183,7 +188,10 @@ public class DescribeAllDataSourcesRequest extends Request {
         }
 
         /**
-         * The database name.
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database</p>
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("SchemaName", schemaName);
@@ -192,7 +200,10 @@ public class DescribeAllDataSourcesRequest extends Request {
         }
 
         /**
-         * The table name.
+         * <p>The table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

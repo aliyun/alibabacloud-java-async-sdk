@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeProcessListRequest} extends {@link RequestModel}
  *
  * <p>DescribeProcessListRequest</p>
@@ -225,7 +226,11 @@ public class DescribeProcessListRequest extends Request {
         } 
 
         /**
-         * The cluster ID. You can call the [DescribeDBClusters](~~170879~~) operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.
+         * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp1190tj036am****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -234,7 +239,10 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * The ID of the query statement.
+         * <p>The ID of the query statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6c69d508-f05f-4c74-857c-d982b7e7e79f</p>
          */
         public Builder initialQueryId(String initialQueryId) {
             this.putQueryParameter("InitialQueryId", initialQueryId);
@@ -243,7 +251,10 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * The account that is used to log on to the database.
+         * <p>The account that is used to log on to the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder initialUser(String initialUser) {
             this.putQueryParameter("InitialUser", initialUser);
@@ -252,7 +263,10 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * The keyword that is used to query.
+         * <p>The keyword that is used to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>join</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -261,13 +275,16 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * Sorting by the specified column name. Valid values:
-         * <p>
+         * <p>Sorting by the specified column name. Valid values:</p>
+         * <ul>
+         * <li>elapsed: the cumulative execution time</li>
+         * <li>written_rows: the number of written rows</li>
+         * <li>read_rows: the number of read rows</li>
+         * <li>memory_usage: the memory usage</li>
+         * </ul>
          * 
-         * *   elapsed: the cumulative execution time
-         * *   written_rows: the number of written rows
-         * *   read_rows: the number of read rows
-         * *   memory_usage: the memory usage
+         * <strong>example:</strong>
+         * <p>elapsed</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -294,7 +311,10 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -303,12 +323,15 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page. Valid values:
-         * <p>
+         * <p>The number of entries returned per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong> (default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
          * 
-         * *   **30** (default)
-         * *   **50**
-         * *   **100**
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -317,7 +340,10 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * The minimum query duration. The minimum value is **1000**, and the default value is **1000**. Unit: milliseconds. Queries that last longer than this duration are returned in response parameters.
+         * <p>The minimum query duration. The minimum value is <strong>1000</strong>, and the default value is <strong>1000</strong>. Unit: milliseconds. Queries that last longer than this duration are returned in response parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder queryDurationMs(Integer queryDurationMs) {
             this.putQueryParameter("QueryDurationMs", queryDurationMs);
@@ -326,7 +352,10 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

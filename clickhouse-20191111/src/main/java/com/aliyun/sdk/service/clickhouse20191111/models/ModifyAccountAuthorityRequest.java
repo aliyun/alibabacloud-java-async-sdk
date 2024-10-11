@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAccountAuthorityRequest} extends {@link RequestModel}
  *
  * <p>ModifyAccountAuthorityRequest</p>
@@ -227,7 +228,11 @@ public class ModifyAccountAuthorityRequest extends Request {
         } 
 
         /**
-         * The name of the database account.
+         * <p>The name of the database account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -236,7 +241,11 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * The databases to which you want to grant permissions. Separate databases with commas (,).
+         * <p>The databases to which you want to grant permissions. Separate databases with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db1</p>
          */
         public Builder allowDatabases(String allowDatabases) {
             this.putQueryParameter("AllowDatabases", allowDatabases);
@@ -245,7 +254,11 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * The dictionaries to which you want to grant permissions. Separate dictionaries with commas (,).
+         * <p>The dictionaries to which you want to grant permissions. Separate dictionaries with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dt1</p>
          */
         public Builder allowDictionaries(String allowDictionaries) {
             this.putQueryParameter("AllowDictionaries", allowDictionaries);
@@ -254,7 +267,11 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp108z124a8o7****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -263,11 +280,15 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * Specifies whether to grant DDL permissions to the database account. Valid values:
-         * <p>
+         * <p>Specifies whether to grant DDL permissions to the database account. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: grants DDL permissions to the database account.</li>
+         * <li><strong>false</strong>: does not grant DDL permissions to the database account.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **true**: grants DDL permissions to the database account.
-         * *   **false**: does not grant DDL permissions to the database account.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ddlAuthority(Boolean ddlAuthority) {
             this.putQueryParameter("DdlAuthority", ddlAuthority);
@@ -276,11 +297,15 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * Specifies whether to grant DML permissions to the database account. Valid values:
-         * <p>
+         * <p>Specifies whether to grant DML permissions to the database account. Valid values:</p>
+         * <ul>
+         * <li><strong>all</strong></li>
+         * <li><strong>readonly,modify</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **all**
-         * *   **readonly,modify**
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder dmlAuthority(String dmlAuthority) {
             this.putQueryParameter("DmlAuthority", dmlAuthority);
@@ -307,7 +332,10 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -334,7 +362,10 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * All databases. Separate databases with commas (,).
+         * <p>All databases. Separate databases with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db1,db2</p>
          */
         public Builder totalDatabases(String totalDatabases) {
             this.putQueryParameter("TotalDatabases", totalDatabases);
@@ -343,7 +374,10 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * All dictionaries. Separate dictionaries with commas (,).
+         * <p>All dictionaries. Separate dictionaries with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dt1,dt2</p>
          */
         public Builder totalDictionaries(String totalDictionaries) {
             this.putQueryParameter("TotalDictionaries", totalDictionaries);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckClickhouseToRDSRequest} extends {@link RequestModel}
  *
  * <p>CheckClickhouseToRDSRequest</p>
@@ -243,7 +244,11 @@ public class CheckClickhouseToRDSRequest extends Request {
         } 
 
         /**
-         * The password of the account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.
+         * <p>The password of the account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456Aa</p>
          */
         public Builder ckPassword(String ckPassword) {
             this.putQueryParameter("CkPassword", ckPassword);
@@ -252,7 +257,11 @@ public class CheckClickhouseToRDSRequest extends Request {
         }
 
         /**
-         * The account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.
+         * <p>The account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1</p>
          */
         public Builder ckUserName(String ckUserName) {
             this.putQueryParameter("CkUserName", ckUserName);
@@ -261,7 +270,10 @@ public class CheckClickhouseToRDSRequest extends Request {
         }
 
         /**
-         * The port number of the ApsaraDB for ClickHouse cluster.
+         * <p>The port number of the ApsaraDB for ClickHouse cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8123</p>
          */
         public Builder clickhousePort(Long clickhousePort) {
             this.putQueryParameter("ClickhousePort", clickhousePort);
@@ -270,7 +282,11 @@ public class CheckClickhouseToRDSRequest extends Request {
         }
 
         /**
-         * The ID of the ApsaraDB for ClickHouse cluster.
+         * <p>The ID of the ApsaraDB for ClickHouse cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-2zeyy362b5sbm****</p>
          */
         public Builder dbClusterId(String dbClusterId) {
             this.putQueryParameter("DbClusterId", dbClusterId);
@@ -297,7 +313,11 @@ public class CheckClickhouseToRDSRequest extends Request {
         }
 
         /**
-         * The ID of the ApsaraDB RDS for MySQL instance.
+         * <p>The ID of the ApsaraDB RDS for MySQL instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp13v4bnwlu8j****</p>
          */
         public Builder rdsId(String rdsId) {
             this.putQueryParameter("RdsId", rdsId);
@@ -306,7 +326,11 @@ public class CheckClickhouseToRDSRequest extends Request {
         }
 
         /**
-         * The password of the account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.
+         * <p>The password of the account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456Rr</p>
          */
         public Builder rdsPassword(String rdsPassword) {
             this.putQueryParameter("RdsPassword", rdsPassword);
@@ -315,7 +339,10 @@ public class CheckClickhouseToRDSRequest extends Request {
         }
 
         /**
-         * The port number of the ApsaraDB RDS for MySQL instance.
+         * <p>The port number of the ApsaraDB RDS for MySQL instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder rdsPort(Long rdsPort) {
             this.putQueryParameter("RdsPort", rdsPort);
@@ -324,7 +351,11 @@ public class CheckClickhouseToRDSRequest extends Request {
         }
 
         /**
-         * The account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.
+         * <p>The account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user2</p>
          */
         public Builder rdsUserName(String rdsUserName) {
             this.putQueryParameter("RdsUserName", rdsUserName);
@@ -333,7 +364,11 @@ public class CheckClickhouseToRDSRequest extends Request {
         }
 
         /**
-         * The ID of the VPC in which the ApsaraDB RDS for MySQL instance is deployed.
+         * <p>The ID of the VPC in which the ApsaraDB RDS for MySQL instance is deployed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-wz9mm0qka0winfl47****</p>
          */
         public Builder rdsVpcId(String rdsVpcId) {
             this.putQueryParameter("RdsVpcId", rdsVpcId);
@@ -342,7 +377,11 @@ public class CheckClickhouseToRDSRequest extends Request {
         }
 
         /**
-         * The internal endpoint of the ApsaraDB RDS for MySQL instance.
+         * <p>The internal endpoint of the ApsaraDB RDS for MySQL instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp16t9h3999xb0a7****.mysql.rds.aliyuncs.com</p>
          */
         public Builder rdsVpcUrl(String rdsVpcUrl) {
             this.putQueryParameter("RdsVpcUrl", rdsVpcUrl);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeProcessListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeProcessListResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The queries.
+         * <p>The queries.</p>
          */
         public Builder processList(ProcessList processList) {
             this.processList = processList;
@@ -57,7 +58,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FD61BB0D-788A-5185-A8E3-1B90BA8F6F04</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeProcessListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeProcessListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProcessListResponseBody</p>
+     */
     public static class ResultSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InitialAddress")
         private String initialAddress;
@@ -157,7 +167,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
             private String queryStartTime; 
 
             /**
-             * The IP address of the client that initiates the query.
+             * <p>The IP address of the client that initiates the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>::ffff:10.1.XX.XX</p>
              */
             public Builder initialAddress(String initialAddress) {
                 this.initialAddress = initialAddress;
@@ -165,7 +178,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * The query ID.
+             * <p>The query ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2dd144fd-4230-4249-b15c-e63f964fbb5a</p>
              */
             public Builder initialQueryId(String initialQueryId) {
                 this.initialQueryId = initialQueryId;
@@ -173,7 +189,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * The database account.
+             * <p>The database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder initialUser(String initialUser) {
                 this.initialUser = initialUser;
@@ -181,7 +200,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement that is executed in the query.
+             * <p>The SQL statement that is executed in the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select * from test order by score limit 1;</p>
              */
             public Builder query(String query) {
                 this.query = query;
@@ -189,7 +211,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * The execution duration of the query. Unit: milliseconds.
+             * <p>The execution duration of the query. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder queryDurationMs(String queryDurationMs) {
                 this.queryDurationMs = queryDurationMs;
@@ -197,7 +222,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range to query. The value is in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in Coordinated Universal Time (UTC).
+             * <p>The beginning of the time range to query. The value is in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in Coordinated Universal Time (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-02-02T09:14:48Z</p>
              */
             public Builder queryStartTime(String queryStartTime) {
                 this.queryStartTime = queryStartTime;
@@ -211,6 +239,12 @@ public class DescribeProcessListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProcessListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProcessListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResultSet")
         private java.util.List < ResultSet> resultSet;
@@ -252,6 +286,12 @@ public class DescribeProcessListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProcessListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProcessListResponseBody</p>
+     */
     public static class Statistics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BytesRead")
         private Integer bytesRead;
@@ -303,7 +343,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
             private Integer rowsRead; 
 
             /**
-             * The size of the data that was scanned. Unit: bytes.
+             * <p>The size of the data that was scanned. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9141300000</p>
              */
             public Builder bytesRead(Integer bytesRead) {
                 this.bytesRead = bytesRead;
@@ -311,7 +354,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * The average response time.
+             * <p>The average response time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4156</p>
              */
             public Builder elapsedTime(Float elapsedTime) {
                 this.elapsedTime = elapsedTime;
@@ -319,7 +365,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of scanned rows.
+             * <p>The number of scanned rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000000</p>
              */
             public Builder rowsRead(Integer rowsRead) {
                 this.rowsRead = rowsRead;
@@ -333,6 +382,12 @@ public class DescribeProcessListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProcessListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProcessListResponseBody</p>
+     */
     public static class TableSchemaResultSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -372,7 +427,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The column name.
+             * <p>The column name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InitialUser</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -380,7 +438,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * The column type.
+             * <p>The column type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>String</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -394,6 +455,12 @@ public class DescribeProcessListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProcessListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProcessListResponseBody</p>
+     */
     public static class TableSchema extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResultSet")
         private java.util.List < TableSchemaResultSet> resultSet;
@@ -435,6 +502,12 @@ public class DescribeProcessListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProcessListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProcessListResponseBody</p>
+     */
     public static class ProcessList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private Data data;
@@ -510,7 +583,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             private TableSchema tableSchema; 
 
             /**
-             * The details of the query.
+             * <p>The details of the query.</p>
              */
             public Builder data(Data data) {
                 this.data = data;
@@ -518,7 +591,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows returned for the query.
+             * <p>The number of rows returned for the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1145700</p>
              */
             public Builder rows(String rows) {
                 this.rows = rows;
@@ -526,7 +602,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder rowsBeforeLimitAtLeast(String rowsBeforeLimitAtLeast) {
                 this.rowsBeforeLimitAtLeast = rowsBeforeLimitAtLeast;
@@ -534,7 +613,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * The statistics of the results.
+             * <p>The statistics of the results.</p>
              */
             public Builder statistics(Statistics statistics) {
                 this.statistics = statistics;
@@ -542,7 +621,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the columns.
+             * <p>Details of the columns.</p>
              */
             public Builder tableSchema(TableSchema tableSchema) {
                 this.tableSchema = tableSchema;

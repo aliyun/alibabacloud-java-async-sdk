@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSynDbsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSynDbsResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeSynDbsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class DescribeSynDbsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class DescribeSynDbsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7655F5F9-1313-5ABA-8516-F6EB79605A5F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class DescribeSynDbsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about data synchronization between the ApsaraDB for ClickHouse cluster and an ApsaraDB RDS for MySQL instance.
+         * <p>The information about data synchronization between the ApsaraDB for ClickHouse cluster and an ApsaraDB RDS for MySQL instance.</p>
          */
         public Builder synDbs(java.util.List < SynDbs> synDbs) {
             this.synDbs = synDbs;
@@ -117,7 +127,10 @@ public class DescribeSynDbsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeSynDbsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSynDbsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSynDbsResponseBody</p>
+     */
     public static class SynDbs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
@@ -217,9 +236,13 @@ public class DescribeSynDbsResponseBody extends TeaModel {
             private Boolean synStatus; 
 
             /**
-             * *   When the value **true** is returned for the **SynStatus** parameter, the system does not return the ErrorMsg parameter.
-             * <p>
-             * *   When the value **false** is returned for the **SynStatus** parameter, the system returns for the ErrorMsg parameter the cause why the data synchronization failed.
+             * <ul>
+             * <li>When the value <strong>true</strong> is returned for the <strong>SynStatus</strong> parameter, the system does not return the ErrorMsg parameter.</li>
+             * <li>When the value <strong>false</strong> is returned for the <strong>SynStatus</strong> parameter, the system returns for the ErrorMsg parameter the cause why the data synchronization failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ClickHouse exception, code: 49, host: 100.100.118.132, port: 49670; Code: 49, e.displayText() = DB::Exception: Logical error: there is no global context (version 20.8.17.25)n</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -227,7 +250,10 @@ public class DescribeSynDbsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ApsaraDB RDS for MySQL instance.
+             * <p>The ID of the ApsaraDB RDS for MySQL instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-wz9d11qg1j0h4****</p>
              */
             public Builder rdsId(String rdsId) {
                 this.rdsId = rdsId;
@@ -235,7 +261,10 @@ public class DescribeSynDbsResponseBody extends TeaModel {
             }
 
             /**
-             * The database account that is used to log on to the ApsaraDB RDS for MySQL instance.
+             * <p>The database account that is used to log on to the ApsaraDB RDS for MySQL instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder rdsUserName(String rdsUserName) {
                 this.rdsUserName = rdsUserName;
@@ -243,7 +272,10 @@ public class DescribeSynDbsResponseBody extends TeaModel {
             }
 
             /**
-             * The internal endpoint of the ApsaraDB RDS for MySQL instance.
+             * <p>The internal endpoint of the ApsaraDB RDS for MySQL instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp16t9h3999xb0a711****.mysql.rds.aliyuncs.com:3306</p>
              */
             public Builder rdsVpcUrl(String rdsVpcUrl) {
                 this.rdsVpcUrl = rdsVpcUrl;
@@ -251,7 +283,10 @@ public class DescribeSynDbsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database in the ApsaraDB RDS for MySQL instance.
+             * <p>The name of the database in the ApsaraDB RDS for MySQL instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>database</p>
              */
             public Builder synDb(String synDb) {
                 this.synDb = synDb;
@@ -259,11 +294,14 @@ public class DescribeSynDbsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the data synchronization succeeded. Valid values:
-             * <p>
+             * <p>Indicates whether the data synchronization succeeded. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The data synchronization succeeded.</li>
+             * <li><strong>false</strong>: The data synchronization failed.</li>
+             * </ul>
              * 
-             * *   **true**: The data synchronization succeeded.
-             * *   **false**: The data synchronization failed.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder synStatus(Boolean synStatus) {
                 this.synStatus = synStatus;
