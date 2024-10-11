@@ -113,7 +113,10 @@ public class UpdateDocumentRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-xxxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -122,7 +125,10 @@ public class UpdateDocumentRequest extends Request {
         }
 
         /**
-         * docId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder docId(String docId) {
             this.putBodyParameter("docId", docId);
@@ -131,7 +137,10 @@ public class UpdateDocumentRequest extends Request {
         }
 
         /**
-         * libraryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc123</p>
          */
         public Builder libraryId(String libraryId) {
             this.putBodyParameter("libraryId", libraryId);

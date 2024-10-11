@@ -70,7 +70,10 @@ public class DeleteLibraryRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-xxxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -79,7 +82,10 @@ public class DeleteLibraryRequest extends Request {
         }
 
         /**
-         * libraryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>skdfefxxx</p>
          */
         public Builder libraryId(String libraryId) {
             this.putQueryParameter("libraryId", libraryId);

@@ -171,7 +171,10 @@ public class CreateFinReportSummaryTaskRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-xxxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -180,7 +183,10 @@ public class CreateFinReportSummaryTaskRequest extends Request {
         }
 
         /**
-         * docId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder docId(String docId) {
             this.putBodyParameter("docId", docId);
@@ -189,7 +195,10 @@ public class CreateFinReportSummaryTaskRequest extends Request {
         }
 
         /**
-         * enableTable.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableTable(Boolean enableTable) {
             this.putBodyParameter("enableTable", enableTable);
@@ -216,7 +225,10 @@ public class CreateFinReportSummaryTaskRequest extends Request {
         }
 
         /**
-         * libraryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3akzl28vap</p>
          */
         public Builder libraryId(String libraryId) {
             this.putBodyParameter("libraryId", libraryId);
@@ -225,7 +237,10 @@ public class CreateFinReportSummaryTaskRequest extends Request {
         }
 
         /**
-         * modelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-max</p>
          */
         public Builder modelId(String modelId) {
             this.putBodyParameter("modelId", modelId);

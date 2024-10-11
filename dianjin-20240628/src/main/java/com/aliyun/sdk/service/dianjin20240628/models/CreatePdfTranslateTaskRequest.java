@@ -128,7 +128,10 @@ public class CreatePdfTranslateTaskRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-ik******RVYCKzt</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -137,7 +140,10 @@ public class CreatePdfTranslateTaskRequest extends Request {
         }
 
         /**
-         * docId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>873648346573245</p>
          */
         public Builder docId(String docId) {
             this.putBodyParameter("docId", docId);
@@ -155,7 +161,10 @@ public class CreatePdfTranslateTaskRequest extends Request {
         }
 
         /**
-         * libraryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cjshcxxxx</p>
          */
         public Builder libraryId(String libraryId) {
             this.putBodyParameter("libraryId", libraryId);
@@ -164,7 +173,10 @@ public class CreatePdfTranslateTaskRequest extends Request {
         }
 
         /**
-         * modelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-plus</p>
          */
         public Builder modelId(String modelId) {
             this.putBodyParameter("modelId", modelId);

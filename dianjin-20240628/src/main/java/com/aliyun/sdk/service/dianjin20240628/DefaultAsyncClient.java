@@ -40,6 +40,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of CreateDocsSummaryTask  CreateDocsSummaryTaskRequest
+     * @return CreateDocsSummaryTaskResponse
+     */
+    @Override
+    public CompletableFuture<CreateDocsSummaryTaskResponse> createDocsSummaryTask(CreateDocsSummaryTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateDocsSummaryTask").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/api/task/summary/docs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDocsSummaryTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateDocsSummaryTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateFinReportSummaryTask  CreateFinReportSummaryTaskRequest
+     * @return CreateFinReportSummaryTaskResponse
+     */
     @Override
     public CompletableFuture<CreateFinReportSummaryTaskResponse> createFinReportSummaryTask(CreateFinReportSummaryTaskRequest request) {
         try {
@@ -54,6 +76,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateLibrary  CreateLibraryRequest
+     * @return CreateLibraryResponse
+     */
     @Override
     public CompletableFuture<CreateLibraryResponse> createLibrary(CreateLibraryRequest request) {
         try {
@@ -68,6 +94,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreatePdfTranslateTask  CreatePdfTranslateTaskRequest
+     * @return CreatePdfTranslateTaskResponse
+     */
     @Override
     public CompletableFuture<CreatePdfTranslateTaskResponse> createPdfTranslateTask(CreatePdfTranslateTaskRequest request) {
         try {
@@ -82,6 +112,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreatePredefinedDocument  CreatePredefinedDocumentRequest
+     * @return CreatePredefinedDocumentResponse
+     */
     @Override
     public CompletableFuture<CreatePredefinedDocumentResponse> createPredefinedDocument(CreatePredefinedDocumentRequest request) {
         try {
@@ -96,6 +130,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateQualityCheckTask  CreateQualityCheckTaskRequest
+     * @return CreateQualityCheckTaskResponse
+     */
+    @Override
+    public CompletableFuture<CreateQualityCheckTaskResponse> createQualityCheckTask(CreateQualityCheckTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateQualityCheckTask").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/api/qualitycheck/task/submit").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateQualityCheckTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateQualityCheckTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteDocument  DeleteDocumentRequest
+     * @return DeleteDocumentResponse
+     */
     @Override
     public CompletableFuture<DeleteDocumentResponse> deleteDocument(DeleteDocumentRequest request) {
         try {
@@ -110,6 +166,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteLibrary  DeleteLibraryRequest
+     * @return DeleteLibraryResponse
+     */
     @Override
     public CompletableFuture<DeleteLibraryResponse> deleteLibrary(DeleteLibraryRequest request) {
         try {
@@ -124,6 +184,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EvictTask  EvictTaskRequest
+     * @return EvictTaskResponse
+     */
     @Override
     public CompletableFuture<EvictTaskResponse> evictTask(EvictTaskRequest request) {
         try {
@@ -138,6 +202,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAppConfig  GetAppConfigRequest
+     * @return GetAppConfigResponse
+     */
     @Override
     public CompletableFuture<GetAppConfigResponse> getAppConfig(GetAppConfigRequest request) {
         try {
@@ -152,6 +220,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDocumentChunkList  GetDocumentChunkListRequest
+     * @return GetDocumentChunkListResponse
+     */
     @Override
     public CompletableFuture<GetDocumentChunkListResponse> getDocumentChunkList(GetDocumentChunkListRequest request) {
         try {
@@ -166,6 +238,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDocumentList  GetDocumentListRequest
+     * @return GetDocumentListResponse
+     */
     @Override
     public CompletableFuture<GetDocumentListResponse> getDocumentList(GetDocumentListRequest request) {
         try {
@@ -180,6 +256,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDocumentUrl  GetDocumentUrlRequest
+     * @return GetDocumentUrlResponse
+     */
     @Override
     public CompletableFuture<GetDocumentUrlResponse> getDocumentUrl(GetDocumentUrlRequest request) {
         try {
@@ -194,6 +274,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetFilterDocumentList  GetFilterDocumentListRequest
+     * @return GetFilterDocumentListResponse
+     */
     @Override
     public CompletableFuture<GetFilterDocumentListResponse> getFilterDocumentList(GetFilterDocumentListRequest request) {
         try {
@@ -208,6 +292,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetHistoryListByBizType  GetHistoryListByBizTypeRequest
+     * @return GetHistoryListByBizTypeResponse
+     */
     @Override
     public CompletableFuture<GetHistoryListByBizTypeResponse> getHistoryListByBizType(GetHistoryListByBizTypeRequest request) {
         try {
@@ -222,6 +310,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetLibrary  GetLibraryRequest
+     * @return GetLibraryResponse
+     */
     @Override
     public CompletableFuture<GetLibraryResponse> getLibrary(GetLibraryRequest request) {
         try {
@@ -236,6 +328,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetLibraryList  GetLibraryListRequest
+     * @return GetLibraryListResponse
+     */
     @Override
     public CompletableFuture<GetLibraryListResponse> getLibraryList(GetLibraryListRequest request) {
         try {
@@ -250,6 +346,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetParseResult  GetParseResultRequest
+     * @return GetParseResultResponse
+     */
     @Override
     public CompletableFuture<GetParseResultResponse> getParseResult(GetParseResultRequest request) {
         try {
@@ -264,6 +364,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetQualityCheckTaskResult  GetQualityCheckTaskResultRequest
+     * @return GetQualityCheckTaskResultResponse
+     */
+    @Override
+    public CompletableFuture<GetQualityCheckTaskResultResponse> getQualityCheckTaskResult(GetQualityCheckTaskResultRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetQualityCheckTaskResult").setMethod(HttpMethod.GET).setPathRegex("/{workspaceId}/api/qualitycheck/task/query").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetQualityCheckTaskResultResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetQualityCheckTaskResultResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetSummaryTaskResult  GetSummaryTaskResultRequest
+     * @return GetSummaryTaskResultResponse
+     */
     @Override
     public CompletableFuture<GetSummaryTaskResultResponse> getSummaryTaskResult(GetSummaryTaskResultRequest request) {
         try {
@@ -278,6 +400,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTaskResult  GetTaskResultRequest
+     * @return GetTaskResultResponse
+     */
     @Override
     public CompletableFuture<GetTaskResultResponse> getTaskResult(GetTaskResultRequest request) {
         try {
@@ -292,6 +418,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTaskStatus  GetTaskStatusRequest
+     * @return GetTaskStatusResponse
+     */
     @Override
     public CompletableFuture<GetTaskStatusResponse> getTaskStatus(GetTaskStatusRequest request) {
         try {
@@ -306,6 +436,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InvokePlugin  InvokePluginRequest
+     * @return InvokePluginResponse
+     */
     @Override
     public CompletableFuture<InvokePluginResponse> invokePlugin(InvokePluginRequest request) {
         try {
@@ -320,6 +454,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PreviewDocument  PreviewDocumentRequest
+     * @return PreviewDocumentResponse
+     */
     @Override
     public CompletableFuture<PreviewDocumentResponse> previewDocument(PreviewDocumentRequest request) {
         try {
@@ -334,6 +472,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReIndex  ReIndexRequest
+     * @return ReIndexResponse
+     */
     @Override
     public CompletableFuture<ReIndexResponse> reIndex(ReIndexRequest request) {
         try {
@@ -348,6 +490,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecallDocument  RecallDocumentRequest
+     * @return RecallDocumentResponse
+     */
     @Override
     public CompletableFuture<RecallDocumentResponse> recallDocument(RecallDocumentRequest request) {
         try {
@@ -362,6 +508,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeIntention  RecognizeIntentionRequest
+     * @return RecognizeIntentionResponse
+     */
     @Override
     public CompletableFuture<RecognizeIntentionResponse> recognizeIntention(RecognizeIntentionRequest request) {
         try {
@@ -376,6 +526,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RunChatResultGeneration  RunChatResultGenerationRequest
+     * @return RunChatResultGenerationResponse
+     */
     @Override
     public CompletableFuture<RunChatResultGenerationResponse> runChatResultGeneration(RunChatResultGenerationRequest request) {
         try {
@@ -400,6 +554,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         return new ResponseIterable<>(iterator);
     }
 
+    /**
+     * @param request the request parameters of RunLibraryChatGeneration  RunLibraryChatGenerationRequest
+     * @return RunLibraryChatGenerationResponse
+     */
     @Override
     public CompletableFuture<RunLibraryChatGenerationResponse> runLibraryChatGeneration(RunLibraryChatGenerationRequest request) {
         try {
@@ -424,6 +582,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         return new ResponseIterable<>(iterator);
     }
 
+    /**
+     * @param request the request parameters of UpdateDocument  UpdateDocumentRequest
+     * @return UpdateDocumentResponse
+     */
     @Override
     public CompletableFuture<UpdateDocumentResponse> updateDocument(UpdateDocumentRequest request) {
         try {
@@ -438,6 +600,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateLibrary  UpdateLibraryRequest
+     * @return UpdateLibraryResponse
+     */
     @Override
     public CompletableFuture<UpdateLibraryResponse> updateLibrary(UpdateLibraryRequest request) {
         try {

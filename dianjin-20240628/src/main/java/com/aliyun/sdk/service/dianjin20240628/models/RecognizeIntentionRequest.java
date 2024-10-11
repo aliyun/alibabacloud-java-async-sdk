@@ -169,7 +169,10 @@ public class RecognizeIntentionRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-xxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -187,7 +190,10 @@ public class RecognizeIntentionRequest extends Request {
         }
 
         /**
-         * bizType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>common</p>
          */
         public Builder bizType(String bizType) {
             this.putBodyParameter("bizType", bizType);
@@ -196,7 +202,7 @@ public class RecognizeIntentionRequest extends Request {
         }
 
         /**
-         * conversation.
+         * <p>This parameter is required.</p>
          */
         public Builder conversation(String conversation) {
             this.putBodyParameter("conversation", conversation);

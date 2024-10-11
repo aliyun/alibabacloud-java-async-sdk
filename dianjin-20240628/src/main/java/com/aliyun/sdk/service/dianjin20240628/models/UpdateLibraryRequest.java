@@ -112,7 +112,10 @@ public class UpdateLibraryRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-xxxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -139,7 +142,10 @@ public class UpdateLibraryRequest extends Request {
         }
 
         /**
-         * libraryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsfbashdbb</p>
          */
         public Builder libraryId(String libraryId) {
             this.putBodyParameter("libraryId", libraryId);

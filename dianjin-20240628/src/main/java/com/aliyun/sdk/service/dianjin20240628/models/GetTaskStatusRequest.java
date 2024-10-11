@@ -70,7 +70,7 @@ public class GetTaskStatusRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>This parameter is required.</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -79,7 +79,7 @@ public class GetTaskStatusRequest extends Request {
         }
 
         /**
-         * taskId.
+         * <p>This parameter is required.</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("taskId", taskId);

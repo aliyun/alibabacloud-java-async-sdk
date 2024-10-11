@@ -99,7 +99,10 @@ public class CreateLibraryRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-ik******RVYCKzt</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -108,7 +111,7 @@ public class CreateLibraryRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>This parameter is required.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -126,7 +129,7 @@ public class CreateLibraryRequest extends Request {
         }
 
         /**
-         * libraryName.
+         * <p>This parameter is required.</p>
          */
         public Builder libraryName(String libraryName) {
             this.putBodyParameter("libraryName", libraryName);

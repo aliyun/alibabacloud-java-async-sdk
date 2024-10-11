@@ -112,7 +112,10 @@ public class RecallDocumentRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-xxxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -130,7 +133,7 @@ public class RecallDocumentRequest extends Request {
         }
 
         /**
-         * query.
+         * <p>This parameter is required.</p>
          */
         public Builder query(String query) {
             this.putBodyParameter("query", query);
@@ -495,7 +498,10 @@ public class RecallDocumentRequest extends Request {
             }
 
             /**
-             * libraryId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sdbjhvs</p>
              */
             public Builder libraryId(String libraryId) {
                 this.libraryId = libraryId;

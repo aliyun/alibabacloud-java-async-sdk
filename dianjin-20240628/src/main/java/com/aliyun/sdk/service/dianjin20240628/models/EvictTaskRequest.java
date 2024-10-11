@@ -70,7 +70,10 @@ public class EvictTaskRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-xxxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -79,7 +82,10 @@ public class EvictTaskRequest extends Request {
         }
 
         /**
-         * taskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17071319</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("taskId", taskId);

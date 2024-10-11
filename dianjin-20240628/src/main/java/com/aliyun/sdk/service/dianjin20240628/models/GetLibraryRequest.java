@@ -78,7 +78,10 @@ public class GetLibraryRequest extends Request {
         }
 
         /**
-         * libraryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cjshcxxxx</p>
          */
         public Builder libraryId(String libraryId) {
             this.putQueryParameter("libraryId", libraryId);

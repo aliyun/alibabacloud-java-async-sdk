@@ -70,7 +70,10 @@ public class ReIndexRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-xxxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -79,7 +82,10 @@ public class ReIndexRequest extends Request {
         }
 
         /**
-         * documentId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8326472354762354</p>
          */
         public Builder documentId(String documentId) {
             this.putQueryParameter("documentId", documentId);

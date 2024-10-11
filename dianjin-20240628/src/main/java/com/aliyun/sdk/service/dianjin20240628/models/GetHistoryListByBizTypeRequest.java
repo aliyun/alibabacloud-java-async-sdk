@@ -113,7 +113,10 @@ public class GetHistoryListByBizTypeRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-xxxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -122,7 +125,10 @@ public class GetHistoryListByBizTypeRequest extends Request {
         }
 
         /**
-         * bizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GysYBsxx</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("bizId", bizId);
@@ -131,7 +137,10 @@ public class GetHistoryListByBizTypeRequest extends Request {
         }
 
         /**
-         * bizType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LibraryChat</p>
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("bizType", bizType);

@@ -141,7 +141,10 @@ public class RunChatResultGenerationRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-xxxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -159,7 +162,7 @@ public class RunChatResultGenerationRequest extends Request {
         }
 
         /**
-         * messages.
+         * <p>This parameter is required.</p>
          */
         public Builder messages(java.util.List < Messages> messages) {
             this.putBodyParameter("messages", messages);
@@ -168,7 +171,10 @@ public class RunChatResultGenerationRequest extends Request {
         }
 
         /**
-         * modelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-max</p>
          */
         public Builder modelId(String modelId) {
             this.putBodyParameter("modelId", modelId);

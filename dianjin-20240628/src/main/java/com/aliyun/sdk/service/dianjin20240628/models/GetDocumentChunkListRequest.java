@@ -169,7 +169,10 @@ public class GetDocumentChunkListRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-xxxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -187,7 +190,10 @@ public class GetDocumentChunkListRequest extends Request {
         }
 
         /**
-         * docId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>182364872346</p>
          */
         public Builder docId(String docId) {
             this.putBodyParameter("docId", docId);
@@ -196,7 +202,10 @@ public class GetDocumentChunkListRequest extends Request {
         }
 
         /**
-         * libraryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsjgfdjgfxxx</p>
          */
         public Builder libraryId(String libraryId) {
             this.putBodyParameter("libraryId", libraryId);

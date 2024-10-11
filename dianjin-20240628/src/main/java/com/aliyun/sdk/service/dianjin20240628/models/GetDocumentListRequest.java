@@ -112,7 +112,10 @@ public class GetDocumentListRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-xxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -121,7 +124,10 @@ public class GetDocumentListRequest extends Request {
         }
 
         /**
-         * libraryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3akzl28vap</p>
          */
         public Builder libraryId(String libraryId) {
             this.putQueryParameter("libraryId", libraryId);

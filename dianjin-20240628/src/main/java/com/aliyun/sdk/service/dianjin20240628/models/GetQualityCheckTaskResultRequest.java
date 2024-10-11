@@ -7,32 +7,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetDocumentUrlRequest} extends {@link RequestModel}
+ * {@link GetQualityCheckTaskResultRequest} extends {@link RequestModel}
  *
- * <p>GetDocumentUrlRequest</p>
+ * <p>GetQualityCheckTaskResultRequest</p>
  */
-public class GetDocumentUrlRequest extends Request {
+public class GetQualityCheckTaskResultRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("workspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("documentId")
+    @com.aliyun.core.annotation.NameInMap("taskId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String documentId;
+    private String taskId;
 
-    private GetDocumentUrlRequest(Builder builder) {
+    private GetQualityCheckTaskResultRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
-        this.documentId = builder.documentId;
+        this.taskId = builder.taskId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetDocumentUrlRequest create() {
+    public static GetQualityCheckTaskResultRequest create() {
         return builder().build();
     }
 
@@ -49,24 +49,24 @@ public class GetDocumentUrlRequest extends Request {
     }
 
     /**
-     * @return documentId
+     * @return taskId
      */
-    public String getDocumentId() {
-        return this.documentId;
+    public String getTaskId() {
+        return this.taskId;
     }
 
-    public static final class Builder extends Request.Builder<GetDocumentUrlRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetQualityCheckTaskResultRequest, Builder> {
         private String workspaceId; 
-        private String documentId; 
+        private String taskId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetDocumentUrlRequest request) {
+        private Builder(GetQualityCheckTaskResultRequest request) {
             super(request);
             this.workspaceId = request.workspaceId;
-            this.documentId = request.documentId;
+            this.taskId = request.taskId;
         } 
 
         /**
@@ -85,17 +85,17 @@ public class GetDocumentUrlRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>12681367362</p>
+         * <p>17071319</p>
          */
-        public Builder documentId(String documentId) {
-            this.putQueryParameter("documentId", documentId);
-            this.documentId = documentId;
+        public Builder taskId(String taskId) {
+            this.putQueryParameter("taskId", taskId);
+            this.taskId = taskId;
             return this;
         }
 
         @Override
-        public GetDocumentUrlRequest build() {
-            return new GetDocumentUrlRequest(this);
+        public GetQualityCheckTaskResultRequest build() {
+            return new GetQualityCheckTaskResultRequest(this);
         } 
 
     } 

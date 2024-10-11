@@ -310,7 +310,10 @@ public class RunLibraryChatGenerationRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-xxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -364,7 +367,10 @@ public class RunLibraryChatGenerationRequest extends Request {
         }
 
         /**
-         * libraryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3akzl28vap</p>
          */
         public Builder libraryId(String libraryId) {
             this.putBodyParameter("libraryId", libraryId);
@@ -373,7 +379,10 @@ public class RunLibraryChatGenerationRequest extends Request {
         }
 
         /**
-         * llmType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-max</p>
          */
         public Builder llmType(String llmType) {
             this.putBodyParameter("llmType", llmType);
@@ -391,7 +400,7 @@ public class RunLibraryChatGenerationRequest extends Request {
         }
 
         /**
-         * query.
+         * <p>This parameter is required.</p>
          */
         public Builder query(String query) {
             this.putBodyParameter("query", query);

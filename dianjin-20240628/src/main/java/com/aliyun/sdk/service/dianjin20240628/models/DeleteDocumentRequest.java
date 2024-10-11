@@ -85,7 +85,10 @@ public class DeleteDocumentRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-xxxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -94,7 +97,7 @@ public class DeleteDocumentRequest extends Request {
         }
 
         /**
-         * docIds.
+         * <p>This parameter is required.</p>
          */
         public Builder docIds(java.util.List < String > docIds) {
             this.putBodyParameter("docIds", docIds);
@@ -103,7 +106,10 @@ public class DeleteDocumentRequest extends Request {
         }
 
         /**
-         * libraryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3akzl28vap</p>
          */
         public Builder libraryId(String libraryId) {
             this.putBodyParameter("libraryId", libraryId);
