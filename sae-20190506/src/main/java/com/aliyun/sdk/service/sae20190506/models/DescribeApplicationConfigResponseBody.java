@@ -643,6 +643,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableAhas")
         private String enableAhas;
 
+        @com.aliyun.core.annotation.NameInMap("EnableCpuBurst")
+        private String enableCpuBurst;
+
         @com.aliyun.core.annotation.NameInMap("EnableGreyTagRoute")
         private Boolean enableGreyTagRoute;
 
@@ -822,6 +825,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.dotnet = builder.dotnet;
             this.edasContainerVersion = builder.edasContainerVersion;
             this.enableAhas = builder.enableAhas;
+            this.enableCpuBurst = builder.enableCpuBurst;
             this.enableGreyTagRoute = builder.enableGreyTagRoute;
             this.enableIdle = builder.enableIdle;
             this.enableNewArms = builder.enableNewArms;
@@ -996,6 +1000,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         public String getEnableAhas() {
             return this.enableAhas;
+        }
+
+        /**
+         * @return enableCpuBurst
+         */
+        public String getEnableCpuBurst() {
+            return this.enableCpuBurst;
         }
 
         /**
@@ -1393,6 +1404,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String dotnet; 
             private String edasContainerVersion; 
             private String enableAhas; 
+            private String enableCpuBurst; 
             private Boolean enableGreyTagRoute; 
             private Boolean enableIdle; 
             private Boolean enableNewArms; 
@@ -1643,6 +1655,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              */
             public Builder enableAhas(String enableAhas) {
                 this.enableAhas = enableAhas;
+                return this;
+            }
+
+            /**
+             * EnableCpuBurst.
+             */
+            public Builder enableCpuBurst(String enableCpuBurst) {
+                this.enableCpuBurst = enableCpuBurst;
                 return this;
             }
 

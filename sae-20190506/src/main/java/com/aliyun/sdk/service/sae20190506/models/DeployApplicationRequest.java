@@ -78,6 +78,10 @@ public class DeployApplicationRequest extends Request {
     private String enableAhas;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableCpuBurst")
+    private Boolean enableCpuBurst;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableGreyTagRoute")
     private Boolean enableGreyTagRoute;
 
@@ -280,6 +284,7 @@ public class DeployApplicationRequest extends Request {
         this.dotnet = builder.dotnet;
         this.edasContainerVersion = builder.edasContainerVersion;
         this.enableAhas = builder.enableAhas;
+        this.enableCpuBurst = builder.enableCpuBurst;
         this.enableGreyTagRoute = builder.enableGreyTagRoute;
         this.enableNewArms = builder.enableNewArms;
         this.envs = builder.envs;
@@ -451,6 +456,13 @@ public class DeployApplicationRequest extends Request {
      */
     public String getEnableAhas() {
         return this.enableAhas;
+    }
+
+    /**
+     * @return enableCpuBurst
+     */
+    public Boolean getEnableCpuBurst() {
+        return this.enableCpuBurst;
     }
 
     /**
@@ -792,6 +804,7 @@ public class DeployApplicationRequest extends Request {
         private String dotnet; 
         private String edasContainerVersion; 
         private String enableAhas; 
+        private Boolean enableCpuBurst; 
         private Boolean enableGreyTagRoute; 
         private Boolean enableNewArms; 
         private String envs; 
@@ -861,6 +874,7 @@ public class DeployApplicationRequest extends Request {
             this.dotnet = request.dotnet;
             this.edasContainerVersion = request.edasContainerVersion;
             this.enableAhas = request.enableAhas;
+            this.enableCpuBurst = request.enableCpuBurst;
             this.enableGreyTagRoute = request.enableGreyTagRoute;
             this.enableNewArms = request.enableNewArms;
             this.envs = request.envs;
@@ -1132,6 +1146,15 @@ public class DeployApplicationRequest extends Request {
         public Builder enableAhas(String enableAhas) {
             this.putQueryParameter("EnableAhas", enableAhas);
             this.enableAhas = enableAhas;
+            return this;
+        }
+
+        /**
+         * EnableCpuBurst.
+         */
+        public Builder enableCpuBurst(Boolean enableCpuBurst) {
+            this.putQueryParameter("EnableCpuBurst", enableCpuBurst);
+            this.enableCpuBurst = enableCpuBurst;
             return this;
         }
 

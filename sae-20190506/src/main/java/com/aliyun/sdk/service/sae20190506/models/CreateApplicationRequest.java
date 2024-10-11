@@ -78,6 +78,10 @@ public class CreateApplicationRequest extends Request {
     private String edasContainerVersion;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableCpuBurst")
+    private Boolean enableCpuBurst;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableEbpf")
     private String enableEbpf;
 
@@ -286,6 +290,7 @@ public class CreateApplicationRequest extends Request {
         this.deploy = builder.deploy;
         this.dotnet = builder.dotnet;
         this.edasContainerVersion = builder.edasContainerVersion;
+        this.enableCpuBurst = builder.enableCpuBurst;
         this.enableEbpf = builder.enableEbpf;
         this.enableNewArms = builder.enableNewArms;
         this.envs = builder.envs;
@@ -458,6 +463,13 @@ public class CreateApplicationRequest extends Request {
      */
     public String getEdasContainerVersion() {
         return this.edasContainerVersion;
+    }
+
+    /**
+     * @return enableCpuBurst
+     */
+    public Boolean getEnableCpuBurst() {
+        return this.enableCpuBurst;
     }
 
     /**
@@ -806,6 +818,7 @@ public class CreateApplicationRequest extends Request {
         private Boolean deploy; 
         private String dotnet; 
         private String edasContainerVersion; 
+        private Boolean enableCpuBurst; 
         private String enableEbpf; 
         private Boolean enableNewArms; 
         private String envs; 
@@ -876,6 +889,7 @@ public class CreateApplicationRequest extends Request {
             this.deploy = request.deploy;
             this.dotnet = request.dotnet;
             this.edasContainerVersion = request.edasContainerVersion;
+            this.enableCpuBurst = request.enableCpuBurst;
             this.enableEbpf = request.enableEbpf;
             this.enableNewArms = request.enableNewArms;
             this.envs = request.envs;
@@ -1106,6 +1120,15 @@ public class CreateApplicationRequest extends Request {
         public Builder edasContainerVersion(String edasContainerVersion) {
             this.putQueryParameter("EdasContainerVersion", edasContainerVersion);
             this.edasContainerVersion = edasContainerVersion;
+            return this;
+        }
+
+        /**
+         * EnableCpuBurst.
+         */
+        public Builder enableCpuBurst(Boolean enableCpuBurst) {
+            this.putQueryParameter("EnableCpuBurst", enableCpuBurst);
+            this.enableCpuBurst = enableCpuBurst;
             return this;
         }
 
