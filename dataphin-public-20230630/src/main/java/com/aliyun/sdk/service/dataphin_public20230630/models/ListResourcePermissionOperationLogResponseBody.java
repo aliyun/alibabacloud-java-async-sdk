@@ -1,0 +1,1062 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.dataphin_public20230630.models;
+
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link ListResourcePermissionOperationLogResponseBody} extends {@link TeaModel}
+ *
+ * <p>ListResourcePermissionOperationLogResponseBody</p>
+ */
+public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Code")
+    private String code;
+
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
+    private Integer httpStatusCode;
+
+    @com.aliyun.core.annotation.NameInMap("Message")
+    private String message;
+
+    @com.aliyun.core.annotation.NameInMap("PageResult")
+    private PageResult pageResult;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("Success")
+    private Boolean success;
+
+    private ListResourcePermissionOperationLogResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.httpStatusCode = builder.httpStatusCode;
+        this.message = builder.message;
+        this.pageResult = builder.pageResult;
+        this.requestId = builder.requestId;
+        this.success = builder.success;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ListResourcePermissionOperationLogResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return httpStatusCode
+     */
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
+     * @return pageResult
+     */
+    public PageResult getPageResult() {
+        return this.pageResult;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public static final class Builder {
+        private String code; 
+        private Integer httpStatusCode; 
+        private String message; 
+        private PageResult pageResult; 
+        private String requestId; 
+        private Boolean success; 
+
+        /**
+         * Code.
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * HttpStatusCode.
+         */
+        public Builder httpStatusCode(Integer httpStatusCode) {
+            this.httpStatusCode = httpStatusCode;
+            return this;
+        }
+
+        /**
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * PageResult.
+         */
+        public Builder pageResult(PageResult pageResult) {
+            this.pageResult = pageResult;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
+            return this;
+        }
+
+        public ListResourcePermissionOperationLogResponseBody build() {
+            return new ListResourcePermissionOperationLogResponseBody(this);
+        } 
+
+    } 
+
+    /**
+     * 
+     * {@link ListResourcePermissionOperationLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourcePermissionOperationLogResponseBody</p>
+     */
+    public static class Account extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private String id;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private Account(Builder builder) {
+            this.id = builder.id;
+            this.name = builder.name;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Account create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String id; 
+            private String name; 
+            private String type; 
+
+            /**
+             * Id.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Account build() {
+                return new Account(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListResourcePermissionOperationLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourcePermissionOperationLogResponseBody</p>
+     */
+    public static class Period extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EndTime")
+        private String endTime;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private Period(Builder builder) {
+            this.endTime = builder.endTime;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Period create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endTime
+         */
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String endTime; 
+            private String type; 
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(String endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Period build() {
+                return new Period(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListResourcePermissionOperationLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourcePermissionOperationLogResponseBody</p>
+     */
+    public static class BizUnitInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
+        private String displayName;
+
+        @com.aliyun.core.annotation.NameInMap("Env")
+        private String env;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private String id;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private BizUnitInfo(Builder builder) {
+            this.displayName = builder.displayName;
+            this.env = builder.env;
+            this.id = builder.id;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BizUnitInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return displayName
+         */
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        /**
+         * @return env
+         */
+        public String getEnv() {
+            return this.env;
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String displayName; 
+            private String env; 
+            private String id; 
+            private String name; 
+
+            /**
+             * DisplayName.
+             */
+            public Builder displayName(String displayName) {
+                this.displayName = displayName;
+                return this;
+            }
+
+            /**
+             * Env.
+             */
+            public Builder env(String env) {
+                this.env = env;
+                return this;
+            }
+
+            /**
+             * <p>Id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>121323</p>
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public BizUnitInfo build() {
+                return new BizUnitInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListResourcePermissionOperationLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourcePermissionOperationLogResponseBody</p>
+     */
+    public static class ProjectInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
+        private String displayName;
+
+        @com.aliyun.core.annotation.NameInMap("Env")
+        private String env;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private Long id;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private ProjectInfo(Builder builder) {
+            this.displayName = builder.displayName;
+            this.env = builder.env;
+            this.id = builder.id;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ProjectInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return displayName
+         */
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        /**
+         * @return env
+         */
+        public String getEnv() {
+            return this.env;
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String displayName; 
+            private String env; 
+            private Long id; 
+            private String name; 
+
+            /**
+             * DisplayName.
+             */
+            public Builder displayName(String displayName) {
+                this.displayName = displayName;
+                return this;
+            }
+
+            /**
+             * Env.
+             */
+            public Builder env(String env) {
+                this.env = env;
+                return this;
+            }
+
+            /**
+             * <p>Id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>121323</p>
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public ProjectInfo build() {
+                return new ProjectInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListResourcePermissionOperationLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourcePermissionOperationLogResponseBody</p>
+     */
+    public static class ResourceInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BizUnitInfo")
+        private BizUnitInfo bizUnitInfo;
+
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
+        private String displayName;
+
+        @com.aliyun.core.annotation.NameInMap("Env")
+        private String env;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private String id;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("ProjectInfo")
+        private ProjectInfo projectInfo;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private ResourceInfo(Builder builder) {
+            this.bizUnitInfo = builder.bizUnitInfo;
+            this.displayName = builder.displayName;
+            this.env = builder.env;
+            this.id = builder.id;
+            this.name = builder.name;
+            this.projectInfo = builder.projectInfo;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bizUnitInfo
+         */
+        public BizUnitInfo getBizUnitInfo() {
+            return this.bizUnitInfo;
+        }
+
+        /**
+         * @return displayName
+         */
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        /**
+         * @return env
+         */
+        public String getEnv() {
+            return this.env;
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return projectInfo
+         */
+        public ProjectInfo getProjectInfo() {
+            return this.projectInfo;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private BizUnitInfo bizUnitInfo; 
+            private String displayName; 
+            private String env; 
+            private String id; 
+            private String name; 
+            private ProjectInfo projectInfo; 
+            private String type; 
+
+            /**
+             * BizUnitInfo.
+             */
+            public Builder bizUnitInfo(BizUnitInfo bizUnitInfo) {
+                this.bizUnitInfo = bizUnitInfo;
+                return this;
+            }
+
+            /**
+             * DisplayName.
+             */
+            public Builder displayName(String displayName) {
+                this.displayName = displayName;
+                return this;
+            }
+
+            /**
+             * Env.
+             */
+            public Builder env(String env) {
+                this.env = env;
+                return this;
+            }
+
+            /**
+             * <p>Id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>121323</p>
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * ProjectInfo.
+             */
+            public Builder projectInfo(ProjectInfo projectInfo) {
+                this.projectInfo = projectInfo;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public ResourceInfo build() {
+                return new ResourceInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListResourcePermissionOperationLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourcePermissionOperationLogResponseBody</p>
+     */
+    public static class TargetAccount extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private String id;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private TargetAccount(Builder builder) {
+            this.id = builder.id;
+            this.name = builder.name;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TargetAccount create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String id; 
+            private String name; 
+            private String type; 
+
+            /**
+             * <p>Id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>121323</p>
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public TargetAccount build() {
+                return new TargetAccount(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListResourcePermissionOperationLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourcePermissionOperationLogResponseBody</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Account")
+        private Account account;
+
+        @com.aliyun.core.annotation.NameInMap("AuthScope")
+        private String authScope;
+
+        @com.aliyun.core.annotation.NameInMap("OperateId")
+        private Long operateId;
+
+        @com.aliyun.core.annotation.NameInMap("OperateTime")
+        private Long operateTime;
+
+        @com.aliyun.core.annotation.NameInMap("OperateType")
+        private String operateType;
+
+        @com.aliyun.core.annotation.NameInMap("Period")
+        private Period period;
+
+        @com.aliyun.core.annotation.NameInMap("Reason")
+        private String reason;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceInfo")
+        private ResourceInfo resourceInfo;
+
+        @com.aliyun.core.annotation.NameInMap("TargetAccount")
+        private TargetAccount targetAccount;
+
+        private Data(Builder builder) {
+            this.account = builder.account;
+            this.authScope = builder.authScope;
+            this.operateId = builder.operateId;
+            this.operateTime = builder.operateTime;
+            this.operateType = builder.operateType;
+            this.period = builder.period;
+            this.reason = builder.reason;
+            this.resourceInfo = builder.resourceInfo;
+            this.targetAccount = builder.targetAccount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return account
+         */
+        public Account getAccount() {
+            return this.account;
+        }
+
+        /**
+         * @return authScope
+         */
+        public String getAuthScope() {
+            return this.authScope;
+        }
+
+        /**
+         * @return operateId
+         */
+        public Long getOperateId() {
+            return this.operateId;
+        }
+
+        /**
+         * @return operateTime
+         */
+        public Long getOperateTime() {
+            return this.operateTime;
+        }
+
+        /**
+         * @return operateType
+         */
+        public String getOperateType() {
+            return this.operateType;
+        }
+
+        /**
+         * @return period
+         */
+        public Period getPeriod() {
+            return this.period;
+        }
+
+        /**
+         * @return reason
+         */
+        public String getReason() {
+            return this.reason;
+        }
+
+        /**
+         * @return resourceInfo
+         */
+        public ResourceInfo getResourceInfo() {
+            return this.resourceInfo;
+        }
+
+        /**
+         * @return targetAccount
+         */
+        public TargetAccount getTargetAccount() {
+            return this.targetAccount;
+        }
+
+        public static final class Builder {
+            private Account account; 
+            private String authScope; 
+            private Long operateId; 
+            private Long operateTime; 
+            private String operateType; 
+            private Period period; 
+            private String reason; 
+            private ResourceInfo resourceInfo; 
+            private TargetAccount targetAccount; 
+
+            /**
+             * Account.
+             */
+            public Builder account(Account account) {
+                this.account = account;
+                return this;
+            }
+
+            /**
+             * AuthScope.
+             */
+            public Builder authScope(String authScope) {
+                this.authScope = authScope;
+                return this;
+            }
+
+            /**
+             * OperateId.
+             */
+            public Builder operateId(Long operateId) {
+                this.operateId = operateId;
+                return this;
+            }
+
+            /**
+             * OperateTime.
+             */
+            public Builder operateTime(Long operateTime) {
+                this.operateTime = operateTime;
+                return this;
+            }
+
+            /**
+             * OperateType.
+             */
+            public Builder operateType(String operateType) {
+                this.operateType = operateType;
+                return this;
+            }
+
+            /**
+             * Period.
+             */
+            public Builder period(Period period) {
+                this.period = period;
+                return this;
+            }
+
+            /**
+             * Reason.
+             */
+            public Builder reason(String reason) {
+                this.reason = reason;
+                return this;
+            }
+
+            /**
+             * ResourceInfo.
+             */
+            public Builder resourceInfo(ResourceInfo resourceInfo) {
+                this.resourceInfo = resourceInfo;
+                return this;
+            }
+
+            /**
+             * TargetAccount.
+             */
+            public Builder targetAccount(TargetAccount targetAccount) {
+                this.targetAccount = targetAccount;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListResourcePermissionOperationLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourcePermissionOperationLogResponseBody</p>
+     */
+    public static class PageResult extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Data")
+        private java.util.List < Data> data;
+
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
+        private Long totalCount;
+
+        private PageResult(Builder builder) {
+            this.data = builder.data;
+            this.totalCount = builder.totalCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PageResult create() {
+            return builder().build();
+        }
+
+        /**
+         * @return data
+         */
+        public java.util.List < Data> getData() {
+            return this.data;
+        }
+
+        /**
+         * @return totalCount
+         */
+        public Long getTotalCount() {
+            return this.totalCount;
+        }
+
+        public static final class Builder {
+            private java.util.List < Data> data; 
+            private Long totalCount; 
+
+            /**
+             * Data.
+             */
+            public Builder data(java.util.List < Data> data) {
+                this.data = data;
+                return this;
+            }
+
+            /**
+             * TotalCount.
+             */
+            public Builder totalCount(Long totalCount) {
+                this.totalCount = totalCount;
+                return this;
+            }
+
+            public PageResult build() {
+                return new PageResult(this);
+            } 
+
+        } 
+
+    }
+}
