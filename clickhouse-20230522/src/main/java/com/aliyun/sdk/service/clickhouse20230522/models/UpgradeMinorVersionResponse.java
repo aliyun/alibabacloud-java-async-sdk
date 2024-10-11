@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ResetAccountPasswordResponse} extends {@link TeaModel}
+ * {@link UpgradeMinorVersionResponse} extends {@link TeaModel}
  *
- * <p>ResetAccountPasswordResponse</p>
+ * <p>UpgradeMinorVersionResponse</p>
  */
-public class ResetAccountPasswordResponse extends Response {
+public class UpgradeMinorVersionResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class ResetAccountPasswordResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ResetAccountPasswordResponseBody body;
+    private UpgradeMinorVersionResponseBody body;
 
-    private ResetAccountPasswordResponse(BuilderImpl builder) {
+    private UpgradeMinorVersionResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ResetAccountPasswordResponse create() {
+    public static UpgradeMinorVersionResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class ResetAccountPasswordResponse extends Response {
     /**
      * @return body
      */
-    public ResetAccountPasswordResponseBody getBody() {
+    public UpgradeMinorVersionResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ResetAccountPasswordResponse, Builder> {
+    public interface Builder extends Response.Builder<UpgradeMinorVersionResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ResetAccountPasswordResponseBody body);
+        Builder body(UpgradeMinorVersionResponseBody body);
 
         @Override
-        ResetAccountPasswordResponse build();
+        UpgradeMinorVersionResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ResetAccountPasswordResponse, Builder>
+            extends Response.BuilderImpl<UpgradeMinorVersionResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private ResetAccountPasswordResponseBody body; 
+        private UpgradeMinorVersionResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ResetAccountPasswordResponse response) {
+        private BuilderImpl(UpgradeMinorVersionResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class ResetAccountPasswordResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ResetAccountPasswordResponseBody body) {
+        public Builder body(UpgradeMinorVersionResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ResetAccountPasswordResponse build() {
-            return new ResetAccountPasswordResponse(this);
+        public UpgradeMinorVersionResponse build() {
+            return new UpgradeMinorVersionResponse(this);
         } 
 
     } 

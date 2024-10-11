@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDBResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteDBResponseBody</p>
  */
 public class DeleteDBResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteDBResponseBody(Builder builder) {
@@ -71,11 +71,17 @@ public class DeleteDBResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteDBResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteDBResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("DBName")
+        @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
 
         private Data(Builder builder) {

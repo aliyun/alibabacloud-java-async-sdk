@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEndpointsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEndpointsResponseBody</p>
  */
 public class DescribeEndpointsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeEndpointsResponseBody(Builder builder) {
@@ -71,11 +71,17 @@ public class DescribeEndpointsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEndpointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEndpointsResponseBody</p>
+     */
     public static class Ports extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
         private Ports(Builder builder) {
@@ -132,29 +138,35 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEndpointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEndpointsResponseBody</p>
+     */
     public static class Endpoints extends TeaModel {
-        @NameInMap("ConnectionString")
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
-        @NameInMap("IPAddress")
+        @com.aliyun.core.annotation.NameInMap("IPAddress")
         private String IPAddress;
 
-        @NameInMap("NetType")
+        @com.aliyun.core.annotation.NameInMap("NetType")
         private String netType;
 
-        @NameInMap("Ports")
+        @com.aliyun.core.annotation.NameInMap("Ports")
         private java.util.List < Ports> ports;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcInstanceId")
+        @com.aliyun.core.annotation.NameInMap("VpcInstanceId")
         private String vpcInstanceId;
 
         private Endpoints(Builder builder) {
@@ -291,7 +303,10 @@ public class DescribeEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * VPC ID。
+             * <p>VPC ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf61z****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -313,11 +328,17 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEndpointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEndpointsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Endpoints")
+        @com.aliyun.core.annotation.NameInMap("Endpoints")
         private java.util.List < Endpoints> endpoints;
 
-        @NameInMap("InstanceNetworkType")
+        @com.aliyun.core.annotation.NameInMap("InstanceNetworkType")
         private String instanceNetworkType;
 
         private Data(Builder builder) {

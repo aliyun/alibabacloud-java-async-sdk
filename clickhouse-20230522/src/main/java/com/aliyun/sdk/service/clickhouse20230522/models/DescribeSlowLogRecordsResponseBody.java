@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSlowLogRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSlowLogRecordsResponseBody</p>
  */
 public class DescribeSlowLogRecordsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeSlowLogRecordsResponseBody(Builder builder) {
@@ -71,38 +71,44 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSlowLogRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSlowLogRecordsResponseBody</p>
+     */
     public static class ResultSet extends TeaModel {
-        @NameInMap("InitialAddress")
+        @com.aliyun.core.annotation.NameInMap("InitialAddress")
         private String initialAddress;
 
-        @NameInMap("InitialQueryId")
+        @com.aliyun.core.annotation.NameInMap("InitialQueryId")
         private String initialQueryId;
 
-        @NameInMap("InitialUser")
+        @com.aliyun.core.annotation.NameInMap("InitialUser")
         private String initialUser;
 
-        @NameInMap("MemoryUsage")
+        @com.aliyun.core.annotation.NameInMap("MemoryUsage")
         private Long memoryUsage;
 
-        @NameInMap("Query")
+        @com.aliyun.core.annotation.NameInMap("Query")
         private String query;
 
-        @NameInMap("QueryDurationMs")
+        @com.aliyun.core.annotation.NameInMap("QueryDurationMs")
         private Long queryDurationMs;
 
-        @NameInMap("QueryStartTime")
+        @com.aliyun.core.annotation.NameInMap("QueryStartTime")
         private String queryStartTime;
 
-        @NameInMap("ReadBytes")
+        @com.aliyun.core.annotation.NameInMap("ReadBytes")
         private Long readBytes;
 
-        @NameInMap("ReadRows")
+        @com.aliyun.core.annotation.NameInMap("ReadRows")
         private Long readRows;
 
-        @NameInMap("ResultBytes")
+        @com.aliyun.core.annotation.NameInMap("ResultBytes")
         private Long resultBytes;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ResultSet(Builder builder) {
@@ -312,17 +318,23 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSlowLogRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSlowLogRecordsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DBInstanceID")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceID")
         private Integer DBInstanceID;
 
-        @NameInMap("DBInstanceName")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceName")
         private String DBInstanceName;
 
-        @NameInMap("ResultSet")
+        @com.aliyun.core.annotation.NameInMap("ResultSet")
         private java.util.List < ResultSet> resultSet;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {

@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityIPListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSecurityIPListResponseBody</p>
  */
 public class DescribeSecurityIPListResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeSecurityIPListResponseBody(Builder builder) {
@@ -71,20 +71,26 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSecurityIPListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityIPListResponseBody</p>
+     */
     public static class GroupItems extends TeaModel {
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("GroupTag")
+        @com.aliyun.core.annotation.NameInMap("GroupTag")
         private String groupTag;
 
-        @NameInMap("SecurityIPList")
+        @com.aliyun.core.annotation.NameInMap("SecurityIPList")
         private String securityIPList;
 
-        @NameInMap("SecurityIPType")
+        @com.aliyun.core.annotation.NameInMap("SecurityIPType")
         private String securityIPType;
 
-        @NameInMap("WhitelistNetType")
+        @com.aliyun.core.annotation.NameInMap("WhitelistNetType")
         private String whitelistNetType;
 
         private GroupItems(Builder builder) {
@@ -192,14 +198,20 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSecurityIPListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityIPListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DBInstanceID")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceID")
         private Integer DBInstanceID;
 
-        @NameInMap("DBInstanceName")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceName")
         private String DBInstanceName;
 
-        @NameInMap("GroupItems")
+        @com.aliyun.core.annotation.NameInMap("GroupItems")
         private java.util.List < GroupItems> groupItems;
 
         private Data(Builder builder) {

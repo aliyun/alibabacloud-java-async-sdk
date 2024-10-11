@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSlowLogTrendResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSlowLogTrendResponseBody</p>
  */
 public class DescribeSlowLogTrendResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeSlowLogTrendResponseBody(Builder builder) {
@@ -71,20 +71,26 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSlowLogTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSlowLogTrendResponseBody</p>
+     */
     public static class ResultSet extends TeaModel {
-        @NameInMap("AvgQueryDurationMs")
+        @com.aliyun.core.annotation.NameInMap("AvgQueryDurationMs")
         private Long avgQueryDurationMs;
 
-        @NameInMap("Cnt")
+        @com.aliyun.core.annotation.NameInMap("Cnt")
         private Long cnt;
 
-        @NameInMap("MaxQueryDurationMs")
+        @com.aliyun.core.annotation.NameInMap("MaxQueryDurationMs")
         private Long maxQueryDurationMs;
 
-        @NameInMap("MinQueryDurationMs")
+        @com.aliyun.core.annotation.NameInMap("MinQueryDurationMs")
         private Long minQueryDurationMs;
 
-        @NameInMap("QueryStartTime")
+        @com.aliyun.core.annotation.NameInMap("QueryStartTime")
         private String queryStartTime;
 
         private ResultSet(Builder builder) {
@@ -192,14 +198,20 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSlowLogTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSlowLogTrendResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DBInstanceID")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceID")
         private Integer DBInstanceID;
 
-        @NameInMap("DBInstanceName")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceName")
         private String DBInstanceName;
 
-        @NameInMap("ResultSet")
+        @com.aliyun.core.annotation.NameInMap("ResultSet")
         private java.util.List < ResultSet> resultSet;
 
         private Data(Builder builder) {

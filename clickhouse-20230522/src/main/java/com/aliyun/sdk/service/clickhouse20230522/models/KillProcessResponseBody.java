@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link KillProcessResponseBody} extends {@link TeaModel}
  *
  * <p>KillProcessResponseBody</p>
  */
 public class KillProcessResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private KillProcessResponseBody(Builder builder) {
@@ -71,14 +71,20 @@ public class KillProcessResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link KillProcessResponseBody} extends {@link TeaModel}
+     *
+     * <p>KillProcessResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("DBInstanceID")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceID")
         private Integer DBInstanceID;
 
-        @NameInMap("DBInstanceName")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceName")
         private String DBInstanceName;
 
         private Data(Builder builder) {

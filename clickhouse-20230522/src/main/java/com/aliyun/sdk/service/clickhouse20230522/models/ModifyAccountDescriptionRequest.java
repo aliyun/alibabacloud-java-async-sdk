@@ -1,31 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAccountDescriptionRequest} extends {@link RequestModel}
  *
  * <p>ModifyAccountDescriptionRequest</p>
  */
 public class ModifyAccountDescriptionRequest extends Request {
-    @Query
-    @NameInMap("Account")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Account")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String account;
 
-    @Query
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String description;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ModifyAccountDescriptionRequest(Builder builder) {
@@ -96,7 +100,10 @@ public class ModifyAccountDescriptionRequest extends Request {
         } 
 
         /**
-         * Account.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testuser</p>
          */
         public Builder account(String account) {
             this.putQueryParameter("Account", account);
@@ -105,7 +112,10 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -114,7 +124,10 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -123,7 +136,10 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

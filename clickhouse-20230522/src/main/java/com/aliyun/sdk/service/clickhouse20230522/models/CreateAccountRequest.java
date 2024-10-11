@@ -1,52 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAccountRequest} extends {@link RequestModel}
  *
  * <p>CreateAccountRequest</p>
  */
 public class CreateAccountRequest extends Request {
-    @Query
-    @NameInMap("Account")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Account")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String account;
 
-    @Query
-    @NameInMap("AccountType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountType;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DmlAuthSetting")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DmlAuthSetting")
     private DmlAuthSetting dmlAuthSetting;
 
-    @Query
-    @NameInMap("Password")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String password;
 
-    @Query
-    @NameInMap("Product")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Product")
     private String product;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private CreateAccountRequest(Builder builder) {
@@ -157,7 +157,10 @@ public class CreateAccountRequest extends Request {
         } 
 
         /**
-         * Account.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder account(String account) {
             this.putQueryParameter("Account", account);
@@ -166,7 +169,10 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * AccountType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NormalAccount</p>
          */
         public Builder accountType(String accountType) {
             this.putQueryParameter("AccountType", accountType);
@@ -175,7 +181,10 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp100p4q1g9z3****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -203,7 +212,10 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * Password.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1b2c3d4@</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -221,7 +233,10 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -236,17 +251,23 @@ public class CreateAccountRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAccountRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAccountRequest</p>
+     */
     public static class DmlAuthSetting extends TeaModel {
-        @NameInMap("AllowDatabases")
+        @com.aliyun.core.annotation.NameInMap("AllowDatabases")
         private java.util.List < String > allowDatabases;
 
-        @NameInMap("AllowDictionaries")
+        @com.aliyun.core.annotation.NameInMap("AllowDictionaries")
         private java.util.List < String > allowDictionaries;
 
-        @NameInMap("DdlAuthority")
+        @com.aliyun.core.annotation.NameInMap("DdlAuthority")
         private Boolean ddlAuthority;
 
-        @NameInMap("DmlAuthority")
+        @com.aliyun.core.annotation.NameInMap("DmlAuthority")
         private Integer dmlAuthority;
 
         private DmlAuthSetting(Builder builder) {

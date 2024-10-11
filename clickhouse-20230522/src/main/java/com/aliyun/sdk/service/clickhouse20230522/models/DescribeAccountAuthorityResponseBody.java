@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccountAuthorityResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAccountAuthorityResponseBody</p>
  */
 public class DescribeAccountAuthorityResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAccountAuthorityResponseBody(Builder builder) {
@@ -71,29 +71,35 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAccountAuthorityResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccountAuthorityResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Account")
+        @com.aliyun.core.annotation.NameInMap("Account")
         private String account;
 
-        @NameInMap("AllowDatabases")
+        @com.aliyun.core.annotation.NameInMap("AllowDatabases")
         private java.util.List < String > allowDatabases;
 
-        @NameInMap("AllowDictionaries")
+        @com.aliyun.core.annotation.NameInMap("AllowDictionaries")
         private java.util.List < String > allowDictionaries;
 
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("DdlAuthority")
+        @com.aliyun.core.annotation.NameInMap("DdlAuthority")
         private Boolean ddlAuthority;
 
-        @NameInMap("DmlAuthority")
+        @com.aliyun.core.annotation.NameInMap("DmlAuthority")
         private Integer dmlAuthority;
 
-        @NameInMap("TotalDatabases")
+        @com.aliyun.core.annotation.NameInMap("TotalDatabases")
         private java.util.List < String > totalDatabases;
 
-        @NameInMap("TotalDictionaries")
+        @com.aliyun.core.annotation.NameInMap("TotalDictionaries")
         private java.util.List < String > totalDictionaries;
 
         private Data(Builder builder) {

@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceClassResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDBInstanceClassResponseBody</p>
  */
 public class ModifyDBInstanceClassResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyDBInstanceClassResponseBody(Builder builder) {
@@ -71,20 +71,26 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyDBInstanceClassResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyDBInstanceClassResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DBInstanceID")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceID")
         private Long DBInstanceID;
 
-        @NameInMap("DBInstanceName")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceName")
         private String DBInstanceName;
 
-        @NameInMap("ScaleMax")
+        @com.aliyun.core.annotation.NameInMap("ScaleMax")
         private Long scaleMax;
 
-        @NameInMap("ScaleMin")
+        @com.aliyun.core.annotation.NameInMap("ScaleMin")
         private Long scaleMin;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private Long taskId;
 
         private Data(Builder builder) {

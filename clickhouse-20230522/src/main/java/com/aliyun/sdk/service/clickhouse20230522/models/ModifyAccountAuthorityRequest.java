@@ -1,31 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAccountAuthorityRequest} extends {@link RequestModel}
  *
  * <p>ModifyAccountAuthorityRequest</p>
  */
 public class ModifyAccountAuthorityRequest extends Request {
-    @Query
-    @NameInMap("Account")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Account")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String account;
 
-    @Query
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("DmlAuthSetting")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DmlAuthSetting")
+    @com.aliyun.core.annotation.Validation(required = true)
     private DmlAuthSetting dmlAuthSetting;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ModifyAccountAuthorityRequest(Builder builder) {
@@ -96,7 +100,10 @@ public class ModifyAccountAuthorityRequest extends Request {
         } 
 
         /**
-         * Account.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder account(String account) {
             this.putQueryParameter("Account", account);
@@ -105,7 +112,10 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp100p4q1g9z3****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -114,7 +124,7 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * DmlAuthSetting.
+         * <p>This parameter is required.</p>
          */
         public Builder dmlAuthSetting(DmlAuthSetting dmlAuthSetting) {
             String dmlAuthSettingShrink = shrink(dmlAuthSetting, "DmlAuthSetting", "json");
@@ -124,7 +134,10 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -139,17 +152,25 @@ public class ModifyAccountAuthorityRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyAccountAuthorityRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAccountAuthorityRequest</p>
+     */
     public static class DmlAuthSetting extends TeaModel {
-        @NameInMap("AllowDatabases")
+        @com.aliyun.core.annotation.NameInMap("AllowDatabases")
         private java.util.List < String > allowDatabases;
 
-        @NameInMap("AllowDictionaries")
+        @com.aliyun.core.annotation.NameInMap("AllowDictionaries")
         private java.util.List < String > allowDictionaries;
 
-        @NameInMap("DdlAuthority")
+        @com.aliyun.core.annotation.NameInMap("DdlAuthority")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Boolean ddlAuthority;
 
-        @NameInMap("DmlAuthority")
+        @com.aliyun.core.annotation.NameInMap("DmlAuthority")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer dmlAuthority;
 
         private DmlAuthSetting(Builder builder) {
@@ -218,7 +239,10 @@ public class ModifyAccountAuthorityRequest extends Request {
             }
 
             /**
-             * DdlAuthority.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ddlAuthority(Boolean ddlAuthority) {
                 this.ddlAuthority = ddlAuthority;
@@ -226,7 +250,10 @@ public class ModifyAccountAuthorityRequest extends Request {
             }
 
             /**
-             * DmlAuthority.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dmlAuthority(Integer dmlAuthority) {
                 this.dmlAuthority = dmlAuthority;
