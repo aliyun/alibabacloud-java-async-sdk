@@ -188,6 +188,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteCustomScenePolicyResponse> deleteCustomScenePolicy(DeleteCustomScenePolicyRequest request);
 
     /**
+     * @param request the request parameters of DeleteKv  DeleteKvRequest
+     * @return DeleteKvResponse
+     */
+    CompletableFuture<DeleteKvResponse> deleteKv(DeleteKvRequest request);
+
+    /**
+     * @param request the request parameters of DeleteKvNamespace  DeleteKvNamespaceRequest
+     * @return DeleteKvNamespaceResponse
+     */
+    CompletableFuture<DeleteKvNamespaceResponse> deleteKvNamespace(DeleteKvNamespaceRequest request);
+
+    /**
      * @param request the request parameters of DeleteList  DeleteListRequest
      * @return DeleteListResponse
      */
@@ -296,6 +308,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeIPRangeListResponse> describeIPRangeList(DescribeIPRangeListRequest request);
 
     /**
+     * @param request the request parameters of DescribeKvAccountStatus  DescribeKvAccountStatusRequest
+     * @return DescribeKvAccountStatusResponse
+     */
+    CompletableFuture<DescribeKvAccountStatusResponse> describeKvAccountStatus(DescribeKvAccountStatusRequest request);
+
+    /**
      * @param request the request parameters of DescribePreloadTasks  DescribePreloadTasksRequest
      * @return DescribePreloadTasksResponse
      */
@@ -336,6 +354,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetCacheReserveSpecificationResponse
      */
     CompletableFuture<GetCacheReserveSpecificationResponse> getCacheReserveSpecification(GetCacheReserveSpecificationRequest request);
+
+    /**
+     * @param request the request parameters of GetKv  GetKvRequest
+     * @return GetKvResponse
+     */
+    CompletableFuture<GetKvResponse> getKv(GetKvRequest request);
+
+    /**
+     * @param request the request parameters of GetKvAccount  GetKvAccountRequest
+     * @return GetKvAccountResponse
+     */
+    CompletableFuture<GetKvAccountResponse> getKvAccount(GetKvAccountRequest request);
 
     /**
      * @param request the request parameters of GetKvNamespace  GetKvNamespaceRequest
