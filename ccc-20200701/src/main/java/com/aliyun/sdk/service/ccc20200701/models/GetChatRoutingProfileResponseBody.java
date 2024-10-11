@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetChatRoutingProfileResponseBody} extends {@link TeaModel}
  *
  * <p>GetChatRoutingProfileResponseBody</p>
@@ -130,6 +131,12 @@ public class GetChatRoutingProfileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetChatRoutingProfileResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChatRoutingProfileResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentConcurrencySettings")
         private String agentConcurrencySettings;

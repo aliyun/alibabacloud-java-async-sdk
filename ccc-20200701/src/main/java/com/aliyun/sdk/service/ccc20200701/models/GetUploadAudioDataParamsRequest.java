@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUploadAudioDataParamsRequest} extends {@link RequestModel}
  *
  * <p>GetUploadAudioDataParamsRequest</p>
@@ -68,7 +69,10 @@ public class GetUploadAudioDataParamsRequest extends Request {
         } 
 
         /**
-         * ContactId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-38860977107324****</p>
          */
         public Builder contactId(String contactId) {
             this.putQueryParameter("ContactId", contactId);

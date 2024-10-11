@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDocumentsRequest} extends {@link RequestModel}
  *
  * <p>ListDocumentsRequest</p>
@@ -139,7 +140,10 @@ public class ListDocumentsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d278629c-c687-4aa3-b044-4fe9b012e7ef</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -175,7 +179,11 @@ public class ListDocumentsRequest extends Request {
         }
 
         /**
-         * schema id
+         * <p>schema id</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>profile</p>
          */
         public Builder schemaId(String schemaId) {
             this.putBodyParameter("SchemaId", schemaId);
@@ -209,6 +217,12 @@ public class ListDocumentsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListDocumentsRequest} extends {@link TeaModel}
+     *
+     * <p>ListDocumentsRequest</p>
+     */
     public static class Sorts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Order")
         private String order;

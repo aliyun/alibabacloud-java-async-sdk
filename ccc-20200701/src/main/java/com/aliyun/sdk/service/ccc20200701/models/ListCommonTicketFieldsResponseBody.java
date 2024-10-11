@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCommonTicketFieldsResponseBody} extends {@link TeaModel}
  *
  * <p>ListCommonTicketFieldsResponseBody</p>
@@ -150,6 +151,12 @@ public class ListCommonTicketFieldsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCommonTicketFieldsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCommonTicketFieldsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
@@ -233,7 +240,10 @@ public class ListCommonTicketFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * Schema ID。
+             * <p>Schema ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ticketing</p>
              */
             public Builder id(String id) {
                 this.id = id;

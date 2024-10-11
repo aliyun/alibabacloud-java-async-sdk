@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssignUsersRequest} extends {@link RequestModel}
  *
  * <p>AssignUsersRequest</p>
@@ -113,7 +114,10 @@ public class AssignUsersRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -122,7 +126,10 @@ public class AssignUsersRequest extends Request {
         }
 
         /**
-         * RamIdList.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;28036411123456****&quot;,&quot;29234301123456****&quot;]</p>
          */
         public Builder ramIdList(String ramIdList) {
             this.putQueryParameter("RamIdList", ramIdList);
@@ -131,7 +138,10 @@ public class AssignUsersRequest extends Request {
         }
 
         /**
-         * RoleId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Agent@ccc-test</p>
          */
         public Builder roleId(String roleId) {
             this.putQueryParameter("RoleId", roleId);
@@ -149,7 +159,10 @@ public class AssignUsersRequest extends Request {
         }
 
         /**
-         * WorkMode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ON_SITE</p>
          */
         public Builder workMode(String workMode) {
             this.putQueryParameter("WorkMode", workMode);

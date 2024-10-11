@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableSchemaPropertyRequest} extends {@link RequestModel}
  *
  * <p>EnableSchemaPropertyRequest</p>
@@ -98,7 +99,10 @@ public class EnableSchemaPropertyRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9cfad875-6260-4a53-ab6e-b13e3fb31f7d</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -107,7 +111,10 @@ public class EnableSchemaPropertyRequest extends Request {
         }
 
         /**
-         * PropertyName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder propertyName(String propertyName) {
             this.putBodyParameter("PropertyName", propertyName);
@@ -125,7 +132,11 @@ public class EnableSchemaPropertyRequest extends Request {
         }
 
         /**
-         * schema id
+         * <p>schema id</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>profile</p>
          */
         public Builder schemaId(String schemaId) {
             this.putBodyParameter("SchemaId", schemaId);

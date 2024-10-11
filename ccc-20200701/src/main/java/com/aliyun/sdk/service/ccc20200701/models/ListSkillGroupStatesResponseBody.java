@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSkillGroupStatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListSkillGroupStatesResponseBody</p>
@@ -150,6 +151,12 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSkillGroupStatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillGroupStatesResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AverageWaitingTime")
         private Long averageWaitingTime;
@@ -511,6 +518,12 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSkillGroupStatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillGroupStatesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;

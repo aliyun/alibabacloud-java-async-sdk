@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeWorkModeRequest} extends {@link RequestModel}
  *
  * <p>ChangeWorkModeRequest</p>
@@ -134,7 +135,10 @@ public class ChangeWorkModeRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -170,7 +174,10 @@ public class ChangeWorkModeRequest extends Request {
         }
 
         /**
-         * WorkMode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ON_SITE</p>
          */
         public Builder workMode(String workMode) {
             this.putQueryParameter("WorkMode", workMode);

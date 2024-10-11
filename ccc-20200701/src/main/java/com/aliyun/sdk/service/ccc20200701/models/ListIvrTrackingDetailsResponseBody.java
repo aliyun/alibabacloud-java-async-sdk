@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIvrTrackingDetailsResponseBody} extends {@link TeaModel}
  *
  * <p>ListIvrTrackingDetailsResponseBody</p>
@@ -130,6 +131,12 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListIvrTrackingDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIvrTrackingDetailsResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Callee")
         private String callee;
@@ -471,6 +478,12 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListIvrTrackingDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIvrTrackingDetailsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;

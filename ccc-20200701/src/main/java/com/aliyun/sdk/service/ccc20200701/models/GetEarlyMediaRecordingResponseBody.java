@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEarlyMediaRecordingResponseBody} extends {@link TeaModel}
  *
  * <p>GetEarlyMediaRecordingResponseBody</p>
@@ -130,6 +131,12 @@ public class GetEarlyMediaRecordingResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetEarlyMediaRecordingResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEarlyMediaRecordingResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportCustomCallTaggingRequest} extends {@link RequestModel}
  *
  * <p>ImportCustomCallTaggingRequest</p>
@@ -69,7 +70,10 @@ public class ImportCustomCallTaggingRequest extends Request {
         } 
 
         /**
-         * FilePath.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>temp/ImportCustomCallTagging.xlsx</p>
          */
         public Builder filePath(String filePath) {
             this.putQueryParameter("FilePath", filePath);
@@ -78,7 +82,10 @@ public class ImportCustomCallTaggingRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

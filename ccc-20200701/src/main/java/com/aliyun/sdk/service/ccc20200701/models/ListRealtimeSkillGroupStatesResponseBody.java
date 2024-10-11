@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRealtimeSkillGroupStatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListRealtimeSkillGroupStatesResponseBody</p>
@@ -130,6 +131,12 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRealtimeSkillGroupStatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRealtimeSkillGroupStatesResponseBody</p>
+     */
     public static class BreakCodeDetailList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BreakCode")
         private String breakCode;
@@ -191,6 +198,12 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRealtimeSkillGroupStatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRealtimeSkillGroupStatesResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BreakCodeDetailList")
         private java.util.List < BreakCodeDetailList> breakCodeDetailList;
@@ -472,6 +485,12 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRealtimeSkillGroupStatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRealtimeSkillGroupStatesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddPhoneNumbersRequest} extends {@link RequestModel}
  *
  * <p>AddPhoneNumbersRequest</p>
@@ -120,7 +121,10 @@ public class AddPhoneNumbersRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -147,7 +151,10 @@ public class AddPhoneNumbersRequest extends Request {
         }
 
         /**
-         * Usage.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bidirection</p>
          */
         public Builder usage(String usage) {
             this.putQueryParameter("Usage", usage);

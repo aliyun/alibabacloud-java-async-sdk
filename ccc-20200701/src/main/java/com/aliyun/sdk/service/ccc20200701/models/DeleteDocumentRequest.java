@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDocumentRequest} extends {@link RequestModel}
  *
  * <p>DeleteDocumentRequest</p>
@@ -98,7 +99,10 @@ public class DeleteDocumentRequest extends Request {
         } 
 
         /**
-         * DocumentId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder documentId(String documentId) {
             this.putBodyParameter("DocumentId", documentId);
@@ -107,7 +111,10 @@ public class DeleteDocumentRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d278629c-c687-4aa3-b044-4fe9b012****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -125,7 +132,11 @@ public class DeleteDocumentRequest extends Request {
         }
 
         /**
-         * schema id
+         * <p>schema id</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>profile</p>
          */
         public Builder schemaId(String schemaId) {
             this.putBodyParameter("SchemaId", schemaId);

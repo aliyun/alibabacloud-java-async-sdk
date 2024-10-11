@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListBriefSkillGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListBriefSkillGroupsResponseBody</p>
@@ -130,6 +131,12 @@ public class ListBriefSkillGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListBriefSkillGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListBriefSkillGroupsResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -311,6 +318,12 @@ public class ListBriefSkillGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListBriefSkillGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListBriefSkillGroupsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;

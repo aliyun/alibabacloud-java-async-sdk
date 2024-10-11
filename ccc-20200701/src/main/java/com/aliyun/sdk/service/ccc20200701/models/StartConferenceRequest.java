@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartConferenceRequest} extends {@link RequestModel}
  *
  * <p>StartConferenceRequest</p>
@@ -112,7 +113,10 @@ public class StartConferenceRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -121,7 +125,10 @@ public class StartConferenceRequest extends Request {
         }
 
         /**
-         * ParticipantListJson.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;8045****&quot;,&quot;1317511****&quot;]</p>
          */
         public Builder participantListJson(String participantListJson) {
             this.putQueryParameter("ParticipantListJson", participantListJson);

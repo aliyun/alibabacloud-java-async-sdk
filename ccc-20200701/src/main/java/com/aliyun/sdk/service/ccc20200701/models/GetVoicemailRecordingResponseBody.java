@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVoicemailRecordingResponseBody} extends {@link TeaModel}
  *
  * <p>GetVoicemailRecordingResponseBody</p>
@@ -130,6 +131,12 @@ public class GetVoicemailRecordingResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetVoicemailRecordingResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVoicemailRecordingResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;

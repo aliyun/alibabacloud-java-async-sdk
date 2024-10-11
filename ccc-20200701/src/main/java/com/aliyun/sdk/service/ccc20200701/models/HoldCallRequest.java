@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HoldCallRequest} extends {@link RequestModel}
  *
  * <p>HoldCallRequest</p>
@@ -126,7 +127,10 @@ public class HoldCallRequest extends Request {
         } 
 
         /**
-         * ChannelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ch:customer:010123****-&gt;1318888****:1609255715825:job-6582589278232****</p>
          */
         public Builder channelId(String channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -144,7 +148,10 @@ public class HoldCallRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -153,7 +160,10 @@ public class HoldCallRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-6582589278232****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

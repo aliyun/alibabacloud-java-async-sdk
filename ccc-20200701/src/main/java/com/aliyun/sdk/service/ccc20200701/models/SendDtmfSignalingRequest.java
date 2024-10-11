@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendDtmfSignalingRequest} extends {@link RequestModel}
  *
  * <p>SendDtmfSignalingRequest</p>
@@ -127,7 +128,10 @@ public class SendDtmfSignalingRequest extends Request {
         } 
 
         /**
-         * ChannelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ch:customer:0108989****-&gt;1318888****:1609234221870:job-6573574060089****</p>
          */
         public Builder channelId(String channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -145,7 +149,10 @@ public class SendDtmfSignalingRequest extends Request {
         }
 
         /**
-         * Dtmf.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder dtmf(String dtmf) {
             this.putQueryParameter("Dtmf", dtmf);
@@ -154,7 +161,10 @@ public class SendDtmfSignalingRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -163,7 +173,10 @@ public class SendDtmfSignalingRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-6573574060089****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

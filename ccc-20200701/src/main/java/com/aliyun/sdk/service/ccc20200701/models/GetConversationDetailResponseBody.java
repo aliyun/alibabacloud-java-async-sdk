@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConversationDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetConversationDetailResponseBody</p>
@@ -130,6 +131,12 @@ public class GetConversationDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetConversationDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConversationDetailResponseBody</p>
+     */
     public static class Phrases extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Begin")
         private Integer begin;

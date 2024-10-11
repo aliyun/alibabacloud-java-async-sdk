@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartBack2BackCallRequest} extends {@link RequestModel}
  *
  * <p>StartBack2BackCallRequest</p>
@@ -151,7 +152,10 @@ public class StartBack2BackCallRequest extends Request {
         }
 
         /**
-         * Broker.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0102157****</p>
          */
         public Builder broker(String broker) {
             this.putQueryParameter("Broker", broker);
@@ -160,7 +164,10 @@ public class StartBack2BackCallRequest extends Request {
         }
 
         /**
-         * Callee.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1372168****</p>
          */
         public Builder callee(String callee) {
             this.putQueryParameter("Callee", callee);
@@ -169,7 +176,10 @@ public class StartBack2BackCallRequest extends Request {
         }
 
         /**
-         * Caller.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1391814****</p>
          */
         public Builder caller(String caller) {
             this.putQueryParameter("Caller", caller);
@@ -178,7 +188,10 @@ public class StartBack2BackCallRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

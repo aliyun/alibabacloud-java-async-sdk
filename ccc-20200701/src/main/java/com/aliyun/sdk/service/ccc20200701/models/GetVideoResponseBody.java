@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVideoResponseBody} extends {@link TeaModel}
  *
  * <p>GetVideoResponseBody</p>
@@ -130,6 +131,12 @@ public class GetVideoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetVideoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVideoResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;

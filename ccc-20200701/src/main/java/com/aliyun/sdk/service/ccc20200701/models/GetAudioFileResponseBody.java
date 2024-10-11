@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAudioFileResponseBody} extends {@link TeaModel}
  *
  * <p>GetAudioFileResponseBody</p>
@@ -130,6 +131,12 @@ public class GetAudioFileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAudioFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAudioFileResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AudioFileName")
         private String audioFileName;

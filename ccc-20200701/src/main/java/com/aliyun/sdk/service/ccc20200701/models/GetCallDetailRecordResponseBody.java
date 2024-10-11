@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCallDetailRecordResponseBody} extends {@link TeaModel}
  *
  * <p>GetCallDetailRecordResponseBody</p>
@@ -130,6 +131,12 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCallDetailRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCallDetailRecordResponseBody</p>
+     */
     public static class EventSequence extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
@@ -211,6 +218,12 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCallDetailRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCallDetailRecordResponseBody</p>
+     */
     public static class AgentEvents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentId")
         private String agentId;
@@ -312,6 +325,567 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCallDetailRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCallDetailRecordResponseBody</p>
+     */
+    public static class Emotion extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Confidence")
+        private Integer confidence;
+
+        @com.aliyun.core.annotation.NameInMap("Remark")
+        private String remark;
+
+        @com.aliyun.core.annotation.NameInMap("Success")
+        private Boolean success;
+
+        @com.aliyun.core.annotation.NameInMap("TaskId")
+        private String taskId;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private Emotion(Builder builder) {
+            this.confidence = builder.confidence;
+            this.remark = builder.remark;
+            this.success = builder.success;
+            this.taskId = builder.taskId;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Emotion create() {
+            return builder().build();
+        }
+
+        /**
+         * @return confidence
+         */
+        public Integer getConfidence() {
+            return this.confidence;
+        }
+
+        /**
+         * @return remark
+         */
+        public String getRemark() {
+            return this.remark;
+        }
+
+        /**
+         * @return success
+         */
+        public Boolean getSuccess() {
+            return this.success;
+        }
+
+        /**
+         * @return taskId
+         */
+        public String getTaskId() {
+            return this.taskId;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private Integer confidence; 
+            private String remark; 
+            private Boolean success; 
+            private String taskId; 
+            private String type; 
+
+            /**
+             * Confidence.
+             */
+            public Builder confidence(Integer confidence) {
+                this.confidence = confidence;
+                return this;
+            }
+
+            /**
+             * Remark.
+             */
+            public Builder remark(String remark) {
+                this.remark = remark;
+                return this;
+            }
+
+            /**
+             * Success.
+             */
+            public Builder success(Boolean success) {
+                this.success = success;
+                return this;
+            }
+
+            /**
+             * TaskId.
+             */
+            public Builder taskId(String taskId) {
+                this.taskId = taskId;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Emotion build() {
+                return new Emotion(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetCallDetailRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCallDetailRecordResponseBody</p>
+     */
+    public static class ProblemSolving extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Problem")
+        private String problem;
+
+        @com.aliyun.core.annotation.NameInMap("Solution")
+        private String solution;
+
+        @com.aliyun.core.annotation.NameInMap("Solved")
+        private Boolean solved;
+
+        @com.aliyun.core.annotation.NameInMap("Success")
+        private Boolean success;
+
+        @com.aliyun.core.annotation.NameInMap("TaskId")
+        private String taskId;
+
+        private ProblemSolving(Builder builder) {
+            this.problem = builder.problem;
+            this.solution = builder.solution;
+            this.solved = builder.solved;
+            this.success = builder.success;
+            this.taskId = builder.taskId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ProblemSolving create() {
+            return builder().build();
+        }
+
+        /**
+         * @return problem
+         */
+        public String getProblem() {
+            return this.problem;
+        }
+
+        /**
+         * @return solution
+         */
+        public String getSolution() {
+            return this.solution;
+        }
+
+        /**
+         * @return solved
+         */
+        public Boolean getSolved() {
+            return this.solved;
+        }
+
+        /**
+         * @return success
+         */
+        public Boolean getSuccess() {
+            return this.success;
+        }
+
+        /**
+         * @return taskId
+         */
+        public String getTaskId() {
+            return this.taskId;
+        }
+
+        public static final class Builder {
+            private String problem; 
+            private String solution; 
+            private Boolean solved; 
+            private Boolean success; 
+            private String taskId; 
+
+            /**
+             * Problem.
+             */
+            public Builder problem(String problem) {
+                this.problem = problem;
+                return this;
+            }
+
+            /**
+             * Solution.
+             */
+            public Builder solution(String solution) {
+                this.solution = solution;
+                return this;
+            }
+
+            /**
+             * Solved.
+             */
+            public Builder solved(Boolean solved) {
+                this.solved = solved;
+                return this;
+            }
+
+            /**
+             * Success.
+             */
+            public Builder success(Boolean success) {
+                this.success = success;
+                return this;
+            }
+
+            /**
+             * TaskId.
+             */
+            public Builder taskId(String taskId) {
+                this.taskId = taskId;
+                return this;
+            }
+
+            public ProblemSolving build() {
+                return new ProblemSolving(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetCallDetailRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCallDetailRecordResponseBody</p>
+     */
+    public static class Satisfaction extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Remark")
+        private String remark;
+
+        @com.aliyun.core.annotation.NameInMap("SatisfactionDescription")
+        private String satisfactionDescription;
+
+        @com.aliyun.core.annotation.NameInMap("Success")
+        private Boolean success;
+
+        @com.aliyun.core.annotation.NameInMap("TaskId")
+        private String taskId;
+
+        private Satisfaction(Builder builder) {
+            this.remark = builder.remark;
+            this.satisfactionDescription = builder.satisfactionDescription;
+            this.success = builder.success;
+            this.taskId = builder.taskId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Satisfaction create() {
+            return builder().build();
+        }
+
+        /**
+         * @return remark
+         */
+        public String getRemark() {
+            return this.remark;
+        }
+
+        /**
+         * @return satisfactionDescription
+         */
+        public String getSatisfactionDescription() {
+            return this.satisfactionDescription;
+        }
+
+        /**
+         * @return success
+         */
+        public Boolean getSuccess() {
+            return this.success;
+        }
+
+        /**
+         * @return taskId
+         */
+        public String getTaskId() {
+            return this.taskId;
+        }
+
+        public static final class Builder {
+            private String remark; 
+            private String satisfactionDescription; 
+            private Boolean success; 
+            private String taskId; 
+
+            /**
+             * Remark.
+             */
+            public Builder remark(String remark) {
+                this.remark = remark;
+                return this;
+            }
+
+            /**
+             * SatisfactionDescription.
+             */
+            public Builder satisfactionDescription(String satisfactionDescription) {
+                this.satisfactionDescription = satisfactionDescription;
+                return this;
+            }
+
+            /**
+             * Success.
+             */
+            public Builder success(Boolean success) {
+                this.success = success;
+                return this;
+            }
+
+            /**
+             * TaskId.
+             */
+            public Builder taskId(String taskId) {
+                this.taskId = taskId;
+                return this;
+            }
+
+            public Satisfaction build() {
+                return new Satisfaction(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetCallDetailRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCallDetailRecordResponseBody</p>
+     */
+    public static class TodoList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Success")
+        private Boolean success;
+
+        @com.aliyun.core.annotation.NameInMap("TaskId")
+        private String taskId;
+
+        @com.aliyun.core.annotation.NameInMap("Tasks")
+        private java.util.List < String > tasks;
+
+        private TodoList(Builder builder) {
+            this.success = builder.success;
+            this.taskId = builder.taskId;
+            this.tasks = builder.tasks;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TodoList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return success
+         */
+        public Boolean getSuccess() {
+            return this.success;
+        }
+
+        /**
+         * @return taskId
+         */
+        public String getTaskId() {
+            return this.taskId;
+        }
+
+        /**
+         * @return tasks
+         */
+        public java.util.List < String > getTasks() {
+            return this.tasks;
+        }
+
+        public static final class Builder {
+            private Boolean success; 
+            private String taskId; 
+            private java.util.List < String > tasks; 
+
+            /**
+             * Success.
+             */
+            public Builder success(Boolean success) {
+                this.success = success;
+                return this;
+            }
+
+            /**
+             * TaskId.
+             */
+            public Builder taskId(String taskId) {
+                this.taskId = taskId;
+                return this;
+            }
+
+            /**
+             * Tasks.
+             */
+            public Builder tasks(java.util.List < String > tasks) {
+                this.tasks = tasks;
+                return this;
+            }
+
+            public TodoList build() {
+                return new TodoList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetCallDetailRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCallDetailRecordResponseBody</p>
+     */
+    public static class AnalyticsReport extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Emotion")
+        private Emotion emotion;
+
+        @com.aliyun.core.annotation.NameInMap("ProblemSolving")
+        private ProblemSolving problemSolving;
+
+        @com.aliyun.core.annotation.NameInMap("Satisfaction")
+        private Satisfaction satisfaction;
+
+        @com.aliyun.core.annotation.NameInMap("TodoList")
+        private TodoList todoList;
+
+        private AnalyticsReport(Builder builder) {
+            this.emotion = builder.emotion;
+            this.problemSolving = builder.problemSolving;
+            this.satisfaction = builder.satisfaction;
+            this.todoList = builder.todoList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AnalyticsReport create() {
+            return builder().build();
+        }
+
+        /**
+         * @return emotion
+         */
+        public Emotion getEmotion() {
+            return this.emotion;
+        }
+
+        /**
+         * @return problemSolving
+         */
+        public ProblemSolving getProblemSolving() {
+            return this.problemSolving;
+        }
+
+        /**
+         * @return satisfaction
+         */
+        public Satisfaction getSatisfaction() {
+            return this.satisfaction;
+        }
+
+        /**
+         * @return todoList
+         */
+        public TodoList getTodoList() {
+            return this.todoList;
+        }
+
+        public static final class Builder {
+            private Emotion emotion; 
+            private ProblemSolving problemSolving; 
+            private Satisfaction satisfaction; 
+            private TodoList todoList; 
+
+            /**
+             * Emotion.
+             */
+            public Builder emotion(Emotion emotion) {
+                this.emotion = emotion;
+                return this;
+            }
+
+            /**
+             * ProblemSolving.
+             */
+            public Builder problemSolving(ProblemSolving problemSolving) {
+                this.problemSolving = problemSolving;
+                return this;
+            }
+
+            /**
+             * Satisfaction.
+             */
+            public Builder satisfaction(Satisfaction satisfaction) {
+                this.satisfaction = satisfaction;
+                return this;
+            }
+
+            /**
+             * TodoList.
+             */
+            public Builder todoList(TodoList todoList) {
+                this.todoList = todoList;
+                return this;
+            }
+
+            public AnalyticsReport build() {
+                return new AnalyticsReport(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetCallDetailRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCallDetailRecordResponseBody</p>
+     */
     public static class CustomerEventsEventSequence extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Event")
         private String event;
@@ -373,6 +947,12 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCallDetailRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCallDetailRecordResponseBody</p>
+     */
     public static class CustomerEvents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomerId")
         private String customerId;
@@ -434,6 +1014,12 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCallDetailRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCallDetailRecordResponseBody</p>
+     */
     public static class IvrEventsEventSequence extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Event")
         private String event;
@@ -495,6 +1081,12 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCallDetailRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCallDetailRecordResponseBody</p>
+     */
     public static class IvrEvents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventSequence")
         private java.util.List < IvrEventsEventSequence> eventSequence;
@@ -576,6 +1168,12 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCallDetailRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCallDetailRecordResponseBody</p>
+     */
     public static class QueueEventsEventSequence extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Event")
         private String event;
@@ -637,6 +1235,12 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCallDetailRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCallDetailRecordResponseBody</p>
+     */
     public static class QueueEvents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventSequence")
         private java.util.List < QueueEventsEventSequence> eventSequence;
@@ -758,6 +1362,12 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCallDetailRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCallDetailRecordResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentEvents")
         private java.util.List < AgentEvents> agentEvents;
@@ -767,6 +1377,12 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("AgentNames")
         private String agentNames;
+
+        @com.aliyun.core.annotation.NameInMap("AnalyticsReport")
+        private AnalyticsReport analyticsReport;
+
+        @com.aliyun.core.annotation.NameInMap("AnalyticsReportReady")
+        private Boolean analyticsReportReady;
 
         @com.aliyun.core.annotation.NameInMap("CallDuration")
         private Long callDuration;
@@ -844,6 +1460,8 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             this.agentEvents = builder.agentEvents;
             this.agentIds = builder.agentIds;
             this.agentNames = builder.agentNames;
+            this.analyticsReport = builder.analyticsReport;
+            this.analyticsReportReady = builder.analyticsReportReady;
             this.callDuration = builder.callDuration;
             this.calledNumber = builder.calledNumber;
             this.calleeLocation = builder.calleeLocation;
@@ -897,6 +1515,20 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
          */
         public String getAgentNames() {
             return this.agentNames;
+        }
+
+        /**
+         * @return analyticsReport
+         */
+        public AnalyticsReport getAnalyticsReport() {
+            return this.analyticsReport;
+        }
+
+        /**
+         * @return analyticsReportReady
+         */
+        public Boolean getAnalyticsReportReady() {
+            return this.analyticsReportReady;
         }
 
         /**
@@ -1071,6 +1703,8 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             private java.util.List < AgentEvents> agentEvents; 
             private String agentIds; 
             private String agentNames; 
+            private AnalyticsReport analyticsReport; 
+            private Boolean analyticsReportReady; 
             private Long callDuration; 
             private String calledNumber; 
             private String calleeLocation; 
@@ -1117,6 +1751,22 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
              */
             public Builder agentNames(String agentNames) {
                 this.agentNames = agentNames;
+                return this;
+            }
+
+            /**
+             * AnalyticsReport.
+             */
+            public Builder analyticsReport(AnalyticsReport analyticsReport) {
+                this.analyticsReport = analyticsReport;
+                return this;
+            }
+
+            /**
+             * AnalyticsReportReady.
+             */
+            public Builder analyticsReportReady(Boolean analyticsReportReady) {
+                this.analyticsReportReady = analyticsReportReady;
                 return this;
             }
 

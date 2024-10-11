@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SwitchToConferenceRequest} extends {@link RequestModel}
  *
  * <p>SwitchToConferenceRequest</p>
@@ -106,7 +107,10 @@ public class SwitchToConferenceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -115,7 +119,10 @@ public class SwitchToConferenceRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-24114064019637****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

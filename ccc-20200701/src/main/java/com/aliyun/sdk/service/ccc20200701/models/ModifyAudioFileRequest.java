@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAudioFileRequest} extends {@link RequestModel}
  *
  * <p>ModifyAudioFileRequest</p>
@@ -128,7 +129,10 @@ public class ModifyAudioFileRequest extends Request {
         } 
 
         /**
-         * AudioFileName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>new-test-file.wav</p>
          */
         public Builder audioFileName(String audioFileName) {
             this.putQueryParameter("AudioFileName", audioFileName);
@@ -137,7 +141,10 @@ public class ModifyAudioFileRequest extends Request {
         }
 
         /**
-         * AudioResourceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acc300c4-75c9-41ba-ba5e-2a365c96c248</p>
          */
         public Builder audioResourceId(String audioResourceId) {
             this.putQueryParameter("AudioResourceId", audioResourceId);
@@ -146,7 +153,10 @@ public class ModifyAudioFileRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -155,7 +165,7 @@ public class ModifyAudioFileRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -164,7 +174,10 @@ public class ModifyAudioFileRequest extends Request {
         }
 
         /**
-         * OssFileKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test/new-test-file.wav</p>
          */
         public Builder ossFileKey(String ossFileKey) {
             this.putQueryParameter("OssFileKey", ossFileKey);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveDocumentRequest} extends {@link RequestModel}
  *
  * <p>SaveDocumentRequest</p>
@@ -121,7 +122,10 @@ public class SaveDocumentRequest extends Request {
         }
 
         /**
-         * DocumentJson.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;name&quot;:&quot;tom&quot;}</p>
          */
         public Builder documentJson(String documentJson) {
             this.putBodyParameter("DocumentJson", documentJson);
@@ -130,7 +134,10 @@ public class SaveDocumentRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9cfad875-6260-4a53-ab6e-b13e3fb31f7d</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -148,7 +155,11 @@ public class SaveDocumentRequest extends Request {
         }
 
         /**
-         * schema id
+         * <p>schema id</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>profile</p>
          */
         public Builder schemaId(String schemaId) {
             this.putBodyParameter("SchemaId", schemaId);

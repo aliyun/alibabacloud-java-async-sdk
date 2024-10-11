@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CommitContactFlowResponse} extends {@link TeaModel}
  *
  * <p>CommitContactFlowResponse</p>

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddPhoneNumberToSkillGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>AddPhoneNumberToSkillGroupsResponseBody</p>

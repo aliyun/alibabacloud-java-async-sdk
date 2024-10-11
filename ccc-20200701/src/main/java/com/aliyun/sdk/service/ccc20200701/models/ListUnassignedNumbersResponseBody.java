@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUnassignedNumbersResponseBody} extends {@link TeaModel}
  *
  * <p>ListUnassignedNumbersResponseBody</p>
@@ -130,6 +131,12 @@ public class ListUnassignedNumbersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUnassignedNumbersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUnassignedNumbersResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("City")
         private String city;
@@ -211,6 +218,12 @@ public class ListUnassignedNumbersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUnassignedNumbersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUnassignedNumbersResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;

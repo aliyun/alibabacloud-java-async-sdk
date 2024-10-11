@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIntervalSkillGroupReportResponseBody} extends {@link TeaModel}
  *
  * <p>ListIntervalSkillGroupReportResponseBody</p>
@@ -130,6 +131,12 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListIntervalSkillGroupReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIntervalSkillGroupReportResponseBody</p>
+     */
     public static class Back2Back extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentHandleRate")
         private Float agentHandleRate;
@@ -471,6 +478,12 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListIntervalSkillGroupReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIntervalSkillGroupReportResponseBody</p>
+     */
     public static class Inbound extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AbandonRate")
         private Float abandonRate;
@@ -1532,6 +1545,12 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListIntervalSkillGroupReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIntervalSkillGroupReportResponseBody</p>
+     */
     public static class Outbound extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnswerRate")
         private Float answerRate;
@@ -2113,6 +2132,12 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListIntervalSkillGroupReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIntervalSkillGroupReportResponseBody</p>
+     */
     public static class BreakCodeDetailList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BreakCode")
         private String breakCode;
@@ -2194,6 +2219,12 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListIntervalSkillGroupReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIntervalSkillGroupReportResponseBody</p>
+     */
     public static class Overall extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AverageBreakTime")
         private Float averageBreakTime;
@@ -2675,6 +2706,12 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListIntervalSkillGroupReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIntervalSkillGroupReportResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Back2Back")
         private Back2Back back2Back;

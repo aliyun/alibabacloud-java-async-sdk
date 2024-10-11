@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BridgeRtcCallResponseBody} extends {@link TeaModel}
  *
  * <p>BridgeRtcCallResponseBody</p>
@@ -150,6 +151,12 @@ public class BridgeRtcCallResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BridgeRtcCallResponseBody} extends {@link TeaModel}
+     *
+     * <p>BridgeRtcCallResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;

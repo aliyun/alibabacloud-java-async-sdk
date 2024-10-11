@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSchemaRequest} extends {@link RequestModel}
  *
  * <p>DeleteSchemaRequest</p>
@@ -83,7 +84,10 @@ public class DeleteSchemaRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9cfad875-6260-4a53-ab6e-b13e3fb31f7d</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -101,7 +105,11 @@ public class DeleteSchemaRequest extends Request {
         }
 
         /**
-         * schema id
+         * <p>schema id</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>profile</p>
          */
         public Builder schemaId(String schemaId) {
             this.putBodyParameter("SchemaId", schemaId);

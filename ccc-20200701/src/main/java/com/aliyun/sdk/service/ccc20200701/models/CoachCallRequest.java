@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CoachCallRequest} extends {@link RequestModel}
  *
  * <p>CoachCallRequest</p>
@@ -127,7 +128,10 @@ public class CoachCallRequest extends Request {
         } 
 
         /**
-         * CoachedUserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>coached-agent@ccc-test</p>
          */
         public Builder coachedUserId(String coachedUserId) {
             this.putQueryParameter("CoachedUserId", coachedUserId);
@@ -145,7 +149,10 @@ public class CoachCallRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -154,7 +161,10 @@ public class CoachCallRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-65382141036853491</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

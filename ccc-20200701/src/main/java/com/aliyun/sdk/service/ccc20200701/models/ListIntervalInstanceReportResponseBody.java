@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIntervalInstanceReportResponseBody} extends {@link TeaModel}
  *
  * <p>ListIntervalInstanceReportResponseBody</p>
@@ -130,6 +131,12 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListIntervalInstanceReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIntervalInstanceReportResponseBody</p>
+     */
     public static class Inbound extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AbandonRate")
         private Float abandonRate;
@@ -1351,6 +1358,12 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListIntervalInstanceReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIntervalInstanceReportResponseBody</p>
+     */
     public static class Outbound extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnswerRate")
         private Float answerRate;
@@ -1892,6 +1905,12 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListIntervalInstanceReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIntervalInstanceReportResponseBody</p>
+     */
     public static class Overall extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AverageBreakTime")
         private Float averageBreakTime;
@@ -2353,6 +2372,12 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListIntervalInstanceReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIntervalInstanceReportResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Inbound")
         private Inbound inbound;

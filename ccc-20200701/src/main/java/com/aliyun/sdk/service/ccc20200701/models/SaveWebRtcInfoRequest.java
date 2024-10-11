@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveWebRtcInfoRequest} extends {@link RequestModel}
  *
  * <p>SaveWebRtcInfoRequest</p>
@@ -114,7 +115,10 @@ public class SaveWebRtcInfoRequest extends Request {
         } 
 
         /**
-         * CallId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e13c9740-1e37-123b-21b6-00163e352f9</p>
          */
         public Builder callId(String callId) {
             this.putQueryParameter("CallId", callId);
@@ -123,7 +127,10 @@ public class SaveWebRtcInfoRequest extends Request {
         }
 
         /**
-         * Content.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;media_source&quot;:{},&quot;remote_inbound_rtp&quot;:{},&quot;outbound_rtp&quot;:{},&quot;inbound_rtp&quot;:{},&quot;remote_outbound_rtp&quot;:{},&quot;candidate&quot;:{},&quot;basic&quot;:{&quot;callId&quot;:&quot;e13c9740-1e37-123b-21b6-00163e352f9&quot;,&quot;timestamp&quot;:&quot;1647262108395&quot;,&quot;callStartTime&quot;:&quot;1647262108393&quot;,&quot;uid&quot;:&quot;user-test&quot;,&quot;access_point&quot;:&quot;shanghai&quot;,&quot;browser&quot;:&quot;90&quot;,&quot;ip&quot;:&quot;127.0.0.1&quot;}}</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -132,7 +139,10 @@ public class SaveWebRtcInfoRequest extends Request {
         }
 
         /**
-         * ContentType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder contentType(String contentType) {
             this.putQueryParameter("ContentType", contentType);
@@ -141,7 +151,10 @@ public class SaveWebRtcInfoRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -150,7 +163,10 @@ public class SaveWebRtcInfoRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-b8b0ca63-330c-4e65-8ae3-9de2c7ce7683</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

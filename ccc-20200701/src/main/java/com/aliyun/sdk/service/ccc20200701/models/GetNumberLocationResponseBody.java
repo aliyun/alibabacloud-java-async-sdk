@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNumberLocationResponseBody} extends {@link TeaModel}
  *
  * <p>GetNumberLocationResponseBody</p>
@@ -130,6 +131,12 @@ public class GetNumberLocationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetNumberLocationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNumberLocationResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("City")
         private String city;

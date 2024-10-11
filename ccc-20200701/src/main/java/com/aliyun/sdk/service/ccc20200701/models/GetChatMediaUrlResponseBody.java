@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetChatMediaUrlResponseBody} extends {@link TeaModel}
  *
  * <p>GetChatMediaUrlResponseBody</p>

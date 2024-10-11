@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetContactFlowRequest} extends {@link RequestModel}
  *
  * <p>GetContactFlowRequest</p>
@@ -84,7 +85,10 @@ public class GetContactFlowRequest extends Request {
         } 
 
         /**
-         * ContactFlowId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>274601be-a6d5-4429-bcef-32b51d031c6e</p>
          */
         public Builder contactFlowId(String contactFlowId) {
             this.putQueryParameter("ContactFlowId", contactFlowId);
@@ -93,7 +97,10 @@ public class GetContactFlowRequest extends Request {
         }
 
         /**
-         * DraftId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>566399d7-5558-447c-a72f-9be2768b6a82</p>
          */
         public Builder draftId(String draftId) {
             this.putQueryParameter("DraftId", draftId);
@@ -102,7 +109,10 @@ public class GetContactFlowRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

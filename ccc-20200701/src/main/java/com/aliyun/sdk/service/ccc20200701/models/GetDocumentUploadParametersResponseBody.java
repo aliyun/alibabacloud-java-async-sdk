@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDocumentUploadParametersResponseBody} extends {@link TeaModel}
  *
  * <p>GetDocumentUploadParametersResponseBody</p>
@@ -150,6 +151,12 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDocumentUploadParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDocumentUploadParametersResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessKeyId")
         private String accessKeyId;
@@ -261,7 +268,10 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
             }
 
             /**
-             * oss host
+             * <p>oss host</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com">https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com</a></p>
              */
             public Builder host(String host) {
                 this.host = host;

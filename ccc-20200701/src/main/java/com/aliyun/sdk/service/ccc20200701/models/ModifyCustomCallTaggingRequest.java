@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCustomCallTaggingRequest} extends {@link RequestModel}
  *
  * <p>ModifyCustomCallTaggingRequest</p>
@@ -115,7 +116,10 @@ public class ModifyCustomCallTaggingRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -124,7 +128,10 @@ public class ModifyCustomCallTaggingRequest extends Request {
         }
 
         /**
-         * Number.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1312121****</p>
          */
         public Builder number(String number) {
             this.putQueryParameter("Number", number);

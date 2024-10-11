@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCampaignsResponseBody} extends {@link TeaModel}
  *
  * <p>ListCampaignsResponseBody</p>
@@ -150,6 +151,12 @@ public class ListCampaignsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCampaignsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCampaignsResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActualEndTime")
         private Long actualEndTime;
@@ -571,6 +578,12 @@ public class ListCampaignsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCampaignsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCampaignsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;

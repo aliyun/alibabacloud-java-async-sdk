@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUserRequest} extends {@link RequestModel}
  *
  * <p>CreateUserRequest</p>
@@ -230,7 +231,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * <p>This parameter is required.</p>
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -239,7 +240,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * Email.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -248,7 +252,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -257,7 +264,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * LoginName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent</p>
          */
         public Builder loginName(String loginName) {
             this.putQueryParameter("LoginName", loginName);
@@ -293,7 +303,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * RoleId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Agent@ccc-test</p>
          */
         public Builder roleId(String roleId) {
             this.putQueryParameter("RoleId", roleId);

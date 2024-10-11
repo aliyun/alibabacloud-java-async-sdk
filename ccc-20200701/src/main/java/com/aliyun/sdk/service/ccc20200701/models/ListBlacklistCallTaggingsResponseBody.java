@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListBlacklistCallTaggingsResponseBody} extends {@link TeaModel}
  *
  * <p>ListBlacklistCallTaggingsResponseBody</p>
@@ -117,7 +118,10 @@ public class ListBlacklistCallTaggingsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>032C73C4-3A6F-4502-872B-4F5B41161C6E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,6 +134,12 @@ public class ListBlacklistCallTaggingsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListBlacklistCallTaggingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListBlacklistCallTaggingsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Blacklisted")
         private Boolean blacklisted;

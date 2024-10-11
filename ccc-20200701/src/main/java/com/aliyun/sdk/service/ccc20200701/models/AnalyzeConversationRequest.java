@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AnalyzeConversationRequest} extends {@link RequestModel}
  *
  * <p>AnalyzeConversationRequest</p>
@@ -114,7 +115,10 @@ public class AnalyzeConversationRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9cfad875-6260-4a53-ab6e-b13e3fb31f7d</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

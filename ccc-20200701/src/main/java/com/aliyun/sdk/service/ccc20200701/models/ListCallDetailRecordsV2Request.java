@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCallDetailRecordsV2Request} extends {@link RequestModel}
  *
  * <p>ListCallDetailRecordsV2Request</p>
@@ -18,6 +19,10 @@ public class ListCallDetailRecordsV2Request extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AgentId")
     private String agentId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AnalyticsReportReady")
+    private Boolean analyticsReportReady;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Broker")
@@ -124,6 +129,7 @@ public class ListCallDetailRecordsV2Request extends Request {
         super(builder);
         this.accessChannelTypeList = builder.accessChannelTypeList;
         this.agentId = builder.agentId;
+        this.analyticsReportReady = builder.analyticsReportReady;
         this.broker = builder.broker;
         this.calledNumber = builder.calledNumber;
         this.callingNumber = builder.callingNumber;
@@ -175,6 +181,13 @@ public class ListCallDetailRecordsV2Request extends Request {
      */
     public String getAgentId() {
         return this.agentId;
+    }
+
+    /**
+     * @return analyticsReportReady
+     */
+    public Boolean getAnalyticsReportReady() {
+        return this.analyticsReportReady;
     }
 
     /**
@@ -348,6 +361,7 @@ public class ListCallDetailRecordsV2Request extends Request {
     public static final class Builder extends Request.Builder<ListCallDetailRecordsV2Request, Builder> {
         private String accessChannelTypeList; 
         private String agentId; 
+        private Boolean analyticsReportReady; 
         private String broker; 
         private String calledNumber; 
         private String callingNumber; 
@@ -381,6 +395,7 @@ public class ListCallDetailRecordsV2Request extends Request {
             super(request);
             this.accessChannelTypeList = request.accessChannelTypeList;
             this.agentId = request.agentId;
+            this.analyticsReportReady = request.analyticsReportReady;
             this.broker = request.broker;
             this.calledNumber = request.calledNumber;
             this.callingNumber = request.callingNumber;
@@ -422,6 +437,15 @@ public class ListCallDetailRecordsV2Request extends Request {
         public Builder agentId(String agentId) {
             this.putQueryParameter("AgentId", agentId);
             this.agentId = agentId;
+            return this;
+        }
+
+        /**
+         * AnalyticsReportReady.
+         */
+        public Builder analyticsReportReady(Boolean analyticsReportReady) {
+            this.putQueryParameter("AnalyticsReportReady", analyticsReportReady);
+            this.analyticsReportReady = analyticsReportReady;
             return this;
         }
 
@@ -507,7 +531,10 @@ public class ListCallDetailRecordsV2Request extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -543,7 +570,10 @@ public class ListCallDetailRecordsV2Request extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -552,7 +582,10 @@ public class ListCallDetailRecordsV2Request extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

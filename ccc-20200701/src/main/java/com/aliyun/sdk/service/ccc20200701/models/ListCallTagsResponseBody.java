@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCallTagsResponseBody} extends {@link TeaModel}
  *
  * <p>ListCallTagsResponseBody</p>
@@ -130,6 +131,12 @@ public class ListCallTagsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCallTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCallTagsResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -191,6 +198,12 @@ public class ListCallTagsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCallTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCallTagsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;

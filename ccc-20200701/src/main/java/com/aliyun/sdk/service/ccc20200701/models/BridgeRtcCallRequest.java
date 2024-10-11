@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BridgeRtcCallRequest} extends {@link RequestModel}
  *
  * <p>BridgeRtcCallRequest</p>
@@ -169,7 +170,7 @@ public class BridgeRtcCallRequest extends Request {
         } 
 
         /**
-         * Callee.
+         * <p>This parameter is required.</p>
          */
         public Builder callee(String callee) {
             this.putQueryParameter("Callee", callee);
@@ -187,7 +188,7 @@ public class BridgeRtcCallRequest extends Request {
         }
 
         /**
-         * DeviceId.
+         * <p>This parameter is required.</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -196,7 +197,7 @@ public class BridgeRtcCallRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

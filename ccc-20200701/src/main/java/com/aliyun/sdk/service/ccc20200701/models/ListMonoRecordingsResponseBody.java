@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMonoRecordingsResponseBody} extends {@link TeaModel}
  *
  * <p>ListMonoRecordingsResponseBody</p>
@@ -130,6 +131,12 @@ public class ListMonoRecordingsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMonoRecordingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMonoRecordingsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentId")
         private String agentId;

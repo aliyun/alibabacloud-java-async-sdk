@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ProcessAliMeCallbackOfStagingResponseBody} extends {@link TeaModel}
  *
  * <p>ProcessAliMeCallbackOfStagingResponseBody</p>
@@ -130,6 +131,12 @@ public class ProcessAliMeCallbackOfStagingResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ProcessAliMeCallbackOfStagingResponseBody} extends {@link TeaModel}
+     *
+     * <p>ProcessAliMeCallbackOfStagingResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Result")
         private String result;

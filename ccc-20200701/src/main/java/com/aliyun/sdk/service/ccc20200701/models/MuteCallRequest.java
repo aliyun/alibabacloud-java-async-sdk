@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MuteCallRequest} extends {@link RequestModel}
  *
  * <p>MuteCallRequest</p>
@@ -129,7 +130,10 @@ public class MuteCallRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -138,7 +142,10 @@ public class MuteCallRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-6581536084722****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

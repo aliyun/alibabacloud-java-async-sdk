@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisableSchemaPropertyRequest} extends {@link RequestModel}
  *
  * <p>DisableSchemaPropertyRequest</p>
@@ -98,7 +99,10 @@ public class DisableSchemaPropertyRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ef1e71e9-ae9d-487c-96ad-9181d85cf802</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -107,7 +111,10 @@ public class DisableSchemaPropertyRequest extends Request {
         }
 
         /**
-         * PropertyName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder propertyName(String propertyName) {
             this.putBodyParameter("PropertyName", propertyName);
@@ -125,7 +132,11 @@ public class DisableSchemaPropertyRequest extends Request {
         }
 
         /**
-         * schema id
+         * <p>schema id</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>profile</p>
          */
         public Builder schemaId(String schemaId) {
             this.putBodyParameter("SchemaId", schemaId);

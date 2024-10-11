@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InterceptCallRequest} extends {@link RequestModel}
  *
  * <p>InterceptCallRequest</p>
@@ -136,7 +137,10 @@ public class InterceptCallRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -145,7 +149,10 @@ public class InterceptCallRequest extends Request {
         }
 
         /**
-         * InterceptedUserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent2@ccc-test</p>
          */
         public Builder interceptedUserId(String interceptedUserId) {
             this.putQueryParameter("InterceptedUserId", interceptedUserId);
@@ -154,7 +161,10 @@ public class InterceptCallRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-6538214103685****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

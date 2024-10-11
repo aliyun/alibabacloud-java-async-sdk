@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddSkillGroupsToUserRequest} extends {@link RequestModel}
  *
  * <p>AddSkillGroupsToUserRequest</p>
@@ -84,7 +85,10 @@ public class AddSkillGroupsToUserRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -93,7 +97,10 @@ public class AddSkillGroupsToUserRequest extends Request {
         }
 
         /**
-         * SkillLevelList.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;skillGroupId&quot;:&quot;test1@ccc-test&quot;,&quot;skillLevel&quot;:5},{&quot;skillGroupId&quot;:&quot;test2@ccc-test&quot;,&quot;skillLevel&quot;:5}]</p>
          */
         public Builder skillLevelList(String skillLevelList) {
             this.putQueryParameter("SkillLevelList", skillLevelList);
@@ -102,7 +109,10 @@ public class AddSkillGroupsToUserRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

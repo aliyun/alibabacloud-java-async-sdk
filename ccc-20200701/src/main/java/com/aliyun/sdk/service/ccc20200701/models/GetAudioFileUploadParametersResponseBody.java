@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAudioFileUploadParametersResponseBody} extends {@link TeaModel}
  *
  * <p>GetAudioFileUploadParametersResponseBody</p>
@@ -130,6 +131,12 @@ public class GetAudioFileUploadParametersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAudioFileUploadParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAudioFileUploadParametersResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessKeyId")
         private String accessKeyId;

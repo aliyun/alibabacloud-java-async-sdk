@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeVisibilityRequest} extends {@link RequestModel}
  *
  * <p>ChangeVisibilityRequest</p>
@@ -82,7 +83,7 @@ public class ChangeVisibilityRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

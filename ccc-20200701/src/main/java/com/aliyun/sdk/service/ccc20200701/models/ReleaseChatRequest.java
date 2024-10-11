@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleaseChatRequest} extends {@link RequestModel}
  *
  * <p>ReleaseChatRequest</p>
@@ -120,7 +121,10 @@ public class ReleaseChatRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chat-6538214103685****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -147,7 +151,10 @@ public class ReleaseChatRequest extends Request {
         }
 
         /**
-         * UserType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CUSTOMER</p>
          */
         public Builder userType(String userType) {
             this.putQueryParameter("UserType", userType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PollUserStatusResponseBody} extends {@link TeaModel}
  *
  * <p>PollUserStatusResponseBody</p>
@@ -150,6 +151,12 @@ public class PollUserStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PollUserStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>PollUserStatusResponseBody</p>
+     */
     public static class ChannelContexts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CallType")
         private String callType;
@@ -471,6 +478,12 @@ public class PollUserStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PollUserStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>PollUserStatusResponseBody</p>
+     */
     public static class CallContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CallType")
         private String callType;
@@ -592,6 +605,12 @@ public class PollUserStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PollUserStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>PollUserStatusResponseBody</p>
+     */
     public static class Members extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Index")
         private Integer index;
@@ -753,6 +772,12 @@ public class PollUserStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PollUserStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>PollUserStatusResponseBody</p>
+     */
     public static class ChatContexts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CallVariables")
         private String callVariables;
@@ -874,6 +899,12 @@ public class PollUserStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PollUserStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>PollUserStatusResponseBody</p>
+     */
     public static class ParallelJobList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
@@ -955,6 +986,12 @@ public class PollUserStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PollUserStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>PollUserStatusResponseBody</p>
+     */
     public static class UserContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BreakCode")
         private String breakCode;
@@ -1256,6 +1293,12 @@ public class PollUserStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PollUserStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>PollUserStatusResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CallContext")
         private CallContext callContext;

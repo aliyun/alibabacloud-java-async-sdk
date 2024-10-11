@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLegacyQueueEventLogsResponseBody} extends {@link TeaModel}
  *
  * <p>ListLegacyQueueEventLogsResponseBody</p>
@@ -150,6 +151,12 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLegacyQueueEventLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLegacyQueueEventLogsResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Acid")
         private String acid;
@@ -391,6 +398,12 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLegacyQueueEventLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLegacyQueueEventLogsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;

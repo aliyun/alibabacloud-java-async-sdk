@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLoginDetailsResponseBody} extends {@link TeaModel}
  *
  * <p>GetLoginDetailsResponseBody</p>
@@ -150,6 +151,12 @@ public class GetLoginDetailsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetLoginDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLoginDetailsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentServerUrl")
         private String agentServerUrl;

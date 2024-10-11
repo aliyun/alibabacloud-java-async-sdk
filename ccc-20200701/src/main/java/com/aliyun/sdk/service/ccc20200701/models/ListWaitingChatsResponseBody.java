@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWaitingChatsResponseBody} extends {@link TeaModel}
  *
  * <p>ListWaitingChatsResponseBody</p>
@@ -130,6 +131,12 @@ public class ListWaitingChatsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListWaitingChatsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWaitingChatsResponseBody</p>
+     */
     public static class Messages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -211,6 +218,12 @@ public class ListWaitingChatsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWaitingChatsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWaitingChatsResponseBody</p>
+     */
     public static class UserList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvatarUrl")
         private String avatarUrl;
@@ -312,6 +325,12 @@ public class ListWaitingChatsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWaitingChatsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWaitingChatsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessChannelId")
         private String accessChannelId;

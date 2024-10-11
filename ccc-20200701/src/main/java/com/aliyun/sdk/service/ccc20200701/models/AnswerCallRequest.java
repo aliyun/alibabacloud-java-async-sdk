@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AnswerCallRequest} extends {@link RequestModel}
  *
  * <p>AnswerCallRequest</p>
@@ -106,7 +107,10 @@ public class AnswerCallRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -115,7 +119,10 @@ public class AnswerCallRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-65382141036853491</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

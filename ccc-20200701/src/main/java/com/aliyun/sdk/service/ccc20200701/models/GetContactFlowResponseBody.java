@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetContactFlowResponseBody} extends {@link TeaModel}
  *
  * <p>GetContactFlowResponseBody</p>
@@ -130,6 +131,12 @@ public class GetContactFlowResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetContactFlowResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetContactFlowResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContactFlowId")
         private String contactFlowId;

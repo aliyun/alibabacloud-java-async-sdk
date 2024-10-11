@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDocumentsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDocumentsResponseBody</p>
@@ -150,6 +151,12 @@ public class ListDocumentsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDocumentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDocumentsResponseBody</p>
+     */
     public static class Schema extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
@@ -273,7 +280,10 @@ public class ListDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * schame id
+             * <p>schame id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>profile</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -311,6 +321,12 @@ public class ListDocumentsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDocumentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDocumentsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Documents")
         private java.util.List < java.util.Map<String, ?>> documents;
@@ -390,7 +406,7 @@ public class ListDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * scheme
+             * <p>scheme</p>
              */
             public Builder schema(Schema schema) {
                 this.schema = schema;

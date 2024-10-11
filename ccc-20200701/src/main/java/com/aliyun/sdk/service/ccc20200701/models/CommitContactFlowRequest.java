@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CommitContactFlowRequest} extends {@link RequestModel}
  *
  * <p>CommitContactFlowRequest</p>
@@ -114,7 +115,10 @@ public class CommitContactFlowRequest extends Request {
         } 
 
         /**
-         * ContactFlowId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7d706489-d06d-4a92-8666-8c9dba2c5cb1</p>
          */
         public Builder contactFlowId(String contactFlowId) {
             this.putQueryParameter("ContactFlowId", contactFlowId);
@@ -123,7 +127,7 @@ public class CommitContactFlowRequest extends Request {
         }
 
         /**
-         * Definition.
+         * <p>This parameter is required.</p>
          */
         public Builder definition(String definition) {
             this.putQueryParameter("Definition", definition);
@@ -132,7 +136,10 @@ public class CommitContactFlowRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -141,7 +148,10 @@ public class CommitContactFlowRequest extends Request {
         }
 
         /**
-         * DraftId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b28f74ca-5846-4496-8bbd-34fb1750798c</p>
          */
         public Builder draftId(String draftId) {
             this.putQueryParameter("DraftId", draftId);
@@ -150,7 +160,10 @@ public class CommitContactFlowRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

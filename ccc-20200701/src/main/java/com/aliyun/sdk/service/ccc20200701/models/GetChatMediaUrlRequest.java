@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetChatMediaUrlRequest} extends {@link RequestModel}
  *
  * <p>GetChatMediaUrlRequest</p>
@@ -83,7 +84,10 @@ public class GetChatMediaUrlRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -92,7 +96,11 @@ public class GetChatMediaUrlRequest extends Request {
         }
 
         /**
-         * media id
+         * <p>media id</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>$iAHNCNQCo3dhdgMGBAAFAAbaACOEAaQhIEeoAqpjjBl42N6o_kg7A88AAAGRIRRuBgTOACrxHgcACM8AAAGRIYJLBQ</p>
          */
         public Builder mediaId(String mediaId) {
             this.putBodyParameter("MediaId", mediaId);

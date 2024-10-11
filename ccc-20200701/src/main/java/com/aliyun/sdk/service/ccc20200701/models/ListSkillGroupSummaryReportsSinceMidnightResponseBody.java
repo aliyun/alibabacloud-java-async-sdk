@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSkillGroupSummaryReportsSinceMidnightResponseBody} extends {@link TeaModel}
  *
  * <p>ListSkillGroupSummaryReportsSinceMidnightResponseBody</p>
@@ -150,6 +151,12 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
 
     } 
 
+    /**
+     * 
+     * {@link ListSkillGroupSummaryReportsSinceMidnightResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillGroupSummaryReportsSinceMidnightResponseBody</p>
+     */
     public static class Inbound extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AbandonedInQueueOfQueueCount")
         private Long abandonedInQueueOfQueueCount;
@@ -911,6 +918,12 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         } 
 
     }
+    /**
+     * 
+     * {@link ListSkillGroupSummaryReportsSinceMidnightResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillGroupSummaryReportsSinceMidnightResponseBody</p>
+     */
     public static class Outbound extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnswerRate")
         private Float answerRate;
@@ -1472,6 +1485,12 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         } 
 
     }
+    /**
+     * 
+     * {@link ListSkillGroupSummaryReportsSinceMidnightResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillGroupSummaryReportsSinceMidnightResponseBody</p>
+     */
     public static class Overall extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AverageReadyTime")
         private Long averageReadyTime;
@@ -1813,6 +1832,12 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         } 
 
     }
+    /**
+     * 
+     * {@link ListSkillGroupSummaryReportsSinceMidnightResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillGroupSummaryReportsSinceMidnightResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Inbound")
         private Inbound inbound;
@@ -1974,6 +1999,12 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         } 
 
     }
+    /**
+     * 
+     * {@link ListSkillGroupSummaryReportsSinceMidnightResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillGroupSummaryReportsSinceMidnightResponseBody</p>
+     */
     public static class PagedSkillGroupSummaryReport extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;

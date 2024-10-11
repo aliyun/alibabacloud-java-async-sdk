@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeWorkModeResponseBody} extends {@link TeaModel}
  *
  * <p>ChangeWorkModeResponseBody</p>
@@ -150,6 +151,12 @@ public class ChangeWorkModeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ChangeWorkModeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChangeWorkModeResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BreakCode")
         private String breakCode;

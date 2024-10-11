@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataChannelCredentialsRequest} extends {@link RequestModel}
  *
  * <p>GetDataChannelCredentialsRequest</p>
@@ -69,7 +70,7 @@ public class GetDataChannelCredentialsRequest extends Request {
         } 
 
         /**
-         * DeviceId.
+         * <p>This parameter is required.</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -78,7 +79,7 @@ public class GetDataChannelCredentialsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

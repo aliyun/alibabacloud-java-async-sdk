@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCampaignResponseBody} extends {@link TeaModel}
  *
  * <p>GetCampaignResponseBody</p>
@@ -110,6 +111,12 @@ public class GetCampaignResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCampaignResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCampaignResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActualEndTime")
         private Long actualEndTime;

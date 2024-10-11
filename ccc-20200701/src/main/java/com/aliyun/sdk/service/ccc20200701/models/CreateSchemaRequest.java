@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSchemaRequest} extends {@link RequestModel}
  *
  * <p>CreateSchemaRequest</p>
@@ -119,7 +120,10 @@ public class CreateSchemaRequest extends Request {
         }
 
         /**
-         * schema id
+         * <p>schema id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>profile</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
@@ -128,7 +132,10 @@ public class CreateSchemaRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b0eb2742-f37e-4c67-82d4-25c651c1c450</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -162,6 +169,12 @@ public class CreateSchemaRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSchemaRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSchemaRequest</p>
+     */
     public static class Properties extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Array")
         private Boolean array;
@@ -399,7 +412,10 @@ public class CreateSchemaRequest extends Request {
             }
 
             /**
-             * DataType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -479,7 +495,10 @@ public class CreateSchemaRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;

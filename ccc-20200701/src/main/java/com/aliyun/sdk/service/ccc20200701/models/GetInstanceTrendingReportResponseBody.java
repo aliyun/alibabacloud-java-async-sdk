@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceTrendingReportResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceTrendingReportResponseBody</p>
@@ -130,6 +131,12 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceTrendingReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceTrendingReportResponseBody</p>
+     */
     public static class Inbound extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CallsAbandonedInIVR")
         private Long callsAbandonedInIVR;
@@ -291,6 +298,12 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceTrendingReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceTrendingReportResponseBody</p>
+     */
     public static class Outbound extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CallsAnswered")
         private Long callsAnswered;
@@ -372,6 +385,12 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceTrendingReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceTrendingReportResponseBody</p>
+     */
     public static class Overall extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxLoggedInAgents")
         private Long maxLoggedInAgents;
@@ -433,6 +452,12 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceTrendingReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceTrendingReportResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Inbound")
         private java.util.List < Inbound> inbound;

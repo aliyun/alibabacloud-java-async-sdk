@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FinishTicketTaskRequest} extends {@link RequestModel}
  *
  * <p>FinishTicketTaskRequest</p>
@@ -97,7 +98,7 @@ public class FinishTicketTaskRequest extends Request {
         } 
 
         /**
-         * Comment.
+         * <p>This parameter is required.</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -106,7 +107,10 @@ public class FinishTicketTaskRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

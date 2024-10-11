@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateInstanceRequest</p>
@@ -113,7 +114,10 @@ public class CreateInstanceRequest extends Request {
         } 
 
         /**
-         * AdminRamIdList.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;24861380681070****&quot;,&quot;105980354482****&quot;]</p>
          */
         public Builder adminRamIdList(String adminRamIdList) {
             this.putQueryParameter("AdminRamIdList", adminRamIdList);
@@ -131,7 +135,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -140,7 +147,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -149,7 +156,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * NumberList.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;0830011xxxx&quot;, &quot;0830312xxxx&quot;]</p>
          */
         public Builder numberList(String numberList) {
             this.putQueryParameter("NumberList", numberList);

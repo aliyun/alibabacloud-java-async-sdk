@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAgentSummaryReportsSinceMidnightResponseBody} extends {@link TeaModel}
  *
  * <p>ListAgentSummaryReportsSinceMidnightResponseBody</p>
@@ -150,6 +151,12 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAgentSummaryReportsSinceMidnightResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAgentSummaryReportsSinceMidnightResponseBody</p>
+     */
     public static class Inbound extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AverageRingTime")
         private Long averageRingTime;
@@ -491,6 +498,12 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAgentSummaryReportsSinceMidnightResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAgentSummaryReportsSinceMidnightResponseBody</p>
+     */
     public static class Outbound extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnswerRate")
         private Float answerRate;
@@ -812,6 +825,12 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAgentSummaryReportsSinceMidnightResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAgentSummaryReportsSinceMidnightResponseBody</p>
+     */
     public static class Overall extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AverageReadyTime")
         private Long averageReadyTime;
@@ -1173,6 +1192,12 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAgentSummaryReportsSinceMidnightResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAgentSummaryReportsSinceMidnightResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentId")
         private String agentId;
@@ -1394,6 +1419,12 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAgentSummaryReportsSinceMidnightResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAgentSummaryReportsSinceMidnightResponseBody</p>
+     */
     public static class PagedAgentSummaryReport extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;

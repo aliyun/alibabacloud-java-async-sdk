@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResubmitTicketRequest} extends {@link RequestModel}
  *
  * <p>ResubmitTicketRequest</p>
@@ -92,7 +93,10 @@ public class ResubmitTicketRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -101,7 +105,10 @@ public class ResubmitTicketRequest extends Request {
         }
 
         /**
-         * TicketId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f2c6722b-cd13-442d-bf10-22a07c70d6d5</p>
          */
         public Builder ticketId(String ticketId) {
             this.putQueryParameter("TicketId", ticketId);

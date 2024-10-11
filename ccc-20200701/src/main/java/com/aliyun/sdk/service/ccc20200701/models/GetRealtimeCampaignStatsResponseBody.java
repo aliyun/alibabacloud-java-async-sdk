@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRealtimeCampaignStatsResponseBody} extends {@link TeaModel}
  *
  * <p>GetRealtimeCampaignStatsResponseBody</p>
@@ -130,6 +131,12 @@ public class GetRealtimeCampaignStatsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRealtimeCampaignStatsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRealtimeCampaignStatsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BreakingAgents")
         private Long breakingAgents;

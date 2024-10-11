@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportAdminsRequest} extends {@link RequestModel}
  *
  * <p>ImportAdminsRequest</p>
@@ -69,7 +70,10 @@ public class ImportAdminsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -78,7 +82,10 @@ public class ImportAdminsRequest extends Request {
         }
 
         /**
-         * RamIdList.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;26972543893791****&quot;]</p>
          */
         public Builder ramIdList(String ramIdList) {
             this.putQueryParameter("RamIdList", ramIdList);

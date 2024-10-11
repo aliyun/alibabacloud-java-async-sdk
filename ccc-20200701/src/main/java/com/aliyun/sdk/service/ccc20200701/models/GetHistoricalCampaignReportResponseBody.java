@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHistoricalCampaignReportResponseBody} extends {@link TeaModel}
  *
  * <p>GetHistoricalCampaignReportResponseBody</p>
@@ -130,6 +131,12 @@ public class GetHistoricalCampaignReportResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHistoricalCampaignReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHistoricalCampaignReportResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AbandonRate")
         private Float abandonRate;

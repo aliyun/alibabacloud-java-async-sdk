@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAudioFileDownloadUrlRequest} extends {@link RequestModel}
  *
  * <p>GetAudioFileDownloadUrlRequest</p>
@@ -69,7 +70,10 @@ public class GetAudioFileDownloadUrlRequest extends Request {
         } 
 
         /**
-         * AudioResourceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acc300c4-75c9-41ba-ba5e-2a365c96c248</p>
          */
         public Builder audioResourceId(String audioResourceId) {
             this.putQueryParameter("AudioResourceId", audioResourceId);
@@ -78,7 +82,10 @@ public class GetAudioFileDownloadUrlRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

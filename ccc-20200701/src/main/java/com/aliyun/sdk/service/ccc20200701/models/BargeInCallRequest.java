@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BargeInCallRequest} extends {@link RequestModel}
  *
  * <p>BargeInCallRequest</p>
@@ -127,7 +128,10 @@ public class BargeInCallRequest extends Request {
         } 
 
         /**
-         * BargedUserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent2@ccc-test</p>
          */
         public Builder bargedUserId(String bargedUserId) {
             this.putQueryParameter("BargedUserId", bargedUserId);
@@ -145,7 +149,10 @@ public class BargeInCallRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -154,7 +161,10 @@ public class BargeInCallRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-6538214103685****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

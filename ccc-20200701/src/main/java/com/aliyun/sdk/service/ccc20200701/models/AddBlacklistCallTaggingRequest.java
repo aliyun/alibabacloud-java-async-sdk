@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddBlacklistCallTaggingRequest} extends {@link RequestModel}
  *
  * <p>AddBlacklistCallTaggingRequest</p>
@@ -83,7 +84,10 @@ public class AddBlacklistCallTaggingRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -101,7 +105,10 @@ public class AddBlacklistCallTaggingRequest extends Request {
         }
 
         /**
-         * Number.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1764590****</p>
          */
         public Builder number(String number) {
             this.putQueryParameter("Number", number);

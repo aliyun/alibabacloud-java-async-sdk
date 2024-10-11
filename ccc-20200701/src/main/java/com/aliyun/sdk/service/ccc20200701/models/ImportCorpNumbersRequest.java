@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportCorpNumbersRequest} extends {@link RequestModel}
  *
  * <p>ImportCorpNumbersRequest</p>
@@ -143,7 +144,10 @@ public class ImportCorpNumbersRequest extends Request {
         }
 
         /**
-         * NumberList.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;02912345678&quot;]</p>
          */
         public Builder numberList(String numberList) {
             this.putQueryParameter("NumberList", numberList);
@@ -152,7 +156,7 @@ public class ImportCorpNumbersRequest extends Request {
         }
 
         /**
-         * Provider.
+         * <p>This parameter is required.</p>
          */
         public Builder provider(String provider) {
             this.putQueryParameter("Provider", provider);

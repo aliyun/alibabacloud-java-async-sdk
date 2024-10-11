@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataChannelCredentialsResponseBody} extends {@link TeaModel}
  *
  * <p>GetDataChannelCredentialsResponseBody</p>
@@ -150,6 +151,12 @@ public class GetDataChannelCredentialsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDataChannelCredentialsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataChannelCredentialsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;

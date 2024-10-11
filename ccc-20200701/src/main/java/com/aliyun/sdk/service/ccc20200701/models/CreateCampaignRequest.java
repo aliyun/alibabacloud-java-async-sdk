@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCampaignRequest} extends {@link RequestModel}
  *
  * <p>CreateCampaignRequest</p>
@@ -274,7 +275,10 @@ public class CreateCampaignRequest extends Request {
         } 
 
         /**
-         * CallableTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;beginTime&quot;:&quot;00:00:00&quot;,&quot;endTime&quot;:&quot;23:00:00&quot; }]</p>
          */
         public Builder callableTime(String callableTime) {
             this.putQueryParameter("CallableTime", callableTime);
@@ -302,7 +306,10 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
-         * ContactFlowId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c1f2bc75-422e-43c7-9c9d9d95633a</p>
          */
         public Builder contactFlowId(String contactFlowId) {
             this.putQueryParameter("ContactFlowId", contactFlowId);
@@ -311,7 +318,10 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1634313600000</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -329,7 +339,10 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -338,7 +351,10 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
-         * MaxAttemptCount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maxAttemptCount(Long maxAttemptCount) {
             this.putQueryParameter("MaxAttemptCount", maxAttemptCount);
@@ -347,7 +363,10 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
-         * MinAttemptInterval.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minAttemptInterval(Long minAttemptInterval) {
             this.putQueryParameter("MinAttemptInterval", minAttemptInterval);
@@ -356,7 +375,10 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-campaign</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -365,7 +387,10 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
-         * QueueId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>skillgroup@ccc-test</p>
          */
         public Builder queueId(String queueId) {
             this.putQueryParameter("QueueId", queueId);
@@ -392,7 +417,10 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1634140800000</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -401,7 +429,10 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
-         * StrategyParameters.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ratio&quot;:1}</p>
          */
         public Builder strategyParameters(String strategyParameters) {
             this.putQueryParameter("StrategyParameters", strategyParameters);
@@ -410,7 +441,10 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
-         * StrategyType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PACING</p>
          */
         public Builder strategyType(String strategyType) {
             this.putQueryParameter("StrategyType", strategyType);
@@ -425,6 +459,12 @@ public class CreateCampaignRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateCampaignRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCampaignRequest</p>
+     */
     public static class CaseList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomVariables")
         private String customVariables;

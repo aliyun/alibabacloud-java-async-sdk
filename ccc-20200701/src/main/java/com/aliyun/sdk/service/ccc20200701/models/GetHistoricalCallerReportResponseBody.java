@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHistoricalCallerReportResponseBody} extends {@link TeaModel}
  *
  * <p>GetHistoricalCallerReportResponseBody</p>
@@ -130,6 +131,12 @@ public class GetHistoricalCallerReportResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHistoricalCallerReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHistoricalCallerReportResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LastCallingTime")
         private Long lastCallingTime;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVisitorLoginDetailsRequest} extends {@link RequestModel}
  *
  * <p>GetVisitorLoginDetailsRequest</p>
@@ -97,7 +98,10 @@ public class GetVisitorLoginDetailsRequest extends Request {
         } 
 
         /**
-         * ChatDeviceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4c51c9116c36537cb850dc1081d745df</p>
          */
         public Builder chatDeviceId(String chatDeviceId) {
             this.putQueryParameter("ChatDeviceId", chatDeviceId);
@@ -124,7 +128,10 @@ public class GetVisitorLoginDetailsRequest extends Request {
         }
 
         /**
-         * VisitorId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fcd020fe-d8e4-40e5-8c77-1a272a174a7d</p>
          */
         public Builder visitorId(String visitorId) {
             this.putQueryParameter("VisitorId", visitorId);

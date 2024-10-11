@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateChatRoutingProfileRequest} extends {@link RequestModel}
  *
  * <p>UpdateChatRoutingProfileRequest</p>
@@ -69,7 +70,10 @@ public class UpdateChatRoutingProfileRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9cfad875-6260-4a53-ab6e-b13e3fb31f7d</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -78,7 +82,27 @@ public class UpdateChatRoutingProfileRequest extends Request {
         }
 
         /**
-         * RoutingProfiles.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;RoutingType&quot;: &quot;Automatic&quot;,
+         *     &quot;AgentConcurrencySettings&quot;: {
+         *         &quot;AllowExceedingLimitWhenTransferring&quot;: false,
+         *         &quot;ConcurrencyLimit&quot;: 4,
+         *         &quot;AllowExceedingLimitWhenClaiming&quot;: true,
+         *         &quot;Enabled&quot;: true
+         *     },
+         *     &quot;ChatSettings&quot;: {
+         *         &quot;IdleChatTimeoutSeconds&quot;: 300
+         *     },
+         *     &quot;DistributionSettings&quot;: {
+         *         &quot;Enabled&quot;: true,
+         *         &quot;AgentRingTimeoutSeconds&quot;: 119,
+         *         &quot;MaxNumberOfConversationsAgentCanMiss&quot;: 5,
+         *         &quot;PostAgentMissingConversionsAction&quot;: &quot;Nothing&quot;
+         *     }
+         * }</p>
          */
         public Builder routingProfiles(String routingProfiles) {
             this.putQueryParameter("RoutingProfiles", routingProfiles);

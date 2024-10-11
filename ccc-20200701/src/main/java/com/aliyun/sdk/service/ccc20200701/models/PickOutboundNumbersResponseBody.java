@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PickOutboundNumbersResponseBody} extends {@link TeaModel}
  *
  * <p>PickOutboundNumbersResponseBody</p>
@@ -130,6 +131,12 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PickOutboundNumbersResponseBody} extends {@link TeaModel}
+     *
+     * <p>PickOutboundNumbersResponseBody</p>
+     */
     public static class Callee extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("City")
         private String city;
@@ -211,6 +218,12 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PickOutboundNumbersResponseBody} extends {@link TeaModel}
+     *
+     * <p>PickOutboundNumbersResponseBody</p>
+     */
     public static class Caller extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("City")
         private String city;
@@ -292,6 +305,12 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PickOutboundNumbersResponseBody} extends {@link TeaModel}
+     *
+     * <p>PickOutboundNumbersResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Callee")
         private Callee callee;

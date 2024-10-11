@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLegacyAppraiseLogsResponseBody} extends {@link TeaModel}
  *
  * <p>ListLegacyAppraiseLogsResponseBody</p>
@@ -150,6 +151,12 @@ public class ListLegacyAppraiseLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLegacyAppraiseLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLegacyAppraiseLogsResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Acid")
         private String acid;
@@ -411,6 +418,12 @@ public class ListLegacyAppraiseLogsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLegacyAppraiseLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLegacyAppraiseLogsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;

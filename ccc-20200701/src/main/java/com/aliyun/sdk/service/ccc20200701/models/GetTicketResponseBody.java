@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTicketResponseBody} extends {@link TeaModel}
  *
  * <p>GetTicketResponseBody</p>
@@ -150,6 +151,12 @@ public class GetTicketResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTicketResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTicketResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Assignee")
         private String assignee;

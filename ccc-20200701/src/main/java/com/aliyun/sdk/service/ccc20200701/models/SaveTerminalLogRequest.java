@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveTerminalLogRequest} extends {@link RequestModel}
  *
  * <p>SaveTerminalLogRequest</p>
@@ -173,7 +174,10 @@ public class SaveTerminalLogRequest extends Request {
         } 
 
         /**
-         * AppName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CCCClient</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -182,7 +186,10 @@ public class SaveTerminalLogRequest extends Request {
         }
 
         /**
-         * CallId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e13c9740-1e37-123b-21b6-00163e352f9</p>
          */
         public Builder callId(String callId) {
             this.putQueryParameter("CallId", callId);
@@ -191,7 +198,10 @@ public class SaveTerminalLogRequest extends Request {
         }
 
         /**
-         * Content.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -200,7 +210,10 @@ public class SaveTerminalLogRequest extends Request {
         }
 
         /**
-         * DataType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder dataType(Integer dataType) {
             this.putQueryParameter("DataType", dataType);
@@ -209,7 +222,10 @@ public class SaveTerminalLogRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -218,7 +234,10 @@ public class SaveTerminalLogRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-b8b0ca63-330c-4e65-8ae3-9de2c7ce7683</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -236,7 +255,10 @@ public class SaveTerminalLogRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -245,7 +267,10 @@ public class SaveTerminalLogRequest extends Request {
         }
 
         /**
-         * UniqueRequestId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         public Builder uniqueRequestId(String uniqueRequestId) {
             this.putQueryParameter("UniqueRequestId", uniqueRequestId);

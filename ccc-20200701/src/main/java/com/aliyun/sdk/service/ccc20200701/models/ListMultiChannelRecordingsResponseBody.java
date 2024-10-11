@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMultiChannelRecordingsResponseBody} extends {@link TeaModel}
  *
  * <p>ListMultiChannelRecordingsResponseBody</p>
@@ -130,6 +131,12 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMultiChannelRecordingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMultiChannelRecordingsResponseBody</p>
+     */
     public static class HoldTimeSegments extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
@@ -191,6 +198,12 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMultiChannelRecordingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMultiChannelRecordingsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentChannelId")
         private String agentChannelId;

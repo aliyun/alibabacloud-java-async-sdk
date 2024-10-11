@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddTicketTaskRequest} extends {@link RequestModel}
  *
  * <p>AddTicketTaskRequest</p>
@@ -128,7 +129,10 @@ public class AddTicketTaskRequest extends Request {
         } 
 
         /**
-         * Assignee.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>assignee@ccc-test</p>
          */
         public Builder assignee(String assignee) {
             this.putQueryParameter("Assignee", assignee);
@@ -137,7 +141,7 @@ public class AddTicketTaskRequest extends Request {
         }
 
         /**
-         * Comment.
+         * <p>This parameter is required.</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -146,7 +150,10 @@ public class AddTicketTaskRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -164,7 +171,10 @@ public class AddTicketTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3b8c672f-48f6-45f5-bf41-9d4cb2b4a716</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -173,7 +183,10 @@ public class AddTicketTaskRequest extends Request {
         }
 
         /**
-         * TicketId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3d26b90a-c5d2-4b09-8219-********</p>
          */
         public Builder ticketId(String ticketId) {
             this.putQueryParameter("TicketId", ticketId);

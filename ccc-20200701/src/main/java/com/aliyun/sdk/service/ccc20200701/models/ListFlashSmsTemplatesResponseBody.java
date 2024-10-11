@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFlashSmsTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListFlashSmsTemplatesResponseBody</p>
@@ -150,6 +151,12 @@ public class ListFlashSmsTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFlashSmsTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFlashSmsTemplatesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;

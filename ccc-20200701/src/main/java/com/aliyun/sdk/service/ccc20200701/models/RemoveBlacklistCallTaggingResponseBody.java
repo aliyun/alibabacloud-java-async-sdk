@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveBlacklistCallTaggingResponseBody} extends {@link TeaModel}
  *
  * <p>RemoveBlacklistCallTaggingResponseBody</p>
@@ -97,7 +98,10 @@ public class RemoveBlacklistCallTaggingResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03C67DAD-EB26-41D8-949D-9B0C470FB716</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMultiChannelRecordingResponseBody} extends {@link TeaModel}
  *
  * <p>GetMultiChannelRecordingResponseBody</p>
@@ -130,6 +131,12 @@ public class GetMultiChannelRecordingResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMultiChannelRecordingResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMultiChannelRecordingResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;

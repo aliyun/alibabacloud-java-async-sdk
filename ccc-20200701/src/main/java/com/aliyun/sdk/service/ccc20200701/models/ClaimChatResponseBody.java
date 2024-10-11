@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ClaimChatResponseBody} extends {@link TeaModel}
  *
  * <p>ClaimChatResponseBody</p>
@@ -150,6 +151,12 @@ public class ClaimChatResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ClaimChatResponseBody} extends {@link TeaModel}
+     *
+     * <p>ClaimChatResponseBody</p>
+     */
     public static class ChatContexts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessChannelId")
         private String accessChannelId;
@@ -331,6 +338,12 @@ public class ClaimChatResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ClaimChatResponseBody} extends {@link TeaModel}
+     *
+     * <p>ClaimChatResponseBody</p>
+     */
     public static class UserContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BreakCode")
         private String breakCode;
@@ -632,6 +645,12 @@ public class ClaimChatResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ClaimChatResponseBody} extends {@link TeaModel}
+     *
+     * <p>ClaimChatResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChatContexts")
         private java.util.List < ChatContexts> chatContexts;

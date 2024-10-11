@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTicketTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTicketTemplatesResponseBody</p>
@@ -150,6 +151,12 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTicketTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTicketTemplatesResponseBody</p>
+     */
     public static class TicketFields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Array")
         private Boolean array;
@@ -591,6 +598,12 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTicketTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTicketTemplatesResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppliedVersion")
         private String appliedVersion;
@@ -832,6 +845,12 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTicketTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTicketTemplatesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;

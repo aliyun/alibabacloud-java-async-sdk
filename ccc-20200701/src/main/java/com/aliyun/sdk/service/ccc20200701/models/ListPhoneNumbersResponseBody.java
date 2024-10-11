@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPhoneNumbersResponseBody} extends {@link TeaModel}
  *
  * <p>ListPhoneNumbersResponseBody</p>
@@ -130,6 +131,12 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPhoneNumbersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPhoneNumbersResponseBody</p>
+     */
     public static class SkillGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
@@ -231,6 +238,12 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPhoneNumbersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPhoneNumbersResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Active")
         private Boolean active;
@@ -512,6 +525,12 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPhoneNumbersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPhoneNumbersResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;

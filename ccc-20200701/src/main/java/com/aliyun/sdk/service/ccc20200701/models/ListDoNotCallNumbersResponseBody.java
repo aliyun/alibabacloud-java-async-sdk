@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDoNotCallNumbersResponseBody} extends {@link TeaModel}
  *
  * <p>ListDoNotCallNumbersResponseBody</p>
@@ -150,6 +151,12 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDoNotCallNumbersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoNotCallNumbersResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
@@ -291,6 +298,12 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoNotCallNumbersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoNotCallNumbersResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;

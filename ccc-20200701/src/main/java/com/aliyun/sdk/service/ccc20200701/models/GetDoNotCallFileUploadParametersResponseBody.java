@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDoNotCallFileUploadParametersResponseBody} extends {@link TeaModel}
  *
  * <p>GetDoNotCallFileUploadParametersResponseBody</p>
@@ -150,6 +151,12 @@ public class GetDoNotCallFileUploadParametersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDoNotCallFileUploadParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoNotCallFileUploadParametersResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessKeyId")
         private String accessKeyId;

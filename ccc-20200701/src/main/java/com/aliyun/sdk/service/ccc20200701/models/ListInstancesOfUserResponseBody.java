@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstancesOfUserResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstancesOfUserResponseBody</p>
@@ -130,6 +131,12 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstancesOfUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesOfUserResponseBody</p>
+     */
     public static class AdminList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
@@ -351,6 +358,12 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesOfUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesOfUserResponseBody</p>
+     */
     public static class SkillGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -512,6 +525,12 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesOfUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesOfUserResponseBody</p>
+     */
     public static class NumberList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Active")
         private Boolean active;
@@ -713,6 +732,12 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesOfUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesOfUserResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdminList")
         private java.util.List < AdminList> adminList;
@@ -914,6 +939,12 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesOfUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesOfUserResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;

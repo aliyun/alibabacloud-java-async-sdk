@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveRTCStatsV2Request} extends {@link RequestModel}
  *
  * <p>SaveRTCStatsV2Request</p>
@@ -129,7 +130,10 @@ public class SaveRTCStatsV2Request extends Request {
         } 
 
         /**
-         * CallId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>257e73de-1ee8-123b-0b9a-00163e0a****</p>
          */
         public Builder callId(String callId) {
             this.putQueryParameter("CallId", callId);
@@ -138,7 +142,7 @@ public class SaveRTCStatsV2Request extends Request {
         }
 
         /**
-         * GeneralInfo.
+         * <p>This parameter is required.</p>
          */
         public Builder generalInfo(String generalInfo) {
             this.putQueryParameter("GeneralInfo", generalInfo);
@@ -147,7 +151,10 @@ public class SaveRTCStatsV2Request extends Request {
         }
 
         /**
-         * GoogAddress.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;47.101.XX.XX&quot;,&quot;44368&quot;,&quot;47.104.XX.XX&quot;,&quot;37947&quot;]</p>
          */
         public Builder googAddress(String googAddress) {
             this.putQueryParameter("GoogAddress", googAddress);
@@ -156,7 +163,10 @@ public class SaveRTCStatsV2Request extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -165,7 +175,10 @@ public class SaveRTCStatsV2Request extends Request {
         }
 
         /**
-         * ReceiverReport.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;1&quot;,&quot;1649328987&quot;,&quot;40&quot;,&quot;PCMU&quot;,&quot;383560&quot;,&quot;89&quot;,&quot;49&quot;,&quot;ssrc_1649328987_recv&quot;,&quot;2022-03-15T09:52:08.820Z&quot;,&quot;&quot;,&quot;0&quot;,&quot;20000&quot;]</p>
          */
         public Builder receiverReport(String receiverReport) {
             this.putQueryParameter("ReceiverReport", receiverReport);
@@ -174,7 +187,10 @@ public class SaveRTCStatsV2Request extends Request {
         }
 
         /**
-         * SenderReport.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;11090&quot;,&quot;2055127460&quot;,&quot;0&quot;,&quot;2236&quot;,&quot;384592&quot;,&quot;ssrc_2055127460_send&quot;,&quot;2022-03-15T09:52:08.820Z&quot;,&quot;1&quot;]</p>
          */
         public Builder senderReport(String senderReport) {
             this.putQueryParameter("SenderReport", senderReport);

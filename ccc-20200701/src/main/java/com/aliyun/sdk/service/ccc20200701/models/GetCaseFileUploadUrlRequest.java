@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCaseFileUploadUrlRequest} extends {@link RequestModel}
  *
  * <p>GetCaseFileUploadUrlRequest</p>
@@ -69,7 +70,10 @@ public class GetCaseFileUploadUrlRequest extends Request {
         } 
 
         /**
-         * FileName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>case.csv</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -78,7 +82,10 @@ public class GetCaseFileUploadUrlRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

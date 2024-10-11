@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSkillLevelsOfUserResponseBody} extends {@link TeaModel}
  *
  * <p>ListSkillLevelsOfUserResponseBody</p>
@@ -130,6 +131,12 @@ public class ListSkillLevelsOfUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSkillLevelsOfUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillLevelsOfUserResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MediaType")
         private String mediaType;
@@ -231,6 +238,12 @@ public class ListSkillLevelsOfUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSkillLevelsOfUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillLevelsOfUserResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;

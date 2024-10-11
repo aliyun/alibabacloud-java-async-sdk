@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartChatResponseBody} extends {@link TeaModel}
  *
  * <p>StartChatResponseBody</p>
@@ -130,6 +131,12 @@ public class StartChatResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link StartChatResponseBody} extends {@link TeaModel}
+     *
+     * <p>StartChatResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChatConversationId")
         private String chatConversationId;

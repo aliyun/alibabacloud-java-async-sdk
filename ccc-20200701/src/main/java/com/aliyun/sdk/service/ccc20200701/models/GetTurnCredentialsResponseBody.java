@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTurnCredentialsResponseBody} extends {@link TeaModel}
  *
  * <p>GetTurnCredentialsResponseBody</p>
@@ -150,6 +151,12 @@ public class GetTurnCredentialsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTurnCredentialsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTurnCredentialsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Password")
         private String password;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAudioFileRequest} extends {@link RequestModel}
  *
  * <p>CreateAudioFileRequest</p>
@@ -113,7 +114,10 @@ public class CreateAudioFileRequest extends Request {
         } 
 
         /**
-         * AudioFileName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-file.wav</p>
          */
         public Builder audioFileName(String audioFileName) {
             this.putQueryParameter("AudioFileName", audioFileName);
@@ -122,7 +126,10 @@ public class CreateAudioFileRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -131,7 +138,7 @@ public class CreateAudioFileRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -140,7 +147,10 @@ public class CreateAudioFileRequest extends Request {
         }
 
         /**
-         * OssFileKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test/test-file.wav</p>
          */
         public Builder ossFileKey(String ossFileKey) {
             this.putQueryParameter("OssFileKey", ossFileKey);

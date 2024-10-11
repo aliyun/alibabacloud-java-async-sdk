@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InitiateAttendedTransferRequest} extends {@link RequestModel}
  *
  * <p>InitiateAttendedTransferRequest</p>
@@ -270,7 +271,10 @@ public class InitiateAttendedTransferRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -279,7 +283,10 @@ public class InitiateAttendedTransferRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-6538214103685****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -351,7 +358,10 @@ public class InitiateAttendedTransferRequest extends Request {
         }
 
         /**
-         * Transferee.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent2@ccc-test</p>
          */
         public Builder transferee(String transferee) {
             this.putQueryParameter("Transferee", transferee);

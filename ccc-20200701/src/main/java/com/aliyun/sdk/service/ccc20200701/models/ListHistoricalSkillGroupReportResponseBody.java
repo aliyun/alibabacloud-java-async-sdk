@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHistoricalSkillGroupReportResponseBody} extends {@link TeaModel}
  *
  * <p>ListHistoricalSkillGroupReportResponseBody</p>
@@ -130,6 +131,12 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHistoricalSkillGroupReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHistoricalSkillGroupReportResponseBody</p>
+     */
     public static class Back2Back extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentHandleRate")
         private Float agentHandleRate;
@@ -451,6 +458,12 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHistoricalSkillGroupReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHistoricalSkillGroupReportResponseBody</p>
+     */
     public static class AccessChannelTypeDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessChannelType")
         private String accessChannelType;
@@ -512,6 +525,12 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHistoricalSkillGroupReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHistoricalSkillGroupReportResponseBody</p>
+     */
     public static class Inbound extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AbandonRate")
         private Float abandonRate;
@@ -1653,6 +1672,12 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHistoricalSkillGroupReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHistoricalSkillGroupReportResponseBody</p>
+     */
     public static class Outbound extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnswerRate")
         private Float answerRate;
@@ -2234,6 +2259,12 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHistoricalSkillGroupReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHistoricalSkillGroupReportResponseBody</p>
+     */
     public static class BreakCodeDetailList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BreakCode")
         private String breakCode;
@@ -2315,6 +2346,12 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHistoricalSkillGroupReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHistoricalSkillGroupReportResponseBody</p>
+     */
     public static class Overall extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AverageBreakTime")
         private Float averageBreakTime;
@@ -2796,6 +2833,12 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHistoricalSkillGroupReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHistoricalSkillGroupReportResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Back2Back")
         private Back2Back back2Back;
@@ -2937,6 +2980,12 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHistoricalSkillGroupReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHistoricalSkillGroupReportResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;

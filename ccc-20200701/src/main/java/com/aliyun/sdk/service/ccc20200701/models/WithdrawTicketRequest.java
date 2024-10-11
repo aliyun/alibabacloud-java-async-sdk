@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link WithdrawTicketRequest} extends {@link RequestModel}
  *
  * <p>WithdrawTicketRequest</p>
@@ -84,7 +85,7 @@ public class WithdrawTicketRequest extends Request {
         } 
 
         /**
-         * Comment.
+         * <p>This parameter is required.</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -93,7 +94,10 @@ public class WithdrawTicketRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -102,7 +106,10 @@ public class WithdrawTicketRequest extends Request {
         }
 
         /**
-         * TicketId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5491d3b4-14ee-4341-b5f1-db2c78beddeb</p>
          */
         public Builder ticketId(String ticketId) {
             this.putQueryParameter("TicketId", ticketId);

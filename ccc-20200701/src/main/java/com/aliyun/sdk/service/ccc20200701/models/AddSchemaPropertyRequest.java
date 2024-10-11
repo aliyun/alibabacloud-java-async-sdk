@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddSchemaPropertyRequest} extends {@link RequestModel}
  *
  * <p>AddSchemaPropertyRequest</p>
@@ -97,7 +98,10 @@ public class AddSchemaPropertyRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b0eb2742-f37e-4c67-82d4-25c651c1xxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -125,7 +129,11 @@ public class AddSchemaPropertyRequest extends Request {
         }
 
         /**
-         * schema id
+         * <p>schema id</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>profile</p>
          */
         public Builder schemaId(String schemaId) {
             this.putBodyParameter("SchemaId", schemaId);
@@ -140,6 +148,12 @@ public class AddSchemaPropertyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddSchemaPropertyRequest} extends {@link TeaModel}
+     *
+     * <p>AddSchemaPropertyRequest</p>
+     */
     public static class Property extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Array")
         private Boolean array;
@@ -377,7 +391,10 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
-             * DataType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -457,7 +474,10 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;

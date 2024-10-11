@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHistoricalInstanceReportResponseBody} extends {@link TeaModel}
  *
  * <p>GetHistoricalInstanceReportResponseBody</p>
@@ -130,6 +131,12 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHistoricalInstanceReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHistoricalInstanceReportResponseBody</p>
+     */
     public static class AccessChannelTypeDetailList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessChannelType")
         private String accessChannelType;
@@ -191,6 +198,12 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetHistoricalInstanceReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHistoricalInstanceReportResponseBody</p>
+     */
     public static class Inbound extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AbandonRate")
         private Float abandonRate;
@@ -1452,6 +1465,12 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetHistoricalInstanceReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHistoricalInstanceReportResponseBody</p>
+     */
     public static class Internal extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CallsAnswered")
         private Long callsAnswered;
@@ -1513,6 +1532,12 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetHistoricalInstanceReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHistoricalInstanceReportResponseBody</p>
+     */
     public static class Outbound extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnswerRate")
         private Float answerRate;
@@ -2054,6 +2079,12 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetHistoricalInstanceReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHistoricalInstanceReportResponseBody</p>
+     */
     public static class Overall extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AverageBreakTime")
         private Float averageBreakTime;
@@ -2535,6 +2566,12 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetHistoricalInstanceReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHistoricalInstanceReportResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Inbound")
         private Inbound inbound;

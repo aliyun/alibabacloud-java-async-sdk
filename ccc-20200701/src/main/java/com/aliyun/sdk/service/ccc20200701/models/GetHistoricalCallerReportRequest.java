@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHistoricalCallerReportRequest} extends {@link RequestModel}
  *
  * <p>GetHistoricalCallerReportRequest</p>
@@ -99,7 +100,10 @@ public class GetHistoricalCallerReportRequest extends Request {
         } 
 
         /**
-         * CallingNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1900000****</p>
          */
         public Builder callingNumber(String callingNumber) {
             this.putQueryParameter("CallingNumber", callingNumber);
@@ -108,7 +112,10 @@ public class GetHistoricalCallerReportRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -117,7 +124,10 @@ public class GetHistoricalCallerReportRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1646841600000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -126,7 +136,10 @@ public class GetHistoricalCallerReportRequest extends Request {
         }
 
         /**
-         * StopTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1646928000000</p>
          */
         public Builder stopTime(Long stopTime) {
             this.putQueryParameter("StopTime", stopTime);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLegacyAgentEventLogsResponseBody} extends {@link TeaModel}
  *
  * <p>ListLegacyAgentEventLogsResponseBody</p>
@@ -150,6 +151,12 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLegacyAgentEventLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLegacyAgentEventLogsResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentDropCall")
         private String agentDropCall;
@@ -531,6 +538,12 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLegacyAgentEventLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLegacyAgentEventLogsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;

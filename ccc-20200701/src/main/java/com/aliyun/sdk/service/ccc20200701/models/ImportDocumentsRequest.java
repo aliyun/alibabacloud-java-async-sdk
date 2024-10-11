@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportDocumentsRequest} extends {@link RequestModel}
  *
  * <p>ImportDocumentsRequest</p>
@@ -98,7 +99,10 @@ public class ImportDocumentsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b0eb2742-f37e-4c67-82d4-25c651c1c450</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -107,7 +111,10 @@ public class ImportDocumentsRequest extends Request {
         }
 
         /**
-         * OssFileKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test/test-file.wav</p>
          */
         public Builder ossFileKey(String ossFileKey) {
             this.putBodyParameter("OssFileKey", ossFileKey);
@@ -125,7 +132,11 @@ public class ImportDocumentsRequest extends Request {
         }
 
         /**
-         * schema id
+         * <p>schema id</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>profile</p>
          */
         public Builder schemaId(String schemaId) {
             this.putBodyParameter("SchemaId", schemaId);

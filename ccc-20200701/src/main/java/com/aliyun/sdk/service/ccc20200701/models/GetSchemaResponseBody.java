@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSchemaResponseBody} extends {@link TeaModel}
  *
  * <p>GetSchemaResponseBody</p>
@@ -150,6 +151,12 @@ public class GetSchemaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSchemaResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSchemaResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
@@ -273,7 +280,10 @@ public class GetSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * schema id
+             * <p>schema id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>profile</p>
              */
             public Builder id(String id) {
                 this.id = id;

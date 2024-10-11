@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddPhoneNumberToSkillGroupsRequest} extends {@link RequestModel}
  *
  * <p>AddPhoneNumberToSkillGroupsRequest</p>
@@ -84,7 +85,10 @@ public class AddPhoneNumberToSkillGroupsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -93,7 +97,10 @@ public class AddPhoneNumberToSkillGroupsRequest extends Request {
         }
 
         /**
-         * Number.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0101234****</p>
          */
         public Builder number(String number) {
             this.putQueryParameter("Number", number);
@@ -102,7 +109,10 @@ public class AddPhoneNumberToSkillGroupsRequest extends Request {
         }
 
         /**
-         * SkillGroupIdList.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;skillgroup1@ccc-test&quot;,&quot;skillgroup2@ccc-test&quot;]</p>
          */
         public Builder skillGroupIdList(String skillGroupIdList) {
             this.putQueryParameter("SkillGroupIdList", skillGroupIdList);

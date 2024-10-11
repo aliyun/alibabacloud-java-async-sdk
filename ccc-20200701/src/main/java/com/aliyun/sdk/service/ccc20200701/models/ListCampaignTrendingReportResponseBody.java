@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCampaignTrendingReportResponseBody} extends {@link TeaModel}
  *
  * <p>ListCampaignTrendingReportResponseBody</p>
@@ -130,6 +131,12 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCampaignTrendingReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCampaignTrendingReportResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BreakAgents")
         private Long breakAgents;

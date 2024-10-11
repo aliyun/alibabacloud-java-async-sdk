@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPrivilegesOfUserResponseBody} extends {@link TeaModel}
  *
  * <p>ListPrivilegesOfUserResponseBody</p>
@@ -130,6 +131,12 @@ public class ListPrivilegesOfUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPrivilegesOfUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPrivilegesOfUserResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;

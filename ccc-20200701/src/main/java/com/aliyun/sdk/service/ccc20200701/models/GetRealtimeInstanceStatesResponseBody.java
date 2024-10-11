@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRealtimeInstanceStatesResponseBody} extends {@link TeaModel}
  *
  * <p>GetRealtimeInstanceStatesResponseBody</p>
@@ -130,6 +131,12 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRealtimeInstanceStatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRealtimeInstanceStatesResponseBody</p>
+     */
     public static class BreakCodeDetailList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BreakCode")
         private String breakCode;
@@ -191,6 +198,12 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRealtimeInstanceStatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRealtimeInstanceStatesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BreakCodeDetailList")
         private java.util.List < BreakCodeDetailList> breakCodeDetailList;

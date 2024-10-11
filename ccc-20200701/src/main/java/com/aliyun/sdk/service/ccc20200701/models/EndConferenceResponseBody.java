@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EndConferenceResponseBody} extends {@link TeaModel}
  *
  * <p>EndConferenceResponseBody</p>
@@ -150,6 +151,12 @@ public class EndConferenceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link EndConferenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>EndConferenceResponseBody</p>
+     */
     public static class ChannelContexts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CallType")
         private String callType;
@@ -391,6 +398,12 @@ public class EndConferenceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link EndConferenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>EndConferenceResponseBody</p>
+     */
     public static class CallContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChannelContexts")
         private java.util.List < ChannelContexts> channelContexts;
@@ -472,6 +485,12 @@ public class EndConferenceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link EndConferenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>EndConferenceResponseBody</p>
+     */
     public static class UserContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BreakCode")
         private String breakCode;
@@ -713,6 +732,12 @@ public class EndConferenceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link EndConferenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>EndConferenceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CallContext")
         private CallContext callContext;

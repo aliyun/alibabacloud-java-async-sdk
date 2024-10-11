@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AppendCasesRequest} extends {@link RequestModel}
  *
  * <p>AppendCasesRequest</p>
@@ -83,7 +84,10 @@ public class AppendCasesRequest extends Request {
         } 
 
         /**
-         * CampaignId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78cf6864-9a22-4ea8-a59d-5adc2d747b0e</p>
          */
         public Builder campaignId(String campaignId) {
             this.putQueryParameter("CampaignId", campaignId);
@@ -92,7 +96,10 @@ public class AppendCasesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -117,6 +124,12 @@ public class AppendCasesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AppendCasesRequest} extends {@link TeaModel}
+     *
+     * <p>AppendCasesRequest</p>
+     */
     public static class AppendCasesRequestBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentId")
         private String agentId;

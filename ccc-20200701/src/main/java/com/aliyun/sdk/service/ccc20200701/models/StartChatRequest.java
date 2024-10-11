@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartChatRequest} extends {@link RequestModel}
  *
  * <p>StartChatRequest</p>
@@ -123,7 +124,7 @@ public class StartChatRequest extends Request {
         }
 
         /**
-         * UserList.
+         * <p>This parameter is required.</p>
          */
         public Builder userList(java.util.List < UserList> userList) {
             String userListShrink = shrink(userList, "UserList", "json");
@@ -139,6 +140,12 @@ public class StartChatRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link StartChatRequest} extends {@link TeaModel}
+     *
+     * <p>StartChatRequest</p>
+     */
     public static class UserList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvatarUrl")
         private String avatarUrl;
