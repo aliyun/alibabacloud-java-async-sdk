@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableProxyProtocolRequest} extends {@link RequestModel}
  *
  * <p>EnableProxyProtocolRequest</p>
@@ -83,7 +84,10 @@ public class EnableProxyProtocolRequest extends Request {
         } 
 
         /**
-         * The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.
+         * <p>The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -92,11 +96,15 @@ public class EnableProxyProtocolRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the proxy protocol to preserve client IP addresses. Valid values:
-         * <p>
+         * <p>Specifies whether to use the proxy protocol to preserve client IP addresses. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **true**
-         * *   **false** (default)
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableProxyProtocol(Boolean enableProxyProtocol) {
             this.putQueryParameter("EnableProxyProtocol", enableProxyProtocol);
@@ -105,7 +113,11 @@ public class EnableProxyProtocolRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-c9bc5afd61014165bd58f621b491*****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);

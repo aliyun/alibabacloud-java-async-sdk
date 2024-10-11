@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClusterTypesResponseBody} extends {@link TeaModel}
  *
  * <p>ListClusterTypesResponseBody</p>
@@ -121,7 +122,10 @@ public class ListClusterTypesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -129,7 +133,7 @@ public class ListClusterTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The data entries returned.
+         * <p>The data entries returned.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -137,10 +141,13 @@ public class ListClusterTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
-         * <p>
+         * <p>The dynamic part in the error message. This parameter is used to replace the **%s** variable in the <strong>ErrMessage</strong> parameter.</p>
+         * <blockquote>
+         * <p>If the return value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> parameter is invalid.</p>
+         * </blockquote>
          * 
-         * > If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
+         * <strong>example:</strong>
+         * <p>The specified parameter is invalid.</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -148,7 +155,10 @@ public class ListClusterTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -156,7 +166,10 @@ public class ListClusterTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -164,7 +177,10 @@ public class ListClusterTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request was successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -172,7 +188,10 @@ public class ListClusterTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>821B5B05-8919-5FBB-BA75-417BFC093EB8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,11 +199,14 @@ public class ListClusterTypesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -197,6 +219,12 @@ public class ListClusterTypesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListClusterTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClusterTypesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -236,7 +264,10 @@ public class ListClusterTypesResponseBody extends TeaModel {
             private String showName; 
 
             /**
-             * The status code returned.
+             * <p>The status code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -244,7 +275,10 @@ public class ListClusterTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the MSE engine that can be activated.
+             * <p>The type of the MSE engine that can be activated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zookeeper</p>
              */
             public Builder showName(String showName) {
                 this.showName = showName;

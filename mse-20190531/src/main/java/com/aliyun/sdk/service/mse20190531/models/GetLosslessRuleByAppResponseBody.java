@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLosslessRuleByAppResponseBody} extends {@link TeaModel}
  *
  * <p>GetLosslessRuleByAppResponseBody</p>
@@ -109,7 +110,10 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -117,7 +121,7 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +129,10 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -133,7 +140,10 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -141,7 +151,10 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -149,7 +162,10 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC34E4A3-5F1C-4E40-86EA-02EDF967****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,11 +173,14 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -174,6 +193,12 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetLosslessRuleByAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLosslessRuleByAppResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Aligned")
         private Boolean aligned;
@@ -321,7 +346,10 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
             private Integer warmupTime; 
 
             /**
-             * Indicates whether service registration is complete before readiness probe.
+             * <p>Indicates whether service registration is complete before readiness probe.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder aligned(Boolean aligned) {
                 this.aligned = aligned;
@@ -329,7 +357,10 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hkhon1po62@24810bf4364a***</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -337,7 +368,10 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spring-cloud-a</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -345,7 +379,10 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances.
+             * <p>The number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -353,7 +390,10 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
             }
 
             /**
-             * The registration latency. Unit: seconds.
+             * <p>The registration latency. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder delayTime(Integer delayTime) {
                 this.delayTime = delayTime;
@@ -361,11 +401,14 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether graceful start is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether graceful start is enabled. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: enabled</li>
+             * <li><code>false</code>: disabled</li>
+             * </ul>
              * 
-             * *   `true`: enabled
-             * *   `false`: disabled
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -373,7 +416,10 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
             }
 
             /**
-             * The slope of the prefetching curve.
+             * <p>The slope of the prefetching curve.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder funcType(Integer funcType) {
                 this.funcType = funcType;
@@ -381,7 +427,10 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether online and offline processing details are displayed.
+             * <p>Indicates whether online and offline processing details are displayed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder lossLessDetail(Boolean lossLessDetail) {
                 this.lossLessDetail = lossLessDetail;
@@ -389,7 +438,10 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether notification is enabled.
+             * <p>Indicates whether notification is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder notice(Boolean notice) {
                 this.notice = notice;
@@ -397,7 +449,10 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether service prefetching is complete before readiness probe.
+             * <p>Indicates whether service prefetching is complete before readiness probe.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder related(Boolean related) {
                 this.related = related;
@@ -405,7 +460,10 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
             }
 
             /**
-             * The prefetching duration. Unit: seconds.
+             * <p>The prefetching duration. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder warmupTime(Integer warmupTime) {
                 this.warmupTime = warmupTime;

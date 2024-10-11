@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateNacosClusterResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateNacosClusterResponseBody</p>
@@ -97,7 +98,10 @@ public class UpdateNacosClusterResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code returned.
+         * <p>The response code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +109,10 @@ public class UpdateNacosClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The result returned.
+         * <p>The result returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -113,7 +120,10 @@ public class UpdateNacosClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +131,10 @@ public class UpdateNacosClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request is successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +142,10 @@ public class UpdateNacosClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9e78a671-4b9b-4dd4-99c1-0b9da87d3dec</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +153,10 @@ public class UpdateNacosClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

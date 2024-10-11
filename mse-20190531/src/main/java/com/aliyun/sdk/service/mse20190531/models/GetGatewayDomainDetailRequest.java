@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetGatewayDomainDetailRequest} extends {@link RequestModel}
  *
  * <p>GetGatewayDomainDetailRequest</p>
@@ -81,11 +82,14 @@ public class GetGatewayDomainDetailRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -94,7 +98,10 @@ public class GetGatewayDomainDetailRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-6d0b23e1d39e41658a968d79a635****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -103,7 +110,10 @@ public class GetGatewayDomainDetailRequest extends Request {
         }
 
         /**
-         * The domain ID.
+         * <p>The domain ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>29</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

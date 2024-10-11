@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceListRequest} extends {@link RequestModel}
  *
  * <p>GetServiceListRequest</p>
@@ -124,7 +125,10 @@ public class GetServiceListRequest extends Request {
         } 
 
         /**
-         * The language of the response.
+         * <p>The language of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -133,7 +137,11 @@ public class GetServiceListRequest extends Request {
         }
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx@xxx</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -142,7 +150,10 @@ public class GetServiceListRequest extends Request {
         }
 
         /**
-         * The IP address.
+         * <p>The IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -151,7 +162,10 @@ public class GetServiceListRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -160,7 +174,10 @@ public class GetServiceListRequest extends Request {
         }
 
         /**
-         * The name of the service.
+         * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.alibaba.xxx</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -169,7 +186,10 @@ public class GetServiceListRequest extends Request {
         }
 
         /**
-         * The type of the framework.
+         * <p>The type of the framework.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dubbo</p>
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("ServiceType", serviceType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySlbSpecResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySlbSpecResponseBody</p>
@@ -97,7 +98,10 @@ public class QuerySlbSpecResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The return value.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class QuerySlbSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The data entries returned.
+         * <p>The data entries returned.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class QuerySlbSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +128,10 @@ public class QuerySlbSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned. If the request is successful, a success message is returned. If the request fails, an error message is returned.
+         * <p>The message returned. If the request is successful, a success message is returned. If the request fails, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request is successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +139,10 @@ public class QuerySlbSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>316F5F64-F73D-42DC-8632-01E308B6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class QuerySlbSpecResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class QuerySlbSpecResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySlbSpecResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySlbSpecResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
@@ -241,7 +263,10 @@ public class QuerySlbSpecResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * The ID of the returned data.
+             * <p>The ID of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -249,7 +274,10 @@ public class QuerySlbSpecResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of connections.
+             * <p>The maximum number of connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50,000</p>
              */
             public Builder maxConnection(String maxConnection) {
                 this.maxConnection = maxConnection;
@@ -257,7 +285,10 @@ public class QuerySlbSpecResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Standard I</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -265,7 +296,10 @@ public class QuerySlbSpecResponseBody extends TeaModel {
             }
 
             /**
-             * The number of connections per second.
+             * <p>The number of connections per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50,000</p>
              */
             public Builder newConnectionPerSecond(String newConnectionPerSecond) {
                 this.newConnectionPerSecond = newConnectionPerSecond;
@@ -273,7 +307,10 @@ public class QuerySlbSpecResponseBody extends TeaModel {
             }
 
             /**
-             * The number of queries per second (QPS).
+             * <p>The number of queries per second (QPS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50,000</p>
              */
             public Builder qps(String qps) {
                 this.qps = qps;
@@ -281,7 +318,10 @@ public class QuerySlbSpecResponseBody extends TeaModel {
             }
 
             /**
-             * The specification of the instance.
+             * <p>The specification of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>slb.s2.small</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMigrationTaskRequest} extends {@link RequestModel}
  *
  * <p>ListMigrationTaskRequest</p>
@@ -109,11 +110,14 @@ public class ListMigrationTaskRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -122,7 +126,10 @@ public class ListMigrationTaskRequest extends Request {
         }
 
         /**
-         * The name of the source instance.
+         * <p>The name of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>whdc</p>
          */
         public Builder originInstanceName(String originInstanceName) {
             this.putQueryParameter("OriginInstanceName", originInstanceName);
@@ -131,7 +138,10 @@ public class ListMigrationTaskRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -140,7 +150,10 @@ public class ListMigrationTaskRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -149,7 +162,10 @@ public class ListMigrationTaskRequest extends Request {
         }
 
         /**
-         * The extended request parameters in the JSON format.
+         * <p>The extended request parameters in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);

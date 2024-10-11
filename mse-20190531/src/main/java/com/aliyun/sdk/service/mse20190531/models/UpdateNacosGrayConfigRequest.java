@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateNacosGrayConfigRequest} extends {@link RequestModel}
  *
  * <p>UpdateNacosGrayConfigRequest</p>
@@ -237,7 +238,10 @@ public class UpdateNacosGrayConfigRequest extends Request {
         }
 
         /**
-         * DataId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder dataId(String dataId) {
             this.putQueryParameter("DataId", dataId);
@@ -255,7 +259,10 @@ public class UpdateNacosGrayConfigRequest extends Request {
         }
 
         /**
-         * GrayType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tags</p>
          */
         public Builder grayType(String grayType) {
             this.putQueryParameter("GrayType", grayType);
@@ -273,7 +280,10 @@ public class UpdateNacosGrayConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse_prepaid_public_cn-st2212****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

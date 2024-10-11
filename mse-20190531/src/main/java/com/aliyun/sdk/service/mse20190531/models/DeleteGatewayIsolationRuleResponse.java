@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteGatewayIsolationRuleResponse} extends {@link TeaModel}
  *
  * <p>DeleteGatewayIsolationRuleResponse</p>

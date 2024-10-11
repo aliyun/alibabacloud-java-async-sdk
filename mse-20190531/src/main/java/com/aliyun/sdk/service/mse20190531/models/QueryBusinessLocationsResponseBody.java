@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryBusinessLocationsResponseBody} extends {@link TeaModel}
  *
  * <p>QueryBusinessLocationsResponseBody</p>
@@ -85,7 +86,7 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -93,7 +94,10 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -101,7 +105,10 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The parameter is invalid.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3369AD10-F1A6-4E6F-B99E-20F51826****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the request.
+         * <p>The result of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryBusinessLocationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryBusinessLocationsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CnName")
         private String cnName;
@@ -301,7 +320,10 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The Chinese name of the region.
+             * <p>The Chinese name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China (Shanghai)</p>
              */
             public Builder cnName(String cnName) {
                 this.cnName = cnName;
@@ -309,7 +331,10 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China (Shanghai)</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -317,7 +342,10 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The Chinese name of the district.
+             * <p>The Chinese name of the district.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia Pacific</p>
              */
             public Builder districtCnName(String districtCnName) {
                 this.districtCnName = districtCnName;
@@ -325,7 +353,10 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The English name of the district.
+             * <p>The English name of the district.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia Pacific</p>
              */
             public Builder districtEnName(String districtEnName) {
                 this.districtEnName = districtEnName;
@@ -333,7 +364,10 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asia-pacific</p>
              */
             public Builder districtId(String districtId) {
                 this.districtId = districtId;
@@ -341,7 +375,10 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ordering information of the district.
+             * <p>The ordering information of the district.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101</p>
              */
             public Builder districtOrdering(Integer districtOrdering) {
                 this.districtOrdering = districtOrdering;
@@ -349,7 +386,10 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the district.
+             * <p>The display name of the district.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia Pacific</p>
              */
             public Builder districtShowName(String districtShowName) {
                 this.districtShowName = districtShowName;
@@ -357,7 +397,10 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The complete description of the region.
+             * <p>The complete description of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China East 2 (Shanghai)</p>
              */
             public Builder enDescription(String enDescription) {
                 this.enDescription = enDescription;
@@ -365,7 +408,10 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The English name of the region.
+             * <p>The English name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China (Shanghai)</p>
              */
             public Builder enName(String enName) {
                 this.enName = enName;
@@ -373,7 +419,10 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -381,7 +430,10 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ordering information.
+             * <p>The ordering information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder ordering(Integer ordering) {
                 this.ordering = ordering;
@@ -389,7 +441,10 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The display name.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China (Shanghai)</p>
              */
             public Builder showName(String showName) {
                 this.showName = showName;
@@ -397,7 +452,10 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The type.
+             * <p>The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>region</p>
              */
             public Builder type(String type) {
                 this.type = type;

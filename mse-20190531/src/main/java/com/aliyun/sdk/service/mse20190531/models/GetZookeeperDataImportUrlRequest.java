@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetZookeeperDataImportUrlRequest} extends {@link RequestModel}
  *
  * <p>GetZookeeperDataImportUrlRequest</p>
@@ -81,7 +82,10 @@ public class GetZookeeperDataImportUrlRequest extends Request {
         } 
 
         /**
-         * RestResult
+         * <p>RestResult</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -90,11 +94,14 @@ public class GetZookeeperDataImportUrlRequest extends Request {
         }
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zip</p>
          */
         public Builder contentType(String contentType) {
             this.putQueryParameter("ContentType", contentType);
@@ -103,7 +110,10 @@ public class GetZookeeperDataImportUrlRequest extends Request {
         }
 
         /**
-         * The type of the file.
+         * <p>The type of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse_prepaid_public_cn-zvp2xzzkk06</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

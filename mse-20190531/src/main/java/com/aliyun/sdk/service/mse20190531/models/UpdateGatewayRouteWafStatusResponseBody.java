@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGatewayRouteWafStatusResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateGatewayRouteWafStatusResponseBody</p>
@@ -97,7 +98,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned. A value of 200 indicates that the request is successful.
+         * <p>The status code returned. A value of 200 indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +128,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +139,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7466566F-F30F-4A29-965D-3E0AF21D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateGatewayRouteWafStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateGatewayRouteWafStatusResponseBody</p>
+     */
     public static class Cors extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowCredentials")
         private Boolean allowCredentials;
@@ -265,7 +287,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private Long unitNum; 
 
             /**
-             * The credentials allowed.
+             * <p>The credentials allowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder allowCredentials(Boolean allowCredentials) {
                 this.allowCredentials = allowCredentials;
@@ -273,7 +298,12 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The headers allowed.
+             * <p>The headers allowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder allowHeaders(String allowHeaders) {
                 this.allowHeaders = allowHeaders;
@@ -281,7 +311,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The methods allowed.
+             * <p>The methods allowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GET,POST,PUT,DELETE,HEAD,OPTIONS,PATCH</p>
              */
             public Builder allowMethods(String allowMethods) {
                 this.allowMethods = allowMethods;
@@ -289,7 +322,12 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The origins allowed.
+             * <p>The origins allowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder allowOrigins(String allowOrigins) {
                 this.allowOrigins = allowOrigins;
@@ -297,7 +335,12 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The response headers.
+             * <p>The response headers.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder exposeHeaders(String exposeHeaders) {
                 this.exposeHeaders = exposeHeaders;
@@ -305,7 +348,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -313,7 +359,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The time unit.
+             * <p>The time unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s</p>
              */
             public Builder timeUnit(String timeUnit) {
                 this.timeUnit = timeUnit;
@@ -321,7 +370,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The unit number.
+             * <p>The unit number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder unitNum(Long unitNum) {
                 this.unitNum = unitNum;
@@ -335,6 +387,12 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateGatewayRouteWafStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateGatewayRouteWafStatusResponseBody</p>
+     */
     public static class DirectResponse extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Body")
         private String body;
@@ -374,7 +432,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private Integer code; 
 
             /**
-             * The mock return value.
+             * <p>The mock return value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;key&quot;:&quot;h68d13466.sqa.eu95&quot;,&quot;dims&quot;:&quot;groupName=All}]</p>
              */
             public Builder body(String body) {
                 this.body = body;
@@ -382,7 +443,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The return value.
+             * <p>The return value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -396,6 +460,12 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateGatewayRouteWafStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateGatewayRouteWafStatusResponseBody</p>
+     */
     public static class HTTPRewrite extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
@@ -483,7 +553,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private String substitution; 
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyuncs.com</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -491,7 +564,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP request path.
+             * <p>The HTTP request path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test/client</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -499,7 +575,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The path type of the HTTP request.
+             * <p>The path type of the HTTP request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRE</p>
              */
             public Builder pathType(String pathType) {
                 this.pathType = pathType;
@@ -507,7 +586,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The matching pattern.
+             * <p>The matching pattern.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test</p>
              */
             public Builder pattern(String pattern) {
                 this.pattern = pattern;
@@ -515,7 +597,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP status.
+             * <p>The HTTP status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -523,7 +608,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The replacement.
+             * <p>The replacement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder substitution(String substitution) {
                 this.substitution = substitution;
@@ -537,6 +625,12 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateGatewayRouteWafStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateGatewayRouteWafStatusResponseBody</p>
+     */
     public static class HeaderOpItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DirectionType")
         private String directionType;
@@ -600,7 +694,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The request or response.
+             * <p>The request or response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Response</p>
              */
             public Builder directionType(String directionType) {
                 this.directionType = directionType;
@@ -608,7 +705,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The header key.
+             * <p>The header key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>debug</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -616,7 +716,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The operation type.
+             * <p>The operation type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Add</p>
              */
             public Builder opType(String opType) {
                 this.opType = opType;
@@ -624,7 +727,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The header value.
+             * <p>The header value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -638,6 +744,12 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateGatewayRouteWafStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateGatewayRouteWafStatusResponseBody</p>
+     */
     public static class HeaderOp extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HeaderOpItems")
         private java.util.List < HeaderOpItems> headerOpItems;
@@ -677,7 +789,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The policy.
+             * <p>The policy.</p>
              */
             public Builder headerOpItems(java.util.List < HeaderOpItems> headerOpItems) {
                 this.headerOpItems = headerOpItems;
@@ -685,7 +797,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -699,6 +814,12 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateGatewayRouteWafStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateGatewayRouteWafStatusResponseBody</p>
+     */
     public static class Redirect extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;
@@ -750,7 +871,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private String path; 
 
             /**
-             * The response code returned.
+             * <p>The response code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -758,7 +882,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The hostname.
+             * <p>The hostname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ww.al.c</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -766,7 +893,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The path.
+             * <p>The path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -780,6 +910,12 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateGatewayRouteWafStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateGatewayRouteWafStatusResponseBody</p>
+     */
     public static class Retry extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attempts")
         private Integer attempts;
@@ -843,7 +979,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The number of retries allowed for a request.
+             * <p>The number of retries allowed for a request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder attempts(Integer attempts) {
                 this.attempts = attempts;
@@ -851,7 +990,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP status code.
+             * <p>The HTTP status code.</p>
              */
             public Builder httpCodes(java.util.List < String > httpCodes) {
                 this.httpCodes = httpCodes;
@@ -859,7 +998,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The retry condition.
+             * <p>The retry condition.</p>
              */
             public Builder retryOn(java.util.List < String > retryOn) {
                 this.retryOn = retryOn;
@@ -867,7 +1006,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The retry status.
+             * <p>The retry status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -881,6 +1023,12 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateGatewayRouteWafStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateGatewayRouteWafStatusResponseBody</p>
+     */
     public static class HeaderPredicates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -932,7 +1080,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the request header.
+             * <p>The key of the request header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibo</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -940,7 +1091,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The matching type.
+             * <p>The matching type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -948,7 +1102,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the request header.
+             * <p>The value of the request header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -962,6 +1119,12 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateGatewayRouteWafStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateGatewayRouteWafStatusResponseBody</p>
+     */
     public static class PathPredicates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IgnoreCase")
         private Boolean ignoreCase;
@@ -1013,7 +1176,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Indicates whether case sensitivity is ignored.
+             * <p>Indicates whether case sensitivity is ignored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ignoreCase(Boolean ignoreCase) {
                 this.ignoreCase = ignoreCase;
@@ -1021,7 +1187,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The path.
+             * <p>The path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/zookeeper/mmgw/unlogined/common.getBu</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -1029,7 +1198,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The matching type.
+             * <p>The matching type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1043,6 +1215,12 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateGatewayRouteWafStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateGatewayRouteWafStatusResponseBody</p>
+     */
     public static class QueryPredicates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -1094,7 +1272,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instanceId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1102,7 +1283,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The type.
+             * <p>The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1110,7 +1294,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the parameter.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1124,6 +1311,12 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateGatewayRouteWafStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateGatewayRouteWafStatusResponseBody</p>
+     */
     public static class RoutePredicates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HeaderPredicates")
         private java.util.List < HeaderPredicates> headerPredicates;
@@ -1187,7 +1380,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private java.util.List < QueryPredicates> queryPredicates; 
 
             /**
-             * The information about matching based on request headers.
+             * <p>The information about matching based on request headers.</p>
              */
             public Builder headerPredicates(java.util.List < HeaderPredicates> headerPredicates) {
                 this.headerPredicates = headerPredicates;
@@ -1195,7 +1388,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information about method matching.
+             * <p>The information about method matching.</p>
              */
             public Builder methodPredicates(java.util.List < String > methodPredicates) {
                 this.methodPredicates = methodPredicates;
@@ -1203,7 +1396,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information about route matching.
+             * <p>The information about route matching.</p>
              */
             public Builder pathPredicates(PathPredicates pathPredicates) {
                 this.pathPredicates = pathPredicates;
@@ -1211,7 +1404,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The parameter matching rules.
+             * <p>The parameter matching rules.</p>
              */
             public Builder queryPredicates(java.util.List < QueryPredicates> queryPredicates) {
                 this.queryPredicates = queryPredicates;
@@ -1225,6 +1418,12 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateGatewayRouteWafStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateGatewayRouteWafStatusResponseBody</p>
+     */
     public static class RouteServices extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
@@ -1336,7 +1535,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The name of the group to which the service belongs.
+             * <p>The name of the group to which the service belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFAULT_GROUP</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -1344,7 +1546,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-aixue-gray</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1352,7 +1557,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -1360,7 +1568,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The weight.
+             * <p>The weight.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder percent(Integer percent) {
                 this.percent = percent;
@@ -1368,7 +1579,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the service.
+             * <p>The ID of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>547</p>
              */
             public Builder serviceId(Long serviceId) {
                 this.serviceId = serviceId;
@@ -1376,7 +1590,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b-service</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -1384,7 +1601,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The source type of the service.
+             * <p>The source type of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>K8s</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -1392,7 +1612,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the service.
+             * <p>The version of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1406,6 +1629,12 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateGatewayRouteWafStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateGatewayRouteWafStatusResponseBody</p>
+     */
     public static class Timeout extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -1457,7 +1686,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private Integer unitNum; 
 
             /**
-             * The status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1465,7 +1697,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The time unit.
+             * <p>The time unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s</p>
              */
             public Builder timeUnit(String timeUnit) {
                 this.timeUnit = timeUnit;
@@ -1473,7 +1708,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The unit number.
+             * <p>The unit number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder unitNum(Integer unitNum) {
                 this.unitNum = unitNum;
@@ -1487,6 +1725,12 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateGatewayRouteWafStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateGatewayRouteWafStatusResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cors")
         private Cors cors;
@@ -1826,7 +2070,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private Timeout timeout; 
 
             /**
-             * The configuration for cross-origin resource sharing (CORS).
+             * <p>The configuration for cross-origin resource sharing (CORS).</p>
              */
             public Builder cors(Cors cors) {
                 this.cors = cors;
@@ -1834,7 +2078,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The default service ID.
+             * <p>The default service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder defaultServiceId(Long defaultServiceId) {
                 this.defaultServiceId = defaultServiceId;
@@ -1842,7 +2089,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The default service name.
+             * <p>The default service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder defaultServiceName(String defaultServiceName) {
                 this.defaultServiceName = defaultServiceName;
@@ -1850,7 +2100,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The destination service type.
+             * <p>The destination service type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Single</p>
              */
             public Builder destinationType(String destinationType) {
                 this.destinationType = destinationType;
@@ -1858,7 +2111,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information about service mocking.
+             * <p>The information about service mocking.</p>
              */
             public Builder directResponse(DirectResponse directResponse) {
                 this.directResponse = directResponse;
@@ -1866,7 +2119,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The domain ID.
+             * <p>The domain ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>235</p>
              */
             public Builder domainId(Long domainId) {
                 this.domainId = domainId;
@@ -1874,7 +2130,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The list of domain IDs.
+             * <p>The list of domain IDs.</p>
              */
             public Builder domainIdList(java.util.List < Long > domainIdList) {
                 this.domainIdList = domainIdList;
@@ -1882,7 +2138,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nbhamster.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -1890,7 +2149,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The domain names.
+             * <p>The domain names.</p>
              */
             public Builder domainNameList(java.util.List < String > domainNameList) {
                 this.domainNameList = domainNameList;
@@ -1898,7 +2157,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether WAF is activated.
+             * <p>Indicates whether WAF is activated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder enableWaf(Boolean enableWaf) {
                 this.enableWaf = enableWaf;
@@ -1906,7 +2168,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the gateway.
+             * <p>The ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102</p>
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -1914,7 +2179,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the gateway.
+             * <p>The unique ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-7ea3da97b96543e19f6c597cd4a9****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -1922,7 +2190,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-26T09:52:41.000+0000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -1930,7 +2201,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The modification time.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-02-24T06:08:29.230+0000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -1938,7 +2212,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the rewrite policy.
+             * <p>The information about the rewrite policy.</p>
              */
             public Builder HTTPRewrite(HTTPRewrite HTTPRewrite) {
                 this.HTTPRewrite = HTTPRewrite;
@@ -1946,7 +2220,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The header settings.
+             * <p>The header settings.</p>
              */
             public Builder headerOp(HeaderOp headerOp) {
                 this.headerOp = headerOp;
@@ -1954,7 +2228,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the route.
+             * <p>The ID of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1962,7 +2239,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the route.
+             * <p>The name of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1970,7 +2250,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The matching rule.
+             * <p>The matching rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;PathPredicates&quot;:{&quot;Path&quot;:&quot;/metas&quot;,&quot;Type&quot;:&quot;PRE&quot;,&quot;IgnoreCase&quot;:false}}</p>
              */
             public Builder predicates(String predicates) {
                 this.predicates = predicates;
@@ -1978,7 +2261,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the redirection.
+             * <p>The configuration of the redirection.</p>
              */
             public Builder redirect(Redirect redirect) {
                 this.redirect = redirect;
@@ -1986,7 +2269,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The retry configuration.
+             * <p>The retry configuration.</p>
              */
             public Builder retry(Retry retry) {
                 this.retry = retry;
@@ -1994,7 +2277,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The sequence number of the route.
+             * <p>The sequence number of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder routeOrder(Integer routeOrder) {
                 this.routeOrder = routeOrder;
@@ -2002,7 +2288,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information about route matching.
+             * <p>The information about route matching.</p>
              */
             public Builder routePredicates(RoutePredicates routePredicates) {
                 this.routePredicates = routePredicates;
@@ -2010,7 +2296,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information about services.
+             * <p>The information about services.</p>
              */
             public Builder routeServices(java.util.List < RouteServices> routeServices) {
                 this.routeServices = routeServices;
@@ -2018,7 +2304,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information about services.
+             * <p>The information about services.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;Percent&quot;:100,&quot;ServiceId&quot;:126}]</p>
              */
             public Builder services(String services) {
                 this.services = services;
@@ -2026,7 +2315,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the route.
+             * <p>The status of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -2034,7 +2326,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout configuration.
+             * <p>The timeout configuration.</p>
              */
             public Builder timeout(Timeout timeout) {
                 this.timeout = timeout;

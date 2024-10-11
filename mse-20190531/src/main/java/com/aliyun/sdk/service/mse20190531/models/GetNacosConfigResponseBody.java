@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNacosConfigResponseBody} extends {@link TeaModel}
  *
  * <p>GetNacosConfigResponseBody</p>
@@ -85,7 +86,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The configuration information.
+         * <p>The configuration information.</p>
          */
         public Builder configuration(Configuration configuration) {
             this.configuration = configuration;
@@ -93,7 +94,10 @@ public class GetNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -101,7 +105,10 @@ public class GetNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class GetNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4EAB48C-BB4B-5B8D-B33B-35D69606C5AD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class GetNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class GetNacosConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetNacosConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNacosConfigResponseBody</p>
+     */
     public static class Configuration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
@@ -269,7 +288,10 @@ public class GetNacosConfigResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -277,7 +299,10 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The list of IP addresses where the beta release of the configuration is performed.
+             * <p>The list of IP addresses where the beta release of the configuration is performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.XX.XX,2.2.XX.XX</p>
              */
             public Builder betaIps(String betaIps) {
                 this.betaIps = betaIps;
@@ -285,7 +310,10 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the configuration.
+             * <p>The content of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>log.level=error</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -293,7 +321,10 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the configuration.
+             * <p>The ID of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>log.yaml</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -301,7 +332,10 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the configuration.
+             * <p>The description of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>For testing</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -309,7 +343,10 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The encryption key.
+             * <p>The encryption key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder encryptedDataKey(String encryptedDataKey) {
                 this.encryptedDataKey = encryptedDataKey;
@@ -317,7 +354,10 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the configuration group.
+             * <p>The name of the configuration group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder group(String group) {
                 this.group = group;
@@ -325,7 +365,10 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The message digest of the configuration.
+             * <p>The message digest of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123rfsdf3</p>
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -333,7 +376,10 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the configuration.
+             * <p>The tags of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>context</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -341,7 +387,10 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The format of the configuration.
+             * <p>The format of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder type(String type) {
                 this.type = type;

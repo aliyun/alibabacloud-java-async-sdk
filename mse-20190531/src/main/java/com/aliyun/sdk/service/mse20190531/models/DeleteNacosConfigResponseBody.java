@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteNacosConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteNacosConfigResponseBody</p>
@@ -113,7 +114,12 @@ public class DeleteNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+         * <blockquote>
+         * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>202</p>
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -129,7 +135,10 @@ public class DeleteNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Deletes a Nacos configuration.
+         * <p>Deletes a Nacos configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4FEFC13F-EB50-51E1-97D8-C5CBA8CD1B84</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

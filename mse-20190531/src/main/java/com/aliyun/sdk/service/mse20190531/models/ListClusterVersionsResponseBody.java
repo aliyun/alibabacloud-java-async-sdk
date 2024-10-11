@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClusterVersionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListClusterVersionsResponseBody</p>
@@ -121,7 +122,10 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -129,7 +133,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -137,7 +141,10 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message.
+         * <p>The dynamic part in the error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter is invalid.</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -145,7 +152,10 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -153,7 +163,10 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -161,7 +174,10 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request was successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -169,7 +185,10 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7717BE5B-C958-5F87-BF49-464AA276EDD1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,11 +196,14 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,6 +216,12 @@ public class ListClusterVersionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListClusterVersionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClusterVersionsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterType")
         private String clusterType;
@@ -245,7 +273,10 @@ public class ListClusterVersionsResponseBody extends TeaModel {
             private String showName; 
 
             /**
-             * The type of the instance.
+             * <p>The type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Nacos-Ans</p>
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -253,7 +284,10 @@ public class ListClusterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the instance type.
+             * <p>The code of the instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NACOS_2_0_0</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -261,7 +295,10 @@ public class ListClusterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the instance.
+             * <p>The version of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.1.0</p>
              */
             public Builder showName(String showName) {
                 this.showName = showName;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetGatewayRouteDetailRequest} extends {@link RequestModel}
  *
  * <p>GetGatewayRouteDetailRequest</p>
@@ -81,11 +82,14 @@ public class GetGatewayRouteDetailRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -94,7 +98,10 @@ public class GetGatewayRouteDetailRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-5d3a78a53ec947aa928212d671d400ac</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -103,7 +110,10 @@ public class GetGatewayRouteDetailRequest extends Request {
         }
 
         /**
-         * The ID of the route.
+         * <p>The ID of the route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1050</p>
          */
         public Builder routeId(Long routeId) {
             this.putQueryParameter("RouteId", routeId);

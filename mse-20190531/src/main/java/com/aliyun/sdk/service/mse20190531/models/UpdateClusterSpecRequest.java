@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateClusterSpecRequest} extends {@link RequestModel}
  *
  * <p>UpdateClusterSpecRequest</p>
@@ -152,11 +153,14 @@ public class UpdateClusterSpecRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -174,7 +178,10 @@ public class UpdateClusterSpecRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-09k1q11****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -183,7 +190,10 @@ public class UpdateClusterSpecRequest extends Request {
         }
 
         /**
-         * The destination engine specifications.
+         * <p>The destination engine specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MSE_SC_2_4_200_c</p>
          */
         public Builder clusterSpecification(String clusterSpecification) {
             this.putQueryParameter("ClusterSpecification", clusterSpecification);
@@ -192,7 +202,10 @@ public class UpdateClusterSpecRequest extends Request {
         }
 
         /**
-         * The number of destination nodes.
+         * <p>The number of destination nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder instanceCount(Integer instanceCount) {
             this.putQueryParameter("InstanceCount", instanceCount);
@@ -201,7 +214,11 @@ public class UpdateClusterSpecRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-cn-st21ri2****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -210,7 +227,10 @@ public class UpdateClusterSpecRequest extends Request {
         }
 
         /**
-         * The MSE version.
+         * <p>The MSE version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse_pro</p>
          */
         public Builder mseVersion(String mseVersion) {
             this.putQueryParameter("MseVersion", mseVersion);

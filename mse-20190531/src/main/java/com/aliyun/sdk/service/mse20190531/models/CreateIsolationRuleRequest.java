@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateIsolationRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateIsolationRuleRequest</p>
@@ -174,7 +175,10 @@ public class CreateIsolationRuleRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-a</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -183,7 +187,10 @@ public class CreateIsolationRuleRequest extends Request {
         }
 
         /**
-         * Enable.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -192,7 +199,10 @@ public class CreateIsolationRuleRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -210,7 +220,10 @@ public class CreateIsolationRuleRequest extends Request {
         }
 
         /**
-         * Resource.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/a</p>
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -219,7 +232,10 @@ public class CreateIsolationRuleRequest extends Request {
         }
 
         /**
-         * Threshold.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder threshold(Float threshold) {
             this.putQueryParameter("Threshold", threshold);

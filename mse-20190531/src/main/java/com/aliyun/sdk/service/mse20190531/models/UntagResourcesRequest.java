@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
@@ -126,11 +127,14 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -139,13 +143,15 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * Specifies whether to delete all tags. This parameter takes effect only when the TagKey.N parameter is not specified. Valid values:
-         * <p>
+         * <p>Specifies whether to delete all tags. This parameter takes effect only when the TagKey.N parameter is not specified. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -154,7 +160,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -163,7 +173,8 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The resource IDs. A maximum of 50 resource IDs can be specified.
+         * <p>The resource IDs. A maximum of 50 resource IDs can be specified.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -172,11 +183,15 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values:
-         * <p>
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li>CLUSTER: MSE instance</li>
+         * <li>GATEWAY: cloud-native gateway</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   CLUSTER: MSE instance
-         * *   GATEWAY: cloud-native gateway
+         * <strong>example:</strong>
+         * <p>CLUSTER</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -185,7 +200,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The tag keys. A maximum of 20 tag keys are supported.
+         * <p>The tag keys. A maximum of 20 tag keys are supported.</p>
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

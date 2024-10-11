@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateApplicationRequest} extends {@link RequestModel}
  *
  * <p>CreateApplicationRequest</p>
@@ -154,11 +155,14 @@ public class CreateApplicationRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -167,7 +171,11 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-a</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -176,7 +184,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The programming language of the application.
+         * <p>The programming language of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JAVA</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -185,7 +196,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * MSE命名空间名字。
+         * <p>MSE命名空间名字。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -194,7 +208,11 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The region to which the application belongs.
+         * <p>The region to which the application belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -203,7 +221,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Specifies whether to start the switch.
+         * <p>Specifies whether to start the switch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder sentinelEnable(String sentinelEnable) {
             this.putQueryParameter("SentinelEnable", sentinelEnable);
@@ -212,7 +233,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The service where the application is deployed. A value of ACK indicates Container Service for Kubernetes.
+         * <p>The service where the application is deployed. A value of ACK indicates Container Service for Kubernetes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACK</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -221,7 +245,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The name of the Microservices Engine (MSE) namespace.
+         * <p>The name of the Microservices Engine (MSE) namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder switchEnable(String switchEnable) {
             this.putQueryParameter("SwitchEnable", switchEnable);

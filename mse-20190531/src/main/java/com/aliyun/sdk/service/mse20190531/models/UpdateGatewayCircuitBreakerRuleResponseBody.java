@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGatewayCircuitBreakerRuleResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateGatewayCircuitBreakerRuleResponseBody</p>
@@ -70,6 +71,12 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateGatewayCircuitBreakerRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateGatewayCircuitBreakerRuleResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BehaviorType")
         private Integer behaviorType;

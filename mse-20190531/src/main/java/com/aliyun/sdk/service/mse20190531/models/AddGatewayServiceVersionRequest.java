@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddGatewayServiceVersionRequest} extends {@link RequestModel}
  *
  * <p>AddGatewayServiceVersionRequest</p>
@@ -95,11 +96,14 @@ public class AddGatewayServiceVersionRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -108,7 +112,10 @@ public class AddGatewayServiceVersionRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-913a49bab6c5461187a3305fb8da****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -117,7 +124,10 @@ public class AddGatewayServiceVersionRequest extends Request {
         }
 
         /**
-         * The ID of the service.
+         * <p>The ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33</p>
          */
         public Builder serviceId(Long serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -126,7 +136,10 @@ public class AddGatewayServiceVersionRequest extends Request {
         }
 
         /**
-         * The version of the service.
+         * <p>The version of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;name&quot;:&quot;v1&quot;,&quot;labels&quot;:[{&quot;key&quot;:&quot;version&quot;,&quot;value&quot;:&quot;v1&quot;}]}</p>
          */
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEngineNamespacesResponseBody} extends {@link TeaModel}
  *
  * <p>ListEngineNamespacesResponseBody</p>
@@ -133,7 +134,7 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -141,7 +142,10 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -149,7 +153,10 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202</p>
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -157,7 +164,10 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request was successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -165,7 +175,10 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -173,7 +186,10 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -181,7 +197,10 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>062D13C5-DEA3-4921-8918-C49A0F1B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -189,11 +208,14 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +223,10 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned instances.
+         * <p>The total number of returned instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -214,6 +239,12 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEngineNamespacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEngineNamespacesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigCount")
         private Integer configCount;
@@ -325,7 +356,10 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * The quota value.
+             * <p>The quota value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder configCount(Integer configCount) {
                 this.configCount = configCount;
@@ -333,7 +367,10 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFAULT</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -341,7 +378,10 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the namespace.
+             * <p>The description of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mytest</p>
              */
             public Builder namespaceDesc(String namespaceDesc) {
                 this.namespaceDesc = namespaceDesc;
@@ -349,7 +389,10 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the namespace.
+             * <p>The name of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>public</p>
              */
             public Builder namespaceShowName(String namespaceShowName) {
                 this.namespaceShowName = namespaceShowName;
@@ -357,7 +400,10 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * The quota.
+             * <p>The quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder quota(Integer quota) {
                 this.quota = quota;
@@ -365,7 +411,10 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of active services.
+             * <p>The number of active services.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder serviceCount(String serviceCount) {
                 this.serviceCount = serviceCount;
@@ -373,7 +422,10 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * The source from which the namespace was created.
+             * <p>The source from which the namespace was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mse</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -381,12 +433,15 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the namespace. Valid values:
-             * <p>
+             * <p>The type of the namespace. Valid values:</p>
+             * <ul>
+             * <li><code>0</code>: global configuration</li>
+             * <li><code>1</code>: default namespace</li>
+             * <li><code>2</code>: custom namespace</li>
+             * </ul>
              * 
-             * *   `0`: global configuration
-             * *   `1`: default namespace
-             * *   `2`: custom namespace
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder type(Integer type) {
                 this.type = type;

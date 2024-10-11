@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMseServiceApplicationRequest} extends {@link RequestModel}
  *
  * <p>CreateMseServiceApplicationRequest</p>
@@ -167,11 +168,14 @@ public class CreateMseServiceApplicationRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -180,7 +184,11 @@ public class CreateMseServiceApplicationRequest extends Request {
         }
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bsd-xxyp-open-goods-server</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -189,7 +197,10 @@ public class CreateMseServiceApplicationRequest extends Request {
         }
 
         /**
-         * The additional information.
+         * <p>The additional information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder extraInfo(String extraInfo) {
             this.putQueryParameter("ExtraInfo", extraInfo);
@@ -198,7 +209,10 @@ public class CreateMseServiceApplicationRequest extends Request {
         }
 
         /**
-         * The programming language of the application.
+         * <p>The programming language of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JAVA</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -207,11 +221,14 @@ public class CreateMseServiceApplicationRequest extends Request {
         }
 
         /**
-         * The edition of the MSE instance that you want to purchase.
-         * <p>
+         * <p>The edition of the MSE instance that you want to purchase.</p>
+         * <ul>
+         * <li>mse_pro: Professional Edition.</li>
+         * <li>mse_dev: Developer Edition.</li>
+         * </ul>
          * 
-         * *   mse_pro: Professional Edition.
-         * *   mse_dev: Developer Edition.
+         * <strong>example:</strong>
+         * <p>mse_pro</p>
          */
         public Builder mseVersion(String mseVersion) {
             this.putQueryParameter("MseVersion", mseVersion);
@@ -220,14 +237,18 @@ public class CreateMseServiceApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the region where the instance resides. Examples:
-         * <p>
+         * <p>The ID of the region where the instance resides. Examples:</p>
+         * <ul>
+         * <li>cn-hangzhou: China (Hangzhou)</li>
+         * <li>cn-beijing: China (Beijing)</li>
+         * <li>cn-shanghai: China (Shanghai)</li>
+         * <li>cn-zhangjiakou: China (Zhangjiakou)</li>
+         * <li>cn-shenzhen: China (Shenzhen)</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   cn-hangzhou: China (Hangzhou)
-         * *   cn-beijing: China (Beijing)
-         * *   cn-shanghai: China (Shanghai)
-         * *   cn-zhangjiakou: China (Zhangjiakou)
-         * *   cn-shenzhen: China (Shenzhen)
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -236,7 +257,10 @@ public class CreateMseServiceApplicationRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the Sentinel-compatible mode.
+         * <p>Specifies whether to enable the Sentinel-compatible mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder sentinelEnable(String sentinelEnable) {
             this.putQueryParameter("SentinelEnable", sentinelEnable);
@@ -245,7 +269,10 @@ public class CreateMseServiceApplicationRequest extends Request {
         }
 
         /**
-         * The service source.
+         * <p>The service source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edasmsc</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -254,7 +281,10 @@ public class CreateMseServiceApplicationRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable switching.
+         * <p>Specifies whether to enable switching.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder switchEnable(String switchEnable) {
             this.putQueryParameter("SwitchEnable", switchEnable);

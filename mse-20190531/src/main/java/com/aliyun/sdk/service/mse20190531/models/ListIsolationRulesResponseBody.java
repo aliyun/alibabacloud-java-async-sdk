@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIsolationRulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListIsolationRulesResponseBody</p>
@@ -150,6 +151,12 @@ public class ListIsolationRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListIsolationRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIsolationRulesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -351,6 +358,12 @@ public class ListIsolationRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListIsolationRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIsolationRulesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;

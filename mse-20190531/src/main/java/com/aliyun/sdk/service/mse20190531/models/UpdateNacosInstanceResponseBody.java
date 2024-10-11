@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateNacosInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateNacosInstanceResponseBody</p>
@@ -97,7 +98,10 @@ public class UpdateNacosInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code returned.
+         * <p>The response code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +109,10 @@ public class UpdateNacosInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the modification.
+         * <p>The result of the modification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -113,7 +120,10 @@ public class UpdateNacosInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +131,10 @@ public class UpdateNacosInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request is successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +142,10 @@ public class UpdateNacosInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9e78a671-4b9b-4dd4-99c1-0b9da87d3dec</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +153,14 @@ public class UpdateNacosInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

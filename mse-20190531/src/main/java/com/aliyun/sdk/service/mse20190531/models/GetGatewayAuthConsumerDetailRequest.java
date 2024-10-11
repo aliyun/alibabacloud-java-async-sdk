@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetGatewayAuthConsumerDetailRequest} extends {@link RequestModel}
  *
  * <p>GetGatewayAuthConsumerDetailRequest</p>
@@ -83,11 +84,14 @@ public class GetGatewayAuthConsumerDetailRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -96,7 +100,11 @@ public class GetGatewayAuthConsumerDetailRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-1a4ab101d5924b6f92c5ec98a84*****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -105,7 +113,11 @@ public class GetGatewayAuthConsumerDetailRequest extends Request {
         }
 
         /**
-         * The ID of the consumer.
+         * <p>The ID of the consumer.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

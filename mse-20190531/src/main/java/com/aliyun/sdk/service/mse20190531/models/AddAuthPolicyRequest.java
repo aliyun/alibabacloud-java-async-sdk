@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddAuthPolicyRequest} extends {@link RequestModel}
  *
  * <p>AddAuthPolicyRequest</p>
@@ -217,7 +218,10 @@ public class AddAuthPolicyRequest extends Request {
         }
 
         /**
-         * AuthRule.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;all&quot;:true,&quot;black&quot;:false,&quot;appIds&quot;:[&quot;dez4qt7weh@***&quot;]}]</p>
          */
         public Builder authRule(String authRule) {
             this.putQueryParameter("AuthRule", authRule);
@@ -235,7 +239,10 @@ public class AddAuthPolicyRequest extends Request {
         }
 
         /**
-         * Enable.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(String enable) {
             this.putQueryParameter("Enable", enable);
@@ -253,7 +260,10 @@ public class AddAuthPolicyRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -271,7 +281,10 @@ public class AddAuthPolicyRequest extends Request {
         }
 
         /**
-         * Protocol.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SPRING_CLOUD</p>
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -280,7 +293,10 @@ public class AddAuthPolicyRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -289,7 +305,10 @@ public class AddAuthPolicyRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edasmsc</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteNacosConfigsRequest} extends {@link RequestModel}
  *
  * <p>DeleteNacosConfigsRequest</p>
@@ -98,11 +99,14 @@ public class DeleteNacosConfigsRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -111,7 +115,11 @@ public class DeleteNacosConfigsRequest extends Request {
         }
 
         /**
-         * The IDs of configurations.
+         * <p>The IDs of configurations.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20024,20025,20026,20027,20034,20104,20394</p>
          */
         public Builder ids(String ids) {
             this.putQueryParameter("Ids", ids);
@@ -120,7 +128,11 @@ public class DeleteNacosConfigsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse_prepaid_public_cn-i7m2e32pd0n</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -129,7 +141,11 @@ public class DeleteNacosConfigsRequest extends Request {
         }
 
         /**
-         * The ID of the namespace.
+         * <p>The ID of the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ef93a21-3487-4367-a859-857d8****</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RulesValue} extends {@link TeaModel}
  *
  * <p>RulesValue</p>
@@ -190,6 +191,12 @@ public class RulesValue extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RulesValue} extends {@link TeaModel}
+     *
+     * <p>RulesValue</p>
+     */
     public static class RestItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("datum")
         private String datum;
@@ -411,6 +418,12 @@ public class RulesValue extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RulesValue} extends {@link TeaModel}
+     *
+     * <p>RulesValue</p>
+     */
     public static class Springcloud extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("condition")
         private String condition;
@@ -612,6 +625,12 @@ public class RulesValue extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RulesValue} extends {@link TeaModel}
+     *
+     * <p>RulesValue</p>
+     */
     public static class ArgumentItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("operator")
         private String operator;
@@ -833,6 +852,12 @@ public class RulesValue extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RulesValue} extends {@link TeaModel}
+     *
+     * <p>RulesValue</p>
+     */
     public static class Dubbo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("appId")
         private String appId;
@@ -1054,6 +1079,12 @@ public class RulesValue extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RulesValue} extends {@link TeaModel}
+     *
+     * <p>RulesValue</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("springcloud")
         private java.util.List < Springcloud> springcloud;

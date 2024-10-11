@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateEngineNamespaceRequest} extends {@link RequestModel}
  *
  * <p>UpdateEngineNamespaceRequest</p>
@@ -139,11 +140,14 @@ public class UpdateEngineNamespaceRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -152,7 +156,10 @@ public class UpdateEngineNamespaceRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-09k1q11****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -161,7 +168,10 @@ public class UpdateEngineNamespaceRequest extends Request {
         }
 
         /**
-         * The description of the cluster.
+         * <p>The description of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         public Builder desc(String desc) {
             this.putQueryParameter("Desc", desc);
@@ -170,7 +180,11 @@ public class UpdateEngineNamespaceRequest extends Request {
         }
 
         /**
-         * The ID of the namespace.
+         * <p>The ID of the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33ff74b6-d21e-4f9b-91a8-bc1ea4ef****</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -179,7 +193,10 @@ public class UpdateEngineNamespaceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-cn-st21ri2****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -188,7 +205,11 @@ public class UpdateEngineNamespaceRequest extends Request {
         }
 
         /**
-         * The name of the cluster.
+         * <p>The name of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -197,7 +218,10 @@ public class UpdateEngineNamespaceRequest extends Request {
         }
 
         /**
-         * The number of active services.
+         * <p>The number of active services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder serviceCount(Integer serviceCount) {
             this.putQueryParameter("ServiceCount", serviceCount);

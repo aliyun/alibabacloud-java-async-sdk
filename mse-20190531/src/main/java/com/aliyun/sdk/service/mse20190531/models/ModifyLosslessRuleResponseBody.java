@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyLosslessRuleResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyLosslessRuleResponseBody</p>
@@ -109,7 +110,10 @@ public class ModifyLosslessRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 响应码。
+         * <p>响应码。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -117,7 +121,10 @@ public class ModifyLosslessRuleResponseBody extends TeaModel {
         }
 
         /**
-         * 返回数据。
+         * <p>返回数据。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder data(Object data) {
             this.data = data;
@@ -125,7 +132,10 @@ public class ModifyLosslessRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -133,7 +143,10 @@ public class ModifyLosslessRuleResponseBody extends TeaModel {
         }
 
         /**
-         * HTTP状态码。
+         * <p>HTTP状态码。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -141,7 +154,10 @@ public class ModifyLosslessRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>modifyLosslessRule success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -149,7 +165,10 @@ public class ModifyLosslessRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3369AD10-F1A6-4E6F-B99E-20F51826****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,11 +176,14 @@ public class ModifyLosslessRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

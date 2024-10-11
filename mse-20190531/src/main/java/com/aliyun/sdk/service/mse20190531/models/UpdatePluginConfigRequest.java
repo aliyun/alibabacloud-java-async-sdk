@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePluginConfigRequest} extends {@link RequestModel}
  *
  * <p>UpdatePluginConfigRequest</p>
@@ -196,10 +197,11 @@ public class UpdatePluginConfigRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <p>zh: Chinese en: English</p>
          * 
-         * zh: Chinese en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -208,7 +210,10 @@ public class UpdatePluginConfigRequest extends Request {
         }
 
         /**
-         * The plug-in configuration. Configurations of WebAssembly plug-ins are in the YAML format, and configurations of Lua plug-ins are in the Lua code.
+         * <p>The plug-in configuration. Configurations of WebAssembly plug-ins are in the YAML format, and configurations of Lua plug-ins are in the Lua code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p># Configure a check for the required fields of the plug-in, such as name, age, and friends. Sample configuration: name: John age: 18 friends: - David - Anne</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -217,12 +222,15 @@ public class UpdatePluginConfigRequest extends Request {
         }
 
         /**
-         * The application scope of the plug-in.
-         * <p>
+         * <p>The application scope of the plug-in.</p>
+         * <ul>
+         * <li>0: global</li>
+         * <li>1: route</li>
+         * <li>2: domain name</li>
+         * </ul>
          * 
-         * *   0: global
-         * *   1: route
-         * *   2: domain name
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder configLevel(Integer configLevel) {
             this.putQueryParameter("ConfigLevel", configLevel);
@@ -231,7 +239,10 @@ public class UpdatePluginConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the plug-in.
+         * <p>Specifies whether to enable the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -240,7 +251,10 @@ public class UpdatePluginConfigRequest extends Request {
         }
 
         /**
-         * The ID of the gateway.
+         * <p>The ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder gatewayId(Long gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -249,7 +263,10 @@ public class UpdatePluginConfigRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-ubuwqygbq4783gqb2y3f87q****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -258,7 +275,10 @@ public class UpdatePluginConfigRequest extends Request {
         }
 
         /**
-         * The creation time.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1667309705000</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.putQueryParameter("GmtCreate", gmtCreate);
@@ -267,7 +287,10 @@ public class UpdatePluginConfigRequest extends Request {
         }
 
         /**
-         * The update time.
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1667309705000</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.putQueryParameter("GmtModified", gmtModified);
@@ -276,7 +299,10 @@ public class UpdatePluginConfigRequest extends Request {
         }
 
         /**
-         * The ID of the plug-in configuration.
+         * <p>The ID of the plug-in configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -285,7 +311,10 @@ public class UpdatePluginConfigRequest extends Request {
         }
 
         /**
-         * The ID of the gateway plug-in.
+         * <p>The ID of the gateway plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pluginId(Long pluginId) {
             this.putQueryParameter("PluginId", pluginId);

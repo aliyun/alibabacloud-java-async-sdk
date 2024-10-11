@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FetchLosslessRuleListResponseBody} extends {@link TeaModel}
  *
  * <p>FetchLosslessRuleListResponseBody</p>
@@ -109,7 +110,10 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code returned.
+         * <p>The response code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -117,7 +121,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -141,7 +145,10 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -149,7 +156,10 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>56D9E600-6348-4260-B35F-583413F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,11 +167,14 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -174,6 +187,12 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FetchLosslessRuleListResponseBody} extends {@link TeaModel}
+     *
+     * <p>FetchLosslessRuleListResponseBody</p>
+     */
     public static class Results extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Aligned")
         private Boolean aligned;
@@ -321,7 +340,10 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             private Integer warmupTime; 
 
             /**
-             * Indicates whether service registration is complete before readiness probe.
+             * <p>Indicates whether service registration is complete before readiness probe.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder aligned(Boolean aligned) {
                 this.aligned = aligned;
@@ -329,7 +351,10 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hkhon1po62@24810bf4364aea1</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -337,7 +362,10 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>echo-demo</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -345,7 +373,10 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances.
+             * <p>The number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -353,7 +384,10 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The registration latency. Unit: seconds.
+             * <p>The registration latency. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder delayTime(Integer delayTime) {
                 this.delayTime = delayTime;
@@ -361,11 +395,14 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether graceful start is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether graceful start is enabled. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: enabled</li>
+             * <li><code>false</code>: disabled</li>
+             * </ul>
              * 
-             * *   `true`: enabled
-             * *   `false`: disabled
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -373,7 +410,10 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The slope of the prefetching curve.
+             * <p>The slope of the prefetching curve.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder funcType(Integer funcType) {
                 this.funcType = funcType;
@@ -381,7 +421,10 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether online and offline processing details are displayed.
+             * <p>Indicates whether online and offline processing details are displayed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder lossLessDetail(Boolean lossLessDetail) {
                 this.lossLessDetail = lossLessDetail;
@@ -389,7 +432,10 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether notification is enabled.
+             * <p>Indicates whether notification is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder notice(Boolean notice) {
                 this.notice = notice;
@@ -397,7 +443,10 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether service prefetching is complete before readiness probe.
+             * <p>Indicates whether service prefetching is complete before readiness probe.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder related(Boolean related) {
                 this.related = related;
@@ -405,7 +454,10 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The prefetching duration. Unit: seconds.
+             * <p>The prefetching duration. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder warmupTime(Integer warmupTime) {
                 this.warmupTime = warmupTime;
@@ -419,6 +471,12 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FetchLosslessRuleListResponseBody} extends {@link TeaModel}
+     *
+     * <p>FetchLosslessRuleListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -482,7 +540,10 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -490,7 +551,10 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -498,7 +562,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The returned data.
+             * <p>The returned data.</p>
              */
             public Builder results(java.util.List < Results> results) {
                 this.results = results;
@@ -506,7 +570,10 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

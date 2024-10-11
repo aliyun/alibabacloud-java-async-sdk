@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServiceSourceResponseBody} extends {@link TeaModel}
  *
  * <p>ListServiceSourceResponseBody</p>
@@ -97,7 +98,10 @@ public class ListServiceSourceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class ListServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +128,10 @@ public class ListServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You are not authorized to perform this operation.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +139,10 @@ public class ListServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B8C4B0D8-EBB9-5F20-8295-04224FBE5529</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class ListServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class ListServiceSourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListServiceSourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceSourceResponseBody</p>
+     */
     public static class IngressOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableIngress")
         private Boolean enableIngress;
@@ -217,7 +239,10 @@ public class ListServiceSourceResponseBody extends TeaModel {
             private String watchNamespace; 
 
             /**
-             * Indicates whether Ingresses are enabled.
+             * <p>Indicates whether Ingresses are enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableIngress(Boolean enableIngress) {
                 this.enableIngress = enableIngress;
@@ -225,7 +250,10 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Ingress status is updated.
+             * <p>Indicates whether the Ingress status is updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableStatus(Boolean enableStatus) {
                 this.enableStatus = enableStatus;
@@ -233,7 +261,10 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The Ingress class.
+             * <p>The Ingress class.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.test.xxx</p>
              */
             public Builder ingressClass(String ingressClass) {
                 this.ingressClass = ingressClass;
@@ -241,7 +272,10 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace that you want to monitor.
+             * <p>The namespace that you want to monitor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder watchNamespace(String watchNamespace) {
                 this.watchNamespace = watchNamespace;
@@ -255,6 +289,12 @@ public class ListServiceSourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceSourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceSourceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
@@ -438,7 +478,10 @@ public class ListServiceSourceResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The ID of the Container Service for Kubernetes (ACK) cluster or the endpoint of the Microservices Engine (MSE) instance.
+             * <p>The ID of the Container Service for Kubernetes (ACK) cluster or the endpoint of the Microservices Engine (MSE) instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -446,7 +489,10 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the service source is associated with the gateway. The value 1 indicates that the service source is associated with the gateway.
+             * <p>Indicates whether the service source is associated with the gateway. The value 1 indicates that the service source is associated with the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder bindingWithGateway(Integer bindingWithGateway) {
                 this.bindingWithGateway = bindingWithGateway;
@@ -454,7 +500,10 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the gateway.
+             * <p>The ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -462,7 +511,10 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the gateway.
+             * <p>The unique ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-2u9uhd9283hd92hgd39g239dg2*****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -470,7 +522,10 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-07 18:07:57</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -478,7 +533,10 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The update time.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-07 18:07:57</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -486,7 +544,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The array of service groups.
+             * <p>The array of service groups.</p>
              */
             public Builder groupList(java.util.List < String > groupList) {
                 this.groupList = groupList;
@@ -494,7 +552,10 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID.
+             * <p>The ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -502,7 +563,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the support for Ingresses by applications.
+             * <p>The information about the support for Ingresses by applications.</p>
              */
             public Builder ingressOptions(IngressOptions ingressOptions) {
                 this.ingressOptions = ingressOptions;
@@ -510,7 +571,10 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -518,7 +582,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The array of root paths of service lists.
+             * <p>The array of root paths of service lists.</p>
              */
             public Builder pathList(java.util.List < String > pathList) {
                 this.pathList = pathList;
@@ -526,7 +590,10 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service source.
+             * <p>The type of the service source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MSE</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -534,7 +601,10 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the service source.
+             * <p>The unique ID of the service source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mse-cn-***</p>
              */
             public Builder sourceUniqueId(String sourceUniqueId) {
                 this.sourceUniqueId = sourceUniqueId;
@@ -542,7 +612,10 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The type.
+             * <p>The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NACOS</p>
              */
             public Builder type(String type) {
                 this.type = type;

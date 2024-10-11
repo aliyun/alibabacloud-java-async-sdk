@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceMethodPageResponseBody} extends {@link TeaModel}
  *
  * <p>GetServiceMethodPageResponseBody</p>
@@ -110,6 +111,12 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetServiceMethodPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceMethodPageResponseBody</p>
+     */
     public static class ParameterDefinitions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -191,6 +198,12 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetServiceMethodPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceMethodPageResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MethodController")
         private String methodController;
@@ -412,6 +425,12 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetServiceMethodPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceMethodPageResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;

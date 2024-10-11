@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyTagPoliciesResponseBody} extends {@link TeaModel}
  *
  * <p>ApplyTagPoliciesResponseBody</p>
@@ -73,7 +74,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -81,7 +82,10 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -89,7 +93,10 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>316F5F64-F73D-42DC-8632-01E308B6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +104,10 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -110,6 +120,12 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ApplyTagPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyTagPoliciesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CarryData")
         private Boolean carryData;
@@ -245,7 +261,10 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             private String tag; 
 
             /**
-             * Indicates whether the field is the primary key.
+             * <p>Indicates whether the field is the primary key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder carryData(Boolean carryData) {
                 this.carryData = carryData;
@@ -253,11 +272,14 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the rule is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the rule is enabled. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: The rule is enabled.</li>
+             * <li><code>false</code>: The rule is disabled.</li>
+             * </ul>
              * 
-             * *   `true`: The rule is enabled.
-             * *   `false`: The rule is disabled.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -265,7 +287,10 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the primary key.
+             * <p>The ID of the primary key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -273,7 +298,10 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances.
+             * <p>The number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder instanceNum(Integer instanceNum) {
                 this.instanceNum = instanceNum;
@@ -281,7 +309,10 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The policy name.
+             * <p>The policy name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -289,7 +320,10 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The rate.
+             * <p>The rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder rate(Integer rate) {
                 this.rate = rate;
@@ -297,7 +331,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the routing rule was deleted.
+             * <p>Indicates whether the routing rule was deleted.</p>
              */
             public Builder remove(Boolean remove) {
                 this.remove = remove;
@@ -305,7 +339,10 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the routing rule.
+             * <p>The details of the routing rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;_base&quot;: {&quot;rate&quot;: 100, &quot;remove&quot;: true}, &quot;blue&quot;: {&quot;rate&quot;: 0}}</p>
              */
             public Builder rules(String rules) {
                 this.rules = rules;
@@ -313,7 +350,10 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -321,7 +361,10 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag.
+             * <p>The tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gray</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;

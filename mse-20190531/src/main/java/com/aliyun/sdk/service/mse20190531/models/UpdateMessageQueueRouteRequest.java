@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMessageQueueRouteRequest} extends {@link RequestModel}
  *
  * <p>UpdateMessageQueueRouteRequest</p>
@@ -155,11 +156,14 @@ public class UpdateMessageQueueRouteRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -168,7 +172,11 @@ public class UpdateMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hkhon1po62@c3df23522baa898</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -186,11 +194,14 @@ public class UpdateMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * Specifies whether the canary release for messaging feature is enabled for the application. Valid values:
-         * <p>
+         * <p>Specifies whether the canary release for messaging feature is enabled for the application. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enabled</li>
+         * <li><code>false</code>: disabled</li>
+         * </ul>
          * 
-         * *   `true`: enabled
-         * *   `false`: disabled
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -199,7 +210,10 @@ public class UpdateMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * The side for message filtering when the canary release for messaging feature is enabled.
+         * <p>The side for message filtering when the canary release for messaging feature is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Server</p>
          */
         public Builder filterSide(String filterSide) {
             this.putQueryParameter("FilterSide", filterSide);
@@ -217,7 +231,11 @@ public class UpdateMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -226,7 +244,7 @@ public class UpdateMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * The tag that is negligible for the untagged environment of the application.
+         * <p>The tag that is negligible for the untagged environment of the application.</p>
          */
         public Builder tags(java.util.List < String > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");

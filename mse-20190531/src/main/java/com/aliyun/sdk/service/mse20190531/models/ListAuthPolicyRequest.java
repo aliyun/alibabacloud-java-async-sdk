@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAuthPolicyRequest} extends {@link RequestModel}
  *
  * <p>ListAuthPolicyRequest</p>
@@ -169,7 +170,10 @@ public class ListAuthPolicyRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values: zh-CN and en-US. Default value: zh-CN. The value zh-CN indicates Chinese and the value en-US indicates English.
+         * <p>The language of the response. Valid values: zh-CN and en-US. Default value: zh-CN. The value zh-CN indicates Chinese and the value en-US indicates English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -178,7 +182,10 @@ public class ListAuthPolicyRequest extends Request {
         }
 
         /**
-         * The application ID.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jgy4cadmqo@***</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -187,7 +194,10 @@ public class ListAuthPolicyRequest extends Request {
         }
 
         /**
-         * The name of the authentication rule.
+         * <p>The name of the authentication rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>auto-rule-**</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -196,7 +206,10 @@ public class ListAuthPolicyRequest extends Request {
         }
 
         /**
-         * The name of the Microservices Engine (MSE) namespace.
+         * <p>The name of the Microservices Engine (MSE) namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -205,7 +218,11 @@ public class ListAuthPolicyRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -214,7 +231,11 @@ public class ListAuthPolicyRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -223,12 +244,15 @@ public class ListAuthPolicyRequest extends Request {
         }
 
         /**
-         * The protocol type. Valid values:
-         * <p>
+         * <p>The protocol type. Valid values:</p>
+         * <ul>
+         * <li><strong>SPRING_CLOUD</strong></li>
+         * <li><strong>DUBBO</strong></li>
+         * <li><strong>istio</strong></li>
+         * </ul>
          * 
-         * *   **SPRING_CLOUD**
-         * *   **DUBBO**
-         * *   **istio**
+         * <strong>example:</strong>
+         * <p>SPRING_CLOUD</p>
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -237,7 +261,11 @@ public class ListAuthPolicyRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -246,7 +274,11 @@ public class ListAuthPolicyRequest extends Request {
         }
 
         /**
-         * The service source.
+         * <p>The service source.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edasmsc</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

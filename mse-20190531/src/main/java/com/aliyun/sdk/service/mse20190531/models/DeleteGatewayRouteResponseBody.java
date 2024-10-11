@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteGatewayRouteResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteGatewayRouteResponseBody</p>
@@ -97,7 +98,10 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +128,10 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request is successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +139,10 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADDD8AB7-8D1C-4697-A83E-410D2607****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteGatewayRouteResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteGatewayRouteResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultServiceId")
         private Long defaultServiceId;
@@ -289,7 +311,10 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The default service ID.
+             * <p>The default service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder defaultServiceId(Long defaultServiceId) {
                 this.defaultServiceId = defaultServiceId;
@@ -297,7 +322,10 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the gateway.
+             * <p>The ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>125</p>
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -305,7 +333,10 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the gateway.
+             * <p>The unique ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-5017305290e14cebbrvec4a5****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -313,7 +344,10 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-07 18:07:57</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -321,7 +355,10 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The modification time.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-30T06:41:52.000+0000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -329,7 +366,10 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The ID.
+             * <p>The ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -337,7 +377,10 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -345,7 +388,10 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The matching rules.
+             * <p>The matching rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;PathPredicates&quot;:{&quot;Path&quot;:&quot;/metas&quot;,&quot;Type&quot;:&quot;PRE&quot;,&quot;IgnoreCase&quot;:false}}</p>
              */
             public Builder predicates(String predicates) {
                 this.predicates = predicates;
@@ -353,7 +399,10 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The sequence number of the route.
+             * <p>The sequence number of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder routeOrder(Integer routeOrder) {
                 this.routeOrder = routeOrder;
@@ -361,15 +410,18 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the route. Valid values:
-             * <p>
+             * <p>The status of the route. Valid values:</p>
+             * <ul>
+             * <li>0: unpublished</li>
+             * <li>2: publishing</li>
+             * <li>3: published</li>
+             * <li>4: editing (updated but not published)</li>
+             * <li>5: unpublishing</li>
+             * <li>6: unavailable</li>
+             * </ul>
              * 
-             * *   0: unpublished
-             * *   2: publishing
-             * *   3: published
-             * *   4: editing (updated but not published)
-             * *   5: unpublishing
-             * *   6: unavailable
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAllSwimmingLaneGroupResponseBody} extends {@link TeaModel}
  *
  * <p>QueryAllSwimmingLaneGroupResponseBody</p>
@@ -121,7 +122,10 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code. A value of 200 is returned if the request is successful.
+         * <p>The status code. A value of 200 is returned if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -129,7 +133,10 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{id:100,name:&quot;test&quot;}]</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -137,7 +144,10 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message.
+         * <p>The dynamic part in the error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter is invalid.</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -145,7 +155,10 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -153,7 +166,10 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -161,11 +177,14 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <ul>
+         * <li>If the request is successful, a success message is returned.</li>
+         * <li>If the request fails, an error message is returned.</li>
+         * </ul>
          * 
-         * *   If the request is successful, a success message is returned.
-         * *   If the request fails, an error message is returned.
+         * <strong>example:</strong>
+         * <p>The request was successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -173,7 +192,10 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54973C90-F379-4372-9AA5-053A3F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -181,11 +203,14 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -198,6 +223,12 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryAllSwimmingLaneGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAllSwimmingLaneGroupResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppIds")
         private String appIds;

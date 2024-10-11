@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CloneSentinelRuleFromAhasRequest} extends {@link RequestModel}
  *
  * <p>CloneSentinelRuleFromAhasRequest</p>
@@ -111,7 +112,10 @@ public class CloneSentinelRuleFromAhasRequest extends Request {
         } 
 
         /**
-         * The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.
+         * <p>The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -120,7 +124,11 @@ public class CloneSentinelRuleFromAhasRequest extends Request {
         }
 
         /**
-         * The namespace (environment) of Application High Availability Service (AHAS).
+         * <p>The namespace (environment) of Application High Availability Service (AHAS).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder ahasNamespace(String ahasNamespace) {
             this.putQueryParameter("AhasNamespace", ahasNamespace);
@@ -129,7 +137,10 @@ public class CloneSentinelRuleFromAhasRequest extends Request {
         }
 
         /**
-         * The application name.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-a</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -138,7 +149,10 @@ public class CloneSentinelRuleFromAhasRequest extends Request {
         }
 
         /**
-         * Specifies whether AHAS is deployed in the Internet region.
+         * <p>Specifies whether AHAS is deployed in the Internet region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isAHASPublicRegion(Boolean isAHASPublicRegion) {
             this.putQueryParameter("IsAHASPublicRegion", isAHASPublicRegion);
@@ -147,7 +161,11 @@ public class CloneSentinelRuleFromAhasRequest extends Request {
         }
 
         /**
-         * The namespace.
+         * <p>The namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

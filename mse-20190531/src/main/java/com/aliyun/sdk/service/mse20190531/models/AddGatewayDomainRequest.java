@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddGatewayDomainRequest} extends {@link RequestModel}
  *
  * <p>AddGatewayDomainRequest</p>
@@ -165,11 +166,14 @@ public class AddGatewayDomainRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -178,7 +182,10 @@ public class AddGatewayDomainRequest extends Request {
         }
 
         /**
-         * The ID of the certificate.
+         * <p>The ID of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6828169-cn-hangzhou</p>
          */
         public Builder certIdentifier(String certIdentifier) {
             this.putQueryParameter("CertIdentifier", certIdentifier);
@@ -187,7 +194,10 @@ public class AddGatewayDomainRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-86575c0bc9f04ecfbacb92b8e392****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -196,12 +206,15 @@ public class AddGatewayDomainRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable `HTTP/2`.
-         * <p>
+         * <p>Specifies whether to enable <code>HTTP/2</code>.</p>
+         * <ul>
+         * <li><code>open</code>: enables <code>HTTP/2</code></li>
+         * <li><code>close</code>: disables <code>HTTP/2</code></li>
+         * <li><code>globalConfig</code>: uses global configurations</li>
+         * </ul>
          * 
-         * *   `open`: enables `HTTP/2`
-         * *   `close`: disables `HTTP/2`
-         * *   `globalConfig`: uses global configurations
+         * <strong>example:</strong>
+         * <p>close</p>
          */
         public Builder http2(String http2) {
             this.putQueryParameter("Http2", http2);
@@ -210,7 +223,10 @@ public class AddGatewayDomainRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable HTTPS.
+         * <p>Specifies whether to enable HTTPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder mustHttps(Boolean mustHttps) {
             this.putQueryParameter("MustHttps", mustHttps);
@@ -219,7 +235,10 @@ public class AddGatewayDomainRequest extends Request {
         }
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.com</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -228,11 +247,14 @@ public class AddGatewayDomainRequest extends Request {
         }
 
         /**
-         * The type of the protocol. Valid values:
-         * <p>
+         * <p>The type of the protocol. Valid values:</p>
+         * <ul>
+         * <li><code>HTTP</code></li>
+         * <li><code>HTTPS</code></li>
+         * </ul>
          * 
-         * *   `HTTP`
-         * *   `HTTPS`
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -241,7 +263,10 @@ public class AddGatewayDomainRequest extends Request {
         }
 
         /**
-         * The maximum version of Transport Layer Security (TLS).
+         * <p>The maximum version of Transport Layer Security (TLS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TLS 1.3</p>
          */
         public Builder tlsMax(String tlsMax) {
             this.putQueryParameter("TlsMax", tlsMax);
@@ -250,7 +275,10 @@ public class AddGatewayDomainRequest extends Request {
         }
 
         /**
-         * The minimum version of TLS.
+         * <p>The minimum version of TLS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TLS 1.0</p>
          */
         public Builder tlsMin(String tlsMin) {
             this.putQueryParameter("TlsMin", tlsMin);

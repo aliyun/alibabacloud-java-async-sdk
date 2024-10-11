@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddGatewayRouteRequest} extends {@link RequestModel}
  *
  * <p>AddGatewayRouteRequest</p>
@@ -291,11 +292,14 @@ public class AddGatewayRouteRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -313,14 +317,17 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * The type of the destination service. Valid values:
-         * <p>
+         * <p>The type of the destination service. Valid values:</p>
+         * <ul>
+         * <li>Single</li>
+         * <li>Multiple</li>
+         * <li>VersionOriented</li>
+         * <li>Mock</li>
+         * <li>Redirect</li>
+         * </ul>
          * 
-         * *   Single
-         * *   Multiple
-         * *   VersionOriented
-         * *   Mock
-         * *   Redirect
+         * <strong>example:</strong>
+         * <p>Multiple</p>
          */
         public Builder destinationType(String destinationType) {
             this.putQueryParameter("DestinationType", destinationType);
@@ -329,7 +336,7 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * The mock response configuration.
+         * <p>The mock response configuration.</p>
          */
         public Builder directResponseJSON(DirectResponseJSON directResponseJSON) {
             String directResponseJSONShrink = shrink(directResponseJSON, "DirectResponseJSON", "json");
@@ -339,7 +346,10 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * The domain ID.
+         * <p>The domain ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder domainId(Long domainId) {
             this.putQueryParameter("DomainId", domainId);
@@ -348,7 +358,10 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * The domain IDs.
+         * <p>The domain IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[0,94]</p>
          */
         public Builder domainIdListJSON(String domainIdListJSON) {
             this.putQueryParameter("DomainIdListJSON", domainIdListJSON);
@@ -357,7 +370,10 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * Specifies whether to activate Web Application Firewall (WAF).
+         * <p>Specifies whether to activate Web Application Firewall (WAF).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableWaf(Boolean enableWaf) {
             this.putQueryParameter("EnableWaf", enableWaf);
@@ -366,7 +382,10 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the Fallback service.
+         * <p>Specifies whether to enable the Fallback service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder fallback(Boolean fallback) {
             this.putQueryParameter("Fallback", fallback);
@@ -375,7 +394,7 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * The information about the Fallback service.
+         * <p>The information about the Fallback service.</p>
          */
         public Builder fallbackServices(java.util.List < FallbackServices> fallbackServices) {
             String fallbackServicesShrink = shrink(fallbackServices, "FallbackServices", "json");
@@ -385,7 +404,10 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * The ID of the gateway.
+         * <p>The ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>526</p>
          */
         public Builder gatewayId(Long gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -394,7 +416,10 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-492af9b04bb4474cae9d645be8*****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -403,7 +428,10 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * The name of the route.
+         * <p>The name of the route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -412,7 +440,10 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * The routing policy in a JSON string.
+         * <p>The routing policy in a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;CORS&quot;:&quot;{&quot;allowMethods&quot;:&quot;GET,POST,PUT,DELETE,HEAD,OPTIONS,PATCH&quot;,&quot;allowHeaders&quot;:&quot;<em>&quot;,&quot;exposeHeaders&quot;:&quot;</em>&quot;,&quot;unitNum&quot;:12,&quot;allowCredentials&quot;:true,&quot;status&quot;:&quot;off&quot;,&quot;allowOrigins&quot;:&quot;*&quot;,&quot;timeUnit&quot;:&quot;h&quot;}&quot;,&quot;Timeout&quot;:&quot;{&quot;unitNum&quot;:10,&quot;timeUnit&quot;:&quot;s&quot;,&quot;status&quot;:&quot;off&quot;}&quot;,&quot;Retry&quot;:&quot;{&quot;attempts&quot;:2,&quot;retryOn&quot;:[&quot;5xx&quot;],&quot;status&quot;:&quot;off&quot;}&quot;,&quot;HTTPRewrite&quot;:&quot;{&quot;pathType&quot;:&quot;EQUAL&quot;,&quot;path&quot;:&quot;/o&quot;,&quot;status&quot;:&quot;off&quot;}&quot;,&quot;Waf&quot;:&quot;{&quot;enabled&quot;:false}&quot;,&quot;HeaderOp&quot;:&quot;{&quot;status&quot;:&quot;off&quot;,&quot;headerOpItems&quot;:[{&quot;directionType&quot;:&quot;Request&quot;,&quot;opType&quot;:&quot;Add&quot;,&quot;key&quot;:&quot;kkk&quot;,&quot;value&quot;:&quot;ll&quot;}]}&quot;}</p>
          */
         public Builder policies(String policies) {
             this.putQueryParameter("Policies", policies);
@@ -421,7 +452,7 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * The matching rule.
+         * <p>The matching rule.</p>
          */
         public Builder predicates(Predicates predicates) {
             String predicatesShrink = shrink(predicates, "Predicates", "json");
@@ -431,7 +462,7 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * The configuration of the redirection.
+         * <p>The configuration of the redirection.</p>
          */
         public Builder redirectJSON(RedirectJSON redirectJSON) {
             String redirectJSONShrink = shrink(redirectJSON, "RedirectJSON", "json");
@@ -441,7 +472,10 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * The sequence number of the route. (A small value indicates a high priority.)
+         * <p>The sequence number of the route. (A small value indicates a high priority.)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder routeOrder(Integer routeOrder) {
             this.putQueryParameter("RouteOrder", routeOrder);
@@ -450,10 +484,11 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * The route type. Valid values:
-         * <p>
+         * <p>The route type. Valid values:</p>
+         * <p>Op: Manage routes.</p>
          * 
-         * Op: Manage routes.
+         * <strong>example:</strong>
+         * <p>Op</p>
          */
         public Builder routeType(String routeType) {
             this.putQueryParameter("RouteType", routeType);
@@ -462,7 +497,7 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * The list of services.
+         * <p>The list of services.</p>
          */
         public Builder services(java.util.List < Services> services) {
             String servicesShrink = shrink(services, "Services", "json");
@@ -478,6 +513,12 @@ public class AddGatewayRouteRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddGatewayRouteRequest} extends {@link TeaModel}
+     *
+     * <p>AddGatewayRouteRequest</p>
+     */
     public static class DirectResponseJSON extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Body")
         private String body;
@@ -517,7 +558,10 @@ public class AddGatewayRouteRequest extends Request {
             private Long code; 
 
             /**
-             * The mock return value.
+             * <p>The mock return value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello</p>
              */
             public Builder body(String body) {
                 this.body = body;
@@ -525,7 +569,10 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The mock return code.
+             * <p>The mock return code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>403</p>
              */
             public Builder code(Long code) {
                 this.code = code;
@@ -539,6 +586,12 @@ public class AddGatewayRouteRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddGatewayRouteRequest} extends {@link TeaModel}
+     *
+     * <p>AddGatewayRouteRequest</p>
+     */
     public static class FallbackServices extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgreementType")
         private String agreementType;
@@ -662,7 +715,10 @@ public class AddGatewayRouteRequest extends Request {
             private String version; 
 
             /**
-             * The type of the protocol.
+             * <p>The type of the protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DUBBO</p>
              */
             public Builder agreementType(String agreementType) {
                 this.agreementType = agreementType;
@@ -670,7 +726,10 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The name of the group to which the service belongs.
+             * <p>The name of the group to which the service belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -678,7 +737,10 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -686,7 +748,10 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The namespace to which the service belongs.
+             * <p>The namespace to which the service belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -694,7 +759,10 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The weight in the form of a percentage value.
+             * <p>The weight in the form of a percentage value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder percent(Integer percent) {
                 this.percent = percent;
@@ -702,7 +770,10 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The ID of the service.
+             * <p>The ID of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>353</p>
              */
             public Builder serviceId(Long serviceId) {
                 this.serviceId = serviceId;
@@ -710,7 +781,10 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The service port number.
+             * <p>The service port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder servicePort(Integer servicePort) {
                 this.servicePort = servicePort;
@@ -718,7 +792,10 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The source type.
+             * <p>The source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MSE</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -726,7 +803,10 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The version of the service.
+             * <p>The version of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -740,6 +820,12 @@ public class AddGatewayRouteRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddGatewayRouteRequest} extends {@link TeaModel}
+     *
+     * <p>AddGatewayRouteRequest</p>
+     */
     public static class HeaderPredicates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -791,7 +877,10 @@ public class AddGatewayRouteRequest extends Request {
             private String value; 
 
             /**
-             * The key of the request header.
+             * <p>The key of the request header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>debug</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -799,7 +888,10 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The matching type.
+             * <p>The matching type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -807,7 +899,10 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The value of the request header.
+             * <p>The value of the request header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -821,6 +916,12 @@ public class AddGatewayRouteRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddGatewayRouteRequest} extends {@link TeaModel}
+     *
+     * <p>AddGatewayRouteRequest</p>
+     */
     public static class PathPredicates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IgnoreCase")
         private Boolean ignoreCase;
@@ -872,7 +973,10 @@ public class AddGatewayRouteRequest extends Request {
             private String type; 
 
             /**
-             * Specifies whether to ignore case sensitivity.
+             * <p>Specifies whether to ignore case sensitivity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ignoreCase(Boolean ignoreCase) {
                 this.ignoreCase = ignoreCase;
@@ -880,7 +984,10 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The path.
+             * <p>The path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -888,12 +995,15 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The route matching type. Valid values:
-             * <p>
+             * <p>The route matching type. Valid values:</p>
+             * <ul>
+             * <li>PRE: prefix matching</li>
+             * <li>EQUAL: exact matching</li>
+             * <li>ERGULAR: regular expression matching</li>
+             * </ul>
              * 
-             * *   PRE: prefix matching
-             * *   EQUAL: exact matching
-             * *   ERGULAR: regular expression matching
+             * <strong>example:</strong>
+             * <p>PRE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -907,6 +1017,12 @@ public class AddGatewayRouteRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddGatewayRouteRequest} extends {@link TeaModel}
+     *
+     * <p>AddGatewayRouteRequest</p>
+     */
     public static class QueryPredicates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -958,7 +1074,10 @@ public class AddGatewayRouteRequest extends Request {
             private String value; 
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>userid</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -966,7 +1085,10 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The matching type.
+             * <p>The matching type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -974,7 +1096,10 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The value of the parameter.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -988,6 +1113,12 @@ public class AddGatewayRouteRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddGatewayRouteRequest} extends {@link TeaModel}
+     *
+     * <p>AddGatewayRouteRequest</p>
+     */
     public static class Predicates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HeaderPredicates")
         private java.util.List < HeaderPredicates> headerPredicates;
@@ -1051,7 +1182,7 @@ public class AddGatewayRouteRequest extends Request {
             private java.util.List < QueryPredicates> queryPredicates; 
 
             /**
-             * The information about header matching.
+             * <p>The information about header matching.</p>
              */
             public Builder headerPredicates(java.util.List < HeaderPredicates> headerPredicates) {
                 this.headerPredicates = headerPredicates;
@@ -1059,7 +1190,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The information about method matching.
+             * <p>The information about method matching.</p>
              */
             public Builder methodPredicates(java.util.List < String > methodPredicates) {
                 this.methodPredicates = methodPredicates;
@@ -1067,7 +1198,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The information about route matching.
+             * <p>The information about route matching.</p>
              */
             public Builder pathPredicates(PathPredicates pathPredicates) {
                 this.pathPredicates = pathPredicates;
@@ -1075,7 +1206,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The information about URL parameter matching.
+             * <p>The information about URL parameter matching.</p>
              */
             public Builder queryPredicates(java.util.List < QueryPredicates> queryPredicates) {
                 this.queryPredicates = queryPredicates;
@@ -1089,6 +1220,12 @@ public class AddGatewayRouteRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddGatewayRouteRequest} extends {@link TeaModel}
+     *
+     * <p>AddGatewayRouteRequest</p>
+     */
     public static class RedirectJSON extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;
@@ -1140,7 +1277,10 @@ public class AddGatewayRouteRequest extends Request {
             private String path; 
 
             /**
-             * The status code returned.
+             * <p>The status code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>302</p>
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -1148,7 +1288,10 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The hostname to be redirected to.
+             * <p>The hostname to be redirected to.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.com</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -1156,7 +1299,10 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The path to be redirected to.
+             * <p>The path to be redirected to.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -1170,6 +1316,12 @@ public class AddGatewayRouteRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddGatewayRouteRequest} extends {@link TeaModel}
+     *
+     * <p>AddGatewayRouteRequest</p>
+     */
     public static class ParamMapsList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExtractKey")
         private String extractKey;
@@ -1221,7 +1373,10 @@ public class AddGatewayRouteRequest extends Request {
             private String mappingType; 
 
             /**
-             * The key extracted from the input parameter.
+             * <p>The key extracted from the input parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder extractKey(String extractKey) {
                 this.extractKey = extractKey;
@@ -1229,16 +1384,23 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The position of the input parameter.
-             * <p>
+             * <p>The position of the input parameter.</p>
+             * <blockquote>
+             * <p>Valid values:</p>
+             * </blockquote>
+             * <ul>
+             * <li><p><code>ALL_QUERY_PARAMETER</code>: request parameter</p>
+             * </li>
+             * <li><p><code>ALL_HEADER</code>: request header</p>
+             * </li>
+             * <li><p><code>ALL_PATH</code>: request path</p>
+             * </li>
+             * <li><p><code>ALL_BODY</code>: request body</p>
+             * </li>
+             * </ul>
              * 
-             * > Valid values:
-             * 
-             * *   `ALL_QUERY_PARAMETER`: request parameter
-             * 
-             * *   `ALL_HEADER`: request header
-             * *   `ALL_PATH`: request path
-             * *   `ALL_BODY`: request body
+             * <strong>example:</strong>
+             * <p>ALL_QUERY_PARAMETER</p>
              */
             public Builder extractKeySpec(String extractKeySpec) {
                 this.extractKeySpec = extractKeySpec;
@@ -1246,7 +1408,10 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The type of the backend service parameter.
+             * <p>The type of the backend service parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java.lang.String</p>
              */
             public Builder mappingType(String mappingType) {
                 this.mappingType = mappingType;
@@ -1260,6 +1425,12 @@ public class AddGatewayRouteRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddGatewayRouteRequest} extends {@link TeaModel}
+     *
+     * <p>AddGatewayRouteRequest</p>
+     */
     public static class MothedMapList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DubboMothedName")
         private String dubboMothedName;
@@ -1347,7 +1518,10 @@ public class AddGatewayRouteRequest extends Request {
             private java.util.List < String > passThroughList; 
 
             /**
-             * The method name of the Dubbo service.
+             * <p>The method name of the Dubbo service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sayHello</p>
              */
             public Builder dubboMothedName(String dubboMothedName) {
                 this.dubboMothedName = dubboMothedName;
@@ -1355,20 +1529,25 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The HTTP method.
-             * <p>
+             * <p>The HTTP method.</p>
+             * <blockquote>
+             * <p>Valid values:</p>
+             * </blockquote>
+             * <ul>
+             * <li><p>ALL_GET</p>
+             * </li>
+             * <li><p>ALL_POST</p>
+             * </li>
+             * <li><p>ALL_PUT</p>
+             * </li>
+             * <li><p>ALL_DELETE</p>
+             * </li>
+             * <li><p>ALL_PATCH</p>
+             * </li>
+             * </ul>
              * 
-             * > Valid values:
-             * 
-             * *   ALL_GET
-             * 
-             * *   ALL_POST
-             * 
-             * *   ALL_PUT
-             * 
-             * *   ALL_DELETE
-             * 
-             * *   ALL_PATCH
+             * <strong>example:</strong>
+             * <p>ALL_GET</p>
              */
             public Builder httpMothed(String httpMothed) {
                 this.httpMothed = httpMothed;
@@ -1376,7 +1555,10 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The path used for method matching.
+             * <p>The path used for method matching.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/mytestzbk/sayhello</p>
              */
             public Builder mothedpath(String mothedpath) {
                 this.mothedpath = mothedpath;
@@ -1384,7 +1566,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The information about parameter mappings.
+             * <p>The information about parameter mappings.</p>
              */
             public Builder paramMapsList(java.util.List < ParamMapsList> paramMapsList) {
                 this.paramMapsList = paramMapsList;
@@ -1392,16 +1574,21 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The pass-through type of the header.
-             * <p>
+             * <p>The pass-through type of the header.</p>
+             * <blockquote>
+             * <p>Valid values:</p>
+             * </blockquote>
+             * <ul>
+             * <li><p>PASS_ALL: All headers are passed through.</p>
+             * </li>
+             * <li><p>PASS_NOT: All headers are not passed through.</p>
+             * </li>
+             * <li><p>PASS_ASSIGN: Specified headers are passed through.</p>
+             * </li>
+             * </ul>
              * 
-             * > Valid values:
-             * 
-             * *   PASS_ALL: All headers are passed through.
-             * 
-             * *   PASS_NOT: All headers are not passed through.
-             * 
-             * *   PASS_ASSIGN: Specified headers are passed through.
+             * <strong>example:</strong>
+             * <p>PASS_NOT</p>
              */
             public Builder passThroughAllHeaders(String passThroughAllHeaders) {
                 this.passThroughAllHeaders = passThroughAllHeaders;
@@ -1409,7 +1596,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The list of headers to be passed through.
+             * <p>The list of headers to be passed through.</p>
              */
             public Builder passThroughList(java.util.List < String > passThroughList) {
                 this.passThroughList = passThroughList;
@@ -1423,6 +1610,12 @@ public class AddGatewayRouteRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddGatewayRouteRequest} extends {@link TeaModel}
+     *
+     * <p>AddGatewayRouteRequest</p>
+     */
     public static class HttpDubboTranscoder extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DubboServiceGroup")
         private String dubboServiceGroup;
@@ -1486,7 +1679,10 @@ public class AddGatewayRouteRequest extends Request {
             private java.util.List < MothedMapList> mothedMapList; 
 
             /**
-             * The name of the service group.
+             * <p>The name of the service group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder dubboServiceGroup(String dubboServiceGroup) {
                 this.dubboServiceGroup = dubboServiceGroup;
@@ -1494,7 +1690,10 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The name of the Dubbo service.
+             * <p>The name of the Dubbo service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>org.apache.dubbo.samples.basic.api.DemoService</p>
              */
             public Builder dubboServiceName(String dubboServiceName) {
                 this.dubboServiceName = dubboServiceName;
@@ -1502,7 +1701,10 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The version of the Dubbo service.
+             * <p>The version of the Dubbo service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.0</p>
              */
             public Builder dubboServiceVersion(String dubboServiceVersion) {
                 this.dubboServiceVersion = dubboServiceVersion;
@@ -1510,7 +1712,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The forwarding rules of the Dubbo service.
+             * <p>The forwarding rules of the Dubbo service.</p>
              */
             public Builder mothedMapList(java.util.List < MothedMapList> mothedMapList) {
                 this.mothedMapList = mothedMapList;
@@ -1524,6 +1726,12 @@ public class AddGatewayRouteRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddGatewayRouteRequest} extends {@link TeaModel}
+     *
+     * <p>AddGatewayRouteRequest</p>
+     */
     public static class Services extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgreementType")
         private String agreementType;
@@ -1659,7 +1867,10 @@ public class AddGatewayRouteRequest extends Request {
             private String version; 
 
             /**
-             * The type of the protocol.
+             * <p>The type of the protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DUBBO</p>
              */
             public Builder agreementType(String agreementType) {
                 this.agreementType = agreementType;
@@ -1667,7 +1878,10 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The name of the group to which the service belongs.
+             * <p>The name of the group to which the service belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -1675,7 +1889,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The transcoder of the Dubbo protocol.
+             * <p>The transcoder of the Dubbo protocol.</p>
              */
             public Builder httpDubboTranscoder(HttpDubboTranscoder httpDubboTranscoder) {
                 this.httpDubboTranscoder = httpDubboTranscoder;
@@ -1683,7 +1897,10 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1691,7 +1908,10 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The namespace to which the service belongs.
+             * <p>The namespace to which the service belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -1699,7 +1919,10 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The weight in the form of a percentage value.
+             * <p>The weight in the form of a percentage value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder percent(Integer percent) {
                 this.percent = percent;
@@ -1707,7 +1930,10 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The ID of the service.
+             * <p>The ID of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>353</p>
              */
             public Builder serviceId(Long serviceId) {
                 this.serviceId = serviceId;
@@ -1715,7 +1941,10 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The service port number.
+             * <p>The service port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder servicePort(Integer servicePort) {
                 this.servicePort = servicePort;
@@ -1723,7 +1952,10 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The source type.
+             * <p>The source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MSE</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -1731,7 +1963,10 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The version of the service.
+             * <p>The version of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder version(String version) {
                 this.version = version;

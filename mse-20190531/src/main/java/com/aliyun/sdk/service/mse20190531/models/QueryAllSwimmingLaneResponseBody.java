@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAllSwimmingLaneResponseBody} extends {@link TeaModel}
  *
  * <p>QueryAllSwimmingLaneResponseBody</p>
@@ -85,7 +86,10 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{id:100,name:&quot;test&quot;}]</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -93,7 +97,10 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -101,7 +108,10 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request was successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +119,10 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC34E4A3-5F1C-4E40-86EA-02EDF967****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +130,14 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +150,12 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryAllSwimmingLaneResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAllSwimmingLaneResponseBody</p>
+     */
     public static class RestItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cond")
         private String cond;
@@ -355,6 +377,12 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAllSwimmingLaneResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAllSwimmingLaneResponseBody</p>
+     */
     public static class EntryRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("condition")
         private String condition;
@@ -456,6 +484,12 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAllSwimmingLaneResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAllSwimmingLaneResponseBody</p>
+     */
     public static class Conditions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cond")
         private String cond;
@@ -577,6 +611,12 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAllSwimmingLaneResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAllSwimmingLaneResponseBody</p>
+     */
     public static class RouteIndependentPercentageList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Percentage")
         private String percentage;
@@ -638,6 +678,12 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAllSwimmingLaneResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAllSwimmingLaneResponseBody</p>
+     */
     public static class GatewaySwimmingLaneRoute extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CanaryModel")
         private Integer canaryModel;
@@ -819,6 +865,12 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAllSwimmingLaneResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAllSwimmingLaneResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EntryRules")
         private java.util.List < EntryRules> entryRules;

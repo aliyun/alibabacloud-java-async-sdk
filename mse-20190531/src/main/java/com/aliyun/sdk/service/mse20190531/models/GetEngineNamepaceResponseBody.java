@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEngineNamepaceResponseBody} extends {@link TeaModel}
  *
  * <p>GetEngineNamepaceResponseBody</p>
@@ -157,7 +158,10 @@ public class GetEngineNamepaceResponseBody extends TeaModel {
         private String type; 
 
         /**
-         * The number of configurations.
+         * <p>The number of configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder configCount(String configCount) {
             this.configCount = configCount;
@@ -165,7 +169,10 @@ public class GetEngineNamepaceResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -173,7 +180,10 @@ public class GetEngineNamepaceResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202</p>
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -181,7 +191,10 @@ public class GetEngineNamepaceResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -189,7 +202,10 @@ public class GetEngineNamepaceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the namespace.
+         * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -197,7 +213,10 @@ public class GetEngineNamepaceResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the namespace.
+         * <p>The description of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mytest</p>
          */
         public Builder namespaceDesc(String namespaceDesc) {
             this.namespaceDesc = namespaceDesc;
@@ -205,7 +224,10 @@ public class GetEngineNamepaceResponseBody extends TeaModel {
         }
 
         /**
-         * The display name of the namespace.
+         * <p>The display name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         public Builder namespaceShowName(String namespaceShowName) {
             this.namespaceShowName = namespaceShowName;
@@ -213,7 +235,10 @@ public class GetEngineNamepaceResponseBody extends TeaModel {
         }
 
         /**
-         * The quota of configurations.
+         * <p>The quota of configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder quota(String quota) {
             this.quota = quota;
@@ -221,7 +246,10 @@ public class GetEngineNamepaceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FA8F966F-420C-52F5-B49E-6ED7CCE02697</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -229,11 +257,14 @@ public class GetEngineNamepaceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -241,12 +272,15 @@ public class GetEngineNamepaceResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the namespace. Valid values:
-         * <p>
+         * <p>The type of the namespace. Valid values:</p>
+         * <ul>
+         * <li>0: global configuration</li>
+         * <li>1: default namespace</li>
+         * <li>2: custom namespace</li>
+         * </ul>
          * 
-         * *   0: global configuration
-         * *   1: default namespace
-         * *   2: custom namespace
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder type(String type) {
             this.type = type;

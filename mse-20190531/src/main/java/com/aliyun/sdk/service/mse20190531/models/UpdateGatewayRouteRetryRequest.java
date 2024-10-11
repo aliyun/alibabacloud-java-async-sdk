@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGatewayRouteRetryRequest} extends {@link RequestModel}
  *
  * <p>UpdateGatewayRouteRetryRequest</p>
@@ -109,11 +110,14 @@ public class UpdateGatewayRouteRetryRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -122,7 +126,10 @@ public class UpdateGatewayRouteRetryRequest extends Request {
         }
 
         /**
-         * The ID of the gateway.
+         * <p>The ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>501</p>
          */
         public Builder gatewayId(Long gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -131,7 +138,10 @@ public class UpdateGatewayRouteRetryRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-3f97e2989c344f35ab3fd62b19f1d10a</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -140,7 +150,10 @@ public class UpdateGatewayRouteRetryRequest extends Request {
         }
 
         /**
-         * The ID of the associated record.
+         * <p>The ID of the associated record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>508</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -149,7 +162,7 @@ public class UpdateGatewayRouteRetryRequest extends Request {
         }
 
         /**
-         * The information about the retry policy.
+         * <p>The information about the retry policy.</p>
          */
         public Builder retryJSON(RetryJSON retryJSON) {
             String retryJSONShrink = shrink(retryJSON, "RetryJSON", "json");
@@ -165,6 +178,12 @@ public class UpdateGatewayRouteRetryRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateGatewayRouteRetryRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateGatewayRouteRetryRequest</p>
+     */
     public static class RetryJSON extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attempts")
         private Integer attempts;
@@ -228,7 +247,10 @@ public class UpdateGatewayRouteRetryRequest extends Request {
             private String status; 
 
             /**
-             * The number of retries.
+             * <p>The number of retries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder attempts(Integer attempts) {
                 this.attempts = attempts;
@@ -236,7 +258,7 @@ public class UpdateGatewayRouteRetryRequest extends Request {
             }
 
             /**
-             * The HTTP status codes.
+             * <p>The HTTP status codes.</p>
              */
             public Builder httpCodes(java.util.List < String > httpCodes) {
                 this.httpCodes = httpCodes;
@@ -244,7 +266,7 @@ public class UpdateGatewayRouteRetryRequest extends Request {
             }
 
             /**
-             * The retry conditions.
+             * <p>The retry conditions.</p>
              */
             public Builder retryOn(java.util.List < String > retryOn) {
                 this.retryOn = retryOn;
@@ -252,7 +274,10 @@ public class UpdateGatewayRouteRetryRequest extends Request {
             }
 
             /**
-             * The status of the policy.
+             * <p>The status of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder status(String status) {
                 this.status = status;

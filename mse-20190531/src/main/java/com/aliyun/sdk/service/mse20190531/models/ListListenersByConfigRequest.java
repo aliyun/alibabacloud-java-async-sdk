@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListListenersByConfigRequest} extends {@link RequestModel}
  *
  * <p>ListListenersByConfigRequest</p>
@@ -126,11 +127,14 @@ public class ListListenersByConfigRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -139,7 +143,11 @@ public class ListListenersByConfigRequest extends Request {
         }
 
         /**
-         * The ID of the data.
+         * <p>The ID of the data.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zeekr-clueboss.yml</p>
          */
         public Builder dataId(String dataId) {
             this.putQueryParameter("DataId", dataId);
@@ -148,7 +156,11 @@ public class ListListenersByConfigRequest extends Request {
         }
 
         /**
-         * The name of the group.
+         * <p>The name of the group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod</p>
          */
         public Builder group(String group) {
             this.putQueryParameter("Group", group);
@@ -157,7 +169,11 @@ public class ListListenersByConfigRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-cn-m7r1yurp00e</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -166,7 +182,10 @@ public class ListListenersByConfigRequest extends Request {
         }
 
         /**
-         * The ID of the namespace.
+         * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aaeb4d28-c9eb-4fa2-85f5-d03ce7ee8df1</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -175,7 +194,10 @@ public class ListListenersByConfigRequest extends Request {
         }
 
         /**
-         * The extended request parameters in the JSON format.
+         * <p>The extended request parameters in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;appGroup\&quot;:\&quot;emas-zfive_prehost\&quot;,\&quot;appName\&quot;:\&quot;emas-zfive\&quot;,\&quot;appStage\&quot;:\&quot;PRE_PUBLISH\&quot;,\&quot;appUnit\&quot;:\&quot;\&quot;,\&quot;bucId\&quot;:\&quot;225902\&quot;,\&quot;bucName\&quot;:\&quot;Wireless\&quot;,\&quot;provider\&quot;:\&quot;aliyun\&quot;}</p>
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);

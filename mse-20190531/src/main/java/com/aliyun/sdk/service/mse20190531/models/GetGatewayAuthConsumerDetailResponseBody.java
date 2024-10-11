@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetGatewayAuthConsumerDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetGatewayAuthConsumerDetailResponseBody</p>
@@ -133,7 +134,10 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code. A value of 200 is returned if the request is successful.
+         * <p>The status code. A value of 200 is returned if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -141,7 +145,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -149,7 +153,10 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message.
+         * <p>The dynamic part in the error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -157,10 +164,13 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
-         * <p>
+         * <p>The dynamic part in the error message. This parameter is used to replace the **%s** variable in the <strong>ErrMessage</strong> parameter.</p>
+         * <blockquote>
+         * <p> If the return value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> parameter is invalid.</p>
+         * </blockquote>
          * 
-         * >  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
+         * <strong>example:</strong>
+         * <p>The specified parameter is invalid.</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -168,7 +178,10 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error code that is returned.
+         * <p>The error code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -176,7 +189,10 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -184,7 +200,10 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request is successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -192,7 +211,10 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>316F5F64-F73D-42DC-8632-01E308B6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -200,11 +222,14 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -217,6 +242,12 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetGatewayAuthConsumerDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayAuthConsumerDetailResponseBody</p>
+     */
     public static class ResourceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConsumerId")
         private Long consumerId;
@@ -328,7 +359,10 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             private String routeName; 
 
             /**
-             * The consumer ID.
+             * <p>The consumer ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder consumerId(Long consumerId) {
                 this.consumerId = consumerId;
@@ -336,7 +370,10 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the gateway.
+             * <p>The unique ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-4822033a8513496fa10f05c934f*****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -344,7 +381,10 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource associated with the consumer authentication record was created.
+             * <p>The time when the resource associated with the consumer authentication record was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-06 01:38:03</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -352,7 +392,10 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource associated with the consumer authentication record was modified.
+             * <p>The time when the resource associated with the consumer authentication record was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-06 01:38:03</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -360,7 +403,10 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the authorized resource for the consumer.
+             * <p>The ID of the authorized resource for the consumer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -368,11 +414,14 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The resource authorization state. Valid values:
-             * <p>
+             * <p>The resource authorization state. Valid values:</p>
+             * <ul>
+             * <li>true: Resource authorization is enabled.</li>
+             * <li>false: Resource authorization is disabled.</li>
+             * </ul>
              * 
-             * *   true: Resource authorization is enabled.
-             * *   false: Resource authorization is disabled.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder resourceStatus(Boolean resourceStatus) {
                 this.resourceStatus = resourceStatus;
@@ -380,7 +429,10 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the route.
+             * <p>The ID of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3458</p>
              */
             public Builder routeId(Long routeId) {
                 this.routeId = routeId;
@@ -388,7 +440,10 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the route.
+             * <p>The name of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder routeName(String routeName) {
                 this.routeName = routeName;
@@ -402,6 +457,12 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetGatewayAuthConsumerDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayAuthConsumerDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConsumerStatus")
         private Boolean consumerStatus;
@@ -633,11 +694,14 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The status of the consumer. Valid values:
-             * <p>
+             * <p>The status of the consumer. Valid values:</p>
+             * <ul>
+             * <li>true: enabled</li>
+             * <li>false: disabled</li>
+             * </ul>
              * 
-             * *   true: enabled
-             * *   false: disabled
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder consumerStatus(Boolean consumerStatus) {
                 this.consumerStatus = consumerStatus;
@@ -645,7 +709,10 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -653,11 +720,14 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The encryption type. Valid values:
-             * <p>
+             * <p>The encryption type. Valid values:</p>
+             * <ul>
+             * <li>RSA</li>
+             * <li>OCT</li>
+             * </ul>
              * 
-             * *   RSA
-             * *   OCT
+             * <strong>example:</strong>
+             * <p>RSA</p>
              */
             public Builder encodeType(String encodeType) {
                 this.encodeType = encodeType;
@@ -665,7 +735,10 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the gateway.
+             * <p>The unique ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-7ea3da97b96543e19f6c597cd4a9****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -673,7 +746,10 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the consumer authentication record was created.
+             * <p>The time when the consumer authentication record was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2031-03-30 02:35:12</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -681,7 +757,10 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the consumer authentication record was modified.
+             * <p>The time when the consumer authentication record was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-01 14:17:57</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -689,7 +768,10 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the consumer.
+             * <p>The ID of the consumer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -697,7 +779,19 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The JWT public key. The JSON format is supported.
+             * <p>The JWT public key. The JSON format is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *       &quot;keys&quot;: [
+             *             {
+             *                   &quot;e&quot;: &quot;AQAB&quot;,
+             *                   &quot;kid&quot;: &quot;DHFbpoIUqrY8t2zpA2qXfCmr5VO5ZEr4RzHU_-envvQ&quot;,
+             *                   &quot;kty&quot;: &quot;RSA&quot;,
+             *                   &quot;n&quot;: &quot;xAE7eB6qugXyCAG3yhh7pkDkT65pHymX-P7KfIupjf59vsdo91bSP9C8H07pSAGQO1MV_xFj9VswgsCg4R6otmg5PV2He95lZdHtOcU5DXIg_pbhLdKXbi66GlVeK6ABZOUW3WYtnNHD-91gVuoeJT_DwtGGcp4ignkgXfkiEm4sw-4sfb4qdt5oLbyVpmW6x9cfa7vs2WTfURiCrBoUqgBo_-4WTiULmmHSGZHOjzwa8WtrtOQGsAFjIbno85jp6MnGGGZPYZbDAa_b3y5u-YpW7ypZrvD8BgtKVjgtQgZhLAGezMt0ua3DRrWnKqTZ0BJ_EyxOGuHJrLsn00fnMQ&quot;
+             *             }
+             *       ]
+             * }</p>
              */
             public Builder jwks(String jwks) {
                 this.jwks = jwks;
@@ -705,7 +799,10 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the key used for JWT-based identity authentication.
+             * <p>The name of the key used for JWT-based identity authentication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iss</p>
              */
             public Builder keyName(String keyName) {
                 this.keyName = keyName;
@@ -713,7 +810,10 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the key used for JWT-based identity authentication.
+             * <p>The value of the key used for JWT-based identity authentication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abcd</p>
              */
             public Builder keyValue(String keyValue) {
                 this.keyValue = keyValue;
@@ -721,7 +821,10 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the consumer.
+             * <p>The name of the consumer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -729,7 +832,10 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The creator.
+             * <p>The creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder primaryUser(String primaryUser) {
                 this.primaryUser = primaryUser;
@@ -737,7 +843,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The resource list.
+             * <p>The resource list.</p>
              */
             public Builder resourceList(java.util.List < ResourceList> resourceList) {
                 this.resourceList = resourceList;
@@ -745,7 +851,10 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The names of the parameters that are required to verify each token. By default, each token is prefixed with Bearer and stored in the Authorization header, such as `Authorization: Bearer <Content of a token>`.
+             * <p>The names of the parameters that are required to verify each token. By default, each token is prefixed with Bearer and stored in the Authorization header, such as <code>Authorization: Bearer &lt;Content of a token&gt;</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Authorization</p>
              */
             public Builder tokenName(String tokenName) {
                 this.tokenName = tokenName;
@@ -753,7 +862,10 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to enable pass-through.
+             * <p>Specifies whether to enable pass-through.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder tokenPass(Boolean tokenPass) {
                 this.tokenPass = tokenPass;
@@ -761,7 +873,10 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The positions of the parameters that are required to verify each token. By default, each token is prefixed with Bearer and stored in the Authorization header, such as `Authorization: Bearer <Content of a token>`.
+             * <p>The positions of the parameters that are required to verify each token. By default, each token is prefixed with Bearer and stored in the Authorization header, such as <code>Authorization: Bearer &lt;Content of a token&gt;</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HEADER</p>
              */
             public Builder tokenPosition(String tokenPosition) {
                 this.tokenPosition = tokenPosition;
@@ -769,7 +884,10 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The prefixes of the parameters that are required to verify each token. By default, each token is prefixed with Bearer and stored in the Authorization header, such as `Authorization: Bearer <Content of a token>`.
+             * <p>The prefixes of the parameters that are required to verify each token. By default, each token is prefixed with Bearer and stored in the Authorization header, such as <code>Authorization: Bearer &lt;Content of a token&gt;</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bearer</p>
              */
             public Builder tokenPrefix(String tokenPrefix) {
                 this.tokenPrefix = tokenPrefix;
@@ -777,10 +895,13 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The authentication type. Valid values:
-             * <p>
+             * <p>The authentication type. Valid values:</p>
+             * <ul>
+             * <li>JWT</li>
+             * </ul>
              * 
-             * *   JWT
+             * <strong>example:</strong>
+             * <p>JWT</p>
              */
             public Builder type(String type) {
                 this.type = type;

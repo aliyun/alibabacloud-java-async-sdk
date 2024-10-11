@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGatewayRouteOnAuthResponseBody} extends {@link TeaModel}
  *
  * <p>ListGatewayRouteOnAuthResponseBody</p>
@@ -97,7 +98,10 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +128,10 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request is successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +139,10 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58E06A0A-BD2C-47A0-99C2-B100F353****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
          * 
-         * *   `true`
-         * *   `false`
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListGatewayRouteOnAuthResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewayRouteOnAuthResponseBody</p>
+     */
     public static class PathPredicates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
@@ -193,7 +215,10 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The path.
+             * <p>The path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/api</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -201,7 +226,10 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
             }
 
             /**
-             * The matching type.
+             * <p>The matching type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -215,6 +243,12 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGatewayRouteOnAuthResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewayRouteOnAuthResponseBody</p>
+     */
     public static class RoutePredicates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PathPredicates")
         private PathPredicates pathPredicates;
@@ -242,7 +276,7 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
             private PathPredicates pathPredicates; 
 
             /**
-             * The information about route matching.
+             * <p>The information about route matching.</p>
              */
             public Builder pathPredicates(PathPredicates pathPredicates) {
                 this.pathPredicates = pathPredicates;
@@ -256,6 +290,12 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGatewayRouteOnAuthResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewayRouteOnAuthResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainId")
         private Long domainId;
@@ -379,7 +419,10 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
             private RoutePredicates routePredicates; 
 
             /**
-             * The domain ID.
+             * <p>The domain ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>235</p>
              */
             public Builder domainId(Long domainId) {
                 this.domainId = domainId;
@@ -387,7 +430,7 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
             }
 
             /**
-             * The domain IDs.
+             * <p>The domain IDs.</p>
              */
             public Builder domainIdList(java.util.List < Long > domainIdList) {
                 this.domainIdList = domainIdList;
@@ -395,7 +438,10 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -403,7 +449,7 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
             }
 
             /**
-             * The domain names.
+             * <p>The domain names.</p>
              */
             public Builder domainNameList(java.util.List < String > domainNameList) {
                 this.domainNameList = domainNameList;
@@ -411,7 +457,10 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
             }
 
             /**
-             * The gateway ID.
+             * <p>The gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>399</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -419,7 +468,10 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the gateway.
+             * <p>The unique ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-7ea3da97b96543e19f6c597c****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -427,7 +479,10 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
             }
 
             /**
-             * The route ID.
+             * <p>The route ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -435,7 +490,10 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the route.
+             * <p>The name of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ceshi</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -443,7 +501,7 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
             }
 
             /**
-             * The information about route matching.
+             * <p>The information about route matching.</p>
              */
             public Builder routePredicates(RoutePredicates routePredicates) {
                 this.routePredicates = routePredicates;

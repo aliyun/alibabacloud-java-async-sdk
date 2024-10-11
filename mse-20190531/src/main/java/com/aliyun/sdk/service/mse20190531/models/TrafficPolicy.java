@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TrafficPolicy} extends {@link TeaModel}
  *
  * <p>TrafficPolicy</p>
@@ -70,6 +71,12 @@ public class TrafficPolicy extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TrafficPolicy} extends {@link TeaModel}
+     *
+     * <p>TrafficPolicy</p>
+     */
     public static class HttpCookie extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -151,6 +158,12 @@ public class TrafficPolicy extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrafficPolicy} extends {@link TeaModel}
+     *
+     * <p>TrafficPolicy</p>
+     */
     public static class ConsistentHashLBConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConsistentHashLBType")
         private String consistentHashLBType;
@@ -232,6 +245,12 @@ public class TrafficPolicy extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrafficPolicy} extends {@link TeaModel}
+     *
+     * <p>TrafficPolicy</p>
+     */
     public static class LoadBalancerSettings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConsistentHashLBConfig")
         private ConsistentHashLBConfig consistentHashLBConfig;
@@ -313,6 +332,12 @@ public class TrafficPolicy extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrafficPolicy} extends {@link TeaModel}
+     *
+     * <p>TrafficPolicy</p>
+     */
     public static class TlsSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CaCertContent")
         private String caCertContent;
@@ -401,7 +426,10 @@ public class TrafficPolicy extends TeaModel {
             }
 
             /**
-             * TlsMode.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SIMPLE</p>
              */
             public Builder tlsMode(String tlsMode) {
                 this.tlsMode = tlsMode;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddGatewayRequest} extends {@link RequestModel}
  *
  * <p>AddGatewayRequest</p>
@@ -363,11 +364,14 @@ public class AddGatewayRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -376,13 +380,15 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The billing method you specify when you purchase an ordinary instance.
-         * <p>
+         * <p>The billing method you specify when you purchase an ordinary instance.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>PREPAY: subscription</li>
+         * <li>POSTPAY: pay-as-you-go</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   PREPAY: subscription
-         * *   POSTPAY: pay-as-you-go
+         * <strong>example:</strong>
+         * <p>POSTPAY</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -391,12 +397,15 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The network type of the purchased Classic Load Balancer (CLB) instance that is billed based on LCUs.
-         * <p>
+         * <p>The network type of the purchased Classic Load Balancer (CLB) instance that is billed based on LCUs.</p>
+         * <ul>
+         * <li>pubnet: Internet</li>
+         * <li>privatenet: private network</li>
+         * <li>privatepubnet: Internet and private network</li>
+         * </ul>
          * 
-         * *   pubnet: Internet
-         * *   privatenet: private network
-         * *   privatepubnet: Internet and private network
+         * <strong>example:</strong>
+         * <p>pubnet</p>
          */
         public Builder clbNetworkType(String clbNetworkType) {
             this.putQueryParameter("ClbNetworkType", clbNetworkType);
@@ -405,7 +414,10 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * Specifies whether to activate Tracing Analysis.
+         * <p>Specifies whether to activate Tracing Analysis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableHardwareAcceleration(Boolean enableHardwareAcceleration) {
             this.putQueryParameter("EnableHardwareAcceleration", enableHardwareAcceleration);
@@ -414,7 +426,10 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The tag of the gateway.
+         * <p>The tag of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableSls(Boolean enableSls) {
             this.putQueryParameter("EnableSls", enableSls);
@@ -423,7 +438,10 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The sampling rate of Tracing Analysis. Valid values: \[1,100].
+         * <p>The sampling rate of Tracing Analysis. Valid values: [1,100].</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableXtrace(Boolean enableXtrace) {
             this.putQueryParameter("EnableXtrace", enableXtrace);
@@ -432,7 +450,10 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable hardware acceleration.
+         * <p>Specifies whether to enable hardware acceleration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enterpriseSecurityGroup(Boolean enterpriseSecurityGroup) {
             this.putQueryParameter("EnterpriseSecurityGroup", enterpriseSecurityGroup);
@@ -441,15 +462,18 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The specifications of the Internet-facing Server Load Balancer (SLB) instance. Valid values:
-         * <p>
+         * <p>The specifications of the Internet-facing Server Load Balancer (SLB) instance. Valid values:</p>
+         * <ul>
+         * <li>slb.s1.small</li>
+         * <li>slb.s2.smal</li>
+         * <li>slb.s2.medium</li>
+         * <li>slb.s3.small</li>
+         * <li>slb.s3.medium</li>
+         * <li>slb.s3.large</li>
+         * </ul>
          * 
-         * *   slb.s1.small
-         * *   slb.s2.smal
-         * *   slb.s2.medium
-         * *   slb.s3.small
-         * *   slb.s3.medium
-         * *   slb.s3.large
+         * <strong>example:</strong>
+         * <p>slb.s2.small</p>
          */
         public Builder internetSlbSpec(String internetSlbSpec) {
             this.putQueryParameter("InternetSlbSpec", internetSlbSpec);
@@ -458,11 +482,14 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The MSE instance type. Valid values:
-         * <p>
+         * <p>The MSE instance type. Valid values:</p>
+         * <ul>
+         * <li>mse_pro: ordinary instance</li>
+         * <li>mse_serverless: serverless instance</li>
+         * </ul>
          * 
-         * *   mse_pro: ordinary instance
-         * *   mse_serverless: serverless instance
+         * <strong>example:</strong>
+         * <p>mse_pro</p>
          */
         public Builder mserVersion(String mserVersion) {
             this.putQueryParameter("MserVersion", mserVersion);
@@ -471,7 +498,10 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-ceshi</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -480,12 +510,15 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The network type of the Network Load Balancer (NLB) instance you specify when you purchase a serverless instance.
-         * <p>
+         * <p>The network type of the Network Load Balancer (NLB) instance you specify when you purchase a serverless instance.</p>
+         * <ul>
+         * <li>pubnet: Internet</li>
+         * <li>privatenet: private network</li>
+         * <li>privatepubnet: Internet and private network</li>
+         * </ul>
          * 
-         * *   pubnet: Internet
-         * *   privatenet: private network
-         * *   privatepubnet: Internet and private network
+         * <strong>example:</strong>
+         * <p>pubnet</p>
          */
         public Builder nlbNetworkType(String nlbNetworkType) {
             this.putQueryParameter("NlbNetworkType", nlbNetworkType);
@@ -494,15 +527,19 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The specifications of the internal-facing Server Load Balancer (SLB) instance. Valid values:
-         * <p>
+         * <p>The specifications of the internal-facing Server Load Balancer (SLB) instance. Valid values:</p>
+         * <ul>
+         * <li>slb.s1.small</li>
+         * <li>slb.s2.small</li>
+         * <li>slb.s2.medium</li>
+         * <li>slb.s3.small</li>
+         * <li>slb.s3.medium</li>
+         * <li>slb.s3.large</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   slb.s1.small
-         * *   slb.s2.small
-         * *   slb.s2.medium
-         * *   slb.s3.small
-         * *   slb.s3.medium
-         * *   slb.s3.large
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -511,7 +548,10 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The number of nodes you specify when you purchase an ordinary instance.
+         * <p>The number of nodes you specify when you purchase an ordinary instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder replica(Integer replica) {
             this.putQueryParameter("Replica", replica);
@@ -520,7 +560,10 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The extended field.
+         * <p>The extended field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -529,11 +572,14 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>rg-acfm34x43l*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -542,15 +588,18 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The specifications of the internal-facing Server Load Balancer (SLB) instance. Valid values:
-         * <p>
+         * <p>The specifications of the internal-facing Server Load Balancer (SLB) instance. Valid values:</p>
+         * <ul>
+         * <li>slb.s1.small</li>
+         * <li>slb.s2.small</li>
+         * <li>slb.s2.medium</li>
+         * <li>slb.s3.small</li>
+         * <li>slb.s3.medium</li>
+         * <li>slb.s3.large</li>
+         * </ul>
          * 
-         * *   slb.s1.small
-         * *   slb.s2.small
-         * *   slb.s2.medium
-         * *   slb.s3.small
-         * *   slb.s3.medium
-         * *   slb.s3.large
+         * <strong>example:</strong>
+         * <p>slb.s2.small</p>
          */
         public Builder slbSpec(String slbSpec) {
             this.putQueryParameter("SlbSpec", slbSpec);
@@ -559,13 +608,16 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The node specifications you specify when you purchase an ordinary instance. Valid values:
-         * <p>
+         * <p>The node specifications you specify when you purchase an ordinary instance. Valid values:</p>
+         * <ul>
+         * <li>MSE_GTW_16_32_200_c(16C32G)</li>
+         * <li>MSE_GTW_2_4_200_c(2C4G)</li>
+         * <li>MSE_GTW_4_8_200_c(4C8G)</li>
+         * <li>MSE_GTW_8_16_200_c(8C16G)</li>
+         * </ul>
          * 
-         * *   MSE_GTW\_16\_32\_200\_c(16C32G)
-         * *   MSE_GTW\_2\_4\_200\_c(2C4G)
-         * *   MSE_GTW\_4\_8\_200\_c(4C8G)
-         * *   MSE_GTW\_8\_16\_200\_c(8C16G)
+         * <strong>example:</strong>
+         * <p>MSE_GTW_2_4_200_c</p>
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);
@@ -574,7 +626,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The tag object.
+         * <p>The tag object.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -583,7 +635,10 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The ID of the primary vSwitch.
+         * <p>The ID of the primary vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1q8th57frl5khj2li43</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -592,7 +647,10 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * Specifies whether to use an advanced security group.
+         * <p>Specifies whether to use an advanced security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-wz9bu6o5vsvitt5mrxo6s</p>
          */
         public Builder vSwitchId2(String vSwitchId2) {
             this.putQueryParameter("VSwitchId2", vSwitchId2);
@@ -601,7 +659,11 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The ID of the primary vSwitch.
+         * <p>The ID of the primary vSwitch.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp15mncnrtm83uauxd1xb</p>
          */
         public Builder vpc(String vpc) {
             this.putQueryParameter("Vpc", vpc);
@@ -610,7 +672,10 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * Specifies whether to activate Log Service.
+         * <p>Specifies whether to activate Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder xtraceRatio(String xtraceRatio) {
             this.putQueryParameter("XtraceRatio", xtraceRatio);
@@ -619,7 +684,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The details of the zone.
+         * <p>The details of the zone.</p>
          */
         public Builder zoneInfo(java.util.List < ZoneInfo> zoneInfo) {
             String zoneInfoShrink = shrink(zoneInfo, "ZoneInfo", "json");
@@ -635,6 +700,12 @@ public class AddGatewayRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddGatewayRequest} extends {@link TeaModel}
+     *
+     * <p>AddGatewayRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -674,7 +745,10 @@ public class AddGatewayRequest extends Request {
             private String value; 
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -682,7 +756,10 @@ public class AddGatewayRequest extends Request {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -696,6 +773,12 @@ public class AddGatewayRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddGatewayRequest} extends {@link TeaModel}
+     *
+     * <p>AddGatewayRequest</p>
+     */
     public static class ZoneInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
@@ -735,7 +818,10 @@ public class AddGatewayRequest extends Request {
             private String zoneId; 
 
             /**
-             * The vSwitch ID.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp*****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -743,7 +829,10 @@ public class AddGatewayRequest extends Request {
             }
 
             /**
-             * The zone ID.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen-e</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

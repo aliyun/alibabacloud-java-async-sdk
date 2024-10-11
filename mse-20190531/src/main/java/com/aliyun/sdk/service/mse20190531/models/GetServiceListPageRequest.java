@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceListPageRequest} extends {@link RequestModel}
  *
  * <p>GetServiceListPageRequest</p>
@@ -181,7 +182,10 @@ public class GetServiceListPageRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.
+         * <p>The language of the response. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -190,7 +194,10 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * The application ID.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dez4xxxxx@f3f75ed8ffxxxxx</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -199,7 +206,10 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * The application name.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-app</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -208,7 +218,10 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * The IP address from which the query is initiated.
+         * <p>The IP address from which the query is initiated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>223.5.5.5</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -217,7 +230,10 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * The name of the MSE namespace.
+         * <p>The name of the MSE namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -226,7 +242,10 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -235,7 +254,10 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -244,7 +266,10 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -253,7 +278,10 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * The service name.
+         * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sc-A</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -262,7 +290,10 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * The service type.
+         * <p>The service type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>springCloud</p>
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("ServiceType", serviceType);

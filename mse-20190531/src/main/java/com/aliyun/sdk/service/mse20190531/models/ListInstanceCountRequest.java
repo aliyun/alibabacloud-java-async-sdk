@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceCountRequest} extends {@link RequestModel}
  *
  * <p>ListInstanceCountRequest</p>
@@ -109,11 +110,14 @@ public class ListInstanceCountRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -122,7 +126,10 @@ public class ListInstanceCountRequest extends Request {
         }
 
         /**
-         * The type of the instance. Valid values: ZooKeeper and Nacos-Ans.
+         * <p>The type of the instance. Valid values: ZooKeeper and Nacos-Ans.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Nacos-Ans</p>
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -131,11 +138,14 @@ public class ListInstanceCountRequest extends Request {
         }
 
         /**
-         * The edition type of the instance. Valid values:
-         * <p>
+         * <p>The edition type of the instance. Valid values:</p>
+         * <ul>
+         * <li><code>mse_dev</code>: Developer Edition</li>
+         * <li><code>mse_pro</code>: Professional Edition</li>
+         * </ul>
          * 
-         * *   `mse_dev`: Developer Edition
-         * *   `mse_pro`: Professional Edition
+         * <strong>example:</strong>
+         * <p>mse_pro</p>
          */
         public Builder mseVersion(String mseVersion) {
             this.putQueryParameter("MseVersion", mseVersion);
@@ -144,14 +154,17 @@ public class ListInstanceCountRequest extends Request {
         }
 
         /**
-         * The ID of the region where the instance resides. Examples:
-         * <p>
+         * <p>The ID of the region where the instance resides. Examples:</p>
+         * <ul>
+         * <li>cn-hangzhou: China (Hangzhou)</li>
+         * <li>cn-beijing: China (Beijing)</li>
+         * <li>cn-shanghai: China (Shanghai)</li>
+         * <li>cn-zhangjiakou: China (Zhangjiakou)</li>
+         * <li>cn-shenzhen: China (Shenzhen)</li>
+         * </ul>
          * 
-         * *   cn-hangzhou: China (Hangzhou)
-         * *   cn-beijing: China (Beijing)
-         * *   cn-shanghai: China (Shanghai)
-         * *   cn-zhangjiakou: China (Zhangjiakou)
-         * *   cn-shenzhen: China (Shenzhen)
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -160,7 +173,10 @@ public class ListInstanceCountRequest extends Request {
         }
 
         /**
-         * The extended request parameters in the JSON format.
+         * <p>The extended request parameters in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);

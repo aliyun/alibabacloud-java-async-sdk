@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetGatewayConfigResponseBody} extends {@link TeaModel}
  *
  * <p>GetGatewayConfigResponseBody</p>
@@ -210,6 +211,12 @@ public class GetGatewayConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetGatewayConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayConfigResponseBody</p>
+     */
     public static class SlsConfigDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GatewayId")
         private Long gatewayId;
@@ -411,6 +418,12 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetGatewayConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayConfigResponseBody</p>
+     */
     public static class XtraceDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GatewayId")
         private Long gatewayId;
@@ -632,6 +645,12 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetGatewayConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessLogHeader")
         private String accessLogHeader;

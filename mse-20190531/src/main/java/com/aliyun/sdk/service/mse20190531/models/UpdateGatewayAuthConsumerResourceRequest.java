@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGatewayAuthConsumerResourceRequest} extends {@link RequestModel}
  *
  * <p>UpdateGatewayAuthConsumerResourceRequest</p>
@@ -97,11 +98,14 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -110,7 +114,11 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
         }
 
         /**
-         * The gateway authentication consumer ID.
+         * <p>The gateway authentication consumer ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder consumerId(Long consumerId) {
             this.putQueryParameter("ConsumerId", consumerId);
@@ -119,7 +127,11 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-3f97e2989c344f35ab3fd62b19f1****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -128,7 +140,7 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
         }
 
         /**
-         * The gateway authentication consumer ID.
+         * <p>The gateway authentication consumer ID.</p>
          */
         public Builder resourceList(java.util.List < ResourceList> resourceList) {
             String resourceListShrink = shrink(resourceList, "ResourceList", "json");
@@ -144,6 +156,12 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateGatewayAuthConsumerResourceRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateGatewayAuthConsumerResourceRequest</p>
+     */
     public static class ResourceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RouteId")
         private Long routeId;
@@ -183,7 +201,10 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
             private String routeName; 
 
             /**
-             * The route ID.
+             * <p>The route ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7816</p>
              */
             public Builder routeId(Long routeId) {
                 this.routeId = routeId;
@@ -191,7 +212,10 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
             }
 
             /**
-             * The name of the route.
+             * <p>The name of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>helo</p>
              */
             public Builder routeName(String routeName) {
                 this.routeName = routeName;

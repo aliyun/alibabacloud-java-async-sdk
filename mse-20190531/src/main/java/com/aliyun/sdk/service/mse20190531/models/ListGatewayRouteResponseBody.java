@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGatewayRouteResponseBody} extends {@link TeaModel}
  *
  * <p>ListGatewayRouteResponseBody</p>
@@ -97,7 +98,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The code returned.
+         * <p>The code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +128,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You are not authorized to perform this operation.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +139,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83F02EAB-ECDF-55C6-B332-8649E5E7AF2C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class ListGatewayRouteResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListGatewayRouteResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewayRouteResponseBody</p>
+     */
     public static class Comment extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -181,7 +203,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>error</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -195,6 +220,12 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGatewayRouteResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewayRouteResponseBody</p>
+     */
     public static class DirectResponse extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Body")
         private String body;
@@ -234,7 +265,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private Integer code; 
 
             /**
-             * The return value for service mocking.
+             * <p>The return value for service mocking.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello</p>
              */
             public Builder body(String body) {
                 this.body = body;
@@ -242,7 +276,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The response code returned.
+             * <p>The response code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -256,6 +293,12 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGatewayRouteResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewayRouteResponseBody</p>
+     */
     public static class FallbackServices extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgreementType")
         private String agreementType;
@@ -391,7 +434,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The type of the protocol.
+             * <p>The type of the protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DUBBO</p>
              */
             public Builder agreementType(String agreementType) {
                 this.agreementType = agreementType;
@@ -399,7 +445,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the group to which the service belongs.
+             * <p>The name of the group to which the service belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -407,7 +456,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -415,7 +467,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace to which the service belongs.
+             * <p>The namespace to which the service belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Namespace</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -423,7 +478,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The weight in the form of a percentage value.
+             * <p>The weight in the form of a percentage value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percent(Integer percent) {
                 this.percent = percent;
@@ -431,7 +489,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the service.
+             * <p>The ID of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>353</p>
              */
             public Builder serviceId(Long serviceId) {
                 this.serviceId = serviceId;
@@ -439,7 +500,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service name</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -447,7 +511,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The service port number.
+             * <p>The service port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8848</p>
              */
             public Builder servicePort(Integer servicePort) {
                 this.servicePort = servicePort;
@@ -455,7 +522,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The source type.
+             * <p>The source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MSE</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -463,7 +533,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the service.
+             * <p>The version of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -477,6 +550,12 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGatewayRouteResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewayRouteResponseBody</p>
+     */
     public static class Redirect extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;
@@ -528,7 +607,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private String path; 
 
             /**
-             * The response code returned.
+             * <p>The response code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -536,7 +618,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The hostname to be redirected to.
+             * <p>The hostname to be redirected to.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.com</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -544,7 +629,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The path.
+             * <p>The path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -558,6 +646,12 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGatewayRouteResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewayRouteResponseBody</p>
+     */
     public static class HeaderPredicates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -609,7 +703,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The header key.
+             * <p>The header key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>userid</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -617,7 +714,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The matching type.
+             * <p>The matching type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -625,7 +725,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The value.
+             * <p>The value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -639,6 +742,12 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGatewayRouteResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewayRouteResponseBody</p>
+     */
     public static class PathPredicates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IgnoreCase")
         private Boolean ignoreCase;
@@ -690,7 +799,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Indicates whether case sensitivity is ignored.
+             * <p>Indicates whether case sensitivity is ignored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ignoreCase(Boolean ignoreCase) {
                 this.ignoreCase = ignoreCase;
@@ -698,7 +810,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the node.
+             * <p>The path of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/getIp</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -706,7 +821,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The matching type.
+             * <p>The matching type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -720,6 +838,12 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGatewayRouteResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewayRouteResponseBody</p>
+     */
     public static class QueryPredicates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -771,7 +895,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key.
+             * <p>The key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>userid</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -779,7 +906,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The matching type.
+             * <p>The matching type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -787,7 +917,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The value.
+             * <p>The value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -801,6 +934,12 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGatewayRouteResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewayRouteResponseBody</p>
+     */
     public static class RoutePredicates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HeaderPredicates")
         private java.util.List < HeaderPredicates> headerPredicates;
@@ -864,7 +1003,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private java.util.List < QueryPredicates> queryPredicates; 
 
             /**
-             * The headers used for route matching.
+             * <p>The headers used for route matching.</p>
              */
             public Builder headerPredicates(java.util.List < HeaderPredicates> headerPredicates) {
                 this.headerPredicates = headerPredicates;
@@ -872,7 +1011,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP methods used for route matching.
+             * <p>The HTTP methods used for route matching.</p>
              */
             public Builder methodPredicates(java.util.List < String > methodPredicates) {
                 this.methodPredicates = methodPredicates;
@@ -880,7 +1019,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The path used for route matching.
+             * <p>The path used for route matching.</p>
              */
             public Builder pathPredicates(PathPredicates pathPredicates) {
                 this.pathPredicates = pathPredicates;
@@ -888,7 +1027,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters used for route matching.
+             * <p>The parameters used for route matching.</p>
              */
             public Builder queryPredicates(java.util.List < QueryPredicates> queryPredicates) {
                 this.queryPredicates = queryPredicates;
@@ -902,6 +1041,12 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGatewayRouteResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewayRouteResponseBody</p>
+     */
     public static class ParamMapsList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExtractKey")
         private String extractKey;
@@ -953,7 +1098,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private String mappingType; 
 
             /**
-             * The key extracted from the input parameter.
+             * <p>The key extracted from the input parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder extractKey(String extractKey) {
                 this.extractKey = extractKey;
@@ -961,18 +1109,23 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The position of the input parameter.
-             * <p>
+             * <p>The position of the input parameter.</p>
+             * <blockquote>
+             * <p>Valid values:</p>
+             * </blockquote>
+             * <ul>
+             * <li><p><code>ALL_QUERY_PARAMETER</code>: request parameter</p>
+             * </li>
+             * <li><p><code>ALL_HEADER</code>: request header</p>
+             * </li>
+             * <li><p><code>ALL_PATH</code>: request path</p>
+             * </li>
+             * <li><p><code>ALL_BODY</code>: request body</p>
+             * </li>
+             * </ul>
              * 
-             * > Valid values:
-             * 
-             * *   `ALL_QUERY_PARAMETER`: request parameter
-             * 
-             * *   `ALL_HEADER`: request header
-             * 
-             * *   `ALL_PATH`: request path
-             * 
-             * *   `ALL_BODY`: request body
+             * <strong>example:</strong>
+             * <p>ALL_QUERY_PARAMETER</p>
              */
             public Builder extractKeySpec(String extractKeySpec) {
                 this.extractKeySpec = extractKeySpec;
@@ -980,7 +1133,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the backend service parameter.
+             * <p>The type of the backend service parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java.lang.String</p>
              */
             public Builder mappingType(String mappingType) {
                 this.mappingType = mappingType;
@@ -994,6 +1150,12 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGatewayRouteResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewayRouteResponseBody</p>
+     */
     public static class MothedMapList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DubboMothedName")
         private String dubboMothedName;
@@ -1081,7 +1243,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private java.util.List < String > passThroughList; 
 
             /**
-             * The method name of the Dubbo service.
+             * <p>The method name of the Dubbo service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sayHello</p>
              */
             public Builder dubboMothedName(String dubboMothedName) {
                 this.dubboMothedName = dubboMothedName;
@@ -1089,20 +1254,25 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP method.
-             * <p>
+             * <p>The HTTP method.</p>
+             * <blockquote>
+             * <p>Valid values:</p>
+             * </blockquote>
+             * <ul>
+             * <li><p>ALL_GET</p>
+             * </li>
+             * <li><p>ALL_POST</p>
+             * </li>
+             * <li><p>ALL_PUT</p>
+             * </li>
+             * <li><p>ALL_DELETE</p>
+             * </li>
+             * <li><p>ALL_PATCH</p>
+             * </li>
+             * </ul>
              * 
-             * > Valid values:
-             * 
-             * *   ALL_GET
-             * 
-             * *   ALL_POST
-             * 
-             * *   ALL_PUT
-             * 
-             * *   ALL_DELETE
-             * 
-             * *   ALL_PATCH
+             * <strong>example:</strong>
+             * <p>ALL_GET</p>
              */
             public Builder httpMothed(String httpMothed) {
                 this.httpMothed = httpMothed;
@@ -1110,7 +1280,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The path used for method matching.
+             * <p>The path used for method matching.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/mytestzbk/sayhello</p>
              */
             public Builder mothedpath(String mothedpath) {
                 this.mothedpath = mothedpath;
@@ -1118,7 +1291,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The information about parameter mappings.
+             * <p>The information about parameter mappings.</p>
              */
             public Builder paramMapsList(java.util.List < ParamMapsList> paramMapsList) {
                 this.paramMapsList = paramMapsList;
@@ -1126,16 +1299,21 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The pass-through type of the header.
-             * <p>
+             * <p>The pass-through type of the header.</p>
+             * <blockquote>
+             * <p>Valid values:</p>
+             * </blockquote>
+             * <ul>
+             * <li><p>PASS_ALL: All headers are passed through.</p>
+             * </li>
+             * <li><p>PASS_NOT: All headers are not passed through.</p>
+             * </li>
+             * <li><p>PASS_ASSIGN: Specified headers are passed through.</p>
+             * </li>
+             * </ul>
              * 
-             * > Valid values:
-             * 
-             * *   PASS_ALL: All headers are passed through.
-             * 
-             * *   PASS_NOT: All headers are not passed through.
-             * 
-             * *   PASS_ASSIGN: Specified headers are passed through.
+             * <strong>example:</strong>
+             * <p>PASS_NOT</p>
              */
             public Builder passThroughAllHeaders(String passThroughAllHeaders) {
                 this.passThroughAllHeaders = passThroughAllHeaders;
@@ -1143,7 +1321,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The list of headers to be passed through.
+             * <p>The list of headers to be passed through.</p>
              */
             public Builder passThroughList(java.util.List < String > passThroughList) {
                 this.passThroughList = passThroughList;
@@ -1157,6 +1335,12 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGatewayRouteResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewayRouteResponseBody</p>
+     */
     public static class HttpDubboTranscoder extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DubboServiceGroup")
         private String dubboServiceGroup;
@@ -1220,7 +1404,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private java.util.List < MothedMapList> mothedMapList; 
 
             /**
-             * The Dubbo service group.
+             * <p>The Dubbo service group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service group</p>
              */
             public Builder dubboServiceGroup(String dubboServiceGroup) {
                 this.dubboServiceGroup = dubboServiceGroup;
@@ -1228,7 +1415,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Dubbo service.
+             * <p>The name of the Dubbo service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>org.apache.dubbo.samples.basic.api.DemoService</p>
              */
             public Builder dubboServiceName(String dubboServiceName) {
                 this.dubboServiceName = dubboServiceName;
@@ -1236,7 +1426,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the Dubbo service.
+             * <p>The version of the Dubbo service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.0</p>
              */
             public Builder dubboServiceVersion(String dubboServiceVersion) {
                 this.dubboServiceVersion = dubboServiceVersion;
@@ -1244,7 +1437,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The forwarding rules of the Dubbo service.
+             * <p>The forwarding rules of the Dubbo service.</p>
              */
             public Builder mothedMapList(java.util.List < MothedMapList> mothedMapList) {
                 this.mothedMapList = mothedMapList;
@@ -1258,6 +1451,12 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGatewayRouteResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewayRouteResponseBody</p>
+     */
     public static class RouteServices extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgreementType")
         private String agreementType;
@@ -1429,7 +1628,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The type of the protocol.
+             * <p>The type of the protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DUBBO</p>
              */
             public Builder agreementType(String agreementType) {
                 this.agreementType = agreementType;
@@ -1437,7 +1639,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the group to which the service belongs.
+             * <p>The name of the group to which the service belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -1453,7 +1658,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The transcoder of the Dubbo protocol.
+             * <p>The transcoder of the Dubbo protocol.</p>
              */
             public Builder httpDubboTranscoder(HttpDubboTranscoder httpDubboTranscoder) {
                 this.httpDubboTranscoder = httpDubboTranscoder;
@@ -1461,7 +1666,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1469,7 +1677,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -1477,7 +1688,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The weight in the form of a percentage value.
+             * <p>The weight in the form of a percentage value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder percent(Integer percent) {
                 this.percent = percent;
@@ -1485,7 +1699,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the service.
+             * <p>The ID of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1563</p>
              */
             public Builder serviceId(Long serviceId) {
                 this.serviceId = serviceId;
@@ -1493,7 +1710,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hu</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -1501,7 +1721,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The Dubbo port number.
+             * <p>The Dubbo port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20880</p>
              */
             public Builder servicePort(Integer servicePort) {
                 this.servicePort = servicePort;
@@ -1509,7 +1732,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The source type.
+             * <p>The source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MSE</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -1525,7 +1751,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the service.
+             * <p>The version of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1539,6 +1768,12 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGatewayRouteResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewayRouteResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Comment")
         private Comment comment;
@@ -1878,7 +2113,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The route comment (ingress).
+             * <p>The route comment (ingress).</p>
              */
             public Builder comment(Comment comment) {
                 this.comment = comment;
@@ -1886,7 +2121,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The default service ID.
+             * <p>The default service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder defaultServiceId(Long defaultServiceId) {
                 this.defaultServiceId = defaultServiceId;
@@ -1894,7 +2132,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The default service name.
+             * <p>The default service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder defaultServiceName(String defaultServiceName) {
                 this.defaultServiceName = defaultServiceName;
@@ -1902,7 +2143,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The destination service type.
+             * <p>The destination service type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Single</p>
              */
             public Builder destinationType(String destinationType) {
                 this.destinationType = destinationType;
@@ -1910,7 +2154,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The information about service mocking.
+             * <p>The information about service mocking.</p>
              */
             public Builder directResponse(DirectResponse directResponse) {
                 this.directResponse = directResponse;
@@ -1918,7 +2162,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The domain ID.
+             * <p>The domain ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>265</p>
              */
             public Builder domainId(Long domainId) {
                 this.domainId = domainId;
@@ -1926,7 +2173,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The domain IDs.
+             * <p>The domain IDs.</p>
              */
             public Builder domainIdList(java.util.List < Long > domainIdList) {
                 this.domainIdList = domainIdList;
@@ -1934,7 +2181,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>y.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -1942,7 +2192,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The domain names.
+             * <p>The domain names.</p>
              */
             public Builder domainNameList(java.util.List < String > domainNameList) {
                 this.domainNameList = domainNameList;
@@ -1958,7 +2208,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Web Application Firewall (WAF) is activated.
+             * <p>Indicates whether Web Application Firewall (WAF) is activated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableWaf(String enableWaf) {
                 this.enableWaf = enableWaf;
@@ -1966,7 +2219,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Fallback service is enabled.
+             * <p>Indicates whether the Fallback service is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder fallback(Boolean fallback) {
                 this.fallback = fallback;
@@ -1974,7 +2230,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the Fallback service.
+             * <p>The information about the Fallback service.</p>
              */
             public Builder fallbackServices(java.util.List < FallbackServices> fallbackServices) {
                 this.fallbackServices = fallbackServices;
@@ -1982,7 +2238,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the gateway.
+             * <p>The ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>496</p>
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -1990,7 +2249,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the gateway.
+             * <p>The unique ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-cf0e7f52ecc7429dbc7ba4d5e3656100</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -1998,7 +2260,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-25T07:14:01.817+0000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -2006,7 +2271,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The modification time.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-07 18:07:57</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -2014,7 +2282,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The ID.
+             * <p>The ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -2022,7 +2293,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2030,7 +2304,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The matching rules.
+             * <p>The matching rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;PathPredicates&quot;:{&quot;Path&quot;:&quot;/rpc/compute &quot;,&quot;Type&quot;:&quot;PRE&quot;,&quot;IgnoreCase&quot;:true}}</p>
              */
             public Builder predicates(String predicates) {
                 this.predicates = predicates;
@@ -2038,7 +2315,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The information about redirection.
+             * <p>The information about redirection.</p>
              */
             public Builder redirect(Redirect redirect) {
                 this.redirect = redirect;
@@ -2046,7 +2323,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The order.
+             * <p>The order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder routeOrder(Integer routeOrder) {
                 this.routeOrder = routeOrder;
@@ -2054,7 +2334,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The matching rules.
+             * <p>The matching rules.</p>
              */
             public Builder routePredicates(RoutePredicates routePredicates) {
                 this.routePredicates = routePredicates;
@@ -2062,7 +2342,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The information about services.
+             * <p>The information about services.</p>
              */
             public Builder routeServices(java.util.List < RouteServices> routeServices) {
                 this.routeServices = routeServices;
@@ -2070,7 +2350,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The information about services.
+             * <p>The information about services.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder services(String services) {
                 this.services = services;
@@ -2078,7 +2361,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -2086,7 +2372,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The route type.
+             * <p>The route type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Op</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -2100,6 +2389,12 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGatewayRouteResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewayRouteResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -2163,7 +2458,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private Long totalSize; 
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -2171,7 +2469,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -2179,7 +2480,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The data structure.
+             * <p>The data structure.</p>
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -2187,7 +2488,10 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36</p>
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;

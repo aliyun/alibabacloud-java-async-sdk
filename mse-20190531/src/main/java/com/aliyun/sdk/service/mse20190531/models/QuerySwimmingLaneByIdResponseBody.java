@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySwimmingLaneByIdResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySwimmingLaneByIdResponseBody</p>
@@ -85,7 +86,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{id:102,name:&quot;test&quot;}</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -93,7 +97,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -101,7 +108,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request was successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +119,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69AD2AA7-DB47-449B-941B-B14409DF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +130,14 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +150,12 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySwimmingLaneByIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySwimmingLaneByIdResponseBody</p>
+     */
     public static class RestItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cond")
         private String cond;
@@ -355,6 +377,12 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySwimmingLaneByIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySwimmingLaneByIdResponseBody</p>
+     */
     public static class EntryRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("condition")
         private String condition;
@@ -456,6 +484,12 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySwimmingLaneByIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySwimmingLaneByIdResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PathIndependentPercentageEnable")
         private Boolean pathIndependentPercentageEnable;

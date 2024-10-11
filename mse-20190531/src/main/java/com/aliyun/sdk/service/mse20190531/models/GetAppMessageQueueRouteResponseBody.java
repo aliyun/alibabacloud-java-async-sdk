@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAppMessageQueueRouteResponseBody} extends {@link TeaModel}
  *
  * <p>GetAppMessageQueueRouteResponseBody</p>
@@ -97,7 +98,10 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code returned.
+         * <p>The response code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,11 +128,14 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
-         * <p>
+         * <p>The message returned.</p>
+         * <ul>
+         * <li>If the request is successful, a success message is returned.</li>
+         * <li>If the request fails, an error message is returned.</li>
+         * </ul>
          * 
-         * *   If the request is successful, a success message is returned.
-         * *   If the request fails, an error message is returned.
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -133,7 +143,10 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4B00BCB0-105F-5A2A-B75B-641C8E9B18FC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +154,10 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values: true and false. The value true indicates that the request was successful. The value false indicates that the request failed.
+         * <p>Indicates whether the request was successful. Valid values: true and false. The value true indicates that the request was successful. The value false indicates that the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAppMessageQueueRouteResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAppMessageQueueRouteResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -229,7 +251,10 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
             private java.util.List < String > tags; 
 
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hkhon1po62@54e1f42f37cd65a</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -237,11 +262,14 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the canary release for messaging feature is enabled.
-             * <p>
+             * <p>Indicates whether the canary release for messaging feature is enabled.</p>
+             * <ul>
+             * <li><code>true</code>: enabled</li>
+             * <li><code>false</code>: disabled</li>
+             * </ul>
              * 
-             * *   `true`: enabled
-             * *   `false`: disabled
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -249,7 +277,10 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The side for message filtering when the canary release for messaging feature is enabled.
+             * <p>The side for message filtering when the canary release for messaging feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Server</p>
              */
             public Builder filterSide(String filterSide) {
                 this.filterSide = filterSide;
@@ -257,7 +288,10 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -265,7 +299,7 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The tags used to ignore message consumption for nodes in untagged environments.
+             * <p>The tags used to ignore message consumption for nodes in untagged environments.</p>
              */
             public Builder tags(java.util.List < String > tags) {
                 this.tags = tags;

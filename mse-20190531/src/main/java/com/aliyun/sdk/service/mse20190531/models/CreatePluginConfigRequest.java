@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePluginConfigRequest} extends {@link RequestModel}
  *
  * <p>CreatePluginConfigRequest</p>
@@ -141,7 +142,10 @@ public class CreatePluginConfigRequest extends Request {
         } 
 
         /**
-         * The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.
+         * <p>The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -150,7 +154,15 @@ public class CreatePluginConfigRequest extends Request {
         }
 
         /**
-         * The plug-in configuration. The configuration content of the WebAssembly (Wasm) plug-in is in the YAML format. The configuration content of the Lua plug-in is Lua code.
+         * <p>The plug-in configuration. The configuration content of the WebAssembly (Wasm) plug-in is in the YAML format. The configuration content of the Lua plug-in is Lua code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>status_code: 200
+         * headers:</p>
+         * <ul>
+         * <li>Content-Type=application/json
+         * body: &quot;{&quot;rule&quot;: &quot;global&quot;}&quot;</li>
+         * </ul>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -159,12 +171,16 @@ public class CreatePluginConfigRequest extends Request {
         }
 
         /**
-         * The application scope of the plug-in. Valid values:
-         * <p>
+         * <p>The application scope of the plug-in. Valid values:</p>
+         * <ul>
+         * <li>0: global</li>
+         * <li>1: route</li>
+         * <li>2: domain name</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   0: global
-         * *   1: route
-         * *   2: domain name
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder configLevel(Integer configLevel) {
             this.putQueryParameter("ConfigLevel", configLevel);
@@ -173,7 +189,11 @@ public class CreatePluginConfigRequest extends Request {
         }
 
         /**
-         * Indicates whether the plug-in is enabled.
+         * <p>Indicates whether the plug-in is enabled.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -182,7 +202,11 @@ public class CreatePluginConfigRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-ubuwqygbq4783gqb2y3f87q****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -191,7 +215,11 @@ public class CreatePluginConfigRequest extends Request {
         }
 
         /**
-         * The gateway plug-in ID.
+         * <p>The gateway plug-in ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pluginId(Long pluginId) {
             this.putQueryParameter("PluginId", pluginId);
@@ -200,7 +228,7 @@ public class CreatePluginConfigRequest extends Request {
         }
 
         /**
-         * The domain IDs or route IDs. They are distinguished based on ConfigLevel.
+         * <p>The domain IDs or route IDs. They are distinguished based on ConfigLevel.</p>
          */
         public Builder resourceIdList(java.util.List < Long > resourceIdList) {
             String resourceIdListShrink = shrink(resourceIdList, "ResourceIdList", "json");

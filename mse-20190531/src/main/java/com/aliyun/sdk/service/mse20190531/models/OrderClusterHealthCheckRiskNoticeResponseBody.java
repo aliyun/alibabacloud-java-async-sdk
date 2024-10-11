@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OrderClusterHealthCheckRiskNoticeResponseBody} extends {@link TeaModel}
  *
  * <p>OrderClusterHealthCheckRiskNoticeResponseBody</p>
@@ -133,7 +134,10 @@ public class OrderClusterHealthCheckRiskNoticeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code. A value of 200 is returned if the request is successful.
+         * <p>The status code. A value of 200 is returned if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -141,7 +145,10 @@ public class OrderClusterHealthCheckRiskNoticeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the subscription was successful.
+         * <p>Indicates whether the subscription was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -149,7 +156,10 @@ public class OrderClusterHealthCheckRiskNoticeResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message.
+         * <p>The dynamic part in the error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -157,10 +167,13 @@ public class OrderClusterHealthCheckRiskNoticeResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
-         * <p>
+         * <p>The dynamic part in the error message. This parameter is used to replace the **%s** variable in the <strong>ErrMessage</strong> parameter.</p>
+         * <blockquote>
+         * <p>If the return value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> parameter is invalid.</p>
+         * </blockquote>
          * 
-         * > If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
+         * <strong>example:</strong>
+         * <p>The specified parameter is invalid.</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -168,7 +181,10 @@ public class OrderClusterHealthCheckRiskNoticeResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -176,7 +192,10 @@ public class OrderClusterHealthCheckRiskNoticeResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -184,11 +203,14 @@ public class OrderClusterHealthCheckRiskNoticeResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
-         * <p>
+         * <p>The message returned.</p>
+         * <ul>
+         * <li>If the request is successful, a success message is returned.</li>
+         * <li>If the request fails, an error message is returned, such as the &quot;TaskId not found&quot; message.</li>
+         * </ul>
          * 
-         * *   If the request is successful, a success message is returned.
-         * *   If the request fails, an error message is returned, such as the "TaskId not found" message.
+         * <strong>example:</strong>
+         * <p>The request is successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -196,7 +218,10 @@ public class OrderClusterHealthCheckRiskNoticeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AF21683A-29C7-4853-AC0F-B5ADEE4D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -204,11 +229,14 @@ public class OrderClusterHealthCheckRiskNoticeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

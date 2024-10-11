@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGatewayIsolationRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateGatewayIsolationRuleRequest</p>
@@ -222,7 +223,10 @@ public class CreateGatewayIsolationRuleRequest extends Request {
         }
 
         /**
-         * BehaviorType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder behaviorType(Integer behaviorType) {
             this.putQueryParameter("BehaviorType", behaviorType);
@@ -240,7 +244,10 @@ public class CreateGatewayIsolationRuleRequest extends Request {
         }
 
         /**
-         * Enable.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder enable(Integer enable) {
             this.putQueryParameter("Enable", enable);
@@ -258,7 +265,10 @@ public class CreateGatewayIsolationRuleRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-e2d226bba4b2445c9e29fa7f8216****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -267,7 +277,10 @@ public class CreateGatewayIsolationRuleRequest extends Request {
         }
 
         /**
-         * MaxConcurrency.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxConcurrency(Integer maxConcurrency) {
             this.putQueryParameter("MaxConcurrency", maxConcurrency);
@@ -303,7 +316,10 @@ public class CreateGatewayIsolationRuleRequest extends Request {
         }
 
         /**
-         * RouteId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52853</p>
          */
         public Builder routeId(Long routeId) {
             this.putQueryParameter("RouteId", routeId);
@@ -312,7 +328,10 @@ public class CreateGatewayIsolationRuleRequest extends Request {
         }
 
         /**
-         * RouteName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>routeName</p>
          */
         public Builder routeName(String routeName) {
             this.putQueryParameter("RouteName", routeName);

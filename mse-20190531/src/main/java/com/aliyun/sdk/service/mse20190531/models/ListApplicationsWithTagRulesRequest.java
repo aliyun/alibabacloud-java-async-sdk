@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationsWithTagRulesRequest} extends {@link RequestModel}
  *
  * <p>ListApplicationsWithTagRulesRequest</p>
@@ -156,11 +157,14 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -169,7 +173,10 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         }
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xjpc0h9h4d@xxx</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -178,7 +185,10 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         }
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -187,7 +197,10 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         }
 
         /**
-         * The MSE namespace to which the application belongs.
+         * <p>The MSE namespace to which the application belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -196,7 +209,11 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -205,7 +222,11 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -214,7 +235,10 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -223,7 +247,10 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         }
 
         /**
-         * The source of the routing rule. Default value: edasmsc.
+         * <p>The source of the routing rule. Default value: edasmsc.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edasmsc</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetGatewayConfigRequest} extends {@link RequestModel}
  *
  * <p>GetGatewayConfigRequest</p>
@@ -77,7 +78,10 @@ public class GetGatewayConfigRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-61f465fa2dd044069e2208c4912*****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);

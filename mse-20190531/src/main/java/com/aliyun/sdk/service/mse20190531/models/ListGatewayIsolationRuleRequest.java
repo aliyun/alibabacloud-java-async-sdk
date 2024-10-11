@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGatewayIsolationRuleRequest} extends {@link RequestModel}
  *
  * <p>ListGatewayIsolationRuleRequest</p>
@@ -77,7 +78,11 @@ public class ListGatewayIsolationRuleRequest extends Request {
         }
 
         /**
-         * just for POP
+         * <p>just for POP</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>param</p>
          */
         public Builder filterParams(String filterParams) {
             this.putQueryParameter("FilterParams", filterParams);

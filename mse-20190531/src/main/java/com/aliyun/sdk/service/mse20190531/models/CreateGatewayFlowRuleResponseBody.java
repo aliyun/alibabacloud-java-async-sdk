@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGatewayFlowRuleResponseBody} extends {@link TeaModel}
  *
  * <p>CreateGatewayFlowRuleResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateGatewayFlowRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the rule.
+         * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>608</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -57,7 +61,10 @@ public class CreateGatewayFlowRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72FC625E-9629-591B-9C01-3F0BFDAB****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

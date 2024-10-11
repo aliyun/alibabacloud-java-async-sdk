@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGatewayRouteTimeoutResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateGatewayRouteTimeoutResponseBody</p>
@@ -97,7 +98,10 @@ public class UpdateGatewayRouteTimeoutResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The return value.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +109,10 @@ public class UpdateGatewayRouteTimeoutResponseBody extends TeaModel {
         }
 
         /**
-         * The data of the node.
+         * <p>The data of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -113,7 +120,10 @@ public class UpdateGatewayRouteTimeoutResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +131,10 @@ public class UpdateGatewayRouteTimeoutResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You are not authorized to perform this operation.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +142,10 @@ public class UpdateGatewayRouteTimeoutResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5359729E-A059-5942-98AF-E981E89C99FA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +153,10 @@ public class UpdateGatewayRouteTimeoutResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. true: The request was successful. false: The request failed.
+         * <p>Indicates whether the request was successful. true: The request was successful. false: The request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

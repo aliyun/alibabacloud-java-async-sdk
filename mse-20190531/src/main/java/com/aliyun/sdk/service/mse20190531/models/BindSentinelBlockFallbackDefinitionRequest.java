@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindSentinelBlockFallbackDefinitionRequest} extends {@link RequestModel}
  *
  * <p>BindSentinelBlockFallbackDefinitionRequest</p>
@@ -137,7 +138,10 @@ public class BindSentinelBlockFallbackDefinitionRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-a</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -146,7 +150,10 @@ public class BindSentinelBlockFallbackDefinitionRequest extends Request {
         }
 
         /**
-         * FallbackId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21</p>
          */
         public Builder fallbackId(Long fallbackId) {
             this.putQueryParameter("FallbackId", fallbackId);
@@ -155,7 +162,10 @@ public class BindSentinelBlockFallbackDefinitionRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -164,7 +174,10 @@ public class BindSentinelBlockFallbackDefinitionRequest extends Request {
         }
 
         /**
-         * Resource.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/a</p>
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -173,7 +186,10 @@ public class BindSentinelBlockFallbackDefinitionRequest extends Request {
         }
 
         /**
-         * TargetType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GatewayOption} extends {@link TeaModel}
  *
  * <p>GatewayOption</p>
@@ -130,6 +131,12 @@ public class GatewayOption extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GatewayOption} extends {@link TeaModel}
+     *
+     * <p>GatewayOption</p>
+     */
     public static class LogConfigDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogEnabled")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -182,7 +189,7 @@ public class GatewayOption extends TeaModel {
             private String projectName; 
 
             /**
-             * LogEnabled.
+             * <p>This parameter is required.</p>
              */
             public Builder logEnabled(Boolean logEnabled) {
                 this.logEnabled = logEnabled;
@@ -212,6 +219,12 @@ public class GatewayOption extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GatewayOption} extends {@link TeaModel}
+     *
+     * <p>GatewayOption</p>
+     */
     public static class TraceDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Sample")
         private Long sample;
@@ -312,7 +325,7 @@ public class GatewayOption extends TeaModel {
             }
 
             /**
-             * TraceEnabled.
+             * <p>This parameter is required.</p>
              */
             public Builder traceEnabled(Boolean traceEnabled) {
                 this.traceEnabled = traceEnabled;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryNamespaceResponseBody} extends {@link TeaModel}
  *
  * <p>QueryNamespaceResponseBody</p>
@@ -85,7 +86,7 @@ public class QueryNamespaceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -93,7 +94,10 @@ public class QueryNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -130,6 +134,12 @@ public class QueryNamespaceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryNamespaceResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryNamespaceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
@@ -169,7 +179,10 @@ public class QueryNamespaceResponseBody extends TeaModel {
             private String region; 
 
             /**
-             * The name of the namespace.
+             * <p>The name of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -177,7 +190,10 @@ public class QueryNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * The region to which the namespace belongs.
+             * <p>The region to which the namespace belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;

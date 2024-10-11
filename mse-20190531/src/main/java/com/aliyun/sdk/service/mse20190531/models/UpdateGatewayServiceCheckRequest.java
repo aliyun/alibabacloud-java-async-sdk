@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGatewayServiceCheckRequest} extends {@link RequestModel}
  *
  * <p>UpdateGatewayServiceCheckRequest</p>
@@ -207,7 +208,10 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         } 
 
         /**
-         * The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.
+         * <p>The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -216,7 +220,10 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the health check.
+         * <p>Specifies whether to enable the health check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder check(Boolean check) {
             this.putQueryParameter("Check", check);
@@ -225,7 +232,7 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * The expected status code, which is required if the health check protocol is HTTP.
+         * <p>The expected status code, which is required if the health check protocol is HTTP.</p>
          */
         public Builder expectedStatuses(java.util.List < Integer > expectedStatuses) {
             String expectedStatusesShrink = shrink(expectedStatuses, "ExpectedStatuses", "json");
@@ -235,7 +242,10 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-8d410698bd7f4628ab76b*****72dd1d</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -244,7 +254,10 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * The healthy threshold of the health check.
+         * <p>The healthy threshold of the health check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder healthyThreshold(Integer healthyThreshold) {
             this.putQueryParameter("HealthyThreshold", healthyThreshold);
@@ -253,7 +266,10 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * The health check domain name, which is optional if the health check protocol is HTTP.
+         * <p>The health check domain name, which is optional if the health check protocol is HTTP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder httpHost(String httpHost) {
             this.putQueryParameter("HttpHost", httpHost);
@@ -262,7 +278,10 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * The health check path, which is required if the health check protocol is HTTP.
+         * <p>The health check path, which is required if the health check protocol is HTTP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/healthz</p>
          */
         public Builder httpPath(String httpPath) {
             this.putQueryParameter("HttpPath", httpPath);
@@ -271,7 +290,10 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * The interval at which the health check is performed.
+         * <p>The interval at which the health check is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder interval(Integer interval) {
             this.putQueryParameter("Interval", interval);
@@ -280,11 +302,14 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * The health check protocol. Valid values:
-         * <p>
+         * <p>The health check protocol. Valid values:</p>
+         * <ul>
+         * <li>HTTP</li>
+         * <li>TCP</li>
+         * </ul>
          * 
-         * *   HTTP
-         * *   TCP
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -293,7 +318,10 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * The ID of the service.
+         * <p>The ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -302,7 +330,10 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * The timeout period of responses to the health check. Unit: seconds.
+         * <p>The timeout period of responses to the health check. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -311,7 +342,10 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * The unhealthy threshold of the health check.
+         * <p>The unhealthy threshold of the health check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.putQueryParameter("UnhealthyThreshold", unhealthyThreshold);

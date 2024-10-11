@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GatewayBlackWhiteListRequest} extends {@link RequestModel}
  *
  * <p>GatewayBlackWhiteListRequest</p>
@@ -123,7 +124,10 @@ public class GatewayBlackWhiteListRequest extends Request {
         } 
 
         /**
-         * The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.
+         * <p>The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -132,7 +136,10 @@ public class GatewayBlackWhiteListRequest extends Request {
         }
 
         /**
-         * This parameter is unavailable for public use.
+         * <p>This parameter is unavailable for public use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder descSort(Boolean descSort) {
             this.putQueryParameter("DescSort", descSort);
@@ -141,7 +148,7 @@ public class GatewayBlackWhiteListRequest extends Request {
         }
 
         /**
-         * The filter parameters.
+         * <p>The filter parameters.</p>
          */
         public Builder filterParams(FilterParams filterParams) {
             String filterParamsShrink = shrink(filterParams, "FilterParams", "json");
@@ -151,7 +158,10 @@ public class GatewayBlackWhiteListRequest extends Request {
         }
 
         /**
-         * This parameter is unavailable for public use.
+         * <p>This parameter is unavailable for public use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder orderItem(String orderItem) {
             this.putQueryParameter("OrderItem", orderItem);
@@ -160,7 +170,10 @@ public class GatewayBlackWhiteListRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -169,7 +182,10 @@ public class GatewayBlackWhiteListRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 1.
+         * <p>The number of entries per page. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -184,6 +200,12 @@ public class GatewayBlackWhiteListRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GatewayBlackWhiteListRequest} extends {@link TeaModel}
+     *
+     * <p>GatewayBlackWhiteListRequest</p>
+     */
     public static class FilterParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GatewayId")
         private Long gatewayId;
@@ -283,7 +305,10 @@ public class GatewayBlackWhiteListRequest extends Request {
             private String type; 
 
             /**
-             * The gateway ID.
+             * <p>The gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>81</p>
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -291,7 +316,10 @@ public class GatewayBlackWhiteListRequest extends Request {
             }
 
             /**
-             * The unique ID of the gateway. If this parameter is used together with the GatewayId parameter, the value of the GatewayId parameter is used.
+             * <p>The unique ID of the gateway. If this parameter is used together with the GatewayId parameter, the value of the GatewayId parameter is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-5017305290e14centbrveca****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -299,7 +327,10 @@ public class GatewayBlackWhiteListRequest extends Request {
             }
 
             /**
-             * This parameter is unavailable for public use.
+             * <p>This parameter is unavailable for public use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder isWhite(Boolean isWhite) {
                 this.isWhite = isWhite;
@@ -307,7 +338,10 @@ public class GatewayBlackWhiteListRequest extends Request {
             }
 
             /**
-             * This parameter is unavailable for public use.
+             * <p>This parameter is unavailable for public use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -315,7 +349,10 @@ public class GatewayBlackWhiteListRequest extends Request {
             }
 
             /**
-             * The content that you want to query.
+             * <p>The content that you want to query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
             public Builder searchContent(String searchContent) {
                 this.searchContent = searchContent;
@@ -323,12 +360,15 @@ public class GatewayBlackWhiteListRequest extends Request {
             }
 
             /**
-             * The query type. Valid values:
-             * <p>
+             * <p>The query type. Valid values:</p>
+             * <ul>
+             * <li>ROUTE: The list is queried by route. If the value of this parameter is ROUTE, set the SearchContent parameter to the route name.</li>
+             * <li>DOMAIN: The list is queried by domain name. If the value of this parameter is DOMAIN, set the SearchContent parameter to the domain name.</li>
+             * <li>IP: The list is queried by specified IP address. If the value of this parameter is IP, set the SearchContent parameter to the IP address.</li>
+             * </ul>
              * 
-             * *   ROUTE: The list is queried by route. If the value of this parameter is ROUTE, set the SearchContent parameter to the route name.
-             * *   DOMAIN: The list is queried by domain name. If the value of this parameter is DOMAIN, set the SearchContent parameter to the domain name.
-             * *   IP: The list is queried by specified IP address. If the value of this parameter is IP, set the SearchContent parameter to the IP address.
+             * <strong>example:</strong>
+             * <p>IP</p>
              */
             public Builder searchType(String searchType) {
                 this.searchType = searchType;
@@ -336,7 +376,10 @@ public class GatewayBlackWhiteListRequest extends Request {
             }
 
             /**
-             * This parameter is unavailable for public use.
+             * <p>This parameter is unavailable for public use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder type(String type) {
                 this.type = type;

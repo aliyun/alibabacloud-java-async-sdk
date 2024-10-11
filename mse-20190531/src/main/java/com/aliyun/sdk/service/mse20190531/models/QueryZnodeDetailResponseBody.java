@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryZnodeDetailResponseBody} extends {@link TeaModel}
  *
  * <p>QueryZnodeDetailResponseBody</p>
@@ -85,7 +86,7 @@ public class QueryZnodeDetailResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -93,7 +94,10 @@ public class QueryZnodeDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -101,7 +105,10 @@ public class QueryZnodeDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request is successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class QueryZnodeDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58E06A0A-BD2C-47A0-99C2-B100F353****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class QueryZnodeDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class QueryZnodeDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryZnodeDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryZnodeDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
@@ -197,7 +216,10 @@ public class QueryZnodeDetailResponseBody extends TeaModel {
             private String path; 
 
             /**
-             * The data of the node.
+             * <p>The data of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cluster</p>
              */
             public Builder data(String data) {
                 this.data = data;
@@ -205,11 +227,14 @@ public class QueryZnodeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the node information was returned. Valid values:
-             * <p>
+             * <p>Indicates whether the node information was returned. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: The node information was returned.</li>
+             * <li><code>false</code>: The node information failed to be returned.</li>
+             * </ul>
              * 
-             * *   `true`: The node information was returned.
-             * *   `false`: The node information failed to be returned.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dir(Boolean dir) {
                 this.dir = dir;
@@ -217,7 +242,10 @@ public class QueryZnodeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zookeeper</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -225,7 +253,10 @@ public class QueryZnodeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the node.
+             * <p>The path of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/zookeeper</p>
              */
             public Builder path(String path) {
                 this.path = path;

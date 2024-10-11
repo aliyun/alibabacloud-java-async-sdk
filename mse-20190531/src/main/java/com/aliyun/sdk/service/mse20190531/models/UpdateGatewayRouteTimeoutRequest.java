@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGatewayRouteTimeoutRequest} extends {@link RequestModel}
  *
  * <p>UpdateGatewayRouteTimeoutRequest</p>
@@ -109,11 +110,14 @@ public class UpdateGatewayRouteTimeoutRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -122,7 +126,10 @@ public class UpdateGatewayRouteTimeoutRequest extends Request {
         }
 
         /**
-         * The ID of the gateway.
+         * <p>The ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>85</p>
          */
         public Builder gatewayId(Long gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -131,7 +138,10 @@ public class UpdateGatewayRouteTimeoutRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-533290d279c1405f9628c64f7c8272ee</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -140,7 +150,10 @@ public class UpdateGatewayRouteTimeoutRequest extends Request {
         }
 
         /**
-         * The ID of the associated record.
+         * <p>The ID of the associated record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>567</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -149,7 +162,7 @@ public class UpdateGatewayRouteTimeoutRequest extends Request {
         }
 
         /**
-         * The timeout period.
+         * <p>The timeout period.</p>
          */
         public Builder timeoutJSON(TimeoutJSON timeoutJSON) {
             String timeoutJSONShrink = shrink(timeoutJSON, "TimeoutJSON", "json");
@@ -165,6 +178,12 @@ public class UpdateGatewayRouteTimeoutRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateGatewayRouteTimeoutRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateGatewayRouteTimeoutRequest</p>
+     */
     public static class TimeoutJSON extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -216,7 +235,10 @@ public class UpdateGatewayRouteTimeoutRequest extends Request {
             private Integer unitNum; 
 
             /**
-             * The status of the policy.
+             * <p>The status of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -224,7 +246,10 @@ public class UpdateGatewayRouteTimeoutRequest extends Request {
             }
 
             /**
-             * The unit of time. A value of s indicates seconds.
+             * <p>The unit of time. A value of s indicates seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s</p>
              */
             public Builder timeUnit(String timeUnit) {
                 this.timeUnit = timeUnit;
@@ -232,7 +257,10 @@ public class UpdateGatewayRouteTimeoutRequest extends Request {
             }
 
             /**
-             * The value of the timeout period.
+             * <p>The value of the timeout period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder unitNum(Integer unitNum) {
                 this.unitNum = unitNum;

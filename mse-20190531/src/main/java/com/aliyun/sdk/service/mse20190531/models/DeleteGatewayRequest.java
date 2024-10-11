@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteGatewayRequest} extends {@link RequestModel}
  *
  * <p>DeleteGatewayRequest</p>
@@ -81,11 +82,14 @@ public class DeleteGatewayRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -94,7 +98,10 @@ public class DeleteGatewayRequest extends Request {
         }
 
         /**
-         * Specifies whether to delete the SLB instance purchased for the gateway when you delete the gateway.
+         * <p>Specifies whether to delete the SLB instance purchased for the gateway when you delete the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deleteSlb(Boolean deleteSlb) {
             this.putQueryParameter("DeleteSlb", deleteSlb);
@@ -103,7 +110,10 @@ public class DeleteGatewayRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-0fe488252dc44d55a9dd57875193a1d7</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);

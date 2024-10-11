@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceListenersRequest} extends {@link RequestModel}
  *
  * <p>GetServiceListenersRequest</p>
@@ -208,11 +209,14 @@ public class GetServiceListenersRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -221,10 +225,13 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * The ID of the MSE instance to which the service belongs.
-         * <p>
+         * <p>The ID of the MSE instance to which the service belongs.</p>
+         * <blockquote>
+         * <p> You must specify InstanceId or ClusterId.</p>
+         * </blockquote>
          * 
-         * >  You must specify InstanceId or ClusterId.
+         * <strong>example:</strong>
+         * <p>mse-09k1q11****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -233,10 +240,13 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * The name of the cluster to which the service belongs.
-         * <p>
+         * <p>The name of the cluster to which the service belongs.</p>
+         * <blockquote>
+         * <p>The cluster is a concept for Nacos services and is not equivalent to a Microservices Engine (MSE) instance.</p>
+         * </blockquote>
          * 
-         * > The cluster is a concept for Nacos services and is not equivalent to a Microservices Engine (MSE) instance.
+         * <strong>example:</strong>
+         * <p>DEFAULT</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -245,7 +255,10 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * The group to which the service belongs.
+         * <p>The group to which the service belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WEB_GROUP</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -254,7 +267,10 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * A reserved parameter.
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         public Builder hasIpCount(String hasIpCount) {
             this.putQueryParameter("HasIpCount", hasIpCount);
@@ -263,10 +279,13 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * The ID of the instance to which the service belongs.
-         * <p>
+         * <p>The ID of the instance to which the service belongs.</p>
+         * <blockquote>
+         * <p>You must specify InstanceId or ClusterId.</p>
+         * </blockquote>
          * 
-         * > You must specify InstanceId or ClusterId.
+         * <strong>example:</strong>
+         * <p>mse_prepaid_public_cn-tl32odtt20j</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -275,7 +294,10 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * The namespace to which the service belongs.
+         * <p>The namespace to which the service belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddaf8f12-****-b1c1-86e7c72e266b</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -284,7 +306,10 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -293,7 +318,10 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -302,7 +330,10 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -311,7 +342,10 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * The extended request parameters in the JSON format.
+         * <p>The extended request parameters in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -320,7 +354,10 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * The name of the service whose listeners you want to query.
+         * <p>The name of the service whose listeners you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zeekr-orderboss</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);

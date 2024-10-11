@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGatewaySlbResponseBody} extends {@link TeaModel}
  *
  * <p>ListGatewaySlbResponseBody</p>
@@ -97,7 +98,10 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         }
 
         /**
-         * The data entries returned.
+         * <p>The data entries returned.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +128,10 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request is successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +139,10 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EAB345F4-3AC3-560C-B653-65717703****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class ListGatewaySlbResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListGatewaySlbResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewaySlbResponseBody</p>
+     */
     public static class VServiceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
@@ -255,6 +277,12 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGatewaySlbResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewaySlbResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EditEnable")
         private Boolean editEnable;
@@ -498,7 +526,10 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             private String vsMetaInfo; 
 
             /**
-             * Indicates whether the edit operation is supported.
+             * <p>Indicates whether the edit operation is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder editEnable(Boolean editEnable) {
                 this.editEnable = editEnable;
@@ -506,7 +537,10 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the gateway.
+             * <p>The ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -514,7 +548,10 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * The mode of the SLB instance.
+             * <p>The mode of the SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UserSelect</p>
              */
             public Builder gatewaySlbMode(String gatewaySlbMode) {
                 this.gatewaySlbMode = gatewaySlbMode;
@@ -522,7 +559,10 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * The association status.
+             * <p>The association status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ready</p>
              */
             public Builder gatewaySlbStatus(String gatewaySlbStatus) {
                 this.gatewaySlbStatus = gatewaySlbStatus;
@@ -530,7 +570,10 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-14 14:39:16</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -538,7 +581,10 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of the HTTP virtual service group.
+             * <p>The port number of the HTTP virtual service group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder httpPort(Integer httpPort) {
                 this.httpPort = httpPort;
@@ -546,7 +592,10 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of the HTTPS virtual service group.
+             * <p>The port number of the HTTPS virtual service group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder httpsPort(Integer httpsPort) {
                 this.httpsPort = httpsPort;
@@ -554,7 +603,10 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the HTTPS virtual service group.
+             * <p>The ID of the HTTPS virtual service group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>353</p>
              */
             public Builder httpsVServerGroupId(String httpsVServerGroupId) {
                 this.httpsVServerGroupId = httpsVServerGroupId;
@@ -562,7 +614,10 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * The ID.
+             * <p>The ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ID</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -570,7 +625,10 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * The service weight.
+             * <p>The service weight.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder serviceWeight(Integer serviceWeight) {
                 this.serviceWeight = serviceWeight;
@@ -578,7 +636,10 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SLB instance.
+             * <p>The ID of the SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-bp1kmnli3hdpreptw2ah3</p>
              */
             public Builder slbId(String slbId) {
                 this.slbId = slbId;
@@ -586,7 +647,10 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the SLB instance.
+             * <p>The IP address of the SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>121.199.XX.XX</p>
              */
             public Builder slbIp(String slbIp) {
                 this.slbIp = slbIp;
@@ -594,7 +658,10 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of the SLB instance.
+             * <p>The port number of the SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80,443</p>
              */
             public Builder slbPort(String slbPort) {
                 this.slbPort = slbPort;
@@ -610,7 +677,10 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the status.
+             * <p>The description of the status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Associating</p>
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -618,7 +688,10 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * The type.
+             * <p>The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PUB_NET</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -626,7 +699,10 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the HTTP virtual service group.
+             * <p>The ID of the HTTP virtual service group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>353</p>
              */
             public Builder vServerGroupId(String vServerGroupId) {
                 this.vServerGroupId = vServerGroupId;

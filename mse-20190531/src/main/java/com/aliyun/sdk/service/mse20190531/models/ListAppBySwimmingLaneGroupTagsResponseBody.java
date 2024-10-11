@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAppBySwimmingLaneGroupTagsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAppBySwimmingLaneGroupTagsResponseBody</p>
@@ -85,7 +86,7 @@ public class ListAppBySwimmingLaneGroupTagsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.Map < String, java.util.List<DataValue>> data) {
             this.data = data;
@@ -93,7 +94,10 @@ public class ListAppBySwimmingLaneGroupTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -101,7 +105,10 @@ public class ListAppBySwimmingLaneGroupTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The additional request information.
+         * <p>The additional request information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class ListAppBySwimmingLaneGroupTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6832e76b-bb5f-4dea-<strong><strong>-</strong></strong>********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListAppBySwimmingLaneGroupTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

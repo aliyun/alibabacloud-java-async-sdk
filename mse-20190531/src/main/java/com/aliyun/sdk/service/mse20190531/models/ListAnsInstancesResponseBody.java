@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAnsInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ListAnsInstancesResponseBody</p>
@@ -133,7 +134,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -141,7 +142,10 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -149,7 +153,10 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202</p>
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -157,7 +164,10 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request was successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -165,7 +175,10 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -173,7 +186,10 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -181,7 +197,10 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52BA6DA6-A702-4362-A32F-DFF79655****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -189,11 +208,14 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +223,10 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned instances.
+         * <p>The total number of returned instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -214,6 +239,12 @@ public class ListAnsInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAnsInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAnsInstancesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("App")
         private String app;
@@ -469,7 +500,10 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app</p>
              */
             public Builder app(String app) {
                 this.app = app;
@@ -477,7 +511,10 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFAULT</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -485,7 +522,10 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The reference key.
+             * <p>The reference key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30.5.XX.XX:unknown:DEFAULT</p>
              */
             public Builder datumKey(String datumKey) {
                 this.datumKey = datumKey;
@@ -493,7 +533,10 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The default key.
+             * <p>The default key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30.5.XX.XX:unknown</p>
              */
             public Builder defaultKey(String defaultKey) {
                 this.defaultKey = defaultKey;
@@ -501,11 +544,14 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The effective status of the instance. Valid values:
-             * <p>
+             * <p>The effective status of the instance. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: The instance takes effect.</li>
+             * <li><code>false</code>: The instance does not take effect.</li>
+             * </ul>
              * 
-             * *   `true`: The instance takes effect.
-             * *   `false`: The instance does not take effect.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -513,11 +559,14 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the information about the ephemeral node is obtained. Valid values:
-             * <p>
+             * <p>Indicates whether the information about the ephemeral node is obtained. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: yes</li>
+             * <li><code>false</code>: no</li>
+             * </ul>
              * 
-             * *   `true`: yes
-             * *   `false`: no
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ephemeral(Boolean ephemeral) {
                 this.ephemeral = ephemeral;
@@ -525,7 +574,10 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of counted failures.
+             * <p>The number of counted failures.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failCount(Integer failCount) {
                 this.failCount = failCount;
@@ -533,11 +585,14 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The health status of the instance. Valid values:
-             * <p>
+             * <p>The health status of the instance. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: The instance is healthy.</li>
+             * <li><code>false</code>: The instance is unhealthy.</li>
+             * </ul>
              * 
-             * *   `true`: The instance is healthy.
-             * *   `false`: The instance is unhealthy.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder healthy(Boolean healthy) {
                 this.healthy = healthy;
@@ -545,7 +600,10 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The heartbeat interval of the instance. Unit: seconds.
+             * <p>The heartbeat interval of the instance. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder instanceHeartBeatInterval(Integer instanceHeartBeatInterval) {
                 this.instanceHeartBeatInterval = instanceHeartBeatInterval;
@@ -553,7 +611,10 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of the instance heartbeat.
+             * <p>The timeout period of the instance heartbeat.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15000</p>
              */
             public Builder instanceHeartBeatTimeOut(Integer instanceHeartBeatTimeOut) {
                 this.instanceHeartBeatTimeOut = instanceHeartBeatTimeOut;
@@ -561,7 +622,10 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30.5.XX.XX#0#DEFAULT#DEFAULT_GROUP@@consumers:com.alibaba.edas.IHelloService</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -569,7 +633,10 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30.5.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -577,7 +644,10 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period for removing an IP address.
+             * <p>The timeout period for removing an IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30000</p>
              */
             public Builder ipDeleteTimeout(Integer ipDeleteTimeout) {
                 this.ipDeleteTimeout = ipDeleteTimeout;
@@ -585,7 +655,10 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The last heartbeat time.
+             * <p>The last heartbeat time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20201010</p>
              */
             public Builder lastBeat(Long lastBeat) {
                 this.lastBeat = lastBeat;
@@ -593,11 +666,14 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance was marked. Valid values:
-             * <p>
+             * <p>Indicates whether the instance was marked. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: The instance marking was successful.</li>
+             * <li><code>false</code>: The instance marking failed.</li>
+             * </ul>
              * 
-             * *   `true`: The instance marking was successful.
-             * *   `false`: The instance marking failed.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder marked(Boolean marked) {
                 this.marked = marked;
@@ -605,7 +681,10 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The metadata.
+             * <p>The metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[int]</p>
              */
             public Builder metadata(java.util.Map < String, ? > metadata) {
                 this.metadata = metadata;
@@ -613,7 +692,10 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of counted successes.
+             * <p>The number of counted successes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder okCount(Integer okCount) {
                 this.okCount = okCount;
@@ -621,7 +703,10 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The port number.
+             * <p>The port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -629,7 +714,10 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFAULT_GROUP@@consumers:com.alibaba.edas.IHelloService::</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -637,7 +725,10 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The weight.
+             * <p>The weight.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

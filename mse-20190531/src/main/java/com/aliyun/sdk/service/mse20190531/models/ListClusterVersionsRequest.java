@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClusterVersionsRequest} extends {@link RequestModel}
  *
  * <p>ListClusterVersionsRequest</p>
@@ -81,11 +82,14 @@ public class ListClusterVersionsRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -94,7 +98,10 @@ public class ListClusterVersionsRequest extends Request {
         }
 
         /**
-         * The type of the instance. Valid values: ZooKeeper, Nacos-Ans, and Eureka.
+         * <p>The type of the instance. Valid values: ZooKeeper, Nacos-Ans, and Eureka.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Nacos-Ans</p>
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -103,11 +110,14 @@ public class ListClusterVersionsRequest extends Request {
         }
 
         /**
-         * The instance edition. Valid values:
-         * <p>
+         * <p>The instance edition. Valid values:</p>
+         * <ul>
+         * <li><code>mse_dev</code>: Developer Edition.</li>
+         * <li><code>mse_pro</code>: Professional Edition. This is the default value.</li>
+         * </ul>
          * 
-         * *   `mse_dev`: Developer Edition.
-         * *   `mse_pro`: Professional Edition. This is the default value.
+         * <strong>example:</strong>
+         * <p>mse_pro</p>
          */
         public Builder mseVersion(String mseVersion) {
             this.putQueryParameter("MseVersion", mseVersion);

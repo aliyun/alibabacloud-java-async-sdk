@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceCountResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstanceCountResponseBody</p>
@@ -133,7 +134,10 @@ public class ListInstanceCountResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code. A value of 200 is returned if the request is successful.
+         * <p>The status code. A value of 200 is returned if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -141,7 +145,7 @@ public class ListInstanceCountResponseBody extends TeaModel {
         }
 
         /**
-         * The data entries returned.
+         * <p>The data entries returned.</p>
          */
         public Builder data(java.util.List < Integer > data) {
             this.data = data;
@@ -149,7 +153,10 @@ public class ListInstanceCountResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message.
+         * <p>The dynamic part in the error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>%s</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -157,10 +164,13 @@ public class ListInstanceCountResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message. This parameter is used to replace `%s` in the `ErrMessage` parameter.
-         * <p>
+         * <p>The dynamic part in the error message. This parameter is used to replace <code>%s</code> in the <code>ErrMessage</code> parameter.</p>
+         * <blockquote>
+         * <p> If the return value of the <code>ErrMessage</code> parameter is <code>The Value of Input Parameter %s is not valid</code> and the return value of the <code>DynamicMessage</code> parameter is <code>DtsJobId</code>, the specified <code>DtsJobId</code> parameter is invalid.</p>
+         * </blockquote>
          * 
-         * >  If the return value of the `ErrMessage` parameter is `The Value of Input Parameter %s is not valid` and the return value of the `DynamicMessage` parameter is `DtsJobId`, the specified `DtsJobId` parameter is invalid.
+         * <strong>example:</strong>
+         * <p>The specified parameter is invalid.</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -168,7 +178,10 @@ public class ListInstanceCountResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed. If the request failed, the ErrorCode parameter is returned. For more information, see the [Error codes](~~456441~~) section of this topic.
+         * <p>The error code returned if the request failed. If the request failed, the ErrorCode parameter is returned. For more information, see the <a href="https://help.aliyun.com/document_detail/456441.html">Error codes</a> section of this topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-100</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -176,7 +189,10 @@ public class ListInstanceCountResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -184,7 +200,10 @@ public class ListInstanceCountResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message. If the request is successful, a success message is returned. If the request fails, an error message is returned.
+         * <p>The returned message. If the request is successful, a success message is returned. If the request fails, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request was successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -192,7 +211,10 @@ public class ListInstanceCountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>316F5F64-F73D-42DC-8632-01E308B6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -200,11 +222,14 @@ public class ListInstanceCountResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

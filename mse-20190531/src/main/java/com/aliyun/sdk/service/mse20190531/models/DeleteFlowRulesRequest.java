@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteFlowRulesRequest} extends {@link RequestModel}
  *
  * <p>DeleteFlowRulesRequest</p>
@@ -120,11 +121,14 @@ public class DeleteFlowRulesRequest extends Request {
         }
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -133,7 +137,11 @@ public class DeleteFlowRulesRequest extends Request {
         }
 
         /**
-         * The application name.
+         * <p>The application name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-a</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -142,7 +150,10 @@ public class DeleteFlowRulesRequest extends Request {
         }
 
         /**
-         * The IDs of the rules to be deleted.
+         * <p>The IDs of the rules to be deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[1,2]</p>
          */
         public Builder ids(java.util.List < Long > ids) {
             String idsShrink = shrink(ids, "Ids", "json");
@@ -152,7 +163,11 @@ public class DeleteFlowRulesRequest extends Request {
         }
 
         /**
-         * The microservice namespace to which the application belongs.
+         * <p>The microservice namespace to which the application belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

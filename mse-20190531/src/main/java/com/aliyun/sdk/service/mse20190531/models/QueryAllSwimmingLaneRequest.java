@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAllSwimmingLaneRequest} extends {@link RequestModel}
  *
  * <p>QueryAllSwimmingLaneRequest</p>
@@ -83,11 +84,14 @@ public class QueryAllSwimmingLaneRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -96,7 +100,11 @@ public class QueryAllSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The ID of the lane group.
+         * <p>The ID of the lane group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>186</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -105,7 +113,10 @@ public class QueryAllSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The name of the MSE namespace.
+         * <p>The name of the MSE namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

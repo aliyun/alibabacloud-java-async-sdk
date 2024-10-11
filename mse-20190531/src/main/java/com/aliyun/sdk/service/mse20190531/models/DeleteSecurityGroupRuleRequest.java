@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSecurityGroupRuleRequest} extends {@link RequestModel}
  *
  * <p>DeleteSecurityGroupRuleRequest</p>
@@ -95,11 +96,14 @@ public class DeleteSecurityGroupRuleRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -117,7 +121,10 @@ public class DeleteSecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-83b0ddb569434f82b9fe8e4c60c40f7c</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -126,7 +133,10 @@ public class DeleteSecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The destination ID.
+         * <p>The destination ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

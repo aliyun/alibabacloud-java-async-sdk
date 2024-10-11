@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportNacosConfigRequest} extends {@link RequestModel}
  *
  * <p>ExportNacosConfigRequest</p>
@@ -156,11 +157,14 @@ public class ExportNacosConfigRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -169,7 +173,10 @@ public class ExportNacosConfigRequest extends Request {
         }
 
         /**
-         * The application tag.
+         * <p>The application tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qjl-gateway-openapi</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -178,14 +185,18 @@ public class ExportNacosConfigRequest extends Request {
         }
 
         /**
-         * The ID of the data that you want to export.
-         * <p>
+         * <p>The ID of the data that you want to export.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>Multiple export methods are supported.</p>
+         * </li>
+         * <li><p>If you want to export a single configuration, you must leave the Ids parameter empty and specify the DataID and Group parameters.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   Multiple export methods are supported.
-         * 
-         * *   If you want to export a single configuration, you must leave the Ids parameter empty and specify the DataID and Group parameters.
+         * <strong>example:</strong>
+         * <p>sms-mes-develop.prop****</p>
          */
         public Builder dataId(String dataId) {
             this.putQueryParameter("DataId", dataId);
@@ -194,7 +205,10 @@ public class ExportNacosConfigRequest extends Request {
         }
 
         /**
-         * The configuration group name and the ID of the configuration that you want to export. Separate multiple configurations with comma (,).
+         * <p>The configuration group name and the ID of the configuration that you want to export. Separate multiple configurations with comma (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testGroup+testDataId1,testGroup+testDataId2</p>
          */
         public Builder dataIds(String dataIds) {
             this.putQueryParameter("DataIds", dataIds);
@@ -203,7 +217,10 @@ public class ExportNacosConfigRequest extends Request {
         }
 
         /**
-         * The name of the configuration group.
+         * <p>The name of the configuration group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TIMEDTASK_COMMON_GROUP</p>
          */
         public Builder group(String group) {
             this.putQueryParameter("Group", group);
@@ -212,10 +229,15 @@ public class ExportNacosConfigRequest extends Request {
         }
 
         /**
-         * The ID of the primary key of a configuration item.
-         * <p>
+         * <p>The ID of the primary key of a configuration item.</p>
+         * <blockquote>
+         * <ul>
+         * <li>Multiple export methods are supported. You must specify this parameter if you want to export multiple configurations. - You can obtain the value of this parameter by calling the ListNacosConfigs operation. - If you specify this parameter, multiple configurations are exported. The DataId and Group parameters are invalid.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * >  - Multiple export methods are supported. You must specify this parameter if you want to export multiple configurations. - You can obtain the value of this parameter by calling the ListNacosConfigs operation. - If you specify this parameter, multiple configurations are exported. The DataId and Group parameters are invalid.
+         * <strong>example:</strong>
+         * <p>1709,1710</p>
          */
         public Builder ids(String ids) {
             this.putQueryParameter("Ids", ids);
@@ -224,7 +246,11 @@ public class ExportNacosConfigRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-cn-2r42ddc****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -233,7 +259,10 @@ public class ExportNacosConfigRequest extends Request {
         }
 
         /**
-         * The ID of the namespace.
+         * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ae77c258-4d4f-478f-baaa-084aee0****</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

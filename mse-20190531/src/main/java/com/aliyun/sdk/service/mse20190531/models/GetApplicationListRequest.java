@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetApplicationListRequest} extends {@link RequestModel}
  *
  * <p>GetApplicationListRequest</p>
@@ -197,11 +198,14 @@ public class GetApplicationListRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -210,7 +214,10 @@ public class GetApplicationListRequest extends Request {
         }
 
         /**
-         * The ID of an application.
+         * <p>The ID of an application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hkhon1po62@c3df23522b*****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -219,7 +226,10 @@ public class GetApplicationListRequest extends Request {
         }
 
         /**
-         * The name of an application.
+         * <p>The name of an application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rest-container</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -228,7 +238,10 @@ public class GetApplicationListRequest extends Request {
         }
 
         /**
-         * The programming language of the application, such as Java and Go.
+         * <p>The programming language of the application, such as Java and Go.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Java</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -237,7 +250,10 @@ public class GetApplicationListRequest extends Request {
         }
 
         /**
-         * The microservice namespace to which the application belongs.
+         * <p>The microservice namespace to which the application belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -246,7 +262,11 @@ public class GetApplicationListRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -255,7 +275,11 @@ public class GetApplicationListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -264,7 +288,11 @@ public class GetApplicationListRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -273,7 +301,10 @@ public class GetApplicationListRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the Sentinel-compatible mode.
+         * <p>Specifies whether to enable the Sentinel-compatible mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder sentinelEnable(Boolean sentinelEnable) {
             this.putQueryParameter("SentinelEnable", sentinelEnable);
@@ -282,7 +313,10 @@ public class GetApplicationListRequest extends Request {
         }
 
         /**
-         * The source of the application. The value is fixed as edasmsc.
+         * <p>The source of the application. The value is fixed as edasmsc.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edasmsc</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -291,7 +325,10 @@ public class GetApplicationListRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable switching.
+         * <p>Specifies whether to enable switching.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder switchEnable(Boolean switchEnable) {
             this.putQueryParameter("SwitchEnable", switchEnable);

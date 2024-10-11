@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGatewayRouteHeaderOpRequest} extends {@link RequestModel}
  *
  * <p>UpdateGatewayRouteHeaderOpRequest</p>
@@ -109,11 +110,14 @@ public class UpdateGatewayRouteHeaderOpRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -122,7 +126,10 @@ public class UpdateGatewayRouteHeaderOpRequest extends Request {
         }
 
         /**
-         * The ID of the gateway.
+         * <p>The ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>324</p>
          */
         public Builder gatewayId(Long gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -131,7 +138,10 @@ public class UpdateGatewayRouteHeaderOpRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-6bdc977deda44bf589c49d063b4c2d1d</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -140,7 +150,10 @@ public class UpdateGatewayRouteHeaderOpRequest extends Request {
         }
 
         /**
-         * The description of user header settings.
+         * <p>The description of user header settings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;status&quot;:&quot;on&quot;,&quot;headerOpItems&quot;:[{&quot;directionType&quot;:&quot;Request&quot;,&quot;opType&quot;:&quot;Update&quot;,&quot;key&quot;:&quot;hosts&quot;,&quot;value&quot;:&quot;test.com&quot;}]}</p>
          */
         public Builder headerOpJSON(String headerOpJSON) {
             this.putQueryParameter("HeaderOpJSON", headerOpJSON);
@@ -149,7 +162,10 @@ public class UpdateGatewayRouteHeaderOpRequest extends Request {
         }
 
         /**
-         * The ID of the record.
+         * <p>The ID of the record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>411</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

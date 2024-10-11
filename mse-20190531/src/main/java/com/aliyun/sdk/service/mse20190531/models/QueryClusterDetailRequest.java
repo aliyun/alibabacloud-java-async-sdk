@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryClusterDetailRequest} extends {@link RequestModel}
  *
  * <p>QueryClusterDetailRequest</p>
@@ -95,11 +96,14 @@ public class QueryClusterDetailRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -108,7 +112,10 @@ public class QueryClusterDetailRequest extends Request {
         }
 
         /**
-         * Specifies whether to query access control lists (ACLs).
+         * <p>Specifies whether to query access control lists (ACLs).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder aclSwitch(Boolean aclSwitch) {
             this.putQueryParameter("AclSwitch", aclSwitch);
@@ -117,7 +124,10 @@ public class QueryClusterDetailRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-cn-st21ri2****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -126,7 +136,10 @@ public class QueryClusterDetailRequest extends Request {
         }
 
         /**
-         * The ID of the order.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20576750143****</p>
          */
         public Builder orderId(String orderId) {
             this.putQueryParameter("OrderId", orderId);

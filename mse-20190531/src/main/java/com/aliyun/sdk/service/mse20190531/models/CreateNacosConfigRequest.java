@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNacosConfigRequest} extends {@link RequestModel}
  *
  * <p>CreateNacosConfigRequest</p>
@@ -196,11 +197,14 @@ public class CreateNacosConfigRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -209,7 +213,10 @@ public class CreateNacosConfigRequest extends Request {
         }
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>saledatacenter-task</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -218,7 +225,10 @@ public class CreateNacosConfigRequest extends Request {
         }
 
         /**
-         * The list of IP addresses where the beta release of the configuration is performed.
+         * <p>The list of IP addresses where the beta release of the configuration is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.117.XX.XX,100.117.XX.XX</p>
          */
         public Builder betaIps(String betaIps) {
             this.putQueryParameter("BetaIps", betaIps);
@@ -227,7 +237,10 @@ public class CreateNacosConfigRequest extends Request {
         }
 
         /**
-         * The content of the configuration.
+         * <p>The content of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asdf</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -236,7 +249,11 @@ public class CreateNacosConfigRequest extends Request {
         }
 
         /**
-         * The ID of the data.
+         * <p>The ID of the data.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>common.yaml</p>
          */
         public Builder dataId(String dataId) {
             this.putQueryParameter("DataId", dataId);
@@ -245,7 +262,10 @@ public class CreateNacosConfigRequest extends Request {
         }
 
         /**
-         * The description of the configuration.
+         * <p>The description of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Basic module configuration.</p>
          */
         public Builder desc(String desc) {
             this.putQueryParameter("Desc", desc);
@@ -254,7 +274,11 @@ public class CreateNacosConfigRequest extends Request {
         }
 
         /**
-         * The ID of the group.
+         * <p>The ID of the group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alime-bridge-aliyun</p>
          */
         public Builder group(String group) {
             this.putQueryParameter("Group", group);
@@ -263,7 +287,11 @@ public class CreateNacosConfigRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse_prepaid_public_cn-tl32****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -272,7 +300,10 @@ public class CreateNacosConfigRequest extends Request {
         }
 
         /**
-         * The ID of the namespace.
+         * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>547fd2a0-d0d6-****-80db2a1afb82</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -281,7 +312,10 @@ public class CreateNacosConfigRequest extends Request {
         }
 
         /**
-         * The tags of the configuration.
+         * <p>The tags of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Basic configurations</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -290,7 +324,10 @@ public class CreateNacosConfigRequest extends Request {
         }
 
         /**
-         * The format of the configuration. Supported formats include TEXT, JSON, and XML.
+         * <p>The format of the configuration. Supported formats include TEXT, JSON, and XML.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

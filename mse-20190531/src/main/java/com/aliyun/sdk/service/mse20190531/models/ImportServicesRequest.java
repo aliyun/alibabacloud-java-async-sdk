@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportServicesRequest} extends {@link RequestModel}
  *
  * <p>ImportServicesRequest</p>
@@ -151,11 +152,14 @@ public class ImportServicesRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -191,7 +195,10 @@ public class ImportServicesRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-77e1153db6e14c0a8b1fae20bcb89ca5</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -200,7 +207,10 @@ public class ImportServicesRequest extends Request {
         }
 
         /**
-         * The information about services.
+         * <p>The information about services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DNS</p>
          */
         public Builder serviceList(java.util.List < ServiceList> serviceList) {
             String serviceListShrink = shrink(serviceList, "ServiceList", "json");
@@ -210,13 +220,16 @@ public class ImportServicesRequest extends Request {
         }
 
         /**
-         * The service source. Valid values:
-         * <p>
+         * <p>The service source. Valid values:</p>
+         * <ul>
+         * <li>MSE: MSE Nacos instance</li>
+         * <li>K8s: ACK cluster</li>
+         * <li>VIP: fixed address</li>
+         * <li>DNS: DNS domain</li>
+         * </ul>
          * 
-         * *   MSE: MSE Nacos instance
-         * *   K8s: ACK cluster
-         * *   VIP: fixed address
-         * *   DNS: DNS domain
+         * <strong>example:</strong>
+         * <p>DNS</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -225,14 +238,22 @@ public class ImportServicesRequest extends Request {
         }
 
         /**
-         * The Transport Layer Security (TLS) settings. Valid values:
-         * <p>
+         * <p>The Transport Layer Security (TLS) settings. Valid values:</p>
+         * <ul>
+         * <li>mode: TLS mode</li>
+         * <li>certId: certificate ID</li>
+         * <li>caCertId: CA certificate ID</li>
+         * <li>caCertContent: CA certificate public key</li>
+         * <li>sni: service name identification</li>
+         * </ul>
          * 
-         * *   mode: TLS mode
-         * *   certId: certificate ID
-         * *   caCertId: CA certificate ID
-         * *   caCertContent: CA certificate public key
-         * *   sni: service name identification
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;mode&quot;: &quot;MUTUAL&quot;,
+         *       &quot;certId&quot;: &quot;1*****-cn-hangzhou&quot;,
+         *       &quot;caCertContent&quot;: &quot;123&quot;,
+         *       &quot;sni&quot;: &quot;ceshi&quot;
+         * }</p>
          */
         public Builder tlsSetting(String tlsSetting) {
             this.putQueryParameter("TlsSetting", tlsSetting);
@@ -247,6 +268,12 @@ public class ImportServicesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ImportServicesRequest} extends {@link TeaModel}
+     *
+     * <p>ImportServicesRequest</p>
+     */
     public static class ServiceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
@@ -334,7 +361,10 @@ public class ImportServicesRequest extends Request {
             private String serviceProtocol; 
 
             /**
-             * The group.
+             * <p>The group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -342,7 +372,7 @@ public class ImportServicesRequest extends Request {
             }
 
             /**
-             * The IP addresses of the service.
+             * <p>The IP addresses of the service.</p>
              */
             public Builder ips(java.util.List < String > ips) {
                 this.ips = ips;
@@ -350,7 +380,10 @@ public class ImportServicesRequest extends Request {
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -358,7 +391,10 @@ public class ImportServicesRequest extends Request {
             }
 
             /**
-             * The namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>public</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -366,7 +402,10 @@ public class ImportServicesRequest extends Request {
             }
 
             /**
-             * The port of the service.
+             * <p>The port of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder servicePort(Long servicePort) {
                 this.servicePort = servicePort;
@@ -374,7 +413,10 @@ public class ImportServicesRequest extends Request {
             }
 
             /**
-             * The protocol of the service.
+             * <p>The protocol of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GRPC, HTTP</p>
              */
             public Builder serviceProtocol(String serviceProtocol) {
                 this.serviceProtocol = serviceProtocol;

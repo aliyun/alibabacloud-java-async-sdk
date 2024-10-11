@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddServiceSourceResponseBody} extends {@link TeaModel}
  *
  * <p>AddServiceSourceResponseBody</p>
@@ -97,7 +98,10 @@ public class AddServiceSourceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * duplicatedClusterAliasName
+         * <p>duplicatedClusterAliasName</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +109,10 @@ public class AddServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * mse-100-007
+         * <p>mse-100-007</p>
+         * 
+         * <strong>example:</strong>
+         * <p>63</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -113,7 +120,10 @@ public class AddServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * code
+         * <p>code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +131,10 @@ public class AddServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * mse-200-105
+         * <p>mse-200-105</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You are not authorized to perform this operation. Action: mse:AddServiceSource, Resource: acs:mse:cn-hangzhou:1105471854403716:instance/gw-082c943a8c304e48a37a7a29a5ddeda7</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +142,10 @@ public class AddServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The response data.
+         * <p>The response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D0DB055C-51F2-5BB2-82A6-CD8A3C6EE6BA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +153,10 @@ public class AddServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * duplicated cluster alias name
+         * <p>duplicated cluster alias name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

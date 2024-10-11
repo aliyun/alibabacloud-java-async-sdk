@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrUpdateSwimmingLaneGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateOrUpdateSwimmingLaneGroupRequest</p>
@@ -265,11 +266,14 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -278,7 +282,10 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * The IDs of applications. Separate application IDs with commas (,).
+         * <p>The IDs of applications. Separate application IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hkhon1po62@c3df23522baa898,hkhon1po62@66e5235415730a5,hkhon1po62@958bba95910341f</p>
          */
         public Builder appIds(String appIds) {
             this.putQueryParameter("AppIds", appIds);
@@ -296,7 +303,10 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable database canary release.
+         * <p>Specifies whether to enable database canary release.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dbGrayEnable(Boolean dbGrayEnable) {
             this.putQueryParameter("DbGrayEnable", dbGrayEnable);
@@ -305,7 +315,10 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * The ingress application.
+         * <p>The ingress application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ingress</p>
          */
         public Builder entryApp(String entryApp) {
             this.putQueryParameter("EntryApp", entryApp);
@@ -314,7 +327,10 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * The ID of the lane group. A value of -1 is used to create a lane group. A value greater than 0 is used to modify the specified lane group.
+         * <p>The ID of the lane group. A value of -1 is used to create a lane group. A value greater than 0 is used to modify the specified lane group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -323,7 +339,10 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * The side for message filtering when the canary release for messaging feature is enabled.
+         * <p>The side for message filtering when the canary release for messaging feature is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Server</p>
          */
         public Builder messageQueueFilterSide(String messageQueueFilterSide) {
             this.putQueryParameter("MessageQueueFilterSide", messageQueueFilterSide);
@@ -332,7 +351,10 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable canary release for messaging.
+         * <p>Specifies whether to enable canary release for messaging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder messageQueueGrayEnable(Boolean messageQueueGrayEnable) {
             this.putQueryParameter("MessageQueueGrayEnable", messageQueueGrayEnable);
@@ -341,7 +363,11 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * The name.
+         * <p>The name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -350,7 +376,10 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * The name of the Microservices Engine (MSE) namespace.
+         * <p>The name of the Microservices Engine (MSE) namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -369,7 +398,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to record request details.
+         * <p>Specifies whether to record request details.</p>
          */
         public Builder recordCanaryDetail(Boolean recordCanaryDetail) {
             this.putQueryParameter("RecordCanaryDetail", recordCanaryDetail);
@@ -378,7 +407,10 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -397,7 +429,10 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * The status of the lane group. The value 0 specifies that the lane group is disabled. The value 1 specifies that the lane group is enabled.
+         * <p>The status of the lane group. The value 0 specifies that the lane group is disabled. The value 1 specifies that the lane group is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

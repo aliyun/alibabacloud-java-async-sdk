@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrUpdateSwimmingLaneRequest} extends {@link RequestModel}
  *
  * <p>CreateOrUpdateSwimmingLaneRequest</p>
@@ -225,7 +226,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.
+         * <p>The language of the response. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -234,7 +238,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the lane.
+         * <p>Specifies whether to enable the lane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -243,7 +250,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * Specifies whether to configure a routing rule for the lane. If an Ingress gateway is used, this parameter is not required.
+         * <p>Specifies whether to configure a routing rule for the lane. If an Ingress gateway is used, this parameter is not required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableRules(Boolean enableRules) {
             this.putQueryParameter("EnableRules", enableRules);
@@ -252,7 +262,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The JSON string.
+         * <p>The JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder entryRule(String entryRule) {
             this.putQueryParameter("EntryRule", entryRule);
@@ -270,7 +283,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The information about the routing rule for the gateway. This parameter is required when a cloud-native gateway is used as the ingress.
+         * <p>The information about the routing rule for the gateway. This parameter is required when a cloud-native gateway is used as the ingress.</p>
          */
         public Builder gatewaySwimmingLaneRouteJson(GatewaySwimmingLaneRouteJson gatewaySwimmingLaneRouteJson) {
             String gatewaySwimmingLaneRouteJsonShrink = shrink(gatewaySwimmingLaneRouteJson, "GatewaySwimmingLaneRouteJson", "json");
@@ -280,13 +293,17 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The language of the response. Valid values:****
-         * <p>
+         * <p>The language of the response. Valid values:****</p>
+         * <ul>
+         * <li><strong>zh-CN</strong>: Chinese</li>
+         * <li><strong>en-US</strong>: English</li>
+         * </ul>
+         * <blockquote>
+         * <p>Default value: <strong>zh-CN</strong>.</p>
+         * </blockquote>
          * 
-         * *   **zh-CN**: Chinese
-         * *   **en-US**: English
-         * 
-         * > Default value: **zh-CN**.
+         * <strong>example:</strong>
+         * <p>115</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -295,7 +312,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The ID of the primary key. The value -1 indicates a request that is used to create a lane. A value greater than 0 indicates a request that is used to modify a lane.
+         * <p>The ID of the primary key. The value -1 indicates a request that is used to create a lane. A value greater than 0 indicates a request that is used to modify a lane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -304,7 +324,11 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The name of the lane.
+         * <p>The name of the lane.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test lane</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -331,7 +355,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -340,7 +367,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The tag.
+         * <p>The tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gray</p>
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);
@@ -355,6 +385,12 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateOrUpdateSwimmingLaneRequest} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateSwimmingLaneRequest</p>
+     */
     public static class RestItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cond")
         private String cond;
@@ -514,7 +550,11 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * The name of the lane.
+             * <p>The name of the lane.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test lane</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -576,6 +616,12 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateOrUpdateSwimmingLaneRequest} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateSwimmingLaneRequest</p>
+     */
     public static class EntryRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Condition")
         private String condition;
@@ -677,6 +723,12 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateOrUpdateSwimmingLaneRequest} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateSwimmingLaneRequest</p>
+     */
     public static class Conditions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cond")
         private String cond;
@@ -740,12 +792,15 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             private String value; 
 
             /**
-             * The matching condition. Valid values:
-             * <p>
+             * <p>The matching condition. Valid values:</p>
+             * <ul>
+             * <li>PRE: prefix matching</li>
+             * <li>EQUAL: exact matching</li>
+             * <li>ERGULAR: regular expression matching</li>
+             * </ul>
              * 
-             * *   PRE: prefix matching
-             * *   EQUAL: exact matching
-             * *   ERGULAR: regular expression matching
+             * <strong>example:</strong>
+             * <p>PRE</p>
              */
             public Builder cond(String cond) {
                 this.cond = cond;
@@ -753,7 +808,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -761,11 +819,14 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * The type of the parameter. Valid values:
-             * <p>
+             * <p>The type of the parameter. Valid values:</p>
+             * <ul>
+             * <li>header</li>
+             * <li>param</li>
+             * </ul>
              * 
-             * *   header
-             * *   param
+             * <strong>example:</strong>
+             * <p>header</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -773,7 +834,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * The value of the parameter.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xiaoming</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -787,6 +851,12 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateOrUpdateSwimmingLaneRequest} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateSwimmingLaneRequest</p>
+     */
     public static class RouteIndependentPercentageList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Percentage")
         private Integer percentage;
@@ -848,6 +918,12 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateOrUpdateSwimmingLaneRequest} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateSwimmingLaneRequest</p>
+     */
     public static class GatewaySwimmingLaneRouteJson extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CanaryModel")
         private Integer canaryModel;
@@ -987,7 +1063,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * The matching conditions.
+             * <p>The matching conditions.</p>
              */
             public Builder conditions(java.util.List < Conditions> conditions) {
                 this.conditions = conditions;
@@ -995,7 +1071,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * The ID of the gateway.
+             * <p>The ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -1003,7 +1082,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * The unique ID of the gateway.
+             * <p>The unique ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-84efde2ee1464260bdb17a5b****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -1019,7 +1101,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * The route IDs.
+             * <p>The route IDs.</p>
              */
             public Builder routeIdList(java.util.List < Long > routeIdList) {
                 this.routeIdList = routeIdList;

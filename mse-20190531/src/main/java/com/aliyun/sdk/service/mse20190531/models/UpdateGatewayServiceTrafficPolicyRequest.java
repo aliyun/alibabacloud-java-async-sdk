@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGatewayServiceTrafficPolicyRequest} extends {@link RequestModel}
  *
  * <p>UpdateGatewayServiceTrafficPolicyRequest</p>
@@ -110,11 +111,14 @@ public class UpdateGatewayServiceTrafficPolicyRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh-CN</strong> (default): Chinese</li>
+         * <li><strong>en-US</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh-CN** (default): Chinese
-         * *   **en-US**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -123,7 +127,10 @@ public class UpdateGatewayServiceTrafficPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the gateway.
+         * <p>The ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>429</p>
          */
         public Builder gatewayId(Long gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -132,7 +139,8 @@ public class UpdateGatewayServiceTrafficPolicyRequest extends Request {
         }
 
         /**
-         * The traffic policy of the gateway.
+         * <p>The traffic policy of the gateway.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder gatewayTrafficPolicy(TrafficPolicy gatewayTrafficPolicy) {
             String gatewayTrafficPolicyShrink = shrink(gatewayTrafficPolicy, "GatewayTrafficPolicy", "json");
@@ -142,7 +150,10 @@ public class UpdateGatewayServiceTrafficPolicyRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-75c5036c083e4f89ba8ef9fafff2e902</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -151,7 +162,10 @@ public class UpdateGatewayServiceTrafficPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the service.
+         * <p>The ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>411</p>
          */
         public Builder serviceId(Long serviceId) {
             this.putQueryParameter("ServiceId", serviceId);

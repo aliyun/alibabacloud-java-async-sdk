@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateFlowRuleRequest} extends {@link RequestModel}
  *
  * <p>UpdateFlowRuleRequest</p>
@@ -168,11 +169,14 @@ public class UpdateFlowRuleRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -181,7 +185,10 @@ public class UpdateFlowRuleRequest extends Request {
         }
 
         /**
-         * The application ID.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hkhon1po62@c3df23522******</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -190,7 +197,11 @@ public class UpdateFlowRuleRequest extends Request {
         }
 
         /**
-         * The application name.
+         * <p>The application name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-a</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -199,34 +210,30 @@ public class UpdateFlowRuleRequest extends Request {
         }
 
         /**
-         * The throttling effect.
-         * <p>
+         * <p>The throttling effect.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>0</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <p>:</p>
+         * <!-- -->
          * 
-         * *   0
+         * <p>fast failure</p>
+         * <!-- -->
+         * </li>
+         * <li><p>2</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>:</p>
+         * <!-- -->
          * 
-         *     :
+         * <p>in queue</p>
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         *     fast failure
-         * 
-         *     <!-- -->
-         * 
-         * *   2
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     in queue
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder controlBehavior(Integer controlBehavior) {
             this.putQueryParameter("ControlBehavior", controlBehavior);
@@ -235,26 +242,26 @@ public class UpdateFlowRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the rule.
-         * <p>
+         * <p>Specifies whether to enable the rule.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   true
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   false
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -263,7 +270,10 @@ public class UpdateFlowRuleRequest extends Request {
         }
 
         /**
-         * The timeout period. Unit: milliseconds. This parameter is required when the value of ControlBehavior is set to 2.
+         * <p>The timeout period. Unit: milliseconds. This parameter is required when the value of ControlBehavior is set to 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder maxQueueingTimeMs(Integer maxQueueingTimeMs) {
             this.putQueryParameter("MaxQueueingTimeMs", maxQueueingTimeMs);
@@ -272,7 +282,11 @@ public class UpdateFlowRuleRequest extends Request {
         }
 
         /**
-         * The namespace.
+         * <p>The namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -281,7 +295,11 @@ public class UpdateFlowRuleRequest extends Request {
         }
 
         /**
-         * The rule ID.
+         * <p>The rule ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -290,7 +308,10 @@ public class UpdateFlowRuleRequest extends Request {
         }
 
         /**
-         * The throttling threshold.
+         * <p>The throttling threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder threshold(Integer threshold) {
             this.putQueryParameter("Threshold", threshold);

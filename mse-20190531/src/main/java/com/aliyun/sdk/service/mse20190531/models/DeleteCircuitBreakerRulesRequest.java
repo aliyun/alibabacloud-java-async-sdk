@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCircuitBreakerRulesRequest} extends {@link RequestModel}
  *
  * <p>DeleteCircuitBreakerRulesRequest</p>
@@ -120,7 +121,10 @@ public class DeleteCircuitBreakerRulesRequest extends Request {
         }
 
         /**
-         * The language of the response. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.
+         * <p>The language of the response. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -129,7 +133,11 @@ public class DeleteCircuitBreakerRulesRequest extends Request {
         }
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-a</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -138,7 +146,7 @@ public class DeleteCircuitBreakerRulesRequest extends Request {
         }
 
         /**
-         * The IDs of the rules that you want to delete.
+         * <p>The IDs of the rules that you want to delete.</p>
          */
         public Builder ids(java.util.List < Long > ids) {
             String idsShrink = shrink(ids, "Ids", "json");
@@ -148,7 +156,11 @@ public class DeleteCircuitBreakerRulesRequest extends Request {
         }
 
         /**
-         * The microservice namespace to which the application belongs.
+         * <p>The microservice namespace to which the application belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

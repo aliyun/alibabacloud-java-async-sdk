@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GatewayBlackWhiteListResponseBody} extends {@link TeaModel}
  *
  * <p>GatewayBlackWhiteListResponseBody</p>
@@ -133,7 +134,10 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code. A value of 200 is returned if the request is successful.
+         * <p>The status code. A value of 200 is returned if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -141,7 +145,7 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -149,7 +153,10 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * The placeholder in the dynamic error message. This parameter is not returned.
+         * <p>The placeholder in the dynamic error message. This parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -157,7 +164,10 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic message. This parameter is not returned.
+         * <p>The dynamic message. This parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter is invalid.</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -165,7 +175,10 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -173,7 +186,10 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -181,7 +197,10 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -189,7 +208,10 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58E06A0A-BD2C-47A0-99C2-B100F353****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -197,11 +219,14 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
          * 
-         * *   `true`
-         * *   `false`
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -214,6 +239,12 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GatewayBlackWhiteListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GatewayBlackWhiteListResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -409,7 +440,10 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The content of the blacklist.
+             * <p>The content of the blacklist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -417,7 +451,10 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The gateway ID.
+             * <p>The gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>81</p>
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -425,7 +462,10 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the gateway.
+             * <p>The unique ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-5017305290e14centbrveca****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -433,7 +473,10 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the blacklist or whitelist was created.
+             * <p>The time when the blacklist or whitelist was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-08-02T02:43:40.000+0000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -441,7 +484,10 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the rule was modified.
+             * <p>The time when the rule was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-08-02T02:43:40.000+0000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -449,7 +495,10 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the blacklist and whitelist.
+             * <p>The ID of the blacklist and whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>549</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -457,7 +506,10 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to enable the whitelist feature.
+             * <p>Specifies whether to enable the whitelist feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isWhite(Boolean isWhite) {
                 this.isWhite = isWhite;
@@ -465,7 +517,10 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the blacklist.
+             * <p>The name of the blacklist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -473,7 +528,7 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The comment.
+             * <p>The comment.</p>
              */
             public Builder note(String note) {
                 this.note = note;
@@ -481,7 +536,10 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The resource ID.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>549</p>
              */
             public Builder resourceId(Long resourceId) {
                 this.resourceId = resourceId;
@@ -489,11 +547,14 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The list of resource IDs in the JSON format.
-             * <p>
+             * <p>The list of resource IDs in the JSON format.</p>
+             * <ul>
+             * <li>If the value of the ResourceType parameter is ROUTE, the value of this parameter is the list of route IDs.</li>
+             * <li>If the value of the ResourceType parameter is DOMAIN, the value of this parameter is the list of domain names.</li>
+             * </ul>
              * 
-             * *   If the value of the ResourceType parameter is ROUTE, the value of this parameter is the list of route IDs.
-             * *   If the value of the ResourceType parameter is DOMAIN, the value of this parameter is the list of domain names.
+             * <strong>example:</strong>
+             * <p>[234]</p>
              */
             public Builder resourceIdJsonList(String resourceIdJsonList) {
                 this.resourceIdJsonList = resourceIdJsonList;
@@ -501,7 +562,10 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the resource name.
+             * <p>The description of the resource name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder resourceIdNameJson(String resourceIdNameJson) {
                 this.resourceIdNameJson = resourceIdNameJson;
@@ -509,12 +573,15 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The effective scope of the blacklist or whitelist. Valid values:
-             * <p>
+             * <p>The effective scope of the blacklist or whitelist. Valid values:</p>
+             * <ul>
+             * <li>GATEWAY</li>
+             * <li>DOMAIN</li>
+             * <li>ROUTE</li>
+             * </ul>
              * 
-             * *   GATEWAY
-             * *   DOMAIN
-             * *   ROUTE
+             * <strong>example:</strong>
+             * <p>GATEWAY</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -522,11 +589,14 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the blacklist or whitelist.
-             * <p>
+             * <p>The status of the blacklist or whitelist.</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
              * 
-             * *   on
-             * *   off
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -534,7 +604,10 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the blacklist and whitelist. The value is fixed to IP address blacklist and whitelist.
+             * <p>The type of the blacklist and whitelist. The value is fixed to IP address blacklist and whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IP</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -548,6 +621,12 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GatewayBlackWhiteListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GatewayBlackWhiteListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -611,7 +690,10 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -619,7 +701,10 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -627,7 +712,7 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The returned information.
+             * <p>The returned information.</p>
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -635,7 +720,10 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of instances returned.
+             * <p>The total number of instances returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

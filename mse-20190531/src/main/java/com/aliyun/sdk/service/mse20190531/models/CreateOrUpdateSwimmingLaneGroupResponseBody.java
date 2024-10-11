@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrUpdateSwimmingLaneGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateOrUpdateSwimmingLaneGroupResponseBody</p>
@@ -85,7 +86,10 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -93,7 +97,10 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -101,7 +108,10 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request was successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +119,10 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE5C32A1-BC0E-4B79-817C-103E4EDF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,10 +130,11 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>true: The request was successful. false: The request failed.</p>
          * 
-         * true: The request was successful. false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -133,6 +147,12 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateOrUpdateSwimmingLaneGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateSwimmingLaneGroupResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppIds")
         private String appIds;

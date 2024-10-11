@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetGatewayAuthDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetGatewayAuthDetailResponseBody</p>
@@ -150,6 +151,12 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetGatewayAuthDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayAuthDetailResponseBody</p>
+     */
     public static class Service extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
@@ -251,6 +258,12 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetGatewayAuthDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayAuthDetailResponseBody</p>
+     */
     public static class ExternalAuthZ extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowRequestHeaders")
         private java.util.List < String > allowRequestHeaders;
@@ -279,6 +292,9 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TokenKey")
         private String tokenKey;
 
+        @com.aliyun.core.annotation.NameInMap("WithRematchRoute")
+        private Boolean withRematchRoute;
+
         @com.aliyun.core.annotation.NameInMap("WithRequestBody")
         private Boolean withRequestBody;
 
@@ -292,6 +308,7 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
             this.serviceId = builder.serviceId;
             this.timeout = builder.timeout;
             this.tokenKey = builder.tokenKey;
+            this.withRematchRoute = builder.withRematchRoute;
             this.withRequestBody = builder.withRequestBody;
         }
 
@@ -367,6 +384,13 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return withRematchRoute
+         */
+        public Boolean getWithRematchRoute() {
+            return this.withRematchRoute;
+        }
+
+        /**
          * @return withRequestBody
          */
         public Boolean getWithRequestBody() {
@@ -383,6 +407,7 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
             private Long serviceId; 
             private Integer timeout; 
             private String tokenKey; 
+            private Boolean withRematchRoute; 
             private Boolean withRequestBody; 
 
             /**
@@ -458,6 +483,14 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
             }
 
             /**
+             * WithRematchRoute.
+             */
+            public Builder withRematchRoute(Boolean withRematchRoute) {
+                this.withRematchRoute = withRematchRoute;
+                return this;
+            }
+
+            /**
              * WithRequestBody.
              */
             public Builder withRequestBody(Boolean withRequestBody) {
@@ -472,6 +505,12 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetGatewayAuthDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayAuthDetailResponseBody</p>
+     */
     public static class AuthResourceHeaderList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HeaderKey")
         private String headerKey;
@@ -553,6 +592,12 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetGatewayAuthDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayAuthDetailResponseBody</p>
+     */
     public static class ResourceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthId")
         private Long authId;
@@ -834,6 +879,12 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetGatewayAuthDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayAuthDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthResourceConfig")
         private String authResourceConfig;

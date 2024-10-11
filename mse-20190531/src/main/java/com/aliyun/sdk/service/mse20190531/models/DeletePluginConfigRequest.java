@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeletePluginConfigRequest} extends {@link RequestModel}
  *
  * <p>DeletePluginConfigRequest</p>
@@ -83,7 +84,10 @@ public class DeletePluginConfigRequest extends Request {
         } 
 
         /**
-         * The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.
+         * <p>The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -92,7 +96,11 @@ public class DeletePluginConfigRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-e2d226bba4b2445c9e29fa7f8216****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -101,7 +109,11 @@ public class DeletePluginConfigRequest extends Request {
         }
 
         /**
-         * The plug-in configuration ID.
+         * <p>The plug-in configuration ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder pluginConfigId(Long pluginConfigId) {
             this.putQueryParameter("PluginConfigId", pluginConfigId);

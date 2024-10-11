@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetKubernetesSourceRequest} extends {@link RequestModel}
  *
  * <p>GetKubernetesSourceRequest</p>
@@ -96,11 +97,14 @@ public class GetKubernetesSourceRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -109,7 +113,11 @@ public class GetKubernetesSourceRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-c5d1aadb7df646cfb7065fbf75c1****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -118,7 +126,7 @@ public class GetKubernetesSourceRequest extends Request {
         }
 
         /**
-         * Specifies whether to obtain the information about all Kubernetes clusters. If you set the value to false, only the information about unassociated clusters is obtained.
+         * <p>Specifies whether to obtain the information about all Kubernetes clusters. If you set the value to false, only the information about unassociated clusters is obtained.</p>
          */
         public Builder isAll(Boolean isAll) {
             this.putQueryParameter("IsAll", isAll);
@@ -127,7 +135,10 @@ public class GetKubernetesSourceRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC).
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1t50e045b5g7i3p****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

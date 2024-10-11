@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSentinelBlockFallbackDefinitionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSentinelBlockFallbackDefinitionsResponseBody</p>
@@ -130,6 +131,12 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSentinelBlockFallbackDefinitionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSentinelBlockFallbackDefinitionsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;

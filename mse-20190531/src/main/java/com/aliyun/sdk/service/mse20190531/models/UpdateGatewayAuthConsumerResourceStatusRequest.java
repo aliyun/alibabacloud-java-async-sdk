@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGatewayAuthConsumerResourceStatusRequest} extends {@link RequestModel}
  *
  * <p>UpdateGatewayAuthConsumerResourceStatusRequest</p>
@@ -113,11 +114,14 @@ public class UpdateGatewayAuthConsumerResourceStatusRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -126,7 +130,11 @@ public class UpdateGatewayAuthConsumerResourceStatusRequest extends Request {
         }
 
         /**
-         * The ID of the consumer.
+         * <p>The ID of the consumer.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder consumerId(Long consumerId) {
             this.putQueryParameter("ConsumerId", consumerId);
@@ -135,7 +143,11 @@ public class UpdateGatewayAuthConsumerResourceStatusRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-2a99625886d54722be94d92e9a69****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -144,7 +156,11 @@ public class UpdateGatewayAuthConsumerResourceStatusRequest extends Request {
         }
 
         /**
-         * The list of IDs of the authorized resources that a user wants to update.
+         * <p>The list of IDs of the authorized resources that a user wants to update.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3,4</p>
          */
         public Builder idList(String idList) {
             this.putQueryParameter("IdList", idList);
@@ -153,11 +169,15 @@ public class UpdateGatewayAuthConsumerResourceStatusRequest extends Request {
         }
 
         /**
-         * The resource authorization status. Valid values:
-         * <p>
+         * <p>The resource authorization status. Valid values:</p>
+         * <ul>
+         * <li>true: enabled</li>
+         * <li>false: disabled</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   true: enabled
-         * *   false: disabled
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder resourceStatus(Boolean resourceStatus) {
             this.putQueryParameter("ResourceStatus", resourceStatus);

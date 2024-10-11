@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddBlackWhiteListRequest} extends {@link RequestModel}
  *
  * <p>AddBlackWhiteListRequest</p>
@@ -179,11 +180,14 @@ public class AddBlackWhiteListRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -192,7 +196,10 @@ public class AddBlackWhiteListRequest extends Request {
         }
 
         /**
-         * The content of the blacklist.
+         * <p>The content of the blacklist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.117.115.51</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -201,7 +208,10 @@ public class AddBlackWhiteListRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-0fe488252dc44d55a9dd57875193****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -210,7 +220,10 @@ public class AddBlackWhiteListRequest extends Request {
         }
 
         /**
-         * The whitelist. Default value: No.
+         * <p>The whitelist. Default value: No.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isWhite(Boolean isWhite) {
             this.putQueryParameter("IsWhite", isWhite);
@@ -219,7 +232,10 @@ public class AddBlackWhiteListRequest extends Request {
         }
 
         /**
-         * The name.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -228,7 +244,10 @@ public class AddBlackWhiteListRequest extends Request {
         }
 
         /**
-         * The description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a note</p>
          */
         public Builder note(String note) {
             this.putQueryParameter("Note", note);
@@ -237,7 +256,10 @@ public class AddBlackWhiteListRequest extends Request {
         }
 
         /**
-         * The resource IDs in the JSON format.
+         * <p>The resource IDs in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[123]</p>
          */
         public Builder resourceIdJsonList(String resourceIdJsonList) {
             this.putQueryParameter("ResourceIdJsonList", resourceIdJsonList);
@@ -246,12 +268,15 @@ public class AddBlackWhiteListRequest extends Request {
         }
 
         /**
-         * The effective scope of the blacklist or whitelist. Valid values:
-         * <p>
+         * <p>The effective scope of the blacklist or whitelist. Valid values:</p>
+         * <ul>
+         * <li>GATEWAY</li>
+         * <li>DOMAIN</li>
+         * <li>ROUTE</li>
+         * </ul>
          * 
-         * *   GATEWAY
-         * *   DOMAIN
-         * *   ROUTE
+         * <strong>example:</strong>
+         * <p>GATEWAY</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -260,11 +285,14 @@ public class AddBlackWhiteListRequest extends Request {
         }
 
         /**
-         * The status of the blacklist.
-         * <p>
+         * <p>The status of the blacklist.</p>
+         * <ul>
+         * <li>on: enabled</li>
+         * <li>off: disabled</li>
+         * </ul>
          * 
-         * *   on: enabled
-         * *   off: disabled
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -273,7 +301,10 @@ public class AddBlackWhiteListRequest extends Request {
         }
 
         /**
-         * The type of object in the blacklist or whitelist.
+         * <p>The type of object in the blacklist or whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IP</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEurekaInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ListEurekaInstancesResponseBody</p>
@@ -133,7 +134,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -141,7 +142,10 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -149,7 +153,10 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202</p>
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -157,7 +164,10 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request is successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -165,7 +175,10 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -173,7 +186,10 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -181,7 +197,10 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>316F5F64-F73D-42DC-8632-01E308B6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -189,11 +208,14 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +223,10 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned instances.
+         * <p>The total number of returned instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -214,6 +239,12 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEurekaInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEurekaInstancesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("App")
         private String app;
@@ -397,7 +428,10 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             private String vipAddress; 
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONTACTINFO</p>
              */
             public Builder app(String app) {
                 this.app = app;
@@ -405,9 +439,10 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of the instance.\
-             * <p>
-             * After the specified timeout period expires, the service is unavailable by default and is deleted.
+             * <p>The timeout period of the instance.<br>After the specified timeout period expires, the service is unavailable by default and is deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder durationInSecs(Integer durationInSecs) {
                 this.durationInSecs = durationInSecs;
@@ -415,7 +450,10 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the homepage.
+             * <p>The URL of the homepage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://30.5.XX.XX:8091/">http://30.5.XX.XX:8091/</a></p>
              */
             public Builder homePageUrl(String homePageUrl) {
                 this.homePageUrl = homePageUrl;
@@ -423,7 +461,10 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The hostname.
+             * <p>The hostname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30.5.XX.XX</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -431,7 +472,10 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>L-PC1A6A28-****.hz.ali.com:contactinfo:8091</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -439,7 +483,10 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30.5.XX.XX</p>
              */
             public Builder ipAddr(String ipAddr) {
                 this.ipAddr = ipAddr;
@@ -447,7 +494,10 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was last modified.
+             * <p>The time when the instance was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20201009115543</p>
              */
             public Builder lastDirtyTimestamp(Long lastDirtyTimestamp) {
                 this.lastDirtyTimestamp = lastDirtyTimestamp;
@@ -455,7 +505,10 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance heartbeat was last checked.
+             * <p>The time when the instance heartbeat was last checked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20201010071203</p>
              */
             public Builder lastUpdatedTimestamp(Long lastUpdatedTimestamp) {
                 this.lastUpdatedTimestamp = lastUpdatedTimestamp;
@@ -463,7 +516,10 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The metadata.
+             * <p>The metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[string]</p>
              */
             public Builder metadata(java.util.Map < String, ? > metadata) {
                 this.metadata = metadata;
@@ -471,7 +527,10 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The service port number.
+             * <p>The service port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8091</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -479,9 +538,10 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum interval between two heartbeat checks after a heartbeat check times out.\
-             * <p>
-             * Default value: 10.
+             * <p>The maximum interval between two heartbeat checks after a heartbeat check times out.<br>Default value: 10.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder renewalIntervalInSecs(Integer renewalIntervalInSecs) {
                 this.renewalIntervalInSecs = renewalIntervalInSecs;
@@ -489,7 +549,10 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The security port.
+             * <p>The security port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder securePort(Integer securePort) {
                 this.securePort = securePort;
@@ -497,7 +560,10 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of service providers. The value is in the following format: Number of healthy instances/Total number of instances.
+             * <p>The number of service providers. The value is in the following format: Number of healthy instances/Total number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1/1</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -505,7 +571,10 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The virtual IP address (VIP).
+             * <p>The virtual IP address (VIP).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>contactinfo</p>
              */
             public Builder vipAddress(String vipAddress) {
                 this.vipAddress = vipAddress;

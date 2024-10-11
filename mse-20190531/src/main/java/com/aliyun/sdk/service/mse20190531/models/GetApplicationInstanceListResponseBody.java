@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetApplicationInstanceListResponseBody} extends {@link TeaModel}
  *
  * <p>GetApplicationInstanceListResponseBody</p>
@@ -37,7 +38,7 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
         private Data data; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -50,6 +51,12 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetApplicationInstanceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationInstanceListResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
@@ -77,7 +84,10 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
             private String tag; 
 
             /**
-             * 标签值。
+             * <p>标签值。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gray</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -91,6 +101,12 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetApplicationInstanceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationInstanceListResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
@@ -142,7 +158,10 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
             private java.util.List < Tags> tags; 
 
             /**
-             * The node IP address.
+             * <p>The node IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.1.2.3</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -150,7 +169,10 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The application port.
+             * <p>The application port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -158,7 +180,7 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The node tags.
+             * <p>The node tags.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -172,6 +194,12 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetApplicationInstanceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationInstanceListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -235,7 +263,10 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * The page number. Pages start from page 1.
+             * <p>The page number. Pages start from page 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -243,7 +274,10 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -251,7 +285,7 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The queried nodes.
+             * <p>The queried nodes.</p>
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -259,7 +293,10 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of nodes.
+             * <p>The total number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

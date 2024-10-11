@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddGatewayAuthRequest} extends {@link RequestModel}
  *
  * <p>AddGatewayAuthRequest</p>
@@ -379,7 +380,7 @@ public class AddGatewayAuthRequest extends Request {
         }
 
         /**
-         * The information about the resource to be authorized.
+         * <p>The information about the resource to be authorized.</p>
          */
         public Builder authResourceList(java.util.List < AuthResourceList> authResourceList) {
             String authResourceListShrink = shrink(authResourceList, "AuthResourceList", "json");
@@ -398,7 +399,10 @@ public class AddGatewayAuthRequest extends Request {
         }
 
         /**
-         * The application ID registered with the OIDC authentication service.
+         * <p>The application ID registered with the OIDC authentication service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23460e2fdd9bf9ad106****</p>
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -407,7 +411,10 @@ public class AddGatewayAuthRequest extends Request {
         }
 
         /**
-         * The application secret registered with the OIDC authentication service.
+         * <p>The application secret registered with the OIDC authentication service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123****</p>
          */
         public Builder clientSecret(String clientSecret) {
             this.putQueryParameter("ClientSecret", clientSecret);
@@ -416,7 +423,10 @@ public class AddGatewayAuthRequest extends Request {
         }
 
         /**
-         * The domain name of the cookie. After the authentication is passed, the cookie is sent to the specified domain name to maintain the logon status. For example, if you set `Cookie-domain` to a.example.com, the cookie is sent to the domain name `a.example.com`. If you set `Cookie-domain` to .example.com, the cookie is sent to all subdomains of `example.com`.
+         * <p>The domain name of the cookie. After the authentication is passed, the cookie is sent to the specified domain name to maintain the logon status. For example, if you set <code>Cookie-domain</code> to a.example.com, the cookie is sent to the domain name <code>a.example.com</code>. If you set <code>Cookie-domain</code> to .example.com, the cookie is sent to all subdomains of <code>example.com</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.com</p>
          */
         public Builder cookieDomain(String cookieDomain) {
             this.putQueryParameter("CookieDomain", cookieDomain);
@@ -425,7 +435,7 @@ public class AddGatewayAuthRequest extends Request {
         }
 
         /**
-         * The information about the custom authentication service.
+         * <p>The information about the custom authentication service.</p>
          */
         public Builder externalAuthZJSON(ExternalAuthZJSON externalAuthZJSON) {
             String externalAuthZJSONShrink = shrink(externalAuthZJSON, "ExternalAuthZJSON", "json");
@@ -435,7 +445,10 @@ public class AddGatewayAuthRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-492af9b04bb4474cae9d645be850e3d7</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -444,7 +457,10 @@ public class AddGatewayAuthRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the whitelist feature.
+         * <p>Specifies whether to enable the whitelist feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isWhite(Boolean isWhite) {
             this.putQueryParameter("IsWhite", isWhite);
@@ -453,7 +469,10 @@ public class AddGatewayAuthRequest extends Request {
         }
 
         /**
-         * The iss value of JWT claims, which indicates the issuer. You must make sure that the value of this parameter is the same as the iss value in the payload of JWT claims.
+         * <p>The iss value of JWT claims, which indicates the issuer. You must make sure that the value of this parameter is the same as the iss value in the payload of JWT claims.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:testing@secure.istio.io">testing@secure.istio.io</a></p>
          */
         public Builder issuer(String issuer) {
             this.putQueryParameter("Issuer", issuer);
@@ -462,7 +481,10 @@ public class AddGatewayAuthRequest extends Request {
         }
 
         /**
-         * The JWT public key. The JSON format is supported.
+         * <p>The JWT public key. The JSON format is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;keys&quot;:[{&quot;e&quot;:&quot;AQAB&quot;,&quot;kid&quot;:&quot;DHFbpoIUqrY8t2zpA2qXfCmr5VO5ZEr4RzHU_-envvQ&quot;,&quot;kty&quot;:&quot;RSA&quot;,&quot;n&quot;:&quot;xAE7eB6qugXyCAG3yhh7pkDkT65pHymX-P7KfIupjf59vsdo91bSP9C8H07pSAGQO1MV_xFj9VswgsCg4R6otmg5PV2He95lZdHtOcU5DXIg_pbhLdKXbi66GlVeK6ABZOUW3WYtnNHD-91gVuoeJT_DwtGGcp4ignkgXfkiEm4sw-4sfb4qdt5oLbyVpmW6x9cfa7vs2WTfURiCrBoUqgBo_-4WTiULmmHSGZHOjzwa8WtrtOQGsAFjIbno85jp6MnGGGZPYZbDAa_b3y5u-YpW7ypZrvD8BgtKVjgtQgZhLAGezMt0ua3DRrWnKqTZ0BJ_EyxOGuHJrLsn00fnMQ&quot;}]}</p>
          */
         public Builder jwks(String jwks) {
             this.putQueryParameter("Jwks", jwks);
@@ -471,7 +493,10 @@ public class AddGatewayAuthRequest extends Request {
         }
 
         /**
-         * The URL that is used to log on to the IDaaS instance.
+         * <p>The URL that is used to log on to the IDaaS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder loginUrl(String loginUrl) {
             this.putQueryParameter("LoginUrl", loginUrl);
@@ -480,7 +505,10 @@ public class AddGatewayAuthRequest extends Request {
         }
 
         /**
-         * The name.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jwt</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -489,7 +517,10 @@ public class AddGatewayAuthRequest extends Request {
         }
 
         /**
-         * The redirect URL.
+         * <p>The redirect URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://test-.com/oauth2/callback">https://test-.com/oauth2/callback</a></p>
          */
         public Builder redirectUrl(String redirectUrl) {
             this.putQueryParameter("RedirectUrl", redirectUrl);
@@ -498,7 +529,7 @@ public class AddGatewayAuthRequest extends Request {
         }
 
         /**
-         * The OIDC scope.
+         * <p>The OIDC scope.</p>
          */
         public Builder scopesList(java.util.List < String > scopesList) {
             String scopesListShrink = shrink(scopesList, "ScopesList", "json");
@@ -508,7 +539,10 @@ public class AddGatewayAuthRequest extends Request {
         }
 
         /**
-         * The status.
+         * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder status(Boolean status) {
             this.putQueryParameter("Status", status);
@@ -517,7 +551,10 @@ public class AddGatewayAuthRequest extends Request {
         }
 
         /**
-         * The sub value of JWT claims, which indicates the subject. You must make sure that the value of this parameter is the same as the sub value in the payload of JWT claims. If you do not set this parameter or leave it empty, the default value, which is the value of the Issuer parameter, is used.
+         * <p>The sub value of JWT claims, which indicates the subject. You must make sure that the value of this parameter is the same as the sub value in the payload of JWT claims. If you do not set this parameter or leave it empty, the default value, which is the value of the Issuer parameter, is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:testing@secure.istio.io">testing@secure.istio.io</a></p>
          */
         public Builder sub(String sub) {
             this.putQueryParameter("Sub", sub);
@@ -526,7 +563,10 @@ public class AddGatewayAuthRequest extends Request {
         }
 
         /**
-         * The name of the parameter that is required to verify a token. By default, a token is prefixed with Bearer and stored in the authorization header. Example: `Authorization: Bearer token`.
+         * <p>The name of the parameter that is required to verify a token. By default, a token is prefixed with Bearer and stored in the authorization header. Example: <code>Authorization: Bearer token</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Authorization</p>
          */
         public Builder tokenName(String tokenName) {
             this.putQueryParameter("TokenName", tokenName);
@@ -535,7 +575,10 @@ public class AddGatewayAuthRequest extends Request {
         }
 
         /**
-         * The name prefix of the parameter that is required to verify a token. By default, a token is prefixed with Bearer and stored in the authorization header. Example: `Authorization: Bearer token`
+         * <p>The name prefix of the parameter that is required to verify a token. By default, a token is prefixed with Bearer and stored in the authorization header. Example: <code>Authorization: Bearer token</code></p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bearer</p>
          */
         public Builder tokenNamePrefix(String tokenNamePrefix) {
             this.putQueryParameter("TokenNamePrefix", tokenNamePrefix);
@@ -544,7 +587,10 @@ public class AddGatewayAuthRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable pass-through.
+         * <p>Specifies whether to enable pass-through.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder tokenPass(Boolean tokenPass) {
             this.putQueryParameter("TokenPass", tokenPass);
@@ -553,7 +599,10 @@ public class AddGatewayAuthRequest extends Request {
         }
 
         /**
-         * The position of the parameter that is required to verify a token. By default, a token is prefixed with Bearer and stored in the authorization header. Example: `Authorization: Bearer token`.
+         * <p>The position of the parameter that is required to verify a token. By default, a token is prefixed with Bearer and stored in the authorization header. Example: <code>Authorization: Bearer token</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HEADER</p>
          */
         public Builder tokenPosition(String tokenPosition) {
             this.putQueryParameter("TokenPosition", tokenPosition);
@@ -562,7 +611,10 @@ public class AddGatewayAuthRequest extends Request {
         }
 
         /**
-         * The authentication type. JSON Web Token (JWT) authentication, OpenID Connect (OIDC) authentication, Identity as a Service (IDaaS) authentication, or custom authentication are supported.
+         * <p>The authentication type. JSON Web Token (JWT) authentication, OpenID Connect (OIDC) authentication, Identity as a Service (IDaaS) authentication, or custom authentication are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JWT</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -577,6 +629,12 @@ public class AddGatewayAuthRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddGatewayAuthRequest} extends {@link TeaModel}
+     *
+     * <p>AddGatewayAuthRequest</p>
+     */
     public static class AuthResourceHeaderList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HeaderKey")
         private String headerKey;
@@ -658,6 +716,12 @@ public class AddGatewayAuthRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddGatewayAuthRequest} extends {@link TeaModel}
+     *
+     * <p>AddGatewayAuthRequest</p>
+     */
     public static class AuthResourceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthResourceHeaderList")
         private java.util.List < AuthResourceHeaderList> authResourceHeaderList;
@@ -741,7 +805,10 @@ public class AddGatewayAuthRequest extends Request {
             }
 
             /**
-             * The domain ID.
+             * <p>The domain ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder domainId(Long domainId) {
                 this.domainId = domainId;
@@ -765,7 +832,10 @@ public class AddGatewayAuthRequest extends Request {
             }
 
             /**
-             * The request path.
+             * <p>The request path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -779,6 +849,12 @@ public class AddGatewayAuthRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddGatewayAuthRequest} extends {@link TeaModel}
+     *
+     * <p>AddGatewayAuthRequest</p>
+     */
     public static class ExternalAuthZJSON extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowRequestHeaders")
         private java.util.List < String > allowRequestHeaders;
@@ -804,6 +880,9 @@ public class AddGatewayAuthRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("TokenKey")
         private String tokenKey;
 
+        @com.aliyun.core.annotation.NameInMap("WithRematchRoute")
+        private Boolean withRematchRoute;
+
         @com.aliyun.core.annotation.NameInMap("WithRequestBody")
         private Boolean withRequestBody;
 
@@ -816,6 +895,7 @@ public class AddGatewayAuthRequest extends Request {
             this.serviceId = builder.serviceId;
             this.timeout = builder.timeout;
             this.tokenKey = builder.tokenKey;
+            this.withRematchRoute = builder.withRematchRoute;
             this.withRequestBody = builder.withRequestBody;
         }
 
@@ -884,6 +964,13 @@ public class AddGatewayAuthRequest extends Request {
         }
 
         /**
+         * @return withRematchRoute
+         */
+        public Boolean getWithRematchRoute() {
+            return this.withRematchRoute;
+        }
+
+        /**
          * @return withRequestBody
          */
         public Boolean getWithRequestBody() {
@@ -899,10 +986,11 @@ public class AddGatewayAuthRequest extends Request {
             private Long serviceId; 
             private Integer timeout; 
             private String tokenKey; 
+            private Boolean withRematchRoute; 
             private Boolean withRequestBody; 
 
             /**
-             * The header that can be carried in an authentication request.
+             * <p>The header that can be carried in an authentication request.</p>
              */
             public Builder allowRequestHeaders(java.util.List < String > allowRequestHeaders) {
                 this.allowRequestHeaders = allowRequestHeaders;
@@ -910,7 +998,7 @@ public class AddGatewayAuthRequest extends Request {
             }
 
             /**
-             * The header that can be retained in an authentication response.
+             * <p>The header that can be retained in an authentication response.</p>
              */
             public Builder allowUpstreamHeaders(java.util.List < String > allowUpstreamHeaders) {
                 this.allowUpstreamHeaders = allowUpstreamHeaders;
@@ -926,7 +1014,10 @@ public class AddGatewayAuthRequest extends Request {
             }
 
             /**
-             * Specifies whether the gateway allows a client request when the authentication server is unavailable. If a connection to the authentication server fails to be established or a 5xx error code is returned, the authentication server is unavailable.
+             * <p>Specifies whether the gateway allows a client request when the authentication server is unavailable. If a connection to the authentication server fails to be established or a 5xx error code is returned, the authentication server is unavailable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isRestrict(Boolean isRestrict) {
                 this.isRestrict = isRestrict;
@@ -934,7 +1025,10 @@ public class AddGatewayAuthRequest extends Request {
             }
 
             /**
-             * The path of the authentication API provided by the authentication service. The path supports the prefix match method.
+             * <p>The path of the authentication API provided by the authentication service. The path supports the prefix match method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/auth</p>
              */
             public Builder prefixPath(String prefixPath) {
                 this.prefixPath = prefixPath;
@@ -942,7 +1036,10 @@ public class AddGatewayAuthRequest extends Request {
             }
 
             /**
-             * The ID of the service.
+             * <p>The ID of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder serviceId(Long serviceId) {
                 this.serviceId = serviceId;
@@ -950,7 +1047,10 @@ public class AddGatewayAuthRequest extends Request {
             }
 
             /**
-             * The timeout period. Unit: seconds.
+             * <p>The timeout period. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -958,10 +1058,21 @@ public class AddGatewayAuthRequest extends Request {
             }
 
             /**
-             * The header that stores a token in an authentication request. In most cases, a token is stored in the Authorization or Cookie header.
+             * <p>The header that stores a token in an authentication request. In most cases, a token is stored in the Authorization or Cookie header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Authorization</p>
              */
             public Builder tokenKey(String tokenKey) {
                 this.tokenKey = tokenKey;
+                return this;
+            }
+
+            /**
+             * WithRematchRoute.
+             */
+            public Builder withRematchRoute(Boolean withRematchRoute) {
+                this.withRematchRoute = withRematchRoute;
                 return this;
             }
 

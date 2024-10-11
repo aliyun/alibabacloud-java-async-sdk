@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGatewayAuthConsumerResponseBody} extends {@link TeaModel}
  *
  * <p>ListGatewayAuthConsumerResponseBody</p>
@@ -133,7 +134,10 @@ public class ListGatewayAuthConsumerResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code. A value of 200 is returned if the request is successful.
+         * <p>The status code. A value of 200 is returned if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -141,7 +145,7 @@ public class ListGatewayAuthConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * The data structure.
+         * <p>The data structure.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -149,7 +153,10 @@ public class ListGatewayAuthConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message.
+         * <p>The dynamic part in the error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -157,10 +164,13 @@ public class ListGatewayAuthConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message. This parameter is used to replace the **%s** variable in the **ErrMessage** parameter.
-         * <p>
+         * <p>The dynamic part in the error message. This parameter is used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> parameter.</p>
+         * <blockquote>
+         * <p> If the return value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> parameter is invalid.</p>
+         * </blockquote>
          * 
-         * >  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
+         * <strong>example:</strong>
+         * <p>The specified parameter is invalid.</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -168,7 +178,10 @@ public class ListGatewayAuthConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * The error code that is returned.
+         * <p>The error code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -176,7 +189,10 @@ public class ListGatewayAuthConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -184,7 +200,10 @@ public class ListGatewayAuthConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request is successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -192,7 +211,10 @@ public class ListGatewayAuthConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc63-465d-8ef5-20dc18af****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -200,11 +222,14 @@ public class ListGatewayAuthConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -217,6 +242,12 @@ public class ListGatewayAuthConsumerResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListGatewayAuthConsumerResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewayAuthConsumerResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConsumerStatus")
         private Boolean consumerStatus;
@@ -340,11 +371,14 @@ public class ListGatewayAuthConsumerResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The status of the consumer. Valid values:
-             * <p>
+             * <p>The status of the consumer. Valid values:</p>
+             * <ul>
+             * <li>true: enabled</li>
+             * <li>false: disabled</li>
+             * </ul>
              * 
-             * *   true: enabled
-             * *   false: disabled
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder consumerStatus(Boolean consumerStatus) {
                 this.consumerStatus = consumerStatus;
@@ -352,7 +386,10 @@ public class ListGatewayAuthConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the consumer.
+             * <p>The description of the consumer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -360,7 +397,10 @@ public class ListGatewayAuthConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the gateway.
+             * <p>The unique ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-5017305290e14centbrveca****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -368,7 +408,10 @@ public class ListGatewayAuthConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-13 19:24:23</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -376,7 +419,10 @@ public class ListGatewayAuthConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * The modification time.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-07 18:07:57</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -384,7 +430,10 @@ public class ListGatewayAuthConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the consumer.
+             * <p>The ID of the consumer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -392,7 +441,10 @@ public class ListGatewayAuthConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the consumer.
+             * <p>The name of the consumer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -400,7 +452,10 @@ public class ListGatewayAuthConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * The creator.
+             * <p>The creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder primaryUser(String primaryUser) {
                 this.primaryUser = primaryUser;
@@ -408,10 +463,13 @@ public class ListGatewayAuthConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * The authentication type. Valid values:
-             * <p>
+             * <p>The authentication type. Valid values:</p>
+             * <ul>
+             * <li>JWT</li>
+             * </ul>
              * 
-             * *   JWT
+             * <strong>example:</strong>
+             * <p>JWT</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -425,6 +483,12 @@ public class ListGatewayAuthConsumerResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGatewayAuthConsumerResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewayAuthConsumerResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -488,7 +552,10 @@ public class ListGatewayAuthConsumerResponseBody extends TeaModel {
             private Long totalSize; 
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -496,7 +563,10 @@ public class ListGatewayAuthConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -504,7 +574,7 @@ public class ListGatewayAuthConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * The returned information.
+             * <p>The returned information.</p>
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -512,7 +582,10 @@ public class ListGatewayAuthConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned entries.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;

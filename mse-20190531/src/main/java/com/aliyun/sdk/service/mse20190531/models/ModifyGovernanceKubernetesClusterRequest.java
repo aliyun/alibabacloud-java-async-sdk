@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyGovernanceKubernetesClusterRequest} extends {@link RequestModel}
  *
  * <p>ModifyGovernanceKubernetesClusterRequest</p>
@@ -97,11 +98,14 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -110,7 +114,11 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cd23228b3c80c4d4f9ad87cc3****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -119,7 +127,7 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
         }
 
         /**
-         * The information about the namespace for which Microservices Engine(MSE) Microservices Governance is enabled.
+         * <p>The information about the namespace for which Microservices Engine(MSE) Microservices Governance is enabled.</p>
          */
         public Builder namespaceInfos(java.util.List < NamespaceInfos> namespaceInfos) {
             String namespaceInfosShrink = shrink(namespaceInfos, "NamespaceInfos", "json");
@@ -129,7 +137,11 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the instance resides. The region is supported by MSE.
+         * <p>The ID of the region in which the instance resides. The region is supported by MSE.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -144,6 +156,12 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyGovernanceKubernetesClusterRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyGovernanceKubernetesClusterRequest</p>
+     */
     public static class NamespaceInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MseNamespace")
         private String mseNamespace;
@@ -183,7 +201,10 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
             private String name; 
 
             /**
-             * The microservice namespace. If you do not specify this parameter, Microservice Governance is not enabled for the namespace.
+             * <p>The microservice namespace. If you do not specify this parameter, Microservice Governance is not enabled for the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder mseNamespace(String mseNamespace) {
                 this.mseNamespace = mseNamespace;
@@ -191,7 +212,10 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
             }
 
             /**
-             * The name of the Kubernetes namespace.
+             * <p>The name of the Kubernetes namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder name(String name) {
                 this.name = name;

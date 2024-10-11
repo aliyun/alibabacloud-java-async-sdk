@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetImageResponseBody} extends {@link TeaModel}
  *
  * <p>GetImageResponseBody</p>
@@ -97,7 +98,7 @@ public class GetImageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class GetImageResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class GetImageResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -121,7 +128,10 @@ public class GetImageResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request is successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +139,10 @@ public class GetImageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25EA0A83-9007-4E87-808C-637BE1A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class GetImageResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class GetImageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetImageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetImageResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentVersionFullShowName")
         private String currentVersionFullShowName;
@@ -217,7 +239,10 @@ public class GetImageResponseBody extends TeaModel {
             private String maxVersionFullShowName; 
 
             /**
-             * The full version number of the current instance image. The parameter is in the X.X.X.X format.
+             * <p>The full version number of the current instance image. The parameter is in the X.X.X.X format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.5.5.0</p>
              */
             public Builder currentVersionFullShowName(String currentVersionFullShowName) {
                 this.currentVersionFullShowName = currentVersionFullShowName;
@@ -225,7 +250,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the changelog for the maximum version to which the current version can be upgraded.
+             * <p>The URL of the changelog for the maximum version to which the current version can be upgraded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxxxx">https://xxxxx</a></p>
              */
             public Builder maxVersionChangelogUrl(String maxVersionChangelogUrl) {
                 this.maxVersionChangelogUrl = maxVersionChangelogUrl;
@@ -233,7 +261,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the maximum version to which the current version can be upgraded.
+             * <p>The code of the maximum version to which the current version can be upgraded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZooKeeper_3_6_3</p>
              */
             public Builder maxVersionCode(String maxVersionCode) {
                 this.maxVersionCode = maxVersionCode;
@@ -241,7 +272,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * The full number of the maximum version to which the current version can be upgraded.
+             * <p>The full number of the maximum version to which the current version can be upgraded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.6.3.0</p>
              */
             public Builder maxVersionFullShowName(String maxVersionFullShowName) {
                 this.maxVersionFullShowName = maxVersionFullShowName;

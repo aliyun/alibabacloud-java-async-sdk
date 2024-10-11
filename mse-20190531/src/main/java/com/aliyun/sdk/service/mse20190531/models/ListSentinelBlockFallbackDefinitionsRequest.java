@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSentinelBlockFallbackDefinitionsRequest} extends {@link RequestModel}
  *
  * <p>ListSentinelBlockFallbackDefinitionsRequest</p>
@@ -106,7 +107,10 @@ public class ListSentinelBlockFallbackDefinitionsRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-a</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -125,7 +129,10 @@ public class ListSentinelBlockFallbackDefinitionsRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

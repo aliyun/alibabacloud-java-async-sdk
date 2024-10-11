@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGatewayFlowRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateGatewayFlowRuleRequest</p>
@@ -213,7 +214,10 @@ public class CreateGatewayFlowRuleRequest extends Request {
         } 
 
         /**
-         * The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.
+         * <p>The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -222,12 +226,13 @@ public class CreateGatewayFlowRuleRequest extends Request {
         }
 
         /**
-         * The type of the web fallback behavior.
-         * <p>
+         * <p>The type of the web fallback behavior.</p>
+         * <p>0: returns the specified content.</p>
+         * <p>1: redirects to the specified page.</p>
+         * <p>This parameter is required.</p>
          * 
-         * 0: returns the specified content.
-         * 
-         * 1: redirects to the specified page.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder behaviorType(Integer behaviorType) {
             this.putQueryParameter("BehaviorType", behaviorType);
@@ -236,12 +241,12 @@ public class CreateGatewayFlowRuleRequest extends Request {
         }
 
         /**
-         * The encoding format.
-         * <p>
+         * <p>The encoding format.</p>
+         * <p>0: normal text</p>
+         * <p>1: JSON</p>
          * 
-         * 0: normal text
-         * 
-         * 1: JSON
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder bodyEncoding(Integer bodyEncoding) {
             this.putQueryParameter("BodyEncoding", bodyEncoding);
@@ -250,12 +255,13 @@ public class CreateGatewayFlowRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the throttling rule.
-         * <p>
+         * <p>Specifies whether to enable the throttling rule.</p>
+         * <p>0: disables the throttling rule.</p>
+         * <p>1: enables the throttling rule.</p>
+         * <p>This parameter is required.</p>
          * 
-         * 0: disables the throttling rule.
-         * 
-         * 1: enables the throttling rule.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder enable(Integer enable) {
             this.putQueryParameter("Enable", enable);
@@ -264,7 +270,10 @@ public class CreateGatewayFlowRuleRequest extends Request {
         }
 
         /**
-         * The ID of the gateway.
+         * <p>The ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14407</p>
          */
         public Builder gatewayId(Long gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -273,7 +282,11 @@ public class CreateGatewayFlowRuleRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-e2d226bba4b2445c9e29fa7f8216****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -282,7 +295,10 @@ public class CreateGatewayFlowRuleRequest extends Request {
         }
 
         /**
-         * The HTTP text to be returned.
+         * <p>The HTTP text to be returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder responseContentBody(String responseContentBody) {
             this.putQueryParameter("ResponseContentBody", responseContentBody);
@@ -291,7 +307,10 @@ public class CreateGatewayFlowRuleRequest extends Request {
         }
 
         /**
-         * The address to be redirected to.
+         * <p>The address to be redirected to.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>www.******.com</p>
          */
         public Builder responseRedirectUrl(String responseRedirectUrl) {
             this.putQueryParameter("ResponseRedirectUrl", responseRedirectUrl);
@@ -300,7 +319,10 @@ public class CreateGatewayFlowRuleRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>429</p>
          */
         public Builder responseStatusCode(Integer responseStatusCode) {
             this.putQueryParameter("ResponseStatusCode", responseStatusCode);
@@ -309,7 +331,11 @@ public class CreateGatewayFlowRuleRequest extends Request {
         }
 
         /**
-         * The ID of the route.
+         * <p>The ID of the route.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52853</p>
          */
         public Builder routeId(Long routeId) {
             this.putQueryParameter("RouteId", routeId);
@@ -318,7 +344,11 @@ public class CreateGatewayFlowRuleRequest extends Request {
         }
 
         /**
-         * The name of the routing rule.
+         * <p>The name of the routing rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>routeName</p>
          */
         public Builder routeName(String routeName) {
             this.putQueryParameter("RouteName", routeName);
@@ -327,7 +357,11 @@ public class CreateGatewayFlowRuleRequest extends Request {
         }
 
         /**
-         * The overall queries per second (QPS) threshold.
+         * <p>The overall queries per second (QPS) threshold.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder threshold(Integer threshold) {
             this.putQueryParameter("Threshold", threshold);

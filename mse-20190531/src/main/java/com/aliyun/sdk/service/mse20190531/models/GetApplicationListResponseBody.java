@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetApplicationListResponseBody} extends {@link TeaModel}
  *
  * <p>GetApplicationListResponseBody</p>
@@ -73,7 +74,7 @@ public class GetApplicationListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -81,7 +82,10 @@ public class GetApplicationListResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request is successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -89,7 +93,10 @@ public class GetApplicationListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F55E608F-7C15-****-9CFD-DF832EBC4A0F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,11 +104,14 @@ public class GetApplicationListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -114,6 +124,12 @@ public class GetApplicationListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetApplicationListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationListResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -249,7 +265,10 @@ public class GetApplicationListResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hkhon1po62@5f1b08becb*****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -257,7 +276,10 @@ public class GetApplicationListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>finance</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -265,7 +287,10 @@ public class GetApplicationListResponseBody extends TeaModel {
             }
 
             /**
-             * The additional information.
+             * <p>The additional information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder extraInfo(String extraInfo) {
                 this.extraInfo = extraInfo;
@@ -273,7 +298,10 @@ public class GetApplicationListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances.
+             * <p>The number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder instancesNumber(Integer instancesNumber) {
                 this.instancesNumber = instancesNumber;
@@ -281,7 +309,10 @@ public class GetApplicationListResponseBody extends TeaModel {
             }
 
             /**
-             * The programming language of the application.
+             * <p>The programming language of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JAVA</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -289,7 +320,10 @@ public class GetApplicationListResponseBody extends TeaModel {
             }
 
             /**
-             * The microservice namespace to which the application belongs.
+             * <p>The microservice namespace to which the application belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -297,7 +331,10 @@ public class GetApplicationListResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -305,7 +342,10 @@ public class GetApplicationListResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the application.
+             * <p>The source of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edasmsc</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -313,7 +353,10 @@ public class GetApplicationListResponseBody extends TeaModel {
             }
 
             /**
-             * The status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Long status) {
                 this.status = status;
@@ -321,7 +364,10 @@ public class GetApplicationListResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -335,6 +381,12 @@ public class GetApplicationListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetApplicationListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -398,7 +450,10 @@ public class GetApplicationListResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -406,7 +461,10 @@ public class GetApplicationListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -414,7 +472,7 @@ public class GetApplicationListResponseBody extends TeaModel {
             }
 
             /**
-             * The data returned.
+             * <p>The data returned.</p>
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -422,7 +480,10 @@ public class GetApplicationListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

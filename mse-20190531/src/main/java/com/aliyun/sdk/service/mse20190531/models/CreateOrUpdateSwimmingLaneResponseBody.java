@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrUpdateSwimmingLaneResponseBody} extends {@link TeaModel}
  *
  * <p>CreateOrUpdateSwimmingLaneResponseBody</p>
@@ -109,7 +110,10 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code. The value 200 is returned if the request is successful.
+         * <p>The status code. The value 200 is returned if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -117,7 +121,10 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +132,10 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -133,7 +143,10 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -141,7 +154,10 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request was successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -149,7 +165,10 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE5C32A1-BC0E-4B79-817C-103E4EDF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,11 +176,14 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -174,6 +196,12 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateOrUpdateSwimmingLaneResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateSwimmingLaneResponseBody</p>
+     */
     public static class RestItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cond")
         private String cond;
@@ -395,6 +423,12 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateOrUpdateSwimmingLaneResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateSwimmingLaneResponseBody</p>
+     */
     public static class EntryRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("condition")
         private String condition;
@@ -496,6 +530,12 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateOrUpdateSwimmingLaneResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateSwimmingLaneResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enable")
         private Boolean enable;

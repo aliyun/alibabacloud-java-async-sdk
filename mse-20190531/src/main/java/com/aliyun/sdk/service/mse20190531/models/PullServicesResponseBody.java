@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PullServicesResponseBody} extends {@link TeaModel}
  *
  * <p>PullServicesResponseBody</p>
@@ -97,7 +98,10 @@ public class PullServicesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class PullServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class PullServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +128,10 @@ public class PullServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You are not authorized to perform this operation. Action: mse:PullServices, Resource: acs:mse:cn-shenzhen:1228932054837788:*</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +139,10 @@ public class PullServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC0A99B9-8BA3-5FE3-8FE7-D7C719CF7BD2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class PullServicesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class PullServicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PullServicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>PullServicesResponseBody</p>
+     */
     public static class Services extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
@@ -229,7 +251,10 @@ public class PullServicesResponseBody extends TeaModel {
             private String sourceType; 
 
             /**
-             * The name of the group.
+             * <p>The name of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -237,7 +262,10 @@ public class PullServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -245,7 +273,10 @@ public class PullServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>public</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -253,7 +284,10 @@ public class PullServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the service source.
+             * <p>The ID of the service source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sourceId(String sourceId) {
                 this.sourceId = sourceId;
@@ -261,7 +295,10 @@ public class PullServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service source.
+             * <p>The type of the service source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MSE</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -275,6 +312,12 @@ public class PullServicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PullServicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>PullServicesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
@@ -338,7 +381,10 @@ public class PullServicesResponseBody extends TeaModel {
             private java.util.List < Services> services; 
 
             /**
-             * The name of the group.
+             * <p>The name of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -346,7 +392,10 @@ public class PullServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -354,7 +403,10 @@ public class PullServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the namespace.
+             * <p>The alias of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>public</p>
              */
             public Builder namespaceShowName(String namespaceShowName) {
                 this.namespaceShowName = namespaceShowName;
@@ -362,7 +414,7 @@ public class PullServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about services.
+             * <p>The information about services.</p>
              */
             public Builder services(java.util.List < Services> services) {
                 this.services = services;

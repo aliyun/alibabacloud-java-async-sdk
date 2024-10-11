@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateIsolationRuleResponseBody} extends {@link TeaModel}
  *
  * <p>CreateIsolationRuleResponseBody</p>
@@ -130,6 +131,12 @@ public class CreateIsolationRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateIsolationRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateIsolationRuleResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;

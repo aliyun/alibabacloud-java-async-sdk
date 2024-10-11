@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGatewayServiceTrafficPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateGatewayServiceTrafficPolicyResponseBody</p>
@@ -97,7 +98,10 @@ public class UpdateGatewayServiceTrafficPolicyResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +109,10 @@ public class UpdateGatewayServiceTrafficPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;GatewayUniqueId&quot;: &quot;gw-2b8ebd75dc554c37a4279ba9917379f2&quot;, &quot;Id&quot;: 417, &quot;GatewayTrafficPolicy&quot;: {&quot;LoadBalancerSettings&quot;: {&quot;LoadbalancerType&quot;: &quot;ROUND_ROBIN&quot;}, &quot;TlsSetting&quot;: {&quot;TlsMode&quot;: &quot;DISABLE&quot;}}}</p>
          */
         public Builder data(GatewayService data) {
             this.data = data;
@@ -113,7 +120,10 @@ public class UpdateGatewayServiceTrafficPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +131,10 @@ public class UpdateGatewayServiceTrafficPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request was successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +142,10 @@ public class UpdateGatewayServiceTrafficPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11A61389-F896-5231-A4FB-074D9E2E0055</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +153,14 @@ public class UpdateGatewayServiceTrafficPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
-         * <p>
+         * <p>Indicates whether the request was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCircuitBreakerRulesRequest} extends {@link RequestModel}
  *
  * <p>ListCircuitBreakerRulesRequest</p>
@@ -176,7 +177,10 @@ public class ListCircuitBreakerRulesRequest extends Request {
         }
 
         /**
-         * The language of the response. Valid values: zh-CN and en-US. Default value: zh-CN. The value zh-CN indicates Chinese, and the value en-US indicates English.
+         * <p>The language of the response. Valid values: zh-CN and en-US. Default value: zh-CN. The value zh-CN indicates Chinese, and the value en-US indicates English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -185,7 +189,10 @@ public class ListCircuitBreakerRulesRequest extends Request {
         }
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hkhon1po62@c3df23522bXXXXX</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -194,7 +201,11 @@ public class ListCircuitBreakerRulesRequest extends Request {
         }
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-a</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -203,7 +214,11 @@ public class ListCircuitBreakerRulesRequest extends Request {
         }
 
         /**
-         * The microservice namespace to which the application belongs.
+         * <p>The microservice namespace to which the application belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -212,7 +227,10 @@ public class ListCircuitBreakerRulesRequest extends Request {
         }
 
         /**
-         * The start page of the returned pages. Default value: 1.
+         * <p>The start page of the returned pages. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -221,7 +239,10 @@ public class ListCircuitBreakerRulesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 6.
+         * <p>The number of entries per page. Default value: 6.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -230,7 +251,10 @@ public class ListCircuitBreakerRulesRequest extends Request {
         }
 
         /**
-         * This parameter is used for exact match of circuit breaking rules.
+         * <p>This parameter is used for exact match of circuit breaking rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/a</p>
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -239,7 +263,10 @@ public class ListCircuitBreakerRulesRequest extends Request {
         }
 
         /**
-         * This parameter is used for fuzzy match of circuit breaking rules.
+         * <p>This parameter is used for fuzzy match of circuit breaking rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a</p>
          */
         public Builder resourceSearchKey(String resourceSearchKey) {
             this.putQueryParameter("ResourceSearchKey", resourceSearchKey);

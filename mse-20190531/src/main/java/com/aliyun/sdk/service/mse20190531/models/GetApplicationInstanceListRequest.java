@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetApplicationInstanceListRequest} extends {@link RequestModel}
  *
  * <p>GetApplicationInstanceListRequest</p>
@@ -154,7 +155,10 @@ public class GetApplicationInstanceListRequest extends Request {
         } 
 
         /**
-         * The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.
+         * <p>The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -163,7 +167,10 @@ public class GetApplicationInstanceListRequest extends Request {
         }
 
         /**
-         * The application ID.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcde@12345</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -172,7 +179,10 @@ public class GetApplicationInstanceListRequest extends Request {
         }
 
         /**
-         * The application name.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-app</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -181,7 +191,10 @@ public class GetApplicationInstanceListRequest extends Request {
         }
 
         /**
-         * The Microservices Engine (MSE) namespace to which the application belongs.
+         * <p>The Microservices Engine (MSE) namespace to which the application belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -190,7 +203,10 @@ public class GetApplicationInstanceListRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1.
+         * <p>The page number. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -199,7 +215,10 @@ public class GetApplicationInstanceListRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -208,7 +227,10 @@ public class GetApplicationInstanceListRequest extends Request {
         }
 
         /**
-         * The region.
+         * <p>The region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -217,7 +239,10 @@ public class GetApplicationInstanceListRequest extends Request {
         }
 
         /**
-         * The tags that you want to add to nodes.
+         * <p>The tags that you want to add to nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gray</p>
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);

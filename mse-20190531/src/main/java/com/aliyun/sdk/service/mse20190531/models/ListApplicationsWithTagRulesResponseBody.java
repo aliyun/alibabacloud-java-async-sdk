@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationsWithTagRulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListApplicationsWithTagRulesResponseBody</p>
@@ -85,7 +86,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -93,7 +94,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -101,11 +105,14 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <ul>
+         * <li>If the request is successful, a success message is returned.</li>
+         * <li>If the request fails, an error message is returned.</li>
+         * </ul>
          * 
-         * *   If the request is successful, a success message is returned.
-         * *   If the request fails, an error message is returned.
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +120,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7466566F-F30F-4A29-965D-3E0AF21D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +131,14 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,6 +151,12 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListApplicationsWithTagRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsWithTagRulesResponseBody</p>
+     */
     public static class ArgumentItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cond")
         private String cond;
@@ -359,6 +378,12 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListApplicationsWithTagRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsWithTagRulesResponseBody</p>
+     */
     public static class Dubbo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("appId")
         private String appId;
@@ -580,6 +605,12 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListApplicationsWithTagRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsWithTagRulesResponseBody</p>
+     */
     public static class RestItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cond")
         private String cond;
@@ -801,6 +832,12 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListApplicationsWithTagRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsWithTagRulesResponseBody</p>
+     */
     public static class Springcloud extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("appId")
         private String appId;
@@ -1002,6 +1039,12 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListApplicationsWithTagRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsWithTagRulesResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dubbo")
         private java.util.List < Dubbo> dubbo;
@@ -1063,6 +1106,12 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListApplicationsWithTagRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsWithTagRulesResponseBody</p>
+     */
     public static class RouteRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
@@ -1174,11 +1223,14 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             private String tag; 
 
             /**
-             * Indicates whether the alert rule is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the alert rule is enabled. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -1186,7 +1238,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The rule ID.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>653</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1194,7 +1249,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances.
+             * <p>The number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder instanceNum(Integer instanceNum) {
                 this.instanceNum = instanceNum;
@@ -1202,7 +1260,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The rule name.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dubbo</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1210,7 +1271,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The rate.
+             * <p>The rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder rate(Integer rate) {
                 this.rate = rate;
@@ -1218,7 +1282,25 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the routing rule.
+             * <p>The details of the routing rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *       &quot;dubbo&quot;: [{
+             *     &quot;serviceName&quot;: &quot;com.taobao.hsf.common.DemoService&quot;,
+             *     &quot;group&quot;: &quot;&quot;,
+             *     &quot;version&quot;: &quot;&quot;,
+             *     &quot;methodName&quot;: &quot;sayHello&quot;,
+             *     &quot;condition&quot;: &quot;AND&quot;,
+             *     &quot;argumentItems&quot;: [{
+             *         &quot;index&quot;: 0,
+             *         &quot;expr&quot;: &quot;&quot;,
+             *         &quot;operator&quot;: &quot;rawvalue&quot;,
+             *         &quot;value&quot;: &quot;jim&quot;,
+             *         &quot;cond&quot;: &quot;==&quot;
+             *     }]
+             *       }]
+             *   }</p>
              */
             public Builder rules(Rules rules) {
                 this.rules = rules;
@@ -1226,7 +1308,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -1234,7 +1319,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag.
+             * <p>The tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gray</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -1248,6 +1336,12 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListApplicationsWithTagRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsWithTagRulesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -1323,7 +1417,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             private Long routeStatus; 
 
             /**
-             * The application ID.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>daqijp6c31@xxx</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -1331,7 +1428,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The application name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service-lottery-core</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -1339,7 +1439,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The MSE namespace to which the application belongs.
+             * <p>The MSE namespace to which the application belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -1347,7 +1450,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The queried rules.
+             * <p>The queried rules.</p>
              */
             public Builder routeRules(java.util.List < RouteRules> routeRules) {
                 this.routeRules = routeRules;
@@ -1355,11 +1458,14 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The route state. Valid values:
-             * <p>
+             * <p>The route state. Valid values:</p>
+             * <ul>
+             * <li>0: disabled</li>
+             * <li>1: enabled</li>
+             * </ul>
              * 
-             * *   0: disabled
-             * *   1: enabled
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder routeStatus(Long routeStatus) {
                 this.routeStatus = routeStatus;
@@ -1373,6 +1479,12 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListApplicationsWithTagRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsWithTagRulesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -1436,7 +1548,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -1444,7 +1559,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1452,7 +1570,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The returned data.
+             * <p>The returned data.</p>
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -1460,7 +1578,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

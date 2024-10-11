@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAnsServicesResponseBody} extends {@link TeaModel}
  *
  * <p>ListAnsServicesResponseBody</p>
@@ -133,7 +134,7 @@ public class ListAnsServicesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -141,7 +142,10 @@ public class ListAnsServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -149,7 +153,10 @@ public class ListAnsServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202</p>
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -157,7 +164,10 @@ public class ListAnsServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request was successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -165,7 +175,10 @@ public class ListAnsServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -173,7 +186,10 @@ public class ListAnsServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -181,7 +197,10 @@ public class ListAnsServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52BA6DA6-A702-4362-A32F-DFF79655****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -189,11 +208,14 @@ public class ListAnsServicesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +223,10 @@ public class ListAnsServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of instances returned.
+         * <p>The total number of instances returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -214,6 +239,12 @@ public class ListAnsServicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAnsServicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAnsServicesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterCount")
         private Integer clusterCount;
@@ -301,7 +332,10 @@ public class ListAnsServicesResponseBody extends TeaModel {
             private String source; 
 
             /**
-             * The total number of clusters.
+             * <p>The total number of clusters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder clusterCount(Integer clusterCount) {
                 this.clusterCount = clusterCount;
@@ -309,7 +343,10 @@ public class ListAnsServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the contact group.
+             * <p>The name of the contact group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -317,7 +354,10 @@ public class ListAnsServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of instances with healthy heartbeats.
+             * <p>The total number of instances with healthy heartbeats.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder healthyInstanceCount(Integer healthyInstanceCount) {
                 this.healthyInstanceCount = healthyInstanceCount;
@@ -325,7 +365,10 @@ public class ListAnsServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of instances that are used for the current service.
+             * <p>The total number of instances that are used for the current service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ipCount(Integer ipCount) {
                 this.ipCount = ipCount;
@@ -333,7 +376,10 @@ public class ListAnsServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMigrationTaskResponseBody} extends {@link TeaModel}
  *
  * <p>ListMigrationTaskResponseBody</p>
@@ -133,7 +134,7 @@ public class ListMigrationTaskResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The array structure.
+         * <p>The array structure.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -141,7 +142,10 @@ public class ListMigrationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -149,7 +153,10 @@ public class ListMigrationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -157,7 +164,10 @@ public class ListMigrationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request was successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -165,7 +175,10 @@ public class ListMigrationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -173,7 +186,10 @@ public class ListMigrationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -181,7 +197,10 @@ public class ListMigrationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>451EBE59-5F33-5B15-83C1-78593B9*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -189,11 +208,14 @@ public class ListMigrationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +223,10 @@ public class ListMigrationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -214,6 +239,12 @@ public class ListMigrationTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMigrationTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMigrationTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterType")
         private String clusterType;
@@ -385,12 +416,15 @@ public class ListMigrationTaskResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * The type of the instance.
-             * <p>
+             * <p>The type of the instance.</p>
+             * <ul>
+             * <li>Nacos-Ans</li>
+             * <li>ZooKeeper</li>
+             * <li>Eureka</li>
+             * </ul>
              * 
-             * *   Nacos-Ans
-             * *   ZooKeeper
-             * *   Eureka
+             * <strong>example:</strong>
+             * <p>Nacos-Ans</p>
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -398,7 +432,10 @@ public class ListMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-07T10:07:57.000+0000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -406,7 +443,10 @@ public class ListMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The update time.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-30T06:41:52.000+0000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -414,7 +454,10 @@ public class ListMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the job.
+             * <p>The ID of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -422,7 +465,10 @@ public class ListMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The address of the source instance node.
+             * <p>The address of the source instance node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.1:8848</p>
              */
             public Builder originInstanceAddress(String originInstanceAddress) {
                 this.originInstanceAddress = originInstanceAddress;
@@ -430,7 +476,10 @@ public class ListMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the source instance.
+             * <p>The name of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder originInstanceName(String originInstanceName) {
                 this.originInstanceName = originInstanceName;
@@ -438,7 +487,10 @@ public class ListMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The list of namespaces. This parameter is optional if applications are migrated from a Nacos instance.
+             * <p>The list of namespaces. This parameter is optional if applications are migrated from a Nacos instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fsdfsdfdsf</p>
              */
             public Builder originInstanceNamespace(String originInstanceNamespace) {
                 this.originInstanceNamespace = originInstanceNamespace;
@@ -446,7 +498,10 @@ public class ListMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder projectDesc(String projectDesc) {
                 this.projectDesc = projectDesc;
@@ -462,7 +517,10 @@ public class ListMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the destination instance.
+             * <p>The name of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>multiple-nacos</p>
              */
             public Builder targetClusterName(String targetClusterName) {
                 this.targetClusterName = targetClusterName;
@@ -470,7 +528,10 @@ public class ListMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the destination instance.
+             * <p>The URL of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mse-f1******-nacos-ans.mse.aliyuncs.com:8848</p>
              */
             public Builder targetClusterUrl(String targetClusterUrl) {
                 this.targetClusterUrl = targetClusterUrl;
@@ -478,7 +539,10 @@ public class ListMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the destination instance.
+             * <p>The ID of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mse-cn-zv*****</p>
              */
             public Builder targetInstanceId(String targetInstanceId) {
                 this.targetInstanceId = targetInstanceId;
@@ -486,7 +550,10 @@ public class ListMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

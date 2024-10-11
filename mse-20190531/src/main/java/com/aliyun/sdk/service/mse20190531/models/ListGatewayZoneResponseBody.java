@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGatewayZoneResponseBody} extends {@link TeaModel}
  *
  * <p>ListGatewayZoneResponseBody</p>
@@ -133,7 +134,10 @@ public class ListGatewayZoneResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code. The status code 200 indicates that the request was successful.
+         * <p>The response code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -141,7 +145,7 @@ public class ListGatewayZoneResponseBody extends TeaModel {
         }
 
         /**
-         * The queried zones.
+         * <p>The queried zones.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -149,7 +153,10 @@ public class ListGatewayZoneResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message.
+         * <p>The dynamic part in the error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -157,7 +164,10 @@ public class ListGatewayZoneResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message. This parameter is used to replace %s in **ErrMessage**.
+         * <p>The dynamic part in the error message. This parameter is used to replace %s in <strong>ErrMessage</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter is invalid.</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -165,7 +175,10 @@ public class ListGatewayZoneResponseBody extends TeaModel {
         }
 
         /**
-         * The status code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NO_PERMISSION</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -173,7 +186,10 @@ public class ListGatewayZoneResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -181,7 +197,10 @@ public class ListGatewayZoneResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -189,7 +208,10 @@ public class ListGatewayZoneResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE5C32A1-BC0E-4B79-817C-103E4EDF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -197,11 +219,14 @@ public class ListGatewayZoneResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -214,6 +239,12 @@ public class ListGatewayZoneResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListGatewayZoneResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewayZoneResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
@@ -253,7 +284,10 @@ public class ListGatewayZoneResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The local name of the zone.
+             * <p>The local name of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>I</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -261,7 +295,10 @@ public class ListGatewayZoneResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

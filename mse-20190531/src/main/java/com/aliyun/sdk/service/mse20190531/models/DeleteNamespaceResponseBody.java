@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteNamespaceResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteNamespaceResponseBody</p>
@@ -85,7 +86,10 @@ public class DeleteNamespaceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NO_PERMISSION</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceListenersResponseBody} extends {@link TeaModel}
  *
  * <p>GetServiceListenersResponseBody</p>
@@ -133,7 +134,7 @@ public class GetServiceListenersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -141,7 +142,10 @@ public class GetServiceListenersResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -149,7 +153,10 @@ public class GetServiceListenersResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202</p>
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -157,11 +164,14 @@ public class GetServiceListenersResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
-         * <p>
+         * <p>The message returned.</p>
+         * <ul>
+         * <li>If the request is successful, a success message is returned.</li>
+         * <li>If the request fails, an error message is returned.</li>
+         * </ul>
          * 
-         * *   If the request is successful, a success message is returned.
-         * *   If the request fails, an error message is returned.
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -169,7 +179,10 @@ public class GetServiceListenersResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -177,7 +190,10 @@ public class GetServiceListenersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -185,7 +201,10 @@ public class GetServiceListenersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54973C90-F379-4372-9AA5-053A3F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,11 +212,14 @@ public class GetServiceListenersResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -205,7 +227,10 @@ public class GetServiceListenersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of listeners that are queried.
+         * <p>The number of listeners that are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -218,6 +243,12 @@ public class GetServiceListenersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetServiceListenersResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceListenersResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Addr")
         private String addr;
@@ -329,7 +360,10 @@ public class GetServiceListenersResponseBody extends TeaModel {
             private String serviceName; 
 
             /**
-             * The IP address of the listener.
+             * <p>The IP address of the listener.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>119.23.84.102</p>
              */
             public Builder addr(String addr) {
                 this.addr = addr;
@@ -337,7 +371,10 @@ public class GetServiceListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The listener client version.
+             * <p>The listener client version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Nacos-Java-Client:v2.1.1</p>
              */
             public Builder agent(String agent) {
                 this.agent = agent;
@@ -345,7 +382,10 @@ public class GetServiceListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The application name of the listener.
+             * <p>The application name of the listener.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app</p>
              */
             public Builder app(String app) {
                 this.app = app;
@@ -353,7 +393,10 @@ public class GetServiceListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster to which the monitored service belongs.
+             * <p>The name of the cluster to which the monitored service belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFAULT</p>
              */
             public Builder cluster(String cluster) {
                 this.cluster = cluster;
@@ -361,7 +404,10 @@ public class GetServiceListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the monitored service.
+             * <p>The IP address of the monitored service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.1.5</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -369,7 +415,10 @@ public class GetServiceListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the namespace.
+             * <p>The ID of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0ba53825-b183-414f-a6a0-288e4f1c467e</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -377,7 +426,10 @@ public class GetServiceListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of the monitored service.
+             * <p>The port number of the monitored service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -385,7 +437,10 @@ public class GetServiceListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the monitored service.
+             * <p>The name of the monitored service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zeekr-orderboss</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;

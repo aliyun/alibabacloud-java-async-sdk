@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGatewayDomainResponseBody} extends {@link TeaModel}
  *
  * <p>ListGatewayDomainResponseBody</p>
@@ -97,7 +98,10 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +128,10 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You are not authorized to perform this operation.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +139,10 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3F5D8E93-CA66-57F1-8BCF-A223E11B6B91</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class ListGatewayDomainResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListGatewayDomainResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewayDomainResponseBody</p>
+     */
     public static class Comment extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -181,7 +203,10 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The route status.
+             * <p>The route status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Error</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -195,6 +220,12 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGatewayDomainResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewayDomainResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertBeforeDate")
         private String certBeforeDate;
@@ -390,7 +421,10 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The time when the certificate expires.
+             * <p>The time when the certificate expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2031-03-30 02:35:12</p>
              */
             public Builder certBeforeDate(String certBeforeDate) {
                 this.certBeforeDate = certBeforeDate;
@@ -398,7 +432,10 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The certificate ID.
+             * <p>The certificate ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3452-cn-hangzhou</p>
              */
             public Builder certIdentifier(String certIdentifier) {
                 this.certIdentifier = certIdentifier;
@@ -406,7 +443,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The route comment. This parameter is returned only in ingress scenarios.
+             * <p>The route comment. This parameter is returned only in ingress scenarios.</p>
              */
             public Builder comment(Comment comment) {
                 this.comment = comment;
@@ -414,7 +451,10 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The gateway ID.
+             * <p>The gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -422,7 +462,10 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the domain name was created.
+             * <p>The time when the domain name was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2031-03-30 02:35:12</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -430,7 +473,10 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the domain name was updated.
+             * <p>The time when the domain name was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2031-03-30 02:35:12</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -438,12 +484,15 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether `HTTP/2` is enabled.
-             * <p>
+             * <p>Indicates whether <code>HTTP/2</code> is enabled.</p>
+             * <ul>
+             * <li><code>open</code>: <code>HTTP/2</code> is enabled.</li>
+             * <li><code>close</code>: <code>HTTP/2</code> is disabled.</li>
+             * <li><code>globalConfig</code>: Global configurations are used.</li>
+             * </ul>
              * 
-             * *   `open`: `HTTP/2` is enabled.
-             * *   `close`: `HTTP/2` is disabled.
-             * *   `globalConfig`: Global configurations are used.
+             * <strong>example:</strong>
+             * <p>close</p>
              */
             public Builder http2(String http2) {
                 this.http2 = http2;
@@ -451,7 +500,10 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the domain name.
+             * <p>The ID of the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>243</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -459,7 +511,10 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether HTTPS is forcefully used.
+             * <p>Indicates whether HTTPS is forcefully used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder mustHttps(Boolean mustHttps) {
                 this.mustHttps = mustHttps;
@@ -467,7 +522,10 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.com</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -475,7 +533,10 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol.
+             * <p>The protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -483,15 +544,18 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the domain name. Valid values:
-             * <p>
+             * <p>The state of the domain name. Valid values:</p>
+             * <ul>
+             * <li>0: unpublished</li>
+             * <li>2: publishing</li>
+             * <li>3: published</li>
+             * <li>4: editing</li>
+             * <li>5: unpublishing</li>
+             * <li>6: unavailable</li>
+             * </ul>
              * 
-             * *   0: unpublished
-             * *   2: publishing
-             * *   3: published
-             * *   4: editing
-             * *   5: unpublishing
-             * *   6: unavailable
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -499,7 +563,10 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum version of Transport Layer Security (TLS).
+             * <p>The maximum version of Transport Layer Security (TLS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TLS 1.3</p>
              */
             public Builder tlsMax(String tlsMax) {
                 this.tlsMax = tlsMax;
@@ -507,7 +574,10 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum version of TLS.
+             * <p>The minimum version of TLS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TLS 1.0</p>
              */
             public Builder tlsMin(String tlsMin) {
                 this.tlsMin = tlsMin;
@@ -515,11 +585,14 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the domain name source. Valid values:
-             * <p>
+             * <p>The type of the domain name source. Valid values:</p>
+             * <ul>
+             * <li>Op: console</li>
+             * <li>Ingress: MSE Ingress</li>
+             * </ul>
              * 
-             * *   Op: console
-             * *   Ingress: MSE Ingress
+             * <strong>example:</strong>
+             * <p>Op</p>
              */
             public Builder type(String type) {
                 this.type = type;

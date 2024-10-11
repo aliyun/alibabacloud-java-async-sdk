@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryGatewayTypeResponseBody} extends {@link TeaModel}
  *
  * <p>QueryGatewayTypeResponseBody</p>
@@ -97,7 +98,10 @@ public class QueryGatewayTypeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned. The value 200 indicates that the request was successful. Other values indicate that the request failed.
+         * <p>The status code returned. The value 200 indicates that the request was successful. Other values indicate that the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class QueryGatewayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the gateway type. The data type of this parameter is List.
+         * <p>The information about the gateway type. The data type of this parameter is List.</p>
          */
         public Builder data(java.util.List < String > data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class QueryGatewayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +128,10 @@ public class QueryGatewayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned. If the request is successful, a success message is returned. If the request fails, an error message is returned.
+         * <p>The message returned. If the request is successful, a success message is returned. If the request fails, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request is successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +139,10 @@ public class QueryGatewayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52BA6DA6-A702-4362-A32F-DFF79655****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class QueryGatewayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

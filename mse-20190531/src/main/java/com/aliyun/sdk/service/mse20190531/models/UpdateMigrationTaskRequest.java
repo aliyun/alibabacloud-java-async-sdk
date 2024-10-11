@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMigrationTaskRequest} extends {@link RequestModel}
  *
  * <p>UpdateMigrationTaskRequest</p>
@@ -207,11 +208,14 @@ public class UpdateMigrationTaskRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -220,12 +224,15 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * The type of the instance. Valid values:
-         * <p>
+         * <p>The type of the instance. Valid values:</p>
+         * <ul>
+         * <li>Nacos-Ans</li>
+         * <li>ZooKeeper</li>
+         * <li>Eureka</li>
+         * </ul>
          * 
-         * *   Nacos-Ans
-         * *   ZooKeeper
-         * *   Eureka
+         * <strong>example:</strong>
+         * <p>Nacos-Ans</p>
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -234,7 +241,10 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * The ID of the task.
+         * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -243,7 +253,10 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * The address of the source instance node.
+         * <p>The address of the source instance node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.1:8848</p>
          */
         public Builder originInstanceAddress(String originInstanceAddress) {
             this.putQueryParameter("OriginInstanceAddress", originInstanceAddress);
@@ -252,7 +265,10 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * The name of the source instance.
+         * <p>The name of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Source instance</p>
          */
         public Builder originInstanceName(String originInstanceName) {
             this.putQueryParameter("OriginInstanceName", originInstanceName);
@@ -261,7 +277,10 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * The list of namespaces. This parameter is optional if you want to migrate applications from a Nacos instance.
+         * <p>The list of namespaces. This parameter is optional if you want to migrate applications from a Nacos instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>namesapceId1,namesapceId2</p>
          */
         public Builder originInstanceNamespace(String originInstanceNamespace) {
             this.putQueryParameter("OriginInstanceNamespace", originInstanceNamespace);
@@ -270,7 +289,10 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * The description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a description.</p>
          */
         public Builder projectDesc(String projectDesc) {
             this.putQueryParameter("ProjectDesc", projectDesc);
@@ -279,7 +301,10 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * The extended request parameters in the JSON format.
+         * <p>The extended request parameters in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -297,7 +322,10 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * The name of the destination instance.
+         * <p>The name of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Destination instance</p>
          */
         public Builder targetClusterName(String targetClusterName) {
             this.putQueryParameter("TargetClusterName", targetClusterName);
@@ -306,7 +334,10 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * The URL of the destination instance.
+         * <p>The URL of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-66*****-nacos-ans.mse.aliyuncs.com:8848</p>
          */
         public Builder targetClusterUrl(String targetClusterUrl) {
             this.putQueryParameter("TargetClusterUrl", targetClusterUrl);
@@ -315,7 +346,10 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * The ID of the destination instance.
+         * <p>The ID of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-cn-ud82*****</p>
          */
         public Builder targetInstanceId(String targetInstanceId) {
             this.putQueryParameter("TargetInstanceId", targetInstanceId);

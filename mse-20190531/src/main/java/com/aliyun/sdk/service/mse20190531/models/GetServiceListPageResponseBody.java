@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceListPageResponseBody} extends {@link TeaModel}
  *
  * <p>GetServiceListPageResponseBody</p>
@@ -73,7 +74,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response to the request.
+         * <p>The response to the request.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -81,7 +82,10 @@ public class GetServiceListPageResponseBody extends TeaModel {
         }
 
         /**
-         * The request information.
+         * <p>The request information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -89,7 +93,10 @@ public class GetServiceListPageResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A2F946FB-F2E3-5BF4-8CBE-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +104,10 @@ public class GetServiceListPageResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -110,6 +120,12 @@ public class GetServiceListPageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetServiceListPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceListPageResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -221,7 +237,10 @@ public class GetServiceListPageResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The application ID.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dez4xxxxx@f3f75ed8ffxxxxx</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -229,7 +248,10 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The application name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-app</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -237,7 +259,10 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the service was last updated.
+             * <p>The time when the service was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder gmtModifyTime(String gmtModifyTime) {
                 this.gmtModifyTime = gmtModifyTime;
@@ -245,7 +270,10 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The group to which the service belongs.
+             * <p>The group to which the service belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFAULT_GROUP</p>
              */
             public Builder group(String group) {
                 this.group = group;
@@ -253,7 +281,10 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The number of service nodes.
+             * <p>The number of service nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder instanceNum(Integer instanceNum) {
                 this.instanceNum = instanceNum;
@@ -261,7 +292,10 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The service name.
+             * <p>The service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sc-A</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -277,7 +311,10 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The service version.
+             * <p>The service version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -291,6 +328,12 @@ public class GetServiceListPageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetServiceListPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceListPageResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private String pageNumber;
@@ -354,7 +397,10 @@ public class GetServiceListPageResponseBody extends TeaModel {
             private String totalSize; 
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(String pageNumber) {
                 this.pageNumber = pageNumber;
@@ -362,7 +408,10 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(String pageSize) {
                 this.pageSize = pageSize;
@@ -370,7 +419,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The data on the current page.
+             * <p>The data on the current page.</p>
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -378,7 +427,10 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalSize(String totalSize) {
                 this.totalSize = totalSize;

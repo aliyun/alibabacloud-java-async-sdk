@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CloneSentinelRuleFromAhasResponseBody} extends {@link TeaModel}
  *
  * <p>CloneSentinelRuleFromAhasResponseBody</p>
@@ -49,7 +50,7 @@ public class CloneSentinelRuleFromAhasResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.Map < String, java.util.List<String>> data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class CloneSentinelRuleFromAhasResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE5C32A1-BC0E-4B79-817C-103E4EDF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

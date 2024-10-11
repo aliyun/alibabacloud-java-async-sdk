@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAppBySwimmingLaneGroupTagsRequest} extends {@link RequestModel}
  *
  * <p>ListAppBySwimmingLaneGroupTagsRequest</p>
@@ -97,7 +98,10 @@ public class ListAppBySwimmingLaneGroupTagsRequest extends Request {
         } 
 
         /**
-         * The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.
+         * <p>The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -106,7 +110,11 @@ public class ListAppBySwimmingLaneGroupTagsRequest extends Request {
         }
 
         /**
-         * The ID of the lane group.
+         * <p>The ID of the lane group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -115,7 +123,11 @@ public class ListAppBySwimmingLaneGroupTagsRequest extends Request {
         }
 
         /**
-         * The name of the MSE namespace that you want to query.
+         * <p>The name of the MSE namespace that you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -124,7 +136,7 @@ public class ListAppBySwimmingLaneGroupTagsRequest extends Request {
         }
 
         /**
-         * The tag based on which you want to list applications.
+         * <p>The tag based on which you want to list applications.</p>
          */
         public Builder tags(java.util.List < String > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");

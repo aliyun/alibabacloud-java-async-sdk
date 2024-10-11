@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteGatewayRouteRequest} extends {@link RequestModel}
  *
  * <p>DeleteGatewayRouteRequest</p>
@@ -81,11 +82,14 @@ public class DeleteGatewayRouteRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -94,7 +98,10 @@ public class DeleteGatewayRouteRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-492af9b04bb4474cae9d645be850e3d7</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -103,7 +110,10 @@ public class DeleteGatewayRouteRequest extends Request {
         }
 
         /**
-         * The ID of the route.
+         * <p>The ID of the route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>252</p>
          */
         public Builder routeId(String routeId) {
             this.putQueryParameter("RouteId", routeId);

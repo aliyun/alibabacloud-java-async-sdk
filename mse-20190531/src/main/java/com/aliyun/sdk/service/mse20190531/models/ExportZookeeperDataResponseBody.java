@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportZookeeperDataResponseBody} extends {@link TeaModel}
  *
  * <p>ExportZookeeperDataResponseBody</p>
@@ -109,7 +110,7 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -117,10 +118,13 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
-         * <p>
+         * <p>The dynamic part in the error message. This parameter is used to replace the **%s** variable in the <strong>ErrMessage</strong> parameter.</p>
+         * <blockquote>
+         * <p>If the return value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> parameter is invalid.</p>
+         * </blockquote>
          * 
-         * > If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
+         * <strong>example:</strong>
+         * <p>The specified parameter is invalid.</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -128,7 +132,10 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -136,7 +143,10 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -144,11 +154,14 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
-         * <p>
+         * <p>The message returned.</p>
+         * <ul>
+         * <li>If the request is successful, a success message is returned.</li>
+         * <li>If the request fails, an error message is returned.</li>
+         * </ul>
          * 
-         * *   If the request is successful, a success message is returned.
-         * *   If the request fails, an error message is returned.
+         * <strong>example:</strong>
+         * <p>The request was successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -156,7 +169,10 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25EA0A83-9007-4E87-808C-637BE1A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -164,11 +180,14 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -181,6 +200,12 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ExportZookeeperDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>ExportZookeeperDataResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContentMap")
         private java.util.Map < String, ? > contentMap;
@@ -304,7 +329,7 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * The content of a task.
+             * <p>The content of a task.</p>
              */
             public Builder contentMap(java.util.Map < String, ? > contentMap) {
                 this.contentMap = contentMap;
@@ -312,7 +337,10 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1631001140913</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -320,11 +348,14 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the object that is exported. Valid values:
-             * <p>
+             * <p>The type of the object that is exported. Valid values:</p>
+             * <ul>
+             * <li>transactionLog: transaction logs</li>
+             * <li>snapshot: snapshots</li>
+             * </ul>
              * 
-             * *   transactionLog: transaction logs
-             * *   snapshot: snapshots
+             * <strong>example:</strong>
+             * <p>snapshot</p>
              */
             public Builder exportType(String exportType) {
                 this.exportType = exportType;
@@ -332,7 +363,10 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
             }
 
             /**
-             * The extended information.
+             * <p>The extended information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder extend(String extend) {
                 this.extend = extend;
@@ -340,7 +374,10 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -348,7 +385,10 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance
+             * <p>The ID of the instance</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mse-cn-st21ri2****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -356,7 +396,10 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the associated task at the underlying layer. This parameter is used only to troubleshoot failures.
+             * <p>The ID of the associated task at the underlying layer. This parameter is used only to troubleshoot failures.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder kubeoneTaskIds(String kubeoneTaskIds) {
                 this.kubeoneTaskIds = kubeoneTaskIds;
@@ -364,14 +407,17 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task. Valid values:
-             * <p>
+             * <p>The status of the task. Valid values:</p>
+             * <ul>
+             * <li>CREATE: The object is being created.</li>
+             * <li>RUNNING: The task is running.</li>
+             * <li>FINISH: The task is completed.</li>
+             * <li>FAILED: The task fails.</li>
+             * <li>EXPIRE: The task has expired.</li>
+             * </ul>
              * 
-             * *   CREATE: The object is being created.
-             * *   RUNNING: The task is running.
-             * *   FINISH: The task is completed.
-             * *   FAILED: The task fails.
-             * *   EXPIRE: The task has expired.
+             * <strong>example:</strong>
+             * <p>FINISH</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -379,7 +425,10 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
             }
 
             /**
-             * The last update time.
+             * <p>The last update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1632979237663</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

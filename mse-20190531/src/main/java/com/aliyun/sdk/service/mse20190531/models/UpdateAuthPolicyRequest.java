@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAuthPolicyRequest} extends {@link RequestModel}
  *
  * <p>UpdateAuthPolicyRequest</p>
@@ -180,7 +181,10 @@ public class UpdateAuthPolicyRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values: zh-CN and en-US. Default value: zh-CN. The value zh-CN indicates Chinese, and the value en-US indicates English.
+         * <p>The language of the response. Valid values: zh-CN and en-US. Default value: zh-CN. The value zh-CN indicates Chinese, and the value en-US indicates English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -189,7 +193,10 @@ public class UpdateAuthPolicyRequest extends Request {
         }
 
         /**
-         * The application ID.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcde@12345</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -198,7 +205,10 @@ public class UpdateAuthPolicyRequest extends Request {
         }
 
         /**
-         * The content of the service authentication rule.
+         * <p>The content of the service authentication rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;all&quot;:true,&quot;appIds&quot;:[&quot;f6xqzbao96@4adfaf3c92c947a&quot;],&quot;black&quot;:false}]</p>
          */
         public Builder authRule(String authRule) {
             this.putQueryParameter("AuthRule", authRule);
@@ -207,7 +217,10 @@ public class UpdateAuthPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the rule.
+         * <p>Specifies whether to enable the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(String enable) {
             this.putQueryParameter("Enable", enable);
@@ -216,7 +229,11 @@ public class UpdateAuthPolicyRequest extends Request {
         }
 
         /**
-         * The rule ID.
+         * <p>The rule ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>432</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -225,7 +242,10 @@ public class UpdateAuthPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the ACK cluster namespace.
+         * <p>The ID of the ACK cluster namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c19c6c500e1ff4d7abc7bed9b8236***</p>
          */
         public Builder k8sNamespace(String k8sNamespace) {
             this.putQueryParameter("K8sNamespace", k8sNamespace);
@@ -234,7 +254,10 @@ public class UpdateAuthPolicyRequest extends Request {
         }
 
         /**
-         * The name of the rule.
+         * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -243,12 +266,15 @@ public class UpdateAuthPolicyRequest extends Request {
         }
 
         /**
-         * The protocol type. Valid values:
-         * <p>
+         * <p>The protocol type. Valid values:</p>
+         * <ul>
+         * <li><strong>SPRING_CLOUD</strong></li>
+         * <li><strong>DUBBO</strong></li>
+         * <li><strong>istio</strong></li>
+         * </ul>
          * 
-         * *   **SPRING_CLOUD**
-         * *   **DUBBO**
-         * *   **istio**
+         * <strong>example:</strong>
+         * <p>SPRING_CLOUD</p>
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -257,7 +283,10 @@ public class UpdateAuthPolicyRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -266,7 +295,10 @@ public class UpdateAuthPolicyRequest extends Request {
         }
 
         /**
-         * The source for application access.
+         * <p>The source for application access.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edasmsc</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

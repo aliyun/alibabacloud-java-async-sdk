@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServiceSourceRequest} extends {@link RequestModel}
  *
  * <p>ListServiceSourceRequest</p>
@@ -81,11 +82,14 @@ public class ListServiceSourceRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -94,7 +98,10 @@ public class ListServiceSourceRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-c51a15c7ee934a4fb945ccf35fe1****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -103,14 +110,17 @@ public class ListServiceSourceRequest extends Request {
         }
 
         /**
-         * Specifies the type of the returned service source. If this parameter is not specified, service sources of all types are returned. Valid values:
-         * <p>
+         * <p>Specifies the type of the returned service source. If this parameter is not specified, service sources of all types are returned. Valid values:</p>
+         * <ul>
+         * <li>K8s</li>
+         * <li>MSE</li>
+         * <li>MSE_ZK</li>
+         * <li>SAE</li>
+         * <li>EDAS</li>
+         * </ul>
          * 
-         * *   K8s
-         * *   MSE
-         * *   MSE_ZK
-         * *   SAE
-         * *   EDAS
+         * <strong>example:</strong>
+         * <p>MSE</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

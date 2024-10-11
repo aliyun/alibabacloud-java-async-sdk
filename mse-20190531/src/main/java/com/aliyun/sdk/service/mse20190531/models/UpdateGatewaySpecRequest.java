@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGatewaySpecRequest} extends {@link RequestModel}
  *
  * <p>UpdateGatewaySpecRequest</p>
@@ -98,11 +99,14 @@ public class UpdateGatewaySpecRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -111,7 +115,11 @@ public class UpdateGatewaySpecRequest extends Request {
         }
 
         /**
-         * The ID of the gateway.
+         * <p>The ID of the gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-c70622ff52fe49beb29bea9a6f52****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -120,7 +128,11 @@ public class UpdateGatewaySpecRequest extends Request {
         }
 
         /**
-         * The number of nodes.
+         * <p>The number of nodes.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder replica(Integer replica) {
             this.putQueryParameter("Replica", replica);
@@ -129,7 +141,11 @@ public class UpdateGatewaySpecRequest extends Request {
         }
 
         /**
-         * The node specifications of the gateway.
+         * <p>The node specifications of the gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MSE_GTW_4_8_200_c</p>
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);

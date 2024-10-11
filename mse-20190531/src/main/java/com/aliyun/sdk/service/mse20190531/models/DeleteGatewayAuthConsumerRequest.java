@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteGatewayAuthConsumerRequest} extends {@link RequestModel}
  *
  * <p>DeleteGatewayAuthConsumerRequest</p>
@@ -83,11 +84,14 @@ public class DeleteGatewayAuthConsumerRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -96,7 +100,11 @@ public class DeleteGatewayAuthConsumerRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-c70622ff52fe49beb29bea9a6f52****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -105,7 +113,11 @@ public class DeleteGatewayAuthConsumerRequest extends Request {
         }
 
         /**
-         * The ID of the consumer on which the gateway performs authentication operations.
+         * <p>The ID of the consumer on which the gateway performs authentication operations.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33ff74b6-d21e-4f9b-91a8-bc1ea4ef****</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

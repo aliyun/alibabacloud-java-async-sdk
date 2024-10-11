@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteGatewayIsolationRuleRequest} extends {@link RequestModel}
  *
  * <p>DeleteGatewayIsolationRuleRequest</p>
@@ -107,7 +108,10 @@ public class DeleteGatewayIsolationRuleRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-e2d226bba4b2445c9e29fa7f8216****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -116,7 +120,10 @@ public class DeleteGatewayIsolationRuleRequest extends Request {
         }
 
         /**
-         * RouteId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11151</p>
          */
         public Builder routeId(Long routeId) {
             this.putQueryParameter("RouteId", routeId);
@@ -125,7 +132,10 @@ public class DeleteGatewayIsolationRuleRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);

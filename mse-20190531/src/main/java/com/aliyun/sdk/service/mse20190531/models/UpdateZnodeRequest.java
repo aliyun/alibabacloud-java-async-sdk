@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateZnodeRequest} extends {@link RequestModel}
  *
  * <p>UpdateZnodeRequest</p>
@@ -112,11 +113,14 @@ public class UpdateZnodeRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -125,7 +129,11 @@ public class UpdateZnodeRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-09k1q11****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -134,7 +142,11 @@ public class UpdateZnodeRequest extends Request {
         }
 
         /**
-         * The data of the node.
+         * <p>The data of the node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>data</p>
          */
         public Builder data(String data) {
             this.putQueryParameter("Data", data);
@@ -143,7 +155,11 @@ public class UpdateZnodeRequest extends Request {
         }
 
         /**
-         * The path of the node.
+         * <p>The path of the node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/zookeeper</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -152,7 +168,10 @@ public class UpdateZnodeRequest extends Request {
         }
 
         /**
-         * The extended request parameters in the JSON format.
+         * <p>The extended request parameters in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetKubernetesSourceResponseBody} extends {@link TeaModel}
  *
  * <p>GetKubernetesSourceResponseBody</p>
@@ -97,7 +98,10 @@ public class GetKubernetesSourceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class GetKubernetesSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class GetKubernetesSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +128,10 @@ public class GetKubernetesSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You are not authorized to perform this operation.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +139,10 @@ public class GetKubernetesSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1085A66C-DEF1-58EE-A0A4-31E00C9FC0D5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class GetKubernetesSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class GetKubernetesSourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetKubernetesSourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetKubernetesSourceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cluster")
         private String cluster;
@@ -193,7 +215,10 @@ public class GetKubernetesSourceResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The ID of the ACK cluster.
+             * <p>The ID of the ACK cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cbc1efca895a64af097ff00b26f3f****</p>
              */
             public Builder cluster(String cluster) {
                 this.cluster = cluster;
@@ -201,7 +226,10 @@ public class GetKubernetesSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the ACK cluster.
+             * <p>The name of the ACK cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k8s-demo</p>
              */
             public Builder name(String name) {
                 this.name = name;

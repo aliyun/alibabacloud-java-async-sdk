@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGatewayIsolationRuleRequest} extends {@link RequestModel}
  *
  * <p>UpdateGatewayIsolationRuleRequest</p>
@@ -237,7 +238,10 @@ public class UpdateGatewayIsolationRuleRequest extends Request {
         }
 
         /**
-         * BehaviorType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder behaviorType(Integer behaviorType) {
             this.putQueryParameter("BehaviorType", behaviorType);
@@ -255,7 +259,10 @@ public class UpdateGatewayIsolationRuleRequest extends Request {
         }
 
         /**
-         * Enable.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder enable(Integer enable) {
             this.putQueryParameter("Enable", enable);
@@ -273,7 +280,10 @@ public class UpdateGatewayIsolationRuleRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-e2d226bba4b2445c9e29fa7f8216****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -282,7 +292,10 @@ public class UpdateGatewayIsolationRuleRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>358</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -291,7 +304,10 @@ public class UpdateGatewayIsolationRuleRequest extends Request {
         }
 
         /**
-         * MaxConcurrency.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxConcurrency(Integer maxConcurrency) {
             this.putQueryParameter("MaxConcurrency", maxConcurrency);
@@ -327,7 +343,10 @@ public class UpdateGatewayIsolationRuleRequest extends Request {
         }
 
         /**
-         * RouteId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52853</p>
          */
         public Builder routeId(Long routeId) {
             this.putQueryParameter("RouteId", routeId);
@@ -336,7 +355,10 @@ public class UpdateGatewayIsolationRuleRequest extends Request {
         }
 
         /**
-         * RouteName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>routeName</p>
          */
         public Builder routeName(String routeName) {
             this.putQueryParameter("RouteName", routeName);

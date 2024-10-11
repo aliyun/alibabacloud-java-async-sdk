@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAppMessageQueueRouteRequest} extends {@link RequestModel}
  *
  * <p>GetAppMessageQueueRouteRequest</p>
@@ -113,11 +114,14 @@ public class GetAppMessageQueueRouteRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -126,7 +130,11 @@ public class GetAppMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hkhon1po62@c3df23522baa898</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -135,7 +143,10 @@ public class GetAppMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-app</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -144,7 +155,10 @@ public class GetAppMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * The name of the Microservices Engine (MSE) namespace.
+         * <p>The name of the Microservices Engine (MSE) namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -153,14 +167,18 @@ public class GetAppMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * The region where the instance resides. Examples:
-         * <p>
+         * <p>The region where the instance resides. Examples:</p>
+         * <ul>
+         * <li><code>cn-hangzhou</code>: China (Hangzhou)</li>
+         * <li><code>cn-beijing</code>: China (Beijing)</li>
+         * <li><code>cn-shanghai</code>: China (Shanghai)</li>
+         * <li><code>cn-zhangjiakou</code>: China (Zhangjiakou)</li>
+         * <li><code>cn-shenzhen</code>: China (Shenzhen)</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   `cn-hangzhou`: China (Hangzhou)
-         * *   `cn-beijing`: China (Beijing)
-         * *   `cn-shanghai`: China (Shanghai)
-         * *   `cn-zhangjiakou`: China (Zhangjiakou)
-         * *   `cn-shenzhen`: China (Shenzhen)
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);

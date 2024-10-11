@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClusterTypesRequest} extends {@link RequestModel}
  *
  * <p>ListClusterTypesRequest</p>
@@ -95,11 +96,14 @@ public class ListClusterTypesRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -108,11 +112,14 @@ public class ListClusterTypesRequest extends Request {
         }
 
         /**
-         * The network type. Valid values:
-         * <p>
+         * <p>The network type. Valid values:</p>
+         * <ul>
+         * <li>slb</li>
+         * <li>eni</li>
+         * </ul>
          * 
-         * *   slb
-         * *   eni
+         * <strong>example:</strong>
+         * <p>slb</p>
          */
         public Builder connectType(String connectType) {
             this.putQueryParameter("ConnectType", connectType);
@@ -121,11 +128,14 @@ public class ListClusterTypesRequest extends Request {
         }
 
         /**
-         * The edition of the MSE instance that you want to purchase.
-         * <p>
+         * <p>The edition of the MSE instance that you want to purchase.</p>
+         * <ul>
+         * <li>mse_pro: Professional Edition</li>
+         * <li>mse_dev: Developer Edition</li>
+         * </ul>
          * 
-         * *   mse_pro: Professional Edition
-         * *   mse_dev: Developer Edition
+         * <strong>example:</strong>
+         * <p>mse_pro</p>
          */
         public Builder mseVersion(String mseVersion) {
             this.putQueryParameter("MseVersion", mseVersion);
@@ -134,7 +144,10 @@ public class ListClusterTypesRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the instance resides. The region is supported by Microservices Engine (MSE).
+         * <p>The ID of the region in which the instance resides. The region is supported by Microservices Engine (MSE).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNamingTrackResponseBody} extends {@link TeaModel}
  *
  * <p>ListNamingTrackResponseBody</p>
@@ -133,7 +134,10 @@ public class ListNamingTrackResponseBody extends TeaModel {
         private java.util.List < Traces> traces; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -141,7 +145,10 @@ public class ListNamingTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -149,7 +156,10 @@ public class ListNamingTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request was successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -157,7 +167,10 @@ public class ListNamingTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -165,7 +178,10 @@ public class ListNamingTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -173,7 +189,10 @@ public class ListNamingTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9916CBED-B2D5-5685-9129-4592FE1*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -181,11 +200,14 @@ public class ListNamingTrackResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -193,7 +215,10 @@ public class ListNamingTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -201,7 +226,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The data information.
+         * <p>The data information.</p>
          */
         public Builder traces(java.util.List < Traces> traces) {
             this.traces = traces;
@@ -214,6 +239,12 @@ public class ListNamingTrackResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListNamingTrackResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNamingTrackResponseBody</p>
+     */
     public static class Traces extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientIp")
         private String clientIp;
@@ -337,7 +368,10 @@ public class ListNamingTrackResponseBody extends TeaModel {
             private String slaTime; 
 
             /**
-             * The IP address of the client.
+             * <p>The IP address of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120.40.32.235</p>
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -345,7 +379,10 @@ public class ListNamingTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The group.
+             * <p>The group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod</p>
              */
             public Builder group(String group) {
                 this.group = group;
@@ -353,7 +390,10 @@ public class ListNamingTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances.
+             * <p>The number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder instanceSize(String instanceSize) {
                 this.instanceSize = instanceSize;
@@ -361,7 +401,10 @@ public class ListNamingTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mse-197*****-167083******-reg-center-0-0</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -369,7 +412,10 @@ public class ListNamingTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The push time.
+             * <p>The push time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-16 11:48:07</p>
              */
             public Builder pushTime(String pushTime) {
                 this.pushTime = pushTime;
@@ -377,7 +423,10 @@ public class ListNamingTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The total push time.
+             * <p>The total push time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>628ms</p>
              */
             public Builder pushTimeAll(String pushTimeAll) {
                 this.pushTimeAll = pushTimeAll;
@@ -385,7 +434,10 @@ public class ListNamingTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The push time for the network.
+             * <p>The push time for the network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>37ms</p>
              */
             public Builder pushTimeNetwork(String pushTimeNetwork) {
                 this.pushTimeNetwork = pushTimeNetwork;
@@ -393,7 +445,10 @@ public class ListNamingTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fpx-xms-baseinfo</p>
              */
             public Builder serverName(String serverName) {
                 this.serverName = serverName;
@@ -401,7 +456,10 @@ public class ListNamingTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The duration that is specified in the service-level agreement (SLA).
+             * <p>The duration that is specified in the service-level agreement (SLA).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>628ms</p>
              */
             public Builder slaTime(String slaTime) {
                 this.slaTime = slaTime;

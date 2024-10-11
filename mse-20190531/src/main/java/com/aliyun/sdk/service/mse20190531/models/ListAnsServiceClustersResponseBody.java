@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAnsServiceClustersResponseBody} extends {@link TeaModel}
  *
  * <p>ListAnsServiceClustersResponseBody</p>
@@ -97,7 +98,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -121,7 +128,10 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request was successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +139,10 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52BA6DA6-A702-4362-A32F-DFF79655****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAnsServiceClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAnsServiceClustersResponseBody</p>
+     */
     public static class AppDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -277,7 +299,10 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             private Integer unhealthyCheckTimes; 
 
             /**
-             * The ID of the application for which Microservices Governance is enabled.
+             * <p>The ID of the application for which Microservices Governance is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hkhon1po62@904cba2c0xxxxxx</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -285,7 +310,10 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application for which Microservices Governance is enabled.
+             * <p>The name of the application for which Microservices Governance is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spring-cloud-b</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -293,7 +321,10 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The health check interval. Unit: seconds.
+             * <p>The health check interval. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder checkInternal(Integer checkInternal) {
                 this.checkInternal = checkInternal;
@@ -301,7 +332,10 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the health check. This parameter is required only when the CheckType parameter is set to http.
+             * <p>The path of the health check. This parameter is required only when the CheckType parameter is set to http.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/health</p>
              */
             public Builder checkPath(String checkPath) {
                 this.checkPath = checkPath;
@@ -309,7 +343,10 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of the health check response. Unit: seconds.
+             * <p>The timeout period of the health check response. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder checkTimeout(Integer checkTimeout) {
                 this.checkTimeout = checkTimeout;
@@ -317,12 +354,15 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the health check. Valid values:
-             * <p>
+             * <p>The type of the health check. Valid values:</p>
+             * <ul>
+             * <li>connection: connection status check</li>
+             * <li>tcp: TCP connection check</li>
+             * <li>http: HTTP connection check</li>
+             * </ul>
              * 
-             * *   connection: connection status check
-             * *   tcp: TCP connection check
-             * *   http: HTTP connection check
+             * <strong>example:</strong>
+             * <p>connection</p>
              */
             public Builder checkType(String checkType) {
                 this.checkType = checkType;
@@ -330,7 +370,10 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of health check retries when the instance state changes from unhealthy to healthy.
+             * <p>The maximum number of health check retries when the instance state changes from unhealthy to healthy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder healthyCheckTimes(Integer healthyCheckTimes) {
                 this.healthyCheckTimes = healthyCheckTimes;
@@ -338,7 +381,10 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of the application for which Microservices Governance is enabled.
+             * <p>The port number of the application for which Microservices Governance is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6001</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -346,7 +392,10 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of health check retries when the instance state changes from healthy to unhealthy.
+             * <p>The maximum number of health check retries when the instance state changes from healthy to unhealthy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder unhealthyCheckTimes(Integer unhealthyCheckTimes) {
                 this.unhealthyCheckTimes = unhealthyCheckTimes;
@@ -360,6 +409,12 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAnsServiceClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAnsServiceClustersResponseBody</p>
+     */
     public static class Clusters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultCheckPort")
         private Integer defaultCheckPort;
@@ -459,7 +514,10 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             private Boolean useIPPort4Check; 
 
             /**
-             * The default port used for a health check.
+             * <p>The default port used for a health check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder defaultCheckPort(Integer defaultCheckPort) {
                 this.defaultCheckPort = defaultCheckPort;
@@ -467,7 +525,10 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The default port.
+             * <p>The default port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder defaultPort(Integer defaultPort) {
                 this.defaultPort = defaultPort;
@@ -475,7 +536,10 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the health check.
+             * <p>The type of the health check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Heartbeat Reporting</p>
              */
             public Builder healthCheckerType(String healthCheckerType) {
                 this.healthCheckerType = healthCheckerType;
@@ -483,7 +547,10 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The metadata of the cluster.
+             * <p>The metadata of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder metadata(java.util.Map < String, ? > metadata) {
                 this.metadata = metadata;
@@ -491,7 +558,10 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster name.
+             * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -499,7 +569,10 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The full name of the service.
+             * <p>The full name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFAULT_GROUP@@nacos.test.3</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -507,7 +580,10 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an end-to-end health check was initiated by the server. This parameter is valid only if the service is not a temporary service.
+             * <p>Indicates whether an end-to-end health check was initiated by the server. This parameter is valid only if the service is not a temporary service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder useIPPort4Check(Boolean useIPPort4Check) {
                 this.useIPPort4Check = useIPPort4Check;
@@ -521,6 +597,12 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAnsServiceClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAnsServiceClustersResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppDetail")
         private AppDetail appDetail;
@@ -644,7 +726,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             private String source; 
 
             /**
-             * The information about the associated application for which Microservices Governance is enabled when the Source parameter is set to governance.
+             * <p>The information about the associated application for which Microservices Governance is enabled when the Source parameter is set to governance.</p>
              */
             public Builder appDetail(AppDetail appDetail) {
                 this.appDetail = appDetail;
@@ -652,7 +734,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster information.
+             * <p>The cluster information.</p>
              */
             public Builder clusters(java.util.List < Clusters> clusters) {
                 this.clusters = clusters;
@@ -660,11 +742,14 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the service is a temporary service. Valid values:
-             * <p>
+             * <p>Indicates whether the service is a temporary service. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: yes</li>
+             * <li><code>false</code>: no</li>
+             * </ul>
              * 
-             * *   `true`: yes
-             * *   `false`: no
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ephemeral(Boolean ephemeral) {
                 this.ephemeral = ephemeral;
@@ -672,7 +757,10 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The service group to which the service belongs.
+             * <p>The service group to which the service belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFAULT_GROUP</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -680,7 +768,10 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The metadata of the service.
+             * <p>The metadata of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder metadata(java.util.Map < String, ? > metadata) {
                 this.metadata = metadata;
@@ -688,7 +779,10 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nacos.test.3</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -696,7 +790,10 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The protection threshold.
+             * <p>The protection threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder protectThreshold(Float protectThreshold) {
                 this.protectThreshold = protectThreshold;
@@ -704,7 +801,10 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The election mode.
+             * <p>The election mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
              */
             public Builder selectorType(String selectorType) {
                 this.selectorType = selectorType;
@@ -712,12 +812,15 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The source type of the service. Valid values:
-             * <p>
+             * <p>The source type of the service. Valid values:</p>
+             * <ul>
+             * <li>console: The service was registered in the console.</li>
+             * <li>sdk: The service was registered by using the SDK.</li>
+             * <li>governance: The service was registered on Microservices Governance.</li>
+             * </ul>
              * 
-             * *   console: The service was registered in the console.
-             * *   sdk: The service was registered by using the SDK.
-             * *   governance: The service was registered on Microservices Governance.
+             * <strong>example:</strong>
+             * <p>console</p>
              */
             public Builder source(String source) {
                 this.source = source;

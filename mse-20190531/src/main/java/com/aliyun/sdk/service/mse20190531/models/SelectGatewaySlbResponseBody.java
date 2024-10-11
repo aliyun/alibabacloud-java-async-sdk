@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SelectGatewaySlbResponseBody} extends {@link TeaModel}
  *
  * <p>SelectGatewaySlbResponseBody</p>
@@ -97,7 +98,10 @@ public class SelectGatewaySlbResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class SelectGatewaySlbResponseBody extends TeaModel {
         }
 
         /**
-         * The data structure.
+         * <p>The data structure.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class SelectGatewaySlbResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +128,10 @@ public class SelectGatewaySlbResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request is successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +139,10 @@ public class SelectGatewaySlbResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E00C6D90-A28A-5813-8981-0459AA436F46</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class SelectGatewaySlbResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class SelectGatewaySlbResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SelectGatewaySlbResponseBody} extends {@link TeaModel}
+     *
+     * <p>SelectGatewaySlbResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SlbId")
         private String slbId;
@@ -193,7 +215,10 @@ public class SelectGatewaySlbResponseBody extends TeaModel {
             private String slbName; 
 
             /**
-             * The ID of the SLB instance.
+             * <p>The ID of the SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-bp14lqiw5n96hq2****</p>
              */
             public Builder slbId(String slbId) {
                 this.slbId = slbId;
@@ -201,7 +226,10 @@ public class SelectGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the SLB instance.
+             * <p>The name of the SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MseGatewaySlb-gw</p>
              */
             public Builder slbName(String slbName) {
                 this.slbName = slbName;

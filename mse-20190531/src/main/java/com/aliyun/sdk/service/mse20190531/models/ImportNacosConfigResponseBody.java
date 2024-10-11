@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportNacosConfigResponseBody} extends {@link TeaModel}
  *
  * <p>ImportNacosConfigResponseBody</p>
@@ -121,7 +122,10 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -129,7 +133,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The number of configurations that are imported.
+         * <p>The number of configurations that are imported.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -137,7 +141,10 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter is invalid.</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -145,7 +152,10 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The code returned.
+         * <p>The code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-100</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -153,7 +163,10 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -161,7 +174,13 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The request is successfully processed.
+         * <p>The request is successfully processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The dynamic part in the error message. This parameter is used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> parameter.</p>
+         * <blockquote>
+         * <p> If the return value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> parameter is invalid.</p>
+         * </blockquote>
          */
         public Builder message(String message) {
             this.message = message;
@@ -169,11 +188,14 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>AF21683A-29C7-4853-AC0F-B5ADEE4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -181,7 +203,10 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The error code that is returned.
+         * <p>The error code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,6 +219,12 @@ public class ImportNacosConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ImportNacosConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImportNacosConfigResponseBody</p>
+     */
     public static class FailData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
@@ -245,7 +276,10 @@ public class ImportNacosConfigResponseBody extends TeaModel {
             private String reason; 
 
             /**
-             * The ID of the group.
+             * <p>The ID of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test2.yaml</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -275,6 +309,12 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImportNacosConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImportNacosConfigResponseBody</p>
+     */
     public static class SkipData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
@@ -314,7 +354,10 @@ public class ImportNacosConfigResponseBody extends TeaModel {
             private String group; 
 
             /**
-             * The ID of the group.
+             * <p>The ID of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.yaml</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -322,7 +365,10 @@ public class ImportNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The information about configurations that are failed to be imported.
+             * <p>The information about configurations that are failed to be imported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>public</p>
              */
             public Builder group(String group) {
                 this.group = group;
@@ -336,6 +382,12 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImportNacosConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImportNacosConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailData")
         private java.util.List < FailData> failData;
@@ -399,7 +451,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
             private Integer succCount; 
 
             /**
-             * The data structure.
+             * <p>The data structure.</p>
              */
             public Builder failData(java.util.List < FailData> failData) {
                 this.failData = failData;
@@ -407,7 +459,10 @@ public class ImportNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The information about skipped configurations.
+             * <p>The information about skipped configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder skipCount(Integer skipCount) {
                 this.skipCount = skipCount;
@@ -415,7 +470,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The data structure.
+             * <p>The data structure.</p>
              */
             public Builder skipData(java.util.List < SkipData> skipData) {
                 this.skipData = skipData;
@@ -423,7 +478,10 @@ public class ImportNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The number of configurations that are skipped.
+             * <p>The number of configurations that are skipped.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder succCount(Integer succCount) {
                 this.succCount = succCount;

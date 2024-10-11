@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetGatewayResponseBody} extends {@link TeaModel}
  *
  * <p>GetGatewayResponseBody</p>
@@ -97,7 +98,10 @@ public class GetGatewayResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned. A value of 200 indicates that the request is successful.
+         * <p>The status code returned. A value of 200 indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class GetGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the gateway.
+         * <p>The information about the gateway.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class GetGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +128,10 @@ public class GetGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request is successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +139,10 @@ public class GetGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9C96CDF8-9E6C-5AB6-B83C-8F87A10117E6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class GetGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class GetGatewayResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetGatewayResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayResponseBody</p>
+     */
     public static class TimePolicyList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DesiredReplica")
         private Integer desiredReplica;
@@ -205,7 +227,10 @@ public class GetGatewayResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * The number of expected replicas.
+             * <p>The number of expected replicas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder desiredReplica(Integer desiredReplica) {
                 this.desiredReplica = desiredReplica;
@@ -213,7 +238,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of auto scale-out.
+             * <p>The end time of auto scale-out.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -221,7 +249,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of auto scale-out.
+             * <p>The start time of auto scale-out.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -235,6 +266,12 @@ public class GetGatewayResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetGatewayResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayResponseBody</p>
+     */
     public static class ElasticPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ElasticType")
         private String elasticType;
@@ -286,10 +323,13 @@ public class GetGatewayResponseBody extends TeaModel {
             private java.util.List < TimePolicyList> timePolicyList; 
 
             /**
-             * The type of auto scale-out. Valid value:
-             * <p>
+             * <p>The type of auto scale-out. Valid value:</p>
+             * <ul>
+             * <li>CronHPA: scale-out by time</li>
+             * </ul>
              * 
-             * *   CronHPA: scale-out by time
+             * <strong>example:</strong>
+             * <p>CronHPA</p>
              */
             public Builder elasticType(String elasticType) {
                 this.elasticType = elasticType;
@@ -297,7 +337,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of instances that are automatically scaled out. This parameter is used for horizontal scale-out.
+             * <p>The maximum number of instances that are automatically scaled out. This parameter is used for horizontal scale-out.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder maxReplica(Integer maxReplica) {
                 this.maxReplica = maxReplica;
@@ -305,7 +348,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The policy of scale-out by time.
+             * <p>The policy of scale-out by time.</p>
              */
             public Builder timePolicyList(java.util.List < TimePolicyList> timePolicyList) {
                 this.timePolicyList = timePolicyList;
@@ -319,6 +362,12 @@ public class GetGatewayResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetGatewayResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayResponseBody</p>
+     */
     public static class LogConfigDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogEnabled")
         private Boolean logEnabled;
@@ -370,7 +419,10 @@ public class GetGatewayResponseBody extends TeaModel {
             private String projectName; 
 
             /**
-             * Indicates whether Log Service is activated.
+             * <p>Indicates whether Log Service is activated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder logEnabled(Boolean logEnabled) {
                 this.logEnabled = logEnabled;
@@ -378,7 +430,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Logstore.
+             * <p>The name of the Logstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mse_access_log</p>
              */
             public Builder logStoreName(String logStoreName) {
                 this.logStoreName = logStoreName;
@@ -386,7 +441,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the project.
+             * <p>The name of the project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k8s-log-c173117256e934a96b7fefdf2ef8a8057</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -400,6 +458,12 @@ public class GetGatewayResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetGatewayResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayResponseBody</p>
+     */
     public static class XtraceDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Sample")
         private Integer sample;
@@ -439,7 +503,10 @@ public class GetGatewayResponseBody extends TeaModel {
             private Boolean traceOn; 
 
             /**
-             * The sampling rate of Tracing Analysis.
+             * <p>The sampling rate of Tracing Analysis.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder sample(Integer sample) {
                 this.sample = sample;
@@ -447,7 +514,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether sampling by using Tracing Analysis is enabled.
+             * <p>Indicates whether sampling by using Tracing Analysis is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder traceOn(Boolean traceOn) {
                 this.traceOn = traceOn;
@@ -461,6 +531,12 @@ public class GetGatewayResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetGatewayResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
@@ -800,7 +876,10 @@ public class GetGatewayResponseBody extends TeaModel {
             private XtraceDetails xtraceDetails; 
 
             /**
-             * The billing method, such as subscription or pay-as-you-go.
+             * <p>The billing method, such as subscription or pay-as-you-go.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>POSTPAY</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -808,7 +887,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether auto scale-out is enabled.
+             * <p>Indicates whether auto scale-out is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder elastic(Boolean elastic) {
                 this.elastic = elastic;
@@ -816,7 +898,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The auto scale-out policy.
+             * <p>The auto scale-out policy.</p>
              */
             public Builder elasticPolicy(ElasticPolicy elasticPolicy) {
                 this.elasticPolicy = elasticPolicy;
@@ -824,7 +906,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The number of replicas that are automatically scaled out.
+             * <p>The number of replicas that are automatically scaled out.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder elasticReplica(Integer elasticReplica) {
                 this.elasticReplica = elasticReplica;
@@ -832,10 +917,13 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The type of auto scale-out. Valid value:
-             * <p>
+             * <p>The type of auto scale-out. Valid value:</p>
+             * <ul>
+             * <li>CronHPA: scale-out by time</li>
+             * </ul>
              * 
-             * *   CronHPA: scale-out by time
+             * <strong>example:</strong>
+             * <p>CronHPA</p>
              */
             public Builder elasticType(String elasticType) {
                 this.elasticType = elasticType;
@@ -843,7 +931,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the gateway expires.
+             * <p>The time when the gateway expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-08-01 00:00:00</p>
              */
             public Builder endDate(String endDate) {
                 this.endDate = endDate;
@@ -851,7 +942,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the gateway.
+             * <p>The unique ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-7ea3da97b96543e19f6c597cd4a9****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -859,7 +953,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the gateway was created. The time is displayed in GMT. The time is the local time of the region in which the gateway resides.
+             * <p>The time when the gateway was created. The time is displayed in GMT. The time is the local time of the region in which the gateway resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-07T10:07:57.000+0000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -867,7 +964,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the gateway was last modified.
+             * <p>The time when the gateway was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-07T10:07:57.000+0000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -875,7 +975,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the gateway.
+             * <p>The ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -883,7 +986,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mse-cn-st21ri2****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -891,7 +997,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The log configuration.
+             * <p>The log configuration.</p>
              */
             public Builder logConfigDetails(LogConfigDetails logConfigDetails) {
                 this.logConfigDetails = logConfigDetails;
@@ -899,7 +1005,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the resource.
+             * <p>The tag of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;TagKey&quot;:&quot;TagValue&quot;}</p>
              */
             public Builder mseTag(String mseTag) {
                 this.mseTag = mseTag;
@@ -907,7 +1016,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the gateway.
+             * <p>The name of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFAULT</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -915,7 +1027,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud account ID of the user who created the gateway.
+             * <p>The Alibaba Cloud account ID of the user who created the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1231254</p>
              */
             public Builder primaryUser(String primaryUser) {
                 this.primaryUser = primaryUser;
@@ -923,7 +1038,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -931,7 +1049,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The number of gateway replicas.
+             * <p>The number of gateway replicas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder replica(Integer replica) {
                 this.replica = replica;
@@ -939,7 +1060,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfm34x43l*****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -947,7 +1071,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group.
+             * <p>The ID of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp11ufzqn6mmb8dtzz82</p>
              */
             public Builder securityGroup(String securityGroup) {
                 this.securityGroup = securityGroup;
@@ -955,7 +1082,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the gateway.
+             * <p>The specifications of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MSE_GTW_16_32_200_c</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -963,20 +1093,23 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the gateway. Valid values:
-             * <p>
+             * <p>The status of the gateway. Valid values:</p>
+             * <ul>
+             * <li>0: The gateway is being created.</li>
+             * <li>1: The gateway fails to be created.</li>
+             * <li>2: The gateway is running.</li>
+             * <li>3: The gateway is changing.</li>
+             * <li>4: The gateway is scaling in.</li>
+             * <li>6: The gateway is scaling out.</li>
+             * <li>8: The gateway is being deleted.</li>
+             * <li>10: The gateway is restarting.</li>
+             * <li>11: The gateway is being rebuilt.</li>
+             * <li>12: The gateway is updating.</li>
+             * <li>13: The gateway fails to be updated.</li>
+             * </ul>
              * 
-             * *   0: The gateway is being created.
-             * *   1: The gateway fails to be created.
-             * *   2: The gateway is running.
-             * *   3: The gateway is changing.
-             * *   4: The gateway is scaling in.
-             * *   6: The gateway is scaling out.
-             * *   8: The gateway is being deleted.
-             * *   10: The gateway is restarting.
-             * *   11: The gateway is being rebuilt.
-             * *   12: The gateway is updating.
-             * *   13: The gateway fails to be updated.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -984,7 +1117,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the status.
+             * <p>The description of the status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Restarting</p>
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -992,7 +1128,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of replicas, including the number of replicas that are automatically scaled out.
+             * <p>The total number of replicas, including the number of replicas that are automatically scaled out.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder totalReplica(Integer totalReplica) {
                 this.totalReplica = totalReplica;
@@ -1000,7 +1139,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1328cm01m6uel42b5zb</p>
              */
             public Builder vpc(String vpc) {
                 this.vpc = vpc;
@@ -1008,7 +1150,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp18zeqxx6mpuq843z4n5</p>
              */
             public Builder vswitch(String vswitch) {
                 this.vswitch = vswitch;
@@ -1016,7 +1161,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the secondary vSwitch.
+             * <p>The ID of the secondary vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1j6ivhav15ve7q54kq2</p>
              */
             public Builder vswitch2(String vswitch2) {
                 this.vswitch2 = vswitch2;
@@ -1024,7 +1172,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The details of Tracing Analysis.
+             * <p>The details of Tracing Analysis.</p>
              */
             public Builder xtraceDetails(XtraceDetails xtraceDetails) {
                 this.xtraceDetails = xtraceDetails;

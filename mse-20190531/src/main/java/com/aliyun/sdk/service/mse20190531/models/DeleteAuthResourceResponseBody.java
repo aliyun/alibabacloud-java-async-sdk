@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAuthResourceResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteAuthResourceResponseBody</p>
@@ -97,7 +98,10 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +128,10 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request is successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +139,10 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>559412D1-BFCE-53CC-B88E-0192C331EF44</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteAuthResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteAuthResourceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthId")
         private Long authId;
@@ -289,7 +311,10 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
             private String path; 
 
             /**
-             * The authentication ID.
+             * <p>The authentication ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>253</p>
              */
             public Builder authId(Long authId) {
                 this.authId = authId;
@@ -297,7 +322,10 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the domain name.
+             * <p>The ID of the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>235</p>
              */
             public Builder domainId(Long domainId) {
                 this.domainId = domainId;
@@ -305,7 +333,10 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -313,7 +344,10 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the gateway.
+             * <p>The ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-7ea3da97b96543e19f6c597cd4a9****</p>
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -321,7 +355,10 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the gateway.
+             * <p>The unique ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-7ea3da97b96543e19f6c597cd4a9****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -329,7 +366,10 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-07T10:07:57.000+0000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -337,7 +377,10 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The modification time.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-07T10:07:57.000+0000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -345,7 +388,10 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the primary key.
+             * <p>The ID of the primary key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -353,7 +399,10 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the whitelist mode is enabled.
+             * <p>Indicates whether the whitelist mode is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isWhite(Boolean isWhite) {
                 this.isWhite = isWhite;
@@ -361,7 +410,10 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The path.
+             * <p>The path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/zookeeper</p>
              */
             public Builder path(String path) {
                 this.path = path;

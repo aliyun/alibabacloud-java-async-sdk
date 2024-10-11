@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGatewayRouteRequest} extends {@link RequestModel}
  *
  * <p>ListGatewayRouteRequest</p>
@@ -123,11 +124,14 @@ public class ListGatewayRouteRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -136,7 +140,10 @@ public class ListGatewayRouteRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable sorting. This parameter is unavailable.
+         * <p>Specifies whether to enable sorting. This parameter is unavailable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder descSort(Boolean descSort) {
             this.putQueryParameter("DescSort", descSort);
@@ -145,7 +152,7 @@ public class ListGatewayRouteRequest extends Request {
         }
 
         /**
-         * The parameters that specify filter conditions. The parameters are in the format of {"key1":"value1"}.
+         * <p>The parameters that specify filter conditions. The parameters are in the format of {&quot;key1&quot;:&quot;value1&quot;}.</p>
          */
         public Builder filterParams(FilterParams filterParams) {
             String filterParamsShrink = shrink(filterParams, "FilterParams", "json");
@@ -155,7 +162,10 @@ public class ListGatewayRouteRequest extends Request {
         }
 
         /**
-         * The item based on which entries are sorted.
+         * <p>The item based on which entries are sorted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtCreate</p>
          */
         public Builder orderItem(String orderItem) {
             this.putQueryParameter("OrderItem", orderItem);
@@ -164,7 +174,10 @@ public class ListGatewayRouteRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -173,7 +186,10 @@ public class ListGatewayRouteRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -188,6 +204,12 @@ public class ListGatewayRouteRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListGatewayRouteRequest} extends {@link TeaModel}
+     *
+     * <p>ListGatewayRouteRequest</p>
+     */
     public static class FilterParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultServiceId")
         @Deprecated
@@ -313,7 +335,10 @@ public class ListGatewayRouteRequest extends Request {
             private Integer status; 
 
             /**
-             * The default service ID.
+             * <p>The default service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder defaultServiceId(Long defaultServiceId) {
                 this.defaultServiceId = defaultServiceId;
@@ -321,7 +346,10 @@ public class ListGatewayRouteRequest extends Request {
             }
 
             /**
-             * The domain ID.
+             * <p>The domain ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>284</p>
              */
             public Builder domainId(Long domainId) {
                 this.domainId = domainId;
@@ -329,7 +357,10 @@ public class ListGatewayRouteRequest extends Request {
             }
 
             /**
-             * The associated domain name.
+             * <p>The associated domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>*.alites.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -337,7 +368,10 @@ public class ListGatewayRouteRequest extends Request {
             }
 
             /**
-             * The ID of the gateway.
+             * <p>The ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>81</p>
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -345,7 +379,11 @@ public class ListGatewayRouteRequest extends Request {
             }
 
             /**
-             * The unique ID of the gateway.
+             * <p>The unique ID of the gateway.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-30a0106924c94bca8712ec4e79fc5acc</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -353,7 +391,10 @@ public class ListGatewayRouteRequest extends Request {
             }
 
             /**
-             * The name of the gateway.
+             * <p>The name of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -369,7 +410,10 @@ public class ListGatewayRouteRequest extends Request {
             }
 
             /**
-             * The order.
+             * <p>The order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder routeOrder(Integer routeOrder) {
                 this.routeOrder = routeOrder;
@@ -377,7 +421,10 @@ public class ListGatewayRouteRequest extends Request {
             }
 
             /**
-             * The status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

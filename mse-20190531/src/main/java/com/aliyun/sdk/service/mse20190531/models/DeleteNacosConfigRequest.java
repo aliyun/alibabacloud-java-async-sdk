@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteNacosConfigRequest} extends {@link RequestModel}
  *
  * <p>DeleteNacosConfigRequest</p>
@@ -126,11 +127,14 @@ public class DeleteNacosConfigRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -139,7 +143,10 @@ public class DeleteNacosConfigRequest extends Request {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder beta(Boolean beta) {
             this.putQueryParameter("Beta", beta);
@@ -148,7 +155,11 @@ public class DeleteNacosConfigRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user-ds.yml</p>
          */
         public Builder dataId(String dataId) {
             this.putQueryParameter("DataId", dataId);
@@ -157,7 +168,11 @@ public class DeleteNacosConfigRequest extends Request {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HALVIE_MICRO_GROUP</p>
          */
         public Builder group(String group) {
             this.putQueryParameter("Group", group);
@@ -166,7 +181,11 @@ public class DeleteNacosConfigRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse_prepaid_public_cn-tl32epfyu18</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -175,7 +194,10 @@ public class DeleteNacosConfigRequest extends Request {
         }
 
         /**
-         * The request is successfully processed.
+         * <p>The request is successfully processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0e9d849b-****-8435da6c21ad</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

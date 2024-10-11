@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGatewayAuthConsumerResourceStatusResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateGatewayAuthConsumerResourceStatusResponseBody</p>
@@ -133,7 +134,10 @@ public class UpdateGatewayAuthConsumerResourceStatusResponseBody extends TeaMode
         private Boolean success; 
 
         /**
-         * The status code. A value of 200 is returned if the request is successful.
+         * <p>The status code. A value of 200 is returned if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -141,11 +145,14 @@ public class UpdateGatewayAuthConsumerResourceStatusResponseBody extends TeaMode
         }
 
         /**
-         * Indicates whether the execution was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the execution was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The execution was successful.</li>
+         * <li>false: The execution failed.</li>
+         * </ul>
          * 
-         * *   true: The execution was successful.
-         * *   false: The execution failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -153,7 +160,10 @@ public class UpdateGatewayAuthConsumerResourceStatusResponseBody extends TeaMode
         }
 
         /**
-         * The dynamic part in the error message.
+         * <p>The dynamic part in the error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -161,10 +171,13 @@ public class UpdateGatewayAuthConsumerResourceStatusResponseBody extends TeaMode
         }
 
         /**
-         * The dynamic part in the error message. This parameter is used to replace the `%s` variable in the `ErrMessage` parameter.
-         * <p>
+         * <p>The dynamic part in the error message. This parameter is used to replace the <code>%s</code> variable in the <code>ErrMessage</code> parameter.</p>
+         * <blockquote>
+         * <p> If the return value of the <code>ErrMessage</code> parameter is <code>The Value of Input Parameter %s is not valid</code> and the return value of the <code>DynamicMessage</code> parameter is <code>DtsJobId</code>, the specified <code>DtsJobId</code> parameter is invalid.</p>
+         * </blockquote>
          * 
-         * >  If the return value of the `ErrMessage` parameter is `The Value of Input Parameter %s is not valid` and the return value of the `DynamicMessage` parameter is `DtsJobId`, the specified `DtsJobId` parameter is invalid.
+         * <strong>example:</strong>
+         * <p>The specified parameter is invalid.</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -172,7 +185,10 @@ public class UpdateGatewayAuthConsumerResourceStatusResponseBody extends TeaMode
         }
 
         /**
-         * The error code that is returned.
+         * <p>The error code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -180,7 +196,10 @@ public class UpdateGatewayAuthConsumerResourceStatusResponseBody extends TeaMode
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -188,7 +207,10 @@ public class UpdateGatewayAuthConsumerResourceStatusResponseBody extends TeaMode
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request is successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -196,7 +218,10 @@ public class UpdateGatewayAuthConsumerResourceStatusResponseBody extends TeaMode
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>316F5F64-F73D-42DC-8632-01E308B6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -204,11 +229,14 @@ public class UpdateGatewayAuthConsumerResourceStatusResponseBody extends TeaMode
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

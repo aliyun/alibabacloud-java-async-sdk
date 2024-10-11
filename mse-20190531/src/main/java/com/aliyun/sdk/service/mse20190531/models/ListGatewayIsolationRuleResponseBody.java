@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGatewayIsolationRuleResponseBody} extends {@link TeaModel}
  *
  * <p>ListGatewayIsolationRuleResponseBody</p>
@@ -70,6 +71,12 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListGatewayIsolationRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewayIsolationRuleResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BehaviorType")
         private Integer behaviorType;
@@ -391,6 +398,12 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGatewayIsolationRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewayIsolationRuleResponseBody</p>
+     */
     public static class Results extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BehaviorType")
         private Integer behaviorType;
@@ -712,6 +725,12 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGatewayIsolationRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewayIsolationRuleResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;

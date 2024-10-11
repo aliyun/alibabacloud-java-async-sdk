@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGatewayCircuitBreakerRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateGatewayCircuitBreakerRuleRequest</p>
@@ -296,7 +297,10 @@ public class CreateGatewayCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * BehaviorType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder behaviorType(Integer behaviorType) {
             this.putQueryParameter("BehaviorType", behaviorType);
@@ -314,7 +318,10 @@ public class CreateGatewayCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * Enable.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder enable(Integer enable) {
             this.putQueryParameter("Enable", enable);
@@ -332,7 +339,10 @@ public class CreateGatewayCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-c9bc5afd61014165bd58f621b491*****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -350,7 +360,10 @@ public class CreateGatewayCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * MinRequestAmount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder minRequestAmount(Integer minRequestAmount) {
             this.putQueryParameter("MinRequestAmount", minRequestAmount);
@@ -359,7 +372,10 @@ public class CreateGatewayCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * RecoveryTimeoutSec.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder recoveryTimeoutSec(Integer recoveryTimeoutSec) {
             this.putQueryParameter("RecoveryTimeoutSec", recoveryTimeoutSec);
@@ -395,7 +411,10 @@ public class CreateGatewayCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * RouteId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>645</p>
          */
         public Builder routeId(Long routeId) {
             this.putQueryParameter("RouteId", routeId);
@@ -404,7 +423,10 @@ public class CreateGatewayCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * RouteName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>routeName</p>
          */
         public Builder routeName(String routeName) {
             this.putQueryParameter("RouteName", routeName);
@@ -413,7 +435,10 @@ public class CreateGatewayCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * StatDurationSec.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder statDurationSec(Integer statDurationSec) {
             this.putQueryParameter("StatDurationSec", statDurationSec);
@@ -422,7 +447,10 @@ public class CreateGatewayCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * Strategy.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder strategy(Integer strategy) {
             this.putQueryParameter("Strategy", strategy);
@@ -431,7 +459,10 @@ public class CreateGatewayCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * TriggerRatio.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder triggerRatio(Integer triggerRatio) {
             this.putQueryParameter("TriggerRatio", triggerRatio);

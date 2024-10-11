@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteGatewayServiceResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteGatewayServiceResponseBody</p>
@@ -97,7 +98,10 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code returned.
+         * <p>The response code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +128,10 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You are not authorized to perform this operation.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +139,10 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The unique ID of the request.
+         * <p>The unique ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B3545F76-6ED1-586F-8DB9-ECE07985F381</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteGatewayServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteGatewayServiceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GatewayId")
         private Long gatewayId;
@@ -325,7 +347,10 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
             private String sourceType; 
 
             /**
-             * The ID of the gateway.
+             * <p>The ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -333,7 +358,10 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the gateway.
+             * <p>The unique ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-7ea3da97b96543e19f6c597c****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -341,7 +369,10 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the service was created.
+             * <p>The time when the service was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-14 14:39:16</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -349,7 +380,10 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The last modification time.
+             * <p>The last modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-07T10:07:57.000+0000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -357,7 +391,10 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the group.
+             * <p>The name of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFAULT_GROUP</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -365,7 +402,10 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the service.
+             * <p>The ID of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>190</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -373,7 +413,7 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * IP
+             * <p>IP</p>
              */
             public Builder ips(java.util.List < String > ips) {
                 this.ips = ips;
@@ -381,7 +421,10 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The basic information about the service.
+             * <p>The basic information about the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder metaInfo(String metaInfo) {
                 this.metaInfo = metaInfo;
@@ -389,7 +432,10 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -397,7 +443,10 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -405,7 +454,10 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service registered with the service registry.
+             * <p>The name of the service registered with the service registry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder serviceNameInRegistry(String serviceNameInRegistry) {
                 this.serviceNameInRegistry = serviceNameInRegistry;
@@ -413,7 +465,10 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the service source.
+             * <p>The ID of the service source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sourceId(Long sourceId) {
                 this.sourceId = sourceId;
@@ -421,7 +476,10 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The source type of the service.
+             * <p>The source type of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MSE</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
