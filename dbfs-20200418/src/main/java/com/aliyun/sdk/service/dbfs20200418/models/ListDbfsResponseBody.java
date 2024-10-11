@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbfs20200418.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDbfsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDbfsResponseBody</p>
  */
 public class ListDbfsResponseBody extends TeaModel {
-    @NameInMap("DBFSInfo")
+    @com.aliyun.core.annotation.NameInMap("DBFSInfo")
     private java.util.List < DBFSInfo> DBFSInfo;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListDbfsResponseBody(Builder builder) {
@@ -131,11 +131,17 @@ public class ListDbfsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDbfsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDbfsResponseBody</p>
+     */
     public static class EbsList extends TeaModel {
-        @NameInMap("EbsId")
+        @com.aliyun.core.annotation.NameInMap("EbsId")
         private String ebsId;
 
-        @NameInMap("SizeG")
+        @com.aliyun.core.annotation.NameInMap("SizeG")
         private Integer sizeG;
 
         private EbsList(Builder builder) {
@@ -192,8 +198,14 @@ public class ListDbfsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDbfsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDbfsResponseBody</p>
+     */
     public static class EcsList extends TeaModel {
-        @NameInMap("EcsId")
+        @com.aliyun.core.annotation.NameInMap("EcsId")
         private String ecsId;
 
         private EcsList(Builder builder) {
@@ -233,17 +245,23 @@ public class ListDbfsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDbfsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDbfsResponseBody</p>
+     */
     public static class SnapshotInfo extends TeaModel {
-        @NameInMap("LinkId")
+        @com.aliyun.core.annotation.NameInMap("LinkId")
         private String linkId;
 
-        @NameInMap("PolicyId")
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
         private String policyId;
 
-        @NameInMap("SnapshotCount")
+        @com.aliyun.core.annotation.NameInMap("SnapshotCount")
         private Integer snapshotCount;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Long totalSize;
 
         private SnapshotInfo(Builder builder) {
@@ -334,14 +352,20 @@ public class ListDbfsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDbfsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDbfsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tags(Builder builder) {
@@ -415,80 +439,86 @@ public class ListDbfsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDbfsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDbfsResponseBody</p>
+     */
     public static class DBFSInfo extends TeaModel {
-        @NameInMap("AttachNodeNumber")
+        @com.aliyun.core.annotation.NameInMap("AttachNodeNumber")
         private Integer attachNodeNumber;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("DBFSClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBFSClusterId")
         private String DBFSClusterId;
 
-        @NameInMap("EbsList")
+        @com.aliyun.core.annotation.NameInMap("EbsList")
         private java.util.List < EbsList> ebsList;
 
-        @NameInMap("EcsList")
+        @com.aliyun.core.annotation.NameInMap("EcsList")
         private java.util.List < EcsList> ecsList;
 
-        @NameInMap("EnableRaid")
+        @com.aliyun.core.annotation.NameInMap("EnableRaid")
         private Boolean enableRaid;
 
-        @NameInMap("Encryption")
+        @com.aliyun.core.annotation.NameInMap("Encryption")
         private Boolean encryption;
 
-        @NameInMap("FsId")
+        @com.aliyun.core.annotation.NameInMap("FsId")
         private String fsId;
 
-        @NameInMap("FsName")
+        @com.aliyun.core.annotation.NameInMap("FsName")
         private String fsName;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("KMSKeyId")
+        @com.aliyun.core.annotation.NameInMap("KMSKeyId")
         private String KMSKeyId;
 
-        @NameInMap("LastFailed")
+        @com.aliyun.core.annotation.NameInMap("LastFailed")
         private String lastFailed;
 
-        @NameInMap("LastMountTime")
+        @com.aliyun.core.annotation.NameInMap("LastMountTime")
         private String lastMountTime;
 
-        @NameInMap("LastUmountTime")
+        @com.aliyun.core.annotation.NameInMap("LastUmountTime")
         private String lastUmountTime;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("PerformanceLevel")
+        @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
-        @NameInMap("RaidStrip")
+        @com.aliyun.core.annotation.NameInMap("RaidStrip")
         private Integer raidStrip;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SizeG")
+        @com.aliyun.core.annotation.NameInMap("SizeG")
         private Integer sizeG;
 
-        @NameInMap("SnapshotInfo")
+        @com.aliyun.core.annotation.NameInMap("SnapshotInfo")
         private SnapshotInfo snapshotInfo;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("UsedScene")
+        @com.aliyun.core.annotation.NameInMap("UsedScene")
         private String usedScene;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private DBFSInfo(Builder builder) {

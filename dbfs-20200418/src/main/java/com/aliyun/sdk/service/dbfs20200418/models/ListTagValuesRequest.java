@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbfs20200418.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagValuesRequest} extends {@link RequestModel}
  *
  * <p>ListTagValuesRequest</p>
  */
 public class ListTagValuesRequest extends Request {
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("TagKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tagKey;
 
     private ListTagValuesRequest(Builder builder) {
@@ -70,7 +70,10 @@ public class ListTagValuesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -79,7 +82,10 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tagKey1</p>
          */
         public Builder tagKey(String tagKey) {
             this.putQueryParameter("TagKey", tagKey);

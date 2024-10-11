@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbfs20200418.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResizeDbfsRequest} extends {@link RequestModel}
  *
  * <p>ResizeDbfsRequest</p>
  */
 public class ResizeDbfsRequest extends Request {
-    @Query
-    @NameInMap("FsId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FsId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fsId;
 
-    @Query
-    @NameInMap("NewSizeG")
-    @Validation(required = true, minimum = 20)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewSizeG")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 20)
     private Integer newSizeG;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ResizeDbfsRequest(Builder builder) {
@@ -85,7 +85,10 @@ public class ResizeDbfsRequest extends Request {
         } 
 
         /**
-         * FsId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbfs-GOrr********Yd0VLOyBpg</p>
          */
         public Builder fsId(String fsId) {
             this.putQueryParameter("FsId", fsId);
@@ -94,7 +97,10 @@ public class ResizeDbfsRequest extends Request {
         }
 
         /**
-         * NewSizeG.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         public Builder newSizeG(Integer newSizeG) {
             this.putQueryParameter("NewSizeG", newSizeG);
@@ -103,7 +109,10 @@ public class ResizeDbfsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

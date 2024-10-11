@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbfs20200418.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAutoSnapshotPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>GetAutoSnapshotPolicyResponseBody</p>
  */
 public class GetAutoSnapshotPolicyResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAutoSnapshotPolicyResponseBody(Builder builder) {
@@ -71,41 +71,47 @@ public class GetAutoSnapshotPolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAutoSnapshotPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAutoSnapshotPolicyResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("AppliedDbfsNumber")
+        @com.aliyun.core.annotation.NameInMap("AppliedDbfsNumber")
         private Integer appliedDbfsNumber;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("LastModified")
+        @com.aliyun.core.annotation.NameInMap("LastModified")
         private String lastModified;
 
-        @NameInMap("PolicyId")
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
         private String policyId;
 
-        @NameInMap("PolicyName")
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
         private String policyName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RepeatWeekdays")
+        @com.aliyun.core.annotation.NameInMap("RepeatWeekdays")
         private java.util.List < String > repeatWeekdays;
 
-        @NameInMap("RetentionDays")
+        @com.aliyun.core.annotation.NameInMap("RetentionDays")
         private Integer retentionDays;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusDetail")
+        @com.aliyun.core.annotation.NameInMap("StatusDetail")
         private String statusDetail;
 
-        @NameInMap("TimePoints")
+        @com.aliyun.core.annotation.NameInMap("TimePoints")
         private java.util.List < String > timePoints;
 
         private Data(Builder builder) {
@@ -230,7 +236,7 @@ public class GetAutoSnapshotPolicyResponseBody extends TeaModel {
             private java.util.List < String > timePoints; 
 
             /**
-             * 账户ID
+             * AccountId.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -238,7 +244,7 @@ public class GetAutoSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * 设置的dbfs数
+             * AppliedDbfsNumber.
              */
             public Builder appliedDbfsNumber(Integer appliedDbfsNumber) {
                 this.appliedDbfsNumber = appliedDbfsNumber;
@@ -262,7 +268,7 @@ public class GetAutoSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * 策略ID
+             * PolicyId.
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -270,7 +276,7 @@ public class GetAutoSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * 自动快照策略名称
+             * PolicyName.
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -294,7 +300,7 @@ public class GetAutoSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * 快照保留天数（1-65535，NULL为永久保存）
+             * RetentionDays.
              */
             public Builder retentionDays(Integer retentionDays) {
                 this.retentionDays = retentionDays;
@@ -302,7 +308,7 @@ public class GetAutoSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * 策略状态
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

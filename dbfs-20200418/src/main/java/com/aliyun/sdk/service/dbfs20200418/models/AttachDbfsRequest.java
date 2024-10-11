@@ -1,42 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbfs20200418.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachDbfsRequest} extends {@link RequestModel}
  *
  * <p>AttachDbfsRequest</p>
  */
 public class AttachDbfsRequest extends Request {
-    @Query
-    @NameInMap("AttachMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AttachMode")
     private String attachMode;
 
-    @Query
-    @NameInMap("AttachPoint")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AttachPoint")
     private String attachPoint;
 
-    @Query
-    @NameInMap("ECSInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ECSInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ECSInstanceId;
 
-    @Query
-    @NameInMap("FsId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FsId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fsId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ServerUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerUrl")
     private String serverUrl;
 
     private AttachDbfsRequest(Builder builder) {
@@ -145,7 +145,10 @@ public class AttachDbfsRequest extends Request {
         }
 
         /**
-         * ECSInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1ecr********5go2go</p>
          */
         public Builder ECSInstanceId(String ECSInstanceId) {
             this.putQueryParameter("ECSInstanceId", ECSInstanceId);
@@ -154,7 +157,10 @@ public class AttachDbfsRequest extends Request {
         }
 
         /**
-         * FsId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbfs-v0WvA********tVEVcgJLg</p>
          */
         public Builder fsId(String fsId) {
             this.putQueryParameter("FsId", fsId);
@@ -163,7 +169,10 @@ public class AttachDbfsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

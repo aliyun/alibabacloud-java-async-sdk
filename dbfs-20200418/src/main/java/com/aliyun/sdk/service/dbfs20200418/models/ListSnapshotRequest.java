@@ -1,66 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbfs20200418.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSnapshotRequest} extends {@link RequestModel}
  *
  * <p>ListSnapshotRequest</p>
  */
 public class ListSnapshotRequest extends Request {
-    @Query
-    @NameInMap("FilterKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilterKey")
     private String filterKey;
 
-    @Query
-    @NameInMap("FilterValue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilterValue")
     private String filterValue;
 
-    @Query
-    @NameInMap("FsId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FsId")
     private String fsId;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(maximum = 10240, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 10240, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 200, minimum = 10)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 10)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("SnapshotIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotIds")
     private String snapshotIds;
 
-    @Query
-    @NameInMap("SnapshotName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotName")
     private String snapshotName;
 
-    @Query
-    @NameInMap("SnapshotType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotType")
     private String snapshotType;
 
-    @Query
-    @NameInMap("SortKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortKey")
     private String sortKey;
 
-    @Query
-    @NameInMap("SortType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortType")
     private String sortType;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private ListSnapshotRequest(Builder builder) {
@@ -256,7 +256,10 @@ public class ListSnapshotRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbfs20200418.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagKeysResponseBody} extends {@link TeaModel}
  *
  * <p>ListTagKeysResponseBody</p>
  */
 public class ListTagKeysResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TagKeys")
+    @com.aliyun.core.annotation.NameInMap("TagKeys")
     private java.util.List < String > tagKeys;
 
     private ListTagKeysResponseBody(Builder builder) {

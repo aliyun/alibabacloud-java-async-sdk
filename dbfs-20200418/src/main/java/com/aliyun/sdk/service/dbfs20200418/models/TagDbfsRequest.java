@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbfs20200418.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagDbfsRequest} extends {@link RequestModel}
  *
  * <p>TagDbfsRequest</p>
  */
 public class TagDbfsRequest extends Request {
-    @Query
-    @NameInMap("DbfsId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbfsId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbfsId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Tags")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tags;
 
     private TagDbfsRequest(Builder builder) {
@@ -85,7 +85,10 @@ public class TagDbfsRequest extends Request {
         } 
 
         /**
-         * DbfsId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbfs-nUy1tb********BQ4X8Gpw</p>
          */
         public Builder dbfsId(String dbfsId) {
             this.putQueryParameter("DbfsId", dbfsId);
@@ -94,7 +97,10 @@ public class TagDbfsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -103,7 +109,10 @@ public class TagDbfsRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;TagKey&quot;:&quot;k1&quot;,&quot;TagValue&quot;:&quot;v1&quot;},{&quot;TagKey&quot;:&quot;k2&quot;,&quot;TagValue&quot;:&quot;v2&quot;}]</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);

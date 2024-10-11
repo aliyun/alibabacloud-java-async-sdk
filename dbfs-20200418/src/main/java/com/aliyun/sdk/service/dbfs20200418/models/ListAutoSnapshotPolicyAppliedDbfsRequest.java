@@ -1,43 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbfs20200418.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAutoSnapshotPolicyAppliedDbfsRequest} extends {@link RequestModel}
  *
  * <p>ListAutoSnapshotPolicyAppliedDbfsRequest</p>
  */
 public class ListAutoSnapshotPolicyAppliedDbfsRequest extends Request {
-    @Query
-    @NameInMap("FilterKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilterKey")
     private String filterKey;
 
-    @Query
-    @NameInMap("FilterValue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilterValue")
     private String filterValue;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(maximum = 999999, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 999999, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 200, minimum = 10)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 10)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("PolicyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ListAutoSnapshotPolicyAppliedDbfsRequest(Builder builder) {
@@ -164,7 +164,10 @@ public class ListAutoSnapshotPolicyAppliedDbfsRequest extends Request {
         }
 
         /**
-         * PolicyId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-z5siir3iq3m**********</p>
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -173,7 +176,10 @@ public class ListAutoSnapshotPolicyAppliedDbfsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

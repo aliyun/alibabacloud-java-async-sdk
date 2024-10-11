@@ -1,28 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbfs20200418.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateServiceLinkedRoleResponse} extends {@link TeaModel}
  *
  * <p>CreateServiceLinkedRoleResponse</p>
  */
 public class CreateServiceLinkedRoleResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
-    @NameInMap("body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
+    private Integer statusCode;
+
+    @com.aliyun.core.annotation.NameInMap("body")
     private CreateServiceLinkedRoleResponseBody body;
 
     private CreateServiceLinkedRoleResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +45,13 @@ public class CreateServiceLinkedRoleResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public CreateServiceLinkedRoleResponseBody getBody() {
@@ -52,6 +61,8 @@ public class CreateServiceLinkedRoleResponse extends Response {
     public interface Builder extends Response.Builder<CreateServiceLinkedRoleResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(CreateServiceLinkedRoleResponseBody body);
 
@@ -64,6 +75,7 @@ public class CreateServiceLinkedRoleResponse extends Response {
             extends Response.BuilderImpl<CreateServiceLinkedRoleResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private CreateServiceLinkedRoleResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +85,7 @@ public class CreateServiceLinkedRoleResponse extends Response {
         private BuilderImpl(CreateServiceLinkedRoleResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +95,15 @@ public class CreateServiceLinkedRoleResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 
