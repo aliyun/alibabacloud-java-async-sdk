@@ -1,34 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openanalytics_open20180619.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSparkJobRequest} extends {@link RequestModel}
  *
  * <p>ListSparkJobRequest</p>
  */
 public class ListSparkJobRequest extends Request {
-    @Query
-    @NameInMap("Condition")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Condition")
     private java.util.Map < String, ? > condition;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("VcName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VcName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vcName;
 
     private ListSparkJobRequest(Builder builder) {
@@ -90,25 +90,29 @@ public class ListSparkJobRequest extends Request {
             super();
         } 
 
-        private Builder(ListSparkJobRequest response) {
-            super(response);
-            this.condition = response.condition;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.vcName = response.vcName;
+        private Builder(ListSparkJobRequest request) {
+            super(request);
+            this.condition = request.condition;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.vcName = request.vcName;
         } 
 
         /**
          * Condition.
          */
         public Builder condition(java.util.Map < String, ? > condition) {
-            this.putQueryParameter("Condition", condition);
+            String conditionShrink = shrink(condition, "Condition", "json");
+            this.putQueryParameter("Condition", conditionShrink);
             this.condition = condition;
             return this;
         }
 
         /**
-         * PageNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -117,7 +121,10 @@ public class ListSparkJobRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -126,7 +133,10 @@ public class ListSparkJobRequest extends Request {
         }
 
         /**
-         * VcName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySparkCluster</p>
          */
         public Builder vcName(String vcName) {
             this.putQueryParameter("VcName", vcName);

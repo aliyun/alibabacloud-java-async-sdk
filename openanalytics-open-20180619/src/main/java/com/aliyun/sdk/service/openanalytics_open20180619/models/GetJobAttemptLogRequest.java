@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openanalytics_open20180619.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetJobAttemptLogRequest} extends {@link RequestModel}
  *
  * <p>GetJobAttemptLogRequest</p>
  */
 public class GetJobAttemptLogRequest extends Request {
-    @Body
-    @NameInMap("JobAttemptId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("JobAttemptId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobAttemptId;
 
-    @Body
-    @NameInMap("JobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
-    @Body
-    @NameInMap("VcName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VcName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vcName;
 
     private GetJobAttemptLogRequest(Builder builder) {
@@ -77,15 +77,18 @@ public class GetJobAttemptLogRequest extends Request {
             super();
         } 
 
-        private Builder(GetJobAttemptLogRequest response) {
-            super(response);
-            this.jobAttemptId = response.jobAttemptId;
-            this.jobId = response.jobId;
-            this.vcName = response.vcName;
+        private Builder(GetJobAttemptLogRequest request) {
+            super(request);
+            this.jobAttemptId = request.jobAttemptId;
+            this.jobId = request.jobId;
+            this.vcName = request.vcName;
         } 
 
         /**
-         * JobAttemptId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>j202105272322hangzhou5d64f1560000128-0001</p>
          */
         public Builder jobAttemptId(String jobAttemptId) {
             this.putBodyParameter("JobAttemptId", jobAttemptId);
@@ -94,7 +97,10 @@ public class GetJobAttemptLogRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>j202105272322hangzhou5d64f1560000128</p>
          */
         public Builder jobId(String jobId) {
             this.putBodyParameter("JobId", jobId);
@@ -103,7 +109,10 @@ public class GetJobAttemptLogRequest extends Request {
         }
 
         /**
-         * VcName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>release-test</p>
          */
         public Builder vcName(String vcName) {
             this.putBodyParameter("VcName", vcName);

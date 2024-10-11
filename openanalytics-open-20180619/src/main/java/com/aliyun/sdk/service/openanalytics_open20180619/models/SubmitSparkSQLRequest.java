@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openanalytics_open20180619.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitSparkSQLRequest} extends {@link RequestModel}
  *
  * <p>SubmitSparkSQLRequest</p>
  */
 public class SubmitSparkSQLRequest extends Request {
-    @Body
-    @NameInMap("Sql")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Sql")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sql;
 
-    @Body
-    @NameInMap("VcName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VcName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vcName;
 
     private SubmitSparkSQLRequest(Builder builder) {
@@ -63,14 +63,17 @@ public class SubmitSparkSQLRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitSparkSQLRequest response) {
-            super(response);
-            this.sql = response.sql;
-            this.vcName = response.vcName;
+        private Builder(SubmitSparkSQLRequest request) {
+            super(request);
+            this.sql = request.sql;
+            this.vcName = request.vcName;
         } 
 
         /**
-         * Sql.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>set spark.driver.resourceSpec=medium;set spark.executor.instances=5;  set spark.executor.resourceSpec=medium;  set spark.app.name=sparksqltest;  show databases;</p>
          */
         public Builder sql(String sql) {
             this.putBodyParameter("Sql", sql);
@@ -79,7 +82,10 @@ public class SubmitSparkSQLRequest extends Request {
         }
 
         /**
-         * VcName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySparkCluster</p>
          */
         public Builder vcName(String vcName) {
             this.putBodyParameter("VcName", vcName);

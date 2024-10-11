@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openanalytics_open20180619.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSparkJobAttemptResponseBody} extends {@link TeaModel}
  *
  * <p>ListSparkJobAttemptResponseBody</p>
  */
 public class ListSparkJobAttemptResponseBody extends TeaModel {
-    @NameInMap("DataResult")
+    @com.aliyun.core.annotation.NameInMap("DataResult")
     private DataResult dataResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListSparkJobAttemptResponseBody(Builder builder) {
@@ -71,44 +71,50 @@ public class ListSparkJobAttemptResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSparkJobAttemptResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSparkJobAttemptResponseBody</p>
+     */
     public static class JobAttemptList extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateTimeValue")
+        @com.aliyun.core.annotation.NameInMap("CreateTimeValue")
         private String createTimeValue;
 
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private String detail;
 
-        @NameInMap("DurationTime")
+        @com.aliyun.core.annotation.NameInMap("DurationTime")
         private String durationTime;
 
-        @NameInMap("DurationTimeValue")
+        @com.aliyun.core.annotation.NameInMap("DurationTimeValue")
         private String durationTimeValue;
 
-        @NameInMap("JobAttemptId")
+        @com.aliyun.core.annotation.NameInMap("JobAttemptId")
         private String jobAttemptId;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("JobName")
+        @com.aliyun.core.annotation.NameInMap("JobName")
         private String jobName;
 
-        @NameInMap("SparkUI")
+        @com.aliyun.core.annotation.NameInMap("SparkUI")
         private String sparkUI;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TerminatedTime")
+        @com.aliyun.core.annotation.NameInMap("TerminatedTime")
         private String terminatedTime;
 
-        @NameInMap("TerminatedTimeValue")
+        @com.aliyun.core.annotation.NameInMap("TerminatedTimeValue")
         private String terminatedTimeValue;
 
-        @NameInMap("VcName")
+        @com.aliyun.core.annotation.NameInMap("VcName")
         private String vcName;
 
         private JobAttemptList(Builder builder) {
@@ -352,17 +358,23 @@ public class ListSparkJobAttemptResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSparkJobAttemptResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSparkJobAttemptResponseBody</p>
+     */
     public static class DataResult extends TeaModel {
-        @NameInMap("JobAttemptList")
+        @com.aliyun.core.annotation.NameInMap("JobAttemptList")
         private java.util.List < JobAttemptList> jobAttemptList;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private String pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private String pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private String totalCount;
 
         private DataResult(Builder builder) {

@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openanalytics_open20180619.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSparkSessionStateResponseBody} extends {@link TeaModel}
  *
  * <p>GetSparkSessionStateResponseBody</p>
  */
 public class GetSparkSessionStateResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("State")
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
     private GetSparkSessionStateResponseBody(Builder builder) {

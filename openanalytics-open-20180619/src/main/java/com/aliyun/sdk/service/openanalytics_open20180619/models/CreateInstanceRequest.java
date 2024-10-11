@@ -1,34 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openanalytics_open20180619.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateInstanceRequest</p>
  */
 public class CreateInstanceRequest extends Request {
-    @Body
-    @NameInMap("ChargeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String chargeType;
 
-    @Body
-    @NameInMap("Component")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Component")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String component;
 
-    @Body
-    @NameInMap("InstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private CreateInstanceRequest(Builder builder) {
@@ -90,16 +90,19 @@ public class CreateInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateInstanceRequest response) {
-            super(response);
-            this.chargeType = response.chargeType;
-            this.component = response.component;
-            this.instanceType = response.instanceType;
-            this.regionId = response.regionId;
+        private Builder(CreateInstanceRequest request) {
+            super(request);
+            this.chargeType = request.chargeType;
+            this.component = request.component;
+            this.instanceType = request.instanceType;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * ChargeType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POSTPAY</p>
          */
         public Builder chargeType(String chargeType) {
             this.putBodyParameter("ChargeType", chargeType);
@@ -108,7 +111,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Component.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;{&quot;operable&quot;:&quot;false&quot;,&quot;max_cu&quot;:&quot;8&quot;,&quot;instance_name&quot;:&quot;api-test-9&quot;,&quot;min_cu&quot;:&quot;0&quot;,&quot;engine&quot;:&quot;spark&quot;,&quot;region&quot;:&quot;cn-hangzhou&quot;,&quot;app_name&quot;:&quot;xx&quot;,&quot;app_version_name&quot;:&quot;xx&quot;}&quot;</p>
          */
         public Builder component(String component) {
             this.putBodyParameter("Component", component);
@@ -117,7 +123,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CU_PRESTO</p>
          */
         public Builder instanceType(String instanceType) {
             this.putBodyParameter("InstanceType", instanceType);

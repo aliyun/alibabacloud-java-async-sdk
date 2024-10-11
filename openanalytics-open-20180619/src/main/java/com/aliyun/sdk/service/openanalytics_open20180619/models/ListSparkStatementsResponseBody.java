@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openanalytics_open20180619.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSparkStatementsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSparkStatementsResponseBody</p>
  */
 public class ListSparkStatementsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Statements")
+    @com.aliyun.core.annotation.NameInMap("Statements")
     private java.util.List < Statements> statements;
 
     private ListSparkStatementsResponseBody(Builder builder) {
@@ -71,26 +71,32 @@ public class ListSparkStatementsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSparkStatementsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSparkStatementsResponseBody</p>
+     */
     public static class Statements extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("CompletedTime")
+        @com.aliyun.core.annotation.NameInMap("CompletedTime")
         private Long completedTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("Output")
+        @com.aliyun.core.annotation.NameInMap("Output")
         private String output;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Float progress;
 
-        @NameInMap("StartedTime")
+        @com.aliyun.core.annotation.NameInMap("StartedTime")
         private Long startedTime;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private Statements(Builder builder) {

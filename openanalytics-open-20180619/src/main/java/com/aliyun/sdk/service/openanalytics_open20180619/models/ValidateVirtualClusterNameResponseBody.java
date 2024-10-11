@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openanalytics_open20180619.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ValidateVirtualClusterNameResponseBody} extends {@link TeaModel}
  *
  * <p>ValidateVirtualClusterNameResponseBody</p>
  */
 public class ValidateVirtualClusterNameResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ValidateVirtualClusterNameResponseBody(Builder builder) {
@@ -71,11 +71,17 @@ public class ValidateVirtualClusterNameResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ValidateVirtualClusterNameResponseBody} extends {@link TeaModel}
+     *
+     * <p>ValidateVirtualClusterNameResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Legal")
+        @com.aliyun.core.annotation.NameInMap("Legal")
         private String legal;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private Data(Builder builder) {
