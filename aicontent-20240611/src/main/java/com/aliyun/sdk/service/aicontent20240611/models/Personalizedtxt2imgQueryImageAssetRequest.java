@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Personalizedtxt2imgQueryImageAssetRequest} extends {@link RequestModel}
  *
  * <p>Personalizedtxt2imgQueryImageAssetRequest</p>
@@ -107,7 +108,10 @@ public class Personalizedtxt2imgQueryImageAssetRequest extends Request {
         }
 
         /**
-         * imageId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000.png</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("imageId", imageId);
@@ -116,7 +120,10 @@ public class Personalizedtxt2imgQueryImageAssetRequest extends Request {
         }
 
         /**
-         * modelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>girl-xxxx-xxxx-xxxx-xxxx</p>
          */
         public Builder modelId(String modelId) {
             this.putQueryParameter("modelId", modelId);
@@ -125,7 +132,10 @@ public class Personalizedtxt2imgQueryImageAssetRequest extends Request {
         }
 
         /**
-         * promptId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxx</p>
          */
         public Builder promptId(String promptId) {
             this.putQueryParameter("promptId", promptId);

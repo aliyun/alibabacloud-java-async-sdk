@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Personalizedtxt2imgAddModelTrainJobRequest} extends {@link RequestModel}
  *
  * <p>Personalizedtxt2imgAddModelTrainJobRequest</p>
@@ -98,7 +99,7 @@ public class Personalizedtxt2imgAddModelTrainJobRequest extends Request {
         } 
 
         /**
-         * imageUrl.
+         * <p>This parameter is required.</p>
          */
         public Builder imageUrl(java.util.List < String > imageUrl) {
             this.putBodyParameter("imageUrl", imageUrl);
@@ -107,7 +108,10 @@ public class Personalizedtxt2imgAddModelTrainJobRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>熊猫图片生成</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -116,7 +120,10 @@ public class Personalizedtxt2imgAddModelTrainJobRequest extends Request {
         }
 
         /**
-         * objectType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dog</p>
          */
         public Builder objectType(String objectType) {
             this.putBodyParameter("objectType", objectType);

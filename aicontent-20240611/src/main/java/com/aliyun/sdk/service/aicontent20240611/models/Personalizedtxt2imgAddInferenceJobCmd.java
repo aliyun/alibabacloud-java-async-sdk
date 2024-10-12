@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Personalizedtxt2imgAddInferenceJobCmd} extends {@link TeaModel}
  *
  * <p>Personalizedtxt2imgAddInferenceJobCmd</p>
@@ -83,7 +84,10 @@ public class Personalizedtxt2imgAddInferenceJobCmd extends TeaModel {
         }
 
         /**
-         * modelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx</p>
          */
         public Builder modelId(String modelId) {
             this.modelId = modelId;
@@ -91,7 +95,10 @@ public class Personalizedtxt2imgAddInferenceJobCmd extends TeaModel {
         }
 
         /**
-         * prompt.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a <special-token> in the snow</p>
          */
         public Builder prompt(String prompt) {
             this.prompt = prompt;

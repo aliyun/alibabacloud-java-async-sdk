@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OpenApiSingleResponse} extends {@link TeaModel}
  *
  * <p>OpenApiSingleResponse</p>
@@ -194,6 +195,12 @@ public class OpenApiSingleResponse extends Response {
 
     } 
 
+    /**
+     * 
+     * {@link OpenApiSingleResponse} extends {@link TeaModel}
+     *
+     * <p>OpenApiSingleResponse</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("modelTrainStatus")
         private String modelTrainStatus;

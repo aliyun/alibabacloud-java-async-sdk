@@ -7,13 +7,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link Personalizedtxt2imgQueryModelTrainStatusResponseBody} extends {@link TeaModel}
+ * {@link AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody} extends {@link TeaModel}
  *
- * <p>Personalizedtxt2imgQueryModelTrainStatusResponseBody</p>
+ * <p>AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody</p>
  */
-public class Personalizedtxt2imgQueryModelTrainStatusResponseBody extends TeaModel {
+public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
-    private Data data;
+    private java.util.List < Data> data;
 
     @com.aliyun.core.annotation.NameInMap("errCode")
     private String errCode;
@@ -30,7 +30,7 @@ public class Personalizedtxt2imgQueryModelTrainStatusResponseBody extends TeaMod
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    private Personalizedtxt2imgQueryModelTrainStatusResponseBody(Builder builder) {
+    private AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody(Builder builder) {
         this.data = builder.data;
         this.errCode = builder.errCode;
         this.errMessage = builder.errMessage;
@@ -43,14 +43,14 @@ public class Personalizedtxt2imgQueryModelTrainStatusResponseBody extends TeaMod
         return new Builder();
     }
 
-    public static Personalizedtxt2imgQueryModelTrainStatusResponseBody create() {
+    public static AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody create() {
         return builder().build();
     }
 
     /**
      * @return data
      */
-    public Data getData() {
+    public java.util.List < Data> getData() {
         return this.data;
     }
 
@@ -90,7 +90,7 @@ public class Personalizedtxt2imgQueryModelTrainStatusResponseBody extends TeaMod
     }
 
     public static final class Builder {
-        private Data data; 
+        private java.util.List < Data> data; 
         private String errCode; 
         private String errMessage; 
         private Integer httpStatusCode; 
@@ -100,7 +100,7 @@ public class Personalizedtxt2imgQueryModelTrainStatusResponseBody extends TeaMod
         /**
          * data.
          */
-        public Builder data(Data data) {
+        public Builder data(java.util.List < Data> data) {
             this.data = data;
             return this;
         }
@@ -145,24 +145,36 @@ public class Personalizedtxt2imgQueryModelTrainStatusResponseBody extends TeaMod
             return this;
         }
 
-        public Personalizedtxt2imgQueryModelTrainStatusResponseBody build() {
-            return new Personalizedtxt2imgQueryModelTrainStatusResponseBody(this);
+        public AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody build() {
+            return new AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link Personalizedtxt2imgQueryModelTrainStatusResponseBody} extends {@link TeaModel}
+     * {@link AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody} extends {@link TeaModel}
      *
-     * <p>Personalizedtxt2imgQueryModelTrainStatusResponseBody</p>
+     * <p>AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("modelTrainStatus")
-        private String modelTrainStatus;
+        @com.aliyun.core.annotation.NameInMap("FreeConcurrencyCount")
+        private Integer freeConcurrencyCount;
+
+        @com.aliyun.core.annotation.NameInMap("FreeCount")
+        private Integer freeCount;
+
+        @com.aliyun.core.annotation.NameInMap("ServiceCode")
+        private String serviceCode;
+
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
+        private String serviceName;
 
         private Data(Builder builder) {
-            this.modelTrainStatus = builder.modelTrainStatus;
+            this.freeConcurrencyCount = builder.freeConcurrencyCount;
+            this.freeCount = builder.freeCount;
+            this.serviceCode = builder.serviceCode;
+            this.serviceName = builder.serviceName;
         }
 
         public static Builder builder() {
@@ -174,20 +186,68 @@ public class Personalizedtxt2imgQueryModelTrainStatusResponseBody extends TeaMod
         }
 
         /**
-         * @return modelTrainStatus
+         * @return freeConcurrencyCount
          */
-        public String getModelTrainStatus() {
-            return this.modelTrainStatus;
+        public Integer getFreeConcurrencyCount() {
+            return this.freeConcurrencyCount;
+        }
+
+        /**
+         * @return freeCount
+         */
+        public Integer getFreeCount() {
+            return this.freeCount;
+        }
+
+        /**
+         * @return serviceCode
+         */
+        public String getServiceCode() {
+            return this.serviceCode;
+        }
+
+        /**
+         * @return serviceName
+         */
+        public String getServiceName() {
+            return this.serviceName;
         }
 
         public static final class Builder {
-            private String modelTrainStatus; 
+            private Integer freeConcurrencyCount; 
+            private Integer freeCount; 
+            private String serviceCode; 
+            private String serviceName; 
 
             /**
-             * modelTrainStatus.
+             * FreeConcurrencyCount.
              */
-            public Builder modelTrainStatus(String modelTrainStatus) {
-                this.modelTrainStatus = modelTrainStatus;
+            public Builder freeConcurrencyCount(Integer freeConcurrencyCount) {
+                this.freeConcurrencyCount = freeConcurrencyCount;
+                return this;
+            }
+
+            /**
+             * FreeCount.
+             */
+            public Builder freeCount(Integer freeCount) {
+                this.freeCount = freeCount;
+                return this;
+            }
+
+            /**
+             * ServiceCode.
+             */
+            public Builder serviceCode(String serviceCode) {
+                this.serviceCode = serviceCode;
+                return this;
+            }
+
+            /**
+             * ServiceName.
+             */
+            public Builder serviceName(String serviceName) {
+                this.serviceName = serviceName;
                 return this;
             }
 

@@ -7,19 +7,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link Personalizedtxt2imgAddInferenceJobRequest} extends {@link RequestModel}
+ * {@link PersonalizedTextToImageAddInferenceJobRequest} extends {@link RequestModel}
  *
- * <p>Personalizedtxt2imgAddInferenceJobRequest</p>
+ * <p>PersonalizedTextToImageAddInferenceJobRequest</p>
  */
-public class Personalizedtxt2imgAddInferenceJobRequest extends Request {
+public class PersonalizedTextToImageAddInferenceJobRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("imageNumber")
     private Integer imageNumber;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("modelId")
+    @com.aliyun.core.annotation.NameInMap("imageUrl")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String modelId;
+    private java.util.List < String > imageUrl;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("prompt")
@@ -30,19 +30,29 @@ public class Personalizedtxt2imgAddInferenceJobRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("seed")
     private Long seed;
 
-    private Personalizedtxt2imgAddInferenceJobRequest(Builder builder) {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("strength")
+    private Double strength;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("trainSteps")
+    private Integer trainSteps;
+
+    private PersonalizedTextToImageAddInferenceJobRequest(Builder builder) {
         super(builder);
         this.imageNumber = builder.imageNumber;
-        this.modelId = builder.modelId;
+        this.imageUrl = builder.imageUrl;
         this.prompt = builder.prompt;
         this.seed = builder.seed;
+        this.strength = builder.strength;
+        this.trainSteps = builder.trainSteps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Personalizedtxt2imgAddInferenceJobRequest create() {
+    public static PersonalizedTextToImageAddInferenceJobRequest create() {
         return builder().build();
     }
 
@@ -59,10 +69,10 @@ public class Personalizedtxt2imgAddInferenceJobRequest extends Request {
     }
 
     /**
-     * @return modelId
+     * @return imageUrl
      */
-    public String getModelId() {
-        return this.modelId;
+    public java.util.List < String > getImageUrl() {
+        return this.imageUrl;
     }
 
     /**
@@ -79,22 +89,40 @@ public class Personalizedtxt2imgAddInferenceJobRequest extends Request {
         return this.seed;
     }
 
-    public static final class Builder extends Request.Builder<Personalizedtxt2imgAddInferenceJobRequest, Builder> {
+    /**
+     * @return strength
+     */
+    public Double getStrength() {
+        return this.strength;
+    }
+
+    /**
+     * @return trainSteps
+     */
+    public Integer getTrainSteps() {
+        return this.trainSteps;
+    }
+
+    public static final class Builder extends Request.Builder<PersonalizedTextToImageAddInferenceJobRequest, Builder> {
         private Integer imageNumber; 
-        private String modelId; 
+        private java.util.List < String > imageUrl; 
         private String prompt; 
         private Long seed; 
+        private Double strength; 
+        private Integer trainSteps; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(Personalizedtxt2imgAddInferenceJobRequest request) {
+        private Builder(PersonalizedTextToImageAddInferenceJobRequest request) {
             super(request);
             this.imageNumber = request.imageNumber;
-            this.modelId = request.modelId;
+            this.imageUrl = request.imageUrl;
             this.prompt = request.prompt;
             this.seed = request.seed;
+            this.strength = request.strength;
+            this.trainSteps = request.trainSteps;
         } 
 
         /**
@@ -108,13 +136,10 @@ public class Personalizedtxt2imgAddInferenceJobRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xxxx-xxxx-xxxx</p>
          */
-        public Builder modelId(String modelId) {
-            this.putBodyParameter("modelId", modelId);
-            this.modelId = modelId;
+        public Builder imageUrl(java.util.List < String > imageUrl) {
+            this.putBodyParameter("imageUrl", imageUrl);
+            this.imageUrl = imageUrl;
             return this;
         }
 
@@ -139,9 +164,27 @@ public class Personalizedtxt2imgAddInferenceJobRequest extends Request {
             return this;
         }
 
+        /**
+         * strength.
+         */
+        public Builder strength(Double strength) {
+            this.putBodyParameter("strength", strength);
+            this.strength = strength;
+            return this;
+        }
+
+        /**
+         * trainSteps.
+         */
+        public Builder trainSteps(Integer trainSteps) {
+            this.putBodyParameter("trainSteps", trainSteps);
+            this.trainSteps = trainSteps;
+            return this;
+        }
+
         @Override
-        public Personalizedtxt2imgAddInferenceJobRequest build() {
-            return new Personalizedtxt2imgAddInferenceJobRequest(this);
+        public PersonalizedTextToImageAddInferenceJobRequest build() {
+            return new PersonalizedTextToImageAddInferenceJobRequest(this);
         } 
 
     } 

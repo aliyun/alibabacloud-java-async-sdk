@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Personalizedtxt2imgQueryModelTrainJobListResponse} extends {@link TeaModel}
  *
  * <p>Personalizedtxt2imgQueryModelTrainJobListResponse</p>

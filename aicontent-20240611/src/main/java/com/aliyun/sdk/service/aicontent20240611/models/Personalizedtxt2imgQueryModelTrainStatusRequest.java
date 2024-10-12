@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Personalizedtxt2imgQueryModelTrainStatusRequest} extends {@link RequestModel}
  *
  * <p>Personalizedtxt2imgQueryModelTrainStatusRequest</p>
@@ -54,7 +55,10 @@ public class Personalizedtxt2imgQueryModelTrainStatusRequest extends Request {
         } 
 
         /**
-         * modelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>modelId-xxxx-xxxx-xxxx</p>
          */
         public Builder modelId(String modelId) {
             this.putQueryParameter("modelId", modelId);

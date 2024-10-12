@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link Personalizedtxt2imgQueryInferenceJobInfoResponseBody} extends {@link TeaModel}
+ * {@link PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody} extends {@link TeaModel}
  *
- * <p>Personalizedtxt2imgQueryInferenceJobInfoResponseBody</p>
+ * <p>PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody</p>
  */
-public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody extends TeaModel {
+public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
@@ -30,7 +30,7 @@ public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody extends TeaMod
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    private Personalizedtxt2imgQueryInferenceJobInfoResponseBody(Builder builder) {
+    private PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody(Builder builder) {
         this.data = builder.data;
         this.errCode = builder.errCode;
         this.errMessage = builder.errMessage;
@@ -43,7 +43,7 @@ public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody extends TeaMod
         return new Builder();
     }
 
-    public static Personalizedtxt2imgQueryInferenceJobInfoResponseBody create() {
+    public static PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody create() {
         return builder().build();
     }
 
@@ -145,17 +145,17 @@ public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody extends TeaMod
             return this;
         }
 
-        public Personalizedtxt2imgQueryInferenceJobInfoResponseBody build() {
-            return new Personalizedtxt2imgQueryInferenceJobInfoResponseBody(this);
+        public PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody build() {
+            return new PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link Personalizedtxt2imgQueryInferenceJobInfoResponseBody} extends {@link TeaModel}
+     * {@link PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody} extends {@link TeaModel}
      *
-     * <p>Personalizedtxt2imgQueryInferenceJobInfoResponseBody</p>
+     * <p>PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody</p>
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
@@ -296,7 +296,10 @@ public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody extends TeaMod
             }
 
             /**
-             * promptId.
+             * <p>promptId</p>
+             * 
+             * <strong>example:</strong>
+             * <p>promptId-xxxx-xxxx-xxxx</p>
              */
             public Builder promptId(String promptId) {
                 this.promptId = promptId;

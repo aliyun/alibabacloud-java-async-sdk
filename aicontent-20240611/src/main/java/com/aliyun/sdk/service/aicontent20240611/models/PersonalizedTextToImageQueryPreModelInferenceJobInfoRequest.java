@@ -7,17 +7,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link Personalizedtxt2imgQueryInferenceJobInfoRequest} extends {@link RequestModel}
+ * {@link PersonalizedTextToImageQueryPreModelInferenceJobInfoRequest} extends {@link RequestModel}
  *
- * <p>Personalizedtxt2imgQueryInferenceJobInfoRequest</p>
+ * <p>PersonalizedTextToImageQueryPreModelInferenceJobInfoRequest</p>
  */
-public class Personalizedtxt2imgQueryInferenceJobInfoRequest extends Request {
+public class PersonalizedTextToImageQueryPreModelInferenceJobInfoRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("inferenceJobId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String inferenceJobId;
 
-    private Personalizedtxt2imgQueryInferenceJobInfoRequest(Builder builder) {
+    private PersonalizedTextToImageQueryPreModelInferenceJobInfoRequest(Builder builder) {
         super(builder);
         this.inferenceJobId = builder.inferenceJobId;
     }
@@ -26,7 +26,7 @@ public class Personalizedtxt2imgQueryInferenceJobInfoRequest extends Request {
         return new Builder();
     }
 
-    public static Personalizedtxt2imgQueryInferenceJobInfoRequest create() {
+    public static PersonalizedTextToImageQueryPreModelInferenceJobInfoRequest create() {
         return builder().build();
     }
 
@@ -42,14 +42,14 @@ public class Personalizedtxt2imgQueryInferenceJobInfoRequest extends Request {
         return this.inferenceJobId;
     }
 
-    public static final class Builder extends Request.Builder<Personalizedtxt2imgQueryInferenceJobInfoRequest, Builder> {
+    public static final class Builder extends Request.Builder<PersonalizedTextToImageQueryPreModelInferenceJobInfoRequest, Builder> {
         private String inferenceJobId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(Personalizedtxt2imgQueryInferenceJobInfoRequest request) {
+        private Builder(PersonalizedTextToImageQueryPreModelInferenceJobInfoRequest request) {
             super(request);
             this.inferenceJobId = request.inferenceJobId;
         } 
@@ -58,7 +58,7 @@ public class Personalizedtxt2imgQueryInferenceJobInfoRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>180</p>
+         * <p>girl-xxxx-xxxx-xxxx-xxxx</p>
          */
         public Builder inferenceJobId(String inferenceJobId) {
             this.putQueryParameter("inferenceJobId", inferenceJobId);
@@ -67,8 +67,8 @@ public class Personalizedtxt2imgQueryInferenceJobInfoRequest extends Request {
         }
 
         @Override
-        public Personalizedtxt2imgQueryInferenceJobInfoRequest build() {
-            return new Personalizedtxt2imgQueryInferenceJobInfoRequest(this);
+        public PersonalizedTextToImageQueryPreModelInferenceJobInfoRequest build() {
+            return new PersonalizedTextToImageQueryPreModelInferenceJobInfoRequest(this);
         } 
 
     } 

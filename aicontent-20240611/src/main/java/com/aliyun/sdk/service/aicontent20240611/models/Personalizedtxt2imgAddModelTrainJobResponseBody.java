@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Personalizedtxt2imgAddModelTrainJobResponseBody} extends {@link TeaModel}
  *
  * <p>Personalizedtxt2imgAddModelTrainJobResponseBody</p>
@@ -150,6 +151,12 @@ public class Personalizedtxt2imgAddModelTrainJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link Personalizedtxt2imgAddModelTrainJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>Personalizedtxt2imgAddModelTrainJobResponseBody</p>
+     */
     public static class InferenceJobList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
@@ -311,6 +318,12 @@ public class Personalizedtxt2imgAddModelTrainJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Personalizedtxt2imgAddModelTrainJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>Personalizedtxt2imgAddModelTrainJobResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;

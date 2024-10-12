@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Personalizedtxt2imgInferenceJobInfoDTO} extends {@link TeaModel}
  *
  * <p>Personalizedtxt2imgInferenceJobInfoDTO</p>

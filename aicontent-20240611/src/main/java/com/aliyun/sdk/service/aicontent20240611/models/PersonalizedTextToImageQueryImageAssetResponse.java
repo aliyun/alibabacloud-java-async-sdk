@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link Personalizedtxt2imgAddInferenceJobResponse} extends {@link TeaModel}
+ * {@link PersonalizedTextToImageQueryImageAssetResponse} extends {@link TeaModel}
  *
- * <p>Personalizedtxt2imgAddInferenceJobResponse</p>
+ * <p>PersonalizedTextToImageQueryImageAssetResponse</p>
  */
-public class Personalizedtxt2imgAddInferenceJobResponse extends Response {
+public class PersonalizedTextToImageQueryImageAssetResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class Personalizedtxt2imgAddInferenceJobResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private Personalizedtxt2imgAddInferenceJobResponseBody body;
+    private Object body;
 
-    private Personalizedtxt2imgAddInferenceJobResponse(BuilderImpl builder) {
+    private PersonalizedTextToImageQueryImageAssetResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static Personalizedtxt2imgAddInferenceJobResponse create() {
+    public static PersonalizedTextToImageQueryImageAssetResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class Personalizedtxt2imgAddInferenceJobResponse extends Response {
     /**
      * @return body
      */
-    public Personalizedtxt2imgAddInferenceJobResponseBody getBody() {
+    public Object getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<Personalizedtxt2imgAddInferenceJobResponse, Builder> {
+    public interface Builder extends Response.Builder<PersonalizedTextToImageQueryImageAssetResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(Personalizedtxt2imgAddInferenceJobResponseBody body);
+        Builder body(Object body);
 
         @Override
-        Personalizedtxt2imgAddInferenceJobResponse build();
+        PersonalizedTextToImageQueryImageAssetResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<Personalizedtxt2imgAddInferenceJobResponse, Builder>
+            extends Response.BuilderImpl<PersonalizedTextToImageQueryImageAssetResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private Personalizedtxt2imgAddInferenceJobResponseBody body; 
+        private Object body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(Personalizedtxt2imgAddInferenceJobResponse response) {
+        private BuilderImpl(PersonalizedTextToImageQueryImageAssetResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class Personalizedtxt2imgAddInferenceJobResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(Personalizedtxt2imgAddInferenceJobResponseBody body) {
+        public Builder body(Object body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public Personalizedtxt2imgAddInferenceJobResponse build() {
-            return new Personalizedtxt2imgAddInferenceJobResponse(this);
+        public PersonalizedTextToImageQueryImageAssetResponse build() {
+            return new PersonalizedTextToImageQueryImageAssetResponse(this);
         } 
 
     } 
