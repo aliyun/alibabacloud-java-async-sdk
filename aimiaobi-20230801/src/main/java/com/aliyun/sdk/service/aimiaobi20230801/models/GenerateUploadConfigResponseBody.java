@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateUploadConfigResponseBody} extends {@link TeaModel}
  *
  * <p>GenerateUploadConfigResponseBody</p>
@@ -150,6 +151,12 @@ public class GenerateUploadConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GenerateUploadConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GenerateUploadConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileKey")
         private String fileKey;

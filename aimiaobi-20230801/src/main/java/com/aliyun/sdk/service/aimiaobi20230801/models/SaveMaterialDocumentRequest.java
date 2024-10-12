@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveMaterialDocumentRequest} extends {@link RequestModel}
  *
  * <p>SaveMaterialDocumentRequest</p>
@@ -260,7 +261,10 @@ public class SaveMaterialDocumentRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c160c841c8e54295bf2f441432785944_p_efm</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -297,7 +301,10 @@ public class SaveMaterialDocumentRequest extends Request {
         }
 
         /**
-         * DocType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>excel</p>
          */
         public Builder docType(String docType) {
             this.putBodyParameter("DocType", docType);

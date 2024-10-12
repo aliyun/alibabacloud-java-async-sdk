@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest} extends {@link RequestModel}
  *
  * <p>SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest</p>
@@ -121,7 +122,10 @@ public class SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest extends Re
         }
 
         /**
-         * AgentKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx_p_efm</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -140,7 +144,10 @@ public class SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest extends Re
         }
 
         /**
-         * Prompt.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>自定义观点的输入Prompt</p>
          */
         public Builder prompt(String prompt) {
             this.putBodyParameter("Prompt", prompt);
@@ -164,6 +171,12 @@ public class SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest extends Re
 
     } 
 
+    /**
+     * 
+     * {@link SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest</p>
+     */
     public static class Documents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Author")
         @com.aliyun.core.annotation.Validation(maxLength = 100)
@@ -278,7 +291,10 @@ public class SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest extends Re
             }
 
             /**
-             * Content.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>文章内容</p>
              */
             public Builder content(String content) {
                 this.content = content;

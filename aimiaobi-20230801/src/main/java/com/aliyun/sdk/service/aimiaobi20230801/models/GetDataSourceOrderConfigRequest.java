@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataSourceOrderConfigRequest} extends {@link RequestModel}
  *
  * <p>GetDataSourceOrderConfigRequest</p>
@@ -92,7 +93,10 @@ public class GetDataSourceOrderConfigRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d9a1f6146a37446495d9985c2e7b267e_p_outbound_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -101,7 +105,10 @@ public class GetDataSourceOrderConfigRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>miaobi</p>
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);

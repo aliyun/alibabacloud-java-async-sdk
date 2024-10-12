@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHotViewPointsResponseBody} extends {@link TeaModel}
  *
  * <p>ListHotViewPointsResponseBody</p>
@@ -210,6 +211,12 @@ public class ListHotViewPointsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHotViewPointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotViewPointsResponseBody</p>
+     */
     public static class News extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Author")
         private String author;
@@ -471,6 +478,12 @@ public class ListHotViewPointsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHotViewPointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotViewPointsResponseBody</p>
+     */
     public static class Outlines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Outline")
         private String outline;
@@ -532,6 +545,12 @@ public class ListHotViewPointsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHotViewPointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotViewPointsResponseBody</p>
+     */
     public static class ViewPoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Outlines")
         private java.util.List < Outlines> outlines;
@@ -613,6 +632,12 @@ public class ListHotViewPointsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHotViewPointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotViewPointsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attitude")
         private String attitude;

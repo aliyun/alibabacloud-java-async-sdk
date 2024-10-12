@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAsyncTasksRequest} extends {@link RequestModel}
  *
  * <p>ListAsyncTasksRequest</p>
@@ -217,7 +218,10 @@ public class ListAsyncTasksRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cd327c3d5d5e44159cc716e23bfa530e_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);

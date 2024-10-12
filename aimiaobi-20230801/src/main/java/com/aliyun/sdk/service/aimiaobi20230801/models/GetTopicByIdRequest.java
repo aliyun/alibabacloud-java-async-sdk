@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTopicByIdRequest} extends {@link RequestModel}
  *
  * <p>GetTopicByIdRequest</p>
@@ -92,7 +93,10 @@ public class GetTopicByIdRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx_p_efm</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -101,7 +105,10 @@ public class GetTopicByIdRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>数据ID</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);

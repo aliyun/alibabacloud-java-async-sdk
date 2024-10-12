@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunCustomHotTopicAnalysisRequest} extends {@link RequestModel}
  *
  * <p>RunCustomHotTopicAnalysisRequest</p>
@@ -180,7 +181,10 @@ public class RunCustomHotTopicAnalysisRequest extends Request {
         }
 
         /**
-         * Prompt.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>用户输入Prompt</p>
          */
         public Builder prompt(String prompt) {
             this.putBodyParameter("Prompt", prompt);
@@ -216,7 +220,10 @@ public class RunCustomHotTopicAnalysisRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

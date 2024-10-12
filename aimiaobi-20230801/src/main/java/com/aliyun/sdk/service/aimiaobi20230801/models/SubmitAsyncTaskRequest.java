@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitAsyncTaskRequest} extends {@link RequestModel}
  *
  * <p>SubmitAsyncTaskRequest</p>
@@ -134,7 +135,10 @@ public class SubmitAsyncTaskRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2daaa2e0c209xb26acb97009ea77bd4b_p_efm</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -143,7 +147,10 @@ public class SubmitAsyncTaskRequest extends Request {
         }
 
         /**
-         * TaskCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MaterialDocumentUpload</p>
          */
         public Builder taskCode(String taskCode) {
             this.putBodyParameter("TaskCode", taskCode);

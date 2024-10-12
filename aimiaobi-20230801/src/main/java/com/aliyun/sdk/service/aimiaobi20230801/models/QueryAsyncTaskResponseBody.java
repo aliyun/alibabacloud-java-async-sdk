@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAsyncTaskResponseBody} extends {@link TeaModel}
  *
  * <p>QueryAsyncTaskResponseBody</p>
@@ -150,6 +151,12 @@ public class QueryAsyncTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryAsyncTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAsyncTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;

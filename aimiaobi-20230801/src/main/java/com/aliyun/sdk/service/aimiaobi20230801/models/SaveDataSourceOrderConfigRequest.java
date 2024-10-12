@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveDataSourceOrderConfigRequest} extends {@link RequestModel}
  *
  * <p>SaveDataSourceOrderConfigRequest</p>
@@ -107,7 +108,10 @@ public class SaveDataSourceOrderConfigRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c160c841c8e54295bf2f441432785944_p_efm</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -116,7 +120,10 @@ public class SaveDataSourceOrderConfigRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>miaobi</p>
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -125,7 +132,7 @@ public class SaveDataSourceOrderConfigRequest extends Request {
         }
 
         /**
-         * UserConfigDataSourceList.
+         * <p>This parameter is required.</p>
          */
         public Builder userConfigDataSourceList(java.util.List < UserConfigDataSourceList> userConfigDataSourceList) {
             String userConfigDataSourceListShrink = shrink(userConfigDataSourceList, "UserConfigDataSourceList", "json");
@@ -141,6 +148,12 @@ public class SaveDataSourceOrderConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SaveDataSourceOrderConfigRequest} extends {@link TeaModel}
+     *
+     * <p>SaveDataSourceOrderConfigRequest</p>
+     */
     public static class UserConfigDataSourceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -207,7 +220,10 @@ public class SaveDataSourceOrderConfigRequest extends Request {
             private String type; 
 
             /**
-             * Code.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>QuarkCommonNews</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -223,7 +239,10 @@ public class SaveDataSourceOrderConfigRequest extends Request {
             }
 
             /**
-             * Number.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder number(Integer number) {
                 this.number = number;
@@ -231,7 +250,10 @@ public class SaveDataSourceOrderConfigRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SystemSearch</p>
              */
             public Builder type(String type) {
                 this.type = type;

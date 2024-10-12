@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FetchImageTaskRequest} extends {@link RequestModel}
  *
  * <p>FetchImageTaskRequest</p>
@@ -107,7 +108,10 @@ public class FetchImageTaskRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cd327c3d5d5e44159cc716e23bfa530e_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -116,7 +120,10 @@ public class FetchImageTaskRequest extends Request {
         }
 
         /**
-         * ArticleTaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e1be065b-adc3-435e-bd01-1c18c5ed75d3</p>
          */
         public Builder articleTaskId(String articleTaskId) {
             this.putBodyParameter("ArticleTaskId", articleTaskId);
@@ -125,7 +132,10 @@ public class FetchImageTaskRequest extends Request {
         }
 
         /**
-         * TaskIdList.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;9d8c9185-3f75-4a20-aca1-c5bb53dd97b3&quot;]</p>
          */
         public Builder taskIdList(java.util.List < String > taskIdList) {
             String taskIdListShrink = shrink(taskIdList, "TaskIdList", "json");

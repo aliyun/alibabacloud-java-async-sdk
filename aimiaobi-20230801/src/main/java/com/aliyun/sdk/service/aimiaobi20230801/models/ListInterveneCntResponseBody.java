@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInterveneCntResponseBody} extends {@link TeaModel}
  *
  * <p>ListInterveneCntResponseBody</p>
@@ -150,6 +151,12 @@ public class ListInterveneCntResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInterveneCntResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInterveneCntResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CntList")
         private java.util.List < ? > cntList;

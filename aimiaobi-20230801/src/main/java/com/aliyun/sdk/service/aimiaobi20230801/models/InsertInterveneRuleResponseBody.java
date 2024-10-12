@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsertInterveneRuleResponseBody} extends {@link TeaModel}
  *
  * <p>InsertInterveneRuleResponseBody</p>
@@ -150,6 +151,12 @@ public class InsertInterveneRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link InsertInterveneRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>InsertInterveneRuleResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;

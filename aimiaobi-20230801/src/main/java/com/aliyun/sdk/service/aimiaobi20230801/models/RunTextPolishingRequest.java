@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunTextPolishingRequest} extends {@link RequestModel}
  *
  * <p>RunTextPolishingRequest</p>
@@ -92,7 +93,10 @@ public class RunTextPolishingRequest extends Request {
         }
 
         /**
-         * Content.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文本内容</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -101,7 +105,10 @@ public class RunTextPolishingRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

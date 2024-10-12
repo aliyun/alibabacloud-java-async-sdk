@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHotNewsWithTypeResponseBody} extends {@link TeaModel}
  *
  * <p>ListHotNewsWithTypeResponseBody</p>
@@ -150,6 +151,12 @@ public class ListHotNewsWithTypeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHotNewsWithTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotNewsWithTypeResponseBody</p>
+     */
     public static class News extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Author")
         private String author;
@@ -431,6 +438,12 @@ public class ListHotNewsWithTypeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHotNewsWithTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotNewsWithTypeResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("News")
         private java.util.List < News> news;

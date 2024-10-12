@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCustomTextResponseBody} extends {@link TeaModel}
  *
  * <p>GetCustomTextResponseBody</p>
@@ -150,6 +151,12 @@ public class GetCustomTextResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCustomTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCustomTextResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInterveneRulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListInterveneRulesResponseBody</p>
@@ -150,6 +151,12 @@ public class ListInterveneRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInterveneRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInterveneRulesResponseBody</p>
+     */
     public static class AnswerConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnswerType")
         private Integer answerType;
@@ -231,6 +238,12 @@ public class ListInterveneRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInterveneRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInterveneRulesResponseBody</p>
+     */
     public static class InterveneRuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnswerConfig")
         private java.util.List < AnswerConfig> answerConfig;
@@ -392,6 +405,12 @@ public class ListInterveneRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInterveneRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInterveneRulesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;

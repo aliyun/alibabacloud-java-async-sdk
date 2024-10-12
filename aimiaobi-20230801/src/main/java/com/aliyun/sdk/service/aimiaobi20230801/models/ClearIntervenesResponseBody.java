@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ClearIntervenesResponseBody} extends {@link TeaModel}
  *
  * <p>ClearIntervenesResponseBody</p>
@@ -150,6 +151,12 @@ public class ClearIntervenesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ClearIntervenesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ClearIntervenesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailIdList")
         private java.util.List < String > failIdList;

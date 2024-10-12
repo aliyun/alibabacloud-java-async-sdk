@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateViewPointResponseBody} extends {@link TeaModel}
  *
  * <p>GenerateViewPointResponseBody</p>
@@ -150,6 +151,12 @@ public class GenerateViewPointResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GenerateViewPointResponseBody} extends {@link TeaModel}
+     *
+     * <p>GenerateViewPointResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Point")
         private String point;

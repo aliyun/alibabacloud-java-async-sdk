@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTopicSelectionPerspectiveAnalysisTaskResponseBody} extends {@link TeaModel}
  *
  * <p>GetTopicSelectionPerspectiveAnalysisTaskResponseBody</p>
@@ -150,6 +151,12 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
 
     } 
 
+    /**
+     * 
+     * {@link GetTopicSelectionPerspectiveAnalysisTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicSelectionPerspectiveAnalysisTaskResponseBody</p>
+     */
     public static class Outlines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Outline")
         private String outline;
@@ -211,6 +218,12 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         } 
 
     }
+    /**
+     * 
+     * {@link GetTopicSelectionPerspectiveAnalysisTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicSelectionPerspectiveAnalysisTaskResponseBody</p>
+     */
     public static class ViewPoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Outlines")
         private java.util.List < Outlines> outlines;
@@ -292,6 +305,12 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         } 
 
     }
+    /**
+     * 
+     * {@link GetTopicSelectionPerspectiveAnalysisTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicSelectionPerspectiveAnalysisTaskResponseBody</p>
+     */
     public static class Attitudes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attitude")
         private String attitude;
@@ -393,6 +412,12 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         } 
 
     }
+    /**
+     * 
+     * {@link GetTopicSelectionPerspectiveAnalysisTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicSelectionPerspectiveAnalysisTaskResponseBody</p>
+     */
     public static class FreshViewPointsResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attitudes")
         private java.util.List < Attitudes> attitudes;
@@ -434,6 +459,12 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         } 
 
     }
+    /**
+     * 
+     * {@link GetTopicSelectionPerspectiveAnalysisTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicSelectionPerspectiveAnalysisTaskResponseBody</p>
+     */
     public static class News extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -655,6 +686,12 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         } 
 
     }
+    /**
+     * 
+     * {@link GetTopicSelectionPerspectiveAnalysisTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicSelectionPerspectiveAnalysisTaskResponseBody</p>
+     */
     public static class ViewPointsOutlines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Outline")
         private String outline;
@@ -716,6 +753,12 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         } 
 
     }
+    /**
+     * 
+     * {@link GetTopicSelectionPerspectiveAnalysisTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicSelectionPerspectiveAnalysisTaskResponseBody</p>
+     */
     public static class AttitudesViewPoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Outlines")
         private java.util.List < ViewPointsOutlines> outlines;
@@ -797,6 +840,12 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         } 
 
     }
+    /**
+     * 
+     * {@link GetTopicSelectionPerspectiveAnalysisTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicSelectionPerspectiveAnalysisTaskResponseBody</p>
+     */
     public static class HotViewPointsResultAttitudes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attitude")
         private String attitude;
@@ -918,6 +967,12 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         } 
 
     }
+    /**
+     * 
+     * {@link GetTopicSelectionPerspectiveAnalysisTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicSelectionPerspectiveAnalysisTaskResponseBody</p>
+     */
     public static class HotViewPointsResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attitudes")
         private java.util.List < HotViewPointsResultAttitudes> attitudes;
@@ -959,6 +1014,12 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         } 
 
     }
+    /**
+     * 
+     * {@link GetTopicSelectionPerspectiveAnalysisTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicSelectionPerspectiveAnalysisTaskResponseBody</p>
+     */
     public static class AttitudesViewPointsOutlines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Outline")
         private String outline;
@@ -1020,6 +1081,12 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         } 
 
     }
+    /**
+     * 
+     * {@link GetTopicSelectionPerspectiveAnalysisTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicSelectionPerspectiveAnalysisTaskResponseBody</p>
+     */
     public static class TimedViewPointsResultAttitudesViewPoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Outlines")
         private java.util.List < AttitudesViewPointsOutlines> outlines;
@@ -1101,6 +1168,12 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         } 
 
     }
+    /**
+     * 
+     * {@link GetTopicSelectionPerspectiveAnalysisTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicSelectionPerspectiveAnalysisTaskResponseBody</p>
+     */
     public static class TimedViewPointsResultAttitudes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attitude")
         private String attitude;
@@ -1282,6 +1355,12 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         } 
 
     }
+    /**
+     * 
+     * {@link GetTopicSelectionPerspectiveAnalysisTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicSelectionPerspectiveAnalysisTaskResponseBody</p>
+     */
     public static class TimedViewPointsResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attitudes")
         private java.util.List < TimedViewPointsResultAttitudes> attitudes;
@@ -1323,6 +1402,12 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         } 
 
     }
+    /**
+     * 
+     * {@link GetTopicSelectionPerspectiveAnalysisTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicSelectionPerspectiveAnalysisTaskResponseBody</p>
+     */
     public static class DocList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
@@ -1404,6 +1489,12 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         } 
 
     }
+    /**
+     * 
+     * {@link GetTopicSelectionPerspectiveAnalysisTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicSelectionPerspectiveAnalysisTaskResponseBody</p>
+     */
     public static class Summaries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DocList")
         private java.util.List < DocList> docList;
@@ -1485,6 +1576,12 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         } 
 
     }
+    /**
+     * 
+     * {@link GetTopicSelectionPerspectiveAnalysisTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicSelectionPerspectiveAnalysisTaskResponseBody</p>
+     */
     public static class TopicSummaryResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Summaries")
         private java.util.List < Summaries> summaries;
@@ -1526,6 +1623,12 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         } 
 
     }
+    /**
+     * 
+     * {@link GetTopicSelectionPerspectiveAnalysisTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicSelectionPerspectiveAnalysisTaskResponseBody</p>
+     */
     public static class Comments extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
@@ -1647,6 +1750,12 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         } 
 
     }
+    /**
+     * 
+     * {@link GetTopicSelectionPerspectiveAnalysisTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicSelectionPerspectiveAnalysisTaskResponseBody</p>
+     */
     public static class WebReviewPointsResultAttitudesViewPointsOutlines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Outline")
         private String outline;
@@ -1708,6 +1817,12 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         } 
 
     }
+    /**
+     * 
+     * {@link GetTopicSelectionPerspectiveAnalysisTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicSelectionPerspectiveAnalysisTaskResponseBody</p>
+     */
     public static class WebReviewPointsResultAttitudesViewPoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Outlines")
         private java.util.List < WebReviewPointsResultAttitudesViewPointsOutlines> outlines;
@@ -1789,6 +1904,12 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         } 
 
     }
+    /**
+     * 
+     * {@link GetTopicSelectionPerspectiveAnalysisTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicSelectionPerspectiveAnalysisTaskResponseBody</p>
+     */
     public static class WebReviewPointsResultAttitudes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attitude")
         private String attitude;
@@ -1910,6 +2031,12 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         } 
 
     }
+    /**
+     * 
+     * {@link GetTopicSelectionPerspectiveAnalysisTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicSelectionPerspectiveAnalysisTaskResponseBody</p>
+     */
     public static class WebReviewPointsResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attitudes")
         private java.util.List < WebReviewPointsResultAttitudes> attitudes;
@@ -1951,6 +2078,12 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         } 
 
     }
+    /**
+     * 
+     * {@link GetTopicSelectionPerspectiveAnalysisTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicSelectionPerspectiveAnalysisTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;

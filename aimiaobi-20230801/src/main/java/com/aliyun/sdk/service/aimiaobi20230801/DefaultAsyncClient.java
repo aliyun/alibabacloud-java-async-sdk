@@ -40,6 +40,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of CancelAsyncTask  CancelAsyncTaskRequest
+     * @return CancelAsyncTaskResponse
+     */
     @Override
     public CompletableFuture<CancelAsyncTaskResponse> cancelAsyncTask(CancelAsyncTaskRequest request) {
         try {
@@ -54,6 +58,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ClearIntervenes  ClearIntervenesRequest
+     * @return ClearIntervenesResponse
+     */
     @Override
     public CompletableFuture<ClearIntervenesResponse> clearIntervenes(ClearIntervenesRequest request) {
         try {
@@ -68,6 +76,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateGeneratedContent  CreateGeneratedContentRequest
+     * @return CreateGeneratedContentResponse
+     */
     @Override
     public CompletableFuture<CreateGeneratedContentResponse> createGeneratedContent(CreateGeneratedContentRequest request) {
         try {
@@ -82,6 +94,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateToken  CreateTokenRequest
+     * @return CreateTokenResponse
+     */
     @Override
     public CompletableFuture<CreateTokenResponse> createToken(CreateTokenRequest request) {
         try {
@@ -96,6 +112,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCustomText  DeleteCustomTextRequest
+     * @return DeleteCustomTextResponse
+     */
     @Override
     public CompletableFuture<DeleteCustomTextResponse> deleteCustomText(DeleteCustomTextRequest request) {
         try {
@@ -110,6 +130,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCustomTopicByTopic  DeleteCustomTopicByTopicRequest
+     * @return DeleteCustomTopicByTopicResponse
+     */
     @Override
     public CompletableFuture<DeleteCustomTopicByTopicResponse> deleteCustomTopicByTopic(DeleteCustomTopicByTopicRequest request) {
         try {
@@ -124,6 +148,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCustomTopicViewPointById  DeleteCustomTopicViewPointByIdRequest
+     * @return DeleteCustomTopicViewPointByIdResponse
+     */
     @Override
     public CompletableFuture<DeleteCustomTopicViewPointByIdResponse> deleteCustomTopicViewPointById(DeleteCustomTopicViewPointByIdRequest request) {
         try {
@@ -138,6 +166,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteGeneratedContent  DeleteGeneratedContentRequest
+     * @return DeleteGeneratedContentResponse
+     */
     @Override
     public CompletableFuture<DeleteGeneratedContentResponse> deleteGeneratedContent(DeleteGeneratedContentRequest request) {
         try {
@@ -152,6 +184,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteInterveneRule  DeleteInterveneRuleRequest
+     * @return DeleteInterveneRuleResponse
+     */
     @Override
     public CompletableFuture<DeleteInterveneRuleResponse> deleteInterveneRule(DeleteInterveneRuleRequest request) {
         try {
@@ -166,6 +202,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteMaterialById  DeleteMaterialByIdRequest
+     * @return DeleteMaterialByIdResponse
+     */
     @Override
     public CompletableFuture<DeleteMaterialByIdResponse> deleteMaterialById(DeleteMaterialByIdRequest request) {
         try {
@@ -180,6 +220,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DocumentExtraction  DocumentExtractionRequest
+     * @return DocumentExtractionResponse
+     */
     @Override
     public CompletableFuture<DocumentExtractionResponse> documentExtraction(DocumentExtractionRequest request) {
         try {
@@ -194,6 +238,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExportGeneratedContent  ExportGeneratedContentRequest
+     * @return ExportGeneratedContentResponse
+     */
     @Override
     public CompletableFuture<ExportGeneratedContentResponse> exportGeneratedContent(ExportGeneratedContentRequest request) {
         try {
@@ -208,6 +256,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExportHotTopicPlanningProposals  ExportHotTopicPlanningProposalsRequest
+     * @return ExportHotTopicPlanningProposalsResponse
+     */
     @Override
     public CompletableFuture<ExportHotTopicPlanningProposalsResponse> exportHotTopicPlanningProposals(ExportHotTopicPlanningProposalsRequest request) {
         try {
@@ -222,6 +274,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExportIntervenes  ExportIntervenesRequest
+     * @return ExportIntervenesResponse
+     */
     @Override
     public CompletableFuture<ExportIntervenesResponse> exportIntervenes(ExportIntervenesRequest request) {
         try {
@@ -236,6 +292,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FeedbackDialogue  FeedbackDialogueRequest
+     * @return FeedbackDialogueResponse
+     */
     @Override
     public CompletableFuture<FeedbackDialogueResponse> feedbackDialogue(FeedbackDialogueRequest request) {
         try {
@@ -250,6 +310,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FetchImageTask  FetchImageTaskRequest
+     * @return FetchImageTaskResponse
+     */
     @Override
     public CompletableFuture<FetchImageTaskResponse> fetchImageTask(FetchImageTaskRequest request) {
         try {
@@ -264,6 +328,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GenerateFileUrlByKey  GenerateFileUrlByKeyRequest
+     * @return GenerateFileUrlByKeyResponse
+     */
     @Override
     public CompletableFuture<GenerateFileUrlByKeyResponse> generateFileUrlByKey(GenerateFileUrlByKeyRequest request) {
         try {
@@ -278,6 +346,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GenerateImageTask  GenerateImageTaskRequest
+     * @return GenerateImageTaskResponse
+     */
     @Override
     public CompletableFuture<GenerateImageTaskResponse> generateImageTask(GenerateImageTaskRequest request) {
         try {
@@ -292,6 +364,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GenerateUploadConfig  GenerateUploadConfigRequest
+     * @return GenerateUploadConfigResponse
+     */
     @Override
     public CompletableFuture<GenerateUploadConfigResponse> generateUploadConfig(GenerateUploadConfigRequest request) {
         try {
@@ -306,6 +382,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GenerateViewPoint  GenerateViewPointRequest
+     * @return GenerateViewPointResponse
+     */
     @Override
     public CompletableFuture<GenerateViewPointResponse> generateViewPoint(GenerateViewPointRequest request) {
         try {
@@ -320,6 +400,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCustomText  GetCustomTextRequest
+     * @return GetCustomTextResponse
+     */
     @Override
     public CompletableFuture<GetCustomTextResponse> getCustomText(GetCustomTextRequest request) {
         try {
@@ -334,6 +418,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCustomTopicSelectionPerspectiveAnalysisTask  GetCustomTopicSelectionPerspectiveAnalysisTaskRequest
+     * @return GetCustomTopicSelectionPerspectiveAnalysisTaskResponse
+     */
     @Override
     public CompletableFuture<GetCustomTopicSelectionPerspectiveAnalysisTaskResponse> getCustomTopicSelectionPerspectiveAnalysisTask(GetCustomTopicSelectionPerspectiveAnalysisTaskRequest request) {
         try {
@@ -348,6 +436,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDataSourceOrderConfig  GetDataSourceOrderConfigRequest
+     * @return GetDataSourceOrderConfigResponse
+     */
     @Override
     public CompletableFuture<GetDataSourceOrderConfigResponse> getDataSourceOrderConfig(GetDataSourceOrderConfigRequest request) {
         try {
@@ -362,6 +454,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDocClusterTask  GetDocClusterTaskRequest
+     * @return GetDocClusterTaskResponse
+     */
     @Override
     public CompletableFuture<GetDocClusterTaskResponse> getDocClusterTask(GetDocClusterTaskRequest request) {
         try {
@@ -376,6 +472,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetGeneratedContent  GetGeneratedContentRequest
+     * @return GetGeneratedContentResponse
+     */
     @Override
     public CompletableFuture<GetGeneratedContentResponse> getGeneratedContent(GetGeneratedContentRequest request) {
         try {
@@ -390,6 +490,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetInterveneGlobalReply  GetInterveneGlobalReplyRequest
+     * @return GetInterveneGlobalReplyResponse
+     */
     @Override
     public CompletableFuture<GetInterveneGlobalReplyResponse> getInterveneGlobalReply(GetInterveneGlobalReplyRequest request) {
         try {
@@ -404,6 +508,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetInterveneImportTaskInfo  GetInterveneImportTaskInfoRequest
+     * @return GetInterveneImportTaskInfoResponse
+     */
     @Override
     public CompletableFuture<GetInterveneImportTaskInfoResponse> getInterveneImportTaskInfo(GetInterveneImportTaskInfoRequest request) {
         try {
@@ -418,6 +526,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetInterveneRuleDetail  GetInterveneRuleDetailRequest
+     * @return GetInterveneRuleDetailResponse
+     */
     @Override
     public CompletableFuture<GetInterveneRuleDetailResponse> getInterveneRuleDetail(GetInterveneRuleDetailRequest request) {
         try {
@@ -432,6 +544,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetInterveneTemplateFileUrl  GetInterveneTemplateFileUrlRequest
+     * @return GetInterveneTemplateFileUrlResponse
+     */
     @Override
     public CompletableFuture<GetInterveneTemplateFileUrlResponse> getInterveneTemplateFileUrl(GetInterveneTemplateFileUrlRequest request) {
         try {
@@ -446,6 +562,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetMaterialById  GetMaterialByIdRequest
+     * @return GetMaterialByIdResponse
+     */
     @Override
     public CompletableFuture<GetMaterialByIdResponse> getMaterialById(GetMaterialByIdRequest request) {
         try {
@@ -460,6 +580,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetProperties  GetPropertiesRequest
+     * @return GetPropertiesResponse
+     */
     @Override
     public CompletableFuture<GetPropertiesResponse> getProperties(GetPropertiesRequest request) {
         try {
@@ -474,6 +598,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTopicById  GetTopicByIdRequest
+     * @return GetTopicByIdResponse
+     */
     @Override
     public CompletableFuture<GetTopicByIdResponse> getTopicById(GetTopicByIdRequest request) {
         try {
@@ -488,6 +616,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTopicSelectionPerspectiveAnalysisTask  GetTopicSelectionPerspectiveAnalysisTaskRequest
+     * @return GetTopicSelectionPerspectiveAnalysisTaskResponse
+     */
     @Override
     public CompletableFuture<GetTopicSelectionPerspectiveAnalysisTaskResponse> getTopicSelectionPerspectiveAnalysisTask(GetTopicSelectionPerspectiveAnalysisTaskRequest request) {
         try {
@@ -502,6 +634,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ImportInterveneFile  ImportInterveneFileRequest
+     * @return ImportInterveneFileResponse
+     */
     @Override
     public CompletableFuture<ImportInterveneFileResponse> importInterveneFile(ImportInterveneFileRequest request) {
         try {
@@ -516,6 +652,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ImportInterveneFileAsync  ImportInterveneFileAsyncRequest
+     * @return ImportInterveneFileAsyncResponse
+     */
     @Override
     public CompletableFuture<ImportInterveneFileAsyncResponse> importInterveneFileAsync(ImportInterveneFileAsyncRequest request) {
         try {
@@ -530,6 +670,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InsertInterveneGlobalReply  InsertInterveneGlobalReplyRequest
+     * @return InsertInterveneGlobalReplyResponse
+     */
     @Override
     public CompletableFuture<InsertInterveneGlobalReplyResponse> insertInterveneGlobalReply(InsertInterveneGlobalReplyRequest request) {
         try {
@@ -544,6 +688,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InsertInterveneRule  InsertInterveneRuleRequest
+     * @return InsertInterveneRuleResponse
+     */
     @Override
     public CompletableFuture<InsertInterveneRuleResponse> insertInterveneRule(InsertInterveneRuleRequest request) {
         try {
@@ -558,6 +706,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAsyncTasks  ListAsyncTasksRequest
+     * @return ListAsyncTasksResponse
+     */
     @Override
     public CompletableFuture<ListAsyncTasksResponse> listAsyncTasks(ListAsyncTasksRequest request) {
         try {
@@ -572,6 +724,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListBuildConfigs  ListBuildConfigsRequest
+     * @return ListBuildConfigsResponse
+     */
     @Override
     public CompletableFuture<ListBuildConfigsResponse> listBuildConfigs(ListBuildConfigsRequest request) {
         try {
@@ -586,6 +742,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCustomText  ListCustomTextRequest
+     * @return ListCustomTextResponse
+     */
     @Override
     public CompletableFuture<ListCustomTextResponse> listCustomText(ListCustomTextRequest request) {
         try {
@@ -600,6 +760,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCustomViewPoints  ListCustomViewPointsRequest
+     * @return ListCustomViewPointsResponse
+     */
     @Override
     public CompletableFuture<ListCustomViewPointsResponse> listCustomViewPoints(ListCustomViewPointsRequest request) {
         try {
@@ -614,6 +778,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDialogues  ListDialoguesRequest
+     * @return ListDialoguesResponse
+     */
     @Override
     public CompletableFuture<ListDialoguesResponse> listDialogues(ListDialoguesRequest request) {
         try {
@@ -628,6 +796,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListFreshViewPoints  ListFreshViewPointsRequest
+     * @return ListFreshViewPointsResponse
+     */
     @Override
     public CompletableFuture<ListFreshViewPointsResponse> listFreshViewPoints(ListFreshViewPointsRequest request) {
         try {
@@ -642,6 +814,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListGeneratedContents  ListGeneratedContentsRequest
+     * @return ListGeneratedContentsResponse
+     */
     @Override
     public CompletableFuture<ListGeneratedContentsResponse> listGeneratedContents(ListGeneratedContentsRequest request) {
         try {
@@ -656,6 +832,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListHotNewsWithType  ListHotNewsWithTypeRequest
+     * @return ListHotNewsWithTypeResponse
+     */
     @Override
     public CompletableFuture<ListHotNewsWithTypeResponse> listHotNewsWithType(ListHotNewsWithTypeRequest request) {
         try {
@@ -670,6 +850,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListHotSources  ListHotSourcesRequest
+     * @return ListHotSourcesResponse
+     */
     @Override
     public CompletableFuture<ListHotSourcesResponse> listHotSources(ListHotSourcesRequest request) {
         try {
@@ -684,6 +868,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListHotTopics  ListHotTopicsRequest
+     * @return ListHotTopicsResponse
+     */
     @Override
     public CompletableFuture<ListHotTopicsResponse> listHotTopics(ListHotTopicsRequest request) {
         try {
@@ -698,6 +886,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListHotViewPoints  ListHotViewPointsRequest
+     * @return ListHotViewPointsResponse
+     */
     @Override
     public CompletableFuture<ListHotViewPointsResponse> listHotViewPoints(ListHotViewPointsRequest request) {
         try {
@@ -712,6 +904,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInterveneCnt  ListInterveneCntRequest
+     * @return ListInterveneCntResponse
+     */
     @Override
     public CompletableFuture<ListInterveneCntResponse> listInterveneCnt(ListInterveneCntRequest request) {
         try {
@@ -726,6 +922,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInterveneImportTasks  ListInterveneImportTasksRequest
+     * @return ListInterveneImportTasksResponse
+     */
     @Override
     public CompletableFuture<ListInterveneImportTasksResponse> listInterveneImportTasks(ListInterveneImportTasksRequest request) {
         try {
@@ -740,6 +940,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInterveneRules  ListInterveneRulesRequest
+     * @return ListInterveneRulesResponse
+     */
     @Override
     public CompletableFuture<ListInterveneRulesResponse> listInterveneRules(ListInterveneRulesRequest request) {
         try {
@@ -754,6 +958,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListIntervenes  ListIntervenesRequest
+     * @return ListIntervenesResponse
+     */
     @Override
     public CompletableFuture<ListIntervenesResponse> listIntervenes(ListIntervenesRequest request) {
         try {
@@ -768,6 +976,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListMaterialDocuments  ListMaterialDocumentsRequest
+     * @return ListMaterialDocumentsResponse
+     */
     @Override
     public CompletableFuture<ListMaterialDocumentsResponse> listMaterialDocuments(ListMaterialDocumentsRequest request) {
         try {
@@ -782,6 +994,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPlanningProposal  ListPlanningProposalRequest
+     * @return ListPlanningProposalResponse
+     */
     @Override
     public CompletableFuture<ListPlanningProposalResponse> listPlanningProposal(ListPlanningProposalRequest request) {
         try {
@@ -796,6 +1012,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTimedViewAttitude  ListTimedViewAttitudeRequest
+     * @return ListTimedViewAttitudeResponse
+     */
     @Override
     public CompletableFuture<ListTimedViewAttitudeResponse> listTimedViewAttitude(ListTimedViewAttitudeRequest request) {
         try {
@@ -810,6 +1030,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTopicRecommendEventList  ListTopicRecommendEventListRequest
+     * @return ListTopicRecommendEventListResponse
+     */
     @Override
     public CompletableFuture<ListTopicRecommendEventListResponse> listTopicRecommendEventList(ListTopicRecommendEventListRequest request) {
         try {
@@ -824,6 +1048,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTopicViewPointRecommendEventList  ListTopicViewPointRecommendEventListRequest
+     * @return ListTopicViewPointRecommendEventListResponse
+     */
     @Override
     public CompletableFuture<ListTopicViewPointRecommendEventListResponse> listTopicViewPointRecommendEventList(ListTopicViewPointRecommendEventListRequest request) {
         try {
@@ -838,6 +1066,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListVersions  ListVersionsRequest
+     * @return ListVersionsResponse
+     */
     @Override
     public CompletableFuture<ListVersionsResponse> listVersions(ListVersionsRequest request) {
         try {
@@ -852,6 +1084,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListWebReviewPoints  ListWebReviewPointsRequest
+     * @return ListWebReviewPointsResponse
+     */
     @Override
     public CompletableFuture<ListWebReviewPointsResponse> listWebReviewPoints(ListWebReviewPointsRequest request) {
         try {
@@ -866,6 +1102,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryAsyncTask  QueryAsyncTaskRequest
+     * @return QueryAsyncTaskResponse
+     */
     @Override
     public CompletableFuture<QueryAsyncTaskResponse> queryAsyncTask(QueryAsyncTaskRequest request) {
         try {
@@ -880,6 +1120,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RunAbbreviationContent  RunAbbreviationContentRequest
+     * @return RunAbbreviationContentResponse
+     */
     @Override
     public CompletableFuture<RunAbbreviationContentResponse> runAbbreviationContent(RunAbbreviationContentRequest request) {
         try {
@@ -904,6 +1148,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         return new ResponseIterable<>(iterator);
     }
 
+    /**
+     * @param request the request parameters of RunContinueContent  RunContinueContentRequest
+     * @return RunContinueContentResponse
+     */
     @Override
     public CompletableFuture<RunContinueContentResponse> runContinueContent(RunContinueContentRequest request) {
         try {
@@ -928,6 +1176,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         return new ResponseIterable<>(iterator);
     }
 
+    /**
+     * @param request the request parameters of RunCustomHotTopicAnalysis  RunCustomHotTopicAnalysisRequest
+     * @return RunCustomHotTopicAnalysisResponse
+     */
     @Override
     public CompletableFuture<RunCustomHotTopicAnalysisResponse> runCustomHotTopicAnalysis(RunCustomHotTopicAnalysisRequest request) {
         try {
@@ -952,6 +1204,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         return new ResponseIterable<>(iterator);
     }
 
+    /**
+     * @param request the request parameters of RunCustomHotTopicViewPointAnalysis  RunCustomHotTopicViewPointAnalysisRequest
+     * @return RunCustomHotTopicViewPointAnalysisResponse
+     */
     @Override
     public CompletableFuture<RunCustomHotTopicViewPointAnalysisResponse> runCustomHotTopicViewPointAnalysis(RunCustomHotTopicViewPointAnalysisRequest request) {
         try {
@@ -976,6 +1232,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         return new ResponseIterable<>(iterator);
     }
 
+    /**
+     * @param request the request parameters of RunExpandContent  RunExpandContentRequest
+     * @return RunExpandContentResponse
+     */
     @Override
     public CompletableFuture<RunExpandContentResponse> runExpandContent(RunExpandContentRequest request) {
         try {
@@ -1000,6 +1260,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         return new ResponseIterable<>(iterator);
     }
 
+    /**
+     * @param request the request parameters of RunKeywordsExtractionGeneration  RunKeywordsExtractionGenerationRequest
+     * @return RunKeywordsExtractionGenerationResponse
+     */
     @Override
     public CompletableFuture<RunKeywordsExtractionGenerationResponse> runKeywordsExtractionGeneration(RunKeywordsExtractionGenerationRequest request) {
         try {
@@ -1024,6 +1288,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         return new ResponseIterable<>(iterator);
     }
 
+    /**
+     * @param request the request parameters of RunStepByStepWriting  RunStepByStepWritingRequest
+     * @return RunStepByStepWritingResponse
+     */
     @Override
     public CompletableFuture<RunStepByStepWritingResponse> runStepByStepWriting(RunStepByStepWritingRequest request) {
         try {
@@ -1048,6 +1316,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         return new ResponseIterable<>(iterator);
     }
 
+    /**
+     * @param request the request parameters of RunStyleFeatureAnalysis  RunStyleFeatureAnalysisRequest
+     * @return RunStyleFeatureAnalysisResponse
+     */
     @Override
     public CompletableFuture<RunStyleFeatureAnalysisResponse> runStyleFeatureAnalysis(RunStyleFeatureAnalysisRequest request) {
         try {
@@ -1072,6 +1344,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         return new ResponseIterable<>(iterator);
     }
 
+    /**
+     * @param request the request parameters of RunSummaryGenerate  RunSummaryGenerateRequest
+     * @return RunSummaryGenerateResponse
+     */
     @Override
     public CompletableFuture<RunSummaryGenerateResponse> runSummaryGenerate(RunSummaryGenerateRequest request) {
         try {
@@ -1096,6 +1372,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         return new ResponseIterable<>(iterator);
     }
 
+    /**
+     * @param request the request parameters of RunTextPolishing  RunTextPolishingRequest
+     * @return RunTextPolishingResponse
+     */
     @Override
     public CompletableFuture<RunTextPolishingResponse> runTextPolishing(RunTextPolishingRequest request) {
         try {
@@ -1120,6 +1400,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         return new ResponseIterable<>(iterator);
     }
 
+    /**
+     * @param request the request parameters of RunTitleGeneration  RunTitleGenerationRequest
+     * @return RunTitleGenerationResponse
+     */
     @Override
     public CompletableFuture<RunTitleGenerationResponse> runTitleGeneration(RunTitleGenerationRequest request) {
         try {
@@ -1144,6 +1428,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         return new ResponseIterable<>(iterator);
     }
 
+    /**
+     * @param request the request parameters of RunTranslateGeneration  RunTranslateGenerationRequest
+     * @return RunTranslateGenerationResponse
+     */
     @Override
     public CompletableFuture<RunTranslateGenerationResponse> runTranslateGeneration(RunTranslateGenerationRequest request) {
         try {
@@ -1168,6 +1456,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         return new ResponseIterable<>(iterator);
     }
 
+    /**
+     * @param request the request parameters of RunWriteToneGeneration  RunWriteToneGenerationRequest
+     * @return RunWriteToneGenerationResponse
+     */
     @Override
     public CompletableFuture<RunWriteToneGenerationResponse> runWriteToneGeneration(RunWriteToneGenerationRequest request) {
         try {
@@ -1192,6 +1484,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         return new ResponseIterable<>(iterator);
     }
 
+    /**
+     * @param request the request parameters of RunWriting  RunWritingRequest
+     * @return RunWritingResponse
+     */
     @Override
     public CompletableFuture<RunWritingResponse> runWriting(RunWritingRequest request) {
         try {
@@ -1216,6 +1512,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         return new ResponseIterable<>(iterator);
     }
 
+    /**
+     * @param request the request parameters of SaveCustomText  SaveCustomTextRequest
+     * @return SaveCustomTextResponse
+     */
     @Override
     public CompletableFuture<SaveCustomTextResponse> saveCustomText(SaveCustomTextRequest request) {
         try {
@@ -1230,6 +1530,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveDataSourceOrderConfig  SaveDataSourceOrderConfigRequest
+     * @return SaveDataSourceOrderConfigResponse
+     */
     @Override
     public CompletableFuture<SaveDataSourceOrderConfigResponse> saveDataSourceOrderConfig(SaveDataSourceOrderConfigRequest request) {
         try {
@@ -1244,6 +1548,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveMaterialDocument  SaveMaterialDocumentRequest
+     * @return SaveMaterialDocumentResponse
+     */
     @Override
     public CompletableFuture<SaveMaterialDocumentResponse> saveMaterialDocument(SaveMaterialDocumentRequest request) {
         try {
@@ -1258,6 +1566,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SearchNews  SearchNewsRequest
+     * @return SearchNewsResponse
+     */
     @Override
     public CompletableFuture<SearchNewsResponse> searchNews(SearchNewsRequest request) {
         try {
@@ -1272,6 +1584,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitAsyncTask  SubmitAsyncTaskRequest
+     * @return SubmitAsyncTaskResponse
+     */
     @Override
     public CompletableFuture<SubmitAsyncTaskResponse> submitAsyncTask(SubmitAsyncTaskRequest request) {
         try {
@@ -1286,6 +1602,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitCustomTopicSelectionPerspectiveAnalysisTask  SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest
+     * @return SubmitCustomTopicSelectionPerspectiveAnalysisTaskResponse
+     */
     @Override
     public CompletableFuture<SubmitCustomTopicSelectionPerspectiveAnalysisTaskResponse> submitCustomTopicSelectionPerspectiveAnalysisTask(SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest request) {
         try {
@@ -1300,6 +1620,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitDocClusterTask  SubmitDocClusterTaskRequest
+     * @return SubmitDocClusterTaskResponse
+     */
     @Override
     public CompletableFuture<SubmitDocClusterTaskResponse> submitDocClusterTask(SubmitDocClusterTaskRequest request) {
         try {
@@ -1314,6 +1638,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitTopicSelectionPerspectiveAnalysisTask  SubmitTopicSelectionPerspectiveAnalysisTaskRequest
+     * @return SubmitTopicSelectionPerspectiveAnalysisTaskResponse
+     */
     @Override
     public CompletableFuture<SubmitTopicSelectionPerspectiveAnalysisTaskResponse> submitTopicSelectionPerspectiveAnalysisTask(SubmitTopicSelectionPerspectiveAnalysisTaskRequest request) {
         try {
@@ -1328,6 +1656,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateCustomText  UpdateCustomTextRequest
+     * @return UpdateCustomTextResponse
+     */
     @Override
     public CompletableFuture<UpdateCustomTextResponse> updateCustomText(UpdateCustomTextRequest request) {
         try {
@@ -1342,6 +1674,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateGeneratedContent  UpdateGeneratedContentRequest
+     * @return UpdateGeneratedContentResponse
+     */
     @Override
     public CompletableFuture<UpdateGeneratedContentResponse> updateGeneratedContent(UpdateGeneratedContentRequest request) {
         try {
@@ -1356,6 +1692,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateMaterialDocument  UpdateMaterialDocumentRequest
+     * @return UpdateMaterialDocumentResponse
+     */
     @Override
     public CompletableFuture<UpdateMaterialDocumentResponse> updateMaterialDocument(UpdateMaterialDocumentRequest request) {
         try {

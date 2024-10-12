@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInterveneImportTaskInfoRequest} extends {@link RequestModel}
  *
  * <p>GetInterveneImportTaskInfoRequest</p>
@@ -91,7 +92,10 @@ public class GetInterveneImportTaskInfoRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67c520d1fa43455ea44fb69fa402d54d_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPropertiesResponseBody} extends {@link TeaModel}
  *
  * <p>GetPropertiesResponseBody</p>
@@ -150,6 +151,12 @@ public class GetPropertiesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPropertiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPropertiesResponseBody</p>
+     */
     public static class ConsoleConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TipContent")
         private String tipContent;
@@ -211,6 +218,12 @@ public class GetPropertiesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPropertiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPropertiesResponseBody</p>
+     */
     public static class Articles extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Select")
         private Boolean select;
@@ -312,6 +325,12 @@ public class GetPropertiesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPropertiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPropertiesResponseBody</p>
+     */
     public static class SearchSamples extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Articles")
         private java.util.List < Articles> articles;
@@ -393,6 +412,12 @@ public class GetPropertiesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPropertiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPropertiesResponseBody</p>
+     */
     public static class SearchSources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -474,6 +499,12 @@ public class GetPropertiesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPropertiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPropertiesResponseBody</p>
+     */
     public static class IntelligentSearchConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProductDescription")
         private String productDescription;
@@ -555,6 +586,12 @@ public class GetPropertiesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPropertiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPropertiesResponseBody</p>
+     */
     public static class DataSearchSources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -616,6 +653,12 @@ public class GetPropertiesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPropertiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPropertiesResponseBody</p>
+     */
     public static class UserInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentId")
         private String agentId;
@@ -717,6 +760,12 @@ public class GetPropertiesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPropertiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPropertiesResponseBody</p>
+     */
     public static class WanxiangImageSizeConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -778,6 +827,12 @@ public class GetPropertiesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPropertiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPropertiesResponseBody</p>
+     */
     public static class WanxiangImageStyleConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -859,6 +914,12 @@ public class GetPropertiesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPropertiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPropertiesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChatConfig")
         private java.util.Map < String, ? > chatConfig;

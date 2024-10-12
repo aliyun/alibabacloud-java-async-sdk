@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportHotTopicPlanningProposalsRequest} extends {@link RequestModel}
  *
  * <p>ExportHotTopicPlanningProposalsRequest</p>
@@ -163,7 +164,10 @@ public class ExportHotTopicPlanningProposalsRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx_p_efm</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -201,7 +205,10 @@ public class ExportHotTopicPlanningProposalsRequest extends Request {
         }
 
         /**
-         * Topic.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>热榜主题</p>
          */
         public Builder topic(String topic) {
             this.putBodyParameter("Topic", topic);
@@ -210,7 +217,10 @@ public class ExportHotTopicPlanningProposalsRequest extends Request {
         }
 
         /**
-         * TopicSource.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>热榜源</p>
          */
         public Builder topicSource(String topicSource) {
             this.putBodyParameter("TopicSource", topicSource);

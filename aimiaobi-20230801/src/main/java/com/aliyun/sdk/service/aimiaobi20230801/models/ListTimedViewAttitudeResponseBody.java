@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTimedViewAttitudeResponseBody} extends {@link TeaModel}
  *
  * <p>ListTimedViewAttitudeResponseBody</p>
@@ -210,6 +211,12 @@ public class ListTimedViewAttitudeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTimedViewAttitudeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTimedViewAttitudeResponseBody</p>
+     */
     public static class Outlines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Outline")
         private String outline;
@@ -271,6 +278,12 @@ public class ListTimedViewAttitudeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTimedViewAttitudeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTimedViewAttitudeResponseBody</p>
+     */
     public static class ViewPoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Outlines")
         private java.util.List < Outlines> outlines;
@@ -352,6 +365,12 @@ public class ListTimedViewAttitudeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTimedViewAttitudeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTimedViewAttitudeResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attitude")
         private String attitude;

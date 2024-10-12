@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportIntervenesRequest} extends {@link RequestModel}
  *
  * <p>ExportIntervenesRequest</p>
@@ -77,7 +78,10 @@ public class ExportIntervenesRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fed6555ec9e24b92aeecc34be484b887_p_efm</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);

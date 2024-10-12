@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsertInterveneGlobalReplyRequest} extends {@link RequestModel}
  *
  * <p>InsertInterveneGlobalReplyRequest</p>
@@ -91,7 +92,10 @@ public class InsertInterveneGlobalReplyRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx_efm</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -116,6 +120,12 @@ public class InsertInterveneGlobalReplyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link InsertInterveneGlobalReplyRequest} extends {@link TeaModel}
+     *
+     * <p>InsertInterveneGlobalReplyRequest</p>
+     */
     public static class ReplyMessagList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;

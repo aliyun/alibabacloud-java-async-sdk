@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FetchImageTaskResponse} extends {@link TeaModel}
  *
  * <p>FetchImageTaskResponse</p>

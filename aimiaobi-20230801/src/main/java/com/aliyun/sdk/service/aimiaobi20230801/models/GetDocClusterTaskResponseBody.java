@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDocClusterTaskResponseBody} extends {@link TeaModel}
  *
  * <p>GetDocClusterTaskResponseBody</p>
@@ -150,6 +151,12 @@ public class GetDocClusterTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDocClusterTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDocClusterTaskResponseBody</p>
+     */
     public static class Topics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DocIds")
         private java.util.List < String > docIds;
@@ -231,6 +238,12 @@ public class GetDocClusterTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDocClusterTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDocClusterTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;

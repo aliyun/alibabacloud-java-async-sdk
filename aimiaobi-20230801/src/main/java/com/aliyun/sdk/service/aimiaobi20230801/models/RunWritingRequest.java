@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunWritingRequest} extends {@link RequestModel}
  *
  * <p>RunWritingRequest</p>
@@ -171,7 +172,10 @@ public class RunWritingRequest extends Request {
         }
 
         /**
-         * Prompt.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>提示词</p>
          */
         public Builder prompt(String prompt) {
             this.putBodyParameter("Prompt", prompt);
@@ -208,7 +212,10 @@ public class RunWritingRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);
@@ -233,6 +240,12 @@ public class RunWritingRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RunWritingRequest} extends {@link TeaModel}
+     *
+     * <p>RunWritingRequest</p>
+     */
     public static class Articles extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Author")
         private String author;
@@ -454,6 +467,12 @@ public class RunWritingRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunWritingRequest} extends {@link TeaModel}
+     *
+     * <p>RunWritingRequest</p>
+     */
     public static class ReferenceData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Articles")
         private java.util.List < Articles> articles;
@@ -495,6 +514,12 @@ public class RunWritingRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunWritingRequest} extends {@link TeaModel}
+     *
+     * <p>RunWritingRequest</p>
+     */
     public static class PromptTag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NecessaryTips")
         private String necessaryTips;
@@ -596,6 +621,12 @@ public class RunWritingRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunWritingRequest} extends {@link TeaModel}
+     *
+     * <p>RunWritingRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Keyword")
         private String keyword;
@@ -657,6 +688,12 @@ public class RunWritingRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunWritingRequest} extends {@link TeaModel}
+     *
+     * <p>RunWritingRequest</p>
+     */
     public static class WritingConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;

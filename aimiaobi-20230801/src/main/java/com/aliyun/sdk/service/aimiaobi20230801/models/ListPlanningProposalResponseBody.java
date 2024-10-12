@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPlanningProposalResponseBody} extends {@link TeaModel}
  *
  * <p>ListPlanningProposalResponseBody</p>
@@ -210,6 +211,12 @@ public class ListPlanningProposalResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPlanningProposalResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPlanningProposalResponseBody</p>
+     */
     public static class Outlines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Outline")
         private String outline;
@@ -271,6 +278,12 @@ public class ListPlanningProposalResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPlanningProposalResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPlanningProposalResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Outlines")
         private java.util.List < Outlines> outlines;

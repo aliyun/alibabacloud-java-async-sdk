@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitDocClusterTaskRequest} extends {@link RequestModel}
  *
  * <p>SubmitDocClusterTaskRequest</p>
@@ -137,7 +138,10 @@ public class SubmitDocClusterTaskRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx_p_efm</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -146,7 +150,7 @@ public class SubmitDocClusterTaskRequest extends Request {
         }
 
         /**
-         * Documents.
+         * <p>This parameter is required.</p>
          */
         public Builder documents(java.util.List < Documents> documents) {
             String documentsShrink = shrink(documents, "Documents", "json");
@@ -189,6 +193,12 @@ public class SubmitDocClusterTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitDocClusterTaskRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitDocClusterTaskRequest</p>
+     */
     public static class Documents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         @com.aliyun.core.annotation.Validation(required = true, maxLength = 3000, minLength = 1)
@@ -242,7 +252,10 @@ public class SubmitDocClusterTaskRequest extends Request {
             private String title; 
 
             /**
-             * Content.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>文档内容</p>
              */
             public Builder content(String content) {
                 this.content = content;

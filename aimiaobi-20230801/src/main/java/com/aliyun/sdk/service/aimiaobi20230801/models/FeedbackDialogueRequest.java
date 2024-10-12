@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FeedbackDialogueRequest} extends {@link RequestModel}
  *
  * <p>FeedbackDialogueRequest</p>
@@ -176,7 +177,10 @@ public class FeedbackDialogueRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fcb14f25c9ee41ccad33a049de8f941b_p_outbound_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -231,7 +235,10 @@ public class FeedbackDialogueRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75bf82fa-b71b-45d7-ae40-0b00e496cd9e</p>
          */
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("SessionId", sessionId);

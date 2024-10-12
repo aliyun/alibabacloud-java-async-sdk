@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsertInterveneRuleRequest} extends {@link RequestModel}
  *
  * <p>InsertInterveneRuleRequest</p>
@@ -91,7 +92,10 @@ public class InsertInterveneRuleRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx_p_efm</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -116,6 +120,12 @@ public class InsertInterveneRuleRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link InsertInterveneRuleRequest} extends {@link TeaModel}
+     *
+     * <p>InsertInterveneRuleRequest</p>
+     */
     public static class AnswerConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnswerType")
         private Integer answerType;
@@ -197,6 +207,12 @@ public class InsertInterveneRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link InsertInterveneRuleRequest} extends {@link TeaModel}
+     *
+     * <p>InsertInterveneRuleRequest</p>
+     */
     public static class EffectConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EffectType")
         private Integer effectType;
@@ -278,6 +294,12 @@ public class InsertInterveneRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link InsertInterveneRuleRequest} extends {@link TeaModel}
+     *
+     * <p>InsertInterveneRuleRequest</p>
+     */
     public static class InterveneConfigList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -329,7 +351,10 @@ public class InsertInterveneRuleRequest extends Request {
             private String query; 
 
             /**
-             * id
+             * <p>id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>37249</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -359,6 +384,12 @@ public class InsertInterveneRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link InsertInterveneRuleRequest} extends {@link TeaModel}
+     *
+     * <p>InsertInterveneRuleRequest</p>
+     */
     public static class InterveneRuleConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnswerConfig")
         private java.util.List < AnswerConfig> answerConfig;

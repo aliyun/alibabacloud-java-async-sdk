@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunCustomHotTopicViewPointAnalysisRequest} extends {@link RequestModel}
  *
  * <p>RunCustomHotTopicViewPointAnalysisRequest</p>
@@ -213,7 +214,10 @@ public class RunCustomHotTopicViewPointAnalysisRequest extends Request {
         }
 
         /**
-         * Prompt.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>自定义选题视角的Prompt</p>
          */
         public Builder prompt(String prompt) {
             this.putBodyParameter("Prompt", prompt);
@@ -285,7 +289,10 @@ public class RunCustomHotTopicViewPointAnalysisRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

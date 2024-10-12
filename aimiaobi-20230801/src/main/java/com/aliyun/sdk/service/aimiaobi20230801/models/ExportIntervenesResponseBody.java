@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportIntervenesResponseBody} extends {@link TeaModel}
  *
  * <p>ExportIntervenesResponseBody</p>
@@ -150,6 +151,12 @@ public class ExportIntervenesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ExportIntervenesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ExportIntervenesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileUrl")
         private String fileUrl;

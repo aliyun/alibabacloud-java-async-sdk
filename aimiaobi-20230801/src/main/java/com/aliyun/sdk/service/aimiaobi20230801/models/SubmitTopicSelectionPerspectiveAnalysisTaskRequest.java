@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitTopicSelectionPerspectiveAnalysisTaskRequest} extends {@link RequestModel}
  *
  * <p>SubmitTopicSelectionPerspectiveAnalysisTaskRequest</p>
@@ -120,7 +121,10 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskRequest extends Request 
         }
 
         /**
-         * AgentKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx_p_efm</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -164,10 +168,86 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskRequest extends Request 
 
     } 
 
+    /**
+     * 
+     * {@link SubmitTopicSelectionPerspectiveAnalysisTaskRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitTopicSelectionPerspectiveAnalysisTaskRequest</p>
+     */
+    public static class Comments extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Text")
+        private String text;
+
+        @com.aliyun.core.annotation.NameInMap("Username")
+        private String username;
+
+        private Comments(Builder builder) {
+            this.text = builder.text;
+            this.username = builder.username;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Comments create() {
+            return builder().build();
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        /**
+         * @return username
+         */
+        public String getUsername() {
+            return this.username;
+        }
+
+        public static final class Builder {
+            private String text; 
+            private String username; 
+
+            /**
+             * Text.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            /**
+             * Username.
+             */
+            public Builder username(String username) {
+                this.username = username;
+                return this;
+            }
+
+            public Comments build() {
+                return new Comments(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SubmitTopicSelectionPerspectiveAnalysisTaskRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitTopicSelectionPerspectiveAnalysisTaskRequest</p>
+     */
     public static class Documents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Author")
         @com.aliyun.core.annotation.Validation(maxLength = 100)
         private String author;
+
+        @com.aliyun.core.annotation.NameInMap("Comments")
+        private java.util.List < Comments> comments;
 
         @com.aliyun.core.annotation.NameInMap("Content")
         @com.aliyun.core.annotation.Validation(required = true, maxLength = 3000, minLength = 30)
@@ -195,6 +275,7 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskRequest extends Request 
 
         private Documents(Builder builder) {
             this.author = builder.author;
+            this.comments = builder.comments;
             this.content = builder.content;
             this.pubTime = builder.pubTime;
             this.source = builder.source;
@@ -216,6 +297,13 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskRequest extends Request 
          */
         public String getAuthor() {
             return this.author;
+        }
+
+        /**
+         * @return comments
+         */
+        public java.util.List < Comments> getComments() {
+            return this.comments;
         }
 
         /**
@@ -262,6 +350,7 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskRequest extends Request 
 
         public static final class Builder {
             private String author; 
+            private java.util.List < Comments> comments; 
             private String content; 
             private String pubTime; 
             private String source; 
@@ -278,7 +367,18 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskRequest extends Request 
             }
 
             /**
-             * Content.
+             * Comments.
+             */
+            public Builder comments(java.util.List < Comments> comments) {
+                this.comments = comments;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>文章内容</p>
              */
             public Builder content(String content) {
                 this.content = content;

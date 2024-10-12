@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFreshViewPointsResponseBody} extends {@link TeaModel}
  *
  * <p>ListFreshViewPointsResponseBody</p>
@@ -210,6 +211,12 @@ public class ListFreshViewPointsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFreshViewPointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFreshViewPointsResponseBody</p>
+     */
     public static class Outlines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Outline")
         private String outline;
@@ -271,6 +278,12 @@ public class ListFreshViewPointsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListFreshViewPointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFreshViewPointsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Outlines")
         private java.util.List < Outlines> outlines;

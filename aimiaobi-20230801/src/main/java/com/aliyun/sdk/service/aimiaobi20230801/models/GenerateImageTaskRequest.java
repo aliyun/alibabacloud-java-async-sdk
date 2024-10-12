@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateImageTaskRequest} extends {@link RequestModel}
  *
  * <p>GenerateImageTaskRequest</p>
@@ -137,7 +138,10 @@ public class GenerateImageTaskRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e1be065b-adc3-435e-bd01-1c18c5ed75d3</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -146,7 +150,10 @@ public class GenerateImageTaskRequest extends Request {
         }
 
         /**
-         * ArticleTaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e1be065b-adc3-435e-bd01-1c18c5ed75d3</p>
          */
         public Builder articleTaskId(String articleTaskId) {
             this.putBodyParameter("ArticleTaskId", articleTaskId);
@@ -155,7 +162,7 @@ public class GenerateImageTaskRequest extends Request {
         }
 
         /**
-         * ParagraphList.
+         * <p>This parameter is required.</p>
          */
         public Builder paragraphList(java.util.List < ParagraphList> paragraphList) {
             String paragraphListShrink = shrink(paragraphList, "ParagraphList", "json");
@@ -165,7 +172,10 @@ public class GenerateImageTaskRequest extends Request {
         }
 
         /**
-         * Size.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024*1024</p>
          */
         public Builder size(String size) {
             this.putBodyParameter("Size", size);
@@ -174,7 +184,10 @@ public class GenerateImageTaskRequest extends Request {
         }
 
         /**
-         * Style.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <auto>
          */
         public Builder style(String style) {
             this.putBodyParameter("Style", style);
@@ -189,6 +202,12 @@ public class GenerateImageTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GenerateImageTaskRequest} extends {@link TeaModel}
+     *
+     * <p>GenerateImageTaskRequest</p>
+     */
     public static class ParagraphList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -254,7 +273,10 @@ public class GenerateImageTaskRequest extends Request {
             private String taskStatus; 
 
             /**
-             * Content.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>一直忧伤的猫</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -262,7 +284,10 @@ public class GenerateImageTaskRequest extends Request {
             }
 
             /**
-             * Id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;

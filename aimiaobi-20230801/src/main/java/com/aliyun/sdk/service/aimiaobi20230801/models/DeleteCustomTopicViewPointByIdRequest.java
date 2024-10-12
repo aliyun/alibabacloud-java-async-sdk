@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCustomTopicViewPointByIdRequest} extends {@link RequestModel}
  *
  * <p>DeleteCustomTopicViewPointByIdRequest</p>
@@ -92,7 +93,10 @@ public class DeleteCustomTopicViewPointByIdRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx_p_efm</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -101,7 +105,10 @@ public class DeleteCustomTopicViewPointByIdRequest extends Request {
         }
 
         /**
-         * CustomViewPointId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dfd73894e6a94fd79fe7ffbe865796fb</p>
          */
         public Builder customViewPointId(String customViewPointId) {
             this.putBodyParameter("CustomViewPointId", customViewPointId);

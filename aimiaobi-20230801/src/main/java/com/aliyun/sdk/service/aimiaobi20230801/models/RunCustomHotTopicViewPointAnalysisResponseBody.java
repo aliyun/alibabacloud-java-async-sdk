@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunCustomHotTopicViewPointAnalysisResponseBody} extends {@link TeaModel}
  *
  * <p>RunCustomHotTopicViewPointAnalysisResponseBody</p>
@@ -90,6 +91,12 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RunCustomHotTopicViewPointAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunCustomHotTopicViewPointAnalysisResponseBody</p>
+     */
     public static class RunCustomHotTopicViewPointAnalysisResponseBodyHeader extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -251,6 +258,12 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunCustomHotTopicViewPointAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunCustomHotTopicViewPointAnalysisResponseBody</p>
+     */
     public static class Output extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AskUser")
         private java.util.List < String > askUser;
@@ -392,6 +405,12 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunCustomHotTopicViewPointAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunCustomHotTopicViewPointAnalysisResponseBody</p>
+     */
     public static class Usage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InputTokens")
         private Long inputTokens;
@@ -473,6 +492,12 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunCustomHotTopicViewPointAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunCustomHotTopicViewPointAnalysisResponseBody</p>
+     */
     public static class Payload extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Output")
         private Output output;

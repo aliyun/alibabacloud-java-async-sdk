@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunSummaryGenerateRequest} extends {@link RequestModel}
  *
  * <p>RunSummaryGenerateRequest</p>
@@ -106,7 +107,10 @@ public class RunSummaryGenerateRequest extends Request {
         }
 
         /**
-         * Content.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>创新政务社交媒体功能。鼓励各地区、各部门结合实际，开发政务社交媒体的特色功能，如在线咨询服务、政策解读、互动问答等，增强政务社交媒体的互动性和实用性，提升公众参与度。</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -124,7 +128,10 @@ public class RunSummaryGenerateRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-2setzb9x4ewsd</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

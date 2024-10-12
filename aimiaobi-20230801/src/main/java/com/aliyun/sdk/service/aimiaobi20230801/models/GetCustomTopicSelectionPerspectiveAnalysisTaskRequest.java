@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCustomTopicSelectionPerspectiveAnalysisTaskRequest} extends {@link RequestModel}
  *
  * <p>GetCustomTopicSelectionPerspectiveAnalysisTaskRequest</p>
@@ -92,7 +93,10 @@ public class GetCustomTopicSelectionPerspectiveAnalysisTaskRequest extends Reque
         }
 
         /**
-         * AgentKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx_p_efm</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -101,7 +105,10 @@ public class GetCustomTopicSelectionPerspectiveAnalysisTaskRequest extends Reque
         }
 
         /**
-         * TaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0dbf1055f8a2475d99904c3b76a0ffba</p>
          */
         public Builder taskId(String taskId) {
             this.putBodyParameter("TaskId", taskId);

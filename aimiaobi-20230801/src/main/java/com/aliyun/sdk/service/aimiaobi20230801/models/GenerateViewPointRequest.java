@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateViewPointRequest} extends {@link RequestModel}
  *
  * <p>GenerateViewPointRequest</p>
@@ -91,7 +92,10 @@ public class GenerateViewPointRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c160c841c8e54295bf2f441432785944_p_efm</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -116,6 +120,12 @@ public class GenerateViewPointRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GenerateViewPointRequest} extends {@link TeaModel}
+     *
+     * <p>GenerateViewPointRequest</p>
+     */
     public static class ReferenceData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MiniDoc")
         private java.util.List < String > miniDoc;

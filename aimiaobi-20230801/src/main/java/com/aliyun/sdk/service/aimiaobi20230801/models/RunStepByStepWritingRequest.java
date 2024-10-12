@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunStepByStepWritingRequest} extends {@link RequestModel}
  *
  * <p>RunStepByStepWritingRequest</p>
@@ -171,7 +172,10 @@ public class RunStepByStepWritingRequest extends Request {
         }
 
         /**
-         * Prompt.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>提示词</p>
          */
         public Builder prompt(String prompt) {
             this.putBodyParameter("Prompt", prompt);
@@ -208,7 +212,10 @@ public class RunStepByStepWritingRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);
@@ -233,6 +240,12 @@ public class RunStepByStepWritingRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RunStepByStepWritingRequest} extends {@link TeaModel}
+     *
+     * <p>RunStepByStepWritingRequest</p>
+     */
     public static class Articles extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Author")
         private String author;
@@ -474,6 +487,12 @@ public class RunStepByStepWritingRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunStepByStepWritingRequest} extends {@link TeaModel}
+     *
+     * <p>RunStepByStepWritingRequest</p>
+     */
     public static class OutlinesArticles extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -555,6 +574,12 @@ public class RunStepByStepWritingRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunStepByStepWritingRequest} extends {@link TeaModel}
+     *
+     * <p>RunStepByStepWritingRequest</p>
+     */
     public static class Outlines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Articles")
         private java.util.List < OutlinesArticles> articles;
@@ -616,6 +641,12 @@ public class RunStepByStepWritingRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunStepByStepWritingRequest} extends {@link TeaModel}
+     *
+     * <p>RunStepByStepWritingRequest</p>
+     */
     public static class ReferenceData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Articles")
         private java.util.List < Articles> articles;
@@ -717,6 +748,12 @@ public class RunStepByStepWritingRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunStepByStepWritingRequest} extends {@link TeaModel}
+     *
+     * <p>RunStepByStepWritingRequest</p>
+     */
     public static class PromptTag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NecessaryTips")
         private String necessaryTips;
@@ -818,6 +855,12 @@ public class RunStepByStepWritingRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunStepByStepWritingRequest} extends {@link TeaModel}
+     *
+     * <p>RunStepByStepWritingRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Keyword")
         private String keyword;
@@ -879,6 +922,12 @@ public class RunStepByStepWritingRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunStepByStepWritingRequest} extends {@link TeaModel}
+     *
+     * <p>RunStepByStepWritingRequest</p>
+     */
     public static class WritingConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;

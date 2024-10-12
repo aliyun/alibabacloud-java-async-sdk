@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunStyleFeatureAnalysisRequest} extends {@link RequestModel}
  *
  * <p>RunStyleFeatureAnalysisRequest</p>
@@ -125,7 +126,10 @@ public class RunStyleFeatureAnalysisRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-2setzb9x4ewsd</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateImageTaskResponseBody} extends {@link TeaModel}
  *
  * <p>GenerateImageTaskResponseBody</p>
@@ -150,6 +151,12 @@ public class GenerateImageTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GenerateImageTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GenerateImageTaskResponseBody</p>
+     */
     public static class TaskList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -251,6 +258,12 @@ public class GenerateImageTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GenerateImageTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GenerateImageTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskList")
         private java.util.List < TaskList> taskList;

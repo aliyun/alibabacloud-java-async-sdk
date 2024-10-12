@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWebReviewPointsResponseBody} extends {@link TeaModel}
  *
  * <p>ListWebReviewPointsResponseBody</p>
@@ -210,6 +211,12 @@ public class ListWebReviewPointsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListWebReviewPointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWebReviewPointsResponseBody</p>
+     */
     public static class Comments extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
@@ -331,6 +338,12 @@ public class ListWebReviewPointsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWebReviewPointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWebReviewPointsResponseBody</p>
+     */
     public static class Outlines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Outline")
         private String outline;
@@ -392,6 +405,12 @@ public class ListWebReviewPointsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWebReviewPointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWebReviewPointsResponseBody</p>
+     */
     public static class ViewPoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Outlines")
         private java.util.List < Outlines> outlines;
@@ -473,6 +492,12 @@ public class ListWebReviewPointsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWebReviewPointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWebReviewPointsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attitude")
         private String attitude;

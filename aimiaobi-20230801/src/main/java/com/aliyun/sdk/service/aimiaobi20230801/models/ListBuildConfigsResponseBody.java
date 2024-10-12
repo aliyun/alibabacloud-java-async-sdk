@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListBuildConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>ListBuildConfigsResponseBody</p>
@@ -150,6 +151,12 @@ public class ListBuildConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListBuildConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListBuildConfigsResponseBody</p>
+     */
     public static class Keywords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -211,6 +218,12 @@ public class ListBuildConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListBuildConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListBuildConfigsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BuildIn")
         private Boolean buildIn;

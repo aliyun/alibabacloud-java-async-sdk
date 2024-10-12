@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTimedViewAttitudeResponse} extends {@link TeaModel}
  *
  * <p>ListTimedViewAttitudeResponse</p>

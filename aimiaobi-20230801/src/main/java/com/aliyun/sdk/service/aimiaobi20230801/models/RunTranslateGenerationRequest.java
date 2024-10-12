@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunTranslateGenerationRequest} extends {@link RequestModel}
  *
  * <p>RunTranslateGenerationRequest</p>
@@ -121,7 +122,10 @@ public class RunTranslateGenerationRequest extends Request {
         }
 
         /**
-         * Prompt.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>toEnglish</p>
          */
         public Builder prompt(String prompt) {
             this.putBodyParameter("Prompt", prompt);
@@ -130,7 +134,7 @@ public class RunTranslateGenerationRequest extends Request {
         }
 
         /**
-         * ReferenceData.
+         * <p>This parameter is required.</p>
          */
         public Builder referenceData(ReferenceData referenceData) {
             String referenceDataShrink = shrink(referenceData, "ReferenceData", "json");
@@ -149,7 +153,10 @@ public class RunTranslateGenerationRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-xxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);
@@ -164,6 +171,12 @@ public class RunTranslateGenerationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RunTranslateGenerationRequest} extends {@link TeaModel}
+     *
+     * <p>RunTranslateGenerationRequest</p>
+     */
     public static class ReferenceData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Contents")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -192,7 +205,7 @@ public class RunTranslateGenerationRequest extends Request {
             private java.util.List < String > contents; 
 
             /**
-             * Contents.
+             * <p>This parameter is required.</p>
              */
             public Builder contents(java.util.List < String > contents) {
                 this.contents = contents;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDocClusterTaskRequest} extends {@link RequestModel}
  *
  * <p>GetDocClusterTaskRequest</p>
@@ -92,7 +93,10 @@ public class GetDocClusterTaskRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx_p_efm</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -101,7 +105,10 @@ public class GetDocClusterTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93771c8e1142467fb1aedf1763feba1e</p>
          */
         public Builder taskId(String taskId) {
             this.putBodyParameter("TaskId", taskId);

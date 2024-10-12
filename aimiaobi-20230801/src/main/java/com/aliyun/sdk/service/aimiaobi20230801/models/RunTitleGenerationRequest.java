@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunTitleGenerationRequest} extends {@link RequestModel}
  *
  * <p>RunTitleGenerationRequest</p>
@@ -106,7 +107,7 @@ public class RunTitleGenerationRequest extends Request {
         }
 
         /**
-         * ReferenceData.
+         * <p>This parameter is required.</p>
          */
         public Builder referenceData(ReferenceData referenceData) {
             String referenceDataShrink = shrink(referenceData, "ReferenceData", "json");
@@ -125,7 +126,10 @@ public class RunTitleGenerationRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-xxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);
@@ -140,6 +144,12 @@ public class RunTitleGenerationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RunTitleGenerationRequest} extends {@link TeaModel}
+     *
+     * <p>RunTitleGenerationRequest</p>
+     */
     public static class ReferenceData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Contents")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -168,7 +178,7 @@ public class RunTitleGenerationRequest extends Request {
             private java.util.List < String > contents; 
 
             /**
-             * Contents.
+             * <p>This parameter is required.</p>
              */
             public Builder contents(java.util.List < String > contents) {
                 this.contents = contents;

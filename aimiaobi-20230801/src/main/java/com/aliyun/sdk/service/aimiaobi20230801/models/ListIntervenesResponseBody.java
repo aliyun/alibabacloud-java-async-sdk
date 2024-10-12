@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIntervenesResponseBody} extends {@link TeaModel}
  *
  * <p>ListIntervenesResponseBody</p>
@@ -150,6 +151,12 @@ public class ListIntervenesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListIntervenesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIntervenesResponseBody</p>
+     */
     public static class InterveneList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -189,7 +196,10 @@ public class ListIntervenesResponseBody extends TeaModel {
             private String query; 
 
             /**
-             * id
+             * <p>id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36559</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -211,6 +221,12 @@ public class ListIntervenesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListIntervenesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIntervenesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InterveneList")
         private java.util.List < InterveneList> interveneList;

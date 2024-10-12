@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunStepByStepWritingResponseBody} extends {@link TeaModel}
  *
  * <p>RunStepByStepWritingResponseBody</p>
@@ -90,6 +91,12 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RunStepByStepWritingResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunStepByStepWritingResponseBody</p>
+     */
     public static class RunStepByStepWritingResponseBodyHeader extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -251,6 +258,12 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunStepByStepWritingResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunStepByStepWritingResponseBody</p>
+     */
     public static class Articles extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Author")
         private String author;
@@ -492,6 +505,12 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunStepByStepWritingResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunStepByStepWritingResponseBody</p>
+     */
     public static class ExtraOutput extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("summarization")
         private java.util.List < String > summarization;
@@ -533,6 +552,12 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunStepByStepWritingResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunStepByStepWritingResponseBody</p>
+     */
     public static class Output extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Articles")
         private java.util.List < Articles> articles;
@@ -654,6 +679,12 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunStepByStepWritingResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunStepByStepWritingResponseBody</p>
+     */
     public static class Usage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InputTokens")
         private Long inputTokens;
@@ -735,6 +766,12 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunStepByStepWritingResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunStepByStepWritingResponseBody</p>
+     */
     public static class Payload extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Output")
         private Output output;

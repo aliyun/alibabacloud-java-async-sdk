@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTokenResponseBody} extends {@link TeaModel}
  *
  * <p>CreateTokenResponseBody</p>
@@ -150,6 +151,12 @@ public class CreateTokenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateTokenResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateTokenResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private Long expiredTime;

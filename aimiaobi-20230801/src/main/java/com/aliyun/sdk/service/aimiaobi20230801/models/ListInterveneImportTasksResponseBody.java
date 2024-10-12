@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInterveneImportTasksResponseBody} extends {@link TeaModel}
  *
  * <p>ListInterveneImportTasksResponseBody</p>
@@ -150,6 +151,12 @@ public class ListInterveneImportTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInterveneImportTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInterveneImportTasksResponseBody</p>
+     */
     public static class StatusList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Msg")
         private String msg;
@@ -271,6 +278,12 @@ public class ListInterveneImportTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInterveneImportTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInterveneImportTasksResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageIndex")
         private Integer pageIndex;

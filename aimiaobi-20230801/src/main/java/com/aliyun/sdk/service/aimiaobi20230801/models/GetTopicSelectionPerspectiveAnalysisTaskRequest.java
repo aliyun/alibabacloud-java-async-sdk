@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTopicSelectionPerspectiveAnalysisTaskRequest} extends {@link RequestModel}
  *
  * <p>GetTopicSelectionPerspectiveAnalysisTaskRequest</p>
@@ -91,7 +92,10 @@ public class GetTopicSelectionPerspectiveAnalysisTaskRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx_p_efm</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);

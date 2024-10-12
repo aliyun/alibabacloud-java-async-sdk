@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInterveneRuleDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetInterveneRuleDetailResponseBody</p>
@@ -150,6 +151,12 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInterveneRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInterveneRuleDetailResponseBody</p>
+     */
     public static class AnswerConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnswerType")
         private Integer answerType;
@@ -231,6 +238,12 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInterveneRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInterveneRuleDetailResponseBody</p>
+     */
     public static class EffectConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EffectType")
         private Integer effectType;
@@ -312,6 +325,12 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInterveneRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInterveneRuleDetailResponseBody</p>
+     */
     public static class InterveneRuleDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnswerConfig")
         private java.util.List < AnswerConfig> answerConfig;
@@ -453,6 +472,12 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInterveneRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInterveneRuleDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InterveneRuleDetail")
         private InterveneRuleDetail interveneRuleDetail;

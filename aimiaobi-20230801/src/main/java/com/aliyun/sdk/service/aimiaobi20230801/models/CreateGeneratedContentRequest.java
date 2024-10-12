@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGeneratedContentRequest} extends {@link RequestModel}
  *
  * <p>CreateGeneratedContentRequest</p>
@@ -192,7 +193,10 @@ public class CreateGeneratedContentRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx_efm</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -201,7 +205,7 @@ public class CreateGeneratedContentRequest extends Request {
         }
 
         /**
-         * Content.
+         * <p>This parameter is required.</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -247,7 +251,10 @@ public class CreateGeneratedContentRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder taskId(String taskId) {
             this.putBodyParameter("TaskId", taskId);
@@ -256,7 +263,7 @@ public class CreateGeneratedContentRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>This parameter is required.</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("Title", title);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataSourceOrderConfigResponseBody} extends {@link TeaModel}
  *
  * <p>GetDataSourceOrderConfigResponseBody</p>
@@ -150,6 +151,12 @@ public class GetDataSourceOrderConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDataSourceOrderConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataSourceOrderConfigResponseBody</p>
+     */
     public static class UserConfigDataSourceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -251,6 +258,12 @@ public class GetDataSourceOrderConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataSourceOrderConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataSourceOrderConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserConfigDataSourceList")
         private java.util.List < UserConfigDataSourceList> userConfigDataSourceList;

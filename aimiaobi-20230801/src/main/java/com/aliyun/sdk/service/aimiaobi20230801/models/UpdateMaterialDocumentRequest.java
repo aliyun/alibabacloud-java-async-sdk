@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMaterialDocumentRequest} extends {@link RequestModel}
  *
  * <p>UpdateMaterialDocumentRequest</p>
@@ -252,7 +253,10 @@ public class UpdateMaterialDocumentRequest extends Request {
         } 
 
         /**
-         * AgentKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67c520d1fa43455ea44fb69fa402d54d_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -280,7 +284,10 @@ public class UpdateMaterialDocumentRequest extends Request {
         }
 
         /**
-         * DocType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image</p>
          */
         public Builder docType(String docType) {
             this.putBodyParameter("DocType", docType);
@@ -307,7 +314,10 @@ public class UpdateMaterialDocumentRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44</p>
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);

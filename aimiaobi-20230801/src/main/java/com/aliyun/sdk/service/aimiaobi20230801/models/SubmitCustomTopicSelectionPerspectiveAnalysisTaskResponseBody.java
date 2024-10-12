@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitCustomTopicSelectionPerspectiveAnalysisTaskResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitCustomTopicSelectionPerspectiveAnalysisTaskResponseBody</p>
@@ -150,6 +151,12 @@ public class SubmitCustomTopicSelectionPerspectiveAnalysisTaskResponseBody exten
 
     } 
 
+    /**
+     * 
+     * {@link SubmitCustomTopicSelectionPerspectiveAnalysisTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitCustomTopicSelectionPerspectiveAnalysisTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;

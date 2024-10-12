@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FetchImageTaskResponseBody} extends {@link TeaModel}
  *
  * <p>FetchImageTaskResponseBody</p>
@@ -150,6 +151,12 @@ public class FetchImageTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FetchImageTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>FetchImageTaskResponseBody</p>
+     */
     public static class ImageList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -231,6 +238,12 @@ public class FetchImageTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FetchImageTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>FetchImageTaskResponseBody</p>
+     */
     public static class TaskInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -332,6 +345,12 @@ public class FetchImageTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FetchImageTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>FetchImageTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskInfoList")
         private java.util.List < TaskInfoList> taskInfoList;

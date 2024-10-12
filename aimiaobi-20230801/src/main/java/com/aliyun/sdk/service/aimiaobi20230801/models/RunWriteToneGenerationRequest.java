@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunWriteToneGenerationRequest} extends {@link RequestModel}
  *
  * <p>RunWriteToneGenerationRequest</p>
@@ -121,7 +122,7 @@ public class RunWriteToneGenerationRequest extends Request {
         }
 
         /**
-         * Prompt.
+         * <p>This parameter is required.</p>
          */
         public Builder prompt(String prompt) {
             this.putBodyParameter("Prompt", prompt);
@@ -130,7 +131,7 @@ public class RunWriteToneGenerationRequest extends Request {
         }
 
         /**
-         * ReferenceData.
+         * <p>This parameter is required.</p>
          */
         public Builder referenceData(ReferenceData referenceData) {
             String referenceDataShrink = shrink(referenceData, "ReferenceData", "json");
@@ -149,7 +150,10 @@ public class RunWriteToneGenerationRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-xxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);
@@ -164,6 +168,12 @@ public class RunWriteToneGenerationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RunWriteToneGenerationRequest} extends {@link TeaModel}
+     *
+     * <p>RunWriteToneGenerationRequest</p>
+     */
     public static class ReferenceData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Contents")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -192,7 +202,7 @@ public class RunWriteToneGenerationRequest extends Request {
             private java.util.List < String > contents; 
 
             /**
-             * Contents.
+             * <p>This parameter is required.</p>
              */
             public Builder contents(java.util.List < String > contents) {
                 this.contents = contents;

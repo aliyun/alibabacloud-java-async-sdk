@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHotTopicsResponseBody} extends {@link TeaModel}
  *
  * <p>ListHotTopicsResponseBody</p>
@@ -210,6 +211,12 @@ public class ListHotTopicsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHotTopicsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotTopicsResponseBody</p>
+     */
     public static class DocList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
@@ -291,6 +298,12 @@ public class ListHotTopicsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHotTopicsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotTopicsResponseBody</p>
+     */
     public static class StructureSummary extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DocList")
         private java.util.List < DocList> docList;
@@ -372,6 +385,12 @@ public class ListHotTopicsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHotTopicsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotTopicsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AsyncTaskId")
         private String asyncTaskId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVersionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListVersionsResponseBody</p>
@@ -150,6 +151,12 @@ public class ListVersionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListVersionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVersionsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConcurrentCount")
         private Integer concurrentCount;
