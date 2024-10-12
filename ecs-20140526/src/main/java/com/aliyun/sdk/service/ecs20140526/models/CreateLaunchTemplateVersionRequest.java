@@ -61,6 +61,18 @@ public class CreateLaunchTemplateVersionRequest extends Request {
     private String hostName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpEndpoint")
+    private String httpEndpoint;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpPutResponseHopLimit")
+    private Integer httpPutResponseHopLimit;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpTokens")
+    private String httpTokens;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
@@ -228,6 +240,9 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         this.description = builder.description;
         this.enableVmOsConfig = builder.enableVmOsConfig;
         this.hostName = builder.hostName;
+        this.httpEndpoint = builder.httpEndpoint;
+        this.httpPutResponseHopLimit = builder.httpPutResponseHopLimit;
+        this.httpTokens = builder.httpTokens;
         this.imageId = builder.imageId;
         this.imageOwnerAlias = builder.imageOwnerAlias;
         this.instanceChargeType = builder.instanceChargeType;
@@ -363,6 +378,27 @@ public class CreateLaunchTemplateVersionRequest extends Request {
      */
     public String getHostName() {
         return this.hostName;
+    }
+
+    /**
+     * @return httpEndpoint
+     */
+    public String getHttpEndpoint() {
+        return this.httpEndpoint;
+    }
+
+    /**
+     * @return httpPutResponseHopLimit
+     */
+    public Integer getHttpPutResponseHopLimit() {
+        return this.httpPutResponseHopLimit;
+    }
+
+    /**
+     * @return httpTokens
+     */
+    public String getHttpTokens() {
+        return this.httpTokens;
     }
 
     /**
@@ -644,6 +680,9 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         private String description; 
         private Boolean enableVmOsConfig; 
         private String hostName; 
+        private String httpEndpoint; 
+        private Integer httpPutResponseHopLimit; 
+        private String httpTokens; 
         private String imageId; 
         private String imageOwnerAlias; 
         private String instanceChargeType; 
@@ -701,6 +740,9 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             this.description = request.description;
             this.enableVmOsConfig = request.enableVmOsConfig;
             this.hostName = request.hostName;
+            this.httpEndpoint = request.httpEndpoint;
+            this.httpPutResponseHopLimit = request.httpPutResponseHopLimit;
+            this.httpTokens = request.httpTokens;
             this.imageId = request.imageId;
             this.imageOwnerAlias = request.imageOwnerAlias;
             this.instanceChargeType = request.instanceChargeType;
@@ -902,6 +944,33 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
             this.hostName = hostName;
+            return this;
+        }
+
+        /**
+         * HttpEndpoint.
+         */
+        public Builder httpEndpoint(String httpEndpoint) {
+            this.putQueryParameter("HttpEndpoint", httpEndpoint);
+            this.httpEndpoint = httpEndpoint;
+            return this;
+        }
+
+        /**
+         * HttpPutResponseHopLimit.
+         */
+        public Builder httpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
+            this.putQueryParameter("HttpPutResponseHopLimit", httpPutResponseHopLimit);
+            this.httpPutResponseHopLimit = httpPutResponseHopLimit;
+            return this;
+        }
+
+        /**
+         * HttpTokens.
+         */
+        public Builder httpTokens(String httpTokens) {
+            this.putQueryParameter("HttpTokens", httpTokens);
+            this.httpTokens = httpTokens;
             return this;
         }
 

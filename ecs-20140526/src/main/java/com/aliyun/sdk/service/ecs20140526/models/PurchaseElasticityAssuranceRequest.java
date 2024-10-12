@@ -21,6 +21,14 @@ public class PurchaseElasticityAssuranceRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
@@ -34,6 +42,14 @@ public class PurchaseElasticityAssuranceRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
@@ -41,9 +57,13 @@ public class PurchaseElasticityAssuranceRequest extends Request {
         super(builder);
         this.privatePoolOptions = builder.privatePoolOptions;
         this.clientToken = builder.clientToken;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
         this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
         this.startTime = builder.startTime;
     }
 
@@ -75,6 +95,20 @@ public class PurchaseElasticityAssuranceRequest extends Request {
     }
 
     /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
      * @return period
      */
     public Integer getPeriod() {
@@ -96,6 +130,20 @@ public class PurchaseElasticityAssuranceRequest extends Request {
     }
 
     /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -105,9 +153,13 @@ public class PurchaseElasticityAssuranceRequest extends Request {
     public static final class Builder extends Request.Builder<PurchaseElasticityAssuranceRequest, Builder> {
         private PrivatePoolOptions privatePoolOptions; 
         private String clientToken; 
+        private String ownerAccount; 
+        private Long ownerId; 
         private Integer period; 
         private String periodUnit; 
         private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
         private String startTime; 
 
         private Builder() {
@@ -118,9 +170,13 @@ public class PurchaseElasticityAssuranceRequest extends Request {
             super(request);
             this.privatePoolOptions = request.privatePoolOptions;
             this.clientToken = request.clientToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
             this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
             this.startTime = request.startTime;
         } 
 
@@ -139,6 +195,24 @@ public class PurchaseElasticityAssuranceRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
             return this;
         }
 
@@ -169,6 +243,24 @@ public class PurchaseElasticityAssuranceRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 

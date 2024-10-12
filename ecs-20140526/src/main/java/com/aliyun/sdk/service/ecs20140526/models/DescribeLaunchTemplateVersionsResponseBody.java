@@ -1036,6 +1036,15 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HostName")
         private String hostName;
 
+        @com.aliyun.core.annotation.NameInMap("HttpEndpoint")
+        private String httpEndpoint;
+
+        @com.aliyun.core.annotation.NameInMap("HttpPutResponseHopLimit")
+        private Integer httpPutResponseHopLimit;
+
+        @com.aliyun.core.annotation.NameInMap("HttpTokens")
+        private String httpTokens;
+
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
@@ -1170,6 +1179,9 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             this.description = builder.description;
             this.enableVmOsConfig = builder.enableVmOsConfig;
             this.hostName = builder.hostName;
+            this.httpEndpoint = builder.httpEndpoint;
+            this.httpPutResponseHopLimit = builder.httpPutResponseHopLimit;
+            this.httpTokens = builder.httpTokens;
             this.imageId = builder.imageId;
             this.imageOwnerAlias = builder.imageOwnerAlias;
             this.instanceChargeType = builder.instanceChargeType;
@@ -1289,6 +1301,27 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
          */
         public String getHostName() {
             return this.hostName;
+        }
+
+        /**
+         * @return httpEndpoint
+         */
+        public String getHttpEndpoint() {
+            return this.httpEndpoint;
+        }
+
+        /**
+         * @return httpPutResponseHopLimit
+         */
+        public Integer getHttpPutResponseHopLimit() {
+            return this.httpPutResponseHopLimit;
+        }
+
+        /**
+         * @return httpTokens
+         */
+        public String getHttpTokens() {
+            return this.httpTokens;
         }
 
         /**
@@ -1589,6 +1622,9 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             private String description; 
             private Boolean enableVmOsConfig; 
             private String hostName; 
+            private String httpEndpoint; 
+            private Integer httpPutResponseHopLimit; 
+            private String httpTokens; 
             private String imageId; 
             private String imageOwnerAlias; 
             private String instanceChargeType; 
@@ -1754,6 +1790,30 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
+                return this;
+            }
+
+            /**
+             * HttpEndpoint.
+             */
+            public Builder httpEndpoint(String httpEndpoint) {
+                this.httpEndpoint = httpEndpoint;
+                return this;
+            }
+
+            /**
+             * HttpPutResponseHopLimit.
+             */
+            public Builder httpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
+                this.httpPutResponseHopLimit = httpPutResponseHopLimit;
+                return this;
+            }
+
+            /**
+             * HttpTokens.
+             */
+            public Builder httpTokens(String httpTokens) {
+                this.httpTokens = httpTokens;
                 return this;
             }
 
