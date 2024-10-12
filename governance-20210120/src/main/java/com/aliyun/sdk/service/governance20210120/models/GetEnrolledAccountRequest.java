@@ -70,6 +70,7 @@ public class GetEnrolledAccountRequest extends Request {
 
         /**
          * <p>The account ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>19534534552****</p>

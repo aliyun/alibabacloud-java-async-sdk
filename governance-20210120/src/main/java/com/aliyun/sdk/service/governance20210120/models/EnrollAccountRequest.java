@@ -48,6 +48,10 @@ public class EnrollAccountRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResellAccountType")
     private String resellAccountType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
     private EnrollAccountRequest(Builder builder) {
         super(builder);
         this.accountNamePrefix = builder.accountNamePrefix;
@@ -59,6 +63,7 @@ public class EnrollAccountRequest extends Request {
         this.payerAccountUid = builder.payerAccountUid;
         this.regionId = builder.regionId;
         this.resellAccountType = builder.resellAccountType;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -137,6 +142,13 @@ public class EnrollAccountRequest extends Request {
         return this.resellAccountType;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<EnrollAccountRequest, Builder> {
         private String accountNamePrefix; 
         private Long accountUid; 
@@ -147,6 +159,7 @@ public class EnrollAccountRequest extends Request {
         private Long payerAccountUid; 
         private String regionId; 
         private String resellAccountType; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -163,6 +176,7 @@ public class EnrollAccountRequest extends Request {
             this.payerAccountUid = request.payerAccountUid;
             this.regionId = request.regionId;
             this.resellAccountType = request.resellAccountType;
+            this.tag = request.tag;
         } 
 
         /**
@@ -299,6 +313,16 @@ public class EnrollAccountRequest extends Request {
             return this;
         }
 
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            String tagShrink = shrink(tag, "Tag", "json");
+            this.putQueryParameter("Tag", tagShrink);
+            this.tag = tag;
+            return this;
+        }
+
         @Override
         public EnrollAccountRequest build() {
             return new EnrollAccountRequest(this);
@@ -424,6 +448,73 @@ public class EnrollAccountRequest extends Request {
 
             public BaselineItems build() {
                 return new BaselineItems(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link EnrollAccountRequest} extends {@link TeaModel}
+     *
+     * <p>EnrollAccountRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
             } 
 
         } 

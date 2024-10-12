@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of BatchEnrollAccounts  BatchEnrollAccountsRequest
+     * @return BatchEnrollAccountsResponse
+     */
     @Override
     public CompletableFuture<BatchEnrollAccountsResponse> batchEnrollAccounts(BatchEnrollAccountsRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAccountFactoryBaseline  CreateAccountFactoryBaselineRequest
+     * @return CreateAccountFactoryBaselineResponse
+     */
     @Override
     public CompletableFuture<CreateAccountFactoryBaselineResponse> createAccountFactoryBaseline(CreateAccountFactoryBaselineRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAccountFactoryBaseline  DeleteAccountFactoryBaselineRequest
+     * @return DeleteAccountFactoryBaselineResponse
+     */
     @Override
     public CompletableFuture<DeleteAccountFactoryBaselineResponse> deleteAccountFactoryBaseline(DeleteAccountFactoryBaselineRequest request) {
         try {
@@ -85,6 +97,9 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <p>You can call this API operation to create a new account or manage an existing account and apply the account baseline to the account.
      * Accounts are created in asynchronous mode. After you create an account, you can apply the account baseline to the account. You can call the <a href="~~GetEnrolledAccount~~">GetEnrolledAccount API</a> operation to view the details about the account to obtain the result of applying the account baseline to the account.</p>
+     * 
+     * @param request the request parameters of EnrollAccount  EnrollAccountRequest
+     * @return EnrollAccountResponse
      */
     @Override
     public CompletableFuture<EnrollAccountResponse> enrollAccount(EnrollAccountRequest request) {
@@ -100,6 +115,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAccountFactoryBaseline  GetAccountFactoryBaselineRequest
+     * @return GetAccountFactoryBaselineResponse
+     */
     @Override
     public CompletableFuture<GetAccountFactoryBaselineResponse> getAccountFactoryBaseline(GetAccountFactoryBaselineRequest request) {
         try {
@@ -114,6 +133,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetEnrolledAccount  GetEnrolledAccountRequest
+     * @return GetEnrolledAccountResponse
+     */
     @Override
     public CompletableFuture<GetEnrolledAccountResponse> getEnrolledAccount(GetEnrolledAccountRequest request) {
         try {
@@ -128,6 +151,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAccountFactoryBaselineItems  ListAccountFactoryBaselineItemsRequest
+     * @return ListAccountFactoryBaselineItemsResponse
+     */
     @Override
     public CompletableFuture<ListAccountFactoryBaselineItemsResponse> listAccountFactoryBaselineItems(ListAccountFactoryBaselineItemsRequest request) {
         try {
@@ -142,6 +169,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAccountFactoryBaselines  ListAccountFactoryBaselinesRequest
+     * @return ListAccountFactoryBaselinesResponse
+     */
     @Override
     public CompletableFuture<ListAccountFactoryBaselinesResponse> listAccountFactoryBaselines(ListAccountFactoryBaselinesRequest request) {
         try {
@@ -156,6 +187,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEnrolledAccounts  ListEnrolledAccountsRequest
+     * @return ListEnrolledAccountsResponse
+     */
     @Override
     public CompletableFuture<ListEnrolledAccountsResponse> listEnrolledAccounts(ListEnrolledAccountsRequest request) {
         try {
@@ -170,6 +205,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEvaluationMetadata  ListEvaluationMetadataRequest
+     * @return ListEvaluationMetadataResponse
+     */
     @Override
     public CompletableFuture<ListEvaluationMetadataResponse> listEvaluationMetadata(ListEvaluationMetadataRequest request) {
         try {
@@ -184,6 +223,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEvaluationMetricDetails  ListEvaluationMetricDetailsRequest
+     * @return ListEvaluationMetricDetailsResponse
+     */
     @Override
     public CompletableFuture<ListEvaluationMetricDetailsResponse> listEvaluationMetricDetails(ListEvaluationMetricDetailsRequest request) {
         try {
@@ -198,6 +241,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEvaluationResults  ListEvaluationResultsRequest
+     * @return ListEvaluationResultsResponse
+     */
     @Override
     public CompletableFuture<ListEvaluationResultsResponse> listEvaluationResults(ListEvaluationResultsRequest request) {
         try {
@@ -212,6 +259,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEvaluationScoreHistory  ListEvaluationScoreHistoryRequest
+     * @return ListEvaluationScoreHistoryResponse
+     */
     @Override
     public CompletableFuture<ListEvaluationScoreHistoryResponse> listEvaluationScoreHistory(ListEvaluationScoreHistoryRequest request) {
         try {
@@ -226,6 +277,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RunEvaluation  RunEvaluationRequest
+     * @return RunEvaluationResponse
+     */
     @Override
     public CompletableFuture<RunEvaluationResponse> runEvaluation(RunEvaluationRequest request) {
         try {
@@ -240,6 +295,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateAccountFactoryBaseline  UpdateAccountFactoryBaselineRequest
+     * @return UpdateAccountFactoryBaselineResponse
+     */
     @Override
     public CompletableFuture<UpdateAccountFactoryBaselineResponse> updateAccountFactoryBaseline(UpdateAccountFactoryBaselineRequest request) {
         try {
