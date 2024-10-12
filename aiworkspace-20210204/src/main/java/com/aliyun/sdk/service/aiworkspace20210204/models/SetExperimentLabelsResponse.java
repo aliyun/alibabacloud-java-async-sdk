@@ -6,11 +6,12 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListServiceTemplatesResponse} extends {@link TeaModel}
+ * 
+ * {@link SetExperimentLabelsResponse} extends {@link TeaModel}
  *
- * <p>ListServiceTemplatesResponse</p>
+ * <p>SetExperimentLabelsResponse</p>
  */
-public class ListServiceTemplatesResponse extends Response {
+public class SetExperimentLabelsResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +19,16 @@ public class ListServiceTemplatesResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ListServiceTemplatesResponseBody body;
+    private SetExperimentLabelsResponseBody body;
 
-    private ListServiceTemplatesResponse(BuilderImpl builder) {
+    private SetExperimentLabelsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListServiceTemplatesResponse create() {
+    public static SetExperimentLabelsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +54,35 @@ public class ListServiceTemplatesResponse extends Response {
     /**
      * @return body
      */
-    public ListServiceTemplatesResponseBody getBody() {
+    public SetExperimentLabelsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListServiceTemplatesResponse, Builder> {
+    public interface Builder extends Response.Builder<SetExperimentLabelsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ListServiceTemplatesResponseBody body);
+        Builder body(SetExperimentLabelsResponseBody body);
 
         @Override
-        ListServiceTemplatesResponse build();
+        SetExperimentLabelsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListServiceTemplatesResponse, Builder>
+            extends Response.BuilderImpl<SetExperimentLabelsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private ListServiceTemplatesResponseBody body; 
+        private SetExperimentLabelsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListServiceTemplatesResponse response) {
+        private BuilderImpl(SetExperimentLabelsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +111,14 @@ public class ListServiceTemplatesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListServiceTemplatesResponseBody body) {
+        public Builder body(SetExperimentLabelsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListServiceTemplatesResponse build() {
-            return new ListServiceTemplatesResponse(this);
+        public SetExperimentLabelsResponse build() {
+            return new SetExperimentLabelsResponse(this);
         } 
 
     } 

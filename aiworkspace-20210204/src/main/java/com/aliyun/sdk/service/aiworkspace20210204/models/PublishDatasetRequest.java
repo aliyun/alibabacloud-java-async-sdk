@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PublishDatasetRequest} extends {@link RequestModel}
  *
  * <p>PublishDatasetRequest</p>
@@ -54,7 +55,10 @@ public class PublishDatasetRequest extends Request {
         } 
 
         /**
-         * DatasetId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-rbvg5w****c9ks92</p>
          */
         public Builder datasetId(String datasetId) {
             this.putPathParameter("DatasetId", datasetId);

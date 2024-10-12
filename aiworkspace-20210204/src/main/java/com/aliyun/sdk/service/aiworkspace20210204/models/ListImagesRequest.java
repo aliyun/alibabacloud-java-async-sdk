@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListImagesRequest} extends {@link RequestModel}
  *
  * <p>ListImagesRequest</p>
@@ -14,6 +15,10 @@ public class ListImagesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Accessibility")
     private String accessibility;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageUri")
+    private String imageUri;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Labels")
@@ -62,6 +67,7 @@ public class ListImagesRequest extends Request {
     private ListImagesRequest(Builder builder) {
         super(builder);
         this.accessibility = builder.accessibility;
+        this.imageUri = builder.imageUri;
         this.labels = builder.labels;
         this.name = builder.name;
         this.order = builder.order;
@@ -93,6 +99,13 @@ public class ListImagesRequest extends Request {
      */
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    /**
+     * @return imageUri
+     */
+    public String getImageUri() {
+        return this.imageUri;
     }
 
     /**
@@ -174,6 +187,7 @@ public class ListImagesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListImagesRequest, Builder> {
         private String accessibility; 
+        private String imageUri; 
         private String labels; 
         private String name; 
         private String order; 
@@ -193,6 +207,7 @@ public class ListImagesRequest extends Request {
         private Builder(ListImagesRequest request) {
             super(request);
             this.accessibility = request.accessibility;
+            this.imageUri = request.imageUri;
             this.labels = request.labels;
             this.name = request.name;
             this.order = request.order;
@@ -212,6 +227,15 @@ public class ListImagesRequest extends Request {
         public Builder accessibility(String accessibility) {
             this.putQueryParameter("Accessibility", accessibility);
             this.accessibility = accessibility;
+            return this;
+        }
+
+        /**
+         * ImageUri.
+         */
+        public Builder imageUri(String imageUri) {
+            this.putQueryParameter("ImageUri", imageUri);
+            this.imageUri = imageUri;
             return this;
         }
 

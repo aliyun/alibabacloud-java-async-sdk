@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddImageRequest} extends {@link RequestModel}
  *
  * <p>AddImageRequest</p>
@@ -180,7 +181,10 @@ public class AddImageRequest extends Request {
         }
 
         /**
-         * ImageUri.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.cn-hangzhou.aliyuncs.com/pai-compression/nlp:gpu</p>
          */
         public Builder imageUri(String imageUri) {
             this.putBodyParameter("ImageUri", imageUri);
@@ -198,7 +202,10 @@ public class AddImageRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nlp-compression</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -231,6 +238,12 @@ public class AddImageRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddImageRequest} extends {@link TeaModel}
+     *
+     * <p>AddImageRequest</p>
+     */
     public static class Labels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPermissionRequest} extends {@link RequestModel}
  *
  * <p>GetPermissionRequest</p>
@@ -125,7 +126,10 @@ public class GetPermissionRequest extends Request {
         } 
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -134,7 +138,10 @@ public class GetPermissionRequest extends Request {
         }
 
         /**
-         * PermissionCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PaiDLC:GetTensorboard</p>
          */
         public Builder permissionCode(String permissionCode) {
             this.putPathParameter("PermissionCode", permissionCode);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateWorkspaceResourceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateWorkspaceResourceResponseBody</p>
@@ -90,6 +91,12 @@ public class CreateWorkspaceResourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateWorkspaceResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateWorkspaceResourceResponseBody</p>
+     */
     public static class Resources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;

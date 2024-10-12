@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateWorkspaceResourceRequest} extends {@link RequestModel}
  *
  * <p>UpdateWorkspaceResourceRequest</p>
@@ -152,7 +153,10 @@ public class UpdateWorkspaceResourceRequest extends Request {
         } 
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -230,6 +234,12 @@ public class UpdateWorkspaceResourceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateWorkspaceResourceRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateWorkspaceResourceRequest</p>
+     */
     public static class Labels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;

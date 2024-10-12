@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateProductOrdersRequest} extends {@link RequestModel}
  *
  * <p>CreateProductOrdersRequest</p>
@@ -91,6 +92,12 @@ public class CreateProductOrdersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateProductOrdersRequest} extends {@link TeaModel}
+     *
+     * <p>CreateProductOrdersRequest</p>
+     */
     public static class InstanceProperties extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -172,6 +179,12 @@ public class CreateProductOrdersRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateProductOrdersRequest} extends {@link TeaModel}
+     *
+     * <p>CreateProductOrdersRequest</p>
+     */
     public static class Products extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoRenew")
         private Boolean autoRenew;

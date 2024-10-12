@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListModelVersionsRequest} extends {@link RequestModel}
  *
  * <p>ListModelVersionsRequest</p>
@@ -208,7 +209,10 @@ public class ListModelVersionsRequest extends Request {
         } 
 
         /**
-         * ModelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>model-dajbueh******</p>
          */
         public Builder modelId(String modelId) {
             this.putPathParameter("ModelId", modelId);

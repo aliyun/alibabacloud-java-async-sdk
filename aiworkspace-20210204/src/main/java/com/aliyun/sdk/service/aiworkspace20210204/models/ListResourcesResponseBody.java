@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListResourcesResponseBody</p>
@@ -90,6 +91,12 @@ public class ListResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourcesResponseBody</p>
+     */
     public static class Encryption extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Algorithm")
         private String algorithm;
@@ -171,6 +178,12 @@ public class ListResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourcesResponseBody</p>
+     */
     public static class Executor extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
@@ -212,6 +225,12 @@ public class ListResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourcesResponseBody</p>
+     */
     public static class Labels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -273,6 +292,12 @@ public class ListResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourcesResponseBody</p>
+     */
     public static class Specs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -334,6 +359,12 @@ public class ListResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourcesResponseBody</p>
+     */
     public static class Quotas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CardType")
         private String cardType;
@@ -515,6 +546,12 @@ public class ListResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourcesResponseBody</p>
+     */
     public static class Resources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Encryption")
         private Encryption encryption;

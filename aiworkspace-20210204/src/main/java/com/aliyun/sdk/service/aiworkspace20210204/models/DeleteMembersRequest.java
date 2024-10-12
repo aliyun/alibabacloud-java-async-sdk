@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMembersRequest} extends {@link RequestModel}
  *
  * <p>DeleteMembersRequest</p>
@@ -69,7 +70,10 @@ public class DeleteMembersRequest extends Request {
         } 
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>145883</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -78,7 +82,10 @@ public class DeleteMembersRequest extends Request {
         }
 
         /**
-         * MemberIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>145883-21513926<strong><strong><strong>88039,145883-2769726</strong></strong></strong>87513</p>
          */
         public Builder memberIds(String memberIds) {
             this.putQueryParameter("MemberIds", memberIds);

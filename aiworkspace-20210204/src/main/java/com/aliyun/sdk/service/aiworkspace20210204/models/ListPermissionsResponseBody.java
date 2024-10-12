@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPermissionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListPermissionsResponseBody</p>
@@ -90,6 +91,12 @@ public class ListPermissionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPermissionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPermissionsResponseBody</p>
+     */
     public static class PermissionRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Accessibility")
         private String accessibility;
@@ -151,6 +158,12 @@ public class ListPermissionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPermissionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPermissionsResponseBody</p>
+     */
     public static class Permissions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PermissionCode")
         private String permissionCode;

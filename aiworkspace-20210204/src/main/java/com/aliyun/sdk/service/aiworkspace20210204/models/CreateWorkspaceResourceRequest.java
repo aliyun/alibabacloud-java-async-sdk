@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateWorkspaceResourceRequest} extends {@link RequestModel}
  *
  * <p>CreateWorkspaceResourceRequest</p>
@@ -83,7 +84,10 @@ public class CreateWorkspaceResourceRequest extends Request {
         } 
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -101,7 +105,7 @@ public class CreateWorkspaceResourceRequest extends Request {
         }
 
         /**
-         * Resources.
+         * <p>This parameter is required.</p>
          */
         public Builder resources(java.util.List < Resources> resources) {
             this.putBodyParameter("Resources", resources);
@@ -116,6 +120,12 @@ public class CreateWorkspaceResourceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateWorkspaceResourceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateWorkspaceResourceRequest</p>
+     */
     public static class Labels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -177,6 +187,12 @@ public class CreateWorkspaceResourceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateWorkspaceResourceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateWorkspaceResourceRequest</p>
+     */
     public static class Quotas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -205,7 +221,10 @@ public class CreateWorkspaceResourceRequest extends Request {
             private String id; 
 
             /**
-             * Id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>232892******92912</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -219,6 +238,12 @@ public class CreateWorkspaceResourceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateWorkspaceResourceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateWorkspaceResourceRequest</p>
+     */
     public static class Resources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnvType")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -357,7 +382,10 @@ public class CreateWorkspaceResourceRequest extends Request {
             private String workspaceId; 
 
             /**
-             * EnvType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -389,7 +417,10 @@ public class CreateWorkspaceResourceRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ResourceName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -429,7 +460,10 @@ public class CreateWorkspaceResourceRequest extends Request {
             }
 
             /**
-             * WorkspaceId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

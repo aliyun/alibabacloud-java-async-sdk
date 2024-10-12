@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPermissionResponseBody} extends {@link TeaModel}
  *
  * <p>GetPermissionResponseBody</p>
@@ -90,6 +91,12 @@ public class GetPermissionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPermissionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPermissionResponseBody</p>
+     */
     public static class PermissionRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Accessibility")
         private String accessibility;

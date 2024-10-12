@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateWorkspaceRequest} extends {@link RequestModel}
  *
  * <p>CreateWorkspaceRequest</p>
@@ -98,7 +99,10 @@ public class CreateWorkspaceRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -116,7 +120,7 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * EnvTypes.
+         * <p>This parameter is required.</p>
          */
         public Builder envTypes(java.util.List < String > envTypes) {
             this.putBodyParameter("EnvTypes", envTypes);
@@ -125,7 +129,10 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * WorkspaceName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace_example</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.putBodyParameter("WorkspaceName", workspaceName);

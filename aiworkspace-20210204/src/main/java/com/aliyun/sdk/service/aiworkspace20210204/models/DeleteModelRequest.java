@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteModelRequest} extends {@link RequestModel}
  *
  * <p>DeleteModelRequest</p>
@@ -54,7 +55,10 @@ public class DeleteModelRequest extends Request {
         } 
 
         /**
-         * ModelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>model-rbvg5wzl****ks92</p>
          */
         public Builder modelId(String modelId) {
             this.putPathParameter("ModelId", modelId);

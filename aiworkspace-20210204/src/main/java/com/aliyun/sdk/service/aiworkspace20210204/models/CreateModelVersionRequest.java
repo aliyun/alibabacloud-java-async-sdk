@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateModelVersionRequest} extends {@link RequestModel}
  *
  * <p>CreateModelVersionRequest</p>
@@ -279,7 +280,10 @@ public class CreateModelVersionRequest extends Request {
         } 
 
         /**
-         * ModelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>model-dfs1****5c</p>
          */
         public Builder modelId(String modelId) {
             this.putPathParameter("ModelId", modelId);
@@ -405,7 +409,10 @@ public class CreateModelVersionRequest extends Request {
         }
 
         /**
-         * Uri.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://mybucket.oss-cn-beijing.aliyuncs.com/mypath/</p>
          */
         public Builder uri(String uri) {
             this.putBodyParameter("Uri", uri);

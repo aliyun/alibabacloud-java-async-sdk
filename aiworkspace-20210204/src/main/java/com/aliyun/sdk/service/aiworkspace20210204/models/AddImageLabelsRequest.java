@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddImageLabelsRequest} extends {@link RequestModel}
  *
  * <p>AddImageLabelsRequest</p>
@@ -69,7 +70,10 @@ public class AddImageLabelsRequest extends Request {
         } 
 
         /**
-         * ImageId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image-4c62******53uor</p>
          */
         public Builder imageId(String imageId) {
             this.putPathParameter("ImageId", imageId);
@@ -78,7 +82,7 @@ public class AddImageLabelsRequest extends Request {
         }
 
         /**
-         * Labels.
+         * <p>This parameter is required.</p>
          */
         public Builder labels(java.util.List < Labels> labels) {
             this.putBodyParameter("Labels", labels);
@@ -93,6 +97,12 @@ public class AddImageLabelsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddImageLabelsRequest} extends {@link TeaModel}
+     *
+     * <p>AddImageLabelsRequest</p>
+     */
     public static class Labels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;

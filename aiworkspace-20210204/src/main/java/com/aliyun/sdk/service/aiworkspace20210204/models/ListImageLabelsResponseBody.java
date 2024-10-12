@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListImageLabelsResponseBody} extends {@link TeaModel}
  *
  * <p>ListImageLabelsResponseBody</p>
@@ -90,6 +91,12 @@ public class ListImageLabelsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListImageLabelsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListImageLabelsResponseBody</p>
+     */
     public static class Labels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;

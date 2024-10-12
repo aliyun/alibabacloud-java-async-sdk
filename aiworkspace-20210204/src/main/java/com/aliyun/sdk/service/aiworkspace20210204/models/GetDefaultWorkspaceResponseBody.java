@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDefaultWorkspaceResponseBody} extends {@link TeaModel}
  *
  * <p>GetDefaultWorkspaceResponseBody</p>
@@ -270,6 +271,12 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDefaultWorkspaceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDefaultWorkspaceResponseBody</p>
+     */
     public static class Conditions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private Long code;
@@ -351,6 +358,12 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDefaultWorkspaceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDefaultWorkspaceResponseBody</p>
+     */
     public static class Owner extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;

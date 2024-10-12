@@ -6,11 +6,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Experiment} extends {@link TeaModel}
  *
  * <p>Experiment</p>
  */
 public class Experiment extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
+    private String accessibility;
+
     @com.aliyun.core.annotation.NameInMap("ArtifactUri")
     private String artifactUri;
 
@@ -24,13 +28,19 @@ public class Experiment extends TeaModel {
     private String gmtModifiedTime;
 
     @com.aliyun.core.annotation.NameInMap("Labels")
-    private java.util.List < java.util.Map<String, ?>> labels;
+    private java.util.List < ExperimentLabel > labels;
+
+    @com.aliyun.core.annotation.NameInMap("LatestRun")
+    private Run latestRun;
 
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TensorboardLogUri")
     private String tensorboardLogUri;
@@ -42,13 +52,16 @@ public class Experiment extends TeaModel {
     private String workspaceId;
 
     private Experiment(Builder builder) {
+        this.accessibility = builder.accessibility;
         this.artifactUri = builder.artifactUri;
         this.experimentId = builder.experimentId;
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
         this.labels = builder.labels;
+        this.latestRun = builder.latestRun;
         this.name = builder.name;
         this.ownerId = builder.ownerId;
+        this.requestId = builder.requestId;
         this.tensorboardLogUri = builder.tensorboardLogUri;
         this.userId = builder.userId;
         this.workspaceId = builder.workspaceId;
@@ -60,6 +73,13 @@ public class Experiment extends TeaModel {
 
     public static Experiment create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessibility
+     */
+    public String getAccessibility() {
+        return this.accessibility;
     }
 
     /**
@@ -93,8 +113,15 @@ public class Experiment extends TeaModel {
     /**
      * @return labels
      */
-    public java.util.List < java.util.Map<String, ?>> getLabels() {
+    public java.util.List < ExperimentLabel > getLabels() {
         return this.labels;
+    }
+
+    /**
+     * @return latestRun
+     */
+    public Run getLatestRun() {
+        return this.latestRun;
     }
 
     /**
@@ -109,6 +136,13 @@ public class Experiment extends TeaModel {
      */
     public String getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
     }
 
     /**
@@ -133,16 +167,27 @@ public class Experiment extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessibility; 
         private String artifactUri; 
         private String experimentId; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
-        private java.util.List < java.util.Map<String, ?>> labels; 
+        private java.util.List < ExperimentLabel > labels; 
+        private Run latestRun; 
         private String name; 
         private String ownerId; 
+        private String requestId; 
         private String tensorboardLogUri; 
         private String userId; 
         private String workspaceId; 
+
+        /**
+         * Accessibility.
+         */
+        public Builder accessibility(String accessibility) {
+            this.accessibility = accessibility;
+            return this;
+        }
 
         /**
          * ArtifactUri.
@@ -179,8 +224,16 @@ public class Experiment extends TeaModel {
         /**
          * Labels.
          */
-        public Builder labels(java.util.List < java.util.Map<String, ?>> labels) {
+        public Builder labels(java.util.List < ExperimentLabel > labels) {
             this.labels = labels;
+            return this;
+        }
+
+        /**
+         * LatestRun.
+         */
+        public Builder latestRun(Run latestRun) {
+            this.latestRun = latestRun;
             return this;
         }
 
@@ -197,6 +250,14 @@ public class Experiment extends TeaModel {
          */
         public Builder ownerId(String ownerId) {
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 

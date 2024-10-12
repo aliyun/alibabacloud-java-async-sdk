@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCodeSourceRequest} extends {@link RequestModel}
  *
  * <p>DeleteCodeSourceRequest</p>
@@ -54,7 +55,10 @@ public class DeleteCodeSourceRequest extends Request {
         } 
 
         /**
-         * CodeSourceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code-20210111103721-85qz78ia96lu</p>
          */
         public Builder codeSourceId(String codeSourceId) {
             this.putPathParameter("CodeSourceId", codeSourceId);

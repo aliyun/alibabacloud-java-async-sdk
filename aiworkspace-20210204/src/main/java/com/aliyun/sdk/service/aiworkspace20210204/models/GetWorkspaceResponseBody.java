@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWorkspaceResponseBody} extends {@link TeaModel}
  *
  * <p>GetWorkspaceResponseBody</p>
@@ -310,6 +311,12 @@ public class GetWorkspaceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetWorkspaceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkspaceResponseBody</p>
+     */
     public static class Owner extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;

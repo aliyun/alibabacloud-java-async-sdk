@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveMemberRoleRequest} extends {@link RequestModel}
  *
  * <p>RemoveMemberRoleRequest</p>
@@ -84,7 +85,10 @@ public class RemoveMemberRoleRequest extends Request {
         } 
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>145883</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -93,7 +97,10 @@ public class RemoveMemberRoleRequest extends Request {
         }
 
         /**
-         * MemberId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>145883-21513926******88039</p>
          */
         public Builder memberId(String memberId) {
             this.putPathParameter("MemberId", memberId);
@@ -102,7 +109,10 @@ public class RemoveMemberRoleRequest extends Request {
         }
 
         /**
-         * RoleName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PAI.AlgoDeveloper</p>
          */
         public Builder roleName(String roleName) {
             this.putPathParameter("RoleName", roleName);

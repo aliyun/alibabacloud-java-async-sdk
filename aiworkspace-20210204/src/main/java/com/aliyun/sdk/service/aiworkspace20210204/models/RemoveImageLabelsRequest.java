@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveImageLabelsRequest} extends {@link RequestModel}
  *
  * <p>RemoveImageLabelsRequest</p>
@@ -69,7 +70,10 @@ public class RemoveImageLabelsRequest extends Request {
         } 
 
         /**
-         * ImageId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image-d8df******dsjfd</p>
          */
         public Builder imageId(String imageId) {
             this.putPathParameter("ImageId", imageId);
@@ -78,7 +82,10 @@ public class RemoveImageLabelsRequest extends Request {
         }
 
         /**
-         * LabelKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1</p>
          */
         public Builder labelKey(String labelKey) {
             this.putPathParameter("LabelKey", labelKey);

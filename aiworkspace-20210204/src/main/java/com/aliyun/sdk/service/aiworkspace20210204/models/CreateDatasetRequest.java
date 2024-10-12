@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDatasetRequest} extends {@link RequestModel}
  *
  * <p>CreateDatasetRequest</p>
@@ -262,7 +263,10 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * DataSourceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NAS</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putBodyParameter("DataSourceType", dataSourceType);
@@ -298,7 +302,10 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myName</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -316,7 +323,10 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * Property.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DIRECTORY</p>
          */
         public Builder property(String property) {
             this.putBodyParameter("Property", property);
@@ -361,7 +371,10 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * Uri.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nas://09f****f2.cn-hangzhou/</p>
          */
         public Builder uri(String uri) {
             this.putBodyParameter("Uri", uri);

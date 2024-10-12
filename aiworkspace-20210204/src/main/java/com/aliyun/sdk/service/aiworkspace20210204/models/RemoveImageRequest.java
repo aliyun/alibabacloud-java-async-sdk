@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveImageRequest} extends {@link RequestModel}
  *
  * <p>RemoveImageRequest</p>
@@ -54,7 +55,10 @@ public class RemoveImageRequest extends Request {
         } 
 
         /**
-         * ImageId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image-rbv******c9ks92</p>
          */
         public Builder imageId(String imageId) {
             this.putPathParameter("ImageId", imageId);

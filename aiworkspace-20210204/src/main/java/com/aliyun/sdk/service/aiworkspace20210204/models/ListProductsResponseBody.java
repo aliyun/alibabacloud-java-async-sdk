@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProductsResponseBody} extends {@link TeaModel}
  *
  * <p>ListProductsResponseBody</p>
@@ -90,6 +91,12 @@ public class ListProductsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProductsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProductsResponseBody</p>
+     */
     public static class Products extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HasPermissionToPurchase")
         private Boolean hasPermissionToPurchase;
@@ -211,6 +218,12 @@ public class ListProductsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProductsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProductsResponseBody</p>
+     */
     public static class Services extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsOpen")
         private Boolean isOpen;

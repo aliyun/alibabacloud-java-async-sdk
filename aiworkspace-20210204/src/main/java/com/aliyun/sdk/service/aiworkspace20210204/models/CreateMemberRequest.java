@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMemberRequest} extends {@link RequestModel}
  *
  * <p>CreateMemberRequest</p>
@@ -69,7 +70,10 @@ public class CreateMemberRequest extends Request {
         } 
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -78,7 +82,7 @@ public class CreateMemberRequest extends Request {
         }
 
         /**
-         * Members.
+         * <p>This parameter is required.</p>
          */
         public Builder members(java.util.List < Members> members) {
             this.putBodyParameter("Members", members);
@@ -93,6 +97,12 @@ public class CreateMemberRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateMemberRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMemberRequest</p>
+     */
     public static class Members extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Roles")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -134,7 +144,7 @@ public class CreateMemberRequest extends Request {
             private String userId; 
 
             /**
-             * Roles.
+             * <p>This parameter is required.</p>
              */
             public Builder roles(java.util.List < String > roles) {
                 this.roles = roles;
@@ -142,7 +152,10 @@ public class CreateMemberRequest extends Request {
             }
 
             /**
-             * UserId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21513926******88039</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

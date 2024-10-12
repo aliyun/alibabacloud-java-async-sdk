@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDatasetRequest} extends {@link RequestModel}
  *
  * <p>DeleteDatasetRequest</p>
@@ -54,7 +55,10 @@ public class DeleteDatasetRequest extends Request {
         } 
 
         /**
-         * DatasetId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-rbvg5wzlj****9ks92</p>
          */
         public Builder datasetId(String datasetId) {
             this.putPathParameter("DatasetId", datasetId);
