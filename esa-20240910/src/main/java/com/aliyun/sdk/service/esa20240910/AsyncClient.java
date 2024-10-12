@@ -500,6 +500,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCacheReserveInstancesResponse> listCacheReserveInstances(ListCacheReserveInstancesRequest request);
 
     /**
+     * @param request the request parameters of ListClientCertificates  ListClientCertificatesRequest
+     * @return ListClientCertificatesResponse
+     */
+    CompletableFuture<ListClientCertificatesResponse> listClientCertificates(ListClientCertificatesRequest request);
+
+    /**
      * @param request the request parameters of ListEdgeContainerAppRecords  ListEdgeContainerAppRecordsRequest
      * @return ListEdgeContainerAppRecordsResponse
      */
