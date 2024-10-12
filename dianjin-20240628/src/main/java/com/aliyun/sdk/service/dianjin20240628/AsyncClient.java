@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of CreateAnnualDocSummaryTask  CreateAnnualDocSummaryTaskRequest
+     * @return CreateAnnualDocSummaryTaskResponse
+     */
+    CompletableFuture<CreateAnnualDocSummaryTaskResponse> createAnnualDocSummaryTask(CreateAnnualDocSummaryTaskRequest request);
+
+    /**
      * @param request the request parameters of CreateDocsSummaryTask  CreateDocsSummaryTaskRequest
      * @return CreateDocsSummaryTaskResponse
      */
