@@ -411,7 +411,13 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * CloneSourceRegionId.
+         * <p>The region ID of the source cluster.</p>
+         * <blockquote>
+         * <p> This parameter must be specified for cloning clusters across regions.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder cloneSourceRegionId(String cloneSourceRegionId) {
             this.putQueryParameter("CloneSourceRegionId", cloneSourceRegionId);

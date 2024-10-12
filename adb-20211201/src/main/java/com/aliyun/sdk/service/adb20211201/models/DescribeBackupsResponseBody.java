@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBackupsResponseBody</p>
  */
 public class DescribeBackupsResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("FreeBackupSize")
+    private Long freeBackupSize;
+
     @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
@@ -24,14 +27,19 @@ public class DescribeBackupsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("TotalBackupSize")
+    private Long totalBackupSize;
+
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private DescribeBackupsResponseBody(Builder builder) {
+        this.freeBackupSize = builder.freeBackupSize;
         this.items = builder.items;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
+        this.totalBackupSize = builder.totalBackupSize;
         this.totalCount = builder.totalCount;
     }
 
@@ -41,6 +49,13 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
     public static DescribeBackupsResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return freeBackupSize
+     */
+    public Long getFreeBackupSize() {
+        return this.freeBackupSize;
     }
 
     /**
@@ -72,6 +87,13 @@ public class DescribeBackupsResponseBody extends TeaModel {
     }
 
     /**
+     * @return totalBackupSize
+     */
+    public Long getTotalBackupSize() {
+        return this.totalBackupSize;
+    }
+
+    /**
      * @return totalCount
      */
     public String getTotalCount() {
@@ -79,11 +101,21 @@ public class DescribeBackupsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Long freeBackupSize; 
         private Items items; 
         private String pageNumber; 
         private String pageSize; 
         private String requestId; 
+        private Long totalBackupSize; 
         private String totalCount; 
+
+        /**
+         * FreeBackupSize.
+         */
+        public Builder freeBackupSize(Long freeBackupSize) {
+            this.freeBackupSize = freeBackupSize;
+            return this;
+        }
 
         /**
          * <p>The queried backup sets.</p>
@@ -127,6 +159,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
+         * TotalBackupSize.
+         */
+        public Builder totalBackupSize(Long totalBackupSize) {
+            this.totalBackupSize = totalBackupSize;
+            return this;
+        }
+
+        /**
          * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
@@ -153,6 +193,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupEndTime")
         private String backupEndTime;
 
+        @com.aliyun.core.annotation.NameInMap("BackupExpiredTime")
+        private String backupExpiredTime;
+
         @com.aliyun.core.annotation.NameInMap("BackupId")
         private String backupId;
 
@@ -173,6 +216,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
         private Backup(Builder builder) {
             this.backupEndTime = builder.backupEndTime;
+            this.backupExpiredTime = builder.backupExpiredTime;
             this.backupId = builder.backupId;
             this.backupMethod = builder.backupMethod;
             this.backupSize = builder.backupSize;
@@ -194,6 +238,13 @@ public class DescribeBackupsResponseBody extends TeaModel {
          */
         public String getBackupEndTime() {
             return this.backupEndTime;
+        }
+
+        /**
+         * @return backupExpiredTime
+         */
+        public String getBackupExpiredTime() {
+            return this.backupExpiredTime;
         }
 
         /**
@@ -240,6 +291,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String backupEndTime; 
+            private String backupExpiredTime; 
             private String backupId; 
             private String backupMethod; 
             private Integer backupSize; 
@@ -255,6 +307,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
              */
             public Builder backupEndTime(String backupEndTime) {
                 this.backupEndTime = backupEndTime;
+                return this;
+            }
+
+            /**
+             * BackupExpiredTime.
+             */
+            public Builder backupExpiredTime(String backupExpiredTime) {
+                this.backupExpiredTime = backupExpiredTime;
                 return this;
             }
 

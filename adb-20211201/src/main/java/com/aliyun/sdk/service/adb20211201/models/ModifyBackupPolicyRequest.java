@@ -40,7 +40,6 @@ public class ModifyBackupPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PreferredBackupPeriod")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String preferredBackupPeriod;
 
     @com.aliyun.core.annotation.Query
@@ -277,7 +276,6 @@ public class ModifyBackupPolicyRequest extends Request {
          * <blockquote>
          * <p> To ensure data security, we recommend that you specify at least two values.</p>
          * </blockquote>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>Monday,Wednesday,Friday,Sunday</p>
