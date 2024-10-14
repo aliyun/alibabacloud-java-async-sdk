@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageResultExtResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageResultExtResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned HTTP status code.
+         * <p>The returned HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned in response to the request.
+         * <p>The message that is returned in response to the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -97,7 +104,10 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6CF2815C-C8C7-4A01-B52E-FF6E24F53492</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageResultExtResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageResultExtResponseBody</p>
+     */
     public static class CustomImage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
@@ -161,7 +177,10 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
             private String libName; 
 
             /**
-             * The image ID.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -169,7 +188,10 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
             }
 
             /**
-             * The image library ID.
+             * <p>The image library ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder libId(String libId) {
                 this.libId = libId;
@@ -177,7 +199,10 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
             }
 
             /**
-             * The image library name.
+             * <p>The image library name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>图库123</p>
              */
             public Builder libName(String libName) {
                 this.libName = libName;
@@ -191,6 +216,12 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageResultExtResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageResultExtResponseBody</p>
+     */
     public static class PublicFigure extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FigureId")
         private String figureId;
@@ -218,7 +249,10 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
             private String figureId; 
 
             /**
-             * Identified person coding information.
+             * <p>Identified person coding information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yzazhzou</p>
              */
             public Builder figureId(String figureId) {
                 this.figureId = figureId;
@@ -232,6 +266,12 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageResultExtResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageResultExtResponseBody</p>
+     */
     public static class CustomTexts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeyWords")
         private String keyWords;
@@ -283,7 +323,10 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
             private String libName; 
 
             /**
-             * Custom words, multiple words separated by commas.
+             * <p>Custom words, multiple words separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aaa,bbb</p>
              */
             public Builder keyWords(String keyWords) {
                 this.keyWords = keyWords;
@@ -291,7 +334,10 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
             }
 
             /**
-             * Custom library ID.
+             * <p>Custom library ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder libId(String libId) {
                 this.libId = libId;
@@ -299,7 +345,10 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
             }
 
             /**
-             * Custom library name.
+             * <p>Custom library name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder libName(String libName) {
                 this.libName = libName;
@@ -313,6 +362,12 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageResultExtResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageResultExtResponseBody</p>
+     */
     public static class TextInImage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomTexts")
         private java.util.List < CustomTexts> customTexts;
@@ -364,7 +419,7 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
             private java.util.List < String > riskWords; 
 
             /**
-             * When a custom text library is hit, the custom library ID, custom library name, and custom word are returned.
+             * <p>When a custom text library is hit, the custom library ID, custom library name, and custom word are returned.</p>
              */
             public Builder customTexts(java.util.List < CustomTexts> customTexts) {
                 this.customTexts = customTexts;
@@ -372,7 +427,7 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
             }
 
             /**
-             * Returns the text information in the recognized image.
+             * <p>Returns the text information in the recognized image.</p>
              */
             public Builder ocrDatas(java.util.List < String > ocrDatas) {
                 this.ocrDatas = ocrDatas;
@@ -380,7 +435,7 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
             }
 
             /**
-             * The risk words that are hit. Multiple words are separated by commas (,).
+             * <p>The risk words that are hit. Multiple words are separated by commas (,).</p>
              */
             public Builder riskWords(java.util.List < String > riskWords) {
                 this.riskWords = riskWords;
@@ -394,6 +449,12 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageResultExtResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageResultExtResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomImage")
         private java.util.List < CustomImage> customImage;
@@ -445,7 +506,7 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
             private TextInImage textInImage; 
 
             /**
-             * If a custom image library is hit, information about the hit custom image library is returned.
+             * <p>If a custom image library is hit, information about the hit custom image library is returned.</p>
              */
             public Builder customImage(java.util.List < CustomImage> customImage) {
                 this.customImage = customImage;
@@ -453,7 +514,7 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
             }
 
             /**
-             * Person information list.
+             * <p>Person information list.</p>
              */
             public Builder publicFigure(java.util.List < PublicFigure> publicFigure) {
                 this.publicFigure = publicFigure;
@@ -461,7 +522,7 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
             }
 
             /**
-             * Returns the text information in the hit image.
+             * <p>Returns the text information in the hit image.</p>
              */
             public Builder textInImage(TextInImage textInImage) {
                 this.textInImage = textInImage;

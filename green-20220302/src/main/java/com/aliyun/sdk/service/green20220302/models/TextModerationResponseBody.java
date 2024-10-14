@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TextModerationResponseBody} extends {@link TeaModel}
  *
  * <p>TextModerationResponseBody</p>
@@ -73,7 +74,10 @@ public class TextModerationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned HTTP status code.
+         * <p>The returned HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class TextModerationResponseBody extends TeaModel {
         }
 
         /**
-         * The moderation results.
+         * <p>The moderation results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class TextModerationResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned in response to the request.
+         * <p>The message that is returned in response to the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class TextModerationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class TextModerationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TextModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>TextModerationResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
@@ -173,7 +189,10 @@ public class TextModerationResponseBody extends TeaModel {
             private String reason; 
 
             /**
-             * The ID of the Alibaba Cloud account.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -181,7 +200,10 @@ public class TextModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The device ID.
+             * <p>The device ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxxx</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -189,7 +211,10 @@ public class TextModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * <p>Labels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>porn</p>
              */
             public Builder labels(String labels) {
                 this.labels = labels;
@@ -197,7 +222,10 @@ public class TextModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The JSON string used to locate the cause.
+             * <p>The JSON string used to locate the cause.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;detectedLanguage&quot;:&quot;ar&quot;,&quot;riskTips&quot;:&quot;sexuality_Suggestive&quot;,&quot;riskWords&quot;:&quot;pxxxxy&quot;,&quot;translatedContent&quot;:&quot;pxxxxy sxxxx&quot;}</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;

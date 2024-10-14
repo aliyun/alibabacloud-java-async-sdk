@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VoiceModerationRequest} extends {@link RequestModel}
  *
  * <p>VoiceModerationRequest</p>
@@ -67,7 +68,10 @@ public class VoiceModerationRequest extends Request {
         } 
 
         /**
-         * The type of the moderation service.
+         * <p>The type of the moderation service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nickname_detection</p>
          */
         public Builder service(String service) {
             this.putBodyParameter("Service", service);
@@ -76,7 +80,10 @@ public class VoiceModerationRequest extends Request {
         }
 
         /**
-         * The parameters required by the moderation service. The value is a JSON string.
+         * <p>The parameters required by the moderation service. The value is a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;url&quot;: &quot;<a href="http://aliyundoc.com/test.flv">http://aliyundoc.com/test.flv</a>&quot;, &quot;dataId&quot;: &quot;data1234&quot;}</p>
          */
         public Builder serviceParameters(String serviceParameters) {
             this.putBodyParameter("ServiceParameters", serviceParameters);

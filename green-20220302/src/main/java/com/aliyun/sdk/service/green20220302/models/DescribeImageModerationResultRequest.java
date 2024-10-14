@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageModerationResultRequest} extends {@link RequestModel}
  *
  * <p>DescribeImageModerationResultRequest</p>
@@ -53,7 +54,10 @@ public class DescribeImageModerationResultRequest extends Request {
         } 
 
         /**
-         * The ReqId field returned by the asynchronous Image Moderation 2.0 API.
+         * <p>The ReqId field returned by the asynchronous Image Moderation 2.0 API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B0963D30-BAB4-562F-9ED0-7A23AEC51C7C</p>
          */
         public Builder reqId(String reqId) {
             this.putQueryParameter("ReqId", reqId);

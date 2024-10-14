@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImageModerationResponseBody} extends {@link TeaModel}
  *
  * <p>ImageModerationResponseBody</p>
@@ -73,7 +74,10 @@ public class ImageModerationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned HTTP status code. The status code 200 indicates that the request was successful.
+         * <p>The returned HTTP status code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class ImageModerationResponseBody extends TeaModel {
         }
 
         /**
-         * The moderation results.
+         * <p>The moderation results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class ImageModerationResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned in response to the request.
+         * <p>The message that is returned in response to the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -97,7 +104,10 @@ public class ImageModerationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID, which is used to locate and troubleshoot issues.
+         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6CF2815C-C8C7-4A01-B52E-FF6E24F53492</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class ImageModerationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ImageModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImageModerationResponseBody</p>
+     */
     public static class CustomImage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
@@ -161,7 +177,10 @@ public class ImageModerationResponseBody extends TeaModel {
             private String libName; 
 
             /**
-             * The image ID.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -169,7 +188,10 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The image library ID.
+             * <p>The image library ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lib_123456</p>
              */
             public Builder libId(String libId) {
                 this.libId = libId;
@@ -177,7 +199,10 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The image library name.
+             * <p>The image library name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder libName(String libName) {
                 this.libName = libName;
@@ -191,6 +216,12 @@ public class ImageModerationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImageModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImageModerationResponseBody</p>
+     */
     public static class Bang extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Confidence")
         private Float confidence;
@@ -230,7 +261,10 @@ public class ImageModerationResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The confidence level of the bang recognition result. Valid values: 0 to 100. A higher value indicates a more credible result.
+             * <p>The confidence level of the bang recognition result. Valid values: 0 to 100. A higher value indicates a more credible result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>81.88</p>
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -238,7 +272,10 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the recognition result of bangs is available.
+             * <p>Indicates whether the recognition result of bangs is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Has</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -252,6 +289,12 @@ public class ImageModerationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImageModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImageModerationResponseBody</p>
+     */
     public static class Gender extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Confidence")
         private Float confidence;
@@ -291,7 +334,10 @@ public class ImageModerationResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The confidence level of the gender recognition result. Valid values: 0 to 100. A higher value indicates a more credible result.
+             * <p>The confidence level of the gender recognition result. Valid values: 0 to 100. A higher value indicates a more credible result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>81.88</p>
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -299,12 +345,16 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The gender recognition result. Valid values:
-             * <p>
+             * <p>The gender recognition result. Valid values:</p>
+             * <ul>
+             * <li><p>Male</p>
+             * </li>
+             * <li><p>FeMale</p>
+             * </li>
+             * </ul>
              * 
-             * - Male
-             * 
-             * - FeMale
+             * <strong>example:</strong>
+             * <p>FeMale</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -318,6 +368,12 @@ public class ImageModerationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImageModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImageModerationResponseBody</p>
+     */
     public static class Hairstyle extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Confidence")
         private Float confidence;
@@ -357,7 +413,10 @@ public class ImageModerationResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The confidence level of the hairstyle recognition result. Valid values: 0 to 100. A higher value indicates a more credible result.
+             * <p>The confidence level of the hairstyle recognition result. Valid values: 0 to 100. A higher value indicates a more credible result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>81.88</p>
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -365,14 +424,18 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The hairstyle recognition result. Valid values:
-             * <p>
+             * <p>The hairstyle recognition result. Valid values:</p>
+             * <ul>
+             * <li><p>Bald: bald head.</p>
+             * </li>
+             * <li><p>Long: Long hair.</p>
+             * </li>
+             * <li><p>Short: Short hair.</p>
+             * </li>
+             * </ul>
              * 
-             * - Bald: bald head.
-             * 
-             * - Long: Long hair.
-             * 
-             * - Short: Short hair.
+             * <strong>example:</strong>
+             * <p>Short</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -386,6 +449,12 @@ public class ImageModerationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImageModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImageModerationResponseBody</p>
+     */
     public static class Hat extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Confidence")
         private Float confidence;
@@ -425,7 +494,10 @@ public class ImageModerationResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The confidence level of the result of wearing the hat. Valid values: 0 to 100. A higher value indicates a more credible result.
+             * <p>The confidence level of the result of wearing the hat. Valid values: 0 to 100. A higher value indicates a more credible result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>88.88</p>
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -433,12 +505,16 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The recognition result of whether to wear the hat. Valid values:
-             * <p>
+             * <p>The recognition result of whether to wear the hat. Valid values:</p>
+             * <ul>
+             * <li><p>Wear: Wear a hat.</p>
+             * </li>
+             * <li><p>None: No hat.</p>
+             * </li>
+             * </ul>
              * 
-             * - Wear: Wear a hat.
-             * 
-             * - None: No hat.
+             * <strong>example:</strong>
+             * <p>Wear</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -452,6 +528,12 @@ public class ImageModerationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImageModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImageModerationResponseBody</p>
+     */
     public static class Location extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("H")
         private Integer h;
@@ -515,7 +597,10 @@ public class ImageModerationResponseBody extends TeaModel {
             private Integer y; 
 
             /**
-             * The height of the face area. Unit: pixels.
+             * <p>The height of the face area. Unit: pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26</p>
              */
             public Builder h(Integer h) {
                 this.h = h;
@@ -523,7 +608,10 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The width of the face area. Unit: pixels.
+             * <p>The width of the face area. Unit: pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>83</p>
              */
             public Builder w(Integer w) {
                 this.w = w;
@@ -531,7 +619,10 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The distance from the upper-left corner of the face area to the y-axis with the upper-left corner of the image as the coordinate origin. Unit: pixels.
+             * <p>The distance from the upper-left corner of the face area to the y-axis with the upper-left corner of the image as the coordinate origin. Unit: pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>41</p>
              */
             public Builder x(Integer x) {
                 this.x = x;
@@ -539,7 +630,10 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The distance from the upper-left corner of the face area to the x-axis with the upper-left corner of the image as the coordinate origin. Unit: pixels.
+             * <p>The distance from the upper-left corner of the face area to the x-axis with the upper-left corner of the image as the coordinate origin. Unit: pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>84</p>
              */
             public Builder y(Integer y) {
                 this.y = y;
@@ -553,6 +647,12 @@ public class ImageModerationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImageModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImageModerationResponseBody</p>
+     */
     public static class Mask extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Confidence")
         private Float confidence;
@@ -592,7 +692,10 @@ public class ImageModerationResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The confidence level of the result of wearing the mask. Valid values: 0 to 100. A higher value indicates a more credible result.
+             * <p>The confidence level of the result of wearing the mask. Valid values: 0 to 100. A higher value indicates a more credible result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99.99</p>
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -600,12 +703,16 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The recognition result of whether to wear a mask. Valid values:
-             * <p>
+             * <p>The recognition result of whether to wear a mask. Valid values:</p>
+             * <ul>
+             * <li><p>Wear a mask.</p>
+             * </li>
+             * <li><p>None: No mask.</p>
+             * </li>
+             * </ul>
              * 
-             * - Wear a mask.
-             * 
-             *  - None: No mask.
+             * <strong>example:</strong>
+             * <p>Wear</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -619,6 +726,12 @@ public class ImageModerationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImageModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImageModerationResponseBody</p>
+     */
     public static class Mustache extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Confidence")
         private Float confidence;
@@ -658,7 +771,10 @@ public class ImageModerationResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The confidence level of the result of the beard. Valid values: 0 to 100. A higher value indicates a more credible result.
+             * <p>The confidence level of the result of the beard. Valid values: 0 to 100. A higher value indicates a more credible result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99.99</p>
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -666,12 +782,16 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The identification result of whether there is a beard.Valid values:
-             * <p>
+             * <p>The identification result of whether there is a beard.Valid values:</p>
+             * <ul>
+             * <li><p>Has:have a beard.</p>
+             * </li>
+             * <li><p>None:No beard.</p>
+             * </li>
+             * </ul>
              * 
-             * - Has:have a beard.
-             * 
-             * - None:No beard.
+             * <strong>example:</strong>
+             * <p>Has</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -685,6 +805,12 @@ public class ImageModerationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImageModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImageModerationResponseBody</p>
+     */
     public static class Quality extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Blur")
         private Float blur;
@@ -760,9 +886,11 @@ public class ImageModerationResponseBody extends TeaModel {
             private Float yaw; 
 
             /**
-             * The blur of the face image. Valid values: 0 to 100. The higher the score, the more fuzzy it is.
-             * <p>
-             * Recommended values: 0 to 25.
+             * <p>The blur of the face image. Valid values: 0 to 100. The higher the score, the more fuzzy it is.
+             * Recommended values: 0 to 25.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.88</p>
              */
             public Builder blur(Float blur) {
                 this.blur = blur;
@@ -770,7 +898,10 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The integrity of the human face. Recommended values:80 to 100.
+             * <p>The integrity of the human face. Recommended values:80 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.0</p>
              */
             public Builder integrity(Float integrity) {
                 this.integrity = integrity;
@@ -778,9 +909,11 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The head-up or head-down angle of the face.
-             * <p>
-             * Recommended values:-30 to 30.
+             * <p>The head-up or head-down angle of the face.
+             * Recommended values:-30 to 30.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.88</p>
              */
             public Builder pitch(Float pitch) {
                 this.pitch = pitch;
@@ -788,9 +921,11 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The plane rotation angle of the face.
-             * <p>
-             * Recommended values:-30 to 30.
+             * <p>The plane rotation angle of the face.
+             * Recommended values:-30 to 30.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.18</p>
              */
             public Builder roll(Float roll) {
                 this.roll = roll;
@@ -798,9 +933,11 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The left and right shaking angle of the human face.
-             * <p>
-             * Recommended values:-30 to 30.
+             * <p>The left and right shaking angle of the human face.
+             * Recommended values:-30 to 30.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.18</p>
              */
             public Builder yaw(Float yaw) {
                 this.yaw = yaw;
@@ -814,6 +951,12 @@ public class ImageModerationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImageModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImageModerationResponseBody</p>
+     */
     public static class FaceData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Age")
         private Integer age;
@@ -961,7 +1104,10 @@ public class ImageModerationResponseBody extends TeaModel {
             private Float smile; 
 
             /**
-             * The age recognition result.
+             * <p>The age recognition result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18</p>
              */
             public Builder age(Integer age) {
                 this.age = age;
@@ -969,7 +1115,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the recognition result of bangs is available.
+             * <p>Indicates whether the recognition result of bangs is available.</p>
              */
             public Builder bang(Bang bang) {
                 this.bang = bang;
@@ -977,7 +1123,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The gender recognition result.
+             * <p>The gender recognition result.</p>
              */
             public Builder gender(Gender gender) {
                 this.gender = gender;
@@ -985,14 +1131,18 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The recognition result of whether to wear glasses.
-             * <p>
+             * <p>The recognition result of whether to wear glasses.</p>
+             * <ul>
+             * <li><p>None: No glasses.</p>
+             * </li>
+             * <li><p>Wear: Wear glasses.</p>
+             * </li>
+             * <li><p>Sunglass: Wear sunglasses.</p>
+             * </li>
+             * </ul>
              * 
-             * - None: No glasses.
-             * 
-             * - Wear: Wear glasses.
-             * 
-             * - Sunglass: Wear sunglasses.
+             * <strong>example:</strong>
+             * <p>Common</p>
              */
             public Builder glasses(String glasses) {
                 this.glasses = glasses;
@@ -1000,7 +1150,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The hairstyle recognition result.
+             * <p>The hairstyle recognition result.</p>
              */
             public Builder hairstyle(Hairstyle hairstyle) {
                 this.hairstyle = hairstyle;
@@ -1008,7 +1158,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The recognition result of whether to wear a hat.
+             * <p>The recognition result of whether to wear a hat.</p>
              */
             public Builder hat(Hat hat) {
                 this.hat = hat;
@@ -1016,7 +1166,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The location of the face.
+             * <p>The location of the face.</p>
              */
             public Builder location(Location location) {
                 this.location = location;
@@ -1024,7 +1174,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The recognition result of whether to wear a mask.
+             * <p>The recognition result of whether to wear a mask.</p>
              */
             public Builder mask(Mask mask) {
                 this.mask = mask;
@@ -1032,7 +1182,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The identification result of whether there is a beard.
+             * <p>The identification result of whether there is a beard.</p>
              */
             public Builder mustache(Mustache mustache) {
                 this.mustache = mustache;
@@ -1040,7 +1190,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The quality information of the face image.
+             * <p>The quality information of the face image.</p>
              */
             public Builder quality(Quality quality) {
                 this.quality = quality;
@@ -1048,7 +1198,10 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The smiling degree of the face.
+             * <p>The smiling degree of the face.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>85.88</p>
              */
             public Builder smile(Float smile) {
                 this.smile = smile;
@@ -1062,6 +1215,12 @@ public class ImageModerationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImageModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImageModerationResponseBody</p>
+     */
     public static class LogoDataLocation extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("H")
         private Integer h;
@@ -1125,7 +1284,10 @@ public class ImageModerationResponseBody extends TeaModel {
             private Integer y; 
 
             /**
-             * The height of the text area, in pixels.
+             * <p>The height of the text area, in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44</p>
              */
             public Builder h(Integer h) {
                 this.h = h;
@@ -1133,7 +1295,10 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The width of the text area, in pixels.
+             * <p>The width of the text area, in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33</p>
              */
             public Builder w(Integer w) {
                 this.w = w;
@@ -1141,7 +1306,10 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The distance between the upper-left corner of the text area and the y-axis, using the upper-left corner of the image as the coordinate origin, in pixels.
+             * <p>The distance between the upper-left corner of the text area and the y-axis, using the upper-left corner of the image as the coordinate origin, in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder x(Integer x) {
                 this.x = x;
@@ -1149,7 +1317,10 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The distance between the upper left corner of the text area and the x-axis, with the upper left corner of the image as the coordinate origin, in pixels.
+             * <p>The distance between the upper left corner of the text area and the x-axis, with the upper left corner of the image as the coordinate origin, in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder y(Integer y) {
                 this.y = y;
@@ -1163,6 +1334,12 @@ public class ImageModerationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImageModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImageModerationResponseBody</p>
+     */
     public static class Logo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Confidence")
         private Float confidence;
@@ -1214,7 +1391,10 @@ public class ImageModerationResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places. Some labels do not have scores of confidence levels.
+             * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places. Some labels do not have scores of confidence levels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99.01</p>
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -1222,7 +1402,10 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Logo category.
+             * <p>Logo category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -1230,7 +1413,10 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Logo name.
+             * <p>Logo name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1244,6 +1430,12 @@ public class ImageModerationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImageModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImageModerationResponseBody</p>
+     */
     public static class LogoData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Location")
         private LogoDataLocation location;
@@ -1283,7 +1475,7 @@ public class ImageModerationResponseBody extends TeaModel {
             private java.util.List < Logo> logo; 
 
             /**
-             * Location information.
+             * <p>Location information.</p>
              */
             public Builder location(LogoDataLocation location) {
                 this.location = location;
@@ -1291,7 +1483,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Logo information.
+             * <p>Logo information.</p>
              */
             public Builder logo(java.util.List < Logo> logo) {
                 this.logo = logo;
@@ -1305,6 +1497,12 @@ public class ImageModerationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImageModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImageModerationResponseBody</p>
+     */
     public static class OcrResultLocation extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("H")
         private Integer h;
@@ -1368,7 +1566,10 @@ public class ImageModerationResponseBody extends TeaModel {
             private Integer y; 
 
             /**
-             * The height of the text area, in pixels.
+             * <p>The height of the text area, in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44</p>
              */
             public Builder h(Integer h) {
                 this.h = h;
@@ -1376,7 +1577,10 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The width of the text area, in pixels.
+             * <p>The width of the text area, in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33</p>
              */
             public Builder w(Integer w) {
                 this.w = w;
@@ -1384,7 +1588,10 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The distance between the upper-left corner of the text area and the y-axis, using the upper-left corner of the image as the coordinate origin, in pixels.
+             * <p>The distance between the upper-left corner of the text area and the y-axis, using the upper-left corner of the image as the coordinate origin, in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder x(Integer x) {
                 this.x = x;
@@ -1392,7 +1599,10 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The distance between the upper left corner of the text area and the x-axis, with the upper left corner of the image as the coordinate origin, in pixels.
+             * <p>The distance between the upper left corner of the text area and the x-axis, with the upper left corner of the image as the coordinate origin, in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder y(Integer y) {
                 this.y = y;
@@ -1406,6 +1616,12 @@ public class ImageModerationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImageModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImageModerationResponseBody</p>
+     */
     public static class OcrResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Location")
         private OcrResultLocation location;
@@ -1445,7 +1661,7 @@ public class ImageModerationResponseBody extends TeaModel {
             private String text; 
 
             /**
-             * Location information.
+             * <p>Location information.</p>
              */
             public Builder location(OcrResultLocation location) {
                 this.location = location;
@@ -1453,7 +1669,10 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The text information in the recognized image.
+             * <p>The text information in the recognized image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -1467,6 +1686,12 @@ public class ImageModerationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImageModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImageModerationResponseBody</p>
+     */
     public static class PublicFigureLocation extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("H")
         private Integer h;
@@ -1530,7 +1755,10 @@ public class ImageModerationResponseBody extends TeaModel {
             private Integer y; 
 
             /**
-             * The height
+             * <p>The height</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44</p>
              */
             public Builder h(Integer h) {
                 this.h = h;
@@ -1538,7 +1766,10 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The weight
+             * <p>The weight</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33</p>
              */
             public Builder w(Integer w) {
                 this.w = w;
@@ -1546,7 +1777,10 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * X coordinate
+             * <p>X coordinate</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder x(Integer x) {
                 this.x = x;
@@ -1554,7 +1788,10 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Y coordinate
+             * <p>Y coordinate</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder y(Integer y) {
                 this.y = y;
@@ -1568,6 +1805,12 @@ public class ImageModerationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImageModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImageModerationResponseBody</p>
+     */
     public static class PublicFigure extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FigureId")
         private String figureId;
@@ -1619,7 +1862,10 @@ public class ImageModerationResponseBody extends TeaModel {
             private java.util.List < PublicFigureLocation> location; 
 
             /**
-             * Identified person coding information.
+             * <p>Identified person coding information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder figureId(String figureId) {
                 this.figureId = figureId;
@@ -1627,7 +1873,10 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Identified person name information.
+             * <p>Identified person name information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder figureName(String figureName) {
                 this.figureName = figureName;
@@ -1635,7 +1884,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * the data array of location info
+             * <p>the data array of location info</p>
              */
             public Builder location(java.util.List < PublicFigureLocation> location) {
                 this.location = location;
@@ -1649,6 +1898,12 @@ public class ImageModerationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImageModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImageModerationResponseBody</p>
+     */
     public static class Recognition extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Classification")
         private String classification;
@@ -1688,7 +1943,10 @@ public class ImageModerationResponseBody extends TeaModel {
             private Float confidence; 
 
             /**
-             * The category of image recognition.
+             * <p>The category of image recognition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder classification(String classification) {
                 this.classification = classification;
@@ -1696,7 +1954,10 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places. Some labels do not have scores of confidence levels.
+             * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places. Some labels do not have scores of confidence levels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99.01</p>
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -1710,6 +1971,12 @@ public class ImageModerationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImageModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImageModerationResponseBody</p>
+     */
     public static class CustomText extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeyWords")
         private String keyWords;
@@ -1761,7 +2028,10 @@ public class ImageModerationResponseBody extends TeaModel {
             private String libName; 
 
             /**
-             * Custom words, multiple words separated by commas.
+             * <p>Custom words, multiple words separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aaa,bbb</p>
              */
             public Builder keyWords(String keyWords) {
                 this.keyWords = keyWords;
@@ -1769,7 +2039,10 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Custom library ID.
+             * <p>Custom library ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder libId(String libId) {
                 this.libId = libId;
@@ -1777,7 +2050,10 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Custom library name.
+             * <p>Custom library name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx</p>
              */
             public Builder libName(String libName) {
                 this.libName = libName;
@@ -1791,6 +2067,12 @@ public class ImageModerationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImageModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImageModerationResponseBody</p>
+     */
     public static class TextInImageOcrResultLocation extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("H")
         private Integer h;
@@ -1854,7 +2136,10 @@ public class ImageModerationResponseBody extends TeaModel {
             private Integer y; 
 
             /**
-             * The height of the text area, in pixels.
+             * <p>The height of the text area, in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33</p>
              */
             public Builder h(Integer h) {
                 this.h = h;
@@ -1862,7 +2147,10 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The width of the text area, in pixels.
+             * <p>The width of the text area, in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44</p>
              */
             public Builder w(Integer w) {
                 this.w = w;
@@ -1870,7 +2158,10 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The distance between the upper-left corner of the text area and the y-axis, using the upper-left corner of the image as the coordinate origin, in pixels.
+             * <p>The distance between the upper-left corner of the text area and the y-axis, using the upper-left corner of the image as the coordinate origin, in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder x(Integer x) {
                 this.x = x;
@@ -1878,7 +2169,10 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The distance between the upper left corner of the text area and the x-axis, with the upper left corner of the image as the coordinate origin, in pixels.
+             * <p>The distance between the upper left corner of the text area and the x-axis, with the upper left corner of the image as the coordinate origin, in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder y(Integer y) {
                 this.y = y;
@@ -1892,6 +2186,12 @@ public class ImageModerationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImageModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImageModerationResponseBody</p>
+     */
     public static class TextInImageOcrResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Location")
         private TextInImageOcrResultLocation location;
@@ -1931,7 +2231,7 @@ public class ImageModerationResponseBody extends TeaModel {
             private String text; 
 
             /**
-             * Location information.
+             * <p>Location information.</p>
              */
             public Builder location(TextInImageOcrResultLocation location) {
                 this.location = location;
@@ -1939,7 +2239,10 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The text information in the recognized image.
+             * <p>The text information in the recognized image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -1953,6 +2256,12 @@ public class ImageModerationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImageModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImageModerationResponseBody</p>
+     */
     public static class TextInImage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomText")
         private java.util.List < CustomText> customText;
@@ -2004,7 +2313,7 @@ public class ImageModerationResponseBody extends TeaModel {
             private java.util.List < String > riskWord; 
 
             /**
-             * When a custom text library is hit, the custom library ID, custom library name, and custom word are returned.
+             * <p>When a custom text library is hit, the custom library ID, custom library name, and custom word are returned.</p>
              */
             public Builder customText(java.util.List < CustomText> customText) {
                 this.customText = customText;
@@ -2012,7 +2321,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Returns the text information in the recognized image.
+             * <p>Returns the text information in the recognized image.</p>
              */
             public Builder ocrResult(java.util.List < TextInImageOcrResult> ocrResult) {
                 this.ocrResult = ocrResult;
@@ -2020,7 +2329,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The risk words that are hit. Multiple words are separated by commas (,).
+             * <p>The risk words that are hit. Multiple words are separated by commas (,).</p>
              */
             public Builder riskWord(java.util.List < String > riskWord) {
                 this.riskWord = riskWord;
@@ -2034,6 +2343,12 @@ public class ImageModerationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImageModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImageModerationResponseBody</p>
+     */
     public static class Ext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomImage")
         private java.util.List < CustomImage> customImage;
@@ -2133,7 +2448,7 @@ public class ImageModerationResponseBody extends TeaModel {
             private TextInImage textInImage; 
 
             /**
-             * If a custom image library is hit, information about the hit custom image library is returned.
+             * <p>If a custom image library is hit, information about the hit custom image library is returned.</p>
              */
             public Builder customImage(java.util.List < CustomImage> customImage) {
                 this.customImage = customImage;
@@ -2141,7 +2456,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The returned face attribute information
+             * <p>The returned face attribute information</p>
              */
             public Builder faceData(java.util.List < FaceData> faceData) {
                 this.faceData = faceData;
@@ -2149,7 +2464,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Logo information.
+             * <p>Logo information.</p>
              */
             public Builder logoData(java.util.List < LogoData> logoData) {
                 this.logoData = logoData;
@@ -2157,7 +2472,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Returns the text information in the recognized image.
+             * <p>Returns the text information in the recognized image.</p>
              */
             public Builder ocrResult(java.util.List < OcrResult> ocrResult) {
                 this.ocrResult = ocrResult;
@@ -2165,7 +2480,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Person information list.
+             * <p>Person information list.</p>
              */
             public Builder publicFigure(java.util.List < PublicFigure> publicFigure) {
                 this.publicFigure = publicFigure;
@@ -2173,7 +2488,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The result of image recognition.
+             * <p>The result of image recognition.</p>
              */
             public Builder recognition(java.util.List < Recognition> recognition) {
                 this.recognition = recognition;
@@ -2181,7 +2496,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Returns the text information in the hit image.
+             * <p>Returns the text information in the hit image.</p>
              */
             public Builder textInImage(TextInImage textInImage) {
                 this.textInImage = textInImage;
@@ -2195,6 +2510,12 @@ public class ImageModerationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImageModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImageModerationResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Confidence")
         private Float confidence;
@@ -2246,7 +2567,10 @@ public class ImageModerationResponseBody extends TeaModel {
             private String label; 
 
             /**
-             * The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places. Some labels do not have scores of confidence levels.
+             * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places. Some labels do not have scores of confidence levels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>81.22</p>
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -2254,7 +2578,10 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the result.
+             * <p>The description of the result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>no risk</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2262,7 +2589,10 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The labels returned after the image moderation. Multiple risk labels and the corresponding scores of confidence levels may be returned for an image.
+             * <p>The labels returned after the image moderation. Multiple risk labels and the corresponding scores of confidence levels may be returned for an image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>violent_explosion</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -2276,6 +2606,12 @@ public class ImageModerationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImageModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImageModerationResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
@@ -2339,10 +2675,13 @@ public class ImageModerationResponseBody extends TeaModel {
             private String riskLevel; 
 
             /**
-             * The ID of the moderated object.
-             * <p>
+             * <p>The ID of the moderated object.</p>
+             * <blockquote>
+             * <p> If you specify the dataId parameter in the request, the value of the dataId parameter is returned in the response.</p>
+             * </blockquote>
              * 
-             * >  If you specify the dataId parameter in the request, the value of the dataId parameter is returned in the response.
+             * <strong>example:</strong>
+             * <p>fb5ffab1-993b-449f-b8d6-b97d5e3331f2</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -2350,7 +2689,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Auxiliary reference information.
+             * <p>Auxiliary reference information.</p>
              */
             public Builder ext(Ext ext) {
                 this.ext = ext;
@@ -2358,7 +2697,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The results of image moderation parameters such as the label parameter and the confidence parameter, which are an array structure.
+             * <p>The results of image moderation parameters such as the label parameter and the confidence parameter, which are an array structure.</p>
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -2366,7 +2705,10 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Risk Level.
+             * <p>Risk Level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;

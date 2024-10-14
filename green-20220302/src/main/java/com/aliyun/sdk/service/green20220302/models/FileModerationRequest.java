@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FileModerationRequest} extends {@link RequestModel}
  *
  * <p>FileModerationRequest</p>
@@ -67,7 +68,10 @@ public class FileModerationRequest extends Request {
         } 
 
         /**
-         * The type of the moderation service.
+         * <p>The type of the moderation service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>document_detection</p>
          */
         public Builder service(String service) {
             this.putBodyParameter("Service", service);
@@ -76,7 +80,10 @@ public class FileModerationRequest extends Request {
         }
 
         /**
-         * The parameters required by the moderation service. The value is a JSON string.
+         * <p>The parameters required by the moderation service. The value is a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;url&quot;:&quot;<a href="https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.pdf%22%7D">https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.pdf&quot;}</a></p>
          */
         public Builder serviceParameters(String serviceParameters) {
             this.putBodyParameter("ServiceParameters", serviceParameters);

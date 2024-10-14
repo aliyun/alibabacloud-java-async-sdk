@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VideoModerationResultResponseBody} extends {@link TeaModel}
  *
  * <p>VideoModerationResultResponseBody</p>
@@ -73,7 +74,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned HTTP status code.
+         * <p>The returned HTTP status code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The moderation results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned in response to the request.
+         * <p>The message that is returned in response to the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success finished</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6CF2815C-C8C7-4A01-B52E-FF6E24F53492</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link VideoModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>VideoModerationResultResponseBody</p>
+     */
     public static class AudioSummarys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -149,7 +165,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private Integer labelSum; 
 
             /**
-             * Voice label.
+             * <p>The voice label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>profanity</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -157,7 +176,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that the label is matched.
+             * <p>The number of times that the label is matched.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder labelSum(Integer labelSum) {
                 this.labelSum = labelSum;
@@ -171,6 +193,12 @@ public class VideoModerationResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link VideoModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>VideoModerationResultResponseBody</p>
+     */
     public static class SliceDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
@@ -330,7 +358,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The end time of the text after voice-to-text conversion. Unit: seconds.
+             * <p>The end time of the text after voice-to-text conversion. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -338,7 +369,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The end timestamp of the segment. Unit: milliseconds.
+             * <p>The end timestamp of the segment. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1685245261939</p>
              */
             public Builder endTimestamp(Long endTimestamp) {
                 this.endTimestamp = endTimestamp;
@@ -346,7 +380,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;consoleProduct&quot;:&quot;slbnext&quot;}</p>
              */
             public Builder extend(String extend) {
                 this.extend = extend;
@@ -354,7 +391,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the labels.
+             * <p>The details of the labels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>porn</p>
              */
             public Builder labels(String labels) {
                 this.labels = labels;
@@ -362,7 +402,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>Risk Level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -370,7 +413,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Subcategory labels. Multiple labels are separated by commas (,).
+             * <p>Subcategory labels. Multiple labels are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder riskTips(String riskTips) {
                 this.riskTips = riskTips;
@@ -378,7 +424,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The risk words that are hit. Multiple words are separated by commas (,).
+             * <p>The risk words that are hit. Multiple words are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder riskWords(String riskWords) {
                 this.riskWords = riskWords;
@@ -386,7 +435,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Risk score, default range 0-99.
+             * <p>The risk score. Default range: 0 to 99.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder score(Float score) {
                 this.score = score;
@@ -394,7 +446,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the text after voice-to-text conversion. Unit: seconds.
+             * <p>The start time of the text after voice-to-text conversion. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -402,7 +457,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The start timestamp of the segment. Unit: milliseconds.
+             * <p>The start timestamp of the segment. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1659935002123</p>
              */
             public Builder startTimestamp(Long startTimestamp) {
                 this.startTimestamp = startTimestamp;
@@ -410,7 +468,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The text converted from voice.
+             * <p>The text converted from voice.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Disgusting</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -418,7 +479,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * If the moderation object is a voice stream, this parameter indicates the temporary access URL of the voice stream to which the text entry corresponds. The validity period of the URL is 30 minutes. You must prepare another URL to store the audio stream at the earliest opportunity.
+             * <p>If the moderation object is a voice stream, this parameter indicates the temporary access URL of the voice stream to which the text entry corresponds. The validity period of the URL is 30 minutes. You must prepare another URL to store the voice stream at the earliest opportunity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxx.abc.img">http://xxxx.abc.img</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -432,6 +496,12 @@ public class VideoModerationResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link VideoModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>VideoModerationResultResponseBody</p>
+     */
     public static class AudioResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AudioSummarys")
         private java.util.List < AudioSummarys> audioSummarys;
@@ -483,7 +553,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private java.util.List < SliceDetails> sliceDetails; 
 
             /**
-             * Summary of voice labels.
+             * <p>Summary of voice labels.</p>
              */
             public Builder audioSummarys(java.util.List < AudioSummarys> audioSummarys) {
                 this.audioSummarys = audioSummarys;
@@ -491,7 +561,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>Risk Level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -499,7 +572,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The details about the text in the moderated voice. The value is a JSON array that contains one or more elements. Each element corresponds to a text entry.
+             * <p>The details about the text in the moderated voice. The value is a JSON array that contains one or more elements. Each element corresponds to a text entry.</p>
              */
             public Builder sliceDetails(java.util.List < SliceDetails> sliceDetails) {
                 this.sliceDetails = sliceDetails;
@@ -513,6 +586,12 @@ public class VideoModerationResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link VideoModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>VideoModerationResultResponseBody</p>
+     */
     public static class FrameSummarys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -564,7 +643,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private Integer labelSum; 
 
             /**
-             * Description.
+             * <p>The description of the result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>no risk</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -572,7 +654,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The label against which a captured frame is matched.
+             * <p>The label against which a captured frame is matched.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>violent_armedForces</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -580,7 +665,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that the label is matched.
+             * <p>The number of times that the label is matched.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder labelSum(Integer labelSum) {
                 this.labelSum = labelSum;
@@ -594,6 +682,12 @@ public class VideoModerationResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link VideoModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>VideoModerationResultResponseBody</p>
+     */
     public static class CustomImage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
@@ -633,7 +727,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private String libId; 
 
             /**
-             * The ID of the hit custom image.
+             * <p>The ID of the custom image that is hit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -641,7 +738,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The custom image library ID of the hit.
+             * <p>The ID of the custom image library that is hit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345678</p>
              */
             public Builder libId(String libId) {
                 this.libId = libId;
@@ -655,6 +755,12 @@ public class VideoModerationResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link VideoModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>VideoModerationResultResponseBody</p>
+     */
     public static class PublicFigure extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FigureId")
         private String figureId;
@@ -682,7 +788,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private String figureId; 
 
             /**
-             * Identified person coding information.
+             * <p>The information about the code of the identified figure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx001</p>
              */
             public Builder figureId(String figureId) {
                 this.figureId = figureId;
@@ -696,6 +805,12 @@ public class VideoModerationResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link VideoModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>VideoModerationResultResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Confidence")
         private Float confidence;
@@ -747,7 +862,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private String label; 
 
             /**
-             * The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.
+             * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -755,7 +873,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>no risk</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -763,7 +884,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The label returned after a frame is moderated. Multiple risk labels and the corresponding scores of confidence levels may be returned for a frame.
+             * <p>The label returned after a frame is moderated. Multiple risk labels and the corresponding scores of confidence levels may be returned for a frame.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bloody</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -777,6 +901,12 @@ public class VideoModerationResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link VideoModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>VideoModerationResultResponseBody</p>
+     */
     public static class Results extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomImage")
         private java.util.List < CustomImage> customImage;
@@ -852,7 +982,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private java.util.Map < String, ? > textInImage; 
 
             /**
-             * If a custom image library is hit, information about the hit custom image library is returned.
+             * <p>If a custom image library is hit, information about the custom image library is returned.</p>
              */
             public Builder customImage(java.util.List < CustomImage> customImage) {
                 this.customImage = customImage;
@@ -860,7 +990,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * If the video contains a specific person, the recognized person code is returned.
+             * <p>If the video contains a specific figure, the code of the identified figure is returned.</p>
              */
             public Builder publicFigure(java.util.List < PublicFigure> publicFigure) {
                 this.publicFigure = publicFigure;
@@ -868,7 +998,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The results of frame moderation parameters such as the label parameter and the confidence parameter.
+             * <p>The results of frame moderation parameters such as the label parameter and the confidence parameter.</p>
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -876,7 +1006,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The moderation service that is called.
+             * <p>The moderation service that is called.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tonalityImprove</p>
              */
             public Builder service(String service) {
                 this.service = service;
@@ -884,7 +1017,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Returns the text information in the hit image.
+             * <p>The information about the text hit in the image is returned.</p>
              */
             public Builder textInImage(java.util.Map < String, ? > textInImage) {
                 this.textInImage = textInImage;
@@ -898,6 +1031,12 @@ public class VideoModerationResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link VideoModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>VideoModerationResultResponseBody</p>
+     */
     public static class Frames extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Offset")
         private Float offset;
@@ -973,7 +1112,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private Long timestamp; 
 
             /**
-             * The interval between the start of the video file and the captured frame. Unit: seconds.
+             * <p>The interval between the start of the video file and the captured frame. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>338</p>
              */
             public Builder offset(Float offset) {
                 this.offset = offset;
@@ -981,7 +1123,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The results of frame moderation parameters such as the label parameter and the confidence parameter.
+             * <p>The results of frame moderation parameters such as the label parameter and the confidence parameter.</p>
              */
             public Builder results(java.util.List < Results> results) {
                 this.results = results;
@@ -989,7 +1131,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>Risk Level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -997,7 +1142,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The temporary URL of a captured frame. This URL is valid for 30 minutes.
+             * <p>The temporary URL of a captured frame.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxx.abc.jpg">http://xxxx.abc.jpg</a></p>
              */
             public Builder tempUrl(String tempUrl) {
                 this.tempUrl = tempUrl;
@@ -1005,7 +1153,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The absolute timestamp. Unit: milliseconds.
+             * <p>The absolute timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1684559739000</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -1019,6 +1170,12 @@ public class VideoModerationResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link VideoModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>VideoModerationResultResponseBody</p>
+     */
     public static class FrameResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FrameNum")
         private Integer frameNum;
@@ -1082,7 +1239,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private String riskLevel; 
 
             /**
-             * The number of captured frames that are returned for the video file.
+             * <p>The number of captured frames that are returned for the video file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder frameNum(Integer frameNum) {
                 this.frameNum = frameNum;
@@ -1090,7 +1250,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The summary of the labels against which captured frames are matched.
+             * <p>The summary of the labels against which captured frames are matched.</p>
              */
             public Builder frameSummarys(java.util.List < FrameSummarys> frameSummarys) {
                 this.frameSummarys = frameSummarys;
@@ -1098,7 +1258,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the frames that match the labels.
+             * <p>The information about the frames that match the labels.</p>
              */
             public Builder frames(java.util.List < Frames> frames) {
                 this.frames = frames;
@@ -1106,7 +1266,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>Risk Level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -1120,6 +1283,12 @@ public class VideoModerationResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link VideoModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>VideoModerationResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AudioResult")
         private AudioResult audioResult;
@@ -1207,7 +1376,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * The voice moderation results. The moderation results contain a structure.
+             * <p>The voice moderation results. The moderation results contain a structure.</p>
              */
             public Builder audioResult(AudioResult audioResult) {
                 this.audioResult = audioResult;
@@ -1215,7 +1384,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the moderated object.
+             * <p>The value of dataId that is specified in the API request. If this parameter is not specified in the API request, the dataId field is not available in the response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product_content-2055763</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -1223,7 +1395,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The image moderation results. If the call is successful, the HTTP status code 200 and moderation results are returned. The moderation results contain a structure.
+             * <p>The image moderation results. If the call is successful, the HTTP status code 200 and moderation results are returned. The moderation results contain a structure.</p>
              */
             public Builder frameResult(FrameResult frameResult) {
                 this.frameResult = frameResult;
@@ -1231,7 +1403,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the live stream.
+             * <p>The unique ID of the live stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liveId</p>
              */
             public Builder liveId(String liveId) {
                 this.liveId = liveId;
@@ -1239,7 +1414,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>Risk Level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -1247,7 +1425,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The task ID.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxx-xxxxx</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UrlAsyncModerationResponseBody} extends {@link TeaModel}
  *
  * <p>UrlAsyncModerationResponseBody</p>
@@ -73,7 +74,10 @@ public class UrlAsyncModerationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned HTTP status code.
+         * <p>The returned HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class UrlAsyncModerationResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class UrlAsyncModerationResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned in response to the request.
+         * <p>The message that is returned in response to the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -97,7 +104,10 @@ public class UrlAsyncModerationResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6CF2815C-<strong><strong>-</strong></strong>-B52E-FF6E2****492</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class UrlAsyncModerationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UrlAsyncModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>UrlAsyncModerationResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
@@ -149,7 +165,10 @@ public class UrlAsyncModerationResponseBody extends TeaModel {
             private String reqId; 
 
             /**
-             * The ID of the moderated object.
+             * <p>The ID of the moderated object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26769ada6e264e7ba9aa048241e12be9</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -157,7 +176,10 @@ public class UrlAsyncModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The reqId field returned by the Url Async Moderation API.
+             * <p>The reqId field returned by the Url Async Moderation API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A07B3DB9-D762-5C56-95B1-8EC55CF176D2</p>
              */
             public Builder reqId(String reqId) {
                 this.reqId = reqId;

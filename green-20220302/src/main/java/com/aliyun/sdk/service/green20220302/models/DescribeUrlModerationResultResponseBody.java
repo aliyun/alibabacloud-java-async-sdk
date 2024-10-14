@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUrlModerationResultResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUrlModerationResultResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned HTTP status code. The status code 200 indicates that the request was successful.
+         * <p>The returned HTTP status code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned in response to the request.
+         * <p>The message that is returned in response to the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -97,7 +104,10 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01F9144A-2088-5D87-935B-2DB865284B1A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUrlModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUrlModerationResultResponseBody</p>
+     */
     public static class ExtraInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IcpNo")
         private String icpNo;
@@ -161,7 +177,10 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
             private String siteType; 
 
             /**
-             * The ICP number.
+             * <p>The ICP number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder icpNo(String icpNo) {
                 this.icpNo = icpNo;
@@ -169,7 +188,10 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the ICP filing.
+             * <p>The type of the ICP filing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder icpType(String icpType) {
                 this.icpType = icpType;
@@ -177,7 +199,10 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The type of site
+             * <p>The type of site</p>
+             * 
+             * <strong>example:</strong>
+             * <p>game</p>
              */
             public Builder siteType(String siteType) {
                 this.siteType = siteType;
@@ -191,6 +216,12 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeUrlModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUrlModerationResultResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Confidence")
         private Float confidence;
@@ -230,7 +261,10 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
             private String label; 
 
             /**
-             * The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.
+             * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>81.22</p>
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -238,7 +272,10 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The labels returned after the asynchronous URL moderation.
+             * <p>The labels returned after the asynchronous URL moderation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sexual_url</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -252,6 +289,12 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeUrlModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUrlModerationResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
@@ -315,7 +358,10 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
             private java.util.List < Result> result; 
 
             /**
-             * The value of dataId that is specified in the API request. If this parameter is not specified in the API request, this field is not available in the response.
+             * <p>The value of dataId that is specified in the API request. If this parameter is not specified in the API request, this field is not available in the response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26769ada6e264e7ba9aa048241e12be9</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -323,7 +369,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The supplementary information.
+             * <p>The supplementary information.</p>
              */
             public Builder extraInfo(ExtraInfo extraInfo) {
                 this.extraInfo = extraInfo;
@@ -331,7 +377,10 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The ReqId field returned by an asynchronous URL moderation operation.
+             * <p>The ReqId field returned by an asynchronous URL moderation operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>B0963D30-BAB4-562F-9ED0-7A23AEC51C7C</p>
              */
             public Builder reqId(String reqId) {
                 this.reqId = reqId;
@@ -339,7 +388,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The returned results.
+             * <p>The returned results.</p>
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;

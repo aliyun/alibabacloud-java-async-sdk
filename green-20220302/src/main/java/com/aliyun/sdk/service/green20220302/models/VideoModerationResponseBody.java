@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VideoModerationResponseBody} extends {@link TeaModel}
  *
  * <p>VideoModerationResponseBody</p>
@@ -73,7 +74,10 @@ public class VideoModerationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned HTTP status code.
+         * <p>The returned HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class VideoModerationResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class VideoModerationResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned in response to the request.
+         * <p>The message that is returned in response to the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class VideoModerationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class VideoModerationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link VideoModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>VideoModerationResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
@@ -149,7 +165,10 @@ public class VideoModerationResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * The ID of the moderated object.
+             * <p>The ID of the moderated object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data1234</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -157,7 +176,10 @@ public class VideoModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The task ID.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxx-xxxxx</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

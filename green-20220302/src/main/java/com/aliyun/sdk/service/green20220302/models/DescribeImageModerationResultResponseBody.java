@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageModerationResultResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageModerationResultResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned HTTP status code.
+         * <p>The returned HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * The image moderation results.
+         * <p>The image moderation results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned in response to the request.
+         * <p>The message that is returned in response to the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -97,7 +104,10 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID, which is used to locate and troubleshoot issues.
+         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2881AD4F-638B-52A3-BA20-F74C5B1CEAE3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageModerationResultResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Confidence")
         private Float confidence;
@@ -161,7 +177,10 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             private String label; 
 
             /**
-             * The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.
+             * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>81.22</p>
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -169,7 +188,10 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the result.
+             * <p>The description of the result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>no risk</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -177,7 +199,10 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The labels returned after the image moderation.
+             * <p>The labels returned after the image moderation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>violent_explosion</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -191,6 +216,12 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageModerationResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
@@ -278,7 +309,10 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             private String riskLevel; 
 
             /**
-             * The value of dataId that is specified in the API request. If this parameter is not specified in the API request, this field is not available in the response.
+             * <p>The value of dataId that is specified in the API request. If this parameter is not specified in the API request, this field is not available in the response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2a5389eb-4ff8-4584-ac99-644e2a539aa1</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -286,7 +320,10 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the captured frames.
+             * <p>The information about the captured frames.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;result&quot;:[{&quot;confidence&quot;:81.22,&quot;label&quot;:&quot;violent_explosion&quot;}]}]</p>
              */
             public Builder frame(String frame) {
                 this.frame = frame;
@@ -294,7 +331,10 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The number of frames.
+             * <p>The number of frames.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder frameNum(Integer frameNum) {
                 this.frameNum = frameNum;
@@ -302,7 +342,10 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The reqId field returned by the Image Async Moderation API.
+             * <p>The reqId field returned by the Image Async Moderation API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>B0963D30-BAB4-562F-9ED0-7A23AEC51C7C</p>
              */
             public Builder reqId(String reqId) {
                 this.reqId = reqId;
@@ -310,7 +353,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The results of image moderation parameters such as the label parameter and the confidence parameter.
+             * <p>The results of image moderation parameters such as the label parameter and the confidence parameter.</p>
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -318,7 +361,10 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Risk Level.
+             * <p>Risk Level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;

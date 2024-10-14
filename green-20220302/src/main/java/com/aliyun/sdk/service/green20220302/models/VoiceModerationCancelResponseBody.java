@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VoiceModerationCancelResponseBody} extends {@link TeaModel}
  *
  * <p>VoiceModerationCancelResponseBody</p>
@@ -61,7 +62,10 @@ public class VoiceModerationCancelResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned HTTP status code.
+         * <p>The returned HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -69,7 +73,10 @@ public class VoiceModerationCancelResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned in response to the request.
+         * <p>The message that is returned in response to the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -77,7 +84,10 @@ public class VoiceModerationCancelResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4A926AE2-4C96-573F-824F-0532960799F8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

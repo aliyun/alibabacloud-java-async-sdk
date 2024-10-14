@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VoiceModerationResultResponseBody} extends {@link TeaModel}
  *
  * <p>VoiceModerationResultResponseBody</p>
@@ -73,7 +74,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned HTTP status code.
+         * <p>The returned HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned in response to the request.
+         * <p>The message that is returned in response to the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2881AD4F-638B-52A3-BA20-F74C5B1CEAE3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class VoiceModerationResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link VoiceModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>VoiceModerationResultResponseBody</p>
+     */
     public static class SliceDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
@@ -125,6 +141,9 @@ public class VoiceModerationResultResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("OriginAlgoResult")
         private java.util.Map < String, ? > originAlgoResult;
+
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
+        private String riskLevel;
 
         @com.aliyun.core.annotation.NameInMap("RiskTips")
         private String riskTips;
@@ -153,6 +172,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             this.extend = builder.extend;
             this.labels = builder.labels;
             this.originAlgoResult = builder.originAlgoResult;
+            this.riskLevel = builder.riskLevel;
             this.riskTips = builder.riskTips;
             this.riskWords = builder.riskWords;
             this.score = builder.score;
@@ -203,6 +223,13 @@ public class VoiceModerationResultResponseBody extends TeaModel {
          */
         public java.util.Map < String, ? > getOriginAlgoResult() {
             return this.originAlgoResult;
+        }
+
+        /**
+         * @return riskLevel
+         */
+        public String getRiskLevel() {
+            return this.riskLevel;
         }
 
         /**
@@ -260,6 +287,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             private String extend; 
             private String labels; 
             private java.util.Map < String, ? > originAlgoResult; 
+            private String riskLevel; 
             private String riskTips; 
             private String riskWords; 
             private Float score; 
@@ -269,7 +297,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The end time of the text after audio-to-text conversion. Unit: seconds.
+             * <p>The end time of the text after audio-to-text conversion. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -277,7 +308,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The end timestamp of the segment. Unit: milliseconds.
+             * <p>The end timestamp of the segment. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1678854649720</p>
              */
             public Builder endTimestamp(Long endTimestamp) {
                 this.endTimestamp = endTimestamp;
@@ -285,7 +319,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;riskTips&quot;:&quot;sexuality_Suggestive&quot;,&quot;riskWords&quot;:&quot;pxxxxy&quot;}</p>
              */
             public Builder extend(String extend) {
                 this.extend = extend;
@@ -293,7 +330,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the labels.
+             * <p>The details of the labels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sexual_sounds</p>
              */
             public Builder labels(String labels) {
                 this.labels = labels;
@@ -301,7 +341,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Reserved field.
+             * <p>Reserved field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder originAlgoResult(java.util.Map < String, ? > originAlgoResult) {
                 this.originAlgoResult = originAlgoResult;
@@ -309,7 +352,18 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The risk details that are hit.
+             * RiskLevel.
+             */
+            public Builder riskLevel(String riskLevel) {
+                this.riskLevel = riskLevel;
+                return this;
+            }
+
+            /**
+             * <p>The risk details that are hit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sexuality_Suggestive</p>
              */
             public Builder riskTips(String riskTips) {
                 this.riskTips = riskTips;
@@ -317,7 +371,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The risk words that are hit.
+             * <p>The risk words that are hit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAA,BBB,CCC</p>
              */
             public Builder riskWords(String riskWords) {
                 this.riskWords = riskWords;
@@ -325,7 +382,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Risk score, default range 0-99.
+             * <p>Risk score, default range 0-99.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>87.01</p>
              */
             public Builder score(Float score) {
                 this.score = score;
@@ -333,7 +393,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the text after audio-to-text conversion. Unit: seconds.
+             * <p>The start time of the text after audio-to-text conversion. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -341,7 +404,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The start timestamp of the segment. Unit: milliseconds.
+             * <p>The start timestamp of the segment. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1678854649720</p>
              */
             public Builder startTimestamp(Long startTimestamp) {
                 this.startTimestamp = startTimestamp;
@@ -349,7 +415,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The text converted from voice.
+             * <p>The text converted from voice.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Disgusting</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -357,7 +426,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The temporary access address of the audio segment. The validity period of the URL is 30 minutes. You must prepare another URL to store the audio segment at the earliest opportunity.
+             * <p>The temporary access address of the audio segment. The validity period of the URL is 30 minutes. You must prepare another URL to store the audio segment at the earliest opportunity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://aliyundoc.com">https://aliyundoc.com</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -371,12 +443,21 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link VoiceModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>VoiceModerationResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
 
         @com.aliyun.core.annotation.NameInMap("LiveId")
         private String liveId;
+
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
+        private String riskLevel;
 
         @com.aliyun.core.annotation.NameInMap("SliceDetails")
         private java.util.List < SliceDetails> sliceDetails;
@@ -390,6 +471,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.dataId = builder.dataId;
             this.liveId = builder.liveId;
+            this.riskLevel = builder.riskLevel;
             this.sliceDetails = builder.sliceDetails;
             this.taskId = builder.taskId;
             this.url = builder.url;
@@ -418,6 +500,13 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return riskLevel
+         */
+        public String getRiskLevel() {
+            return this.riskLevel;
+        }
+
+        /**
          * @return sliceDetails
          */
         public java.util.List < SliceDetails> getSliceDetails() {
@@ -441,12 +530,16 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         public static final class Builder {
             private String dataId; 
             private String liveId; 
+            private String riskLevel; 
             private java.util.List < SliceDetails> sliceDetails; 
             private String taskId; 
             private String url; 
 
             /**
-             * The ID of the moderated object.
+             * <p>The ID of the moderated object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26769ada6e264e7ba9aa048241e12be9</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -454,7 +547,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the live stream.
+             * <p>The unique ID of the live stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liveId</p>
              */
             public Builder liveId(String liveId) {
                 this.liveId = liveId;
@@ -462,7 +558,15 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The details about the audio segments.
+             * RiskLevel.
+             */
+            public Builder riskLevel(String riskLevel) {
+                this.riskLevel = riskLevel;
+                return this;
+            }
+
+            /**
+             * <p>The details about the audio segments.</p>
              */
             public Builder sliceDetails(java.util.List < SliceDetails> sliceDetails) {
                 this.sliceDetails = sliceDetails;
@@ -470,7 +574,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The task ID.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kw24ihd0WGkdi5nniVZM@qOj-1x5Ibb</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -478,7 +585,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the moderation object.
+             * <p>The URL of the moderation object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://aliyundoc.com">https://aliyundoc.com</a></p>
              */
             public Builder url(String url) {
                 this.url = url;

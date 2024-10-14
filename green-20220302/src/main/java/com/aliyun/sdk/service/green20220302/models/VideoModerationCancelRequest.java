@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VideoModerationCancelRequest} extends {@link RequestModel}
  *
  * <p>VideoModerationCancelRequest</p>
@@ -67,7 +68,10 @@ public class VideoModerationCancelRequest extends Request {
         } 
 
         /**
-         * The type of the moderation service.
+         * <p>The type of the moderation service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>videoDetection</p>
          */
         public Builder service(String service) {
             this.putBodyParameter("Service", service);
@@ -76,7 +80,10 @@ public class VideoModerationCancelRequest extends Request {
         }
 
         /**
-         * The parameters required by the moderation service. The value is a JSON string.
+         * <p>The parameters required by the moderation service. The value is a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;taskId&quot;:&quot;vi_s_4O9gp7GfNQdx9GOqdekFmk-1z2RJT&quot;}</p>
          */
         public Builder serviceParameters(String serviceParameters) {
             this.putBodyParameter("ServiceParameters", serviceParameters);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VideoModerationResultRequest} extends {@link RequestModel}
  *
  * <p>VideoModerationResultRequest</p>
@@ -67,7 +68,17 @@ public class VideoModerationResultRequest extends Request {
         } 
 
         /**
-         * The type of the moderation service.
+         * <p>The type of the moderation service.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>liveStreamDetection: live stream moderation</li>
+         * <li>videoDetection: video file moderation</li>
+         * <li>liveStreamDetection_cb: live stream moderation_For regions outside the Chinese mainland</li>
+         * <li>videoDetection_cb: video file moderation_For regions outside the Chinese mainland.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>videoDetection</p>
          */
         public Builder service(String service) {
             this.putBodyParameter("Service", service);
@@ -76,7 +87,10 @@ public class VideoModerationResultRequest extends Request {
         }
 
         /**
-         * The parameters required by the moderation service. The value is a JSON string.
+         * <p>The parameters required by the moderation service. The ID of the task that you want to query. You can specify one task ID at a time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;taskId&quot;:&quot;au_f_8PoWiZKoLbczp5HRn69VdT-1y8@U5&quot;}</p>
          */
         public Builder serviceParameters(String serviceParameters) {
             this.putBodyParameter("ServiceParameters", serviceParameters);

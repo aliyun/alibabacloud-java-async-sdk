@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageResultExtRequest} extends {@link RequestModel}
  *
  * <p>DescribeImageResultExtRequest</p>
@@ -67,7 +68,10 @@ public class DescribeImageResultExtRequest extends Request {
         } 
 
         /**
-         * The content of the information to be obtained. Multiple values are separated by commas.
+         * <p>The content of the information to be obtained. Multiple values are separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customImage,textInImage</p>
          */
         public Builder infoType(String infoType) {
             this.putBodyParameter("InfoType", infoType);
@@ -76,7 +80,10 @@ public class DescribeImageResultExtRequest extends Request {
         }
 
         /**
-         * The reqId field returned by the Url Async Moderation API.
+         * <p>The reqId field returned by the Url Async Moderation API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>638EDDC65C82AB39319A9F60</p>
          */
         public Builder reqId(String reqId) {
             this.putBodyParameter("ReqId", reqId);

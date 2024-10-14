@@ -58,6 +58,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of DescribeFileModerationResult  DescribeFileModerationResultRequest
+     * @return DescribeFileModerationResultResponse
+     */
     @Override
     public CompletableFuture<DescribeFileModerationResultResponse> describeFileModerationResult(DescribeFileModerationResultRequest request) {
         try {
@@ -73,9 +77,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Billing: This operation is free of charge.
-      * *   QPS limit: You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>  Billing: This operation is free of charge.</p>
+     * <ul>
+     * <li>QPS limit: You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeImageModerationResult  DescribeImageModerationResultRequest
+     * @return DescribeImageModerationResultResponse
      */
     @Override
     public CompletableFuture<DescribeImageModerationResultResponse> describeImageModerationResult(DescribeImageModerationResultRequest request) {
@@ -91,6 +100,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImageResultExt  DescribeImageResultExtRequest
+     * @return DescribeImageResultExtResponse
+     */
     @Override
     public CompletableFuture<DescribeImageResultExtResponse> describeImageResultExt(DescribeImageResultExtRequest request) {
         try {
@@ -105,6 +118,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeUploadToken  DescribeUploadTokenRequest
+     * @return DescribeUploadTokenResponse
+     */
     @Override
     public CompletableFuture<DescribeUploadTokenResponse> describeUploadToken(DescribeUploadTokenRequest request) {
         try {
@@ -120,10 +137,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Billing: This operation is free of charge.
-      * *   Query timeout: We recommend that you query moderation results at least 480 seconds after you send an asynchronous moderation request. Content Moderation retains moderation results for up to 3 days. After 3 days, the results are deleted.
-      * *   You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>  Billing: This operation is free of charge.</p>
+     * <ul>
+     * <li>Query timeout: We recommend that you query moderation results at least 480 seconds after you send an asynchronous moderation request. Content Moderation retains moderation results for up to 3 days. After 3 days, the results are deleted.</li>
+     * <li>You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeUrlModerationResult  DescribeUrlModerationResultRequest
+     * @return DescribeUrlModerationResultResponse
      */
     @Override
     public CompletableFuture<DescribeUrlModerationResultResponse> describeUrlModerationResult(DescribeUrlModerationResultRequest request) {
@@ -139,6 +161,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FileModeration  FileModerationRequest
+     * @return FileModerationResponse
+     */
     @Override
     public CompletableFuture<FileModerationResponse> fileModeration(FileModerationRequest request) {
         try {
@@ -153,6 +179,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ImageAsyncModeration  ImageAsyncModerationRequest
+     * @return ImageAsyncModerationResponse
+     */
     @Override
     public CompletableFuture<ImageAsyncModerationResponse> imageAsyncModeration(ImageAsyncModerationRequest request) {
         try {
@@ -168,8 +198,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * **Before you call this operation, make sure that you are familiar with the [billing](~~467826~~)[](https://www.aliyun.com/price/product?#/lvwang/detail/cdibag) of Image Moderation 2.0.
-      *
+     * <b>description</b> :
+     * <p>*Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/467826.html">billing</a><a href="https://www.aliyun.com/price/product?#/lvwang/detail/cdibag"></a> of Image Moderation 2.0.</p>
+     * 
+     * @param request the request parameters of ImageModeration  ImageModerationRequest
+     * @return ImageModerationResponse
      */
     @Override
     public CompletableFuture<ImageModerationResponse> imageModeration(ImageModerationRequest request) {
@@ -185,6 +218,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TextModeration  TextModerationRequest
+     * @return TextModerationResponse
+     */
     @Override
     public CompletableFuture<TextModerationResponse> textModeration(TextModerationRequest request) {
         try {
@@ -200,8 +237,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, make sure that you have [activated the Content Moderation 2.0 service](https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn) and are familiar with the [billing](https://help.aliyun.com/document_detail/2671445.html?#section-6od-32j-99n) of the Text Moderation 2.0 Plus service.
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you have <a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">activated the Content Moderation 2.0 service</a> and are familiar with the <a href="https://help.aliyun.com/document_detail/2671445.html?#section-6od-32j-99n">billing</a> of the Text Moderation 2.0 Plus service.</p>
+     * 
+     * @param request the request parameters of TextModerationPlus  TextModerationPlusRequest
+     * @return TextModerationPlusResponse
      */
     @Override
     public CompletableFuture<TextModerationPlusResponse> textModerationPlus(TextModerationPlusRequest request) {
@@ -217,6 +257,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UrlAsyncModeration  UrlAsyncModerationRequest
+     * @return UrlAsyncModerationResponse
+     */
     @Override
     public CompletableFuture<UrlAsyncModerationResponse> urlAsyncModeration(UrlAsyncModerationRequest request) {
         try {
@@ -231,6 +275,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of VideoModeration  VideoModerationRequest
+     * @return VideoModerationResponse
+     */
     @Override
     public CompletableFuture<VideoModerationResponse> videoModeration(VideoModerationRequest request) {
         try {
@@ -245,6 +293,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of VideoModerationCancel  VideoModerationCancelRequest
+     * @return VideoModerationCancelResponse
+     */
     @Override
     public CompletableFuture<VideoModerationCancelResponse> videoModerationCancel(VideoModerationCancelRequest request) {
         try {
@@ -259,6 +311,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>This operation is free of charge. We recommend that you query moderation results at least 30 seconds after you send an asynchronous moderation request. Content Moderation retains moderation results for at most 24 hours. After 24 hours, the results are deleted.</p>
+     * 
+     * @param request the request parameters of VideoModerationResult  VideoModerationResultRequest
+     * @return VideoModerationResultResponse
+     */
     @Override
     public CompletableFuture<VideoModerationResultResponse> videoModerationResult(VideoModerationResultRequest request) {
         try {
@@ -273,6 +332,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of VoiceModeration  VoiceModerationRequest
+     * @return VoiceModerationResponse
+     */
     @Override
     public CompletableFuture<VoiceModerationResponse> voiceModeration(VoiceModerationRequest request) {
         try {
@@ -287,6 +350,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of VoiceModerationCancel  VoiceModerationCancelRequest
+     * @return VoiceModerationCancelResponse
+     */
     @Override
     public CompletableFuture<VoiceModerationCancelResponse> voiceModerationCancel(VoiceModerationCancelRequest request) {
         try {
@@ -301,6 +368,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of VoiceModerationResult  VoiceModerationResultRequest
+     * @return VoiceModerationResultResponse
+     */
     @Override
     public CompletableFuture<VoiceModerationResultResponse> voiceModerationResult(VoiceModerationResultRequest request) {
         try {

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImageModerationRequest} extends {@link RequestModel}
  *
  * <p>ImageModerationRequest</p>
@@ -67,28 +68,31 @@ public class ImageModerationRequest extends Request {
         } 
 
         /**
-         * The moderation services supported by Image Moderation 2.0. Valid values:
-         * <p>
+         * <p>The moderation services supported by Image Moderation 2.0. Valid values:</p>
+         * <ul>
+         * <li>baselineCheck: common baseline moderation</li>
+         * <li>baselineCheck_pro: common baseline moderation_Professional</li>
+         * <li>baselineCheck_cb: common baseline moderation_For regions outside the Chinese mainland</li>
+         * <li>tonalityImprove: content governance moderation</li>
+         * <li>aigcCheck: AI-generated image identification</li>
+         * <li>profilePhotoCheck: avatar image moderation</li>
+         * <li>advertisingCheck: marketing material identification</li>
+         * <li>liveStreamCheck: moderation of screenshots of videos and live streams</li>
+         * </ul>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>liveStreamCheck: moderation of screenshots of videos and live streams</li>
+         * <li>baselineCheck: common baseline moderation</li>
+         * <li>aigcCheck: AI-generated image identification</li>
+         * <li>baselineCheck_pro: common baseline moderation_Professional</li>
+         * <li>advertisingCheck: marketing material identification</li>
+         * <li>baselineCheck_cb: common baseline moderation_For regions outside the Chinese mainland</li>
+         * <li>tonalityImprove: content governance moderation</li>
+         * <li>profilePhotoCheck: avatar image moderation</li>
+         * </ul>
          * 
-         * *   baselineCheck: common baseline moderation
-         * *   baselineCheck_pro: common baseline moderation_Professional
-         * *   baselineCheck_cb: common baseline moderation_For regions outside the Chinese mainland
-         * *   tonalityImprove: content governance moderation
-         * *   aigcCheck: AI-generated image identification
-         * *   profilePhotoCheck: avatar image moderation
-         * *   advertisingCheck: marketing material identification
-         * *   liveStreamCheck: moderation of screenshots of videos and live streams
-         * 
-         * Valid values:
-         * 
-         * *   liveStreamCheck: moderation of screenshots of videos and live streams
-         * *   baselineCheck: common baseline moderation
-         * *   aigcCheck: AI-generated image identification
-         * *   baselineCheck_pro: common baseline moderation_Professional
-         * *   advertisingCheck: marketing material identification
-         * *   baselineCheck_cb: common baseline moderation_For regions outside the Chinese mainland
-         * *   tonalityImprove: content governance moderation
-         * *   profilePhotoCheck: avatar image moderation
+         * <strong>example:</strong>
+         * <p>baselineCheck</p>
          */
         public Builder service(String service) {
             this.putBodyParameter("Service", service);
@@ -97,11 +101,14 @@ public class ImageModerationRequest extends Request {
         }
 
         /**
-         * The parameters required by the moderation service. The value is a JSON string.
-         * <p>
+         * <p>The parameters required by the moderation service. The value is a JSON string.</p>
+         * <ul>
+         * <li>imageUrl: the URL of the object that you want to moderate. This parameter is required.</li>
+         * <li>dataId: the ID of the object that you want to moderate. This parameter is optional.</li>
+         * </ul>
          * 
-         * *   imageUrl: the URL of the object that you want to moderate. This parameter is required.
-         * *   dataId: the ID of the object that you want to moderate. This parameter is optional.
+         * <strong>example:</strong>
+         * <p>{&quot;imageUrl&quot;:&quot;<a href="https://www.aliyun.com/test.jpg%22,%22dataId%22:%22img1234567%22%7D">https://www.aliyun.com/test.jpg&quot;,&quot;dataId&quot;:&quot;img1234567&quot;}</a></p>
          */
         public Builder serviceParameters(String serviceParameters) {
             this.putBodyParameter("ServiceParameters", serviceParameters);

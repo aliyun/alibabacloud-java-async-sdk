@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFileModerationResultResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFileModerationResultResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned HTTP status code. The status code 200 indicates that the request was successful.
+         * <p>The returned HTTP status code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned in response to the request.
+         * <p>The message that is returned in response to the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6CF2815C-C8C7-4A01-B52E-FF6E24F53492</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFileModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileModerationResultResponseBody</p>
+     */
     public static class LabelResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Confidence")
         private Float confidence;
@@ -161,7 +177,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private String label; 
 
             /**
-             * The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.
+             * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25.0</p>
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -169,7 +188,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a title.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -177,7 +199,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the labels.
+             * <p>The details of the labels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nonlabel</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -191,6 +216,12 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFileModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileModerationResultResponseBody</p>
+     */
     public static class Location extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("H")
         private Integer h;
@@ -254,7 +285,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private Integer y; 
 
             /**
-             * The H value of the coordinate point.
+             * <p>The H value of the coordinate point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44</p>
              */
             public Builder h(Integer h) {
                 this.h = h;
@@ -262,7 +296,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The W value of the coordinate point.
+             * <p>The W value of the coordinate point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33</p>
              */
             public Builder w(Integer w) {
                 this.w = w;
@@ -270,7 +307,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The X value of the coordinate point.
+             * <p>The X value of the coordinate point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder x(Integer x) {
                 this.x = x;
@@ -278,7 +318,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The Y value of the coordinate point.
+             * <p>The Y value of the coordinate point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder y(Integer y) {
                 this.y = y;
@@ -292,6 +335,12 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFileModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileModerationResultResponseBody</p>
+     */
     public static class ImageResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -367,7 +416,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private String service; 
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a title.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -375,7 +427,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The label information.
+             * <p>The label information.</p>
              */
             public Builder labelResult(java.util.List < LabelResult> labelResult) {
                 this.labelResult = labelResult;
@@ -383,7 +435,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The location information
+             * <p>The location information</p>
              */
             public Builder location(Location location) {
                 this.location = location;
@@ -391,7 +443,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Risk Level
+             * <p>Risk Level</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -399,7 +454,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The moderation service.
+             * <p>The moderation service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>baselineCheck</p>
              */
             public Builder service(String service) {
                 this.service = service;
@@ -413,6 +471,12 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFileModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileModerationResultResponseBody</p>
+     */
     public static class TextResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -524,7 +588,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private String textSegment; 
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a title.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -532,7 +599,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the labels.
+             * <p>The details of the labels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>porn</p>
              */
             public Builder labels(String labels) {
                 this.labels = labels;
@@ -540,7 +610,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Risk Level
+             * <p>Risk Level</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -548,7 +621,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The risk details that are hit.
+             * <p>The risk details that are hit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder riskTips(String riskTips) {
                 this.riskTips = riskTips;
@@ -556,7 +632,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The risk words that are hit.
+             * <p>The risk words that are hit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder riskWords(String riskWords) {
                 this.riskWords = riskWords;
@@ -564,7 +643,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The moderation service.
+             * <p>The moderation service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chat_detection</p>
              */
             public Builder service(String service) {
                 this.service = service;
@@ -572,7 +654,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The text content.
+             * <p>The text content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a text.</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -580,7 +665,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The text segmentation information.
+             * <p>The text segmentation information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[0,999]</p>
              */
             public Builder textSegment(String textSegment) {
                 this.textSegment = textSegment;
@@ -594,6 +682,12 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFileModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileModerationResultResponseBody</p>
+     */
     public static class PageResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageResult")
         private java.util.List < ImageResult> imageResult;
@@ -669,7 +763,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private String textUrl; 
 
             /**
-             * The image moderation results.
+             * <p>The image moderation results.</p>
              */
             public Builder imageResult(java.util.List < ImageResult> imageResult) {
                 this.imageResult = imageResult;
@@ -677,7 +771,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The image URL.
+             * <p>The image URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.jpg">https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.jpg</a></p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -685,7 +782,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -693,7 +793,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The text moderation results.
+             * <p>The text moderation results.</p>
              */
             public Builder textResult(java.util.List < TextResult> textResult) {
                 this.textResult = textResult;
@@ -701,7 +801,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The text URL.
+             * <p>The text URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.txt">https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.txt</a></p>
              */
             public Builder textUrl(String textUrl) {
                 this.textUrl = textUrl;
@@ -715,6 +818,12 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFileModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileModerationResultResponseBody</p>
+     */
     public static class ImageLabels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -766,7 +875,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private Integer labelSum; 
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -774,7 +886,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the labels.
+             * <p>The details of the labels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>contraband</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -782,7 +897,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that the label is matched.
+             * <p>The number of times that the label is matched.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder labelSum(Integer labelSum) {
                 this.labelSum = labelSum;
@@ -796,6 +914,12 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFileModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileModerationResultResponseBody</p>
+     */
     public static class ImageSummary extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageLabels")
         private java.util.List < ImageLabels> imageLabels;
@@ -835,7 +959,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private String riskLevel; 
 
             /**
-             * Image Label
+             * <p>Image Label</p>
              */
             public Builder imageLabels(java.util.List < ImageLabels> imageLabels) {
                 this.imageLabels = imageLabels;
@@ -843,7 +967,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Risk Level
+             * <p>Risk Level</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -857,6 +984,12 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFileModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileModerationResultResponseBody</p>
+     */
     public static class TextLabels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -896,7 +1029,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private Integer labelSum; 
 
             /**
-             * The details of the labels.
+             * <p>The details of the labels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>contraband</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -904,7 +1040,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that the label is matched.
+             * <p>The number of times that the label is matched.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder labelSum(Integer labelSum) {
                 this.labelSum = labelSum;
@@ -918,6 +1057,12 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFileModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileModerationResultResponseBody</p>
+     */
     public static class TextSummary extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
@@ -957,7 +1102,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private java.util.List < TextLabels> textLabels; 
 
             /**
-             * Risk Level
+             * <p>Risk Level</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -965,7 +1113,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Text Label
+             * <p>Text Label</p>
              */
             public Builder textLabels(java.util.List < TextLabels> textLabels) {
                 this.textLabels = textLabels;
@@ -979,6 +1127,12 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFileModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileModerationResultResponseBody</p>
+     */
     public static class PageSummary extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageSummary")
         private ImageSummary imageSummary;
@@ -1030,7 +1184,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private TextSummary textSummary; 
 
             /**
-             * Image Results Summary
+             * <p>Image Results Summary</p>
              */
             public Builder imageSummary(ImageSummary imageSummary) {
                 this.imageSummary = imageSummary;
@@ -1038,7 +1192,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Number of pages
+             * <p>Number of pages</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageSum(Integer pageSum) {
                 this.pageSum = pageSum;
@@ -1046,7 +1203,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Text Results Summary
+             * <p>Text Results Summary</p>
              */
             public Builder textSummary(TextSummary textSummary) {
                 this.textSummary = textSummary;
@@ -1060,6 +1217,12 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFileModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileModerationResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
@@ -1147,7 +1310,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The ID of the moderated object.
+             * <p>The ID of the moderated object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26769ada6e264e7ba9aa048241e12be9</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -1155,7 +1321,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Optional. The document type.
+             * <p>Optional. The document type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>doc</p>
              */
             public Builder docType(String docType) {
                 this.docType = docType;
@@ -1163,7 +1332,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the moderation results.
+             * <p>An array that consists of the moderation results.</p>
              */
             public Builder pageResult(java.util.List < PageResult> pageResult) {
                 this.pageResult = pageResult;
@@ -1171,7 +1340,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Summary of results
+             * <p>Summary of results</p>
              */
             public Builder pageSummary(PageSummary pageSummary) {
                 this.pageSummary = pageSummary;
@@ -1179,7 +1348,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Risk Level
+             * <p>Risk Level</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -1187,7 +1359,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the moderated object.
+             * <p>The URL of the moderated object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.pdf">https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.pdf</a></p>
              */
             public Builder url(String url) {
                 this.url = url;

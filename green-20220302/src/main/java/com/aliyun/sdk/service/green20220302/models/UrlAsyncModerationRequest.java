@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UrlAsyncModerationRequest} extends {@link RequestModel}
  *
  * <p>UrlAsyncModerationRequest</p>
@@ -67,7 +68,10 @@ public class UrlAsyncModerationRequest extends Request {
         } 
 
         /**
-         * The type of the moderation service.
+         * <p>The type of the moderation service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>url_detection</p>
          */
         public Builder service(String service) {
             this.putQueryParameter("Service", service);
@@ -76,7 +80,13 @@ public class UrlAsyncModerationRequest extends Request {
         }
 
         /**
-         * The parameters required by the moderation service. The value is a JSON string.
+         * <p>The parameters required by the moderation service. The value is a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *         &quot;url&quot;: &quot;<a href="https://help.aliyun.com/">https://help.aliyun.com/</a>&quot;,
+         *         &quot;dataId&quot;: &quot;url123******&quot;
+         * }</p>
          */
         public Builder serviceParameters(String serviceParameters) {
             this.putQueryParameter("ServiceParameters", serviceParameters);
