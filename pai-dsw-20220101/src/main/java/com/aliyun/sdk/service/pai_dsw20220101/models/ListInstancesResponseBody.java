@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstancesResponseBody</p>
@@ -170,6 +171,12 @@ public class ListInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class CPU extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
@@ -211,6 +218,12 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class Affinity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CPU")
         private CPU CPU;
@@ -252,6 +265,12 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class CloudDisks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Capacity")
         private String capacity;
@@ -353,6 +372,12 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class Datasets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatasetId")
         private String datasetId;
@@ -474,6 +499,12 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class IdleInstanceCuller extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CpuPercentThreshold")
         private Integer cpuPercentThreshold;
@@ -595,6 +626,12 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class InstanceShutdownTimer extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DueTime")
         private String dueTime;
@@ -716,6 +753,12 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class InstanceSnapshotList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
@@ -917,6 +960,12 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class Labels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -978,6 +1027,12 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class LatestSnapshot extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
@@ -1179,6 +1234,12 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class RequestedResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CPU")
         private String CPU;
@@ -1300,6 +1361,12 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class UserVpc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultRoute")
         private String defaultRoute;
@@ -1441,6 +1508,12 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AcceleratorType")
         private String acceleratorType;
@@ -2124,7 +2197,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Jupyterlab Url。
+             * <p>Jupyterlab Url。</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/lab/">https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/lab/</a></p>
              */
             public Builder jupyterlabUrl(String jupyterlabUrl) {
                 this.jupyterlabUrl = jupyterlabUrl;
@@ -2244,7 +2320,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Web IDE url。
+             * <p>Web IDE url。</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/ide/">https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/ide/</a></p>
              */
             public Builder webIDEUrl(String webIDEUrl) {
                 this.webIDEUrl = webIDEUrl;

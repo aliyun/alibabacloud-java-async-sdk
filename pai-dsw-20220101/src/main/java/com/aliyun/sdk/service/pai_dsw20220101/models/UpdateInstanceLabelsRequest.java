@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateInstanceLabelsRequest} extends {@link RequestModel}
  *
  * <p>UpdateInstanceLabelsRequest</p>
@@ -69,7 +70,10 @@ public class UpdateInstanceLabelsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsw-730xxxxxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -78,7 +82,7 @@ public class UpdateInstanceLabelsRequest extends Request {
         }
 
         /**
-         * Labels.
+         * <p>This parameter is required.</p>
          */
         public Builder labels(java.util.List < Labels> labels) {
             this.putBodyParameter("Labels", labels);
@@ -93,6 +97,12 @@ public class UpdateInstanceLabelsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateInstanceLabelsRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateInstanceLabelsRequest</p>
+     */
     public static class Labels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -134,7 +144,10 @@ public class UpdateInstanceLabelsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>customLabelKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -142,7 +155,10 @@ public class UpdateInstanceLabelsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>labelValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

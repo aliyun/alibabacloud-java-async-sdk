@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLifecycleRequest} extends {@link RequestModel}
  *
  * <p>GetLifecycleRequest</p>
@@ -36,6 +37,10 @@ public class GetLifecycleRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Token")
+    private String token;
+
     private GetLifecycleRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
@@ -44,6 +49,7 @@ public class GetLifecycleRequest extends Request {
         this.order = builder.order;
         this.sessionNumber = builder.sessionNumber;
         this.startTime = builder.startTime;
+        this.token = builder.token;
     }
 
     public static Builder builder() {
@@ -101,6 +107,13 @@ public class GetLifecycleRequest extends Request {
         return this.startTime;
     }
 
+    /**
+     * @return token
+     */
+    public String getToken() {
+        return this.token;
+    }
+
     public static final class Builder extends Request.Builder<GetLifecycleRequest, Builder> {
         private String instanceId; 
         private String endTime; 
@@ -108,6 +121,7 @@ public class GetLifecycleRequest extends Request {
         private String order; 
         private Integer sessionNumber; 
         private String startTime; 
+        private String token; 
 
         private Builder() {
             super();
@@ -121,10 +135,14 @@ public class GetLifecycleRequest extends Request {
             this.order = request.order;
             this.sessionNumber = request.sessionNumber;
             this.startTime = request.startTime;
+            this.token = request.token;
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsw-9698d842b6***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -174,6 +192,15 @@ public class GetLifecycleRequest extends Request {
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * Token.
+         */
+        public Builder token(String token) {
+            this.putQueryParameter("Token", token);
+            this.token = token;
             return this;
         }
 

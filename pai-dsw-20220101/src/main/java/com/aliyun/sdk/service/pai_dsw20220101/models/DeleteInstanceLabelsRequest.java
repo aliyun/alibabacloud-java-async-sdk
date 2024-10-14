@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteInstanceLabelsRequest} extends {@link RequestModel}
  *
  * <p>DeleteInstanceLabelsRequest</p>
@@ -69,7 +70,10 @@ public class DeleteInstanceLabelsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsw-730xxxxxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -78,7 +82,10 @@ public class DeleteInstanceLabelsRequest extends Request {
         }
 
         /**
-         * LabelKeys.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>labelKey1,labelKey2,labelKey3</p>
          */
         public Builder labelKeys(String labelKeys) {
             this.putQueryParameter("LabelKeys", labelKeys);

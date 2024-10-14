@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEcsSpecsResponseBody} extends {@link TeaModel}
  *
  * <p>ListEcsSpecsResponseBody</p>
@@ -170,6 +171,12 @@ public class ListEcsSpecsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEcsSpecsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEcsSpecsResponseBody</p>
+     */
     public static class Labels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -231,6 +238,12 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEcsSpecsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEcsSpecsResponseBody</p>
+     */
     public static class EcsSpecs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AcceleratorType")
         private String acceleratorType;

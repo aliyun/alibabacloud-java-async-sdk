@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateInstanceRequest} extends {@link RequestModel}
  *
  * <p>UpdateInstanceRequest</p>
@@ -348,7 +349,10 @@ public class UpdateInstanceRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsw-730xxxxxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -552,6 +556,12 @@ public class UpdateInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateInstanceRequest</p>
+     */
     public static class CPU extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
@@ -593,6 +603,12 @@ public class UpdateInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateInstanceRequest</p>
+     */
     public static class Affinity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CPU")
         private CPU CPU;
@@ -634,6 +650,12 @@ public class UpdateInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateInstanceRequest</p>
+     */
     public static class CloudDisks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Capacity")
         private String capacity;
@@ -695,6 +717,12 @@ public class UpdateInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateInstanceRequest</p>
+     */
     public static class Datasets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatasetId")
         private String datasetId;
@@ -703,6 +731,7 @@ public class UpdateInstanceRequest extends Request {
         private String mountPath;
 
         @com.aliyun.core.annotation.NameInMap("OptionType")
+        @Deprecated
         private String optionType;
 
         @com.aliyun.core.annotation.NameInMap("Options")
@@ -816,6 +845,12 @@ public class UpdateInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateInstanceRequest</p>
+     */
     public static class RequestedResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CPU")
         private String CPU;
@@ -937,6 +972,12 @@ public class UpdateInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateInstanceRequest</p>
+     */
     public static class UserVpc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultRoute")
         private String defaultRoute;

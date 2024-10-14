@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserConfigResponseBody} extends {@link TeaModel}
  *
  * <p>GetUserConfigResponseBody</p>
@@ -210,6 +211,12 @@ public class GetUserConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetUserConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserConfigResponseBody</p>
+     */
     public static class FreeTier extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;

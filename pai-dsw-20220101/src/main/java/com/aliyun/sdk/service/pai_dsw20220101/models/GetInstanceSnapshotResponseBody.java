@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceSnapshotResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceSnapshotResponseBody</p>
@@ -370,6 +371,12 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceSnapshotResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceSnapshotResponseBody</p>
+     */
     public static class Labels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;

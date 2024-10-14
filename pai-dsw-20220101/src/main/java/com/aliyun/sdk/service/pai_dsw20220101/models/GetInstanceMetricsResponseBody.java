@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceMetricsResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceMetricsResponseBody</p>
@@ -170,6 +171,12 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceMetricsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceMetricsResponseBody</p>
+     */
     public static class Metrics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Time")
         private Long time;
@@ -231,6 +238,12 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceMetricsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceMetricsResponseBody</p>
+     */
     public static class PodMetrics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Metrics")
         private java.util.List < Metrics> metrics;

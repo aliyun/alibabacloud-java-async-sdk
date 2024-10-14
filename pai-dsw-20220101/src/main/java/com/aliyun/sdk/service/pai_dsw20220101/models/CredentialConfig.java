@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CredentialConfig} extends {@link TeaModel}
  *
  * <p>CredentialConfig</p>
@@ -90,6 +91,12 @@ public class CredentialConfig extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CredentialConfig} extends {@link TeaModel}
+     *
+     * <p>CredentialConfig</p>
+     */
     public static class UserInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessKeyId")
         private String accessKeyId;
@@ -191,6 +198,12 @@ public class CredentialConfig extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CredentialConfig} extends {@link TeaModel}
+     *
+     * <p>CredentialConfig</p>
+     */
     public static class Roles extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssumeRoleFor")
         private String assumeRoleFor;
@@ -284,7 +297,10 @@ public class CredentialConfig extends TeaModel {
             }
 
             /**
-             * RoleArn.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::123******:role/****</p>
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -292,7 +308,10 @@ public class CredentialConfig extends TeaModel {
             }
 
             /**
-             * RoleType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service</p>
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;
@@ -314,6 +333,12 @@ public class CredentialConfig extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CredentialConfig} extends {@link TeaModel}
+     *
+     * <p>CredentialConfig</p>
+     */
     public static class Configs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -367,7 +392,10 @@ public class CredentialConfig extends TeaModel {
             private String type; 
 
             /**
-             * Key.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -383,7 +411,10 @@ public class CredentialConfig extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Role</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateInstanceRequest</p>
@@ -505,6 +506,12 @@ public class CreateInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
     public static class CPU extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
@@ -546,6 +553,12 @@ public class CreateInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
     public static class Affinity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CPU")
         private CPU CPU;
@@ -587,6 +600,12 @@ public class CreateInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
     public static class Status extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Available")
         private Long available;
@@ -668,6 +687,12 @@ public class CreateInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
     public static class CloudDisks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Capacity")
         private String capacity;
@@ -789,6 +814,12 @@ public class CreateInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
     public static class Datasets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatasetId")
         private String datasetId;
@@ -797,6 +828,7 @@ public class CreateInstanceRequest extends Request {
         private String mountPath;
 
         @com.aliyun.core.annotation.NameInMap("OptionType")
+        @Deprecated
         private String optionType;
 
         @com.aliyun.core.annotation.NameInMap("Options")
@@ -910,6 +942,12 @@ public class CreateInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
     public static class Labels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -971,6 +1009,12 @@ public class CreateInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
     public static class RequestedResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CPU")
         private String CPU;
@@ -1092,6 +1136,12 @@ public class CreateInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
     public static class UserVpc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultRoute")
         private String defaultRoute;

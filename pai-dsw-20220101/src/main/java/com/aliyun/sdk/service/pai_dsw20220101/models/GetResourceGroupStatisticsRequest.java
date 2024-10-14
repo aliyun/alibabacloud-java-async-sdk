@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourceGroupStatisticsRequest} extends {@link RequestModel}
  *
  * <p>GetResourceGroupStatisticsRequest</p>
@@ -99,7 +100,10 @@ public class GetResourceGroupStatisticsRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-08T15:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -108,7 +112,10 @@ public class GetResourceGroupStatisticsRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-123456789</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -117,7 +124,10 @@ public class GetResourceGroupStatisticsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-08T15:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -126,7 +136,10 @@ public class GetResourceGroupStatisticsRequest extends Request {
         }
 
         /**
-         * WorkspaceIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27218,34956</p>
          */
         public Builder workspaceIds(String workspaceIds) {
             this.putQueryParameter("WorkspaceIds", workspaceIds);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceSnapshotRequest} extends {@link RequestModel}
  *
  * <p>CreateInstanceSnapshotRequest</p>
@@ -138,7 +139,10 @@ public class CreateInstanceSnapshotRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsw-730xxxxxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -207,6 +211,12 @@ public class CreateInstanceSnapshotRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateInstanceSnapshotRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceSnapshotRequest</p>
+     */
     public static class Labels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;

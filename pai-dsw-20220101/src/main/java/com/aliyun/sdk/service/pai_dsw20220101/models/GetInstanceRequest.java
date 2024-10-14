@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceRequest} extends {@link RequestModel}
  *
  * <p>GetInstanceRequest</p>
@@ -16,9 +17,14 @@ public class GetInstanceRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Token")
+    private String token;
+
     private GetInstanceRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.token = builder.token;
     }
 
     public static Builder builder() {
@@ -41,8 +47,16 @@ public class GetInstanceRequest extends Request {
         return this.instanceId;
     }
 
+    /**
+     * @return token
+     */
+    public String getToken() {
+        return this.token;
+    }
+
     public static final class Builder extends Request.Builder<GetInstanceRequest, Builder> {
         private String instanceId; 
+        private String token; 
 
         private Builder() {
             super();
@@ -51,14 +65,27 @@ public class GetInstanceRequest extends Request {
         private Builder(GetInstanceRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.token = request.token;
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsw-730xxxxxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * Token.
+         */
+        public Builder token(String token) {
+            this.putQueryParameter("Token", token);
+            this.token = token;
             return this;
         }
 

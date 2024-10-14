@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEcsSpecsRequest} extends {@link RequestModel}
  *
  * <p>ListEcsSpecsRequest</p>
@@ -110,7 +111,10 @@ public class ListEcsSpecsRequest extends Request {
         } 
 
         /**
-         * AcceleratorType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder acceleratorType(String acceleratorType) {
             this.putQueryParameter("AcceleratorType", acceleratorType);

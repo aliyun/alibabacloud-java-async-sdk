@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEcsSpecsResponse} extends {@link TeaModel}
  *
  * <p>ListEcsSpecsResponse</p>

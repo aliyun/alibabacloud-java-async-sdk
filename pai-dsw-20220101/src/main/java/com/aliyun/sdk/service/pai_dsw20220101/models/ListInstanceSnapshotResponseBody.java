@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceSnapshotResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstanceSnapshotResponseBody</p>
@@ -170,6 +171,12 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstanceSnapshotResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceSnapshotResponseBody</p>
+     */
     public static class Labels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -231,6 +238,12 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstanceSnapshotResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceSnapshotResponseBody</p>
+     */
     public static class Snapshots extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExcludePaths")
         private java.util.List < String > excludePaths;

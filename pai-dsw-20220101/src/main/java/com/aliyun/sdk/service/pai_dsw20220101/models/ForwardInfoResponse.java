@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ForwardInfoResponse} extends {@link TeaModel}
  *
  * <p>ForwardInfoResponse</p>
@@ -218,6 +219,12 @@ public class ForwardInfoResponse extends Response {
 
     } 
 
+    /**
+     * 
+     * {@link ForwardInfoResponse} extends {@link TeaModel}
+     *
+     * <p>ForwardInfoResponse</p>
+     */
     public static class Internet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
@@ -279,6 +286,12 @@ public class ForwardInfoResponse extends Response {
         } 
 
     }
+    /**
+     * 
+     * {@link ForwardInfoResponse} extends {@link TeaModel}
+     *
+     * <p>ForwardInfoResponse</p>
+     */
     public static class Intranet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
@@ -340,6 +353,12 @@ public class ForwardInfoResponse extends Response {
         } 
 
     }
+    /**
+     * 
+     * {@link ForwardInfoResponse} extends {@link TeaModel}
+     *
+     * <p>ForwardInfoResponse</p>
+     */
     public static class ConnectInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Internet")
         private Internet internet;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteIdleInstanceCullerResponse} extends {@link TeaModel}
  *
  * <p>DeleteIdleInstanceCullerResponse</p>

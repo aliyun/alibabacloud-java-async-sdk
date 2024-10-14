@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceEventsRequest} extends {@link RequestModel}
  *
  * <p>GetInstanceEventsRequest</p>
@@ -28,12 +29,17 @@ public class GetInstanceEventsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Token")
+    private String token;
+
     private GetInstanceEventsRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.endTime = builder.endTime;
         this.maxEventsNum = builder.maxEventsNum;
         this.startTime = builder.startTime;
+        this.token = builder.token;
     }
 
     public static Builder builder() {
@@ -77,11 +83,19 @@ public class GetInstanceEventsRequest extends Request {
         return this.startTime;
     }
 
+    /**
+     * @return token
+     */
+    public String getToken() {
+        return this.token;
+    }
+
     public static final class Builder extends Request.Builder<GetInstanceEventsRequest, Builder> {
         private String instanceId; 
         private String endTime; 
         private Integer maxEventsNum; 
         private String startTime; 
+        private String token; 
 
         private Builder() {
             super();
@@ -93,10 +107,14 @@ public class GetInstanceEventsRequest extends Request {
             this.endTime = request.endTime;
             this.maxEventsNum = request.maxEventsNum;
             this.startTime = request.startTime;
+            this.token = request.token;
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsw-730xxxxxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -128,6 +146,15 @@ public class GetInstanceEventsRequest extends Request {
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * Token.
+         */
+        public Builder token(String token) {
+            this.putQueryParameter("Token", token);
+            this.token = token;
             return this;
         }
 

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteInstanceSnapshotRequest} extends {@link RequestModel}
  *
  * <p>DeleteInstanceSnapshotRequest</p>
@@ -69,7 +70,10 @@ public class DeleteInstanceSnapshotRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsw-730xxxxxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -78,7 +82,10 @@ public class DeleteInstanceSnapshotRequest extends Request {
         }
 
         /**
-         * SnapshotId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snp-05cexxxxxxxxx</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putPathParameter("SnapshotId", snapshotId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceStatisticsRequest} extends {@link RequestModel}
  *
  * <p>ListInstanceStatisticsRequest</p>
@@ -54,7 +55,10 @@ public class ListInstanceStatisticsRequest extends Request {
         } 
 
         /**
-         * WorkspaceIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27218,34956</p>
          */
         public Builder workspaceIds(String workspaceIds) {
             this.putQueryParameter("WorkspaceIds", workspaceIds);

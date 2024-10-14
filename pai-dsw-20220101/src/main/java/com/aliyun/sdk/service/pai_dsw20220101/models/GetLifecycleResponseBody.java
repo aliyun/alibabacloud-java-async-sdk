@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLifecycleResponseBody} extends {@link TeaModel}
  *
  * <p>GetLifecycleResponseBody</p>
@@ -150,6 +151,12 @@ public class GetLifecycleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetLifecycleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLifecycleResponseBody</p>
+     */
     public static class Lifecycle extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;

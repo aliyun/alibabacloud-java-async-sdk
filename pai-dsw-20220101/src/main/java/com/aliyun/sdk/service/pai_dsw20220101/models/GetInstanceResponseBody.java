@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceResponseBody</p>
@@ -781,7 +782,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Jupyterlab Url。
+         * <p>Jupyterlab Url。</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/lab/">https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/lab/</a></p>
          */
         public Builder jupyterlabUrl(String jupyterlabUrl) {
             this.jupyterlabUrl = jupyterlabUrl;
@@ -933,7 +937,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Web IDE url。
+         * <p>Web IDE url。</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/ide/">https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/ide/</a></p>
          */
         public Builder webIDEUrl(String webIDEUrl) {
             this.webIDEUrl = webIDEUrl;
@@ -970,6 +977,12 @@ public class GetInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class CPU extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
@@ -1011,6 +1024,12 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class Affinity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CPU")
         private CPU CPU;
@@ -1052,6 +1071,12 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class CloudDisks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Capacity")
         private String capacity;
@@ -1153,6 +1178,12 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class Datasets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatasetId")
         private String datasetId;
@@ -1274,6 +1305,12 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class IdleInstanceCuller extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CpuPercentThreshold")
         private Integer cpuPercentThreshold;
@@ -1395,6 +1432,12 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class InstanceShutdownTimer extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DueTime")
         private String dueTime;
@@ -1516,6 +1559,12 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class InstanceSnapshotList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
@@ -1639,7 +1688,10 @@ public class GetInstanceResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 快照创建时间
+             * <p>快照创建时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-12T14:36:01Z</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -1647,7 +1699,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 快照修改时间
+             * <p>快照修改时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-12T14:36:01Z</p>
              */
             public Builder gmtModifiedTime(String gmtModifiedTime) {
                 this.gmtModifiedTime = gmtModifiedTime;
@@ -1655,7 +1710,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 镜像Id
+             * <p>镜像Id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>image-05cefd0be2exxxx</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1663,7 +1721,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 镜像名称
+             * <p>镜像名称</p>
+             * 
+             * <strong>example:</strong>
+             * <p>py36_cpu_tf1.12_ubuntu</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -1671,7 +1732,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 镜像Url
+             * <p>镜像Url</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry.cn-shanghai.aliyuncs.com/pai_product/tensorflow:py36_cpu_tf1.12_ubuntu</p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -1679,7 +1743,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 实例快照错误代码
+             * <p>实例快照错误代码</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Internal Error</p>
              */
             public Builder reasonCode(String reasonCode) {
                 this.reasonCode = reasonCode;
@@ -1687,7 +1754,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 实例快照错误消息
+             * <p>实例快照错误消息</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImagePullBackOff</p>
              */
             public Builder reasonMessage(String reasonMessage) {
                 this.reasonMessage = reasonMessage;
@@ -1695,7 +1765,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 镜像仓库Url
+             * <p>镜像仓库Url</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://cr.console.aliyun.com/repository/cn-hangzhou/zouxu/kf/images">https://cr.console.aliyun.com/repository/cn-hangzhou/zouxu/kf/images</a></p>
              */
             public Builder repositoryUrl(String repositoryUrl) {
                 this.repositoryUrl = repositoryUrl;
@@ -1703,7 +1776,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 实例快照状态
+             * <p>实例快照状态</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pushing</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1717,6 +1793,12 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class Labels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -1778,6 +1860,12 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class LatestSnapshot extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
@@ -1901,7 +1989,10 @@ public class GetInstanceResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 快照创建时间
+             * <p>快照创建时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-12T14:36:01Z</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -1909,7 +2000,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 快照修改时间
+             * <p>快照修改时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-12T14:36:01Z</p>
              */
             public Builder gmtModifiedTime(String gmtModifiedTime) {
                 this.gmtModifiedTime = gmtModifiedTime;
@@ -1917,7 +2011,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 镜像Id
+             * <p>镜像Id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>image-05cefd0be2exxxx</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1925,7 +2022,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 镜像名称
+             * <p>镜像名称</p>
+             * 
+             * <strong>example:</strong>
+             * <p>py36_cpu_tf1.12_ubuntu</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -1933,7 +2033,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 镜像Url
+             * <p>镜像Url</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry.cn-shanghai.aliyuncs.com/pai_product/tensorflow:py36_cpu_tf1.12_ubuntu</p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -1941,7 +2044,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 实例快照错误代码
+             * <p>实例快照错误代码</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Internal Error</p>
              */
             public Builder reasonCode(String reasonCode) {
                 this.reasonCode = reasonCode;
@@ -1949,7 +2055,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 实例快照错误消息
+             * <p>实例快照错误消息</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImagePullBackOff</p>
              */
             public Builder reasonMessage(String reasonMessage) {
                 this.reasonMessage = reasonMessage;
@@ -1957,7 +2066,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 镜像仓库Url
+             * <p>镜像仓库Url</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://cr.console.aliyun.com/repository/cn-hangzhou/zouxu/kf/images">https://cr.console.aliyun.com/repository/cn-hangzhou/zouxu/kf/images</a></p>
              */
             public Builder repositoryUrl(String repositoryUrl) {
                 this.repositoryUrl = repositoryUrl;
@@ -1965,7 +2077,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 实例快照状态
+             * <p>实例快照状态</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pushing</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1979,6 +2094,12 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class NodeErrorRecovery extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("autoSwitchCountdownSeconds")
         private Long autoSwitchCountdownSeconds;
@@ -2060,6 +2181,12 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class RequestedResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CPU")
         private String CPU;
@@ -2181,6 +2308,12 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class UserVpc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultRoute")
         private String defaultRoute;
@@ -2308,7 +2441,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Vpc Id。
+             * <p>Vpc Id。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-xxxxx</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
