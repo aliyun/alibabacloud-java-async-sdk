@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightModifyOrderDetailV2ResponseBody} extends {@link TeaModel}
  *
  * <p>FlightModifyOrderDetailV2ResponseBody</p>
@@ -113,7 +114,7 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         }
 
         /**
-         * module
+         * <p>module</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -121,7 +122,10 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>407543AF-2BD9-5890-BD92-9D1AB7218B27</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +141,10 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210bc2dc16839612026565712dcbe6</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -150,6 +157,139 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FlightModifyOrderDetailV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOrderDetailV2ResponseBody</p>
+     */
+    public static class Attributes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("baggage_rule")
+        private String baggageRule;
+
+        @com.aliyun.core.annotation.NameInMap("change_rule")
+        private String changeRule;
+
+        @com.aliyun.core.annotation.NameInMap("latest_pay_time")
+        private Object latestPayTime;
+
+        @com.aliyun.core.annotation.NameInMap("latest_pay_time_str")
+        private String latestPayTimeStr;
+
+        @com.aliyun.core.annotation.NameInMap("refund_rule")
+        private String refundRule;
+
+        private Attributes(Builder builder) {
+            this.baggageRule = builder.baggageRule;
+            this.changeRule = builder.changeRule;
+            this.latestPayTime = builder.latestPayTime;
+            this.latestPayTimeStr = builder.latestPayTimeStr;
+            this.refundRule = builder.refundRule;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Attributes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return baggageRule
+         */
+        public String getBaggageRule() {
+            return this.baggageRule;
+        }
+
+        /**
+         * @return changeRule
+         */
+        public String getChangeRule() {
+            return this.changeRule;
+        }
+
+        /**
+         * @return latestPayTime
+         */
+        public Object getLatestPayTime() {
+            return this.latestPayTime;
+        }
+
+        /**
+         * @return latestPayTimeStr
+         */
+        public String getLatestPayTimeStr() {
+            return this.latestPayTimeStr;
+        }
+
+        /**
+         * @return refundRule
+         */
+        public String getRefundRule() {
+            return this.refundRule;
+        }
+
+        public static final class Builder {
+            private String baggageRule; 
+            private String changeRule; 
+            private Object latestPayTime; 
+            private String latestPayTimeStr; 
+            private String refundRule; 
+
+            /**
+             * baggage_rule.
+             */
+            public Builder baggageRule(String baggageRule) {
+                this.baggageRule = baggageRule;
+                return this;
+            }
+
+            /**
+             * change_rule.
+             */
+            public Builder changeRule(String changeRule) {
+                this.changeRule = changeRule;
+                return this;
+            }
+
+            /**
+             * latest_pay_time.
+             */
+            public Builder latestPayTime(Object latestPayTime) {
+                this.latestPayTime = latestPayTime;
+                return this;
+            }
+
+            /**
+             * latest_pay_time_str.
+             */
+            public Builder latestPayTimeStr(String latestPayTimeStr) {
+                this.latestPayTimeStr = latestPayTimeStr;
+                return this;
+            }
+
+            /**
+             * refund_rule.
+             */
+            public Builder refundRule(String refundRule) {
+                this.refundRule = refundRule;
+                return this;
+            }
+
+            public Attributes build() {
+                return new Attributes(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link FlightModifyOrderDetailV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOrderDetailV2ResponseBody</p>
+     */
     public static class ContactInfoDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("contact_email")
         private String contactEmail;
@@ -251,6 +391,139 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyOrderDetailV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOrderDetailV2ResponseBody</p>
+     */
+    public static class FlightChange extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("change_desc")
+        private String changeDesc;
+
+        @com.aliyun.core.annotation.NameInMap("change_status")
+        private String changeStatus;
+
+        @com.aliyun.core.annotation.NameInMap("change_status_code")
+        private String changeStatusCode;
+
+        @com.aliyun.core.annotation.NameInMap("new_segment")
+        private Object newSegment;
+
+        @com.aliyun.core.annotation.NameInMap("passenger_names")
+        private java.util.List < String > passengerNames;
+
+        private FlightChange(Builder builder) {
+            this.changeDesc = builder.changeDesc;
+            this.changeStatus = builder.changeStatus;
+            this.changeStatusCode = builder.changeStatusCode;
+            this.newSegment = builder.newSegment;
+            this.passengerNames = builder.passengerNames;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FlightChange create() {
+            return builder().build();
+        }
+
+        /**
+         * @return changeDesc
+         */
+        public String getChangeDesc() {
+            return this.changeDesc;
+        }
+
+        /**
+         * @return changeStatus
+         */
+        public String getChangeStatus() {
+            return this.changeStatus;
+        }
+
+        /**
+         * @return changeStatusCode
+         */
+        public String getChangeStatusCode() {
+            return this.changeStatusCode;
+        }
+
+        /**
+         * @return newSegment
+         */
+        public Object getNewSegment() {
+            return this.newSegment;
+        }
+
+        /**
+         * @return passengerNames
+         */
+        public java.util.List < String > getPassengerNames() {
+            return this.passengerNames;
+        }
+
+        public static final class Builder {
+            private String changeDesc; 
+            private String changeStatus; 
+            private String changeStatusCode; 
+            private Object newSegment; 
+            private java.util.List < String > passengerNames; 
+
+            /**
+             * change_desc.
+             */
+            public Builder changeDesc(String changeDesc) {
+                this.changeDesc = changeDesc;
+                return this;
+            }
+
+            /**
+             * change_status.
+             */
+            public Builder changeStatus(String changeStatus) {
+                this.changeStatus = changeStatus;
+                return this;
+            }
+
+            /**
+             * change_status_code.
+             */
+            public Builder changeStatusCode(String changeStatusCode) {
+                this.changeStatusCode = changeStatusCode;
+                return this;
+            }
+
+            /**
+             * new_segment.
+             */
+            public Builder newSegment(Object newSegment) {
+                this.newSegment = newSegment;
+                return this;
+            }
+
+            /**
+             * passenger_names.
+             */
+            public Builder passengerNames(java.util.List < String > passengerNames) {
+                this.passengerNames = passengerNames;
+                return this;
+            }
+
+            public FlightChange build() {
+                return new FlightChange(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link FlightModifyOrderDetailV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOrderDetailV2ResponseBody</p>
+     */
     public static class SegmentPosition extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("journey_index")
         private Integer journeyIndex;
@@ -312,6 +585,12 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyOrderDetailV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOrderDetailV2ResponseBody</p>
+     */
     public static class DestFlightInfoDTOS extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airline_code")
         private String airlineCode;
@@ -382,6 +661,9 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dep_time")
         private String depTime;
 
+        @com.aliyun.core.annotation.NameInMap("flight_change")
+        private FlightChange flightChange;
+
         @com.aliyun.core.annotation.NameInMap("flight_no")
         private String flightNo;
 
@@ -430,6 +712,7 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
             this.depCityName = builder.depCityName;
             this.depTerminal = builder.depTerminal;
             this.depTime = builder.depTime;
+            this.flightChange = builder.flightChange;
             this.flightNo = builder.flightNo;
             this.flightType = builder.flightType;
             this.mealDesc = builder.mealDesc;
@@ -610,6 +893,13 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return flightChange
+         */
+        public FlightChange getFlightChange() {
+            return this.flightChange;
+        }
+
+        /**
          * @return flightNo
          */
         public String getFlightNo() {
@@ -689,6 +979,7 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
             private String depCityName; 
             private String depTerminal; 
             private String depTime; 
+            private FlightChange flightChange; 
             private String flightNo; 
             private String flightType; 
             private String mealDesc; 
@@ -883,6 +1174,14 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
             }
 
             /**
+             * flight_change.
+             */
+            public Builder flightChange(FlightChange flightChange) {
+                this.flightChange = flightChange;
+                return this;
+            }
+
+            /**
              * flight_no.
              */
             public Builder flightNo(String flightNo) {
@@ -953,6 +1252,12 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyOrderDetailV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOrderDetailV2ResponseBody</p>
+     */
     public static class ChangeFee extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("change_fee")
         private Long changeFee;
@@ -1034,6 +1339,12 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyOrderDetailV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOrderDetailV2ResponseBody</p>
+     */
     public static class TravelerInfoDTOS extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("birth_date")
         private String birthDate;
@@ -1295,9 +1606,18 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyOrderDetailV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOrderDetailV2ResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("apply_time")
         private String applyTime;
+
+        @com.aliyun.core.annotation.NameInMap("attributes")
+        private Attributes attributes;
 
         @com.aliyun.core.annotation.NameInMap("book_user_email")
         private String bookUserEmail;
@@ -1355,6 +1675,7 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
 
         private Module(Builder builder) {
             this.applyTime = builder.applyTime;
+            this.attributes = builder.attributes;
             this.bookUserEmail = builder.bookUserEmail;
             this.bookUserName = builder.bookUserName;
             this.bookuserPhone = builder.bookuserPhone;
@@ -1388,6 +1709,13 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
          */
         public String getApplyTime() {
             return this.applyTime;
+        }
+
+        /**
+         * @return attributes
+         */
+        public Attributes getAttributes() {
+            return this.attributes;
         }
 
         /**
@@ -1518,6 +1846,7 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
 
         public static final class Builder {
             private String applyTime; 
+            private Attributes attributes; 
             private String bookUserEmail; 
             private String bookUserName; 
             private String bookuserPhone; 
@@ -1542,6 +1871,14 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
              */
             public Builder applyTime(String applyTime) {
                 this.applyTime = applyTime;
+                return this;
+            }
+
+            /**
+             * attributes.
+             */
+            public Builder attributes(Attributes attributes) {
+                this.attributes = attributes;
                 return this;
             }
 

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightCreateOrderRequest} extends {@link RequestModel}
  *
  * <p>FlightCreateOrderRequest</p>
@@ -339,7 +340,10 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * arr_city_code.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HGH</p>
          */
         public Builder arrCityCode(String arrCityCode) {
             this.putBodyParameter("arr_city_code", arrCityCode);
@@ -366,7 +370,10 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * buyer_unique_key.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder buyerUniqueKey(String buyerUniqueKey) {
             this.putBodyParameter("buyer_unique_key", buyerUniqueKey);
@@ -375,7 +382,7 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * contact_info.
+         * <p>This parameter is required.</p>
          */
         public Builder contactInfo(ContactInfo contactInfo) {
             String contactInfoShrink = shrink(contactInfo, "contact_info", "json");
@@ -394,7 +401,10 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * dep_city_code.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BJS</p>
          */
         public Builder depCityCode(String depCityCode) {
             this.putBodyParameter("dep_city_code", depCityCode);
@@ -403,7 +413,10 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * dep_date.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000-00-00 00:00:00</p>
          */
         public Builder depDate(String depDate) {
             this.putBodyParameter("dep_date", depDate);
@@ -412,7 +425,10 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * dis_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dis123</p>
          */
         public Builder disOrderId(String disOrderId) {
             this.putBodyParameter("dis_order_id", disOrderId);
@@ -431,7 +447,10 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * order_params.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000_1_0</p>
          */
         public Builder orderParams(String orderParams) {
             this.putBodyParameter("order_params", orderParams);
@@ -440,7 +459,10 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * ota_item_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7fb731deeb4510b86c17e8c8c25740_11</p>
          */
         public Builder otaItemId(String otaItemId) {
             this.putBodyParameter("ota_item_id", otaItemId);
@@ -449,7 +471,10 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * price.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder price(Long price) {
             this.putBodyParameter("price", price);
@@ -485,7 +510,7 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * traveler_info_list.
+         * <p>This parameter is required.</p>
          */
         public Builder travelerInfoList(java.util.List < TravelerInfoList> travelerInfoList) {
             String travelerInfoListShrink = shrink(travelerInfoList, "traveler_info_list", "json");
@@ -495,7 +520,10 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * trip_type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder tripType(Integer tripType) {
             this.putBodyParameter("trip_type", tripType);
@@ -519,6 +547,12 @@ public class FlightCreateOrderRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link FlightCreateOrderRequest} extends {@link TeaModel}
+     *
+     * <p>FlightCreateOrderRequest</p>
+     */
     public static class ContactInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("contact_email")
         private String contactEmail;
@@ -580,7 +614,7 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * contact_name.
+             * <p>This parameter is required.</p>
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
@@ -588,7 +622,10 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * contact_phone.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12312345211</p>
              */
             public Builder contactPhone(String contactPhone) {
                 this.contactPhone = contactPhone;
@@ -602,6 +639,12 @@ public class FlightCreateOrderRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightCreateOrderRequest} extends {@link TeaModel}
+     *
+     * <p>FlightCreateOrderRequest</p>
+     */
     public static class TravelerInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("birthday")
         private String birthday;
@@ -783,7 +826,10 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * cert_no.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1262651555151</p>
              */
             public Builder certNo(String certNo) {
                 this.certNo = certNo;
@@ -791,7 +837,10 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * cert_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder certType(String certType) {
                 this.certType = certType;
@@ -807,7 +856,7 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * name.
+             * <p>This parameter is required.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -815,7 +864,10 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * 国籍
+             * <p>国籍</p>
+             * 
+             * <strong>example:</strong>
+             * <p>中国大陆</p>
              */
             public Builder nationality(String nationality) {
                 this.nationality = nationality;
@@ -823,7 +875,10 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * 国籍二字码
+             * <p>国籍二字码</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder nationalityCode(String nationalityCode) {
                 this.nationalityCode = nationalityCode;
@@ -831,7 +886,10 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * out_user_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder outUserId(String outUserId) {
                 this.outUserId = outUserId;
@@ -839,7 +897,10 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * phone.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12341231232</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -855,7 +916,10 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(String type) {
                 this.type = type;

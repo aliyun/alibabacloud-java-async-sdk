@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DepartmentSaveRequest} extends {@link RequestModel}
  *
  * <p>DepartmentSaveRequest</p>
@@ -92,6 +93,12 @@ public class DepartmentSaveRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DepartmentSaveRequest} extends {@link TeaModel}
+     *
+     * <p>DepartmentSaveRequest</p>
+     */
     public static class DepartList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("depart_id")
         private Long departId;
@@ -200,7 +207,7 @@ public class DepartmentSaveRequest extends Request {
             }
 
             /**
-             * depart_name.
+             * <p>This parameter is required.</p>
              */
             public Builder departName(String departName) {
                 this.departName = departName;

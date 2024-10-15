@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CommonApplyQueryResponseBody} extends {@link TeaModel}
  *
  * <p>CommonApplyQueryResponseBody</p>
@@ -150,6 +151,12 @@ public class CommonApplyQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CommonApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CommonApplyQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("apply_id")
         private Long applyId;

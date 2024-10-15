@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightOtaItemDetailResponseBody} extends {@link TeaModel}
  *
  * <p>FlightOtaItemDetailResponseBody</p>
@@ -113,7 +114,7 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
         }
 
         /**
-         * module
+         * <p>module</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -121,7 +122,10 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>92359A00-85D8-16C4-AED0-249618DEEC17</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +141,10 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210bc60a16916374201706365d2a16</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -150,6 +157,12 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaItemDetailResponseBody</p>
+     */
     public static class Description extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("desc")
         private String desc;
@@ -251,6 +264,12 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaItemDetailResponseBody</p>
+     */
     public static class ImageDO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("image")
         private String image;
@@ -352,6 +371,12 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaItemDetailResponseBody</p>
+     */
     public static class BaggageSubContentVisualizes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_desc")
         private java.util.List < String > baggageDesc;
@@ -439,7 +464,7 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
             private String subTitle; 
 
             /**
-             * baggage_desc
+             * <p>baggage_desc</p>
              */
             public Builder baggageDesc(java.util.List < String > baggageDesc) {
                 this.baggageDesc = baggageDesc;
@@ -493,6 +518,12 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaItemDetailResponseBody</p>
+     */
     public static class BaggageSubItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_sub_content_visualizes")
         private java.util.List < BaggageSubContentVisualizes> baggageSubContentVisualizes;
@@ -614,6 +645,12 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaItemDetailResponseBody</p>
+     */
     public static class Tips extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("logo")
         private String logo;
@@ -695,6 +732,12 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaItemDetailResponseBody</p>
+     */
     public static class BaggageRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_sub_items")
         private java.util.List < BaggageSubItems> baggageSubItems;
@@ -836,6 +879,12 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaItemDetailResponseBody</p>
+     */
     public static class ExtraContents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -897,6 +946,12 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaItemDetailResponseBody</p>
+     */
     public static class RefundSubContents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fee_desc")
         private String feeDesc;
@@ -978,6 +1033,12 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaItemDetailResponseBody</p>
+     */
     public static class RefundSubItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("is_struct")
         private Boolean isStruct;
@@ -1079,6 +1140,12 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaItemDetailResponseBody</p>
+     */
     public static class ChangeRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("extra_contents")
         private java.util.List < ExtraContents> extraContents;
@@ -1262,7 +1329,7 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
             }
 
             /**
-             * subTableHead
+             * <p>subTableHead</p>
              */
             public Builder subTableHead(java.util.List < String > subTableHead) {
                 this.subTableHead = subTableHead;
@@ -1300,6 +1367,12 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaItemDetailResponseBody</p>
+     */
     public static class RefundRuleExtraContents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -1361,6 +1434,12 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaItemDetailResponseBody</p>
+     */
     public static class RefundSubItemsRefundSubContents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fee_desc")
         private String feeDesc;
@@ -1442,6 +1521,12 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaItemDetailResponseBody</p>
+     */
     public static class RefundRuleRefundSubItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("is_struct")
         private Boolean isStruct;
@@ -1543,6 +1628,12 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaItemDetailResponseBody</p>
+     */
     public static class RefundRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("extra_contents")
         private java.util.List < RefundRuleExtraContents> extraContents;
@@ -1726,7 +1817,7 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
             }
 
             /**
-             * subTableHead
+             * <p>subTableHead</p>
              */
             public Builder subTableHead(java.util.List < String > subTableHead) {
                 this.subTableHead = subTableHead;
@@ -1764,6 +1855,12 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaItemDetailResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_rule")
         private java.util.List < BaggageRule> baggageRule;

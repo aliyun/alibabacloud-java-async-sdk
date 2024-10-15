@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelSearchResponseBody} extends {@link TeaModel}
  *
  * <p>HotelSearchResponseBody</p>
@@ -150,6 +151,12 @@ public class HotelSearchResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HotelSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelSearchResponseBody</p>
+     */
     public static class DiscountDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("label_name")
         private java.util.List < String > labelName;
@@ -211,6 +218,12 @@ public class HotelSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelSearchResponseBody</p>
+     */
     public static class DiscountDesc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cash_reduce_total")
         private String cashReduceTotal;
@@ -332,6 +345,12 @@ public class HotelSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelSearchResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("brand_name")
         private String brandName;
@@ -733,6 +752,12 @@ public class HotelSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelSearchResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("items")
         private java.util.List < Items> items;

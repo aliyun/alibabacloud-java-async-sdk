@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IeFlightBillSettlementQueryResponseBody} extends {@link TeaModel}
  *
  * <p>IeFlightBillSettlementQueryResponseBody</p>
@@ -170,6 +171,12 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link IeFlightBillSettlementQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>IeFlightBillSettlementQueryResponseBody</p>
+     */
     public static class DataList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("advance_day")
         private Integer advanceDay;
@@ -324,11 +331,17 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("index")
         private String index;
 
+        @com.aliyun.core.annotation.NameInMap("ins_order_id")
+        private String insOrderId;
+
         @com.aliyun.core.annotation.NameInMap("insurance_fee")
         private Double insuranceFee;
 
         @com.aliyun.core.annotation.NameInMap("insurance_number")
         private String insuranceNumber;
+
+        @com.aliyun.core.annotation.NameInMap("insurance_product_name")
+        private String insuranceProductName;
 
         @com.aliyun.core.annotation.NameInMap("invoice_title")
         private String invoiceTitle;
@@ -447,6 +460,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("voucher_type")
         private Integer voucherType;
 
+        @com.aliyun.core.annotation.NameInMap("voyage_name")
+        private String voyageName;
+
         private DataList(Builder builder) {
             this.advanceDay = builder.advanceDay;
             this.airlineCorpCode = builder.airlineCorpCode;
@@ -499,8 +515,10 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             this.feeType = builder.feeType;
             this.flightNo = builder.flightNo;
             this.index = builder.index;
+            this.insOrderId = builder.insOrderId;
             this.insuranceFee = builder.insuranceFee;
             this.insuranceNumber = builder.insuranceNumber;
+            this.insuranceProductName = builder.insuranceProductName;
             this.invoiceTitle = builder.invoiceTitle;
             this.mostDifferenceDeptTime = builder.mostDifferenceDeptTime;
             this.mostDifferenceDiscount = builder.mostDifferenceDiscount;
@@ -540,6 +558,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             this.travelerJobNo = builder.travelerJobNo;
             this.travelerName = builder.travelerName;
             this.voucherType = builder.voucherType;
+            this.voyageName = builder.voyageName;
         }
 
         public static Builder builder() {
@@ -908,6 +927,13 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return insOrderId
+         */
+        public String getInsOrderId() {
+            return this.insOrderId;
+        }
+
+        /**
          * @return insuranceFee
          */
         public Double getInsuranceFee() {
@@ -919,6 +945,13 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getInsuranceNumber() {
             return this.insuranceNumber;
+        }
+
+        /**
+         * @return insuranceProductName
+         */
+        public String getInsuranceProductName() {
+            return this.insuranceProductName;
         }
 
         /**
@@ -1194,6 +1227,13 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             return this.voucherType;
         }
 
+        /**
+         * @return voyageName
+         */
+        public String getVoyageName() {
+            return this.voyageName;
+        }
+
         public static final class Builder {
             private Integer advanceDay; 
             private String airlineCorpCode; 
@@ -1246,8 +1286,10 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             private String feeType; 
             private String flightNo; 
             private String index; 
+            private String insOrderId; 
             private Double insuranceFee; 
             private String insuranceNumber; 
+            private String insuranceProductName; 
             private String invoiceTitle; 
             private String mostDifferenceDeptTime; 
             private String mostDifferenceDiscount; 
@@ -1287,6 +1329,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             private String travelerJobNo; 
             private String travelerName; 
             private Integer voucherType; 
+            private String voyageName; 
 
             /**
              * advance_day.
@@ -1353,7 +1396,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 审批扩展自定义字段
+             * <p>审批扩展自定义字段</p>
              */
             public Builder applyExtendField(String applyExtendField) {
                 this.applyExtendField = applyExtendField;
@@ -1697,6 +1740,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * ins_order_id.
+             */
+            public Builder insOrderId(String insOrderId) {
+                this.insOrderId = insOrderId;
+                return this;
+            }
+
+            /**
              * insurance_fee.
              */
             public Builder insuranceFee(Double insuranceFee) {
@@ -1709,6 +1760,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder insuranceNumber(String insuranceNumber) {
                 this.insuranceNumber = insuranceNumber;
+                return this;
+            }
+
+            /**
+             * insurance_product_name.
+             */
+            public Builder insuranceProductName(String insuranceProductName) {
+                this.insuranceProductName = insuranceProductName;
                 return this;
             }
 
@@ -1961,7 +2020,10 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 税率
+             * <p>税率</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6%</p>
              */
             public Builder taxRate(String taxRate) {
                 this.taxRate = taxRate;
@@ -2024,6 +2086,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * voyage_name.
+             */
+            public Builder voyageName(String voyageName) {
+                this.voyageName = voyageName;
+                return this;
+            }
+
             public DataList build() {
                 return new DataList(this);
             } 
@@ -2031,6 +2101,12 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IeFlightBillSettlementQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>IeFlightBillSettlementQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("category")
         private Integer category;

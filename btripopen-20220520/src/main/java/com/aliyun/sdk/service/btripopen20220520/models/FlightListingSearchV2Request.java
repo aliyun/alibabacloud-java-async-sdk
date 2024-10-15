@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightListingSearchV2Request} extends {@link RequestModel}
  *
  * <p>FlightListingSearchV2Request</p>
@@ -239,7 +240,10 @@ public class FlightListingSearchV2Request extends Request {
         }
 
         /**
-         * isv_name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cheshi</p>
          */
         public Builder isvName(String isvName) {
             this.putQueryParameter("isv_name", isvName);
@@ -284,7 +288,7 @@ public class FlightListingSearchV2Request extends Request {
         }
 
         /**
-         * search_journeys.
+         * <p>This parameter is required.</p>
          */
         public Builder searchJourneys(java.util.List < SearchJourneys> searchJourneys) {
             String searchJourneysShrink = shrink(searchJourneys, "search_journeys", "json");
@@ -294,7 +298,10 @@ public class FlightListingSearchV2Request extends Request {
         }
 
         /**
-         * search_mode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder searchMode(Integer searchMode) {
             this.putQueryParameter("search_mode", searchMode);
@@ -303,7 +310,10 @@ public class FlightListingSearchV2Request extends Request {
         }
 
         /**
-         * trip_type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder tripType(Integer tripType) {
             this.putQueryParameter("trip_type", tripType);
@@ -327,6 +337,12 @@ public class FlightListingSearchV2Request extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link FlightListingSearchV2Request} extends {@link TeaModel}
+     *
+     * <p>FlightListingSearchV2Request</p>
+     */
     public static class SelectedFlights extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_airport_code")
         private String arrAirportCode;
@@ -488,6 +504,12 @@ public class FlightListingSearchV2Request extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightListingSearchV2Request} extends {@link TeaModel}
+     *
+     * <p>FlightListingSearchV2Request</p>
+     */
     public static class SearchJourneys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_city_code")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -554,7 +576,10 @@ public class FlightListingSearchV2Request extends Request {
             private java.util.List < SelectedFlights> selectedFlights; 
 
             /**
-             * arr_city_code.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HGH</p>
              */
             public Builder arrCityCode(String arrCityCode) {
                 this.arrCityCode = arrCityCode;
@@ -562,7 +587,10 @@ public class FlightListingSearchV2Request extends Request {
             }
 
             /**
-             * dep_city_code.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BJS</p>
              */
             public Builder depCityCode(String depCityCode) {
                 this.depCityCode = depCityCode;
@@ -570,7 +598,10 @@ public class FlightListingSearchV2Request extends Request {
             }
 
             /**
-             * dep_date.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-09-01</p>
              */
             public Builder depDate(String depDate) {
                 this.depDate = depDate;

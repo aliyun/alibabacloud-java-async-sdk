@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MealBillSettlementQueryResponse} extends {@link TeaModel}
  *
  * <p>MealBillSettlementQueryResponse</p>

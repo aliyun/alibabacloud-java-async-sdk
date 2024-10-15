@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyExternalNodeStatusUpdateRequest} extends {@link RequestModel}
  *
  * <p>ApplyExternalNodeStatusUpdateRequest</p>
@@ -97,7 +98,10 @@ public class ApplyExternalNodeStatusUpdateRequest extends Request {
         } 
 
         /**
-         * node_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("node_id", nodeId);
@@ -116,7 +120,10 @@ public class ApplyExternalNodeStatusUpdateRequest extends Request {
         }
 
         /**
-         * process_action_result.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROCESS_AGREE</p>
          */
         public Builder processActionResult(String processActionResult) {
             this.putBodyParameter("process_action_result", processActionResult);
@@ -140,6 +147,12 @@ public class ApplyExternalNodeStatusUpdateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ApplyExternalNodeStatusUpdateRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyExternalNodeStatusUpdateRequest</p>
+     */
     public static class OperationRecords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("comment")
         private String comment;

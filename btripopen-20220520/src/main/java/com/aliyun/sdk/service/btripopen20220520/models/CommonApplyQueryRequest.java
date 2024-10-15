@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CommonApplyQueryRequest} extends {@link RequestModel}
  *
  * <p>CommonApplyQueryRequest</p>
@@ -119,7 +120,10 @@ public class CommonApplyQueryRequest extends Request {
         }
 
         /**
-         * biz_category.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder bizCategory(Integer bizCategory) {
             this.putQueryParameter("biz_category", bizCategory);

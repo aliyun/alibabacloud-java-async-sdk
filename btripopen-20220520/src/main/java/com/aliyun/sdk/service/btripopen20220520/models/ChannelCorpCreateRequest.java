@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChannelCorpCreateRequest} extends {@link RequestModel}
  *
  * <p>ChannelCorpCreateRequest</p>
@@ -169,7 +170,7 @@ public class ChannelCorpCreateRequest extends Request {
         } 
 
         /**
-         * administrator_name.
+         * <p>This parameter is required.</p>
          */
         public Builder administratorName(String administratorName) {
             this.putBodyParameter("administrator_name", administratorName);
@@ -178,7 +179,10 @@ public class ChannelCorpCreateRequest extends Request {
         }
 
         /**
-         * administrator_phone.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18378889782</p>
          */
         public Builder administratorPhone(String administratorPhone) {
             this.putBodyParameter("administrator_phone", administratorPhone);
@@ -196,7 +200,7 @@ public class ChannelCorpCreateRequest extends Request {
         }
 
         /**
-         * corp_name.
+         * <p>This parameter is required.</p>
          */
         public Builder corpName(String corpName) {
             this.putBodyParameter("corp_name", corpName);
@@ -223,7 +227,10 @@ public class ChannelCorpCreateRequest extends Request {
         }
 
         /**
-         * third_corp_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00001</p>
          */
         public Builder thirdCorpId(String thirdCorpId) {
             this.putBodyParameter("third_corp_id", thirdCorpId);

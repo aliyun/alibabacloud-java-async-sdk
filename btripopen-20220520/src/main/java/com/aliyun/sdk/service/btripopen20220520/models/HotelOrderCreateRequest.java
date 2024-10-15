@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelOrderCreateRequest} extends {@link RequestModel}
  *
  * <p>HotelOrderCreateRequest</p>
@@ -378,7 +379,10 @@ public class HotelOrderCreateRequest extends Request {
         } 
 
         /**
-         * btrip_user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123122</p>
          */
         public Builder btripUserId(String btripUserId) {
             this.putBodyParameter("btrip_user_id", btripUserId);
@@ -387,7 +391,10 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * check_in.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-20</p>
          */
         public Builder checkIn(String checkIn) {
             this.putBodyParameter("check_in", checkIn);
@@ -396,7 +403,10 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * check_out.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-20</p>
          */
         public Builder checkOut(String checkOut) {
             this.putBodyParameter("check_out", checkOut);
@@ -423,7 +433,10 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * contract_phone.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19281772123</p>
          */
         public Builder contractPhone(String contractPhone) {
             this.putBodyParameter("contract_phone", contractPhone);
@@ -432,7 +445,10 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * corp_pay_price.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder corpPayPrice(Long corpPayPrice) {
             this.putBodyParameter("corp_pay_price", corpPayPrice);
@@ -441,7 +457,10 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * dis_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dis123</p>
          */
         public Builder disOrderId(String disOrderId) {
             this.putBodyParameter("dis_order_id", disOrderId);
@@ -469,7 +488,10 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * item_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>671570615157</p>
          */
         public Builder itemId(Long itemId) {
             this.putBodyParameter("item_id", itemId);
@@ -478,7 +500,10 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * itinerary_no.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fb5e1abf33924b6c912bd6d80deec0eb-1</p>
          */
         public Builder itineraryNo(String itineraryNo) {
             this.putBodyParameter("itinerary_no", itineraryNo);
@@ -487,7 +512,7 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * occupant_info_list.
+         * <p>This parameter is required.</p>
          */
         public Builder occupantInfoList(java.util.List < OccupantInfoList> occupantInfoList) {
             String occupantInfoListShrink = shrink(occupantInfoList, "occupant_info_list", "json");
@@ -497,7 +522,10 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * person_pay_price.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder personPayPrice(Long personPayPrice) {
             this.putBodyParameter("person_pay_price", personPayPrice);
@@ -516,7 +544,10 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * rate_plan_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1399417428510</p>
          */
         public Builder ratePlanId(Long ratePlanId) {
             this.putBodyParameter("rate_plan_id", ratePlanId);
@@ -525,7 +556,10 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * room_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>187211</p>
          */
         public Builder roomId(Long roomId) {
             this.putBodyParameter("room_id", roomId);
@@ -534,7 +568,10 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * room_num.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder roomNum(Integer roomNum) {
             this.putBodyParameter("room_num", roomNum);
@@ -543,7 +580,10 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * seller_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2088441675613762</p>
          */
         public Builder sellerId(Long sellerId) {
             this.putBodyParameter("seller_id", sellerId);
@@ -552,7 +592,10 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * shid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2198781</p>
          */
         public Builder shid(Long shid) {
             this.putBodyParameter("shid", shid);
@@ -561,7 +604,10 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * total_order_price.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalOrderPrice(Long totalOrderPrice) {
             this.putBodyParameter("total_order_price", totalOrderPrice);
@@ -570,7 +616,10 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * validate_res_key.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nonUltron_1673575241156_d91ea8ad16735752359161037bf6cf_c54d3768312a4b249b719f126377bf82</p>
          */
         public Builder validateResKey(String validateResKey) {
             this.putBodyParameter("validate_res_key", validateResKey);
@@ -594,6 +643,12 @@ public class HotelOrderCreateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link HotelOrderCreateRequest} extends {@link TeaModel}
+     *
+     * <p>HotelOrderCreateRequest</p>
+     */
     public static class InvoiceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("buyer_add")
         private String buyerAdd;
@@ -955,6 +1010,12 @@ public class HotelOrderCreateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderCreateRequest} extends {@link TeaModel}
+     *
+     * <p>HotelOrderCreateRequest</p>
+     */
     public static class OccupantInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("card_no")
         private String cardNo;
@@ -1212,7 +1273,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * name.
+             * <p>This parameter is required.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1220,7 +1281,10 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * phone.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18277123451</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -1258,6 +1322,12 @@ public class HotelOrderCreateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderCreateRequest} extends {@link TeaModel}
+     *
+     * <p>HotelOrderCreateRequest</p>
+     */
     public static class PromotionDetailInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("check_status")
         private Boolean checkStatus;
@@ -1419,6 +1489,12 @@ public class HotelOrderCreateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderCreateRequest} extends {@link TeaModel}
+     *
+     * <p>HotelOrderCreateRequest</p>
+     */
     public static class PromotionInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("promotion_detail_info_list")
         private java.util.List < PromotionDetailInfoList> promotionDetailInfoList;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IntlFlightSegmentAvailableCertResponseBody} extends {@link TeaModel}
  *
  * <p>IntlFlightSegmentAvailableCertResponseBody</p>
@@ -150,6 +151,12 @@ public class IntlFlightSegmentAvailableCertResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link IntlFlightSegmentAvailableCertResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightSegmentAvailableCertResponseBody</p>
+     */
     public static class SegmentPosition extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("journey_index")
         private Integer journeyIndex;
@@ -211,6 +218,12 @@ public class IntlFlightSegmentAvailableCertResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightSegmentAvailableCertResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightSegmentAvailableCertResponseBody</p>
+     */
     public static class SegmentAvailableCertList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cert_types")
         private java.util.List < Integer > certTypes;
@@ -272,6 +285,12 @@ public class IntlFlightSegmentAvailableCertResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightSegmentAvailableCertResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightSegmentAvailableCertResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("segment_available_cert_list")
         private java.util.List < SegmentAvailableCertList> segmentAvailableCertList;

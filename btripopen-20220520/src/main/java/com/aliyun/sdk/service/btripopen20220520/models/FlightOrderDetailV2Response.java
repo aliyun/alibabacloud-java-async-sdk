@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightOrderDetailV2Response} extends {@link TeaModel}
  *
  * <p>FlightOrderDetailV2Response</p>

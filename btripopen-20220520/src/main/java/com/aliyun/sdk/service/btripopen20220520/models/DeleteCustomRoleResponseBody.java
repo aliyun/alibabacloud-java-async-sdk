@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCustomRoleResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteCustomRoleResponseBody</p>
@@ -137,7 +138,10 @@ public class DeleteCustomRoleResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210f079e16603757182131635d866a</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;

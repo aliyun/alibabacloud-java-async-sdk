@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightRefundDetailRequest} extends {@link RequestModel}
  *
  * <p>FlightRefundDetailRequest</p>
@@ -83,7 +84,10 @@ public class FlightRefundDetailRequest extends Request {
         } 
 
         /**
-         * dis_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dis123</p>
          */
         public Builder disOrderId(String disOrderId) {
             this.putQueryParameter("dis_order_id", disOrderId);
@@ -92,7 +96,10 @@ public class FlightRefundDetailRequest extends Request {
         }
 
         /**
-         * dis_sub_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>refun123</p>
          */
         public Builder disSubOrderId(String disSubOrderId) {
             this.putQueryParameter("dis_sub_order_id", disSubOrderId);

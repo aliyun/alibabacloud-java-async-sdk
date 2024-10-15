@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCustomRoleRequest} extends {@link RequestModel}
  *
  * <p>CreateCustomRoleRequest</p>
@@ -83,7 +84,10 @@ public class CreateCustomRoleRequest extends Request {
         } 
 
         /**
-         * role_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123abc</p>
          */
         public Builder roleId(String roleId) {
             this.putBodyParameter("role_id", roleId);
@@ -92,7 +96,7 @@ public class CreateCustomRoleRequest extends Request {
         }
 
         /**
-         * role_name.
+         * <p>This parameter is required.</p>
          */
         public Builder roleName(String roleName) {
             this.putBodyParameter("role_name", roleName);

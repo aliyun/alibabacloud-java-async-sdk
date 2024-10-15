@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsureOrderCreateRequest} extends {@link RequestModel}
  *
  * <p>InsureOrderCreateRequest</p>
@@ -183,7 +184,7 @@ public class InsureOrderCreateRequest extends Request {
         } 
 
         /**
-         * applicant.
+         * <p>This parameter is required.</p>
          */
         public Builder applicant(Applicant applicant) {
             String applicantShrink = shrink(applicant, "applicant", "json");
@@ -211,7 +212,7 @@ public class InsureOrderCreateRequest extends Request {
         }
 
         /**
-         * ins_person_and_segment_list.
+         * <p>This parameter is required.</p>
          */
         public Builder insPersonAndSegmentList(java.util.List < InsPersonAndSegmentList> insPersonAndSegmentList) {
             String insPersonAndSegmentListShrink = shrink(insPersonAndSegmentList, "ins_person_and_segment_list", "json");
@@ -221,7 +222,10 @@ public class InsureOrderCreateRequest extends Request {
         }
 
         /**
-         * isv_name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PostalSavingsBank</p>
          */
         public Builder isvName(String isvName) {
             this.putBodyParameter("isv_name", isvName);
@@ -239,7 +243,10 @@ public class InsureOrderCreateRequest extends Request {
         }
 
         /**
-         * out_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202310101026030</p>
          */
         public Builder outOrderId(String outOrderId) {
             this.putBodyParameter("out_order_id", outOrderId);
@@ -281,6 +288,12 @@ public class InsureOrderCreateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link InsureOrderCreateRequest} extends {@link TeaModel}
+     *
+     * <p>InsureOrderCreateRequest</p>
+     */
     public static class Applicant extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("birthday")
         private String birthday;
@@ -442,6 +455,12 @@ public class InsureOrderCreateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link InsureOrderCreateRequest} extends {@link TeaModel}
+     *
+     * <p>InsureOrderCreateRequest</p>
+     */
     public static class InsureSegment extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_airport_code")
         private String arrAirportCode;
@@ -643,6 +662,12 @@ public class InsureOrderCreateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link InsureOrderCreateRequest} extends {@link TeaModel}
+     *
+     * <p>InsureOrderCreateRequest</p>
+     */
     public static class Insured extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("birthday")
         private String birthday;
@@ -804,6 +829,12 @@ public class InsureOrderCreateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link InsureOrderCreateRequest} extends {@link TeaModel}
+     *
+     * <p>InsureOrderCreateRequest</p>
+     */
     public static class InsPersonAndSegmentList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("insure_segment")
         private InsureSegment insureSegment;

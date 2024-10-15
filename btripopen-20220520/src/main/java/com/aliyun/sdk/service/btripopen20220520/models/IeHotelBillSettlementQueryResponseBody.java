@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IeHotelBillSettlementQueryResponseBody} extends {@link TeaModel}
  *
  * <p>IeHotelBillSettlementQueryResponseBody</p>
@@ -113,7 +114,7 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
-         * module
+         * <p>module</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -150,6 +151,12 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link IeHotelBillSettlementQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>IeHotelBillSettlementQueryResponseBody</p>
+     */
     public static class DataList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("alipay_trade_no")
         private String alipayTradeNo;
@@ -300,6 +307,9 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("order_type")
         private String orderType;
+
+        @com.aliyun.core.annotation.NameInMap("original_reserve_rule")
+        private String originalReserveRule;
 
         @com.aliyun.core.annotation.NameInMap("over_apply_id")
         private String overApplyId;
@@ -454,6 +464,7 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
             this.orderPrice = builder.orderPrice;
             this.orderStatusDesc = builder.orderStatusDesc;
             this.orderType = builder.orderType;
+            this.originalReserveRule = builder.originalReserveRule;
             this.overApplyId = builder.overApplyId;
             this.paymentDepartmentId = builder.paymentDepartmentId;
             this.paymentDepartmentName = builder.paymentDepartmentName;
@@ -849,6 +860,13 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return originalReserveRule
+         */
+        public String getOriginalReserveRule() {
+            return this.originalReserveRule;
+        }
+
+        /**
          * @return overApplyId
          */
         public String getOverApplyId() {
@@ -1137,6 +1155,7 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
             private Double orderPrice; 
             private String orderStatusDesc; 
             private String orderType; 
+            private String originalReserveRule; 
             private String overApplyId; 
             private String paymentDepartmentId; 
             private String paymentDepartmentName; 
@@ -1573,6 +1592,14 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * original_reserve_rule.
+             */
+            public Builder originalReserveRule(String originalReserveRule) {
+                this.originalReserveRule = originalReserveRule;
+                return this;
+            }
+
+            /**
              * over_apply_id.
              */
             public Builder overApplyId(String overApplyId) {
@@ -1851,6 +1878,12 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IeHotelBillSettlementQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>IeHotelBillSettlementQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("category")
         private Integer category;

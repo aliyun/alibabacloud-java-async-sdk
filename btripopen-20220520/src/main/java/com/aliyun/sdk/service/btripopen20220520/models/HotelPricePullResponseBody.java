@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelPricePullResponseBody} extends {@link TeaModel}
  *
  * <p>HotelPricePullResponseBody</p>
@@ -137,7 +138,10 @@ public class HotelPricePullResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210f079e16603757182131635d866a</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -150,6 +154,12 @@ public class HotelPricePullResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HotelPricePullResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelPricePullResponseBody</p>
+     */
     public static class BtripHotelCancelPolicyInfoDTOList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("hour")
         private Long hour;
@@ -211,6 +221,12 @@ public class HotelPricePullResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelPricePullResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelPricePullResponseBody</p>
+     */
     public static class BtripHotelCancelPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("btrip_hotel_cancel_policy_info_d_t_o_list")
         private java.util.List < BtripHotelCancelPolicyInfoDTOList> btripHotelCancelPolicyInfoDTOList;
@@ -272,6 +288,12 @@ public class HotelPricePullResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelPricePullResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelPricePullResponseBody</p>
+     */
     public static class RateDailys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("discount_price")
         private Long discountPrice;
@@ -373,6 +395,12 @@ public class HotelPricePullResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelPricePullResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelPricePullResponseBody</p>
+     */
     public static class Rates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("breakfast")
         private String breakfast;
@@ -874,6 +902,12 @@ public class HotelPricePullResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelPricePullResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelPricePullResponseBody</p>
+     */
     public static class Rooms extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("area")
         private String area;
@@ -1155,6 +1189,12 @@ public class HotelPricePullResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelPricePullResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelPricePullResponseBody</p>
+     */
     public static class HotelPriceInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("address")
         private String address;
@@ -1276,6 +1316,12 @@ public class HotelPricePullResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelPricePullResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelPricePullResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("hotel_price_infos")
         private java.util.List < HotelPriceInfos> hotelPriceInfos;

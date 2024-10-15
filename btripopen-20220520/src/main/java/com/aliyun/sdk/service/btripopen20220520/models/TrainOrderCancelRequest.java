@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TrainOrderCancelRequest} extends {@link RequestModel}
  *
  * <p>TrainOrderCancelRequest</p>
@@ -120,7 +121,10 @@ public class TrainOrderCancelRequest extends Request {
         }
 
         /**
-         * order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1002145190081005400</p>
          */
         public Builder orderId(String orderId) {
             this.putBodyParameter("order_id", orderId);
@@ -138,7 +142,10 @@ public class TrainOrderCancelRequest extends Request {
         }
 
         /**
-         * out_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder outOrderId(String outOrderId) {
             this.putBodyParameter("out_order_id", outOrderId);

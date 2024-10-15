@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EntityDeleteRequest} extends {@link RequestModel}
  *
  * <p>EntityDeleteRequest</p>
@@ -97,7 +98,10 @@ public class EntityDeleteRequest extends Request {
         } 
 
         /**
-         * del_all.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder delAll(Boolean delAll) {
             this.putQueryParameter("del_all", delAll);
@@ -116,7 +120,10 @@ public class EntityDeleteRequest extends Request {
         }
 
         /**
-         * thirdpart_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder thirdpartId(String thirdpartId) {
             this.putQueryParameter("thirdpart_id", thirdpartId);
@@ -140,6 +147,12 @@ public class EntityDeleteRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link EntityDeleteRequest} extends {@link TeaModel}
+     *
+     * <p>EntityDeleteRequest</p>
+     */
     public static class EntityDOList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("entity_id")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -181,7 +194,10 @@ public class EntityDeleteRequest extends Request {
             private String entityType; 
 
             /**
-             * entity_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -189,7 +205,10 @@ public class EntityDeleteRequest extends Request {
             }
 
             /**
-             * entity_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;

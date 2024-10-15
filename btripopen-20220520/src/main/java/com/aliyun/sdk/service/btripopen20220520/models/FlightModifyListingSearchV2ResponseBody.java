@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightModifyListingSearchV2ResponseBody} extends {@link TeaModel}
  *
  * <p>FlightModifyListingSearchV2ResponseBody</p>
@@ -113,7 +114,7 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         }
 
         /**
-         * module
+         * <p>module</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -121,7 +122,10 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +141,10 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2136019116915615924561621e06ee</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -150,6 +157,12 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FlightModifyListingSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyListingSearchV2ResponseBody</p>
+     */
     public static class AirlineInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airline_chinese_name")
         private String airlineChineseName;
@@ -271,6 +284,12 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyListingSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyListingSearchV2ResponseBody</p>
+     */
     public static class ArrAirportInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airport_code")
         private String airportCode;
@@ -372,6 +391,12 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyListingSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyListingSearchV2ResponseBody</p>
+     */
     public static class DepAirportInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airport_code")
         private String airportCode;
@@ -473,6 +498,12 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyListingSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyListingSearchV2ResponseBody</p>
+     */
     public static class OperatingAirlineInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airline_chinese_name")
         private String airlineChineseName;
@@ -594,6 +625,12 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyListingSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyListingSearchV2ResponseBody</p>
+     */
     public static class FlightShareInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("operating_airline_info")
         private OperatingAirlineInfo operatingAirlineInfo;
@@ -655,6 +692,12 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyListingSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyListingSearchV2ResponseBody</p>
+     */
     public static class FlightStopInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("stop_airport")
         private String stopAirport;
@@ -816,6 +859,12 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyListingSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyListingSearchV2ResponseBody</p>
+     */
     public static class TransferAirlineInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airline_chinese_name")
         private String airlineChineseName;
@@ -937,6 +986,12 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyListingSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyListingSearchV2ResponseBody</p>
+     */
     public static class FlightTransferInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("transfer_airline_info")
         private TransferAirlineInfo transferAirlineInfo;
@@ -1118,6 +1173,12 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyListingSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyListingSearchV2ResponseBody</p>
+     */
     public static class ReShopPriceInfoDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("re_shop_adult_change_fee")
         private Integer reShopAdultChangeFee;
@@ -1319,6 +1380,12 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyListingSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyListingSearchV2ResponseBody</p>
+     */
     public static class PriceInfoDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("adult_price")
         private Integer adultPrice;
@@ -1600,6 +1667,12 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyListingSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyListingSearchV2ResponseBody</p>
+     */
     public static class DirectFlightList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airline_info")
         private AirlineInfo airlineInfo;
@@ -2161,6 +2234,12 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyListingSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyListingSearchV2ResponseBody</p>
+     */
     public static class TransferFlightListAirlineInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airline_chinese_name")
         private String airlineChineseName;
@@ -2282,6 +2361,12 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyListingSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyListingSearchV2ResponseBody</p>
+     */
     public static class TransferFlightListArrAirportInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airport_code")
         private String airportCode;
@@ -2383,6 +2468,12 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyListingSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyListingSearchV2ResponseBody</p>
+     */
     public static class TransferFlightListDepAirportInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airport_code")
         private String airportCode;
@@ -2484,6 +2575,12 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyListingSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyListingSearchV2ResponseBody</p>
+     */
     public static class FlightShareInfoOperatingAirlineInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airline_chinese_name")
         private String airlineChineseName;
@@ -2605,6 +2702,12 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyListingSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyListingSearchV2ResponseBody</p>
+     */
     public static class TransferFlightListFlightShareInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("operating_airline_info")
         private FlightShareInfoOperatingAirlineInfo operatingAirlineInfo;
@@ -2666,6 +2769,12 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyListingSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyListingSearchV2ResponseBody</p>
+     */
     public static class TransferFlightListFlightStopInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("stop_airport")
         private String stopAirport;
@@ -2827,6 +2936,12 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyListingSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyListingSearchV2ResponseBody</p>
+     */
     public static class FlightTransferInfoTransferAirlineInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airline_chinese_name")
         private String airlineChineseName;
@@ -2948,6 +3063,12 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyListingSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyListingSearchV2ResponseBody</p>
+     */
     public static class TransferFlightListFlightTransferInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("transfer_airline_info")
         private FlightTransferInfoTransferAirlineInfo transferAirlineInfo;
@@ -3129,6 +3250,12 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyListingSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyListingSearchV2ResponseBody</p>
+     */
     public static class PriceInfoDTOReShopPriceInfoDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("re_shop_adult_change_fee")
         private Integer reShopAdultChangeFee;
@@ -3330,6 +3457,12 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyListingSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyListingSearchV2ResponseBody</p>
+     */
     public static class TransferFlightListPriceInfoDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("adult_price")
         private Integer adultPrice;
@@ -3611,6 +3744,12 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyListingSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyListingSearchV2ResponseBody</p>
+     */
     public static class TransferFlightList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airline_info")
         private TransferFlightListAirlineInfo airlineInfo;
@@ -4172,6 +4311,12 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyListingSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyListingSearchV2ResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("direct_flight_list")
         private java.util.List < DirectFlightList> directFlightList;

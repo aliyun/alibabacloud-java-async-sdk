@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryReimbursementOrderResponseBody} extends {@link TeaModel}
  *
  * <p>QueryReimbursementOrderResponseBody</p>
@@ -121,7 +122,10 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B72B39C8-32DE-558D-AD1C-D53F11F6ADFE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +141,10 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21041ce316577904808056433edbb2</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -150,6 +157,12 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryReimbursementOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryReimbursementOrderResponseBody</p>
+     */
     public static class ExpenseCompositions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bill_settlement_id")
         private Long billSettlementId;
@@ -351,6 +364,12 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryReimbursementOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryReimbursementOrderResponseBody</p>
+     */
     public static class InvoiceInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("amount")
         private String amount;
@@ -492,6 +511,12 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryReimbursementOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryReimbursementOrderResponseBody</p>
+     */
     public static class Expenses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("amount")
         private String amount;
@@ -733,6 +758,12 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryReimbursementOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryReimbursementOrderResponseBody</p>
+     */
     public static class Itineraries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_city")
         private String arrCity;
@@ -874,6 +905,12 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryReimbursementOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryReimbursementOrderResponseBody</p>
+     */
     public static class PaymentInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("amount")
         private String amount;
@@ -935,6 +972,12 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryReimbursementOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryReimbursementOrderResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("company_amount")
         private String companyAmount;

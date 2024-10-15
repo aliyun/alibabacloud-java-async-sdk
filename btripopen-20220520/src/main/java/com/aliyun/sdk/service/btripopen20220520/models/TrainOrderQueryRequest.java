@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TrainOrderQueryRequest} extends {@link RequestModel}
  *
  * <p>TrainOrderQueryRequest</p>
@@ -82,7 +83,10 @@ public class TrainOrderQueryRequest extends Request {
         } 
 
         /**
-         * order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2627694109810885616</p>
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("order_id", orderId);

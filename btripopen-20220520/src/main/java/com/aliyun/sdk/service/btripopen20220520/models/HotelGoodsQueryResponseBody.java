@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelGoodsQueryResponseBody} extends {@link TeaModel}
  *
  * <p>HotelGoodsQueryResponseBody</p>
@@ -150,6 +151,12 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HotelGoodsQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelGoodsQueryResponseBody</p>
+     */
     public static class BtripHotelCancelPolicyInfoDTOList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("hour")
         private Long hour;
@@ -211,6 +218,12 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelGoodsQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelGoodsQueryResponseBody</p>
+     */
     public static class BtripHotelCancelPolicyDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("btrip_hotel_cancel_policy_info_d_t_o_list")
         private java.util.List < BtripHotelCancelPolicyInfoDTOList> btripHotelCancelPolicyInfoDTOList;
@@ -272,6 +285,12 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelGoodsQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelGoodsQueryResponseBody</p>
+     */
     public static class BtripCancelRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("btrip_hotel_cancel_policy_d_t_o")
         private BtripHotelCancelPolicyDTO btripHotelCancelPolicyDTO;
@@ -353,6 +372,12 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelGoodsQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelGoodsQueryResponseBody</p>
+     */
     public static class BtripHotelCancelDesc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("desc")
         private String desc;
@@ -414,6 +439,12 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelGoodsQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelGoodsQueryResponseBody</p>
+     */
     public static class DiscountDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("label_name")
         private java.util.List < String > labelName;
@@ -475,6 +506,12 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelGoodsQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelGoodsQueryResponseBody</p>
+     */
     public static class DiscountDesc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cash_reduce_total")
         private String cashReduceTotal;
@@ -596,6 +633,12 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelGoodsQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelGoodsQueryResponseBody</p>
+     */
     public static class HotelDetailRatePriceDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("before_discount_price")
         private Long beforeDiscountPrice;
@@ -777,6 +820,12 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelGoodsQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelGoodsQueryResponseBody</p>
+     */
     public static class Rates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bed_desc")
         private String bedDesc;
@@ -828,6 +877,9 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("instant_confirm")
         private Boolean instantConfirm;
+
+        @com.aliyun.core.annotation.NameInMap("inventory_desc")
+        private String inventoryDesc;
 
         @com.aliyun.core.annotation.NameInMap("inventory_price")
         private String inventoryPrice;
@@ -922,6 +974,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             this.endTimeDaily = builder.endTimeDaily;
             this.hotelDetailRatePriceDTO = builder.hotelDetailRatePriceDTO;
             this.instantConfirm = builder.instantConfirm;
+            this.inventoryDesc = builder.inventoryDesc;
             this.inventoryPrice = builder.inventoryPrice;
             this.isBusinessPay4Goods = builder.isBusinessPay4Goods;
             this.isGuarantee = builder.isGuarantee;
@@ -1074,6 +1127,13 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
          */
         public Boolean getInstantConfirm() {
             return this.instantConfirm;
+        }
+
+        /**
+         * @return inventoryDesc
+         */
+        public String getInventoryDesc() {
+            return this.inventoryDesc;
         }
 
         /**
@@ -1269,6 +1329,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             private String endTimeDaily; 
             private java.util.List < HotelDetailRatePriceDTO> hotelDetailRatePriceDTO; 
             private Boolean instantConfirm; 
+            private String inventoryDesc; 
             private String inventoryPrice; 
             private Boolean isBusinessPay4Goods; 
             private Integer isGuarantee; 
@@ -1428,6 +1489,14 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
              */
             public Builder instantConfirm(Boolean instantConfirm) {
                 this.instantConfirm = instantConfirm;
+                return this;
+            }
+
+            /**
+             * inventory_desc.
+             */
+            public Builder inventoryDesc(String inventoryDesc) {
+                this.inventoryDesc = inventoryDesc;
                 return this;
             }
 
@@ -1638,6 +1707,12 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelGoodsQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelGoodsQueryResponseBody</p>
+     */
     public static class RoomService extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("color")
         private String color;
@@ -1739,6 +1814,12 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelGoodsQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelGoodsQueryResponseBody</p>
+     */
     public static class Rooms extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("area")
         private String area;
@@ -2080,6 +2161,12 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelGoodsQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelGoodsQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("address")
         private String address;

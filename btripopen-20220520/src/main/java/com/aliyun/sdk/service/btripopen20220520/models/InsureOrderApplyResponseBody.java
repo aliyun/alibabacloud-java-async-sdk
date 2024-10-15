@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsureOrderApplyResponseBody} extends {@link TeaModel}
  *
  * <p>InsureOrderApplyResponseBody</p>
@@ -150,6 +151,12 @@ public class InsureOrderApplyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link InsureOrderApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>InsureOrderApplyResponseBody</p>
+     */
     public static class InsOrderPolicyList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("out_sub_ins_order_id")
         private String outSubInsOrderId;
@@ -251,6 +258,12 @@ public class InsureOrderApplyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link InsureOrderApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>InsureOrderApplyResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ins_order_id")
         private String insOrderId;

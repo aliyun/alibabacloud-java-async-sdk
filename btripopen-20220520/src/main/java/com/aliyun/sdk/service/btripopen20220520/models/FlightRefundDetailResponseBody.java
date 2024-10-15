@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightRefundDetailResponseBody} extends {@link TeaModel}
  *
  * <p>FlightRefundDetailResponseBody</p>
@@ -150,6 +151,12 @@ public class FlightRefundDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FlightRefundDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightRefundDetailResponseBody</p>
+     */
     public static class RefundFeeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("alipay_trade_no")
         private String alipayTradeNo;
@@ -251,6 +258,12 @@ public class FlightRefundDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightRefundDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightRefundDetailResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("btrip_order_id")
         private Long btripOrderId;

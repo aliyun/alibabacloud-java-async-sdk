@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyModifyRequest} extends {@link RequestModel}
  *
  * <p>ApplyModifyRequest</p>
@@ -612,7 +613,10 @@ public class ApplyModifyRequest extends Request {
         }
 
         /**
-         * 可将补充描述传入此字段，账单中将会体现此字段的值。可以用于企业的统计和对账
+         * <p>可将补充描述传入此字段，账单中将会体现此字段的值。可以用于企业的统计和对账</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;cost_center&quot;:&quot;成本中心&quot;}</p>
          */
         public Builder extendField(String extendField) {
             this.putBodyParameter("extend_field", extendField);
@@ -734,7 +738,10 @@ public class ApplyModifyRequest extends Request {
         }
 
         /**
-         * 子企业Id
+         * <p>子企业Id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>btrip123</p>
          */
         public Builder subCorpId(String subCorpId) {
             this.putBodyParameter("sub_corp_id", subCorpId);
@@ -743,7 +750,10 @@ public class ApplyModifyRequest extends Request {
         }
 
         /**
-         * thirdpart_apply_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0001A1100000007EX08O</p>
          */
         public Builder thirdpartApplyId(String thirdpartApplyId) {
             this.putBodyParameter("thirdpart_apply_id", thirdpartApplyId);
@@ -808,7 +818,7 @@ public class ApplyModifyRequest extends Request {
         }
 
         /**
-         * trip_cause.
+         * <p>This parameter is required.</p>
          */
         public Builder tripCause(String tripCause) {
             this.putBodyParameter("trip_cause", tripCause);
@@ -826,7 +836,7 @@ public class ApplyModifyRequest extends Request {
         }
 
         /**
-         * trip_title.
+         * <p>This parameter is required.</p>
          */
         public Builder tripTitle(String tripTitle) {
             this.putBodyParameter("trip_title", tripTitle);
@@ -844,7 +854,10 @@ public class ApplyModifyRequest extends Request {
         }
 
         /**
-         * user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>thirdpart12138</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("user_id", userId);
@@ -886,6 +899,12 @@ public class ApplyModifyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
     public static class CarRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("scenario_template_id")
         private String scenarioTemplateId;
@@ -947,6 +966,12 @@ public class ApplyModifyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
     public static class HotelCitys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
@@ -1028,6 +1053,12 @@ public class ApplyModifyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
     public static class HotelIntlCitys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
@@ -1109,6 +1140,12 @@ public class ApplyModifyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
     public static class DefaultStandard extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("business_discount")
         private Integer businessDiscount;
@@ -1410,6 +1447,12 @@ public class ApplyModifyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
     public static class ExternalTravelerList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("attribute")
         private String attribute;
@@ -1691,6 +1734,12 @@ public class ApplyModifyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
     public static class ExternalTravelerStandardHotelCitys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
@@ -1772,6 +1821,12 @@ public class ApplyModifyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
     public static class ExternalTravelerStandardHotelIntlCitys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
@@ -1853,6 +1908,12 @@ public class ApplyModifyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
     public static class ExternalTravelerStandard extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("business_discount")
         private Integer businessDiscount;
@@ -2116,7 +2177,10 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
-             * 超级经济舱折扣。1到10的整数
+             * <p>超级经济舱折扣。1到10的整数</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder premiumEconomyDiscount(Integer premiumEconomyDiscount) {
                 this.premiumEconomyDiscount = premiumEconomyDiscount;
@@ -2154,6 +2218,12 @@ public class ApplyModifyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
     public static class HotelShare extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("param")
         private String param;
@@ -2215,6 +2285,12 @@ public class ApplyModifyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
     public static class ItineraryTravelStandard extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("hotel_available_nights_per_day")
         private Integer hotelAvailableNightsPerDay;
@@ -2256,6 +2332,12 @@ public class ApplyModifyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
     public static class ItineraryList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_city")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -2518,7 +2600,7 @@ public class ApplyModifyRequest extends Request {
             private Integer tripWay; 
 
             /**
-             * arr_city.
+             * <p>This parameter is required.</p>
              */
             public Builder arrCity(String arrCity) {
                 this.arrCity = arrCity;
@@ -2534,7 +2616,10 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
-             * arr_date.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-12 00:00:00</p>
              */
             public Builder arrDate(String arrDate) {
                 this.arrDate = arrDate;
@@ -2558,7 +2643,7 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
-             * dep_city.
+             * <p>This parameter is required.</p>
              */
             public Builder depCity(String depCity) {
                 this.depCity = depCity;
@@ -2574,7 +2659,10 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
-             * dep_date.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-12 00:00:00</p>
              */
             public Builder depDate(String depDate) {
                 this.depDate = depDate;
@@ -2590,7 +2678,10 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
-             * itinerary_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000131</p>
              */
             public Builder itineraryId(String itineraryId) {
                 this.itineraryId = itineraryId;
@@ -2662,7 +2753,10 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
-             * traffic_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder trafficType(Integer trafficType) {
                 this.trafficType = trafficType;
@@ -2670,7 +2764,10 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
-             * trip_way.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder tripWay(Integer tripWay) {
                 this.tripWay = tripWay;
@@ -2684,6 +2781,12 @@ public class ApplyModifyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
     public static class ItinerarySetListItineraryTravelStandard extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("hotel_available_nights_per_day")
         private Integer hotelAvailableNightsPerDay;
@@ -2725,6 +2828,12 @@ public class ApplyModifyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
     public static class ItinerarySetList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_date")
         private String arrDate;
@@ -2920,7 +3029,10 @@ public class ApplyModifyRequest extends Request {
             private Integer trafficType; 
 
             /**
-             * arr_date.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-12 00:00:00</p>
              */
             public Builder arrDate(String arrDate) {
                 this.arrDate = arrDate;
@@ -2960,7 +3072,10 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
-             * dep_date.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-12 00:00:00</p>
              */
             public Builder depDate(String depDate) {
                 this.depDate = depDate;
@@ -2976,7 +3091,10 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
-             * itinerary_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000131</p>
              */
             public Builder itineraryId(String itineraryId) {
                 this.itineraryId = itineraryId;
@@ -3032,7 +3150,10 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
-             * traffic_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder trafficType(Integer trafficType) {
                 this.trafficType = trafficType;
@@ -3046,6 +3167,12 @@ public class ApplyModifyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
     public static class TravelerList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("attribute")
         private String attribute;
@@ -3285,7 +3412,10 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
-             * user_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>thirdpart12138</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -3307,6 +3437,12 @@ public class ApplyModifyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
     public static class CarCitySet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("city_code")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -3348,7 +3484,7 @@ public class ApplyModifyRequest extends Request {
             private String cityName; 
 
             /**
-             * city_code.
+             * <p>This parameter is required.</p>
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -3356,7 +3492,7 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
-             * city_name.
+             * <p>This parameter is required.</p>
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -3370,6 +3506,12 @@ public class ApplyModifyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
     public static class TravelerStandardHotelCitys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
@@ -3421,7 +3563,7 @@ public class ApplyModifyRequest extends Request {
             private Long fee; 
 
             /**
-             * city_code.
+             * <p>This parameter is required.</p>
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -3429,7 +3571,7 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
-             * city_name.
+             * <p>This parameter is required.</p>
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -3451,6 +3593,12 @@ public class ApplyModifyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
     public static class TravelerStandardHotelIntlCitys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
@@ -3502,7 +3650,7 @@ public class ApplyModifyRequest extends Request {
             private Long fee; 
 
             /**
-             * city_code.
+             * <p>This parameter is required.</p>
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -3510,7 +3658,7 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
-             * city_name.
+             * <p>This parameter is required.</p>
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -3532,6 +3680,12 @@ public class ApplyModifyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
     public static class TravelerStandard extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("business_discount")
         private Integer businessDiscount;
@@ -3827,7 +3981,10 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
-             * 超级经济舱折扣。1到10的整数
+             * <p>超级经济舱折扣。1到10的整数</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder premiumEconomyDiscount(Integer premiumEconomyDiscount) {
                 this.premiumEconomyDiscount = premiumEconomyDiscount;
@@ -3859,7 +4016,10 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
-             * user_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>thirdpart12138</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

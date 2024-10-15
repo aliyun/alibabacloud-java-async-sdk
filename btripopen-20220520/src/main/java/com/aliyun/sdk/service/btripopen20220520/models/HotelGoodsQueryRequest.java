@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelGoodsQueryRequest} extends {@link RequestModel}
  *
  * <p>HotelGoodsQueryRequest</p>
@@ -243,7 +244,10 @@ public class HotelGoodsQueryRequest extends Request {
         }
 
         /**
-         * begin_date.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-27</p>
          */
         public Builder beginDate(String beginDate) {
             this.putQueryParameter("begin_date", beginDate);
@@ -261,7 +265,10 @@ public class HotelGoodsQueryRequest extends Request {
         }
 
         /**
-         * btrip_user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder btripUserId(String btripUserId) {
             this.putQueryParameter("btrip_user_id", btripUserId);
@@ -279,7 +286,10 @@ public class HotelGoodsQueryRequest extends Request {
         }
 
         /**
-         * end_date.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-28</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("end_date", endDate);
@@ -288,7 +298,10 @@ public class HotelGoodsQueryRequest extends Request {
         }
 
         /**
-         * hotel_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>182873</p>
          */
         public Builder hotelId(String hotelId) {
             this.putQueryParameter("hotel_id", hotelId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelSearchRequest} extends {@link RequestModel}
  *
  * <p>HotelSearchRequest</p>
@@ -394,7 +395,10 @@ public class HotelSearchRequest extends Request {
         }
 
         /**
-         * check_in_date.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-22</p>
          */
         public Builder checkInDate(String checkInDate) {
             this.putQueryParameter("check_in_date", checkInDate);
@@ -403,7 +407,10 @@ public class HotelSearchRequest extends Request {
         }
 
         /**
-         * check_out_date.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-22</p>
          */
         public Builder checkOutDate(String checkOutDate) {
             this.putQueryParameter("check_out_date", checkOutDate);
@@ -502,7 +509,10 @@ public class HotelSearchRequest extends Request {
         }
 
         /**
-         * page_no.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("page_no", pageNo);
@@ -511,7 +521,10 @@ public class HotelSearchRequest extends Request {
         }
 
         /**
-         * page_size.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("page_size", pageSize);
@@ -548,7 +561,10 @@ public class HotelSearchRequest extends Request {
         }
 
         /**
-         * sort_code.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder sortCode(Integer sortCode) {
             this.putQueryParameter("sort_code", sortCode);

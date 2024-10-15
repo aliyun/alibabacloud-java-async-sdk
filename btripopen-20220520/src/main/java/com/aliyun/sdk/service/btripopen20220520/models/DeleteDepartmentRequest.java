@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDepartmentRequest} extends {@link RequestModel}
  *
  * <p>DeleteDepartmentRequest</p>
@@ -68,7 +69,10 @@ public class DeleteDepartmentRequest extends Request {
         } 
 
         /**
-         * out_dept_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dept123</p>
          */
         public Builder outDeptId(String outDeptId) {
             this.putBodyParameter("out_dept_id", outDeptId);

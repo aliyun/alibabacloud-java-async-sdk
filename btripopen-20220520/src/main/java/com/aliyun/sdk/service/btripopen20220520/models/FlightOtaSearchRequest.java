@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightOtaSearchRequest} extends {@link RequestModel}
  *
  * <p>FlightOtaSearchRequest</p>
@@ -164,7 +165,10 @@ public class FlightOtaSearchRequest extends Request {
         }
 
         /**
-         * arr_city_code.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BJS</p>
          */
         public Builder arrCityCode(String arrCityCode) {
             this.putQueryParameter("arr_city_code", arrCityCode);
@@ -191,7 +195,10 @@ public class FlightOtaSearchRequest extends Request {
         }
 
         /**
-         * dep_city_code.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HGH</p>
          */
         public Builder depCityCode(String depCityCode) {
             this.putQueryParameter("dep_city_code", depCityCode);
@@ -200,7 +207,10 @@ public class FlightOtaSearchRequest extends Request {
         }
 
         /**
-         * dep_date.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-08-15 19:30:00</p>
          */
         public Builder depDate(String depDate) {
             this.putQueryParameter("dep_date", depDate);
@@ -209,7 +219,10 @@ public class FlightOtaSearchRequest extends Request {
         }
 
         /**
-         * flight_no.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CA2323</p>
          */
         public Builder flightNo(String flightNo) {
             this.putQueryParameter("flight_no", flightNo);

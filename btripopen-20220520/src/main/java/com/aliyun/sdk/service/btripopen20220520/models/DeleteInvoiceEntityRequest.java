@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteInvoiceEntityRequest} extends {@link RequestModel}
  *
  * <p>DeleteInvoiceEntityRequest</p>
@@ -115,7 +116,10 @@ public class DeleteInvoiceEntityRequest extends Request {
         }
 
         /**
-         * third_part_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>340049</p>
          */
         public Builder thirdPartId(String thirdPartId) {
             this.putQueryParameter("third_part_id", thirdPartId);
@@ -139,6 +143,12 @@ public class DeleteInvoiceEntityRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteInvoiceEntityRequest} extends {@link TeaModel}
+     *
+     * <p>DeleteInvoiceEntityRequest</p>
+     */
     public static class Entities extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("entity_id")
         private String entityId;

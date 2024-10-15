@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GroupDepartSaveRequest} extends {@link RequestModel}
  *
  * <p>GroupDepartSaveRequest</p>
@@ -154,7 +155,7 @@ public class GroupDepartSaveRequest extends Request {
         } 
 
         /**
-         * dept_name.
+         * <p>This parameter is required.</p>
          */
         public Builder deptName(String deptName) {
             this.putBodyParameter("dept_name", deptName);
@@ -172,7 +173,10 @@ public class GroupDepartSaveRequest extends Request {
         }
 
         /**
-         * outer_dept_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>001</p>
          */
         public Builder outerDeptId(String outerDeptId) {
             this.putBodyParameter("outer_dept_id", outerDeptId);
@@ -190,7 +194,10 @@ public class GroupDepartSaveRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putBodyParameter("status", status);

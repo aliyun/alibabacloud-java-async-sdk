@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyApproveResponseBody} extends {@link TeaModel}
  *
  * <p>ApplyApproveResponseBody</p>
@@ -113,7 +114,10 @@ public class ApplyApproveResponseBody extends TeaModel {
         }
 
         /**
-         * module。
+         * <p>module。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>module</p>
          */
         public Builder module(String module) {
             this.module = module;

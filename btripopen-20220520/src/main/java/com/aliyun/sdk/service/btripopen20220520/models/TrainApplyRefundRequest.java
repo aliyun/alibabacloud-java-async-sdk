@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TrainApplyRefundRequest} extends {@link RequestModel}
  *
  * <p>TrainApplyRefundRequest</p>
@@ -113,7 +114,10 @@ public class TrainApplyRefundRequest extends Request {
         } 
 
         /**
-         * order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1002145190081005400</p>
          */
         public Builder orderId(String orderId) {
             this.putBodyParameter("order_id", orderId);
@@ -122,7 +126,10 @@ public class TrainApplyRefundRequest extends Request {
         }
 
         /**
-         * out_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder outOrderId(String outOrderId) {
             this.putBodyParameter("out_order_id", outOrderId);
@@ -131,7 +138,10 @@ public class TrainApplyRefundRequest extends Request {
         }
 
         /**
-         * out_refund_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456778</p>
          */
         public Builder outRefundId(String outRefundId) {
             this.putBodyParameter("out_refund_id", outRefundId);
@@ -140,7 +150,7 @@ public class TrainApplyRefundRequest extends Request {
         }
 
         /**
-         * refund_train_infos.
+         * <p>This parameter is required.</p>
          */
         public Builder refundTrainInfos(java.util.List < RefundTrainInfos> refundTrainInfos) {
             String refundTrainInfosShrink = shrink(refundTrainInfos, "refund_train_infos", "json");
@@ -165,6 +175,12 @@ public class TrainApplyRefundRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TrainApplyRefundRequest} extends {@link TeaModel}
+     *
+     * <p>TrainApplyRefundRequest</p>
+     */
     public static class RefundPassengerInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("passenger_cert_no")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -232,7 +248,10 @@ public class TrainApplyRefundRequest extends Request {
             private String passengerName; 
 
             /**
-             * passenger_cert_no.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>291487e553c5abde3b611aae283e2526f0d733ab55094aadc0b5ba587222a233c</p>
              */
             public Builder passengerCertNo(String passengerCertNo) {
                 this.passengerCertNo = passengerCertNo;
@@ -240,7 +259,10 @@ public class TrainApplyRefundRequest extends Request {
             }
 
             /**
-             * passenger_cert_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>170d9ac6f8807f9ec603c688f45f78a41</p>
              */
             public Builder passengerCertType(String passengerCertType) {
                 this.passengerCertType = passengerCertType;
@@ -248,7 +270,10 @@ public class TrainApplyRefundRequest extends Request {
             }
 
             /**
-             * passenger_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12334</p>
              */
             public Builder passengerId(String passengerId) {
                 this.passengerId = passengerId;
@@ -256,7 +281,10 @@ public class TrainApplyRefundRequest extends Request {
             }
 
             /**
-             * passenger_name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>949c9f34f677a0e5d249dfc94f5e62cc7</p>
              */
             public Builder passengerName(String passengerName) {
                 this.passengerName = passengerName;
@@ -270,6 +298,12 @@ public class TrainApplyRefundRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainApplyRefundRequest} extends {@link TeaModel}
+     *
+     * <p>TrainApplyRefundRequest</p>
+     */
     public static class RefundTrainInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dep_time")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -324,7 +358,10 @@ public class TrainApplyRefundRequest extends Request {
             private String trainNo; 
 
             /**
-             * dep_time.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-06 15:19:01</p>
              */
             public Builder depTime(String depTime) {
                 this.depTime = depTime;
@@ -332,7 +369,7 @@ public class TrainApplyRefundRequest extends Request {
             }
 
             /**
-             * refund_passenger_infos.
+             * <p>This parameter is required.</p>
              */
             public Builder refundPassengerInfos(java.util.List < RefundPassengerInfos> refundPassengerInfos) {
                 this.refundPassengerInfos = refundPassengerInfos;
@@ -340,7 +377,10 @@ public class TrainApplyRefundRequest extends Request {
             }
 
             /**
-             * train_no.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>K234</p>
              */
             public Builder trainNo(String trainNo) {
                 this.trainNo = trainNo;

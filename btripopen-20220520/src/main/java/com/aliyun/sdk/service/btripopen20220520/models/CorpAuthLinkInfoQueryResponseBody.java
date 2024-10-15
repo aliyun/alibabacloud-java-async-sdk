@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CorpAuthLinkInfoQueryResponseBody} extends {@link TeaModel}
  *
  * <p>CorpAuthLinkInfoQueryResponseBody</p>
@@ -130,6 +131,12 @@ public class CorpAuthLinkInfoQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CorpAuthLinkInfoQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CorpAuthLinkInfoQueryResponseBody</p>
+     */
     public static class LinkCorps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("corp_name")
         private String corpName;
@@ -211,6 +218,12 @@ public class CorpAuthLinkInfoQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CorpAuthLinkInfoQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CorpAuthLinkInfoQueryResponseBody</p>
+     */
     public static class OrgCorp extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("corp_name")
         private String corpName;
@@ -292,6 +305,12 @@ public class CorpAuthLinkInfoQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CorpAuthLinkInfoQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CorpAuthLinkInfoQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("link_corps")
         private java.util.List < LinkCorps> linkCorps;

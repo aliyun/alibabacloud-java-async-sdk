@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightExceedApplyQueryResponseBody} extends {@link TeaModel}
  *
  * <p>FlightExceedApplyQueryResponseBody</p>
@@ -150,6 +151,12 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FlightExceedApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightExceedApplyQueryResponseBody</p>
+     */
     public static class ApplyIntentionInfoDo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_airport_name")
         private String arrAirportName;
@@ -471,6 +478,12 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightExceedApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightExceedApplyQueryResponseBody</p>
+     */
     public static class ApplyIntentionInfoDoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_airport_name")
         private String arrAirportName;
@@ -792,6 +805,12 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightExceedApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightExceedApplyQueryResponseBody</p>
+     */
     public static class ApplyRecommendFlights extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_airport_name")
         private String arrAirportName;
@@ -1073,6 +1092,12 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightExceedApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightExceedApplyQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("apply_id")
         private Long applyId;

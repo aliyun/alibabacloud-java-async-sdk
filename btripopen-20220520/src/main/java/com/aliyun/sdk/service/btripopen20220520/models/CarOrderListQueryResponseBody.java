@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CarOrderListQueryResponseBody} extends {@link TeaModel}
  *
  * <p>CarOrderListQueryResponseBody</p>
@@ -157,7 +158,10 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21041ce316577904808056433edbb2</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -170,6 +174,12 @@ public class CarOrderListQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CarOrderListQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CarOrderListQueryResponseBody</p>
+     */
     public static class PriceInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("category_code")
         private Integer categoryCode;
@@ -371,6 +381,12 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CarOrderListQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CarOrderListQueryResponseBody</p>
+     */
     public static class UserAffiliateList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
@@ -432,6 +448,12 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CarOrderListQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CarOrderListQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("apply_id")
         private Long applyId;
@@ -1553,6 +1575,12 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CarOrderListQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CarOrderListQueryResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("page")
         private Integer page;

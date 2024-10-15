@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
  *
  * <p>FlightOtaSearchResponseBody</p>
@@ -150,6 +151,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class AirlineInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airline_code")
         private String airlineCode;
@@ -231,6 +238,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class ArrAirportInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airport_code")
         private String airportCode;
@@ -352,6 +365,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class Description extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("desc")
         private String desc;
@@ -453,6 +472,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class ImageDO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("image")
         private String image;
@@ -554,6 +579,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class BaggageSubContentVisualizes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_desc")
         private java.util.List < String > baggageDesc;
@@ -695,6 +726,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class BaggageSubItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_sub_content_visualizes")
         private java.util.List < BaggageSubContentVisualizes> baggageSubContentVisualizes;
@@ -794,7 +831,10 @@ public class FlightOtaSearchResponseBody extends TeaModel {
             }
 
             /**
-             * PTC
+             * <p>PTC</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ADT</p>
              */
             public Builder ptc(String ptc) {
                 this.ptc = ptc;
@@ -816,6 +856,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class Tips extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("logo")
         private String logo;
@@ -897,6 +943,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class BaggageItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_sub_items")
         private java.util.List < BaggageSubItems> baggageSubItems;
@@ -1038,6 +1090,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class Info extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -1179,6 +1237,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class ChangeRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("able")
         private Boolean able;
@@ -1240,6 +1304,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class ExtraContents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -1301,6 +1371,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class RefundSubContents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fee_desc")
         private String feeDesc;
@@ -1382,6 +1458,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class RefundSubItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("is_struct")
         private Boolean isStruct;
@@ -1453,7 +1535,10 @@ public class FlightOtaSearchResponseBody extends TeaModel {
             }
 
             /**
-             * PTC
+             * <p>PTC</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ADT</p>
              */
             public Builder ptc(String ptc) {
                 this.ptc = ptc;
@@ -1483,6 +1568,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class ChangeRuleItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("extra_contents")
         private java.util.List < ExtraContents> extraContents;
@@ -1644,6 +1735,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class RefundRuleInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -1785,6 +1882,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class RefundRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("able")
         private Boolean able;
@@ -1846,6 +1949,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class RefundRuleItemExtraContents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -1907,6 +2016,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class RefundSubItemsRefundSubContents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fee_desc")
         private String feeDesc;
@@ -1988,6 +2103,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class RefundRuleItemRefundSubItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("is_struct")
         private Boolean isStruct;
@@ -2059,7 +2180,10 @@ public class FlightOtaSearchResponseBody extends TeaModel {
             }
 
             /**
-             * PTC
+             * <p>PTC</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ADT</p>
              */
             public Builder ptc(String ptc) {
                 this.ptc = ptc;
@@ -2089,6 +2213,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class RefundRuleItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("extra_contents")
         private java.util.List < RefundRuleItemExtraContents> extraContents;
@@ -2250,6 +2380,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class SignRuleInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -2391,6 +2527,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class SignRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("able")
         private Boolean able;
@@ -2452,6 +2594,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class UpgradeRuleInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -2593,6 +2741,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class UpgradeRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("able")
         private Boolean able;
@@ -2654,6 +2808,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class FlightRuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_info")
         private String baggageInfo;
@@ -2875,6 +3035,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class CabinInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("agent_id")
         private Long agentId;
@@ -3376,6 +3542,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class DepAirportInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airport_code")
         private String airportCode;
@@ -3497,6 +3669,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class BaggageSubContentVisualizesDescription extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("desc")
         private String desc;
@@ -3598,6 +3776,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class BaggageSubContentVisualizesImageDO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("image")
         private String image;
@@ -3699,6 +3883,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class BaggageSubItemsBaggageSubContentVisualizes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_desc")
         private java.util.List < String > baggageDesc;
@@ -3840,6 +4030,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class BaggageItemBaggageSubItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_sub_content_visualizes")
         private java.util.List < BaggageSubItemsBaggageSubContentVisualizes> baggageSubContentVisualizes;
@@ -3939,7 +4135,10 @@ public class FlightOtaSearchResponseBody extends TeaModel {
             }
 
             /**
-             * PTC
+             * <p>PTC</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ADT</p>
              */
             public Builder ptc(String ptc) {
                 this.ptc = ptc;
@@ -3961,6 +4160,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class BaggageItemTips extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("logo")
         private String logo;
@@ -4042,6 +4247,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class FlightRuleListBaggageItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_sub_items")
         private java.util.List < BaggageItemBaggageSubItems> baggageSubItems;
@@ -4183,6 +4394,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class ChangeRuleInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -4324,6 +4541,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class FlightRuleListChangeRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("able")
         private Boolean able;
@@ -4385,6 +4608,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class ChangeRuleItemExtraContents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -4446,6 +4675,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class ChangeRuleItemRefundSubItemsRefundSubContents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fee_desc")
         private String feeDesc;
@@ -4527,6 +4762,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class ChangeRuleItemRefundSubItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("is_struct")
         private Boolean isStruct;
@@ -4590,7 +4831,10 @@ public class FlightOtaSearchResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * isStruct : true
+             * <p>isStruct : true</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isStruct(Boolean isStruct) {
                 this.isStruct = isStruct;
@@ -4598,7 +4842,10 @@ public class FlightOtaSearchResponseBody extends TeaModel {
             }
 
             /**
-             * PTC
+             * <p>PTC</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ADT</p>
              */
             public Builder ptc(String ptc) {
                 this.ptc = ptc;
@@ -4628,6 +4875,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class FlightRuleListChangeRuleItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("extra_contents")
         private java.util.List < ChangeRuleItemExtraContents> extraContents;
@@ -4789,6 +5042,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class FlightRuleListRefundRuleInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -4930,6 +5189,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class FlightRuleListRefundRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("able")
         private Boolean able;
@@ -4991,6 +5256,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class FlightRuleListRefundRuleItemExtraContents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -5052,6 +5323,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class RefundRuleItemRefundSubItemsRefundSubContents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fee_desc")
         private String feeDesc;
@@ -5133,6 +5410,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class FlightRuleListRefundRuleItemRefundSubItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("is_struct")
         private Boolean isStruct;
@@ -5196,7 +5479,10 @@ public class FlightOtaSearchResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * isStruct : true
+             * <p>isStruct : true</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isStruct(Boolean isStruct) {
                 this.isStruct = isStruct;
@@ -5204,7 +5490,10 @@ public class FlightOtaSearchResponseBody extends TeaModel {
             }
 
             /**
-             * PTC
+             * <p>PTC</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ADT</p>
              */
             public Builder ptc(String ptc) {
                 this.ptc = ptc;
@@ -5234,6 +5523,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class FlightRuleListRefundRuleItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("extra_contents")
         private java.util.List < FlightRuleListRefundRuleItemExtraContents> extraContents;
@@ -5395,6 +5690,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class FlightRuleListSignRuleInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -5536,6 +5837,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class FlightRuleListSignRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("able")
         private Boolean able;
@@ -5597,6 +5904,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class FlightRuleListUpgradeRuleInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -5738,6 +6051,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class FlightRuleListUpgradeRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("able")
         private Boolean able;
@@ -5799,6 +6118,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class FlightListFlightRuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_info")
         private String baggageInfo;
@@ -6020,6 +6345,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class FlightList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airline_info")
         private AirlineInfo airlineInfo;
@@ -6821,6 +7152,12 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("flight_list")
         private java.util.List < FlightList> flightList;

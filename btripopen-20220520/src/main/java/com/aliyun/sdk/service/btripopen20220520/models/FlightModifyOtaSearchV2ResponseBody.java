@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
  *
  * <p>FlightModifyOtaSearchV2ResponseBody</p>
@@ -113,7 +114,7 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         }
 
         /**
-         * module
+         * <p>module</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -121,7 +122,10 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +141,10 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2136019116915615639457351e06ee</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -150,6 +157,12 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
     public static class CabinClassInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cabin_class")
         private String cabinClass;
@@ -251,6 +264,12 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
     public static class ReShopPriceInfoDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("re_shop_adult_change_fee")
         private Integer reShopAdultChangeFee;
@@ -452,6 +471,12 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
     public static class PriceInfoDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("adult_price")
         private Integer adultPrice;
@@ -733,6 +758,12 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
     public static class AgentInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("attribute_show_info_map")
         private java.util.Map < String, java.util.List<ModuleAgentInfosAttributeShowInfoMapValue>> attributeShowInfoMap;
@@ -974,6 +1005,12 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
     public static class AgentInfoCabinClassInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cabin_class")
         private String cabinClass;
@@ -1053,7 +1090,10 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
             }
 
             /**
-             * inner_cabin_class
+             * <p>inner_cabin_class</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder innerCabinClass(Integer innerCabinClass) {
                 this.innerCabinClass = innerCabinClass;
@@ -1075,6 +1115,12 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
     public static class PriceInfoDTOReShopPriceInfoDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("re_shop_adult_change_fee")
         private Integer reShopAdultChangeFee;
@@ -1276,6 +1322,12 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
     public static class AgentInfoPriceInfoDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("adult_price")
         private Integer adultPrice;
@@ -1557,6 +1609,12 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
     public static class AgentInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("attribute_show_info_map")
         private java.util.Map < String, java.util.List<ModuleAgentInfoAttributeShowInfoMapValue>> attributeShowInfoMap;
@@ -1744,7 +1802,10 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
             }
 
             /**
-             * item_id
+             * <p>item_id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c85124c527fc4b26b86d0c043ddc08d3_0</p>
              */
             public Builder itemId(String itemId) {
                 this.itemId = itemId;
@@ -1798,6 +1859,12 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
     public static class DepAirportInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airport_code")
         private String airportCode;
@@ -1899,6 +1966,12 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
     public static class ArrAirportInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airport_code")
         private String airportCode;
@@ -2000,6 +2073,12 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
     public static class AirlineInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airline_code")
         private String airlineCode;
@@ -2121,6 +2200,12 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
     public static class OperatingAirlineInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airline_code")
         private String airlineCode;
@@ -2242,6 +2327,12 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
     public static class FlightSharedInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("operating_flight_no")
         private String operatingFlightNo;
@@ -2303,6 +2394,12 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
     public static class FlightStopInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("stop_city_name")
         private String stopCityName;
@@ -2464,6 +2561,12 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
     public static class FlightSegmentInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("journey_seq")
         private Integer journeySeq;
@@ -2945,6 +3048,12 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
     public static class PassengerCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("adult_passenger_num")
         private Integer adultPassengerNum;
@@ -3026,6 +3135,12 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("agentInfos")
         private java.util.List < AgentInfos> agentInfos;

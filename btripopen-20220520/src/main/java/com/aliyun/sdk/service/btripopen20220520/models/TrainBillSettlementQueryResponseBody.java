@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TrainBillSettlementQueryResponseBody} extends {@link TeaModel}
  *
  * <p>TrainBillSettlementQueryResponseBody</p>
@@ -150,6 +151,12 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TrainBillSettlementQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainBillSettlementQueryResponseBody</p>
+     */
     public static class DataList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("alipay_trade_no")
         private String alipayTradeNo;
@@ -204,6 +211,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("business_trip_result")
         private String businessTripResult;
+
+        @com.aliyun.core.annotation.NameInMap("cabin_max_price")
+        private Double cabinMaxPrice;
 
         @com.aliyun.core.annotation.NameInMap("capital_direction")
         private String capitalDirection;
@@ -271,6 +281,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("is_transfer_order")
         private String isTransferOrder;
 
+        @com.aliyun.core.annotation.NameInMap("max_cabin")
+        private String maxCabin;
+
         @com.aliyun.core.annotation.NameInMap("order_id")
         private String orderId;
 
@@ -318,6 +331,12 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("run_time")
         private String runTime;
+
+        @com.aliyun.core.annotation.NameInMap("scene_id")
+        private String sceneId;
+
+        @com.aliyun.core.annotation.NameInMap("scene_name")
+        private String sceneName;
 
         @com.aliyun.core.annotation.NameInMap("seat_no")
         private String seatNo;
@@ -407,6 +426,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             this.bookerJobNo = builder.bookerJobNo;
             this.bookerName = builder.bookerName;
             this.businessTripResult = builder.businessTripResult;
+            this.cabinMaxPrice = builder.cabinMaxPrice;
             this.capitalDirection = builder.capitalDirection;
             this.cascadeDepartment = builder.cascadeDepartment;
             this.changeAffiliateNo = builder.changeAffiliateNo;
@@ -429,6 +449,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             this.index = builder.index;
             this.invoiceTitle = builder.invoiceTitle;
             this.isTransferOrder = builder.isTransferOrder;
+            this.maxCabin = builder.maxCabin;
             this.orderId = builder.orderId;
             this.orderPrice = builder.orderPrice;
             this.overApplyId = builder.overApplyId;
@@ -445,6 +466,8 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             this.remark = builder.remark;
             this.reserveMode = builder.reserveMode;
             this.runTime = builder.runTime;
+            this.sceneId = builder.sceneId;
+            this.sceneName = builder.sceneName;
             this.seatNo = builder.seatNo;
             this.seatType = builder.seatType;
             this.serviceFee = builder.serviceFee;
@@ -605,6 +628,13 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return cabinMaxPrice
+         */
+        public Double getCabinMaxPrice() {
+            return this.cabinMaxPrice;
+        }
+
+        /**
          * @return capitalDirection
          */
         public String getCapitalDirection() {
@@ -759,6 +789,13 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxCabin
+         */
+        public String getMaxCabin() {
+            return this.maxCabin;
+        }
+
+        /**
          * @return orderId
          */
         public String getOrderId() {
@@ -868,6 +905,20 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getRunTime() {
             return this.runTime;
+        }
+
+        /**
+         * @return sceneId
+         */
+        public String getSceneId() {
+            return this.sceneId;
+        }
+
+        /**
+         * @return sceneName
+         */
+        public String getSceneName() {
+            return this.sceneName;
         }
 
         /**
@@ -1050,6 +1101,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             private String bookerJobNo; 
             private String bookerName; 
             private String businessTripResult; 
+            private Double cabinMaxPrice; 
             private String capitalDirection; 
             private String cascadeDepartment; 
             private String changeAffiliateNo; 
@@ -1072,6 +1124,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             private String index; 
             private String invoiceTitle; 
             private String isTransferOrder; 
+            private String maxCabin; 
             private String orderId; 
             private Double orderPrice; 
             private String overApplyId; 
@@ -1088,6 +1141,8 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             private String remark; 
             private String reserveMode; 
             private String runTime; 
+            private String sceneId; 
+            private String sceneName; 
             private String seatNo; 
             private String seatType; 
             private Double serviceFee; 
@@ -1153,7 +1208,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 审批扩展自定义字段
+             * <p>审批扩展自定义字段</p>
              */
             public Builder applyExtendField(String applyExtendField) {
                 this.applyExtendField = applyExtendField;
@@ -1253,6 +1308,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder businessTripResult(String businessTripResult) {
                 this.businessTripResult = businessTripResult;
+                return this;
+            }
+
+            /**
+             * cabin_max_price.
+             */
+            public Builder cabinMaxPrice(Double cabinMaxPrice) {
+                this.cabinMaxPrice = cabinMaxPrice;
                 return this;
             }
 
@@ -1433,6 +1496,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * max_cabin.
+             */
+            public Builder maxCabin(String maxCabin) {
+                this.maxCabin = maxCabin;
+                return this;
+            }
+
+            /**
              * order_id.
              */
             public Builder orderId(String orderId) {
@@ -1561,6 +1632,22 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * scene_id.
+             */
+            public Builder sceneId(String sceneId) {
+                this.sceneId = sceneId;
+                return this;
+            }
+
+            /**
+             * scene_name.
+             */
+            public Builder sceneName(String sceneName) {
+                this.sceneName = sceneName;
+                return this;
+            }
+
+            /**
              * seat_no.
              */
             public Builder seatNo(String seatNo) {
@@ -1641,7 +1728,10 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 税率
+             * <p>税率</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6%</p>
              */
             public Builder taxRate(String taxRate) {
                 this.taxRate = taxRate;
@@ -1751,6 +1841,12 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainBillSettlementQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainBillSettlementQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("category")
         private Integer category;

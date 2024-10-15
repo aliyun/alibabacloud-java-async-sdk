@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteEmployeesFromCustomRoleRequest} extends {@link RequestModel}
  *
  * <p>DeleteEmployeesFromCustomRoleRequest</p>
@@ -83,7 +84,10 @@ public class DeleteEmployeesFromCustomRoleRequest extends Request {
         } 
 
         /**
-         * role_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder roleId(String roleId) {
             this.putBodyParameter("role_id", roleId);
@@ -92,7 +96,7 @@ public class DeleteEmployeesFromCustomRoleRequest extends Request {
         }
 
         /**
-         * user_id_list.
+         * <p>This parameter is required.</p>
          */
         public Builder userIdList(java.util.List < String > userIdList) {
             String userIdListShrink = shrink(userIdList, "user_id_list", "json");

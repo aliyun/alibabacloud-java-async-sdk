@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IsvRuleSaveRequest} extends {@link RequestModel}
  *
  * <p>IsvRuleSaveRequest</p>
@@ -149,7 +150,7 @@ public class IsvRuleSaveRequest extends Request {
         }
 
         /**
-         * book_type.
+         * <p>This parameter is required.</p>
          */
         public Builder bookType(String bookType) {
             this.putBodyParameter("book_type", bookType);
@@ -177,7 +178,10 @@ public class IsvRuleSaveRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putBodyParameter("status", status);
@@ -186,7 +190,10 @@ public class IsvRuleSaveRequest extends Request {
         }
 
         /**
-         * user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("user_id", userId);
@@ -210,6 +217,12 @@ public class IsvRuleSaveRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link IsvRuleSaveRequest} extends {@link TeaModel}
+     *
+     * <p>IsvRuleSaveRequest</p>
+     */
     public static class BookuserList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("entity_id")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -251,7 +264,7 @@ public class IsvRuleSaveRequest extends Request {
             private Integer entityType; 
 
             /**
-             * entity_id.
+             * <p>This parameter is required.</p>
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -259,7 +272,7 @@ public class IsvRuleSaveRequest extends Request {
             }
 
             /**
-             * entity_type.
+             * <p>This parameter is required.</p>
              */
             public Builder entityType(Integer entityType) {
                 this.entityType = entityType;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyTripTaskExecuteResponseBody} extends {@link TeaModel}
  *
  * <p>ApplyTripTaskExecuteResponseBody</p>
@@ -137,7 +138,10 @@ public class ApplyTripTaskExecuteResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210bc56016876728084104176d2c35</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelBillSettlementQueryResponseBody} extends {@link TeaModel}
  *
  * <p>HotelBillSettlementQueryResponseBody</p>
@@ -150,6 +151,12 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HotelBillSettlementQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelBillSettlementQueryResponseBody</p>
+     */
     public static class DataList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("agreement_promotion_fee")
         private Double agreementPromotionFee;
@@ -181,6 +188,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bill_record_time")
         private String billRecordTime;
 
+        @com.aliyun.core.annotation.NameInMap("billing_entity")
+        private String billingEntity;
+
         @com.aliyun.core.annotation.NameInMap("book_reason")
         private String bookReason;
 
@@ -204,6 +214,12 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("business_trip_result")
         private String businessTripResult;
+
+        @com.aliyun.core.annotation.NameInMap("cancel_or_modify_reason")
+        private String cancelOrModifyReason;
+
+        @com.aliyun.core.annotation.NameInMap("cancel_or_modify_scene")
+        private String cancelOrModifyScene;
 
         @com.aliyun.core.annotation.NameInMap("capital_direction")
         private String capitalDirection;
@@ -304,6 +320,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("order_type")
         private String orderType;
 
+        @com.aliyun.core.annotation.NameInMap("original_reserve_rule")
+        private String originalReserveRule;
+
         @com.aliyun.core.annotation.NameInMap("over_apply_id")
         private String overApplyId;
 
@@ -348,6 +367,12 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("room_type")
         private String roomType;
+
+        @com.aliyun.core.annotation.NameInMap("scene_id")
+        private String sceneId;
+
+        @com.aliyun.core.annotation.NameInMap("scene_name")
+        private String sceneName;
 
         @com.aliyun.core.annotation.NameInMap("service_fee")
         private Double serviceFee;
@@ -405,6 +430,7 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             this.applyId = builder.applyId;
             this.averageNights = builder.averageNights;
             this.billRecordTime = builder.billRecordTime;
+            this.billingEntity = builder.billingEntity;
             this.bookReason = builder.bookReason;
             this.bookTime = builder.bookTime;
             this.bookerId = builder.bookerId;
@@ -413,6 +439,8 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             this.brandGroup = builder.brandGroup;
             this.brandName = builder.brandName;
             this.businessTripResult = builder.businessTripResult;
+            this.cancelOrModifyReason = builder.cancelOrModifyReason;
+            this.cancelOrModifyScene = builder.cancelOrModifyScene;
             this.capitalDirection = builder.capitalDirection;
             this.cascadeDepartment = builder.cascadeDepartment;
             this.checkInDate = builder.checkInDate;
@@ -446,6 +474,7 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             this.orderId = builder.orderId;
             this.orderPrice = builder.orderPrice;
             this.orderType = builder.orderType;
+            this.originalReserveRule = builder.originalReserveRule;
             this.overApplyId = builder.overApplyId;
             this.paymentDepartmentId = builder.paymentDepartmentId;
             this.paymentDepartmentName = builder.paymentDepartmentName;
@@ -461,6 +490,8 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             this.roomNumber = builder.roomNumber;
             this.roomPrice = builder.roomPrice;
             this.roomType = builder.roomType;
+            this.sceneId = builder.sceneId;
+            this.sceneName = builder.sceneName;
             this.serviceFee = builder.serviceFee;
             this.settlementFee = builder.settlementFee;
             this.settlementGrantFee = builder.settlementGrantFee;
@@ -557,6 +588,13 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return billingEntity
+         */
+        public String getBillingEntity() {
+            return this.billingEntity;
+        }
+
+        /**
          * @return bookReason
          */
         public String getBookReason() {
@@ -610,6 +648,20 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getBusinessTripResult() {
             return this.businessTripResult;
+        }
+
+        /**
+         * @return cancelOrModifyReason
+         */
+        public String getCancelOrModifyReason() {
+            return this.cancelOrModifyReason;
+        }
+
+        /**
+         * @return cancelOrModifyScene
+         */
+        public String getCancelOrModifyScene() {
+            return this.cancelOrModifyScene;
         }
 
         /**
@@ -844,6 +896,13 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return originalReserveRule
+         */
+        public String getOriginalReserveRule() {
+            return this.originalReserveRule;
+        }
+
+        /**
          * @return overApplyId
          */
         public String getOverApplyId() {
@@ -946,6 +1005,20 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getRoomType() {
             return this.roomType;
+        }
+
+        /**
+         * @return sceneId
+         */
+        public String getSceneId() {
+            return this.sceneId;
+        }
+
+        /**
+         * @return sceneName
+         */
+        public String getSceneName() {
+            return this.sceneName;
         }
 
         /**
@@ -1064,6 +1137,7 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             private String applyId; 
             private String averageNights; 
             private String billRecordTime; 
+            private String billingEntity; 
             private String bookReason; 
             private String bookTime; 
             private String bookerId; 
@@ -1072,6 +1146,8 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             private String brandGroup; 
             private String brandName; 
             private String businessTripResult; 
+            private String cancelOrModifyReason; 
+            private String cancelOrModifyScene; 
             private String capitalDirection; 
             private String cascadeDepartment; 
             private String checkInDate; 
@@ -1105,6 +1181,7 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             private String orderId; 
             private Double orderPrice; 
             private String orderType; 
+            private String originalReserveRule; 
             private String overApplyId; 
             private String paymentDepartmentId; 
             private String paymentDepartmentName; 
@@ -1120,6 +1197,8 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             private Integer roomNumber; 
             private Double roomPrice; 
             private String roomType; 
+            private String sceneId; 
+            private String sceneName; 
             private Double serviceFee; 
             private Double settlementFee; 
             private Double settlementGrantFee; 
@@ -1185,7 +1264,7 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 审批扩展自定义字段
+             * <p>审批扩展自定义字段</p>
              */
             public Builder applyExtendField(String applyExtendField) {
                 this.applyExtendField = applyExtendField;
@@ -1213,6 +1292,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder billRecordTime(String billRecordTime) {
                 this.billRecordTime = billRecordTime;
+                return this;
+            }
+
+            /**
+             * billing_entity.
+             */
+            public Builder billingEntity(String billingEntity) {
+                this.billingEntity = billingEntity;
                 return this;
             }
 
@@ -1277,6 +1364,22 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder businessTripResult(String businessTripResult) {
                 this.businessTripResult = businessTripResult;
+                return this;
+            }
+
+            /**
+             * cancel_or_modify_reason.
+             */
+            public Builder cancelOrModifyReason(String cancelOrModifyReason) {
+                this.cancelOrModifyReason = cancelOrModifyReason;
+                return this;
+            }
+
+            /**
+             * cancel_or_modify_scene.
+             */
+            public Builder cancelOrModifyScene(String cancelOrModifyScene) {
+                this.cancelOrModifyScene = cancelOrModifyScene;
                 return this;
             }
 
@@ -1545,6 +1648,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * original_reserve_rule.
+             */
+            public Builder originalReserveRule(String originalReserveRule) {
+                this.originalReserveRule = originalReserveRule;
+                return this;
+            }
+
+            /**
              * over_apply_id.
              */
             public Builder overApplyId(String overApplyId) {
@@ -1665,6 +1776,22 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * scene_id.
+             */
+            public Builder sceneId(String sceneId) {
+                this.sceneId = sceneId;
+                return this;
+            }
+
+            /**
+             * scene_name.
+             */
+            public Builder sceneName(String sceneName) {
+                this.sceneName = sceneName;
+                return this;
+            }
+
+            /**
              * service_fee.
              */
             public Builder serviceFee(Double serviceFee) {
@@ -1721,7 +1848,10 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 税率
+             * <p>税率</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6%</p>
              */
             public Builder taxRate(String taxRate) {
                 this.taxRate = taxRate;
@@ -1791,6 +1921,12 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelBillSettlementQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelBillSettlementQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("category")
         private Integer category;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TBAccountInfoQueryResponseBody} extends {@link TeaModel}
  *
  * <p>TBAccountInfoQueryResponseBody</p>
@@ -150,6 +151,12 @@ public class TBAccountInfoQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TBAccountInfoQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TBAccountInfoQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tb_account")
         private String tbAccount;

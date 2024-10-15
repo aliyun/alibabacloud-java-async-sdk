@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyTripTaskExecuteRequest} extends {@link RequestModel}
  *
  * <p>ApplyTripTaskExecuteRequest</p>
@@ -141,7 +142,10 @@ public class ApplyTripTaskExecuteRequest extends Request {
         } 
 
         /**
-         * action_from.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>open</p>
          */
         public Builder actionFrom(String actionFrom) {
             this.putBodyParameter("action_from", actionFrom);
@@ -159,7 +163,10 @@ public class ApplyTripTaskExecuteRequest extends Request {
         }
 
         /**
-         * task_action.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agree</p>
          */
         public Builder taskAction(String taskAction) {
             this.putBodyParameter("task_action", taskAction);
@@ -168,7 +175,10 @@ public class ApplyTripTaskExecuteRequest extends Request {
         }
 
         /**
-         * task_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder taskId(Long taskId) {
             this.putBodyParameter("task_id", taskId);
@@ -177,7 +187,10 @@ public class ApplyTripTaskExecuteRequest extends Request {
         }
 
         /**
-         * user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>thirdpart12138</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("user_id", userId);

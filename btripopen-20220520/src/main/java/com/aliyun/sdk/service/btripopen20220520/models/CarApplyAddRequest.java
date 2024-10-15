@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CarApplyAddRequest} extends {@link RequestModel}
  *
  * <p>CarApplyAddRequest</p>
@@ -301,7 +302,7 @@ public class CarApplyAddRequest extends Request {
         } 
 
         /**
-         * cause.
+         * <p>This parameter is required.</p>
          */
         public Builder cause(String cause) {
             this.putBodyParameter("cause", cause);
@@ -310,7 +311,7 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * city.
+         * <p>This parameter is required.</p>
          */
         public Builder city(String city) {
             this.putBodyParameter("city", city);
@@ -328,7 +329,10 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * date.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-12 14:52:52</p>
          */
         public Builder date(String date) {
             this.putBodyParameter("date", date);
@@ -364,7 +368,10 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putBodyParameter("status", status);
@@ -373,7 +380,10 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * third_part_apply_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IRGS1413</p>
          */
         public Builder thirdPartApplyId(String thirdPartApplyId) {
             this.putBodyParameter("third_part_apply_id", thirdPartApplyId);
@@ -400,7 +410,10 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * times_total.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder timesTotal(Integer timesTotal) {
             this.putBodyParameter("times_total", timesTotal);
@@ -409,7 +422,10 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * times_type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder timesType(Integer timesType) {
             this.putBodyParameter("times_type", timesType);
@@ -418,7 +434,10 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * times_used.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder timesUsed(Integer timesUsed) {
             this.putBodyParameter("times_used", timesUsed);
@@ -427,7 +446,7 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * title.
+         * <p>This parameter is required.</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("title", title);
@@ -446,7 +465,10 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OPEN1415614</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("user_id", userId);
@@ -470,6 +492,12 @@ public class CarApplyAddRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CarApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>CarApplyAddRequest</p>
+     */
     public static class CarCitySet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("city_code")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -511,7 +539,7 @@ public class CarApplyAddRequest extends Request {
             private String cityName; 
 
             /**
-             * city_code.
+             * <p>This parameter is required.</p>
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -519,7 +547,7 @@ public class CarApplyAddRequest extends Request {
             }
 
             /**
-             * city_name.
+             * <p>This parameter is required.</p>
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -533,6 +561,12 @@ public class CarApplyAddRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CarApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>CarApplyAddRequest</p>
+     */
     public static class TravelerStandard extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("car_city_set")
         private java.util.List < CarCitySet> carCitySet;
@@ -581,7 +615,7 @@ public class CarApplyAddRequest extends Request {
             }
 
             /**
-             * user_id.
+             * <p>This parameter is required.</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

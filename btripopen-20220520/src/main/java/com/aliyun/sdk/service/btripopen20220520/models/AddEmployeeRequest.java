@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddEmployeeRequest} extends {@link RequestModel}
  *
  * <p>AddEmployeeRequest</p>
@@ -501,7 +502,10 @@ public class AddEmployeeRequest extends Request {
         }
 
         /**
-         * user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user123</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("user_id", userId);
@@ -510,7 +514,7 @@ public class AddEmployeeRequest extends Request {
         }
 
         /**
-         * user_nick.
+         * <p>This parameter is required.</p>
          */
         public Builder userNick(String userNick) {
             this.putBodyParameter("user_nick", userNick);
@@ -534,6 +538,12 @@ public class AddEmployeeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddEmployeeRequest} extends {@link TeaModel}
+     *
+     * <p>AddEmployeeRequest</p>
+     */
     public static class CertList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("birthday")
         private String birthday;

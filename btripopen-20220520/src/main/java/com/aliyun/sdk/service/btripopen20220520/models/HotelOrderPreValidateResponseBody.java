@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelOrderPreValidateResponseBody} extends {@link TeaModel}
  *
  * <p>HotelOrderPreValidateResponseBody</p>
@@ -121,7 +122,10 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B72B39C8-32DE-558D-AD1C-D53F11F6ADFE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,6 +154,12 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HotelOrderPreValidateResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderPreValidateResponseBody</p>
+     */
     public static class PromotionDetailInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("check_status")
         private Boolean checkStatus;
@@ -311,6 +321,12 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderPreValidateResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderPreValidateResponseBody</p>
+     */
     public static class PromotionInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ext_attr_map")
         private java.util.Map < String, String > extAttrMap;
@@ -392,6 +408,12 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderPreValidateResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderPreValidateResponseBody</p>
+     */
     public static class RatePlanDaily extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("board")
         private String board;
@@ -593,6 +615,12 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderPreValidateResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderPreValidateResponseBody</p>
+     */
     public static class BtripHotelCancelPolicyInfoDTOList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("hour")
         private Long hour;
@@ -654,6 +682,12 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderPreValidateResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderPreValidateResponseBody</p>
+     */
     public static class BtripHotelCancelPolicyDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("btrip_hotel_cancel_policy_info_d_t_o_list")
         private java.util.List < BtripHotelCancelPolicyInfoDTOList> btripHotelCancelPolicyInfoDTOList;
@@ -715,6 +749,12 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderPreValidateResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderPreValidateResponseBody</p>
+     */
     public static class RatePlanInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bed_desc")
         private String bedDesc;
@@ -956,6 +996,12 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderPreValidateResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderPreValidateResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("extend_info")
         private String extendInfo;

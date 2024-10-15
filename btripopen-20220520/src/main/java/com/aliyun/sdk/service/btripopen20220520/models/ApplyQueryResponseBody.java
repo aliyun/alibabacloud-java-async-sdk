@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyQueryResponseBody} extends {@link TeaModel}
  *
  * <p>ApplyQueryResponseBody</p>
@@ -150,6 +151,12 @@ public class ApplyQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyQueryResponseBody</p>
+     */
     public static class ApproverList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("note")
         private String note;
@@ -311,6 +318,12 @@ public class ApplyQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyQueryResponseBody</p>
+     */
     public static class CarRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("scenario_template_id")
         private String scenarioTemplateId;
@@ -372,6 +385,12 @@ public class ApplyQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyQueryResponseBody</p>
+     */
     public static class HotelCitys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
@@ -453,6 +472,12 @@ public class ApplyQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyQueryResponseBody</p>
+     */
     public static class HotelIntlCitys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
@@ -534,6 +559,12 @@ public class ApplyQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyQueryResponseBody</p>
+     */
     public static class ExternalTravelerList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("attribute")
         private String attribute;
@@ -1095,6 +1126,12 @@ public class ApplyQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyQueryResponseBody</p>
+     */
     public static class HotelShare extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("param")
         private String param;
@@ -1156,6 +1193,12 @@ public class ApplyQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyQueryResponseBody</p>
+     */
     public static class ItineraryTravelStandard extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("hotel_available_nights_per_day")
         private Integer hotelAvailableNightsPerDay;
@@ -1197,6 +1240,12 @@ public class ApplyQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyQueryResponseBody</p>
+     */
     public static class ItineraryList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_city")
         private String arrCity;
@@ -1578,6 +1627,12 @@ public class ApplyQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyQueryResponseBody</p>
+     */
     public static class ItinerarySetListItineraryTravelStandard extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("hotel_available_nights_per_day")
         private Integer hotelAvailableNightsPerDay;
@@ -1619,6 +1674,12 @@ public class ApplyQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyQueryResponseBody</p>
+     */
     public static class ItinerarySetList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_date")
         private String arrDate;
@@ -1940,6 +2001,12 @@ public class ApplyQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyQueryResponseBody</p>
+     */
     public static class CarCitySet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
@@ -2001,6 +2068,12 @@ public class ApplyQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyQueryResponseBody</p>
+     */
     public static class TravelerListHotelCitys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
@@ -2082,6 +2155,12 @@ public class ApplyQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyQueryResponseBody</p>
+     */
     public static class TravelerListHotelIntlCitys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
@@ -2163,6 +2242,12 @@ public class ApplyQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyQueryResponseBody</p>
+     */
     public static class TravelerList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("attribute")
         private String attribute;
@@ -2744,6 +2829,12 @@ public class ApplyQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("apply_show_id")
         private String applyShowId;
@@ -3287,7 +3378,10 @@ public class ApplyQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 补充描述，账单中将会体现此字段的值。可以用于企业的统计和对账
+             * <p>补充描述，账单中将会体现此字段的值。可以用于企业的统计和对账</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;cost_center&quot;:&quot;成本中心&quot;}</p>
              */
             public Builder extendField(String extendField) {
                 this.extendField = extendField;

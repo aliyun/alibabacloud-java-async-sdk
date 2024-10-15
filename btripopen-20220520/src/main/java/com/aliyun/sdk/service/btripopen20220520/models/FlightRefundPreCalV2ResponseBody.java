@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightRefundPreCalV2ResponseBody} extends {@link TeaModel}
  *
  * <p>FlightRefundPreCalV2ResponseBody</p>
@@ -113,7 +114,7 @@ public class FlightRefundPreCalV2ResponseBody extends TeaModel {
         }
 
         /**
-         * module
+         * <p>module</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -121,7 +122,10 @@ public class FlightRefundPreCalV2ResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>92359A00-85D8-16C4-AED0-249618DEEC17</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +141,10 @@ public class FlightRefundPreCalV2ResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21041ce316577904808056433edbb2</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -150,6 +157,12 @@ public class FlightRefundPreCalV2ResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FlightRefundPreCalV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightRefundPreCalV2ResponseBody</p>
+     */
     public static class MultiRefundFeeDTOS extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("passenger_id")
         private String passengerId;
@@ -251,6 +264,12 @@ public class FlightRefundPreCalV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightRefundPreCalV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightRefundPreCalV2ResponseBody</p>
+     */
     public static class RefundReasonOptionDTOS extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("reason")
         private String reason;
@@ -332,6 +351,12 @@ public class FlightRefundPreCalV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightRefundPreCalV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightRefundPreCalV2ResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("multi_refund_fee_d_t_o_s")
         private java.util.List < MultiRefundFeeDTOS> multiRefundFeeDTOS;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MealOrderDetailQueryRequest} extends {@link RequestModel}
  *
  * <p>MealOrderDetailQueryRequest</p>
@@ -82,7 +83,10 @@ public class MealOrderDetailQueryRequest extends Request {
         } 
 
         /**
-         * order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1034088198073015300</p>
          */
         public Builder orderId(String orderId) {
             this.putPathParameter("order_id", orderId);

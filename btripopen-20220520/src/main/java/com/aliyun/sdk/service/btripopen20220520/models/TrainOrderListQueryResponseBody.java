@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TrainOrderListQueryResponseBody} extends {@link TeaModel}
  *
  * <p>TrainOrderListQueryResponseBody</p>
@@ -170,6 +171,12 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TrainOrderListQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainOrderListQueryResponseBody</p>
+     */
     public static class CostCenter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("corp_id")
         private String corpId;
@@ -271,6 +278,12 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainOrderListQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainOrderListQueryResponseBody</p>
+     */
     public static class Invoice extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
@@ -332,6 +345,12 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainOrderListQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainOrderListQueryResponseBody</p>
+     */
     public static class PriceInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("category_code")
         private Integer categoryCode;
@@ -653,6 +672,12 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainOrderListQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainOrderListQueryResponseBody</p>
+     */
     public static class UserAffiliateList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
@@ -714,6 +739,12 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainOrderListQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainOrderListQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("apply_id")
         private Long applyId;
@@ -1515,6 +1546,12 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainOrderListQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainOrderListQueryResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("page")
         private Integer page;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TravelStandardQueryRequest} extends {@link RequestModel}
  *
  * <p>TravelStandardQueryRequest</p>
@@ -98,7 +99,10 @@ public class TravelStandardQueryRequest extends Request {
         } 
 
         /**
-         * from_group.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder fromGroup(Boolean fromGroup) {
             this.putQueryParameter("from_group", fromGroup);
@@ -107,7 +111,10 @@ public class TravelStandardQueryRequest extends Request {
         }
 
         /**
-         * rule_code.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2006523763</p>
          */
         public Builder ruleCode(Long ruleCode) {
             this.putQueryParameter("rule_code", ruleCode);
@@ -116,7 +123,7 @@ public class TravelStandardQueryRequest extends Request {
         }
 
         /**
-         * service_type_list.
+         * <p>This parameter is required.</p>
          */
         public Builder serviceTypeList(java.util.List < String > serviceTypeList) {
             String serviceTypeListShrink = shrink(serviceTypeList, "service_type_list", "json");

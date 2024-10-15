@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelStaticInfoResponseBody} extends {@link TeaModel}
  *
  * <p>HotelStaticInfoResponseBody</p>
@@ -113,7 +114,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         }
 
         /**
-         * module
+         * <p>module</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -150,6 +151,12 @@ public class HotelStaticInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HotelStaticInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelStaticInfoResponseBody</p>
+     */
     public static class ExpandInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("check_in")
         private String checkIn;
@@ -391,6 +398,12 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelStaticInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelStaticInfoResponseBody</p>
+     */
     public static class Imageinfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("desc")
         private String desc;
@@ -472,6 +485,12 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelStaticInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelStaticInfoResponseBody</p>
+     */
     public static class BedInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bed_desc")
         private String bedDesc;
@@ -613,6 +632,12 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelStaticInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelStaticInfoResponseBody</p>
+     */
     public static class BedInfoGroupList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bed_Infos")
         private java.util.List < BedInfos> bedInfos;
@@ -654,6 +679,12 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelStaticInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelStaticInfoResponseBody</p>
+     */
     public static class RoomInfosBedInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bed_desc")
         private String bedDesc;
@@ -795,6 +826,12 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelStaticInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelStaticInfoResponseBody</p>
+     */
     public static class RoomInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bed_info_group_list")
         private java.util.List < BedInfoGroupList> bedInfoGroupList;
@@ -1196,6 +1233,12 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelStaticInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelStaticInfoResponseBody</p>
+     */
     public static class HotelStaticInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("block_room_type_information")
         private java.util.Map < String, String > blockRoomTypeInformation;
@@ -1897,6 +1940,12 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelStaticInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelStaticInfoResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("hotel_static_infos")
         private java.util.List < HotelStaticInfos> hotelStaticInfos;

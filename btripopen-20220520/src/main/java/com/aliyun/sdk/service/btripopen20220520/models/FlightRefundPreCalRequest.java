@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightRefundPreCalRequest} extends {@link RequestModel}
  *
  * <p>FlightRefundPreCalRequest</p>
@@ -97,7 +98,10 @@ public class FlightRefundPreCalRequest extends Request {
         } 
 
         /**
-         * dis_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dis123</p>
          */
         public Builder disOrderId(String disOrderId) {
             this.putQueryParameter("dis_order_id", disOrderId);
@@ -115,7 +119,7 @@ public class FlightRefundPreCalRequest extends Request {
         }
 
         /**
-         * passenger_segment_info_list.
+         * <p>This parameter is required.</p>
          */
         public Builder passengerSegmentInfoList(java.util.List < PassengerSegmentInfoList> passengerSegmentInfoList) {
             String passengerSegmentInfoListShrink = shrink(passengerSegmentInfoList, "passenger_segment_info_list", "json");
@@ -140,6 +144,12 @@ public class FlightRefundPreCalRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link FlightRefundPreCalRequest} extends {@link TeaModel}
+     *
+     * <p>FlightRefundPreCalRequest</p>
+     */
     public static class PassengerSegmentInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("flight_no")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -194,7 +204,10 @@ public class FlightRefundPreCalRequest extends Request {
             private String userId; 
 
             /**
-             * flight_no.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CA1982</p>
              */
             public Builder flightNo(String flightNo) {
                 this.flightNo = flightNo;
@@ -202,7 +215,7 @@ public class FlightRefundPreCalRequest extends Request {
             }
 
             /**
-             * passenger_name.
+             * <p>This parameter is required.</p>
              */
             public Builder passengerName(String passengerName) {
                 this.passengerName = passengerName;
@@ -210,7 +223,10 @@ public class FlightRefundPreCalRequest extends Request {
             }
 
             /**
-             * user_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23112</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelIndexInfoRequest} extends {@link RequestModel}
  *
  * <p>HotelIndexInfoRequest</p>
@@ -128,7 +129,10 @@ public class HotelIndexInfoRequest extends Request {
         }
 
         /**
-         * page_size.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("page_size", pageSize);

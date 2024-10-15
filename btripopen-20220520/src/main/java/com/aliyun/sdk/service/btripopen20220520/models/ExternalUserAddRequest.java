@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExternalUserAddRequest} extends {@link RequestModel}
  *
  * <p>ExternalUserAddRequest</p>
@@ -196,7 +197,10 @@ public class ExternalUserAddRequest extends Request {
         }
 
         /**
-         * external_user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0012</p>
          */
         public Builder externalUserId(String externalUserId) {
             this.putBodyParameter("external_user_id", externalUserId);
@@ -214,7 +218,7 @@ public class ExternalUserAddRequest extends Request {
         }
 
         /**
-         * real_name.
+         * <p>This parameter is required.</p>
          */
         public Builder realName(String realName) {
             this.putBodyParameter("real_name", realName);
@@ -232,7 +236,10 @@ public class ExternalUserAddRequest extends Request {
         }
 
         /**
-         * user_type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder userType(Integer userType) {
             this.putBodyParameter("user_type", userType);
@@ -256,6 +263,12 @@ public class ExternalUserAddRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ExternalUserAddRequest} extends {@link TeaModel}
+     *
+     * <p>ExternalUserAddRequest</p>
+     */
     public static class CertRequestList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cert_expired_time")
         private String certExpiredTime;
@@ -349,7 +362,10 @@ public class ExternalUserAddRequest extends Request {
             }
 
             /**
-             * cert_no.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>330101199010010213</p>
              */
             public Builder certNo(String certNo) {
                 this.certNo = certNo;
@@ -357,7 +373,10 @@ public class ExternalUserAddRequest extends Request {
             }
 
             /**
-             * cert_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder certType(Integer certType) {
                 this.certType = certType;

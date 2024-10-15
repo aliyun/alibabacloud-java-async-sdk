@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MonthBillGetResponseBody} extends {@link TeaModel}
  *
  * <p>MonthBillGetResponseBody</p>
@@ -150,6 +151,12 @@ public class MonthBillGetResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link MonthBillGetResponseBody} extends {@link TeaModel}
+     *
+     * <p>MonthBillGetResponseBody</p>
+     */
     public static class MonthAccountBillDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("billConfirmed")
         private Integer billConfirmed;
@@ -305,7 +312,10 @@ public class MonthBillGetResponseBody extends TeaModel {
             }
 
             /**
-             * 用车金额（单位：元）
+             * <p>用车金额（单位：元）</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx.xx</p>
              */
             public Builder carAmount(Double carAmount) {
                 this.carAmount = carAmount;
@@ -313,7 +323,10 @@ public class MonthBillGetResponseBody extends TeaModel {
             }
 
             /**
-             * 违约金金额（单位：元）
+             * <p>违约金金额（单位：元）</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx.xx</p>
              */
             public Builder damageAmount(Double damageAmount) {
                 this.damageAmount = damageAmount;
@@ -321,7 +334,10 @@ public class MonthBillGetResponseBody extends TeaModel {
             }
 
             /**
-             * 机票金额（单位：元）
+             * <p>机票金额（单位：元）</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx.xx</p>
              */
             public Builder flightAmount(Double flightAmount) {
                 this.flightAmount = flightAmount;
@@ -329,7 +345,10 @@ public class MonthBillGetResponseBody extends TeaModel {
             }
 
             /**
-             * 福豆金额（单位：元）
+             * <p>福豆金额（单位：元）</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx.xx</p>
              */
             public Builder fuPoint(Double fuPoint) {
                 this.fuPoint = fuPoint;
@@ -337,7 +356,10 @@ public class MonthBillGetResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店金额（单位：元）
+             * <p>酒店金额（单位：元）</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx.xx</p>
              */
             public Builder hotelAmount(Double hotelAmount) {
                 this.hotelAmount = hotelAmount;
@@ -345,7 +367,10 @@ public class MonthBillGetResponseBody extends TeaModel {
             }
 
             /**
-             * 国际机票金额（单位：元）
+             * <p>国际机票金额（单位：元）</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx.xx</p>
              */
             public Builder ieFlightAmount(Double ieFlightAmount) {
                 this.ieFlightAmount = ieFlightAmount;
@@ -361,7 +386,10 @@ public class MonthBillGetResponseBody extends TeaModel {
             }
 
             /**
-             * 账期日：YYYYMMDD
+             * <p>账期日：YYYYMMDD</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20200501</p>
              */
             public Builder mailBillDate(Long mailBillDate) {
                 this.mailBillDate = mailBillDate;
@@ -369,7 +397,10 @@ public class MonthBillGetResponseBody extends TeaModel {
             }
 
             /**
-             * 服务费金额（单位：元）
+             * <p>服务费金额（单位：元）</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx.xx</p>
              */
             public Builder serviceAmount(Double serviceAmount) {
                 this.serviceAmount = serviceAmount;
@@ -377,7 +408,10 @@ public class MonthBillGetResponseBody extends TeaModel {
             }
 
             /**
-             * 火车票金额（单位：元）
+             * <p>火车票金额（单位：元）</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx.xx</p>
              */
             public Builder trainAmount(Double trainAmount) {
                 this.trainAmount = trainAmount;
@@ -391,6 +425,12 @@ public class MonthBillGetResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MonthBillGetResponseBody} extends {@link TeaModel}
+     *
+     * <p>MonthBillGetResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("end_date")
         private String endDate;
@@ -462,7 +502,7 @@ public class MonthBillGetResponseBody extends TeaModel {
             }
 
             /**
-             * CorpMonthAccountBillFeeDetail
+             * <p>CorpMonthAccountBillFeeDetail</p>
              */
             public Builder monthAccountBillDetail(MonthAccountBillDetail monthAccountBillDetail) {
                 this.monthAccountBillDetail = monthAccountBillDetail;

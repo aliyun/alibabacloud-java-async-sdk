@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TicketChangingEnquiryResponseBody} extends {@link TeaModel}
  *
  * <p>TicketChangingEnquiryResponseBody</p>
@@ -150,6 +151,12 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TicketChangingEnquiryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingEnquiryResponseBody</p>
+     */
     public static class AirlineInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airline_code")
         private String airlineCode;
@@ -231,6 +238,12 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingEnquiryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingEnquiryResponseBody</p>
+     */
     public static class ArrAirportInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airport_code")
         private String airportCode;
@@ -352,6 +365,12 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingEnquiryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingEnquiryResponseBody</p>
+     */
     public static class Description extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("desc")
         private String desc;
@@ -453,6 +472,12 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingEnquiryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingEnquiryResponseBody</p>
+     */
     public static class ImageDO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("image")
         private String image;
@@ -554,6 +579,12 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingEnquiryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingEnquiryResponseBody</p>
+     */
     public static class BaggageSubContentVisualizes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_desc")
         private java.util.List < String > baggageDesc;
@@ -695,6 +726,12 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingEnquiryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingEnquiryResponseBody</p>
+     */
     public static class BaggageSubContents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_desc")
         private String baggageDesc;
@@ -796,6 +833,12 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingEnquiryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingEnquiryResponseBody</p>
+     */
     public static class BaggageSubItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("attributes")
         private java.util.Map < String, ? > attributes;
@@ -895,7 +938,7 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * attributes
+             * <p>attributes</p>
              */
             public Builder attributes(java.util.Map < String, ? > attributes) {
                 this.attributes = attributes;
@@ -957,6 +1000,12 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingEnquiryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingEnquiryResponseBody</p>
+     */
     public static class Tips extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("logo")
         private String logo;
@@ -1038,6 +1087,12 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingEnquiryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingEnquiryResponseBody</p>
+     */
     public static class BaggageDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_sub_items")
         private java.util.List < BaggageSubItems> baggageSubItems;
@@ -1179,6 +1234,12 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingEnquiryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingEnquiryResponseBody</p>
+     */
     public static class ExtraContents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -1260,6 +1321,12 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingEnquiryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingEnquiryResponseBody</p>
+     */
     public static class RefundSubContents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fee_desc")
         private String feeDesc;
@@ -1341,6 +1408,12 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingEnquiryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingEnquiryResponseBody</p>
+     */
     public static class RefundSubItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -1462,6 +1535,12 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingEnquiryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingEnquiryResponseBody</p>
+     */
     public static class ChangeDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("extra_contents")
         private java.util.List < ExtraContents> extraContents;
@@ -1603,6 +1682,12 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingEnquiryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingEnquiryResponseBody</p>
+     */
     public static class RefundDetailsExtraContents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -1684,6 +1769,12 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingEnquiryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingEnquiryResponseBody</p>
+     */
     public static class RefundSubItemsRefundSubContents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fee_desc")
         private String feeDesc;
@@ -1765,6 +1856,12 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingEnquiryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingEnquiryResponseBody</p>
+     */
     public static class RefundDetailsRefundSubItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -1886,6 +1983,12 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingEnquiryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingEnquiryResponseBody</p>
+     */
     public static class RefundDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("extra_contents")
         private java.util.List < RefundDetailsExtraContents> extraContents;
@@ -2027,6 +2130,12 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingEnquiryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingEnquiryResponseBody</p>
+     */
     public static class ChangeOtaItemRuleRq extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_details")
         private java.util.List < BaggageDetails> baggageDetails;
@@ -2108,6 +2217,12 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingEnquiryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingEnquiryResponseBody</p>
+     */
     public static class ModifyPriceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("passenger_type")
         private Integer passengerType;
@@ -2209,6 +2324,12 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingEnquiryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingEnquiryResponseBody</p>
+     */
     public static class CabinList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cabin")
         private String cabin;
@@ -2410,6 +2531,12 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingEnquiryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingEnquiryResponseBody</p>
+     */
     public static class DepAirportInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airport_code")
         private String airportCode;
@@ -2531,6 +2658,12 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingEnquiryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingEnquiryResponseBody</p>
+     */
     public static class LowestCabinPrice extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("passenger_type")
         private Integer passengerType;
@@ -2632,6 +2765,12 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingEnquiryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingEnquiryResponseBody</p>
+     */
     public static class FlightInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airline_info")
         private AirlineInfo airlineInfo;
@@ -3013,6 +3152,12 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingEnquiryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingEnquiryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("flight_info_list")
         private java.util.List < FlightInfoList> flightInfoList;

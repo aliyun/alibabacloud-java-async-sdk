@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightModifyPayV2ResponseBody} extends {@link TeaModel}
  *
  * <p>FlightModifyPayV2ResponseBody</p>
@@ -113,7 +114,7 @@ public class FlightModifyPayV2ResponseBody extends TeaModel {
         }
 
         /**
-         * module
+         * <p>module</p>
          */
         public Builder module(java.util.Map < String, ? > module) {
             this.module = module;
@@ -121,7 +122,10 @@ public class FlightModifyPayV2ResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +141,10 @@ public class FlightModifyPayV2ResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210bc59716837025964391120d3a5e</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;

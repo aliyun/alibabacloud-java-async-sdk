@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsureOrderRefundResponseBody} extends {@link TeaModel}
  *
  * <p>InsureOrderRefundResponseBody</p>
@@ -150,6 +151,12 @@ public class InsureOrderRefundResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link InsureOrderRefundResponseBody} extends {@link TeaModel}
+     *
+     * <p>InsureOrderRefundResponseBody</p>
+     */
     public static class InsRefundList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("policy_refund_no")
         private String policyRefundNo;
@@ -231,6 +238,12 @@ public class InsureOrderRefundResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link InsureOrderRefundResponseBody} extends {@link TeaModel}
+     *
+     * <p>InsureOrderRefundResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("apply_id")
         private String applyId;

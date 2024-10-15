@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightRefundApplyV2Request} extends {@link RequestModel}
  *
  * <p>FlightRefundApplyV2Request</p>
@@ -346,6 +347,12 @@ public class FlightRefundApplyV2Request extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link FlightRefundApplyV2Request} extends {@link TeaModel}
+     *
+     * <p>FlightRefundApplyV2Request</p>
+     */
     public static class PassengerSegmentRelations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("passenger_id")
         private String passengerId;

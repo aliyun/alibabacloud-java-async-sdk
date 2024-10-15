@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InvoiceRuleSaveResponseBody} extends {@link TeaModel}
  *
  * <p>InvoiceRuleSaveResponseBody</p>
@@ -150,6 +151,12 @@ public class InvoiceRuleSaveResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link InvoiceRuleSaveResponseBody} extends {@link TeaModel}
+     *
+     * <p>InvoiceRuleSaveResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("add_num")
         private Integer addNum;

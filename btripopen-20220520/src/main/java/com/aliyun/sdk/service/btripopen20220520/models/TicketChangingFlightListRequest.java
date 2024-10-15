@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TicketChangingFlightListRequest} extends {@link RequestModel}
  *
  * <p>TicketChangingFlightListRequest</p>
@@ -157,7 +158,10 @@ public class TicketChangingFlightListRequest extends Request {
         }
 
         /**
-         * dep_date.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000-00-00 00:00:00</p>
          */
         public Builder depDate(String depDate) {
             this.putQueryParameter("dep_date", depDate);
@@ -166,7 +170,10 @@ public class TicketChangingFlightListRequest extends Request {
         }
 
         /**
-         * dis_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dis123</p>
          */
         public Builder disOrderId(String disOrderId) {
             this.putQueryParameter("dis_order_id", disOrderId);
@@ -209,6 +216,12 @@ public class TicketChangingFlightListRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TicketChangingFlightListRequest} extends {@link TeaModel}
+     *
+     * <p>TicketChangingFlightListRequest</p>
+     */
     public static class TravelerInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_city")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -287,7 +300,10 @@ public class TicketChangingFlightListRequest extends Request {
             private String userId; 
 
             /**
-             * arr_city.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BJS</p>
              */
             public Builder arrCity(String arrCity) {
                 this.arrCity = arrCity;
@@ -295,7 +311,10 @@ public class TicketChangingFlightListRequest extends Request {
             }
 
             /**
-             * dep_city.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HGH</p>
              */
             public Builder depCity(String depCity) {
                 this.depCity = depCity;
@@ -319,7 +338,10 @@ public class TicketChangingFlightListRequest extends Request {
             }
 
             /**
-             * user_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23231</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

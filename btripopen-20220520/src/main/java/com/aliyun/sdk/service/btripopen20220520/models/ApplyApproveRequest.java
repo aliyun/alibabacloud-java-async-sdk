@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyApproveRequest} extends {@link RequestModel}
  *
  * <p>ApplyApproveRequest</p>
@@ -155,7 +156,10 @@ public class ApplyApproveRequest extends Request {
         } 
 
         /**
-         * apply_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sdfg</p>
          */
         public Builder applyId(String applyId) {
             this.putBodyParameter("apply_id", applyId);
@@ -173,7 +177,10 @@ public class ApplyApproveRequest extends Request {
         }
 
         /**
-         * operate_time.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-12 16:12:53</p>
          */
         public Builder operateTime(String operateTime) {
             this.putBodyParameter("operate_time", operateTime);
@@ -182,7 +189,10 @@ public class ApplyApproveRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putBodyParameter("status", status);
@@ -200,7 +210,10 @@ public class ApplyApproveRequest extends Request {
         }
 
         /**
-         * user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>thirdpart12138</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("user_id", userId);

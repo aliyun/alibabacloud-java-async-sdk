@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CommonApplySyncRequest} extends {@link RequestModel}
  *
  * <p>CommonApplySyncRequest</p>
@@ -140,7 +141,10 @@ public class CommonApplySyncRequest extends Request {
         } 
 
         /**
-         * apply_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1003366164</p>
          */
         public Builder applyId(Long applyId) {
             this.putQueryParameter("apply_id", applyId);
@@ -167,7 +171,10 @@ public class CommonApplySyncRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("status", status);
@@ -185,7 +192,7 @@ public class CommonApplySyncRequest extends Request {
         }
 
         /**
-         * user_id.
+         * <p>This parameter is required.</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("user_id", userId);

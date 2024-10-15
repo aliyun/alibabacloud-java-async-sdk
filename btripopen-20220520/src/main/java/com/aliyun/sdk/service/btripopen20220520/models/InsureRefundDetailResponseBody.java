@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsureRefundDetailResponseBody} extends {@link TeaModel}
  *
  * <p>InsureRefundDetailResponseBody</p>
@@ -150,6 +151,12 @@ public class InsureRefundDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link InsureRefundDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>InsureRefundDetailResponseBody</p>
+     */
     public static class Applicant extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cert_name")
         private String certName;
@@ -251,6 +258,12 @@ public class InsureRefundDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link InsureRefundDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>InsureRefundDetailResponseBody</p>
+     */
     public static class InsureOrder extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("applicant")
         private Applicant applicant;
@@ -472,6 +485,12 @@ public class InsureRefundDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link InsureRefundDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>InsureRefundDetailResponseBody</p>
+     */
     public static class InsureSegment extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_airport_code")
         private String arrAirportCode;
@@ -673,6 +692,12 @@ public class InsureRefundDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link InsureRefundDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>InsureRefundDetailResponseBody</p>
+     */
     public static class Insured extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("birthday")
         private String birthday;
@@ -834,6 +859,12 @@ public class InsureRefundDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link InsureRefundDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>InsureRefundDetailResponseBody</p>
+     */
     public static class SubOrderRefundList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("effective_end_time")
         private String effectiveEndTime;
@@ -1155,6 +1186,12 @@ public class InsureRefundDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link InsureRefundDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>InsureRefundDetailResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("apply_id")
         private String applyId;

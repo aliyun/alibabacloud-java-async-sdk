@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InvoiceRuleSaveRequest} extends {@link RequestModel}
  *
  * <p>InvoiceRuleSaveRequest</p>
@@ -138,7 +139,10 @@ public class InvoiceRuleSaveRequest extends Request {
         }
 
         /**
-         * third_part_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i123</p>
          */
         public Builder thirdPartId(String thirdPartId) {
             this.putBodyParameter("third_part_id", thirdPartId);
@@ -162,6 +166,12 @@ public class InvoiceRuleSaveRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link InvoiceRuleSaveRequest} extends {@link TeaModel}
+     *
+     * <p>InvoiceRuleSaveRequest</p>
+     */
     public static class Entities extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("id")
         private String id;

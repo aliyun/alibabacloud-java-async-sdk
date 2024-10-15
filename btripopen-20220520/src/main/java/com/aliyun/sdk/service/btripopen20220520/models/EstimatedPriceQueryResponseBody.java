@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EstimatedPriceQueryResponseBody} extends {@link TeaModel}
  *
  * <p>EstimatedPriceQueryResponseBody</p>
@@ -137,7 +138,10 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21041ce316577904808056433edbb2</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -150,6 +154,12 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link EstimatedPriceQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>EstimatedPriceQueryResponseBody</p>
+     */
     public static class HotelFeeDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("city")
         private String city;
@@ -271,6 +281,12 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link EstimatedPriceQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>EstimatedPriceQueryResponseBody</p>
+     */
     public static class Cheapest extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_time")
         private String arrTime;
@@ -392,6 +408,12 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link EstimatedPriceQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>EstimatedPriceQueryResponseBody</p>
+     */
     public static class MostExpensive extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_time")
         private String arrTime;
@@ -513,6 +535,12 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link EstimatedPriceQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>EstimatedPriceQueryResponseBody</p>
+     */
     public static class BtripRoutes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_city")
         private String arrCity;
@@ -714,6 +742,12 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link EstimatedPriceQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>EstimatedPriceQueryResponseBody</p>
+     */
     public static class TrafficFee extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("btrip_routes")
         private java.util.List < BtripRoutes> btripRoutes;
@@ -835,6 +869,12 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link EstimatedPriceQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>EstimatedPriceQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("hotel_fee_detail")
         private java.util.List < HotelFeeDetail> hotelFeeDetail;
@@ -894,7 +934,10 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店费用总额，单位为元
+             * <p>酒店费用总额，单位为元</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder totalHotelFee(Long totalHotelFee) {
                 this.totalHotelFee = totalHotelFee;

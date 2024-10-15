@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExceedApplySyncRequest} extends {@link RequestModel}
  *
  * <p>ExceedApplySyncRequest</p>
@@ -140,7 +141,10 @@ public class ExceedApplySyncRequest extends Request {
         } 
 
         /**
-         * apply_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>823744</p>
          */
         public Builder applyId(Long applyId) {
             this.putQueryParameter("apply_id", applyId);
@@ -167,7 +171,10 @@ public class ExceedApplySyncRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("status", status);
@@ -185,7 +192,10 @@ public class ExceedApplySyncRequest extends Request {
         }
 
         /**
-         * user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>open5145141</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("user_id", userId);

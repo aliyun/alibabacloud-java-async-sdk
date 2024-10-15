@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyModifyResponseBody} extends {@link TeaModel}
  *
  * <p>ApplyModifyResponseBody</p>
@@ -113,7 +114,7 @@ public class ApplyModifyResponseBody extends TeaModel {
         }
 
         /**
-         * module。
+         * <p>module。</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -150,6 +151,12 @@ public class ApplyModifyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ApplyModifyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("apply_id")
         private Long applyId;

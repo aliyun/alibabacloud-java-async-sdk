@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsInvoiceScanQueryResponseBody} extends {@link TeaModel}
  *
  * <p>InsInvoiceScanQueryResponseBody</p>
@@ -121,7 +122,10 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +141,10 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210e847f16611516748613869de4f6</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -150,6 +157,12 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link InsInvoiceScanQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>InsInvoiceScanQueryResponseBody</p>
+     */
     public static class InvoiceDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("amount")
         private String amount;
@@ -273,7 +286,10 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             private String unitPrice; 
 
             /**
-             * 金额
+             * <p>金额</p>
+             * 
+             * <strong>example:</strong>
+             * <p>75.21</p>
              */
             public Builder amount(String amount) {
                 this.amount = amount;
@@ -281,7 +297,10 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 行号
+             * <p>行号</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder index(String index) {
                 this.index = index;
@@ -289,7 +308,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 货物或应税劳务、服务名称
+             * <p>货物或应税劳务、服务名称</p>
              */
             public Builder itemName(String itemName) {
                 this.itemName = itemName;
@@ -297,7 +316,10 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 数量
+             * <p>数量</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder quantity(String quantity) {
                 this.quantity = quantity;
@@ -305,7 +327,10 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 规格型号
+             * <p>规格型号</p>
+             * 
+             * <strong>example:</strong>
+             * <p>66PT11230069</p>
              */
             public Builder specification(String specification) {
                 this.specification = specification;
@@ -313,7 +338,10 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 税额
+             * <p>税额</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12.79</p>
              */
             public Builder tax(String tax) {
                 this.tax = tax;
@@ -321,7 +349,10 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 税率
+             * <p>税率</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17%</p>
              */
             public Builder taxRate(String taxRate) {
                 this.taxRate = taxRate;
@@ -329,7 +360,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 单位
+             * <p>单位</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -337,7 +368,10 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 单价
+             * <p>单价</p>
+             * 
+             * <strong>example:</strong>
+             * <p>75.21</p>
              */
             public Builder unitPrice(String unitPrice) {
                 this.unitPrice = unitPrice;
@@ -351,6 +385,12 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link InsInvoiceScanQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>InsInvoiceScanQueryResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("amount_with_tax")
         private String amountWithTax;
@@ -902,7 +942,10 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 校验码
+             * <p>校验码</p>
+             * 
+             * <strong>example:</strong>
+             * <p>07122942791187744475</p>
              */
             public Builder checkCode(String checkCode) {
                 this.checkCode = checkCode;
@@ -926,7 +969,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 开票人
+             * <p>开票人</p>
              */
             public Builder drawer(String drawer) {
                 this.drawer = drawer;
@@ -934,7 +977,10 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 应用ID
+             * <p>应用ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>566</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -982,7 +1028,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发票明细
+             * <p>发票明细</p>
              */
             public Builder invoiceDetails(java.util.List < InvoiceDetails> invoiceDetails) {
                 this.invoiceDetails = invoiceDetails;
@@ -990,7 +1036,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发票地区
+             * <p>发票地区</p>
              */
             public Builder invoiceLocation(String invoiceLocation) {
                 this.invoiceLocation = invoiceLocation;
@@ -1006,7 +1052,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发票抬头
+             * <p>发票抬头</p>
              */
             public Builder invoiceTitle(String invoiceTitle) {
                 this.invoiceTitle = invoiceTitle;
@@ -1022,7 +1068,10 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 机器码
+             * <p>机器码</p>
+             * 
+             * <strong>example:</strong>
+             * <p>661619906841</p>
              */
             public Builder machineCode(String machineCode) {
                 this.machineCode = machineCode;
@@ -1062,7 +1111,10 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 密码区
+             * <p>密码区</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&lt;87*&gt;&gt;53&gt;5023&gt;-446&gt;/4+83/5* *&gt;5/81&lt;75/1931&gt;4&gt;&gt;</p>
              */
             public Builder passwordArea(String passwordArea) {
                 this.passwordArea = passwordArea;
@@ -1078,7 +1130,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 购方银行信息
+             * <p>购方银行信息</p>
              */
             public Builder purchaserBankAccountInfo(String purchaserBankAccountInfo) {
                 this.purchaserBankAccountInfo = purchaserBankAccountInfo;
@@ -1086,7 +1138,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 购方联系方式
+             * <p>购方联系方式</p>
              */
             public Builder purchaserContactInfo(String purchaserContactInfo) {
                 this.purchaserContactInfo = purchaserContactInfo;
@@ -1110,7 +1162,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 收款人
+             * <p>收款人</p>
              */
             public Builder recipient(String recipient) {
                 this.recipient = recipient;
@@ -1118,7 +1170,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 备注
+             * <p>备注</p>
              */
             public Builder remarks(String remarks) {
                 this.remarks = remarks;
@@ -1126,7 +1178,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 复核人
+             * <p>复核人</p>
              */
             public Builder reviewer(String reviewer) {
                 this.reviewer = reviewer;
@@ -1134,7 +1186,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 销售方银行信息
+             * <p>销售方银行信息</p>
              */
             public Builder sellerBankAccountInfo(String sellerBankAccountInfo) {
                 this.sellerBankAccountInfo = sellerBankAccountInfo;
@@ -1142,7 +1194,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 销售方联系方式
+             * <p>销售方联系方式</p>
              */
             public Builder sellerContactInfo(String sellerContactInfo) {
                 this.sellerContactInfo = sellerContactInfo;
@@ -1166,7 +1218,10 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 校验码
+             * <p>校验码</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4475</p>
              */
             public Builder smartCheckCode(String smartCheckCode) {
                 this.smartCheckCode = smartCheckCode;
@@ -1182,7 +1237,10 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 税率
+             * <p>税率</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17%</p>
              */
             public Builder taxRate(String taxRate) {
                 this.taxRate = taxRate;
@@ -1190,7 +1248,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 大写金额
+             * <p>大写金额</p>
              */
             public Builder totalAmountInWords(String totalAmountInWords) {
                 this.totalAmountInWords = totalAmountInWords;
@@ -1212,6 +1270,12 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link InsInvoiceScanQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>InsInvoiceScanQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("items")
         private java.util.List < Items> items;

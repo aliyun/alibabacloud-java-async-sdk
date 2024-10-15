@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightOtaSearchV2Request} extends {@link RequestModel}
  *
  * <p>FlightOtaSearchV2Request</p>
@@ -174,7 +175,10 @@ public class FlightOtaSearchV2Request extends Request {
         }
 
         /**
-         * isv_name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cheshi</p>
          */
         public Builder isvName(String isvName) {
             this.putQueryParameter("isv_name", isvName);
@@ -192,7 +196,7 @@ public class FlightOtaSearchV2Request extends Request {
         }
 
         /**
-         * search_journeys.
+         * <p>This parameter is required.</p>
          */
         public Builder searchJourneys(java.util.List < SearchJourneys> searchJourneys) {
             String searchJourneysShrink = shrink(searchJourneys, "search_journeys", "json");
@@ -202,7 +206,10 @@ public class FlightOtaSearchV2Request extends Request {
         }
 
         /**
-         * search_mode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder searchMode(Integer searchMode) {
             this.putQueryParameter("search_mode", searchMode);
@@ -211,7 +218,10 @@ public class FlightOtaSearchV2Request extends Request {
         }
 
         /**
-         * trip_type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder tripType(Integer tripType) {
             this.putQueryParameter("trip_type", tripType);
@@ -235,6 +245,12 @@ public class FlightOtaSearchV2Request extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link FlightOtaSearchV2Request} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchV2Request</p>
+     */
     public static class SelectedFlights extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_airport_code")
         private String arrAirportCode;
@@ -375,7 +391,10 @@ public class FlightOtaSearchV2Request extends Request {
             }
 
             /**
-             * market_flight_no.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO3925</p>
              */
             public Builder marketFlightNo(String marketFlightNo) {
                 this.marketFlightNo = marketFlightNo;
@@ -397,6 +416,12 @@ public class FlightOtaSearchV2Request extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOtaSearchV2Request} extends {@link TeaModel}
+     *
+     * <p>FlightOtaSearchV2Request</p>
+     */
     public static class SearchJourneys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_city_code")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -464,7 +489,10 @@ public class FlightOtaSearchV2Request extends Request {
             private java.util.List < SelectedFlights> selectedFlights; 
 
             /**
-             * arr_city_code.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HGH</p>
              */
             public Builder arrCityCode(String arrCityCode) {
                 this.arrCityCode = arrCityCode;
@@ -472,7 +500,10 @@ public class FlightOtaSearchV2Request extends Request {
             }
 
             /**
-             * dep_city_code.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BJS</p>
              */
             public Builder depCityCode(String depCityCode) {
                 this.depCityCode = depCityCode;
@@ -480,7 +511,10 @@ public class FlightOtaSearchV2Request extends Request {
             }
 
             /**
-             * dep_date.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-09-01</p>
              */
             public Builder depDate(String depDate) {
                 this.depDate = depDate;
@@ -488,7 +522,7 @@ public class FlightOtaSearchV2Request extends Request {
             }
 
             /**
-             * selected_flights.
+             * <p>This parameter is required.</p>
              */
             public Builder selectedFlights(java.util.List < SelectedFlights> selectedFlights) {
                 this.selectedFlights = selectedFlights;

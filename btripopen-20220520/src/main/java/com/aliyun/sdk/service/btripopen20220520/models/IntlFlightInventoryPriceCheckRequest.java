@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IntlFlightInventoryPriceCheckRequest} extends {@link RequestModel}
  *
  * <p>IntlFlightInventoryPriceCheckRequest</p>
@@ -180,7 +181,10 @@ public class IntlFlightInventoryPriceCheckRequest extends Request {
         }
 
         /**
-         * ota_item_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22111acaf9ea47c09ed0db6abc45be2d_0</p>
          */
         public Builder otaItemId(String otaItemId) {
             this.putQueryParameter("ota_item_id", otaItemId);
@@ -189,7 +193,7 @@ public class IntlFlightInventoryPriceCheckRequest extends Request {
         }
 
         /**
-         * passenger_list.
+         * <p>This parameter is required.</p>
          */
         public Builder passengerList(java.util.List < PassengerList> passengerList) {
             String passengerListShrink = shrink(passengerList, "passenger_list", "json");
@@ -232,6 +236,12 @@ public class IntlFlightInventoryPriceCheckRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link IntlFlightInventoryPriceCheckRequest} extends {@link TeaModel}
+     *
+     * <p>IntlFlightInventoryPriceCheckRequest</p>
+     */
     public static class CertInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cert_nation")
         private String certNation;
@@ -318,7 +328,10 @@ public class IntlFlightInventoryPriceCheckRequest extends Request {
             }
 
             /**
-             * cert_no.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>H123456</p>
              */
             public Builder certNo(String certNo) {
                 this.certNo = certNo;
@@ -326,7 +339,10 @@ public class IntlFlightInventoryPriceCheckRequest extends Request {
             }
 
             /**
-             * cert_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder certType(Integer certType) {
                 this.certType = certType;
@@ -342,7 +358,10 @@ public class IntlFlightInventoryPriceCheckRequest extends Request {
             }
 
             /**
-             * name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZHANG/SAN</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -356,6 +375,12 @@ public class IntlFlightInventoryPriceCheckRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightInventoryPriceCheckRequest} extends {@link TeaModel}
+     *
+     * <p>IntlFlightInventoryPriceCheckRequest</p>
+     */
     public static class SubsidiaryCertInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cert_nation")
         private String certNation;
@@ -439,7 +464,10 @@ public class IntlFlightInventoryPriceCheckRequest extends Request {
             }
 
             /**
-             * cert_no.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>H123456</p>
              */
             public Builder certNo(String certNo) {
                 this.certNo = certNo;
@@ -447,7 +475,10 @@ public class IntlFlightInventoryPriceCheckRequest extends Request {
             }
 
             /**
-             * cert_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder certType(Integer certType) {
                 this.certType = certType;
@@ -463,7 +494,10 @@ public class IntlFlightInventoryPriceCheckRequest extends Request {
             }
 
             /**
-             * name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZHANG/SAN</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -477,6 +511,12 @@ public class IntlFlightInventoryPriceCheckRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightInventoryPriceCheckRequest} extends {@link TeaModel}
+     *
+     * <p>IntlFlightInventoryPriceCheckRequest</p>
+     */
     public static class PassengerList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("birthday")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -761,7 +801,10 @@ public class IntlFlightInventoryPriceCheckRequest extends Request {
             private Integer userType; 
 
             /**
-             * birthday.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-01-01</p>
              */
             public Builder birthday(String birthday) {
                 this.birthday = birthday;
@@ -785,7 +828,7 @@ public class IntlFlightInventoryPriceCheckRequest extends Request {
             }
 
             /**
-             * cert_info.
+             * <p>This parameter is required.</p>
              */
             public Builder certInfo(CertInfo certInfo) {
                 this.certInfo = certInfo;
@@ -881,7 +924,10 @@ public class IntlFlightInventoryPriceCheckRequest extends Request {
             }
 
             /**
-             * passenger_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder passengerType(Integer passengerType) {
                 this.passengerType = passengerType;
@@ -889,7 +935,10 @@ public class IntlFlightInventoryPriceCheckRequest extends Request {
             }
 
             /**
-             * phone.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18012341234</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -921,7 +970,10 @@ public class IntlFlightInventoryPriceCheckRequest extends Request {
             }
 
             /**
-             * user_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10001</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

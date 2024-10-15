@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddressGetRequest} extends {@link RequestModel}
  *
  * <p>AddressGetRequest</p>
@@ -45,6 +46,10 @@ public class AddressGetRequest extends Request {
     private String itineraryId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("middle_page")
+    private Integer middlePage;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("order_Id")
     private String orderId;
 
@@ -59,6 +64,10 @@ public class AddressGetRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("taobao_callback_url")
     private String taobaoCallbackUrl;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("thirdpart_apply_id")
+    private String thirdpartApplyId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("traveler_id")
@@ -91,10 +100,12 @@ public class AddressGetRequest extends Request {
         this.depCityName = builder.depCityName;
         this.depDate = builder.depDate;
         this.itineraryId = builder.itineraryId;
+        this.middlePage = builder.middlePage;
         this.orderId = builder.orderId;
         this.phone = builder.phone;
         this.subCorpId = builder.subCorpId;
         this.taobaoCallbackUrl = builder.taobaoCallbackUrl;
+        this.thirdpartApplyId = builder.thirdpartApplyId;
         this.travelerId = builder.travelerId;
         this.type = builder.type;
         this.useBookingProxy = builder.useBookingProxy;
@@ -172,6 +183,13 @@ public class AddressGetRequest extends Request {
     }
 
     /**
+     * @return middlePage
+     */
+    public Integer getMiddlePage() {
+        return this.middlePage;
+    }
+
+    /**
      * @return orderId
      */
     public String getOrderId() {
@@ -197,6 +215,13 @@ public class AddressGetRequest extends Request {
      */
     public String getTaobaoCallbackUrl() {
         return this.taobaoCallbackUrl;
+    }
+
+    /**
+     * @return thirdpartApplyId
+     */
+    public String getThirdpartApplyId() {
+        return this.thirdpartApplyId;
     }
 
     /**
@@ -243,10 +268,12 @@ public class AddressGetRequest extends Request {
         private String depCityName; 
         private String depDate; 
         private String itineraryId; 
+        private Integer middlePage; 
         private String orderId; 
         private String phone; 
         private String subCorpId; 
         private String taobaoCallbackUrl; 
+        private String thirdpartApplyId; 
         private String travelerId; 
         private Integer type; 
         private Integer useBookingProxy; 
@@ -267,10 +294,12 @@ public class AddressGetRequest extends Request {
             this.depCityName = request.depCityName;
             this.depDate = request.depDate;
             this.itineraryId = request.itineraryId;
+            this.middlePage = request.middlePage;
             this.orderId = request.orderId;
             this.phone = request.phone;
             this.subCorpId = request.subCorpId;
             this.taobaoCallbackUrl = request.taobaoCallbackUrl;
+            this.thirdpartApplyId = request.thirdpartApplyId;
             this.travelerId = request.travelerId;
             this.type = request.type;
             this.useBookingProxy = request.useBookingProxy;
@@ -279,7 +308,10 @@ public class AddressGetRequest extends Request {
         } 
 
         /**
-         * action_type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder actionType(Integer actionType) {
             this.putQueryParameter("action_type", actionType);
@@ -351,6 +383,15 @@ public class AddressGetRequest extends Request {
         }
 
         /**
+         * middle_page.
+         */
+        public Builder middlePage(Integer middlePage) {
+            this.putQueryParameter("middle_page", middlePage);
+            this.middlePage = middlePage;
+            return this;
+        }
+
+        /**
          * order_Id.
          */
         public Builder orderId(String orderId) {
@@ -387,6 +428,15 @@ public class AddressGetRequest extends Request {
         }
 
         /**
+         * thirdpart_apply_id.
+         */
+        public Builder thirdpartApplyId(String thirdpartApplyId) {
+            this.putQueryParameter("thirdpart_apply_id", thirdpartApplyId);
+            this.thirdpartApplyId = thirdpartApplyId;
+            return this;
+        }
+
+        /**
          * traveler_id.
          */
         public Builder travelerId(String travelerId) {
@@ -414,7 +464,7 @@ public class AddressGetRequest extends Request {
         }
 
         /**
-         * user_id.
+         * <p>This parameter is required.</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("user_id", userId);

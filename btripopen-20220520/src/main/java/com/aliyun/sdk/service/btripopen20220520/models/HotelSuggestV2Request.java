@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelSuggestV2Request} extends {@link RequestModel}
  *
  * <p>HotelSuggestV2Request</p>
@@ -183,7 +184,10 @@ public class HotelSuggestV2Request extends Request {
         }
 
         /**
-         * search_type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder searchType(Integer searchType) {
             this.putQueryParameter("search_type", searchType);

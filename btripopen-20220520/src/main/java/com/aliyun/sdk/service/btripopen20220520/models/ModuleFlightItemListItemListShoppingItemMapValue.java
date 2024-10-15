@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModuleFlightItemListItemListShoppingItemMapValue} extends {@link TeaModel}
  *
  * <p>ModuleFlightItemListItemListShoppingItemMapValue</p>
@@ -73,7 +74,10 @@ public class ModuleFlightItemListItemListShoppingItemMapValue extends TeaModel {
         private java.util.Map < String, ModuleFlightItemListItemListShoppingItemMapValueSegmentPriceValue > segmentPrice; 
 
         /**
-         * id
+         * <p>id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADT07df0bd9-f803-4a50-8449-f4bd675d9939</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -110,6 +114,12 @@ public class ModuleFlightItemListItemListShoppingItemMapValue extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModuleFlightItemListItemListShoppingItemMapValue} extends {@link TeaModel}
+     *
+     * <p>ModuleFlightItemListItemListShoppingItemMapValue</p>
+     */
     public static class PriceShowInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("discount_info")
         private String discountInfo;
@@ -191,6 +201,12 @@ public class ModuleFlightItemListItemListShoppingItemMapValue extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ModuleFlightItemListItemListShoppingItemMapValue} extends {@link TeaModel}
+     *
+     * <p>ModuleFlightItemListItemListShoppingItemMapValue</p>
+     */
     public static class SearchPrice extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("floor_price")
         private Integer floorPrice;
@@ -606,7 +622,10 @@ public class ModuleFlightItemListItemListShoppingItemMapValue extends TeaModel {
             }
 
             /**
-             * fdPrice
+             * <p>fdPrice</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fdPrice</p>
              */
             public Builder interTicketPrice(Integer interTicketPrice) {
                 this.interTicketPrice = interTicketPrice;

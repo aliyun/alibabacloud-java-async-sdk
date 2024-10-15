@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CarSceneQueryResponseBody} extends {@link TeaModel}
  *
  * <p>CarSceneQueryResponseBody</p>
@@ -137,7 +138,10 @@ public class CarSceneQueryResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21041ce316577904808056433edbb2</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -150,6 +154,12 @@ public class CarSceneQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CarSceneQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CarSceneQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("scenarioTemplateId")
         private String scenarioTemplateId;

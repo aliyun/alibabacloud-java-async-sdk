@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IsvUserSaveRequest} extends {@link RequestModel}
  *
  * <p>IsvUserSaveRequest</p>
@@ -92,6 +93,12 @@ public class IsvUserSaveRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link IsvUserSaveRequest} extends {@link TeaModel}
+     *
+     * <p>IsvUserSaveRequest</p>
+     */
     public static class CertList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cert_expired_time")
         private String certExpiredTime;
@@ -213,6 +220,12 @@ public class IsvUserSaveRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link IsvUserSaveRequest} extends {@link TeaModel}
+     *
+     * <p>IsvUserSaveRequest</p>
+     */
     public static class UserList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("base_city_code")
         private String baseCityCode;
@@ -606,7 +619,10 @@ public class IsvUserSaveRequest extends Request {
             }
 
             /**
-             * user_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -614,7 +630,7 @@ public class IsvUserSaveRequest extends Request {
             }
 
             /**
-             * user_name.
+             * <p>This parameter is required.</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TravelStandardListQueryResponseBody} extends {@link TeaModel}
  *
  * <p>TravelStandardListQueryResponseBody</p>
@@ -137,7 +138,10 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21041aa317070996148671005d0a0b</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -150,6 +154,12 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TravelStandardListQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TravelStandardListQueryResponseBody</p>
+     */
     public static class MainReserveRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("open_service_type_list")
         private java.util.List < String > openServiceTypeList;
@@ -271,6 +281,12 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TravelStandardListQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TravelStandardListQueryResponseBody</p>
+     */
     public static class DataList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
@@ -332,6 +348,12 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TravelStandardListQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TravelStandardListQueryResponseBody</p>
+     */
     public static class ReserveRuleDesc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("data_list")
         private java.util.List < DataList> dataList;
@@ -413,6 +435,12 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TravelStandardListQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TravelStandardListQueryResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("main_reserve_rule")
         private MainReserveRule mainReserveRule;
@@ -494,6 +522,12 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TravelStandardListQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TravelStandardListQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("items")
         private java.util.List < Items> items;

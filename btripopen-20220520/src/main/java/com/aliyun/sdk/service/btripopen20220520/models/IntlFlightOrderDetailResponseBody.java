@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IntlFlightOrderDetailResponseBody} extends {@link TeaModel}
  *
  * <p>IntlFlightOrderDetailResponseBody</p>
@@ -150,6 +151,12 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link IntlFlightOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOrderDetailResponseBody</p>
+     */
     public static class ContactInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("contact_email")
         private String contactEmail;
@@ -251,6 +258,12 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOrderDetailResponseBody</p>
+     */
     public static class FlightOtherInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("aircraft_age")
         private String aircraftAge;
@@ -532,6 +545,12 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOrderDetailResponseBody</p>
+     */
     public static class LuggageDirectInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dep_city_luggage_direct")
         private Integer depCityLuggageDirect;
@@ -593,6 +612,12 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOrderDetailResponseBody</p>
+     */
     public static class MarketingAirlineInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airline_code")
         private String airlineCode;
@@ -754,6 +779,12 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOrderDetailResponseBody</p>
+     */
     public static class OperatingAirlineInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airline_code")
         private String airlineCode;
@@ -915,6 +946,12 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOrderDetailResponseBody</p>
+     */
     public static class SegmentVisaRemark extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dep_city_visa_remark")
         private String depCityVisaRemark;
@@ -1016,6 +1053,12 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOrderDetailResponseBody</p>
+     */
     public static class StopCityList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("stop_airport")
         private String stopAirport;
@@ -1197,6 +1240,12 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOrderDetailResponseBody</p>
+     */
     public static class SegmentList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_airport_code")
         private String arrAirportCode;
@@ -1758,6 +1807,12 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOrderDetailResponseBody</p>
+     */
     public static class JourneyList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_city_code")
         private String arrCityCode;
@@ -1959,6 +2014,12 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOrderDetailResponseBody</p>
+     */
     public static class BaggageRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_digest")
         private String baggageDigest;
@@ -2040,6 +2101,12 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOrderDetailResponseBody</p>
+     */
     public static class PassengerPriceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("discount")
         private Double discount;
@@ -2241,6 +2308,12 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOrderDetailResponseBody</p>
+     */
     public static class RefundChangeRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cancel_fee_ind")
         private Boolean cancelFeeInd;
@@ -2362,6 +2435,12 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOrderDetailResponseBody</p>
+     */
     public static class OrderItemList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_rule")
         private BaggageRule baggageRule;
@@ -2463,6 +2542,12 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOrderDetailResponseBody</p>
+     */
     public static class PriceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("modify_fee")
         private Long modifyFee;
@@ -2604,6 +2689,12 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOrderDetailResponseBody</p>
+     */
     public static class TicketSegmentList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cabin")
         private String cabin;
@@ -2745,6 +2836,12 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOrderDetailResponseBody</p>
+     */
     public static class TicketList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("issue_time")
         private String issueTime;
@@ -2846,6 +2943,12 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOrderDetailResponseBody</p>
+     */
     public static class PassengerItemDetailList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("passenger_id")
         private Long passengerId;
@@ -2907,6 +3010,12 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOrderDetailResponseBody</p>
+     */
     public static class CertInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cert_nation")
         private String certNation;
@@ -3028,6 +3137,12 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOrderDetailResponseBody</p>
+     */
     public static class SubsidiaryCertInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cert_nation")
         private String certNation;
@@ -3149,6 +3264,12 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOrderDetailResponseBody</p>
+     */
     public static class PassengerList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("birthday")
         private String birthday;
@@ -3630,6 +3751,12 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOrderDetailResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("book_user_id")
         private String bookUserId;

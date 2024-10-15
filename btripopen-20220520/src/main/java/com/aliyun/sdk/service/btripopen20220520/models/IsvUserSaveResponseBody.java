@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IsvUserSaveResponseBody} extends {@link TeaModel}
  *
  * <p>IsvUserSaveResponseBody</p>
@@ -137,7 +138,10 @@ public class IsvUserSaveResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>707c9fd116393792883244141e4e7d</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;

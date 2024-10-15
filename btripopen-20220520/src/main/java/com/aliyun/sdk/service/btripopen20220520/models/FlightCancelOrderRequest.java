@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightCancelOrderRequest} extends {@link RequestModel}
  *
  * <p>FlightCancelOrderRequest</p>
@@ -68,7 +69,10 @@ public class FlightCancelOrderRequest extends Request {
         } 
 
         /**
-         * dis_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dis123</p>
          */
         public Builder disOrderId(String disOrderId) {
             this.putQueryParameter("dis_order_id", disOrderId);

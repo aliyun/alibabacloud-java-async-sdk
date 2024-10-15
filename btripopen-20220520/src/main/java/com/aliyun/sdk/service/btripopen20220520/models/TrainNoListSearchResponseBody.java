@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TrainNoListSearchResponseBody} extends {@link TeaModel}
  *
  * <p>TrainNoListSearchResponseBody</p>
@@ -113,7 +114,7 @@ public class TrainNoListSearchResponseBody extends TeaModel {
         }
 
         /**
-         * module
+         * <p>module</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -137,7 +138,10 @@ public class TrainNoListSearchResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21041ce316577904808056433edbb2</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -150,6 +154,12 @@ public class TrainNoListSearchResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TrainNoListSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainNoListSearchResponseBody</p>
+     */
     public static class SeatInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("price")
         private Long price;
@@ -251,6 +261,12 @@ public class TrainNoListSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainNoListSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainNoListSearchResponseBody</p>
+     */
     public static class TrainStationSearchVOS extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_day_tag")
         private String arrDayTag;
@@ -612,6 +628,12 @@ public class TrainNoListSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainNoListSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainNoListSearchResponseBody</p>
+     */
     public static class TransferDetailListSeatInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("price")
         private Long price;
@@ -713,6 +735,12 @@ public class TrainNoListSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainNoListSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainNoListSearchResponseBody</p>
+     */
     public static class TransferDetailList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_day_tag")
         private String arrDayTag;
@@ -1074,6 +1102,12 @@ public class TrainNoListSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainNoListSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainNoListSearchResponseBody</p>
+     */
     public static class TrainTransferStationSearchVOs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_station")
         private String arrStation;
@@ -1215,6 +1249,12 @@ public class TrainNoListSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainNoListSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainNoListSearchResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("train_station_search_v_o_s")
         private java.util.List < TrainStationSearchVOS> trainStationSearchVOS;

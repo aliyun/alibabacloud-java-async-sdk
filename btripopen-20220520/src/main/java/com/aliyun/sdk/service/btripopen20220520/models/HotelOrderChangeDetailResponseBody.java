@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelOrderChangeDetailResponseBody} extends {@link TeaModel}
  *
  * <p>HotelOrderChangeDetailResponseBody</p>
@@ -150,6 +151,12 @@ public class HotelOrderChangeDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HotelOrderChangeDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderChangeDetailResponseBody</p>
+     */
     public static class RoomDailyRefundInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("check_in_date")
         private String checkInDate;
@@ -251,6 +258,12 @@ public class HotelOrderChangeDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderChangeDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderChangeDetailResponseBody</p>
+     */
     public static class RoomInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cancel_date")
         private java.util.List < String > cancelDate;
@@ -332,6 +345,12 @@ public class HotelOrderChangeDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderChangeDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderChangeDetailResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("change_order_id")
         private String changeOrderId;

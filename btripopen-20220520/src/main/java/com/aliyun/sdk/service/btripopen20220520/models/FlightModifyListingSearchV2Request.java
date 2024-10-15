@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightModifyListingSearchV2Request} extends {@link RequestModel}
  *
  * <p>FlightModifyListingSearchV2Request</p>
@@ -348,6 +349,12 @@ public class FlightModifyListingSearchV2Request extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link FlightModifyListingSearchV2Request} extends {@link TeaModel}
+     *
+     * <p>FlightModifyListingSearchV2Request</p>
+     */
     public static class PassengerSegmentRelations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("passenger_id")
         private String passengerId;
@@ -409,6 +416,12 @@ public class FlightModifyListingSearchV2Request extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyListingSearchV2Request} extends {@link TeaModel}
+     *
+     * <p>FlightModifyListingSearchV2Request</p>
+     */
     public static class SelectedSegments extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_city_code")
         private String arrCityCode;

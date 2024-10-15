@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddressGetResponseBody} extends {@link TeaModel}
  *
  * <p>AddressGetResponseBody</p>
@@ -150,6 +151,12 @@ public class AddressGetResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddressGetResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddressGetResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("url")
         private String url;

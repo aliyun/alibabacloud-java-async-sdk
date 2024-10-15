@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AccessTokenRequest} extends {@link RequestModel}
  *
  * <p>AccessTokenRequest</p>
@@ -54,7 +55,10 @@ public class AccessTokenRequest extends Request {
         } 
 
         /**
-         * app_secret.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ggZADkghsadgogeDxdaD</p>
          */
         public Builder appSecret(String appSecret) {
             this.putQueryParameter("app_secret", appSecret);

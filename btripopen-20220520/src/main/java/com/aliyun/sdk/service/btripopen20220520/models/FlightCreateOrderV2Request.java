@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightCreateOrderV2Request} extends {@link RequestModel}
  *
  * <p>FlightCreateOrderV2Request</p>
@@ -234,7 +235,7 @@ public class FlightCreateOrderV2Request extends Request {
         }
 
         /**
-         * contact_info.
+         * <p>This parameter is required.</p>
          */
         public Builder contactInfo(ContactInfo contactInfo) {
             String contactInfoShrink = shrink(contactInfo, "contact_info", "json");
@@ -244,7 +245,10 @@ public class FlightCreateOrderV2Request extends Request {
         }
 
         /**
-         * isv_name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cheshiapi</p>
          */
         public Builder isvName(String isvName) {
             this.putBodyParameter("isv_name", isvName);
@@ -253,7 +257,10 @@ public class FlightCreateOrderV2Request extends Request {
         }
 
         /**
-         * ota_item_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7fb731deeb4510b86c17e8c8c25740_11</p>
          */
         public Builder otaItemId(String otaItemId) {
             this.putBodyParameter("ota_item_id", otaItemId);
@@ -262,7 +269,7 @@ public class FlightCreateOrderV2Request extends Request {
         }
 
         /**
-         * out_order_id.
+         * <p>This parameter is required.</p>
          */
         public Builder outOrderId(String outOrderId) {
             this.putBodyParameter("out_order_id", outOrderId);
@@ -280,7 +287,7 @@ public class FlightCreateOrderV2Request extends Request {
         }
 
         /**
-         * travelers.
+         * <p>This parameter is required.</p>
          */
         public Builder travelers(java.util.List < Travelers> travelers) {
             String travelersShrink = shrink(travelers, "travelers", "json");
@@ -305,6 +312,12 @@ public class FlightCreateOrderV2Request extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link FlightCreateOrderV2Request} extends {@link TeaModel}
+     *
+     * <p>FlightCreateOrderV2Request</p>
+     */
     public static class ContactInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("contact_email")
         private String contactEmail;
@@ -406,6 +419,12 @@ public class FlightCreateOrderV2Request extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightCreateOrderV2Request} extends {@link TeaModel}
+     *
+     * <p>FlightCreateOrderV2Request</p>
+     */
     public static class Travelers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("birthday")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -669,7 +688,10 @@ public class FlightCreateOrderV2Request extends Request {
             private Integer userType; 
 
             /**
-             * birthday.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1991-01-22</p>
              */
             public Builder birthday(String birthday) {
                 this.birthday = birthday;
@@ -685,7 +707,7 @@ public class FlightCreateOrderV2Request extends Request {
             }
 
             /**
-             * cert_no.
+             * <p>This parameter is required.</p>
              */
             public Builder certNo(String certNo) {
                 this.certNo = certNo;
@@ -693,7 +715,10 @@ public class FlightCreateOrderV2Request extends Request {
             }
 
             /**
-             * cert_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder certType(Integer certType) {
                 this.certType = certType;
@@ -741,7 +766,7 @@ public class FlightCreateOrderV2Request extends Request {
             }
 
             /**
-             * gender.
+             * <p>This parameter is required.</p>
              */
             public Builder gender(Integer gender) {
                 this.gender = gender;
@@ -773,7 +798,7 @@ public class FlightCreateOrderV2Request extends Request {
             }
 
             /**
-             * passenger_name.
+             * <p>This parameter is required.</p>
              */
             public Builder passengerName(String passengerName) {
                 this.passengerName = passengerName;
@@ -781,7 +806,10 @@ public class FlightCreateOrderV2Request extends Request {
             }
 
             /**
-             * passenger_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder passengerType(Integer passengerType) {
                 this.passengerType = passengerType;
@@ -789,7 +817,7 @@ public class FlightCreateOrderV2Request extends Request {
             }
 
             /**
-             * phone.
+             * <p>This parameter is required.</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -813,7 +841,10 @@ public class FlightCreateOrderV2Request extends Request {
             }
 
             /**
-             * user_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18155711459129970552412</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

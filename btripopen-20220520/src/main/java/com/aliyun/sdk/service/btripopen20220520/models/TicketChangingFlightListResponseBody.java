@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TicketChangingFlightListResponseBody} extends {@link TeaModel}
  *
  * <p>TicketChangingFlightListResponseBody</p>
@@ -150,6 +151,12 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TicketChangingFlightListResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingFlightListResponseBody</p>
+     */
     public static class AirlineInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airline_code")
         private String airlineCode;
@@ -231,6 +238,12 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingFlightListResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingFlightListResponseBody</p>
+     */
     public static class ArrAirportInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airport_code")
         private String airportCode;
@@ -352,6 +365,12 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingFlightListResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingFlightListResponseBody</p>
+     */
     public static class ModifyPriceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("passenger_type")
         private Integer passengerType;
@@ -453,6 +472,12 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingFlightListResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingFlightListResponseBody</p>
+     */
     public static class CabinList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cabin")
         private String cabin;
@@ -634,6 +659,12 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingFlightListResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingFlightListResponseBody</p>
+     */
     public static class DepAirportInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airport_code")
         private String airportCode;
@@ -755,6 +786,12 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingFlightListResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingFlightListResponseBody</p>
+     */
     public static class LowestCabinPrice extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("passenger_type")
         private Integer passengerType;
@@ -856,6 +893,12 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingFlightListResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingFlightListResponseBody</p>
+     */
     public static class FlightInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airline_info")
         private AirlineInfo airlineInfo;
@@ -1377,6 +1420,12 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingFlightListResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingFlightListResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("flight_info_list")
         private java.util.List < FlightInfoList> flightInfoList;

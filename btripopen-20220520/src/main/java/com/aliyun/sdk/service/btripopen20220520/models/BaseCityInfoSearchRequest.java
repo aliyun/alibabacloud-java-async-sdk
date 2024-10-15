@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BaseCityInfoSearchRequest} extends {@link RequestModel}
  *
  * <p>BaseCityInfoSearchRequest</p>
@@ -83,7 +84,7 @@ public class BaseCityInfoSearchRequest extends Request {
         } 
 
         /**
-         * keyword.
+         * <p>This parameter is required.</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);
@@ -92,7 +93,10 @@ public class BaseCityInfoSearchRequest extends Request {
         }
 
         /**
-         * region.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TicketChangingCancelResponseBody} extends {@link TeaModel}
  *
  * <p>TicketChangingCancelResponseBody</p>
@@ -150,6 +151,12 @@ public class TicketChangingCancelResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TicketChangingCancelResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingCancelResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cancel_time")
         private String cancelTime;

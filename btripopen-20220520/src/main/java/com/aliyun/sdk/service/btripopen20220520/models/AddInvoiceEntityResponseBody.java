@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddInvoiceEntityResponseBody} extends {@link TeaModel}
  *
  * <p>AddInvoiceEntityResponseBody</p>
@@ -137,7 +138,10 @@ public class AddInvoiceEntityResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210f079e16603757182131635d866a</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -150,6 +154,12 @@ public class AddInvoiceEntityResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddInvoiceEntityResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddInvoiceEntityResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("add_num")
         private Integer addNum;

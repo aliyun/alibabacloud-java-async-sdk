@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TrainOrderQueryV2ResponseBody} extends {@link TeaModel}
  *
  * <p>TrainOrderQueryV2ResponseBody</p>
@@ -121,7 +122,10 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1213ds1d</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +141,10 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123412dcdsac sd</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -150,6 +157,12 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TrainOrderQueryV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainOrderQueryV2ResponseBody</p>
+     */
     public static class ChangeTicketInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("change_coach_no")
         private String changeCoachNo;
@@ -691,6 +704,12 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainOrderQueryV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainOrderQueryV2ResponseBody</p>
+     */
     public static class InvoiceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
@@ -752,6 +771,12 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainOrderQueryV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainOrderQueryV2ResponseBody</p>
+     */
     public static class OrderBaseInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("apply_id")
         private String applyId;
@@ -1213,6 +1238,12 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainOrderQueryV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainOrderQueryV2ResponseBody</p>
+     */
     public static class PassengerInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cost_center_id")
         private Long costCenterId;
@@ -1454,6 +1485,12 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainOrderQueryV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainOrderQueryV2ResponseBody</p>
+     */
     public static class PriceInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("category_code")
         private Integer categoryCode;
@@ -1615,6 +1652,12 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainOrderQueryV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainOrderQueryV2ResponseBody</p>
+     */
     public static class RefundTicketInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("gmt_create")
         private String gmtCreate;
@@ -1756,6 +1799,12 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainOrderQueryV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainOrderQueryV2ResponseBody</p>
+     */
     public static class TrainTicketInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("changed")
         private Boolean changed;
@@ -2197,6 +2246,12 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainOrderQueryV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainOrderQueryV2ResponseBody</p>
+     */
     public static class TrainInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_time")
         private String arrTime;
@@ -2396,7 +2451,10 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             }
 
             /**
-             * itemId
+             * <p>itemId</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12312</p>
              */
             public Builder itemId(Long itemId) {
                 this.itemId = itemId;
@@ -2458,6 +2516,12 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainOrderQueryV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainOrderQueryV2ResponseBody</p>
+     */
     public static class TrainTransferInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cost_time")
         private String costTime;
@@ -2779,6 +2843,12 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainOrderQueryV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainOrderQueryV2ResponseBody</p>
+     */
     public static class TrainOrderInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("train_info_list")
         private java.util.List < TrainInfoList> trainInfoList;
@@ -2840,6 +2910,12 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainOrderQueryV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainOrderQueryV2ResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("change_ticket_info_list")
         private java.util.List < ChangeTicketInfoList> changeTicketInfoList;

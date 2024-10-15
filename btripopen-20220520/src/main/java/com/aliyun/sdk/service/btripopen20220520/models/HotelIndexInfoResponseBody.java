@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelIndexInfoResponseBody} extends {@link TeaModel}
  *
  * <p>HotelIndexInfoResponseBody</p>
@@ -150,6 +151,12 @@ public class HotelIndexInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HotelIndexInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelIndexInfoResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("hotel_id")
         private String hotelId;
@@ -211,6 +218,12 @@ public class HotelIndexInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelIndexInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelIndexInfoResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("items")
         private java.util.List < Items> items;

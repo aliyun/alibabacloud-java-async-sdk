@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SyncSingleUserRequest} extends {@link RequestModel}
  *
  * <p>SyncSingleUserRequest</p>
@@ -291,7 +292,10 @@ public class SyncSingleUserRequest extends Request {
         }
 
         /**
-         * user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>573263</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("user_id", userId);
@@ -300,7 +304,7 @@ public class SyncSingleUserRequest extends Request {
         }
 
         /**
-         * user_name.
+         * <p>This parameter is required.</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("user_name", userName);

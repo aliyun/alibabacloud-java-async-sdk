@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyListQueryResponseBody} extends {@link TeaModel}
  *
  * <p>ApplyListQueryResponseBody</p>
@@ -150,6 +151,12 @@ public class ApplyListQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ApplyListQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyListQueryResponseBody</p>
+     */
     public static class ApproverList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("note")
         private String note;
@@ -311,6 +318,12 @@ public class ApplyListQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyListQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyListQueryResponseBody</p>
+     */
     public static class CarRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("scenario_template_id")
         private String scenarioTemplateId;
@@ -372,6 +385,12 @@ public class ApplyListQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyListQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyListQueryResponseBody</p>
+     */
     public static class ExternalTravelerList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("attribute")
         private String attribute;
@@ -593,6 +612,12 @@ public class ApplyListQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyListQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyListQueryResponseBody</p>
+     */
     public static class ItineraryList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_city")
         private String arrCity;
@@ -894,6 +919,12 @@ public class ApplyListQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyListQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyListQueryResponseBody</p>
+     */
     public static class ItinerarySetList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_date")
         private String arrDate;
@@ -1175,6 +1206,12 @@ public class ApplyListQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyListQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyListQueryResponseBody</p>
+     */
     public static class CarCitySet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
@@ -1236,6 +1273,12 @@ public class ApplyListQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyListQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyListQueryResponseBody</p>
+     */
     public static class TravelerList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("attribute")
         private String attribute;
@@ -1497,6 +1540,12 @@ public class ApplyListQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyListQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyListQueryResponseBody</p>
+     */
     public static class ModuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("apply_show_id")
         private String applyShowId;

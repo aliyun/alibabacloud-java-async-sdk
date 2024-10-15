@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyExternalNodeStatusUpdateResponseBody} extends {@link TeaModel}
  *
  * <p>ApplyExternalNodeStatusUpdateResponseBody</p>
@@ -137,7 +138,10 @@ public class ApplyExternalNodeStatusUpdateResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210f079416784321627628333de4ab</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;

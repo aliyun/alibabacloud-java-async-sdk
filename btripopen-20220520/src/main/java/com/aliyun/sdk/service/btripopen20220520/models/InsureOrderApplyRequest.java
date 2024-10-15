@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsureOrderApplyRequest} extends {@link RequestModel}
  *
  * <p>InsureOrderApplyRequest</p>
@@ -153,7 +154,10 @@ public class InsureOrderApplyRequest extends Request {
         } 
 
         /**
-         * btrip_user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000102</p>
          */
         public Builder btripUserId(String btripUserId) {
             this.putBodyParameter("btrip_user_id", btripUserId);
@@ -171,7 +175,10 @@ public class InsureOrderApplyRequest extends Request {
         }
 
         /**
-         * ins_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000003000000490</p>
          */
         public Builder insOrderId(String insOrderId) {
             this.putBodyParameter("ins_order_id", insOrderId);

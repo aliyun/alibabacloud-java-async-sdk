@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelAskingPriceRequest} extends {@link RequestModel}
  *
  * <p>HotelAskingPriceRequest</p>
@@ -242,7 +243,10 @@ public class HotelAskingPriceRequest extends Request {
         }
 
         /**
-         * check_in_date.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-22 00:00:00</p>
          */
         public Builder checkInDate(String checkInDate) {
             this.putQueryParameter("check_in_date", checkInDate);
@@ -251,7 +255,10 @@ public class HotelAskingPriceRequest extends Request {
         }
 
         /**
-         * check_out_date.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-22 00:00:00</p>
          */
         public Builder checkOutDate(String checkOutDate) {
             this.putQueryParameter("check_out_date", checkOutDate);
@@ -314,7 +321,7 @@ public class HotelAskingPriceRequest extends Request {
         }
 
         /**
-         * shids.
+         * <p>This parameter is required.</p>
          */
         public Builder shids(java.util.List < Long > shids) {
             String shidsShrink = shrink(shids, "shids", "json");

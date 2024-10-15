@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelOrderCreateResponseBody} extends {@link TeaModel}
  *
  * <p>HotelOrderCreateResponseBody</p>
@@ -150,6 +151,12 @@ public class HotelOrderCreateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HotelOrderCreateResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderCreateResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("btrip_order_id")
         private Long btripOrderId;

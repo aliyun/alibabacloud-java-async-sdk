@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TravelStandardListQueryRequest} extends {@link RequestModel}
  *
  * <p>TravelStandardListQueryRequest</p>
@@ -121,7 +122,10 @@ public class TravelStandardListQueryRequest extends Request {
         }
 
         /**
-         * page_no.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("page_no", pageNo);
@@ -130,7 +134,10 @@ public class TravelStandardListQueryRequest extends Request {
         }
 
         /**
-         * page_size.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("page_size", pageSize);
@@ -148,7 +155,10 @@ public class TravelStandardListQueryRequest extends Request {
         }
 
         /**
-         * x-acs-btrip-corp-token.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>feth00jqwls</p>
          */
         public Builder xAcsBtripCorpToken(String xAcsBtripCorpToken) {
             this.putHeaderParameter("x-acs-btrip-corp-token", xAcsBtripCorpToken);

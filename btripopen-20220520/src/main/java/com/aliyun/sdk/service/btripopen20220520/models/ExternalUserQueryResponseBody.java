@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExternalUserQueryResponseBody} extends {@link TeaModel}
  *
  * <p>ExternalUserQueryResponseBody</p>
@@ -157,7 +158,10 @@ public class ExternalUserQueryResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210e847f16611516748613869de4f6</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -170,6 +174,12 @@ public class ExternalUserQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ExternalUserQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ExternalUserQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("birthday")
         private String birthday;

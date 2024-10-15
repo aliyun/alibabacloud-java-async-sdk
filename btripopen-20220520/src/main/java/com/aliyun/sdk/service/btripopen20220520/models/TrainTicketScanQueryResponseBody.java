@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TrainTicketScanQueryResponseBody} extends {@link TeaModel}
  *
  * <p>TrainTicketScanQueryResponseBody</p>
@@ -121,7 +122,10 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +141,10 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21041ce316577904808056433edbb2</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -150,6 +157,12 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TrainTicketScanQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainTicketScanQueryResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("apply_id")
         private String applyId;
@@ -589,7 +602,10 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 取票号
+             * <p>取票号</p>
+             * 
+             * <strong>example:</strong>
+             * <p>784-1111111111</p>
              */
             public Builder ticketNo(String ticketNo) {
                 this.ticketNo = ticketNo;
@@ -597,7 +613,10 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 车次
+             * <p>车次</p>
+             * 
+             * <strong>example:</strong>
+             * <p>G99</p>
              */
             public Builder trainNo(String trainNo) {
                 this.trainNo = trainNo;
@@ -611,6 +630,12 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainTicketScanQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainTicketScanQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("items")
         private java.util.List < Items> items;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VatInvoiceScanQueryRequest} extends {@link RequestModel}
  *
  * <p>VatInvoiceScanQueryRequest</p>
@@ -125,7 +126,10 @@ public class VatInvoiceScanQueryRequest extends Request {
         } 
 
         /**
-         * bill_date.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-01</p>
          */
         public Builder billDate(String billDate) {
             this.putQueryParameter("bill_date", billDate);

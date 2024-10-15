@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CostCenterModifyRequest} extends {@link RequestModel}
  *
  * <p>CostCenterModifyRequest</p>
@@ -167,7 +168,10 @@ public class CostCenterModifyRequest extends Request {
         }
 
         /**
-         * scope.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scope(Long scope) {
             this.putBodyParameter("scope", scope);
@@ -176,7 +180,10 @@ public class CostCenterModifyRequest extends Request {
         }
 
         /**
-         * thirdpart_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>340049</p>
          */
         public Builder thirdpartId(String thirdpartId) {
             this.putBodyParameter("thirdpart_id", thirdpartId);
@@ -185,7 +192,7 @@ public class CostCenterModifyRequest extends Request {
         }
 
         /**
-         * title.
+         * <p>This parameter is required.</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("title", title);

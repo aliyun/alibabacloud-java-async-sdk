@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSubCorpResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSubCorpResponseBody</p>
@@ -150,6 +151,12 @@ public class CreateSubCorpResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSubCorpResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateSubCorpResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("sub_corp_id")
         private String subCorpId;

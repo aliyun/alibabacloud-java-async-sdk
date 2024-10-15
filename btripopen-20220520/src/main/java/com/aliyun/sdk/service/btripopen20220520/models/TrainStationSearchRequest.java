@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TrainStationSearchRequest} extends {@link RequestModel}
  *
  * <p>TrainStationSearchRequest</p>
@@ -68,7 +69,7 @@ public class TrainStationSearchRequest extends Request {
         } 
 
         /**
-         * keyword.
+         * <p>This parameter is required.</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);

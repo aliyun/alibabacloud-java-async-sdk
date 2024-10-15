@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TrainApplyChangeRequest} extends {@link RequestModel}
  *
  * <p>TrainApplyChangeRequest</p>
@@ -164,7 +165,7 @@ public class TrainApplyChangeRequest extends Request {
         }
 
         /**
-         * change_train_info_s.
+         * <p>This parameter is required.</p>
          */
         public Builder changeTrainInfoS(java.util.List < ChangeTrainInfoS> changeTrainInfoS) {
             String changeTrainInfoSShrink = shrink(changeTrainInfoS, "change_train_info_s", "json");
@@ -192,7 +193,10 @@ public class TrainApplyChangeRequest extends Request {
         }
 
         /**
-         * order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1017028198411054446</p>
          */
         public Builder orderId(String orderId) {
             this.putBodyParameter("order_id", orderId);
@@ -201,7 +205,10 @@ public class TrainApplyChangeRequest extends Request {
         }
 
         /**
-         * out_change_apply_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder outChangeApplyId(String outChangeApplyId) {
             this.putBodyParameter("out_change_apply_id", outChangeApplyId);
@@ -210,7 +217,10 @@ public class TrainApplyChangeRequest extends Request {
         }
 
         /**
-         * out_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder outOrderId(String outOrderId) {
             this.putBodyParameter("out_order_id", outOrderId);
@@ -234,6 +244,12 @@ public class TrainApplyChangeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TrainApplyChangeRequest} extends {@link TeaModel}
+     *
+     * <p>TrainApplyChangeRequest</p>
+     */
     public static class PassengerInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("passenger_cert_no")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -301,7 +317,10 @@ public class TrainApplyChangeRequest extends Request {
             private String passengerName; 
 
             /**
-             * passenger_cert_no.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>291487e553c5abde3b611aae283e2526f0d733ab55094aadc0b5ba587222a233c</p>
              */
             public Builder passengerCertNo(String passengerCertNo) {
                 this.passengerCertNo = passengerCertNo;
@@ -309,7 +328,10 @@ public class TrainApplyChangeRequest extends Request {
             }
 
             /**
-             * passenger_cert_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>170d9ac6f8807f9ec603c688f45f78a41</p>
              */
             public Builder passengerCertType(String passengerCertType) {
                 this.passengerCertType = passengerCertType;
@@ -317,7 +339,10 @@ public class TrainApplyChangeRequest extends Request {
             }
 
             /**
-             * passenger_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder passengerId(String passengerId) {
                 this.passengerId = passengerId;
@@ -325,7 +350,10 @@ public class TrainApplyChangeRequest extends Request {
             }
 
             /**
-             * passenger_name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>949c9f34f677a0e5d249dfc94f5e62cc7</p>
              */
             public Builder passengerName(String passengerName) {
                 this.passengerName = passengerName;
@@ -339,6 +367,12 @@ public class TrainApplyChangeRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainApplyChangeRequest} extends {@link TeaModel}
+     *
+     * <p>TrainApplyChangeRequest</p>
+     */
     public static class ChangeTicketInfoS extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("passenger_info")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -406,7 +440,7 @@ public class TrainApplyChangeRequest extends Request {
             private String ticketType; 
 
             /**
-             * passenger_info.
+             * <p>This parameter is required.</p>
              */
             public Builder passengerInfo(PassengerInfo passengerInfo) {
                 this.passengerInfo = passengerInfo;
@@ -414,7 +448,10 @@ public class TrainApplyChangeRequest extends Request {
             }
 
             /**
-             * seat_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14</p>
              */
             public Builder seatType(String seatType) {
                 this.seatType = seatType;
@@ -422,7 +459,10 @@ public class TrainApplyChangeRequest extends Request {
             }
 
             /**
-             * ticket_price.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder ticketPrice(String ticketPrice) {
                 this.ticketPrice = ticketPrice;
@@ -430,7 +470,10 @@ public class TrainApplyChangeRequest extends Request {
             }
 
             /**
-             * ticket_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ticketType(String ticketType) {
                 this.ticketType = ticketType;
@@ -444,6 +487,12 @@ public class TrainApplyChangeRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainApplyChangeRequest} extends {@link TeaModel}
+     *
+     * <p>TrainApplyChangeRequest</p>
+     */
     public static class ChangeTrainInfoS extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_station_code")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -574,7 +623,10 @@ public class TrainApplyChangeRequest extends Request {
             private String trainNo; 
 
             /**
-             * arr_station_code.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BTC</p>
              */
             public Builder arrStationCode(String arrStationCode) {
                 this.arrStationCode = arrStationCode;
@@ -582,7 +634,7 @@ public class TrainApplyChangeRequest extends Request {
             }
 
             /**
-             * change_ticket_info_s.
+             * <p>This parameter is required.</p>
              */
             public Builder changeTicketInfoS(java.util.List < ChangeTicketInfoS> changeTicketInfoS) {
                 this.changeTicketInfoS = changeTicketInfoS;
@@ -606,7 +658,10 @@ public class TrainApplyChangeRequest extends Request {
             }
 
             /**
-             * dep_station_code.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BDC</p>
              */
             public Builder depStationCode(String depStationCode) {
                 this.depStationCode = depStationCode;
@@ -614,7 +669,10 @@ public class TrainApplyChangeRequest extends Request {
             }
 
             /**
-             * dep_time.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-06 15:19:01</p>
              */
             public Builder depTime(String depTime) {
                 this.depTime = depTime;
@@ -622,7 +680,10 @@ public class TrainApplyChangeRequest extends Request {
             }
 
             /**
-             * original_dep_time.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-06 15:19:01</p>
              */
             public Builder originalDepTime(String originalDepTime) {
                 this.originalDepTime = originalDepTime;
@@ -630,7 +691,10 @@ public class TrainApplyChangeRequest extends Request {
             }
 
             /**
-             * original_train_no.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>K234</p>
              */
             public Builder originalTrainNo(String originalTrainNo) {
                 this.originalTrainNo = originalTrainNo;
@@ -638,7 +702,10 @@ public class TrainApplyChangeRequest extends Request {
             }
 
             /**
-             * train_no.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>K2345</p>
              */
             public Builder trainNo(String trainNo) {
                 this.trainNo = trainNo;

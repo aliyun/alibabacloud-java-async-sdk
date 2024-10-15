@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelOrderInfoQueryResponseBody} extends {@link TeaModel}
  *
  * <p>HotelOrderInfoQueryResponseBody</p>
@@ -150,6 +151,12 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HotelOrderInfoQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderInfoQueryResponseBody</p>
+     */
     public static class BaseOrderInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("book_mode")
         private String bookMode;
@@ -531,6 +538,12 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderInfoQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderInfoQueryResponseBody</p>
+     */
     public static class Department extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cascade_dept_mask")
         private String cascadeDeptMask;
@@ -652,6 +665,12 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderInfoQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderInfoQueryResponseBody</p>
+     */
     public static class BookerInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("booker_role")
         private String bookerRole;
@@ -873,6 +892,12 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderInfoQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderInfoQueryResponseBody</p>
+     */
     public static class HotelInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
@@ -1174,6 +1199,12 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderInfoQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderInfoQueryResponseBody</p>
+     */
     public static class HotelOrderFeeInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("order_amount")
         private Long orderAmount;
@@ -1295,6 +1326,12 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderInfoQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderInfoQueryResponseBody</p>
+     */
     public static class HotelOrderRefundInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cancel_fine")
         private Long cancelFine;
@@ -1456,6 +1493,12 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderInfoQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderInfoQueryResponseBody</p>
+     */
     public static class ExceedApply extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("exceed_reason")
         private String exceedReason;
@@ -1557,6 +1600,12 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderInfoQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderInfoQueryResponseBody</p>
+     */
     public static class ApplyInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("apply_business_id")
         private String applyBusinessId;
@@ -1678,6 +1727,12 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderInfoQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderInfoQueryResponseBody</p>
+     */
     public static class TraverInfosDepartment extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cascade_dept_mask")
         private String cascadeDeptMask;
@@ -1799,6 +1854,12 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderInfoQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderInfoQueryResponseBody</p>
+     */
     public static class TripCostCenter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cost_center_code")
         private String costCenterCode;
@@ -2000,6 +2061,12 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderInfoQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderInfoQueryResponseBody</p>
+     */
     public static class TraverInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("apply_info")
         private ApplyInfo applyInfo;
@@ -2241,6 +2308,12 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderInfoQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderInfoQueryResponseBody</p>
+     */
     public static class RoomTraverInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("live_room_no")
         private String liveRoomNo;
@@ -2322,6 +2395,12 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderInfoQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderInfoQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("base_order_info")
         private BaseOrderInfo baseOrderInfo;

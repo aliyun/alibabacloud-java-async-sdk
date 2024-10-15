@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MonthBillConfirmRequest} extends {@link RequestModel}
  *
  * <p>MonthBillConfirmRequest</p>
@@ -82,7 +83,10 @@ public class MonthBillConfirmRequest extends Request {
         } 
 
         /**
-         * mail_bill_date.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20221001</p>
          */
         public Builder mailBillDate(Integer mailBillDate) {
             this.putBodyParameter("mail_bill_date", mailBillDate);

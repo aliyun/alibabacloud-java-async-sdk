@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TicketChangingPayRequest} extends {@link RequestModel}
  *
  * <p>TicketChangingPayRequest</p>
@@ -149,7 +150,10 @@ public class TicketChangingPayRequest extends Request {
         }
 
         /**
-         * dis_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dis123</p>
          */
         public Builder disOrderId(String disOrderId) {
             this.putBodyParameter("dis_order_id", disOrderId);
@@ -158,7 +162,10 @@ public class TicketChangingPayRequest extends Request {
         }
 
         /**
-         * dis_sub_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>refun123</p>
          */
         public Builder disSubOrderId(String disSubOrderId) {
             this.putBodyParameter("dis_sub_order_id", disSubOrderId);
@@ -186,7 +193,10 @@ public class TicketChangingPayRequest extends Request {
         }
 
         /**
-         * total_pay_price.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalPayPrice(Long totalPayPrice) {
             this.putBodyParameter("total_pay_price", totalPayPrice);

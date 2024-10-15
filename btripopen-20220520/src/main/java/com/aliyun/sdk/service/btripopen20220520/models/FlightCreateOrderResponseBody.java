@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightCreateOrderResponseBody} extends {@link TeaModel}
  *
  * <p>FlightCreateOrderResponseBody</p>
@@ -150,6 +151,12 @@ public class FlightCreateOrderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FlightCreateOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightCreateOrderResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("alipay_trade_no")
         private String alipayTradeNo;

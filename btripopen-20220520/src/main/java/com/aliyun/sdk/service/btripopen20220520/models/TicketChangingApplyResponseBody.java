@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TicketChangingApplyResponseBody} extends {@link TeaModel}
  *
  * <p>TicketChangingApplyResponseBody</p>
@@ -150,6 +151,12 @@ public class TicketChangingApplyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TicketChangingApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingApplyResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("booking_changed_total_fee")
         private Integer bookingChangedTotalFee;

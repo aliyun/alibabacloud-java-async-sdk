@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CooperatorFlightBillSettlementQueryResponseBody} extends {@link TeaModel}
  *
  * <p>CooperatorFlightBillSettlementQueryResponseBody</p>
@@ -137,7 +138,10 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
-         * trace_id
+         * <p>trace_id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>213e20c816937929648732715e16f1</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -150,6 +154,12 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CooperatorFlightBillSettlementQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CooperatorFlightBillSettlementQueryResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("advance_day")
         private Integer advanceDay;
@@ -2271,6 +2281,12 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CooperatorFlightBillSettlementQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CooperatorFlightBillSettlementQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("category")
         private Integer category;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TBAccountUnbindRequest} extends {@link RequestModel}
  *
  * <p>TBAccountUnbindRequest</p>
@@ -68,7 +69,10 @@ public class TBAccountUnbindRequest extends Request {
         } 
 
         /**
-         * user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12138</p>
          */
         public Builder userId(String userId) {
             this.putPathParameter("user_id", userId);

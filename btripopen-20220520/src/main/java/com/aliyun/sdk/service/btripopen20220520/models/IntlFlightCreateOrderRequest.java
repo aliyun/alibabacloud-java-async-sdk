@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IntlFlightCreateOrderRequest} extends {@link RequestModel}
  *
  * <p>IntlFlightCreateOrderRequest</p>
@@ -259,7 +260,10 @@ public class IntlFlightCreateOrderRequest extends Request {
         }
 
         /**
-         * async_create_order_mode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder asyncCreateOrderMode(Boolean asyncCreateOrderMode) {
             this.putQueryParameter("async_create_order_mode", asyncCreateOrderMode);
@@ -395,6 +399,12 @@ public class IntlFlightCreateOrderRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link IntlFlightCreateOrderRequest} extends {@link TeaModel}
+     *
+     * <p>IntlFlightCreateOrderRequest</p>
+     */
     public static class ContactInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("contact_email")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -462,7 +472,10 @@ public class IntlFlightCreateOrderRequest extends Request {
             private Boolean sendMsgToPassenger; 
 
             /**
-             * contact_email.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:XXX@aliyun.com">XXX@aliyun.com</a></p>
              */
             public Builder contactEmail(String contactEmail) {
                 this.contactEmail = contactEmail;
@@ -470,7 +483,7 @@ public class IntlFlightCreateOrderRequest extends Request {
             }
 
             /**
-             * contact_name.
+             * <p>This parameter is required.</p>
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
@@ -478,7 +491,10 @@ public class IntlFlightCreateOrderRequest extends Request {
             }
 
             /**
-             * contact_phone.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13812341234</p>
              */
             public Builder contactPhone(String contactPhone) {
                 this.contactPhone = contactPhone;
@@ -486,7 +502,10 @@ public class IntlFlightCreateOrderRequest extends Request {
             }
 
             /**
-             * send_msg_to_passenger.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sendMsgToPassenger(Boolean sendMsgToPassenger) {
                 this.sendMsgToPassenger = sendMsgToPassenger;
@@ -500,6 +519,12 @@ public class IntlFlightCreateOrderRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightCreateOrderRequest} extends {@link TeaModel}
+     *
+     * <p>IntlFlightCreateOrderRequest</p>
+     */
     public static class CostCenter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cost_center_name")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -541,7 +566,7 @@ public class IntlFlightCreateOrderRequest extends Request {
             private String costCenterNumber; 
 
             /**
-             * cost_center_name.
+             * <p>This parameter is required.</p>
              */
             public Builder costCenterName(String costCenterName) {
                 this.costCenterName = costCenterName;
@@ -549,7 +574,10 @@ public class IntlFlightCreateOrderRequest extends Request {
             }
 
             /**
-             * cost_center_number.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>312434</p>
              */
             public Builder costCenterNumber(String costCenterNumber) {
                 this.costCenterNumber = costCenterNumber;
@@ -563,6 +591,12 @@ public class IntlFlightCreateOrderRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightCreateOrderRequest} extends {@link TeaModel}
+     *
+     * <p>IntlFlightCreateOrderRequest</p>
+     */
     public static class CertInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cert_nation")
         private String certNation;
@@ -649,7 +683,10 @@ public class IntlFlightCreateOrderRequest extends Request {
             }
 
             /**
-             * cert_no.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>H123456</p>
              */
             public Builder certNo(String certNo) {
                 this.certNo = certNo;
@@ -657,7 +694,10 @@ public class IntlFlightCreateOrderRequest extends Request {
             }
 
             /**
-             * cert_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder certType(Integer certType) {
                 this.certType = certType;
@@ -673,7 +713,10 @@ public class IntlFlightCreateOrderRequest extends Request {
             }
 
             /**
-             * name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZHANG/SAN</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -687,6 +730,12 @@ public class IntlFlightCreateOrderRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightCreateOrderRequest} extends {@link TeaModel}
+     *
+     * <p>IntlFlightCreateOrderRequest</p>
+     */
     public static class SubsidiaryCertInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cert_nation")
         private String certNation;
@@ -773,7 +822,10 @@ public class IntlFlightCreateOrderRequest extends Request {
             }
 
             /**
-             * cert_no.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>H123456</p>
              */
             public Builder certNo(String certNo) {
                 this.certNo = certNo;
@@ -781,7 +833,10 @@ public class IntlFlightCreateOrderRequest extends Request {
             }
 
             /**
-             * cert_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder certType(Integer certType) {
                 this.certType = certType;
@@ -797,7 +852,10 @@ public class IntlFlightCreateOrderRequest extends Request {
             }
 
             /**
-             * name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZHANG/SAN</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -811,6 +869,12 @@ public class IntlFlightCreateOrderRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightCreateOrderRequest} extends {@link TeaModel}
+     *
+     * <p>IntlFlightCreateOrderRequest</p>
+     */
     public static class PassengerList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("birthday")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -1095,7 +1159,10 @@ public class IntlFlightCreateOrderRequest extends Request {
             private Integer userType; 
 
             /**
-             * birthday.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-01-01</p>
              */
             public Builder birthday(String birthday) {
                 this.birthday = birthday;
@@ -1119,7 +1186,7 @@ public class IntlFlightCreateOrderRequest extends Request {
             }
 
             /**
-             * cert_info.
+             * <p>This parameter is required.</p>
              */
             public Builder certInfo(CertInfo certInfo) {
                 this.certInfo = certInfo;
@@ -1127,7 +1194,7 @@ public class IntlFlightCreateOrderRequest extends Request {
             }
 
             /**
-             * cost_center_name.
+             * <p>This parameter is required.</p>
              */
             public Builder costCenterName(String costCenterName) {
                 this.costCenterName = costCenterName;
@@ -1135,7 +1202,10 @@ public class IntlFlightCreateOrderRequest extends Request {
             }
 
             /**
-             * cost_center_number.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>312434</p>
              */
             public Builder costCenterNumber(String costCenterNumber) {
                 this.costCenterNumber = costCenterNumber;
@@ -1215,7 +1285,10 @@ public class IntlFlightCreateOrderRequest extends Request {
             }
 
             /**
-             * passenger_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder passengerType(Integer passengerType) {
                 this.passengerType = passengerType;
@@ -1223,7 +1296,10 @@ public class IntlFlightCreateOrderRequest extends Request {
             }
 
             /**
-             * phone.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18012341234</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -1255,7 +1331,10 @@ public class IntlFlightCreateOrderRequest extends Request {
             }
 
             /**
-             * user_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13123123212</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

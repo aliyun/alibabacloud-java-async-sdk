@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightModifyApplyV2Request} extends {@link RequestModel}
  *
  * <p>FlightModifyApplyV2Request</p>
@@ -289,7 +290,10 @@ public class FlightModifyApplyV2Request extends Request {
         }
 
         /**
-         * sessionId
+         * <p>sessionId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a2ffebfe733742aab5c491d960ba3d59</p>
          */
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("session_id", sessionId);
@@ -322,6 +326,12 @@ public class FlightModifyApplyV2Request extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link FlightModifyApplyV2Request} extends {@link TeaModel}
+     *
+     * <p>FlightModifyApplyV2Request</p>
+     */
     public static class PassengerSegmentRelations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("passenger_id")
         private String passengerId;

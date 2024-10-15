@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CarOrderQueryResponseBody} extends {@link TeaModel}
  *
  * <p>CarOrderQueryResponseBody</p>
@@ -121,7 +122,10 @@ public class CarOrderQueryResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +141,10 @@ public class CarOrderQueryResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21041ce316577904808056433edbb2</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -150,6 +157,12 @@ public class CarOrderQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CarOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CarOrderQueryResponseBody</p>
+     */
     public static class CarInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("business_category")
         private String businessCategory;
@@ -731,6 +744,12 @@ public class CarOrderQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CarOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CarOrderQueryResponseBody</p>
+     */
     public static class InvoiceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
@@ -792,6 +811,12 @@ public class CarOrderQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CarOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CarOrderQueryResponseBody</p>
+     */
     public static class OrderBaseInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("apply_id")
         private String applyId;
@@ -1193,6 +1218,12 @@ public class CarOrderQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CarOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CarOrderQueryResponseBody</p>
+     */
     public static class PassengerList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cost_center_id")
         private Long costCenterId;
@@ -1434,6 +1465,12 @@ public class CarOrderQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CarOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CarOrderQueryResponseBody</p>
+     */
     public static class PriceInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("category_code")
         private Integer categoryCode;
@@ -1595,6 +1632,12 @@ public class CarOrderQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CarOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CarOrderQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("car_info")
         private CarInfo carInfo;

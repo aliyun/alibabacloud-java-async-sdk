@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EntityDeleteResponseBody} extends {@link TeaModel}
  *
  * <p>EntityDeleteResponseBody</p>
@@ -157,7 +158,10 @@ public class EntityDeleteResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21041ce316577904808056433edbb2</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -170,6 +174,12 @@ public class EntityDeleteResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link EntityDeleteResponseBody} extends {@link TeaModel}
+     *
+     * <p>EntityDeleteResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("remove_num")
         private Integer removeNum;

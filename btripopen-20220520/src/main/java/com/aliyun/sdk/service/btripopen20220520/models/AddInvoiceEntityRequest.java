@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddInvoiceEntityRequest} extends {@link RequestModel}
  *
  * <p>AddInvoiceEntityRequest</p>
@@ -83,7 +84,7 @@ public class AddInvoiceEntityRequest extends Request {
         } 
 
         /**
-         * entities.
+         * <p>This parameter is required.</p>
          */
         public Builder entities(java.util.List < Entities> entities) {
             String entitiesShrink = shrink(entities, "entities", "json");
@@ -93,7 +94,10 @@ public class AddInvoiceEntityRequest extends Request {
         }
 
         /**
-         * third_part_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4854821</p>
          */
         public Builder thirdPartId(String thirdPartId) {
             this.putBodyParameter("third_part_id", thirdPartId);
@@ -117,6 +121,12 @@ public class AddInvoiceEntityRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddInvoiceEntityRequest} extends {@link TeaModel}
+     *
+     * <p>AddInvoiceEntityRequest</p>
+     */
     public static class Entities extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("entity_id")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -171,7 +181,10 @@ public class AddInvoiceEntityRequest extends Request {
             private String entityType; 
 
             /**
-             * entity_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -179,7 +192,7 @@ public class AddInvoiceEntityRequest extends Request {
             }
 
             /**
-             * entity_name.
+             * <p>This parameter is required.</p>
              */
             public Builder entityName(String entityName) {
                 this.entityName = entityName;
@@ -187,7 +200,10 @@ public class AddInvoiceEntityRequest extends Request {
             }
 
             /**
-             * entity_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;

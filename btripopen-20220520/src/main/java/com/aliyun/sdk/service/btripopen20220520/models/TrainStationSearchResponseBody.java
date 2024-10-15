@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TrainStationSearchResponseBody} extends {@link TeaModel}
  *
  * <p>TrainStationSearchResponseBody</p>
@@ -113,7 +114,7 @@ public class TrainStationSearchResponseBody extends TeaModel {
         }
 
         /**
-         * module
+         * <p>module</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -150,6 +151,12 @@ public class TrainStationSearchResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TrainStationSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainStationSearchResponseBody</p>
+     */
     public static class Cities extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
@@ -211,6 +218,12 @@ public class TrainStationSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainStationSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainStationSearchResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cities")
         private java.util.List < Cities> cities;

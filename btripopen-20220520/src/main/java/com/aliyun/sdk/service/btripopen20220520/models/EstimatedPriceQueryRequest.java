@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EstimatedPriceQueryRequest} extends {@link RequestModel}
  *
  * <p>EstimatedPriceQueryRequest</p>
@@ -171,7 +172,7 @@ public class EstimatedPriceQueryRequest extends Request {
         } 
 
         /**
-         * arr_city.
+         * <p>This parameter is required.</p>
          */
         public Builder arrCity(String arrCity) {
             this.putQueryParameter("arr_city", arrCity);
@@ -180,7 +181,10 @@ public class EstimatedPriceQueryRequest extends Request {
         }
 
         /**
-         * category.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flight</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("category", category);
@@ -189,7 +193,7 @@ public class EstimatedPriceQueryRequest extends Request {
         }
 
         /**
-         * dep_city.
+         * <p>This parameter is required.</p>
          */
         public Builder depCity(String depCity) {
             this.putQueryParameter("dep_city", depCity);
@@ -198,7 +202,10 @@ public class EstimatedPriceQueryRequest extends Request {
         }
 
         /**
-         * end_time.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1670601600000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("end_time", endTime);
@@ -216,7 +223,10 @@ public class EstimatedPriceQueryRequest extends Request {
         }
 
         /**
-         * start_time.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1670428800000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("start_time", startTime);
@@ -234,7 +244,10 @@ public class EstimatedPriceQueryRequest extends Request {
         }
 
         /**
-         * user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678910</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("user_id", userId);

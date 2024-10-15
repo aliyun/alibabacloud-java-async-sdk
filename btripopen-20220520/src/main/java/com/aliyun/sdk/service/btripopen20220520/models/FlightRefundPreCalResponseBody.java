@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightRefundPreCalResponseBody} extends {@link TeaModel}
  *
  * <p>FlightRefundPreCalResponseBody</p>
@@ -150,6 +151,12 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FlightRefundPreCalResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightRefundPreCalResponseBody</p>
+     */
     public static class MultiRefundCalList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("can_apply_refund")
         private Boolean canApplyRefund;
@@ -271,6 +278,12 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightRefundPreCalResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightRefundPreCalResponseBody</p>
+     */
     public static class ReturnReason extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("extend_desc")
         private String extendDesc;
@@ -412,6 +425,12 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightRefundPreCalResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightRefundPreCalResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("flight_change")
         private Boolean flightChange;

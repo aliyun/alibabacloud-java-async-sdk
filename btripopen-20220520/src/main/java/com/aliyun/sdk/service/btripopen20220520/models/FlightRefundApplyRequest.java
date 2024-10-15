@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightRefundApplyRequest} extends {@link RequestModel}
  *
  * <p>FlightRefundApplyRequest</p>
@@ -265,7 +266,10 @@ public class FlightRefundApplyRequest extends Request {
         }
 
         /**
-         * dis_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dis123</p>
          */
         public Builder disOrderId(String disOrderId) {
             this.putBodyParameter("dis_order_id", disOrderId);
@@ -274,7 +278,10 @@ public class FlightRefundApplyRequest extends Request {
         }
 
         /**
-         * dis_sub_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>refu123</p>
          */
         public Builder disSubOrderId(String disSubOrderId) {
             this.putBodyParameter("dis_sub_order_id", disSubOrderId);
@@ -283,7 +290,10 @@ public class FlightRefundApplyRequest extends Request {
         }
 
         /**
-         * display_refund_money.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder displayRefundMoney(String displayRefundMoney) {
             this.putBodyParameter("display_refund_money", displayRefundMoney);
@@ -302,7 +312,10 @@ public class FlightRefundApplyRequest extends Request {
         }
 
         /**
-         * is_voluntary.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder isVoluntary(Integer isVoluntary) {
             this.putBodyParameter("is_voluntary", isVoluntary);
@@ -311,7 +324,10 @@ public class FlightRefundApplyRequest extends Request {
         }
 
         /**
-         * item_unit_ids.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FlightItem_9966772382</p>
          */
         public Builder itemUnitIds(String itemUnitIds) {
             this.putBodyParameter("item_unit_ids", itemUnitIds);
@@ -348,7 +364,10 @@ public class FlightRefundApplyRequest extends Request {
         }
 
         /**
-         * reason_type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder reasonType(Integer reasonType) {
             this.putBodyParameter("reason_type", reasonType);
@@ -367,7 +386,10 @@ public class FlightRefundApplyRequest extends Request {
         }
 
         /**
-         * session_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0f9418cd2ce34af49ab0de16fea166d1</p>
          */
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("session_id", sessionId);
@@ -400,6 +422,12 @@ public class FlightRefundApplyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link FlightRefundApplyRequest} extends {@link TeaModel}
+     *
+     * <p>FlightRefundApplyRequest</p>
+     */
     public static class PassengerSegmentInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("flight_no")
         private String flightNo;

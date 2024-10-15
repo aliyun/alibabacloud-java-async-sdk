@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ProjectAddRequest} extends {@link RequestModel}
  *
  * <p>ProjectAddRequest</p>
@@ -126,7 +127,10 @@ public class ProjectAddRequest extends Request {
         } 
 
         /**
-         * code.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pro_code</p>
          */
         public Builder code(String code) {
             this.putBodyParameter("code", code);
@@ -135,7 +139,7 @@ public class ProjectAddRequest extends Request {
         }
 
         /**
-         * project_name.
+         * <p>This parameter is required.</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("project_name", projectName);
@@ -153,7 +157,10 @@ public class ProjectAddRequest extends Request {
         }
 
         /**
-         * third_part_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder thirdPartId(String thirdPartId) {
             this.putBodyParameter("third_part_id", thirdPartId);

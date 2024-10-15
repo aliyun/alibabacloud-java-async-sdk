@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TicketChangingPayResponseBody} extends {@link TeaModel}
  *
  * <p>TicketChangingPayResponseBody</p>
@@ -150,6 +151,12 @@ public class TicketChangingPayResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TicketChangingPayResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingPayResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("can_retry")
         private Boolean canRetry;

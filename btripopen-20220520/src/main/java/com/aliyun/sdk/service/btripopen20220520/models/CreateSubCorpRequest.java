@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSubCorpRequest} extends {@link RequestModel}
  *
  * <p>CreateSubCorpRequest</p>
@@ -98,7 +99,10 @@ public class CreateSubCorpRequest extends Request {
         } 
 
         /**
-         * outer_corp_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>corp123</p>
          */
         public Builder outerCorpId(String outerCorpId) {
             this.putBodyParameter("outer_corp_id", outerCorpId);
@@ -107,7 +111,7 @@ public class CreateSubCorpRequest extends Request {
         }
 
         /**
-         * outer_corp_name.
+         * <p>This parameter is required.</p>
          */
         public Builder outerCorpName(String outerCorpName) {
             this.putBodyParameter("outer_corp_name", outerCorpName);
@@ -116,7 +120,10 @@ public class CreateSubCorpRequest extends Request {
         }
 
         /**
-         * user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("user_id", userId);

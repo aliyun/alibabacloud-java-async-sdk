@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TicketChangingEnquiryRequest} extends {@link RequestModel}
  *
  * <p>TicketChangingEnquiryRequest</p>
@@ -158,7 +159,10 @@ public class TicketChangingEnquiryRequest extends Request {
         } 
 
         /**
-         * arr_city.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BJS</p>
          */
         public Builder arrCity(String arrCity) {
             this.putQueryParameter("arr_city", arrCity);
@@ -167,7 +171,10 @@ public class TicketChangingEnquiryRequest extends Request {
         }
 
         /**
-         * dep_city.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HGH</p>
          */
         public Builder depCity(String depCity) {
             this.putQueryParameter("dep_city", depCity);
@@ -176,7 +183,10 @@ public class TicketChangingEnquiryRequest extends Request {
         }
 
         /**
-         * dis_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dis123</p>
          */
         public Builder disOrderId(String disOrderId) {
             this.putQueryParameter("dis_order_id", disOrderId);
@@ -185,7 +195,10 @@ public class TicketChangingEnquiryRequest extends Request {
         }
 
         /**
-         * is_voluntary.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder isVoluntary(Integer isVoluntary) {
             this.putQueryParameter("is_voluntary", isVoluntary);
@@ -194,7 +207,10 @@ public class TicketChangingEnquiryRequest extends Request {
         }
 
         /**
-         * modify_depart_date.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000-00-00 00:00:00</p>
          */
         public Builder modifyDepartDate(String modifyDepartDate) {
             this.putQueryParameter("modify_depart_date", modifyDepartDate);
@@ -203,7 +219,10 @@ public class TicketChangingEnquiryRequest extends Request {
         }
 
         /**
-         * modify_flight_no.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CA1704</p>
          */
         public Builder modifyFlightNo(String modifyFlightNo) {
             this.putQueryParameter("modify_flight_no", modifyFlightNo);
@@ -212,7 +231,10 @@ public class TicketChangingEnquiryRequest extends Request {
         }
 
         /**
-         * session_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ece19e8b1047898a5a98b6487348c2</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("session_id", sessionId);

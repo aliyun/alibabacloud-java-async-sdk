@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightPayOrderResponseBody} extends {@link TeaModel}
  *
  * <p>FlightPayOrderResponseBody</p>
@@ -150,6 +151,12 @@ public class FlightPayOrderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FlightPayOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightPayOrderResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("actual_pay_price")
         private Long actualPayPrice;

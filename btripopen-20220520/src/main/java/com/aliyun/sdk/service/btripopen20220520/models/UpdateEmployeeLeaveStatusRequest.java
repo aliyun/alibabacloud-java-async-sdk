@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateEmployeeLeaveStatusRequest} extends {@link RequestModel}
  *
  * <p>UpdateEmployeeLeaveStatusRequest</p>
@@ -83,7 +84,10 @@ public class UpdateEmployeeLeaveStatusRequest extends Request {
         } 
 
         /**
-         * is_leave.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isLeave(Boolean isLeave) {
             this.putBodyParameter("is_leave", isLeave);
@@ -92,7 +96,10 @@ public class UpdateEmployeeLeaveStatusRequest extends Request {
         }
 
         /**
-         * user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user123</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("user_id", userId);

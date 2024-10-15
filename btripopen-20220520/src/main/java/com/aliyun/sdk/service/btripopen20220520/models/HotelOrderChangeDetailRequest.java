@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelOrderChangeDetailRequest} extends {@link RequestModel}
  *
  * <p>HotelOrderChangeDetailRequest</p>
@@ -121,7 +122,10 @@ public class HotelOrderChangeDetailRequest extends Request {
         }
 
         /**
-         * change_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21351235134</p>
          */
         public Builder changeOrderId(String changeOrderId) {
             this.putBodyParameter("change_order_id", changeOrderId);
@@ -130,7 +134,10 @@ public class HotelOrderChangeDetailRequest extends Request {
         }
 
         /**
-         * dis_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dis123</p>
          */
         public Builder disOrderId(String disOrderId) {
             this.putBodyParameter("dis_order_id", disOrderId);
@@ -139,7 +146,10 @@ public class HotelOrderChangeDetailRequest extends Request {
         }
 
         /**
-         * sale_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1402002197440511306</p>
          */
         public Builder saleOrderId(String saleOrderId) {
             this.putBodyParameter("sale_order_id", saleOrderId);

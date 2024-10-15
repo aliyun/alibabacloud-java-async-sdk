@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VatInvoiceScanQueryResponseBody} extends {@link TeaModel}
  *
  * <p>VatInvoiceScanQueryResponseBody</p>
@@ -121,7 +122,10 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +141,10 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210e842b16611337974412836dae27</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -150,6 +157,12 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link VatInvoiceScanQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>VatInvoiceScanQueryResponseBody</p>
+     */
     public static class InvoiceDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("amount")
         private String amount;
@@ -281,7 +294,10 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 行号
+             * <p>行号</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder index(String index) {
                 this.index = index;
@@ -351,6 +367,12 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link VatInvoiceScanQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>VatInvoiceScanQueryResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("amount_with_tax")
         private String amountWithTax;
@@ -918,7 +940,10 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 机器码
+             * <p>机器码</p>
+             * 
+             * <strong>example:</strong>
+             * <p>661619906841</p>
              */
             public Builder machineCode(String machineCode) {
                 this.machineCode = machineCode;
@@ -1092,6 +1117,12 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link VatInvoiceScanQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>VatInvoiceScanQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("items")
         private java.util.List < Items> items;

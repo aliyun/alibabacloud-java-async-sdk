@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModuleFlightItemListBestPriceItemShoppingItemMapValue} extends {@link TeaModel}
  *
  * <p>ModuleFlightItemListBestPriceItemShoppingItemMapValue</p>
@@ -121,7 +122,10 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
         }
 
         /**
-         * id
+         * <p>id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADT07df0bd9-f803-4a50-8449-f4bd675d9939</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -150,6 +154,12 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
 
     } 
 
+    /**
+     * 
+     * {@link ModuleFlightItemListBestPriceItemShoppingItemMapValue} extends {@link TeaModel}
+     *
+     * <p>ModuleFlightItemListBestPriceItemShoppingItemMapValue</p>
+     */
     public static class SegmentPosition extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("segment_index")
         private Integer segmentIndex;
@@ -211,6 +221,12 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
         } 
 
     }
+    /**
+     * 
+     * {@link ModuleFlightItemListBestPriceItemShoppingItemMapValue} extends {@link TeaModel}
+     *
+     * <p>ModuleFlightItemListBestPriceItemShoppingItemMapValue</p>
+     */
     public static class Cabin extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cabin")
         private String cabin;
@@ -312,6 +328,12 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
         } 
 
     }
+    /**
+     * 
+     * {@link ModuleFlightItemListBestPriceItemShoppingItemMapValue} extends {@link TeaModel}
+     *
+     * <p>ModuleFlightItemListBestPriceItemShoppingItemMapValue</p>
+     */
     public static class CabinQuantityList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("segment_position")
         private SegmentPosition segmentPosition;
@@ -373,6 +395,12 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
         } 
 
     }
+    /**
+     * 
+     * {@link ModuleFlightItemListBestPriceItemShoppingItemMapValue} extends {@link TeaModel}
+     *
+     * <p>ModuleFlightItemListBestPriceItemShoppingItemMapValue</p>
+     */
     public static class PriceShowInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("discount_info")
         private String discountInfo;
@@ -454,6 +482,12 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
         } 
 
     }
+    /**
+     * 
+     * {@link ModuleFlightItemListBestPriceItemShoppingItemMapValue} extends {@link TeaModel}
+     *
+     * <p>ModuleFlightItemListBestPriceItemShoppingItemMapValue</p>
+     */
     public static class SearchPrice extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("floor_price")
         private Integer floorPrice;
@@ -869,7 +903,10 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
             }
 
             /**
-             * fdPrice
+             * <p>fdPrice</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fdPrice</p>
              */
             public Builder interTicketPrice(Integer interTicketPrice) {
                 this.interTicketPrice = interTicketPrice;
@@ -955,6 +992,12 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
         } 
 
     }
+    /**
+     * 
+     * {@link ModuleFlightItemListBestPriceItemShoppingItemMapValue} extends {@link TeaModel}
+     *
+     * <p>ModuleFlightItemListBestPriceItemShoppingItemMapValue</p>
+     */
     public static class SegmentPriceListSegmentPosition extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("journey_index")
         private Integer journeyIndex;
@@ -1016,6 +1059,12 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
         } 
 
     }
+    /**
+     * 
+     * {@link ModuleFlightItemListBestPriceItemShoppingItemMapValue} extends {@link TeaModel}
+     *
+     * <p>ModuleFlightItemListBestPriceItemShoppingItemMapValue</p>
+     */
     public static class SegmentPriceListSearchPrice extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ticket_price")
         private Integer ticketPrice;
@@ -1097,6 +1146,12 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
         } 
 
     }
+    /**
+     * 
+     * {@link ModuleFlightItemListBestPriceItemShoppingItemMapValue} extends {@link TeaModel}
+     *
+     * <p>ModuleFlightItemListBestPriceItemShoppingItemMapValue</p>
+     */
     public static class SegmentPriceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("segment_position")
         private SegmentPriceListSegmentPosition segmentPosition;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExternalUserUpdateRequest} extends {@link RequestModel}
  *
  * <p>ExternalUserUpdateRequest</p>
@@ -152,7 +153,10 @@ public class ExternalUserUpdateRequest extends Request {
         } 
 
         /**
-         * external_user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0012</p>
          */
         public Builder externalUserId(String externalUserId) {
             this.putPathParameter("external_user_id", externalUserId);
@@ -231,6 +235,12 @@ public class ExternalUserUpdateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ExternalUserUpdateRequest} extends {@link TeaModel}
+     *
+     * <p>ExternalUserUpdateRequest</p>
+     */
     public static class CertRequestList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cert_expired_time")
         private String certExpiredTime;
@@ -324,7 +334,10 @@ public class ExternalUserUpdateRequest extends Request {
             }
 
             /**
-             * cert_no.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>330101199010010213</p>
              */
             public Builder certNo(String certNo) {
                 this.certNo = certNo;
@@ -332,7 +345,10 @@ public class ExternalUserUpdateRequest extends Request {
             }
 
             /**
-             * cert_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder certType(Integer certType) {
                 this.certType = certType;

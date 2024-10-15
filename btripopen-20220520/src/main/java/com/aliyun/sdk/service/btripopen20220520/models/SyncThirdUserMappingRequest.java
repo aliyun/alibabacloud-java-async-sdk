@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SyncThirdUserMappingRequest} extends {@link RequestModel}
  *
  * <p>SyncThirdUserMappingRequest</p>
@@ -113,7 +114,10 @@ public class SyncThirdUserMappingRequest extends Request {
         } 
 
         /**
-         * status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putBodyParameter("status", status);
@@ -122,7 +126,10 @@ public class SyncThirdUserMappingRequest extends Request {
         }
 
         /**
-         * third_channel_type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>weCom</p>
          */
         public Builder thirdChannelType(String thirdChannelType) {
             this.putBodyParameter("third_channel_type", thirdChannelType);
@@ -131,7 +138,10 @@ public class SyncThirdUserMappingRequest extends Request {
         }
 
         /**
-         * third_user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder thirdUserId(String thirdUserId) {
             this.putBodyParameter("third_user_id", thirdUserId);
@@ -140,7 +150,10 @@ public class SyncThirdUserMappingRequest extends Request {
         }
 
         /**
-         * user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("user_id", userId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryReimbursementOrderRequest} extends {@link RequestModel}
  *
  * <p>QueryReimbursementOrderRequest</p>
@@ -82,7 +83,10 @@ public class QueryReimbursementOrderRequest extends Request {
         } 
 
         /**
-         * reimb_order_no.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RT204396</p>
          */
         public Builder reimbOrderNo(String reimbOrderNo) {
             this.putQueryParameter("reimb_order_no", reimbOrderNo);

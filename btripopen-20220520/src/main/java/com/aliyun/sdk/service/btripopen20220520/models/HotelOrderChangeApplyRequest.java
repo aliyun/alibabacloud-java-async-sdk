@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelOrderChangeApplyRequest} extends {@link RequestModel}
  *
  * <p>HotelOrderChangeApplyRequest</p>
@@ -136,7 +137,10 @@ public class HotelOrderChangeApplyRequest extends Request {
         }
 
         /**
-         * dis_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3685792244476194816</p>
          */
         public Builder disOrderId(String disOrderId) {
             this.putBodyParameter("dis_order_id", disOrderId);
@@ -145,7 +149,7 @@ public class HotelOrderChangeApplyRequest extends Request {
         }
 
         /**
-         * reason.
+         * <p>This parameter is required.</p>
          */
         public Builder reason(String reason) {
             this.putBodyParameter("reason", reason);
@@ -154,7 +158,7 @@ public class HotelOrderChangeApplyRequest extends Request {
         }
 
         /**
-         * room_info_list.
+         * <p>This parameter is required.</p>
          */
         public Builder roomInfoList(java.util.List < RoomInfoList> roomInfoList) {
             String roomInfoListShrink = shrink(roomInfoList, "room_info_list", "json");
@@ -164,7 +168,10 @@ public class HotelOrderChangeApplyRequest extends Request {
         }
 
         /**
-         * sale_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1402002197440511306</p>
          */
         public Builder saleOrderId(String saleOrderId) {
             this.putBodyParameter("sale_order_id", saleOrderId);
@@ -188,6 +195,12 @@ public class HotelOrderChangeApplyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link HotelOrderChangeApplyRequest} extends {@link TeaModel}
+     *
+     * <p>HotelOrderChangeApplyRequest</p>
+     */
     public static class RoomInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cancel_date")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -229,7 +242,7 @@ public class HotelOrderChangeApplyRequest extends Request {
             private Integer roomNo; 
 
             /**
-             * cancel_date.
+             * <p>This parameter is required.</p>
              */
             public Builder cancelDate(java.util.List < String > cancelDate) {
                 this.cancelDate = cancelDate;
@@ -237,7 +250,10 @@ public class HotelOrderChangeApplyRequest extends Request {
             }
 
             /**
-             * room_no.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>112</p>
              */
             public Builder roomNo(Integer roomNo) {
                 this.roomNo = roomNo;

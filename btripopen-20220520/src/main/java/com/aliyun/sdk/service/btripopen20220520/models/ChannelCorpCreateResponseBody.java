@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChannelCorpCreateResponseBody} extends {@link TeaModel}
  *
  * <p>ChannelCorpCreateResponseBody</p>
@@ -150,6 +151,12 @@ public class ChannelCorpCreateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ChannelCorpCreateResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChannelCorpCreateResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("administrator_name")
         private String administratorName;

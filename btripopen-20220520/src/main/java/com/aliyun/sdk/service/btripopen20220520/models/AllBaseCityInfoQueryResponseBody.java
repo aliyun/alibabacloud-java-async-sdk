@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllBaseCityInfoQueryResponseBody} extends {@link TeaModel}
  *
  * <p>AllBaseCityInfoQueryResponseBody</p>
@@ -137,7 +138,10 @@ public class AllBaseCityInfoQueryResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210f079e16603757182131635d866a</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -150,6 +154,12 @@ public class AllBaseCityInfoQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AllBaseCityInfoQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>AllBaseCityInfoQueryResponseBody</p>
+     */
     public static class AllCityBaseInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("adcode")
         private String adcode;
@@ -311,6 +321,12 @@ public class AllBaseCityInfoQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AllBaseCityInfoQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>AllBaseCityInfoQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("all_city_base_info_list")
         private java.util.List < AllCityBaseInfoList> allCityBaseInfoList;

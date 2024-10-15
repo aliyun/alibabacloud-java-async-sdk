@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
  *
  * <p>IntlFlightOtaItemDetailResponseBody</p>
@@ -150,6 +151,12 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class AirlineInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airline_chinese_name")
         private String airlineChineseName;
@@ -271,6 +278,12 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class ArrAirportInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airport_code")
         private String airportCode;
@@ -372,6 +385,12 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class DepAirportInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airport_code")
         private String airportCode;
@@ -473,6 +492,12 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class OperatingAirlineInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airline_chinese_name")
         private String airlineChineseName;
@@ -594,6 +619,12 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class FlightShareInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("operating_airline_info")
         private OperatingAirlineInfo operatingAirlineInfo;
@@ -655,6 +686,12 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class FlightStopInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("stop_airport")
         private String stopAirport;
@@ -876,6 +913,12 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class LuggageDirectInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dep_city_luggage_direct")
         private Integer depCityLuggageDirect;
@@ -937,6 +980,12 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class SegmentVisaRemark extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dep_city_visa_remark")
         private String depCityVisaRemark;
@@ -1038,6 +1087,12 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class FlightSegmentInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airline_info")
         private AirlineInfo airlineInfo;
@@ -1679,6 +1734,12 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class FlightJourneyInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_city_code")
         private String arrCityCode;
@@ -1920,6 +1981,12 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class FlightRuleInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_desc")
         private String baggageDesc;
@@ -1981,6 +2048,12 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class SegmentPosition extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("journey_index")
         private Integer journeyIndex;
@@ -2042,6 +2115,12 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class FlightRuleInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("flight_rule_info")
         private FlightRuleInfo flightRuleInfo;
@@ -2103,6 +2182,12 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class BaggageRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_digest")
         private String baggageDigest;
@@ -2184,6 +2269,12 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class RefundChangeRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cancel_fee_ind")
         private Boolean cancelFeeInd;
@@ -2305,6 +2396,12 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class SubItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_rule")
         private BaggageRule baggageRule;
@@ -2426,6 +2523,12 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class GroupItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("agreement_price_codes")
         private java.util.List < String > agreementPriceCodes;
@@ -2587,6 +2690,12 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class ShutterDocs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("contents")
         private java.util.List < String > contents;
@@ -2648,6 +2757,12 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("flight_journey_infos")
         private java.util.List < FlightJourneyInfos> flightJourneyInfos;

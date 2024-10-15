@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelOrderChangeApplyResponseBody} extends {@link TeaModel}
  *
  * <p>HotelOrderChangeApplyResponseBody</p>
@@ -113,7 +114,7 @@ public class HotelOrderChangeApplyResponseBody extends TeaModel {
         }
 
         /**
-         * module
+         * <p>module</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -150,6 +151,12 @@ public class HotelOrderChangeApplyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HotelOrderChangeApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderChangeApplyResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("change_order_id")
         private String changeOrderId;

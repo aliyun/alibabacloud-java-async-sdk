@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TrainFeeCalculateChangeRequest} extends {@link RequestModel}
  *
  * <p>TrainFeeCalculateChangeRequest</p>
@@ -98,7 +99,7 @@ public class TrainFeeCalculateChangeRequest extends Request {
         } 
 
         /**
-         * change_train_details.
+         * <p>This parameter is required.</p>
          */
         public Builder changeTrainDetails(java.util.List < ChangeTrainDetails> changeTrainDetails) {
             String changeTrainDetailsShrink = shrink(changeTrainDetails, "change_train_details", "json");
@@ -108,7 +109,10 @@ public class TrainFeeCalculateChangeRequest extends Request {
         }
 
         /**
-         * distribute_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder distributeOrderId(String distributeOrderId) {
             this.putBodyParameter("distribute_order_id", distributeOrderId);
@@ -117,7 +121,10 @@ public class TrainFeeCalculateChangeRequest extends Request {
         }
 
         /**
-         * order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2627694109810885616</p>
          */
         public Builder orderId(String orderId) {
             this.putBodyParameter("order_id", orderId);
@@ -141,6 +148,12 @@ public class TrainFeeCalculateChangeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TrainFeeCalculateChangeRequest} extends {@link TeaModel}
+     *
+     * <p>TrainFeeCalculateChangeRequest</p>
+     */
     public static class PassengerInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("passenger_cert_no")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -195,7 +208,10 @@ public class TrainFeeCalculateChangeRequest extends Request {
             private String passengerName; 
 
             /**
-             * passenger_cert_no.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>949c9f34f677a0e5d249dfc94f5e62cc7</p>
              */
             public Builder passengerCertNo(String passengerCertNo) {
                 this.passengerCertNo = passengerCertNo;
@@ -203,7 +219,10 @@ public class TrainFeeCalculateChangeRequest extends Request {
             }
 
             /**
-             * passenger_cert_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>170d9ac6f8807f9ec603c688f45f78a41</p>
              */
             public Builder passengerCertType(String passengerCertType) {
                 this.passengerCertType = passengerCertType;
@@ -211,7 +230,10 @@ public class TrainFeeCalculateChangeRequest extends Request {
             }
 
             /**
-             * passenger_name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>291487e553c5abde3b611aae283e2526f0d733ab55094aadc0b5ba587222a233c</p>
              */
             public Builder passengerName(String passengerName) {
                 this.passengerName = passengerName;
@@ -225,6 +247,12 @@ public class TrainFeeCalculateChangeRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainFeeCalculateChangeRequest} extends {@link TeaModel}
+     *
+     * <p>TrainFeeCalculateChangeRequest</p>
+     */
     public static class ChangeTrainDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_station_code")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -344,7 +372,10 @@ public class TrainFeeCalculateChangeRequest extends Request {
             private String trainNo; 
 
             /**
-             * arr_station_code.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BDC</p>
              */
             public Builder arrStationCode(String arrStationCode) {
                 this.arrStationCode = arrStationCode;
@@ -352,7 +383,10 @@ public class TrainFeeCalculateChangeRequest extends Request {
             }
 
             /**
-             * dep_station_code.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BTC</p>
              */
             public Builder depStationCode(String depStationCode) {
                 this.depStationCode = depStationCode;
@@ -360,7 +394,10 @@ public class TrainFeeCalculateChangeRequest extends Request {
             }
 
             /**
-             * dep_time.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-06 15:19:01</p>
              */
             public Builder depTime(String depTime) {
                 this.depTime = depTime;
@@ -368,7 +405,10 @@ public class TrainFeeCalculateChangeRequest extends Request {
             }
 
             /**
-             * original_dep_time.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-06 15:19:01</p>
              */
             public Builder originalDepTime(String originalDepTime) {
                 this.originalDepTime = originalDepTime;
@@ -376,7 +416,10 @@ public class TrainFeeCalculateChangeRequest extends Request {
             }
 
             /**
-             * original_train_no.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>K234</p>
              */
             public Builder originalTrainNo(String originalTrainNo) {
                 this.originalTrainNo = originalTrainNo;
@@ -384,7 +427,7 @@ public class TrainFeeCalculateChangeRequest extends Request {
             }
 
             /**
-             * passenger_info.
+             * <p>This parameter is required.</p>
              */
             public Builder passengerInfo(PassengerInfo passengerInfo) {
                 this.passengerInfo = passengerInfo;
@@ -392,7 +435,10 @@ public class TrainFeeCalculateChangeRequest extends Request {
             }
 
             /**
-             * seat_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14</p>
              */
             public Builder seatType(String seatType) {
                 this.seatType = seatType;
@@ -400,7 +446,10 @@ public class TrainFeeCalculateChangeRequest extends Request {
             }
 
             /**
-             * train_no.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>K2345</p>
              */
             public Builder trainNo(String trainNo) {
                 this.trainNo = trainNo;

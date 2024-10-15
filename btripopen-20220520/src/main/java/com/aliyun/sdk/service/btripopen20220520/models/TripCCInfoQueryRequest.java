@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TripCCInfoQueryRequest} extends {@link RequestModel}
  *
  * <p>TripCCInfoQueryRequest</p>

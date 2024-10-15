@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCustomRoleRequest} extends {@link RequestModel}
  *
  * <p>DeleteCustomRoleRequest</p>
@@ -68,7 +69,10 @@ public class DeleteCustomRoleRequest extends Request {
         } 
 
         /**
-         * role_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder roleId(String roleId) {
             this.putBodyParameter("role_id", roleId);

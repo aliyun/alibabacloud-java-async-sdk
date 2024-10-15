@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CooperatorHotelBillSettlementQueryRequest} extends {@link RequestModel}
  *
  * <p>CooperatorHotelBillSettlementQueryRequest</p>
@@ -135,7 +136,10 @@ public class CooperatorHotelBillSettlementQueryRequest extends Request {
         }
 
         /**
-         * page_no.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("page_no", pageNo);
@@ -144,7 +148,10 @@ public class CooperatorHotelBillSettlementQueryRequest extends Request {
         }
 
         /**
-         * page_size.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("page_size", pageSize);
@@ -153,7 +160,10 @@ public class CooperatorHotelBillSettlementQueryRequest extends Request {
         }
 
         /**
-         * period_end.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-02</p>
          */
         public Builder periodEnd(String periodEnd) {
             this.putQueryParameter("period_end", periodEnd);

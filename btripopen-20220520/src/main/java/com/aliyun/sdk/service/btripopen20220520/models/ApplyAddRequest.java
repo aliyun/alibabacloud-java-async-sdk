@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyAddRequest} extends {@link RequestModel}
  *
  * <p>ApplyAddRequest</p>
@@ -640,7 +641,10 @@ public class ApplyAddRequest extends Request {
         }
 
         /**
-         * 可将补充描述传入此字段，账单中将会体现此字段的值。可以用于企业的统计和对账
+         * <p>可将补充描述传入此字段，账单中将会体现此字段的值。可以用于企业的统计和对账</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;cost_center&quot;:&quot;成本中心&quot;}</p>
          */
         public Builder extendField(String extendField) {
             this.putBodyParameter("extend_field", extendField);
@@ -780,7 +784,10 @@ public class ApplyAddRequest extends Request {
         }
 
         /**
-         * thirdpart_apply_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder thirdpartApplyId(String thirdpartApplyId) {
             this.putBodyParameter("thirdpart_apply_id", thirdpartApplyId);
@@ -845,7 +852,7 @@ public class ApplyAddRequest extends Request {
         }
 
         /**
-         * trip_cause.
+         * <p>This parameter is required.</p>
          */
         public Builder tripCause(String tripCause) {
             this.putBodyParameter("trip_cause", tripCause);
@@ -863,7 +870,7 @@ public class ApplyAddRequest extends Request {
         }
 
         /**
-         * trip_title.
+         * <p>This parameter is required.</p>
          */
         public Builder tripTitle(String tripTitle) {
             this.putBodyParameter("trip_title", tripTitle);
@@ -890,7 +897,10 @@ public class ApplyAddRequest extends Request {
         }
 
         /**
-         * user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>thridpart12138</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("user_id", userId);
@@ -932,6 +942,12 @@ public class ApplyAddRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyAddRequest</p>
+     */
     public static class CarRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("scenario_template_id")
         private String scenarioTemplateId;
@@ -993,6 +1009,12 @@ public class ApplyAddRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyAddRequest</p>
+     */
     public static class HotelCitys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
@@ -1074,6 +1096,12 @@ public class ApplyAddRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyAddRequest</p>
+     */
     public static class HotelIntlCitys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
@@ -1155,6 +1183,12 @@ public class ApplyAddRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyAddRequest</p>
+     */
     public static class DefaultStandard extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("business_discount")
         private Integer businessDiscount;
@@ -1476,6 +1510,12 @@ public class ApplyAddRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyAddRequest</p>
+     */
     public static class ExternalTravelerList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("attribute")
         private String attribute;
@@ -1757,6 +1797,12 @@ public class ApplyAddRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyAddRequest</p>
+     */
     public static class ExternalTravelerStandardHotelCitys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
@@ -1838,6 +1884,12 @@ public class ApplyAddRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyAddRequest</p>
+     */
     public static class ExternalTravelerStandardHotelIntlCitys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
@@ -1919,6 +1971,12 @@ public class ApplyAddRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyAddRequest</p>
+     */
     public static class ExternalTravelerStandard extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("business_discount")
         private Integer businessDiscount;
@@ -2240,6 +2298,12 @@ public class ApplyAddRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyAddRequest</p>
+     */
     public static class HotelShare extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("param")
         private String param;
@@ -2301,6 +2365,12 @@ public class ApplyAddRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyAddRequest</p>
+     */
     public static class ItineraryTravelStandard extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("hotel_available_nights_per_day")
         private Integer hotelAvailableNightsPerDay;
@@ -2342,6 +2412,12 @@ public class ApplyAddRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyAddRequest</p>
+     */
     public static class ItineraryList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_city")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -2604,7 +2680,7 @@ public class ApplyAddRequest extends Request {
             private Integer tripWay; 
 
             /**
-             * arr_city.
+             * <p>This parameter is required.</p>
              */
             public Builder arrCity(String arrCity) {
                 this.arrCity = arrCity;
@@ -2620,7 +2696,7 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * arr_date.
+             * <p>This parameter is required.</p>
              */
             public Builder arrDate(String arrDate) {
                 this.arrDate = arrDate;
@@ -2644,7 +2720,7 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * dep_city.
+             * <p>This parameter is required.</p>
              */
             public Builder depCity(String depCity) {
                 this.depCity = depCity;
@@ -2660,7 +2736,10 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * dep_date.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-01-01 00:00:00</p>
              */
             public Builder depDate(String depDate) {
                 this.depDate = depDate;
@@ -2676,7 +2755,10 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * itinerary_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder itineraryId(String itineraryId) {
                 this.itineraryId = itineraryId;
@@ -2748,7 +2830,10 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * traffic_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder trafficType(Integer trafficType) {
                 this.trafficType = trafficType;
@@ -2756,7 +2841,10 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * trip_way.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder tripWay(Integer tripWay) {
                 this.tripWay = tripWay;
@@ -2770,6 +2858,12 @@ public class ApplyAddRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyAddRequest</p>
+     */
     public static class ItinerarySetListItineraryTravelStandard extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("hotel_available_nights_per_day")
         private Integer hotelAvailableNightsPerDay;
@@ -2811,6 +2905,12 @@ public class ApplyAddRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyAddRequest</p>
+     */
     public static class ItinerarySetList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_date")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -3012,7 +3112,10 @@ public class ApplyAddRequest extends Request {
             private Integer trafficType; 
 
             /**
-             * arr_date.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-01-01 00:00:00</p>
              */
             public Builder arrDate(String arrDate) {
                 this.arrDate = arrDate;
@@ -3028,7 +3131,10 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * city_code_set.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BJS,HGH</p>
              */
             public Builder cityCodeSet(String cityCodeSet) {
                 this.cityCodeSet = cityCodeSet;
@@ -3036,7 +3142,7 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * city_set.
+             * <p>This parameter is required.</p>
              */
             public Builder citySet(String citySet) {
                 this.citySet = citySet;
@@ -3052,7 +3158,10 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * dep_date.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-01-01 00:00:00</p>
              */
             public Builder depDate(String depDate) {
                 this.depDate = depDate;
@@ -3068,7 +3177,10 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * itinerary_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder itineraryId(String itineraryId) {
                 this.itineraryId = itineraryId;
@@ -3124,7 +3236,10 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * traffic_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder trafficType(Integer trafficType) {
                 this.trafficType = trafficType;
@@ -3138,6 +3253,12 @@ public class ApplyAddRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyAddRequest</p>
+     */
     public static class TravelerList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("attribute")
         private String attribute;
@@ -3377,7 +3498,10 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * user_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>thridpart12138</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -3399,6 +3523,12 @@ public class ApplyAddRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyAddRequest</p>
+     */
     public static class CarCitySet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("city_code")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -3440,7 +3570,7 @@ public class ApplyAddRequest extends Request {
             private String cityName; 
 
             /**
-             * city_code.
+             * <p>This parameter is required.</p>
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -3448,7 +3578,7 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * city_name.
+             * <p>This parameter is required.</p>
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -3462,6 +3592,12 @@ public class ApplyAddRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyAddRequest</p>
+     */
     public static class TravelerStandardHotelCitys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
@@ -3513,7 +3649,7 @@ public class ApplyAddRequest extends Request {
             private Long fee; 
 
             /**
-             * city_code.
+             * <p>This parameter is required.</p>
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -3521,7 +3657,7 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * city_name.
+             * <p>This parameter is required.</p>
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -3543,6 +3679,12 @@ public class ApplyAddRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyAddRequest</p>
+     */
     public static class TravelerStandardHotelIntlCitys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
@@ -3594,7 +3736,7 @@ public class ApplyAddRequest extends Request {
             private Long fee; 
 
             /**
-             * city_code.
+             * <p>This parameter is required.</p>
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -3602,7 +3744,7 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * city_name.
+             * <p>This parameter is required.</p>
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -3624,6 +3766,12 @@ public class ApplyAddRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyAddRequest</p>
+     */
     public static class TravelerStandard extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("business_discount")
         private Integer businessDiscount;
@@ -3971,7 +4119,10 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * user_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>thridpart12138</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

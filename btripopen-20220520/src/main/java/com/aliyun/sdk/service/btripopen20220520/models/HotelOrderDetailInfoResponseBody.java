@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelOrderDetailInfoResponseBody} extends {@link TeaModel}
  *
  * <p>HotelOrderDetailInfoResponseBody</p>
@@ -150,6 +151,12 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HotelOrderDetailInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderDetailInfoResponseBody</p>
+     */
     public static class BtripHotelCancelPolicyInfoDTOList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("hour")
         private Long hour;
@@ -211,6 +218,12 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderDetailInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderDetailInfoResponseBody</p>
+     */
     public static class BtripHotelCancelPolicyDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("btrip_hotel_cancel_policy_info_d_t_o_list")
         private java.util.List < BtripHotelCancelPolicyInfoDTOList> btripHotelCancelPolicyInfoDTOList;
@@ -272,6 +285,12 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderDetailInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderDetailInfoResponseBody</p>
+     */
     public static class CancelInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cancel_end_time")
         private String cancelEndTime;
@@ -333,6 +352,12 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderDetailInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderDetailInfoResponseBody</p>
+     */
     public static class HotelDetailInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("address")
         private String address;
@@ -454,6 +479,12 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderDetailInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderDetailInfoResponseBody</p>
+     */
     public static class HotelSaleOrderRoomInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("checkin_date")
         private String checkinDate;
@@ -675,6 +706,12 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderDetailInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderDetailInfoResponseBody</p>
+     */
     public static class InvoiceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("billing_money")
         private Long billingMoney;
@@ -1076,6 +1113,12 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderDetailInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderDetailInfoResponseBody</p>
+     */
     public static class CostCenterInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cost_center_id")
         private String costCenterId;
@@ -1297,6 +1340,12 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderDetailInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderDetailInfoResponseBody</p>
+     */
     public static class OccupantInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("card_no")
         private String cardNo;
@@ -1658,6 +1707,12 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderDetailInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderDetailInfoResponseBody</p>
+     */
     public static class RoomNightPriceInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("board")
         private String board;
@@ -1839,6 +1894,12 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderDetailInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderDetailInfoResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("actual_check_in_time")
         private String actualCheckInTime;

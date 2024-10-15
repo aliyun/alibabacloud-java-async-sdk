@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TrainNoInfoSearchRequest} extends {@link RequestModel}
  *
  * <p>TrainNoInfoSearchRequest</p>
@@ -168,7 +169,7 @@ public class TrainNoInfoSearchRequest extends Request {
         } 
 
         /**
-         * arr_location.
+         * <p>This parameter is required.</p>
          */
         public Builder arrLocation(String arrLocation) {
             this.putBodyParameter("arr_location", arrLocation);
@@ -177,7 +178,10 @@ public class TrainNoInfoSearchRequest extends Request {
         }
 
         /**
-         * dep_date.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-08-15</p>
          */
         public Builder depDate(String depDate) {
             this.putBodyParameter("dep_date", depDate);
@@ -186,7 +190,7 @@ public class TrainNoInfoSearchRequest extends Request {
         }
 
         /**
-         * dep_location.
+         * <p>This parameter is required.</p>
          */
         public Builder depLocation(String depLocation) {
             this.putBodyParameter("dep_location", depLocation);

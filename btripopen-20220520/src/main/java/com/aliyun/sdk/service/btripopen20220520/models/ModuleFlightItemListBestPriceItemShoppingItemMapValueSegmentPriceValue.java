@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModuleFlightItemListBestPriceItemShoppingItemMapValueSegmentPriceValue} extends {@link TeaModel}
  *
  * <p>ModuleFlightItemListBestPriceItemShoppingItemMapValueSegmentPriceValue</p>
@@ -425,7 +426,10 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValueSegmentPriceVa
         }
 
         /**
-         * fdPrice
+         * <p>fdPrice</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fdPrice</p>
          */
         public Builder interTicketPrice(Integer interTicketPrice) {
             this.interTicketPrice = interTicketPrice;
@@ -510,6 +514,12 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValueSegmentPriceVa
 
     } 
 
+    /**
+     * 
+     * {@link ModuleFlightItemListBestPriceItemShoppingItemMapValueSegmentPriceValue} extends {@link TeaModel}
+     *
+     * <p>ModuleFlightItemListBestPriceItemShoppingItemMapValueSegmentPriceValue</p>
+     */
     public static class PriceShowInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("discount_info")
         private String discountInfo;

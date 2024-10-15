@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelRoomInfoRequest} extends {@link RequestModel}
  *
  * <p>HotelRoomInfoRequest</p>
@@ -68,7 +69,7 @@ public class HotelRoomInfoRequest extends Request {
         } 
 
         /**
-         * room_ids.
+         * <p>This parameter is required.</p>
          */
         public Builder roomIds(java.util.List < Long > roomIds) {
             String roomIdsShrink = shrink(roomIds, "room_ids", "json");

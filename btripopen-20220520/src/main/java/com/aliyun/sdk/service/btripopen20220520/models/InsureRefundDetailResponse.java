@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsureRefundDetailResponse} extends {@link TeaModel}
  *
  * <p>InsureRefundDetailResponse</p>

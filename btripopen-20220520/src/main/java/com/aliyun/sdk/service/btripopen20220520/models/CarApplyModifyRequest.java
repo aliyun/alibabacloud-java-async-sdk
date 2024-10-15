@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CarApplyModifyRequest} extends {@link RequestModel}
  *
  * <p>CarApplyModifyRequest</p>
@@ -144,7 +145,10 @@ public class CarApplyModifyRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putBodyParameter("status", status);
@@ -153,7 +157,10 @@ public class CarApplyModifyRequest extends Request {
         }
 
         /**
-         * third_part_apply_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IRGS1413</p>
          */
         public Builder thirdPartApplyId(String thirdPartApplyId) {
             this.putBodyParameter("third_part_apply_id", thirdPartApplyId);
@@ -162,7 +169,10 @@ public class CarApplyModifyRequest extends Request {
         }
 
         /**
-         * user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>open62141</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("user_id", userId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelExceedApplyQueryResponseBody} extends {@link TeaModel}
  *
  * <p>HotelExceedApplyQueryResponseBody</p>
@@ -150,6 +151,12 @@ public class HotelExceedApplyQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HotelExceedApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelExceedApplyQueryResponseBody</p>
+     */
     public static class ApplyIntentionInfoDo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("check_in")
         private String checkIn;
@@ -311,6 +318,12 @@ public class HotelExceedApplyQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelExceedApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelExceedApplyQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("apply_id")
         private Long applyId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelCityCodeListResponseBody} extends {@link TeaModel}
  *
  * <p>HotelCityCodeListResponseBody</p>
@@ -150,6 +151,12 @@ public class HotelCityCodeListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HotelCityCodeListResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelCityCodeListResponseBody</p>
+     */
     public static class Districts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("district_code")
         private String districtCode;
@@ -211,6 +218,12 @@ public class HotelCityCodeListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelCityCodeListResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelCityCodeListResponseBody</p>
+     */
     public static class Citys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
@@ -292,6 +305,12 @@ public class HotelCityCodeListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelCityCodeListResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelCityCodeListResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("citys")
         private java.util.List < Citys> citys;

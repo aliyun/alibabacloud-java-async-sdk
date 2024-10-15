@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelOrderPreValidateRequest} extends {@link RequestModel}
  *
  * <p>HotelOrderPreValidateRequest</p>
@@ -246,7 +247,10 @@ public class HotelOrderPreValidateRequest extends Request {
         } 
 
         /**
-         * btrip_user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23141</p>
          */
         public Builder btripUserId(String btripUserId) {
             this.putQueryParameter("btrip_user_id", btripUserId);
@@ -255,7 +259,10 @@ public class HotelOrderPreValidateRequest extends Request {
         }
 
         /**
-         * check_in.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-15</p>
          */
         public Builder checkIn(String checkIn) {
             this.putQueryParameter("check_in", checkIn);
@@ -264,7 +271,10 @@ public class HotelOrderPreValidateRequest extends Request {
         }
 
         /**
-         * check_out.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-15</p>
          */
         public Builder checkOut(String checkOut) {
             this.putQueryParameter("check_out", checkOut);
@@ -273,7 +283,7 @@ public class HotelOrderPreValidateRequest extends Request {
         }
 
         /**
-         * daily_list.
+         * <p>This parameter is required.</p>
          */
         public Builder dailyList(java.util.List < DailyList> dailyList) {
             String dailyListShrink = shrink(dailyList, "daily_list", "json");
@@ -283,7 +293,10 @@ public class HotelOrderPreValidateRequest extends Request {
         }
 
         /**
-         * item_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>612673015638</p>
          */
         public Builder itemId(Long itemId) {
             this.putQueryParameter("item_id", itemId);
@@ -311,7 +324,10 @@ public class HotelOrderPreValidateRequest extends Request {
         }
 
         /**
-         * rate_plan_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>239872781</p>
          */
         public Builder ratePlanId(Long ratePlanId) {
             this.putQueryParameter("rate_plan_id", ratePlanId);
@@ -320,7 +336,10 @@ public class HotelOrderPreValidateRequest extends Request {
         }
 
         /**
-         * room_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>71652158</p>
          */
         public Builder roomId(Long roomId) {
             this.putQueryParameter("room_id", roomId);
@@ -329,7 +348,10 @@ public class HotelOrderPreValidateRequest extends Request {
         }
 
         /**
-         * room_num.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder roomNum(Integer roomNum) {
             this.putQueryParameter("room_num", roomNum);
@@ -338,7 +360,10 @@ public class HotelOrderPreValidateRequest extends Request {
         }
 
         /**
-         * search_room_price.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder searchRoomPrice(Long searchRoomPrice) {
             this.putQueryParameter("search_room_price", searchRoomPrice);
@@ -347,7 +372,10 @@ public class HotelOrderPreValidateRequest extends Request {
         }
 
         /**
-         * seller_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2088441675613762</p>
          */
         public Builder sellerId(Long sellerId) {
             this.putQueryParameter("seller_id", sellerId);
@@ -356,7 +384,10 @@ public class HotelOrderPreValidateRequest extends Request {
         }
 
         /**
-         * shid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52302073</p>
          */
         public Builder shid(Long shid) {
             this.putQueryParameter("shid", shid);
@@ -380,6 +411,12 @@ public class HotelOrderPreValidateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link HotelOrderPreValidateRequest} extends {@link TeaModel}
+     *
+     * <p>HotelOrderPreValidateRequest</p>
+     */
     public static class DailyList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("board")
         private String board;
@@ -481,6 +518,12 @@ public class HotelOrderPreValidateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderPreValidateRequest} extends {@link TeaModel}
+     *
+     * <p>HotelOrderPreValidateRequest</p>
+     */
     public static class OccupantInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("card_no")
         private String cardNo;

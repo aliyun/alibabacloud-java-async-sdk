@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelOrderPayRequest} extends {@link RequestModel}
  *
  * <p>HotelOrderPayRequest</p>
@@ -156,7 +157,11 @@ public class HotelOrderPayRequest extends Request {
         } 
 
         /**
-         * 供应商订单号（取自创单返回的订单号）
+         * <p>供应商订单号（取自创单返回的订单号）</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1002202194207077022</p>
          */
         public Builder btripOrderId(Long btripOrderId) {
             this.putBodyParameter("btrip_order_id", btripOrderId);
@@ -165,7 +170,10 @@ public class HotelOrderPayRequest extends Request {
         }
 
         /**
-         * btrip_user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23918781</p>
          */
         public Builder btripUserId(String btripUserId) {
             this.putBodyParameter("btrip_user_id", btripUserId);
@@ -174,7 +182,10 @@ public class HotelOrderPayRequest extends Request {
         }
 
         /**
-         * company_pay_fee.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder companyPayFee(Long companyPayFee) {
             this.putBodyParameter("company_pay_fee", companyPayFee);
@@ -183,7 +194,10 @@ public class HotelOrderPayRequest extends Request {
         }
 
         /**
-         * person_pay_fee.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder personPayFee(Long personPayFee) {
             this.putBodyParameter("person_pay_fee", personPayFee);
@@ -210,7 +224,10 @@ public class HotelOrderPayRequest extends Request {
         }
 
         /**
-         * total_price.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalPrice(Long totalPrice) {
             this.putBodyParameter("total_price", totalPrice);

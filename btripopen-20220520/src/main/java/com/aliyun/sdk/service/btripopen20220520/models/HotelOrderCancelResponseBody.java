@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelOrderCancelResponseBody} extends {@link TeaModel}
  *
  * <p>HotelOrderCancelResponseBody</p>
@@ -113,7 +114,7 @@ public class HotelOrderCancelResponseBody extends TeaModel {
         }
 
         /**
-         * module。
+         * <p>module。</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -150,6 +151,12 @@ public class HotelOrderCancelResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HotelOrderCancelResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderCancelResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cancel_success")
         private Boolean cancelSuccess;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelOrderPayResponseBody} extends {@link TeaModel}
  *
  * <p>HotelOrderPayResponseBody</p>
@@ -121,7 +122,10 @@ public class HotelOrderPayResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>407543AF-2BD9-5890-BD92-9D1AB7218B27</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

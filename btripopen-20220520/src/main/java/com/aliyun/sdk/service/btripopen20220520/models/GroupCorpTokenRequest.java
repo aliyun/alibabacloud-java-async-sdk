@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GroupCorpTokenRequest} extends {@link RequestModel}
  *
  * <p>GroupCorpTokenRequest</p>
@@ -98,7 +99,10 @@ public class GroupCorpTokenRequest extends Request {
         } 
 
         /**
-         * app_secret.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZzljczY5dnFjNDAwVlNofiwoWX5ZWCxlcjVTKnVoZS0</p>
          */
         public Builder appSecret(String appSecret) {
             this.putQueryParameter("app_secret", appSecret);
@@ -107,7 +111,10 @@ public class GroupCorpTokenRequest extends Request {
         }
 
         /**
-         * corp_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>open12g9sfbmm5i07v10wDzRSK9w00</p>
          */
         public Builder corpId(String corpId) {
             this.putQueryParameter("corp_id", corpId);
@@ -116,7 +123,10 @@ public class GroupCorpTokenRequest extends Request {
         }
 
         /**
-         * sub_corp_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>btripuyxmbg3cs286734u_mow6q</p>
          */
         public Builder subCorpId(String subCorpId) {
             this.putQueryParameter("sub_corp_id", subCorpId);

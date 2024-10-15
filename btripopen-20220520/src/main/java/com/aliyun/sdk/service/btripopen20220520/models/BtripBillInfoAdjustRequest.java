@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BtripBillInfoAdjustRequest} extends {@link RequestModel}
  *
  * <p>BtripBillInfoAdjustRequest</p>
@@ -138,7 +139,10 @@ public class BtripBillInfoAdjustRequest extends Request {
         } 
 
         /**
-         * primary_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder primaryId(Long primaryId) {
             this.putBodyParameter("primary_id", primaryId);

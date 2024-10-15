@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CostCenterQueryResponseBody} extends {@link TeaModel}
  *
  * <p>CostCenterQueryResponseBody</p>
@@ -157,7 +158,10 @@ public class CostCenterQueryResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21041ce316577904808056433edbb2</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -170,6 +174,12 @@ public class CostCenterQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CostCenterQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CostCenterQueryResponseBody</p>
+     */
     public static class EntityDOS extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("corp_id")
         private String corpId;
@@ -291,6 +301,12 @@ public class CostCenterQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CostCenterQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CostCenterQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("alipay_no")
         private String alipayNo;
@@ -474,7 +490,10 @@ public class CostCenterQueryResponseBody extends TeaModel {
             }
 
             /**
-             * rule code
+             * <p>rule code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500578154</p>
              */
             public Builder ruleCode(Long ruleCode) {
                 this.ruleCode = ruleCode;

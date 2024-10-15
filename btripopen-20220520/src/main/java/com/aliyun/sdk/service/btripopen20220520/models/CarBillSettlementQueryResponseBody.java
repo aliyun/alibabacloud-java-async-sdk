@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CarBillSettlementQueryResponseBody} extends {@link TeaModel}
  *
  * <p>CarBillSettlementQueryResponseBody</p>
@@ -150,6 +151,12 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CarBillSettlementQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CarBillSettlementQueryResponseBody</p>
+     */
     public static class DataList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("alipay_trade_no")
         private String alipayTradeNo;
@@ -189,6 +196,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("bill_record_time")
         private String billRecordTime;
+
+        @com.aliyun.core.annotation.NameInMap("billing_entity")
+        private String billingEntity;
 
         @com.aliyun.core.annotation.NameInMap("book_model")
         private String bookModel;
@@ -319,6 +329,12 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("remark")
         private String remark;
 
+        @com.aliyun.core.annotation.NameInMap("scene_id")
+        private String sceneId;
+
+        @com.aliyun.core.annotation.NameInMap("scene_name")
+        private String sceneName;
+
         @com.aliyun.core.annotation.NameInMap("service_fee")
         private Double serviceFee;
 
@@ -390,6 +406,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             this.arrLocation = builder.arrLocation;
             this.arrTime = builder.arrTime;
             this.billRecordTime = builder.billRecordTime;
+            this.billingEntity = builder.billingEntity;
             this.bookModel = builder.bookModel;
             this.bookTime = builder.bookTime;
             this.bookerId = builder.bookerId;
@@ -433,6 +450,8 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             this.realFromAddr = builder.realFromAddr;
             this.realToAddr = builder.realToAddr;
             this.remark = builder.remark;
+            this.sceneId = builder.sceneId;
+            this.sceneName = builder.sceneName;
             this.serviceFee = builder.serviceFee;
             this.settlementFee = builder.settlementFee;
             this.settlementGrantFee = builder.settlementGrantFee;
@@ -551,6 +570,13 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getBillRecordTime() {
             return this.billRecordTime;
+        }
+
+        /**
+         * @return billingEntity
+         */
+        public String getBillingEntity() {
+            return this.billingEntity;
         }
 
         /**
@@ -855,6 +881,20 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return sceneId
+         */
+        public String getSceneId() {
+            return this.sceneId;
+        }
+
+        /**
+         * @return sceneName
+         */
+        public String getSceneName() {
+            return this.sceneName;
+        }
+
+        /**
          * @return serviceFee
          */
         public Double getServiceFee() {
@@ -1001,6 +1041,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             private String arrLocation; 
             private String arrTime; 
             private String billRecordTime; 
+            private String billingEntity; 
             private String bookModel; 
             private String bookTime; 
             private String bookerId; 
@@ -1044,6 +1085,8 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             private String realFromAddr; 
             private String realToAddr; 
             private String remark; 
+            private String sceneId; 
+            private String sceneName; 
             private Double serviceFee; 
             private Double settlementFee; 
             private Double settlementGrantFee; 
@@ -1105,7 +1148,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 审批扩展自定义字段
+             * <p>审批扩展自定义字段</p>
              */
             public Builder applyExtendField(String applyExtendField) {
                 this.applyExtendField = applyExtendField;
@@ -1165,6 +1208,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder billRecordTime(String billRecordTime) {
                 this.billRecordTime = billRecordTime;
+                return this;
+            }
+
+            /**
+             * billing_entity.
+             */
+            public Builder billingEntity(String billingEntity) {
+                this.billingEntity = billingEntity;
                 return this;
             }
 
@@ -1513,6 +1564,22 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * scene_id.
+             */
+            public Builder sceneId(String sceneId) {
+                this.sceneId = sceneId;
+                return this;
+            }
+
+            /**
+             * scene_name.
+             */
+            public Builder sceneName(String sceneName) {
+                this.sceneName = sceneName;
+                return this;
+            }
+
+            /**
              * service_fee.
              */
             public Builder serviceFee(Double serviceFee) {
@@ -1593,7 +1660,10 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 税率
+             * <p>税率</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6%</p>
              */
             public Builder taxRate(String taxRate) {
                 this.taxRate = taxRate;
@@ -1671,6 +1741,12 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CarBillSettlementQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CarBillSettlementQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("category")
         private Integer category;

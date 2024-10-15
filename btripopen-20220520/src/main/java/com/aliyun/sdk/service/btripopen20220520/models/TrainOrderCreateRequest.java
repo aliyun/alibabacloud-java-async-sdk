@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TrainOrderCreateRequest} extends {@link RequestModel}
  *
  * <p>TrainOrderCreateRequest</p>
@@ -208,7 +209,7 @@ public class TrainOrderCreateRequest extends Request {
         }
 
         /**
-         * book_train_infos.
+         * <p>This parameter is required.</p>
          */
         public Builder bookTrainInfos(java.util.List < BookTrainInfos> bookTrainInfos) {
             String bookTrainInfosShrink = shrink(bookTrainInfos, "book_train_infos", "json");
@@ -218,7 +219,10 @@ public class TrainOrderCreateRequest extends Request {
         }
 
         /**
-         * btrip_user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12344321</p>
          */
         public Builder btripUserId(String btripUserId) {
             this.putBodyParameter("btrip_user_id", btripUserId);
@@ -227,7 +231,7 @@ public class TrainOrderCreateRequest extends Request {
         }
 
         /**
-         * btrip_user_name.
+         * <p>This parameter is required.</p>
          */
         public Builder btripUserName(String btripUserName) {
             this.putBodyParameter("btrip_user_name", btripUserName);
@@ -246,7 +250,7 @@ public class TrainOrderCreateRequest extends Request {
         }
 
         /**
-         * contact_info.
+         * <p>This parameter is required.</p>
          */
         public Builder contactInfo(ContactInfo contactInfo) {
             String contactInfoShrink = shrink(contactInfo, "contact_info", "json");
@@ -274,7 +278,10 @@ public class TrainOrderCreateRequest extends Request {
         }
 
         /**
-         * out_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder outOrderId(String outOrderId) {
             this.putBodyParameter("out_order_id", outOrderId);
@@ -283,7 +290,7 @@ public class TrainOrderCreateRequest extends Request {
         }
 
         /**
-         * passenger_open_info_s.
+         * <p>This parameter is required.</p>
          */
         public Builder passengerOpenInfoS(java.util.List < PassengerOpenInfoS> passengerOpenInfoS) {
             String passengerOpenInfoSShrink = shrink(passengerOpenInfoS, "passenger_open_info_s", "json");
@@ -308,6 +315,12 @@ public class TrainOrderCreateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TrainOrderCreateRequest} extends {@link TeaModel}
+     *
+     * <p>TrainOrderCreateRequest</p>
+     */
     public static class BookTicketInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("passenger_id")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -375,7 +388,10 @@ public class TrainOrderCreateRequest extends Request {
             private String ticketType; 
 
             /**
-             * passenger_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder passengerId(String passengerId) {
                 this.passengerId = passengerId;
@@ -383,7 +399,10 @@ public class TrainOrderCreateRequest extends Request {
             }
 
             /**
-             * seat_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14</p>
              */
             public Builder seatType(String seatType) {
                 this.seatType = seatType;
@@ -391,7 +410,10 @@ public class TrainOrderCreateRequest extends Request {
             }
 
             /**
-             * ticket_price.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder ticketPrice(Long ticketPrice) {
                 this.ticketPrice = ticketPrice;
@@ -399,7 +421,10 @@ public class TrainOrderCreateRequest extends Request {
             }
 
             /**
-             * ticket_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ticketType(String ticketType) {
                 this.ticketType = ticketType;
@@ -413,6 +438,12 @@ public class TrainOrderCreateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainOrderCreateRequest} extends {@link TeaModel}
+     *
+     * <p>TrainOrderCreateRequest</p>
+     */
     public static class BookTrainInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_station_code")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -517,7 +548,10 @@ public class TrainOrderCreateRequest extends Request {
             private String trainNo; 
 
             /**
-             * arr_station_code.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BDC</p>
              */
             public Builder arrStationCode(String arrStationCode) {
                 this.arrStationCode = arrStationCode;
@@ -525,7 +559,7 @@ public class TrainOrderCreateRequest extends Request {
             }
 
             /**
-             * book_ticket_infos.
+             * <p>This parameter is required.</p>
              */
             public Builder bookTicketInfos(java.util.List < BookTicketInfos> bookTicketInfos) {
                 this.bookTicketInfos = bookTicketInfos;
@@ -549,7 +583,10 @@ public class TrainOrderCreateRequest extends Request {
             }
 
             /**
-             * dep_station_code.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BTC</p>
              */
             public Builder depStationCode(String depStationCode) {
                 this.depStationCode = depStationCode;
@@ -557,7 +594,10 @@ public class TrainOrderCreateRequest extends Request {
             }
 
             /**
-             * dep_time.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-06 15:19:01</p>
              */
             public Builder depTime(String depTime) {
                 this.depTime = depTime;
@@ -565,7 +605,10 @@ public class TrainOrderCreateRequest extends Request {
             }
 
             /**
-             * train_no.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>K123456</p>
              */
             public Builder trainNo(String trainNo) {
                 this.trainNo = trainNo;
@@ -579,6 +622,12 @@ public class TrainOrderCreateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainOrderCreateRequest} extends {@link TeaModel}
+     *
+     * <p>TrainOrderCreateRequest</p>
+     */
     public static class BusinessInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("customer_apply_id")
         private String customerApplyId;
@@ -640,6 +689,12 @@ public class TrainOrderCreateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainOrderCreateRequest} extends {@link TeaModel}
+     *
+     * <p>TrainOrderCreateRequest</p>
+     */
     public static class ContactInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("passenger_id")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -694,7 +749,10 @@ public class TrainOrderCreateRequest extends Request {
             private String passengerName; 
 
             /**
-             * passenger_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder passengerId(String passengerId) {
                 this.passengerId = passengerId;
@@ -702,7 +760,10 @@ public class TrainOrderCreateRequest extends Request {
             }
 
             /**
-             * passenger_mobile.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b6a6fc1bdf1ba60e25c2e132b612c8819</p>
              */
             public Builder passengerMobile(String passengerMobile) {
                 this.passengerMobile = passengerMobile;
@@ -710,7 +771,10 @@ public class TrainOrderCreateRequest extends Request {
             }
 
             /**
-             * passenger_name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>949c9f34f677a0e5d249dfc94f5e62cc7</p>
              */
             public Builder passengerName(String passengerName) {
                 this.passengerName = passengerName;
@@ -724,6 +788,12 @@ public class TrainOrderCreateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainOrderCreateRequest} extends {@link TeaModel}
+     *
+     * <p>TrainOrderCreateRequest</p>
+     */
     public static class CostCenterInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cascade_dept_name")
         private String cascadeDeptName;
@@ -945,6 +1015,12 @@ public class TrainOrderCreateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainOrderCreateRequest} extends {@link TeaModel}
+     *
+     * <p>TrainOrderCreateRequest</p>
+     */
     public static class PassengerOpenInfoS extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cost_center_info")
         private CostCenterInfo costCenterInfo;
@@ -1076,7 +1152,10 @@ public class TrainOrderCreateRequest extends Request {
             }
 
             /**
-             * passenger_cert_no.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>291487e553c5abde3b611aae283e2526f0d733ab55094aadc0b5ba587222a233c</p>
              */
             public Builder passengerCertNo(String passengerCertNo) {
                 this.passengerCertNo = passengerCertNo;
@@ -1084,7 +1163,10 @@ public class TrainOrderCreateRequest extends Request {
             }
 
             /**
-             * passenger_cert_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>949c9f34f677a0e5d249dfc94f5e62cc7</p>
              */
             public Builder passengerCertType(String passengerCertType) {
                 this.passengerCertType = passengerCertType;
@@ -1092,7 +1174,10 @@ public class TrainOrderCreateRequest extends Request {
             }
 
             /**
-             * passenger_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder passengerId(String passengerId) {
                 this.passengerId = passengerId;
@@ -1100,7 +1185,10 @@ public class TrainOrderCreateRequest extends Request {
             }
 
             /**
-             * passenger_mobile.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b6a6fc1bdf1ba60e25c2e132b612c8819</p>
              */
             public Builder passengerMobile(String passengerMobile) {
                 this.passengerMobile = passengerMobile;
@@ -1108,7 +1196,10 @@ public class TrainOrderCreateRequest extends Request {
             }
 
             /**
-             * passenger_name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>949c9f34f677a0e5d249dfc94f5e62cc7</p>
              */
             public Builder passengerName(String passengerName) {
                 this.passengerName = passengerName;

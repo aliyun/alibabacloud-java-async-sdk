@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TrainNoListSearchRequest} extends {@link RequestModel}
  *
  * <p>TrainNoListSearchRequest</p>
@@ -127,7 +128,7 @@ public class TrainNoListSearchRequest extends Request {
         } 
 
         /**
-         * arr_location.
+         * <p>This parameter is required.</p>
          */
         public Builder arrLocation(String arrLocation) {
             this.putBodyParameter("arr_location", arrLocation);
@@ -136,7 +137,10 @@ public class TrainNoListSearchRequest extends Request {
         }
 
         /**
-         * dep_date.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-16</p>
          */
         public Builder depDate(String depDate) {
             this.putBodyParameter("dep_date", depDate);
@@ -145,7 +149,7 @@ public class TrainNoListSearchRequest extends Request {
         }
 
         /**
-         * dep_location.
+         * <p>This parameter is required.</p>
          */
         public Builder depLocation(String depLocation) {
             this.putBodyParameter("dep_location", depLocation);
@@ -154,7 +158,7 @@ public class TrainNoListSearchRequest extends Request {
         }
 
         /**
-         * option.
+         * <p>This parameter is required.</p>
          */
         public Builder option(Option option) {
             String optionShrink = shrink(option, "option", "json");
@@ -188,6 +192,12 @@ public class TrainNoListSearchRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TrainNoListSearchRequest} extends {@link TeaModel}
+     *
+     * <p>TrainNoListSearchRequest</p>
+     */
     public static class Option extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("need_transfer")
         private Boolean needTransfer;

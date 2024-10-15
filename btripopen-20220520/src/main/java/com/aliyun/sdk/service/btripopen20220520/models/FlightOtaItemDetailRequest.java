@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightOtaItemDetailRequest} extends {@link RequestModel}
  *
  * <p>FlightOtaItemDetailRequest</p>
@@ -83,7 +84,10 @@ public class FlightOtaItemDetailRequest extends Request {
         } 
 
         /**
-         * isv_name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cheshi</p>
          */
         public Builder isvName(String isvName) {
             this.putQueryParameter("isv_name", isvName);
@@ -92,7 +96,10 @@ public class FlightOtaItemDetailRequest extends Request {
         }
 
         /**
-         * ota_item_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68cdc6b37c87484c98b479b49306ffbb_0</p>
          */
         public Builder otaItemId(String otaItemId) {
             this.putQueryParameter("ota_item_id", otaItemId);

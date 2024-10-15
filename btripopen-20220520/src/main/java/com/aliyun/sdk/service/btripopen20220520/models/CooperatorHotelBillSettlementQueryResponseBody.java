@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CooperatorHotelBillSettlementQueryResponseBody} extends {@link TeaModel}
  *
  * <p>CooperatorHotelBillSettlementQueryResponseBody</p>
@@ -121,7 +122,10 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>407543AF-2BD9-5890-BD92-9D1AB7218B27</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +141,10 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21041ce316577904808056433edbb2</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -150,6 +157,12 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CooperatorHotelBillSettlementQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CooperatorHotelBillSettlementQueryResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("alipay_trade_no")
         private String alipayTradeNo;
@@ -1851,6 +1864,12 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CooperatorHotelBillSettlementQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CooperatorHotelBillSettlementQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("category")
         private Integer category;

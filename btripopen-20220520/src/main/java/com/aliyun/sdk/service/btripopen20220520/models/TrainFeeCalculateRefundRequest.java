@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TrainFeeCalculateRefundRequest} extends {@link RequestModel}
  *
  * <p>TrainFeeCalculateRefundRequest</p>
@@ -98,7 +99,10 @@ public class TrainFeeCalculateRefundRequest extends Request {
         } 
 
         /**
-         * distribute_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder distributeOrderId(String distributeOrderId) {
             this.putBodyParameter("distribute_order_id", distributeOrderId);
@@ -107,7 +111,10 @@ public class TrainFeeCalculateRefundRequest extends Request {
         }
 
         /**
-         * order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1002145190081005400</p>
          */
         public Builder orderId(String orderId) {
             this.putBodyParameter("order_id", orderId);
@@ -116,7 +123,7 @@ public class TrainFeeCalculateRefundRequest extends Request {
         }
 
         /**
-         * refund_train_infos.
+         * <p>This parameter is required.</p>
          */
         public Builder refundTrainInfos(java.util.List < RefundTrainInfos> refundTrainInfos) {
             String refundTrainInfosShrink = shrink(refundTrainInfos, "refund_train_infos", "json");
@@ -141,6 +148,12 @@ public class TrainFeeCalculateRefundRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TrainFeeCalculateRefundRequest} extends {@link TeaModel}
+     *
+     * <p>TrainFeeCalculateRefundRequest</p>
+     */
     public static class RefundPassengerInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("passenger_cert_no")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -208,7 +221,10 @@ public class TrainFeeCalculateRefundRequest extends Request {
             private String passengerName; 
 
             /**
-             * passenger_cert_no.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>291487e553c5abde3b611aae283e2526f0d733ab55094aadc0b5ba587222a233c</p>
              */
             public Builder passengerCertNo(String passengerCertNo) {
                 this.passengerCertNo = passengerCertNo;
@@ -216,7 +232,10 @@ public class TrainFeeCalculateRefundRequest extends Request {
             }
 
             /**
-             * passenger_cert_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>170d9ac6f8807f9ec603c688f45f78a41</p>
              */
             public Builder passengerCertType(String passengerCertType) {
                 this.passengerCertType = passengerCertType;
@@ -224,7 +243,10 @@ public class TrainFeeCalculateRefundRequest extends Request {
             }
 
             /**
-             * passenger_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder passengerId(String passengerId) {
                 this.passengerId = passengerId;
@@ -232,7 +254,10 @@ public class TrainFeeCalculateRefundRequest extends Request {
             }
 
             /**
-             * passenger_name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>949c9f34f677a0e5d249dfc94f5e62cc7</p>
              */
             public Builder passengerName(String passengerName) {
                 this.passengerName = passengerName;
@@ -246,6 +271,12 @@ public class TrainFeeCalculateRefundRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainFeeCalculateRefundRequest} extends {@link TeaModel}
+     *
+     * <p>TrainFeeCalculateRefundRequest</p>
+     */
     public static class RefundTrainInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_station_code")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -326,7 +357,10 @@ public class TrainFeeCalculateRefundRequest extends Request {
             private String trainNo; 
 
             /**
-             * arr_station_code.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BDC</p>
              */
             public Builder arrStationCode(String arrStationCode) {
                 this.arrStationCode = arrStationCode;
@@ -334,7 +368,10 @@ public class TrainFeeCalculateRefundRequest extends Request {
             }
 
             /**
-             * dep_station_code.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BTC</p>
              */
             public Builder depStationCode(String depStationCode) {
                 this.depStationCode = depStationCode;
@@ -342,7 +379,10 @@ public class TrainFeeCalculateRefundRequest extends Request {
             }
 
             /**
-             * dep_time.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-06 15:19:01</p>
              */
             public Builder depTime(String depTime) {
                 this.depTime = depTime;
@@ -350,7 +390,7 @@ public class TrainFeeCalculateRefundRequest extends Request {
             }
 
             /**
-             * refund_passenger_infos.
+             * <p>This parameter is required.</p>
              */
             public Builder refundPassengerInfos(java.util.List < RefundPassengerInfos> refundPassengerInfos) {
                 this.refundPassengerInfos = refundPassengerInfos;
@@ -358,7 +398,10 @@ public class TrainFeeCalculateRefundRequest extends Request {
             }
 
             /**
-             * train_no.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>K1234</p>
              */
             public Builder trainNo(String trainNo) {
                 this.trainNo = trainNo;

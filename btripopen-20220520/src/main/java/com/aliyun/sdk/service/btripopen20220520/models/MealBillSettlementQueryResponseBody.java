@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MealBillSettlementQueryResponseBody} extends {@link TeaModel}
  *
  * <p>MealBillSettlementQueryResponseBody</p>
@@ -150,6 +151,12 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link MealBillSettlementQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>MealBillSettlementQueryResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("apply_extend_field")
         private String applyExtendField;
@@ -1231,6 +1238,12 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MealBillSettlementQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>MealBillSettlementQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("category")
         private Integer category;

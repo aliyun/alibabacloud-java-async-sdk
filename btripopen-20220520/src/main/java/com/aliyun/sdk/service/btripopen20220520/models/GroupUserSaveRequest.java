@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GroupUserSaveRequest} extends {@link RequestModel}
  *
  * <p>GroupUserSaveRequest</p>
@@ -260,7 +261,7 @@ public class GroupUserSaveRequest extends Request {
         }
 
         /**
-         * sub_corp_id_list.
+         * <p>This parameter is required.</p>
          */
         public Builder subCorpIdList(java.util.List < SubCorpIdList> subCorpIdList) {
             String subCorpIdListShrink = shrink(subCorpIdList, "sub_corp_id_list", "json");
@@ -270,7 +271,10 @@ public class GroupUserSaveRequest extends Request {
         }
 
         /**
-         * user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("user_id", userId);
@@ -279,7 +283,7 @@ public class GroupUserSaveRequest extends Request {
         }
 
         /**
-         * user_name.
+         * <p>This parameter is required.</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("user_name", userName);
@@ -303,6 +307,12 @@ public class GroupUserSaveRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GroupUserSaveRequest} extends {@link TeaModel}
+     *
+     * <p>GroupUserSaveRequest</p>
+     */
     public static class CertList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cert_expired_time")
         private String certExpiredTime;
@@ -424,6 +434,12 @@ public class GroupUserSaveRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GroupUserSaveRequest} extends {@link TeaModel}
+     *
+     * <p>GroupUserSaveRequest</p>
+     */
     public static class SubCorpIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("depart_ids")
         private java.util.List < String > departIds;
@@ -529,7 +545,10 @@ public class GroupUserSaveRequest extends Request {
             }
 
             /**
-             * leave_status.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder leaveStatus(Integer leaveStatus) {
                 this.leaveStatus = leaveStatus;
@@ -553,7 +572,10 @@ public class GroupUserSaveRequest extends Request {
             }
 
             /**
-             * sub_corp_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>btrip123</p>
              */
             public Builder subCorpId(String subCorpId) {
                 this.subCorpId = subCorpId;

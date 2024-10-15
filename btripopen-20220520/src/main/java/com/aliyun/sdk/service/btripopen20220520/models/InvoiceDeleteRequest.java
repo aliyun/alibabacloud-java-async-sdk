@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InvoiceDeleteRequest} extends {@link RequestModel}
  *
  * <p>InvoiceDeleteRequest</p>
@@ -68,7 +69,10 @@ public class InvoiceDeleteRequest extends Request {
         } 
 
         /**
-         * third_part_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>340049</p>
          */
         public Builder thirdPartId(String thirdPartId) {
             this.putQueryParameter("third_part_id", thirdPartId);

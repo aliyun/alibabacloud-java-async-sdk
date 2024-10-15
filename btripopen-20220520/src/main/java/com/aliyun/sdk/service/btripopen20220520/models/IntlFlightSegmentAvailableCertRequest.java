@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IntlFlightSegmentAvailableCertRequest} extends {@link RequestModel}
  *
  * <p>IntlFlightSegmentAvailableCertRequest</p>
@@ -124,7 +125,10 @@ public class IntlFlightSegmentAvailableCertRequest extends Request {
         } 
 
         /**
-         * ota_item_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43014d8fc58b4161b818dc9196d90b0b_1</p>
          */
         public Builder otaItemId(String otaItemId) {
             this.putPathParameter("ota_item_id", otaItemId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TrainExceedApplyQueryResponseBody} extends {@link TeaModel}
  *
  * <p>TrainExceedApplyQueryResponseBody</p>
@@ -150,6 +151,12 @@ public class TrainExceedApplyQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TrainExceedApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainExceedApplyQueryResponseBody</p>
+     */
     public static class ApplyIntentionInfoDO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_city")
         private String arrCity;
@@ -431,6 +438,12 @@ public class TrainExceedApplyQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainExceedApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainExceedApplyQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("apply_id")
         private Long applyId;

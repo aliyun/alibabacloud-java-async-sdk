@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelSuggestV2ResponseBody} extends {@link TeaModel}
  *
  * <p>HotelSuggestV2ResponseBody</p>
@@ -150,6 +151,12 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HotelSuggestV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelSuggestV2ResponseBody</p>
+     */
     public static class GuessSuggestInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("address")
         private String address;
@@ -391,6 +398,12 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelSuggestV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelSuggestV2ResponseBody</p>
+     */
     public static class BusinessAreaWithCity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("address")
         private String address;
@@ -632,6 +645,12 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelSuggestV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelSuggestV2ResponseBody</p>
+     */
     public static class KeywordSuggestInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("address")
         private String address;
@@ -893,6 +912,12 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelSuggestV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelSuggestV2ResponseBody</p>
+     */
     public static class PopularInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("display_name")
         private String displayName;
@@ -934,6 +959,12 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelSuggestV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelSuggestV2ResponseBody</p>
+     */
     public static class PopularSuggestInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("icon")
         private String icon;
@@ -1015,6 +1046,12 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelSuggestV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelSuggestV2ResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("guess_suggest_infos")
         private java.util.List < GuessSuggestInfos> guessSuggestInfos;

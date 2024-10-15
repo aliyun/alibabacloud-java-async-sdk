@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExternalUserDeleteRequest} extends {@link RequestModel}
  *
  * <p>ExternalUserDeleteRequest</p>
@@ -68,7 +69,10 @@ public class ExternalUserDeleteRequest extends Request {
         } 
 
         /**
-         * external_user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0012</p>
          */
         public Builder externalUserId(String externalUserId) {
             this.putPathParameter("external_user_id", externalUserId);

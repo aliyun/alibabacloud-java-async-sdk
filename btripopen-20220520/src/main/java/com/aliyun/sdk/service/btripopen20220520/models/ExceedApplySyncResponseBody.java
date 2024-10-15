@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExceedApplySyncResponseBody} extends {@link TeaModel}
  *
  * <p>ExceedApplySyncResponseBody</p>
@@ -113,7 +114,10 @@ public class ExceedApplySyncResponseBody extends TeaModel {
         }
 
         /**
-         * module。
+         * <p>module。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;list&quot;: [], &quot;pageSize&quot;: 20, &quot;pageNo&quot;: 1}</p>
          */
         public Builder module(Boolean module) {
             this.module = module;

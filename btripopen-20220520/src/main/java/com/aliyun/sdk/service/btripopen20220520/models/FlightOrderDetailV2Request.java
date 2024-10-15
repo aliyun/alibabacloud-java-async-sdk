@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightOrderDetailV2Request} extends {@link RequestModel}
  *
  * <p>FlightOrderDetailV2Request</p>
@@ -96,7 +97,10 @@ public class FlightOrderDetailV2Request extends Request {
         } 
 
         /**
-         * isv_name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cheshiapi</p>
          */
         public Builder isvName(String isvName) {
             this.putQueryParameter("isv_name", isvName);

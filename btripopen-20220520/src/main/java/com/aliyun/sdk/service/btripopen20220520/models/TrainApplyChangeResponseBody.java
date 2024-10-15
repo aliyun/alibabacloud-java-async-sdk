@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TrainApplyChangeResponseBody} extends {@link TeaModel}
  *
  * <p>TrainApplyChangeResponseBody</p>
@@ -113,7 +114,7 @@ public class TrainApplyChangeResponseBody extends TeaModel {
         }
 
         /**
-         * module
+         * <p>module</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -137,7 +138,10 @@ public class TrainApplyChangeResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2103ad0216854277618591626db2b6</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -150,6 +154,12 @@ public class TrainApplyChangeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TrainApplyChangeResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainApplyChangeResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("change_order_id")
         private String changeOrderId;

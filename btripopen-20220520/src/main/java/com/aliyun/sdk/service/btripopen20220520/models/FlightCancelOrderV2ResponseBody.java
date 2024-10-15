@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightCancelOrderV2ResponseBody} extends {@link TeaModel}
  *
  * <p>FlightCancelOrderV2ResponseBody</p>
@@ -113,7 +114,7 @@ public class FlightCancelOrderV2ResponseBody extends TeaModel {
         }
 
         /**
-         * module
+         * <p>module</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -121,7 +122,10 @@ public class FlightCancelOrderV2ResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +141,10 @@ public class FlightCancelOrderV2ResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21041ce316577904808056433edbb2</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -150,6 +157,12 @@ public class FlightCancelOrderV2ResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FlightCancelOrderV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightCancelOrderV2ResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cancel_time")
         private String cancelTime;

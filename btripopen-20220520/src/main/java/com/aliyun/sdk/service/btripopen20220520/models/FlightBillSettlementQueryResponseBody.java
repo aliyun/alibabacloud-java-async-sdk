@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightBillSettlementQueryResponseBody} extends {@link TeaModel}
  *
  * <p>FlightBillSettlementQueryResponseBody</p>
@@ -150,6 +151,12 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FlightBillSettlementQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightBillSettlementQueryResponseBody</p>
+     */
     public static class DataList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("advance_day")
         private Integer advanceDay;
@@ -373,6 +380,12 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("project_name")
         private String projectName;
 
+        @com.aliyun.core.annotation.NameInMap("refund_affiliate_no")
+        private String refundAffiliateNo;
+
+        @com.aliyun.core.annotation.NameInMap("refund_apply_id")
+        private String refundApplyId;
+
         @com.aliyun.core.annotation.NameInMap("refund_fee")
         private Double refundFee;
 
@@ -387,6 +400,12 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("repeat_refund")
         private String repeatRefund;
+
+        @com.aliyun.core.annotation.NameInMap("scene_id")
+        private String sceneId;
+
+        @com.aliyun.core.annotation.NameInMap("scene_name")
+        private String sceneName;
 
         @com.aliyun.core.annotation.NameInMap("seal_price")
         private Double sealPrice;
@@ -517,11 +536,15 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             this.primaryId = builder.primaryId;
             this.projectCode = builder.projectCode;
             this.projectName = builder.projectName;
+            this.refundAffiliateNo = builder.refundAffiliateNo;
+            this.refundApplyId = builder.refundApplyId;
             this.refundFee = builder.refundFee;
             this.refundResult = builder.refundResult;
             this.refundUpgradeCost = builder.refundUpgradeCost;
             this.remark = builder.remark;
             this.repeatRefund = builder.repeatRefund;
+            this.sceneId = builder.sceneId;
+            this.sceneName = builder.sceneName;
             this.sealPrice = builder.sealPrice;
             this.serviceFee = builder.serviceFee;
             this.settlementFee = builder.settlementFee;
@@ -1069,6 +1092,20 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return refundAffiliateNo
+         */
+        public String getRefundAffiliateNo() {
+            return this.refundAffiliateNo;
+        }
+
+        /**
+         * @return refundApplyId
+         */
+        public String getRefundApplyId() {
+            return this.refundApplyId;
+        }
+
+        /**
          * @return refundFee
          */
         public Double getRefundFee() {
@@ -1101,6 +1138,20 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getRepeatRefund() {
             return this.repeatRefund;
+        }
+
+        /**
+         * @return sceneId
+         */
+        public String getSceneId() {
+            return this.sceneId;
+        }
+
+        /**
+         * @return sceneName
+         */
+        public String getSceneName() {
+            return this.sceneName;
         }
 
         /**
@@ -1304,11 +1355,15 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             private Long primaryId; 
             private String projectCode; 
             private String projectName; 
+            private String refundAffiliateNo; 
+            private String refundApplyId; 
             private Double refundFee; 
             private String refundResult; 
             private Double refundUpgradeCost; 
             private String remark; 
             private String repeatRefund; 
+            private String sceneId; 
+            private String sceneName; 
             private Double sealPrice; 
             private Double serviceFee; 
             private Double settlementFee; 
@@ -1401,7 +1456,7 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 审批扩展自定义字段
+             * <p>审批扩展自定义字段</p>
              */
             public Builder applyExtendField(String applyExtendField) {
                 this.applyExtendField = applyExtendField;
@@ -1921,6 +1976,22 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * refund_affiliate_no.
+             */
+            public Builder refundAffiliateNo(String refundAffiliateNo) {
+                this.refundAffiliateNo = refundAffiliateNo;
+                return this;
+            }
+
+            /**
+             * refund_apply_id.
+             */
+            public Builder refundApplyId(String refundApplyId) {
+                this.refundApplyId = refundApplyId;
+                return this;
+            }
+
+            /**
              * refund_fee.
              */
             public Builder refundFee(Double refundFee) {
@@ -1957,6 +2028,22 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder repeatRefund(String repeatRefund) {
                 this.repeatRefund = repeatRefund;
+                return this;
+            }
+
+            /**
+             * scene_id.
+             */
+            public Builder sceneId(String sceneId) {
+                this.sceneId = sceneId;
+                return this;
+            }
+
+            /**
+             * scene_name.
+             */
+            public Builder sceneName(String sceneName) {
+                this.sceneName = sceneName;
                 return this;
             }
 
@@ -2017,7 +2104,10 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 税率
+             * <p>税率</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6%</p>
              */
             public Builder taxRate(String taxRate) {
                 this.taxRate = taxRate;
@@ -2111,6 +2201,12 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightBillSettlementQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightBillSettlementQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("category")
         private Integer category;

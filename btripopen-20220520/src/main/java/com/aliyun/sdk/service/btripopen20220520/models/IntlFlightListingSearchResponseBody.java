@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IntlFlightListingSearchResponseBody} extends {@link TeaModel}
  *
  * <p>IntlFlightListingSearchResponseBody</p>
@@ -150,6 +151,12 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link IntlFlightListingSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightListingSearchResponseBody</p>
+     */
     public static class BestPriceItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("agreement_price_codes")
         private java.util.List < String > agreementPriceCodes;
@@ -231,6 +238,12 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightListingSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightListingSearchResponseBody</p>
+     */
     public static class AirlineInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airline_chinese_name")
         private String airlineChineseName;
@@ -352,6 +365,12 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightListingSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightListingSearchResponseBody</p>
+     */
     public static class ArrAirportInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airport_code")
         private String airportCode;
@@ -453,6 +472,12 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightListingSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightListingSearchResponseBody</p>
+     */
     public static class DepAirportInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airport_code")
         private String airportCode;
@@ -554,6 +579,12 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightListingSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightListingSearchResponseBody</p>
+     */
     public static class OperatingAirlineInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airline_chinese_name")
         private String airlineChineseName;
@@ -675,6 +706,12 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightListingSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightListingSearchResponseBody</p>
+     */
     public static class FlightShareInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("operating_airline_info")
         private OperatingAirlineInfo operatingAirlineInfo;
@@ -736,6 +773,12 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightListingSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightListingSearchResponseBody</p>
+     */
     public static class FlightStopInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("stop_airport")
         private String stopAirport;
@@ -957,6 +1000,12 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightListingSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightListingSearchResponseBody</p>
+     */
     public static class FlightSegmentInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airline_info")
         private AirlineInfo airlineInfo;
@@ -1412,7 +1461,10 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             }
 
             /**
-             * duration
+             * <p>duration</p>
+             * 
+             * <strong>example:</strong>
+             * <p>140</p>
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -1578,6 +1630,12 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightListingSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightListingSearchResponseBody</p>
+     */
     public static class FlightJourneyInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_city_code")
         private String arrCityCode;
@@ -1761,7 +1819,10 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             }
 
             /**
-             * duration
+             * <p>duration</p>
+             * 
+             * <strong>example:</strong>
+             * <p>140</p>
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -1799,6 +1860,12 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightListingSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightListingSearchResponseBody</p>
+     */
     public static class FlightItemList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("best_price_item")
         private BestPriceItem bestPriceItem;
@@ -1860,6 +1927,12 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightListingSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightListingSearchResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("flight_item_list")
         private java.util.List < FlightItemList> flightItemList;

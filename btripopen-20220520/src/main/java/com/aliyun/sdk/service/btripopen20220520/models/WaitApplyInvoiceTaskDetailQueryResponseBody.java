@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link WaitApplyInvoiceTaskDetailQueryResponseBody} extends {@link TeaModel}
  *
  * <p>WaitApplyInvoiceTaskDetailQueryResponseBody</p>
@@ -121,7 +122,10 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>407543AF-2BD9-5890-BD92-9D1AB7218B27</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +141,10 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210f079e16603757182131635d866a</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -150,6 +157,12 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link WaitApplyInvoiceTaskDetailQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>WaitApplyInvoiceTaskDetailQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("contact")
         private String contact;
@@ -214,6 +227,9 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("train_invoice_fee")
         private String trainInvoiceFee;
 
+        @com.aliyun.core.annotation.NameInMap("vas_mall_special_invoice_fee")
+        private String vasMallSpecialInvoiceFee;
+
         @com.aliyun.core.annotation.NameInMap("vehicle_invoice_fee")
         private String vehicleInvoiceFee;
 
@@ -242,6 +258,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
             this.telephone = builder.telephone;
             this.trainAccelerationPackageInvoiceFee = builder.trainAccelerationPackageInvoiceFee;
             this.trainInvoiceFee = builder.trainInvoiceFee;
+            this.vasMallSpecialInvoiceFee = builder.vasMallSpecialInvoiceFee;
             this.vehicleInvoiceFee = builder.vehicleInvoiceFee;
             this.vehicleNormalInvoiceFee = builder.vehicleNormalInvoiceFee;
         }
@@ -402,6 +419,13 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return vasMallSpecialInvoiceFee
+         */
+        public String getVasMallSpecialInvoiceFee() {
+            return this.vasMallSpecialInvoiceFee;
+        }
+
+        /**
          * @return vehicleInvoiceFee
          */
         public String getVehicleInvoiceFee() {
@@ -437,6 +461,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
             private String telephone; 
             private String trainAccelerationPackageInvoiceFee; 
             private String trainInvoiceFee; 
+            private String vasMallSpecialInvoiceFee; 
             private String vehicleInvoiceFee; 
             private String vehicleNormalInvoiceFee; 
 
@@ -605,6 +630,14 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
              */
             public Builder trainInvoiceFee(String trainInvoiceFee) {
                 this.trainInvoiceFee = trainInvoiceFee;
+                return this;
+            }
+
+            /**
+             * vas_mall_special_invoice_fee.
+             */
+            public Builder vasMallSpecialInvoiceFee(String vasMallSpecialInvoiceFee) {
+                this.vasMallSpecialInvoiceFee = vasMallSpecialInvoiceFee;
                 return this;
             }
 

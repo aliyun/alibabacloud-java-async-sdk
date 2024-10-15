@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IntlFlightInventoryPriceCheckResponseBody} extends {@link TeaModel}
  *
  * <p>IntlFlightInventoryPriceCheckResponseBody</p>
@@ -150,6 +151,12 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link IntlFlightInventoryPriceCheckResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightInventoryPriceCheckResponseBody</p>
+     */
     public static class ChangedPrice extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("build_price")
         private Long buildPrice;
@@ -251,6 +258,12 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightInventoryPriceCheckResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightInventoryPriceCheckResponseBody</p>
+     */
     public static class OriginalPrice extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("build_price")
         private Long buildPrice;
@@ -352,6 +365,12 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightInventoryPriceCheckResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightInventoryPriceCheckResponseBody</p>
+     */
     public static class PassengerChangedPriceInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("changed")
         private Boolean changed;
@@ -453,6 +472,12 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightInventoryPriceCheckResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightInventoryPriceCheckResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("check_success")
         private Boolean checkSuccess;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CorpTokenRequest} extends {@link RequestModel}
  *
  * <p>CorpTokenRequest</p>
@@ -106,7 +107,10 @@ public class CorpTokenRequest extends Request {
         }
 
         /**
-         * corp_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>open324dfsdafsgcxvxv</p>
          */
         public Builder corpId(String corpId) {
             this.putQueryParameter("corp_id", corpId);
@@ -115,7 +119,10 @@ public class CorpTokenRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder type(Integer type) {
             this.putQueryParameter("type", type);

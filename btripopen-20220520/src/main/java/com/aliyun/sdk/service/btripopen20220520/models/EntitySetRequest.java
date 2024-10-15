@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EntitySetRequest} extends {@link RequestModel}
  *
  * <p>EntitySetRequest</p>
@@ -92,7 +93,10 @@ public class EntitySetRequest extends Request {
         }
 
         /**
-         * thirdpart_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>340049</p>
          */
         public Builder thirdpartId(String thirdpartId) {
             this.putBodyParameter("thirdpart_id", thirdpartId);
@@ -116,6 +120,12 @@ public class EntitySetRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link EntitySetRequest} extends {@link TeaModel}
+     *
+     * <p>EntitySetRequest</p>
+     */
     public static class EntityDOList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("entity_id")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -157,7 +167,10 @@ public class EntitySetRequest extends Request {
             private String entityType; 
 
             /**
-             * entity_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -165,7 +178,10 @@ public class EntitySetRequest extends Request {
             }
 
             /**
-             * entity_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;

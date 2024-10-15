@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GroupCorpTokenResponseBody} extends {@link TeaModel}
  *
  * <p>GroupCorpTokenResponseBody</p>
@@ -121,7 +122,10 @@ public class GroupCorpTokenResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +141,10 @@ public class GroupCorpTokenResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210f079e16603757182131635d866a</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -150,6 +157,12 @@ public class GroupCorpTokenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GroupCorpTokenResponseBody} extends {@link TeaModel}
+     *
+     * <p>GroupCorpTokenResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("expire")
         private Long expire;

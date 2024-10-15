@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CarApplyQueryResponseBody} extends {@link TeaModel}
  *
  * <p>CarApplyQueryResponseBody</p>
@@ -170,6 +171,12 @@ public class CarApplyQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CarApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CarApplyQueryResponseBody</p>
+     */
     public static class ApproverList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("note")
         private String note;
@@ -331,6 +338,12 @@ public class CarApplyQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CarApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CarApplyQueryResponseBody</p>
+     */
     public static class ItineraryList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_city")
         private String arrCity;
@@ -632,6 +645,12 @@ public class CarApplyQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CarApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CarApplyQueryResponseBody</p>
+     */
     public static class CarCitySet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
@@ -693,6 +712,12 @@ public class CarApplyQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CarApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CarApplyQueryResponseBody</p>
+     */
     public static class TravelerStandard extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("car_city_set")
         private java.util.List < CarCitySet> carCitySet;
@@ -754,6 +779,12 @@ public class CarApplyQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CarApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CarApplyQueryResponseBody</p>
+     */
     public static class ApplyList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("approver_list")
         private java.util.List < ApproverList> approverList;

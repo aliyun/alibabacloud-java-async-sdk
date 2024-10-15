@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TravelStandardQueryResponseBody} extends {@link TeaModel}
  *
  * <p>TravelStandardQueryResponseBody</p>
@@ -137,7 +138,10 @@ public class TravelStandardQueryResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210bcc3a16583004579056128d33d7</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -150,6 +154,12 @@ public class TravelStandardQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TravelStandardQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TravelStandardQueryResponseBody</p>
+     */
     public static class MainReserveRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("open_service_type_list")
         private java.util.List < String > openServiceTypeList;
@@ -271,6 +281,12 @@ public class TravelStandardQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TravelStandardQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TravelStandardQueryResponseBody</p>
+     */
     public static class ModuleConfigList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
@@ -332,6 +348,12 @@ public class TravelStandardQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TravelStandardQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TravelStandardQueryResponseBody</p>
+     */
     public static class ReserveRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("main_reserve_rule")
         private MainReserveRule mainReserveRule;
@@ -393,6 +415,12 @@ public class TravelStandardQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TravelStandardQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TravelStandardQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("activated_service_type_list")
         private java.util.List < String > activatedServiceTypeList;

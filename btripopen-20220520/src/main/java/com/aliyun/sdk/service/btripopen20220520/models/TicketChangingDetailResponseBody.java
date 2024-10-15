@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TicketChangingDetailResponseBody} extends {@link TeaModel}
  *
  * <p>TicketChangingDetailResponseBody</p>
@@ -150,6 +151,12 @@ public class TicketChangingDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TicketChangingDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingDetailResponseBody</p>
+     */
     public static class FlightInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airline_code")
         private String airlineCode;
@@ -831,6 +838,12 @@ public class TicketChangingDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingDetailResponseBody</p>
+     */
     public static class TravelerInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("birth_date")
         private String birthDate;
@@ -1032,6 +1045,12 @@ public class TicketChangingDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingDetailResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("alipay_trade_no")
         private String alipayTradeNo;

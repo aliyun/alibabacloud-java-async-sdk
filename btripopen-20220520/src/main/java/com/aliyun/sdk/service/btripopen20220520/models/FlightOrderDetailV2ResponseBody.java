@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightOrderDetailV2ResponseBody} extends {@link TeaModel}
  *
  * <p>FlightOrderDetailV2ResponseBody</p>
@@ -113,7 +114,7 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         }
 
         /**
-         * module
+         * <p>module</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -121,7 +122,10 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E5F4ACF5-5677-1515-9999-ABBB5E668032</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +141,10 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210bc60a16917251281873772dac41</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -150,6 +157,12 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FlightOrderDetailV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOrderDetailV2ResponseBody</p>
+     */
     public static class ContactInfoDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("contact_email")
         private String contactEmail;
@@ -251,6 +264,12 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOrderDetailV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOrderDetailV2ResponseBody</p>
+     */
     public static class FlightChange extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("change_desc")
         private String changeDesc;
@@ -372,6 +391,12 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOrderDetailV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOrderDetailV2ResponseBody</p>
+     */
     public static class SegmentPosition extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("journey_index")
         private Integer journeyIndex;
@@ -433,6 +458,12 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOrderDetailV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOrderDetailV2ResponseBody</p>
+     */
     public static class SegmentList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("air_line_code")
         private String airLineCode;
@@ -1156,7 +1187,7 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             }
 
             /**
-             * cabin
+             * <p>cabin</p>
              */
             public Builder cabin(String cabin) {
                 this.cabin = cabin;
@@ -1172,7 +1203,10 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             }
 
             /**
-             * cabin_class
+             * <p>cabin_class</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Y</p>
              */
             public Builder cabinClass(String cabinClass) {
                 this.cabinClass = cabinClass;
@@ -1180,7 +1214,7 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             }
 
             /**
-             * cabin_class_name
+             * <p>cabin_class_name</p>
              */
             public Builder cabinClassName(String cabinClassName) {
                 this.cabinClassName = cabinClassName;
@@ -1404,7 +1438,10 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             }
 
             /**
-             * segmentIndex
+             * <p>segmentIndex</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder segmentIndex(Integer segmentIndex) {
                 this.segmentIndex = segmentIndex;
@@ -1474,6 +1511,12 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOrderDetailV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOrderDetailV2ResponseBody</p>
+     */
     public static class Journeys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("all_fly_duration")
         private Long allFlyDuration;
@@ -1781,7 +1824,10 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             }
 
             /**
-             * iata_no
+             * <p>iata_no</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iata_no</p>
              */
             public Builder iataNo(String iataNo) {
                 this.iataNo = iataNo;
@@ -1835,6 +1881,12 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOrderDetailV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOrderDetailV2ResponseBody</p>
+     */
     public static class FlightTaleInfoDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("journeys")
         private java.util.List < Journeys> journeys;
@@ -1936,6 +1988,12 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOrderDetailV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOrderDetailV2ResponseBody</p>
+     */
     public static class Credential extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("birth_date")
         private String birthDate;
@@ -2197,6 +2255,12 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOrderDetailV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOrderDetailV2ResponseBody</p>
+     */
     public static class Credentials extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("birth_date")
         private String birthDate;
@@ -2458,6 +2522,12 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOrderDetailV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOrderDetailV2ResponseBody</p>
+     */
     public static class SegmentOpenTicketList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("journey_index")
         private Integer journeyIndex;
@@ -2525,7 +2595,10 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             }
 
             /**
-             * segmentIndex
+             * <p>segmentIndex</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder segmentIndex(Integer segmentIndex) {
                 this.segmentIndex = segmentIndex;
@@ -2539,6 +2612,12 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOrderDetailV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOrderDetailV2ResponseBody</p>
+     */
     public static class Tickets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("channel")
         private String channel;
@@ -2698,7 +2777,10 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             }
 
             /**
-             * pcc/office
+             * <p>pcc/office</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pcc/office</p>
              */
             public Builder pcc(String pcc) {
                 this.pcc = pcc;
@@ -2760,6 +2842,12 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOrderDetailV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOrderDetailV2ResponseBody</p>
+     */
     public static class PassengerList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("birthday")
         private String birthday;
@@ -3341,6 +3429,12 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOrderDetailV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOrderDetailV2ResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("b2g_vip_code")
         private String b2gVipCode;
@@ -3768,10 +3862,8 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             }
 
             /**
-             * key :passengerId
-             * <p>
-             * 
-             * value :segmentId
+             * <p>key :passengerId</p>
+             * <p>value :segmentId</p>
              */
             public Builder passengerSegmentMap(java.util.Map < String, String > passengerSegmentMap) {
                 this.passengerSegmentMap = passengerSegmentMap;

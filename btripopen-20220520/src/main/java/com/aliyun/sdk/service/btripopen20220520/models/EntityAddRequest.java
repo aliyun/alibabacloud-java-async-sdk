@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EntityAddRequest} extends {@link RequestModel}
  *
  * <p>EntityAddRequest</p>
@@ -92,7 +93,10 @@ public class EntityAddRequest extends Request {
         }
 
         /**
-         * thirdpart_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>340049</p>
          */
         public Builder thirdpartId(String thirdpartId) {
             this.putBodyParameter("thirdpart_id", thirdpartId);
@@ -116,6 +120,12 @@ public class EntityAddRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link EntityAddRequest} extends {@link TeaModel}
+     *
+     * <p>EntityAddRequest</p>
+     */
     public static class EntityDOList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("entity_id")
         private String entityId;

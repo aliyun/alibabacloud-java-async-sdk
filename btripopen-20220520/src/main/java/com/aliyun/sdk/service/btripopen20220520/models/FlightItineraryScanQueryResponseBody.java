@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightItineraryScanQueryResponseBody} extends {@link TeaModel}
  *
  * <p>FlightItineraryScanQueryResponseBody</p>
@@ -121,7 +122,10 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +141,10 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21041ce316577904808056433edbb2</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -150,6 +157,12 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FlightItineraryScanQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightItineraryScanQueryResponseBody</p>
+     */
     public static class Flights extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arrival_station")
         private String arrivalStation;
@@ -309,7 +322,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             private String validToDate; 
 
             /**
-             * 航班至
+             * <p>航班至</p>
              */
             public Builder arrivalStation(String arrivalStation) {
                 this.arrivalStation = arrivalStation;
@@ -317,7 +330,10 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 座位等级
+             * <p>座位等级</p>
+             * 
+             * <strong>example:</strong>
+             * <p>M</p>
              */
             public Builder cabinClass(String cabinClass) {
                 this.cabinClass = cabinClass;
@@ -325,7 +341,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 承运人
+             * <p>承运人</p>
              */
             public Builder carrier(String carrier) {
                 this.carrier = carrier;
@@ -333,7 +349,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 航班从
+             * <p>航班从</p>
              */
             public Builder departureStation(String departureStation) {
                 this.departureStation = departureStation;
@@ -341,7 +357,10 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 日期
+             * <p>日期</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-11-18</p>
              */
             public Builder flightDate(String flightDate) {
                 this.flightDate = flightDate;
@@ -349,7 +368,10 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 航班号
+             * <p>航班号</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MU2271</p>
              */
             public Builder flightNumber(String flightNumber) {
                 this.flightNumber = flightNumber;
@@ -357,7 +379,10 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 时间
+             * <p>时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18:25</p>
              */
             public Builder flightTime(String flightTime) {
                 this.flightTime = flightTime;
@@ -365,7 +390,10 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 免费行李
+             * <p>免费行李</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20K</p>
              */
             public Builder freeBaggageAllowance(String freeBaggageAllowance) {
                 this.freeBaggageAllowance = freeBaggageAllowance;
@@ -373,7 +401,10 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 行号
+             * <p>行号</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(String index) {
                 this.index = index;
@@ -381,7 +412,10 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 客票级别
+             * <p>客票级别</p>
+             * 
+             * <strong>example:</strong>
+             * <p>M</p>
              */
             public Builder seatClass(String seatClass) {
                 this.seatClass = seatClass;
@@ -389,7 +423,10 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 客票生效日期
+             * <p>客票生效日期</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-01</p>
              */
             public Builder validFromDate(String validFromDate) {
                 this.validFromDate = validFromDate;
@@ -397,7 +434,10 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 有效截止日期
+             * <p>有效截止日期</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-01</p>
              */
             public Builder validToDate(String validToDate) {
                 this.validToDate = validToDate;
@@ -411,6 +451,12 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightItineraryScanQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightItineraryScanQueryResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("agent_code")
         private String agentCode;
@@ -445,6 +491,9 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("invoice_title")
         private String invoiceTitle;
 
+        @com.aliyun.core.annotation.NameInMap("invoice_type")
+        private Integer invoiceType;
+
         @com.aliyun.core.annotation.NameInMap("issue_company")
         private String issueCompany;
 
@@ -453,6 +502,9 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("itinerary_num")
         private String itineraryNum;
+
+        @com.aliyun.core.annotation.NameInMap("ofd_oss_url")
+        private String ofdOssUrl;
 
         @com.aliyun.core.annotation.NameInMap("order_id")
         private Long orderId;
@@ -468,6 +520,12 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("prompt_message")
         private String promptMessage;
+
+        @com.aliyun.core.annotation.NameInMap("purchaser_name")
+        private String purchaserName;
+
+        @com.aliyun.core.annotation.NameInMap("purchaser_type")
+        private Integer purchaserType;
 
         @com.aliyun.core.annotation.NameInMap("tax_amount")
         private String taxAmount;
@@ -499,14 +557,18 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             this.id = builder.id;
             this.insurance = builder.insurance;
             this.invoiceTitle = builder.invoiceTitle;
+            this.invoiceType = builder.invoiceType;
             this.issueCompany = builder.issueCompany;
             this.issueDate = builder.issueDate;
             this.itineraryNum = builder.itineraryNum;
+            this.ofdOssUrl = builder.ofdOssUrl;
             this.orderId = builder.orderId;
             this.ossUrl = builder.ossUrl;
             this.passengerName = builder.passengerName;
             this.project = builder.project;
             this.promptMessage = builder.promptMessage;
+            this.purchaserName = builder.purchaserName;
+            this.purchaserType = builder.purchaserType;
             this.taxAmount = builder.taxAmount;
             this.taxRate = builder.taxRate;
             this.ticketNo = builder.ticketNo;
@@ -601,6 +663,13 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return invoiceType
+         */
+        public Integer getInvoiceType() {
+            return this.invoiceType;
+        }
+
+        /**
          * @return issueCompany
          */
         public String getIssueCompany() {
@@ -619,6 +688,13 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
          */
         public String getItineraryNum() {
             return this.itineraryNum;
+        }
+
+        /**
+         * @return ofdOssUrl
+         */
+        public String getOfdOssUrl() {
+            return this.ofdOssUrl;
         }
 
         /**
@@ -654,6 +730,20 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
          */
         public String getPromptMessage() {
             return this.promptMessage;
+        }
+
+        /**
+         * @return purchaserName
+         */
+        public String getPurchaserName() {
+            return this.purchaserName;
+        }
+
+        /**
+         * @return purchaserType
+         */
+        public Integer getPurchaserType() {
+            return this.purchaserType;
         }
 
         /**
@@ -710,14 +800,18 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             private String id; 
             private String insurance; 
             private String invoiceTitle; 
+            private Integer invoiceType; 
             private String issueCompany; 
             private String issueDate; 
             private String itineraryNum; 
+            private String ofdOssUrl; 
             private Long orderId; 
             private String ossUrl; 
             private String passengerName; 
             private String project; 
             private String promptMessage; 
+            private String purchaserName; 
+            private Integer purchaserType; 
             private String taxAmount; 
             private String taxRate; 
             private String ticketNo; 
@@ -726,7 +820,10 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             private String validationCode; 
 
             /**
-             * 销售单位代号
+             * <p>销售单位代号</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SIA25608336893</p>
              */
             public Builder agentCode(String agentCode) {
                 this.agentCode = agentCode;
@@ -774,7 +871,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 机票行程明细
+             * <p>机票行程明细</p>
              */
             public Builder flights(java.util.List < Flights> flights) {
                 this.flights = flights;
@@ -790,7 +887,10 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * UK
+             * <p>UK</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -814,7 +914,15 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 填开单位
+             * invoice_type.
+             */
+            public Builder invoiceType(Integer invoiceType) {
+                this.invoiceType = invoiceType;
+                return this;
+            }
+
+            /**
+             * <p>填开单位</p>
              */
             public Builder issueCompany(String issueCompany) {
                 this.issueCompany = issueCompany;
@@ -822,7 +930,10 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 填开日期
+             * <p>填开日期</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-02-28</p>
              */
             public Builder issueDate(String issueDate) {
                 this.issueDate = issueDate;
@@ -834,6 +945,14 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
              */
             public Builder itineraryNum(String itineraryNum) {
                 this.itineraryNum = itineraryNum;
+                return this;
+            }
+
+            /**
+             * ofd_oss_url.
+             */
+            public Builder ofdOssUrl(String ofdOssUrl) {
+                this.ofdOssUrl = ofdOssUrl;
                 return this;
             }
 
@@ -870,10 +989,26 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 提示信息
+             * <p>提示信息</p>
              */
             public Builder promptMessage(String promptMessage) {
                 this.promptMessage = promptMessage;
+                return this;
+            }
+
+            /**
+             * purchaser_name.
+             */
+            public Builder purchaserName(String purchaserName) {
+                this.purchaserName = purchaserName;
+                return this;
+            }
+
+            /**
+             * purchaser_type.
+             */
+            public Builder purchaserType(Integer purchaserType) {
+                this.purchaserType = purchaserType;
                 return this;
             }
 
@@ -918,7 +1053,10 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 验证码
+             * <p>验证码</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9817</p>
              */
             public Builder validationCode(String validationCode) {
                 this.validationCode = validationCode;
@@ -932,6 +1070,12 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightItineraryScanQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightItineraryScanQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("items")
         private java.util.List < Items> items;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModuleGroupItemSubItemsShoppingItemMapValue} extends {@link TeaModel}
  *
  * <p>ModuleGroupItemSubItemsShoppingItemMapValue</p>
@@ -50,6 +51,12 @@ public class ModuleGroupItemSubItemsShoppingItemMapValue extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModuleGroupItemSubItemsShoppingItemMapValue} extends {@link TeaModel}
+     *
+     * <p>ModuleGroupItemSubItemsShoppingItemMapValue</p>
+     */
     public static class SearchPrice extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ticket_price")
         private Integer ticketPrice;

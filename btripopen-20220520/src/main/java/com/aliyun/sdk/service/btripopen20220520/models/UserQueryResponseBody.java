@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UserQueryResponseBody} extends {@link TeaModel}
  *
  * <p>UserQueryResponseBody</p>
@@ -137,7 +138,10 @@ public class UserQueryResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2f624a6316366024344424669e3279</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -150,6 +154,12 @@ public class UserQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UserQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>UserQueryResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("employee_nick")
         private String employeeNick;
@@ -251,6 +261,12 @@ public class UserQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UserQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>UserQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("has_more")
         private Boolean hasMore;

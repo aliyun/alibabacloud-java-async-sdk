@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TrainOrderChangeConfirmRequest} extends {@link RequestModel}
  *
  * <p>TrainOrderChangeConfirmRequest</p>
@@ -128,7 +129,10 @@ public class TrainOrderChangeConfirmRequest extends Request {
         } 
 
         /**
-         * change_apply_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         public Builder changeApplyId(String changeApplyId) {
             this.putBodyParameter("change_apply_id", changeApplyId);
@@ -137,7 +141,10 @@ public class TrainOrderChangeConfirmRequest extends Request {
         }
 
         /**
-         * change_settle_amount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder changeSettleAmount(Long changeSettleAmount) {
             this.putBodyParameter("change_settle_amount", changeSettleAmount);
@@ -146,7 +153,10 @@ public class TrainOrderChangeConfirmRequest extends Request {
         }
 
         /**
-         * order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1002145190081005400</p>
          */
         public Builder orderId(String orderId) {
             this.putBodyParameter("order_id", orderId);
@@ -155,7 +165,10 @@ public class TrainOrderChangeConfirmRequest extends Request {
         }
 
         /**
-         * out_change_apply_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder outChangeApplyId(String outChangeApplyId) {
             this.putBodyParameter("out_change_apply_id", outChangeApplyId);
@@ -164,7 +177,10 @@ public class TrainOrderChangeConfirmRequest extends Request {
         }
 
         /**
-         * out_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder outOrderId(String outOrderId) {
             this.putBodyParameter("out_order_id", outOrderId);

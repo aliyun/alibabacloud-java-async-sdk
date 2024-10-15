@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightRefundDetailV2ResponseBody} extends {@link TeaModel}
  *
  * <p>FlightRefundDetailV2ResponseBody</p>
@@ -113,7 +114,7 @@ public class FlightRefundDetailV2ResponseBody extends TeaModel {
         }
 
         /**
-         * module
+         * <p>module</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -121,7 +122,10 @@ public class FlightRefundDetailV2ResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>407543AF-2BD9-5890-BD92-9D1AB7218B27</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +141,10 @@ public class FlightRefundDetailV2ResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210e845f16785007404904300ddc92</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -150,6 +157,12 @@ public class FlightRefundDetailV2ResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FlightRefundDetailV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightRefundDetailV2ResponseBody</p>
+     */
     public static class ContactInfoDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("contact_email")
         private String contactEmail;
@@ -251,6 +264,12 @@ public class FlightRefundDetailV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightRefundDetailV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightRefundDetailV2ResponseBody</p>
+     */
     public static class SegmentPosition extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("journey_index")
         private Integer journeyIndex;
@@ -312,6 +331,12 @@ public class FlightRefundDetailV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightRefundDetailV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightRefundDetailV2ResponseBody</p>
+     */
     public static class FlightInfoDTOS extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airline_code")
         private String airlineCode;
@@ -953,6 +978,12 @@ public class FlightRefundDetailV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightRefundDetailV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightRefundDetailV2ResponseBody</p>
+     */
     public static class TravelerInfoDTOS extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("birth_date")
         private String birthDate;
@@ -1194,6 +1225,12 @@ public class FlightRefundDetailV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightRefundDetailV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightRefundDetailV2ResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("apply_time")
         private String applyTime;

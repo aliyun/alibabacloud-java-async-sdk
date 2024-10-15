@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelRoomInfoResponseBody} extends {@link TeaModel}
  *
  * <p>HotelRoomInfoResponseBody</p>
@@ -121,7 +122,10 @@ public class HotelRoomInfoResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>407543AF-2BD9-5890-BD92-9D1AB7218B27</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,6 +154,12 @@ public class HotelRoomInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HotelRoomInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelRoomInfoResponseBody</p>
+     */
     public static class BedInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bed_desc")
         private String bedDesc;
@@ -291,6 +301,12 @@ public class HotelRoomInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelRoomInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelRoomInfoResponseBody</p>
+     */
     public static class BedInfoGroupList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bed_infos")
         private java.util.List < BedInfos> bedInfos;
@@ -332,6 +348,12 @@ public class HotelRoomInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelRoomInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelRoomInfoResponseBody</p>
+     */
     public static class ModuleBedInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bed_desc")
         private String bedDesc;
@@ -473,6 +495,12 @@ public class HotelRoomInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelRoomInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelRoomInfoResponseBody</p>
+     */
     public static class RoomImages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bed_infos2")
         private String bedInfos2;
@@ -554,6 +582,12 @@ public class HotelRoomInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelRoomInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelRoomInfoResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bed_info_group_list")
         private java.util.List < BedInfoGroupList> bedInfoGroupList;

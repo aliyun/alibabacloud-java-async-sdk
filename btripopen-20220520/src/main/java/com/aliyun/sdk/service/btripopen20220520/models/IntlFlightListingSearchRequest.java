@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IntlFlightListingSearchRequest} extends {@link RequestModel}
  *
  * <p>IntlFlightListingSearchRequest</p>
@@ -287,7 +288,10 @@ public class IntlFlightListingSearchRequest extends Request {
         }
 
         /**
-         * cabin_type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder cabinType(Integer cabinType) {
             this.putQueryParameter("cabin_type", cabinType);
@@ -305,7 +309,10 @@ public class IntlFlightListingSearchRequest extends Request {
         }
 
         /**
-         * isv_name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TEST</p>
          */
         public Builder isvName(String isvName) {
             this.putQueryParameter("isv_name", isvName);
@@ -332,7 +339,10 @@ public class IntlFlightListingSearchRequest extends Request {
         }
 
         /**
-         * out_wheel_search.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder outWheelSearch(Boolean outWheelSearch) {
             this.putQueryParameter("out_wheel_search", outWheelSearch);
@@ -350,7 +360,7 @@ public class IntlFlightListingSearchRequest extends Request {
         }
 
         /**
-         * search_journeys.
+         * <p>This parameter is required.</p>
          */
         public Builder searchJourneys(java.util.List < SearchJourneys> searchJourneys) {
             String searchJourneysShrink = shrink(searchJourneys, "search_journeys", "json");
@@ -360,7 +370,10 @@ public class IntlFlightListingSearchRequest extends Request {
         }
 
         /**
-         * search_mode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder searchMode(Integer searchMode) {
             this.putQueryParameter("search_mode", searchMode);
@@ -397,7 +410,10 @@ public class IntlFlightListingSearchRequest extends Request {
         }
 
         /**
-         * trip_type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder tripType(Integer tripType) {
             this.putQueryParameter("trip_type", tripType);
@@ -421,6 +437,12 @@ public class IntlFlightListingSearchRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link IntlFlightListingSearchRequest} extends {@link TeaModel}
+     *
+     * <p>IntlFlightListingSearchRequest</p>
+     */
     public static class SelectedFlights extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_airport_code")
         private String arrAirportCode;
@@ -544,7 +566,10 @@ public class IntlFlightListingSearchRequest extends Request {
             }
 
             /**
-             * arr_city_code.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MEL</p>
              */
             public Builder arrCityCode(String arrCityCode) {
                 this.arrCityCode = arrCityCode;
@@ -552,7 +577,10 @@ public class IntlFlightListingSearchRequest extends Request {
             }
 
             /**
-             * cabin_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cabinType(Integer cabinType) {
                 this.cabinType = cabinType;
@@ -568,7 +596,10 @@ public class IntlFlightListingSearchRequest extends Request {
             }
 
             /**
-             * dep_city_code.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HKG</p>
              */
             public Builder depCityCode(String depCityCode) {
                 this.depCityCode = depCityCode;
@@ -576,7 +607,10 @@ public class IntlFlightListingSearchRequest extends Request {
             }
 
             /**
-             * flight_time.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-12-28 12:00:00</p>
              */
             public Builder flightTime(String flightTime) {
                 this.flightTime = flightTime;
@@ -584,7 +618,10 @@ public class IntlFlightListingSearchRequest extends Request {
             }
 
             /**
-             * market_flight_no.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KA5809</p>
              */
             public Builder marketFlightNo(String marketFlightNo) {
                 this.marketFlightNo = marketFlightNo;
@@ -606,6 +643,12 @@ public class IntlFlightListingSearchRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightListingSearchRequest} extends {@link TeaModel}
+     *
+     * <p>IntlFlightListingSearchRequest</p>
+     */
     public static class SearchJourneys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_city_code")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -672,7 +715,10 @@ public class IntlFlightListingSearchRequest extends Request {
             private java.util.List < SelectedFlights> selectedFlights; 
 
             /**
-             * arr_city_code.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MEL</p>
              */
             public Builder arrCityCode(String arrCityCode) {
                 this.arrCityCode = arrCityCode;
@@ -680,7 +726,10 @@ public class IntlFlightListingSearchRequest extends Request {
             }
 
             /**
-             * dep_city_code.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HKG</p>
              */
             public Builder depCityCode(String depCityCode) {
                 this.depCityCode = depCityCode;
@@ -688,7 +737,10 @@ public class IntlFlightListingSearchRequest extends Request {
             }
 
             /**
-             * dep_date.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-12-28</p>
              */
             public Builder depDate(String depDate) {
                 this.depDate = depDate;
@@ -710,6 +762,12 @@ public class IntlFlightListingSearchRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightListingSearchRequest} extends {@link TeaModel}
+     *
+     * <p>IntlFlightListingSearchRequest</p>
+     */
     public static class SearchPassengerList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cert_no")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -777,7 +835,10 @@ public class IntlFlightListingSearchRequest extends Request {
             private Integer type; 
 
             /**
-             * cert_no.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10012301201</p>
              */
             public Builder certNo(String certNo) {
                 this.certNo = certNo;
@@ -785,7 +846,10 @@ public class IntlFlightListingSearchRequest extends Request {
             }
 
             /**
-             * cert_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder certType(Integer certType) {
                 this.certType = certType;
@@ -793,7 +857,10 @@ public class IntlFlightListingSearchRequest extends Request {
             }
 
             /**
-             * full_name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZHANGSAN</p>
              */
             public Builder fullName(String fullName) {
                 this.fullName = fullName;
@@ -801,7 +868,10 @@ public class IntlFlightListingSearchRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder type(Integer type) {
                 this.type = type;

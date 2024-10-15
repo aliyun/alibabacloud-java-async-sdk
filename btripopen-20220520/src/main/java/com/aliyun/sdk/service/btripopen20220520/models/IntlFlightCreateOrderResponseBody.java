@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IntlFlightCreateOrderResponseBody} extends {@link TeaModel}
  *
  * <p>IntlFlightCreateOrderResponseBody</p>
@@ -170,6 +171,12 @@ public class IntlFlightCreateOrderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link IntlFlightCreateOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightCreateOrderResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("async_create_order_key")
         private String asyncCreateOrderKey;

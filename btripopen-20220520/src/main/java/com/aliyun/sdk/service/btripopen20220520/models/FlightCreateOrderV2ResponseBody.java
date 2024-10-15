@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightCreateOrderV2ResponseBody} extends {@link TeaModel}
  *
  * <p>FlightCreateOrderV2ResponseBody</p>
@@ -113,7 +114,7 @@ public class FlightCreateOrderV2ResponseBody extends TeaModel {
         }
 
         /**
-         * module
+         * <p>module</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -121,7 +122,10 @@ public class FlightCreateOrderV2ResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210bc60a16916593445203790d2a16</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +141,10 @@ public class FlightCreateOrderV2ResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2103ad0716827336456723986d4bda</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -150,6 +157,12 @@ public class FlightCreateOrderV2ResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FlightCreateOrderV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightCreateOrderV2ResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("async_create_order_key")
         private String asyncCreateOrderKey;

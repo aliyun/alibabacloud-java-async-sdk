@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightListingSearchRequest} extends {@link RequestModel}
  *
  * <p>FlightListingSearchRequest</p>
@@ -135,7 +136,10 @@ public class FlightListingSearchRequest extends Request {
         }
 
         /**
-         * arr_city_code.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HGH</p>
          */
         public Builder arrCityCode(String arrCityCode) {
             this.putQueryParameter("arr_city_code", arrCityCode);
@@ -153,7 +157,10 @@ public class FlightListingSearchRequest extends Request {
         }
 
         /**
-         * dep_city_code.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BJS</p>
          */
         public Builder depCityCode(String depCityCode) {
             this.putQueryParameter("dep_city_code", depCityCode);
@@ -162,7 +169,10 @@ public class FlightListingSearchRequest extends Request {
         }
 
         /**
-         * dep_date.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-26</p>
          */
         public Builder depDate(String depDate) {
             this.putQueryParameter("dep_date", depDate);
