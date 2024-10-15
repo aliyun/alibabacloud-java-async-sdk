@@ -285,6 +285,7 @@ public class DescribeDataCachesRequest extends Request {
 
         /**
          * <p>The region ID of the data caches that you want to query.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

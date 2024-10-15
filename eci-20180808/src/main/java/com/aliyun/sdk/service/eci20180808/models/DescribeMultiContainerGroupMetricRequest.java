@@ -155,6 +155,7 @@ public class DescribeMultiContainerGroupMetricRequest extends Request {
 
         /**
          * <p>The instance ID. The value is a JSON array. You can specify up to 20 instance IDs at a time.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;eci-2zegym1qhbmdfr1s****&quot;,&quot;eci-2ze39w5svzj5ic34****&quot;]</p>
@@ -197,6 +198,7 @@ public class DescribeMultiContainerGroupMetricRequest extends Request {
 
         /**
          * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

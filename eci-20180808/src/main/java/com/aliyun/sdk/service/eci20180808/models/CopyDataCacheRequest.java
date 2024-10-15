@@ -251,7 +251,7 @@ public class CopyDataCacheRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="~~25693~~">How to ensure idempotence</a>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -264,6 +264,7 @@ public class CopyDataCacheRequest extends Request {
 
         /**
          * <p>The ID of the DataCache in the source region.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>edc-bp15l4vvys94oo******</p>
@@ -276,6 +277,7 @@ public class CopyDataCacheRequest extends Request {
 
         /**
          * <p>The destination region of the DataCache.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -330,6 +332,7 @@ public class CopyDataCacheRequest extends Request {
 
         /**
          * <p>The source region of the DataCache.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>

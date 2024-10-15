@@ -249,7 +249,7 @@ public class DescribeContainerGroupPriceRequest extends Request {
         }
 
         /**
-         * <p>The number of vCPUs. For information about the vCPU and memory specifications that are supported by Elastic Container Instance, see <a href="~~114662~~">vCPU and memory specifications</a>.</p>
+         * <p>The number of vCPUs. For information about the vCPU and memory specifications that are supported by Elastic Container Instance, see <a href="https://help.aliyun.com/document_detail/114662.html">vCPU and memory specifications</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0</p>
@@ -273,7 +273,7 @@ public class DescribeContainerGroupPriceRequest extends Request {
         }
 
         /**
-         * <p>The instance type of the Elastic Compute Service (ECS) instance that is used to create the elastic container instance. For information about the ECS instance types that are supported by Elastic Container Instance, see <a href="~~114664~~">ECS instance types that are supported by Elastic Container Instance</a>.</p>
+         * <p>The instance type of the Elastic Compute Service (ECS) instance that is used to create the elastic container instance. For information about the ECS instance types that are supported by Elastic Container Instance, see <a href="https://help.aliyun.com/document_detail/114664.html">ECS instance types that are supported by Elastic Container Instance</a>.</p>
          * <blockquote>
          * <p>If you specify this parameter, the specified specifications of vCPUs and memory are ignored. Only the price of the ECS instance type is returned.</p>
          * </blockquote>
@@ -288,7 +288,7 @@ public class DescribeContainerGroupPriceRequest extends Request {
         }
 
         /**
-         * <p>The size of the memory. Unit: GiB. For information about the vCPU and memory specifications that are supported by Elastic Container Instance, see <a href="~~114662~~">vCPU and memory specifications</a>.</p>
+         * <p>The size of the memory. Unit: GiB. For information about the vCPU and memory specifications that are supported by Elastic Container Instance, see <a href="https://help.aliyun.com/document_detail/114662.html">vCPU and memory specifications</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>4.0</p>
@@ -318,7 +318,8 @@ public class DescribeContainerGroupPriceRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance. You can call the <a href="~~146965~~">DescribeRegions</a> operation to query the most recent region and zone list.</p>
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/146965.html">DescribeRegions</a> operation to query the most recent region and zone list.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -390,7 +391,7 @@ public class DescribeContainerGroupPriceRequest extends Request {
         }
 
         /**
-         * <p>The zone ID of the instance. You can call the <a href="~~146965~~">DescribeRegions</a> operation to query the most recent region and zone list.</p>
+         * <p>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/146965.html">DescribeRegions</a> operation to query the most recent region and zone list.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-g</p>

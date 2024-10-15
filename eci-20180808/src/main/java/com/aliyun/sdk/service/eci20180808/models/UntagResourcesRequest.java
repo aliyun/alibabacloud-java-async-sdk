@@ -200,7 +200,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="~~25693~~">How to ensure idempotence</a>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-xxx-xxx-xxxx-42665544xxxx</p>
@@ -231,6 +231,7 @@ public class UntagResourcesRequest extends Request {
 
         /**
          * <p>The region ID of the resource.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -243,6 +244,7 @@ public class UntagResourcesRequest extends Request {
 
         /**
          * <p>The IDs of the resources.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -276,6 +278,7 @@ public class UntagResourcesRequest extends Request {
          * <li>DataCache: data cache</li>
          * <li>VirtualNode: virtual node</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ContainerGroup</p>

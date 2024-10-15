@@ -199,6 +199,7 @@ public class ExecContainerCommandRequest extends Request {
 
         /**
          * <p>The commands to run in the container. You can specify up to 20 commands. Each command can be up to 256 characters in length.<br>The strings must be in the JSON format. Example: <code>[&quot;/bin/sh&quot;, &quot;-c&quot;, &quot;ls -a&quot;]</code>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;/bin/sh&quot;, &quot;-c&quot;, &quot;ls -a&quot;]</p>
@@ -211,6 +212,7 @@ public class ExecContainerCommandRequest extends Request {
 
         /**
          * <p>The ID of the elastic container instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>eci-2zebxkiifulhl****</p>
@@ -223,6 +225,7 @@ public class ExecContainerCommandRequest extends Request {
 
         /**
          * <p>The name of the container.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>nginx</p>
@@ -253,6 +256,7 @@ public class ExecContainerCommandRequest extends Request {
 
         /**
          * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

@@ -155,6 +155,7 @@ public class DescribeAvailableResourceRequest extends Request {
 
         /**
          * <p>The information about the resource that you want to query.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder destinationResource(DestinationResource destinationResource) {
             this.putQueryParameter("DestinationResource", destinationResource);
@@ -182,7 +183,8 @@ public class DescribeAvailableResourceRequest extends Request {
 
         /**
          * <p>The region ID of the ECS instance families.</p>
-         * <p>You can call the <a href="~~146965~~">DescribeRegions</a> operation to query the most recent list of regions.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/146965.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -315,6 +317,7 @@ public class DescribeAvailableResourceRequest extends Request {
              * <li>InstanceTypeFamily: queries instance families. If you use this parameter value, you must also specify the Value parameter.</li>
              * <li>InstanceType: queries instance types. If you use this parameter value, you must also specify the Value, Cores, and Memory parameters.</li>
              * </ul>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>InstanceTypeFamily</p>

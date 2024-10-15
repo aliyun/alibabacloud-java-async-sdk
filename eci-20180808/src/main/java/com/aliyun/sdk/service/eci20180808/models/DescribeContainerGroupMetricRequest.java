@@ -168,6 +168,7 @@ public class DescribeContainerGroupMetricRequest extends Request {
 
         /**
          * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>eci-bp17da5olmkuagfr****</p>

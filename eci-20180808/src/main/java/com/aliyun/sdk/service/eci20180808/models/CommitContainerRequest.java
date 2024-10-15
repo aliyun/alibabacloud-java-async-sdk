@@ -205,6 +205,7 @@ public class CommitContainerRequest extends Request {
 
         /**
          * <p>The ID of the container group.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>eci-bp1do4xz75fa5sd****</p>
@@ -217,6 +218,7 @@ public class CommitContainerRequest extends Request {
 
         /**
          * <p>The name of the container.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>container-1</p>
@@ -256,6 +258,7 @@ public class CommitContainerRequest extends Request {
 
         /**
          * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -577,6 +580,7 @@ public class CommitContainerRequest extends Request {
 
             /**
              * <p>The image repository.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>registry-vpc.cn-hangzhou.aliyuncs.com/eastest/registry-test</p>
@@ -588,6 +592,7 @@ public class CommitContainerRequest extends Request {
 
             /**
              * <p>The tag of the image. This parameter is empty by default, which indicates that the tag is not modified.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0.6</p>

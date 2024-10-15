@@ -225,6 +225,7 @@ public class ListTagResourcesRequest extends Request {
 
         /**
          * <p>The region ID of the resource.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -270,6 +271,7 @@ public class ListTagResourcesRequest extends Request {
          * <li>DataCache: data cache</li>
          * <li>VirtualNode: virtual node</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ContainerGroup</p>

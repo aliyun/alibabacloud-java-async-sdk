@@ -4603,7 +4603,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
              * <p>The storage media for the emptyDir volume. This parameter is empty by default, indicating that the node file system is used as the storage media. Valid values:</p>
              * <ul>
              * <li>Memory: Memory is used as the storage media.</li>
-             * <li>LocalRaid0: Local disks are formed into RAID 0. This value is valid only if an elastic container instance that has local disks mounted is created. For more information, see <a href="~~114664~~">Create an elastic container instance that has local disks mounted</a>.</li>
+             * <li>LocalRaid0: Local disks are formed into RAID 0. This value is valid only if an elastic container instance that has local disks mounted is created. For more information, see <a href="https://help.aliyun.com/document_detail/114664.html">Create an elastic container instance that has local disks mounted</a>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -5452,7 +5452,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance RAM role. The elastic container instance and the ECS instance share a RAM role. For more information, see <a href="~~61178~~">Use an instance RAM role by calling API operations</a>.</p>
+             * <p>The name of the instance RAM role. The elastic container instance and the ECS instance share a RAM role. For more information, see <a href="https://help.aliyun.com/document_detail/61178.html">Use an instance RAM role by calling API operations</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>ram:PassRole</p>

@@ -323,7 +323,7 @@ public class CreateVirtualNodeRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="~~25693~~">How to ensure idempotence</a>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -427,6 +427,7 @@ public class CreateVirtualNodeRequest extends Request {
 
         /**
          * <p>The region ID of the virtual node.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -469,6 +470,7 @@ public class CreateVirtualNodeRequest extends Request {
 
         /**
          * <p>The ID of the security group. The VNode and the elastic container instances in the VNode are added to the security group.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-2ze81zoc3yl7a3we****</p>
@@ -517,6 +519,7 @@ public class CreateVirtualNodeRequest extends Request {
         /**
          * <p>The ID of the vSwitch. The vSwitch is connected to the VNode and the elastic container instances in the VNode.</p>
          * <p>You can specify 1 to 10 vSwitches for a VPC.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-2ze23nqzig8inprou****</p>

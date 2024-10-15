@@ -175,6 +175,7 @@ public class TagResourcesRequest extends Request {
 
         /**
          * <p>The region ID of the resource.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -187,6 +188,7 @@ public class TagResourcesRequest extends Request {
 
         /**
          * <p>The IDs of the resources.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -220,6 +222,7 @@ public class TagResourcesRequest extends Request {
          * <li>DataCache: data cache</li>
          * <li>VirtualNode: virtual node</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ContainerGroup</p>
@@ -232,6 +235,7 @@ public class TagResourcesRequest extends Request {
 
         /**
          * <p>The tags that you want to add to the resource. A maximum of 20 tags can be added to a resource.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);

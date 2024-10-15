@@ -90,6 +90,9 @@ public class DescribeRegionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("UnavailableZones")
+        private java.util.List < String > unavailableZones;
+
         @com.aliyun.core.annotation.NameInMap("Zones")
         private java.util.List < String > zones;
 
@@ -97,6 +100,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             this.recommendZones = builder.recommendZones;
             this.regionEndpoint = builder.regionEndpoint;
             this.regionId = builder.regionId;
+            this.unavailableZones = builder.unavailableZones;
             this.zones = builder.zones;
         }
 
@@ -130,6 +134,13 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return unavailableZones
+         */
+        public java.util.List < String > getUnavailableZones() {
+            return this.unavailableZones;
+        }
+
+        /**
          * @return zones
          */
         public java.util.List < String > getZones() {
@@ -140,6 +151,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private java.util.List < String > recommendZones; 
             private String regionEndpoint; 
             private String regionId; 
+            private java.util.List < String > unavailableZones; 
             private java.util.List < String > zones; 
 
             /**
@@ -169,6 +181,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * UnavailableZones.
+             */
+            public Builder unavailableZones(java.util.List < String > unavailableZones) {
+                this.unavailableZones = unavailableZones;
                 return this;
             }
 

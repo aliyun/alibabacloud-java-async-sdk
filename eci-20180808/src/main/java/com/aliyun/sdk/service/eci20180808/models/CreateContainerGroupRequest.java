@@ -1070,7 +1070,7 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * <p>The information about the Container Registry Enterprise Edition instance that provides the image for the creation of the elastic container instance. For more information, see <a href="~~194250~~">Pull images from a Container Registry Enterprise Edition instance without using a secret</a>.</p>
+         * <p>The information about the Container Registry Enterprise Edition instance that provides the image for the creation of the elastic container instance. For more information, see <a href="https://help.aliyun.com/document_detail/194250.html">Pull images from a Container Registry Enterprise Edition instance without using a secret</a>.</p>
          */
         public Builder acrRegistryInfo(java.util.List < AcrRegistryInfo> acrRegistryInfo) {
             this.putQueryParameter("AcrRegistryInfo", acrRegistryInfo);
@@ -1115,7 +1115,7 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="~~25693~~">How to ensure idempotency</a>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotency</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-xxxx-12d3-xxxx-426655440000</p>
@@ -1127,7 +1127,7 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * <p>The compute category of the instance. For more information, see <a href="~~2638061~~">Specify a compute category to create an elastic container instance</a>.</p>
+         * <p>The compute category of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/2638061.html">Specify a compute category to create an elastic container instance</a>.</p>
          */
         public Builder computeCategory(java.util.List < String > computeCategory) {
             this.putQueryParameter("ComputeCategory", computeCategory);
@@ -1137,6 +1137,7 @@ public class CreateContainerGroupRequest extends Request {
 
         /**
          * <p>The information about the container.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder container(java.util.List < Container> container) {
             this.putQueryParameter("Container", container);
@@ -1150,6 +1151,7 @@ public class CreateContainerGroupRequest extends Request {
          * <li>The name must be 2 to 128 characters in length.</li>
          * <li>The name can contain lowercase letters, digits, and hyphens (-). It cannot start or end with a hyphen (-).</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>nginx-test</p>
@@ -1173,7 +1175,7 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * <p>The path to core dump files. For more information, see <a href="~~167801~~">Save core files to volumes</a>.</p>
+         * <p>The path to core dump files. For more information, see <a href="https://help.aliyun.com/document_detail/167801.html">Save core files to volumes</a>.</p>
          * <blockquote>
          * <p> The path cannot start with |. You cannot use core dump files to configure executable programs.``</p>
          * </blockquote>
@@ -1264,7 +1266,7 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the performance burst feature when ESSDs AutoPL are used to store data caches. For more information, see <a href="~~368372~~">ESSDs AutoPL</a>.</p>
+         * <p>Specifies whether to enable the performance burst feature when ESSDs AutoPL are used to store data caches. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSDs AutoPL</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1288,7 +1290,7 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * <p>The input/output operations per second (IOPS) provisioned for ESSDs AutoPL when ESSDs AutoPL are used to store data caches.<br>Valid values: 0 to min{50000, 1000 × Storage capacity - Baseline IOPS}. Baseline IOPS = min{1,800 + 50 × Storage capacity, 50,000}.<br>For more information, see <a href="~~368372~~">ESSDs AutoPL</a>.</p>
+         * <p>The input/output operations per second (IOPS) provisioned for ESSDs AutoPL when ESSDs AutoPL are used to store data caches.<br>Valid values: 0 to min{50000, 1000 × Storage capacity - Baseline IOPS}. Baseline IOPS = min{1,800 + 50 × Storage capacity, 50,000}.<br>For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSDs AutoPL</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>40000</p>
@@ -1396,7 +1398,7 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * <p>The increased capacity of the temporary storage space. Unit: GiB.<br>For more information, see <a href="~~204066~~">Increase the size of the temporary storage space</a>.</p>
+         * <p>The increased capacity of the temporary storage space. Unit: GiB.<br>For more information, see <a href="https://help.aliyun.com/document_detail/204066.html">Increase the size of the temporary storage space</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -1408,7 +1410,7 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to configure the instance to use a fixed IP address. For more information, see <a href="~~2381086~~">Configure an elastic container instance to use a fixed IP address</a>.</p>
+         * <p>Specifies whether to configure the instance to use a fixed IP address. For more information, see <a href="https://help.aliyun.com/document_detail/2381086.html">Configure an elastic container instance to use a fixed IP address</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1438,7 +1440,7 @@ public class CreateContainerGroupRequest extends Request {
          * <li>tesla=525.85.12</li>
          * </ul>
          * <blockquote>
-         * <p> You can switch the GPU driver version only for a few Elastic Compute Service (ECS) instance types. For more information, see <a href="~~2579486~~">Specify GPU-accelerated ECS instance types to create an elastic container instance</a>.</p>
+         * <p> You can switch the GPU driver version only for a few Elastic Compute Service (ECS) instance types. For more information, see <a href="https://help.aliyun.com/document_detail/2579486.html">Specify GPU-accelerated ECS instance types to create an elastic container instance</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1499,7 +1501,7 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image cache. For more information, see <a href="~~141281~~">Use image caches to accelerate the creation of instances</a>.</p>
+         * <p>The ID of the image cache. For more information, see <a href="https://help.aliyun.com/document_detail/141281.html">Use image caches to accelerate the creation of instances</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>imc-2zebxkiifuyzzlhl****</p>
@@ -1544,7 +1546,7 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * <p>The ECS instance types that you specify to create the elastic container instance. Multiple instance types are supported. For more information, see <a href="~~114664~~">Specify ECS instance types to create an elastic container instance</a>.</p>
+         * <p>The ECS instance types that you specify to create the elastic container instance. Multiple instance types are supported. For more information, see <a href="https://help.aliyun.com/document_detail/114664.html">Specify ECS instance types to create an elastic container instance</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.c5.xlarge</p>
@@ -1698,7 +1700,7 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * <p>The name of the instance Resource Access Management (RAM) role. You can use the same RAM role to access elastic container instances and ECS instances. For more information, see <a href="~~61178~~">Use an instance RAM role by calling API operations</a>.</p>
+         * <p>The name of the instance Resource Access Management (RAM) role. You can use the same RAM role to access elastic container instances and ECS instances. For more information, see <a href="https://help.aliyun.com/document_detail/61178.html">Use an instance RAM role by calling API operations</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>RamTestRole</p>
@@ -1711,6 +1713,7 @@ public class CreateContainerGroupRequest extends Request {
 
         /**
          * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -1775,7 +1778,7 @@ public class CreateContainerGroupRequest extends Request {
          * <li>VSwitchOrdered: The system schedules resources in the sequence of the vSwitches.</li>
          * <li>VSwitchRandom: The system schedules resources at random.</li>
          * </ul>
-         * <p>For more information, see <a href="~~157290~~">Specify multiple zones to create an elastic container instance</a>.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/157290.html">Specify multiple zones to create an elastic container instance</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>VSwitchOrdered</p>
@@ -1871,7 +1874,7 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * <p>The tags that you want to add to the instance. You can bind a maximum of 20 tags. For more information, see <a href="~~146608~~">Use tags to manage elastic container instances</a>.</p>
+         * <p>The tags that you want to add to the instance. You can bind a maximum of 20 tags. For more information, see <a href="https://help.aliyun.com/document_detail/146608.html">Use tags to manage elastic container instances</a>.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -2215,7 +2218,7 @@ public class CreateContainerGroupRequest extends Request {
             private java.util.List < Sysctl> sysctl; 
 
             /**
-             * <p>Configure a security context to modify unsafe sysctls. For more information, see <a href="~~462313~~">Configure a security context</a>.</p>
+             * <p>Configure a security context to modify unsafe sysctls. For more information, see <a href="https://help.aliyun.com/document_detail/462313.html">Configure a security context</a>.</p>
              */
             public Builder sysctl(java.util.List < Sysctl> sysctl) {
                 this.sysctl = sysctl;
@@ -2339,7 +2342,7 @@ public class CreateContainerGroupRequest extends Request {
             private java.util.List < SecurityContextSysctl> sysctl; 
 
             /**
-             * <p>Configure a security context to modify safe sysctls. For more information, see <a href="~~462313~~">Configure a security context</a>.</p>
+             * <p>Configure a security context to modify safe sysctls. For more information, see <a href="https://help.aliyun.com/document_detail/462313.html">Configure a security context</a>.</p>
              */
             public Builder sysctl(java.util.List < SecurityContextSysctl> sysctl) {
                 this.sysctl = sysctl;
@@ -4512,6 +4515,7 @@ public class CreateContainerGroupRequest extends Request {
 
             /**
              * <p>The image of the container.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>registry-vpc.cn-hangzhou.aliyuncs.com/eci_open/nginx:latest</p>
@@ -4728,6 +4732,7 @@ public class CreateContainerGroupRequest extends Request {
 
             /**
              * <p>The name of the container.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>nginx</p>

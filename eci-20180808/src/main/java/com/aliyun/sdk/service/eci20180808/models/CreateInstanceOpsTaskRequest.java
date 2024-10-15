@@ -157,6 +157,7 @@ public class CreateInstanceOpsTaskRequest extends Request {
 
         /**
          * <p>The ID of the container group.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>eci-bp1dvysdafbh00t7****</p>
@@ -173,6 +174,7 @@ public class CreateInstanceOpsTaskRequest extends Request {
          * <li>coredump</li>
          * <li>tcpdump</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>coredump</p>
@@ -210,6 +212,7 @@ public class CreateInstanceOpsTaskRequest extends Request {
          * </ul>
          * </li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>enable</p>
@@ -240,6 +243,7 @@ public class CreateInstanceOpsTaskRequest extends Request {
 
         /**
          * <p>The region ID of the O&amp;M task.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

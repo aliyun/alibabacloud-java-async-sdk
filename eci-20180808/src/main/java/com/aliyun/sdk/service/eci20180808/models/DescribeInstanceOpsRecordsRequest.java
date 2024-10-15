@@ -142,6 +142,7 @@ public class DescribeInstanceOpsRecordsRequest extends Request {
 
         /**
          * <p>The ID of the elastic container instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>eci-bp1dvysdafbh00t7****</p>
@@ -158,6 +159,7 @@ public class DescribeInstanceOpsRecordsRequest extends Request {
          * <li>coredump</li>
          * <li>tcpdump</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>coredump</p>
@@ -188,6 +190,7 @@ public class DescribeInstanceOpsRecordsRequest extends Request {
 
         /**
          * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

@@ -421,7 +421,7 @@ public class CreateImageCacheRequest extends Request {
         } 
 
         /**
-         * <p>Information about the Container Registry Enterprise Edition instance. For more information, see <a href="~~194250~~">Pull images from a Container Registry Enterprise Edition instance without using secrets</a>.</p>
+         * <p>Information about the Container Registry Enterprise Edition instance. For more information, see <a href="https://help.aliyun.com/document_detail/194250.html">Pull images from a Container Registry Enterprise Edition instance without using secrets</a>.</p>
          */
         public Builder acrRegistryInfo(java.util.List < AcrRegistryInfo> acrRegistryInfo) {
             this.putQueryParameter("AcrRegistryInfo", acrRegistryInfo);
@@ -459,7 +459,7 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="~~25693~~">How to ensure the idempotence of a request</a>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure the idempotence of a request</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-xxx-xxx-xxxx-42665544xxxx</p>
@@ -529,6 +529,7 @@ public class CreateImageCacheRequest extends Request {
 
         /**
          * <p>Container image N that is used to create the image cache.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>registry-vpc.cn-hangzhou.aliyuncs.com/eci_open/nginx:1.15.10-perl</p>
@@ -541,6 +542,7 @@ public class CreateImageCacheRequest extends Request {
 
         /**
          * <p>The name of the image cache.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>testcache</p>
@@ -626,6 +628,7 @@ public class CreateImageCacheRequest extends Request {
 
         /**
          * <p>The region ID of the image cache.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

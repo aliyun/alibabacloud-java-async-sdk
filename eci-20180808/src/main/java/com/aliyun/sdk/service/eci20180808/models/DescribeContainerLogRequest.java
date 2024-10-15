@@ -225,6 +225,7 @@ public class DescribeContainerLogRequest extends Request {
 
         /**
          * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>eci-uf6fonnghi50v6nq****</p>
@@ -237,6 +238,7 @@ public class DescribeContainerLogRequest extends Request {
 
         /**
          * <p>The name of the container.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>nginx</p>

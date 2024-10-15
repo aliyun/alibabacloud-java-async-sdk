@@ -74,7 +74,7 @@ public class ExecContainerCommandResponseBody extends TeaModel {
         private String webSocketUri; 
 
         /**
-         * <p>The HTTP URL. You can use this URL to enter the container within 30 seconds after this operation is called. For more information, see <a href="~~202846~~">Use and integrate the Elastic Container Instance terminal</a>.</p>
+         * <p>The HTTP URL. You can use this URL to enter the container within 30 seconds after this operation is called. For more information, see <a href="https://help.aliyun.com/document_detail/202846.html">Use and integrate the Elastic Container Instance terminal</a>.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://eci.console.aliyun.com/terminal?param=X32a">https://eci.console.aliyun.com/terminal?param=X32a</a>****</p>
