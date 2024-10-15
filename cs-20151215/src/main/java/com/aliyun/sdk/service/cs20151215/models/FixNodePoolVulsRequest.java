@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FixNodePoolVulsRequest} extends {@link RequestModel}
  *
  * <p>FixNodePoolVulsRequest</p>
@@ -125,7 +126,11 @@ public class FixNodePoolVulsRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cf62854ac2130470897be7a27ed1f****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -134,7 +139,11 @@ public class FixNodePoolVulsRequest extends Request {
         }
 
         /**
-         * The node pool ID.
+         * <p>The node pool ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np31da1b38983f4511b490fc62108a****</p>
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("nodepool_id", nodepoolId);
@@ -143,7 +152,10 @@ public class FixNodePoolVulsRequest extends Request {
         }
 
         /**
-         * Specifies whether to allow the nodes to restart.
+         * <p>Specifies whether to allow the nodes to restart.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRestart(Boolean autoRestart) {
             this.putBodyParameter("auto_restart", autoRestart);
@@ -152,7 +164,7 @@ public class FixNodePoolVulsRequest extends Request {
         }
 
         /**
-         * The names of the nodes to be patched.
+         * <p>The names of the nodes to be patched.</p>
          */
         public Builder nodes(java.util.List < String > nodes) {
             this.putBodyParameter("nodes", nodes);
@@ -161,7 +173,7 @@ public class FixNodePoolVulsRequest extends Request {
         }
 
         /**
-         * The batch patching policy.
+         * <p>The batch patching policy.</p>
          */
         public Builder rolloutPolicy(RolloutPolicy rolloutPolicy) {
             this.putBodyParameter("rollout_policy", rolloutPolicy);
@@ -170,7 +182,7 @@ public class FixNodePoolVulsRequest extends Request {
         }
 
         /**
-         * The list of vulnerabilities.
+         * <p>The list of vulnerabilities.</p>
          */
         public Builder vuls(java.util.List < String > vuls) {
             this.putBodyParameter("vuls", vuls);
@@ -185,6 +197,12 @@ public class FixNodePoolVulsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link FixNodePoolVulsRequest} extends {@link TeaModel}
+     *
+     * <p>FixNodePoolVulsRequest</p>
+     */
     public static class RolloutPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("max_parallelism")
         private Long maxParallelism;
@@ -212,7 +230,10 @@ public class FixNodePoolVulsRequest extends Request {
             private Long maxParallelism; 
 
             /**
-             * The maximum concurrency for batch patching. Minimum value: 1. The maximum value equals the number of nodes in the node pool.
+             * <p>The maximum concurrency for batch patching. Minimum value: 1. The maximum value equals the number of nodes in the node pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder maxParallelism(Long maxParallelism) {
                 this.maxParallelism = maxParallelism;

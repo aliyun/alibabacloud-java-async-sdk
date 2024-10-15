@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
@@ -99,7 +100,11 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * The region ID of the resource.
+         * <p>The region ID of the resource.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("region_id", regionId);
@@ -108,7 +113,8 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The list of resource IDs.
+         * <p>The list of resource IDs.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
             this.putBodyParameter("resource_ids", resourceIds);
@@ -117,7 +123,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The type of resource that you want to label. Set the value to `CLUSTER`.
+         * <p>The type of resource that you want to label. Set the value to <code>CLUSTER</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CLUSTER</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("resource_type", resourceType);
@@ -126,12 +136,13 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The labels that you want to add to the resources in key-value pairs. You can add up to 20 labels. Usage notes:
-         * <p>
-         * 
-         * *   Label values must not be empty strings. A label value must be 1 to 128 characters in length.
-         * *   The label value must not start with `aliyun` or `acs:`.
-         * *   The label value must not contain `http://` or `https://`.
+         * <p>The labels that you want to add to the resources in key-value pairs. You can add up to 20 labels. Usage notes:</p>
+         * <ul>
+         * <li>Label values must not be empty strings. A label value must be 1 to 128 characters in length.</li>
+         * <li>The label value must not start with <code>aliyun</code> or <code>acs:</code>.</li>
+         * <li>The label value must not contain <code>http://</code> or <code>https://</code>.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          */
         public Builder tags(java.util.List < Tag > tags) {
             this.putBodyParameter("tags", tags);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScaleClusterRequest} extends {@link RequestModel}
  *
  * <p>ScaleClusterRequest</p>
@@ -320,7 +321,7 @@ public class ScaleClusterRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>This parameter is required.</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -506,6 +507,12 @@ public class ScaleClusterRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ScaleClusterRequest} extends {@link TeaModel}
+     *
+     * <p>ScaleClusterRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
@@ -547,6 +554,12 @@ public class ScaleClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ScaleClusterRequest} extends {@link TeaModel}
+     *
+     * <p>ScaleClusterRequest</p>
+     */
     public static class Taints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("effect")
         private String effect;
@@ -628,6 +641,12 @@ public class ScaleClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ScaleClusterRequest} extends {@link TeaModel}
+     *
+     * <p>ScaleClusterRequest</p>
+     */
     public static class WorkerDataDisks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("category")
         private String category;

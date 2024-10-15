@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveNodePoolNodesResponseBody} extends {@link TeaModel}
  *
  * <p>RemoveNodePoolNodesResponseBody</p>
@@ -49,7 +50,10 @@ public class RemoveNodePoolNodesResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A9891419-D125-4D89-AFCA-68846675E2F7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class RemoveNodePoolNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T-62a944794ee141074400****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

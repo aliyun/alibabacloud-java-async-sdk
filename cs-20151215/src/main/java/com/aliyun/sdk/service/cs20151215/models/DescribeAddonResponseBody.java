@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAddonResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAddonResponseBody</p>
@@ -133,11 +134,11 @@ public class DescribeAddonResponseBody extends TeaModel {
         private String version; 
 
         /**
-         * Architectures supported by the component. Valid values:
-         * <p>
-         * 
-         * *   amd64
-         * *   arm64
+         * <p>Architectures supported by the component. Valid values:</p>
+         * <ul>
+         * <li>amd64</li>
+         * <li>arm64</li>
+         * </ul>
          */
         public Builder architecture(java.util.List < String > architecture) {
             this.architecture = architecture;
@@ -145,7 +146,10 @@ public class DescribeAddonResponseBody extends TeaModel {
         }
 
         /**
-         * The category of the component.
+         * <p>The category of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>network</p>
          */
         public Builder category(String category) {
             this.category = category;
@@ -153,7 +157,10 @@ public class DescribeAddonResponseBody extends TeaModel {
         }
 
         /**
-         * The custom parameter schema of the component.
+         * <p>The custom parameter schema of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder configSchema(String configSchema) {
             this.configSchema = configSchema;
@@ -161,7 +168,10 @@ public class DescribeAddonResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the component is automatically installed by default.
+         * <p>Indicates whether the component is automatically installed by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder installByDefault(Boolean installByDefault) {
             this.installByDefault = installByDefault;
@@ -169,7 +179,10 @@ public class DescribeAddonResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the component is fully managed.
+         * <p>Indicates whether the component is fully managed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder managed(Boolean managed) {
             this.managed = managed;
@@ -177,7 +190,10 @@ public class DescribeAddonResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the component.
+         * <p>The name of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>coredns</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -185,7 +201,7 @@ public class DescribeAddonResponseBody extends TeaModel {
         }
 
         /**
-         * The latest version of the component.
+         * <p>The latest version of the component.</p>
          */
         public Builder newerVersions(java.util.List < NewerVersions> newerVersions) {
             this.newerVersions = newerVersions;
@@ -193,13 +209,13 @@ public class DescribeAddonResponseBody extends TeaModel {
         }
 
         /**
-         * Operations supported by the component. Valid values:
-         * <p>
-         * 
-         * *   Install
-         * *   Upgrade
-         * *   Modify
-         * *   Uninstall
+         * <p>Operations supported by the component. Valid values:</p>
+         * <ul>
+         * <li>Install</li>
+         * <li>Upgrade</li>
+         * <li>Modify</li>
+         * <li>Uninstall</li>
+         * </ul>
          */
         public Builder supportedActions(java.util.List < String > supportedActions) {
             this.supportedActions = supportedActions;
@@ -207,7 +223,10 @@ public class DescribeAddonResponseBody extends TeaModel {
         }
 
         /**
-         * The version of the component.
+         * <p>The version of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1.9.3.6-32932850-aliyun</p>
          */
         public Builder version(String version) {
             this.version = version;
@@ -220,6 +239,12 @@ public class DescribeAddonResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAddonResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAddonResponseBody</p>
+     */
     public static class NewerVersions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("minimum_cluster_version")
         private String minimumClusterVersion;
@@ -271,7 +296,10 @@ public class DescribeAddonResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The minimum cluster version required by the component version.
+             * <p>The minimum cluster version required by the component version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.20.4</p>
              */
             public Builder minimumClusterVersion(String minimumClusterVersion) {
                 this.minimumClusterVersion = minimumClusterVersion;
@@ -279,7 +307,10 @@ public class DescribeAddonResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the component can be updated to the version.
+             * <p>Indicates whether the component can be updated to the version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder upgradable(Boolean upgradable) {
                 this.upgradable = upgradable;
@@ -287,7 +318,10 @@ public class DescribeAddonResponseBody extends TeaModel {
             }
 
             /**
-             * The version number.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1.9.3.10-7dfca203-aliyun</p>
              */
             public Builder version(String version) {
                 this.version = version;

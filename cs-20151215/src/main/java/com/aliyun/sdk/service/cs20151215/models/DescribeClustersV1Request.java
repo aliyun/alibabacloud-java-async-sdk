@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClustersV1Request} extends {@link RequestModel}
  *
  * <p>DescribeClustersV1Request</p>
@@ -151,7 +152,10 @@ public class DescribeClustersV1Request extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca418e5e6fa2849d78301341700axxxxx</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("cluster_id", clusterId);
@@ -160,11 +164,14 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * After you set `cluster_type` to `ManagedKubernetes` and configure the `profile` parameter, you can further specify the edition of the cluster. Valid values:
-         * <p>
+         * <p>After you set <code>cluster_type</code> to <code>ManagedKubernetes</code> and configure the <code>profile</code> parameter, you can further specify the edition of the cluster. Valid values:</p>
+         * <ul>
+         * <li><code>ack.pro.small</code>: ACK Pro cluster.</li>
+         * <li><code>ack.standard</code>: ACK Basic cluster. If you leave the parameter empty, ACK Basic cluster is selected.</li>
+         * </ul>
          * 
-         * *   `ack.pro.small`: ACK Pro cluster.
-         * *   `ack.standard`: ACK Basic cluster. If you leave the parameter empty, ACK Basic cluster is selected.
+         * <strong>example:</strong>
+         * <p>ack.pro.small</p>
          */
         public Builder clusterSpec(String clusterSpec) {
             this.putQueryParameter("cluster_spec", clusterSpec);
@@ -173,10 +180,14 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * *   `Kubernetes`: ACK dedicated cluster.
-         * <p>
-         * *   `ManagedKubernetes`: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless Basic clusters, ACK Serverless Pro clusters, ACK Edge Basic clusters, ACK Edge Pro clusters, and ACK Lingjun Pro clusters.
-         * *   `ExternalKubernetes`: registered cluster.
+         * <ul>
+         * <li><code>Kubernetes</code>: ACK dedicated cluster.</li>
+         * <li><code>ManagedKubernetes</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless Basic clusters, ACK Serverless Pro clusters, ACK Edge Basic clusters, ACK Edge Pro clusters, and ACK Lingjun Pro clusters.</li>
+         * <li><code>ExternalKubernetes</code>: registered cluster.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Kubernetes</p>
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("cluster_type", clusterType);
@@ -185,10 +196,11 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * The cluster name.
-         * <p>
+         * <p>The cluster name.</p>
+         * <p>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).</p>
          * 
-         * The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).
+         * <strong>example:</strong>
+         * <p>cluster-demo</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -197,7 +209,10 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("page_number", pageNumber);
@@ -206,7 +221,10 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("page_size", pageSize);
@@ -215,13 +233,16 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * If you set `cluster_type` to `ManagedKubernetes`, an ACK managed cluster is created. In this case, you can further specify the cluster edition. Valid values:
-         * <p>
+         * <p>If you set <code>cluster_type</code> to <code>ManagedKubernetes</code>, an ACK managed cluster is created. In this case, you can further specify the cluster edition. Valid values:</p>
+         * <ul>
+         * <li><code>Default</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.</li>
+         * <li><code>Edge</code>: ACK Edge cluster. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.</li>
+         * <li><code>Serverless</code>: ACK Serverless cluster. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.</li>
+         * <li><code>Lingjun</code>: ACK Lingjun Pro cluster.</li>
+         * </ul>
          * 
-         * *   `Default`: ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.
-         * *   `Edge`: ACK Edge cluster. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.
-         * *   `Serverless`: ACK Serverless cluster. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.
-         * *   `Lingjun`: ACK Lingjun Pro cluster.
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         public Builder profile(String profile) {
             this.putQueryParameter("profile", profile);
@@ -230,7 +251,10 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * The region ID of the clusters. You can use this parameter to query all clusters in the specified region.
+         * <p>The region ID of the clusters. You can use this parameter to query all clusters in the specified region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("region_id", regionId);

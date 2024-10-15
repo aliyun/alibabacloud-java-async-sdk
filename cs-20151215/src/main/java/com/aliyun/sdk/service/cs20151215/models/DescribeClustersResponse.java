@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClustersResponse} extends {@link TeaModel}
  *
  * <p>DescribeClustersResponse</p>
@@ -122,6 +123,12 @@ public class DescribeClustersResponse extends Response {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClustersResponse} extends {@link TeaModel}
+     *
+     * <p>DescribeClustersResponse</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
@@ -183,6 +190,12 @@ public class DescribeClustersResponse extends Response {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClustersResponse} extends {@link TeaModel}
+     *
+     * <p>DescribeClustersResponse</p>
+     */
     public static class DescribeClustersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cluster_id")
         private String clusterId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPolicyInstanceRequest} extends {@link RequestModel}
  *
  * <p>ModifyPolicyInstanceRequest</p>
@@ -125,7 +126,11 @@ public class ModifyPolicyInstanceRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c8155823d057948c69a****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -134,7 +139,11 @@ public class ModifyPolicyInstanceRequest extends Request {
         }
 
         /**
-         * The name of the policy.
+         * <p>The name of the policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACKAllowedRepos</p>
          */
         public Builder policyName(String policyName) {
             this.putPathParameter("policy_name", policyName);
@@ -143,11 +152,14 @@ public class ModifyPolicyInstanceRequest extends Request {
         }
 
         /**
-         * The action of the policy. Valid values:
-         * <p>
+         * <p>The action of the policy. Valid values:</p>
+         * <ul>
+         * <li><code>deny</code>: Deployments that match the policy are denied.</li>
+         * <li><code>warn</code>: Alerts are generated for deployments that match the policy.</li>
+         * </ul>
          * 
-         * *   `deny`: Deployments that match the policy are denied.
-         * *   `warn`: Alerts are generated for deployments that match the policy.
+         * <strong>example:</strong>
+         * <p>deny</p>
          */
         public Builder action(String action) {
             this.putBodyParameter("action", action);
@@ -156,7 +168,10 @@ public class ModifyPolicyInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the policy instance.
+         * <p>The ID of the policy instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>allowed-repos-cbhhb</p>
          */
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("instance_name", instanceName);
@@ -165,7 +180,7 @@ public class ModifyPolicyInstanceRequest extends Request {
         }
 
         /**
-         * The namespaces to which the policy is applied. The policy is applied to all namespaces if this parameter is left empty.
+         * <p>The namespaces to which the policy is applied. The policy is applied to all namespaces if this parameter is left empty.</p>
          */
         public Builder namespaces(java.util.List < String > namespaces) {
             this.putBodyParameter("namespaces", namespaces);
@@ -174,7 +189,10 @@ public class ModifyPolicyInstanceRequest extends Request {
         }
 
         /**
-         * The parameters of the policy instance. For more information, see [Predefined security policies of ACK](~~359819~~).
+         * <p>The parameters of the policy instance. For more information, see <a href="https://help.aliyun.com/document_detail/359819.html">Predefined security policies of ACK</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;restrictedNamespaces&quot;: [ &quot;test&quot; ]</p>
          */
         public Builder parameters(java.util.Map < String, ? > parameters) {
             this.putBodyParameter("parameters", parameters);

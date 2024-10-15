@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelOperationPlanRequest} extends {@link RequestModel}
  *
  * <p>CancelOperationPlanRequest</p>
@@ -53,7 +54,10 @@ public class CancelOperationPlanRequest extends Request {
         } 
 
         /**
-         * The ID of the O\&M plan.
+         * <p>The ID of the O&amp;M plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>P-655c9c127e0e6603ef00****</p>
          */
         public Builder planId(String planId) {
             this.putPathParameter("plan_id", planId);

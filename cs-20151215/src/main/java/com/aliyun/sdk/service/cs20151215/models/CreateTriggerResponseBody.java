@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTriggerResponseBody} extends {@link TeaModel}
  *
  * <p>CreateTriggerResponseBody</p>
@@ -85,7 +86,10 @@ public class CreateTriggerResponseBody extends TeaModel {
         private String type; 
 
         /**
-         * The action that the trigger performs. For example, a value of `redeploy` indicates that the trigger redeploys the application.
+         * <p>The action that the trigger performs. For example, a value of <code>redeploy</code> indicates that the trigger redeploys the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>redeploy</p>
          */
         public Builder action(String action) {
             this.action = action;
@@ -93,7 +97,10 @@ public class CreateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c93095129fc41463aa455d89444fd****</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -101,7 +108,10 @@ public class CreateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the trigger.
+         * <p>The ID of the trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102536</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -109,7 +119,10 @@ public class CreateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the trigger project.
+         * <p>The name of the trigger project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default/test-app</p>
          */
         public Builder projectId(String projectId) {
             this.projectId = projectId;
@@ -117,7 +130,10 @@ public class CreateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The type of trigger. Default value: deployment.
+         * <p>The type of trigger. Default value: deployment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deployment</p>
          */
         public Builder type(String type) {
             this.type = type;

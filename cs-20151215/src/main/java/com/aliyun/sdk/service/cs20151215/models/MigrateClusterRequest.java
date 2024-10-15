@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MigrateClusterRequest} extends {@link RequestModel}
  *
  * <p>MigrateClusterRequest</p>
@@ -82,7 +83,11 @@ public class MigrateClusterRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c21e0591548ba4c10bdb535d6572b****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -91,7 +96,10 @@ public class MigrateClusterRequest extends Request {
         }
 
         /**
-         * The endpoint of the OSS bucket.
+         * <p>The endpoint of the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>*******.oss-cn-hangzhou.aliyuncs.com</p>
          */
         public Builder ossBucketEndpoint(String ossBucketEndpoint) {
             this.putBodyParameter("oss_bucket_endpoint", ossBucketEndpoint);
@@ -100,7 +108,10 @@ public class MigrateClusterRequest extends Request {
         }
 
         /**
-         * The name of the Object Storage Service (OSS) bucket.
+         * <p>The name of the Object Storage Service (OSS) bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bucket-****</p>
          */
         public Builder ossBucketName(String ossBucketName) {
             this.putBodyParameter("oss_bucket_name", ossBucketName);

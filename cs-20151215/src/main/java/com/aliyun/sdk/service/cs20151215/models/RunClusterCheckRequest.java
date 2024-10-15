@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunClusterCheckRequest} extends {@link RequestModel}
  *
  * <p>RunClusterCheckRequest</p>
@@ -96,7 +97,10 @@ public class RunClusterCheckRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ce0da5a1d627e4e9e9f96cae8ad07****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -105,7 +109,7 @@ public class RunClusterCheckRequest extends Request {
         }
 
         /**
-         * The cluster check items.
+         * <p>The cluster check items.</p>
          */
         public Builder options(java.util.Map < String, String > options) {
             this.putBodyParameter("options", options);
@@ -114,7 +118,10 @@ public class RunClusterCheckRequest extends Request {
         }
 
         /**
-         * The target to be checked.
+         * <p>The target to be checked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np1f6779297c4444a3a1cdd29be8e5****</p>
          */
         public Builder target(String target) {
             this.putBodyParameter("target", target);
@@ -123,7 +130,11 @@ public class RunClusterCheckRequest extends Request {
         }
 
         /**
-         * The check method.
+         * <p>The check method.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ClusterUpgrade</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);

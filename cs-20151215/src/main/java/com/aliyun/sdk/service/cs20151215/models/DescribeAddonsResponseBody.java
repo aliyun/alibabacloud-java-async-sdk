@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAddonsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAddonsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeAddonsResponseBody extends TeaModel {
         private java.util.Map < String, StandardComponentsValue > standardComponents; 
 
         /**
-         * The list of the returned components.
+         * <p>The list of the returned components.</p>
          */
         public Builder componentGroups(java.util.List < ComponentGroups> componentGroups) {
             this.componentGroups = componentGroups;
@@ -57,7 +58,7 @@ public class DescribeAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * Standard components.
+         * <p>Standard components.</p>
          */
         public Builder standardComponents(java.util.Map < String, StandardComponentsValue > standardComponents) {
             this.standardComponents = standardComponents;
@@ -70,6 +71,12 @@ public class DescribeAddonsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAddonsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAddonsResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -97,7 +104,10 @@ public class DescribeAddonsResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The name of the component.
+             * <p>The name of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>flexvolume</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -111,6 +121,12 @@ public class DescribeAddonsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAddonsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAddonsResponseBody</p>
+     */
     public static class ComponentGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("group_name")
         private String groupName;
@@ -150,7 +166,10 @@ public class DescribeAddonsResponseBody extends TeaModel {
             private java.util.List < Items> items; 
 
             /**
-             * The name of the component group.
+             * <p>The name of the component group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>storage</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -158,7 +177,7 @@ public class DescribeAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * The names of the components in the component group.
+             * <p>The names of the components in the component group.</p>
              */
             public Builder items(java.util.List < Items> items) {
                 this.items = items;

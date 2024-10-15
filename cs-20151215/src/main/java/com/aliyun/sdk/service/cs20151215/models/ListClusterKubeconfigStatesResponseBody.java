@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClusterKubeconfigStatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListClusterKubeconfigStatesResponseBody</p>
@@ -49,7 +50,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         private java.util.List < States> states; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder page(Page page) {
             this.page = page;
@@ -57,7 +58,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         }
 
         /**
-         * The status list of the kubeconfig files associated with the cluster.
+         * <p>The status list of the kubeconfig files associated with the cluster.</p>
          */
         public Builder states(java.util.List < States> states) {
             this.states = states;
@@ -70,6 +71,12 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListClusterKubeconfigStatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClusterKubeconfigStatesResponseBody</p>
+     */
     public static class Page extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("page_number")
         private Integer pageNumber;
@@ -121,7 +128,10 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -129,7 +139,10 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -137,7 +150,10 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -151,6 +167,12 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListClusterKubeconfigStatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClusterKubeconfigStatesResponseBody</p>
+     */
     public static class States extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("account_display_name")
         private String accountDisplayName;
@@ -262,7 +284,10 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             private Boolean revokable; 
 
             /**
-             * The displayed name or role name of the RAM user.
+             * <p>The displayed name or role name of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tom</p>
              */
             public Builder accountDisplayName(String accountDisplayName) {
                 this.accountDisplayName = accountDisplayName;
@@ -270,7 +295,10 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of an Alibaba Cloud account, RAM user, or RAM role.
+             * <p>The ID of an Alibaba Cloud account, RAM user, or RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22855*****************</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -278,7 +306,10 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The logon name or role name of the RAM user.
+             * <p>The logon name or role name of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tom</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -286,12 +317,15 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the account.
-             * <p>
+             * <p>The status of the account.</p>
+             * <ul>
+             * <li>Active: The account is active.</li>
+             * <li>InActive: The account is locked.</li>
+             * <li>Deleted: The account is deleted.</li>
+             * </ul>
              * 
-             * *   Active: The account is active.
-             * *   InActive: The account is locked.
-             * *   Deleted: The account is deleted.
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder accountState(String accountState) {
                 this.accountState = accountState;
@@ -299,12 +333,15 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the account.
-             * <p>
+             * <p>The type of the account.</p>
+             * <ul>
+             * <li>RootAccount: Alibaba Cloud account.</li>
+             * <li>RamUser: RAM user.</li>
+             * <li>RamRole: RAM role.</li>
+             * </ul>
              * 
-             * *   RootAccount: Alibaba Cloud account.
-             * *   RamUser: RAM user.
-             * *   RamRole: RAM role.
+             * <strong>example:</strong>
+             * <p>RamUser</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -312,7 +349,10 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the client certificate for the kubeconfig file.
+             * <p>The expiration time of the client certificate for the kubeconfig file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2027-07-15T01:32:20Z</p>
              */
             public Builder certExpireTime(String certExpireTime) {
                 this.certExpireTime = certExpireTime;
@@ -320,12 +360,15 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the client certificate for the kubeconfig file.
-             * <p>
+             * <p>The status of the client certificate for the kubeconfig file.</p>
+             * <ul>
+             * <li>Unexpired: The certificate is not expired.</li>
+             * <li>Expired: The certificate is expired.</li>
+             * <li>Unknown: The status of the certificate is unknown.</li>
+             * </ul>
              * 
-             * *   Unexpired: The certificate is not expired.
-             * *   Expired: The certificate is expired.
-             * *   Unknown: The status of the certificate is unknown.
+             * <strong>example:</strong>
+             * <p>Expired</p>
              */
             public Builder certState(String certState) {
                 this.certState = certState;
@@ -333,7 +376,10 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the client certificate for the kubeconfig file can be revoked.
+             * <p>Indicates whether the client certificate for the kubeconfig file can be revoked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder revokable(Boolean revokable) {
                 this.revokable = revokable;

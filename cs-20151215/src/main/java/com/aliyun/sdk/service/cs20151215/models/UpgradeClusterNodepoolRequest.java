@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeClusterNodepoolRequest} extends {@link RequestModel}
  *
  * <p>UpgradeClusterNodepoolRequest</p>
@@ -167,7 +168,11 @@ public class UpgradeClusterNodepoolRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c106f377e16f34eb1808d6b9362c9****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -176,7 +181,11 @@ public class UpgradeClusterNodepoolRequest extends Request {
         }
 
         /**
-         * The node pool ID.
+         * <p>The node pool ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np31da1b38983f4511b490fc62108a****</p>
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("NodepoolId", nodepoolId);
@@ -185,7 +194,10 @@ public class UpgradeClusterNodepoolRequest extends Request {
         }
 
         /**
-         * The ID of the OS image that is used by the nodes.
+         * <p>The ID of the OS image that is used by the nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun_2_1903_x64_20G_alibase_20200529.vhd</p>
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("image_id", imageId);
@@ -194,7 +206,10 @@ public class UpgradeClusterNodepoolRequest extends Request {
         }
 
         /**
-         * The Kubernetes version that is used by the nodes. You can call the [DescribeKubernetesVersionMetadata](~~2667899~~) operation to query the Kubernetes version of the cluster returned in the current_version parameter.
+         * <p>The Kubernetes version that is used by the nodes. You can call the <a href="https://help.aliyun.com/document_detail/2667899.html">DescribeKubernetesVersionMetadata</a> operation to query the Kubernetes version of the cluster returned in the current_version parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.22.15-aliyun.1</p>
          */
         public Builder kubernetesVersion(String kubernetesVersion) {
             this.putBodyParameter("kubernetes_version", kubernetesVersion);
@@ -203,7 +218,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
         }
 
         /**
-         * The nodes that you want to update. If you do not specify this parameter, all nodes in the node pool are updated by default.
+         * <p>The nodes that you want to update. If you do not specify this parameter, all nodes in the node pool are updated by default.</p>
          */
         public Builder nodeNames(java.util.List < String > nodeNames) {
             this.putBodyParameter("node_names", nodeNames);
@@ -212,7 +227,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
         }
 
         /**
-         * The rotation configuration.
+         * <p>The rotation configuration.</p>
          */
         public Builder rollingPolicy(RollingPolicy rollingPolicy) {
             this.putBodyParameter("rolling_policy", rollingPolicy);
@@ -221,7 +236,10 @@ public class UpgradeClusterNodepoolRequest extends Request {
         }
 
         /**
-         * The runtime type. You can call the [DescribeKubernetesVersionMetadata](~~2667899~~) operation to query the runtime information returned in the runtime parameter.
+         * <p>The runtime type. You can call the <a href="https://help.aliyun.com/document_detail/2667899.html">DescribeKubernetesVersionMetadata</a> operation to query the runtime information returned in the runtime parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>containerd</p>
          */
         public Builder runtimeType(String runtimeType) {
             this.putBodyParameter("runtime_type", runtimeType);
@@ -230,7 +248,10 @@ public class UpgradeClusterNodepoolRequest extends Request {
         }
 
         /**
-         * The version of the container runtime that is used by the nodes. You can call the [DescribeKubernetesVersionMetadata](~~2667899~~) operation to query the runtime version information returned in the runtime parameter.
+         * <p>The version of the container runtime that is used by the nodes. You can call the <a href="https://help.aliyun.com/document_detail/2667899.html">DescribeKubernetesVersionMetadata</a> operation to query the runtime version information returned in the runtime parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.5.10</p>
          */
         public Builder runtimeVersion(String runtimeVersion) {
             this.putBodyParameter("runtime_version", runtimeVersion);
@@ -239,13 +260,15 @@ public class UpgradeClusterNodepoolRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform the update by replacing the system disk. Valid values:
-         * <p>
+         * <p>Specifies whether to perform the update by replacing the system disk. Valid values:</p>
+         * <ul>
+         * <li>true: updates by replacing the system disk.</li>
+         * <li>false: does not update by replacing the system disk.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: updates by replacing the system disk.
-         * *   false: does not update by replacing the system disk.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder useReplace(Boolean useReplace) {
             this.putBodyParameter("use_replace", useReplace);
@@ -260,6 +283,12 @@ public class UpgradeClusterNodepoolRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpgradeClusterNodepoolRequest} extends {@link TeaModel}
+     *
+     * <p>UpgradeClusterNodepoolRequest</p>
+     */
     public static class RollingPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("batch_interval")
         private Integer batchInterval;
@@ -311,7 +340,10 @@ public class UpgradeClusterNodepoolRequest extends Request {
             private String pausePolicy; 
 
             /**
-             * The update interval between batches takes effect only when the pause policy is set to NotPause. Unit: minutes. Valid values: 5 to 120.
+             * <p>The update interval between batches takes effect only when the pause policy is set to NotPause. Unit: minutes. Valid values: 5 to 120.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5 minutes</p>
              */
             public Builder batchInterval(Integer batchInterval) {
                 this.batchInterval = batchInterval;
@@ -319,7 +351,10 @@ public class UpgradeClusterNodepoolRequest extends Request {
             }
 
             /**
-             * The maximum number of unavailable nodes.
+             * <p>The maximum number of unavailable nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder maxParallelism(Integer maxParallelism) {
                 this.maxParallelism = maxParallelism;
@@ -327,12 +362,15 @@ public class UpgradeClusterNodepoolRequest extends Request {
             }
 
             /**
-             * The policy that is used to pause the update. Valid values:
-             * <p>
+             * <p>The policy that is used to pause the update. Valid values:</p>
+             * <ul>
+             * <li>FirstBatch: pauses the update after the first batch is completed.</li>
+             * <li>EveryBatch: pauses after each batch is completed.</li>
+             * <li>NotPause: does not pause.</li>
+             * </ul>
              * 
-             * *   FirstBatch: pauses the update after the first batch is completed.
-             * *   EveryBatch: pauses after each batch is completed.
-             * *   NotPause: does not pause.
+             * <strong>example:</strong>
+             * <p>NotPause</p>
              */
             public Builder pausePolicy(String pausePolicy) {
                 this.pausePolicy = pausePolicy;

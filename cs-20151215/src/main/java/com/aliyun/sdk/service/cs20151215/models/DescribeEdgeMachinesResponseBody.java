@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEdgeMachinesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEdgeMachinesResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
         private PageInfo pageInfo; 
 
         /**
-         * The list of cloud-native boxes.
+         * <p>The list of cloud-native boxes.</p>
          */
         public Builder edgeMachines(java.util.List < EdgeMachines> edgeMachines) {
             this.edgeMachines = edgeMachines;
@@ -57,7 +58,7 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
         }
 
         /**
-         * The paging information.
+         * <p>The paging information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,6 +71,12 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEdgeMachinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEdgeMachinesResponseBody</p>
+     */
     public static class EdgeMachines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("active_time")
         private String activeTime;
@@ -205,7 +212,10 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             private String updated; 
 
             /**
-             * The time when the cloud-native box was activated.
+             * <p>The time when the cloud-native box was activated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-07-19T16:07:48+08:00</p>
              */
             public Builder activeTime(String activeTime) {
                 this.activeTime = activeTime;
@@ -213,7 +223,10 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cloud-native box was created.
+             * <p>The time when the cloud-native box was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-07-07T20:44:00+08:00</p>
              */
             public Builder created(String created) {
                 this.created = created;
@@ -221,7 +234,10 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The device ID.
+             * <p>The device ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c61083909b13f4a95b8554bda9577****</p>
              */
             public Builder edgeMachineId(String edgeMachineId) {
                 this.edgeMachineId = edgeMachineId;
@@ -229,7 +245,10 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The `hostname` of the cloud-native box.
+             * <p>The <code>hostname</code> of the cloud-native box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ack-v-b010-ssdfw****</p>
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -237,7 +256,10 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The lifecycle of the cloud-native box.
+             * <p>The lifecycle of the cloud-native box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>activated</p>
              */
             public Builder lifeState(String lifeState) {
                 this.lifeState = lifeState;
@@ -245,7 +267,10 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The model of the cloud-native box.
+             * <p>The model of the cloud-native box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACK-V-B010</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -253,7 +278,10 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The machine name.
+             * <p>The machine name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ack-v-b010-ssdfw****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -261,7 +289,10 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cloud-native box.
+             * <p>The status of the cloud-native box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder onlineState(String onlineState) {
                 this.onlineState = onlineState;
@@ -269,7 +300,10 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The serial number.
+             * <p>The serial number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACK9GBL31SXX****</p>
              */
             public Builder sn(String sn) {
                 this.sn = sn;
@@ -277,7 +311,10 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cloud-native box was last updated.
+             * <p>The time when the cloud-native box was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-07-07T20:44:00+08:00</p>
              */
             public Builder updated(String updated) {
                 this.updated = updated;
@@ -291,6 +328,12 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEdgeMachinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEdgeMachinesResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("page_number")
         private Integer pageNumber;
@@ -342,10 +385,11 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number.
-             * <p>
+             * <p>The page number.</p>
+             * <p>Default value: 1.</p>
              * 
-             * Default value: 1.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -353,10 +397,11 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
-             * <p>
+             * <p>The number of entries per page.</p>
+             * <p>Default value: 10.</p>
              * 
-             * Default value: 10.
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -364,7 +409,10 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of pages returned.
+             * <p>The total number of pages returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

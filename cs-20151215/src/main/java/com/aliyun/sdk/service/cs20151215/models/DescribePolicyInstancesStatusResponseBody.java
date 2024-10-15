@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePolicyInstancesStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePolicyInstancesStatusResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
         private java.util.List < PolicyInstances> policyInstances; 
 
         /**
-         * The number of policy instances that are deployed in the cluster at different severity levels.
+         * <p>The number of policy instances that are deployed in the cluster at different severity levels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;high&quot;: 11,     &quot;medium&quot;: 1  }</p>
          */
         public Builder instancesSeverityCount(java.util.Map < String, ? > instancesSeverityCount) {
             this.instancesSeverityCount = instancesSeverityCount;
@@ -57,7 +61,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of policy instances of each policy type.
+         * <p>The number of policy instances of each policy type.</p>
          */
         public Builder policyInstances(java.util.List < PolicyInstances> policyInstances) {
             this.policyInstances = policyInstances;
@@ -70,6 +74,12 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePolicyInstancesStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePolicyInstancesStatusResponseBody</p>
+     */
     public static class PolicyInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("policy_category")
         private String policyCategory;
@@ -145,7 +155,10 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
             private String policySeverity; 
 
             /**
-             * The type of the policy. For more information about different types of policies and their descriptions, see [Predefined security policies of ACK](~~359819~~).
+             * <p>The type of the policy. For more information about different types of policies and their descriptions, see <a href="https://help.aliyun.com/document_detail/359819.html">Predefined security policies of ACK</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>compliance</p>
              */
             public Builder policyCategory(String policyCategory) {
                 this.policyCategory = policyCategory;
@@ -153,7 +166,10 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the policy.
+             * <p>The description of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Restricts use of the cluster-admin role.</p>
              */
             public Builder policyDescription(String policyDescription) {
                 this.policyDescription = policyDescription;
@@ -161,7 +177,10 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of policy instances that are deployed. If this parameter is empty, no policy instance is deployed.
+             * <p>The number of policy instances that are deployed. If this parameter is empty, no policy instance is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder policyInstancesCount(Long policyInstancesCount) {
                 this.policyInstancesCount = policyInstancesCount;
@@ -169,7 +188,10 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the policy.
+             * <p>The name of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACKRestrictRoleBindings</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -177,7 +199,10 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level of the policy.
+             * <p>The severity level of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>medium</p>
              */
             public Builder policySeverity(String policySeverity) {
                 this.policySeverity = policySeverity;

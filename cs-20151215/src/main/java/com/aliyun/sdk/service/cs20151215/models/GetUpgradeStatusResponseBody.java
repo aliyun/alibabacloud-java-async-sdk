@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUpgradeStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetUpgradeStatusResponseBody</p>
@@ -85,7 +86,10 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
         private UpgradeTask upgradeTask; 
 
         /**
-         * The error message returned during the update.
+         * <p>The error message returned during the update.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>subject to actual return</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -93,7 +97,10 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the precheck report.
+         * <p>The ID of the precheck report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>be4c8eb72de94d459ea7ace7c811d119</p>
          */
         public Builder precheckReportId(String precheckReportId) {
             this.precheckReportId = precheckReportId;
@@ -101,13 +108,16 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the update. Valid values:
-         * <p>
+         * <p>The status of the update. Valid values:</p>
+         * <ul>
+         * <li><code>success</code>: The update is successful.</li>
+         * <li><code>fail</code>: The update failed.</li>
+         * <li><code>pause</code>: The update is paused.</li>
+         * <li><code>running</code>: The update is in progress.</li>
+         * </ul>
          * 
-         * *   `success`: The update is successful.
-         * *   `fail`: The update failed.
-         * *   `pause`: The update is paused.
-         * *   `running`: The update is in progress.
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -115,14 +125,17 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The current phase of the update. Valid values:
-         * <p>
+         * <p>The current phase of the update. Valid values:</p>
+         * <ul>
+         * <li><code>not_start</code>: The update is not started.</li>
+         * <li><code>prechecking</code>: The precheck is in progress.</li>
+         * <li><code>upgrading</code>: The cluster is being updated.</li>
+         * <li><code>pause</code>: The update is paused.</li>
+         * <li><code>success</code>: The update is successful.</li>
+         * </ul>
          * 
-         * *   `not_start`: The update is not started.
-         * *   `prechecking`: The precheck is in progress.
-         * *   `upgrading`: The cluster is being updated.
-         * *   `pause`: The update is paused.
-         * *   `success`: The update is successful.
+         * <strong>example:</strong>
+         * <p>prechecking</p>
          */
         public Builder upgradeStep(String upgradeStep) {
             this.upgradeStep = upgradeStep;
@@ -130,7 +143,7 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the update task.
+         * <p>The details of the update task.</p>
          */
         public Builder upgradeTask(UpgradeTask upgradeTask) {
             this.upgradeTask = upgradeTask;
@@ -143,6 +156,12 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetUpgradeStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUpgradeStatusResponseBody</p>
+     */
     public static class UpgradeTask extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("message")
         private String message;
@@ -182,7 +201,10 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The description of the update task.
+             * <p>The description of the update task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>subject to actual return</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -190,12 +212,15 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the update task. Valid values:
-             * <p>
+             * <p>The status of the update task. Valid values:</p>
+             * <ul>
+             * <li><code>running</code>: The update task is being executed.</li>
+             * <li><code>Success</code>: The update task is successfully executed.</li>
+             * <li><code>Failed</code>: The update task failed.</li>
+             * </ul>
              * 
-             * *   `running`: The update task is being executed.
-             * *   `Success`: The update task is successfully executed.
-             * *   `Failed`: The update task failed.
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OpenAckServiceRequest} extends {@link RequestModel}
  *
  * <p>OpenAckServiceRequest</p>
@@ -53,11 +54,14 @@ public class OpenAckServiceRequest extends Request {
         } 
 
         /**
-         * The type of service that you want to activate. Valid values:
-         * <p>
+         * <p>The type of service that you want to activate. Valid values:</p>
+         * <ul>
+         * <li><code>propayasgo</code>: ACK clusters (including ACK managed clusters and ACK dedicated clusters), ACK Serverless clusters, and registered clusters.</li>
+         * <li><code>edgepayasgo</code>: ACK Edge clusters.</li>
+         * </ul>
          * 
-         * *   `propayasgo`: ACK clusters (including ACK managed clusters and ACK dedicated clusters), ACK Serverless clusters, and registered clusters.
-         * *   `edgepayasgo`: ACK Edge clusters.
+         * <strong>example:</strong>
+         * <p>propayasgo</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

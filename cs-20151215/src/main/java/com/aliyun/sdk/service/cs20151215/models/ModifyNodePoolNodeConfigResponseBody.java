@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyNodePoolNodeConfigResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyNodePoolNodeConfigResponseBody</p>
@@ -61,7 +62,10 @@ public class ModifyNodePoolNodeConfigResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The node pool ID.
+         * <p>The node pool ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np737c3ac1ac684703b9e10673aa2c****</p>
          */
         public Builder nodepoolId(String nodepoolId) {
             this.nodepoolId = nodepoolId;
@@ -69,7 +73,10 @@ public class ModifyNodePoolNodeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D7631D83-6E98-1949-B665-766A62xxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class ModifyNodePoolNodeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T-5fd211e924e1d00787xxxxxx</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

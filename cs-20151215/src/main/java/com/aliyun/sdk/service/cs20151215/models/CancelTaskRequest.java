@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelTaskRequest} extends {@link RequestModel}
  *
  * <p>CancelTaskRequest</p>
@@ -54,7 +55,11 @@ public class CancelTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the task.
+         * <p>The ID of the task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T-62ccd14aacb8db06ca00****</p>
          */
         public Builder taskId(String taskId) {
             this.putPathParameter("task_id", taskId);

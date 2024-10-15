@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNodePoolVulsRequest} extends {@link RequestModel}
  *
  * <p>DescribeNodePoolVulsRequest</p>
@@ -83,7 +84,11 @@ public class DescribeNodePoolVulsRequest extends Request {
         } 
 
         /**
-         * cluster_id.
+         * <p>Cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c17e742cee942410486f237293d66****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -92,7 +97,11 @@ public class DescribeNodePoolVulsRequest extends Request {
         }
 
         /**
-         * nodepool_id.
+         * <p>Node pool ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np38f32fdbc60e4a1e957ffde77846****</p>
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("nodepool_id", nodepoolId);
@@ -101,12 +110,15 @@ public class DescribeNodePoolVulsRequest extends Request {
         }
 
         /**
-         * The priority to fix the vulnerability. Separate multiple priorities with commas (,). Valid values:
-         * <p>
+         * <p>The priority to fix the vulnerability. Separate multiple priorities with commas (,). Valid values:</p>
+         * <ul>
+         * <li><code>asap</code>: high</li>
+         * <li><code>later</code>: medium</li>
+         * <li><code>nntf</code>: low</li>
+         * </ul>
          * 
-         * *   `asap`: high
-         * *   `later`: medium
-         * *   `nntf`: low
+         * <strong>example:</strong>
+         * <p>asap</p>
          */
         public Builder necessity(String necessity) {
             this.putQueryParameter("necessity", necessity);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAlertContactGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteAlertContactGroupRequest</p>
@@ -54,7 +55,7 @@ public class DeleteAlertContactGroupRequest extends Request {
         } 
 
         /**
-         * contact_group_ids.
+         * <p>This parameter is required.</p>
          */
         public Builder contactGroupIds(java.util.List < Long > contactGroupIds) {
             String contactGroupIdsShrink = shrink(contactGroupIds, "contact_group_ids", "json");

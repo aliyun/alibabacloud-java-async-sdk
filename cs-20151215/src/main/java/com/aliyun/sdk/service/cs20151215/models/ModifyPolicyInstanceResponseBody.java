@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPolicyInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyPolicyInstanceResponseBody</p>
@@ -37,7 +38,7 @@ public class ModifyPolicyInstanceResponseBody extends TeaModel {
         private java.util.List < String > instances; 
 
         /**
-         * The list of policy instances that are updated.
+         * <p>The list of policy instances that are updated.</p>
          */
         public Builder instances(java.util.List < String > instances) {
             this.instances = instances;

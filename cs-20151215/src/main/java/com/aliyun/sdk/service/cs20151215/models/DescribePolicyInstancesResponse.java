@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePolicyInstancesResponse} extends {@link TeaModel}
  *
  * <p>DescribePolicyInstancesResponse</p>
@@ -122,6 +123,12 @@ public class DescribePolicyInstancesResponse extends Response {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePolicyInstancesResponse} extends {@link TeaModel}
+     *
+     * <p>DescribePolicyInstancesResponse</p>
+     */
     public static class DescribePolicyInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ali_uid")
         private String aliUid;
@@ -257,7 +264,10 @@ public class DescribePolicyInstancesResponse extends Response {
             private String policyAction; 
 
             /**
-             * The UID of the Alibaba Cloud account that is used to deploy the policy instance.
+             * <p>The UID of the Alibaba Cloud account that is used to deploy the policy instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16298168****</p>
              */
             public Builder aliUid(String aliUid) {
                 this.aliUid = aliUid;
@@ -265,7 +275,10 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c8155823d057948c69a****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -273,7 +286,10 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * The name of the policy instance.
+             * <p>The name of the policy instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>no-env-var-secrets-****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -281,7 +297,10 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * The name of the policy.
+             * <p>The name of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACKPSPCapabilities</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -289,7 +308,10 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * The type of policy.
+             * <p>The type of policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k8s-general</p>
              */
             public Builder policyCategory(String policyCategory) {
                 this.policyCategory = policyCategory;
@@ -297,7 +319,10 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * The description of the policy template.
+             * <p>The description of the policy template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Restricts secrets used in pod envs</p>
              */
             public Builder policyDescription(String policyDescription) {
                 this.policyDescription = policyDescription;
@@ -305,7 +330,10 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * The parameters of the policy instance.
+             * <p>The parameters of the policy instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;restrictedNamespaces&quot;: [ &quot;test&quot; ]</p>
              */
             public Builder policyParameters(String policyParameters) {
                 this.policyParameters = policyParameters;
@@ -313,7 +341,10 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * The severity level of the policy instance.
+             * <p>The severity level of the policy instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>low</p>
              */
             public Builder policySeverity(String policySeverity) {
                 this.policySeverity = policySeverity;
@@ -321,12 +352,14 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * The applicable scope of the policy instance.
-             * <p>
+             * <p>The applicable scope of the policy instance.</p>
+             * <p>A value of * indicates all namespaces in the cluster. This is the default value.</p>
+             * <p>Multiple namespaces are separated by commas (,).</p>
              * 
-             * A value of \* indicates all namespaces in the cluster. This is the default value.
-             * 
-             * Multiple namespaces are separated by commas (,).
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder policyScope(String policyScope) {
                 this.policyScope = policyScope;
@@ -334,11 +367,14 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * The action of the policy. Valid values:
-             * <p>
+             * <p>The action of the policy. Valid values:</p>
+             * <ul>
+             * <li><code>deny</code>: Deployments that match the policy are denied.</li>
+             * <li><code>warn</code>: Alerts are generated for deployments that match the policy.</li>
+             * </ul>
              * 
-             * *   `deny`: Deployments that match the policy are denied.
-             * *   `warn`: Alerts are generated for deployments that match the policy.
+             * <strong>example:</strong>
+             * <p>deny</p>
              */
             public Builder policyAction(String policyAction) {
                 this.policyAction = policyAction;

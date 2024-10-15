@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartAlertResponseBody} extends {@link TeaModel}
  *
  * <p>StartAlertResponseBody</p>
@@ -49,7 +50,10 @@ public class StartAlertResponseBody extends TeaModel {
         private Boolean status; 
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -57,7 +61,10 @@ public class StartAlertResponseBody extends TeaModel {
         }
 
         /**
-         * The status.
+         * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder status(Boolean status) {
             this.status = status;

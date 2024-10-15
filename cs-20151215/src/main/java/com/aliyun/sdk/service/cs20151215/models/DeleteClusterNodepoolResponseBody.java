@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteClusterNodepoolResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteClusterNodepoolResponseBody</p>
@@ -49,7 +50,10 @@ public class DeleteClusterNodepoolResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7263C978-3DBD-4E06-B319-793B38A2F388</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteEdgeMachineRequest} extends {@link RequestModel}
  *
  * <p>DeleteEdgeMachineRequest</p>
@@ -68,7 +69,11 @@ public class DeleteEdgeMachineRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud-native box.
+         * <p>The ID of the cloud-native box.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc0725ddf688744979cd98445f67e****</p>
          */
         public Builder edgeMachineid(String edgeMachineid) {
             this.putPathParameter("edge_machineid", edgeMachineid);
@@ -77,13 +82,15 @@ public class DeleteEdgeMachineRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcefully delete the cloud-native box. Valid values:
-         * <p>
+         * <p>Specifies whether to forcefully delete the cloud-native box. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: forcefully deletes the cloud-native box.</li>
+         * <li><code>false</code>: does not forcefully delete the cloud-native box.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: forcefully deletes the cloud-native box.
-         * *   `false`: does not forcefully delete the cloud-native box.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>true/false</p>
          */
         public Builder force(String force) {
             this.putQueryParameter("force", force);

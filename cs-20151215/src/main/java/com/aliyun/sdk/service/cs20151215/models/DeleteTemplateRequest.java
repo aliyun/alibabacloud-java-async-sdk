@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTemplateRequest} extends {@link RequestModel}
  *
  * <p>DeleteTemplateRequest</p>
@@ -54,7 +55,11 @@ public class DeleteTemplateRequest extends Request {
         } 
 
         /**
-         * The ID of the orchestration template.
+         * <p>The ID of the orchestration template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20663627-81ee-4cfe-9b69-c96fcb84a674</p>
          */
         public Builder templateId(String templateId) {
             this.putPathParameter("TemplateId", templateId);

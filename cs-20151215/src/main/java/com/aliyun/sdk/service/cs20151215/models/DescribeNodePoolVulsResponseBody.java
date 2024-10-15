@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNodePoolVulsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNodePoolVulsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
         private Boolean vulsFixServicePurchased; 
 
         /**
-         * The node pool vulnerabilities.
+         * <p>The node pool vulnerabilities.</p>
          */
         public Builder vulRecords(java.util.List < VulRecords> vulRecords) {
             this.vulRecords = vulRecords;
@@ -57,7 +58,10 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
         }
 
         /**
-         * vuls_fix_service_purchased.
+         * <p>Whether the Cloud Security CVE Remediation Service has been purchased</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder vulsFixServicePurchased(Boolean vulsFixServicePurchased) {
             this.vulsFixServicePurchased = vulsFixServicePurchased;
@@ -70,6 +74,12 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNodePoolVulsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNodePoolVulsResponseBody</p>
+     */
     public static class VulList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("alias_name")
         private String aliasName;
@@ -145,7 +155,10 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             private Boolean needReboot; 
 
             /**
-             * The alias of the vulnerability.
+             * <p>The alias of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RHSA-2019:3197-Important: sudo security update</p>
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -153,7 +166,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             }
 
             /**
-             * A list of CVE names corresponding to the vulnerabilities.
+             * <p>A list of CVE names corresponding to the vulnerabilities.</p>
              */
             public Builder cveList(java.util.List < String > cveList) {
                 this.cveList = cveList;
@@ -161,7 +174,10 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the vulnerability.
+             * <p>The name of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oval:com.redhat.rhsa:def:20193197</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -169,14 +185,16 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level of the vulnerability.
-             * <p>
+             * <p>The severity level of the vulnerability.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>nntf: You can ignore the vulnerability.</li>
+             * <li>later: You can fix the vulnerability later.</li>
+             * <li>asap: You need to fix the vulnerability at the earliest opportunity.</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   nntf: You can ignore the vulnerability.
-             * *   later: You can fix the vulnerability later.
-             * *   asap: You need to fix the vulnerability at the earliest opportunity.
+             * <strong>example:</strong>
+             * <p>asap</p>
              */
             public Builder necessity(String necessity) {
                 this.necessity = necessity;
@@ -184,7 +202,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a restart is required.
+             * <p>Indicates whether a restart is required.</p>
              */
             public Builder needReboot(Boolean needReboot) {
                 this.needReboot = needReboot;
@@ -198,6 +216,12 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNodePoolVulsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNodePoolVulsResponseBody</p>
+     */
     public static class VulRecords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("instance_id")
         private String instanceId;
@@ -249,7 +273,10 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             private java.util.List < VulList> vulList; 
 
             /**
-             * The ID of the node.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-t4n2qolb0wtzt0pz****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -257,7 +284,10 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             }
 
             /**
-             * The node name. This name is the identifier of the node in the cluster.
+             * <p>The node name. This name is the identifier of the node in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou.192.168.x.x</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -265,7 +295,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             }
 
             /**
-             * A list of vulnerabilities.
+             * <p>A list of vulnerabilities.</p>
              */
             public Builder vulList(java.util.List < VulList> vulList) {
                 this.vulList = vulList;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartAlertRequest} extends {@link RequestModel}
  *
  * <p>StartAlertRequest</p>
@@ -82,7 +83,11 @@ public class StartAlertRequest extends Request {
         } 
 
         /**
-         * The cluster ID. You can call the ListClusters operation to query the cluster ID.
+         * <p>The cluster ID. You can call the ListClusters operation to query the cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c245ff43c717f494489f42f5f1575e98d</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -91,7 +96,7 @@ public class StartAlertRequest extends Request {
         }
 
         /**
-         * The name of the alert rule set to be enabled.
+         * <p>The name of the alert rule set to be enabled.</p>
          */
         public Builder alertRuleGroupName(String alertRuleGroupName) {
             this.putBodyParameter("alert_rule_group_name", alertRuleGroupName);
@@ -100,7 +105,7 @@ public class StartAlertRequest extends Request {
         }
 
         /**
-         * The name of the alert rule to be enabled. If you do not specify an alert rule name, the alert rule set is enabled.
+         * <p>The name of the alert rule to be enabled. If you do not specify an alert rule name, the alert rule set is enabled.</p>
          */
         public Builder alertRuleName(String alertRuleName) {
             this.putBodyParameter("alert_rule_name", alertRuleName);

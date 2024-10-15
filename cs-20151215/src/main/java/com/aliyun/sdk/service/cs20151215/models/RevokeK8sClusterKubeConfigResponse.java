@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RevokeK8sClusterKubeConfigResponse} extends {@link TeaModel}
  *
  * <p>RevokeK8sClusterKubeConfigResponse</p>

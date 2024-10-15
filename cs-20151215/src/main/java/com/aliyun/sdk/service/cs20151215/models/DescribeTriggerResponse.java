@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTriggerResponse} extends {@link TeaModel}
  *
  * <p>DescribeTriggerResponse</p>
@@ -122,6 +123,12 @@ public class DescribeTriggerResponse extends Response {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTriggerResponse} extends {@link TeaModel}
+     *
+     * <p>DescribeTriggerResponse</p>
+     */
     public static class DescribeTriggerResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("id")
         private String id;
@@ -221,7 +228,10 @@ public class DescribeTriggerResponse extends Response {
             private String token; 
 
             /**
-             * The ID of the trigger.
+             * <p>The ID of the trigger.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -229,7 +239,10 @@ public class DescribeTriggerResponse extends Response {
             }
 
             /**
-             * The name of the trigger.
+             * <p>The name of the trigger.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -237,7 +250,10 @@ public class DescribeTriggerResponse extends Response {
             }
 
             /**
-             * The ID of the associated cluster.
+             * <p>The ID of the associated cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c259f563386444ebb8d7****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -245,10 +261,11 @@ public class DescribeTriggerResponse extends Response {
             }
 
             /**
-             * The name of the project.
-             * <p>
+             * <p>The name of the project.</p>
+             * <p>The name consists of the namespace where the application is deployed and the name of the application. The format is <code>${namespace}/${name}</code>. Example: default/test-app.</p>
              * 
-             * The name consists of the namespace where the application is deployed and the name of the application. The format is `${namespace}/${name}`. Example: default/test-app.
+             * <strong>example:</strong>
+             * <p>default/test-app</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -256,15 +273,16 @@ public class DescribeTriggerResponse extends Response {
             }
 
             /**
-             * The type of trigger.
-             * <p>
+             * <p>The type of trigger.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><code>deployment</code>: performs actions on Deployments.</li>
+             * <li><code>application</code>: performs actions on applications that are deployed in Application Center.</li>
+             * </ul>
+             * <p>Default value: <code>deployment</code>.</p>
              * 
-             * Valid values:
-             * 
-             * *   `deployment`: performs actions on Deployments.
-             * *   `application`: performs actions on applications that are deployed in Application Center.
-             * 
-             * Default value: `deployment`.
+             * <strong>example:</strong>
+             * <p>deployment</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -272,10 +290,11 @@ public class DescribeTriggerResponse extends Response {
             }
 
             /**
-             * The action that the trigger performs. The value is set to redeploy.
-             * <p>
+             * <p>The action that the trigger performs. The value is set to redeploy.</p>
+             * <p><code>redeploy</code>: redeploys the resource specified by project_id.</p>
              * 
-             * `redeploy`: redeploys the resource specified by project_id.
+             * <strong>example:</strong>
+             * <p>redeploy</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -283,7 +302,10 @@ public class DescribeTriggerResponse extends Response {
             }
 
             /**
-             * The token information.
+             * <p>The token information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eyJhbGci***</p>
              */
             public Builder token(String token) {
                 this.token = token;

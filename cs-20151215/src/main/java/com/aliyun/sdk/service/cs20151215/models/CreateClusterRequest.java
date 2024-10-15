@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateClusterRequest} extends {@link RequestModel}
  *
  * <p>CreateClusterRequest</p>
@@ -155,6 +156,10 @@ public class CreateClusterRequest extends Request {
     private String loginPassword;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("maintenance_window")
+    private MaintenanceWindow maintenanceWindow;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("master_auto_renew")
     private Boolean masterAutoRenew;
 
@@ -231,6 +236,10 @@ public class CreateClusterRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("num_of_nodes")
     @Deprecated
     private Long numOfNodes;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("operation_policy")
+    private OperationPolicy operationPolicy;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("os_type")
@@ -448,6 +457,7 @@ public class CreateClusterRequest extends Request {
         this.loadBalancerSpec = builder.loadBalancerSpec;
         this.loggingType = builder.loggingType;
         this.loginPassword = builder.loginPassword;
+        this.maintenanceWindow = builder.maintenanceWindow;
         this.masterAutoRenew = builder.masterAutoRenew;
         this.masterAutoRenewPeriod = builder.masterAutoRenewPeriod;
         this.masterCount = builder.masterCount;
@@ -467,6 +477,7 @@ public class CreateClusterRequest extends Request {
         this.nodePortRange = builder.nodePortRange;
         this.nodepools = builder.nodepools;
         this.numOfNodes = builder.numOfNodes;
+        this.operationPolicy = builder.operationPolicy;
         this.osType = builder.osType;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
@@ -769,6 +780,13 @@ public class CreateClusterRequest extends Request {
     }
 
     /**
+     * @return maintenanceWindow
+     */
+    public MaintenanceWindow getMaintenanceWindow() {
+        return this.maintenanceWindow;
+    }
+
+    /**
      * @return masterAutoRenew
      */
     public Boolean getMasterAutoRenew() {
@@ -899,6 +917,13 @@ public class CreateClusterRequest extends Request {
      */
     public Long getNumOfNodes() {
         return this.numOfNodes;
+    }
+
+    /**
+     * @return operationPolicy
+     */
+    public OperationPolicy getOperationPolicy() {
+        return this.operationPolicy;
     }
 
     /**
@@ -1224,6 +1249,7 @@ public class CreateClusterRequest extends Request {
         private String loadBalancerSpec; 
         private String loggingType; 
         private String loginPassword; 
+        private MaintenanceWindow maintenanceWindow; 
         private Boolean masterAutoRenew; 
         private Long masterAutoRenewPeriod; 
         private Long masterCount; 
@@ -1243,6 +1269,7 @@ public class CreateClusterRequest extends Request {
         private String nodePortRange; 
         private java.util.List < Nodepool > nodepools; 
         private Long numOfNodes; 
+        private OperationPolicy operationPolicy; 
         private String osType; 
         private Long period; 
         private String periodUnit; 
@@ -1326,6 +1353,7 @@ public class CreateClusterRequest extends Request {
             this.loadBalancerSpec = request.loadBalancerSpec;
             this.loggingType = request.loggingType;
             this.loginPassword = request.loginPassword;
+            this.maintenanceWindow = request.maintenanceWindow;
             this.masterAutoRenew = request.masterAutoRenew;
             this.masterAutoRenewPeriod = request.masterAutoRenewPeriod;
             this.masterCount = request.masterCount;
@@ -1345,6 +1373,7 @@ public class CreateClusterRequest extends Request {
             this.nodePortRange = request.nodePortRange;
             this.nodepools = request.nodepools;
             this.numOfNodes = request.numOfNodes;
+            this.operationPolicy = request.operationPolicy;
             this.osType = request.osType;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
@@ -1389,7 +1418,7 @@ public class CreateClusterRequest extends Request {
         } 
 
         /**
-         * The network access control list (ACL) of the SLB instance associated with the API server if the cluster is a registered cluster.
+         * <p>The network access control list (ACL) of the SLB instance associated with the API server if the cluster is a registered cluster.</p>
          */
         public Builder accessControlList(java.util.List < String > accessControlList) {
             this.putBodyParameter("access_control_list", accessControlList);
@@ -1398,33 +1427,27 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The components that you want to install in the cluster. When you create a cluster, you can configure the `addons` parameter to specify the components that you want to install.
-         * <p>
-         * 
-         * **Network plug-in**: required. The Flannel and Terway plug-ins are supported. Select one of the plug-ins for the cluster.
-         * 
-         * *   If you want to use the Terway component, specify the network plug-in in the \[{"name":"flannel","config":""}] format.
-         * *   If you want to use the Terway component, specify the value network plug-in in the \[{"Name": "terway-eniip","Config": ""}] format.
-         * 
-         * **Volume plug-in**: optional. Only the `Container Storage Interface (CSI)` plug-in is supported.
-         * 
-         * Specify the `CSI` plug-in in the following format: \[{"name":"csi-plugin","config": ""},{"name": "csi-provisioner","config": ""}].
-         * 
-         * **Simple Log Service component**: optional. We recommend that you enable Simple Log Service. If Simple Log Service is disabled, you cannot use the cluster auditing feature.
-         * 
-         * *   Specify an existing `Simple Log Service project` in the following format: \[{"name": "logtail-ds","config": "{"IngressDashboardEnabled":"true","sls_project_name":"your_sls_project_name"}"}].
-         * *   To create a `Simple Log Service project`, specify the component in the following format: \[{"name": "logtail-ds","config": "{"IngressDashboardEnabled":"true"}"}].
-         * 
-         * **Ingress controller**: optional. By default, the `nginx-ingress-controller` component is installed in ACK dedicated clusters.
-         * 
-         * *   To install nginx-ingress-controller and enable Internet access, specify the Ingress controller in the following format: \[{"name":"nginx-ingress-controller","config":"{"IngressSlbNetworkType":"internet"}"}].
-         * *   To disable the automatic installation of nginx-ingress-controller, specify the Ingress controller in the following format: \[{"name": "nginx-ingress-controller","config": "","disabled": true}].
-         * 
-         * **Event center**: optional. By default, the event center feature is enabled.
-         * 
-         * You can use ACK event centers to store and query events and configure alerts. You can use the Logstores that are associated with ACK event centers free of charge within 90 days. For more information, see [Create and use an event center](~~150476~~).
-         * 
-         * To enable the event center feature, specify the event center component in the following format: \[{"name":"ack-node-problem-detector","config":"{"sls_project_name":"your_sls_project_name"}"}].
+         * <p>The components that you want to install in the cluster. When you create a cluster, you can configure the <code>addons</code> parameter to specify the components that you want to install.</p>
+         * <p><strong>Network plug-in</strong>: required. The Flannel and Terway plug-ins are supported. Select one of the plug-ins for the cluster.</p>
+         * <ul>
+         * <li>If you want to use the Terway component, specify the network plug-in in the [{&quot;name&quot;:&quot;flannel&quot;,&quot;config&quot;:&quot;&quot;}] format.</li>
+         * <li>If you want to use the Terway component, specify the value network plug-in in the [{&quot;Name&quot;: &quot;terway-eniip&quot;,&quot;Config&quot;: &quot;&quot;}] format.</li>
+         * </ul>
+         * <p><strong>Volume plug-in</strong>: optional. Only the <code>Container Storage Interface (CSI)</code> plug-in is supported.</p>
+         * <p>Specify the <code>CSI</code> plug-in in the following format: [{&quot;name&quot;:&quot;csi-plugin&quot;,&quot;config&quot;: &quot;&quot;},{&quot;name&quot;: &quot;csi-provisioner&quot;,&quot;config&quot;: &quot;&quot;}].</p>
+         * <p><strong>Simple Log Service component</strong>: optional. We recommend that you enable Simple Log Service. If Simple Log Service is disabled, you cannot use the cluster auditing feature.</p>
+         * <ul>
+         * <li>Specify an existing <code>Simple Log Service project</code> in the following format: [{&quot;name&quot;: &quot;logtail-ds&quot;,&quot;config&quot;: &quot;{&quot;IngressDashboardEnabled&quot;:&quot;true&quot;,&quot;sls_project_name&quot;:&quot;your_sls_project_name&quot;}&quot;}].</li>
+         * <li>To create a <code>Simple Log Service project</code>, specify the component in the following format: [{&quot;name&quot;: &quot;logtail-ds&quot;,&quot;config&quot;: &quot;{&quot;IngressDashboardEnabled&quot;:&quot;true&quot;}&quot;}].</li>
+         * </ul>
+         * <p><strong>Ingress controller</strong>: optional. By default, the <code>nginx-ingress-controller</code> component is installed in ACK dedicated clusters.</p>
+         * <ul>
+         * <li>To install nginx-ingress-controller and enable Internet access, specify the Ingress controller in the following format: [{&quot;name&quot;:&quot;nginx-ingress-controller&quot;,&quot;config&quot;:&quot;{&quot;IngressSlbNetworkType&quot;:&quot;internet&quot;}&quot;}].</li>
+         * <li>To disable the automatic installation of nginx-ingress-controller, specify the Ingress controller in the following format: [{&quot;name&quot;: &quot;nginx-ingress-controller&quot;,&quot;config&quot;: &quot;&quot;,&quot;disabled&quot;: true}].</li>
+         * </ul>
+         * <p><strong>Event center</strong>: optional. By default, the event center feature is enabled.</p>
+         * <p>You can use ACK event centers to store and query events and configure alerts. You can use the Logstores that are associated with ACK event centers free of charge within 90 days. For more information, see <a href="https://help.aliyun.com/document_detail/150476.html">Create and use an event center</a>.</p>
+         * <p>To enable the event center feature, specify the event center component in the following format: [{&quot;name&quot;:&quot;ack-node-problem-detector&quot;,&quot;config&quot;:&quot;{&quot;sls_project_name&quot;:&quot;your_sls_project_name&quot;}&quot;}].</p>
          */
         public Builder addons(java.util.List < Addon > addons) {
             this.putBodyParameter("addons", addons);
@@ -1433,10 +1456,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Service accounts provide identities for pods when pods communicate with the `API server` of the cluster. The `api-audiences` parameter validates `tokens` and is used by the `API server` to check whether the `tokens` of requests are valid. Separate multiple values with commas (,).``
-         * <p>
+         * <p>Service accounts provide identities for pods when pods communicate with the <code>API server</code> of the cluster. The <code>api-audiences</code> parameter validates <code>tokens</code> and is used by the <code>API server</code> to check whether the <code>tokens</code> of requests are valid. Separate multiple values with commas (,).``</p>
+         * <p>For more information about <code>service accounts</code>, see <a href="https://help.aliyun.com/document_detail/160384.html">Enable service account token volume projection</a>.</p>
          * 
-         * For more information about `service accounts`, see [Enable service account token volume projection](~~160384~~).
+         * <strong>example:</strong>
+         * <p>kubernetes.default.svc</p>
          */
         public Builder apiAudiences(String apiAudiences) {
             this.putBodyParameter("api_audiences", apiAudiences);
@@ -1445,7 +1469,16 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * auto_renew.
+         * <p>Specifies whether to enable auto-renewal, which takes effect only when the <code>charge_type</code> value is set to <code>PrePaid</code>. </p>
+         * <p>Possible values:</p>
+         * <ul>
+         * <li><code>true</code>: Enable auto-renewal. </li>
+         * <li><code>false</code>: Do not auto-renew.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putBodyParameter("auto_renew", autoRenew);
@@ -1454,7 +1487,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * auto_renew_period.
+         * <p>Renewal period, which takes effect only when Prepaid and Auto-Renewal are selected. When <code>PeriodUnit=Month</code>, the value range is {1, 2, 3, 6, 12}.
+         * Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder autoRenewPeriod(Long autoRenewPeriod) {
             this.putBodyParameter("auto_renew_period", autoRenewPeriod);
@@ -1463,20 +1500,16 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The billing method of the cluster. The following resources are billed on a subscription basis:
-         * <p>
+         * <p>The billing method of the cluster. The following resources are billed on a subscription basis:</p>
+         * <p>ECS instances in node pools.</p>
+         * <p>The internal-facing SLB instance associated with the API server.</p>
+         * <p>Valid values:</p>
+         * <p>PrePaid: subscription.</p>
+         * <p>PostPaid: pay-as-you-go.</p>
+         * <p>Default value: PostPaid.</p>
          * 
-         * ECS instances in node pools.
-         * 
-         * The internal-facing SLB instance associated with the API server.
-         * 
-         * Valid values:
-         * 
-         * PrePaid: subscription.
-         * 
-         * PostPaid: pay-as-you-go.
-         * 
-         * Default value: PostPaid.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder chargeType(String chargeType) {
             this.putBodyParameter("charge_type", chargeType);
@@ -1485,7 +1518,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use security_hardening_os instead.
+         * <p>This parameter is deprecated. Use security_hardening_os instead.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder cisEnabled(Boolean cisEnabled) {
             this.putBodyParameter("cis_enabled", cisEnabled);
@@ -1494,13 +1530,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to install the CloudMonitor agent. Valid values:
-         * <p>
+         * <p>Specifies whether to install the CloudMonitor agent. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: installs the CloudMonitor agent.</li>
+         * <li><code>false</code>: does not install the CloudMonitor agent.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: installs the CloudMonitor agent.
-         * *   `false`: does not install the CloudMonitor agent.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder cloudMonitorFlags(Boolean cloudMonitorFlags) {
             this.putBodyParameter("cloud_monitor_flags", cloudMonitorFlags);
@@ -1509,10 +1547,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The domain name of the cluster.
-         * <p>
+         * <p>The domain name of the cluster.</p>
+         * <p>The domain name can contain one or more parts that are separated by periods (.). Each part cannot exceed 63 characters in length, and can contain lowercase letters, digits, and hyphens (-). Each part must start and end with a lowercase letter or digit.</p>
          * 
-         * The domain name can contain one or more parts that are separated by periods (.). Each part cannot exceed 63 characters in length, and can contain lowercase letters, digits, and hyphens (-). Each part must start and end with a lowercase letter or digit.
+         * <strong>example:</strong>
+         * <p>cluster.local</p>
          */
         public Builder clusterDomain(String clusterDomain) {
             this.putBodyParameter("cluster_domain", clusterDomain);
@@ -1521,11 +1560,14 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * After you set `cluster_type` to `ManagedKubernetes` and configure the `profile` parameter, you can further specify the cluster edition. Valid values:
-         * <p>
+         * <p>After you set <code>cluster_type</code> to <code>ManagedKubernetes</code> and configure the <code>profile</code> parameter, you can further specify the cluster edition. Valid values:</p>
+         * <ul>
+         * <li><code>ack.pro.small</code>: Pro Edition.</li>
+         * <li><code>ack.standard</code>: Basic Edition. If you leave the parameter empty, an ACK Basic cluster is created.</li>
+         * </ul>
          * 
-         * *   `ack.pro.small`: Pro Edition.
-         * *   `ack.standard`: Basic Edition. If you leave the parameter empty, an ACK Basic cluster is created.
+         * <strong>example:</strong>
+         * <p>ack.pro.small</p>
          */
         public Builder clusterSpec(String clusterSpec) {
             this.putBodyParameter("cluster_spec", clusterSpec);
@@ -1534,10 +1576,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * *   `Kubernetes`: ACK dedicated cluster.
-         * <p>
-         * *   `ManagedKubernetes`: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless clusters (Basic Edition and Pro Edition), ACK Edge clusters (Basic Edition and Pro Edition), and ACK Lingjun clusters (Pro Edition).
-         * *   `ExternalKubernetes`: registered cluster.
+         * <ul>
+         * <li><code>Kubernetes</code>: ACK dedicated cluster.</li>
+         * <li><code>ManagedKubernetes</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless clusters (Basic Edition and Pro Edition), ACK Edge clusters (Basic Edition and Pro Edition), and ACK Lingjun clusters (Pro Edition).</li>
+         * <li><code>ExternalKubernetes</code>: registered cluster.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Kubernetes</p>
          */
         public Builder clusterType(String clusterType) {
             this.putBodyParameter("cluster_type", clusterType);
@@ -1546,12 +1593,14 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The pod CIDR block. You can specify 10.0.0.0/8, 172.16-31.0.0/12-16, 192.168.0.0/16, or their subnets as the pod CIDR block. The pod CIDR block cannot overlap with the CIDR block of the VPC in which the cluster is deployed and the CIDR blocks of existing clusters in the VPC. You cannot modify the pod CIDR block after you create the cluster.
-         * <p>
+         * <p>The pod CIDR block. You can specify 10.0.0.0/8, 172.16-31.0.0/12-16, 192.168.0.0/16, or their subnets as the pod CIDR block. The pod CIDR block cannot overlap with the CIDR block of the VPC in which the cluster is deployed and the CIDR blocks of existing clusters in the VPC. You cannot modify the pod CIDR block after you create the cluster.</p>
+         * <p>For more information about how to plan the network of an ACK cluster, see <a href="https://help.aliyun.com/document_detail/86500.html">Plan the network of an ACK cluster</a>.</p>
+         * <blockquote>
+         * <p> This parameter is required if the cluster uses the Flannel plug-in.</p>
+         * </blockquote>
          * 
-         * For more information about how to plan the network of an ACK cluster, see [Plan the network of an ACK cluster](~~86500~~).
-         * 
-         * >  This parameter is required if the cluster uses the Flannel plug-in.
+         * <strong>example:</strong>
+         * <p>172.20.0.0/16</p>
          */
         public Builder containerCidr(String containerCidr) {
             this.putBodyParameter("container_cidr", containerCidr);
@@ -1560,10 +1609,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The list of control plane components for which you want to enable log collection.
-         * <p>
-         * 
-         * By default, the logs of kube-apiserver, kube-controller-manager, and kube-scheduler are collected.
+         * <p>The list of control plane components for which you want to enable log collection.</p>
+         * <p>By default, the logs of kube-apiserver, kube-controller-manager, and kube-scheduler are collected.</p>
          */
         public Builder controlplaneLogComponents(java.util.List < String > controlplaneLogComponents) {
             this.putBodyParameter("controlplane_log_components", controlplaneLogComponents);
@@ -1572,7 +1619,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The Simple Log Service project that is used to store the logs of control plane components. You can use an existing project or create one. If you choose to create a Simple Log Service project, the created project is named in the `k8s-log-{ClusterID}` format.
+         * <p>The Simple Log Service project that is used to store the logs of control plane components. You can use an existing project or create one. If you choose to create a Simple Log Service project, the created project is named in the <code>k8s-log-{ClusterID}</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k8s-log-xxx</p>
          */
         public Builder controlplaneLogProject(String controlplaneLogProject) {
             this.putBodyParameter("controlplane_log_project", controlplaneLogProject);
@@ -1581,7 +1631,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The retention period of control plane logs in days.
+         * <p>The retention period of control plane logs in days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder controlplaneLogTtl(String controlplaneLogTtl) {
             this.putBodyParameter("controlplane_log_ttl", controlplaneLogTtl);
@@ -1590,13 +1643,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The CPU management policy of nodes in the node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:
-         * <p>
+         * <p>The CPU management policy of nodes in the node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:</p>
+         * <ul>
+         * <li><code>static</code>: allows pods with specific resource characteristics on the node to be granted with enhanced CPU affinity and exclusivity.</li>
+         * <li><code>none</code>: specifies that the default CPU affinity is used.</li>
+         * </ul>
+         * <p>Default value: <code>none</code>.</p>
          * 
-         * *   `static`: allows pods with specific resource characteristics on the node to be granted with enhanced CPU affinity and exclusivity.
-         * *   `none`: specifies that the default CPU affinity is used.
-         * 
-         * Default value: `none`.
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         public Builder cpuPolicy(String cpuPolicy) {
             this.putBodyParameter("cpu_policy", cpuPolicy);
@@ -1605,7 +1660,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The custom subject alternative names (SANs) for the API server certificate to accept requests from specified IP addresses or domain names. Separate multiple IP addresses and domain names with commas (,).
+         * <p>The custom subject alternative names (SANs) for the API server certificate to accept requests from specified IP addresses or domain names. Separate multiple IP addresses and domain names with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cs.aliyun.com</p>
          */
         public Builder customSan(String customSan) {
             this.putBodyParameter("custom_san", customSan);
@@ -1614,13 +1672,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable cluster deletion protection. If this option is enabled, the cluster cannot be deleted in the ACK console or by calling API operations. Valid values:
-         * <p>
+         * <p>Specifies whether to enable cluster deletion protection. If this option is enabled, the cluster cannot be deleted in the ACK console or by calling API operations. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables deletion protection for the cluster. This way, the cluster cannot be deleted in the ACK console or by calling API operations.</li>
+         * <li><code>false</code>: disables deletion protection for the cluster. This way, the cluster can be deleted in the ACK console or by calling API operations.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: enables deletion protection for the cluster. This way, the cluster cannot be deleted in the ACK console or by calling API operations.
-         * *   `false`: disables deletion protection for the cluster. This way, the cluster can be deleted in the ACK console or by calling API operations.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putBodyParameter("deletion_protection", deletionProtection);
@@ -1629,13 +1689,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a rollback when the cluster fails to be created. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a rollback when the cluster fails to be created. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: performs a rollback when the cluster fails to be created.</li>
+         * <li><code>false</code>: does not perform a rollback when the cluster fails to be created.</li>
+         * </ul>
+         * <p>Default value: <code>true</code>.</p>
          * 
-         * *   `true`: performs a rollback when the cluster fails to be created.
-         * *   `false`: does not perform a rollback when the cluster fails to be created.
-         * 
-         * Default value: `true`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder disableRollback(Boolean disableRollback) {
             this.putBodyParameter("disable_rollback", disableRollback);
@@ -1644,7 +1706,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the RAM Roles for Service Accounts (RRSA) feature.
+         * <p>Specifies whether to enable the RAM Roles for Service Accounts (RRSA) feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableRrsa(Boolean enableRrsa) {
             this.putBodyParameter("enable_rrsa", enableRrsa);
@@ -1653,10 +1718,13 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The ID of the Key Management Service (KMS) key that is used to encrypt the system disk. For more information, see [What is KMS?](~~28935~~)
-         * <p>
+         * <p>The ID of the Key Management Service (KMS) key that is used to encrypt the system disk. For more information, see <a href="https://help.aliyun.com/document_detail/28935.html">What is KMS?</a></p>
+         * <blockquote>
+         * <p> The key can be used only in ACK Pro clusters.</p>
+         * </blockquote>
          * 
-         * >  The key can be used only in ACK Pro clusters.
+         * <strong>example:</strong>
+         * <p>0fe64791-55eb-4fc7-84c5-c6c7cdca****</p>
          */
         public Builder encryptionProviderKey(String encryptionProviderKey) {
             this.putBodyParameter("encryption_provider_key", encryptionProviderKey);
@@ -1665,13 +1733,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Internet access for the cluster. You can use an elastic IP address (EIP) to expose the API server. This way, you can access the cluster over the Internet. Valid values:
-         * <p>
+         * <p>Specifies whether to enable Internet access for the cluster. You can use an elastic IP address (EIP) to expose the API server. This way, you can access the cluster over the Internet. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables Internet access for the cluster.</li>
+         * <li><code>false</code>: disables Internet access for the cluster. If you set the value to false, the API server cannot be accessed over the Internet.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: enables Internet access for the cluster.
-         * *   `false`: disables Internet access for the cluster. If you set the value to false, the API server cannot be accessed over the Internet.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder endpointPublicAccess(Boolean endpointPublicAccess) {
             this.putBodyParameter("endpoint_public_access", endpointPublicAccess);
@@ -1680,18 +1750,20 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to mount a data disk to a node that is created based on an existing ECS instance. Valid values:
-         * <p>
+         * <p>Specifies whether to mount a data disk to a node that is created based on an existing ECS instance. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: stores the data of containers and images on a data disk. The existing data stored on the data disk is lost. Back up the existing data first.</li>
+         * <li><code>false</code>: does not store the data of containers and images on a data disk.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
+         * <p>How data disks are mounted:</p>
+         * <ul>
+         * <li>If an ECS instance has data disks mounted and the file system of the last data disk is not initialized, the system automatically formats the data disk to ext4. Then, the system mounts the data disk to /var/lib/docker and /var/lib/kubelet.</li>
+         * <li>If no data disk is mounted to the ECS instance, the system does not purchase a new data disk.</li>
+         * </ul>
          * 
-         * *   `true`: stores the data of containers and images on a data disk. The existing data stored on the data disk is lost. Back up the existing data first.
-         * *   `false`: does not store the data of containers and images on a data disk.
-         * 
-         * Default value: `false`.
-         * 
-         * How data disks are mounted:
-         * 
-         * *   If an ECS instance has data disks mounted and the file system of the last data disk is not initialized, the system automatically formats the data disk to ext4. Then, the system mounts the data disk to /var/lib/docker and /var/lib/kubelet.
-         * *   If no data disk is mounted to the ECS instance, the system does not purchase a new data disk.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder formatDisk(Boolean formatDisk) {
             this.putBodyParameter("format_disk", formatDisk);
@@ -1700,7 +1772,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The custom image. By default, the image provided by ACK is used. You can select a custom image to replace the default image. For more information, see [Use a custom image to create an ACK cluster](~~146647~~).
+         * <p>The custom image. By default, the image provided by ACK is used. You can select a custom image to replace the default image. For more information, see <a href="https://help.aliyun.com/document_detail/146647.html">Use a custom image to create an ACK cluster</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-bp16z7xko3vvv8gt****</p>
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("image_id", imageId);
@@ -1709,20 +1784,22 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The type of OS distribution that you want to use. To specify the node OS, we recommend that you use this parameter. Valid values:
-         * <p>
+         * <p>The type of OS distribution that you want to use. To specify the node OS, we recommend that you use this parameter. Valid values:</p>
+         * <ul>
+         * <li>CentOS</li>
+         * <li>AliyunLinux</li>
+         * <li>AliyunLinux Qboot</li>
+         * <li>AliyunLinuxUEFI</li>
+         * <li>AliyunLinux3</li>
+         * <li>Windows</li>
+         * <li>WindowsCore</li>
+         * <li>AliyunLinux3Arm64</li>
+         * <li>ContainerOS</li>
+         * </ul>
+         * <p>Default value: <code>CentOS</code>.</p>
          * 
-         * *   CentOS
-         * *   AliyunLinux
-         * *   AliyunLinux Qboot
-         * *   AliyunLinuxUEFI
-         * *   AliyunLinux3
-         * *   Windows
-         * *   WindowsCore
-         * *   AliyunLinux3Arm64
-         * *   ContainerOS
-         * 
-         * Default value: `CentOS`.
+         * <strong>example:</strong>
+         * <p>AliyunLinux</p>
          */
         public Builder imageType(String imageType) {
             this.putBodyParameter("image_type", imageType);
@@ -1731,10 +1808,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The existing ECS instances that are specified as worker nodes for the cluster.
-         * <p>
-         * 
-         * >  This parameter is required if you create worker nodes on existing ECS instances.
+         * <p>The existing ECS instances that are specified as worker nodes for the cluster.</p>
+         * <blockquote>
+         * <p> This parameter is required if you create worker nodes on existing ECS instances.</p>
+         * </blockquote>
          */
         public Builder instances(java.util.List < String > instances) {
             this.putBodyParameter("instances", instances);
@@ -1743,7 +1820,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The IP stack of the cluster.
+         * <p>The IP stack of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Optional value: ipv4 (Single stack) or ipv6 (Dual Stack)
+         * Default value: IPV4</p>
          */
         public Builder ipStack(String ipStack) {
             this.putBodyParameter("ip_stack", ipStack);
@@ -1752,15 +1833,18 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to create an advanced security group. This parameter takes effect only if `security_group_id` is not specified.
-         * <p>
+         * <p>Specifies whether to create an advanced security group. This parameter takes effect only if <code>security_group_id</code> is not specified.</p>
+         * <blockquote>
+         * <p> To use a basic security group, make sure that the sum of the number of nodes in the cluster and the number of pods that use Terway does not exceed 2,000. Therefore, we recommend that you specify an advanced security group for a cluster that uses Terway.</p>
+         * </blockquote>
+         * <ul>
+         * <li><code>true</code>: creates an advanced security group.</li>
+         * <li><code>false</code>: does not create an advanced security group.</li>
+         * </ul>
+         * <p>Default value: <code>true</code>.</p>
          * 
-         * >  To use a basic security group, make sure that the sum of the number of nodes in the cluster and the number of pods that use Terway does not exceed 2,000. Therefore, we recommend that you specify an advanced security group for a cluster that uses Terway.
-         * 
-         * *   `true`: creates an advanced security group.
-         * *   `false`: does not create an advanced security group.
-         * 
-         * Default value: `true`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isEnterpriseSecurityGroup(Boolean isEnterpriseSecurityGroup) {
             this.putBodyParameter("is_enterprise_security_group", isEnterpriseSecurityGroup);
@@ -1769,13 +1853,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to retain the names of existing ECS instances that are used in the cluster. Valid values:
-         * <p>
+         * <p>Specifies whether to retain the names of existing ECS instances that are used in the cluster. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: retains the names.</li>
+         * <li><code>false</code>: does not retain the names. The system assigns new names.</li>
+         * </ul>
+         * <p>Default value: <code>true</code>.</p>
          * 
-         * *   `true`: retains the names.
-         * *   `false`: does not retain the names. The system assigns new names.
-         * 
-         * Default value: `true`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder keepInstanceName(Boolean keepInstanceName) {
             this.putBodyParameter("keep_instance_name", keepInstanceName);
@@ -1784,7 +1870,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The name of the key pair. You must specify this parameter or the `login_password` parameter.
+         * <p>The name of the key pair. You must specify this parameter or the <code>login_password</code> parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>secrity-key</p>
          */
         public Builder keyPair(String keyPair) {
             this.putBodyParameter("key_pair", keyPair);
@@ -1793,10 +1882,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the Kubernetes versions supported by open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not specify this parameter, the latest Kubernetes version is used.
-         * <p>
+         * <p>The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the Kubernetes versions supported by open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not specify this parameter, the latest Kubernetes version is used.</p>
+         * <p>You can create clusters of the latest two Kubernetes versions in the ACK console. If you want to create clusters that run earlier Kubernetes versions, use the ACK API. For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Support for Kubernetes versions</a>.</p>
          * 
-         * You can create clusters of the latest two Kubernetes versions in the ACK console. If you want to create clusters that run earlier Kubernetes versions, use the ACK API. For more information about the Kubernetes versions supported by ACK, see [Support for Kubernetes versions](~~185269~~).
+         * <strong>example:</strong>
+         * <p>1.16.9-aliyun.1</p>
          */
         public Builder kubernetesVersion(String kubernetesVersion) {
             this.putBodyParameter("kubernetes_version", kubernetesVersion);
@@ -1805,7 +1895,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * load_balancer_id.
+         * <p>Specifies the CLB instance ID for accessing the APIServer. When this parameter is set, an APIServer CLB will no longer be automatically created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-wz9t256gqa3vbouk****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putBodyParameter("load_balancer_id", loadBalancerId);
@@ -1814,17 +1907,19 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The specification of the Server Load Balancer (SLB) instance. Valid values:
-         * <p>
+         * <p>The specification of the Server Load Balancer (SLB) instance. Valid values:</p>
+         * <ul>
+         * <li>slb.s1.small</li>
+         * <li>slb.s2.small</li>
+         * <li>slb.s2.medium</li>
+         * <li>slb.s3.small</li>
+         * <li>slb.s3.medium</li>
+         * <li>slb.s3.large</li>
+         * </ul>
+         * <p>Default value: <code>slb.s2.small</code>.</p>
          * 
-         * *   slb.s1.small
-         * *   slb.s2.small
-         * *   slb.s2.medium
-         * *   slb.s3.small
-         * *   slb.s3.medium
-         * *   slb.s3.large
-         * 
-         * Default value: `slb.s2.small`.
+         * <strong>example:</strong>
+         * <p>slb.s2.small</p>
          */
         public Builder loadBalancerSpec(String loadBalancerSpec) {
             this.putBodyParameter("load_balancer_spec", loadBalancerSpec);
@@ -1833,7 +1928,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Enables Simple Log Service for the cluster. This parameter takes effect only for ACK Serverless clusters. Valid value: `SLS`.
+         * <p>Enables Simple Log Service for the cluster. This parameter takes effect only for ACK Serverless clusters. Valid value: <code>SLS</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SLS</p>
          */
         public Builder loggingType(String loggingType) {
             this.putBodyParameter("logging_type", loggingType);
@@ -1842,7 +1940,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The password for SSH logon. You must specify this parameter or `key_pair`. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
+         * <p>The password for SSH logon. You must specify this parameter or <code>key_pair</code>. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello@1234</p>
          */
         public Builder loginPassword(String loginPassword) {
             this.putBodyParameter("login_password", loginPassword);
@@ -1851,13 +1952,24 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal for master nodes. This parameter takes effect only when `master_instance_charge_type` is set to `PrePaid`. Valid values:
-         * <p>
+         * maintenance_window.
+         */
+        public Builder maintenanceWindow(MaintenanceWindow maintenanceWindow) {
+            this.putBodyParameter("maintenance_window", maintenanceWindow);
+            this.maintenanceWindow = maintenanceWindow;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to enable auto-renewal for master nodes. This parameter takes effect only when <code>master_instance_charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables auto-renewal.</li>
+         * <li><code>false</code>: disables auto-renewal.</li>
+         * </ul>
+         * <p>Default value: <code>true</code>.</p>
          * 
-         * *   `true`: enables auto-renewal.
-         * *   `false`: disables auto-renewal.
-         * 
-         * Default value: `true`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder masterAutoRenew(Boolean masterAutoRenew) {
             this.putBodyParameter("master_auto_renew", masterAutoRenew);
@@ -1866,12 +1978,12 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The auto-renewal duration. This parameter takes effect and is required only when the subscription billing method is selected for master nodes.
-         * <p>
+         * <p>The auto-renewal duration. This parameter takes effect and is required only when the subscription billing method is selected for master nodes.</p>
+         * <p>Valid values: 1, 2, 3, 6, and 12.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Valid values: 1, 2, 3, 6, and 12.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder masterAutoRenewPeriod(Long masterAutoRenewPeriod) {
             this.putBodyParameter("master_auto_renew_period", masterAutoRenewPeriod);
@@ -1880,10 +1992,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The number of master nodes. Valid values: `3` and `5`.
-         * <p>
+         * <p>The number of master nodes. Valid values: <code>3</code> and <code>5</code>.</p>
+         * <p>Default value: <code>3</code>.</p>
          * 
-         * Default value: `3`.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder masterCount(Long masterCount) {
             this.putBodyParameter("master_count", masterCount);
@@ -1892,13 +2005,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The billing method of master nodes. Valid values:
-         * <p>
+         * <p>The billing method of master nodes. Valid values:</p>
+         * <ul>
+         * <li><code>PrePaid</code>: subscription.</li>
+         * <li><code>PostPaid</code>: the pay-as-you-go.</li>
+         * </ul>
+         * <p>Default value: <code>PostPaid</code>.</p>
          * 
-         * *   `PrePaid`: subscription.
-         * *   `PostPaid`: the pay-as-you-go.
-         * 
-         * Default value: `PostPaid`.
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder masterInstanceChargeType(String masterInstanceChargeType) {
             this.putBodyParameter("master_instance_charge_type", masterInstanceChargeType);
@@ -1907,7 +2022,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The instance types of master nodes. For more information, see [Overview of instance families](~~25378~~).
+         * <p>The instance types of master nodes. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</p>
          */
         public Builder masterInstanceTypes(java.util.List < String > masterInstanceTypes) {
             this.putBodyParameter("master_instance_types", masterInstanceTypes);
@@ -1916,12 +2031,12 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The subscription duration of master nodes. This parameter takes effect and is required only when `master_instance_charge_type` is set to `PrePaid`.
-         * <p>
+         * <p>The subscription duration of master nodes. This parameter takes effect and is required only when <code>master_instance_charge_type</code> is set to <code>PrePaid</code>.</p>
+         * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder masterPeriod(Long masterPeriod) {
             this.putBodyParameter("master_period", masterPeriod);
@@ -1930,10 +2045,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The billing cycle of the master nodes in the cluster. This parameter is required if master_instance_charge_type is set to `PrePaid`.
-         * <p>
+         * <p>The billing cycle of the master nodes in the cluster. This parameter is required if master_instance_charge_type is set to <code>PrePaid</code>.</p>
+         * <p>Valid value: <code>Month</code>, which indicates that master nodes are billed only on a monthly basis.</p>
          * 
-         * Valid value: `Month`, which indicates that master nodes are billed only on a monthly basis.
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder masterPeriodUnit(String masterPeriodUnit) {
             this.putBodyParameter("master_period_unit", masterPeriodUnit);
@@ -1942,14 +2058,16 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The system disk type of master nodes. Valid values:
-         * <p>
+         * <p>The system disk type of master nodes. Valid values:</p>
+         * <ul>
+         * <li><code>cloud_efficiency</code>: ultra disk.</li>
+         * <li><code>cloud_ssd</code>: standard SSD.</li>
+         * <li><code>cloud_essd</code>: Enterprise SSD (ESSD).</li>
+         * </ul>
+         * <p>Default value: <code>cloud_ssd</code>. The default value may vary in different zones.</p>
          * 
-         * *   `cloud_efficiency`: ultra disk.
-         * *   `cloud_ssd`: standard SSD.
-         * *   `cloud_essd`: Enterprise SSD (ESSD).
-         * 
-         * Default value: `cloud_ssd`. The default value may vary in different zones.
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
          */
         public Builder masterSystemDiskCategory(String masterSystemDiskCategory) {
             this.putBodyParameter("master_system_disk_category", masterSystemDiskCategory);
@@ -1958,7 +2076,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The performance level (PL) of the system disk that you want to use for master nodes. This parameter takes effect only for ESSDs. For more information about the relationship between disk PLs and disk sizes, see [ESSDs](~~122389~~).
+         * <p>The performance level (PL) of the system disk that you want to use for master nodes. This parameter takes effect only for ESSDs. For more information about the relationship between disk PLs and disk sizes, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL1</p>
          */
         public Builder masterSystemDiskPerformanceLevel(String masterSystemDiskPerformanceLevel) {
             this.putBodyParameter("master_system_disk_performance_level", masterSystemDiskPerformanceLevel);
@@ -1967,10 +2088,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The system disk size of master nodes. Valid values: 40 to 500. Unit: GiB.
-         * <p>
+         * <p>The system disk size of master nodes. Valid values: 40 to 500. Unit: GiB.</p>
+         * <p>Default value: <code>120</code>.</p>
          * 
-         * Default value: `120`.
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         public Builder masterSystemDiskSize(Long masterSystemDiskSize) {
             this.putBodyParameter("master_system_disk_size", masterSystemDiskSize);
@@ -1979,7 +2101,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The ID of the automatic snapshot policy that is used by the system disk specified for master nodes.
+         * <p>The ID of the automatic snapshot policy that is used by the system disk specified for master nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-2zej1nogjvovnz4z****</p>
          */
         public Builder masterSystemDiskSnapshotPolicyId(String masterSystemDiskSnapshotPolicyId) {
             this.putBodyParameter("master_system_disk_snapshot_policy_id", masterSystemDiskSnapshotPolicyId);
@@ -1988,10 +2113,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The IDs of the vSwitches that are specified for master nodes. You can specify up to three vSwitches. We recommend that you specify three vSwitches in different zones to ensure high availability.
-         * <p>
-         * 
-         * The number of vSwitches must be the same as the value of the `master_count` parameter and also the same as the number of vSwitches specified in the `master_vswitch_ids` parameter.
+         * <p>The IDs of the vSwitches that are specified for master nodes. You can specify up to three vSwitches. We recommend that you specify three vSwitches in different zones to ensure high availability.</p>
+         * <p>The number of vSwitches must be the same as the value of the <code>master_count</code> parameter and also the same as the number of vSwitches specified in the <code>master_vswitch_ids</code> parameter.</p>
          */
         public Builder masterVswitchIds(java.util.List < String > masterVswitchIds) {
             this.putBodyParameter("master_vswitch_ids", masterVswitchIds);
@@ -2000,10 +2123,12 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The cluster name.
-         * <p>
+         * <p>The cluster name.</p>
+         * <p>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).</p>
+         * <p>This parameter is required.</p>
          * 
-         * The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).
+         * <strong>example:</strong>
+         * <p>cluster-demo</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -2012,13 +2137,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to create a NAT gateway and configure SNAT rules if you create an ACK Serverless cluster. Valid values:
-         * <p>
+         * <p>Specifies whether to create a NAT gateway and configure SNAT rules if you create an ACK Serverless cluster. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: automatically creates a NAT gateway and configures SNAT rules. This enables Internet access for the VPC in which the cluster is deployed.</li>
+         * <li><code>false</code>: does not create a NAT gateway or configure SNAT rules. If you specify this value, the cluster in the VPC cannot access the Internet.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: automatically creates a NAT gateway and configures SNAT rules. This enables Internet access for the VPC in which the cluster is deployed.
-         * *   `false`: does not create a NAT gateway or configure SNAT rules. If you specify this value, the cluster in the VPC cannot access the Internet.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder natGateway(Boolean natGateway) {
             this.putBodyParameter("nat_gateway", natGateway);
@@ -2027,10 +2154,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The maximum number of IP addresses that can be assigned to each node. This number is determined by the subnet mask of the specified CIDR block. This parameter takes effect only if the cluster uses the Flannel plug-in.
-         * <p>
+         * <p>The maximum number of IP addresses that can be assigned to each node. This number is determined by the subnet mask of the specified CIDR block. This parameter takes effect only if the cluster uses the Flannel plug-in.</p>
+         * <p>Default value: <code>26</code>.</p>
          * 
-         * Default value: `26`.
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         public Builder nodeCidrMask(String nodeCidrMask) {
             this.putBodyParameter("node_cidr_mask", nodeCidrMask);
@@ -2039,15 +2167,16 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The custom node name.
-         * <p>
+         * <p>The custom node name.</p>
+         * <p>A custom node name consists of a prefix, a node IP address, and a suffix.</p>
+         * <ul>
+         * <li>The prefix and suffix can contain multiple parts that are separated by periods (.). Each part can contain lowercase letters, digits, and hyphens (-), and must start and end with a lowercase letter or digit.</li>
+         * <li>The IP substring length specifies the number of digits to be truncated from the end of the node IP address. The IP substring length ranges from 5 to 12.</li>
+         * </ul>
+         * <p>For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, the IP substring length is 5, and the suffix is test, the node name will aliyun.com00055test.</p>
          * 
-         * A custom node name consists of a prefix, a node IP address, and a suffix.
-         * 
-         * *   The prefix and suffix can contain multiple parts that are separated by periods (.). Each part can contain lowercase letters, digits, and hyphens (-), and must start and end with a lowercase letter or digit.
-         * *   The IP substring length specifies the number of digits to be truncated from the end of the node IP address. The IP substring length ranges from 5 to 12.
-         * 
-         * For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, the IP substring length is 5, and the suffix is test, the node name will aliyun.com00055test.
+         * <strong>example:</strong>
+         * <p>aliyun.com00055test</p>
          */
         public Builder nodeNameMode(String nodeNameMode) {
             this.putBodyParameter("node_name_mode", nodeNameMode);
@@ -2056,10 +2185,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The node port range. Valid values: 30000 to 65535.
-         * <p>
+         * <p>The node port range. Valid values: 30000 to 65535.</p>
+         * <p>Default value: <code>30000-32767</code>.</p>
          * 
-         * Default value: `30000-32767`.
+         * <strong>example:</strong>
+         * <p>30000~32767</p>
          */
         public Builder nodePortRange(String nodePortRange) {
             this.putBodyParameter("node_port_range", nodePortRange);
@@ -2068,7 +2198,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The list of node pools.
+         * <p>The list of node pools.</p>
          */
         public Builder nodepools(java.util.List < Nodepool > nodepools) {
             this.putBodyParameter("nodepools", nodepools);
@@ -2077,7 +2207,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The number of worker nodes. Valid values: 0 to 100.
+         * <p>The number of worker nodes. Valid values: 0 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder numOfNodes(Long numOfNodes) {
             this.putBodyParameter("num_of_nodes", numOfNodes);
@@ -2086,13 +2219,24 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The type of OS. Valid values:
-         * <p>
+         * operation_policy.
+         */
+        public Builder operationPolicy(OperationPolicy operationPolicy) {
+            this.putBodyParameter("operation_policy", operationPolicy);
+            this.operationPolicy = operationPolicy;
+            return this;
+        }
+
+        /**
+         * <p>The type of OS. Valid values:</p>
+         * <ul>
+         * <li>Windows</li>
+         * <li>Linux</li>
+         * </ul>
+         * <p>Default value: <code>Linux</code>.</p>
          * 
-         * *   Windows
-         * *   Linux
-         * 
-         * Default value: `Linux`.
+         * <strong>example:</strong>
+         * <p>Linux</p>
          */
         public Builder osType(String osType) {
             this.putBodyParameter("os_type", osType);
@@ -2101,12 +2245,12 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The subscription duration of the instance. This parameter takes effect and is required only when you set charge_type to PrePaid.
-         * <p>
+         * <p>The subscription duration of the instance. This parameter takes effect and is required only when you set charge_type to PrePaid.</p>
+         * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>FY2023</p>
          */
         public Builder period(Long period) {
             this.putBodyParameter("period", period);
@@ -2115,10 +2259,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The billing cycle. This parameter is required if charge_type is set to PrePaid.
-         * <p>
+         * <p>The billing cycle. This parameter is required if charge_type is set to PrePaid.</p>
+         * <p>Set the value to Month. Subscription clusters are billed only on a monthly basis.</p>
          * 
-         * Set the value to Month. Subscription clusters are billed only on a monthly basis.
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putBodyParameter("period_unit", periodUnit);
@@ -2127,17 +2272,19 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The OS distribution that is used. Valid values:
-         * <p>
+         * <p>The OS distribution that is used. Valid values:</p>
+         * <ul>
+         * <li>CentOS</li>
+         * <li>AliyunLinux</li>
+         * <li>QbootAliyunLinux</li>
+         * <li>Qboot</li>
+         * <li>Windows</li>
+         * <li>WindowsCore</li>
+         * </ul>
+         * <p>Default value: <code>CentOS</code>.</p>
          * 
-         * *   CentOS
-         * *   AliyunLinux
-         * *   QbootAliyunLinux
-         * *   Qboot
-         * *   Windows
-         * *   WindowsCore
-         * 
-         * Default value: `CentOS`.
+         * <strong>example:</strong>
+         * <p>CentOS</p>
          */
         public Builder platform(String platform) {
             this.putBodyParameter("platform", platform);
@@ -2146,10 +2293,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * If you select Terway as the network plug-in, you must allocate vSwitches to pods. For each vSwitch that allocates IP addresses to worker nodes, you must select a vSwitch in the same zone to allocate IP addresses to pods.
-         * <p>
-         * 
-         * >  We recommend that you select pod vSwitches whose subnet masks that do not exceed 19 bits in length. The maximum subnet mask length of a pod vSwitch is 25 bits. If you select a pod vSwitch whose subnet mask exceeds 25 bits in length, the IP addresses that can be allocated to pods may be insufficient.
+         * <p>If you select Terway as the network plug-in, you must allocate vSwitches to pods. For each vSwitch that allocates IP addresses to worker nodes, you must select a vSwitch in the same zone to allocate IP addresses to pods.</p>
+         * <blockquote>
+         * <p> We recommend that you select pod vSwitches whose subnet masks that do not exceed 19 bits in length. The maximum subnet mask length of a pod vSwitch is 25 bits. If you select a pod vSwitch whose subnet mask exceeds 25 bits in length, the IP addresses that can be allocated to pods may be insufficient.</p>
+         * </blockquote>
          */
         public Builder podVswitchIds(java.util.List < String > podVswitchIds) {
             this.putBodyParameter("pod_vswitch_ids", podVswitchIds);
@@ -2158,13 +2305,16 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * If you set `cluster_type` to `ManagedKubernetes`, an ACK managed cluster is created. In this case, you can further specify the cluster edition. Valid values:
-         * <p>
+         * <p>If you set <code>cluster_type</code> to <code>ManagedKubernetes</code>, an ACK managed cluster is created. In this case, you can further specify the cluster edition. Valid values:</p>
+         * <ul>
+         * <li><code>Default</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.</li>
+         * <li><code>Edge</code>: ACK Edge cluster. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.</li>
+         * <li><code>Serverless</code>: ACK Serverless cluster. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.</li>
+         * <li><code>Lingjun</code>: ACK Lingjun Pro cluster.</li>
+         * </ul>
          * 
-         * *   `Default`: ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.
-         * *   `Edge`: ACK Edge cluster. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.
-         * *   `Serverless`: ACK Serverless cluster. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.
-         * *   `Lingjun`: ACK Lingjun Pro cluster.
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         public Builder profile(String profile) {
             this.putBodyParameter("profile", profile);
@@ -2173,13 +2323,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The kube-proxy mode. Valid values:
-         * <p>
+         * <p>The kube-proxy mode. Valid values:</p>
+         * <ul>
+         * <li><code>iptables</code>: a mature and stable mode that uses iptables rules to conduct service discovery and load balancing. The performance of this mode is limited by the size of the cluster. This mode is suitable for clusters that run a small number of Services.</li>
+         * <li><code>ipvs</code>: a mode that provides high performance and uses IP Virtual Server (IPVS) to conduct service discovery and load balancing. This mode is suitable for clusters that run a large number of Services. We recommend that you use this mode in scenarios that require high-performance load balancing.</li>
+         * </ul>
+         * <p>Default value: <code>ipvs</code>.</p>
          * 
-         * *   `iptables`: a mature and stable mode that uses iptables rules to conduct service discovery and load balancing. The performance of this mode is limited by the size of the cluster. This mode is suitable for clusters that run a small number of Services.
-         * *   `ipvs`: a mode that provides high performance and uses IP Virtual Server (IPVS) to conduct service discovery and load balancing. This mode is suitable for clusters that run a large number of Services. We recommend that you use this mode in scenarios that require high-performance load balancing.
-         * 
-         * Default value: `ipvs`.
+         * <strong>example:</strong>
+         * <p>ipvs</p>
          */
         public Builder proxyMode(String proxyMode) {
             this.putBodyParameter("proxy_mode", proxyMode);
@@ -2188,7 +2340,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The ApsaraDB RDS instances. The pod CIDR block and node CIDR block are added to the whitelists of the ApsaraDB RDS instances. We recommend that you add the pod CIDR block and node CIDR block to the whitelists of the ApsaraDB RDS instances in the ApsaraDB RDS console. If the RDS instances are not in the Running state, new nodes cannot be added to the cluster.
+         * <p>The ApsaraDB RDS instances. The pod CIDR block and node CIDR block are added to the whitelists of the ApsaraDB RDS instances. We recommend that you add the pod CIDR block and node CIDR block to the whitelists of the ApsaraDB RDS instances in the ApsaraDB RDS console. If the RDS instances are not in the Running state, new nodes cannot be added to the cluster.</p>
          */
         public Builder rdsInstances(java.util.List < String > rdsInstances) {
             this.putBodyParameter("rds_instances", rdsInstances);
@@ -2197,7 +2349,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the cluster is deployed.
+         * <p>The ID of the region in which the cluster is deployed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("region_id", regionId);
@@ -2206,7 +2362,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the cluster belongs. You can use resource groups to isolate clusters.
+         * <p>The ID of the resource group to which the cluster belongs. You can use resource groups to isolate clusters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm3mkrure****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resource_group_id", resourceGroupId);
@@ -2215,10 +2374,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The container runtime. The default container runtime is Docker. containerd and Sandboxed-Container are also supported.
-         * <p>
-         * 
-         * For more information about how to select a proper container runtime, see [Comparison among Docker, containerd, and Sandboxed-Container](~~160313~~).
+         * <p>The container runtime. The default container runtime is Docker. containerd and Sandboxed-Container are also supported.</p>
+         * <p>For more information about how to select a proper container runtime, see <a href="https://help.aliyun.com/document_detail/160313.html">Comparison among Docker, containerd, and Sandboxed-Container</a>.</p>
          */
         public Builder runtime(Runtime runtime) {
             this.putBodyParameter("runtime", runtime);
@@ -2227,7 +2384,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The ID of an existing security group. You must specify this parameter or the `is_enterprise_security_group` parameter. Cluster nodes are automatically added to the security group.
+         * <p>The ID of an existing security group. You must specify this parameter or the <code>is_enterprise_security_group</code> parameter. Cluster nodes are automatically added to the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp1bdue0qc1g7k****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putBodyParameter("security_group_id", securityGroupId);
@@ -2236,13 +2396,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Alibaba Cloud Linux Security Hardening. Valid values:
-         * <p>
+         * <p>Specifies whether to enable Alibaba Cloud Linux Security Hardening. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables Alibaba Cloud Linux Security Hardening.</li>
+         * <li><code>false</code>: disables Alibaba Cloud Linux Security Hardening.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: enables Alibaba Cloud Linux Security Hardening.
-         * *   `false`: disables Alibaba Cloud Linux Security Hardening.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder securityHardeningOs(Boolean securityHardeningOs) {
             this.putBodyParameter("security_hardening_os", securityHardeningOs);
@@ -2251,10 +2413,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Service accounts provide identities for pods when pods communicate with the `API server` of the cluster. The `service-account-issuer` parameter specifies the issuer of the `service account token`, which is specified by using the `iss` field in the `token payload`.
-         * <p>
+         * <p>Service accounts provide identities for pods when pods communicate with the <code>API server</code> of the cluster. The <code>service-account-issuer</code> parameter specifies the issuer of the <code>service account token</code>, which is specified by using the <code>iss</code> field in the <code>token payload</code>.</p>
+         * <p>For more information about <code>service accounts</code>, see <a href="https://help.aliyun.com/document_detail/160384.html">Enable service account token volume projection</a>.</p>
          * 
-         * For more information about `service accounts`, see [Enable service account token volume projection](~~160384~~).
+         * <strong>example:</strong>
+         * <p>kubernetes.default.svc</p>
          */
         public Builder serviceAccountIssuer(String serviceAccountIssuer) {
             this.putBodyParameter("service_account_issuer", serviceAccountIssuer);
@@ -2263,10 +2426,12 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The Service CIDR block. Valid values: 10.0.0.0/16-24, 172.16-31.0.0/16-24, and 192.168.0.0/16-24. The Service CIDR block cannot overlap with the VPC CIDR block (10.1.0.0/21) or the CIDR blocks of existing clusters in the VPC. You cannot modify the Service CIDR block after the cluster is created.
-         * <p>
+         * <p>The Service CIDR block. Valid values: 10.0.0.0/16-24, 172.16-31.0.0/16-24, and 192.168.0.0/16-24. The Service CIDR block cannot overlap with the VPC CIDR block (10.1.0.0/21) or the CIDR blocks of existing clusters in the VPC. You cannot modify the Service CIDR block after the cluster is created.</p>
+         * <p>By default, the Service CIDR block is set to 172.19.0.0/20.</p>
+         * <p>This parameter is required.</p>
          * 
-         * By default, the Service CIDR block is set to 172.19.0.0/20.
+         * <strong>example:</strong>
+         * <p>172.21.0.0/20</p>
          */
         public Builder serviceCidr(String serviceCidr) {
             this.putBodyParameter("service_cidr", serviceCidr);
@@ -2275,13 +2440,12 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The type of service discovery that is implemented in the `ACK Serverless` cluster.
-         * <p>
-         * 
-         * *   `CoreDNS`: a standard service discovery plug-in provided by open source Kubernetes. To use DNS resolution, you must provision pods. By default, two elastic container instances are used. The specification of each instance is 0.25 vCPUs and 512 MiB of memory.
-         * *   `PrivateZone`: a DNS resolution service provided by Alibaba Cloud. You must activate Alibaba Cloud DNS PrivateZone before you can use it to implement service discovery.
-         * 
-         * By default, this parameter is not specified.
+         * <p>The type of service discovery that is implemented in the <code>ACK Serverless</code> cluster.</p>
+         * <ul>
+         * <li><code>CoreDNS</code>: a standard service discovery plug-in provided by open source Kubernetes. To use DNS resolution, you must provision pods. By default, two elastic container instances are used. The specification of each instance is 0.25 vCPUs and 512 MiB of memory.</li>
+         * <li><code>PrivateZone</code>: a DNS resolution service provided by Alibaba Cloud. You must activate Alibaba Cloud DNS PrivateZone before you can use it to implement service discovery.</li>
+         * </ul>
+         * <p>By default, this parameter is not specified.</p>
          */
         public Builder serviceDiscoveryTypes(java.util.List < String > serviceDiscoveryTypes) {
             this.putBodyParameter("service_discovery_types", serviceDiscoveryTypes);
@@ -2290,15 +2454,18 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to configure SNAT rules for the VPC in which your cluster is deployed. Valid values:
-         * <p>
+         * <p>Specifies whether to configure SNAT rules for the VPC in which your cluster is deployed. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: automatically creates a NAT gateway and configures SNAT rules. Set the value to <code>true</code> if nodes and applications in the cluster need to access the Internet.</li>
+         * <li><code>false</code>: does not create a NAT gateway or configure SNAT rules. In this case, nodes and applications in the cluster cannot access the Internet.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If this feature is disabled when you create the cluster, you can also manually enable this feature after you create the cluster. For more information, see <a href="https://help.aliyun.com/document_detail/178480.html">Enable an existing ACK cluster to access the Internet</a>.</p>
+         * </blockquote>
+         * <p>Default value: <code>true</code>.</p>
          * 
-         * *   `true`: automatically creates a NAT gateway and configures SNAT rules. Set the value to `true` if nodes and applications in the cluster need to access the Internet.
-         * *   `false`: does not create a NAT gateway or configure SNAT rules. In this case, nodes and applications in the cluster cannot access the Internet.
-         * 
-         * >  If this feature is disabled when you create the cluster, you can also manually enable this feature after you create the cluster. For more information, see [Enable an existing ACK cluster to access the Internet](~~178480~~).
-         * 
-         * Default value: `true`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder snatEntry(Boolean snatEntry) {
             this.putBodyParameter("snat_entry", snatEntry);
@@ -2307,15 +2474,16 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable security hardening based on Multi-Level Protection Scheme (MLPS). For more information, see [ACK security hardening based on MLPS](~~196148~~).
-         * <p>
+         * <p>Specifies whether to enable security hardening based on Multi-Level Protection Scheme (MLPS). For more information, see <a href="https://help.aliyun.com/document_detail/196148.html">ACK security hardening based on MLPS</a>.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables security hardening based on MLPS.</li>
+         * <li><code>false</code>: disables security hardening based on MLPS.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * Valid values:
-         * 
-         * *   `true`: enables security hardening based on MLPS.
-         * *   `false`: disables security hardening based on MLPS.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder socEnabled(Boolean socEnabled) {
             this.putBodyParameter("soc_enabled", socEnabled);
@@ -2324,13 +2492,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable SSH logon. If this parameter is set to true, you can log on to master nodes in an ACK dedicated cluster over the Internet. This parameter does not take effect for ACK managed clusters. Valid values:
-         * <p>
+         * <p>Specifies whether to enable SSH logon. If this parameter is set to true, you can log on to master nodes in an ACK dedicated cluster over the Internet. This parameter does not take effect for ACK managed clusters. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables SSH logon.</li>
+         * <li><code>false</code>: disables SSH logon.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: enables SSH logon.
-         * *   `false`: disables SSH logon.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder sshFlags(Boolean sshFlags) {
             this.putBodyParameter("ssh_flags", sshFlags);
@@ -2339,11 +2509,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The labels that you want to add to nodes. You must add labels based on the following rules:
-         * <p>
-         * 
-         * *   A label is a case-sensitive key-value pair. You can add up to 20 labels.
-         * *   When you add a label, you must specify a unique key but you can leave the value empty. A key cannot exceed 64 characters in length and a value cannot exceed 128 characters in length. Keys and values cannot start with aliyun, acs:, https://, or http://. For more information, see [Labels and Selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set).
+         * <p>The labels that you want to add to nodes. You must add labels based on the following rules:</p>
+         * <ul>
+         * <li>A label is a case-sensitive key-value pair. You can add up to 20 labels.</li>
+         * <li>When you add a label, you must specify a unique key but you can leave the value empty. A key cannot exceed 64 characters in length and a value cannot exceed 128 characters in length. Keys and values cannot start with aliyun, acs:, https://, or http://. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</li>
+         * </ul>
          */
         public Builder tags(java.util.List < Tag > tags) {
             this.putBodyParameter("tags", tags);
@@ -2352,7 +2522,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The taints that you want to add to nodes. Taints can be used together with tolerations to avoid scheduling pods to specific nodes. For more information, see [taint-and-toleration](https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/).
+         * <p>The taints that you want to add to nodes. Taints can be used together with tolerations to avoid scheduling pods to specific nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</p>
          */
         public Builder taints(java.util.List < Taint > taints) {
             this.putBodyParameter("taints", taints);
@@ -2361,10 +2531,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies the timeout period of cluster creation. Unit: minutes.
-         * <p>
+         * <p>Specifies the timeout period of cluster creation. Unit: minutes.</p>
+         * <p>Default value: <code>60</code>.</p>
          * 
-         * Default value: `60`.
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder timeoutMins(Long timeoutMins) {
             this.putBodyParameter("timeout_mins", timeoutMins);
@@ -2373,7 +2544,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The time zone of the cluster.
+         * <p>The time zone of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
          */
         public Builder timezone(String timezone) {
             this.putBodyParameter("timezone", timezone);
@@ -2382,7 +2556,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The custom Certificate Authority (CA) certificate used by the cluster.
+         * <p>The custom Certificate Authority (CA) certificate used by the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----****</p>
          */
         public Builder userCa(String userCa) {
             this.putBodyParameter("user_ca", userCa);
@@ -2391,7 +2568,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The user data of nodes.
+         * <p>The user data of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IyEvdXNyL2Jpbi9iYXNoCmVjaG8gIkhlbGxvIEFD****</p>
          */
         public Builder userData(String userData) {
             this.putBodyParameter("user_data", userData);
@@ -2400,7 +2580,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The virtual private cloud (VPC) in which you want to deploy the cluster. This parameter is required.
+         * <p>The virtual private cloud (VPC) in which you want to deploy the cluster. This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2zeik9h3ahvv2zz95****</p>
          */
         public Builder vpcid(String vpcid) {
             this.putBodyParameter("vpcid", vpcid);
@@ -2409,7 +2592,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The vSwitches for nodes in the cluster. This parameter is required if you create an ACK managed cluster that does not contain nodes.
+         * <p>The vSwitches for nodes in the cluster. This parameter is required if you create an ACK managed cluster that does not contain nodes.</p>
          */
         public Builder vswitchIds(java.util.List < String > vswitchIds) {
             this.putBodyParameter("vswitch_ids", vswitchIds);
@@ -2418,13 +2601,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal for worker nodes. This parameter takes effect and is required only when `worker_instance_charge_type` is set to `PrePaid`. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto-renewal for worker nodes. This parameter takes effect and is required only when <code>worker_instance_charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables auto-renewal.</li>
+         * <li><code>false</code>: disables auto-renewal.</li>
+         * </ul>
+         * <p>Default value: <code>true</code></p>
          * 
-         * *   `true`: enables auto-renewal.
-         * *   `false`: disables auto-renewal.
-         * 
-         * Default value: `true`
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder workerAutoRenew(Boolean workerAutoRenew) {
             this.putBodyParameter("worker_auto_renew", workerAutoRenew);
@@ -2433,10 +2618,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The auto-renewal duration. This parameter takes effect and is required only when the subscription billing method is selected for worker nodes.
-         * <p>
+         * <p>The auto-renewal duration. This parameter takes effect and is required only when the subscription billing method is selected for worker nodes.</p>
+         * <p>Valid values: 1, 2, 3, 6, and 12.</p>
          * 
-         * Valid values: 1, 2, 3, 6, and 12.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder workerAutoRenewPeriod(Long workerAutoRenewPeriod) {
             this.putBodyParameter("worker_auto_renew_period", workerAutoRenewPeriod);
@@ -2445,7 +2631,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The configurations of the data disks that you want to mount to worker nodes. The configurations include the disk type and disk size.
+         * <p>The configurations of the data disks that you want to mount to worker nodes. The configurations include the disk type and disk size.</p>
          */
         public Builder workerDataDisks(java.util.List < WorkerDataDisks> workerDataDisks) {
             this.putBodyParameter("worker_data_disks", workerDataDisks);
@@ -2454,13 +2640,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The billing method of worker nodes. Valid values:
-         * <p>
+         * <p>The billing method of worker nodes. Valid values:</p>
+         * <ul>
+         * <li><code>PrePaid</code>: subscription.</li>
+         * <li><code>PostPaid</code>: pay-as-you-go.</li>
+         * </ul>
+         * <p>Default value: PostPaid.</p>
          * 
-         * *   `PrePaid`: subscription.
-         * *   `PostPaid`: pay-as-you-go.
-         * 
-         * Default value: PostPaid.
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder workerInstanceChargeType(String workerInstanceChargeType) {
             this.putBodyParameter("worker_instance_charge_type", workerInstanceChargeType);
@@ -2469,7 +2657,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The instance configurations of worker nodes.
+         * <p>The instance configurations of worker nodes.</p>
          */
         public Builder workerInstanceTypes(java.util.List < String > workerInstanceTypes) {
             this.putBodyParameter("worker_instance_types", workerInstanceTypes);
@@ -2478,12 +2666,12 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The subscription duration of worker nodes. This parameter takes effect and is required only when `worker_instance_charge_type` is set to `PrePaid`.
-         * <p>
+         * <p>The subscription duration of worker nodes. This parameter takes effect and is required only when <code>worker_instance_charge_type</code> is set to <code>PrePaid</code>.</p>
+         * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder workerPeriod(Long workerPeriod) {
             this.putBodyParameter("worker_period", workerPeriod);
@@ -2492,10 +2680,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The billing cycle of worker nodes. This parameter is required if worker_instance_charge_type is set to `PrePaid`.
-         * <p>
+         * <p>The billing cycle of worker nodes. This parameter is required if worker_instance_charge_type is set to <code>PrePaid</code>.</p>
+         * <p>Set the value to <code>Month</code>. Subscription worker nodes are billed only on a monthly basis.</p>
          * 
-         * Set the value to `Month`. Subscription worker nodes are billed only on a monthly basis.
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder workerPeriodUnit(String workerPeriodUnit) {
             this.putBodyParameter("worker_period_unit", workerPeriodUnit);
@@ -2504,15 +2693,16 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The system disk type of worker nodes. For more information, see [Overview of Block Storage](~~63136~~).
-         * <p>
+         * <p>The system disk type of worker nodes. For more information, see <a href="https://help.aliyun.com/document_detail/63136.html">Overview of Block Storage</a>.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><code>cloud_efficiency</code>: ultra disk.</li>
+         * <li><code>cloud_ssd</code>: standard SSD.</li>
+         * </ul>
+         * <p>Default value: <code>cloud_ssd</code>.</p>
          * 
-         * Valid values:
-         * 
-         * *   `cloud_efficiency`: ultra disk.
-         * *   `cloud_ssd`: standard SSD.
-         * 
-         * Default value: `cloud_ssd`.
+         * <strong>example:</strong>
+         * <p>cloud_efficiency</p>
          */
         public Builder workerSystemDiskCategory(String workerSystemDiskCategory) {
             this.putBodyParameter("worker_system_disk_category", workerSystemDiskCategory);
@@ -2521,15 +2711,17 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * If the system disk is an ESSD, you can specify the PL of the ESSD. For more information, see [Enterprise SSDs](~~122389~~).
-         * <p>
+         * <p>If the system disk is an ESSD, you can specify the PL of the ESSD. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">Enterprise SSDs</a>.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>PL0</li>
+         * <li>PL1</li>
+         * <li>PL2</li>
+         * <li>PL3</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   PL0
-         * *   PL1
-         * *   PL2
-         * *   PL3
+         * <strong>example:</strong>
+         * <p>PL1</p>
          */
         public Builder workerSystemDiskPerformanceLevel(String workerSystemDiskPerformanceLevel) {
             this.putBodyParameter("worker_system_disk_performance_level", workerSystemDiskPerformanceLevel);
@@ -2538,14 +2730,13 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The system disk size of worker nodes. Unit: GiB.
-         * <p>
+         * <p>The system disk size of worker nodes. Unit: GiB.</p>
+         * <p>Valid values: 40 to 500.</p>
+         * <p>The value of this parameter must be at least 40 and greater than or equal to the image size.</p>
+         * <p>Default value: <code>120</code>.</p>
          * 
-         * Valid values: 40 to 500.
-         * 
-         * The value of this parameter must be at least 40 and greater than or equal to the image size.
-         * 
-         * Default value: `120`.
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         public Builder workerSystemDiskSize(Long workerSystemDiskSize) {
             this.putBodyParameter("worker_system_disk_size", workerSystemDiskSize);
@@ -2554,7 +2745,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The ID of the automatic snapshot policy that is used by the system disk specified for worker nodes.
+         * <p>The ID of the automatic snapshot policy that is used by the system disk specified for worker nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-2zej1nogjvovnz4z****</p>
          */
         public Builder workerSystemDiskSnapshotPolicyId(String workerSystemDiskSnapshotPolicyId) {
             this.putBodyParameter("worker_system_disk_snapshot_policy_id", workerSystemDiskSnapshotPolicyId);
@@ -2563,10 +2757,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The vSwitches for worker nodes. Each worker node is allocated a vSwitch.
-         * <p>
-         * 
-         * `worker_vswitch_ids` is optional but `vswitch_ids` is required if you create an ACK managed cluster that does not contain nodes.
+         * <p>The vSwitches for worker nodes. Each worker node is allocated a vSwitch.</p>
+         * <p><code>worker_vswitch_ids</code> is optional but <code>vswitch_ids</code> is required if you create an ACK managed cluster that does not contain nodes.</p>
          */
         public Builder workerVswitchIds(java.util.List < String > workerVswitchIds) {
             this.putBodyParameter("worker_vswitch_ids", workerVswitchIds);
@@ -2575,10 +2767,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The ID of the zone to which the cluster belongs. This parameter takes effect only for ACK Serverless clusters.
-         * <p>
+         * <p>The ID of the zone to which the cluster belongs. This parameter takes effect only for ACK Serverless clusters.</p>
+         * <p>If you create an ACK Serverless cluster, you must specify <code>zone_id</code> if <code>vpc_id</code> and <code>vswitch_ids</code> are not specified. This way, the system automatically creates a VPC in the specified zone.</p>
          * 
-         * If you create an ACK Serverless cluster, you must specify `zone_id` if `vpc_id` and `vswitch_ids` are not specified. This way, the system automatically creates a VPC in the specified zone.
+         * <strong>example:</strong>
+         * <p>cn-beiji****</p>
          */
         public Builder zoneId(String zoneId) {
             this.putBodyParameter("zone_id", zoneId);
@@ -2587,7 +2780,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * zone_ids.
+         * <p>List of availability zone IDs in the region where the cluster resides. This parameter is specific to ACK managed clusters.
+         * When creating an ACK managed cluster, if <code>vpc_id</code> and <code>vswitch_ids</code> are not specified, specifying <code>zone_ids</code> allows for automatic creation of VPC network resources across multiple availability zones. If <code>vpc_id</code> and <code>vswitch_ids</code> are specified, this parameter becomes ineffective.</p>
          */
         public Builder zoneIds(java.util.List < String > zoneIds) {
             this.putBodyParameter("zone_ids", zoneIds);
@@ -2602,6 +2796,126 @@ public class CreateClusterRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
+    public static class ClusterAutoUpgrade extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("channel")
+        private String channel;
+
+        @com.aliyun.core.annotation.NameInMap("enabled")
+        private Boolean enabled;
+
+        private ClusterAutoUpgrade(Builder builder) {
+            this.channel = builder.channel;
+            this.enabled = builder.enabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ClusterAutoUpgrade create() {
+            return builder().build();
+        }
+
+        /**
+         * @return channel
+         */
+        public String getChannel() {
+            return this.channel;
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public static final class Builder {
+            private String channel; 
+            private Boolean enabled; 
+
+            /**
+             * channel.
+             */
+            public Builder channel(String channel) {
+                this.channel = channel;
+                return this;
+            }
+
+            /**
+             * enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            public ClusterAutoUpgrade build() {
+                return new ClusterAutoUpgrade(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
+    public static class OperationPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("cluster_auto_upgrade")
+        private ClusterAutoUpgrade clusterAutoUpgrade;
+
+        private OperationPolicy(Builder builder) {
+            this.clusterAutoUpgrade = builder.clusterAutoUpgrade;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OperationPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return clusterAutoUpgrade
+         */
+        public ClusterAutoUpgrade getClusterAutoUpgrade() {
+            return this.clusterAutoUpgrade;
+        }
+
+        public static final class Builder {
+            private ClusterAutoUpgrade clusterAutoUpgrade; 
+
+            /**
+             * cluster_auto_upgrade.
+             */
+            public Builder clusterAutoUpgrade(ClusterAutoUpgrade clusterAutoUpgrade) {
+                this.clusterAutoUpgrade = clusterAutoUpgrade;
+                return this;
+            }
+
+            public OperationPolicy build() {
+                return new OperationPolicy(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
     public static class WorkerDataDisks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("category")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -2667,7 +2981,11 @@ public class CreateClusterRequest extends Request {
             private String size; 
 
             /**
-             * The data disk type.
+             * <p>The data disk type.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -2675,13 +2993,15 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * Specifies whether to encrypt the data disk. Valid values:
-             * <p>
+             * <p>Specifies whether to encrypt the data disk. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: encrypts the data disk.</li>
+             * <li><code>false</code>: does not encrypt the data disk.</li>
+             * </ul>
+             * <p>Default value: <code>false</code>.</p>
              * 
-             * *   `true`: encrypts the data disk.
-             * *   `false`: does not encrypt the data disk.
-             * 
-             * Default value: `false`.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder encrypted(String encrypted) {
                 this.encrypted = encrypted;
@@ -2689,7 +3009,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The PL of the data disk. This parameter takes effect only for ESSDs. You can specify a higher PL if you increase the size of a data disk. For more information, see [Enterprise SSDs](~~122389~~).
+             * <p>The PL of the data disk. This parameter takes effect only for ESSDs. You can specify a higher PL if you increase the size of a data disk. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">Enterprise SSDs</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PL1</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -2697,7 +3020,11 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The data disk size. Valid values: 40 to 32767. Unit: GiB.
+             * <p>The data disk size. Valid values: 40 to 32767. Unit: GiB.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder size(String size) {
                 this.size = size;

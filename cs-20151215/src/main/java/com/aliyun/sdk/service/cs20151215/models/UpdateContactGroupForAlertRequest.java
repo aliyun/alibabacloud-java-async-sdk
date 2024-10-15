@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateContactGroupForAlertRequest} extends {@link RequestModel}
  *
  * <p>UpdateContactGroupForAlertRequest</p>
@@ -109,7 +110,10 @@ public class UpdateContactGroupForAlertRequest extends Request {
         } 
 
         /**
-         * The cluster ID. You can call the ListCluster operation to query the cluster ID.
+         * <p>The cluster ID. You can call the ListCluster operation to query the cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ce7d08276f8a6422282c46272a84bxxxx</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);

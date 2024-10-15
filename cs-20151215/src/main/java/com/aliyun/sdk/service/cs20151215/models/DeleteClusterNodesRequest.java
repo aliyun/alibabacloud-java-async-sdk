@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteClusterNodesRequest} extends {@link RequestModel}
  *
  * <p>DeleteClusterNodesRequest</p>
@@ -97,7 +98,11 @@ public class DeleteClusterNodesRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c850429a2287b4d968e27e87a4921****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -106,13 +111,15 @@ public class DeleteClusterNodesRequest extends Request {
         }
 
         /**
-         * Specifies whether to remove all pods from the nodes that you want to remove. Valid values:
-         * <p>
+         * <p>Specifies whether to remove all pods from the nodes that you want to remove. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: removes all pods from the nodes that you want to remove.</li>
+         * <li><code>false</code>: does not remove pods from the nodes that you want to remove.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: removes all pods from the nodes that you want to remove.
-         * *   `false`: does not remove pods from the nodes that you want to remove.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder drainNode(Boolean drainNode) {
             this.putBodyParameter("drain_node", drainNode);
@@ -121,7 +128,8 @@ public class DeleteClusterNodesRequest extends Request {
         }
 
         /**
-         * The list of nodes to be removed. You need to specify the name of the nodes used in the cluster, for example, `cn-hangzhou.192.168.0.70`.
+         * <p>The list of nodes to be removed. You need to specify the name of the nodes used in the cluster, for example, <code>cn-hangzhou.192.168.0.70</code>.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder nodes(java.util.List < String > nodes) {
             this.putBodyParameter("nodes", nodes);
@@ -130,15 +138,18 @@ public class DeleteClusterNodesRequest extends Request {
         }
 
         /**
-         * Specifies whether to release the Elastic Compute Service (ECS) instances. Valid values:
-         * <p>
+         * <p>Specifies whether to release the Elastic Compute Service (ECS) instances. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: releases the ECS instances.</li>
+         * <li><code>false</code>: does not release the ECS instances.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
+         * <blockquote>
+         * <p> You cannot release subscription ECS instances.</p>
+         * </blockquote>
          * 
-         * *   `true`: releases the ECS instances.
-         * *   `false`: does not release the ECS instances.
-         * 
-         * Default value: `false`.
-         * 
-         * >  You cannot release subscription ECS instances.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder releaseNode(Boolean releaseNode) {
             this.putBodyParameter("release_node", releaseNode);

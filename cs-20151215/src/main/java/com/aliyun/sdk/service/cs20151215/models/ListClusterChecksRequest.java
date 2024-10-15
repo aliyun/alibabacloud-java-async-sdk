@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClusterChecksRequest} extends {@link RequestModel}
  *
  * <p>ListClusterChecksRequest</p>
@@ -81,7 +82,10 @@ public class ListClusterChecksRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ce0da5a1d627e4e9e9f96cae8ad07****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -90,7 +94,10 @@ public class ListClusterChecksRequest extends Request {
         }
 
         /**
-         * The targets to check.
+         * <p>The targets to check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-bp19ay6nnvd4cexxxx</p>
          */
         public Builder target(String target) {
             this.putQueryParameter("target", target);
@@ -99,7 +106,10 @@ public class ListClusterChecksRequest extends Request {
         }
 
         /**
-         * The check method.
+         * <p>The check method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ClusterUpgrade</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

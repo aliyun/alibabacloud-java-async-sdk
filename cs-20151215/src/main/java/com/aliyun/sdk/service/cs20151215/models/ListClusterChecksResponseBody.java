@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClusterChecksResponseBody} extends {@link TeaModel}
  *
  * <p>ListClusterChecksResponseBody</p>
@@ -37,7 +38,7 @@ public class ListClusterChecksResponseBody extends TeaModel {
         private java.util.List < Checks> checks; 
 
         /**
-         * The list of check items.
+         * <p>The list of check items.</p>
          */
         public Builder checks(java.util.List < Checks> checks) {
             this.checks = checks;
@@ -50,6 +51,12 @@ public class ListClusterChecksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListClusterChecksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClusterChecksResponseBody</p>
+     */
     public static class Checks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("check_id")
         private String checkId;
@@ -137,7 +144,10 @@ public class ListClusterChecksResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The ID of the cluster check task.
+             * <p>The ID of the cluster check task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1697100584236600453-ce0da5a1d627e4e9e9f96cae8ad07****-clustercheck-lboto</p>
              */
             public Builder checkId(String checkId) {
                 this.checkId = checkId;
@@ -145,7 +155,10 @@ public class ListClusterChecksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cluster check task was created.
+             * <p>The time when the cluster check task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-10-16T08:31:20.292030178Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -153,7 +166,10 @@ public class ListClusterChecksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cluster check task was completed.
+             * <p>The time when the cluster check task was completed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-10-16T08:35:20.292030178Z</p>
              */
             public Builder finishedAt(String finishedAt) {
                 this.finishedAt = finishedAt;
@@ -161,7 +177,10 @@ public class ListClusterChecksResponseBody extends TeaModel {
             }
 
             /**
-             * The message that indicates the status of the cluster check task.
+             * <p>The message that indicates the status of the cluster check task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task succeed</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -169,7 +188,10 @@ public class ListClusterChecksResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cluster check.
+             * <p>The status of the cluster check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Succeeded</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -177,7 +199,10 @@ public class ListClusterChecksResponseBody extends TeaModel {
             }
 
             /**
-             * The check method.
+             * <p>The check method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ClusterUpgrade</p>
              */
             public Builder type(String type) {
                 this.type = type;

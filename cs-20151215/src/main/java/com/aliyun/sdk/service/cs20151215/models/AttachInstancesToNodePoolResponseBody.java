@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachInstancesToNodePoolResponseBody} extends {@link TeaModel}
  *
  * <p>AttachInstancesToNodePoolResponseBody</p>
@@ -49,7 +50,10 @@ public class AttachInstancesToNodePoolResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D7631D83-6E98-1949-B665-766A62xxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class AttachInstancesToNodePoolResponseBody extends TeaModel {
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T-5a54309c80282e39ea00002f</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

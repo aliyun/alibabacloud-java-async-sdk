@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SyncClusterNodePoolRequest} extends {@link RequestModel}
  *
  * <p>SyncClusterNodePoolRequest</p>
@@ -54,7 +55,11 @@ public class SyncClusterNodePoolRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c905d1364c2dd4b6284a3f41790c4****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAddonsRequest} extends {@link RequestModel}
  *
  * <p>ListAddonsRequest</p>
@@ -123,7 +124,10 @@ public class ListAddonsRequest extends Request {
         } 
 
         /**
-         * The cluster ID. If you specify a cluster ID, only components used in the specified cluster are queried. Other parameters are ignored.
+         * <p>The cluster ID. If you specify a cluster ID, only components used in the specified cluster are queried. Other parameters are ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c02b3e03be10643e8a644a843ffcb****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("cluster_id", clusterId);
@@ -132,7 +136,10 @@ public class ListAddonsRequest extends Request {
         }
 
         /**
-         * The specifications of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.
+         * <p>The specifications of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ack.pro.small</p>
          */
         public Builder clusterSpec(String clusterSpec) {
             this.putQueryParameter("cluster_spec", clusterSpec);
@@ -141,7 +148,10 @@ public class ListAddonsRequest extends Request {
         }
 
         /**
-         * The type of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.
+         * <p>The type of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ManagedKubernetes</p>
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("cluster_type", clusterType);
@@ -150,7 +160,10 @@ public class ListAddonsRequest extends Request {
         }
 
         /**
-         * The version of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.
+         * <p>The version of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.26.3-aliyun.1</p>
          */
         public Builder clusterVersion(String clusterVersion) {
             this.putQueryParameter("cluster_version", clusterVersion);
@@ -159,7 +172,10 @@ public class ListAddonsRequest extends Request {
         }
 
         /**
-         * The subtype of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.
+         * <p>The subtype of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         public Builder profile(String profile) {
             this.putQueryParameter("profile", profile);
@@ -168,7 +184,10 @@ public class ListAddonsRequest extends Request {
         }
 
         /**
-         * The region of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.
+         * <p>The region of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("region_id", regionId);

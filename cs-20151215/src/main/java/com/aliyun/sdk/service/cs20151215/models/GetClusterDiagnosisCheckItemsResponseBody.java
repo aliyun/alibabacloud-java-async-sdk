@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClusterDiagnosisCheckItemsResponseBody} extends {@link TeaModel}
  *
  * <p>GetClusterDiagnosisCheckItemsResponseBody</p>
@@ -73,7 +74,7 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The check item.
+         * <p>The check item.</p>
          */
         public Builder checkItems(java.util.List < CheckItems> checkItems) {
             this.checkItems = checkItems;
@@ -81,7 +82,10 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
         }
 
         /**
-         * The status code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -89,7 +93,10 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the check is successful.
+         * <p>Indicates whether the check is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -97,7 +104,10 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1DFFD8C6-259E-582B-8B40-002C17DC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetClusterDiagnosisCheckItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterDiagnosisCheckItemsResponseBody</p>
+     */
     public static class CheckItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("desc")
         private String desc;
@@ -221,7 +237,10 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Check whether the node can access host dns service</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -229,7 +248,10 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The display name.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HostDNS</p>
              */
             public Builder display(String display) {
                 this.display = display;
@@ -237,7 +259,10 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the group to which the check item belongs.
+             * <p>The name of the group to which the check item belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Node</p>
              */
             public Builder group(String group) {
                 this.group = group;
@@ -245,14 +270,16 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level of the check result.
-             * <p>
+             * <p>The severity level of the check result.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>normal</li>
+             * <li>warning</li>
+             * <li>error</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   normal
-             * *   warning
-             * *   error
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -260,7 +287,10 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The check result.
+             * <p>The check result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -268,7 +298,10 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the check item.
+             * <p>The name of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HostDNS</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -276,7 +309,10 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The reference value.
+             * <p>The reference value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder refer(String refer) {
                 this.refer = refer;
@@ -284,7 +320,10 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the check item.
+             * <p>The value of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder value(String value) {
                 this.value = value;

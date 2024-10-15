@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserPermissionResponse} extends {@link TeaModel}
  *
  * <p>DescribeUserPermissionResponse</p>
@@ -122,6 +123,12 @@ public class DescribeUserPermissionResponse extends Response {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUserPermissionResponse} extends {@link TeaModel}
+     *
+     * <p>DescribeUserPermissionResponse</p>
+     */
     public static class DescribeUserPermissionResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("resource_id")
         private String resourceId;
@@ -209,12 +216,15 @@ public class DescribeUserPermissionResponse extends Response {
             private Long isRamRole; 
 
             /**
-             * The authorization setting. Valid values:
-             * <p>
+             * <p>The authorization setting. Valid values:</p>
+             * <ul>
+             * <li><code>{cluster_id}</code> is returned if the permissions are scoped to a cluster.</li>
+             * <li><code>{cluster_id}/{namespace}</code> is returned if the permissions are scoped to a namespace of a cluster.</li>
+             * <li><code>all-clusters</code> is returned if the permissions are scoped to all clusters.</li>
+             * </ul>
              * 
-             * *   `{cluster_id}` is returned if the permissions are scoped to a cluster.
-             * *   `{cluster_id}/{namespace}` is returned if the permissions are scoped to a namespace of a cluster.
-             * *   `all-clusters` is returned if the permissions are scoped to all clusters.
+             * <strong>example:</strong>
+             * <p>c1b542****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -222,12 +232,15 @@ public class DescribeUserPermissionResponse extends Response {
             }
 
             /**
-             * The authorization type. Valid values:
-             * <p>
+             * <p>The authorization type. Valid values:</p>
+             * <ul>
+             * <li><code>cluster</code>: indicates that the permissions are scoped to a cluster.</li>
+             * <li><code>namespace</code>: indicates that the permissions are scoped to a namespace of a cluster.</li>
+             * <li><code>console</code>: indicates that the permissions are scoped to all clusters. This value was displayed only in the console.</li>
+             * </ul>
              * 
-             * *   `cluster`: indicates that the permissions are scoped to a cluster.
-             * *   `namespace`: indicates that the permissions are scoped to a namespace of a cluster.
-             * *   `console`: indicates that the permissions are scoped to all clusters. This value was displayed only in the console.
+             * <strong>example:</strong>
+             * <p>cluster</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -235,7 +248,10 @@ public class DescribeUserPermissionResponse extends Response {
             }
 
             /**
-             * The name of the custom role. If a custom role is assigned, the value is the name of the assigned custom role.
+             * <p>The name of the custom role. If a custom role is assigned, the value is the name of the assigned custom role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>view</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -243,14 +259,17 @@ public class DescribeUserPermissionResponse extends Response {
             }
 
             /**
-             * The type of predefined role. Valid values:
-             * <p>
+             * <p>The type of predefined role. Valid values:</p>
+             * <ul>
+             * <li><code>admin</code>: administrator</li>
+             * <li><code>ops</code>: O&amp;M engineer</li>
+             * <li><code>dev</code>: developer</li>
+             * <li><code>restricted</code>: restricted user</li>
+             * <li><code>custom</code>: custom role</li>
+             * </ul>
              * 
-             * *   `admin`: administrator
-             * *   `ops`: O\&M engineer
-             * *   `dev`: developer
-             * *   `restricted`: restricted user
-             * *   `custom`: custom role
+             * <strong>example:</strong>
+             * <p>admin</p>
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;
@@ -258,11 +277,14 @@ public class DescribeUserPermissionResponse extends Response {
             }
 
             /**
-             * Indicates whether the permissions are granted to the cluster owner.
-             * <p>
+             * <p>Indicates whether the permissions are granted to the cluster owner.</p>
+             * <ul>
+             * <li><code>0</code>: indicates that the permissions are not granted to the cluster owner.</li>
+             * <li><code>1</code>: indicates that the permissions are granted to the cluster owner. The cluster owner is the administrator.</li>
+             * </ul>
              * 
-             * *   `0`: indicates that the permissions are not granted to the cluster owner.
-             * *   `1`: indicates that the permissions are granted to the cluster owner. The cluster owner is the administrator.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isOwner(Long isOwner) {
                 this.isOwner = isOwner;
@@ -270,11 +292,14 @@ public class DescribeUserPermissionResponse extends Response {
             }
 
             /**
-             * Indicates whether the permissions are granted to the RAM role. Valid values:
-             * <p>
+             * <p>Indicates whether the permissions are granted to the RAM role. Valid values:</p>
+             * <ul>
+             * <li><code>0</code>: indicates that the permissions are not granted to the RAM role.</li>
+             * <li><code>1</code>: indicates that the permissions are granted to the RAM role.</li>
+             * </ul>
              * 
-             * *   `0`: indicates that the permissions are not granted to the RAM role.
-             * *   `1`: indicates that the permissions are granted to the RAM role.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isRamRole(Long isRamRole) {
                 this.isRamRole = isRamRole;

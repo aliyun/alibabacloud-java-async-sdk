@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescirbeWorkflowRequest} extends {@link RequestModel}
  *
  * <p>DescirbeWorkflowRequest</p>
@@ -54,7 +55,11 @@ public class DescirbeWorkflowRequest extends Request {
         } 
 
         /**
-         * The name of the workflow.
+         * <p>The name of the workflow.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mapping-gpu-mhhgh</p>
          */
         public Builder workflowName(String workflowName) {
             this.putPathParameter("workflowName", workflowName);

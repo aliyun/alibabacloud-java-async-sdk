@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyClusterTagsRequest} extends {@link RequestModel}
  *
  * <p>ModifyClusterTagsRequest</p>
@@ -68,7 +69,11 @@ public class ModifyClusterTagsRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c106f377e16f34eb1808d6b9362c9****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -77,7 +82,7 @@ public class ModifyClusterTagsRequest extends Request {
         }
 
         /**
-         * The data of the labels that you want to modify.
+         * <p>The data of the labels that you want to modify.</p>
          */
         public Builder body(java.util.List < Tag > body) {
             this.putBodyParameter("body", body);

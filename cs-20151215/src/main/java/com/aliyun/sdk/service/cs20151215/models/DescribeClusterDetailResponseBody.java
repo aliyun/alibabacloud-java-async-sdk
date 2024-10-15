@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClusterDetailResponseBody</p>
@@ -55,6 +56,9 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("next_version")
     private String nextVersion;
+
+    @com.aliyun.core.annotation.NameInMap("operation_policy")
+    private OperationPolicy operationPolicy;
 
     @com.aliyun.core.annotation.NameInMap("parameters")
     private java.util.Map < String, String > parameters;
@@ -117,6 +121,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         this.name = builder.name;
         this.networkMode = builder.networkMode;
         this.nextVersion = builder.nextVersion;
+        this.operationPolicy = builder.operationPolicy;
         this.parameters = builder.parameters;
         this.privateZone = builder.privateZone;
         this.profile = builder.profile;
@@ -248,6 +253,13 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     }
 
     /**
+     * @return operationPolicy
+     */
+    public OperationPolicy getOperationPolicy() {
+        return this.operationPolicy;
+    }
+
+    /**
      * @return parameters
      */
     public java.util.Map < String, String > getParameters() {
@@ -368,6 +380,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         private String name; 
         private String networkMode; 
         private String nextVersion; 
+        private OperationPolicy operationPolicy; 
         private java.util.Map < String, String > parameters; 
         private Boolean privateZone; 
         private String profile; 
@@ -385,7 +398,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         private String zoneId; 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c82e6987e2961451182edacd74faf****</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -393,11 +409,14 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * After you set `cluster_type` to `ManagedKubernetes` and configure the `profile` parameter, you can further specify the edition of the cluster.
-         * <p>
+         * <p>After you set <code>cluster_type</code> to <code>ManagedKubernetes</code> and configure the <code>profile</code> parameter, you can further specify the edition of the cluster.</p>
+         * <ul>
+         * <li><code>ack.pro.small</code>: Pro.</li>
+         * <li><code>ack.standard</code>: Basic. If you leave the parameter empty, the Basic edition is selected.</li>
+         * </ul>
          * 
-         * *   `ack.pro.small`: Pro.
-         * *   `ack.standard`: Basic. If you leave the parameter empty, the Basic edition is selected.
+         * <strong>example:</strong>
+         * <p>ack.pro.small</p>
          */
         public Builder clusterSpec(String clusterSpec) {
             this.clusterSpec = clusterSpec;
@@ -405,10 +424,14 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * *   `Kubernetes`: ACK dedicated cluster.
-         * <p>
-         * *   `ManagedKubernetes`: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless clusters (Basic and Pro), ACK Edge clusters (Basic and Pro), and ACK Lingjun clusters (Pro).
-         * *   `ExternalKubernetes`: registered cluster.
+         * <ul>
+         * <li><code>Kubernetes</code>: ACK dedicated cluster.</li>
+         * <li><code>ManagedKubernetes</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless clusters (Basic and Pro), ACK Edge clusters (Basic and Pro), and ACK Lingjun clusters (Pro).</li>
+         * <li><code>ExternalKubernetes</code>: registered cluster.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Kubernetes</p>
          */
         public Builder clusterType(String clusterType) {
             this.clusterType = clusterType;
@@ -416,7 +439,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the cluster was created.
+         * <p>The time when the cluster was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-11-25T15:50:20+08:00</p>
          */
         public Builder created(String created) {
             this.created = created;
@@ -424,7 +450,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The current Kubernetes version of the cluster. For more information about the Kubernetes versions supported by ACK, see [Release notes for Kubernetes versions](~~185269~~).
+         * <p>The current Kubernetes version of the cluster. For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Release notes for Kubernetes versions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.16.6-aliyun.1</p>
          */
         public Builder currentVersion(String currentVersion) {
             this.currentVersion = currentVersion;
@@ -432,11 +461,14 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether deletion protection is enabled for the cluster. If deletion protection is enabled, the cluster cannot be deleted in the Container Service console or by calling API operations. Valid values:
-         * <p>
+         * <p>Indicates whether deletion protection is enabled for the cluster. If deletion protection is enabled, the cluster cannot be deleted in the Container Service console or by calling API operations. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: deletion protection is enabled for the cluster. This way, the cluster cannot be deleted in the Container Service console or by calling API operations.</li>
+         * <li><code>false</code>: deletion protection is disabled for the cluster. This way, the cluster can be deleted in the Container Service console or by calling API operations.</li>
+         * </ul>
          * 
-         * *   `true`: deletion protection is enabled for the cluster. This way, the cluster cannot be deleted in the Container Service console or by calling API operations.
-         * *   `false`: deletion protection is disabled for the cluster. This way, the cluster can be deleted in the Container Service console or by calling API operations.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deletionProtection(Boolean deletionProtection) {
             this.deletionProtection = deletionProtection;
@@ -444,7 +476,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The Docker version that is used by the cluster.
+         * <p>The Docker version that is used by the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19.03.5</p>
          */
         public Builder dockerVersion(String dockerVersion) {
             this.dockerVersion = dockerVersion;
@@ -460,7 +495,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The initial Kubernetes version of the cluster.
+         * <p>The initial Kubernetes version of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.16.6-aliyun.1</p>
          */
         public Builder initVersion(String initVersion) {
             this.initVersion = initVersion;
@@ -468,7 +506,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The maintenance window of the cluster. This feature is available only in ACK Pro clusters.
+         * <p>The maintenance window of the cluster. This feature is available only in ACK Pro clusters.</p>
          */
         public Builder maintenanceWindow(MaintenanceWindow maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
@@ -476,7 +514,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The endpoints of the cluster, including an internal endpoint and a public endpoint.
+         * <p>The endpoints of the cluster, including an internal endpoint and a public endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;intranet_api_server_endpoint&quot;:&quot;<a href="https://192.168.0.251:6443%5C%22***%7D">https://192.168.0.251:6443\&quot;***}</a></p>
          */
         public Builder masterUrl(String masterUrl) {
             this.masterUrl = masterUrl;
@@ -484,7 +525,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The metadata of the cluster.
+         * <p>The metadata of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;Addons&quot;:***</p>
          */
         public Builder metaData(String metaData) {
             this.metaData = metaData;
@@ -492,10 +536,11 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the cluster.
-         * <p>
+         * <p>The name of the cluster.</p>
+         * <p>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).</p>
          * 
-         * The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).
+         * <strong>example:</strong>
+         * <p>cluster-demo</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -519,7 +564,15 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ROS parameters of the cluster.
+         * operation_policy.
+         */
+        public Builder operationPolicy(OperationPolicy operationPolicy) {
+            this.operationPolicy = operationPolicy;
+            return this;
+        }
+
+        /**
+         * <p>The ROS parameters of the cluster.</p>
          */
         public Builder parameters(java.util.Map < String, String > parameters) {
             this.parameters = parameters;
@@ -535,13 +588,16 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * If you set `cluster_type` to `ManagedKubernetes`, an ACK managed cluster is created. In this case, you can further specify the cluster edition.
-         * <p>
+         * <p>If you set <code>cluster_type</code> to <code>ManagedKubernetes</code>, an ACK managed cluster is created. In this case, you can further specify the cluster edition.</p>
+         * <ul>
+         * <li><code>Default</code>. ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.</li>
+         * <li><code>Edge</code>: ACK Edge cluster. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.</li>
+         * <li><code>Serverless</code>: ACK Serverless cluster. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.</li>
+         * <li><code>Lingjun</code>: ACK Lingjun Pro cluster.</li>
+         * </ul>
          * 
-         * *   `Default`. ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.
-         * *   `Edge`: ACK Edge cluster. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.
-         * *   `Serverless`: ACK Serverless cluster. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.
-         * *   `Lingjun`: ACK Lingjun Pro cluster.
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         public Builder profile(String profile) {
             this.profile = profile;
@@ -549,7 +605,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the cluster.
+         * <p>The region ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -557,7 +616,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group to which the cluster belongs.
+         * <p>The ID of the resource group to which the cluster belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyvw3wjm****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -565,7 +627,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the security group to which the cluster belongs.
+         * <p>The ID of the security group to which the cluster belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-25yq****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
@@ -573,7 +638,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The number of nodes in the cluster. Master nodes and worker nodes are included.
+         * <p>The number of nodes in the cluster. Master nodes and worker nodes are included.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder size(Long size) {
             this.size = size;
@@ -581,21 +649,24 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the cluster. Valid values:
-         * <p>
+         * <p>The status of the cluster. Valid values:</p>
+         * <ul>
+         * <li><code>initial</code>: The cluster is being created.</li>
+         * <li><code>failed</code>: The cluster failed to be created.</li>
+         * <li><code>running</code>: The cluster is running.</li>
+         * <li><code>updating</code>: The cluster is being updated.</li>
+         * <li><code>updating_failed</code>: The cluster failed to be updated.</li>
+         * <li><code>scaling</code>: The cluster is being scaled.</li>
+         * <li><code>waiting</code>: The cluster is waiting for connection requests.</li>
+         * <li><code>disconnected</code>: The cluster is disconnected.</li>
+         * <li><code>stopped</code>: The cluster is stopped.</li>
+         * <li><code>deleting</code>: The cluster is being deleted.</li>
+         * <li><code>deleted</code>: The cluster is deleted.</li>
+         * <li><code>delete_failed</code>: The cluster failed to be deleted.</li>
+         * </ul>
          * 
-         * *   `initial`: The cluster is being created.
-         * *   `failed`: The cluster failed to be created.
-         * *   `running`: The cluster is running.
-         * *   `updating`: The cluster is being updated.
-         * *   `updating_failed`: The cluster failed to be updated.
-         * *   `scaling`: The cluster is being scaled.
-         * *   `waiting`: The cluster is waiting for connection requests.
-         * *   `disconnected`: The cluster is disconnected.
-         * *   `stopped`: The cluster is stopped.
-         * *   `deleting`: The cluster is being deleted.
-         * *   `deleted`: The cluster is deleted.
-         * *   `delete_failed`: The cluster failed to be deleted.
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         public Builder state(String state) {
             this.state = state;
@@ -603,16 +674,17 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The pod CIDR block. It must be a valid and private CIDR block, and must be one of the following CIDR blocks or their subnets:
-         * <p>
+         * <p>The pod CIDR block. It must be a valid and private CIDR block, and must be one of the following CIDR blocks or their subnets:</p>
+         * <ul>
+         * <li>10.0.0.0/8</li>
+         * <li>172.16-31.0.0/12-16</li>
+         * <li>192.168.0.0/16</li>
+         * </ul>
+         * <p>The pod CIDR block cannot overlap with the CIDR block of the VPC or the CIDR blocks of the clusters in the VPC.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/186964.html">Plan CIDR blocks for an ACK cluster</a>.</p>
          * 
-         * *   10.0.0.0/8
-         * *   172.16-31.0.0/12-16
-         * *   192.168.0.0/16
-         * 
-         * The pod CIDR block cannot overlap with the CIDR block of the VPC or the CIDR blocks of the clusters in the VPC.
-         * 
-         * For more information, see [Plan CIDR blocks for an ACK cluster](~~186964~~).
+         * <strong>example:</strong>
+         * <p>172.20.0.0/16</p>
          */
         public Builder subnetCidr(String subnetCidr) {
             this.subnetCidr = subnetCidr;
@@ -620,7 +692,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The resource tags of the cluster.
+         * <p>The resource tags of the cluster.</p>
          */
         public Builder tags(java.util.List < Tag > tags) {
             this.tags = tags;
@@ -628,7 +700,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the cluster was updated.
+         * <p>The time when the cluster was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-01-13T23:01:03+08:00</p>
          */
         public Builder updated(String updated) {
             this.updated = updated;
@@ -636,7 +711,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the VPC where the cluster is deployed. This parameter is required when you create a cluster.
+         * <p>The ID of the VPC where the cluster is deployed. This parameter is required when you create a cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2zecuu62b9zw7a7qn****</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;
@@ -644,7 +722,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The IDs of the vSwitches. You can select one to three vSwitches when you create a cluster. We recommend that you select vSwitches in different zones to ensure high availability.
+         * <p>The IDs of the vSwitches. You can select one to three vSwitches when you create a cluster. We recommend that you select vSwitches in different zones to ensure high availability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-2zete8s4qocqg0mf6****,vsw-2zete8s4qocqg0mf6****</p>
          */
         public Builder vswitchId(String vswitchId) {
             this.vswitchId = vswitchId;
@@ -652,7 +733,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes of the cluster to allow the worker nodes to manage Elastic Compute Service (ECS) instances.
+         * <p>The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes of the cluster to allow the worker nodes to manage Elastic Compute Service (ECS) instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KubernetesWorkerRole-ec87d15b-edca-4302-933f-c8a16bf0****</p>
          */
         public Builder workerRamRoleName(String workerRamRoleName) {
             this.workerRamRoleName = workerRamRoleName;
@@ -673,4 +757,118 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClusterDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterDetailResponseBody</p>
+     */
+    public static class ClusterAutoUpgrade extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("channel")
+        private String channel;
+
+        @com.aliyun.core.annotation.NameInMap("enabled")
+        private Boolean enabled;
+
+        private ClusterAutoUpgrade(Builder builder) {
+            this.channel = builder.channel;
+            this.enabled = builder.enabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ClusterAutoUpgrade create() {
+            return builder().build();
+        }
+
+        /**
+         * @return channel
+         */
+        public String getChannel() {
+            return this.channel;
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public static final class Builder {
+            private String channel; 
+            private Boolean enabled; 
+
+            /**
+             * channel.
+             */
+            public Builder channel(String channel) {
+                this.channel = channel;
+                return this;
+            }
+
+            /**
+             * enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            public ClusterAutoUpgrade build() {
+                return new ClusterAutoUpgrade(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeClusterDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterDetailResponseBody</p>
+     */
+    public static class OperationPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("cluster_auto_upgrade")
+        private ClusterAutoUpgrade clusterAutoUpgrade;
+
+        private OperationPolicy(Builder builder) {
+            this.clusterAutoUpgrade = builder.clusterAutoUpgrade;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OperationPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return clusterAutoUpgrade
+         */
+        public ClusterAutoUpgrade getClusterAutoUpgrade() {
+            return this.clusterAutoUpgrade;
+        }
+
+        public static final class Builder {
+            private ClusterAutoUpgrade clusterAutoUpgrade; 
+
+            /**
+             * cluster_auto_upgrade.
+             */
+            public Builder clusterAutoUpgrade(ClusterAutoUpgrade clusterAutoUpgrade) {
+                this.clusterAutoUpgrade = clusterAutoUpgrade;
+                return this;
+            }
+
+            public OperationPolicy build() {
+                return new OperationPolicy(this);
+            } 
+
+        } 
+
+    }
 }

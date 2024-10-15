@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelComponentUpgradeRequest} extends {@link RequestModel}
  *
  * <p>CancelComponentUpgradeRequest</p>
@@ -69,7 +70,11 @@ public class CancelComponentUpgradeRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c82e6987e2961451182edacd74faf****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("clusterId", clusterId);
@@ -78,7 +83,11 @@ public class CancelComponentUpgradeRequest extends Request {
         }
 
         /**
-         * The component ID.
+         * <p>The component ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>metric-server</p>
          */
         public Builder componentId(String componentId) {
             this.putPathParameter("componentId", componentId);

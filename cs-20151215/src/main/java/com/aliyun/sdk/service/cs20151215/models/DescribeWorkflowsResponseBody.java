@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWorkflowsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWorkflowsResponseBody</p>
@@ -37,7 +38,7 @@ public class DescribeWorkflowsResponseBody extends TeaModel {
         private java.util.List < Jobs> jobs; 
 
         /**
-         * The list of jobs.
+         * <p>The list of jobs.</p>
          */
         public Builder jobs(java.util.List < Jobs> jobs) {
             this.jobs = jobs;
@@ -50,6 +51,12 @@ public class DescribeWorkflowsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWorkflowsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWorkflowsResponseBody</p>
+     */
     public static class Jobs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cluster_id")
         private String clusterId;
@@ -101,7 +108,10 @@ public class DescribeWorkflowsResponseBody extends TeaModel {
             private String jobName; 
 
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cb1a7214cfc0b41d9bb086affc2d8f51c</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -109,7 +119,10 @@ public class DescribeWorkflowsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the workflow was created.
+             * <p>The time when the workflow was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-01-15T13:18:52Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -117,7 +130,10 @@ public class DescribeWorkflowsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the workflow.
+             * <p>The name of the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wgs-gpu-qb4dk</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;

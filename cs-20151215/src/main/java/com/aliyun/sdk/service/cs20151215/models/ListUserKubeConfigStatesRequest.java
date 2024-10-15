@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserKubeConfigStatesRequest} extends {@link RequestModel}
  *
  * <p>ListUserKubeConfigStatesRequest</p>
@@ -81,7 +82,10 @@ public class ListUserKubeConfigStatesRequest extends Request {
         } 
 
         /**
-         * The ID of the specified Resource Access Management (RAM) user or RAM role within the Alibaba Cloud account.
+         * <p>The ID of the specified Resource Access Management (RAM) user or RAM role within the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2xxxxxxxxxxxxxxxxxx</p>
          */
         public Builder uid(String uid) {
             this.putPathParameter("Uid", uid);
@@ -90,11 +94,14 @@ public class ListUserKubeConfigStatesRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <ul>
+         * <li>Valid values: ≥ 1.</li>
+         * <li>Default value: 1.</li>
+         * </ul>
          * 
-         * *   Valid values: ≥ 1.
-         * *   Default value: 1.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("page_number", pageNumber);
@@ -103,11 +110,14 @@ public class ListUserKubeConfigStatesRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <ul>
+         * <li>Value values: 1 to 100.</li>
+         * <li>Default value: 50.</li>
+         * </ul>
          * 
-         * *   Value values: 1 to 100.
-         * *   Default value: 50.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("page_size", pageSize);

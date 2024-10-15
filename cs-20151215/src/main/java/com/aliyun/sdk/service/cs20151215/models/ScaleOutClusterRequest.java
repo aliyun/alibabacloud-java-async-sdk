@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScaleOutClusterRequest} extends {@link RequestModel}
  *
  * <p>ScaleOutClusterRequest</p>
@@ -355,7 +356,11 @@ public class ScaleOutClusterRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c82e6987e2961451182edacd74faf****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -364,13 +369,15 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to install the CloudMonitor agent. Valid values:
-         * <p>
+         * <p>Specifies whether to install the CloudMonitor agent. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: installs the CloudMonitor agent.</li>
+         * <li><code>false</code>: does not install the CloudMonitor agent.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: installs the CloudMonitor agent.
-         * *   `false`: does not install the CloudMonitor agent.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder cloudMonitorFlags(Boolean cloudMonitorFlags) {
             this.putBodyParameter("cloud_monitor_flags", cloudMonitorFlags);
@@ -379,7 +386,11 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * The number of worker nodes that you want to add.
+         * <p>The number of worker nodes that you want to add.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder count(Long count) {
             this.putBodyParameter("count", count);
@@ -388,13 +399,15 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * The CPU management policy of nodes. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:
-         * <p>
+         * <p>The CPU management policy of nodes. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:</p>
+         * <ul>
+         * <li><code>static</code>: allows pods with specific resource characteristics on the node to be granted with enhanced CPU affinity and exclusivity.</li>
+         * <li><code>none</code>: specifies that the default CPU affinity is used.</li>
+         * </ul>
+         * <p>Default value: <code>none</code>.</p>
          * 
-         * *   `static`: allows pods with specific resource characteristics on the node to be granted with enhanced CPU affinity and exclusivity.
-         * *   `none`: specifies that the default CPU affinity is used.
-         * 
-         * Default value: `none`.
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         public Builder cpuPolicy(String cpuPolicy) {
             this.putBodyParameter("cpu_policy", cpuPolicy);
@@ -403,7 +416,10 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * Specifies a custom image for nodes. By default, the image provided by ACK is used. You can select a custom image to replace the default image. For more information, see [Custom images](~~146647~~).
+         * <p>Specifies a custom image for nodes. By default, the image provided by ACK is used. You can select a custom image to replace the default image. For more information, see <a href="https://help.aliyun.com/document_detail/146647.html">Custom images</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-bp16z7xko3vvv8gt****</p>
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("image_id", imageId);
@@ -412,7 +428,11 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * The name of the key pair. You must configure this parameter or the `login_password` parameter.
+         * <p>The name of the key pair. You must configure this parameter or the <code>login_password</code> parameter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>secrity-key</p>
          */
         public Builder keyPair(String keyPair) {
             this.putBodyParameter("key_pair", keyPair);
@@ -421,7 +441,11 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * The password for SSH logon. You must configure this parameter or the `key_pair` parameter. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
+         * <p>The password for SSH logon. You must configure this parameter or the <code>key_pair</code> parameter. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello@1234</p>
          */
         public Builder loginPassword(String loginPassword) {
             this.putBodyParameter("login_password", loginPassword);
@@ -430,7 +454,7 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * The ApsaraDB RDS instances. If you specify a list of ApsaraDB RDS instances, ECS instances in the cluster are automatically added to the whitelist of the ApsaraDB RDS instances.
+         * <p>The ApsaraDB RDS instances. If you specify a list of ApsaraDB RDS instances, ECS instances in the cluster are automatically added to the whitelist of the ApsaraDB RDS instances.</p>
          */
         public Builder rdsInstances(java.util.List < String > rdsInstances) {
             this.putBodyParameter("rds_instances", rdsInstances);
@@ -439,7 +463,7 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * The container runtime.
+         * <p>The container runtime.</p>
          */
         public Builder runtime(Runtime runtime) {
             this.putBodyParameter("runtime", runtime);
@@ -448,11 +472,11 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * The labels that you want to add to nodes. You must add labels based on the following rules:
-         * <p>
-         * 
-         * *   A label is a case-sensitive key-value pair. You can add up to 20 labels.
-         * *   When you add a label, you must specify a unique key but you can leave the value empty. A key cannot exceed 64 characters in length and a value cannot exceed 128 characters in length. Keys and values cannot start with aliyun, acs:, https://, or http://. For more information, see [Labels and Selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set).
+         * <p>The labels that you want to add to nodes. You must add labels based on the following rules:</p>
+         * <ul>
+         * <li>A label is a case-sensitive key-value pair. You can add up to 20 labels.</li>
+         * <li>When you add a label, you must specify a unique key but you can leave the value empty. A key cannot exceed 64 characters in length and a value cannot exceed 128 characters in length. Keys and values cannot start with aliyun, acs:, https://, or http://. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</li>
+         * </ul>
          */
         public Builder tags(java.util.List < Tag > tags) {
             this.putBodyParameter("tags", tags);
@@ -461,7 +485,7 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * The taints that you want to add to nodes. Taints can be used together with tolerations to avoid scheduling pods to specified nodes. For more information, see [taint-and-toleration](https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/).
+         * <p>The taints that you want to add to nodes. Taints can be used together with tolerations to avoid scheduling pods to specified nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</p>
          */
         public Builder taints(java.util.List < Taint > taints) {
             this.putBodyParameter("taints", taints);
@@ -470,7 +494,10 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * The user-defined data of the node pool. For more information, see [Generate user-defined data](~~49121~~).
+         * <p>The user-defined data of the node pool. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate user-defined data</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IyEvdXNyL2Jpbi9iYXNoCmVjaG8gIkhlbGxvIEFD****</p>
          */
         public Builder userData(String userData) {
             this.putBodyParameter("user_data", userData);
@@ -479,7 +506,8 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * The vSwitch IDs. You can select one to three vSwitches when you create a cluster. To ensure the high availability of the cluster, we recommend that you select vSwitches in different zones.
+         * <p>The vSwitch IDs. You can select one to three vSwitches when you create a cluster. To ensure the high availability of the cluster, we recommend that you select vSwitches in different zones.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder vswitchIds(java.util.List < String > vswitchIds) {
             this.putBodyParameter("vswitch_ids", vswitchIds);
@@ -488,13 +516,15 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal for worker nodes. This parameter takes effect and is required only if `worker_instance_charge_type` is set to `PrePaid`. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto-renewal for worker nodes. This parameter takes effect and is required only if <code>worker_instance_charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables auto-renewal.</li>
+         * <li><code>false</code>: does not enable auto-renewal.</li>
+         * </ul>
+         * <p>Default value: <code>true</code>.</p>
          * 
-         * *   `true`: enables auto-renewal.
-         * *   `false`: does not enable auto-renewal.
-         * 
-         * Default value: `true`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder workerAutoRenew(Boolean workerAutoRenew) {
             this.putBodyParameter("worker_auto_renew", workerAutoRenew);
@@ -503,12 +533,12 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * The auto-renewal duration of worker nodes. This parameter takes effect and is required only if the subscription billing method is selected for worker nodes.
-         * <p>
+         * <p>The auto-renewal duration of worker nodes. This parameter takes effect and is required only if the subscription billing method is selected for worker nodes.</p>
+         * <p>Valid values: 1, 2, 3, 6, and 12.</p>
+         * <p>Default value: <code>1</code>.</p>
          * 
-         * Valid values: 1, 2, 3, 6, and 12.
-         * 
-         * Default value: `1`.
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder workerAutoRenewPeriod(Long workerAutoRenewPeriod) {
             this.putBodyParameter("worker_auto_renew_period", workerAutoRenewPeriod);
@@ -517,7 +547,7 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * The configurations of the data disks that you want to mount to worker nodes. The configurations include the disk type and disk size.
+         * <p>The configurations of the data disks that you want to mount to worker nodes. The configurations include the disk type and disk size.</p>
          */
         public Builder workerDataDisks(java.util.List < WorkerDataDisks> workerDataDisks) {
             this.putBodyParameter("worker_data_disks", workerDataDisks);
@@ -526,13 +556,15 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * The billing method of worker nodes. Valid values:
-         * <p>
+         * <p>The billing method of worker nodes. Valid values:</p>
+         * <ul>
+         * <li><code>PrePaid</code>: subscription.</li>
+         * <li><code>PostPaid</code>: pay-as-you-go.</li>
+         * </ul>
+         * <p>Default value: <code>PostPaid</code>.</p>
          * 
-         * *   `PrePaid`: subscription.
-         * *   `PostPaid`: pay-as-you-go.
-         * 
-         * Default value: `PostPaid`.
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder workerInstanceChargeType(String workerInstanceChargeType) {
             this.putBodyParameter("worker_instance_charge_type", workerInstanceChargeType);
@@ -541,7 +573,8 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * The instance configurations of worker nodes.
+         * <p>The instance configurations of worker nodes.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder workerInstanceTypes(java.util.List < String > workerInstanceTypes) {
             this.putBodyParameter("worker_instance_types", workerInstanceTypes);
@@ -550,12 +583,12 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * The subscription duration of worker nodes. This parameter takes effect and is required only if `worker_instance_charge_type` is set to `PrePaid`.
-         * <p>
+         * <p>The subscription duration of worker nodes. This parameter takes effect and is required only if <code>worker_instance_charge_type</code> is set to <code>PrePaid</code>.</p>
+         * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder workerPeriod(Long workerPeriod) {
             this.putBodyParameter("worker_period", workerPeriod);
@@ -564,10 +597,11 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * The billing cycle of worker nodes. This parameter is required only if worker_instance_charge_type is set to `PrePaid`.
-         * <p>
+         * <p>The billing cycle of worker nodes. This parameter is required only if worker_instance_charge_type is set to <code>PrePaid</code>.</p>
+         * <p>Set the value to <code>Month</code>. Worker nodes are billed only on a monthly basis.</p>
          * 
-         * Set the value to `Month`. Worker nodes are billed only on a monthly basis.
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder workerPeriodUnit(String workerPeriodUnit) {
             this.putBodyParameter("worker_period_unit", workerPeriodUnit);
@@ -576,14 +610,17 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * The system disk type of worker nodes. Valid values:
-         * <p>
+         * <p>The system disk type of worker nodes. Valid values:</p>
+         * <ul>
+         * <li><code>cloud_efficiency</code>: ultra disk.</li>
+         * <li><code>cloud_ssd</code>: standard SSD.</li>
+         * <li><code>cloud_essd</code>: Enterprise SSD (ESSD).</li>
+         * </ul>
+         * <p>Default value: <code>cloud_ssd</code>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   `cloud_efficiency`: ultra disk.
-         * *   `cloud_ssd`: standard SSD.
-         * *   `cloud_essd`: Enterprise SSD (ESSD).
-         * 
-         * Default value: `cloud_ssd`.
+         * <strong>example:</strong>
+         * <p>cloud_efficiency</p>
          */
         public Builder workerSystemDiskCategory(String workerSystemDiskCategory) {
             this.putBodyParameter("worker_system_disk_category", workerSystemDiskCategory);
@@ -592,12 +629,13 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * The system disk size of worker nodes. Unit: GiB.
-         * <p>
+         * <p>The system disk size of worker nodes. Unit: GiB.</p>
+         * <p>Valid values: 40 to 500.</p>
+         * <p>Default value: <code>120</code>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values: 40 to 500.
-         * 
-         * Default value: `120`.
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         public Builder workerSystemDiskSize(Long workerSystemDiskSize) {
             this.putBodyParameter("worker_system_disk_size", workerSystemDiskSize);
@@ -612,6 +650,12 @@ public class ScaleOutClusterRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ScaleOutClusterRequest} extends {@link TeaModel}
+     *
+     * <p>ScaleOutClusterRequest</p>
+     */
     public static class WorkerDataDisks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("auto_snapshot_policy_id")
         private String autoSnapshotPolicyId;
@@ -675,10 +719,11 @@ public class ScaleOutClusterRequest extends Request {
             private String size; 
 
             /**
-             * The ID of the automatic snapshot policy. The system performs automatic backup for a cloud disk based on the specified automatic snapshot policy.
-             * <p>
+             * <p>The ID of the automatic snapshot policy. The system performs automatic backup for a cloud disk based on the specified automatic snapshot policy.</p>
+             * <p>By default, this parameter is left empty, which indicates that automatic backup is disabled.</p>
              * 
-             * By default, this parameter is left empty, which indicates that automatic backup is disabled.
+             * <strong>example:</strong>
+             * <p>sp-bp14yziiuvu3s6jn****</p>
              */
             public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
                 this.autoSnapshotPolicyId = autoSnapshotPolicyId;
@@ -686,7 +731,10 @@ public class ScaleOutClusterRequest extends Request {
             }
 
             /**
-             * The data disk type.
+             * <p>The data disk type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -694,13 +742,15 @@ public class ScaleOutClusterRequest extends Request {
             }
 
             /**
-             * Specifies whether to encrypt the data disk. Valid values:
-             * <p>
+             * <p>Specifies whether to encrypt the data disk. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: encrypts the data disk.</li>
+             * <li><code>false</code>: does not encrypt the data disk.</li>
+             * </ul>
+             * <p>Default value: <code>false</code>.</p>
              * 
-             * *   `true`: encrypts the data disk.
-             * *   `false`: does not encrypt the data disk.
-             * 
-             * Default value: `false`.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder encrypted(String encrypted) {
                 this.encrypted = encrypted;
@@ -708,7 +758,10 @@ public class ScaleOutClusterRequest extends Request {
             }
 
             /**
-             * The data disk size. Valid values: 40 to 32767.
+             * <p>The data disk size. Valid values: 40 to 32767.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder size(String size) {
                 this.size = size;

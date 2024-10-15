@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOperationPlansResponseBody} extends {@link TeaModel}
  *
  * <p>ListOperationPlansResponseBody</p>
@@ -37,7 +38,7 @@ public class ListOperationPlansResponseBody extends TeaModel {
         private java.util.List < Plans> plans; 
 
         /**
-         * The operation plans.
+         * <p>The operation plans.</p>
          */
         public Builder plans(java.util.List < Plans> plans) {
             this.plans = plans;
@@ -50,6 +51,12 @@ public class ListOperationPlansResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListOperationPlansResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOperationPlansResponseBody</p>
+     */
     public static class Plans extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cluster_id")
         private String clusterId;
@@ -173,7 +180,10 @@ public class ListOperationPlansResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c29ced64b3dfe4f33b57ca0aa9f68****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -181,7 +191,10 @@ public class ListOperationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the operation plan was created.
+             * <p>The time when the operation plan was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-11-21T20:01:22+08:00</p>
              */
             public Builder created(String created) {
                 this.created = created;
@@ -189,7 +202,10 @@ public class ListOperationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The expected end time of the plan.
+             * <p>The expected end time of the plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-11-22T18:00:00+08:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -197,7 +213,10 @@ public class ListOperationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The operation plan ID.
+             * <p>The operation plan ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>P-655c9c127e0e6603ef00****</p>
              */
             public Builder planId(String planId) {
                 this.planId = planId;
@@ -205,7 +224,10 @@ public class ListOperationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The expected start time of the plan.
+             * <p>The expected start time of the plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-11-22T15:18:00+08:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -213,11 +235,14 @@ public class ListOperationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The plan status. Valid values:
-             * <p>
+             * <p>The plan status. Valid values:</p>
+             * <ul>
+             * <li>scheduled</li>
+             * <li>Canceled</li>
+             * </ul>
              * 
-             * *   scheduled
-             * *   Canceled
+             * <strong>example:</strong>
+             * <p>scheduled</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -225,7 +250,10 @@ public class ListOperationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The target ID.
+             * <p>The target ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c29ced64b3dfe4f33b57ca0aa9f68****</p>
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -233,7 +261,10 @@ public class ListOperationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The target type.
+             * <p>The target type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cluster</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -241,10 +272,13 @@ public class ListOperationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The plan type. Valid values:
-             * <p>
+             * <p>The plan type. Valid values:</p>
+             * <ul>
+             * <li>cluster_upgrade</li>
+             * </ul>
              * 
-             * *   cluster_upgrade
+             * <strong>example:</strong>
+             * <p>cluster_upgrade</p>
              */
             public Builder type(String type) {
                 this.type = type;

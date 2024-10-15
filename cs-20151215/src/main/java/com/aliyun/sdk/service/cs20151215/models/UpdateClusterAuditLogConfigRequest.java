@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateClusterAuditLogConfigRequest} extends {@link RequestModel}
  *
  * <p>UpdateClusterAuditLogConfigRequest</p>
@@ -81,7 +82,10 @@ public class UpdateClusterAuditLogConfigRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c82e6987e2961451182edacd74faf****</p>
          */
         public Builder clusterid(String clusterid) {
             this.putPathParameter("clusterid", clusterid);
@@ -90,11 +94,14 @@ public class UpdateClusterAuditLogConfigRequest extends Request {
         }
 
         /**
-         * Enable or disable the audit log feature.
-         * <p>
+         * <p>Enable or disable the audit log feature.</p>
+         * <ul>
+         * <li>false: enables the audit log feature or updates the audit log configuration.</li>
+         * <li>true: disables the audit log feature.</li>
+         * </ul>
          * 
-         * *   false: enables the audit log feature or updates the audit log configuration.
-         * *   true: disables the audit log feature.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disable(Boolean disable) {
             this.putBodyParameter("disable", disable);
@@ -103,12 +110,15 @@ public class UpdateClusterAuditLogConfigRequest extends Request {
         }
 
         /**
-         * The [SLS project](https://help.aliyun.com/zh/sls/product-overview/project?spm=a2c4g.11186623.0.i3) to which the [Logstore](https://help.aliyun.com/zh/sls/product-overview/logstore?spm=a2c4g.11186623.0.0.48287ce0jAUWWM) belongs.
-         * <p>
+         * <p>The <a href="https://help.aliyun.com/zh/sls/product-overview/project?spm=a2c4g.11186623.0.i3">SLS project</a> to which the <a href="https://help.aliyun.com/zh/sls/product-overview/logstore?spm=a2c4g.11186623.0.0.48287ce0jAUWWM">Logstore</a> belongs.</p>
+         * <ul>
+         * <li>Default value: k8s-log-{clusterid}.</li>
+         * <li>After the cluster audit log feature is enabled, a Logstore is created in the specified SLS project to store the cluster audit logs.</li>
+         * <li>If you want to change the project after the cluster audit log feature is enabled, you can use this parameter to specify another SLS project. You can perform this operation only in ACK managed clusters.</li>
+         * </ul>
          * 
-         * *   Default value: k8s-log-{clusterid}.
-         * *   After the cluster audit log feature is enabled, a Logstore is created in the specified SLS project to store the cluster audit logs.
-         * *   If you want to change the project after the cluster audit log feature is enabled, you can use this parameter to specify another SLS project. You can perform this operation only in ACK managed clusters.
+         * <strong>example:</strong>
+         * <p>k8s-log-c82e6987e2961451182edacd74faf****</p>
          */
         public Builder slsProjectName(String slsProjectName) {
             this.putBodyParameter("sls_project_name", slsProjectName);

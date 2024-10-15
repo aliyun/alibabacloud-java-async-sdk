@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeClusterAddonsRequest} extends {@link RequestModel}
  *
  * <p>UpgradeClusterAddonsRequest</p>
@@ -68,7 +69,11 @@ public class UpgradeClusterAddonsRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cf4299b79b3e34226abfdc80a4bda****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -77,7 +82,7 @@ public class UpgradeClusterAddonsRequest extends Request {
         }
 
         /**
-         * The request parameters.
+         * <p>The request parameters.</p>
          */
         public Builder body(java.util.List < UpgradeClusterAddonsRequestBody> body) {
             this.putBodyParameter("body", body);
@@ -92,6 +97,12 @@ public class UpgradeClusterAddonsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpgradeClusterAddonsRequest} extends {@link TeaModel}
+     *
+     * <p>UpgradeClusterAddonsRequest</p>
+     */
     public static class UpgradeClusterAddonsRequestBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("component_name")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -169,7 +180,11 @@ public class UpgradeClusterAddonsRequest extends Request {
             private String version; 
 
             /**
-             * The name of the component.
+             * <p>The name of the component.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>coredns</p>
              */
             public Builder componentName(String componentName) {
                 this.componentName = componentName;
@@ -177,7 +192,10 @@ public class UpgradeClusterAddonsRequest extends Request {
             }
 
             /**
-             * The custom component settings that you want to use. The value is a JSON string.
+             * <p>The custom component settings that you want to use. The value is a JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;CpuRequest&quot;:&quot;800m&quot;}</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -185,7 +203,11 @@ public class UpgradeClusterAddonsRequest extends Request {
             }
 
             /**
-             * The version to which the component can be updated. You can call the `DescribeClusterAddonsVersion` operation to query the version to which the component can be updated.
+             * <p>The version to which the component can be updated. You can call the <code>DescribeClusterAddonsVersion</code> operation to query the version to which the component can be updated.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.6.7</p>
              */
             public Builder nextVersion(String nextVersion) {
                 this.nextVersion = nextVersion;
@@ -193,11 +215,14 @@ public class UpgradeClusterAddonsRequest extends Request {
             }
 
             /**
-             * The update policy. Valid values:
-             * <p>
+             * <p>The update policy. Valid values:</p>
+             * <ul>
+             * <li>overwrite</li>
+             * <li>canary</li>
+             * </ul>
              * 
-             * *   overwrite
-             * *   canary
+             * <strong>example:</strong>
+             * <p>canary</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -205,7 +230,10 @@ public class UpgradeClusterAddonsRequest extends Request {
             }
 
             /**
-             * The current version of the component.
+             * <p>The current version of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1.6.2</p>
              */
             public Builder version(String version) {
                 this.version = version;

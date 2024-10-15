@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEdgeMachineResponseBody} extends {@link TeaModel}
  *
  * <p>CreateEdgeMachineResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateEdgeMachineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the cloud-native box.
+         * <p>The ID of the cloud-native box.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc0725ddf688744979cd98445f67e****</p>
          */
         public Builder edgeMachineId(String edgeMachineId) {
             this.edgeMachineId = edgeMachineId;
@@ -57,7 +61,10 @@ public class CreateEdgeMachineResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;request_id&quot;: &quot;6e7b377a-c5ed-4388-8026-689e1b34****&quot;,</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

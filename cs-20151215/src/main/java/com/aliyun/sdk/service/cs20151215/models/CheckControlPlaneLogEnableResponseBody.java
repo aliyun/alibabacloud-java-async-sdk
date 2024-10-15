@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckControlPlaneLogEnableResponseBody} extends {@link TeaModel}
  *
  * <p>CheckControlPlaneLogEnableResponseBody</p>
@@ -74,7 +75,10 @@ public class CheckControlPlaneLogEnableResponseBody extends TeaModel {
         private String logTtl; 
 
         /**
-         * The ID of the Alibaba Cloud account to which the resource belongs.
+         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>162981*****</p>
          */
         public Builder aliuid(String aliuid) {
             this.aliuid = aliuid;
@@ -82,7 +86,8 @@ public class CheckControlPlaneLogEnableResponseBody extends TeaModel {
         }
 
         /**
-         * The control plane components for which log collection is enabled.
+         * <p>The control plane components for which log collection is enabled.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder components(java.util.List < String > components) {
             this.components = components;
@@ -90,10 +95,11 @@ public class CheckControlPlaneLogEnableResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the Simple Log Service project that you want to use to store the logs of control plane components.
-         * <p>
+         * <p>The name of the Simple Log Service project that you want to use to store the logs of control plane components.</p>
+         * <p>Default value: k8s-log-$Cluster ID.</p>
          * 
-         * Default value: k8s-log-$Cluster ID.
+         * <strong>example:</strong>
+         * <p>k8s-log-c5b5e80b0b64a4bf6939d2d8fbbc5****</p>
          */
         public Builder logProject(String logProject) {
             this.logProject = logProject;
@@ -101,10 +107,11 @@ public class CheckControlPlaneLogEnableResponseBody extends TeaModel {
         }
 
         /**
-         * The retention period of the log data stored in the Logstore. Valid values: 1 to 3000. Unit: days.
-         * <p>
+         * <p>The retention period of the log data stored in the Logstore. Valid values: 1 to 3000. Unit: days.</p>
+         * <p>Default value: 30.</p>
          * 
-         * Default value: 30.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder logTtl(String logTtl) {
             this.logTtl = logTtl;

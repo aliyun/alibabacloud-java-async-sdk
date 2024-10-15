@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeClusterRequest} extends {@link RequestModel}
  *
  * <p>UpgradeClusterRequest</p>
@@ -126,7 +127,11 @@ public class UpgradeClusterRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster that you want to upgrade.
+         * <p>The ID of the cluster that you want to upgrade.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c82e6987e2961451182edacd74faf****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -135,7 +140,10 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k8s</p>
          */
         public Builder componentName(String componentName) {
             this.putBodyParameter("component_name", componentName);
@@ -144,11 +152,14 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to update only the master nodes. Valid values:
-         * <p>
+         * <p>Specifies whether to update only the master nodes. Valid values:</p>
+         * <ul>
+         * <li>true: updates only the master nodes.</li>
+         * <li>false: updates the master nodes and worker nodes.</li>
+         * </ul>
          * 
-         * *   true: updates only the master nodes.
-         * *   false: updates the master nodes and worker nodes.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder masterOnly(Boolean masterOnly) {
             this.putBodyParameter("master_only", masterOnly);
@@ -157,7 +168,10 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * The Kubernetes version to which you want to update the cluster.
+         * <p>The Kubernetes version to which you want to update the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.16.9-aliyun.1</p>
          */
         public Builder nextVersion(String nextVersion) {
             this.putBodyParameter("next_version", nextVersion);
@@ -166,7 +180,7 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * rolling_policy.
+         * <p>Policy of rolling.</p>
          */
         public Builder rollingPolicy(RollingPolicy rollingPolicy) {
             this.putBodyParameter("rolling_policy", rollingPolicy);
@@ -175,7 +189,10 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Specify the Kubernetes version by using the next_version parameter.
+         * <p>This parameter is deprecated. Specify the Kubernetes version by using the next_version parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.14.8-aliyun.1</p>
          */
         public Builder version(String version) {
             this.putBodyParameter("version", version);
@@ -190,6 +207,12 @@ public class UpgradeClusterRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpgradeClusterRequest} extends {@link TeaModel}
+     *
+     * <p>UpgradeClusterRequest</p>
+     */
     public static class RollingPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("max_parallelism")
         private Integer maxParallelism;
@@ -217,7 +240,10 @@ public class UpgradeClusterRequest extends Request {
             private Integer maxParallelism; 
 
             /**
-             * max_parallelism.
+             * <p>Maximum number of executions per batch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder maxParallelism(Integer maxParallelism) {
                 this.maxParallelism = maxParallelism;

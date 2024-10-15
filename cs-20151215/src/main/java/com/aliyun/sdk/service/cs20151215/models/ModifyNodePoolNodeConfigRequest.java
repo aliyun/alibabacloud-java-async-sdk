@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyNodePoolNodeConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyNodePoolNodeConfigRequest</p>
@@ -111,7 +112,11 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c23421cfa74454bc8b37163fd19af****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -120,7 +125,11 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         }
 
         /**
-         * The node pool ID.
+         * <p>The node pool ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np8d8c9c2cd0f64e89884f82a5fbcd****</p>
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("NodepoolId", nodepoolId);
@@ -129,7 +138,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         }
 
         /**
-         * The parameter settings of the kubelet.
+         * <p>The parameter settings of the kubelet.</p>
          */
         public Builder kubeletConfig(KubeletConfig kubeletConfig) {
             this.putBodyParameter("kubelet_config", kubeletConfig);
@@ -147,7 +156,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         }
 
         /**
-         * The rotation configurations.
+         * <p>The rotation configurations.</p>
          */
         public Builder rollingPolicy(RollingPolicy rollingPolicy) {
             this.putBodyParameter("rolling_policy", rollingPolicy);
@@ -162,6 +171,12 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyNodePoolNodeConfigRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyNodePoolNodeConfigRequest</p>
+     */
     public static class OsConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("sysctl")
         private java.util.Map < String, ? > sysctl;
@@ -203,6 +218,12 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyNodePoolNodeConfigRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyNodePoolNodeConfigRequest</p>
+     */
     public static class RollingPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("max_parallelism")
         private Long maxParallelism;
@@ -230,7 +251,10 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
             private Long maxParallelism; 
 
             /**
-             * The maximum number of unavailable nodes.
+             * <p>The maximum number of unavailable nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder maxParallelism(Long maxParallelism) {
                 this.maxParallelism = maxParallelism;

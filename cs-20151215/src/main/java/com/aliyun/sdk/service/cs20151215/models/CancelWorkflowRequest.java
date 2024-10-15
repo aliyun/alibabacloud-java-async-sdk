@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelWorkflowRequest} extends {@link RequestModel}
  *
  * <p>CancelWorkflowRequest</p>
@@ -69,7 +70,11 @@ public class CancelWorkflowRequest extends Request {
         } 
 
         /**
-         * The name of the workflow that you want to cancel.
+         * <p>The name of the workflow that you want to cancel.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mapping-gpu-mhhgh</p>
          */
         public Builder workflowName(String workflowName) {
             this.putPathParameter("workflowName", workflowName);
@@ -78,7 +83,11 @@ public class CancelWorkflowRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to cancel.
+         * <p>The operation that you want to perform. Set the value to cancel.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cancel</p>
          */
         public Builder action(String action) {
             this.putBodyParameter("action", action);

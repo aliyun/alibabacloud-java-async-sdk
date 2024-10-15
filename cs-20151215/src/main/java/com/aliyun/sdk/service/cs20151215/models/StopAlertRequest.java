@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopAlertRequest} extends {@link RequestModel}
  *
  * <p>StopAlertRequest</p>
@@ -82,10 +83,12 @@ public class StopAlertRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to obtain cluster IDs.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to obtain cluster IDs.
+         * <strong>example:</strong>
+         * <p>c7f9c85baee73452883b3299a0107****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -94,7 +97,7 @@ public class StopAlertRequest extends Request {
         }
 
         /**
-         * The name of the alert rule set to be disabled.
+         * <p>The name of the alert rule set to be disabled.</p>
          */
         public Builder alertRuleGroupName(String alertRuleGroupName) {
             this.putBodyParameter("alert_rule_group_name", alertRuleGroupName);
@@ -103,7 +106,7 @@ public class StopAlertRequest extends Request {
         }
 
         /**
-         * The name of the alert rule to be disabled. If you do not specify an alert rule name, the alert rule set is disabled.
+         * <p>The name of the alert rule to be disabled. If you do not specify an alert rule name, the alert rule set is disabled.</p>
          */
         public Builder alertRuleName(String alertRuleName) {
             this.putBodyParameter("alert_rule_name", alertRuleName);

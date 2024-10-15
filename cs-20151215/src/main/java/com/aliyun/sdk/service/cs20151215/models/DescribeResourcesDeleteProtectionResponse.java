@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResourcesDeleteProtectionResponse} extends {@link TeaModel}
  *
  * <p>DescribeResourcesDeleteProtectionResponse</p>
@@ -122,6 +123,12 @@ public class DescribeResourcesDeleteProtectionResponse extends Response {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeResourcesDeleteProtectionResponse} extends {@link TeaModel}
+     *
+     * <p>DescribeResourcesDeleteProtectionResponse</p>
+     */
     public static class DescribeResourcesDeleteProtectionResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -186,7 +193,11 @@ public class DescribeResourcesDeleteProtectionResponse extends Response {
             private Boolean protection; 
 
             /**
-             * The name of the resource.
+             * <p>The name of the resource.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -194,7 +205,10 @@ public class DescribeResourcesDeleteProtectionResponse extends Response {
             }
 
             /**
-             * The namespace to which the resource belongs.
+             * <p>The namespace to which the resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -202,7 +216,10 @@ public class DescribeResourcesDeleteProtectionResponse extends Response {
             }
 
             /**
-             * The type of resource for which deletion protection is enabled.
+             * <p>The type of resource for which deletion protection is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>namespaces</p>
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -210,13 +227,15 @@ public class DescribeResourcesDeleteProtectionResponse extends Response {
             }
 
             /**
-             * Indicates whether deletion protection is enabled.
-             * <p>
+             * <p>Indicates whether deletion protection is enabled.</p>
+             * <ul>
+             * <li>true: deletion protection is enabled.</li>
+             * <li>false: deletion protection is disabled.</li>
+             * </ul>
+             * <p>Default value: false</p>
              * 
-             * *   true: deletion protection is enabled.
-             * *   false: deletion protection is disabled.
-             * 
-             * Default value: false
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder protection(Boolean protection) {
                 this.protection = protection;

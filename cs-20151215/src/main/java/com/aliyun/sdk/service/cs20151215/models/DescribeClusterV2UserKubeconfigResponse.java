@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterV2UserKubeconfigResponse} extends {@link TeaModel}
  *
  * <p>DescribeClusterV2UserKubeconfigResponse</p>

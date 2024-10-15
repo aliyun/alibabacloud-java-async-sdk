@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventsRequest} extends {@link RequestModel}
  *
  * <p>DescribeEventsRequest</p>
@@ -95,7 +96,10 @@ public class DescribeEventsRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cf62854ac2130470897be7a27ed1f****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("cluster_id", clusterId);
@@ -104,7 +108,10 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("page_number", pageNumber);
@@ -113,7 +120,10 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("page_size", pageSize);
@@ -122,25 +132,28 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * The event type. Valid values:
-         * <p>
+         * <p>The event type. Valid values:</p>
+         * <ul>
+         * <li><code>cluster_create</code>: cluster creation.</li>
+         * <li><code>cluster_scaleout</code>: cluster scale-out.</li>
+         * <li><code>cluster_attach</code>: node addition.</li>
+         * <li><code>cluster_delete</code>: cluster deletion.</li>
+         * <li><code>cluster_upgrade</code>: cluster upgrades.</li>
+         * <li><code>cluster_migrate</code>: cluster migration.</li>
+         * <li><code>cluster_node_delete</code>: node removal.</li>
+         * <li><code>cluster_node_drain</code>: node draining.</li>
+         * <li><code>cluster_modify</code>: cluster modifications.</li>
+         * <li><code>cluster_configuration_modify</code>: modifications of control plane configurations.</li>
+         * <li><code>cluster_addon_install</code>: component installation.</li>
+         * <li><code>cluster_addon_upgrade</code>: component updates.</li>
+         * <li><code>cluster_addon_uninstall</code>: component uninstallation.</li>
+         * <li><code>runtime_upgrade</code>: runtime updates.</li>
+         * <li><code>nodepool_upgrade</code>: node pool upgrades.</li>
+         * <li><code>nodepool_update</code>: node pool updates.</li>
+         * </ul>
          * 
-         * *   `cluster_create`: cluster creation.
-         * *   `cluster_scaleout`: cluster scale-out.
-         * *   `cluster_attach`: node addition.
-         * *   `cluster_delete`: cluster deletion.
-         * *   `cluster_upgrade`: cluster upgrades.
-         * *   `cluster_migrate`: cluster migration.
-         * *   `cluster_node_delete`: node removal.
-         * *   `cluster_node_drain`: node draining.
-         * *   `cluster_modify`: cluster modifications.
-         * *   `cluster_configuration_modify`: modifications of control plane configurations.
-         * *   `cluster_addon_install`: component installation.
-         * *   `cluster_addon_upgrade`: component updates.
-         * *   `cluster_addon_uninstall`: component uninstallation.
-         * *   `runtime_upgrade`: runtime updates.
-         * *   `nodepool_upgrade`: node pool upgrades.
-         * *   `nodepool_update`: node pool updates.
+         * <strong>example:</strong>
+         * <p>nodepool_upgrade</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

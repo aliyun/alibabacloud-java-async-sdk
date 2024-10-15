@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckServiceRoleRequest} extends {@link RequestModel}
  *
  * <p>CheckServiceRoleRequest</p>
@@ -54,7 +55,8 @@ public class CheckServiceRoleRequest extends Request {
         } 
 
         /**
-         * The service roles that you want to check.
+         * <p>The service roles that you want to check.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder roles(java.util.List < Roles> roles) {
             this.putBodyParameter("roles", roles);
@@ -69,6 +71,12 @@ public class CheckServiceRoleRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CheckServiceRoleRequest} extends {@link TeaModel}
+     *
+     * <p>CheckServiceRoleRequest</p>
+     */
     public static class Roles extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -97,7 +105,11 @@ public class CheckServiceRoleRequest extends Request {
             private String name; 
 
             /**
-             * The service role name.
+             * <p>The service role name.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunCSManagedAutoScalerRole</p>
              */
             public Builder name(String name) {
                 this.name = name;

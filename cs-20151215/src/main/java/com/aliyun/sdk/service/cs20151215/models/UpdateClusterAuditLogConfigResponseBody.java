@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateClusterAuditLogConfigResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateClusterAuditLogConfigResponseBody</p>
@@ -61,7 +62,10 @@ public class UpdateClusterAuditLogConfigResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c93095129fc41463aa455d89444fd****</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -69,7 +73,10 @@ public class UpdateClusterAuditLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48BD70F6-A7E6-543D-9F23-08DEB764C92E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class UpdateClusterAuditLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T-5faa48fb31b6b8078d00****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

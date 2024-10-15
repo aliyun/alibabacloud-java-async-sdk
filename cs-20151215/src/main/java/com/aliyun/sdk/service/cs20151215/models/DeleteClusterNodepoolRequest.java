@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteClusterNodepoolRequest} extends {@link RequestModel}
  *
  * <p>DeleteClusterNodepoolRequest</p>
@@ -83,7 +84,11 @@ public class DeleteClusterNodepoolRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c61da77e8bfbc4c4c999af2b51b65****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -92,7 +97,11 @@ public class DeleteClusterNodepoolRequest extends Request {
         }
 
         /**
-         * The node pool ID.
+         * <p>The node pool ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np30db56bcac7843dca90b999c8928****</p>
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("NodepoolId", nodepoolId);
@@ -101,7 +110,10 @@ public class DeleteClusterNodepoolRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcefully delete the node pool.
+         * <p>Specifies whether to forcefully delete the node pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("force", force);

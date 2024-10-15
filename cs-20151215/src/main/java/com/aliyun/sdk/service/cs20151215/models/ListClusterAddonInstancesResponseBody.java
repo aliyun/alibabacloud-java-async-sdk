@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClusterAddonInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ListClusterAddonInstancesResponseBody</p>
@@ -37,7 +38,7 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
         private java.util.List < Addons> addons; 
 
         /**
-         * A list of components that are installed in the cluster.
+         * <p>A list of components that are installed in the cluster.</p>
          */
         public Builder addons(java.util.List < Addons> addons) {
             this.addons = addons;
@@ -50,6 +51,12 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListClusterAddonInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClusterAddonInstancesResponseBody</p>
+     */
     public static class Addons extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -101,7 +108,10 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The component name.
+             * <p>The component name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>coredns</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -109,13 +119,16 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the component. Valid values:
-             * <p>
+             * <p>The status of the component. Valid values:</p>
+             * <ul>
+             * <li>active: The component is installed.</li>
+             * <li>updating: The component is being modified.</li>
+             * <li>upgrading: The component is being updated.</li>
+             * <li>deleting: The component is being uninstalled.</li>
+             * </ul>
              * 
-             * *   active: The component is installed.
-             * *   updating: The component is being modified.
-             * *   upgrading: The component is being updated.
-             * *   deleting: The component is being uninstalled.
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -123,7 +136,10 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the component.
+             * <p>The version of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1.9.3.10-7dfca203-aliyun</p>
              */
             public Builder version(String version) {
                 this.version = version;

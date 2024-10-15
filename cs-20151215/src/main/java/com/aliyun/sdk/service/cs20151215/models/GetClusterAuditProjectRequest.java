@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClusterAuditProjectRequest} extends {@link RequestModel}
  *
  * <p>GetClusterAuditProjectRequest</p>
@@ -54,7 +55,10 @@ public class GetClusterAuditProjectRequest extends Request {
         } 
 
         /**
-         * clusterid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cad1230511cbb4db4a488e58518******</p>
          */
         public Builder clusterid(String clusterid) {
             this.putPathParameter("clusterid", clusterid);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Nodepool} extends {@link TeaModel}
  *
  * <p>Nodepool</p>
@@ -252,6 +253,12 @@ public class Nodepool extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link Nodepool} extends {@link TeaModel}
+     *
+     * <p>Nodepool</p>
+     */
     public static class AutoScaling extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("eip_bandwidth")
         @Deprecated
@@ -373,7 +380,10 @@ public class Nodepool extends TeaModel {
             }
 
             /**
-             * enable.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -389,7 +399,10 @@ public class Nodepool extends TeaModel {
             }
 
             /**
-             * max_instances.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxInstances(Long maxInstances) {
                 this.maxInstances = maxInstances;
@@ -397,7 +410,10 @@ public class Nodepool extends TeaModel {
             }
 
             /**
-             * min_instances.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder minInstances(Long minInstances) {
                 this.minInstances = minInstances;
@@ -419,6 +435,12 @@ public class Nodepool extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Nodepool} extends {@link TeaModel}
+     *
+     * <p>Nodepool</p>
+     */
     public static class InterconnectConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bandwidth")
         @Deprecated
@@ -545,6 +567,12 @@ public class Nodepool extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Nodepool} extends {@link TeaModel}
+     *
+     * <p>Nodepool</p>
+     */
     public static class KubernetesConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cms_enabled")
         private Boolean cmsEnabled;
@@ -690,7 +718,10 @@ public class Nodepool extends TeaModel {
             }
 
             /**
-             * runtime.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>docker</p>
              */
             public Builder runtime(String runtime) {
                 this.runtime = runtime;
@@ -698,7 +729,10 @@ public class Nodepool extends TeaModel {
             }
 
             /**
-             * runtime_version.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19.03.5</p>
              */
             public Builder runtimeVersion(String runtimeVersion) {
                 this.runtimeVersion = runtimeVersion;
@@ -728,6 +762,12 @@ public class Nodepool extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Nodepool} extends {@link TeaModel}
+     *
+     * <p>Nodepool</p>
+     */
     public static class AutoRepairPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("restart_node")
         private Boolean restartNode;
@@ -769,6 +809,12 @@ public class Nodepool extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Nodepool} extends {@link TeaModel}
+     *
+     * <p>Nodepool</p>
+     */
     public static class AutoUpgradePolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("auto_upgrade_kubelet")
         private Boolean autoUpgradeKubelet;
@@ -810,6 +856,12 @@ public class Nodepool extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Nodepool} extends {@link TeaModel}
+     *
+     * <p>Nodepool</p>
+     */
     public static class AutoVulFixPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("restart_node")
         private Boolean restartNode;
@@ -871,6 +923,12 @@ public class Nodepool extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Nodepool} extends {@link TeaModel}
+     *
+     * <p>Nodepool</p>
+     */
     public static class UpgradeConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("auto_upgrade")
         private Boolean autoUpgrade;
@@ -972,6 +1030,12 @@ public class Nodepool extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Nodepool} extends {@link TeaModel}
+     *
+     * <p>Nodepool</p>
+     */
     public static class Management extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("auto_repair")
         private Boolean autoRepair;
@@ -1132,7 +1196,10 @@ public class Nodepool extends TeaModel {
             }
 
             /**
-             * enable.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -1154,6 +1221,12 @@ public class Nodepool extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Nodepool} extends {@link TeaModel}
+     *
+     * <p>Nodepool</p>
+     */
     public static class NodeConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("kubelet_configuration")
         private KubeletConfig kubeletConfiguration;
@@ -1195,6 +1268,12 @@ public class Nodepool extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Nodepool} extends {@link TeaModel}
+     *
+     * <p>Nodepool</p>
+     */
     public static class NodepoolInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -1247,7 +1326,10 @@ public class Nodepool extends TeaModel {
             private String type; 
 
             /**
-             * name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>np-test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1277,6 +1359,12 @@ public class Nodepool extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Nodepool} extends {@link TeaModel}
+     *
+     * <p>Nodepool</p>
+     */
     public static class PrivatePoolOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("id")
         private String id;
@@ -1338,6 +1426,12 @@ public class Nodepool extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Nodepool} extends {@link TeaModel}
+     *
+     * <p>Nodepool</p>
+     */
     public static class SpotPriceLimit extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("instance_type")
         private String instanceType;
@@ -1399,6 +1493,12 @@ public class Nodepool extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Nodepool} extends {@link TeaModel}
+     *
+     * <p>Nodepool</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
@@ -1460,6 +1560,12 @@ public class Nodepool extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Nodepool} extends {@link TeaModel}
+     *
+     * <p>Nodepool</p>
+     */
     public static class ScalingGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("auto_renew")
         private Boolean autoRenew;
@@ -2047,7 +2153,10 @@ public class Nodepool extends TeaModel {
             }
 
             /**
-             * instance_charge_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -2055,7 +2164,7 @@ public class Nodepool extends TeaModel {
             }
 
             /**
-             * instance_types.
+             * <p>This parameter is required.</p>
              */
             public Builder instanceTypes(java.util.List < String > instanceTypes) {
                 this.instanceTypes = instanceTypes;
@@ -2311,7 +2420,7 @@ public class Nodepool extends TeaModel {
             }
 
             /**
-             * vswitch_ids.
+             * <p>This parameter is required.</p>
              */
             public Builder vswitchIds(java.util.List < String > vswitchIds) {
                 this.vswitchIds = vswitchIds;
@@ -2325,6 +2434,12 @@ public class Nodepool extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Nodepool} extends {@link TeaModel}
+     *
+     * <p>Nodepool</p>
+     */
     public static class TeeConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tee_enable")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -2353,7 +2468,10 @@ public class Nodepool extends TeaModel {
             private Boolean teeEnable; 
 
             /**
-             * tee_enable.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder teeEnable(Boolean teeEnable) {
                 this.teeEnable = teeEnable;

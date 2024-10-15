@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateClusterDiagnosisRequest} extends {@link RequestModel}
  *
  * <p>CreateClusterDiagnosisRequest</p>
@@ -81,7 +82,10 @@ public class CreateClusterDiagnosisRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ce0da5a1d627e4e9e9f96cae8ad07****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -90,32 +94,28 @@ public class CreateClusterDiagnosisRequest extends Request {
         }
 
         /**
-         * The parameter used to specify the diagnostic object. Examples of parameters for different types of diagnostic objects:
-         * <p>
+         * <p>The parameter used to specify the diagnostic object. Examples of parameters for different types of diagnostic objects:</p>
+         * <p>node:</p>
+         * <pre><code>{&quot;name&quot;: &quot;cn-shanghai.10.10.10.107&quot;}
+         * </code></pre>
+         * <p>pod</p>
+         * <pre><code>{&quot;namespace&quot;: &quot;kube-system&quot;, &quot;name&quot;: &quot;csi-plugin-2cg9f&quot;}
+         * </code></pre>
+         * <p>network</p>
+         * <pre><code>{&quot;src&quot;: &quot;10.10.10.108&quot;, &quot;dst&quot;: &quot;10.11.247.16&quot;, &quot;dport&quot;: &quot;80&quot;}
+         * </code></pre>
+         * <p>ingress</p>
+         * <pre><code>{&quot;url&quot;: &quot;https://example.com&quot;}
+         * </code></pre>
+         * <p>memory</p>
+         * <pre><code>{&quot;node&quot;:&quot;cn-hangzhou.172.16.9.240&quot;}
+         * </code></pre>
+         * <p>service</p>
+         * <pre><code>{&quot;namespace&quot;: &quot;kube-system&quot;, &quot;name&quot;: &quot;nginx-ingress-lb&quot;}
+         * </code></pre>
          * 
-         * node:
-         * 
-         *     {"name": "cn-shanghai.10.10.10.107"}
-         * 
-         * pod
-         * 
-         *     {"namespace": "kube-system", "name": "csi-plugin-2cg9f"}
-         * 
-         * network
-         * 
-         *     {"src": "10.10.10.108", "dst": "10.11.247.16", "dport": "80"}
-         * 
-         * ingress
-         * 
-         *     {"url": "https://example.com"}
-         * 
-         * memory
-         * 
-         *     {"node":"cn-hangzhou.172.16.9.240"}
-         * 
-         * service
-         * 
-         *     {"namespace": "kube-system", "name": "nginx-ingress-lb"}
+         * <strong>example:</strong>
+         * <p>{&quot;namespace&quot;: &quot;kube-system&quot;, &quot;name&quot;: &quot;csi-plugin-2cg9f&quot;}</p>
          */
         public Builder target(java.util.Map < String, ? > target) {
             this.putBodyParameter("target", target);
@@ -124,18 +124,20 @@ public class CreateClusterDiagnosisRequest extends Request {
         }
 
         /**
-         * The type of the diagnostic.
-         * <p>
+         * <p>The type of the diagnostic.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>node</li>
+         * <li>ingress</li>
+         * <li>cluster</li>
+         * <li>memory</li>
+         * <li>pod</li>
+         * <li>service</li>
+         * <li>network</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   node
-         * *   ingress
-         * *   cluster
-         * *   memory
-         * *   pod
-         * *   service
-         * *   network
+         * <strong>example:</strong>
+         * <p>node</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);

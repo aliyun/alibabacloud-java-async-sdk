@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FixNodePoolVulsResponseBody} extends {@link TeaModel}
  *
  * <p>FixNodePoolVulsResponseBody</p>
@@ -37,7 +38,10 @@ public class FixNodePoolVulsResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The ID of the CVE patching task.
+         * <p>The ID of the CVE patching task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T-60fea8ad2e277f087900****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

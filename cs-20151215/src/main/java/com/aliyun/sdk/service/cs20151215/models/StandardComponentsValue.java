@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StandardComponentsValue} extends {@link TeaModel}
  *
  * <p>StandardComponentsValue</p>
@@ -85,7 +86,10 @@ public class StandardComponentsValue extends TeaModel {
         private Boolean disabled; 
 
         /**
-         * The name of the component.
+         * <p>The name of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ack-arena</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -93,7 +97,10 @@ public class StandardComponentsValue extends TeaModel {
         }
 
         /**
-         * The version of the component.
+         * <p>The version of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5.0</p>
          */
         public Builder version(String version) {
             this.version = version;
@@ -101,7 +108,10 @@ public class StandardComponentsValue extends TeaModel {
         }
 
         /**
-         * The description of the component.
+         * <p>The description of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder description(String description) {
             this.description = description;
@@ -109,11 +119,14 @@ public class StandardComponentsValue extends TeaModel {
         }
 
         /**
-         * Indicates whether the component is a required component. Valid values:
-         * <p>
+         * <p>Indicates whether the component is a required component. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The component is required and must be installed when a cluster is created.</li>
+         * <li><code>false</code>: The component is optional. After a cluster is created, you can go to the <code>Add-ons</code> page to install the component.</li>
+         * </ul>
          * 
-         * *   `true`: The component is required and must be installed when a cluster is created.
-         * *   `false`: The component is optional. After a cluster is created, you can go to the `Add-ons` page to install the component.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder required(String required) {
             this.required = required;
@@ -121,11 +134,14 @@ public class StandardComponentsValue extends TeaModel {
         }
 
         /**
-         * Indicates whether the automatic installation of the component is disabled. By default, some optional components, such as components for logging and Ingresses, are installed when a cluster is created. You can set this parameter to disable automatic component installation. Valid values:
-         * <p>
+         * <p>Indicates whether the automatic installation of the component is disabled. By default, some optional components, such as components for logging and Ingresses, are installed when a cluster is created. You can set this parameter to disable automatic component installation. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: disables automatic component installation.</li>
+         * <li><code>false</code>: enables automatic component installation.</li>
+         * </ul>
          * 
-         * *   `true`: disables automatic component installation.
-         * *   `false`: enables automatic component installation.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disabled(Boolean disabled) {
             this.disabled = disabled;

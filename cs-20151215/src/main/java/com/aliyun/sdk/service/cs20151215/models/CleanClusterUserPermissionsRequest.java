@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CleanClusterUserPermissionsRequest} extends {@link RequestModel}
  *
  * <p>CleanClusterUserPermissionsRequest</p>
@@ -83,7 +84,11 @@ public class CleanClusterUserPermissionsRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c5b5e80b0b64a4bf6939d2d8fbbc5****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -92,7 +97,11 @@ public class CleanClusterUserPermissionsRequest extends Request {
         }
 
         /**
-         * The ID of the specified Resource Access Management (RAM) user or RAM role within the Alibaba Cloud account.
+         * <p>The ID of the specified Resource Access Management (RAM) user or RAM role within the Alibaba Cloud account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2xxxxxxxxxxxxxxxxxx</p>
          */
         public Builder uid(String uid) {
             this.putPathParameter("Uid", uid);
@@ -101,11 +110,14 @@ public class CleanClusterUserPermissionsRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcefully delete the specified kubeconfig files. Valid values:
-         * <p>
+         * <p>Specifies whether to forcefully delete the specified kubeconfig files. Valid values:</p>
+         * <ul>
+         * <li>false (default): checks the cluster access records within the previous seven days before deleting the kubeconfig files. The kubeconfig files are not deleted if cluster access records are found or fail to be retrieved.</li>
+         * <li>true: forcefully deletes the kubeconfig files without checking the cluster access records.</li>
+         * </ul>
          * 
-         * *   false (default): checks the cluster access records within the previous seven days before deleting the kubeconfig files. The kubeconfig files are not deleted if cluster access records are found or fail to be retrieved.
-         * *   true: forcefully deletes the kubeconfig files without checking the cluster access records.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);

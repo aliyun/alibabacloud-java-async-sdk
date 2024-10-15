@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterAddonInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClusterAddonInstanceResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeClusterAddonInstanceResponseBody extends TeaModel {
         private String version; 
 
         /**
-         * The configuration of the component.
+         * <p>The configuration of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;NetworkPolicy&quot;:&quot;true&quot;}</p>
          */
         public Builder config(String config) {
             this.config = config;
@@ -81,7 +85,10 @@ public class DescribeClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the component.
+         * <p>The name of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>terway-eniip</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -89,16 +96,19 @@ public class DescribeClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the component. Valid values:
-         * <p>
+         * <p>The status of the component. Valid values:</p>
+         * <ul>
+         * <li>initial: the component is being installed.</li>
+         * <li>active: the component is installed.</li>
+         * <li>unhealthy: the component abnormal.</li>
+         * <li>upgrading: the component is being updated.</li>
+         * <li>updating: the component is being modified.</li>
+         * <li>deleting: the component is being uninstalled.</li>
+         * <li>deleted: The component is deleted.</li>
+         * </ul>
          * 
-         * *   initial: the component is being installed.
-         * *   active: the component is installed.
-         * *   unhealthy: the component abnormal.
-         * *   upgrading: the component is being updated.
-         * *   updating: the component is being modified.
-         * *   deleting: the component is being uninstalled.
-         * *   deleted: The component is deleted.
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder state(String state) {
             this.state = state;
@@ -106,7 +116,10 @@ public class DescribeClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The version of the component.
+         * <p>The version of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1.4.3</p>
          */
         public Builder version(String version) {
             this.version = version;

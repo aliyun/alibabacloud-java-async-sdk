@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyClusterConfigurationRequest} extends {@link RequestModel}
  *
  * <p>ModifyClusterConfigurationRequest</p>
@@ -68,7 +69,11 @@ public class ModifyClusterConfigurationRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc0f87de0b8fb403f86e10e204f83****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -77,7 +82,7 @@ public class ModifyClusterConfigurationRequest extends Request {
         }
 
         /**
-         * The custom configuration.
+         * <p>The custom configuration.</p>
          */
         public Builder customizeConfig(java.util.List < CustomizeConfig> customizeConfig) {
             this.putBodyParameter("customize_config", customizeConfig);
@@ -92,6 +97,12 @@ public class ModifyClusterConfigurationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyClusterConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyClusterConfigurationRequest</p>
+     */
     public static class Configs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
@@ -131,7 +142,10 @@ public class ModifyClusterConfigurationRequest extends Request {
             private String value; 
 
             /**
-             * The name of the configuration item.
+             * <p>The name of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MaxRequestsInflight</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -139,7 +153,10 @@ public class ModifyClusterConfigurationRequest extends Request {
             }
 
             /**
-             * The value of the configuration item.
+             * <p>The value of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -153,6 +170,12 @@ public class ModifyClusterConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyClusterConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyClusterConfigurationRequest</p>
+     */
     public static class CustomizeConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("configs")
         private java.util.List < Configs> configs;
@@ -192,7 +215,7 @@ public class ModifyClusterConfigurationRequest extends Request {
             private String name; 
 
             /**
-             * The custom configuration.
+             * <p>The custom configuration.</p>
              */
             public Builder configs(java.util.List < Configs> configs) {
                 this.configs = configs;
@@ -200,7 +223,10 @@ public class ModifyClusterConfigurationRequest extends Request {
             }
 
             /**
-             * The name of the component.
+             * <p>The name of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kube-apiserver</p>
              */
             public Builder name(String name) {
                 this.name = name;

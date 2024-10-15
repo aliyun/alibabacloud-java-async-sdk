@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterVulsRequest} extends {@link RequestModel}
  *
  * <p>DescribeClusterVulsRequest</p>
@@ -53,7 +54,10 @@ public class DescribeClusterVulsRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c5cdf7e3938bc4f8eb0e44b21a80f****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);

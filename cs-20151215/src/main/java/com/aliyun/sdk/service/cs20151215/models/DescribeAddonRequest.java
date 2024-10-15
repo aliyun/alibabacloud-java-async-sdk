@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAddonRequest} extends {@link RequestModel}
  *
  * <p>DescribeAddonRequest</p>
@@ -151,7 +152,10 @@ public class DescribeAddonRequest extends Request {
         } 
 
         /**
-         * The name of the component.
+         * <p>The name of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>coredns</p>
          */
         public Builder addonName(String addonName) {
             this.putPathParameter("addon_name", addonName);
@@ -160,7 +164,10 @@ public class DescribeAddonRequest extends Request {
         }
 
         /**
-         * The ID of the cluster. If you specify a cluster ID, only components used in the cluster are queried. Other parameters are ignored.
+         * <p>The ID of the cluster. If you specify a cluster ID, only components used in the cluster are queried. Other parameters are ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c02b3e03be10643e8a644a843ffcb****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("cluster_id", clusterId);
@@ -169,7 +176,10 @@ public class DescribeAddonRequest extends Request {
         }
 
         /**
-         * The specifications of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.
+         * <p>The specifications of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ack.pro.small</p>
          */
         public Builder clusterSpec(String clusterSpec) {
             this.putQueryParameter("cluster_spec", clusterSpec);
@@ -178,7 +188,10 @@ public class DescribeAddonRequest extends Request {
         }
 
         /**
-         * The type of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.
+         * <p>The type of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ManagedKubernetes</p>
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("cluster_type", clusterType);
@@ -187,7 +200,10 @@ public class DescribeAddonRequest extends Request {
         }
 
         /**
-         * The version of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.
+         * <p>The version of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.26.3-aliyun.1</p>
          */
         public Builder clusterVersion(String clusterVersion) {
             this.putQueryParameter("cluster_version", clusterVersion);
@@ -196,7 +212,10 @@ public class DescribeAddonRequest extends Request {
         }
 
         /**
-         * The subtype of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.
+         * <p>The subtype of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         public Builder profile(String profile) {
             this.putQueryParameter("profile", profile);
@@ -205,7 +224,10 @@ public class DescribeAddonRequest extends Request {
         }
 
         /**
-         * The region ID. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.
+         * <p>The region ID. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("region_id", regionId);
@@ -214,7 +236,10 @@ public class DescribeAddonRequest extends Request {
         }
 
         /**
-         * The version of the component. If you do not specify this parameter, the latest version of the component is queried.
+         * <p>The version of the component. If you do not specify this parameter, the latest version of the component is queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1.9.3.10-7dfca203-aliyun</p>
          */
         public Builder version(String version) {
             this.putQueryParameter("version", version);

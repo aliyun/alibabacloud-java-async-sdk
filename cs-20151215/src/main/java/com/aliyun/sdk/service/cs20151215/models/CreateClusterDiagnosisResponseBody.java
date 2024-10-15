@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateClusterDiagnosisResponseBody} extends {@link TeaModel}
  *
  * <p>CreateClusterDiagnosisResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateClusterDiagnosisResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c5cdf7e3938bc4f8eb0e44b21a80f****</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -69,7 +73,10 @@ public class CreateClusterDiagnosisResponseBody extends TeaModel {
         }
 
         /**
-         * The diagnostic ID.
+         * <p>The diagnostic ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6f719f23098240818eb26fe3a37d****</p>
          */
         public Builder diagnosisId(String diagnosisId) {
             this.diagnosisId = diagnosisId;
@@ -77,7 +84,10 @@ public class CreateClusterDiagnosisResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>687C5BAA-D103-4993-884B-C35E4314****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

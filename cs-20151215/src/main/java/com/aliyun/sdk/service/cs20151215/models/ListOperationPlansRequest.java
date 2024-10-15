@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOperationPlansRequest} extends {@link RequestModel}
  *
  * <p>ListOperationPlansRequest</p>
@@ -67,7 +68,10 @@ public class ListOperationPlansRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c29ced64b3dfe4f33b57ca0aa9f68****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("cluster_id", clusterId);
@@ -76,7 +80,10 @@ public class ListOperationPlansRequest extends Request {
         }
 
         /**
-         * The operation plan type.
+         * <p>The operation plan type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster_upgrade</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

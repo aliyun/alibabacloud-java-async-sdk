@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterResourcesRequest} extends {@link RequestModel}
  *
  * <p>DescribeClusterResourcesRequest</p>
@@ -68,12 +69,13 @@ public class DescribeClusterResourcesRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <p>For more information about how to query cluster IDs, see <a href="https://help.aliyun.com/document_detail/89446.html">View cluster information</a>.</p>
+         * <p>You can also call the <a href="https://help.aliyun.com/document_detail/183905.html">DescribeClustersV1</a> API operation to query all clusters that belong to an Alibaba Cloud account.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to query cluster IDs, see [View cluster information](~~89446~~).
-         * 
-         * You can also call the [DescribeClustersV1](~~183905~~) API operation to query all clusters that belong to an Alibaba Cloud account.
+         * <strong>example:</strong>
+         * <p>cb95aa626a47740afbf6aa099b65****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -82,7 +84,7 @@ public class DescribeClusterResourcesRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the resources created by cluster components.
+         * <p>Specifies whether to query the resources created by cluster components.</p>
          */
         public Builder withAddonResources(Boolean withAddonResources) {
             this.putQueryParameter("with_addon_resources", withAddonResources);

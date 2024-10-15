@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckServiceRoleResponseBody} extends {@link TeaModel}
  *
  * <p>CheckServiceRoleResponseBody</p>
@@ -37,7 +38,7 @@ public class CheckServiceRoleResponseBody extends TeaModel {
         private java.util.List < Roles> roles; 
 
         /**
-         * The check results.
+         * <p>The check results.</p>
          */
         public Builder roles(java.util.List < Roles> roles) {
             this.roles = roles;
@@ -50,6 +51,12 @@ public class CheckServiceRoleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CheckServiceRoleResponseBody} extends {@link TeaModel}
+     *
+     * <p>CheckServiceRoleResponseBody</p>
+     */
     public static class Roles extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("granted")
         private Boolean granted;
@@ -101,7 +108,10 @@ public class CheckServiceRoleResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Specifies whether the service role is granted required permissions.
+             * <p>Specifies whether the service role is granted required permissions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder granted(Boolean granted) {
                 this.granted = granted;
@@ -109,7 +119,10 @@ public class CheckServiceRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The message returned if the service role is not granted required permissions.
+             * <p>The message returned if the service role is not granted required permissions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The role does not exist: AliyunCSManagedAutoScalerRole</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -117,7 +130,10 @@ public class CheckServiceRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The service role name.
+             * <p>The service role name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunCSManagedAutoScalerRole</p>
              */
             public Builder name(String name) {
                 this.name = name;

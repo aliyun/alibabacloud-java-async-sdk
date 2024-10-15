@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyClusterAddonRequest} extends {@link RequestModel}
  *
  * <p>ModifyClusterAddonRequest</p>
@@ -83,7 +84,11 @@ public class ModifyClusterAddonRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c71d616e629ff40d5b42d7bb87770****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -92,7 +97,11 @@ public class ModifyClusterAddonRequest extends Request {
         }
 
         /**
-         * The component ID.
+         * <p>The component ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>coredns</p>
          */
         public Builder componentId(String componentId) {
             this.putPathParameter("component_id", componentId);
@@ -101,7 +110,10 @@ public class ModifyClusterAddonRequest extends Request {
         }
 
         /**
-         * The custom parameter settings that you want to use.
+         * <p>The custom parameter settings that you want to use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;CpuRequest&quot;:&quot;800m&quot;}</p>
          */
         public Builder config(String config) {
             this.putBodyParameter("config", config);

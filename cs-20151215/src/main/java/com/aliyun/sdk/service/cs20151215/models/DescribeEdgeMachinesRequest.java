@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEdgeMachinesRequest} extends {@link RequestModel}
  *
  * <p>DescribeEdgeMachinesRequest</p>
@@ -123,7 +124,10 @@ public class DescribeEdgeMachinesRequest extends Request {
         } 
 
         /**
-         * The `hostname` of the cloud-native box.
+         * <p>The <code>hostname</code> of the cloud-native box.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ack-v-b010-ssdfw****</p>
          */
         public Builder hostname(String hostname) {
             this.putQueryParameter("hostname", hostname);
@@ -132,7 +136,10 @@ public class DescribeEdgeMachinesRequest extends Request {
         }
 
         /**
-         * The lifecycle status.
+         * <p>The lifecycle status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>activated/waitOnline/deleting</p>
          */
         public Builder lifeState(String lifeState) {
             this.putQueryParameter("life_state", lifeState);
@@ -141,7 +148,10 @@ public class DescribeEdgeMachinesRequest extends Request {
         }
 
         /**
-         * The type of cloud-native box.
+         * <p>The type of cloud-native box.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACK-V-B010</p>
          */
         public Builder model(String model) {
             this.putQueryParameter("model", model);
@@ -150,11 +160,14 @@ public class DescribeEdgeMachinesRequest extends Request {
         }
 
         /**
-         * The status of the cloud-native box. Valid values:
-         * <p>
+         * <p>The status of the cloud-native box. Valid values:</p>
+         * <ul>
+         * <li><code>offline</code></li>
+         * <li><code>online</code></li>
+         * </ul>
          * 
-         * *   `offline`
-         * *   `online`
+         * <strong>example:</strong>
+         * <p>offline/online</p>
          */
         public Builder onlineState(String onlineState) {
             this.putQueryParameter("online_state", onlineState);
@@ -163,7 +176,10 @@ public class DescribeEdgeMachinesRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("page_number", pageNumber);
@@ -172,7 +188,10 @@ public class DescribeEdgeMachinesRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("page_size", pageSize);

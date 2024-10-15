@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeClusterResponseBody} extends {@link TeaModel}
  *
  * <p>UpgradeClusterResponseBody</p>
@@ -61,7 +62,10 @@ public class UpgradeClusterResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * cluster_id.
+         * <p>Cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c82e6987e2961451182edacd74faf****</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -69,7 +73,10 @@ public class UpgradeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * request_id.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0527ac9a-c899-4341-a21a-****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class UpgradeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * task_id.
+         * <p>Task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T-5faa48fb31b6b8078d00****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

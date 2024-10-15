@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScaleClusterNodePoolResponseBody} extends {@link TeaModel}
  *
  * <p>ScaleClusterNodePoolResponseBody</p>
@@ -37,7 +38,10 @@ public class ScaleClusterNodePoolResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T-5faa48fb31b6b8078d00****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

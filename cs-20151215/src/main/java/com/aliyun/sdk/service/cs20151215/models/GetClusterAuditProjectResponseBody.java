@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClusterAuditProjectResponseBody} extends {@link TeaModel}
  *
  * <p>GetClusterAuditProjectResponseBody</p>
@@ -49,7 +50,10 @@ public class GetClusterAuditProjectResponseBody extends TeaModel {
         private String slsProjectName; 
 
         /**
-         * Indicates whether the cluster auditing feature is enabled for the cluster. `true`: The cluster auditing feature is enabled for the cluster. `false`: The cluster auditing feature is disabled for the cluster.
+         * <p>Indicates whether the cluster auditing feature is enabled for the cluster. <code>true</code>: The cluster auditing feature is enabled for the cluster. <code>false</code>: The cluster auditing feature is disabled for the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder auditEnabled(Boolean auditEnabled) {
             this.auditEnabled = auditEnabled;
@@ -57,7 +61,10 @@ public class GetClusterAuditProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The SLS project in which the audit logs of the API server are stored.
+         * <p>The SLS project in which the audit logs of the API server are stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k8s-log-cad1230511cbb4db4a488e58518******</p>
          */
         public Builder slsProjectName(String slsProjectName) {
             this.slsProjectName = slsProjectName;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyClusterRequest} extends {@link RequestModel}
  *
  * <p>ModifyClusterRequest</p>
@@ -250,7 +251,11 @@ public class ModifyClusterRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cb95aa626a47740afbf6aa099b65****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -259,7 +264,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * The network access control lists (ACLs) of the SLB instance associated with the API server if the cluster is a registered cluster.
+         * <p>The network access control lists (ACLs) of the SLB instance associated with the API server if the cluster is a registered cluster.</p>
          */
         public Builder accessControlList(java.util.List < String > accessControlList) {
             this.putBodyParameter("access_control_list", accessControlList);
@@ -268,7 +273,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * The custom subject alternative names (SANs) for the API server certificate to accept requests from specified IP addresses or domain names. This parameter is available only for ACK managed clusters.
+         * <p>The custom subject alternative names (SANs) for the API server certificate to accept requests from specified IP addresses or domain names. This parameter is available only for ACK managed clusters.</p>
          */
         public Builder apiServerCustomCertSans(ApiServerCustomCertSans apiServerCustomCertSans) {
             this.putBodyParameter("api_server_custom_cert_sans", apiServerCustomCertSans);
@@ -277,11 +282,14 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to associate an elastic IP address (EIP) with the cluster. This EIP is used to enable access to the API server over the Internet. Valid values:
-         * <p>
+         * <p>Specifies whether to associate an elastic IP address (EIP) with the cluster. This EIP is used to enable access to the API server over the Internet. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: associates an EIP with the cluster.</li>
+         * <li><code>false</code>: does not associate an EIP with the cluster.</li>
+         * </ul>
          * 
-         * *   `true`: associates an EIP with the cluster.
-         * *   `false`: does not associate an EIP with the cluster.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder apiServerEip(Boolean apiServerEip) {
             this.putBodyParameter("api_server_eip", apiServerEip);
@@ -290,7 +298,10 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * The ID of the EIP that you want to associate with the API server of the cluster. This parameter takes effect when `api_server_eip` is set to `true`.
+         * <p>The ID of the EIP that you want to associate with the API server of the cluster. This parameter takes effect when <code>api_server_eip</code> is set to <code>true</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-wz9fnasl6dsfhmvci****</p>
          */
         public Builder apiServerEipId(String apiServerEipId) {
             this.putBodyParameter("api_server_eip_id", apiServerEipId);
@@ -299,10 +310,11 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * The name of the cluster.
-         * <p>
+         * <p>The name of the cluster.</p>
+         * <p>The cluster name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The cluster name cannot start with a hyphen (-).</p>
          * 
-         * The cluster name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The cluster name cannot start with a hyphen (-).
+         * <strong>example:</strong>
+         * <p>cluster-new-name</p>
          */
         public Builder clusterName(String clusterName) {
             this.putBodyParameter("cluster_name", clusterName);
@@ -311,13 +323,15 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable cluster deletion protection. If you enable this option, the cluster cannot be deleted in the console or by calling API operations. Valid values:
-         * <p>
+         * <p>Specifies whether to enable cluster deletion protection. If you enable this option, the cluster cannot be deleted in the console or by calling API operations. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables cluster deletion protection.</li>
+         * <li><code>false</code>: disables cluster deletion protection.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: enables cluster deletion protection.
-         * *   `false`: disables cluster deletion protection.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putBodyParameter("deletion_protection", deletionProtection);
@@ -326,11 +340,14 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the RAM Roles for Service Accounts (RRSA) feature. This parameter is available only for ACK managed clusters. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the RAM Roles for Service Accounts (RRSA) feature. This parameter is available only for ACK managed clusters. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables the RRSA feature.</li>
+         * <li><code>false</code>: disables the RRSA feature.</li>
+         * </ul>
          * 
-         * *   `true`: enables the RRSA feature.
-         * *   `false`: disables the RRSA feature.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableRrsa(Boolean enableRrsa) {
             this.putBodyParameter("enable_rrsa", enableRrsa);
@@ -339,13 +356,15 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to remap the test domain name of the cluster. Valid values:
-         * <p>
+         * <p>Specifies whether to remap the test domain name of the cluster. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: remaps the test domain name of the cluster.</li>
+         * <li><code>false</code>: does not remap the test domain name of the cluster.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: remaps the test domain name of the cluster.
-         * *   `false`: does not remap the test domain name of the cluster.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ingressDomainRebinding(Boolean ingressDomainRebinding) {
             this.putBodyParameter("ingress_domain_rebinding", ingressDomainRebinding);
@@ -354,7 +373,10 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * The ID of the Server Load Balancer (SLB) instance of the cluster to be modified.
+         * <p>The ID of the Server Load Balancer (SLB) instance of the cluster to be modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-wz97kes8tnndkpodw****</p>
          */
         public Builder ingressLoadbalancerId(String ingressLoadbalancerId) {
             this.putBodyParameter("ingress_loadbalancer_id", ingressLoadbalancerId);
@@ -363,13 +385,15 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable instance deletion protection. If you enable this option, the instance cannot be deleted in the console or by calling API operations. Valid values:
-         * <p>
+         * <p>Specifies whether to enable instance deletion protection. If you enable this option, the instance cannot be deleted in the console or by calling API operations. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables instance deletion protection.</li>
+         * <li><code>false</code>: disables instance deletion protection.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: enables instance deletion protection.
-         * *   `false`: disables instance deletion protection.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder instanceDeletionProtection(Boolean instanceDeletionProtection) {
             this.putBodyParameter("instance_deletion_protection", instanceDeletionProtection);
@@ -378,7 +402,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * The cluster maintenance window. This feature takes effect only for ACK Pro clusters.
+         * <p>The cluster maintenance window. This feature takes effect only for ACK Pro clusters.</p>
          */
         public Builder maintenanceWindow(MaintenanceWindow maintenanceWindow) {
             this.putBodyParameter("maintenance_window", maintenanceWindow);
@@ -387,7 +411,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * The automatic O\&M policy of the cluster.
+         * <p>The automatic O&amp;M policy of the cluster.</p>
          */
         public Builder operationPolicy(OperationPolicy operationPolicy) {
             this.putBodyParameter("operation_policy", operationPolicy);
@@ -396,7 +420,10 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * The cluster resource group ID.
+         * <p>The cluster resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyvw3wjm****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resource_group_id", resourceGroupId);
@@ -405,7 +432,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * The storage configurations of system events.
+         * <p>The storage configurations of system events.</p>
          */
         public Builder systemEventsLogging(SystemEventsLogging systemEventsLogging) {
             this.putBodyParameter("system_events_logging", systemEventsLogging);
@@ -420,6 +447,12 @@ public class ModifyClusterRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyClusterRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyClusterRequest</p>
+     */
     public static class ApiServerCustomCertSans extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("action")
         private String action;
@@ -459,11 +492,14 @@ public class ModifyClusterRequest extends Request {
             private java.util.List < String > subjectAlternativeNames; 
 
             /**
-             * Specifies whether to overwrite or add SANs. Valid values:
-             * <p>
+             * <p>Specifies whether to overwrite or add SANs. Valid values:</p>
+             * <ul>
+             * <li>overwrite: overwrites SANs.</li>
+             * <li>append: adds SANs.</li>
+             * </ul>
              * 
-             * *   overwrite: overwrites SANs.
-             * *   append: adds SANs.
+             * <strong>example:</strong>
+             * <p>append</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -471,7 +507,7 @@ public class ModifyClusterRequest extends Request {
             }
 
             /**
-             * The SANs.
+             * <p>The SANs.</p>
              */
             public Builder subjectAlternativeNames(java.util.List < String > subjectAlternativeNames) {
                 this.subjectAlternativeNames = subjectAlternativeNames;
@@ -485,6 +521,12 @@ public class ModifyClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyClusterRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyClusterRequest</p>
+     */
     public static class ClusterAutoUpgrade extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("channel")
         private String channel;
@@ -524,12 +566,15 @@ public class ModifyClusterRequest extends Request {
             private Boolean enabled; 
 
             /**
-             * The frequency of auto cluster updates. Valid values:
-             * <p>
+             * <p>The frequency of auto cluster updates. Valid values:</p>
+             * <ul>
+             * <li>patch</li>
+             * <li>stable</li>
+             * <li>rapid</li>
+             * </ul>
              * 
-             * *   patch
-             * *   stable
-             * *   rapid
+             * <strong>example:</strong>
+             * <p>patch</p>
              */
             public Builder channel(String channel) {
                 this.channel = channel;
@@ -537,7 +582,10 @@ public class ModifyClusterRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable auto cluster update.
+             * <p>Specifies whether to enable auto cluster update.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -551,6 +599,12 @@ public class ModifyClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyClusterRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyClusterRequest</p>
+     */
     public static class OperationPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cluster_auto_upgrade")
         private ClusterAutoUpgrade clusterAutoUpgrade;
@@ -578,7 +632,7 @@ public class ModifyClusterRequest extends Request {
             private ClusterAutoUpgrade clusterAutoUpgrade; 
 
             /**
-             * The configurations of auto cluster update.
+             * <p>The configurations of auto cluster update.</p>
              */
             public Builder clusterAutoUpgrade(ClusterAutoUpgrade clusterAutoUpgrade) {
                 this.clusterAutoUpgrade = clusterAutoUpgrade;
@@ -592,6 +646,12 @@ public class ModifyClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyClusterRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyClusterRequest</p>
+     */
     public static class SystemEventsLogging extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enabled")
         private Boolean enabled;
@@ -631,7 +691,10 @@ public class ModifyClusterRequest extends Request {
             private String loggingProject; 
 
             /**
-             * Specifies whether to enable system event storage.
+             * <p>Specifies whether to enable system event storage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -639,7 +702,10 @@ public class ModifyClusterRequest extends Request {
             }
 
             /**
-             * The name of the Simple Log Service project that stores system events.
+             * <p>The name of the Simple Log Service project that stores system events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k8s-log-cb95aa626a47740afbf6aa099b65****</p>
              */
             public Builder loggingProject(String loggingProject) {
                 this.loggingProject = loggingProject;

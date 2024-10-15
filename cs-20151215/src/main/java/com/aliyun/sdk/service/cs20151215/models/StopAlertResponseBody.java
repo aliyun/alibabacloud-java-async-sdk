@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopAlertResponseBody} extends {@link TeaModel}
  *
  * <p>StopAlertResponseBody</p>
@@ -49,7 +50,10 @@ public class StopAlertResponseBody extends TeaModel {
         private Boolean status; 
 
         /**
-         * The error message returned if the call fails.
+         * <p>The error message returned if the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -57,11 +61,14 @@ public class StopAlertResponseBody extends TeaModel {
         }
 
         /**
-         * The operation result. Valid values:
-         * <p>
+         * <p>The operation result. Valid values:</p>
+         * <ul>
+         * <li>True: The operation is successful.</li>
+         * <li>False: The operation failed.</li>
+         * </ul>
          * 
-         * *   True: The operation is successful.
-         * *   False: The operation failed.
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder status(Boolean status) {
             this.status = status;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateResourcesDeleteProtectionRequest} extends {@link RequestModel}
  *
  * <p>UpdateResourcesDeleteProtectionRequest</p>
@@ -110,7 +111,11 @@ public class UpdateResourcesDeleteProtectionRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c850429a2287b4d968e27e87a4921****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -119,7 +124,10 @@ public class UpdateResourcesDeleteProtectionRequest extends Request {
         }
 
         /**
-         * Specify whether to enable deletion protection. Set the value to true to enable deletion protection and set the value to false to disable deletion protection.
+         * <p>Specify whether to enable deletion protection. Set the value to true to enable deletion protection and set the value to false to disable deletion protection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.putBodyParameter("enable", enable);
@@ -128,7 +136,10 @@ public class UpdateResourcesDeleteProtectionRequest extends Request {
         }
 
         /**
-         * The namespace to which the resource belongs.
+         * <p>The namespace to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("namespace", namespace);
@@ -137,7 +148,10 @@ public class UpdateResourcesDeleteProtectionRequest extends Request {
         }
 
         /**
-         * The type of resource for which deletion protection is enabled or disabled. You can specify namespaces or Services.
+         * <p>The type of resource for which deletion protection is enabled or disabled. You can specify namespaces or Services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>services</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("resource_type", resourceType);
@@ -146,7 +160,7 @@ public class UpdateResourcesDeleteProtectionRequest extends Request {
         }
 
         /**
-         * The resources list.
+         * <p>The resources list.</p>
          */
         public Builder resources(java.util.List < String > resources) {
             this.putBodyParameter("resources", resources);

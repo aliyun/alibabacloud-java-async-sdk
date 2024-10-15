@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEdgeMachineActiveProcessResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEdgeMachineActiveProcessResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeEdgeMachineActiveProcessResponseBody extends TeaModel {
         private String step; 
 
         /**
-         * The activation progress list.
+         * <p>The activation progress list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;content&quot;:&quot;步骤 &quot;颁发激活凭证&quot; 执行开始&quot;,&quot;id&quot;:0,&quot;level&quot;:3,&quot;timestamp&quot;:1625994913000},{&quot;content&quot;:&quot;步骤 &quot;颁发激活凭证&quot; 执行成功&quot;,&quot;id&quot;:1,&quot;level&quot;:3,&quot;timestamp&quot;:1625994914000},{&quot;content&quot;:&quot;步骤 &quot;初始化主机配置&quot; 执行开始&quot;,&quot;id&quot;:2,&quot;level&quot;:3,&quot;timestamp&quot;:1625994975000},{&quot;content&quot;:&quot;步骤 &quot;初始化主机配置&quot; 执行成功&quot;,&quot;id&quot;:3,&quot;level&quot;:3,&quot;timestamp&quot;:1625994975000}]</p>
          */
         public Builder logs(String logs) {
             this.logs = logs;
@@ -93,7 +97,10 @@ public class DescribeEdgeMachineActiveProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The activation progress.
+         * <p>The activation progress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder progress(Long progress) {
             this.progress = progress;
@@ -101,7 +108,10 @@ public class DescribeEdgeMachineActiveProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b62796a8-c5a6-4d3f-beb2-7650e4309cb1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,10 @@ public class DescribeEdgeMachineActiveProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The activation status.
+         * <p>The activation status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVATED</p>
          */
         public Builder state(String state) {
             this.state = state;
@@ -117,7 +130,10 @@ public class DescribeEdgeMachineActiveProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The activation step.
+         * <p>The activation step.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>步骤 &quot;初始化主机配置&quot; 执行成功</p>
          */
         public Builder step(String step) {
             this.step = step;

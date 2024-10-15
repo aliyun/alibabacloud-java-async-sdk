@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeletePolicyInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>DeletePolicyInstanceResponseBody</p>
@@ -37,7 +38,7 @@ public class DeletePolicyInstanceResponseBody extends TeaModel {
         private java.util.List < String > instances; 
 
         /**
-         * A list of policy instances.
+         * <p>A list of policy instances.</p>
          */
         public Builder instances(java.util.List < String > instances) {
             this.instances = instances;

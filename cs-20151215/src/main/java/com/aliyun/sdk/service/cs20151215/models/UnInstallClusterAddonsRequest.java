@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnInstallClusterAddonsRequest} extends {@link RequestModel}
  *
  * <p>UnInstallClusterAddonsRequest</p>
@@ -68,7 +69,11 @@ public class UnInstallClusterAddonsRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c5b5e80b0b64a4bf6939d2d8fbbc5****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -77,7 +82,7 @@ public class UnInstallClusterAddonsRequest extends Request {
         }
 
         /**
-         * The components that you want to uninstall. The list is an array.
+         * <p>The components that you want to uninstall. The list is an array.</p>
          */
         public Builder addons(java.util.List < Addons> addons) {
             this.putBodyParameter("addons", addons);
@@ -92,6 +97,12 @@ public class UnInstallClusterAddonsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UnInstallClusterAddonsRequest} extends {@link TeaModel}
+     *
+     * <p>UnInstallClusterAddonsRequest</p>
+     */
     public static class Addons extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cleanup_cloud_resources")
         private Boolean cleanupCloudResources;
@@ -131,7 +142,10 @@ public class UnInstallClusterAddonsRequest extends Request {
             private String name; 
 
             /**
-             * Specifies whether to release cloud resources.
+             * <p>Specifies whether to release cloud resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder cleanupCloudResources(Boolean cleanupCloudResources) {
                 this.cleanupCloudResources = cleanupCloudResources;
@@ -139,7 +153,10 @@ public class UnInstallClusterAddonsRequest extends Request {
             }
 
             /**
-             * The component name.
+             * <p>The component name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ack-node-problem-detector</p>
              */
             public Builder name(String name) {
                 this.name = name;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClusterAddonInstanceRequest} extends {@link RequestModel}
  *
  * <p>GetClusterAddonInstanceRequest</p>
@@ -67,7 +68,10 @@ public class GetClusterAddonInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c02b3e03be10643e8a644a843ffcb****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -76,7 +80,10 @@ public class GetClusterAddonInstanceRequest extends Request {
         }
 
         /**
-         * The name of the component instance.
+         * <p>The name of the component instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ack-node-problem-detector</p>
          */
         public Builder instanceName(String instanceName) {
             this.putPathParameter("instance_name", instanceName);

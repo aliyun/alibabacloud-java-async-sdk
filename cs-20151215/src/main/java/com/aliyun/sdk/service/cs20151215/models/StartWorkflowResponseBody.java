@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartWorkflowResponseBody} extends {@link TeaModel}
  *
  * <p>StartWorkflowResponseBody</p>
@@ -37,7 +38,10 @@ public class StartWorkflowResponseBody extends TeaModel {
         private String jobName; 
 
         /**
-         * The name of the workflow.
+         * <p>The name of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mapping-gpu-66xv7</p>
          */
         public Builder jobName(String jobName) {
             this.jobName = jobName;

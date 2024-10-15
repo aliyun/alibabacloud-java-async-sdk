@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePolicyDetailsRequest} extends {@link RequestModel}
  *
  * <p>DescribePolicyDetailsRequest</p>
@@ -54,7 +55,11 @@ public class DescribePolicyDetailsRequest extends Request {
         } 
 
         /**
-         * The name of the policy.
+         * <p>The name of the policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACKAllowedRepos</p>
          */
         public Builder policyName(String policyName) {
             this.putPathParameter("policy_name", policyName);

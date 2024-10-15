@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesRequest} extends {@link RequestModel}
  *
  * <p>ListTagResourcesRequest</p>
@@ -112,7 +113,10 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("next_token", nextToken);
@@ -121,7 +125,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("region_id", regionId);
@@ -130,7 +138,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The list of cluster IDs.
+         * <p>The list of cluster IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;xxxxx&quot;,&quot;xxxxxx&quot;]</p>
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
             String resourceIdsShrink = shrink(resourceIds, "resource_ids", "json");
@@ -140,7 +152,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The resource type. Set the value to `CLUSTER`.
+         * <p>The resource type. Set the value to <code>CLUSTER</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CLUSTER</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("resource_type", resourceType);
@@ -149,7 +165,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The list of labels that you want to query. You can specify at most 20 labels.
+         * <p>The list of labels that you want to query. You can specify at most 20 labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;,&quot;dev&quot;},{&quot;key&quot;:&quot;dev&quot;, &quot;value&quot;:&quot;IT&quot;}]</p>
          */
         public Builder tags(java.util.List < Tag > tags) {
             String tagsShrink = shrink(tags, "tags", "json");

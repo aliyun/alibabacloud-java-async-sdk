@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterV2UserKubeconfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeClusterV2UserKubeconfigRequest</p>
@@ -68,7 +69,7 @@ public class DescribeClusterV2UserKubeconfigRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>This parameter is required.</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);

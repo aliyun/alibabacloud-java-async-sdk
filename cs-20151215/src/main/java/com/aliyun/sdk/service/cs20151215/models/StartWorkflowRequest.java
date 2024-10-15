@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartWorkflowRequest} extends {@link RequestModel}
  *
  * <p>StartWorkflowRequest</p>
@@ -306,7 +307,10 @@ public class StartWorkflowRequest extends Request {
         } 
 
         /**
-         * The name of the output BAM file.
+         * <p>The name of the output BAM file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc.bam</p>
          */
         public Builder mappingBamOutFilename(String mappingBamOutFilename) {
             this.putBodyParameter("mapping_bam_out_filename", mappingBamOutFilename);
@@ -315,7 +319,10 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * The output path of the Binary Alignment Map (BAM) file.
+         * <p>The output path of the Binary Alignment Map (BAM) file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>output/bamDirName</p>
          */
         public Builder mappingBamOutPath(String mappingBamOutPath) {
             this.putBodyParameter("mapping_bam_out_path", mappingBamOutPath);
@@ -324,7 +331,10 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * The name of the OSS bucket that stores the data of the mapping workflow.
+         * <p>The name of the OSS bucket that stores the data of the mapping workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gene-shenzhen</p>
          */
         public Builder mappingBucketName(String mappingBucketName) {
             this.putBodyParameter("mapping_bucket_name", mappingBucketName);
@@ -333,7 +343,10 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * The name of the first FASTQ file of the mapping workflow.
+         * <p>The name of the first FASTQ file of the mapping workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MGISEQ2000_PCR-free_NA12878_1_V100003043_L01_1.fq.gz</p>
          */
         public Builder mappingFastqFirstFilename(String mappingFastqFirstFilename) {
             this.putBodyParameter("mapping_fastq_first_filename", mappingFastqFirstFilename);
@@ -342,7 +355,10 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * The path of the FASTQ files of the mapping workflow.
+         * <p>The path of the FASTQ files of the mapping workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fastq/MGISEQ2000</p>
          */
         public Builder mappingFastqPath(String mappingFastqPath) {
             this.putBodyParameter("mapping_fastq_path", mappingFastqPath);
@@ -351,7 +367,10 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * The name of the second FASTQ file of the mapping workflow.
+         * <p>The name of the second FASTQ file of the mapping workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MGISEQ2000_PCR-free_NA12878_1_V100003043_L01_2.fq.gz</p>
          */
         public Builder mappingFastqSecondFilename(String mappingFastqSecondFilename) {
             this.putBodyParameter("mapping_fastq_second_filename", mappingFastqSecondFilename);
@@ -360,7 +379,10 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * Specifies whether to mark duplicate values.
+         * <p>Specifies whether to mark duplicate values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder mappingIsMarkDup(String mappingIsMarkDup) {
             this.putBodyParameter("mapping_is_mark_dup", mappingIsMarkDup);
@@ -369,7 +391,10 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * The region where the Object Storage Service (OSS) bucket that stores the data of the mapping workflow is deployed.
+         * <p>The region where the Object Storage Service (OSS) bucket that stores the data of the mapping workflow is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder mappingOssRegion(String mappingOssRegion) {
             this.putBodyParameter("mapping_oss_region", mappingOssRegion);
@@ -378,7 +403,10 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * The path of the reference files of the mapping workflow.
+         * <p>The path of the reference files of the mapping workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>reference/hg19</p>
          */
         public Builder mappingReferencePath(String mappingReferencePath) {
             this.putBodyParameter("mapping_reference_path", mappingReferencePath);
@@ -387,12 +415,15 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * The type of service-level agreement (SLA). Valid values:
-         * <p>
+         * <p>The type of service-level agreement (SLA). Valid values:</p>
+         * <ul>
+         * <li>s: the silver level (S-level). It requires 1 extra minute to process every 1.5 billion base pairs beyond the limit of 90 billion base pairs.</li>
+         * <li>g: the gold level (G-level). It requires 1 extra minute to process every 2 billion base pairs beyond the limit of 90 billion base pairs.</li>
+         * <li>p: the platinum level (P-level). It requires 1 extra minute to process every 3 billion base pairs beyond the limit of 90 billion base pairs.</li>
+         * </ul>
          * 
-         * *   s: the silver level (S-level). It requires 1 extra minute to process every 1.5 billion base pairs beyond the limit of 90 billion base pairs.
-         * *   g: the gold level (G-level). It requires 1 extra minute to process every 2 billion base pairs beyond the limit of 90 billion base pairs.
-         * *   p: the platinum level (P-level). It requires 1 extra minute to process every 3 billion base pairs beyond the limit of 90 billion base pairs.
+         * <strong>example:</strong>
+         * <p>s</p>
          */
         public Builder service(String service) {
             this.putBodyParameter("service", service);
@@ -401,7 +432,10 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * The name of the OSS bucket that stores the data of the WGS workflow.
+         * <p>The name of the OSS bucket that stores the data of the WGS workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gene-shenzhen</p>
          */
         public Builder wgsBucketName(String wgsBucketName) {
             this.putBodyParameter("wgs_bucket_name", wgsBucketName);
@@ -410,7 +444,10 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * The name of the first FASTQ file of the WGS workflow.
+         * <p>The name of the first FASTQ file of the WGS workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MGISEQ2000_PCR-free_NA12878_1_V100003043_L01_1.fq.gz</p>
          */
         public Builder wgsFastqFirstFilename(String wgsFastqFirstFilename) {
             this.putBodyParameter("wgs_fastq_first_filename", wgsFastqFirstFilename);
@@ -419,7 +456,10 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * The path of the FASTQ files of the WGS workflow.
+         * <p>The path of the FASTQ files of the WGS workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fastq/MGISEQ2000</p>
          */
         public Builder wgsFastqPath(String wgsFastqPath) {
             this.putBodyParameter("wgs_fastq_path", wgsFastqPath);
@@ -428,7 +468,10 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * The name of the second FASTQ file of the WGS workflow.
+         * <p>The name of the second FASTQ file of the WGS workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MGISEQ2000_PCR-free_NA12878_1_V100003043_L01_2.fq.gz</p>
          */
         public Builder wgsFastqSecondFilename(String wgsFastqSecondFilename) {
             this.putBodyParameter("wgs_fastq_second_filename", wgsFastqSecondFilename);
@@ -437,7 +480,10 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * The region where the OSS bucket that stores the data of the whole genome sequencing (WGS) workflow is deployed.
+         * <p>The region where the OSS bucket that stores the data of the whole genome sequencing (WGS) workflow is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder wgsOssRegion(String wgsOssRegion) {
             this.putBodyParameter("wgs_oss_region", wgsOssRegion);
@@ -446,7 +492,10 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * The path of the reference files of the WGS workflow.
+         * <p>The path of the reference files of the WGS workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>reference/hg19</p>
          */
         public Builder wgsReferencePath(String wgsReferencePath) {
             this.putBodyParameter("wgs_reference_path", wgsReferencePath);
@@ -455,7 +504,10 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * The name of the output VCF file.
+         * <p>The name of the output VCF file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc.vcf</p>
          */
         public Builder wgsVcfOutFilename(String wgsVcfOutFilename) {
             this.putBodyParameter("wgs_vcf_out_filename", wgsVcfOutFilename);
@@ -464,7 +516,10 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * The output path of the Variant Call Format (VCF) file.
+         * <p>The output path of the Variant Call Format (VCF) file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>output/vcf</p>
          */
         public Builder wgsVcfOutPath(String wgsVcfOutPath) {
             this.putBodyParameter("wgs_vcf_out_path", wgsVcfOutPath);
@@ -473,7 +528,11 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * The type of workflow. Valid values: wgs and mapping.
+         * <p>The type of workflow. Valid values: wgs and mapping.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mapping</p>
          */
         public Builder workflowType(String workflowType) {
             this.putBodyParameter("workflow_type", workflowType);

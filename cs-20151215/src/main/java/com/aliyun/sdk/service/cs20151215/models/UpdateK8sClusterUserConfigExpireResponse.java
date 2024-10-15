@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateK8sClusterUserConfigExpireResponse} extends {@link TeaModel}
  *
  * <p>UpdateK8sClusterUserConfigExpireResponse</p>

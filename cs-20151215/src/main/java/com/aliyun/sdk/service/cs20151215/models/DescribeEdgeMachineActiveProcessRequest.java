@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEdgeMachineActiveProcessRequest} extends {@link RequestModel}
  *
  * <p>DescribeEdgeMachineActiveProcessRequest</p>
@@ -54,7 +55,11 @@ public class DescribeEdgeMachineActiveProcessRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud-native box.
+         * <p>The ID of the cloud-native box.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc0725ddf688744979cd98445f67e****</p>
          */
         public Builder edgeMachineid(String edgeMachineid) {
             this.putPathParameter("edge_machineid", edgeMachineid);

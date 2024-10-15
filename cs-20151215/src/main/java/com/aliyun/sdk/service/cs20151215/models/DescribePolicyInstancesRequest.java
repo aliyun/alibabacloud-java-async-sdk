@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePolicyInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribePolicyInstancesRequest</p>
@@ -82,7 +83,11 @@ public class DescribePolicyInstancesRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c8155823d057948c69a****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -91,7 +96,10 @@ public class DescribePolicyInstancesRequest extends Request {
         }
 
         /**
-         * The name of the policy instance that you want to query.
+         * <p>The name of the policy instance that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>allowed-repos-cz4s2</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("instance_name", instanceName);
@@ -100,7 +108,10 @@ public class DescribePolicyInstancesRequest extends Request {
         }
 
         /**
-         * The name of the policy that you want to query.
+         * <p>The name of the policy that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACKPSPCapabilities</p>
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("policy_name", policyName);

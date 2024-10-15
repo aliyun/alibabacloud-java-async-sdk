@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateKubernetesTriggerResponseBody} extends {@link TeaModel}
  *
  * <p>CreateKubernetesTriggerResponseBody</p>
@@ -85,7 +86,10 @@ public class CreateKubernetesTriggerResponseBody extends TeaModel {
         private String type; 
 
         /**
-         * The action that the trigger performs. For example, a value of `redeploy` indicates that the trigger redeploys the application.
+         * <p>The action that the trigger performs. For example, a value of <code>redeploy</code> indicates that the trigger redeploys the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>redeploy</p>
          */
         public Builder action(String action) {
             this.action = action;
@@ -93,7 +97,10 @@ public class CreateKubernetesTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c5cdf7e3938bc4f8eb0e44b21a80f****</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -101,7 +108,10 @@ public class CreateKubernetesTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the trigger.
+         * <p>The ID of the trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -109,7 +119,10 @@ public class CreateKubernetesTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the trigger project.
+         * <p>The name of the trigger project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default/test-app</p>
          */
         public Builder projectId(String projectId) {
             this.projectId = projectId;
@@ -117,13 +130,15 @@ public class CreateKubernetesTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The type of trigger.
-         * <p>
+         * <p>The type of trigger.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><code>deployment</code>: performs actions on Deployments.</li>
+         * <li><code>application</code>: performs actions on applications that are deployed in Application Center.</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   `deployment`: performs actions on Deployments.
-         * *   `application`: performs actions on applications that are deployed in Application Center.
+         * <strong>example:</strong>
+         * <p>deployment</p>
          */
         public Builder type(String type) {
             this.type = type;

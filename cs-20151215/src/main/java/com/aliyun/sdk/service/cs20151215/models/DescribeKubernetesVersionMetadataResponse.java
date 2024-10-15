@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeKubernetesVersionMetadataResponse} extends {@link TeaModel}
  *
  * <p>DescribeKubernetesVersionMetadataResponse</p>
@@ -122,6 +123,12 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeKubernetesVersionMetadataResponse} extends {@link TeaModel}
+     *
+     * <p>DescribeKubernetesVersionMetadataResponse</p>
+     */
     public static class Images extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("image_id")
         private String imageId;
@@ -233,7 +240,10 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             private String architecture; 
 
             /**
-             * The image ID.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>centos_7_7_x64_20G_alibase_20200426.vhd</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -241,7 +251,10 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * The image name.
+             * <p>The image name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CentOS 7.7</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -249,13 +262,16 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * The OS platform. Valid values:
-             * <p>
+             * <p>The OS platform. Valid values:</p>
+             * <ul>
+             * <li><code>AliyunLinux</code></li>
+             * <li><code>CentOS</code></li>
+             * <li><code>Windows</code></li>
+             * <li><code>WindowsCore</code></li>
+             * </ul>
              * 
-             * *   `AliyunLinux`
-             * *   `CentOS`
-             * *   `Windows`
-             * *   `WindowsCore`
+             * <strong>example:</strong>
+             * <p>CentOS</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -263,7 +279,10 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * The version of the image.
+             * <p>The version of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7.7</p>
              */
             public Builder osVersion(String osVersion) {
                 this.osVersion = osVersion;
@@ -271,18 +290,21 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * The type of OS distribution that you want to use. To specify the node OS, we recommend that you use this parameter. Valid values:
-             * <p>
+             * <p>The type of OS distribution that you want to use. To specify the node OS, we recommend that you use this parameter. Valid values:</p>
+             * <ul>
+             * <li><code>CentOS</code></li>
+             * <li><code>AliyunLinux</code></li>
+             * <li><code>AliyunLinux Qboot</code></li>
+             * <li><code>AliyunLinuxUEFI</code></li>
+             * <li><code>AliyunLinux3</code></li>
+             * <li><code>Windows</code></li>
+             * <li><code>WindowsCore</code></li>
+             * <li><code>AliyunLinux3Arm64</code></li>
+             * <li><code>ContainerOS</code></li>
+             * </ul>
              * 
-             * *   `CentOS`
-             * *   `AliyunLinux`
-             * *   `AliyunLinux Qboot`
-             * *   `AliyunLinuxUEFI`
-             * *   `AliyunLinux3`
-             * *   `Windows`
-             * *   `WindowsCore`
-             * *   `AliyunLinux3Arm64`
-             * *   `ContainerOS`
+             * <strong>example:</strong>
+             * <p>centos_7_7_20</p>
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
@@ -290,11 +312,14 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * The type of OS. Examples:
-             * <p>
+             * <p>The type of OS. Examples:</p>
+             * <ul>
+             * <li><code>Windows</code></li>
+             * <li><code>Linux</code></li>
+             * </ul>
              * 
-             * *   `Windows`
-             * *   `Linux`
+             * <strong>example:</strong>
+             * <p>Linux</p>
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -302,13 +327,16 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * The type of image. Valid values:
-             * <p>
+             * <p>The type of image. Valid values:</p>
+             * <ul>
+             * <li><code>system</code>: public image</li>
+             * <li><code>self</code>: custom image</li>
+             * <li><code>others</code>: shared image from other Alibaba Cloud accounts</li>
+             * <li><code>marketplace</code>: image from the marketplace</li>
+             * </ul>
              * 
-             * *   `system`: public image
-             * *   `self`: custom image
-             * *   `others`: shared image from other Alibaba Cloud accounts
-             * *   `marketplace`: image from the marketplace
+             * <strong>example:</strong>
+             * <p>system</p>
              */
             public Builder imageCategory(String imageCategory) {
                 this.imageCategory = imageCategory;
@@ -316,7 +344,10 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * The architecture of the image.
+             * <p>The architecture of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>x86_64</p>
              */
             public Builder architecture(String architecture) {
                 this.architecture = architecture;
@@ -330,6 +361,12 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeKubernetesVersionMetadataResponse} extends {@link TeaModel}
+     *
+     * <p>DescribeKubernetesVersionMetadataResponse</p>
+     */
     public static class DescribeKubernetesVersionMetadataResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("capabilities")
         private java.util.Map < String, ? > capabilities;
@@ -453,7 +490,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             private java.util.List < String > upgradableVersions; 
 
             /**
-             * Features of the queried Kubernetes version.
+             * <p>Features of the queried Kubernetes version.</p>
              */
             public Builder capabilities(java.util.Map < String, ? > capabilities) {
                 this.capabilities = capabilities;
@@ -461,7 +498,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * The OS images that are returned.
+             * <p>The OS images that are returned.</p>
              */
             public Builder images(java.util.List < Images> images) {
                 this.images = images;
@@ -469,7 +506,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * The metadata of the Kubernetes version.
+             * <p>The metadata of the Kubernetes version.</p>
              */
             public Builder metaData(java.util.Map < String, ? > metaData) {
                 this.metaData = metaData;
@@ -477,7 +514,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * Details of the supported container runtimes.
+             * <p>Details of the supported container runtimes.</p>
              */
             public Builder runtimes(java.util.List < Runtime > runtimes) {
                 this.runtimes = runtimes;
@@ -485,7 +522,10 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * The Kubernetes version supported by ACK. For more information, see [Release notes for Kubernetes versions](~~185269~~).
+             * <p>The Kubernetes version supported by ACK. For more information, see <a href="https://help.aliyun.com/document_detail/185269.html">Release notes for Kubernetes versions</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.16.9-aliyun.1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -493,7 +533,10 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * The release date of the Kubernetes version.
+             * <p>The release date of the Kubernetes version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-30T00:00:00Z</p>
              */
             public Builder releaseDate(String releaseDate) {
                 this.releaseDate = releaseDate;
@@ -501,7 +544,10 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * The expiration date of the Kubernetes version.
+             * <p>The expiration date of the Kubernetes version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-04-30T00:00:00Z</p>
              */
             public Builder expirationDate(String expirationDate) {
                 this.expirationDate = expirationDate;
@@ -509,7 +555,10 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * Indicates whether you can create clusters that run the Kubernetes version.
+             * <p>Indicates whether you can create clusters that run the Kubernetes version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder creatable(Boolean creatable) {
                 this.creatable = creatable;
@@ -517,7 +566,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * The list of available versions for updates.
+             * <p>The list of available versions for updates.</p>
              */
             public Builder upgradableVersions(java.util.List < String > upgradableVersions) {
                 this.upgradableVersions = upgradableVersions;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScanClusterVulsResponseBody} extends {@link TeaModel}
  *
  * <p>ScanClusterVulsResponseBody</p>
@@ -49,7 +50,10 @@ public class ScanClusterVulsResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * request_id.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>687C5BAA-D103-4993-884B-C35E4314A1E1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class ScanClusterVulsResponseBody extends TeaModel {
         }
 
         /**
-         * task_id.
+         * <p>Task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T-xascadasd*****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

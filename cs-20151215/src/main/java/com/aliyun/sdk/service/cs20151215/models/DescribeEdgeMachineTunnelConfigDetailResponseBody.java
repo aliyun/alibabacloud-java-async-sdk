@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEdgeMachineTunnelConfigDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEdgeMachineTunnelConfigDetailResponseBody</p>
@@ -109,7 +110,10 @@ public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel 
         private String tunnelEndpoint; 
 
         /**
-         * The device name.
+         * <p>The device name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TEST0621N0FF****</p>
          */
         public Builder deviceName(String deviceName) {
             this.deviceName = deviceName;
@@ -117,7 +121,10 @@ public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel 
         }
 
         /**
-         * The model of the cloud-native box.
+         * <p>The model of the cloud-native box.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACK-A-S001</p>
          */
         public Builder model(String model) {
             this.model = model;
@@ -125,7 +132,10 @@ public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel 
         }
 
         /**
-         * Product Key
+         * <p>Product Key</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a11rXul****</p>
          */
         public Builder productKey(String productKey) {
             this.productKey = productKey;
@@ -133,7 +143,10 @@ public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel 
         }
 
         /**
-         * Request ID
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bfd12953-31cb-42f1-8a36-7b80ec345094</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +154,10 @@ public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel 
         }
 
         /**
-         * The serial number of the cloud-native box.
+         * <p>The serial number of the cloud-native box.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Q2CB5XZAFBFG****</p>
          */
         public Builder sn(String sn) {
             this.sn = sn;
@@ -149,7 +165,10 @@ public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel 
         }
 
         /**
-         * Token
+         * <p>Token</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcd****</p>
          */
         public Builder token(String token) {
             this.token = token;
@@ -157,7 +176,10 @@ public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel 
         }
 
         /**
-         * The tunnel endpoint.
+         * <p>The tunnel endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wss://frontend-iotx-r-debug.aliyun-inc.test</p>
          */
         public Builder tunnelEndpoint(String tunnelEndpoint) {
             this.tunnelEndpoint = tunnelEndpoint;

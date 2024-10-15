@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateK8sClusterUserConfigExpireRequest} extends {@link RequestModel}
  *
  * <p>UpdateK8sClusterUserConfigExpireRequest</p>
@@ -84,7 +85,11 @@ public class UpdateK8sClusterUserConfigExpireRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c5b5e80b0b64a4bf6939d2d8fbbc5****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -93,10 +98,14 @@ public class UpdateK8sClusterUserConfigExpireRequest extends Request {
         }
 
         /**
-         * The validity period of the kubeconfig file. Unit: hours.
-         * <p>
+         * <p>The validity period of the kubeconfig file. Unit: hours.</p>
+         * <blockquote>
+         * <p>The value of expire_hour must be greater than 0 and equal to or smaller than 876000 (100 years).</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The value of expire_hour must be greater than 0 and equal to or smaller than 876000 (100 years).
+         * <strong>example:</strong>
+         * <p>720</p>
          */
         public Builder expireHour(Long expireHour) {
             this.putBodyParameter("expire_hour", expireHour);
@@ -105,7 +114,11 @@ public class UpdateK8sClusterUserConfigExpireRequest extends Request {
         }
 
         /**
-         * The user ID.
+         * <p>The user ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The ID of the Resource Access Management (RAM) user that you use.</p>
          */
         public Builder user(String user) {
             this.putBodyParameter("user", user);

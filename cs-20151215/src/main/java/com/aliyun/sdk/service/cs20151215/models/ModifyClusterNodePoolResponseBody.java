@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyClusterNodePoolResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyClusterNodePoolResponseBody</p>
@@ -61,7 +62,10 @@ public class ModifyClusterNodePoolResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The node pool ID.
+         * <p>The node pool ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np737c3ac1ac684703b9e10673aa2c****</p>
          */
         public Builder nodepoolId(String nodepoolId) {
             this.nodepoolId = nodepoolId;
@@ -69,7 +73,10 @@ public class ModifyClusterNodePoolResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>687C5BAA-D103-4993-884B-C35E4314****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class ModifyClusterNodePoolResponseBody extends TeaModel {
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T-5fd211e924e1d00787000293</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

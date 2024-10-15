@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExternalAgentResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeExternalAgentResponseBody</p>
@@ -37,7 +38,10 @@ public class DescribeExternalAgentResponseBody extends TeaModel {
         private String config; 
 
         /**
-         * The agent configurations in the YAML format.
+         * <p>The agent configurations in the YAML format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apiVersion: v1****</p>
          */
         public Builder config(String config) {
             this.config = config;

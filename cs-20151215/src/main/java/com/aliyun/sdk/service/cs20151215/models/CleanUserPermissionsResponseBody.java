@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CleanUserPermissionsResponseBody} extends {@link TeaModel}
  *
  * <p>CleanUserPermissionsResponseBody</p>
@@ -49,7 +50,10 @@ public class CleanUserPermissionsResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * 请求ID。
+         * <p>请求ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>687C5BAA-D103-4993-884B-C35E4314****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class CleanUserPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * 任务ID
+         * <p>任务ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>clean-user-permissions-2085266204********-6694c16e6ae07***********</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterUserKubeconfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClusterUserKubeconfigResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeClusterUserKubeconfigResponseBody extends TeaModel {
         private String expiration; 
 
         /**
-         * The kubeconfig file of the cluster. For more information about the content of the kubeconfig file, see [Configure cluster credentials](~~86494~~).
+         * <p>The kubeconfig file of the cluster. For more information about the content of the kubeconfig file, see <a href="https://help.aliyun.com/document_detail/86494.html">Configure cluster credentials</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apiVersion: v1****</p>
          */
         public Builder config(String config) {
             this.config = config;
@@ -57,7 +61,10 @@ public class DescribeClusterUserKubeconfigResponseBody extends TeaModel {
         }
 
         /**
-         * The validity period of the kubeconfig file. The value is the UTC time displayed in RFC3339 format.
+         * <p>The validity period of the kubeconfig file. The value is the UTC time displayed in RFC3339 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-03-10T09:56:17Z</p>
          */
         public Builder expiration(String expiration) {
             this.expiration = expiration;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTemplateAttributeResponse} extends {@link TeaModel}
  *
  * <p>DescribeTemplateAttributeResponse</p>
@@ -122,6 +123,12 @@ public class DescribeTemplateAttributeResponse extends Response {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTemplateAttributeResponse} extends {@link TeaModel}
+     *
+     * <p>DescribeTemplateAttributeResponse</p>
+     */
     public static class DescribeTemplateAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("id")
         private String id;
@@ -257,7 +264,10 @@ public class DescribeTemplateAttributeResponse extends Response {
             private String updated; 
 
             /**
-             * The ID of the template. When you update a template, a new template ID is generated.
+             * <p>The ID of the template. When you update a template, a new template ID is generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>72d20cf8-a533-4ea9-a10d-e7630d3d****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -265,7 +275,10 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * The access control policy of the template.
+             * <p>The access control policy of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>private</p>
              */
             public Builder acl(String acl) {
                 this.acl = acl;
@@ -273,7 +286,10 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * The name of the template.
+             * <p>The name of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>web</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -281,7 +297,10 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * The template content in the YAML format.
+             * <p>The template content in the YAML format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apiVersion: V1\n***</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -289,14 +308,16 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * The type of template. The value can be a custom value.
-             * <p>
+             * <p>The type of template. The value can be a custom value.</p>
+             * <ul>
+             * <li>If the parameter is set to <code>kubernetes</code>, the template is displayed on the Templates page in the console.</li>
+             * <li>If the parameter is set to <code>compose</code>, the template is displayed on the Container Service - Swarm page in the console. Container Service for Swarm is deprecated.</li>
+             * <li>If the value of the parameter is not <code>kubernetes</code>, the template is not displayed on the Templates page in the console. We recommend that you set the parameter to <code>kubernetes</code>.</li>
+             * </ul>
+             * <p>Default value: <code>kubernetes</code>.</p>
              * 
-             * *   If the parameter is set to `kubernetes`, the template is displayed on the Templates page in the console.
-             * *   If the parameter is set to `compose`, the template is displayed on the Container Service - Swarm page in the console. Container Service for Swarm is deprecated.
-             * *   If the value of the parameter is not `kubernetes`, the template is not displayed on the Templates page in the console. We recommend that you set the parameter to `kubernetes`.
-             * 
-             * Default value: `kubernetes`.
+             * <strong>example:</strong>
+             * <p>kubernetes</p>
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;
@@ -304,7 +325,10 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * The description of the template.
+             * <p>The description of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test template</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -312,7 +336,10 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * The label of the template.
+             * <p>The label of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sa</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -320,7 +347,10 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * The unique ID of the template. The value remains unchanged after the template is updated.
+             * <p>The unique ID of the template. The value remains unchanged after the template is updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>874ec485-e7e6-4373-8a3b-47bde8ae****</p>
              */
             public Builder templateWithHistId(String templateWithHistId) {
                 this.templateWithHistId = templateWithHistId;
@@ -328,7 +358,10 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * The time when the template was created.
+             * <p>The time when the template was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-09-16T19:21:29+08:00</p>
              */
             public Builder created(String created) {
                 this.created = created;
@@ -336,7 +369,10 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * The time when the template was updated.
+             * <p>The time when the template was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-09-16T19:21:29+08:00</p>
              */
             public Builder updated(String updated) {
                 this.updated = updated;

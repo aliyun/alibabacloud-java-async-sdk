@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>AttachInstancesResponseBody</p>
@@ -49,7 +50,7 @@ public class AttachInstancesResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The details of the added nodes.
+         * <p>The details of the added nodes.</p>
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -57,7 +58,10 @@ public class AttachInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T-5a544aff80282e39ea000039</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -70,6 +74,12 @@ public class AttachInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AttachInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>AttachInstancesResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
@@ -121,7 +131,10 @@ public class AttachInstancesResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * The code that indicates the task result.
+             * <p>The code that indicates the task result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -129,7 +142,10 @@ public class AttachInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance.
+             * <p>The ID of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2ze0lgm3y6iylcbt****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -137,7 +153,10 @@ public class AttachInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the ECS instance is successfully added to the ACK cluster.
+             * <p>Indicates whether the ECS instance is successfully added to the ACK cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>successful</p>
              */
             public Builder message(String message) {
                 this.message = message;

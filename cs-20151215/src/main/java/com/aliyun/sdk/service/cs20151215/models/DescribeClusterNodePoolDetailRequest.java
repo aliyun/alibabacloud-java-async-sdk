@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterNodePoolDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeClusterNodePoolDetailRequest</p>
@@ -69,7 +70,11 @@ public class DescribeClusterNodePoolDetailRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster that you want to query.
+         * <p>The ID of the cluster that you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c23421cfa74454bc8b37163fd19af****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -78,7 +83,11 @@ public class DescribeClusterNodePoolDetailRequest extends Request {
         }
 
         /**
-         * The node pool ID.
+         * <p>The node pool ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np31da1b38983f4511b490fc62108a****</p>
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("NodepoolId", nodepoolId);

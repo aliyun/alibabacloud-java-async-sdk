@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunClusterCheckResponseBody} extends {@link TeaModel}
  *
  * <p>RunClusterCheckResponseBody</p>
@@ -49,7 +50,10 @@ public class RunClusterCheckResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the cluster check task.
+         * <p>The ID of the cluster check task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1697100584236600453-ce0da5a1d627e4e9e9f96cae8ad07****-clustercheck-lboto</p>
          */
         public Builder checkId(String checkId) {
             this.checkId = checkId;
@@ -57,7 +61,10 @@ public class RunClusterCheckResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F04DF81D-5C12-1524-B36A-86E02526****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

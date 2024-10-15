@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveNodePoolNodesRequest} extends {@link RequestModel}
  *
  * <p>RemoveNodePoolNodesRequest</p>
@@ -140,7 +141,11 @@ public class RemoveNodePoolNodesRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c23421cfa74454bc8b37163fd19af****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -149,7 +154,11 @@ public class RemoveNodePoolNodesRequest extends Request {
         }
 
         /**
-         * The node pool ID.
+         * <p>The node pool ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np97de2cfb1ba042398dd8f5504c94****</p>
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("NodepoolId", nodepoolId);
@@ -158,7 +167,10 @@ public class RemoveNodePoolNodesRequest extends Request {
         }
 
         /**
-         * concurrency.
+         * <p>Whether to remove concurrently.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder concurrency(Boolean concurrency) {
             this.putQueryParameter("concurrency", concurrency);
@@ -167,11 +179,14 @@ public class RemoveNodePoolNodesRequest extends Request {
         }
 
         /**
-         * Specifies whether to drain the nodes that you want to remove. Valid values:
-         * <p>
+         * <p>Specifies whether to drain the nodes that you want to remove. Valid values:</p>
+         * <ul>
+         * <li>true: drain the nodes that you want to remove.</li>
+         * <li>false: do not drain the nodes that you want to remove.</li>
+         * </ul>
          * 
-         * *   true: drain the nodes that you want to remove.
-         * *   false: do not drain the nodes that you want to remove.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder drainNode(Boolean drainNode) {
             this.putQueryParameter("drain_node", drainNode);
@@ -180,7 +195,7 @@ public class RemoveNodePoolNodesRequest extends Request {
         }
 
         /**
-         * A list of instances that you want to remove.
+         * <p>A list of instances that you want to remove.</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "instance_ids", "json");
@@ -190,7 +205,7 @@ public class RemoveNodePoolNodesRequest extends Request {
         }
 
         /**
-         * A list of nodes that you want to remove.
+         * <p>A list of nodes that you want to remove.</p>
          */
         public Builder nodes(java.util.List < String > nodes) {
             String nodesShrink = shrink(nodes, "nodes", "json");
@@ -200,11 +215,14 @@ public class RemoveNodePoolNodesRequest extends Request {
         }
 
         /**
-         * Specifies whether to release the nodes after they are removed. Valid values:
-         * <p>
+         * <p>Specifies whether to release the nodes after they are removed. Valid values:</p>
+         * <ul>
+         * <li>true: release the nodes after they are removed.</li>
+         * <li>false: do not release the nodes after they are removed.</li>
+         * </ul>
          * 
-         * *   true: release the nodes after they are removed.
-         * *   false: do not release the nodes after they are removed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder releaseNode(Boolean releaseNode) {
             this.putQueryParameter("release_node", releaseNode);

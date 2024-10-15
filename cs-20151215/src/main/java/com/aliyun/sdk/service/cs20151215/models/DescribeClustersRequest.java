@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClustersRequest} extends {@link RequestModel}
  *
  * <p>DescribeClustersRequest</p>
@@ -81,7 +82,10 @@ public class DescribeClustersRequest extends Request {
         } 
 
         /**
-         * The cluster type.
+         * <p>The cluster type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ManagedKubernetes</p>
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("clusterType", clusterType);
@@ -90,7 +94,10 @@ public class DescribeClustersRequest extends Request {
         }
 
         /**
-         * The cluster name based on which the system performs fuzzy searches among the clusters that belong to the current Alibaba Cloud account.
+         * <p>The cluster name based on which the system performs fuzzy searches among the clusters that belong to the current Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);

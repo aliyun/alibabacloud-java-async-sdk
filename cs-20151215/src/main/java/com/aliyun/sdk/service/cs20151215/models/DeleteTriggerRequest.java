@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTriggerRequest} extends {@link RequestModel}
  *
  * <p>DeleteTriggerRequest</p>
@@ -69,7 +70,11 @@ public class DeleteTriggerRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c68deb844dc6d480eb775be611fdf****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -78,7 +83,11 @@ public class DeleteTriggerRequest extends Request {
         }
 
         /**
-         * The trigger ID.
+         * <p>The trigger ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123407</p>
          */
         public Builder id(String id) {
             this.putPathParameter("Id", id);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAlertContactGroupResponse} extends {@link TeaModel}
  *
  * <p>DeleteAlertContactGroupResponse</p>
@@ -122,6 +123,12 @@ public class DeleteAlertContactGroupResponse extends Response {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteAlertContactGroupResponse} extends {@link TeaModel}
+     *
+     * <p>DeleteAlertContactGroupResponse</p>
+     */
     public static class DeleteAlertContactGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("status")
         private Boolean status;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterLogsResponse} extends {@link TeaModel}
  *
  * <p>DescribeClusterLogsResponse</p>
@@ -122,6 +123,12 @@ public class DescribeClusterLogsResponse extends Response {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClusterLogsResponse} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterLogsResponse</p>
+     */
     public static class DescribeClusterLogsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ID")
         private Long id;
@@ -197,7 +204,10 @@ public class DescribeClusterLogsResponse extends Response {
             private String updated; 
 
             /**
-             * The ID of the log entry.
+             * <p>The ID of the log entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>590749245</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -205,7 +215,10 @@ public class DescribeClusterLogsResponse extends Response {
             }
 
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c23421cfa74454bc8b37163fd19af***</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -213,7 +226,10 @@ public class DescribeClusterLogsResponse extends Response {
             }
 
             /**
-             * The log content.
+             * <p>The log content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>start to update cluster status to CREATE_COMPLETE</p>
              */
             public Builder clusterLog(String clusterLog) {
                 this.clusterLog = clusterLog;
@@ -221,7 +237,10 @@ public class DescribeClusterLogsResponse extends Response {
             }
 
             /**
-             * The time when the log entry was generated.
+             * <p>The time when the log entry was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-09-11T10:11:51+08:00</p>
              */
             public Builder created(String created) {
                 this.created = created;
@@ -229,7 +248,10 @@ public class DescribeClusterLogsResponse extends Response {
             }
 
             /**
-             * The time when the log entry was updated.
+             * <p>The time when the log entry was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-09-11T10:11:51+08:00</p>
              */
             public Builder updated(String updated) {
                 this.updated = updated;

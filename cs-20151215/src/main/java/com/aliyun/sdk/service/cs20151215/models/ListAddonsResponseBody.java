@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAddonsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAddonsResponseBody</p>
@@ -37,7 +38,7 @@ public class ListAddonsResponseBody extends TeaModel {
         private java.util.List < Addons> addons; 
 
         /**
-         * The list of available components.
+         * <p>The list of available components.</p>
          */
         public Builder addons(java.util.List < Addons> addons) {
             this.addons = addons;
@@ -50,6 +51,12 @@ public class ListAddonsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAddonsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAddonsResponseBody</p>
+     */
     public static class Addons extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("architecture")
         private java.util.List < String > architecture;
@@ -161,11 +168,11 @@ public class ListAddonsResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * Architectures supported by the component. Valid values:
-             * <p>
-             * 
-             * *   amd64
-             * *   arm64
+             * <p>Architectures supported by the component. Valid values:</p>
+             * <ul>
+             * <li>amd64</li>
+             * <li>arm64</li>
+             * </ul>
              */
             public Builder architecture(java.util.List < String > architecture) {
                 this.architecture = architecture;
@@ -173,7 +180,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the component.
+             * <p>The category of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>monitor</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -181,7 +191,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * The schema of the custom parameters of the component.
+             * <p>The schema of the custom parameters of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder configSchema(String configSchema) {
                 this.configSchema = configSchema;
@@ -189,7 +202,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the component is automatically installed by default.
+             * <p>Indicates whether the component is automatically installed by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder installByDefault(Boolean installByDefault) {
                 this.installByDefault = installByDefault;
@@ -197,7 +213,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the component is fully managed.
+             * <p>Indicates whether the component is fully managed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder managed(Boolean managed) {
                 this.managed = managed;
@@ -205,7 +224,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * The component name.
+             * <p>The component name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>arms-prometheus</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -213,13 +235,13 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Operations supported by the component. Valid values:
-             * <p>
-             * 
-             * *   Install
-             * *   Upgrade
-             * *   Modify
-             * *   Uninstall
+             * <p>Operations supported by the component. Valid values:</p>
+             * <ul>
+             * <li>Install</li>
+             * <li>Upgrade</li>
+             * <li>Modify</li>
+             * <li>Uninstall</li>
+             * </ul>
              */
             public Builder supportedActions(java.util.List < String > supportedActions) {
                 this.supportedActions = supportedActions;
@@ -227,7 +249,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * The version number.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.9</p>
              */
             public Builder version(String version) {
                 this.version = version;

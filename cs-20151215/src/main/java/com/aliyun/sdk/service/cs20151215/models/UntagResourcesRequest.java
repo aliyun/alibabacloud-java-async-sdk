@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
@@ -113,11 +114,14 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove all custom labels. This parameter takes effect only when `tag_keys` is left empty. Valid values:
-         * <p>
+         * <p>Specifies whether to remove all custom labels. This parameter takes effect only when <code>tag_keys</code> is left empty. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: Remove all custom labels.</li>
+         * <li><code>false</code>: Do not remove all custom labels.</li>
+         * </ul>
          * 
-         * *   `true`: Remove all custom labels.
-         * *   `false`: Do not remove all custom labels.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("all", all);
@@ -126,7 +130,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID of the resources.
+         * <p>The region ID of the resources.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("region_id", regionId);
@@ -135,7 +143,8 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The list of resource IDs.
+         * <p>The list of resource IDs.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
             String resourceIdsShrink = shrink(resourceIds, "resource_ids", "json");
@@ -145,7 +154,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The type of resource. Set the value to `CLUSTER`.
+         * <p>The type of resource. Set the value to <code>CLUSTER</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CLUSTER</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("resource_type", resourceType);
@@ -154,7 +167,8 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The list of keys of the labels that you want to remove.
+         * <p>The list of keys of the labels that you want to remove.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder tagKeys(java.util.List < String > tagKeys) {
             String tagKeysShrink = shrink(tagKeys, "tag_keys", "json");

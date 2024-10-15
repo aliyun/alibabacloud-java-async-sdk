@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteKubernetesTriggerRequest} extends {@link RequestModel}
  *
  * <p>DeleteKubernetesTriggerRequest</p>
@@ -54,7 +55,11 @@ public class DeleteKubernetesTriggerRequest extends Request {
         } 
 
         /**
-         * The ID of the application trigger.
+         * <p>The ID of the application trigger.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c5cdf7e3938bc4f8eb0e44b21a80f****</p>
          */
         public Builder id(String id) {
             this.putPathParameter("Id", id);

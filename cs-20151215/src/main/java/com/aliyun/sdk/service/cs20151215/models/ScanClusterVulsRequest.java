@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScanClusterVulsRequest} extends {@link RequestModel}
  *
  * <p>ScanClusterVulsRequest</p>
@@ -53,7 +54,10 @@ public class ScanClusterVulsRequest extends Request {
         } 
 
         /**
-         * cluster_id.
+         * <p>Cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c259f563386444ebb8d7****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);

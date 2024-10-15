@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterAddonsUpgradeStatusRequest} extends {@link RequestModel}
  *
  * <p>DescribeClusterAddonsUpgradeStatusRequest</p>
@@ -69,7 +70,11 @@ public class DescribeClusterAddonsUpgradeStatusRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c23421cfa74454bc8b37163fd19af****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -78,7 +83,8 @@ public class DescribeClusterAddonsUpgradeStatusRequest extends Request {
         }
 
         /**
-         * The list of component names.
+         * <p>The list of component names.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder componentIds(java.util.List < String > componentIds) {
             String componentIdsShrink = shrink(componentIds, "componentIds", "json");

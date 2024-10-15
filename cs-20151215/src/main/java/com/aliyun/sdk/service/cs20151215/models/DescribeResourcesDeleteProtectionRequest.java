@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResourcesDeleteProtectionRequest} extends {@link RequestModel}
  *
  * <p>DescribeResourcesDeleteProtectionRequest</p>
@@ -97,7 +98,11 @@ public class DescribeResourcesDeleteProtectionRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c82e6987e2961451182edacd74faf****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -106,7 +111,11 @@ public class DescribeResourcesDeleteProtectionRequest extends Request {
         }
 
         /**
-         * The type of resource for which deletion protection is enabled or disabled. You can specify namespaces or Services.
+         * <p>The type of resource for which deletion protection is enabled or disabled. You can specify namespaces or Services.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>namespaces</p>
          */
         public Builder resourceType(String resourceType) {
             this.putPathParameter("ResourceType", resourceType);
@@ -115,7 +124,10 @@ public class DescribeResourcesDeleteProtectionRequest extends Request {
         }
 
         /**
-         * The namespace to which the resource belongs.
+         * <p>The namespace to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("namespace", namespace);
@@ -124,7 +136,10 @@ public class DescribeResourcesDeleteProtectionRequest extends Request {
         }
 
         /**
-         * The name of the resource that you want to query. Separate multiple resource names with commas (,).
+         * <p>The name of the resource that you want to query. Separate multiple resource names with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1,test2</p>
          */
         public Builder resources(String resources) {
             this.putQueryParameter("resources", resources);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeletePolicyInstanceRequest} extends {@link RequestModel}
  *
  * <p>DeletePolicyInstanceRequest</p>
@@ -83,7 +84,11 @@ public class DeletePolicyInstanceRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c8155823d057948c69a****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -92,7 +97,11 @@ public class DeletePolicyInstanceRequest extends Request {
         }
 
         /**
-         * The name of the policy.
+         * <p>The name of the policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACKAllowedRepos</p>
          */
         public Builder policyName(String policyName) {
             this.putPathParameter("policy_name", policyName);
@@ -101,7 +110,10 @@ public class DeletePolicyInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the policy instance.
+         * <p>The ID of the policy instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>allowed-repos-mqdsf</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("instance_name", instanceName);

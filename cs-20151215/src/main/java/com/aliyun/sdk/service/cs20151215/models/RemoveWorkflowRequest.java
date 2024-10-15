@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveWorkflowRequest} extends {@link RequestModel}
  *
  * <p>RemoveWorkflowRequest</p>
@@ -54,7 +55,11 @@ public class RemoveWorkflowRequest extends Request {
         } 
 
         /**
-         * The name of the workflow.
+         * <p>The name of the workflow.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mapping-gpu-98wt4</p>
          */
         public Builder workflowName(String workflowName) {
             this.putPathParameter("workflowName", workflowName);

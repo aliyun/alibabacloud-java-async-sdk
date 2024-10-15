@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClusterKubeconfigStatesRequest} extends {@link RequestModel}
  *
  * <p>ListClusterKubeconfigStatesRequest</p>
@@ -81,7 +82,10 @@ public class ListClusterKubeconfigStatesRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c82e6987e2961451182edacd74faf****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -90,11 +94,14 @@ public class ListClusterKubeconfigStatesRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <ul>
+         * <li>Valid values: ≥ 1.</li>
+         * <li>Default value: 1.</li>
+         * </ul>
          * 
-         * *   Valid values: ≥ 1.
-         * *   Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -103,11 +110,14 @@ public class ListClusterKubeconfigStatesRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <ul>
+         * <li>Valid values: 10 to 50.</li>
+         * <li>Default value: 10</li>
+         * </ul>
          * 
-         * *   Valid values: 10 to 50.
-         * *   Default value: 10
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

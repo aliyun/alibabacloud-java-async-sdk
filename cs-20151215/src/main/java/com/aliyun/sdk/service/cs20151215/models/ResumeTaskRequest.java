@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResumeTaskRequest} extends {@link RequestModel}
  *
  * <p>ResumeTaskRequest</p>
@@ -54,7 +55,11 @@ public class ResumeTaskRequest extends Request {
         } 
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T-62a944794ee141074400****</p>
          */
         public Builder taskId(String taskId) {
             this.putPathParameter("task_id", taskId);

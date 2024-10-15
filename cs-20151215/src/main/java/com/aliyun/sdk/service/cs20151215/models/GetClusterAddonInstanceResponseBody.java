@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClusterAddonInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>GetClusterAddonInstanceResponseBody</p>
@@ -85,7 +86,10 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         private String version; 
 
         /**
-         * The custom configurations of the component.
+         * <p>The custom configurations of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;sls_project_name&quot;:&quot;&quot;}</p>
          */
         public Builder config(String config) {
             this.config = config;
@@ -93,7 +97,7 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The status of Simple Log Service.
+         * <p>The status of Simple Log Service.</p>
          */
         public Builder logging(Logging logging) {
             this.logging = logging;
@@ -101,7 +105,10 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the component instance.
+         * <p>The name of the component instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ack-node-problem-detector</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -109,13 +116,16 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the component. Valid values:
-         * <p>
+         * <p>The status of the component. Valid values:</p>
+         * <ul>
+         * <li>active: The component is installed.</li>
+         * <li>updating: The component is being modified.</li>
+         * <li>upgrading: The component is being updated.</li>
+         * <li>deleting: The component is being uninstalled.</li>
+         * </ul>
          * 
-         * *   active: The component is installed.
-         * *   updating: The component is being modified.
-         * *   upgrading: The component is being updated.
-         * *   deleting: The component is being uninstalled.
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder state(String state) {
             this.state = state;
@@ -123,7 +133,10 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The version of the component instance.
+         * <p>The version of the component instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.16</p>
          */
         public Builder version(String version) {
             this.version = version;
@@ -136,6 +149,12 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetClusterAddonInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterAddonInstanceResponseBody</p>
+     */
     public static class Logging extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("capable")
         private Boolean capable;
@@ -199,7 +218,10 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
             private String logstore; 
 
             /**
-             * Indicates whether Simple Log Service is supported by the component.
+             * <p>Indicates whether Simple Log Service is supported by the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder capable(Boolean capable) {
                 this.capable = capable;
@@ -207,7 +229,10 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Simple Log Service is enabled for the component.
+             * <p>Indicates whether Simple Log Service is enabled for the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -215,7 +240,10 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The Simple Log Service project that is used to collect logs for the component.
+             * <p>The Simple Log Service project that is used to collect logs for the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-log-project</p>
              */
             public Builder logProject(String logProject) {
                 this.logProject = logProject;
@@ -223,7 +251,10 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The Simple Log Service Logstore that is used to collect logs for the component.
+             * <p>The Simple Log Service Logstore that is used to collect logs for the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-logstore</p>
              */
             public Builder logstore(String logstore) {
                 this.logstore = logstore;

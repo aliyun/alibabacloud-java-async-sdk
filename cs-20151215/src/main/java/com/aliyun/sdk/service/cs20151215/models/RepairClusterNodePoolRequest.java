@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RepairClusterNodePoolRequest} extends {@link RequestModel}
  *
  * <p>RepairClusterNodePoolRequest</p>
@@ -111,7 +112,11 @@ public class RepairClusterNodePoolRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c2273b7f4a30d4ef6b43e0926cdd8****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -120,7 +125,11 @@ public class RepairClusterNodePoolRequest extends Request {
         }
 
         /**
-         * The ID of the node pool that you want to manage.
+         * <p>The ID of the node pool that you want to manage.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np613940c3593c4bea96faa8600cb9****</p>
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("nodepool_id", nodepoolId);
@@ -129,7 +138,10 @@ public class RepairClusterNodePoolRequest extends Request {
         }
 
         /**
-         * Specifies whether to restart the instance of the node.
+         * <p>Specifies whether to restart the instance of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRestart(Boolean autoRestart) {
             this.putBodyParameter("auto_restart", autoRestart);
@@ -138,7 +150,7 @@ public class RepairClusterNodePoolRequest extends Request {
         }
 
         /**
-         * The list of nodes. If you do not specify nodes, all nodes in the node pool are selected.
+         * <p>The list of nodes. If you do not specify nodes, all nodes in the node pool are selected.</p>
          */
         public Builder nodes(java.util.List < String > nodes) {
             this.putBodyParameter("nodes", nodes);
@@ -162,6 +174,12 @@ public class RepairClusterNodePoolRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RepairClusterNodePoolRequest} extends {@link TeaModel}
+     *
+     * <p>RepairClusterNodePoolRequest</p>
+     */
     public static class Operations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("args")
         private java.util.List < String > args;

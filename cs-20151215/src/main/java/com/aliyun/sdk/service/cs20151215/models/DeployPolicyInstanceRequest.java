@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeployPolicyInstanceRequest} extends {@link RequestModel}
  *
  * <p>DeployPolicyInstanceRequest</p>
@@ -111,7 +112,11 @@ public class DeployPolicyInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c8155823d057948c69a****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -120,7 +125,11 @@ public class DeployPolicyInstanceRequest extends Request {
         }
 
         /**
-         * The policy name.
+         * <p>The policy name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACKNoEnvVarSecrets</p>
          */
         public Builder policyName(String policyName) {
             this.putPathParameter("policy_name", policyName);
@@ -129,11 +138,14 @@ public class DeployPolicyInstanceRequest extends Request {
         }
 
         /**
-         * The action of the policy. Valid values:
-         * <p>
+         * <p>The action of the policy. Valid values:</p>
+         * <ul>
+         * <li><code>deny</code>: Deployments that match the policy are denied.</li>
+         * <li><code>warn</code>: Alerts are generated for Deployments that match the policy.</li>
+         * </ul>
          * 
-         * *   `deny`: Deployments that match the policy are denied.
-         * *   `warn`: Alerts are generated for Deployments that match the policy.
+         * <strong>example:</strong>
+         * <p>deny</p>
          */
         public Builder action(String action) {
             this.putBodyParameter("action", action);
@@ -142,7 +154,7 @@ public class DeployPolicyInstanceRequest extends Request {
         }
 
         /**
-         * The namespaces to which the policy applies. If you leave this parameter empty, the policy is applicable to all namespaces of the cluster.
+         * <p>The namespaces to which the policy applies. If you leave this parameter empty, the policy is applicable to all namespaces of the cluster.</p>
          */
         public Builder namespaces(java.util.List < String > namespaces) {
             this.putBodyParameter("namespaces", namespaces);
@@ -151,7 +163,10 @@ public class DeployPolicyInstanceRequest extends Request {
         }
 
         /**
-         * The parameter settings of the policy. For more information about the parameters supported by each policy, see [Predefined security policies of ACK](https://www.alibabacloud.com/help/doc-detail/359819.html).
+         * <p>The parameter settings of the policy. For more information about the parameters supported by each policy, see <a href="https://www.alibabacloud.com/help/doc-detail/359819.html">Predefined security policies of ACK</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;restrictedNamespaces&quot;: [ &quot;test&quot; ]}</p>
          */
         public Builder parameters(java.util.Map < String, ? > parameters) {
             this.putBodyParameter("parameters", parameters);
