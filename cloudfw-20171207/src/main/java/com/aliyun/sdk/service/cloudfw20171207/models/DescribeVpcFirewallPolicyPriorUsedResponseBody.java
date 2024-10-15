@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcFirewallPolicyPriorUsedResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVpcFirewallPolicyPriorUsedResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeVpcFirewallPolicyPriorUsedResponseBody extends TeaModel {
         private Integer start; 
 
         /**
-         * The lowest priority for the access control policies.
+         * <p>The lowest priority for the access control policies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150</p>
          */
         public Builder end(Integer end) {
             this.end = end;
@@ -69,7 +73,10 @@ public class DescribeVpcFirewallPolicyPriorUsedResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class DescribeVpcFirewallPolicyPriorUsedResponseBody extends TeaModel {
         }
 
         /**
-         * The highest priority for the access control policies.
+         * <p>The highest priority for the access control policies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder start(Integer start) {
             this.start = start;

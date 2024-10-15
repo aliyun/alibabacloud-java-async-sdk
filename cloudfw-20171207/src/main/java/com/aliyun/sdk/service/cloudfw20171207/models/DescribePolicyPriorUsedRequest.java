@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePolicyPriorUsedRequest} extends {@link RequestModel}
  *
  * <p>DescribePolicyPriorUsedRequest</p>
@@ -97,13 +98,16 @@ public class DescribePolicyPriorUsedRequest extends Request {
         } 
 
         /**
-         * The direction of the traffic to which the access control policy applies.
-         * <p>
+         * <p>The direction of the traffic to which the access control policy applies.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>in</strong>: inbound.</li>
+         * <li><strong>out</strong>: outbound.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   **in**: inbound.
-         * *   **out**: outbound.
+         * <strong>example:</strong>
+         * <p>in</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -112,13 +116,15 @@ public class DescribePolicyPriorUsedRequest extends Request {
         }
 
         /**
-         * The IP version of the asset that is protected by Cloud Firewall.
-         * <p>
+         * <p>The IP version of the asset that is protected by Cloud Firewall.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>4</strong> (default): IPv4.</li>
+         * <li><strong>6</strong>: IPv6.</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   **4** (default): IPv4.
-         * *   **6**: IPv6.
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder ipVersion(String ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);
@@ -127,13 +133,15 @@ public class DescribePolicyPriorUsedRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response.
-         * <p>
+         * <p>The language of the content within the request and response.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default)</li>
+         * <li><strong>en</strong></li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   **zh** (default)
-         * *   **en**
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -142,7 +150,10 @@ public class DescribePolicyPriorUsedRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

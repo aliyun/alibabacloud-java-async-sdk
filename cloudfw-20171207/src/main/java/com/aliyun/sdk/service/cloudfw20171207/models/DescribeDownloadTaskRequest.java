@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDownloadTaskRequest} extends {@link RequestModel}
  *
  * <p>DescribeDownloadTaskRequest</p>
@@ -95,7 +96,10 @@ public class DescribeDownloadTaskRequest extends Request {
         } 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -104,11 +108,14 @@ public class DescribeDownloadTaskRequest extends Request {
         }
 
         /**
-         * The language of the content within the response. Valid values:
-         * <p>
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh** (default): Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -117,7 +124,10 @@ public class DescribeDownloadTaskRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10. Maximum value: 50.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -126,7 +136,10 @@ public class DescribeDownloadTaskRequest extends Request {
         }
 
         /**
-         * The type of the task. For more information about task types, see the descriptions in the "DescribeDownloadTaskType" topic. If you do not specify this parameter, all files are queried by default.
+         * <p>The type of the task. For more information about task types, see the descriptions in the &quot;DescribeDownloadTaskType&quot; topic. If you do not specify this parameter, all files are queried by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternetFirewallAsset</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

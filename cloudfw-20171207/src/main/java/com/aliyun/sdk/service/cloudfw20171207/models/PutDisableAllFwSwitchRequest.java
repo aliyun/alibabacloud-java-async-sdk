@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutDisableAllFwSwitchRequest} extends {@link RequestModel}
  *
  * <p>PutDisableAllFwSwitchRequest</p>
@@ -82,7 +83,10 @@ public class PutDisableAllFwSwitchRequest extends Request {
         } 
 
         /**
-         * The instance ID of your Cloud Firewall.
+         * <p>The instance ID of your Cloud Firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-2ze8v2x5kd9qyvp2****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -91,11 +95,14 @@ public class PutDisableAllFwSwitchRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values: Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values: Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh** (default): Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -104,7 +111,10 @@ public class PutDisableAllFwSwitchRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

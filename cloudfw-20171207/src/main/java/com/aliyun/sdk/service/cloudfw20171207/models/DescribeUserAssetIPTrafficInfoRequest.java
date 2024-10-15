@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserAssetIPTrafficInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeUserAssetIPTrafficInfoRequest</p>
@@ -83,7 +84,11 @@ public class DescribeUserAssetIPTrafficInfoRequest extends Request {
         } 
 
         /**
-         * The IP address of the asset.
+         * <p>The IP address of the asset.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         public Builder assetIP(String assetIP) {
             this.putQueryParameter("AssetIP", assetIP);
@@ -92,11 +97,14 @@ public class DescribeUserAssetIPTrafficInfoRequest extends Request {
         }
 
         /**
-         * The language of the content within the response. Valid values:
-         * <p>
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh** (default): Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -105,7 +113,11 @@ public class DescribeUserAssetIPTrafficInfoRequest extends Request {
         }
 
         /**
-         * The time range to query. The value is a UNIX timestamp. Unit: seconds.
+         * <p>The time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1656923760</p>
          */
         public Builder trafficTime(String trafficTime) {
             this.putQueryParameter("TrafficTime", trafficTime);

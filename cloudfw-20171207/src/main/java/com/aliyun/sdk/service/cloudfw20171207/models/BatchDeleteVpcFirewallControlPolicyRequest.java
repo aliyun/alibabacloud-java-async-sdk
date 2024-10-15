@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchDeleteVpcFirewallControlPolicyRequest} extends {@link RequestModel}
  *
  * <p>BatchDeleteVpcFirewallControlPolicyRequest</p>
@@ -69,7 +70,8 @@ public class BatchDeleteVpcFirewallControlPolicyRequest extends Request {
         } 
 
         /**
-         * The UUIDs of access control policies.
+         * <p>The UUIDs of access control policies.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder aclUuidList(java.util.List < String > aclUuidList) {
             this.putQueryParameter("AclUuidList", aclUuidList);
@@ -78,7 +80,11 @@ public class BatchDeleteVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The instance ID of the VPC firewall.
+         * <p>The instance ID of the VPC firewall.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vfw-m5e7dbc4y****</p>
          */
         public Builder vpcFirewallId(String vpcFirewallId) {
             this.putQueryParameter("VpcFirewallId", vpcFirewallId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNatFirewallPolicyPriorUsedRequest} extends {@link RequestModel}
  *
  * <p>DescribeNatFirewallPolicyPriorUsedRequest</p>
@@ -97,12 +98,15 @@ public class DescribeNatFirewallPolicyPriorUsedRequest extends Request {
         } 
 
         /**
-         * The direction of the traffic to which the access control policy applies.
-         * <p>
+         * <p>The direction of the traffic to which the access control policy applies.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>out</strong>: outbound traffic</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   **out**: outbound traffic
+         * <strong>example:</strong>
+         * <p>out</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -111,10 +115,13 @@ public class DescribeNatFirewallPolicyPriorUsedRequest extends Request {
         }
 
         /**
-         * The IP version supported by the access control policy. Valid values:
-         * <p>
+         * <p>The IP version supported by the access control policy. Valid values:</p>
+         * <ul>
+         * <li><strong>4</strong>: IPv4 (default)</li>
+         * </ul>
          * 
-         * *   **4**: IPv4 (default)
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder ipVersion(String ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);
@@ -123,11 +130,14 @@ public class DescribeNatFirewallPolicyPriorUsedRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and the response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -136,7 +146,11 @@ public class DescribeNatFirewallPolicyPriorUsedRequest extends Request {
         }
 
         /**
-         * The ID of the NAT gateway.
+         * <p>The ID of the NAT gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-xxxxxx</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);

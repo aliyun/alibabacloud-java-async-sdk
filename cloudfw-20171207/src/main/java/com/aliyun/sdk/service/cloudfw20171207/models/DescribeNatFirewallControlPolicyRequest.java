@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNatFirewallControlPolicyRequest} extends {@link RequestModel}
  *
  * <p>DescribeNatFirewallControlPolicyRequest</p>
@@ -223,14 +224,16 @@ public class DescribeNatFirewallControlPolicyRequest extends Request {
         } 
 
         /**
-         * The action that Cloud Firewall performs on the traffic.
-         * <p>
+         * <p>The action that Cloud Firewall performs on the traffic.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>accept</strong>: allows the traffic.</li>
+         * <li><strong>drop</strong>: denies the traffic.</li>
+         * <li><strong>log</strong>: monitors the traffic.</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   **accept**: allows the traffic.
-         * *   **drop**: denies the traffic.
-         * *   **log**: monitors the traffic.
+         * <strong>example:</strong>
+         * <p>accept</p>
          */
         public Builder aclAction(String aclAction) {
             this.putQueryParameter("AclAction", aclAction);
@@ -239,7 +242,10 @@ public class DescribeNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The UUID of the access control policy.
+         * <p>The UUID of the access control policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>303f0697-2a21-4e43-b142-4a77adf7b358</p>
          */
         public Builder aclUuid(String aclUuid) {
             this.putQueryParameter("AclUuid", aclUuid);
@@ -248,7 +254,10 @@ public class DescribeNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -257,10 +266,13 @@ public class DescribeNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The description of the access control policy. Fuzzy match is supported.
-         * <p>
+         * <p>The description of the access control policy. Fuzzy match is supported.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the descriptions of all policies are queried.</p>
+         * </blockquote>
          * 
-         * > If you do not specify this parameter, the descriptions of all policies are queried.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -269,15 +281,19 @@ public class DescribeNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The destination address in the access control policy. Fuzzy match is supported. The value of this parameter varies based on the value of the DestinationType parameter.
-         * <p>
+         * <p>The destination address in the access control policy. Fuzzy match is supported. The value of this parameter varies based on the value of the DestinationType parameter.</p>
+         * <ul>
+         * <li>If DestinationType is set to <code>net</code>, the value of Destination must be a CIDR block. Example: 10.0.3.0/24.</li>
+         * <li>If DestinationType is set to <code>domain</code>, the value of Destination must be a domain name. Example: aliyun.</li>
+         * <li>If DestinationType is set to <code>group</code>, the value of Destination must be the name of an address book. Example: db_group.</li>
+         * <li>If DestinationType is set to <code>location</code>, the value of Destination is a location. For more information about location codes, see <a href="https://help.aliyun.com/document_detail/474128.html">AddControlPolicy</a>. Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not specify this parameter, all types of destination addresses are queried.</p>
+         * </blockquote>
          * 
-         * *   If DestinationType is set to `net`, the value of Destination must be a CIDR block. Example: 10.0.3.0/24.
-         * *   If DestinationType is set to `domain`, the value of Destination must be a domain name. Example: aliyun.
-         * *   If DestinationType is set to `group`, the value of Destination must be the name of an address book. Example: db_group.
-         * *   If DestinationType is set to `location`, the value of Destination is a location. For more information about location codes, see [AddControlPolicy](~~474128~~). Example: \["BJ11", "ZB"].
-         * 
-         * > If you do not specify this parameter, all types of destination addresses are queried.
+         * <strong>example:</strong>
+         * <p>x.x.x.x/32</p>
          */
         public Builder destination(String destination) {
             this.putQueryParameter("Destination", destination);
@@ -286,10 +302,14 @@ public class DescribeNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The direction of the traffic to which the access control policy applies. Valid values:
-         * <p>
+         * <p>The direction of the traffic to which the access control policy applies. Valid values:</p>
+         * <ul>
+         * <li><strong>out</strong>: outbound traffic</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **out**: outbound traffic
+         * <strong>example:</strong>
+         * <p>out</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -298,11 +318,14 @@ public class DescribeNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The language of the content within the response. Valid values:
-         * <p>
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -311,7 +334,11 @@ public class DescribeNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the NAT gateway.
+         * <p>The ID of the NAT gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-xxxxxx</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -320,7 +347,10 @@ public class DescribeNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -329,15 +359,19 @@ public class DescribeNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The type of the protocol in the access control policy. Valid values:
-         * <p>
+         * <p>The type of the protocol in the access control policy. Valid values:</p>
+         * <ul>
+         * <li><strong>TCP</strong></li>
+         * <li><strong>UDP</strong></li>
+         * <li><strong>ICMP</strong></li>
+         * <li><strong>ANY</strong>: all types of protocols</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not specify this parameter, access control policies of all protocol types are queried.</p>
+         * </blockquote>
          * 
-         * *   **TCP**
-         * *   **UDP**
-         * *   **ICMP**
-         * *   **ANY**: all types of protocols
-         * 
-         * > If you do not specify this parameter, access control policies of all protocol types are queried.
+         * <strong>example:</strong>
+         * <p>ANY</p>
          */
         public Builder proto(String proto) {
             this.putQueryParameter("Proto", proto);
@@ -346,11 +380,14 @@ public class DescribeNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether the access control policy is enabled. By default, an access control policy is enabled after it is created. Valid values:
-         * <p>
+         * <p>Specifies whether the access control policy is enabled. By default, an access control policy is enabled after it is created. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder release(String release) {
             this.putQueryParameter("Release", release);
@@ -359,14 +396,17 @@ public class DescribeNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The recurrence type for the access control policy to take effect. Valid values:
-         * <p>
+         * <p>The recurrence type for the access control policy to take effect. Valid values:</p>
+         * <ul>
+         * <li><strong>Permanent</strong> (default): The policy always takes effect.</li>
+         * <li><strong>None</strong>: The policy takes effect only once.</li>
+         * <li><strong>Daily</strong>: The policy takes effect on a daily basis.</li>
+         * <li><strong>Weekly</strong>: The policy takes effect on a weekly basis.</li>
+         * <li><strong>Monthly</strong>: The policy takes effect on a monthly basis.</li>
+         * </ul>
          * 
-         * *   **Permanent** (default): The policy always takes effect.
-         * *   **None**: The policy takes effect only once.
-         * *   **Daily**: The policy takes effect on a daily basis.
-         * *   **Weekly**: The policy takes effect on a weekly basis.
-         * *   **Monthly**: The policy takes effect on a monthly basis.
+         * <strong>example:</strong>
+         * <p>Permanent</p>
          */
         public Builder repeatType(String repeatType) {
             this.putQueryParameter("RepeatType", repeatType);
@@ -375,14 +415,18 @@ public class DescribeNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The source address in the access control policy. Fuzzy match is supported. The value of this parameter varies based on the value of the SourceType parameter.
-         * <p>
+         * <p>The source address in the access control policy. Fuzzy match is supported. The value of this parameter varies based on the value of the SourceType parameter.</p>
+         * <ul>
+         * <li>If SourceType is set to <code>net</code>, the value of Source must be a CIDR block. Example: 192.0.XX.XX/24.</li>
+         * <li>If SourceType is set to <code>group</code>, the value of Source must be the name of an address book. Example: db_group. If the db_group address book does not contain addresses, all source addresses are queried.</li>
+         * <li>If SourceType is set to <code>location</code>, the value of Source must be a location. Example: beijing.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not specify this parameter, all types of source addresses are queried.</p>
+         * </blockquote>
          * 
-         * *   If SourceType is set to `net`, the value of Source must be a CIDR block. Example: 192.0.XX.XX/24.
-         * *   If SourceType is set to `group`, the value of Source must be the name of an address book. Example: db_group. If the db_group address book does not contain addresses, all source addresses are queried.
-         * *   If SourceType is set to `location`, the value of Source must be a location. Example: beijing.
-         * 
-         * > If you do not specify this parameter, all types of source addresses are queried.
+         * <strong>example:</strong>
+         * <p>1.1.1.1/32</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

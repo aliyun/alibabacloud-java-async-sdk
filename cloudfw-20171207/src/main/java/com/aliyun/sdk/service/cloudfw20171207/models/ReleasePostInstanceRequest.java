@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleasePostInstanceRequest} extends {@link RequestModel}
  *
  * <p>ReleasePostInstanceRequest</p>
@@ -53,7 +54,10 @@ public class ReleasePostInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the Cloud Firewall instance.
+         * <p>The ID of the Cloud Firewall instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cfw_elasticity_public_cn-xxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

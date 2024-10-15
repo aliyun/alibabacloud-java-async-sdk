@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSlsLogDispatchRequest} extends {@link RequestModel}
  *
  * <p>CreateSlsLogDispatchRequest</p>
@@ -67,7 +68,10 @@ public class CreateSlsLogDispatchRequest extends Request {
         } 
 
         /**
-         * The region ID of the Simple Log Service project.
+         * <p>The region ID of the Simple Log Service project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-southeast-1</p>
          */
         public Builder slsRegionId(String slsRegionId) {
             this.putBodyParameter("SlsRegionId", slsRegionId);
@@ -76,7 +80,10 @@ public class CreateSlsLogDispatchRequest extends Request {
         }
 
         /**
-         * The log retention period. Unit: days.
+         * <p>The log retention period. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder ttl(Long ttl) {
             this.putBodyParameter("Ttl", ttl);

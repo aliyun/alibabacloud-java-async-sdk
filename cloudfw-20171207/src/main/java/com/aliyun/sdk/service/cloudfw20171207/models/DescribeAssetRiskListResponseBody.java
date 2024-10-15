@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAssetRiskListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAssetRiskListResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The details of the assets.
+         * <p>The details of the assets.</p>
          */
         public Builder assetList(java.util.List < AssetList> assetList) {
             this.assetList = assetList;
@@ -69,7 +70,10 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443C5781-1C03-5FCD-8EC5-FB9C0B9AC396</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAssetRiskListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAssetRiskListResponseBody</p>
+     */
     public static class AssetList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
@@ -153,7 +166,10 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
             private String riskLevel; 
 
             /**
-             * The IP address of the server.
+             * <p>The IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>39.108.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -161,13 +177,15 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * The IP version of the asset that is protected by Cloud Firewall.
-             * <p>
+             * <p>The IP version of the asset that is protected by Cloud Firewall.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><strong>4</strong>: IPv4</li>
+             * <li><strong>6</strong>: IPv6</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   **4**: IPv4
-             * *   **6**: IPv6
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder ipVersion(Long ipVersion) {
                 this.ipVersion = ipVersion;
@@ -175,7 +193,10 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * The reason for the risk.
+             * <p>The reason for the risk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>other</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -183,12 +204,15 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level. Valid values:
-             * <p>
+             * <p>The risk level. Valid values:</p>
+             * <ul>
+             * <li><strong>low</strong></li>
+             * <li><strong>middle</strong></li>
+             * <li><strong>high</strong></li>
+             * </ul>
              * 
-             * *   **low**
-             * *   **middle**
-             * *   **high**
+             * <strong>example:</strong>
+             * <p>low</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;

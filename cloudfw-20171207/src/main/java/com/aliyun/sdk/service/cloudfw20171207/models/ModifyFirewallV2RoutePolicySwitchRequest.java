@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyFirewallV2RoutePolicySwitchRequest} extends {@link RequestModel}
  *
  * <p>ModifyFirewallV2RoutePolicySwitchRequest</p>
@@ -109,7 +110,10 @@ public class ModifyFirewallV2RoutePolicySwitchRequest extends Request {
         } 
 
         /**
-         * The instance ID of the virtual private cloud (VPC) firewall.
+         * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vfw-tr-5b202e7f0be64611****</p>
          */
         public Builder firewallId(String firewallId) {
             this.putQueryParameter("FirewallId", firewallId);
@@ -118,11 +122,14 @@ public class ModifyFirewallV2RoutePolicySwitchRequest extends Request {
         }
 
         /**
-         * The language of the content within the response. Valid values:
-         * <p>
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh** (default): Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -131,11 +138,14 @@ public class ModifyFirewallV2RoutePolicySwitchRequest extends Request {
         }
 
         /**
-         * Specifies whether to restore the traffic redirection configurations. Valid values:
-         * <p>
+         * <p>Specifies whether to restore the traffic redirection configurations. Valid values:</p>
+         * <ul>
+         * <li>true: roll back</li>
+         * <li>false: withdraw</li>
+         * </ul>
          * 
-         * *   true: roll back
-         * *   false: withdraw
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder shouldRecover(String shouldRecover) {
             this.putQueryParameter("ShouldRecover", shouldRecover);
@@ -144,7 +154,10 @@ public class ModifyFirewallV2RoutePolicySwitchRequest extends Request {
         }
 
         /**
-         * The ID of the routing policy.
+         * <p>The ID of the routing policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy-93684cc5caa44b2e****</p>
          */
         public Builder trFirewallRoutePolicyId(String trFirewallRoutePolicyId) {
             this.putQueryParameter("TrFirewallRoutePolicyId", trFirewallRoutePolicyId);
@@ -153,11 +166,14 @@ public class ModifyFirewallV2RoutePolicySwitchRequest extends Request {
         }
 
         /**
-         * The status of the routing policy. Valid values:
-         * <p>
+         * <p>The status of the routing policy. Valid values:</p>
+         * <ul>
+         * <li>open: enabled</li>
+         * <li>close: disabled</li>
+         * </ul>
          * 
-         * *   open: enabled
-         * *   close: disabled
+         * <strong>example:</strong>
+         * <p>open</p>
          */
         public Builder trFirewallRoutePolicySwitchStatus(String trFirewallRoutePolicySwitchStatus) {
             this.putQueryParameter("TrFirewallRoutePolicySwitchStatus", trFirewallRoutePolicySwitchStatus);

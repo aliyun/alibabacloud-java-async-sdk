@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcFirewallIPSWhitelistRequest} extends {@link RequestModel}
  *
  * <p>DescribeVpcFirewallIPSWhitelistRequest</p>
@@ -82,13 +83,15 @@ public class DescribeVpcFirewallIPSWhitelistRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response.
-         * <p>
+         * <p>The language of the content within the request and response.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   **zh** (default): Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -97,7 +100,10 @@ public class DescribeVpcFirewallIPSWhitelistRequest extends Request {
         }
 
         /**
-         * The UID of the member in Cloud Firewall.
+         * <p>The UID of the member in Cloud Firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1766185894104675</p>
          */
         public Builder memberUid(Long memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -106,7 +112,11 @@ public class DescribeVpcFirewallIPSWhitelistRequest extends Request {
         }
 
         /**
-         * The instance ID of the VPC firewall.
+         * <p>The instance ID of the VPC firewall.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vfw-3547deab1c9b4190a53f</p>
          */
         public Builder vpcFirewallId(String vpcFirewallId) {
             this.putQueryParameter("VpcFirewallId", vpcFirewallId);

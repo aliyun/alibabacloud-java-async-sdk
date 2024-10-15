@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceMemberAttributesRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceMemberAttributesRequest</p>
@@ -54,7 +55,8 @@ public class ModifyInstanceMemberAttributesRequest extends Request {
         } 
 
         /**
-         * The members that to be modified.
+         * <p>The members that to be modified.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder members(java.util.List < Members> members) {
             this.putQueryParameter("Members", members);
@@ -69,6 +71,12 @@ public class ModifyInstanceMemberAttributesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyInstanceMemberAttributesRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyInstanceMemberAttributesRequest</p>
+     */
     public static class Members extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MemberDesc")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -110,7 +118,11 @@ public class ModifyInstanceMemberAttributesRequest extends Request {
             private Long memberUid; 
 
             /**
-             * The remarks of the member in Cloud Firewall.
+             * <p>The remarks of the member in Cloud Firewall.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>renewal</p>
              */
             public Builder memberDesc(String memberDesc) {
                 this.memberDesc = memberDesc;
@@ -118,7 +130,11 @@ public class ModifyInstanceMemberAttributesRequest extends Request {
             }
 
             /**
-             * The UID of the member in Cloud Firewall.
+             * <p>The UID of the member in Cloud Firewall.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123412341234****</p>
              */
             public Builder memberUid(Long memberUid) {
                 this.memberUid = memberUid;

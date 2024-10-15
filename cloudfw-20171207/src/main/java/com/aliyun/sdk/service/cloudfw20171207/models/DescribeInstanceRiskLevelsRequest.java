@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceRiskLevelsRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceRiskLevelsRequest</p>
@@ -67,7 +68,7 @@ public class DescribeInstanceRiskLevelsRequest extends Request {
         } 
 
         /**
-         * The information about the instances.
+         * <p>The information about the instances.</p>
          */
         public Builder instances(java.util.List < Instances> instances) {
             this.putQueryParameter("Instances", instances);
@@ -76,11 +77,14 @@ public class DescribeInstanceRiskLevelsRequest extends Request {
         }
 
         /**
-         * The language of the content within the response. Valid values:
-         * <p>
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh** (default): Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -95,6 +99,12 @@ public class DescribeInstanceRiskLevelsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceRiskLevelsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceRiskLevelsRequest</p>
+     */
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -158,7 +168,10 @@ public class DescribeInstanceRiskLevelsRequest extends Request {
             private String uuid; 
 
             /**
-             * The instance ID of your Cloud Firewall.
+             * <p>The instance ID of your Cloud Firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vipcloudfw-cn-7mz2fj8nm0u</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -166,7 +179,7 @@ public class DescribeInstanceRiskLevelsRequest extends Request {
             }
 
             /**
-             * The public IP addresses of instances.
+             * <p>The public IP addresses of instances.</p>
              */
             public Builder internetIp(java.util.List < String > internetIp) {
                 this.internetIp = internetIp;
@@ -174,7 +187,10 @@ public class DescribeInstanceRiskLevelsRequest extends Request {
             }
 
             /**
-             * The private IP address of the instance.
+             * <p>The private IP address of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.17.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -182,7 +198,10 @@ public class DescribeInstanceRiskLevelsRequest extends Request {
             }
 
             /**
-             * The UUID of the instance.
+             * <p>The UUID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>181ad081-e4f2-4e3e-b925-03b67f648397</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

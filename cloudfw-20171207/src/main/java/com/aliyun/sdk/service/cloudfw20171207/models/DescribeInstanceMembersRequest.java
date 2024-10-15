@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceMembersRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceMembersRequest</p>
@@ -109,7 +110,10 @@ public class DescribeInstanceMembersRequest extends Request {
         } 
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -118,7 +122,10 @@ public class DescribeInstanceMembersRequest extends Request {
         }
 
         /**
-         * The remarks of the member. The remarks must be 1 to 256 characters in length.
+         * <p>The remarks of the member. The remarks must be 1 to 256 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>renewal</p>
          */
         public Builder memberDesc(String memberDesc) {
             this.putQueryParameter("MemberDesc", memberDesc);
@@ -127,7 +134,10 @@ public class DescribeInstanceMembersRequest extends Request {
         }
 
         /**
-         * The name of the member.
+         * <p>The name of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloudfirewall_2</p>
          */
         public Builder memberDisplayName(String memberDisplayName) {
             this.putQueryParameter("MemberDisplayName", memberDisplayName);
@@ -136,7 +146,10 @@ public class DescribeInstanceMembersRequest extends Request {
         }
 
         /**
-         * The UID of the member.
+         * <p>The UID of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>258039427902****</p>
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -145,10 +158,11 @@ public class DescribeInstanceMembersRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Default value: <strong>20</strong>.</p>
          * 
-         * Default value: **20**.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

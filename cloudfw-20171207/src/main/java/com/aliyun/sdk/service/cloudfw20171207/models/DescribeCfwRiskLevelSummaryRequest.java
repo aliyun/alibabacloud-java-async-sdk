@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCfwRiskLevelSummaryRequest} extends {@link RequestModel}
  *
  * <p>DescribeCfwRiskLevelSummaryRequest</p>
@@ -81,7 +82,10 @@ public class DescribeCfwRiskLevelSummaryRequest extends Request {
         } 
 
         /**
-         * The instance type.
+         * <p>The instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EcsEIP</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -90,13 +94,15 @@ public class DescribeCfwRiskLevelSummaryRequest extends Request {
         }
 
         /**
-         * The language of the content within the response.
-         * <p>
+         * <p>The language of the content within the response.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   **zh** (default): Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -105,10 +111,13 @@ public class DescribeCfwRiskLevelSummaryRequest extends Request {
         }
 
         /**
-         * The region ID of your Cloud Firewall.
-         * <p>
+         * <p>The region ID of your Cloud Firewall.</p>
+         * <blockquote>
+         * <p> For more information about Cloud Firewall supported regions, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+         * </blockquote>
          * 
-         * >  For more information about Cloud Firewall supported regions, see [Supported regions](~~195657~~).
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

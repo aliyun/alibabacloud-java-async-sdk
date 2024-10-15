@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcFirewallAclGroupListRequest} extends {@link RequestModel}
  *
  * <p>DescribeVpcFirewallAclGroupListRequest</p>
@@ -95,7 +96,10 @@ public class DescribeVpcFirewallAclGroupListRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: 1.
+         * <p>The number of the page to return. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -104,12 +108,15 @@ public class DescribeVpcFirewallAclGroupListRequest extends Request {
         }
 
         /**
-         * Specifies whether VPC firewalls are configured. Valid values:
-         * <p>
+         * <p>Specifies whether VPC firewalls are configured. Valid values:</p>
+         * <ul>
+         * <li><strong>notconfigured</strong>: VPC firewalls are not configured.</li>
+         * <li><strong>configured</strong>: VPC firewalls are configured.</li>
+         * <li>If you do not specify this parameter, the access control policies of all VPC firewalls are queried.</li>
+         * </ul>
          * 
-         * *   **notconfigured**: VPC firewalls are not configured.
-         * *   **configured**: VPC firewalls are configured.
-         * *   If you do not specify this parameter, the access control policies of all VPC firewalls are queried.
+         * <strong>example:</strong>
+         * <p>configured</p>
          */
         public Builder firewallConfigureStatus(String firewallConfigureStatus) {
             this.putQueryParameter("FirewallConfigureStatus", firewallConfigureStatus);
@@ -118,11 +125,14 @@ public class DescribeVpcFirewallAclGroupListRequest extends Request {
         }
 
         /**
-         * The language of the content within the response. Valid values:
-         * <p>
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -131,7 +141,10 @@ public class DescribeVpcFirewallAclGroupListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 50.
+         * <p>The number of entries to return on each page. Maximum value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

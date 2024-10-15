@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSecurityProxyRequest} extends {@link RequestModel}
  *
  * <p>DeleteSecurityProxyRequest</p>
@@ -68,11 +69,14 @@ public class DeleteSecurityProxyRequest extends Request {
         } 
 
         /**
-         * The language of the content within the response. Valid values:
-         * <p>
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh** (default): Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -81,7 +85,11 @@ public class DeleteSecurityProxyRequest extends Request {
         }
 
         /**
-         * The ID of the NAT firewall.
+         * <p>The ID of the NAT firewall.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>proxy-nat00ab412ef93d4275a6b5</p>
          */
         public Builder proxyId(String proxyId) {
             this.putQueryParameter("ProxyId", proxyId);

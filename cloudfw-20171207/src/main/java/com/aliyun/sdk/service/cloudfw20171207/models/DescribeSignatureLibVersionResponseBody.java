@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSignatureLibVersionResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSignatureLibVersionResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
         private java.util.List < Version> version; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9C50C2A9-4BBB-5504-8ADA-C41A79B8C946</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,10 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>132</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -77,7 +84,7 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the versions.
+         * <p>The information about the versions.</p>
          */
         public Builder version(java.util.List < Version> version) {
             this.version = version;
@@ -90,6 +97,12 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSignatureLibVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSignatureLibVersionResponseBody</p>
+     */
     public static class Version extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -129,36 +142,32 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The type.
-             * <p>
+             * <p>The type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>ips</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <p>:</p>
+             * <!-- -->
              * 
-             * *   ips
+             * <p>Basic Rules and Virtual Patching</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>.</p>
+             * </li>
+             * <li><p>intelligence</p>
+             * <!-- -->
              * 
-             *     :
+             * <p>:</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>Threat Intelligence</p>
+             * <!-- --></li>
+             * </ul>
              * 
-             *     Basic Rules and Virtual Patching
-             * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   intelligence
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     Threat Intelligence
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>ips</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -166,7 +175,10 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The version number.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IPS-2307-02</p>
              */
             public Builder version(String version) {
                 this.version = version;

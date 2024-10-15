@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteNatFirewallControlPolicyBatchResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteNatFirewallControlPolicyBatchResponseBody</p>
@@ -37,7 +38,10 @@ public class DeleteNatFirewallControlPolicyBatchResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>450D47F5-956E-543E-8502-2F71C8C54E72</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

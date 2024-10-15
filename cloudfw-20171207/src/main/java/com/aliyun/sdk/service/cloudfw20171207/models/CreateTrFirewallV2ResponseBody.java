@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTrFirewallV2ResponseBody} extends {@link TeaModel}
  *
  * <p>CreateTrFirewallV2ResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateTrFirewallV2ResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The instance ID of the VPC firewall.
+         * <p>The instance ID of the VPC firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vfw-tr-37e22bf0d9b34870****</p>
          */
         public Builder firewallId(String firewallId) {
             this.firewallId = firewallId;
@@ -57,7 +61,10 @@ public class CreateTrFirewallV2ResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>822B9125-6E1A-551C-8EAF-6E7AE7444B00</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

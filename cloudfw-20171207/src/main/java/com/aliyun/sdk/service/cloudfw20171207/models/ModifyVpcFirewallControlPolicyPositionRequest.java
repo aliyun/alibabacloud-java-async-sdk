@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyVpcFirewallControlPolicyPositionRequest} extends {@link RequestModel}
  *
  * <p>ModifyVpcFirewallControlPolicyPositionRequest</p>
@@ -111,10 +112,11 @@ public class ModifyVpcFirewallControlPolicyPositionRequest extends Request {
         } 
 
         /**
-         * The UUID of the access control policy.
-         * <p>
+         * <p>The UUID of the access control policy.</p>
+         * <p>If you want to modify the configurations of an access control policy, you must provide the UUID of the policy. You can call the <a href="https://help.aliyun.com/document_detail/159758.html">DescribeVpcFirewallControlPolicy</a> operation to query the UUID.</p>
          * 
-         * If you want to modify the configurations of an access control policy, you must provide the UUID of the policy. You can call the [DescribeVpcFirewallControlPolicy](~~159758~~) operation to query the UUID.
+         * <strong>example:</strong>
+         * <p>2746d9ff-5d7c-449d-a2a9-ccaa15fe****</p>
          */
         public Builder aclUuid(String aclUuid) {
             this.putQueryParameter("AclUuid", aclUuid);
@@ -123,13 +125,15 @@ public class ModifyVpcFirewallControlPolicyPositionRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and the response.
-         * <p>
+         * <p>The language of the content within the request and the response.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -138,10 +142,14 @@ public class ModifyVpcFirewallControlPolicyPositionRequest extends Request {
         }
 
         /**
-         * The new priority of the access control policy.
-         * <p>
+         * <p>The new priority of the access control policy.</p>
+         * <blockquote>
+         * <p> For more information about the valid values of the new priority, see <a href="https://help.aliyun.com/document_detail/474145.html">DescribeVpcFirewallPolicyPriorUsed</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  For more information about the valid values of the new priority, see [DescribeVpcFirewallPolicyPriorUsed](~~474145~~).
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder newOrder(String newOrder) {
             this.putQueryParameter("NewOrder", newOrder);
@@ -150,10 +158,13 @@ public class ModifyVpcFirewallControlPolicyPositionRequest extends Request {
         }
 
         /**
-         * The original priority of the access control policy.
-         * <p>
+         * <p>The original priority of the access control policy.</p>
+         * <blockquote>
+         * <p>This parameter is not recommended. We recommend that you use the AclUuid parameter to specify the policy that you want to modify.</p>
+         * </blockquote>
          * 
-         * > This parameter is not recommended. We recommend that you use the AclUuid parameter to specify the policy that you want to modify.
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder oldOrder(String oldOrder) {
             this.putQueryParameter("OldOrder", oldOrder);
@@ -162,18 +173,20 @@ public class ModifyVpcFirewallControlPolicyPositionRequest extends Request {
         }
 
         /**
-         * The ID of the group to which the access control policy belongs. You can call the [DescribeVpcFirewallAclGroupList](~~159760~~) operation to query the ID.
-         * <p>
+         * <p>The ID of the group to which the access control policy belongs. You can call the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to query the ID.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>If the VPC firewall is used to protect a CEN instance, the value of this parameter must be the ID of the CEN instance.</p>
+         * <p>Example: cen-ervw0g12b5jbw****</p>
+         * </li>
+         * <li><p>If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter must be the instance ID of the VPC firewall.</p>
+         * <p>Example: vfw-a42bbb7b887148c9****</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   If the VPC firewall is used to protect a CEN instance, the value of this parameter must be the ID of the CEN instance.
-         * 
-         *     Example: cen-ervw0g12b5jbw\*\*\*\*
-         * 
-         * *   If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter must be the instance ID of the VPC firewall.
-         * 
-         *     Example: vfw-a42bbb7b887148c9\*\*\*\*
+         * <strong>example:</strong>
+         * <p>vfw-a42bbb7b887148c9****</p>
          */
         public Builder vpcFirewallId(String vpcFirewallId) {
             this.putQueryParameter("VpcFirewallId", vpcFirewallId);

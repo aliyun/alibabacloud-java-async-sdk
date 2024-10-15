@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePostpayTrafficDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePostpayTrafficDetailResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         private java.util.List < TrafficList> trafficList; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0525EADE-C112-5702-A5BC-0E2F6F94DB23</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,10 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>132</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -77,7 +84,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The statistics on traffic.
+         * <p>The statistics on traffic.</p>
          */
         public Builder trafficList(java.util.List < TrafficList> trafficList) {
             this.trafficList = trafficList;
@@ -90,6 +97,12 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePostpayTrafficDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePostpayTrafficDetailResponseBody</p>
+     */
     public static class TrafficList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InBytes")
         private Long inBytes;
@@ -225,7 +238,10 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             private String trafficType; 
 
             /**
-             * The inbound network throughput, which indicates the total number of bytes that are received Unit: bytes.
+             * <p>The inbound network throughput, which indicates the total number of bytes that are received Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1115096939</p>
              */
             public Builder inBytes(Long inBytes) {
                 this.inBytes = inBytes;
@@ -233,7 +249,10 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the asset.
+             * <p>The instance ID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-8vb2d7c9mtn0bo9qcraq</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -241,7 +260,10 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The asset type. This value takes effect only for the Internet firewall.
+             * <p>The asset type. This value takes effect only for the Internet firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EcsPublicIP</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -249,7 +271,10 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The outbound network throughput, which indicates the total number of bytes that are sent. Unit: bytes.
+             * <p>The outbound network throughput, which indicates the total number of bytes that are sent. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000000</p>
              */
             public Builder outBytes(Long outBytes) {
                 this.outBytes = outBytes;
@@ -273,7 +298,10 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The resource ID. The resource ID for the Internet firewall is the public IP address that is protected the Internet firewall, and the resource ID for a NAT firewall is the instance ID of the NAT firewall.
+             * <p>The resource ID. The resource ID for the Internet firewall is the public IP address that is protected the Internet firewall, and the resource ID for a NAT firewall is the instance ID of the NAT firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>39.106.146.214</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -281,7 +309,10 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total inbound and outbound network throughput, which indicates the total number of bytes that are received and sent. Unit: bytes.
+             * <p>The total inbound and outbound network throughput, which indicates the total number of bytes that are received and sent. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1215096939</p>
              */
             public Builder totalBytes(Long totalBytes) {
                 this.totalBytes = totalBytes;
@@ -289,7 +320,10 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The date on which the statistics are collected.
+             * <p>The date on which the statistics are collected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20231001</p>
              */
             public Builder trafficDay(String trafficDay) {
                 this.trafficDay = trafficDay;
@@ -297,12 +331,15 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The traffic type. Valid values:
-             * <p>
+             * <p>The traffic type. Valid values:</p>
+             * <ul>
+             * <li><strong>EIP_TRAFFIC</strong>: traffic for the Internet firewall</li>
+             * <li><strong>NatGateway_TRAFFIC</strong>: traffic for NAT firewalls</li>
+             * <li><strong>VPC_TRAFFIC</strong>: traffic for VPC firewalls</li>
+             * </ul>
              * 
-             * *   **EIP_TRAFFIC**: traffic for the Internet firewall
-             * *   **NatGateway_TRAFFIC**: traffic for NAT firewalls
-             * *   **VPC_TRAFFIC**: traffic for VPC firewalls
+             * <strong>example:</strong>
+             * <p>EIP_TRAFFIC</p>
              */
             public Builder trafficType(String trafficType) {
                 this.trafficType = trafficType;

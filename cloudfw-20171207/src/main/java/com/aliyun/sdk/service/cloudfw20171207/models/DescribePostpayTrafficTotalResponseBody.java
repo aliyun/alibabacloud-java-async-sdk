@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePostpayTrafficTotalResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePostpayTrafficTotalResponseBody</p>
@@ -145,7 +146,10 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
         private Long totalVpcTraffic; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>826B6280-9704-5643-97B1-6B47AC3F027A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -153,7 +157,10 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of assets protected all types of firewalls.
+         * <p>The total number of assets protected all types of firewalls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>132</p>
          */
         public Builder totalAssets(Long totalAssets) {
             this.totalAssets = totalAssets;
@@ -161,7 +168,10 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The volume of burstable protected traffic for which fees are generated. Unit: bytes.
+         * <p>The volume of burstable protected traffic for which fees are generated. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2320274874426</p>
          */
         public Builder totalBillTraffic(Long totalBillTraffic) {
             this.totalBillTraffic = totalBillTraffic;
@@ -169,7 +179,10 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of assets protected by the Internet firewall.
+         * <p>The total number of assets protected by the Internet firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128</p>
          */
         public Builder totalInternetAssets(Long totalInternetAssets) {
             this.totalInternetAssets = totalInternetAssets;
@@ -177,7 +190,10 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The total traffic for the Internet firewall. If you use Cloud Firewall that uses the subscription billing method, this parameter indicates the total volume of burstable protected traffic on the Internet boundary. Unit: bytes.
+         * <p>The total traffic for the Internet firewall. If you use Cloud Firewall that uses the subscription billing method, this parameter indicates the total volume of burstable protected traffic on the Internet boundary. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2320274874426</p>
          */
         public Builder totalInternetTraffic(Long totalInternetTraffic) {
             this.totalInternetTraffic = totalInternetTraffic;
@@ -185,7 +201,10 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of assets protected by NAT firewalls.
+         * <p>The total number of assets protected by NAT firewalls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalNatAssets(Long totalNatAssets) {
             this.totalNatAssets = totalNatAssets;
@@ -193,7 +212,10 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The total traffic for NAT firewalls. If you use Cloud Firewall that uses the subscription billing method, this parameter indicates the total volume of burstable protected traffic on the NAT boundary. Unit: bytes.
+         * <p>The total traffic for NAT firewalls. If you use Cloud Firewall that uses the subscription billing method, this parameter indicates the total volume of burstable protected traffic on the NAT boundary. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>560646279</p>
          */
         public Builder totalNatTraffic(Long totalNatTraffic) {
             this.totalNatTraffic = totalNatTraffic;
@@ -201,7 +223,10 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The total volume of traffic. If you use Cloud Firewall that uses the subscription billing method, this parameter indicates the total volume of burstable protected traffic. Unit: bytes.
+         * <p>The total volume of traffic. If you use Cloud Firewall that uses the subscription billing method, this parameter indicates the total volume of burstable protected traffic. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2320274874426</p>
          */
         public Builder totalTraffic(Long totalTraffic) {
             this.totalTraffic = totalTraffic;
@@ -209,7 +234,10 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of assets protected by virtual private cloud (VPC) firewalls.
+         * <p>The total number of assets protected by virtual private cloud (VPC) firewalls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalVpcAssets(Long totalVpcAssets) {
             this.totalVpcAssets = totalVpcAssets;
@@ -217,7 +245,10 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The total traffic for VPC firewalls. If you use Cloud Firewall that uses the subscription billing method, this parameter indicates the total volume of burstable protected traffic on the VPC boundary. Unit: bytes.
+         * <p>The total traffic for VPC firewalls. If you use Cloud Firewall that uses the subscription billing method, this parameter indicates the total volume of burstable protected traffic on the VPC boundary. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2320274874426</p>
          */
         public Builder totalVpcTraffic(Long totalVpcTraffic) {
             this.totalVpcTraffic = totalVpcTraffic;

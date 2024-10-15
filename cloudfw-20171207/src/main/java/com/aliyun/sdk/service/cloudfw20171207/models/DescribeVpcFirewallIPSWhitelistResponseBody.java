@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcFirewallIPSWhitelistResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVpcFirewallIPSWhitelistResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
         private java.util.List < Whitelists> whitelists; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B5EE02F9-4F21-56CA-AA49-F9F8D69483C1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the IPS whitelist of the VPC firewall.
+         * <p>The details of the IPS whitelist of the VPC firewall.</p>
          */
         public Builder whitelists(java.util.List < Whitelists> whitelists) {
             this.whitelists = whitelists;
@@ -70,6 +74,12 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVpcFirewallIPSWhitelistResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcFirewallIPSWhitelistResponseBody</p>
+     */
     public static class Whitelists extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ListType")
         private Long listType;
@@ -145,11 +155,14 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
             private Long whiteType; 
 
             /**
-             * The type of the list. Valid values:
-             * <p>
+             * <p>The type of the list. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: user-defined</li>
+             * <li><strong>2</strong>: address book</li>
+             * </ul>
              * 
-             * *   **1**: user-defined
-             * *   **2**: address book
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder listType(Long listType) {
                 this.listType = listType;
@@ -157,7 +170,10 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * The entries in the list.
+             * <p>The entries in the list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.10.200.4/32,10.10.200.25/32</p>
              */
             public Builder listValue(String listValue) {
                 this.listValue = listValue;
@@ -165,7 +181,10 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the VPC firewall.
+             * <p>The instance ID of the VPC firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vfw-57431e9abe424852a578</p>
              */
             public Builder vpcFirewallId(String vpcFirewallId) {
                 this.vpcFirewallId = vpcFirewallId;
@@ -173,7 +192,7 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * An array of entries in the list.
+             * <p>An array of entries in the list.</p>
              */
             public Builder whiteListValue(java.util.List < String > whiteListValue) {
                 this.whiteListValue = whiteListValue;
@@ -181,11 +200,14 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the whitelist. Valid values:
-             * <p>
+             * <p>The type of the whitelist. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: destination</li>
+             * <li><strong>2</strong>: source</li>
+             * </ul>
              * 
-             * *   **1**: destination
-             * *   **2**: source
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder whiteType(Long whiteType) {
                 this.whiteType = whiteType;

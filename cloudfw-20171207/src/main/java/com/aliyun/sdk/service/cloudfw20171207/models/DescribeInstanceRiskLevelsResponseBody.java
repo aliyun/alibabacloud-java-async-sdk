@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceRiskLevelsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceRiskLevelsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the instances.
+         * <p>The information about the instances.</p>
          */
         public Builder instanceRisks(java.util.List < InstanceRisks> instanceRisks) {
             this.instanceRisks = instanceRisks;
@@ -57,7 +58,10 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9AABB1B7-C81F-5158-9EF9-B2DD5D3DA014</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceRiskLevelsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceRiskLevelsResponseBody</p>
+     */
     public static class Details extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
@@ -121,7 +131,10 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The IP addresses of servers.
+             * <p>The IP addresses of servers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>203.107.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -129,10 +142,13 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
             }
 
             /**
-             * The risk levels. Valid values:
-             * <p>
+             * <p>The risk levels. Valid values:</p>
+             * <ul>
+             * <li><strong>medium</strong></li>
+             * </ul>
              * 
-             * *   **medium**
+             * <strong>example:</strong>
+             * <p>medium</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -140,7 +156,10 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
             }
 
             /**
-             * The type.
+             * <p>The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ResourceNotProtected</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -154,6 +173,12 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceRiskLevelsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceRiskLevelsResponseBody</p>
+     */
     public static class InstanceRisks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Details")
         private java.util.List < Details> details;
@@ -205,7 +230,7 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
             private String level; 
 
             /**
-             * The risk levels of the Elastic Compute Service (ECS) instance.
+             * <p>The risk levels of the Elastic Compute Service (ECS) instance.</p>
              */
             public Builder details(java.util.List < Details> details) {
                 this.details = details;
@@ -213,7 +238,10 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of your Cloud Firewall.
+             * <p>The instance ID of your Cloud Firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vipcloudfw-cn-7mz2fj8nm0u</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -221,10 +249,13 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
             }
 
             /**
-             * The risk levels. Valid values:
-             * <p>
+             * <p>The risk levels. Valid values:</p>
+             * <ul>
+             * <li><strong>medium</strong></li>
+             * </ul>
              * 
-             * *   **medium**
+             * <strong>example:</strong>
+             * <p>medium</p>
              */
             public Builder level(String level) {
                 this.level = level;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRiskEventPayloadRequest} extends {@link RequestModel}
  *
  * <p>DescribeRiskEventPayloadRequest</p>
@@ -168,7 +169,10 @@ public class DescribeRiskEventPayloadRequest extends Request {
         } 
 
         /**
-         * The destination IP address to query. If you specify this parameter, all intrusion events with the specified destination IP address are queried.
+         * <p>The destination IP address to query. If you specify this parameter, all intrusion events with the specified destination IP address are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.0.113.2</p>
          */
         public Builder dstIP(String dstIP) {
             this.putQueryParameter("DstIP", dstIP);
@@ -177,7 +181,10 @@ public class DescribeRiskEventPayloadRequest extends Request {
         }
 
         /**
-         * The ID of the destination VPC to query. If you specify this parameter, all intrusion events that contain the specified ID of the destination VPC are queried.
+         * <p>The ID of the destination VPC to query. If you specify this parameter, all intrusion events that contain the specified ID of the destination VPC are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf6jr1klwqb60dyn2****</p>
          */
         public Builder dstVpcId(String dstVpcId) {
             this.putQueryParameter("DstVpcId", dstVpcId);
@@ -186,7 +193,11 @@ public class DescribeRiskEventPayloadRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The value is a timestamp. Unit: seconds.
+         * <p>The end of the time range to query. The value is a timestamp. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1681288980</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -195,11 +206,14 @@ public class DescribeRiskEventPayloadRequest extends Request {
         }
 
         /**
-         * The type of the firewall. Valid values:
-         * <p>
+         * <p>The type of the firewall. Valid values:</p>
+         * <ul>
+         * <li><strong>VpcFirewall</strong>: virtual private cloud (VPC) firewall</li>
+         * <li><strong>InternetFirewall</strong> (default): Internet firewall</li>
+         * </ul>
          * 
-         * *   **VpcFirewall**: virtual private cloud (VPC) firewall
-         * *   **InternetFirewall** (default): Internet firewall
+         * <strong>example:</strong>
+         * <p>InternetFirewall</p>
          */
         public Builder firewallType(String firewallType) {
             this.putQueryParameter("FirewallType", firewallType);
@@ -208,7 +222,10 @@ public class DescribeRiskEventPayloadRequest extends Request {
         }
 
         /**
-         * The public IP address. If you specify this parameter, all intrusion events that contain the specified public IP address are queried.
+         * <p>The public IP address. If you specify this parameter, all intrusion events that contain the specified public IP address are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.0.113.3</p>
          */
         public Builder publicIP(String publicIP) {
             this.putQueryParameter("PublicIP", publicIP);
@@ -217,7 +234,10 @@ public class DescribeRiskEventPayloadRequest extends Request {
         }
 
         /**
-         * The source IP address to query. If you specify this parameter, all intrusion events from the specified source IP address are queried.
+         * <p>The source IP address to query. If you specify this parameter, all intrusion events from the specified source IP address are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.0.113.1</p>
          */
         public Builder srcIP(String srcIP) {
             this.putQueryParameter("SrcIP", srcIP);
@@ -226,7 +246,10 @@ public class DescribeRiskEventPayloadRequest extends Request {
         }
 
         /**
-         * The ID of the source VPC to query. If you specify this parameter, all intrusion events that contain the specified ID of the source VPC are queried.
+         * <p>The ID of the source VPC to query. If you specify this parameter, all intrusion events that contain the specified ID of the source VPC are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-wz9j2lqyo15udw5nt****</p>
          */
         public Builder srcVpcId(String srcVpcId) {
             this.putQueryParameter("SrcVpcId", srcVpcId);
@@ -235,7 +258,11 @@ public class DescribeRiskEventPayloadRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The value is a timestamp. Unit: seconds.
+         * <p>The beginning of the time range to query. The value is a timestamp. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1669533617</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -244,7 +271,11 @@ public class DescribeRiskEventPayloadRequest extends Request {
         }
 
         /**
-         * The UUID of the intrusion event.
+         * <p>The UUID of the intrusion event.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e62c25e0-1073-46bd-9567-b8f12b3d****</p>
          */
         public Builder UUID(String UUID) {
             this.putQueryParameter("UUID", UUID);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNatAclPageStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNatAclPageStatusResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeNatAclPageStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Extra error information.
+         * <p>Extra error information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>proxy_not_exist</p>
          */
         public Builder detail(String detail) {
             this.detail = detail;
@@ -69,7 +73,10 @@ public class DescribeNatAclPageStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether pagination for access control policies for NAT firewalls is supported.
+         * <p>Indicates whether pagination for access control policies for NAT firewalls is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder natAclPageEnable(Boolean natAclPageEnable) {
             this.natAclPageEnable = natAclPageEnable;
@@ -77,7 +84,10 @@ public class DescribeNatAclPageStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B97F9AD7-A2DB-5F8F-9206-DF89DE0AC9E8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

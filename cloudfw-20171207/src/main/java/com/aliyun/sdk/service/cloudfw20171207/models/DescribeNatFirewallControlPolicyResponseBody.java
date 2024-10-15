@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNatFirewallControlPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNatFirewallControlPolicyResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * The information about the access control policies.
+         * <p>The information about the access control policies.</p>
          */
         public Builder policys(java.util.List < Policys> policys) {
             this.policys = policys;
@@ -69,7 +70,10 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F183567D-8A52-5BAE-9472-F1C427378C28</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNatFirewallControlPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNatFirewallControlPolicyResponseBody</p>
+     */
     public static class Policys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AclAction")
         private String aclAction;
@@ -513,12 +526,15 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             private Long startTime; 
 
             /**
-             * The action that Cloud Firewall performs on the traffic. Valid values:
-             * <p>
+             * <p>The action that Cloud Firewall performs on the traffic. Valid values:</p>
+             * <ul>
+             * <li><strong>accept</strong>: allows the traffic.</li>
+             * <li><strong>drop</strong>: denies the traffic.</li>
+             * <li><strong>log</strong>: monitors the traffic.</li>
+             * </ul>
              * 
-             * *   **accept**: allows the traffic.
-             * *   **drop**: denies the traffic.
-             * *   **log**: monitors the traffic.
+             * <strong>example:</strong>
+             * <p>accept</p>
              */
             public Builder aclAction(String aclAction) {
                 this.aclAction = aclAction;
@@ -526,7 +542,10 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the access control policy.
+             * <p>The UUID of the access control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00281255-d220-4db1-8f4f-c4df221a****</p>
              */
             public Builder aclUuid(String aclUuid) {
                 this.aclUuid = aclUuid;
@@ -534,7 +553,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The application names.
+             * <p>The application names.</p>
              */
             public Builder applicationNameList(java.util.List < String > applicationNameList) {
                 this.applicationNameList = applicationNameList;
@@ -542,7 +561,10 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the access control policy was created.
+             * <p>The time when the access control policy was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1761062400</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -550,7 +572,10 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the access control policy.
+             * <p>The description of the access control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -558,7 +583,10 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The destination port in the access control policy.
+             * <p>The destination port in the access control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder destPort(String destPort) {
                 this.destPort = destPort;
@@ -566,7 +594,10 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the destination port address book in the access control policy.
+             * <p>The name of the destination port address book in the access control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my_port_group</p>
              */
             public Builder destPortGroup(String destPortGroup) {
                 this.destPortGroup = destPortGroup;
@@ -574,7 +605,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The ports in the destination port address book.
+             * <p>The ports in the destination port address book.</p>
              */
             public Builder destPortGroupPorts(java.util.List < String > destPortGroupPorts) {
                 this.destPortGroupPorts = destPortGroupPorts;
@@ -582,11 +613,14 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the destination port in the access control policy. Valid values:
-             * <p>
+             * <p>The type of the destination port in the access control policy. Valid values:</p>
+             * <ul>
+             * <li><strong>port</strong>: port</li>
+             * <li><strong>group</strong>: port address book</li>
+             * </ul>
              * 
-             * *   **port**: port
-             * *   **group**: port address book
+             * <strong>example:</strong>
+             * <p>port</p>
              */
             public Builder destPortType(String destPortType) {
                 this.destPortType = destPortType;
@@ -594,13 +628,16 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The destination address in the access control policy. The value of this parameter varies based on the value of DestinationType. Valid values:
-             * <p>
+             * <p>The destination address in the access control policy. The value of this parameter varies based on the value of DestinationType. Valid values:</p>
+             * <ul>
+             * <li>If the value of <strong>DestinationType</strong> is <strong>net</strong>, the value of this parameter is a CIDR block. Example: 192.0.XX.XX/24.</li>
+             * <li>If the value of <strong>DestinationType</strong> is <strong>domain</strong>, the value of this parameter is a domain name. Example: aliyuncs.com.</li>
+             * <li>If the value of <strong>DestinationType</strong> is <strong>group</strong>, the value of this parameter is the name of an address book. Example: db_group.</li>
+             * <li>If the value of <strong>DestinationType</strong> is <strong>location</strong>, the value of this parameter is a location. For more information about location codes, see <a href="https://help.aliyun.com/document_detail/138867.html">AddControlPolicy</a>. Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</li>
+             * </ul>
              * 
-             * *   If the value of **DestinationType** is **net**, the value of this parameter is a CIDR block. Example: 192.0.XX.XX/24.
-             * *   If the value of **DestinationType** is **domain**, the value of this parameter is a domain name. Example: aliyuncs.com.
-             * *   If the value of **DestinationType** is **group**, the value of this parameter is the name of an address book. Example: db_group.
-             * *   If the value of **DestinationType** is **location**, the value of this parameter is a location. For more information about location codes, see [AddControlPolicy](~~138867~~). Example: \["BJ11", "ZB"].
+             * <strong>example:</strong>
+             * <p>x.x.x.x/32</p>
              */
             public Builder destination(String destination) {
                 this.destination = destination;
@@ -608,7 +645,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The CIDR blocks in the destination address book.
+             * <p>The CIDR blocks in the destination address book.</p>
              */
             public Builder destinationGroupCidrs(java.util.List < String > destinationGroupCidrs) {
                 this.destinationGroupCidrs = destinationGroupCidrs;
@@ -616,11 +653,14 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the destination address book in the access control policy. Valid values:
-             * <p>
+             * <p>The type of the destination address book in the access control policy. Valid values:</p>
+             * <ul>
+             * <li><strong>ip</strong>: an address book that includes one or more CIDR blocks</li>
+             * <li><strong>domain</strong>: an address book that includes one or more domain names</li>
+             * </ul>
              * 
-             * *   **ip**: an address book that includes one or more CIDR blocks
-             * *   **domain**: an address book that includes one or more domain names
+             * <strong>example:</strong>
+             * <p>ip</p>
              */
             public Builder destinationGroupType(String destinationGroupType) {
                 this.destinationGroupType = destinationGroupType;
@@ -628,13 +668,16 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the destination address in the access control policy. Valid values:
-             * <p>
+             * <p>The type of the destination address in the access control policy. Valid values:</p>
+             * <ul>
+             * <li><strong>net</strong>: CIDR block</li>
+             * <li><strong>group</strong>: address book</li>
+             * <li><strong>domain</strong>: domain name</li>
+             * <li><strong>location</strong>: location</li>
+             * </ul>
              * 
-             * *   **net**: CIDR block
-             * *   **group**: address book
-             * *   **domain**: domain name
-             * *   **location**: location
+             * <strong>example:</strong>
+             * <p>net</p>
              */
             public Builder destinationType(String destinationType) {
                 this.destinationType = destinationType;
@@ -642,7 +685,10 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The DNS resolution result.
+             * <p>The DNS resolution result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111.0.XX.XX,112.0.XX.XX</p>
              */
             public Builder dnsResult(String dnsResult) {
                 this.dnsResult = dnsResult;
@@ -650,7 +696,10 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the Domain Name System (DNS) resolution was performed. The value is a UNIX timestamp. Unit: seconds.
+             * <p>The time when the Domain Name System (DNS) resolution was performed. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1579261141</p>
              */
             public Builder dnsResultTime(Long dnsResultTime) {
                 this.dnsResultTime = dnsResultTime;
@@ -658,12 +707,15 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name resolution method of the access control policy. By default, an access control policy is enabled after the policy is created. Valid values:
-             * <p>
+             * <p>The domain name resolution method of the access control policy. By default, an access control policy is enabled after the policy is created. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: fully qualified domain name (FQDN)-based resolution</li>
+             * <li><strong>1</strong>: DNS-based dynamic resolution</li>
+             * <li><strong>2</strong>: FQDN and DNS-based dynamic resolution</li>
+             * </ul>
              * 
-             * *   **0**: fully qualified domain name (FQDN)-based resolution
-             * *   **1**: DNS-based dynamic resolution
-             * *   **2**: FQDN and DNS-based dynamic resolution
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder domainResolveType(Integer domainResolveType) {
                 this.domainResolveType = domainResolveType;
@@ -671,10 +723,13 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the access control policy stops taking effect. The value is a UNIX timestamp. Unit: seconds. The end time must be on the hour or on the half hour, and at least 30 minutes later than the start time.
-             * <p>
+             * <p>The time when the access control policy stops taking effect. The value is a UNIX timestamp. Unit: seconds. The end time must be on the hour or on the half hour, and at least 30 minutes later than the start time.</p>
+             * <blockquote>
+             * <p> If RepeatType is set to Permanent, this parameter is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, this parameter must be specified.</p>
+             * </blockquote>
              * 
-             * >  If RepeatType is set to Permanent, this parameter is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, this parameter must be specified.
+             * <strong>example:</strong>
+             * <p>1694764800</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -682,7 +737,10 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the access control policy was last hit. The value is a UNIX timestamp. Unit: seconds.
+             * <p>The time when the access control policy was last hit. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1579261141</p>
              */
             public Builder hitLastTime(Long hitLastTime) {
                 this.hitLastTime = hitLastTime;
@@ -690,7 +748,10 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The number of hits for the access control policy.
+             * <p>The number of hits for the access control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder hitTimes(Integer hitTimes) {
                 this.hitTimes = hitTimes;
@@ -698,7 +759,10 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the access control policy was modified.
+             * <p>The time when the access control policy was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1761062400</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -706,7 +770,10 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the NAT gateway.
+             * <p>The ID of the NAT gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ngw-xxxxxx</p>
              */
             public Builder natGatewayId(String natGatewayId) {
                 this.natGatewayId = natGatewayId;
@@ -714,10 +781,11 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the access control policy.
-             * <p>
+             * <p>The priority of the access control policy.</p>
+             * <p>The priority value starts from 1. A smaller priority value indicates a higher priority.</p>
              * 
-             * The priority value starts from 1. A smaller priority value indicates a higher priority.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder order(Integer order) {
                 this.order = order;
@@ -725,13 +793,16 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol type in the access control policy. Valid values:
-             * <p>
+             * <p>The protocol type in the access control policy. Valid values:</p>
+             * <ul>
+             * <li><strong>ANY</strong></li>
+             * <li><strong>TCP</strong></li>
+             * <li><strong>UDP</strong></li>
+             * <li><strong>ICMP</strong></li>
+             * </ul>
              * 
-             * *   **ANY**
-             * *   **TCP**
-             * *   **UDP**
-             * *   **ICMP**
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder proto(String proto) {
                 this.proto = proto;
@@ -739,11 +810,14 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the access control policy. By default, an access control policy is enabled after it is created. Valid values:
-             * <p>
+             * <p>The status of the access control policy. By default, an access control policy is enabled after it is created. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: enabled</li>
+             * <li><strong>false</strong>: disabled</li>
+             * </ul>
              * 
-             * *   **true**: enabled
-             * *   **false**: disabled
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder release(String release) {
                 this.release = release;
@@ -751,17 +825,20 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The days of a week or of a month on which the access control policy takes effect.
-             * <p>
-             * 
-             * *   If RepeatType is set to `Permanent`, `None`, or `Daily`, the value of this parameter is an empty array. Example: \[].
-             * *   If RepeatType is set to Weekly, this parameter must be specified. Example: \[0, 6].
-             * 
-             * >  If RepeatType is set to Weekly, the fields in the value of this parameter cannot be repeated.
-             * 
-             * *   If RepeatType is set to `Monthly`, this parameter must be specified. Example: \[1, 31].
-             * 
-             * >  If RepeatType is set to Monthly, the fields in the value of this parameter cannot be repeated.
+             * <p>The days of a week or of a month on which the access control policy takes effect.</p>
+             * <ul>
+             * <li>If RepeatType is set to <code>Permanent</code>, <code>None</code>, or <code>Daily</code>, the value of this parameter is an empty array. Example: [].</li>
+             * <li>If RepeatType is set to Weekly, this parameter must be specified. Example: [0, 6].</li>
+             * </ul>
+             * <blockquote>
+             * <p> If RepeatType is set to Weekly, the fields in the value of this parameter cannot be repeated.</p>
+             * </blockquote>
+             * <ul>
+             * <li>If RepeatType is set to <code>Monthly</code>, this parameter must be specified. Example: [1, 31].</li>
+             * </ul>
+             * <blockquote>
+             * <p> If RepeatType is set to Monthly, the fields in the value of this parameter cannot be repeated.</p>
+             * </blockquote>
              */
             public Builder repeatDays(java.util.List < Long > repeatDays) {
                 this.repeatDays = repeatDays;
@@ -769,10 +846,13 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time when the recurrence ends. Example: 23:30. The end time must be on the hour or on the half hour, and at least 30 minutes later than the start time.
-             * <p>
+             * <p>The point in time when the recurrence ends. Example: 23:30. The end time must be on the hour or on the half hour, and at least 30 minutes later than the start time.</p>
+             * <blockquote>
+             * <p> If RepeatType is set to Permanent or None, this parameter is left empty. If RepeatType is set to Daily, Weekly, or Monthly, this parameter must be specified.</p>
+             * </blockquote>
              * 
-             * >  If RepeatType is set to Permanent or None, this parameter is left empty. If RepeatType is set to Daily, Weekly, or Monthly, this parameter must be specified.
+             * <strong>example:</strong>
+             * <p>23:30</p>
              */
             public Builder repeatEndTime(String repeatEndTime) {
                 this.repeatEndTime = repeatEndTime;
@@ -780,10 +860,13 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time when the recurrence starts. Example: 08:00. The start time must be on the hour or on the half hour, and at least 30 minutes earlier than the end time.
-             * <p>
+             * <p>The point in time when the recurrence starts. Example: 08:00. The start time must be on the hour or on the half hour, and at least 30 minutes earlier than the end time.</p>
+             * <blockquote>
+             * <p> If RepeatType is set to Permanent or None, this parameter is left empty. If RepeatType is set to Daily, Weekly, or Monthly, this parameter must be specified.</p>
+             * </blockquote>
              * 
-             * >  If RepeatType is set to Permanent or None, this parameter is left empty. If RepeatType is set to Daily, Weekly, or Monthly, this parameter must be specified.
+             * <strong>example:</strong>
+             * <p>08:00</p>
              */
             public Builder repeatStartTime(String repeatStartTime) {
                 this.repeatStartTime = repeatStartTime;
@@ -791,14 +874,17 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The recurrence type for the access control policy to take effect. Valid values:
-             * <p>
+             * <p>The recurrence type for the access control policy to take effect. Valid values:</p>
+             * <ul>
+             * <li><strong>Permanent</strong> (default): The policy always takes effect.</li>
+             * <li><strong>None</strong>: The policy takes effect for only once.</li>
+             * <li><strong>Daily</strong>: The policy takes effect on a daily basis.</li>
+             * <li><strong>Weekly</strong>: The policy takes effect on a weekly basis.</li>
+             * <li><strong>Monthly</strong>: The policy takes effect on a monthly basis.</li>
+             * </ul>
              * 
-             * *   **Permanent** (default): The policy always takes effect.
-             * *   **None**: The policy takes effect for only once.
-             * *   **Daily**: The policy takes effect on a daily basis.
-             * *   **Weekly**: The policy takes effect on a weekly basis.
-             * *   **Monthly**: The policy takes effect on a monthly basis.
+             * <strong>example:</strong>
+             * <p>Permanent</p>
              */
             public Builder repeatType(String repeatType) {
                 this.repeatType = repeatType;
@@ -806,12 +892,15 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The source address in the access control policy. Valid values:
-             * <p>
+             * <p>The source address in the access control policy. Valid values:</p>
+             * <ul>
+             * <li>If the value of <strong>SourceType</strong> is <code>net</code>, the value of this parameter is a CIDR block. Example: 192.0.XX.XX/24.</li>
+             * <li>If the value of <strong>SourceType</strong> is <code>group</code>, the value of this parameter is the name of an address book. Example: db_group.</li>
+             * <li>If the value of <strong>SourceType</strong> is <code>location</code>, the value of this parameter is a location. For more information about location codes, see <a href="https://help.aliyun.com/document_detail/138867.html">AddControlPolicy</a>. Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</li>
+             * </ul>
              * 
-             * *   If the value of **SourceType** is `net`, the value of this parameter is a CIDR block. Example: 192.0.XX.XX/24.
-             * *   If the value of **SourceType** is `group`, the value of this parameter is the name of an address book. Example: db_group.
-             * *   If the value of **SourceType** is `location`, the value of this parameter is a location. For more information about location codes, see [AddControlPolicy](~~138867~~). Example: \["BJ11", "ZB"].
+             * <strong>example:</strong>
+             * <p>192.0.XX.XX/24</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -819,7 +908,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The CIDR blocks in the source address book.
+             * <p>The CIDR blocks in the source address book.</p>
              */
             public Builder sourceGroupCidrs(java.util.List < String > sourceGroupCidrs) {
                 this.sourceGroupCidrs = sourceGroupCidrs;
@@ -827,7 +916,10 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the source address book in the access control policy. The value is fixed as **ip**. The value indicates an address book that includes one or more CIDR blocks.
+             * <p>The type of the source address book in the access control policy. The value is fixed as <strong>ip</strong>. The value indicates an address book that includes one or more CIDR blocks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ip</p>
              */
             public Builder sourceGroupType(String sourceGroupType) {
                 this.sourceGroupType = sourceGroupType;
@@ -835,12 +927,15 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the source address in the access control policy. Valid values:
-             * <p>
+             * <p>The type of the source address in the access control policy. Valid values:</p>
+             * <ul>
+             * <li><strong>net</strong>: CIDR block</li>
+             * <li><strong>group</strong>: address book</li>
+             * <li><strong>location</strong>: location</li>
+             * </ul>
              * 
-             * *   **net**: CIDR block
-             * *   **group**: address book
-             * *   **location**: location
+             * <strong>example:</strong>
+             * <p>net</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -848,7 +943,10 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The total quota consumed by the returned access control policies, which is the sum of the quota consumed by each policy. The quota that is consumed by an access control policy is calculated by using the following formula: Quota that is consumed by an access control policy = Number of source addresses (number of CIDR blocks or regions) × Number of destination addresses (number of CIDR blocks, regions, or domain names) × Number of port ranges × Number of applications.
+             * <p>The total quota consumed by the returned access control policies, which is the sum of the quota consumed by each policy. The quota that is consumed by an access control policy is calculated by using the following formula: Quota that is consumed by an access control policy = Number of source addresses (number of CIDR blocks or regions) × Number of destination addresses (number of CIDR blocks, regions, or domain names) × Number of port ranges × Number of applications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10,000</p>
              */
             public Builder spreadCnt(String spreadCnt) {
                 this.spreadCnt = spreadCnt;
@@ -856,10 +954,13 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the access control policy starts to take effect. The value is a UNIX timestamp. Unit: seconds. The start time must be on the hour or on the half hour, and at least 30 minutes earlier than the end time.
-             * <p>
+             * <p>The time when the access control policy starts to take effect. The value is a UNIX timestamp. Unit: seconds. The start time must be on the hour or on the half hour, and at least 30 minutes earlier than the end time.</p>
+             * <blockquote>
+             * <p> If RepeatType is set to Permanent, this parameter is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, this parameter must be specified.</p>
+             * </blockquote>
              * 
-             * >  If RepeatType is set to Permanent, this parameter is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, this parameter must be specified.
+             * <strong>example:</strong>
+             * <p>1694761200</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

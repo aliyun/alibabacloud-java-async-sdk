@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDownloadTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateDownloadTaskRequest</p>
@@ -81,13 +82,15 @@ public class CreateDownloadTaskRequest extends Request {
         } 
 
         /**
-         * The language of the content within the response.
-         * <p>
+         * <p>The language of the content within the response.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -96,7 +99,10 @@ public class CreateDownloadTaskRequest extends Request {
         }
 
         /**
-         * The query condition of the download task.
+         * <p>The query condition of the download task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;SearchItem&quot;:&quot;&quot;,&quot;UserType&quot;:&quot;buy&quot;,&quot;IpVersion&quot;:&quot;4&quot;}</p>
          */
         public Builder taskData(String taskData) {
             this.putQueryParameter("TaskData", taskData);
@@ -105,7 +111,10 @@ public class CreateDownloadTaskRequest extends Request {
         }
 
         /**
-         * The time zone of the time information in the downloaded file. The value must be an identifier of a time zone in the Internet Assigned Numbers Authority (IANA) database. The default value is Asia/Shanghai, which indicates UTC+8.
+         * <p>The time zone of the time information in the downloaded file. The value must be an identifier of a time zone in the Internet Assigned Numbers Authority (IANA) database. The default value is Asia/Shanghai, which indicates UTC+8.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
          */
         public Builder timeZone(String timeZone) {
             this.putQueryParameter("TimeZone", timeZone);

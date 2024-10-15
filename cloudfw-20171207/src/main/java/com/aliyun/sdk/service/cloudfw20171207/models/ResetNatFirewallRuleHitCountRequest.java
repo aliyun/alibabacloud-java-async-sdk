@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResetNatFirewallRuleHitCountRequest} extends {@link RequestModel}
  *
  * <p>ResetNatFirewallRuleHitCountRequest</p>
@@ -82,7 +83,11 @@ public class ResetNatFirewallRuleHitCountRequest extends Request {
         } 
 
         /**
-         * The UUID of the access control policy.
+         * <p>The UUID of the access control policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3de3aed5-6de7-4ecd-9106-cfe994b9c49f</p>
          */
         public Builder aclUuid(String aclUuid) {
             this.putQueryParameter("AclUuid", aclUuid);
@@ -91,11 +96,14 @@ public class ResetNatFirewallRuleHitCountRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh** (default): Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -104,7 +112,10 @@ public class ResetNatFirewallRuleHitCountRequest extends Request {
         }
 
         /**
-         * The ID of the NAT gateway.
+         * <p>The ID of the NAT gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-zm0h3c1exm5bifuorg8c5</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);

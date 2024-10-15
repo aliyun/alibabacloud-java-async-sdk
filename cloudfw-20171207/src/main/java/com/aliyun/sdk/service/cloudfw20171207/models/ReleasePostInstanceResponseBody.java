@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleasePostInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>ReleasePostInstanceResponseBody</p>
@@ -73,7 +74,10 @@ public class ReleasePostInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -81,11 +85,14 @@ public class ReleasePostInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the release was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the release was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder releaseStatus(Boolean releaseStatus) {
             this.releaseStatus = releaseStatus;
@@ -93,7 +100,10 @@ public class ReleasePostInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID, which is used to locate and troubleshoot issues.
+         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE316A19-xxxx-5043-9DF1-C04458ABC570</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +111,10 @@ public class ReleasePostInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

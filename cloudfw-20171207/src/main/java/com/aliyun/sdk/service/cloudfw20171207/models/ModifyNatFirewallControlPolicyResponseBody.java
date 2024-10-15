@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyNatFirewallControlPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyNatFirewallControlPolicyResponseBody</p>
@@ -37,7 +38,10 @@ public class ModifyNatFirewallControlPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3868197C-E6E8-52CD-8358-05E3308430E2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

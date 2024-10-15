@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteNatFirewallControlPolicyBatchRequest} extends {@link RequestModel}
  *
  * <p>DeleteNatFirewallControlPolicyBatchRequest</p>
@@ -96,7 +97,7 @@ public class DeleteNatFirewallControlPolicyBatchRequest extends Request {
         } 
 
         /**
-         * The UUIDs of access control policies.
+         * <p>The UUIDs of access control policies.</p>
          */
         public Builder aclUuidList(java.util.List < String > aclUuidList) {
             this.putQueryParameter("AclUuidList", aclUuidList);
@@ -105,10 +106,13 @@ public class DeleteNatFirewallControlPolicyBatchRequest extends Request {
         }
 
         /**
-         * The direction of the traffic to which the access control policy applies. Valid values:
-         * <p>
+         * <p>The direction of the traffic to which the access control policy applies. Valid values:</p>
+         * <ul>
+         * <li><strong>out</strong>: outbound traffic</li>
+         * </ul>
          * 
-         * *   **out**: outbound traffic
+         * <strong>example:</strong>
+         * <p>out</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -117,11 +121,14 @@ public class DeleteNatFirewallControlPolicyBatchRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh** (default): Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -130,7 +137,11 @@ public class DeleteNatFirewallControlPolicyBatchRequest extends Request {
         }
 
         /**
-         * The ID of the NAT gateway.
+         * <p>The ID of the NAT gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-uf6j0426ap74vd6vrb676</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);

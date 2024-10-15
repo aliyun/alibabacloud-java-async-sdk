@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRiskEventPayloadResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRiskEventPayloadResponseBody</p>
@@ -19,6 +20,15 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("DstVpcId")
     private String dstVpcId;
+
+    @com.aliyun.core.annotation.NameInMap("HitContentType")
+    private Integer hitContentType;
+
+    @com.aliyun.core.annotation.NameInMap("HitTo")
+    private Integer hitTo;
+
+    @com.aliyun.core.annotation.NameInMap("ParsedContent")
+    private String parsedContent;
 
     @com.aliyun.core.annotation.NameInMap("Payload")
     private String payload;
@@ -51,6 +61,9 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
         this.dstIP = builder.dstIP;
         this.dstPort = builder.dstPort;
         this.dstVpcId = builder.dstVpcId;
+        this.hitContentType = builder.hitContentType;
+        this.hitTo = builder.hitTo;
+        this.parsedContent = builder.parsedContent;
         this.payload = builder.payload;
         this.payloadLen = builder.payloadLen;
         this.proto = builder.proto;
@@ -89,6 +102,27 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
      */
     public String getDstVpcId() {
         return this.dstVpcId;
+    }
+
+    /**
+     * @return hitContentType
+     */
+    public Integer getHitContentType() {
+        return this.hitContentType;
+    }
+
+    /**
+     * @return hitTo
+     */
+    public Integer getHitTo() {
+        return this.hitTo;
+    }
+
+    /**
+     * @return parsedContent
+     */
+    public String getParsedContent() {
+        return this.parsedContent;
     }
 
     /**
@@ -158,6 +192,9 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
         private String dstIP; 
         private Integer dstPort; 
         private String dstVpcId; 
+        private Integer hitContentType; 
+        private Integer hitTo; 
+        private String parsedContent; 
         private String payload; 
         private Integer payloadLen; 
         private String proto; 
@@ -169,7 +206,10 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
         private String xForwardFor; 
 
         /**
-         * The destination IP address of the intrusion event.
+         * <p>The destination IP address of the intrusion event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.0.113.1</p>
          */
         public Builder dstIP(String dstIP) {
             this.dstIP = dstIP;
@@ -177,7 +217,10 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
         }
 
         /**
-         * The destination port of the intrusion event.
+         * <p>The destination port of the intrusion event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         public Builder dstPort(Integer dstPort) {
             this.dstPort = dstPort;
@@ -185,7 +228,10 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
         }
 
         /**
-         * The destination VPC ID of the intrusion event.
+         * <p>The destination VPC ID of the intrusion event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp10w5nb30r4jzfyc****</p>
          */
         public Builder dstVpcId(String dstVpcId) {
             this.dstVpcId = dstVpcId;
@@ -193,7 +239,34 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
         }
 
         /**
-         * The attack payload of the intrusion event.
+         * HitContentType.
+         */
+        public Builder hitContentType(Integer hitContentType) {
+            this.hitContentType = hitContentType;
+            return this;
+        }
+
+        /**
+         * HitTo.
+         */
+        public Builder hitTo(Integer hitTo) {
+            this.hitTo = hitTo;
+            return this;
+        }
+
+        /**
+         * ParsedContent.
+         */
+        public Builder parsedContent(String parsedContent) {
+            this.parsedContent = parsedContent;
+            return this;
+        }
+
+        /**
+         * <p>The attack payload of the intrusion event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>302902010004067075626c6963a01c0204036a5f43020100020100300e300c06082b060102010101000500</p>
          */
         public Builder payload(String payload) {
             this.payload = payload;
@@ -201,7 +274,10 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
         }
 
         /**
-         * The length of the attack payload of the intrusion event.
+         * <p>The length of the attack payload of the intrusion event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>457</p>
          */
         public Builder payloadLen(Integer payloadLen) {
             this.payloadLen = payloadLen;
@@ -209,11 +285,14 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
         }
 
         /**
-         * The protocol type of intrusion event. Valid values:
-         * <p>
+         * <p>The protocol type of intrusion event. Valid values:</p>
+         * <ul>
+         * <li><strong>TCP</strong></li>
+         * <li><strong>UDP</strong></li>
+         * </ul>
          * 
-         * *   **TCP**
-         * *   **UDP**
+         * <strong>example:</strong>
+         * <p>TCP</p>
          */
         public Builder proto(String proto) {
             this.proto = proto;
@@ -221,7 +300,10 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP X-Real-IP field.
+         * <p>The HTTP X-Real-IP field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.0.113.3</p>
          */
         public Builder realIp(String realIp) {
             this.realIp = realIp;
@@ -229,7 +311,10 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68055BA4-D8BD-5611-AC49-C651E619A12E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -237,7 +322,10 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
         }
 
         /**
-         * The source IP address of the intrusion event.
+         * <p>The source IP address of the intrusion event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.0.113.2</p>
          */
         public Builder srcIP(String srcIP) {
             this.srcIP = srcIP;
@@ -245,7 +333,10 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
         }
 
         /**
-         * The source port of the intrusion event.
+         * <p>The source port of the intrusion event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54360</p>
          */
         public Builder srcPort(Integer srcPort) {
             this.srcPort = srcPort;
@@ -253,7 +344,10 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
         }
 
         /**
-         * The source VPC ID of the intrusion event.
+         * <p>The source VPC ID of the intrusion event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-t4nlt09olhpazpoeg****</p>
          */
         public Builder srcVpcId(String srcVpcId) {
             this.srcVpcId = srcVpcId;
@@ -261,7 +355,10 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP X-Forwarded-For field.
+         * <p>The HTTP X-Forwarded-For field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.0.113.4</p>
          */
         public Builder xForwardFor(String xForwardFor) {
             this.xForwardFor = xForwardFor;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceMembersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceMembersResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the member.
+         * <p>The information about the member.</p>
          */
         public Builder members(java.util.List < Members> members) {
             this.members = members;
@@ -69,7 +70,7 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A531AE1A-FBA2-48B6-BAB8-84D02BD409EE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceMembersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceMembersResponseBody</p>
+     */
     public static class Members extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Integer createTime;
@@ -177,7 +187,10 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
             private Integer modifyTime; 
 
             /**
-             * The time when the member was added to Cloud Firewall. The value is a timestamp. Unit: seconds.
+             * <p>The time when the member was added to Cloud Firewall. The value is a timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1615189819</p>
              */
             public Builder createTime(Integer createTime) {
                 this.createTime = createTime;
@@ -185,7 +198,10 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks of the member.
+             * <p>The remarks of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>renewal</p>
              */
             public Builder memberDesc(String memberDesc) {
                 this.memberDesc = memberDesc;
@@ -193,7 +209,10 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the member.
+             * <p>The name of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloudfirewall_2</p>
              */
             public Builder memberDisplayName(String memberDisplayName) {
                 this.memberDisplayName = memberDisplayName;
@@ -201,11 +220,14 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the member. Valid values:
-             * <p>
+             * <p>The status of the member. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong></li>
+             * <li><strong>deleting</strong></li>
+             * </ul>
              * 
-             * *   **normal**
-             * *   **deleting**
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder memberStatus(String memberStatus) {
                 this.memberStatus = memberStatus;
@@ -213,7 +235,10 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The UID of the member.
+             * <p>The UID of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>258039427902****</p>
              */
             public Builder memberUid(Long memberUid) {
                 this.memberUid = memberUid;
@@ -221,7 +246,10 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the member was last modified. The value is a timestamp. Unit: seconds.
+             * <p>The time when the member was last modified. The value is a timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1615189819</p>
              */
             public Builder modifyTime(Integer modifyTime) {
                 this.modifyTime = modifyTime;
@@ -235,6 +263,12 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceMembersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceMembersResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
@@ -286,7 +320,10 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -294,7 +331,10 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -302,7 +342,10 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of the members.
+             * <p>The total number of the members.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

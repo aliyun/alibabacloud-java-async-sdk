@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcZoneRequest} extends {@link RequestModel}
  *
  * <p>DescribeVpcZoneRequest</p>
@@ -95,11 +96,14 @@ public class DescribeVpcZoneRequest extends Request {
         } 
 
         /**
-         * The environment. Valid values:
-         * <p>
+         * <p>The environment. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong></li>
+         * <li><strong>TransitRouter</strong></li>
+         * </ul>
          * 
-         * *   **VPC**
-         * *   **TransitRouter**
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder environment(String environment) {
             this.putQueryParameter("Environment", environment);
@@ -108,11 +112,14 @@ public class DescribeVpcZoneRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh** (default): Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -121,7 +128,10 @@ public class DescribeVpcZoneRequest extends Request {
         }
 
         /**
-         * The UID of the member in Cloud Firewall.
+         * <p>The UID of the member in Cloud Firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1415189284827022</p>
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -130,7 +140,10 @@ public class DescribeVpcZoneRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);

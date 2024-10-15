@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDownloadTaskRequest} extends {@link RequestModel}
  *
  * <p>DeleteDownloadTaskRequest</p>
@@ -67,11 +68,14 @@ public class DeleteDownloadTaskRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh** (default): Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -80,7 +84,10 @@ public class DeleteDownloadTaskRequest extends Request {
         }
 
         /**
-         * The ID of the file download task.
+         * <p>The ID of the file download task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4376</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

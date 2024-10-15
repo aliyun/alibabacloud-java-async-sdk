@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcListLiteResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVpcListLiteResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeVpcListLiteResponseBody extends TeaModel {
         private java.util.List < VpcList> vpcList; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55E56A55-D93A-5614-AE00-BE2F8077F891</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeVpcListLiteResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the VPCs.
+         * <p>The information about the VPCs.</p>
          */
         public Builder vpcList(java.util.List < VpcList> vpcList) {
             this.vpcList = vpcList;
@@ -70,6 +74,12 @@ public class DescribeVpcListLiteResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVpcListLiteResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcListLiteResponseBody</p>
+     */
     public static class VpcList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionNo")
         private String regionNo;
@@ -121,7 +131,10 @@ public class DescribeVpcListLiteResponseBody extends TeaModel {
             private String vpcName; 
 
             /**
-             * The region ID of the VPC.
+             * <p>The region ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -129,7 +142,10 @@ public class DescribeVpcListLiteResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-wz9dqhljd10fk0b4eh885</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -137,7 +153,10 @@ public class DescribeVpcListLiteResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the VPC.
+             * <p>The name of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cloud_Firewall_VPC</p>
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;

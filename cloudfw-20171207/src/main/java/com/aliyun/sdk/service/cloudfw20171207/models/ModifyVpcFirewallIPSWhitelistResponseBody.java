@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyVpcFirewallIPSWhitelistResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyVpcFirewallIPSWhitelistResponseBody</p>
@@ -37,7 +38,10 @@ public class ModifyVpcFirewallIPSWhitelistResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F2E8D49A-E5AA-5FF8-8822-25282DCF4BE8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

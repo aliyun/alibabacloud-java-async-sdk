@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDefaultIPSConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyDefaultIPSConfigRequest</p>
@@ -126,11 +127,15 @@ public class ModifyDefaultIPSConfigRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable basic protection. Valid values:
-         * <p>
+         * <p>Specifies whether to enable basic protection. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**: yes
-         * *   **0**: no
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder basicRules(String basicRules) {
             this.putQueryParameter("BasicRules", basicRules);
@@ -139,11 +144,15 @@ public class ModifyDefaultIPSConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable threat intelligence. Valid values:
-         * <p>
+         * <p>Specifies whether to enable threat intelligence. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**: yes
-         * *   **0**: no
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder ctiRules(String ctiRules) {
             this.putQueryParameter("CtiRules", ctiRules);
@@ -152,11 +161,14 @@ public class ModifyDefaultIPSConfigRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default)</li>
+         * <li><strong>en</strong></li>
+         * </ul>
          * 
-         * *   **zh** (default)
-         * *   **en**
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -165,11 +177,14 @@ public class ModifyDefaultIPSConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable virtual patching. Valid values:
-         * <p>
+         * <p>Specifies whether to enable virtual patching. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
          * 
-         * *   **1**: yes
-         * *   **0**: no
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder patchRules(String patchRules) {
             this.putQueryParameter("PatchRules", patchRules);
@@ -178,12 +193,15 @@ public class ModifyDefaultIPSConfigRequest extends Request {
         }
 
         /**
-         * The level of the rule group for the IPS. Valid values:
-         * <p>
+         * <p>The level of the rule group for the IPS. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: loose</li>
+         * <li><strong>2</strong>: medium</li>
+         * <li><strong>3</strong>: strict</li>
+         * </ul>
          * 
-         * *   **1**: loose
-         * *   **2**: medium
-         * *   **3**: strict
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ruleClass(String ruleClass) {
             this.putQueryParameter("RuleClass", ruleClass);
@@ -192,11 +210,15 @@ public class ModifyDefaultIPSConfigRequest extends Request {
         }
 
         /**
-         * The mode of the IPS. Valid values:
-         * <p>
+         * <p>The mode of the IPS. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: block mode</li>
+         * <li><strong>0</strong>: monitor mode</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**: block mode
-         * *   **0**: monitor mode
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder runMode(String runMode) {
             this.putQueryParameter("RunMode", runMode);

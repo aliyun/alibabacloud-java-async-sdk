@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNatFirewallControlPolicyRequest} extends {@link RequestModel}
  *
  * <p>CreateNatFirewallControlPolicyRequest</p>
@@ -386,14 +387,17 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         } 
 
         /**
-         * The action that Cloud Firewall performs on the traffic.
-         * <p>
+         * <p>The action that Cloud Firewall performs on the traffic.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>accept</strong>: allows the traffic.</li>
+         * <li><strong>drop</strong>: denies the traffic.</li>
+         * <li><strong>log</strong>: monitors the traffic.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   **accept**: allows the traffic.
-         * *   **drop**: denies the traffic.
-         * *   **log**: monitors the traffic.
+         * <strong>example:</strong>
+         * <p>log</p>
          */
         public Builder aclAction(String aclAction) {
             this.putQueryParameter("AclAction", aclAction);
@@ -402,7 +406,8 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The application types supported by the access control policy.
+         * <p>The application types supported by the access control policy.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder applicationNameList(java.util.List < String > applicationNameList) {
             this.putQueryParameter("ApplicationNameList", applicationNameList);
@@ -411,7 +416,11 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The description of the access control policy.
+         * <p>The description of the access control policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>allow</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -420,18 +429,25 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The destination port in the access control policy. Valid values:
-         * <p>
+         * <p>The destination port in the access control policy. Valid values:</p>
+         * <ul>
+         * <li>If Proto is set to ICMP, DestPort is automatically left empty.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If Proto is set to ICMP, access control does not take effect on the destination port.</p>
+         * </blockquote>
+         * <ul>
+         * <li>If Proto is set to TCP, UDP, or ANY and DestPortType is set to group, DestPort is empty.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If DestPortType is set to group, you do not need to specify the destination port number. All ports on which the access control policy takes effect are included in the destination port address book.</p>
+         * </blockquote>
+         * <ul>
+         * <li>If Proto is set to TCP, UDP, or ANY and DestPortType is set to port, the value of DestPort is the destination port number.</li>
+         * </ul>
          * 
-         * *   If Proto is set to ICMP, DestPort is automatically left empty.
-         * 
-         * > If Proto is set to ICMP, access control does not take effect on the destination port.
-         * 
-         * *   If Proto is set to TCP, UDP, or ANY and DestPortType is set to group, DestPort is empty.
-         * 
-         * > If DestPortType is set to group, you do not need to specify the destination port number. All ports on which the access control policy takes effect are included in the destination port address book.
-         * 
-         * *   If Proto is set to TCP, UDP, or ANY and DestPortType is set to port, the value of DestPort is the destination port number.
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder destPort(String destPort) {
             this.putQueryParameter("DestPort", destPort);
@@ -440,10 +456,13 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The name of the destination port address book in the access control policy.
-         * <p>
+         * <p>The name of the destination port address book in the access control policy.</p>
+         * <blockquote>
+         * <p>If DestPortType is set to group, you must specify the name of the destination port address book.</p>
+         * </blockquote>
          * 
-         * > If DestPortType is set to group, you must specify the name of the destination port address book.
+         * <strong>example:</strong>
+         * <p>my_port_group</p>
          */
         public Builder destPortGroup(String destPortGroup) {
             this.putQueryParameter("DestPortGroup", destPortGroup);
@@ -452,11 +471,14 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The type of the destination port in the access control policy. Valid values:
-         * <p>
+         * <p>The type of the destination port in the access control policy. Valid values:</p>
+         * <ul>
+         * <li><strong>port</strong>: port</li>
+         * <li><strong>group</strong>: port address book</li>
+         * </ul>
          * 
-         * *   **port**: port
-         * *   **group**: port address book
+         * <strong>example:</strong>
+         * <p>port</p>
          */
         public Builder destPortType(String destPortType) {
             this.putQueryParameter("DestPortType", destPortType);
@@ -465,26 +487,26 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The destination address in the access control policy.
-         * <p>
+         * <p>The destination address in the access control policy.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>If DestinationType is set to net, the value of this parameter is a CIDR block.</p>
+         * <p>Example: 1.2.XX.XX/24</p>
+         * </li>
+         * <li><p>If DestinationType is set to group, the value of this parameter is an address book.</p>
+         * <p>Example: db_group</p>
+         * </li>
+         * <li><p>If DestinationType is set to domain, the value of this parameter is a domain name.</p>
+         * <p>Example: *.aliyuncs.com</p>
+         * </li>
+         * <li><p>If DestinationType is set to location, the value of this parameter is a location.</p>
+         * <p>Example: [&quot;BJ11&quot;, &quot;ZB&quot;]</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   If DestinationType is set to net, the value of this parameter is a CIDR block.
-         * 
-         *     Example: 1.2.XX.XX/24
-         * 
-         * *   If DestinationType is set to group, the value of this parameter is an address book.
-         * 
-         *     Example: db_group
-         * 
-         * *   If DestinationType is set to domain, the value of this parameter is a domain name.
-         * 
-         *     Example: \*.aliyuncs.com
-         * 
-         * *   If DestinationType is set to location, the value of this parameter is a location.
-         * 
-         *     Example: \["BJ11", "ZB"]
+         * <strong>example:</strong>
+         * <p>XX.XX.XX.XX/24</p>
          */
         public Builder destination(String destination) {
             this.putQueryParameter("Destination", destination);
@@ -493,14 +515,17 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The type of the destination address in the access control policy.
-         * <p>
+         * <p>The type of the destination address in the access control policy.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>net</strong>: CIDR block</li>
+         * <li><strong>group</strong>: address book</li>
+         * <li><strong>domain</strong>: domain name</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   **net**: CIDR block
-         * *   **group**: address book
-         * *   **domain**: domain name
+         * <strong>example:</strong>
+         * <p>net</p>
          */
         public Builder destinationType(String destinationType) {
             this.putQueryParameter("DestinationType", destinationType);
@@ -509,10 +534,14 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The direction of the traffic to which the access control policy applies. Valid value:
-         * <p>
+         * <p>The direction of the traffic to which the access control policy applies. Valid value:</p>
+         * <ul>
+         * <li><strong>out</strong>: outbound.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **out**: outbound.
+         * <strong>example:</strong>
+         * <p>out</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -521,12 +550,15 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The domain name resolution method of the access control policy. Valid values:
-         * <p>
+         * <p>The domain name resolution method of the access control policy. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: fully qualified domain name (FQDN)-based resolution</li>
+         * <li><strong>1</strong>: Domain Name System (DNS)-based dynamic resolution</li>
+         * <li><strong>2</strong>: FQDN and DNS-based dynamic resolution</li>
+         * </ul>
          * 
-         * *   **0**: fully qualified domain name (FQDN)-based resolution
-         * *   **1**: Domain Name System (DNS)-based dynamic resolution
-         * *   **2**: FQDN and DNS-based dynamic resolution
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder domainResolveType(Integer domainResolveType) {
             this.putQueryParameter("DomainResolveType", domainResolveType);
@@ -535,10 +567,13 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The time when the access control policy stops taking effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes later than the value of StartTime.
-         * <p>
+         * <p>The time when the access control policy stops taking effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes later than the value of StartTime.</p>
+         * <blockquote>
+         * <p> If RepeatType is set to Permanent, EndTime is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, this parameter must be specified.</p>
+         * </blockquote>
          * 
-         * >  If RepeatType is set to Permanent, EndTime is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, this parameter must be specified.
+         * <strong>example:</strong>
+         * <p>1694764800</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -547,10 +582,13 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The IP version supported by the access control policy. Valid values:
-         * <p>
+         * <p>The IP version supported by the access control policy. Valid values:</p>
+         * <ul>
+         * <li><strong>4</strong>: IPv4 (default)</li>
+         * </ul>
          * 
-         * *   **4**: IPv4 (default)
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder ipVersion(String ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);
@@ -559,13 +597,15 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The language of the content within the response.
-         * <p>
+         * <p>The language of the content within the response.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -574,7 +614,11 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the NAT gateway.
+         * <p>The ID of the NAT gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngx-xxxxxxx</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -583,7 +627,11 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The priority of the access control policy. The priority value starts from 1. A small priority value indicates a high priority.
+         * <p>The priority of the access control policy. The priority value starts from 1. A small priority value indicates a high priority.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder newOrder(String newOrder) {
             this.putQueryParameter("NewOrder", newOrder);
@@ -592,17 +640,21 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The protocol type in the access control policy.
-         * <p>
+         * <p>The protocol type in the access control policy.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>ANY: all types of protocols.</li>
+         * <li>TCP</li>
+         * <li>UDP</li>
+         * <li>ICMP</li>
+         * </ul>
+         * <blockquote>
+         * <p> If the destination address is a threat intelligence address book of the domain name type or a cloud service address book, you can set Proto only to TCP and set ApplicationNameList to HTTP, HTTPS, SMTP, SMTPS, or SSL.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   ANY: all types of protocols.
-         * *   TCP
-         * *   UDP
-         * *   ICMP
-         * 
-         * >  If the destination address is a threat intelligence address book of the domain name type or a cloud service address book, you can set Proto only to TCP and set ApplicationNameList to HTTP, HTTPS, SMTP, SMTPS, or SSL.
+         * <strong>example:</strong>
+         * <p>ANY</p>
          */
         public Builder proto(String proto) {
             this.putQueryParameter("Proto", proto);
@@ -611,11 +663,14 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the access control policy. By default, an access control policy is enabled after it is created. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the access control policy. By default, an access control policy is enabled after it is created. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder release(String release) {
             this.putQueryParameter("Release", release);
@@ -624,17 +679,20 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The days of a week or of a month on which the access control policy takes effect.
-         * <p>
-         * 
-         * *   If RepeatType is set to `Permanent`, `None`, or `Daily`, RepeatDays is left empty. Example: \[].
-         * *   If RepeatType is set to Weekly, RepeatDays must be specified. Example: \[0, 6].
-         * 
-         * >  If RepeatType is set to Weekly, the fields in the value of RepeatDays cannot be repeated.
-         * 
-         * *   If RepeatType is set to `Monthly`, RepeatDays must be specified. Example: \[1, 31].
-         * 
-         * >  If RepeatType is set to Monthly, the fields in the value of RepeatDays cannot be repeated.
+         * <p>The days of a week or of a month on which the access control policy takes effect.</p>
+         * <ul>
+         * <li>If RepeatType is set to <code>Permanent</code>, <code>None</code>, or <code>Daily</code>, RepeatDays is left empty. Example: [].</li>
+         * <li>If RepeatType is set to Weekly, RepeatDays must be specified. Example: [0, 6].</li>
+         * </ul>
+         * <blockquote>
+         * <p> If RepeatType is set to Weekly, the fields in the value of RepeatDays cannot be repeated.</p>
+         * </blockquote>
+         * <ul>
+         * <li>If RepeatType is set to <code>Monthly</code>, RepeatDays must be specified. Example: [1, 31].</li>
+         * </ul>
+         * <blockquote>
+         * <p> If RepeatType is set to Monthly, the fields in the value of RepeatDays cannot be repeated.</p>
+         * </blockquote>
          */
         public Builder repeatDays(java.util.List < Long > repeatDays) {
             this.putQueryParameter("RepeatDays", repeatDays);
@@ -643,10 +701,13 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The point in time when the recurrence ends. Example: 23:30. The value must be on the hour or on the half hour, and at least 30 minutes later than the value of RepeatStartTime.
-         * <p>
+         * <p>The point in time when the recurrence ends. Example: 23:30. The value must be on the hour or on the half hour, and at least 30 minutes later than the value of RepeatStartTime.</p>
+         * <blockquote>
+         * <p> If RepeatType is set to Permanent or None, RepeatEndTime is left empty. If RepeatType is set to Daily, Weekly, or Monthly, this parameter must be specified.</p>
+         * </blockquote>
          * 
-         * >  If RepeatType is set to Permanent or None, RepeatEndTime is left empty. If RepeatType is set to Daily, Weekly, or Monthly, this parameter must be specified.
+         * <strong>example:</strong>
+         * <p>23:30</p>
          */
         public Builder repeatEndTime(String repeatEndTime) {
             this.putQueryParameter("RepeatEndTime", repeatEndTime);
@@ -655,10 +716,13 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The point in time when the recurrence starts. Example: 08:00. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the value of RepeatEndTime.
-         * <p>
+         * <p>The point in time when the recurrence starts. Example: 08:00. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the value of RepeatEndTime.</p>
+         * <blockquote>
+         * <p> If RepeatType is set to Permanent or None, RepeatStartTime is left empty. If RepeatType is set to Daily, Weekly, or Monthly, this parameter must be specified.</p>
+         * </blockquote>
          * 
-         * >  If RepeatType is set to Permanent or None, RepeatStartTime is left empty. If RepeatType is set to Daily, Weekly, or Monthly, this parameter must be specified.
+         * <strong>example:</strong>
+         * <p>08:00</p>
          */
         public Builder repeatStartTime(String repeatStartTime) {
             this.putQueryParameter("RepeatStartTime", repeatStartTime);
@@ -667,14 +731,17 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The recurrence type for the access control policy to take effect. Valid values:
-         * <p>
+         * <p>The recurrence type for the access control policy to take effect. Valid values:</p>
+         * <ul>
+         * <li><strong>Permanent</strong> (default): The policy always takes effect.</li>
+         * <li><strong>None</strong>: The policy takes effect for only once.</li>
+         * <li><strong>Daily</strong>: The policy takes effect on a daily basis.</li>
+         * <li><strong>Weekly</strong>: The policy takes effect on a weekly basis.</li>
+         * <li><strong>Monthly</strong>: The policy takes effect on a monthly basis.</li>
+         * </ul>
          * 
-         * *   **Permanent** (default): The policy always takes effect.
-         * *   **None**: The policy takes effect for only once.
-         * *   **Daily**: The policy takes effect on a daily basis.
-         * *   **Weekly**: The policy takes effect on a weekly basis.
-         * *   **Monthly**: The policy takes effect on a monthly basis.
+         * <strong>example:</strong>
+         * <p>Permanent</p>
          */
         public Builder repeatType(String repeatType) {
             this.putQueryParameter("RepeatType", repeatType);
@@ -683,18 +750,20 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The source address in the access control policy.
-         * <p>
+         * <p>The source address in the access control policy.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>If <strong>SourceType</strong> is set to <code>net</code>, the value of Source is a CIDR block.</p>
+         * <p>Example: 10.2.4.0/24</p>
+         * </li>
+         * <li><p>If <strong>SourceType</strong> is set to <code>group</code>, the value of this parameter must be an address book name.</p>
+         * <p>Example: db_group</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   If **SourceType** is set to `net`, the value of Source is a CIDR block.
-         * 
-         *     Example: 10.2.4.0/24
-         * 
-         * *   If **SourceType** is set to `group`, the value of this parameter must be an address book name.
-         * 
-         *     Example: db_group
+         * <strong>example:</strong>
+         * <p>192.168.0.25/32</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -703,13 +772,16 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The type of the source address in the access control policy.
-         * <p>
+         * <p>The type of the source address in the access control policy.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>net</strong>: source CIDR block</li>
+         * <li><strong>group</strong>: source address book</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   **net**: source CIDR block
-         * *   **group**: source address book
+         * <strong>example:</strong>
+         * <p>net</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -718,10 +790,13 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The time when the access control policy starts to take effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the value of EndTime.
-         * <p>
+         * <p>The time when the access control policy starts to take effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the value of EndTime.</p>
+         * <blockquote>
+         * <p> If RepeatType is set to Permanent, StartTime is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, this parameter must be specified.</p>
+         * </blockquote>
          * 
-         * >  If RepeatType is set to Permanent, StartTime is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, this parameter must be specified.
+         * <strong>example:</strong>
+         * <p>1694761200</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

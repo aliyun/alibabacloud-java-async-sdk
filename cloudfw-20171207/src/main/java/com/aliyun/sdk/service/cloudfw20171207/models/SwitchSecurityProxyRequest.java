@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SwitchSecurityProxyRequest} extends {@link RequestModel}
  *
  * <p>SwitchSecurityProxyRequest</p>
@@ -83,11 +84,14 @@ public class SwitchSecurityProxyRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and the response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default)</li>
+         * <li><strong>en</strong></li>
+         * </ul>
          * 
-         * *   **zh** (default)
-         * *   **en**
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -96,7 +100,11 @@ public class SwitchSecurityProxyRequest extends Request {
         }
 
         /**
-         * The ID of the NAT firewall.
+         * <p>The ID of the NAT firewall.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>proxy-natbfd2fafbb77042308d1b</p>
          */
         public Builder proxyId(String proxyId) {
             this.putQueryParameter("ProxyId", proxyId);
@@ -105,11 +113,15 @@ public class SwitchSecurityProxyRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the NAT firewall. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the NAT firewall. Valid values:</p>
+         * <ul>
+         * <li>open: yes</li>
+         * <li>close: no</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   open: yes
-         * *   close: no
+         * <strong>example:</strong>
+         * <p>open</p>
          */
         public Builder _switch(String _switch) {
             this.putQueryParameter("Switch", _switch);

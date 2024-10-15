@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTrFirewallsV2ListRequest} extends {@link RequestModel}
  *
  * <p>DescribeTrFirewallsV2ListRequest</p>
@@ -193,7 +194,10 @@ public class DescribeTrFirewallsV2ListRequest extends Request {
         } 
 
         /**
-         * The ID of the Cloud Enterprise Network (CEN) instance.
+         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-rig0t5zi96crkl****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -202,7 +206,10 @@ public class DescribeTrFirewallsV2ListRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -211,7 +218,10 @@ public class DescribeTrFirewallsV2ListRequest extends Request {
         }
 
         /**
-         * The instance ID of the VPC firewall.
+         * <p>The instance ID of the VPC firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vfw-tr-f1799baa9e254651****</p>
          */
         public Builder firewallId(String firewallId) {
             this.putQueryParameter("FirewallId", firewallId);
@@ -220,7 +230,10 @@ public class DescribeTrFirewallsV2ListRequest extends Request {
         }
 
         /**
-         * The name of the VPC firewall.
+         * <p>The name of the VPC firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder firewallName(String firewallName) {
             this.putQueryParameter("FirewallName", firewallName);
@@ -229,18 +242,22 @@ public class DescribeTrFirewallsV2ListRequest extends Request {
         }
 
         /**
-         * The status of the VPC firewall. Valid values:
-         * <p>
+         * <p>The status of the VPC firewall. Valid values:</p>
+         * <ul>
+         * <li><strong>opened</strong>: The VPC firewall is enabled.</li>
+         * <li><strong>closed</strong>: The VPC firewall is disabled.</li>
+         * <li><strong>notconfigured</strong>: The VPC firewall is not created.</li>
+         * <li><strong>configured</strong>: The VPC firewall is created but is not enabled.</li>
+         * <li><strong>creating</strong>: The VPC firewall is being created.</li>
+         * <li><strong>opening</strong>: The VPC firewall is being enabled.</li>
+         * <li><strong>deleting</strong>: The VPC firewall is being deleted.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you do not specify this parameter, VPC firewalls in all states are queried.</p>
+         * </blockquote>
          * 
-         * *   **opened**: The VPC firewall is enabled.
-         * *   **closed**: The VPC firewall is disabled.
-         * *   **notconfigured**: The VPC firewall is not created.
-         * *   **configured**: The VPC firewall is created but is not enabled.
-         * *   **creating**: The VPC firewall is being created.
-         * *   **opening**: The VPC firewall is being enabled.
-         * *   **deleting**: The VPC firewall is being deleted.
-         * 
-         * >  If you do not specify this parameter, VPC firewalls in all states are queried.
+         * <strong>example:</strong>
+         * <p>opened</p>
          */
         public Builder firewallSwitchStatus(String firewallSwitchStatus) {
             this.putQueryParameter("FirewallSwitchStatus", firewallSwitchStatus);
@@ -249,11 +266,14 @@ public class DescribeTrFirewallsV2ListRequest extends Request {
         }
 
         /**
-         * The language of the content within the response. Valid values:
-         * <p>
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -271,7 +291,10 @@ public class DescribeTrFirewallsV2ListRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -280,7 +303,10 @@ public class DescribeTrFirewallsV2ListRequest extends Request {
         }
 
         /**
-         * The region ID of the transit router.
+         * <p>The region ID of the transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);
@@ -289,13 +315,17 @@ public class DescribeTrFirewallsV2ListRequest extends Request {
         }
 
         /**
-         * The routing mode of the VPC firewall. Valid values:
-         * <p>
+         * <p>The routing mode of the VPC firewall. Valid values:</p>
+         * <ul>
+         * <li><strong>managed</strong>: automatic mode</li>
+         * <li><strong>manual</strong>: manual mode</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you do not specify this parameter, VPC firewalls in all routing modes are queried.</p>
+         * </blockquote>
          * 
-         * *   **managed**: automatic mode
-         * *   **manual**: manual mode
-         * 
-         * >  If you do not specify this parameter, VPC firewalls in all routing modes are queried.
+         * <strong>example:</strong>
+         * <p>managed</p>
          */
         public Builder routeMode(String routeMode) {
             this.putQueryParameter("RouteMode", routeMode);
@@ -304,7 +334,10 @@ public class DescribeTrFirewallsV2ListRequest extends Request {
         }
 
         /**
-         * The ID of the transit router.
+         * <p>The ID of the transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-uf6egtvyaedvt20xl****</p>
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);

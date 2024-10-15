@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOutgoingDestinationIPResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeOutgoingDestinationIPResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The IP addresses in outbound connections.
+         * <p>The IP addresses in outbound connections.</p>
          */
         public Builder dstIPList(java.util.List < DstIPList> dstIPList) {
             this.dstIPList = dstIPList;
@@ -69,7 +70,10 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F0F82705-CFC7-5F83-86C8-A063892F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of destination IP addresses in outbound connections.
+         * <p>The total number of destination IP addresses in outbound connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeOutgoingDestinationIPResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOutgoingDestinationIPResponseBody</p>
+     */
     public static class AddressGroupList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddressGroupName")
         private String addressGroupName;
@@ -129,7 +142,10 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             private String addressGroupUUID; 
 
             /**
-             * The name of the address book.
+             * <p>The name of the address book.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IP address book</p>
              */
             public Builder addressGroupName(String addressGroupName) {
                 this.addressGroupName = addressGroupName;
@@ -137,7 +153,10 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the address book.
+             * <p>The UUID of the address book.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f04ac7ce-628b-4cb7-be61-310222b7****</p>
              */
             public Builder addressGroupUUID(String addressGroupUUID) {
                 this.addressGroupUUID = addressGroupUUID;
@@ -151,6 +170,12 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeOutgoingDestinationIPResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOutgoingDestinationIPResponseBody</p>
+     */
     public static class ApplicationPortList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
@@ -190,26 +215,30 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             private Integer port; 
 
             /**
-             * The application type used in the access control policy. Valid values:
-             * <p>
+             * <p>The application type used in the access control policy. Valid values:</p>
+             * <ul>
+             * <li><strong>FTP</strong></li>
+             * <li><strong>HTTP</strong></li>
+             * <li><strong>HTTPS</strong></li>
+             * <li><strong>Memcache</strong></li>
+             * <li><strong>MongoDB</strong></li>
+             * <li><strong>MQTT</strong></li>
+             * <li><strong>MySQL</strong></li>
+             * <li><strong>RDP</strong></li>
+             * <li><strong>Redis</strong></li>
+             * <li><strong>SMTP</strong></li>
+             * <li><strong>SMTPS</strong></li>
+             * <li><strong>SSH</strong></li>
+             * <li><strong>SSL_No_Cert</strong></li>
+             * <li><strong>SSL</strong></li>
+             * <li><strong>VNC</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p> The value of this parameter depends on the value of the Proto parameter. If you set Proto to TCP, you can set ApplicationNameList to any valid value. If you configure both ApplicationNameList and ApplicationName, only the value of ApplicationNameList is used.</p>
+             * </blockquote>
              * 
-             * *   **FTP**
-             * *   **HTTP**
-             * *   **HTTPS**
-             * *   **Memcache**
-             * *   **MongoDB**
-             * *   **MQTT**
-             * *   **MySQL**
-             * *   **RDP**
-             * *   **Redis**
-             * *   **SMTP**
-             * *   **SMTPS**
-             * *   **SSH**
-             * *   **SSL_No_Cert**
-             * *   **SSL**
-             * *   **VNC**
-             * 
-             * >  The value of this parameter depends on the value of the Proto parameter. If you set Proto to TCP, you can set ApplicationNameList to any valid value. If you configure both ApplicationNameList and ApplicationName, only the value of ApplicationNameList is used.
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -217,7 +246,10 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * The application port.
+             * <p>The application port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -231,6 +263,12 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeOutgoingDestinationIPResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOutgoingDestinationIPResponseBody</p>
+     */
     public static class TagList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClassId")
         private String classId;
@@ -306,12 +344,15 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             private String tagName; 
 
             /**
-             * The type of the tag. Valid values:
-             * <p>
+             * <p>The type of the tag. Valid values:</p>
+             * <ul>
+             * <li><strong>Suspicious</strong></li>
+             * <li><strong>Malicious</strong></li>
+             * <li><strong>Trusted</strong></li>
+             * </ul>
              * 
-             * *   **Suspicious**
-             * *   **Malicious**
-             * *   **Trusted**
+             * <strong>example:</strong>
+             * <p>Trusted</p>
              */
             public Builder classId(String classId) {
                 this.classId = classId;
@@ -319,12 +360,15 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level. Valid values:
-             * <p>
+             * <p>The risk level. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: low</li>
+             * <li><strong>2</strong>: medium</li>
+             * <li><strong>3</strong>: high</li>
+             * </ul>
              * 
-             * *   **1**: low
-             * *   **2**: medium
-             * *   **3**: high
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;
@@ -332,7 +376,10 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the tag.
+             * <p>The description of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tag that indicates traffic is allowed</p>
              */
             public Builder tagDescribe(String tagDescribe) {
                 this.tagDescribe = tagDescribe;
@@ -340,7 +387,10 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tag.
+             * <p>The ID of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliYun</p>
              */
             public Builder tagId(String tagId) {
                 this.tagId = tagId;
@@ -348,7 +398,10 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the tag.
+             * <p>The name of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tag that indicates traffic is allowed</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;
@@ -362,6 +415,12 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeOutgoingDestinationIPResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOutgoingDestinationIPResponseBody</p>
+     */
     public static class DstIPList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AclCoverage")
         private String aclCoverage;
@@ -377,6 +436,9 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ApplicationPortList")
         private java.util.List < ApplicationPortList> applicationPortList;
+
+        @com.aliyun.core.annotation.NameInMap("AssetCount")
+        private Long assetCount;
 
         @com.aliyun.core.annotation.NameInMap("CategoryClassId")
         private String categoryClassId;
@@ -405,8 +467,14 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsMarkNormal")
         private Boolean isMarkNormal;
 
+        @com.aliyun.core.annotation.NameInMap("LocationName")
+        private String locationName;
+
         @com.aliyun.core.annotation.NameInMap("OutBytes")
         private Long outBytes;
+
+        @com.aliyun.core.annotation.NameInMap("PrivateAssetCount")
+        private Long privateAssetCount;
 
         @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
@@ -435,6 +503,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             this.aclStatus = builder.aclStatus;
             this.addressGroupList = builder.addressGroupList;
             this.applicationPortList = builder.applicationPortList;
+            this.assetCount = builder.assetCount;
             this.categoryClassId = builder.categoryClassId;
             this.categoryId = builder.categoryId;
             this.categoryName = builder.categoryName;
@@ -444,7 +513,9 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             this.hasAclRecommend = builder.hasAclRecommend;
             this.inBytes = builder.inBytes;
             this.isMarkNormal = builder.isMarkNormal;
+            this.locationName = builder.locationName;
             this.outBytes = builder.outBytes;
+            this.privateAssetCount = builder.privateAssetCount;
             this.ruleId = builder.ruleId;
             this.ruleName = builder.ruleName;
             this.securityReason = builder.securityReason;
@@ -495,6 +566,13 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
          */
         public java.util.List < ApplicationPortList> getApplicationPortList() {
             return this.applicationPortList;
+        }
+
+        /**
+         * @return assetCount
+         */
+        public Long getAssetCount() {
+            return this.assetCount;
         }
 
         /**
@@ -561,10 +639,24 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         }
 
         /**
+         * @return locationName
+         */
+        public String getLocationName() {
+            return this.locationName;
+        }
+
+        /**
          * @return outBytes
          */
         public Long getOutBytes() {
             return this.outBytes;
+        }
+
+        /**
+         * @return privateAssetCount
+         */
+        public Long getPrivateAssetCount() {
+            return this.privateAssetCount;
         }
 
         /**
@@ -622,6 +714,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             private String aclStatus; 
             private java.util.List < AddressGroupList> addressGroupList; 
             private java.util.List < ApplicationPortList> applicationPortList; 
+            private Long assetCount; 
             private String categoryClassId; 
             private String categoryId; 
             private String categoryName; 
@@ -631,7 +724,9 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             private Boolean hasAclRecommend; 
             private Long inBytes; 
             private Boolean isMarkNormal; 
+            private String locationName; 
             private Long outBytes; 
+            private Long privateAssetCount; 
             private String ruleId; 
             private String ruleName; 
             private String securityReason; 
@@ -641,11 +736,14 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             private String totalBytes; 
 
             /**
-             * Indicates whether an access control policy is configured. Valid values:
-             * <p>
+             * <p>Indicates whether an access control policy is configured. Valid values:</p>
+             * <ul>
+             * <li><strong>Uncovered</strong>: no</li>
+             * <li><strong>FullCoverage</strong>: yes</li>
+             * </ul>
              * 
-             * *   **Uncovered**: no
-             * *   **FullCoverage**: yes
+             * <strong>example:</strong>
+             * <p>Uncovered</p>
              */
             public Builder aclCoverage(String aclCoverage) {
                 this.aclCoverage = aclCoverage;
@@ -653,7 +751,10 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * The suggestion to configure an access control policy.
+             * <p>The suggestion to configure an access control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Allows the traffic.</p>
              */
             public Builder aclRecommendDetail(String aclRecommendDetail) {
                 this.aclRecommendDetail = aclRecommendDetail;
@@ -661,11 +762,14 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the access control policy. Valid values:
-             * <p>
+             * <p>The status of the access control policy. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong>: healthy</li>
+             * <li><strong>Abnormal</strong>: unhealthy</li>
+             * </ul>
              * 
-             * *   **normal**: healthy
-             * *   **Abnormal**: unhealthy
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder aclStatus(String aclStatus) {
                 this.aclStatus = aclStatus;
@@ -673,7 +777,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the address book.
+             * <p>The information about the address book.</p>
              */
             public Builder addressGroupList(java.util.List < AddressGroupList> addressGroupList) {
                 this.addressGroupList = addressGroupList;
@@ -681,7 +785,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * The application ports.
+             * <p>The application ports.</p>
              */
             public Builder applicationPortList(java.util.List < ApplicationPortList> applicationPortList) {
                 this.applicationPortList = applicationPortList;
@@ -689,12 +793,23 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the tag. Valid values:
-             * <p>
+             * AssetCount.
+             */
+            public Builder assetCount(Long assetCount) {
+                this.assetCount = assetCount;
+                return this;
+            }
+
+            /**
+             * <p>The type of the tag. Valid values:</p>
+             * <ul>
+             * <li><strong>Suspicious</strong></li>
+             * <li><strong>Malicious</strong></li>
+             * <li><strong>Trusted</strong></li>
+             * </ul>
              * 
-             * *   **Suspicious**
-             * *   **Malicious**
-             * *   **Trusted**
+             * <strong>example:</strong>
+             * <p>Trusted</p>
              */
             public Builder categoryClassId(String categoryClassId) {
                 this.categoryClassId = categoryClassId;
@@ -702,11 +817,14 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the service type. Valid values:
-             * <p>
+             * <p>The ID of the service type. Valid values:</p>
+             * <ul>
+             * <li><strong>Aliyun</strong>: Alibaba Cloud services</li>
+             * <li><strong>NotAliyun</strong>: third-party services</li>
+             * </ul>
              * 
-             * *   **Aliyun**: Alibaba Cloud services
-             * *   **NotAliyun**: third-party services
+             * <strong>example:</strong>
+             * <p>Aliyun</p>
              */
             public Builder categoryId(String categoryId) {
                 this.categoryId = categoryId;
@@ -714,11 +832,14 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service to which the destination IP address belongs. Valid values:
-             * <p>
+             * <p>The type of the service to which the destination IP address belongs. Valid values:</p>
+             * <ul>
+             * <li><strong>Alibaba Cloud services</strong></li>
+             * <li><strong>Third-party services</strong></li>
+             * </ul>
              * 
-             * *   **Alibaba Cloud services**
-             * *   **Third-party services**
+             * <strong>example:</strong>
+             * <p>Alibaba Cloud services</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -726,7 +847,10 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * The destination IP addresses in outbound connections.
+             * <p>The destination IP addresses in outbound connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.XX.XX</p>
              */
             public Builder dstIP(String dstIP) {
                 this.dstIP = dstIP;
@@ -734,7 +858,10 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the group to which the access control policy belongs.
+             * <p>The name of the group to which the access control policy belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Rule_test</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -742,11 +869,14 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an access control policy is configured. Valid values:
-             * <p>
+             * <p>Indicates whether an access control policy is configured. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasAcl(String hasAcl) {
                 this.hasAcl = hasAcl;
@@ -754,11 +884,14 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an access control policy is recommended. Valid values:
-             * <p>
+             * <p>Indicates whether an access control policy is recommended. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasAclRecommend(Boolean hasAclRecommend) {
                 this.hasAclRecommend = hasAclRecommend;
@@ -766,7 +899,10 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * The inbound traffic. Unit: bytes.
+             * <p>The inbound traffic. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>472</p>
              */
             public Builder inBytes(Long inBytes) {
                 this.inBytes = inBytes;
@@ -774,11 +910,14 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the destination IP address is added to a whitelist. Valid values:
-             * <p>
+             * <p>Indicates whether the destination IP address is added to a whitelist. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isMarkNormal(Boolean isMarkNormal) {
                 this.isMarkNormal = isMarkNormal;
@@ -786,7 +925,18 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * The outbound traffic. Unit: bytes.
+             * LocationName.
+             */
+            public Builder locationName(String locationName) {
+                this.locationName = locationName;
+                return this;
+            }
+
+            /**
+             * <p>The outbound traffic. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>965</p>
              */
             public Builder outBytes(Long outBytes) {
                 this.outBytes = outBytes;
@@ -794,7 +944,18 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the access control policy.
+             * PrivateAssetCount.
+             */
+            public Builder privateAssetCount(Long privateAssetCount) {
+                this.privateAssetCount = privateAssetCount;
+                return this;
+            }
+
+            /**
+             * <p>The UUID of the access control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fadsfd-dfadf-df****</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -802,7 +963,10 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the access control policy.
+             * <p>The name of the access control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default rule</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -810,7 +974,10 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the domain name is secure.
+             * <p>The reason why the domain name is secure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Intelligent policy: The destination domain name belongs to Alibaba Cloud Computing Co., Ltd. The domain name mainly provides services for Alibaba Cloud. No security risks are found, and you can add the domain name to the whitelist.</p>
              */
             public Builder securityReason(String securityReason) {
                 this.securityReason = securityReason;
@@ -818,12 +985,15 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * The suggestion to handle the traffic of the domain name in outbound connections. Valid values:
-             * <p>
+             * <p>The suggestion to handle the traffic of the domain name in outbound connections. Valid values:</p>
+             * <ul>
+             * <li><strong>pass</strong>: allow</li>
+             * <li><strong>alert</strong>: deny</li>
+             * <li><strong>drop</strong>: monitor</li>
+             * </ul>
              * 
-             * *   **pass**: allow
-             * *   **alert**: deny
-             * *   **drop**: monitor
+             * <strong>example:</strong>
+             * <p>pass</p>
              */
             public Builder securitySuggest(String securitySuggest) {
                 this.securitySuggest = securitySuggest;
@@ -831,7 +1001,10 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * The number of requests.
+             * <p>The number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder sessionCount(Long sessionCount) {
                 this.sessionCount = sessionCount;
@@ -839,7 +1012,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
              */
             public Builder tagList(java.util.List < TagList> tagList) {
                 this.tagList = tagList;
@@ -847,7 +1020,10 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * The total traffic. Unit: bytes
+             * <p>The total traffic. Unit: bytes</p>
+             * 
+             * <strong>example:</strong>
+             * <p>800</p>
              */
             public Builder totalBytes(String totalBytes) {
                 this.totalBytes = totalBytes;

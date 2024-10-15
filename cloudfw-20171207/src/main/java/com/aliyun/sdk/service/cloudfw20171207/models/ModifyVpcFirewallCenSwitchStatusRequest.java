@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyVpcFirewallCenSwitchStatusRequest} extends {@link RequestModel}
  *
  * <p>ModifyVpcFirewallCenSwitchStatusRequest</p>
@@ -97,11 +98,15 @@ public class ModifyVpcFirewallCenSwitchStatusRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable the VPC firewall. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the VPC firewall. Valid values:</p>
+         * <ul>
+         * <li><strong>open</strong>: yes</li>
+         * <li><strong>close</strong>: no</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **open**: yes
-         * *   **close**: no
+         * <strong>example:</strong>
+         * <p>open</p>
          */
         public Builder firewallSwitch(String firewallSwitch) {
             this.putQueryParameter("FirewallSwitch", firewallSwitch);
@@ -110,11 +115,14 @@ public class ModifyVpcFirewallCenSwitchStatusRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -123,7 +131,10 @@ public class ModifyVpcFirewallCenSwitchStatusRequest extends Request {
         }
 
         /**
-         * The UID of the member that is managed by your Alibaba Cloud account.
+         * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>258039427902****</p>
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -132,10 +143,14 @@ public class ModifyVpcFirewallCenSwitchStatusRequest extends Request {
         }
 
         /**
-         * The instance ID of the VPC firewall.
-         * <p>
+         * <p>The instance ID of the VPC firewall.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/345777.html">DescribeVpcFirewallCenList</a> operation to query the instance IDs of VPC firewalls.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeVpcFirewallCenList](~~345777~~) operation to query the instance IDs of VPC firewalls.
+         * <strong>example:</strong>
+         * <p>vfw-m5e7dbc4y****</p>
          */
         public Builder vpcFirewallId(String vpcFirewallId) {
             this.putQueryParameter("VpcFirewallId", vpcFirewallId);

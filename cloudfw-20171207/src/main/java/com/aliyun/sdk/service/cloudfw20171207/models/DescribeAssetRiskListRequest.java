@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAssetRiskListRequest} extends {@link RequestModel}
  *
  * <p>DescribeAssetRiskListRequest</p>
@@ -96,14 +97,15 @@ public class DescribeAssetRiskListRequest extends Request {
         } 
 
         /**
-         * The IP addresses to query. Separate the IP addresses with commas (,). You can specify up to 20 IP addresses at a time.
-         * <p>
-         * 
-         * > 
-         * 
-         * *   Example IPv4 address: 47.97.XX.XX.
-         * 
-         * *   Example IPv6 address: 2001:db8:ffff:ffff:ffff:XXXX:ffff.
+         * <p>The IP addresses to query. Separate the IP addresses with commas (,). You can specify up to 20 IP addresses at a time.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>Example IPv4 address: 47.97.XX.XX.</p>
+         * </li>
+         * <li><p>Example IPv6 address: 2001:db8:ffff:ffff:ffff:XXXX:ffff.</p>
+         * </li>
+         * </ul>
          */
         public Builder ipAddrList(java.util.List < String > ipAddrList) {
             this.putQueryParameter("IpAddrList", ipAddrList);
@@ -112,13 +114,16 @@ public class DescribeAssetRiskListRequest extends Request {
         }
 
         /**
-         * The IP version of the asset that is protected by Cloud Firewall.
-         * <p>
+         * <p>The IP version of the asset that is protected by Cloud Firewall.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>4</strong> (default): IPv4</li>
+         * <li><strong>6</strong>: IPv6</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   **4** (default): IPv4
-         * *   **6**: IPv6
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder ipVersion(Integer ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);
@@ -127,11 +132,14 @@ public class DescribeAssetRiskListRequest extends Request {
         }
 
         /**
-         * The language of the content within the response. Valid values:
-         * <p>
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh** (default): Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -140,7 +148,10 @@ public class DescribeAssetRiskListRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.100.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

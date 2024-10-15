@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDownloadTaskResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDownloadTaskResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3F2BED13-F3D0-5984-80D6-D5F298CFEA88</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The tasks.
+         * <p>The tasks.</p>
          */
         public Builder tasks(java.util.List < Tasks> tasks) {
             this.tasks = tasks;
@@ -77,7 +81,10 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of tasks.
+         * <p>The total number of tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>132</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDownloadTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDownloadTaskResponseBody</p>
+     */
     public static class Tasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
@@ -201,7 +214,10 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * The time when the task was created. The value is a UNIX timestamp. Unit: seconds.
+             * <p>The time when the task was created. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1706595827</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -209,7 +225,10 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task expires. The value is a UNIX timestamp. Unit: seconds.
+             * <p>The time when the task expires. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1714371828</p>
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -217,7 +236,10 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the file.
+             * <p>The size of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24.04KB</p>
              */
             public Builder fileSize(String fileSize) {
                 this.fileSize = fileSize;
@@ -225,7 +247,10 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the OSS file.
+             * <p>The URL of the OSS file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://cfw-table-download-cn.oss-cn-hangzhou.aliyuncs.com/%E4%BA%92%E8%81%94%E7%BD%91%E8%BE%B9%E7%95%8C%E9%98%B2%E7%81%AB%E5%A2%99%E8%B5%84%E4%BA%A7-IPv4_1069.csv?Expires=1708583913&OSSAccessKeyId=****&Signature=******%3D">https://cfw-table-download-cn.oss-cn-hangzhou.aliyuncs.com/%E4%BA%92%E8%81%94%E7%BD%91%E8%BE%B9%E7%95%8C%E9%98%B2%E7%81%AB%E5%A2%99%E8%B5%84%E4%BA%A7-IPv4_1069.csv?Expires=1708583913&amp;OSSAccessKeyId=****&amp;Signature=******%3D</a></p>
              */
             public Builder fileURL(String fileURL) {
                 this.fileURL = fileURL;
@@ -233,13 +258,16 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task. Valid values:
-             * <p>
+             * <p>The status of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>finish</strong></li>
+             * <li><strong>start</strong></li>
+             * <li><strong>error</strong></li>
+             * <li><strong>expire</strong>: The task file is invalid and cannot be downloaded.</li>
+             * </ul>
              * 
-             * *   **finish**
-             * *   **start**
-             * *   **error**
-             * *   **expire**: The task file is invalid and cannot be downloaded.
+             * <strong>example:</strong>
+             * <p>finish</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -247,7 +275,10 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The task ID.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1111</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -255,7 +286,10 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task.
+             * <p>The name of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Internet Boundary Firewall Assets - IPv4</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -263,7 +297,10 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task.
+             * <p>The type of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InternetFirewallAsset</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

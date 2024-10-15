@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcFirewallDefaultIPSConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVpcFirewallDefaultIPSConfigResponseBody</p>
@@ -85,11 +86,14 @@ public class DescribeVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
         private Integer runMode; 
 
         /**
-         * Indicates whether basic policies are enabled. Valid values:
-         * <p>
+         * <p>Indicates whether basic policies are enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
          * 
-         * *   **1**: yes
-         * *   **0**: no
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder basicRules(Integer basicRules) {
             this.basicRules = basicRules;
@@ -97,11 +101,14 @@ public class DescribeVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether virtual patching is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether virtual patching is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
          * 
-         * *   **1**: yes
-         * *   **0**: no
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder enableAllPatch(Integer enableAllPatch) {
             this.enableAllPatch = enableAllPatch;
@@ -109,7 +116,10 @@ public class DescribeVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>850A84D6-0DE4-4797-A1E8-00090125adf1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -125,11 +135,14 @@ public class DescribeVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The mode of the intrusion prevention system (IPS). Valid values:
-         * <p>
+         * <p>The mode of the intrusion prevention system (IPS). Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: block mode</li>
+         * <li><strong>0</strong>: monitor mode</li>
+         * </ul>
          * 
-         * *   **1**: block mode
-         * *   **0**: monitor mode
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder runMode(Integer runMode) {
             this.runMode = runMode;

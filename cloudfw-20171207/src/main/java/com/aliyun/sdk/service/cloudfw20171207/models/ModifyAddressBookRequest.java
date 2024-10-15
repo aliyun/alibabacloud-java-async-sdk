@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAddressBookRequest} extends {@link RequestModel}
  *
  * <p>ModifyAddressBookRequest</p>
@@ -183,12 +184,15 @@ public class ModifyAddressBookRequest extends Request {
         } 
 
         /**
-         * The addresses in the address book. Separate multiple addresses with commas (,). If you set GroupType to **ip**, **port**, or **domain**, you must specify this parameter.
-         * <p>
+         * <p>The addresses in the address book. Separate multiple addresses with commas (,). If you set GroupType to <strong>ip</strong>, <strong>port</strong>, or <strong>domain</strong>, you must specify this parameter.</p>
+         * <ul>
+         * <li>If you set GroupType to <strong>ip</strong>, you must specify IP addresses for the address book. Example: 1.2.XX.XX/32,1.2.XX.XX/24.</li>
+         * <li>If you set GroupType to <strong>port</strong>, you must specify port numbers or port ranges for the address book. Example: 80/80,100/200.</li>
+         * <li>If you set GroupType to <strong>domain</strong>, you must specify domain names for the address book. Example: demo1.aliyun.com,demo2.aliyun.com.</li>
+         * </ul>
          * 
-         * *   If you set GroupType to **ip**, you must specify IP addresses for the address book. Example: 1.2.XX.XX/32,1.2.XX.XX/24.
-         * *   If you set GroupType to **port**, you must specify port numbers or port ranges for the address book. Example: 80/80,100/200.
-         * *   If you set GroupType to **domain**, you must specify domain names for the address book. Example: demo1.aliyun.com,demo2.aliyun.com.
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX/32, 192.0.XX.XX/24</p>
          */
         public Builder addressList(String addressList) {
             this.putQueryParameter("AddressList", addressList);
@@ -197,11 +201,14 @@ public class ModifyAddressBookRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically add public IP addresses of Elastic Compute Service (ECS) instances to the address book if the instances match the specified tags. Valid values:
-         * <p>
+         * <p>Specifies whether to automatically add public IP addresses of Elastic Compute Service (ECS) instances to the address book if the instances match the specified tags. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
          * 
-         * *   **1**: yes
-         * *   **0**: no
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder autoAddTagEcs(String autoAddTagEcs) {
             this.putQueryParameter("AutoAddTagEcs", autoAddTagEcs);
@@ -210,7 +217,11 @@ public class ModifyAddressBookRequest extends Request {
         }
 
         /**
-         * The description of the address book.
+         * <p>The description of the address book.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bj-001</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -219,7 +230,11 @@ public class ModifyAddressBookRequest extends Request {
         }
 
         /**
-         * The name of the address book.
+         * <p>The name of the address book.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bj-001</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -228,10 +243,14 @@ public class ModifyAddressBookRequest extends Request {
         }
 
         /**
-         * The ID of the address book.
-         * <p>
+         * <p>The ID of the address book.</p>
+         * <blockquote>
+         * <p> To modify the address book, you must provide the ID of the address book. You can call the <a href="https://help.aliyun.com/document_detail/138869.html">DescribeAddressBook</a> operation to query the ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  To modify the address book, you must provide the ID of the address book. You can call the [DescribeAddressBook](~~138869~~) operation to query the ID.
+         * <strong>example:</strong>
+         * <p>0657ab9d-fe8b-4174-b2a6-6baf358e****</p>
          */
         public Builder groupUuid(String groupUuid) {
             this.putQueryParameter("GroupUuid", groupUuid);
@@ -240,11 +259,14 @@ public class ModifyAddressBookRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -253,15 +275,19 @@ public class ModifyAddressBookRequest extends Request {
         }
 
         /**
-         * Modification mode with the following values:
-         * <p>
+         * <p>Modification mode with the following values:</p>
+         * <ul>
+         * <li><strong>Cover</strong>: Use the value of the AddressList parameter to overwrite the original address book.</li>
+         * <li><strong>Append</strong>: After the original address book, append addresses using the value of the AddressList parameter.</li>
+         * <li><strong>Delete</strong>: Delete addresses using the value of the AddressList parameter from the address book.</li>
+         * </ul>
+         * <blockquote>
+         * <p>When GroupType is <strong>ip</strong>, <strong>ipv6</strong>, <strong>port</strong>, or <strong>domain</strong>, if this parameter is not configured, the default is to use the <strong>Cover</strong> method to modify the address book.
+         * Notice: When GroupType is <strong>tag</strong>, this parameter must be empty.</notice></p>
+         * </blockquote>
          * 
-         * - **Cover**: Use the value of the AddressList parameter to overwrite the original address book.
-         * - **Append**: After the original address book, append addresses using the value of the AddressList parameter.
-         * - **Delete**: Delete addresses using the value of the AddressList parameter from the address book.
-         * 
-         * >When GroupType is **ip**, **ipv6**, **port**, or **domain**, if this parameter is not configured, the default is to use the **Cover** method to modify the address book.
-         * ><notice>When GroupType is **tag**, this parameter must be empty.</notice>
+         * <strong>example:</strong>
+         * <p>Cover</p>
          */
         public Builder modifyMode(String modifyMode) {
             this.putQueryParameter("ModifyMode", modifyMode);
@@ -270,7 +296,10 @@ public class ModifyAddressBookRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -279,7 +308,7 @@ public class ModifyAddressBookRequest extends Request {
         }
 
         /**
-         * The ECS tags that you want to match.
+         * <p>The ECS tags that you want to match.</p>
          */
         public Builder tagList(java.util.List < TagList> tagList) {
             this.putQueryParameter("TagList", tagList);
@@ -288,11 +317,14 @@ public class ModifyAddressBookRequest extends Request {
         }
 
         /**
-         * The logical relationship among ECS tags. Valid values:
-         * <p>
+         * <p>The logical relationship among ECS tags. Valid values:</p>
+         * <ul>
+         * <li><strong>and</strong>: Only the public IP addresses of ECS instances that match all the specified tags can be added to the address book.</li>
+         * <li><strong>or</strong>: The public IP addresses of ECS instances that match one of the specified tags can be added to the address book.</li>
+         * </ul>
          * 
-         * *   **and**: Only the public IP addresses of ECS instances that match all the specified tags can be added to the address book.
-         * *   **or**: The public IP addresses of ECS instances that match one of the specified tags can be added to the address book.
+         * <strong>example:</strong>
+         * <p>and</p>
          */
         public Builder tagRelation(String tagRelation) {
             this.putQueryParameter("TagRelation", tagRelation);
@@ -307,6 +339,12 @@ public class ModifyAddressBookRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyAddressBookRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAddressBookRequest</p>
+     */
     public static class TagList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -346,7 +384,10 @@ public class ModifyAddressBookRequest extends Request {
             private String tagValue; 
 
             /**
-             * The key of ECS tag N that you want to match.
+             * <p>The key of ECS tag N that you want to match.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TXY</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -354,7 +395,10 @@ public class ModifyAddressBookRequest extends Request {
             }
 
             /**
-             * The value of ECS tag N that you want to match.
+             * <p>The value of ECS tag N that you want to match.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

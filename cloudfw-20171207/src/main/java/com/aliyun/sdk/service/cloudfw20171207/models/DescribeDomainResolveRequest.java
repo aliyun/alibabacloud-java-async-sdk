@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainResolveRequest} extends {@link RequestModel}
  *
  * <p>DescribeDomainResolveRequest</p>
@@ -97,7 +98,11 @@ public class DescribeDomainResolveRequest extends Request {
         } 
 
         /**
-         * The domain name whose DNS record you want to query.
+         * <p>The domain name whose DNS record you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -106,11 +111,14 @@ public class DescribeDomainResolveRequest extends Request {
         }
 
         /**
-         * The IP version of the asset that is protected by Cloud Firewall. Valid values:
-         * <p>
+         * <p>The IP version of the asset that is protected by Cloud Firewall. Valid values:</p>
+         * <ul>
+         * <li><strong>4</strong>: IPv4 (default)</li>
+         * <li><strong>6</strong>: IPv6</li>
+         * </ul>
          * 
-         * *   **4**: IPv4 (default)
-         * *   **6**: IPv6
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder ipVersion(String ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);
@@ -119,13 +127,15 @@ public class DescribeDomainResolveRequest extends Request {
         }
 
         /**
-         * The language of the content within the response.
-         * <p>
+         * <p>The language of the content within the response.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -134,7 +144,10 @@ public class DescribeDomainResolveRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

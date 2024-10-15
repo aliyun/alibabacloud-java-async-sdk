@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNatFirewallPolicyPriorUsedResponse} extends {@link TeaModel}
  *
  * <p>DescribeNatFirewallPolicyPriorUsedResponse</p>

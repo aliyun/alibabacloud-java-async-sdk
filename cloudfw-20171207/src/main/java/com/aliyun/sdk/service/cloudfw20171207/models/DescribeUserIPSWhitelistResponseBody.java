@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserIPSWhitelistResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserIPSWhitelistResponseBody</p>
@@ -90,6 +91,12 @@ public class DescribeUserIPSWhitelistResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUserIPSWhitelistResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserIPSWhitelistResponseBody</p>
+     */
     public static class Ipv6Whitelists extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Direction")
         private Long direction;
@@ -211,6 +218,12 @@ public class DescribeUserIPSWhitelistResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeUserIPSWhitelistResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserIPSWhitelistResponseBody</p>
+     */
     public static class Whitelists extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Direction")
         private Long direction;

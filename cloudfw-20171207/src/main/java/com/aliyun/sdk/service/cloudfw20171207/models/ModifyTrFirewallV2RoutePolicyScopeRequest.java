@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyTrFirewallV2RoutePolicyScopeRequest} extends {@link RequestModel}
  *
  * <p>ModifyTrFirewallV2RoutePolicyScopeRequest</p>
@@ -125,7 +126,7 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
         } 
 
         /**
-         * The secondary traffic redirection instances.
+         * <p>The secondary traffic redirection instances.</p>
          */
         public Builder destCandidateList(java.util.List < DestCandidateList> destCandidateList) {
             String destCandidateListShrink = shrink(destCandidateList, "DestCandidateList", "json");
@@ -135,7 +136,11 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
         }
 
         /**
-         * The instance ID of the virtual private cloud (VPC) firewall.
+         * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vfw-tr-6520de0253bc4669bbd9</p>
          */
         public Builder firewallId(String firewallId) {
             this.putQueryParameter("FirewallId", firewallId);
@@ -144,11 +149,14 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
         }
 
         /**
-         * The language of the content within the response. Valid values:
-         * <p>
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *  **zh** (default): Chinese
-         * *  **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -157,11 +165,14 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
         }
 
         /**
-         * Specifies whether to restore the traffic redirection configurations. Valid values:
-         * <p>
+         * <p>Specifies whether to restore the traffic redirection configurations. Valid values:</p>
+         * <ul>
+         * <li>true: roll back</li>
+         * <li>false: withdraw</li>
+         * </ul>
          * 
-         * *   true: roll back
-         * *   false: withdraw
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder shouldRecover(String shouldRecover) {
             this.putQueryParameter("ShouldRecover", shouldRecover);
@@ -170,7 +181,7 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
         }
 
         /**
-         * The primary traffic redirection instances.
+         * <p>The primary traffic redirection instances.</p>
          */
         public Builder srcCandidateList(java.util.List < SrcCandidateList> srcCandidateList) {
             String srcCandidateListShrink = shrink(srcCandidateList, "SrcCandidateList", "json");
@@ -180,7 +191,11 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
         }
 
         /**
-         * The ID of the routing policy.
+         * <p>The ID of the routing policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy-4d724d0139df48f18091</p>
          */
         public Builder trFirewallRoutePolicyId(String trFirewallRoutePolicyId) {
             this.putQueryParameter("TrFirewallRoutePolicyId", trFirewallRoutePolicyId);
@@ -195,6 +210,12 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyTrFirewallV2RoutePolicyScopeRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyTrFirewallV2RoutePolicyScopeRequest</p>
+     */
     public static class DestCandidateList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CandidateId")
         private String candidateId;
@@ -234,7 +255,10 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
             private String candidateType; 
 
             /**
-             * The ID of the traffic redirection instance.
+             * <p>The ID of the traffic redirection instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2ze9epancaw8t4shajuzi</p>
              */
             public Builder candidateId(String candidateId) {
                 this.candidateId = candidateId;
@@ -242,7 +266,10 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
             }
 
             /**
-             * The type of the traffic redirection instance.
+             * <p>The type of the traffic redirection instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder candidateType(String candidateType) {
                 this.candidateType = candidateType;
@@ -256,6 +283,12 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyTrFirewallV2RoutePolicyScopeRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyTrFirewallV2RoutePolicyScopeRequest</p>
+     */
     public static class SrcCandidateList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CandidateId")
         private String candidateId;
@@ -295,7 +328,10 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
             private String candidateType; 
 
             /**
-             * The ID of the traffic redirection instance.
+             * <p>The ID of the traffic redirection instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2ze9epancaw8t4shajuzi</p>
              */
             public Builder candidateId(String candidateId) {
                 this.candidateId = candidateId;
@@ -303,7 +339,10 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
             }
 
             /**
-             * The type of the traffic redirection instance.
+             * <p>The type of the traffic redirection instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder candidateType(String candidateType) {
                 this.candidateType = candidateType;

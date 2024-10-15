@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcFirewallListRequest} extends {@link RequestModel}
  *
  * <p>DescribeVpcFirewallListRequest</p>
@@ -193,11 +194,14 @@ public class DescribeVpcFirewallListRequest extends Request {
         } 
 
         /**
-         * The sub-type of the connection. Valid values:
-         * <p>
+         * <p>The sub-type of the connection. Valid values:</p>
+         * <ul>
+         * <li><strong>vpc2vpc</strong>: Express Connect connection</li>
+         * <li><strong>vpcpeer</strong>: peer connection</li>
+         * </ul>
          * 
-         * *   **vpc2vpc**: Express Connect connection
-         * *   **vpcpeer**: peer connection
+         * <strong>example:</strong>
+         * <p>vpcpeer</p>
          */
         public Builder connectSubType(String connectSubType) {
             this.putQueryParameter("ConnectSubType", connectSubType);
@@ -206,10 +210,11 @@ public class DescribeVpcFirewallListRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <p>Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
          * 
-         * Pages start from page **1**. Default value: **1**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -218,15 +223,19 @@ public class DescribeVpcFirewallListRequest extends Request {
         }
 
         /**
-         * The status of the VPC firewall. Valid values:
-         * <p>
+         * <p>The status of the VPC firewall. Valid values:</p>
+         * <ul>
+         * <li><strong>opened</strong>: The VPC firewall is enabled.</li>
+         * <li><strong>closed</strong>: The VPC firewall is disabled.</li>
+         * <li><strong>notconfigured</strong>: The VPC firewall is not configured.</li>
+         * <li><strong>configured</strong>: The VPC firewall is configured.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not specify this parameter, VPC firewalls in all states are queried.</p>
+         * </blockquote>
          * 
-         * *   **opened**: The VPC firewall is enabled.
-         * *   **closed**: The VPC firewall is disabled.
-         * *   **notconfigured**: The VPC firewall is not configured.
-         * *   **configured**: The VPC firewall is configured.
-         * 
-         * > If you do not specify this parameter, VPC firewalls in all states are queried.
+         * <strong>example:</strong>
+         * <p>opened</p>
          */
         public Builder firewallSwitchStatus(String firewallSwitchStatus) {
             this.putQueryParameter("FirewallSwitchStatus", firewallSwitchStatus);
@@ -235,11 +244,14 @@ public class DescribeVpcFirewallListRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -248,7 +260,10 @@ public class DescribeVpcFirewallListRequest extends Request {
         }
 
         /**
-         * The UID of the member that is managed by your Alibaba Cloud account.
+         * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>258039427902****</p>
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -257,10 +272,11 @@ public class DescribeVpcFirewallListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Default value: <strong>10</strong>. Maximum value: <strong>50</strong>.</p>
          * 
-         * Default value: **10**. Maximum value: **50**.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -269,7 +285,10 @@ public class DescribeVpcFirewallListRequest extends Request {
         }
 
         /**
-         * The UID of the Alibaba Cloud account to which the peer VPC belongs.
+         * <p>The UID of the Alibaba Cloud account to which the peer VPC belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>258039427902****</p>
          */
         public Builder peerUid(String peerUid) {
             this.putQueryParameter("PeerUid", peerUid);
@@ -278,10 +297,13 @@ public class DescribeVpcFirewallListRequest extends Request {
         }
 
         /**
-         * The region ID of the VPC.
-         * <p>
+         * <p>The region ID of the VPC.</p>
+         * <blockquote>
+         * <p>For more information about the regions, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+         * </blockquote>
          * 
-         * > For more information about the regions, see [Supported regions](~~195657~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);
@@ -290,7 +312,10 @@ public class DescribeVpcFirewallListRequest extends Request {
         }
 
         /**
-         * The instance ID of the VPC firewall.
+         * <p>The instance ID of the VPC firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vfw-m5e7dbc4y****</p>
          */
         public Builder vpcFirewallId(String vpcFirewallId) {
             this.putQueryParameter("VpcFirewallId", vpcFirewallId);
@@ -299,7 +324,10 @@ public class DescribeVpcFirewallListRequest extends Request {
         }
 
         /**
-         * The instance name of the VPC firewall.
+         * <p>The instance name of the VPC firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test firewall</p>
          */
         public Builder vpcFirewallName(String vpcFirewallName) {
             this.putQueryParameter("VpcFirewallName", vpcFirewallName);
@@ -308,7 +336,10 @@ public class DescribeVpcFirewallListRequest extends Request {
         }
 
         /**
-         * The ID of the VPC.
+         * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-8vbwbo90rq0anm6t****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

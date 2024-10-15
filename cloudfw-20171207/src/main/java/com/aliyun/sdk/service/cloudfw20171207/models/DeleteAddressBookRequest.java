@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAddressBookRequest} extends {@link RequestModel}
  *
  * <p>DeleteAddressBookRequest</p>
@@ -83,10 +84,12 @@ public class DeleteAddressBookRequest extends Request {
         } 
 
         /**
-         * The ID of the address book.
-         * <p>
+         * <p>The ID of the address book.</p>
+         * <p>To delete the address book, you must provide the ID of the address book. You can call the DescribeAddressBook operation to query the ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * To delete the address book, you must provide the ID of the address book. You can call the DescribeAddressBook operation to query the ID.
+         * <strong>example:</strong>
+         * <p>0657ab9d-fe8b-4174-b2a6-6baf358e****</p>
          */
         public Builder groupUuid(String groupUuid) {
             this.putQueryParameter("GroupUuid", groupUuid);
@@ -95,11 +98,14 @@ public class DeleteAddressBookRequest extends Request {
         }
 
         /**
-         * The natural language of the request and response. Valid values:
-         * <p>
+         * <p>The natural language of the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -108,7 +114,10 @@ public class DeleteAddressBookRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

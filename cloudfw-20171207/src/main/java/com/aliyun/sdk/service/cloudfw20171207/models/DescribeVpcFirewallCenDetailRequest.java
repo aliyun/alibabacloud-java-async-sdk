@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcFirewallCenDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeVpcFirewallCenDetailRequest</p>
@@ -82,11 +83,14 @@ public class DescribeVpcFirewallCenDetailRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -95,7 +99,10 @@ public class DescribeVpcFirewallCenDetailRequest extends Request {
         }
 
         /**
-         * The ID of the VPC for which the VPC firewall is created.
+         * <p>The ID of the VPC for which the VPC firewall is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2zefk9fbn8j7v585g****</p>
          */
         public Builder networkInstanceId(String networkInstanceId) {
             this.putQueryParameter("NetworkInstanceId", networkInstanceId);
@@ -104,10 +111,14 @@ public class DescribeVpcFirewallCenDetailRequest extends Request {
         }
 
         /**
-         * The instance ID of the VPC firewall.
-         * <p>
+         * <p>The instance ID of the VPC firewall.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/345777.html">DescribeVpcFirewallCenList</a> operation to query the instance IDs of VPC firewalls.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeVpcFirewallCenList](~~345777~~) operation to query the instance IDs of VPC firewalls.
+         * <strong>example:</strong>
+         * <p>vfw-m5e7dbc4y****</p>
          */
         public Builder vpcFirewallId(String vpcFirewallId) {
             this.putQueryParameter("VpcFirewallId", vpcFirewallId);

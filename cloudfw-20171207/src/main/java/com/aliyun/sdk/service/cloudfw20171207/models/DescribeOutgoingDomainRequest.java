@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOutgoingDomainRequest} extends {@link RequestModel}
  *
  * <p>DescribeOutgoingDomainRequest</p>
@@ -195,14 +196,17 @@ public class DescribeOutgoingDomainRequest extends Request {
         } 
 
         /**
-         * The type of the service. This parameter is empty by default. Valid values:
-         * <p>
+         * <p>The type of the service. This parameter is empty by default. Valid values:</p>
+         * <ul>
+         * <li><strong>All</strong>: all services</li>
+         * <li><strong>RiskDomain</strong>: risky domain names</li>
+         * <li><strong>RiskIP</strong>: risky IP addresses</li>
+         * <li><strong>AliYun</strong>: Alibaba Cloud services</li>
+         * <li><strong>NotAliYun</strong>: third-party services</li>
+         * </ul>
          * 
-         * *   **All**: all services
-         * *   **RiskDomain**: risky domain names
-         * *   **RiskIP**: risky IP addresses
-         * *   **AliYun**: Alibaba Cloud services
-         * *   **NotAliYun**: third-party services
+         * <strong>example:</strong>
+         * <p>All</p>
          */
         public Builder categoryId(String categoryId) {
             this.putQueryParameter("CategoryId", categoryId);
@@ -211,10 +215,11 @@ public class DescribeOutgoingDomainRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -223,7 +228,10 @@ public class DescribeOutgoingDomainRequest extends Request {
         }
 
         /**
-         * The domain name in outbound connections.
+         * <p>The domain name in outbound connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -232,7 +240,11 @@ public class DescribeOutgoingDomainRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1656750960</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -241,11 +253,14 @@ public class DescribeOutgoingDomainRequest extends Request {
         }
 
         /**
-         * The language of the content within the request. Valid values:
-         * <p>
+         * <p>The language of the content within the request. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -254,11 +269,14 @@ public class DescribeOutgoingDomainRequest extends Request {
         }
 
         /**
-         * The method that is used to sort the results. Valid values:
-         * <p>
+         * <p>The method that is used to sort the results. Valid values:</p>
+         * <ul>
+         * <li><strong>asc</strong>: the ascending order.</li>
+         * <li><strong>desc</strong> (default): the descending order.</li>
+         * </ul>
          * 
-         * *   **asc**: the ascending order.
-         * *   **desc** (default): the descending order.
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -267,10 +285,11 @@ public class DescribeOutgoingDomainRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Default value: 6. Maximum value: 100.</p>
          * 
-         * Default value: 6. Maximum value: 100.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -279,7 +298,10 @@ public class DescribeOutgoingDomainRequest extends Request {
         }
 
         /**
-         * The public IP address of the Elastic Compute Service (ECS) instance that initiates outbound connections.
+         * <p>The public IP address of the Elastic Compute Service (ECS) instance that initiates outbound connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         public Builder publicIP(String publicIP) {
             this.putQueryParameter("PublicIP", publicIP);
@@ -288,11 +310,14 @@ public class DescribeOutgoingDomainRequest extends Request {
         }
 
         /**
-         * The field based on which you want to sort the query results. Valid values:
-         * <p>
+         * <p>The field based on which you want to sort the query results. Valid values:</p>
+         * <ul>
+         * <li><strong>SessionCount</strong> (default): the number of requests.</li>
+         * <li><strong>TotalBytes</strong>: the total volume of traffic.</li>
+         * </ul>
          * 
-         * *   **SessionCount** (default): the number of requests.
-         * *   **TotalBytes**: the total volume of traffic.
+         * <strong>example:</strong>
+         * <p>SessionCount</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -301,7 +326,11 @@ public class DescribeOutgoingDomainRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1656664560</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -310,46 +339,49 @@ public class DescribeOutgoingDomainRequest extends Request {
         }
 
         /**
-         * The ID of the tag. Valid values:
-         * <p>
+         * <p>The ID of the tag. Valid values:</p>
+         * <ul>
+         * <li><strong>AliYun</strong>: Alibaba Cloud service</li>
+         * <li><strong>RiskDomain</strong>: risky domain name</li>
+         * <li><strong>RiskIP</strong>: risky IP address</li>
+         * <li><strong>TrustedDomain</strong>: trusted website</li>
+         * <li><strong>AliPay</strong>: Alipay</li>
+         * <li><strong>DingDing</strong>: DingTalk</li>
+         * <li><strong>WeChat</strong>: WeChat</li>
+         * <li><strong>QQ</strong>: Tencent QQ</li>
+         * <li><strong>SecurityService</strong>: security service</li>
+         * <li><strong>Microsoft</strong>: Microsoft</li>
+         * <li><strong>Amazon</strong>: Amazon Web Services (AWS)</li>
+         * <li><strong>Pan</strong>: cloud disk</li>
+         * <li><strong>Map</strong>: map</li>
+         * <li><strong>Code</strong>: code hosting</li>
+         * <li><strong>SystemService</strong>: system service</li>
+         * <li><strong>Taobao</strong>: Taobao</li>
+         * <li><strong>Google</strong>: Google</li>
+         * <li><strong>ThirdPartyService</strong>: third-party service</li>
+         * <li><strong>FirstFlow</strong>: the first time when an outbound connection is initiated</li>
+         * <li><strong>Downloader</strong>: malicious download</li>
+         * <li><strong>Alexa Top1M</strong>: popular website</li>
+         * <li><strong>Miner</strong>: mining pool</li>
+         * <li><strong>Intelligence</strong>: threat intelligence</li>
+         * <li><strong>DDoS</strong>: DDoS trojan</li>
+         * <li><strong>Ransomware</strong>: ransomware</li>
+         * <li><strong>Spyware</strong>: spyware</li>
+         * <li><strong>Rogue</strong>: rogue software</li>
+         * <li><strong>Botnet</strong>: botnet</li>
+         * <li><strong>Suspicious</strong>: suspicious website</li>
+         * <li><strong>C&amp;C</strong>: command and control (C&amp;C)</li>
+         * <li><strong>Gang</strong>: gang</li>
+         * <li><strong>CVE</strong>: Common Vulnerabilities and Exposures (CVE)</li>
+         * <li><strong>Backdoor</strong>: webshell</li>
+         * <li><strong>Phishing</strong>: phishing website</li>
+         * <li><strong>APT</strong>: advanced persistent threat (APT) attack</li>
+         * <li><strong>Supply Chain Attack</strong>: supply chain attack</li>
+         * <li><strong>Malicious software</strong>: malware</li>
+         * </ul>
          * 
-         * *   **AliYun**: Alibaba Cloud service
-         * *   **RiskDomain**: risky domain name
-         * *   **RiskIP**: risky IP address
-         * *   **TrustedDomain**: trusted website
-         * *   **AliPay**: Alipay
-         * *   **DingDing**: DingTalk
-         * *   **WeChat**: WeChat
-         * *   **QQ**: Tencent QQ
-         * *   **SecurityService**: security service
-         * *   **Microsoft**: Microsoft
-         * *   **Amazon**: Amazon Web Services (AWS)
-         * *   **Pan**: cloud disk
-         * *   **Map**: map
-         * *   **Code**: code hosting
-         * *   **SystemService**: system service
-         * *   **Taobao**: Taobao
-         * *   **Google**: Google
-         * *   **ThirdPartyService**: third-party service
-         * *   **FirstFlow**: the first time when an outbound connection is initiated
-         * *   **Downloader**: malicious download
-         * *   **Alexa Top1M**: popular website
-         * *   **Miner**: mining pool
-         * *   **Intelligence**: threat intelligence
-         * *   **DDoS**: DDoS trojan
-         * *   **Ransomware**: ransomware
-         * *   **Spyware**: spyware
-         * *   **Rogue**: rogue software
-         * *   **Botnet**: botnet
-         * *   **Suspicious**: suspicious website
-         * *   **C\&C**: command and control (C\&C)
-         * *   **Gang**: gang
-         * *   **CVE**: Common Vulnerabilities and Exposures (CVE)
-         * *   **Backdoor**: webshell
-         * *   **Phishing**: phishing website
-         * *   **APT**: advanced persistent threat (APT) attack
-         * *   **Supply Chain Attack**: supply chain attack
-         * *   **Malicious software**: malware
+         * <strong>example:</strong>
+         * <p>AliYun</p>
          */
         public Builder tagIdNew(String tagIdNew) {
             this.putQueryParameter("TagIdNew", tagIdNew);

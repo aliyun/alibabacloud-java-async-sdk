@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeACLProtectTrendRequest} extends {@link RequestModel}
  *
  * <p>DescribeACLProtectTrendRequest</p>
@@ -95,7 +96,10 @@ public class DescribeACLProtectTrendRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. The value is a UNIX timestamp that is accurate to seconds.
+         * <p>The end of the time range to query. The value is a UNIX timestamp that is accurate to seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1670397599</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -104,11 +108,14 @@ public class DescribeACLProtectTrendRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and the response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh** (default): Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -117,7 +124,10 @@ public class DescribeACLProtectTrendRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>223.95.87.130</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -126,7 +136,10 @@ public class DescribeACLProtectTrendRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The value is a UNIX timestamp that is accurate to seconds.
+         * <p>The beginning of the time range to query. The value is a UNIX timestamp that is accurate to seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1677050306</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

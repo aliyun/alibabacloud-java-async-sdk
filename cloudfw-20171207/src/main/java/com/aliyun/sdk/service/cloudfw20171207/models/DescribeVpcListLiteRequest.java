@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcListLiteRequest} extends {@link RequestModel}
  *
  * <p>DescribeVpcListLiteRequest</p>
@@ -109,11 +110,14 @@ public class DescribeVpcListLiteRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh** (default): Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -122,10 +126,13 @@ public class DescribeVpcListLiteRequest extends Request {
         }
 
         /**
-         * The region ID of the VPC.
-         * <p>
+         * <p>The region ID of the VPC.</p>
+         * <blockquote>
+         * <p> For more information about Cloud Firewall supported regions, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+         * </blockquote>
          * 
-         * >  For more information about Cloud Firewall supported regions, see [Supported regions](~~195657~~).
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);
@@ -134,7 +141,10 @@ public class DescribeVpcListLiteRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58.34.174.194</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -143,7 +153,10 @@ public class DescribeVpcListLiteRequest extends Request {
         }
 
         /**
-         * The ID of the VPC.
+         * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-8vbwbo90rq0anm6t****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -152,7 +165,10 @@ public class DescribeVpcListLiteRequest extends Request {
         }
 
         /**
-         * The name of the VPC.
+         * <p>The name of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-shanghai</p>
          */
         public Builder vpcName(String vpcName) {
             this.putQueryParameter("VpcName", vpcName);

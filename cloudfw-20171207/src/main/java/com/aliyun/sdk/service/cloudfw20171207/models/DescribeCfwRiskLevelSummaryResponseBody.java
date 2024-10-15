@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCfwRiskLevelSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCfwRiskLevelSummaryResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeCfwRiskLevelSummaryResponseBody extends TeaModel {
         private java.util.List < RiskList> riskList; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F1F30435-FA0A-52DA-A5DE-C16FD6C171DA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeCfwRiskLevelSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The list of risks.
+         * <p>The list of risks.</p>
          */
         public Builder riskList(java.util.List < RiskList> riskList) {
             this.riskList = riskList;
@@ -70,6 +74,12 @@ public class DescribeCfwRiskLevelSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCfwRiskLevelSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCfwRiskLevelSummaryResponseBody</p>
+     */
     public static class RiskList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
@@ -121,10 +131,13 @@ public class DescribeCfwRiskLevelSummaryResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The risk levels. Valid values:
-             * <p>
+             * <p>The risk levels. Valid values:</p>
+             * <ul>
+             * <li><strong>medium</strong></li>
+             * </ul>
              * 
-             * *   **medium**
+             * <strong>example:</strong>
+             * <p>medium</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -132,7 +145,10 @@ public class DescribeCfwRiskLevelSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of at-risk Elastic Compute Service (ECS) instances.
+             * <p>The number of at-risk Elastic Compute Service (ECS) instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder num(String num) {
                 this.num = num;
@@ -140,7 +156,10 @@ public class DescribeCfwRiskLevelSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The type.
+             * <p>The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ResourceNotProtected</p>
              */
             public Builder type(String type) {
                 this.type = type;

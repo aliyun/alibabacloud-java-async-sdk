@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePolicyAdvancedConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePolicyAdvancedConfigResponseBody</p>
@@ -49,11 +50,14 @@ public class DescribePolicyAdvancedConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the strict mode is enabled for the access control policy. Valid values:
-         * <p>
+         * <p>Indicates whether the strict mode is enabled for the access control policy. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong>: The strict mode is enabled.</li>
+         * <li><strong>off</strong>: The strict mode is disabled.</li>
+         * </ul>
          * 
-         * *   **on**: The strict mode is enabled.
-         * *   **off**: The strict mode is disabled.
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder internetSwitch(String internetSwitch) {
             this.internetSwitch = internetSwitch;
@@ -61,7 +65,10 @@ public class DescribePolicyAdvancedConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>850A84D6-0DE4-4797-A1E8-00090125EEB1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

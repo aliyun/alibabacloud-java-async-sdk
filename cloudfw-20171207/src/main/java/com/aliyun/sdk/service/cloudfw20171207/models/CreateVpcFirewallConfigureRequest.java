@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVpcFirewallConfigureRequest} extends {@link RequestModel}
  *
  * <p>CreateVpcFirewallConfigureRequest</p>
@@ -187,11 +188,15 @@ public class CreateVpcFirewallConfigureRequest extends Request {
         } 
 
         /**
-         * The status of the VPC firewall after you create the firewall. Valid values:
-         * <p>
+         * <p>The status of the VPC firewall after you create the firewall. Valid values:</p>
+         * <ul>
+         * <li><strong>open</strong>: After you create the VPC firewall, the VPC firewall is automatically enabled. This is the default value.</li>
+         * <li><strong>close</strong>: After you create the VPC firewall, the VPC firewall is disabled. To enable the firewall, you can call the <a href="https://help.aliyun.com/document_detail/342935.html">ModifyVpcFirewallSwitchStatus</a> operation.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **open**: After you create the VPC firewall, the VPC firewall is automatically enabled. This is the default value.
-         * *   **close**: After you create the VPC firewall, the VPC firewall is disabled. To enable the firewall, you can call the [ModifyVpcFirewallSwitchStatus](~~342935~~) operation.
+         * <strong>example:</strong>
+         * <p>open</p>
          */
         public Builder firewallSwitch(String firewallSwitch) {
             this.putQueryParameter("FirewallSwitch", firewallSwitch);
@@ -200,11 +205,14 @@ public class CreateVpcFirewallConfigureRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and the response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English.
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -213,11 +221,15 @@ public class CreateVpcFirewallConfigureRequest extends Request {
         }
 
         /**
-         * The CIDR blocks of the local VPC. The value is a JSON string that contains the following parameters:
-         * <p>
+         * <p>The CIDR blocks of the local VPC. The value is a JSON string that contains the following parameters:</p>
+         * <ul>
+         * <li><strong>RouteTableId</strong>: the ID of the route table for the local VPC.</li>
+         * <li><strong>RouteEntryList</strong>: The value is a JSON string that contains the DestinationCidr and NextHopInstanceId parameters. The DestinationCidr parameter indicates the destination CIDR block of the local VPC. The NextHopInstanceId parameter indicates the instance ID of the next hop for the local VPC.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **RouteTableId**: the ID of the route table for the local VPC.
-         * *   **RouteEntryList**: The value is a JSON string that contains the DestinationCidr and NextHopInstanceId parameters. The DestinationCidr parameter indicates the destination CIDR block of the local VPC. The NextHopInstanceId parameter indicates the instance ID of the next hop for the local VPC.
+         * <strong>example:</strong>
+         * <p>[{&quot;RouteTableId&quot;:&quot;vtb-1234&quot;,&quot;RouteEntryList&quot;:[{&quot;DestinationCidr&quot;:&quot;192.168.XX.XX/24&quot;,&quot;NextHopInstanceId&quot;:&quot;vrt-m5eb5me6c3l5sezae****&quot;}]},{&quot;RouteTableId&quot;:&quot;vtb-1235&quot;,&quot;RouteEntryList&quot;:[{&quot;DestinationCidr&quot;:&quot;192.168.XX.XX/24&quot;,&quot;NextHopInstanceId&quot;:&quot;vrt-m5eb5me6c3l5sezae****&quot;}]}]</p>
          */
         public Builder localVpcCidrTableList(String localVpcCidrTableList) {
             this.putQueryParameter("LocalVpcCidrTableList", localVpcCidrTableList);
@@ -226,7 +238,11 @@ public class CreateVpcFirewallConfigureRequest extends Request {
         }
 
         /**
-         * The ID of the local VPC.
+         * <p>The ID of the local VPC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-8vbwbo90rq0anm6t****</p>
          */
         public Builder localVpcId(String localVpcId) {
             this.putQueryParameter("LocalVpcId", localVpcId);
@@ -235,10 +251,14 @@ public class CreateVpcFirewallConfigureRequest extends Request {
         }
 
         /**
-         * The region ID of the local VPC.
-         * <p>
+         * <p>The region ID of the local VPC.</p>
+         * <blockquote>
+         * <p> For more information about the regions in which Cloud Firewall is available, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  For more information about the regions in which Cloud Firewall is available, see [Supported regions](~~195657~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder localVpcRegion(String localVpcRegion) {
             this.putQueryParameter("LocalVpcRegion", localVpcRegion);
@@ -247,7 +267,10 @@ public class CreateVpcFirewallConfigureRequest extends Request {
         }
 
         /**
-         * The UID of the member that is managed by your Alibaba Cloud account.
+         * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>258039427902****</p>
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -256,11 +279,15 @@ public class CreateVpcFirewallConfigureRequest extends Request {
         }
 
         /**
-         * The CIDR blocks of the peer VPC. The value is a JSON string that contains the following parameters:
-         * <p>
+         * <p>The CIDR blocks of the peer VPC. The value is a JSON string that contains the following parameters:</p>
+         * <ul>
+         * <li><strong>RouteTableId</strong>: the ID of the route table for the peer VPC.</li>
+         * <li><strong>RouteEntryList</strong>: The value is a JSON string that contains the DestinationCidr and NextHopInstanceId parameters. The DestinationCidr parameter indicates the destination CIDR block of the peer VPC. The NextHopInstanceId parameter indicates the instance ID of the next hop for the peer VPC.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **RouteTableId**: the ID of the route table for the peer VPC.
-         * *   **RouteEntryList**: The value is a JSON string that contains the DestinationCidr and NextHopInstanceId parameters. The DestinationCidr parameter indicates the destination CIDR block of the peer VPC. The NextHopInstanceId parameter indicates the instance ID of the next hop for the peer VPC.
+         * <strong>example:</strong>
+         * <p>[{&quot;RouteTableId&quot;:&quot;vtb-1234&quot;,&quot;RouteEntryList&quot;:[{&quot;DestinationCidr&quot;:&quot;192.168.XX.XX/24&quot;,&quot;NextHopInstanceId&quot;:&quot;vrt-m5eb5me6c3l5sezae****&quot;}]},{&quot;RouteTableId&quot;:&quot;vtb-1235&quot;,&quot;RouteEntryList&quot;:[{&quot;DestinationCidr&quot;:&quot;192.168.XX.XX/24&quot;,&quot;NextHopInstanceId&quot;:&quot;vrt-m5eb5me6c3l5sezae****&quot;}]}]</p>
          */
         public Builder peerVpcCidrTableList(String peerVpcCidrTableList) {
             this.putQueryParameter("PeerVpcCidrTableList", peerVpcCidrTableList);
@@ -269,7 +296,11 @@ public class CreateVpcFirewallConfigureRequest extends Request {
         }
 
         /**
-         * The ID of the peer VPC.
+         * <p>The ID of the peer VPC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-wb8vbo90rq0anm6t****</p>
          */
         public Builder peerVpcId(String peerVpcId) {
             this.putQueryParameter("PeerVpcId", peerVpcId);
@@ -278,10 +309,14 @@ public class CreateVpcFirewallConfigureRequest extends Request {
         }
 
         /**
-         * The region ID of the peer VPC.
-         * <p>
+         * <p>The region ID of the peer VPC.</p>
+         * <blockquote>
+         * <p> For more information about Cloud Firewall supported regions, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  For more information about Cloud Firewall supported regions, see [Supported regions](~~195657~~).
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder peerVpcRegion(String peerVpcRegion) {
             this.putQueryParameter("PeerVpcRegion", peerVpcRegion);
@@ -290,7 +325,11 @@ public class CreateVpcFirewallConfigureRequest extends Request {
         }
 
         /**
-         * The instance name of the VPC firewall.
+         * <p>The instance name of the VPC firewall.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-vpc-firewall</p>
          */
         public Builder vpcFirewallName(String vpcFirewallName) {
             this.putQueryParameter("VpcFirewallName", vpcFirewallName);

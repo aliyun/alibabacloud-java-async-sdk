@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddAddressBookResponseBody} extends {@link TeaModel}
  *
  * <p>AddAddressBookResponseBody</p>
@@ -49,7 +50,10 @@ public class AddAddressBookResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The UUID of the returned address book.
+         * <p>The UUID of the returned address book.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f04ac7ce-628b-4cb7-be61-310222b7****</p>
          */
         public Builder groupUuid(String groupUuid) {
             this.groupUuid = groupUuid;
@@ -57,7 +61,10 @@ public class AddAddressBookResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

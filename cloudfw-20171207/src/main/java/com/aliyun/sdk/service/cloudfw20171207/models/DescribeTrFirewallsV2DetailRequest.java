@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTrFirewallsV2DetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeTrFirewallsV2DetailRequest</p>
@@ -67,7 +68,10 @@ public class DescribeTrFirewallsV2DetailRequest extends Request {
         } 
 
         /**
-         * The instance ID of the VPC firewall.
+         * <p>The instance ID of the VPC firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vfw-tr-a5a6b89f46764928****</p>
          */
         public Builder firewallId(String firewallId) {
             this.putQueryParameter("FirewallId", firewallId);
@@ -76,11 +80,14 @@ public class DescribeTrFirewallsV2DetailRequest extends Request {
         }
 
         /**
-         * The language of the content within the response. Valid values:
-         * <p>
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

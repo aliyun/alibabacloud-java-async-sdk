@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDefaultIPSConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDefaultIPSConfigResponseBody</p>
@@ -97,11 +98,14 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
         private Integer runMode; 
 
         /**
-         * Indicates whether basic protection is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether basic protection is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
          * 
-         * *   **1**: yes
-         * *   **0**: no
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder basicRules(Integer basicRules) {
             this.basicRules = basicRules;
@@ -109,11 +113,14 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether threat intelligence is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether threat intelligence is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
          * 
-         * *   **1**: yes
-         * *   **0**: no
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder ctiRules(Integer ctiRules) {
             this.ctiRules = ctiRules;
@@ -121,11 +128,14 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether virtual patching is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether virtual patching is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
          * 
-         * *   **1**: yes
-         * *   **0**: no
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder patchRules(Integer patchRules) {
             this.patchRules = patchRules;
@@ -133,7 +143,10 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>133173B9-8010-5DF5-8B93-********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,12 +154,15 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The level of the rule group for the IPS. Valid values:
-         * <p>
+         * <p>The level of the rule group for the IPS. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: loose</li>
+         * <li><strong>2</strong>: medium</li>
+         * <li><strong>3</strong>: strict</li>
+         * </ul>
          * 
-         * *   **1**: loose
-         * *   **2**: medium
-         * *   **3**: strict
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder ruleClass(Integer ruleClass) {
             this.ruleClass = ruleClass;
@@ -154,11 +170,14 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The mode of the IPS. Valid values:
-         * <p>
+         * <p>The mode of the IPS. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: block mode</li>
+         * <li><strong>0</strong>: monitor mode</li>
+         * </ul>
          * 
-         * *   **1**: block mode
-         * *   **0**: monitor mode
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder runMode(Integer runMode) {
             this.runMode = runMode;

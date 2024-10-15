@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResetVpcFirewallRuleHitCountResponseBody} extends {@link TeaModel}
  *
  * <p>ResetVpcFirewallRuleHitCountResponseBody</p>
@@ -37,7 +38,10 @@ public class ResetVpcFirewallRuleHitCountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A918B4F6-482F-5A91-8F65-AFFFF1FC04EA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

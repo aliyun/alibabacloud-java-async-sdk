@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutDisableAllFwSwitchResponseBody} extends {@link TeaModel}
  *
  * <p>PutDisableAllFwSwitchResponseBody</p>
@@ -37,7 +38,10 @@ public class PutDisableAllFwSwitchResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B2841452-CB8D-4F7D-B247-38E1CF7334F8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

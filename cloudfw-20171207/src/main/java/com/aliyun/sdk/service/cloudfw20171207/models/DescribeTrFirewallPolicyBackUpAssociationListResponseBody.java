@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTrFirewallPolicyBackUpAssociationListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTrFirewallPolicyBackUpAssociationListResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
         private String requestId; 
 
         /**
-         * The route tables.
+         * <p>The route tables.</p>
          */
         public Builder policyAssociationBackupConfigs(java.util.List < PolicyAssociationBackupConfigs> policyAssociationBackupConfigs) {
             this.policyAssociationBackupConfigs = policyAssociationBackupConfigs;
@@ -57,7 +58,10 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C264A756-9B48-57E3-B312-716941E146C6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTrFirewallPolicyBackUpAssociationListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTrFirewallPolicyBackUpAssociationListResponseBody</p>
+     */
     public static class PolicyAssociationBackupConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CandidateId")
         private String candidateId;
@@ -145,7 +155,10 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
             private String originalRouteTableId; 
 
             /**
-             * The ID of the traffic redirection instance.
+             * <p>The ID of the traffic redirection instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-wz9grb8ng3y7h7lf2****</p>
              */
             public Builder candidateId(String candidateId) {
                 this.candidateId = candidateId;
@@ -153,7 +166,10 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
             }
 
             /**
-             * The name of the traffic redirection instance.
+             * <p>The name of the traffic redirection instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder candidateName(String candidateName) {
                 this.candidateName = candidateName;
@@ -161,7 +177,10 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
             }
 
             /**
-             * The type of the traffic redirection instance.
+             * <p>The type of the traffic redirection instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder candidateType(String candidateType) {
                 this.candidateType = candidateType;
@@ -169,7 +188,10 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
             }
 
             /**
-             * The route table that is used after traffic redirection.
+             * <p>The route table that is used after traffic redirection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vtb-wz9898grickmh5j09****</p>
              */
             public Builder currentRouteTableId(String currentRouteTableId) {
                 this.currentRouteTableId = currentRouteTableId;
@@ -177,7 +199,10 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
             }
 
             /**
-             * The ID of the route table.
+             * <p>The ID of the route table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vtb-wz9slp3s7m4qrzvnq****</p>
              */
             public Builder originalRouteTableId(String originalRouteTableId) {
                 this.originalRouteTableId = originalRouteTableId;

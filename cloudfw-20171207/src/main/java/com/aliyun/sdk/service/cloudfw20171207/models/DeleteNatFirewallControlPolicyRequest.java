@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteNatFirewallControlPolicyRequest} extends {@link RequestModel}
  *
  * <p>DeleteNatFirewallControlPolicyRequest</p>
@@ -98,10 +99,12 @@ public class DeleteNatFirewallControlPolicyRequest extends Request {
         } 
 
         /**
-         * The UUID of the access control policy.
-         * <p>
+         * <p>The UUID of the access control policy.</p>
+         * <p>To delete an access control policy, you must provide the ID of the policy. You can call the DescribeNatFirewallControlPolicy operation to query the UUIDs of access control policies.</p>
+         * <p>This parameter is required.</p>
          * 
-         * To delete an access control policy, you must provide the ID of the policy. You can call the DescribeNatFirewallControlPolicy operation to query the UUIDs of access control policies.
+         * <strong>example:</strong>
+         * <p>b6c8f905-2eb6-442a-ba35-9416e9dbb2c5</p>
          */
         public Builder aclUuid(String aclUuid) {
             this.putQueryParameter("AclUuid", aclUuid);
@@ -110,12 +113,15 @@ public class DeleteNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The direction of the traffic to which the access control policy applies.
-         * <p>
+         * <p>The direction of the traffic to which the access control policy applies.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>out</strong>: outbound traffic</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   **out**: outbound traffic
+         * <strong>example:</strong>
+         * <p>out</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -124,11 +130,14 @@ public class DeleteNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The language of the content within the response. Valid values:
-         * <p>
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -137,7 +146,11 @@ public class DeleteNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the NAT gateway.
+         * <p>The ID of the NAT gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-xxxxxx</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);

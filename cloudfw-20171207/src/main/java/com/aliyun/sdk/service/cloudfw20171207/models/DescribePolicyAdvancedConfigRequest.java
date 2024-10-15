@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePolicyAdvancedConfigRequest} extends {@link RequestModel}
  *
  * <p>DescribePolicyAdvancedConfigRequest</p>
@@ -68,11 +69,14 @@ public class DescribePolicyAdvancedConfigRequest extends Request {
         } 
 
         /**
-         * The natural language of the request and response. Valid values:
-         * <p>
+         * <p>The natural language of the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -81,7 +85,10 @@ public class DescribePolicyAdvancedConfigRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcFirewallCenDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVpcFirewallCenDetailResponseBody</p>
@@ -109,7 +110,10 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         private String vpcFirewallName; 
 
         /**
-         * The connection type of the VPC firewall. The value is fixed as **cen**, which indicates CEN instances.
+         * <p>The connection type of the VPC firewall. The value is fixed as <strong>cen</strong>, which indicates CEN instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen</p>
          */
         public Builder connectType(String connectType) {
             this.connectType = connectType;
@@ -117,12 +121,15 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the VPC firewall. Valid values:
-         * <p>
+         * <p>The status of the VPC firewall. Valid values:</p>
+         * <ul>
+         * <li><strong>opened</strong>: enabled</li>
+         * <li><strong>closed</strong>: disabled</li>
+         * <li><strong>notconfigured</strong>: not configured</li>
+         * </ul>
          * 
-         * *   **opened**: enabled
-         * *   **closed**: disabled
-         * *   **notconfigured**: not configured
+         * <strong>example:</strong>
+         * <p>opened</p>
          */
         public Builder firewallSwitchStatus(String firewallSwitchStatus) {
             this.firewallSwitchStatus = firewallSwitchStatus;
@@ -130,7 +137,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The VPC that is automatically created for the firewall.
+         * <p>The VPC that is automatically created for the firewall.</p>
          */
         public Builder firewallVpc(FirewallVpc firewallVpc) {
             this.firewallVpc = firewallVpc;
@@ -138,7 +145,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the VPC.
+         * <p>The details about the VPC.</p>
          */
         public Builder localVpc(LocalVpc localVpc) {
             this.localVpc = localVpc;
@@ -146,7 +153,10 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>850A84D6-0DE4-4797-A1E8-00090125g4d2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +164,10 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The instance ID of the VPC firewall.
+         * <p>The instance ID of the VPC firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vfw-m5e7dbc4y****</p>
          */
         public Builder vpcFirewallId(String vpcFirewallId) {
             this.vpcFirewallId = vpcFirewallId;
@@ -162,7 +175,10 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The instance name of the VPC firewall.
+         * <p>The instance name of the VPC firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test firewall</p>
          */
         public Builder vpcFirewallName(String vpcFirewallName) {
             this.vpcFirewallName = vpcFirewallName;
@@ -175,6 +191,12 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVpcFirewallCenDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcFirewallCenDetailResponseBody</p>
+     */
     public static class FirewallVpc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowConfiguration")
         private Integer allowConfiguration;
@@ -262,11 +284,14 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * Indicates whether you can specify a CIDR block when you create a VPC firewall for a Basic Edition transit router of a CEN instance. Valid values:
-             * <p>
+             * <p>Indicates whether you can specify a CIDR block when you create a VPC firewall for a Basic Edition transit router of a CEN instance. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: yes</li>
+             * <li><strong>0</strong>: no</li>
+             * </ul>
              * 
-             * *   **1**: yes
-             * *   **0**: no
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder allowConfiguration(Integer allowConfiguration) {
                 this.allowConfiguration = allowConfiguration;
@@ -274,7 +299,10 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The CIDR block of the VPC.
+             * <p>The CIDR block of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.0/8</p>
              */
             public Builder vpcCidr(String vpcCidr) {
                 this.vpcCidr = vpcCidr;
@@ -282,7 +310,10 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1245k5oagy2bp74****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -290,7 +321,10 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The CIDR block of the vSwitch.
+             * <p>The CIDR block of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.1/24</p>
              */
             public Builder vswitchCidr(String vswitchCidr) {
                 this.vswitchCidr = vswitchCidr;
@@ -298,7 +332,10 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1sqg9wms9wxcs1****</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -306,7 +343,10 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -320,6 +360,12 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcFirewallCenDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcFirewallCenDetailResponseBody</p>
+     */
     public static class EniList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EniId")
         private String eniId;
@@ -371,7 +417,10 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             private String eniVSwitchId; 
 
             /**
-             * The ID of the ENI that belongs to the VPC.
+             * <p>The ID of the ENI that belongs to the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-8vbhfosfqv2rff42****</p>
              */
             public Builder eniId(String eniId) {
                 this.eniId = eniId;
@@ -379,7 +428,10 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the ENI that belongs to the VPC.
+             * <p>The private IP address of the ENI that belongs to the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder eniPrivateIpAddress(String eniPrivateIpAddress) {
                 this.eniPrivateIpAddress = eniPrivateIpAddress;
@@ -387,7 +439,10 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch to which the ENI is connected.
+             * <p>The ID of the vSwitch to which the ENI is connected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-wz9viido7j436b0n1****</p>
              */
             public Builder eniVSwitchId(String eniVSwitchId) {
                 this.eniVSwitchId = eniVSwitchId;
@@ -401,6 +456,12 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcFirewallCenDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcFirewallCenDetailResponseBody</p>
+     */
     public static class RouteEntryList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestinationCidr")
         private String destinationCidr;
@@ -440,7 +501,10 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             private String nextHopInstanceId; 
 
             /**
-             * The destination CIDR block of the VPC.
+             * <p>The destination CIDR block of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX/24</p>
              */
             public Builder destinationCidr(String destinationCidr) {
                 this.destinationCidr = destinationCidr;
@@ -448,7 +512,10 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the next hop for the VPC.
+             * <p>The instance ID of the next hop for the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vrt-m5eb5me6c3l5sezae****</p>
              */
             public Builder nextHopInstanceId(String nextHopInstanceId) {
                 this.nextHopInstanceId = nextHopInstanceId;
@@ -462,6 +529,12 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcFirewallCenDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcFirewallCenDetailResponseBody</p>
+     */
     public static class VpcCidrTableList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RouteEntryList")
         private java.util.List < RouteEntryList> routeEntryList;
@@ -501,7 +574,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             private String routeTableId; 
 
             /**
-             * The route entries for the VPC.
+             * <p>The route entries for the VPC.</p>
              */
             public Builder routeEntryList(java.util.List < RouteEntryList> routeEntryList) {
                 this.routeEntryList = routeEntryList;
@@ -509,7 +582,10 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The route table ID of the VPC.
+             * <p>The route table ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vtb-1234</p>
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;
@@ -523,6 +599,12 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcFirewallCenDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcFirewallCenDetailResponseBody</p>
+     */
     public static class LocalVpc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttachmentId")
         private String attachmentId;
@@ -742,7 +824,10 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             private String vpcName; 
 
             /**
-             * The ID of the connection between two network instances.
+             * <p>The ID of the connection between two network instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-attach-sxig7bye51fid5****</p>
              */
             public Builder attachmentId(String attachmentId) {
                 this.attachmentId = attachmentId;
@@ -750,7 +835,10 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the connection between two network instances.
+             * <p>The name of the connection between two network instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Local test</p>
              */
             public Builder attachmentName(String attachmentName) {
                 this.attachmentName = attachmentName;
@@ -758,7 +846,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * An array consisting of the CIDR blocks that are protected by the VPC firewall.
+             * <p>An array consisting of the CIDR blocks that are protected by the VPC firewall.</p>
              */
             public Builder defendCidrList(java.util.List < String > defendCidrList) {
                 this.defendCidrList = defendCidrList;
@@ -766,7 +854,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The Elastic Network Interfaces (ENIs).
+             * <p>The Elastic Network Interfaces (ENIs).</p>
              */
             public Builder eniList(java.util.List < EniList> eniList) {
                 this.eniList = eniList;
@@ -774,7 +862,10 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the specified vSwitch when the routing mode is manual.
+             * <p>The ID of the specified vSwitch when the routing mode is manual.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-zeq4o875u****</p>
              */
             public Builder manualVSwitchId(String manualVSwitchId) {
                 this.manualVSwitchId = manualVSwitchId;
@@ -782,7 +873,10 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC for which the VPC firewall is created.
+             * <p>The ID of the VPC for which the VPC firewall is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2zefk9fbn8j7v585g****</p>
              */
             public Builder networkInstanceId(String networkInstanceId) {
                 this.networkInstanceId = networkInstanceId;
@@ -790,7 +884,10 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the network instance.
+             * <p>The name of the network instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test VPC</p>
              */
             public Builder networkInstanceName(String networkInstanceName) {
                 this.networkInstanceName = networkInstanceName;
@@ -798,7 +895,10 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the network instance. The value is fixed as **VPC**.
+             * <p>The type of the network instance. The value is fixed as <strong>VPC</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder networkInstanceType(String networkInstanceType) {
                 this.networkInstanceType = networkInstanceType;
@@ -806,7 +906,10 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The UID of the Alibaba Cloud account to which the VPC belongs.
+             * <p>The UID of the Alibaba Cloud account to which the VPC belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>158039427902****</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -814,7 +917,10 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the VPC resides.
+             * <p>The ID of the region in which the VPC resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -822,11 +928,14 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The routing mode. Valid values:
-             * <p>
+             * <p>The routing mode. Valid values:</p>
+             * <ul>
+             * <li>auto: automatic mode</li>
+             * <li>manual: manual mode</li>
+             * </ul>
              * 
-             * *   auto: automatic mode
-             * *   manual: manual mode
+             * <strong>example:</strong>
+             * <p>auto</p>
              */
             public Builder routeMode(String routeMode) {
                 this.routeMode = routeMode;
@@ -834,11 +943,14 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the manual routing mode is supported. Valid values:
-             * <p>
+             * <p>Indicates whether the manual routing mode is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: yes</li>
+             * <li><strong>0</strong>: no</li>
+             * </ul>
              * 
-             * *   **1**: yes
-             * *   **0**: no
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder supportManualMode(String supportManualMode) {
                 this.supportManualMode = supportManualMode;
@@ -846,7 +958,10 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the CEN transit router.
+             * <p>The instance ID of the CEN transit router.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-2zetwxskej633l3u1****</p>
              */
             public Builder transitRouterId(String transitRouterId) {
                 this.transitRouterId = transitRouterId;
@@ -854,11 +969,14 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The edition of the CEN transit router. Valid values:
-             * <p>
+             * <p>The edition of the CEN transit router. Valid values:</p>
+             * <ul>
+             * <li><strong>Basic</strong>: Basic Edition</li>
+             * <li><strong>Enterprise</strong>: Enterprise Edition</li>
+             * </ul>
              * 
-             * *   **Basic**: Basic Edition
-             * *   **Enterprise**: Enterprise Edition
+             * <strong>example:</strong>
+             * <p>Basic</p>
              */
             public Builder transitRouterType(String transitRouterType) {
                 this.transitRouterType = transitRouterType;
@@ -866,7 +984,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the CIDR blocks of the VPC.
+             * <p>An array that consists of the CIDR blocks of the VPC.</p>
              */
             public Builder vpcCidrTableList(java.util.List < VpcCidrTableList> vpcCidrTableList) {
                 this.vpcCidrTableList = vpcCidrTableList;
@@ -874,7 +992,10 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-8vbwbo90rq0anm6t****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -882,7 +1003,10 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the VPC.
+             * <p>The name of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test instance</p>
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;

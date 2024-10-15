@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyVpcFirewallIPSWhitelistRequest} extends {@link RequestModel}
  *
  * <p>ModifyVpcFirewallIPSWhitelistRequest</p>
@@ -126,11 +127,14 @@ public class ModifyVpcFirewallIPSWhitelistRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh** (default): Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -139,11 +143,15 @@ public class ModifyVpcFirewallIPSWhitelistRequest extends Request {
         }
 
         /**
-         * The type of the list. Valid values:
-         * <p>
+         * <p>The type of the list. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: user-defined</li>
+         * <li><strong>2</strong>: address book</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**: user-defined
-         * *   **2**: address book
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder listType(Long listType) {
             this.putQueryParameter("ListType", listType);
@@ -152,7 +160,10 @@ public class ModifyVpcFirewallIPSWhitelistRequest extends Request {
         }
 
         /**
-         * The entry in the list.
+         * <p>The entry in the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.130.0.0/20,10.130.17.11/32</p>
          */
         public Builder listValue(String listValue) {
             this.putQueryParameter("ListValue", listValue);
@@ -161,7 +172,10 @@ public class ModifyVpcFirewallIPSWhitelistRequest extends Request {
         }
 
         /**
-         * The UID of the member that is managed by your Alibaba Cloud account.
+         * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1415189284827022</p>
          */
         public Builder memberUid(Long memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -170,7 +184,11 @@ public class ModifyVpcFirewallIPSWhitelistRequest extends Request {
         }
 
         /**
-         * The instance ID of the VPC firewall.
+         * <p>The instance ID of the VPC firewall.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vfw-d7b8ce273791475b9b0b</p>
          */
         public Builder vpcFirewallId(String vpcFirewallId) {
             this.putQueryParameter("VpcFirewallId", vpcFirewallId);
@@ -179,11 +197,15 @@ public class ModifyVpcFirewallIPSWhitelistRequest extends Request {
         }
 
         /**
-         * The type of the whitelist. Valid values:
-         * <p>
+         * <p>The type of the whitelist. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: destination</li>
+         * <li><strong>2</strong>: source</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**: destination
-         * *   **2**: source
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder whiteType(Long whiteType) {
             this.putQueryParameter("WhiteType", whiteType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SwitchSecurityProxyResponseBody} extends {@link TeaModel}
  *
  * <p>SwitchSecurityProxyResponseBody</p>
@@ -37,7 +38,10 @@ public class SwitchSecurityProxyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F1E55690-3ABA-58FA-90E3-593EF05B73ED</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

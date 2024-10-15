@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddInstanceMembersRequest} extends {@link RequestModel}
  *
  * <p>AddInstanceMembersRequest</p>
@@ -54,7 +55,8 @@ public class AddInstanceMembersRequest extends Request {
         } 
 
         /**
-         * The members.
+         * <p>The members.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder members(java.util.List < Members> members) {
             this.putQueryParameter("Members", members);
@@ -69,6 +71,12 @@ public class AddInstanceMembersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddInstanceMembersRequest} extends {@link TeaModel}
+     *
+     * <p>AddInstanceMembersRequest</p>
+     */
     public static class Members extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MemberDesc")
         private String memberDesc;
@@ -109,7 +117,10 @@ public class AddInstanceMembersRequest extends Request {
             private Long memberUid; 
 
             /**
-             * The remarks of the member. The value must be 1 to 256 characters in length.
+             * <p>The remarks of the member. The value must be 1 to 256 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>renewal</p>
              */
             public Builder memberDesc(String memberDesc) {
                 this.memberDesc = memberDesc;
@@ -117,7 +128,11 @@ public class AddInstanceMembersRequest extends Request {
             }
 
             /**
-             * The UID of the member. You can add up to 20 members to Cloud Firewall at a time.
+             * <p>The UID of the member. You can add up to 20 members to Cloud Firewall at a time.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>258039427902****</p>
              */
             public Builder memberUid(Long memberUid) {
                 this.memberUid = memberUid;

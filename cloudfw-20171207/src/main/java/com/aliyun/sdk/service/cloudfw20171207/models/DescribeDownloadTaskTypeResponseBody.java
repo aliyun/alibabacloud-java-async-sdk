@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDownloadTaskTypeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDownloadTaskTypeResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeDownloadTaskTypeResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B835494C-D093-5524-BBDE-BD272077B40E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,7 @@ public class DescribeDownloadTaskTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The task types.
+         * <p>The task types.</p>
          */
         public Builder taskTypeArray(java.util.List < TaskTypeArray> taskTypeArray) {
             this.taskTypeArray = taskTypeArray;
@@ -77,7 +81,10 @@ public class DescribeDownloadTaskTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeDownloadTaskTypeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDownloadTaskTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDownloadTaskTypeResponseBody</p>
+     */
     public static class TaskTypeArray extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
@@ -129,7 +142,10 @@ public class DescribeDownloadTaskTypeResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * The name of the task type.
+             * <p>The name of the task type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Internet Boundary Firewall Assets</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -137,7 +153,10 @@ public class DescribeDownloadTaskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task.
+             * <p>The type of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InternetFirewallAsset</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

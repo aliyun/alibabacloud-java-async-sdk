@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyObjectGroupOperationRequest} extends {@link RequestModel}
  *
  * <p>ModifyObjectGroupOperationRequest</p>
@@ -141,7 +142,10 @@ public class ModifyObjectGroupOperationRequest extends Request {
         } 
 
         /**
-         * The remarks of the operation.
+         * <p>The remarks of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -150,13 +154,16 @@ public class ModifyObjectGroupOperationRequest extends Request {
         }
 
         /**
-         * The direction of the traffic to which the access control policy applies.
-         * <p>
+         * <p>The direction of the traffic to which the access control policy applies.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>in</strong>: inbound.</li>
+         * <li><strong>out</strong>: outbound.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   **in**: inbound.
-         * *   **out**: outbound.
+         * <strong>example:</strong>
+         * <p>out</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -165,11 +172,14 @@ public class ModifyObjectGroupOperationRequest extends Request {
         }
 
         /**
-         * The language of the content within the response. Valid values:
-         * <p>
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default)</li>
+         * <li><strong>en</strong></li>
+         * </ul>
          * 
-         * *   **zh** (default)
-         * *   **en**
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -178,7 +188,8 @@ public class ModifyObjectGroupOperationRequest extends Request {
         }
 
         /**
-         * The operation objects.
+         * <p>The operation objects.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder objectList(java.util.List < String > objectList) {
             this.putQueryParameter("ObjectList", objectList);
@@ -187,13 +198,17 @@ public class ModifyObjectGroupOperationRequest extends Request {
         }
 
         /**
-         * The operation. Valid values:
-         * <p>
+         * <p>The operation. Valid values:</p>
+         * <ul>
+         * <li><strong>ignore</strong>: adds the operation object to the whitelist.</li>
+         * <li><strong>cancelIgnore</strong>: removes the operation object from the whitelist.</li>
+         * <li><strong>subscribe</strong>: follows the operation object.</li>
+         * <li><strong>unsubscribe</strong>: unfollows the operation object.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **ignore**: adds the operation object to the whitelist.
-         * *   **cancelIgnore**: removes the operation object from the whitelist.
-         * *   **subscribe**: follows the operation object.
-         * *   **unsubscribe**: unfollows the operation object.
+         * <strong>example:</strong>
+         * <p>ignore</p>
          */
         public Builder objectOperation(String objectOperation) {
             this.putQueryParameter("ObjectOperation", objectOperation);
@@ -202,15 +217,18 @@ public class ModifyObjectGroupOperationRequest extends Request {
         }
 
         /**
-         * The type of the operation object.
-         * <p>
+         * <p>The type of the operation object.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>assetsIp</strong>: the asset IP address.</li>
+         * <li><strong>destinationIp</strong>: the destination IP address.</li>
+         * <li><strong>destinationPort</strong>: the destination port.</li>
+         * <li><strong>destinationDomain</strong>: the destination domain name.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   **assetsIp**: the asset IP address.
-         * *   **destinationIp**: the destination IP address.
-         * *   **destinationPort**: the destination port.
-         * *   **destinationDomain**: the destination domain name.
+         * <strong>example:</strong>
+         * <p>destinationDomain</p>
          */
         public Builder objectType(String objectType) {
             this.putQueryParameter("ObjectType", objectType);
@@ -219,7 +237,10 @@ public class ModifyObjectGroupOperationRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123.xxx.251.60</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

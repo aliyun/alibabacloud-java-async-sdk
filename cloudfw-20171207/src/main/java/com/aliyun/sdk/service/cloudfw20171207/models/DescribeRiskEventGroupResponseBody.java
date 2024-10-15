@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRiskEventGroupResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRiskEventGroupResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * An array that consists of the details of the intrusion events.
+         * <p>An array that consists of the details of the intrusion events.</p>
          */
         public Builder dataList(java.util.List < DataList> dataList) {
             this.dataList = dataList;
@@ -69,7 +70,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B14757D0-4640-4B44-AC67-7F558FE7E6EF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of risk events.
+         * <p>The total number of risk events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRiskEventGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRiskEventGroupResponseBody</p>
+     */
     public static class IPLocationInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CityId")
         private String cityId;
@@ -153,7 +166,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             private String countryName; 
 
             /**
-             * The ID of the city to which the IP address belongs.
+             * <p>The ID of the city to which the IP address belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>510100</p>
              */
             public Builder cityId(String cityId) {
                 this.cityId = cityId;
@@ -161,7 +177,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the city to which the IP address belongs.
+             * <p>The name of the city to which the IP address belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Chengdu, Sichuan Province</p>
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -169,7 +188,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the country to which the IP address belongs.
+             * <p>The ID of the country to which the IP address belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder countryId(String countryId) {
                 this.countryId = countryId;
@@ -177,7 +199,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the country to which the IP address belongs.
+             * <p>The name of the country to which the IP address belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China</p>
              */
             public Builder countryName(String countryName) {
                 this.countryName = countryName;
@@ -191,6 +216,12 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRiskEventGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRiskEventGroupResponseBody</p>
+     */
     public static class ResourcePrivateIPList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionNo")
         private String regionNo;
@@ -254,7 +285,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             private String resourcePrivateIP; 
 
             /**
-             * The ID of the region to which the private IP address belongs.
+             * <p>The ID of the region to which the private IP address belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -262,7 +296,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance that uses the private IP address.
+             * <p>The ID of the instance that uses the private IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-wz92jf4scg2zb74p****</p>
              */
             public Builder resourceInstanceId(String resourceInstanceId) {
                 this.resourceInstanceId = resourceInstanceId;
@@ -270,7 +307,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance that uses the private IP address.
+             * <p>The name of the instance that uses the private IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LD-shenzhen-zy****</p>
              */
             public Builder resourceInstanceName(String resourceInstanceName) {
                 this.resourceInstanceName = resourceInstanceName;
@@ -278,7 +318,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address.
+             * <p>The private IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.255.XX.XX</p>
              */
             public Builder resourcePrivateIP(String resourcePrivateIP) {
                 this.resourcePrivateIP = resourcePrivateIP;
@@ -292,6 +335,12 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRiskEventGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRiskEventGroupResponseBody</p>
+     */
     public static class VpcDstInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EcsInstanceId")
         private String ecsInstanceId;
@@ -367,7 +416,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             private String regionNo; 
 
             /**
-             * The ID of the ECS instance.
+             * <p>The ID of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-wz92jf4scg2zb74p****</p>
              */
             public Builder ecsInstanceId(String ecsInstanceId) {
                 this.ecsInstanceId = ecsInstanceId;
@@ -375,7 +427,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the ECS instance.
+             * <p>The name of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LD-shenzhen-zy****</p>
              */
             public Builder ecsInstanceName(String ecsInstanceName) {
                 this.ecsInstanceName = ecsInstanceName;
@@ -383,7 +438,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf6e9a9zyokj2ywuo****</p>
              */
             public Builder networkInstanceId(String networkInstanceId) {
                 this.networkInstanceId = networkInstanceId;
@@ -391,7 +449,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the VPC.
+             * <p>The name of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC-SH-TX****</p>
              */
             public Builder networkInstanceName(String networkInstanceName) {
                 this.networkInstanceName = networkInstanceName;
@@ -399,7 +460,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the destination VPC resides.
+             * <p>The ID of the region in which the destination VPC resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -413,6 +477,12 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRiskEventGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRiskEventGroupResponseBody</p>
+     */
     public static class VpcSrcInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EcsInstanceId")
         private String ecsInstanceId;
@@ -488,7 +558,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             private String regionNo; 
 
             /**
-             * The ID of the ECS instance.
+             * <p>The ID of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-wz92jf4scg2zb74p****</p>
              */
             public Builder ecsInstanceId(String ecsInstanceId) {
                 this.ecsInstanceId = ecsInstanceId;
@@ -496,7 +569,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the ECS instance.
+             * <p>The name of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LD-shenzhen-zy****</p>
              */
             public Builder ecsInstanceName(String ecsInstanceName) {
                 this.ecsInstanceName = ecsInstanceName;
@@ -504,7 +580,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf6e9a9zyokj2ywuo****</p>
              */
             public Builder networkInstanceId(String networkInstanceId) {
                 this.networkInstanceId = networkInstanceId;
@@ -512,7 +591,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the VPC.
+             * <p>The name of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC-SH-TX****</p>
              */
             public Builder networkInstanceName(String networkInstanceName) {
                 this.networkInstanceName = networkInstanceName;
@@ -520,7 +602,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the source VPC resides.
+             * <p>The ID of the region in which the source VPC resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -534,6 +619,12 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRiskEventGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRiskEventGroupResponseBody</p>
+     */
     public static class DataList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttackApp")
         private String attackApp;
@@ -825,7 +916,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             private Integer vulLevel; 
 
             /**
-             * The name of the attacked application.
+             * <p>The name of the attacked application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySql</p>
              */
             public Builder attackApp(String attackApp) {
                 this.attackApp = attackApp;
@@ -833,22 +927,25 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The attack type of the intrusion event. Valid values:
-             * <p>
+             * <p>The attack type of the intrusion event. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: suspicious connection</li>
+             * <li><strong>2</strong>: command execution</li>
+             * <li><strong>3</strong>: brute-force attack</li>
+             * <li><strong>4</strong>: scanning</li>
+             * <li><strong>5</strong>: others</li>
+             * <li><strong>6</strong>: information leak</li>
+             * <li><strong>7</strong>: DoS attack</li>
+             * <li><strong>8</strong>: buffer overflow attack</li>
+             * <li><strong>9</strong>: web attack</li>
+             * <li><strong>10</strong>: trojan backdoor</li>
+             * <li><strong>11</strong>: computer worm</li>
+             * <li><strong>12</strong>: mining</li>
+             * <li><strong>13</strong>: reverse shell</li>
+             * </ul>
              * 
-             * *   **1**: suspicious connection
-             * *   **2**: command execution
-             * *   **3**: brute-force attack
-             * *   **4**: scanning
-             * *   **5**: others
-             * *   **6**: information leak
-             * *   **7**: DoS attack
-             * *   **8**: buffer overflow attack
-             * *   **9**: web attack
-             * *   **10**: trojan backdoor
-             * *   **11**: computer worm
-             * *   **12**: mining
-             * *   **13**: reverse shell
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder attackType(Integer attackType) {
                 this.attackType = attackType;
@@ -856,7 +953,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the intrusion event.
+             * <p>The description of the intrusion event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Path traversal attacks are detected in the web access requests over HTTP.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -864,11 +964,14 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The direction of the traffic for the intrusion event. Valid values:
-             * <p>
+             * <p>The direction of the traffic for the intrusion event. Valid values:</p>
+             * <ul>
+             * <li><strong>in</strong>: inbound</li>
+             * <li><strong>out</strong>: outbound</li>
+             * </ul>
              * 
-             * *   **in**: inbound
-             * *   **out**: outbound
+             * <strong>example:</strong>
+             * <p>in</p>
              */
             public Builder direction(String direction) {
                 this.direction = direction;
@@ -876,7 +979,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The destination IP address that is included in the intrusion event.
+             * <p>The destination IP address that is included in the intrusion event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0.XX.XX</p>
              */
             public Builder dstIP(String dstIP) {
                 this.dstIP = dstIP;
@@ -884,7 +990,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The number of intrusion events.
+             * <p>The number of intrusion events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder eventCount(Integer eventCount) {
                 this.eventCount = eventCount;
@@ -892,7 +1001,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the intrusion event.
+             * <p>The ID of the intrusion event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2b58efae-4c4b-4d96-9544-a586fb1f****</p>
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -900,7 +1012,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the intrusion event.
+             * <p>The name of the intrusion event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Path traversal attack</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -908,7 +1023,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the intrusion event was first detected. The value is a UNIX timestamp. Unit: seconds.
+             * <p>The time when the intrusion event was first detected. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1534408189</p>
              */
             public Builder firstEventTime(Integer firstEventTime) {
                 this.firstEventTime = firstEventTime;
@@ -916,9 +1034,8 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The geographical information about the IP address. The value is a struct that contains the following parameters: **CityId**, **CityName**, **CountryId**, and **CountryName**.\
-             * <p>
-             * ****************
+             * <p>The geographical information about the IP address. The value is a struct that contains the following parameters: <strong>CityId</strong>, <strong>CityName</strong>, <strong>CountryId</strong>, and <strong>CountryName</strong>.\</p>
+             * <hr>
              */
             public Builder IPLocationInfo(IPLocationInfo IPLocationInfo) {
                 this.IPLocationInfo = IPLocationInfo;
@@ -926,7 +1043,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the intrusion event was last detected. The value is a UNIX timestamp. Unit: seconds.
+             * <p>The time when the intrusion event was last detected. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1534408267</p>
              */
             public Builder lastEventTime(Integer lastEventTime) {
                 this.lastEventTime = lastEventTime;
@@ -934,9 +1054,8 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the private IP address in the intrusion event. The value is an array that contains the following parameters: **RegionNo**, **ResourceInstanceId**, **ResourceInstanceName**, and **ResourcePrivateIP**.\
-             * <p>
-             * ****************
+             * <p>The information about the private IP address in the intrusion event. The value is an array that contains the following parameters: <strong>RegionNo</strong>, <strong>ResourceInstanceId</strong>, <strong>ResourceInstanceName</strong>, and <strong>ResourcePrivateIP</strong>.\</p>
+             * <hr>
              */
             public Builder resourcePrivateIPList(java.util.List < ResourcePrivateIPList> resourcePrivateIPList) {
                 this.resourcePrivateIPList = resourcePrivateIPList;
@@ -944,14 +1063,17 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the public IP address in the intrusion event. Valid values:
-             * <p>
+             * <p>The type of the public IP address in the intrusion event. Valid values:</p>
+             * <ul>
+             * <li><strong>EIP</strong>: the elastic IP address (EIP)</li>
+             * <li><strong>EcsPublicIP</strong>: the public IP address of an Elastic Compute Service (ECS) instance</li>
+             * <li><strong>EcsEIP</strong>: the EIP of an ECS instance</li>
+             * <li><strong>NatPublicIP</strong>: the public IP address of a NAT gateway</li>
+             * <li><strong>NatEIP</strong>: the EIP of a NAT gateway</li>
+             * </ul>
              * 
-             * *   **EIP**: the elastic IP address (EIP)
-             * *   **EcsPublicIP**: the public IP address of an Elastic Compute Service (ECS) instance
-             * *   **EcsEIP**: the EIP of an ECS instance
-             * *   **NatPublicIP**: the public IP address of a NAT gateway
-             * *   **NatEIP**: the EIP of a NAT gateway
+             * <strong>example:</strong>
+             * <p>EcsPublicIP</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -959,7 +1081,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule that is used to detect the intrusion event.
+             * <p>The ID of the rule that is used to detect the intrusion event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000****</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -967,11 +1092,14 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the firewall. Valid values:
-             * <p>
+             * <p>The status of the firewall. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: alerting</li>
+             * <li><strong>2</strong>: blocking</li>
+             * </ul>
              * 
-             * *   **1**: alerting
-             * *   **2**: blocking
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder ruleResult(Integer ruleResult) {
                 this.ruleResult = ruleResult;
@@ -979,12 +1107,15 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The module of the rule that is used to detect the intrusion event. Valid values:
-             * <p>
+             * <p>The module of the rule that is used to detect the intrusion event. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: basic protection</li>
+             * <li><strong>2</strong>: virtual patching</li>
+             * <li><strong>4</strong>: threat intelligence</li>
+             * </ul>
              * 
-             * *   **1**: basic protection
-             * *   **2**: virtual patching
-             * *   **4**: threat intelligence
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ruleSource(Integer ruleSource) {
                 this.ruleSource = ruleSource;
@@ -992,7 +1123,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The source IP address that is included in the intrusion event.
+             * <p>The source IP address that is included in the intrusion event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0.XX.XX</p>
              */
             public Builder srcIP(String srcIP) {
                 this.srcIP = srcIP;
@@ -1000,7 +1134,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The tag added to the source IP address. The tag helps identify whether the source IP address is a back-to-origin IP address for a cloud service.
+             * <p>The tag added to the source IP address. The tag helps identify whether the source IP address is a back-to-origin IP address for a cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WAF Back-to-origin Address</p>
              */
             public Builder srcIPTag(String srcIPTag) {
                 this.srcIPTag = srcIPTag;
@@ -1008,7 +1145,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the source private IP addresses in the intrusion event.
+             * <p>An array that consists of the source private IP addresses in the intrusion event.</p>
              */
             public Builder srcPrivateIPList(java.util.List < String > srcPrivateIPList) {
                 this.srcPrivateIPList = srcPrivateIPList;
@@ -1016,7 +1153,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The tag added to the threat intelligence that is provided for major events.
+             * <p>The tag added to the threat intelligence that is provided for major events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Threat intelligence provided for major events</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -1024,9 +1164,8 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the destination VPC of the intrusion event. The value is a struct that contains the following parameters: **EcsInstanceId**, **EcsInstanceName**, **NetworkInstanceId**, **NetworkInstanceName**, and **RegionNo**.\
-             * <p>
-             * ********************
+             * <p>The information about the destination VPC of the intrusion event. The value is a struct that contains the following parameters: <strong>EcsInstanceId</strong>, <strong>EcsInstanceName</strong>, <strong>NetworkInstanceId</strong>, <strong>NetworkInstanceName</strong>, and <strong>RegionNo</strong>.\</p>
+             * <hr>
              */
             public Builder vpcDstInfo(VpcDstInfo vpcDstInfo) {
                 this.vpcDstInfo = vpcDstInfo;
@@ -1034,9 +1173,8 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the source VPC of the intrusion event. The value is a struct that contains the following parameters: **EcsInstanceId**, **EcsInstanceName**, **NetworkInstanceId**, **NetworkInstanceName**, and **RegionNo**.\
-             * <p>
-             * ********************
+             * <p>The information about the source VPC of the intrusion event. The value is a struct that contains the following parameters: <strong>EcsInstanceId</strong>, <strong>EcsInstanceName</strong>, <strong>NetworkInstanceId</strong>, <strong>NetworkInstanceName</strong>, and <strong>RegionNo</strong>.\</p>
+             * <hr>
              */
             public Builder vpcSrcInfo(VpcSrcInfo vpcSrcInfo) {
                 this.vpcSrcInfo = vpcSrcInfo;
@@ -1044,12 +1182,15 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the intrusion event. Valid values:
-             * <p>
+             * <p>The risk level of the intrusion event. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: low</li>
+             * <li><strong>2</strong>: medium</li>
+             * <li><strong>3</strong>: high</li>
+             * </ul>
              * 
-             * *   **1**: low
-             * *   **2**: medium
-             * *   **3**: high
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder vulLevel(Integer vulLevel) {
                 this.vulLevel = vulLevel;

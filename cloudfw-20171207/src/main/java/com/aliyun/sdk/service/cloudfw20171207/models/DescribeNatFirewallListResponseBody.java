@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNatFirewallListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNatFirewallListResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The NAT firewalls.
+         * <p>The NAT firewalls.</p>
          */
         public Builder natFirewallList(java.util.List < NatFirewallList> natFirewallList) {
             this.natFirewallList = natFirewallList;
@@ -69,7 +70,10 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15FCCC52-1E23-57AE-B5EF-3E00A3******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of NAT firewalls.
+         * <p>The total number of NAT firewalls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNatFirewallListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNatFirewallListResponseBody</p>
+     */
     public static class NatRouteEntryList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestinationCidr")
         private String destinationCidr;
@@ -153,7 +166,10 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
             private String routeTableId; 
 
             /**
-             * The destination CIDR block of the default route.
+             * <p>The destination CIDR block of the default route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.0.0/0</p>
              */
             public Builder destinationCidr(String destinationCidr) {
                 this.destinationCidr = destinationCidr;
@@ -161,7 +177,10 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
             }
 
             /**
-             * The next hop of the original NAT gateway.
+             * <p>The next hop of the original NAT gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ngw-2ze0s284r9atg5******</p>
              */
             public Builder nextHopId(String nextHopId) {
                 this.nextHopId = nextHopId;
@@ -169,7 +188,10 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the next hop. The value is fixed as NatGateway.
+             * <p>The network type of the next hop. The value is fixed as NatGateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NatGateway</p>
              */
             public Builder nextHopType(String nextHopType) {
                 this.nextHopType = nextHopType;
@@ -177,7 +199,10 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
             }
 
             /**
-             * The route table to which the default route of the NAT gateway belongs.
+             * <p>The route table to which the default route of the NAT gateway belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vtb-bp18o0gb******</p>
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;
@@ -191,6 +216,12 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNatFirewallListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNatFirewallListResponseBody</p>
+     */
     public static class NatFirewallList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
@@ -362,10 +393,13 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
             private String vpcName; 
 
             /**
-             * The UID of the Alibaba Cloud account.
-             * <p>
+             * <p>The UID of the Alibaba Cloud account.</p>
+             * <blockquote>
+             * <p> The value of this parameter indicates the management account to which the member is added.</p>
+             * </blockquote>
              * 
-             * >  The value of this parameter indicates the management account to which the member is added.
+             * <strong>example:</strong>
+             * <p>19106481******</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -373,7 +407,10 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
             }
 
             /**
-             * The cause of the error.
+             * <p>The cause of the error.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Create Failed.</p>
              */
             public Builder errorDetail(String errorDetail) {
                 this.errorDetail = errorDetail;
@@ -381,7 +418,10 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
             }
 
             /**
-             * The UID of the member in Cloud Firewall.
+             * <p>The UID of the member in Cloud Firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19106481******</p>
              */
             public Builder memberUid(Long memberUid) {
                 this.memberUid = memberUid;
@@ -389,7 +429,10 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the NAT gateway.
+             * <p>The ID of the NAT gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ngw-uf6tnblxip4qcxg******</p>
              */
             public Builder natGatewayId(String natGatewayId) {
                 this.natGatewayId = natGatewayId;
@@ -397,7 +440,10 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the NAT gateway.
+             * <p>The name of the NAT gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nat-******</p>
              */
             public Builder natGatewayName(String natGatewayName) {
                 this.natGatewayName = natGatewayName;
@@ -405,7 +451,7 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
             }
 
             /**
-             * The default route entries of the NAT gateway.
+             * <p>The default route entries of the NAT gateway.</p>
              */
             public Builder natRouteEntryList(java.util.List < NatRouteEntryList> natRouteEntryList) {
                 this.natRouteEntryList = natRouteEntryList;
@@ -413,7 +459,10 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the NAT firewall.
+             * <p>The ID of the NAT firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>proxy-nat30******</p>
              */
             public Builder proxyId(String proxyId) {
                 this.proxyId = proxyId;
@@ -421,7 +470,10 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the NAT firewall.
+             * <p>The name of the NAT firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>proxy-******</p>
              */
             public Builder proxyName(String proxyName) {
                 this.proxyName = proxyName;
@@ -429,16 +481,19 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the NAT firewall. Valid values:
-             * <p>
+             * <p>The status of the NAT firewall. Valid values:</p>
+             * <ul>
+             * <li>configuring</li>
+             * <li>deleting</li>
+             * <li>normal</li>
+             * <li>abnormal</li>
+             * <li>opening</li>
+             * <li>closing</li>
+             * <li>closed</li>
+             * </ul>
              * 
-             * *   configuring
-             * *   deleting
-             * *   normal
-             * *   abnormal
-             * *   opening
-             * *   closing
-             * *   closed
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder proxyStatus(String proxyStatus) {
                 this.proxyStatus = proxyStatus;
@@ -446,10 +501,13 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of your Cloud Firewall.
-             * <p>
+             * <p>The region ID of your Cloud Firewall.</p>
+             * <blockquote>
+             * <p> For more information about the supported regions of Cloud Firewall, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+             * </blockquote>
              * 
-             * >  For more information about the supported regions of Cloud Firewall, see [Supported regions](~~195657~~).
+             * <strong>example:</strong>
+             * <p>cn-qingdao</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -457,7 +515,10 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the strict mode is enabled. Valid values: 1, which specifies yes, and 0, which specifies no.
+             * <p>Indicates whether the strict mode is enabled. Valid values: 1, which specifies yes, and 0, which specifies no.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder strictMode(Integer strictMode) {
                 this.strictMode = strictMode;
@@ -465,7 +526,10 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2ze26ya******</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -473,7 +537,10 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the VPC.
+             * <p>The name of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-******</p>
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;

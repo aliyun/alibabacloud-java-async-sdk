@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutEnableFwSwitchRequest} extends {@link RequestModel}
  *
  * <p>PutEnableFwSwitchRequest</p>
@@ -110,10 +111,13 @@ public class PutEnableFwSwitchRequest extends Request {
         } 
 
         /**
-         * The IP addresses.
-         * <p>
+         * <p>The IP addresses.</p>
+         * <blockquote>
+         * <p>You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.</p>
+         * </blockquote>
          * 
-         * > You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.
+         * <strong>example:</strong>
+         * <p>[&quot;192.0.X.X&quot;,&quot;192.0.X.X&quot;]</p>
          */
         public Builder ipaddrList(java.util.List < String > ipaddrList) {
             this.putQueryParameter("IpaddrList", ipaddrList);
@@ -122,11 +126,14 @@ public class PutEnableFwSwitchRequest extends Request {
         }
 
         /**
-         * The language of the content within the response.
-         * <p>
+         * <p>The language of the content within the response.</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -135,10 +142,13 @@ public class PutEnableFwSwitchRequest extends Request {
         }
 
         /**
-         * The regions.
-         * <p>
+         * <p>The regions.</p>
+         * <blockquote>
+         * <p>You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.</p>
+         * </blockquote>
          * 
-         * > You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.
+         * <strong>example:</strong>
+         * <p>[&quot;cn-hangzhou&quot;,&quot;cn-shanghai&quot;]</p>
          */
         public Builder regionList(java.util.List < String > regionList) {
             this.putQueryParameter("RegionList", regionList);
@@ -147,24 +157,27 @@ public class PutEnableFwSwitchRequest extends Request {
         }
 
         /**
-         * The types of the assets.
-         * <p>
+         * <p>The types of the assets.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>BastionHostIP: the egress IP address of a bastion host</li>
+         * <li>BastionHostIngressIP: the ingress IP address of a bastion host</li>
+         * <li>EcsEIP: the elastic IP address (EIP) of an Elastic Compute Service (ECS) instance</li>
+         * <li>EcsPublicIP: the public IP address of an ECS instance</li>
+         * <li>EIP: the EIP</li>
+         * <li>EniEIP: the EIP of an elastic network interface (ENI)</li>
+         * <li>NatEIP: the EIP of a NAT gateway</li>
+         * <li>SlbEIP: the EIP of a Server Load Balancer (SLB) instance</li>
+         * <li>SlbPublicIP: the public IP address of an SLB instance</li>
+         * <li>NatPublicIP: the public IP address of a NAT gateway</li>
+         * <li>HAVIP: the high-availability virtual IP address (HAVIP)</li>
+         * </ul>
+         * <blockquote>
+         * <p>You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.</p>
+         * </blockquote>
          * 
-         * Valid values:
-         * 
-         * *   BastionHostIP: the egress IP address of a bastion host
-         * *   BastionHostIngressIP: the ingress IP address of a bastion host
-         * *   EcsEIP: the elastic IP address (EIP) of an Elastic Compute Service (ECS) instance
-         * *   EcsPublicIP: the public IP address of an ECS instance
-         * *   EIP: the EIP
-         * *   EniEIP: the EIP of an elastic network interface (ENI)
-         * *   NatEIP: the EIP of a NAT gateway
-         * *   SlbEIP: the EIP of a Server Load Balancer (SLB) instance
-         * *   SlbPublicIP: the public IP address of an SLB instance
-         * *   NatPublicIP: the public IP address of a NAT gateway
-         * *   HAVIP: the high-availability virtual IP address (HAVIP)
-         * 
-         * > You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.
+         * <strong>example:</strong>
+         * <p>[&quot;EcsPublicIp&quot;,&quot;NatEip&quot;]</p>
          */
         public Builder resourceTypeList(java.util.List < String > resourceTypeList) {
             this.putQueryParameter("ResourceTypeList", resourceTypeList);
@@ -173,7 +186,10 @@ public class PutEnableFwSwitchRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.X.X</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

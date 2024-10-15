@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteControlPolicyRequest} extends {@link RequestModel}
  *
  * <p>DeleteControlPolicyRequest</p>
@@ -97,10 +98,12 @@ public class DeleteControlPolicyRequest extends Request {
         } 
 
         /**
-         * The UUID of the access control policy.
-         * <p>
+         * <p>The UUID of the access control policy.</p>
+         * <p>To delete an access control policy, you must specify the UUID of the policy. You can call the <a href="https://help.aliyun.com/document_detail/138866.html">DescribeControlPolicy</a> operation to query the UUID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * To delete an access control policy, you must specify the UUID of the policy. You can call the [DescribeControlPolicy](~~138866~~) operation to query the UUID.
+         * <strong>example:</strong>
+         * <p>00281255-d220-4db1-8f4f-c4df221ad84c</p>
          */
         public Builder aclUuid(String aclUuid) {
             this.putQueryParameter("AclUuid", aclUuid);
@@ -109,13 +112,15 @@ public class DeleteControlPolicyRequest extends Request {
         }
 
         /**
-         * The direction of the traffic to which the access control policy applies.
-         * <p>
+         * <p>The direction of the traffic to which the access control policy applies.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>in</strong>: inbound.</li>
+         * <li><strong>out</strong>: outbound.</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   **in**: inbound.
-         * *   **out**: outbound.
+         * <strong>example:</strong>
+         * <p>in</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -124,13 +129,15 @@ public class DeleteControlPolicyRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response.
-         * <p>
+         * <p>The language of the content within the request and response.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default)</li>
+         * <li><strong>en</strong></li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   **zh** (default)
-         * *   **en**
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -139,7 +146,10 @@ public class DeleteControlPolicyRequest extends Request {
         }
 
         /**
-         * The source IP address of the traffic.
+         * <p>The source IP address of the traffic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

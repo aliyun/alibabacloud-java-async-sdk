@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDownloadTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDownloadTaskResponseBody</p>
@@ -73,7 +74,10 @@ public class CreateDownloadTaskResponseBody extends TeaModel {
         private String taskName; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7F333E0-7B70-54DA-A307-4B2B49DEE923</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,16 +85,14 @@ public class CreateDownloadTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the task. Valid values:
-         * <p>
+         * <p>The status of the task. Valid values:</p>
+         * <p>finish: The task finished. You can query the task to obtain the download link of the file.</p>
+         * <p>start: The task start.</p>
+         * <p>error: An error occurred.</p>
+         * <p>expire: The task file is invalid and cannot be downloaded.</p>
          * 
-         * finish: The task finished. You can query the task to obtain the download link of the file.
-         * 
-         * start: The task start.
-         * 
-         * error: An error occurred.
-         * 
-         * expire: The task file is invalid and cannot be downloaded.
+         * <strong>example:</strong>
+         * <p>start</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -98,7 +100,10 @@ public class CreateDownloadTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The unique ID of the task.
+         * <p>The unique ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>132</p>
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;
@@ -106,7 +111,10 @@ public class CreateDownloadTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the file download task.
+         * <p>The name of the file download task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Internet Boundary Firewall Assets - IPv4</p>
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;

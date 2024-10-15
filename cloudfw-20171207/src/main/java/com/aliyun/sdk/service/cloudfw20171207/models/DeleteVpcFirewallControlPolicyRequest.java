@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteVpcFirewallControlPolicyRequest} extends {@link RequestModel}
  *
  * <p>DeleteVpcFirewallControlPolicyRequest</p>
@@ -83,10 +84,12 @@ public class DeleteVpcFirewallControlPolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the access control policy. 
-         * <p>
+         * <p>The ID of the access control policy. </p>
+         * <p>To delete an access control policy, you must provide the ID of the policy. You can call the <strong>DescribeVpcFirewallControlPolicy</strong> operation to query the ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * To delete an access control policy, you must provide the ID of the policy. You can call the **DescribeVpcFirewallControlPolicy** operation to query the ID.
+         * <strong>example:</strong>
+         * <p>00281255-d220-4db1-8f4f-c4df2214****</p>
          */
         public Builder aclUuid(String aclUuid) {
             this.putQueryParameter("AclUuid", aclUuid);
@@ -95,11 +98,14 @@ public class DeleteVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The natural language of the request and response. Valid values: 
-         * <p>
+         * <p>The natural language of the request and response. Valid values: </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * - **zh**: Chinese
-         * - **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -108,17 +114,20 @@ public class DeleteVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the group to which the access control policy belongs. You can call the **DescribeVpcFirewallAclGroupList** operation to query the ID.  
-         * <p>
+         * <p>The ID of the group to which the access control policy belongs. You can call the <strong>DescribeVpcFirewallAclGroupList</strong> operation to query the ID.  </p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>If the VPC firewall is used to protect a CEN instance, the value of this parameter is the ID of the CEN instance.</li>
+         * </ul>
+         * <p>Example: cen-ervw0g12b5jbw****</p>
+         * <ul>
+         * <li>If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the ID of the VPC firewall.</li>
+         * </ul>
+         * <p>Example: vfw-a42bbb7b887148c9****</p>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * - If the VPC firewall is used to protect a CEN instance, the value of this parameter is the ID of the CEN instance.  
-         * 
-         * Example: cen-ervw0g12b5jbw****
-         * - If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the ID of the VPC firewall.  
-         * 
-         * Example: vfw-a42bbb7b887148c9****
+         * <strong>example:</strong>
+         * <p>vfw-a42bbb7b887148c91****</p>
          */
         public Builder vpcFirewallId(String vpcFirewallId) {
             this.putQueryParameter("VpcFirewallId", vpcFirewallId);

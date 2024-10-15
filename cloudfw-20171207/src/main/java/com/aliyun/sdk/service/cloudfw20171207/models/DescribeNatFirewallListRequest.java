@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNatFirewallListRequest} extends {@link RequestModel}
  *
  * <p>DescribeNatFirewallListRequest</p>
@@ -179,10 +180,14 @@ public class DescribeNatFirewallListRequest extends Request {
         } 
 
         /**
-         * The language of the content within the response. Valid values:
-         * <p>
-         * *   **zh** (default)
-         * *   **en**
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default)</li>
+         * <li><strong>en</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -191,7 +196,10 @@ public class DescribeNatFirewallListRequest extends Request {
         }
 
         /**
-         * The UID of the member that is managed by your Alibaba Cloud account.
+         * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>147783******</p>
          */
         public Builder memberUid(Long memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -200,7 +208,10 @@ public class DescribeNatFirewallListRequest extends Request {
         }
 
         /**
-         * The ID of the NAT gateway.
+         * <p>The ID of the NAT gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nat-bp123456g******</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -209,7 +220,10 @@ public class DescribeNatFirewallListRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -218,12 +232,12 @@ public class DescribeNatFirewallListRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Default value: 10. </p>
+         * <p> Maximum value: 50.</p>
          * 
-         * Default value: 10. 
-         * 
-         *  Maximum value: 50.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -232,7 +246,10 @@ public class DescribeNatFirewallListRequest extends Request {
         }
 
         /**
-         * The ID of the NAT firewall.
+         * <p>The ID of the NAT firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>proxy-nat97a******</p>
          */
         public Builder proxyId(String proxyId) {
             this.putQueryParameter("ProxyId", proxyId);
@@ -241,7 +258,10 @@ public class DescribeNatFirewallListRequest extends Request {
         }
 
         /**
-         * The name of the NAT firewall. The name must be 4 to 50 characters in length, and can contain letters, digits, and underscores (_). The name cannot start with an underscore.
+         * <p>The name of the NAT firewall. The name must be 4 to 50 characters in length, and can contain letters, digits, and underscores (_). The name cannot start with an underscore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>proxy-******</p>
          */
         public Builder proxyName(String proxyName) {
             this.putQueryParameter("ProxyName", proxyName);
@@ -250,7 +270,10 @@ public class DescribeNatFirewallListRequest extends Request {
         }
 
         /**
-         * The region ID of the virtual private cloud (VPC).
+         * <p>The region ID of the virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);
@@ -259,16 +282,19 @@ public class DescribeNatFirewallListRequest extends Request {
         }
 
         /**
-         * The status of the NAT firewall. Valid values:
-         * <p>
+         * <p>The status of the NAT firewall. Valid values:</p>
+         * <ul>
+         * <li>configuring</li>
+         * <li>deleting</li>
+         * <li>normal</li>
+         * <li>abnormal</li>
+         * <li>opening</li>
+         * <li>closing</li>
+         * <li>closed</li>
+         * </ul>
          * 
-         * *   configuring
-         * *   deleting
-         * *   normal
-         * *   abnormal
-         * *   opening
-         * *   closing
-         * *   closed
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -277,7 +303,10 @@ public class DescribeNatFirewallListRequest extends Request {
         }
 
         /**
-         * The ID of the VPC.
+         * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-8vbwbo90rq0anm6t****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

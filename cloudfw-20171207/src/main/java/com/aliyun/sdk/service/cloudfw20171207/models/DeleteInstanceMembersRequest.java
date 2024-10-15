@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteInstanceMembersRequest} extends {@link RequestModel}
  *
  * <p>DeleteInstanceMembersRequest</p>
@@ -54,7 +55,11 @@ public class DeleteInstanceMembersRequest extends Request {
         } 
 
         /**
-         * The UIDs of the members.
+         * <p>The UIDs of the members.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234123412341234</p>
          */
         public Builder memberUids(java.util.List < Long > memberUids) {
             this.putQueryParameter("MemberUids", memberUids);

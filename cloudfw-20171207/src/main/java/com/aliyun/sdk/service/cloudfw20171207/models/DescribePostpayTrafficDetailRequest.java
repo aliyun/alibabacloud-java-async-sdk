@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePostpayTrafficDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribePostpayTrafficDetailRequest</p>
@@ -168,7 +169,10 @@ public class DescribePostpayTrafficDetailRequest extends Request {
         } 
 
         /**
-         * The page number. Default value: 1.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -177,7 +181,11 @@ public class DescribePostpayTrafficDetailRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify a value in the YYYYMMDD format.
+         * <p>The end of the time range to query. Specify a value in the YYYYMMDD format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20230130</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -186,11 +194,14 @@ public class DescribePostpayTrafficDetailRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh** (default): Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -199,11 +210,14 @@ public class DescribePostpayTrafficDetailRequest extends Request {
         }
 
         /**
-         * The field based on which you want to sort the query results. Valid values:
-         * <p>
+         * <p>The field based on which you want to sort the query results. Valid values:</p>
+         * <ul>
+         * <li><strong>resourceId</strong></li>
+         * <li><strong>trafficDay</strong></li>
+         * </ul>
          * 
-         * *   **resourceId**
-         * *   **trafficDay**
+         * <strong>example:</strong>
+         * <p>resourceId</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -212,7 +226,10 @@ public class DescribePostpayTrafficDetailRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10. Maximum value: 50.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -230,7 +247,10 @@ public class DescribePostpayTrafficDetailRequest extends Request {
         }
 
         /**
-         * The instance ID or the IP address of the asset.
+         * <p>The instance ID or the IP address of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         public Builder searchItem(String searchItem) {
             this.putQueryParameter("SearchItem", searchItem);
@@ -239,7 +259,11 @@ public class DescribePostpayTrafficDetailRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify a value in the YYYYMMDD format.
+         * <p>The beginning of the time range to query. Specify a value in the YYYYMMDD format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20230101</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -248,12 +272,16 @@ public class DescribePostpayTrafficDetailRequest extends Request {
         }
 
         /**
-         * The traffic type. This parameter is required. Valid values:
-         * <p>
+         * <p>The traffic type. This parameter is required. Valid values:</p>
+         * <ul>
+         * <li><strong>EIP_TRAFFIC</strong>: traffic for the Internet firewall.</li>
+         * <li><strong>NatGateway_TRAFFIC</strong>: traffic for NAT firewalls.</li>
+         * <li><strong>VPC_TRAFFIC</strong>: traffic for virtual private cloud (VPC) firewalls.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **EIP_TRAFFIC**: traffic for the Internet firewall.
-         * *   **NatGateway_TRAFFIC**: traffic for NAT firewalls.
-         * *   **VPC_TRAFFIC**: traffic for virtual private cloud (VPC) firewalls.
+         * <strong>example:</strong>
+         * <p>EIP_TRAFFIC</p>
          */
         public Builder trafficType(String trafficType) {
             this.putQueryParameter("TrafficType", trafficType);

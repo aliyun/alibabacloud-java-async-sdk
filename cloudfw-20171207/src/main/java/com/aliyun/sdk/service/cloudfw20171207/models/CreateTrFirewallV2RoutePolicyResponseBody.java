@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTrFirewallV2RoutePolicyResponseBody} extends {@link TeaModel}
  *
  * <p>CreateTrFirewallV2RoutePolicyResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateTrFirewallV2RoutePolicyResponseBody extends TeaModel {
         private String trFirewallRoutePolicyId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C91D68BA-A0BE-51BF-A0F1-1CB5C57FE58D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class CreateTrFirewallV2RoutePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the routing policy.
+         * <p>The ID of the routing policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy-8ebed27e13e14ce2****</p>
          */
         public Builder trFirewallRoutePolicyId(String trFirewallRoutePolicyId) {
             this.trFirewallRoutePolicyId = trFirewallRoutePolicyId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcZoneResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVpcZoneResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeVpcZoneResponseBody extends TeaModel {
         private java.util.List < ZoneList> zoneList; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>694DFBF3-C060-529F-92D0-7FC7E0DA1E21</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeVpcZoneResponseBody extends TeaModel {
         }
 
         /**
-         * The zones.
+         * <p>The zones.</p>
          */
         public Builder zoneList(java.util.List < ZoneList> zoneList) {
             this.zoneList = zoneList;
@@ -70,6 +74,12 @@ public class DescribeVpcZoneResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVpcZoneResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcZoneResponseBody</p>
+     */
     public static class ZoneList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
@@ -121,7 +131,10 @@ public class DescribeVpcZoneResponseBody extends TeaModel {
             private String zoneType; 
 
             /**
-             * The name of the zone.
+             * <p>The name of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hangzhou Zone B</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -129,7 +142,10 @@ public class DescribeVpcZoneResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-b</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -137,7 +153,10 @@ public class DescribeVpcZoneResponseBody extends TeaModel {
             }
 
             /**
-             * The zone type. Default value: AvailabilityZone. This value indicates Alibaba Cloud zones.
+             * <p>The zone type. Default value: AvailabilityZone. This value indicates Alibaba Cloud zones.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AvailabilityZone</p>
              */
             public Builder zoneType(String zoneType) {
                 this.zoneType = zoneType;

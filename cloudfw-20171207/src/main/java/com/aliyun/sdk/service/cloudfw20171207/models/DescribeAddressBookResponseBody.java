@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAddressBookResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAddressBookResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * The information about the address book.
+         * <p>The information about the address book.</p>
          */
         public Builder acls(java.util.List < Acls> acls) {
             this.acls = acls;
@@ -93,7 +94,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(String pageNo) {
             this.pageNo = pageNo;
@@ -101,7 +105,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B36F150A-1E27-43AA-B72C-D2AC712F09DA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of the returned address books.
+         * <p>The total number of the returned address books.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeAddressBookResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAddressBookResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAddressBookResponseBody</p>
+     */
     public static class TagList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -169,7 +188,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The key of the ECS tag.
+             * <p>The key of the ECS tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>company</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -177,7 +199,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the ECS tag.
+             * <p>The value of the ECS tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admin</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -191,6 +216,12 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAddressBookResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAddressBookResponseBody</p>
+     */
     public static class Acls extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddressList")
         private java.util.List < String > addressList;
@@ -326,7 +357,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             private String tagRelation; 
 
             /**
-             * The addresses in the address book.
+             * <p>The addresses in the address book.</p>
              */
             public Builder addressList(java.util.List < String > addressList) {
                 this.addressList = addressList;
@@ -334,7 +365,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * The number of addresses in the address book.
+             * <p>The number of addresses in the address book.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder addressListCount(Integer addressListCount) {
                 this.addressListCount = addressListCount;
@@ -342,11 +376,14 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the public IP addresses of ECS instances are automatically added to the address book if the instances match the specified tags. The setting takes effect on both newly purchased ECS instances whose tag settings are complete and ECS instances whose tag settings are modified. Valid values:
-             * <p>
+             * <p>Indicates whether the public IP addresses of ECS instances are automatically added to the address book if the instances match the specified tags. The setting takes effect on both newly purchased ECS instances whose tag settings are complete and ECS instances whose tag settings are modified. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: yes</li>
+             * <li><strong>0</strong>: no</li>
+             * </ul>
              * 
-             * *   **1**: yes
-             * *   **0**: no
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder autoAddTagEcs(Integer autoAddTagEcs) {
                 this.autoAddTagEcs = autoAddTagEcs;
@@ -354,7 +391,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the address book.
+             * <p>The description of the address book.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my address book</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -362,7 +402,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the address book.
+             * <p>The name of the address book.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo_address_book</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -370,15 +413,18 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the address book. Valid values:
-             * <p>
+             * <p>The type of the address book. Valid values:</p>
+             * <ul>
+             * <li><strong>ip</strong>: IP address book</li>
+             * <li><strong>domain</strong>: domain address book</li>
+             * <li><strong>port</strong>: port address book</li>
+             * <li><strong>tag</strong>: ECS tag-based address book</li>
+             * <li><strong>allCloud</strong>: cloud service address book</li>
+             * <li><strong>threat</strong>: threat intelligence address book</li>
+             * </ul>
              * 
-             * *   **ip**: IP address book
-             * *   **domain**: domain address book
-             * *   **port**: port address book
-             * *   **tag**: ECS tag-based address book
-             * *   **allCloud**: cloud service address book
-             * *   **threat**: threat intelligence address book
+             * <strong>example:</strong>
+             * <p>ip</p>
              */
             public Builder groupType(String groupType) {
                 this.groupType = groupType;
@@ -386,7 +432,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the address book.
+             * <p>The UUID of the address book.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f04ac7ce-628b-4cb7-be61-310222b7****</p>
              */
             public Builder groupUuid(String groupUuid) {
                 this.groupUuid = groupUuid;
@@ -394,7 +443,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that the address book is referenced.
+             * <p>The number of times that the address book is referenced.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder referenceCount(Integer referenceCount) {
                 this.referenceCount = referenceCount;
@@ -402,7 +454,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * The details about the ECS tags that can be automatically added to the address book.
+             * <p>The details about the ECS tags that can be automatically added to the address book.</p>
              */
             public Builder tagList(java.util.List < TagList> tagList) {
                 this.tagList = tagList;
@@ -410,11 +462,14 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * The logical relationship among ECS tags. Valid values:
-             * <p>
+             * <p>The logical relationship among ECS tags. Valid values:</p>
+             * <ul>
+             * <li><strong>and</strong>: Only the public IP addresses of ECS instances that match all the specified tags can be added to the address book.</li>
+             * <li><strong>or</strong>: The public IP addresses of ECS instances that match any of the specified tags can be added to the address book.</li>
+             * </ul>
              * 
-             * *   **and**: Only the public IP addresses of ECS instances that match all the specified tags can be added to the address book.
-             * *   **or**: The public IP addresses of ECS instances that match any of the specified tags can be added to the address book.
+             * <strong>example:</strong>
+             * <p>and</p>
              */
             public Builder tagRelation(String tagRelation) {
                 this.tagRelation = tagRelation;

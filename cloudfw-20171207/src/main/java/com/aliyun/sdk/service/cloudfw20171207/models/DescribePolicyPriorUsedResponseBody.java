@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePolicyPriorUsedResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePolicyPriorUsedResponseBody</p>
@@ -61,10 +62,13 @@ public class DescribePolicyPriorUsedResponseBody extends TeaModel {
         private Integer start; 
 
         /**
-         * The lowest priority of existing access control policies.
-         * <p>
+         * <p>The lowest priority of existing access control policies.</p>
+         * <blockquote>
+         * <p> The value -1 indicates the lowest priority.</p>
+         * </blockquote>
          * 
-         * >  The value -1 indicates the lowest priority.
+         * <strong>example:</strong>
+         * <p>150</p>
          */
         public Builder end(Integer end) {
             this.end = end;
@@ -72,7 +76,10 @@ public class DescribePolicyPriorUsedResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -80,10 +87,13 @@ public class DescribePolicyPriorUsedResponseBody extends TeaModel {
         }
 
         /**
-         * The highest priority of existing access control policies.
-         * <p>
+         * <p>The highest priority of existing access control policies.</p>
+         * <blockquote>
+         * <p> The value 0 indicates the highest priority.</p>
+         * </blockquote>
          * 
-         * >  The value 0 indicates the highest priority.
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder start(Integer start) {
             this.start = start;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSlsLogDispatchResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSlsLogDispatchResponseBody</p>
@@ -37,7 +38,10 @@ public class CreateSlsLogDispatchResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>850A84D6************00090125EEB1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

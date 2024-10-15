@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInternetOpenIpResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInternetOpenIpResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder dataList(java.util.List < DataList> dataList) {
             this.dataList = dataList;
@@ -69,7 +70,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6B780BD6-282C-51A9-A8E6-59F636BAFA54</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInternetOpenIpResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInternetOpenIpResponseBody</p>
+     */
     public static class DataList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AclRecommendDetail")
         private String aclRecommendDetail;
@@ -309,13 +319,16 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             private String trafficPercent7Day; 
 
             /**
-             * The reason why recommended intelligent policies are unavailable. Valid values:
-             * <p>
+             * <p>The reason why recommended intelligent policies are unavailable. Valid values:</p>
+             * <ul>
+             * <li>No recommended intelligent policies are available.</li>
+             * <li>This feature is available only to some users.</li>
+             * <li>The policy configuration has been modified. No recommended intelligent policies are available.</li>
+             * <li>The recommended intelligent policies have been configured. No new recommended intelligent policies are available.</li>
+             * </ul>
              * 
-             * *   No recommended intelligent policies are available.
-             * *   This feature is available only to some users.
-             * *   The policy configuration has been modified. No recommended intelligent policies are available.
-             * *   The recommended intelligent policies have been configured. No new recommended intelligent policies are available.
+             * <strong>example:</strong>
+             * <p>No recommended intelligent policies are available.</p>
              */
             public Builder aclRecommendDetail(String aclRecommendDetail) {
                 this.aclRecommendDetail = aclRecommendDetail;
@@ -323,7 +336,10 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1ix9w22kv6aew9****</p>
              */
             public Builder assetsInstanceId(String assetsInstanceId) {
                 this.assetsInstanceId = assetsInstanceId;
@@ -331,7 +347,10 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * The instance name.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>launch-advisor-2023****</p>
              */
             public Builder assetsName(String assetsName) {
                 this.assetsName = assetsName;
@@ -339,7 +358,10 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * The asset type of the instance.
+             * <p>The asset type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EcsEIP</p>
              */
             public Builder assetsType(String assetsType) {
                 this.assetsType = assetsType;
@@ -347,7 +369,10 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of ports.
+             * <p>The total number of ports.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder detailNum(Integer detailNum) {
                 this.detailNum = detailNum;
@@ -355,11 +380,14 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether an access control policy is recommended. Valid values:
-             * <p>
+             * <p>Specifies whether an access control policy is recommended. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasAclRecommend(Boolean hasAclRecommend) {
                 this.hasAclRecommend = hasAclRecommend;
@@ -367,7 +395,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * The list of ports.
+             * <p>The list of ports.</p>
              */
             public Builder portList(java.util.List < String > portList) {
                 this.portList = portList;
@@ -375,7 +403,10 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the instance.
+             * <p>The public IP address of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>203.0.113.1</p>
              */
             public Builder publicIp(String publicIp) {
                 this.publicIp = publicIp;
@@ -383,7 +414,10 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the instance.
+             * <p>The region ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -391,13 +425,16 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level. Valid values:
-             * <p>
+             * <p>The risk level. Valid values:</p>
+             * <ul>
+             * <li><strong>3</strong>: high risk</li>
+             * <li><strong>2</strong>: medium risk</li>
+             * <li><strong>1</strong>: low risk</li>
+             * <li><strong>0</strong>: no risk</li>
+             * </ul>
              * 
-             * *   **3**: high risk
-             * *   **2**: medium risk
-             * *   **1**: low risk
-             * *   **0**: no risk
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;
@@ -405,7 +442,10 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * The reason for the risk.
+             * <p>The reason for the risk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Previous traffic is all malicious traffic.</p>
              */
             public Builder riskReason(String riskReason) {
                 this.riskReason = riskReason;
@@ -413,7 +453,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * The list of applications.
+             * <p>The list of applications.</p>
              */
             public Builder serviceNameList(java.util.List < String > serviceNameList) {
                 this.serviceNameList = serviceNameList;
@@ -437,7 +477,10 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * The percentage of traffic of a day. Unit: percent (%).
+             * <p>The percentage of traffic of a day. Unit: percent (%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11.1</p>
              */
             public Builder trafficPercent1Day(String trafficPercent1Day) {
                 this.trafficPercent1Day = trafficPercent1Day;
@@ -445,7 +488,10 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * The percentage of traffic of 30 days. Unit: percent (%).
+             * <p>The percentage of traffic of 30 days. Unit: percent (%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99.9</p>
              */
             public Builder trafficPercent30Day(String trafficPercent30Day) {
                 this.trafficPercent30Day = trafficPercent30Day;
@@ -453,7 +499,10 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * The percentage of traffic of seven days. Unit: percent (%).
+             * <p>The percentage of traffic of seven days. Unit: percent (%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>77.7</p>
              */
             public Builder trafficPercent7Day(String trafficPercent7Day) {
                 this.trafficPercent7Day = trafficPercent7Day;
@@ -467,6 +516,12 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInternetOpenIpResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInternetOpenIpResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
@@ -518,7 +573,10 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -526,7 +584,10 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -534,7 +595,10 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

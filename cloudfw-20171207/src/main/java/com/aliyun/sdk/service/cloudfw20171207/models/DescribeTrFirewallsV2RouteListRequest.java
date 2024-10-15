@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTrFirewallsV2RouteListRequest} extends {@link RequestModel}
  *
  * <p>DescribeTrFirewallsV2RouteListRequest</p>
@@ -109,7 +110,10 @@ public class DescribeTrFirewallsV2RouteListRequest extends Request {
         } 
 
         /**
-         * The page number. Default value: 1.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -118,7 +122,10 @@ public class DescribeTrFirewallsV2RouteListRequest extends Request {
         }
 
         /**
-         * The instance ID of the virtual private cloud (VPC) firewall.
+         * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vfw-tr-8bcfa0f2f12d411e****</p>
          */
         public Builder firewallId(String firewallId) {
             this.putQueryParameter("FirewallId", firewallId);
@@ -127,11 +134,14 @@ public class DescribeTrFirewallsV2RouteListRequest extends Request {
         }
 
         /**
-         * The language of the content within the response. Valid values:
-         * <p>
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh** (default): Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -140,7 +150,10 @@ public class DescribeTrFirewallsV2RouteListRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -149,7 +162,10 @@ public class DescribeTrFirewallsV2RouteListRequest extends Request {
         }
 
         /**
-         * The ID of the routing policy.
+         * <p>The ID of the routing policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy-7d5c672e37ee4175****</p>
          */
         public Builder trFirewallRoutePolicyId(String trFirewallRoutePolicyId) {
             this.putQueryParameter("TrFirewallRoutePolicyId", trFirewallRoutePolicyId);

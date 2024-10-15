@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSecurityProxyResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSecurityProxyResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateSecurityProxyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the NAT firewall.
+         * <p>The ID of the NAT firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>proxy-nat97ac4d7cc3834a5daf40</p>
          */
         public Builder proxyId(String proxyId) {
             this.proxyId = proxyId;
@@ -57,7 +61,10 @@ public class CreateSecurityProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15FCCC52-1E23-57AE-B5EF-3E00A3DC3CAB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

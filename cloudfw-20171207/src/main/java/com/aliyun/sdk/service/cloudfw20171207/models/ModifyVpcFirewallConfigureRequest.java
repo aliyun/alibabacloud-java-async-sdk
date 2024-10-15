@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyVpcFirewallConfigureRequest} extends {@link RequestModel}
  *
  * <p>ModifyVpcFirewallConfigureRequest</p>
@@ -127,11 +128,14 @@ public class ModifyVpcFirewallConfigureRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -140,13 +144,18 @@ public class ModifyVpcFirewallConfigureRequest extends Request {
         }
 
         /**
-         * The CIDR blocks of the local VPC. The value is a JSON string that contains the following parameters:
-         * <p>
+         * <p>The CIDR blocks of the local VPC. The value is a JSON string that contains the following parameters:</p>
+         * <ul>
+         * <li><strong>RouteTableId</strong>: the ID of the route table for the local VPC.</li>
+         * <li><strong>RouteEntryList</strong>: The value is a JSON string that contains the DestinationCidr and NextHopInstanceId parameters. The DestinationCidr parameter indicates the destination CIDR block of the local VPC. The NextHopInstanceId parameter indicates the instance ID of the next hop for the local VPC.</li>
+         * </ul>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/342892.html">DescribeVpcFirewallDetail</a> operation to query the CIDR blocks of local VPCs for VPC firewalls.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **RouteTableId**: the ID of the route table for the local VPC.
-         * *   **RouteEntryList**: The value is a JSON string that contains the DestinationCidr and NextHopInstanceId parameters. The DestinationCidr parameter indicates the destination CIDR block of the local VPC. The NextHopInstanceId parameter indicates the instance ID of the next hop for the local VPC.
-         * 
-         * > You can call the [DescribeVpcFirewallDetail](~~342892~~) operation to query the CIDR blocks of local VPCs for VPC firewalls.
+         * <strong>example:</strong>
+         * <p>[{&quot;RouteTableId&quot;:&quot;vtb-1234&quot;,&quot;RouteEntryList&quot;:[{&quot;DestinationCidr&quot;:&quot;192.168.XX.XX/24&quot;,&quot;NextHopInstanceId&quot;:&quot;vrt-m5eb5me6c3l5sezae****&quot;}]},{&quot;RouteTableId&quot;:&quot;vtb-1235&quot;,&quot;RouteEntryList&quot;:[{&quot;DestinationCidr&quot;:&quot;192.168.XX.XX/24&quot;,&quot;NextHopInstanceId&quot;:&quot;vrt-m5eb5me6c3l5sezae****&quot;}]}]</p>
          */
         public Builder localVpcCidrTableList(String localVpcCidrTableList) {
             this.putQueryParameter("LocalVpcCidrTableList", localVpcCidrTableList);
@@ -155,7 +164,10 @@ public class ModifyVpcFirewallConfigureRequest extends Request {
         }
 
         /**
-         * The UID of the member that is managed by your Alibaba Cloud account.
+         * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>258039427902****</p>
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -164,13 +176,18 @@ public class ModifyVpcFirewallConfigureRequest extends Request {
         }
 
         /**
-         * The CIDR blocks of the peer VPC. The value is a JSON string that contains the following parameters:
-         * <p>
+         * <p>The CIDR blocks of the peer VPC. The value is a JSON string that contains the following parameters:</p>
+         * <ul>
+         * <li><strong>RouteTableId</strong>: the ID of the route table for the peer VPC.</li>
+         * <li><strong>RouteEntryList</strong>: The value is a JSON string that contains the DestinationCidr and NextHopInstanceId parameters. The DestinationCidr parameter indicates the destination CIDR block of the peer VPC. The NextHopInstanceId parameter indicates the instance ID of the next hop for the peer VPC.</li>
+         * </ul>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/342892.html">DescribeVpcFirewallDetail</a> operation to query the CIDR blocks of peer VPCs for VPC firewalls.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **RouteTableId**: the ID of the route table for the peer VPC.
-         * *   **RouteEntryList**: The value is a JSON string that contains the DestinationCidr and NextHopInstanceId parameters. The DestinationCidr parameter indicates the destination CIDR block of the peer VPC. The NextHopInstanceId parameter indicates the instance ID of the next hop for the peer VPC.
-         * 
-         * > You can call the [DescribeVpcFirewallDetail](~~342892~~) operation to query the CIDR blocks of peer VPCs for VPC firewalls.
+         * <strong>example:</strong>
+         * <p>[{&quot;RouteTableId&quot;:&quot;vtb-1234&quot;,&quot;RouteEntryList&quot;:[{&quot;DestinationCidr&quot;:&quot;192.168.XX.XX/24&quot;,&quot;NextHopInstanceId&quot;:&quot;vrt-m5eb5me6c3l5sezae****&quot;}]},{&quot;RouteTableId&quot;:&quot;vtb-1235&quot;,&quot;RouteEntryList&quot;:[{&quot;DestinationCidr&quot;:&quot;192.168.XX.XX/24&quot;,&quot;NextHopInstanceId&quot;:&quot;vrt-m5eb5me6c3l5sezae****&quot;}]}]</p>
          */
         public Builder peerVpcCidrTableList(String peerVpcCidrTableList) {
             this.putQueryParameter("PeerVpcCidrTableList", peerVpcCidrTableList);
@@ -179,10 +196,14 @@ public class ModifyVpcFirewallConfigureRequest extends Request {
         }
 
         /**
-         * The instance ID of the VPC firewall.
-         * <p>
+         * <p>The instance ID of the VPC firewall.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> operation to query the instance IDs of VPC firewalls.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeVpcFirewallList](~~342932~~) operation to query the instance IDs of VPC firewalls.
+         * <strong>example:</strong>
+         * <p>vfw-m5e7dbc4y****</p>
          */
         public Builder vpcFirewallId(String vpcFirewallId) {
             this.putQueryParameter("VpcFirewallId", vpcFirewallId);
@@ -191,7 +212,11 @@ public class ModifyVpcFirewallConfigureRequest extends Request {
         }
 
         /**
-         * The instance name of the VPC firewall.
+         * <p>The instance name of the VPC firewall.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test firewall</p>
          */
         public Builder vpcFirewallName(String vpcFirewallName) {
             this.putQueryParameter("VpcFirewallName", vpcFirewallName);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteVpcFirewallCenConfigureRequest} extends {@link RequestModel}
  *
  * <p>DeleteVpcFirewallCenConfigureRequest</p>
@@ -82,11 +83,14 @@ public class DeleteVpcFirewallCenConfigureRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -95,7 +99,10 @@ public class DeleteVpcFirewallCenConfigureRequest extends Request {
         }
 
         /**
-         * The UID of the member that is managed by your Alibaba Cloud account.
+         * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>258039427902****</p>
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -104,7 +111,8 @@ public class DeleteVpcFirewallCenConfigureRequest extends Request {
         }
 
         /**
-         * The instance IDs of VPC firewalls.
+         * <p>The instance IDs of VPC firewalls.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder vpcFirewallIdList(java.util.List < String > vpcFirewallIdList) {
             this.putQueryParameter("VpcFirewallIdList", vpcFirewallIdList);

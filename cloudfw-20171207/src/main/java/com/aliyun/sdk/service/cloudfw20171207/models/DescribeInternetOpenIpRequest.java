@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInternetOpenIpRequest} extends {@link RequestModel}
  *
  * <p>DescribeInternetOpenIpRequest</p>
@@ -223,7 +224,10 @@ public class DescribeInternetOpenIpRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-uf6faknmuby7ezht****</p>
          */
         public Builder assetsInstanceId(String assetsInstanceId) {
             this.putQueryParameter("AssetsInstanceId", assetsInstanceId);
@@ -232,7 +236,10 @@ public class DescribeInternetOpenIpRequest extends Request {
         }
 
         /**
-         * The instance name.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>launch-advisor-2023****</p>
          */
         public Builder assetsInstanceName(String assetsInstanceName) {
             this.putQueryParameter("AssetsInstanceName", assetsInstanceName);
@@ -241,7 +248,10 @@ public class DescribeInternetOpenIpRequest extends Request {
         }
 
         /**
-         * The asset type of the instance.
+         * <p>The asset type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EcsEIP</p>
          */
         public Builder assetsType(String assetsType) {
             this.putQueryParameter("AssetsType", assetsType);
@@ -250,7 +260,11 @@ public class DescribeInternetOpenIpRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -259,7 +273,10 @@ public class DescribeInternetOpenIpRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1663640336</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -268,11 +285,14 @@ public class DescribeInternetOpenIpRequest extends Request {
         }
 
         /**
-         * The language of the content within the response. Valid values:
-         * <p>
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -281,7 +301,11 @@ public class DescribeInternetOpenIpRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -290,7 +314,10 @@ public class DescribeInternetOpenIpRequest extends Request {
         }
 
         /**
-         * The port number.
+         * <p>The port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -299,7 +326,10 @@ public class DescribeInternetOpenIpRequest extends Request {
         }
 
         /**
-         * The public IP address of the instance.
+         * <p>The public IP address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.0.113.1</p>
          */
         public Builder publicIp(String publicIp) {
             this.putQueryParameter("PublicIp", publicIp);
@@ -308,7 +338,10 @@ public class DescribeInternetOpenIpRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);
@@ -317,13 +350,16 @@ public class DescribeInternetOpenIpRequest extends Request {
         }
 
         /**
-         * The risk level. If you leave this parameter empty, all risk levels are queried. Valid values:
-         * <p>
+         * <p>The risk level. If you leave this parameter empty, all risk levels are queried. Valid values:</p>
+         * <ul>
+         * <li><strong>3</strong>: high risk</li>
+         * <li><strong>2</strong>: medium risk</li>
+         * <li><strong>1</strong>: low risk</li>
+         * <li><strong>0</strong>: no risk</li>
+         * </ul>
          * 
-         * *   **3**: high risk
-         * *   **2**: medium risk
-         * *   **1**: low risk
-         * *   **0**: no risk
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder riskLevel(String riskLevel) {
             this.putQueryParameter("RiskLevel", riskLevel);
@@ -332,7 +368,10 @@ public class DescribeInternetOpenIpRequest extends Request {
         }
 
         /**
-         * The application.
+         * <p>The application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SSH</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -341,7 +380,10 @@ public class DescribeInternetOpenIpRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1681957629</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
