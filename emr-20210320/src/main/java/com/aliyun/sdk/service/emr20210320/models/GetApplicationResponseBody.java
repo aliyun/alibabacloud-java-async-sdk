@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>GetApplicationResponseBody</p>
@@ -57,7 +58,10 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * <p>请求ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetApplicationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
     public static class ValueAttribute extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -157,7 +167,10 @@ public class GetApplicationResponseBody extends TeaModel {
             private String valueUnit; 
 
             /**
-             * 值表述。
+             * <p>值表述。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>描述</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -165,7 +178,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 值步长。
+             * <p>值步长。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder valueIncrementStep(String valueIncrementStep) {
                 this.valueIncrementStep = valueIncrementStep;
@@ -173,7 +189,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 最大值。
+             * <p>最大值。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder valueMaximum(String valueMaximum) {
                 this.valueMaximum = valueMaximum;
@@ -181,7 +200,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 最小值。
+             * <p>最小值。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder valueMinimum(String valueMinimum) {
                 this.valueMinimum = valueMinimum;
@@ -189,7 +211,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 属性值类型。
+             * <p>属性值类型。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder valueType(String valueType) {
                 this.valueType = valueType;
@@ -197,7 +222,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 值单位。
+             * <p>值单位。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>number</p>
              */
             public Builder valueUnit(String valueUnit) {
                 this.valueUnit = valueUnit;
@@ -211,6 +239,12 @@ public class GetApplicationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
     public static class ActionParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -262,7 +296,10 @@ public class GetApplicationResponseBody extends TeaModel {
             private ValueAttribute valueAttribute; 
 
             /**
-             * 动作参数描述。
+             * <p>动作参数描述。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>start</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -270,7 +307,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 动作参数KEY。
+             * <p>动作参数KEY。</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -278,7 +315,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 动作参数属性。
+             * <p>动作参数属性。</p>
              */
             public Builder valueAttribute(ValueAttribute valueAttribute) {
                 this.valueAttribute = valueAttribute;
@@ -292,6 +329,12 @@ public class GetApplicationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
     public static class Actions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActionName")
         private String actionName;
@@ -379,7 +422,10 @@ public class GetApplicationResponseBody extends TeaModel {
             private String runActionScope; 
 
             /**
-             * 操作名称。
+             * <p>操作名称。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>START</p>
              */
             public Builder actionName(String actionName) {
                 this.actionName = actionName;
@@ -387,7 +433,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 操作参数。
+             * <p>操作参数。</p>
              */
             public Builder actionParams(java.util.List < ActionParams> actionParams) {
                 this.actionParams = actionParams;
@@ -395,7 +441,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 命令。
+             * <p>命令。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>START</p>
              */
             public Builder command(String command) {
                 this.command = command;
@@ -403,7 +452,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 组件名称。
+             * <p>组件名称。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DataNode</p>
              */
             public Builder componentName(String componentName) {
                 this.componentName = componentName;
@@ -411,7 +463,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 操作描述。
+             * <p>操作描述。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>描述</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -419,7 +474,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 执行范围。
+             * <p>执行范围。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CLUSTER</p>
              */
             public Builder runActionScope(String runActionScope) {
                 this.runActionScope = runActionScope;
@@ -433,6 +491,12 @@ public class GetApplicationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
     public static class Application extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Actions")
         private java.util.List < Actions> actions;
@@ -508,7 +572,7 @@ public class GetApplicationResponseBody extends TeaModel {
             private String communityVersion; 
 
             /**
-             * 操作列表。
+             * <p>操作列表。</p>
              */
             public Builder actions(java.util.List < Actions> actions) {
                 this.actions = actions;
@@ -516,7 +580,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 应用名称。
+             * <p>应用名称。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HDFS</p>
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -524,7 +591,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 应用操作状态。
+             * <p>应用操作状态。</p>
              */
             public Builder applicationState(String applicationState) {
                 this.applicationState = applicationState;
@@ -532,7 +599,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 应用版本。
+             * <p>应用版本。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.8.5</p>
              */
             public Builder applicationVersion(String applicationVersion) {
                 this.applicationVersion = applicationVersion;
@@ -540,7 +610,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 社区版本。
+             * <p>社区版本。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.8.5</p>
              */
             public Builder communityVersion(String communityVersion) {
                 this.communityVersion = communityVersion;

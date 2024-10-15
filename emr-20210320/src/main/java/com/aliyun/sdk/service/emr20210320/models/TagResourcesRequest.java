@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
@@ -99,7 +100,11 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * The ID of the region in which you want to create the instance.
+         * <p>The ID of the region in which you want to create the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -108,7 +113,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The list of resource IDs. Valid values of N: 1 to 1.
+         * <p>The list of resource IDs. Valid values of N: 1 to 1.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster</p>
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -117,10 +126,14 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource to which the tag belongs. Valid values:
-         * <p>
+         * <p>The type of the resource to which the tag belongs. Valid values:</p>
+         * <ul>
+         * <li>cluster: cluster</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   cluster: cluster
+         * <strong>example:</strong>
+         * <p>cluster</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -129,7 +142,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[null]</p>
          */
         public Builder tags(java.util.List < Tag > tags) {
             this.putQueryParameter("Tags", tags);

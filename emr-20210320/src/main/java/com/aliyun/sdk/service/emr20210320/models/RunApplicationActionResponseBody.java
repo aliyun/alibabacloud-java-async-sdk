@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunApplicationActionResponseBody} extends {@link TeaModel}
  *
  * <p>RunApplicationActionResponseBody</p>
@@ -61,7 +62,7 @@ public class RunApplicationActionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The abnormal nodes.
+         * <p>The abnormal nodes.</p>
          */
         public Builder abnInstances(java.util.List < AbnInstances> abnInstances) {
             this.abnInstances = abnInstances;
@@ -69,7 +70,10 @@ public class RunApplicationActionResponseBody extends TeaModel {
         }
 
         /**
-         * The operation ID.
+         * <p>The operation ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>op-13c37a77c505****</p>
          */
         public Builder operationId(String operationId) {
             this.operationId = operationId;
@@ -77,7 +81,10 @@ public class RunApplicationActionResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9E3A7161-EB7B-172B-8D18-FFB06BA3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class RunApplicationActionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RunApplicationActionResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunApplicationActionResponseBody</p>
+     */
     public static class AbnInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
@@ -129,7 +142,10 @@ public class RunApplicationActionResponseBody extends TeaModel {
             private String nodeName; 
 
             /**
-             * The ID of the abnormal node.
+             * <p>The ID of the abnormal node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1cudc25w2bfwl5****</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -137,7 +153,10 @@ public class RunApplicationActionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the abnormal node.
+             * <p>The name of the abnormal node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>core1-1</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;

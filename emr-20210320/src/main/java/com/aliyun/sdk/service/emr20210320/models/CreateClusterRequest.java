@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateClusterRequest} extends {@link RequestModel}
  *
  * <p>CreateClusterRequest</p>
@@ -284,7 +285,7 @@ public class CreateClusterRequest extends Request {
         } 
 
         /**
-         * The application configurations. You can specify a maximum of 1,000 items.
+         * <p>The application configurations. You can specify a maximum of 1,000 items.</p>
          */
         public Builder applicationConfigs(java.util.List < ApplicationConfig > applicationConfigs) {
             this.putQueryParameter("ApplicationConfigs", applicationConfigs);
@@ -293,7 +294,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The applications. You can specify a maximum of 100 items.
+         * <p>The applications. You can specify a maximum of 100 items.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder applications(java.util.List < Application > applications) {
             this.putQueryParameter("Applications", applications);
@@ -302,7 +304,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The bootstrap actions. You can specify a maximum of 10 items.
+         * <p>The bootstrap actions. You can specify a maximum of 10 items.</p>
          */
         public Builder bootstrapScripts(java.util.List < Script > bootstrapScripts) {
             this.putQueryParameter("BootstrapScripts", bootstrapScripts);
@@ -311,7 +313,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The idempotent client token. If you call the same ClientToken multiple times, the returned results are the same. Only one cluster can be created with the same ClientToken.
+         * <p>The idempotent client token. If you call the same ClientToken multiple times, the returned results are the same. Only one cluster can be created with the same ClientToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A7D960FA-6DBA-5E07-8746-A63E3E4D****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -320,7 +325,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The name of the cluster. The name must be 1 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
+         * <p>The name of the cluster. The name must be 1 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emrtest</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -329,17 +338,20 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The type of the cluster. Valid values:
-         * <p>
+         * <p>The type of the cluster. Valid values:</p>
+         * <ul>
+         * <li>DATALAKE: data lake</li>
+         * <li>OLAP: online analytical processing (OLAP)</li>
+         * <li>DATAFLOW: Dataflow</li>
+         * <li>DATASERVING: DataServing</li>
+         * <li>CUSTOM: a custom hybrid cluster.</li>
+         * <li>HADOOP: the old data lake. We recommend that you use the new data lake.</li>
+         * </ul>
+         * <p>If you create an EMR cluster for the first time after 17:00 (UTC +8) on December 19, 2022, you cannot select the HADOOP, DATA_SCIENCE, PRESTO, or ZOOKEEPER cluster type.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   DATALAKE: data lake
-         * *   OLAP: online analytical processing (OLAP)
-         * *   DATAFLOW: Dataflow
-         * *   DATASERVING: DataServing
-         * *   CUSTOM: a custom hybrid cluster.
-         * *   HADOOP: the old data lake. We recommend that you use the new data lake.
-         * 
-         * If you create an EMR cluster for the first time after 17:00 (UTC +8) on December 19, 2022, you cannot select the HADOOP, DATA_SCIENCE, PRESTO, or ZOOKEEPER cluster type.
+         * <strong>example:</strong>
+         * <p>DATALAKE</p>
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -348,11 +360,14 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The deployment mode of master nodes in the cluster. Valid values:
-         * <p>
+         * <p>The deployment mode of master nodes in the cluster. Valid values:</p>
+         * <ul>
+         * <li>NORMAL: regular mode. This is the default value. A cluster that contains only one master node is created.</li>
+         * <li>HA: high availability (HA) mode. A cluster that contains three master nodes is created.</li>
+         * </ul>
          * 
-         * *   NORMAL: regular mode. This is the default value. A cluster that contains only one master node is created.
-         * *   HA: high availability (HA) mode. A cluster that contains three master nodes is created.
+         * <strong>example:</strong>
+         * <p>HA</p>
          */
         public Builder deployMode(String deployMode) {
             this.putQueryParameter("DeployMode", deployMode);
@@ -370,7 +385,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The attributes of all ECS instances.
+         * <p>The attributes of all ECS instances.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder nodeAttributes(NodeAttributes nodeAttributes) {
             this.putQueryParameter("NodeAttributes", nodeAttributes);
@@ -379,7 +395,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The node groups. You can specify a maximum of 100 items.
+         * <p>The node groups. You can specify a maximum of 100 items.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder nodeGroups(java.util.List < NodeGroupConfig > nodeGroups) {
             this.putQueryParameter("NodeGroups", nodeGroups);
@@ -388,13 +408,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The billing cycle of the instance. Valid values:
-         * <p>
+         * <p>The billing cycle of the instance. Valid values:</p>
+         * <ul>
+         * <li>PayAsYouGo: pay-as-you-go</li>
+         * <li>Subscription: subscription</li>
+         * </ul>
+         * <p>Default value: PayAsYouGo.</p>
          * 
-         * *   PayAsYouGo: pay-as-you-go
-         * *   Subscription: subscription
-         * 
-         * Default value: PayAsYouGo.
+         * <strong>example:</strong>
+         * <p>PayAsYouGo</p>
          */
         public Builder paymentType(String paymentType) {
             this.putQueryParameter("PaymentType", paymentType);
@@ -403,7 +425,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -412,7 +438,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The version of EMR. You can view the EMR release version on the EMR cluster purchase page.
+         * <p>The version of EMR. You can view the EMR release version on the EMR cluster purchase page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EMR-5.8.0</p>
          */
         public Builder releaseVersion(String releaseVersion) {
             this.putQueryParameter("ReleaseVersion", releaseVersion);
@@ -421,7 +451,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which to assign the ENI.
+         * <p>The ID of the resource group to which to assign the ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzabjyop****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -430,11 +463,14 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The security mode of the cluster. Valid values:
-         * <p>
+         * <p>The security mode of the cluster. Valid values:</p>
+         * <ul>
+         * <li>NORMAL: disables Kerberos authentication for the cluster. This is the default value.</li>
+         * <li>KERBEROS: enables Kerberos authentication for the cluster.</li>
+         * </ul>
          * 
-         * *   NORMAL: disables Kerberos authentication for the cluster. This is the default value.
-         * *   KERBEROS: enables Kerberos authentication for the cluster.
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder securityMode(String securityMode) {
             this.putQueryParameter("SecurityMode", securityMode);
@@ -443,7 +479,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The subscription configurations. This parameter is required only if you set the PaymentType parameter to Subscription.
+         * <p>The subscription configurations. This parameter is required only if you set the PaymentType parameter to Subscription.</p>
          */
         public Builder subscriptionConfig(SubscriptionConfig subscriptionConfig) {
             this.putQueryParameter("SubscriptionConfig", subscriptionConfig);
@@ -452,7 +488,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The tags. You can specify a maximum of 20 items.
+         * <p>The tags. You can specify a maximum of 20 items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A7D960FA-6DBA-5E07-8746-A63E3E4D****</p>
          */
         public Builder tags(java.util.List < Tag > tags) {
             this.putQueryParameter("Tags", tags);

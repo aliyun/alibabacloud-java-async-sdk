@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TimeRange} extends {@link TeaModel}
  *
  * <p>TimeRange</p>
@@ -49,7 +50,10 @@ public class TimeRange extends TeaModel {
         private String startTime; 
 
         /**
-         * 结束时间。
+         * <p>结束时间。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1676441972000</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -57,7 +61,10 @@ public class TimeRange extends TeaModel {
         }
 
         /**
-         * 起始时间。
+         * <p>起始时间。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1676441971000</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListScriptsResponseBody} extends {@link TeaModel}
  *
  * <p>ListScriptsResponseBody</p>
@@ -85,7 +86,10 @@ public class ListScriptsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * 本次请求所返回的最大记录条数。
+         * <p>本次请求所返回的最大记录条数。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,7 +97,10 @@ public class ListScriptsResponseBody extends TeaModel {
         }
 
         /**
-         * 返回读取到的数据位置，空代表数据已经读取完毕。
+         * <p>返回读取到的数据位置，空代表数据已经读取完毕。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dd6b1b2a-5837-5237-abe4-ff0c89568982</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,7 +108,10 @@ public class ListScriptsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * <p>请求ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class ListScriptsResponseBody extends TeaModel {
         }
 
         /**
-         * The scripts.
+         * <p>The scripts.</p>
          */
         public Builder scripts(java.util.List < Scripts> scripts) {
             this.scripts = scripts;
@@ -117,7 +127,10 @@ public class ListScriptsResponseBody extends TeaModel {
         }
 
         /**
-         * 本次请求条件下的数据总量。
+         * <p>本次请求条件下的数据总量。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListScriptsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListScriptsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListScriptsResponseBody</p>
+     */
     public static class Scripts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
@@ -301,7 +320,10 @@ public class ListScriptsResponseBody extends TeaModel {
             private Long startTime; 
 
             /**
-             * The name of the API operation.
+             * <p>The name of the API operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ListScripts</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -309,7 +331,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the system finishes the running of the script. This parameter is returned only if the ScriptType parameter is set to NORMAL.
+             * <p>The time when the system finishes the running of the script. This parameter is returned only if the ScriptType parameter is set to NORMAL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1639715635819</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -317,11 +342,14 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * The policy that is used to handle execution failures of the script. Valid values:
-             * <p>
+             * <p>The policy that is used to handle execution failures of the script. Valid values:</p>
+             * <ul>
+             * <li>FAILED_CONTINUE</li>
+             * <li>FAILED_BLOCK</li>
+             * </ul>
              * 
-             * *   FAILED_CONTINUE
-             * *   FAILED_BLOCK
+             * <strong>example:</strong>
+             * <p>FAILED_CONTINUE</p>
              */
             public Builder executionFailStrategy(String executionFailStrategy) {
                 this.executionFailStrategy = executionFailStrategy;
@@ -329,11 +357,14 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * The time based on which the system runs the script. Valid values:
-             * <p>
+             * <p>The time based on which the system runs the script. Valid values:</p>
+             * <ul>
+             * <li>BEFORE_INSTALL</li>
+             * <li>AFTER_STARTED</li>
+             * </ul>
              * 
-             * *   BEFORE_INSTALL
-             * *   AFTER_STARTED
+             * <strong>example:</strong>
+             * <p>BEFORE_INSTALL</p>
              */
             public Builder executionMoment(String executionMoment) {
                 this.executionMoment = executionMoment;
@@ -341,12 +372,15 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the script. This parameter is returned only if the `ScriptType` parameter is set to `NORMAL`. Valid values:
-             * <p>
+             * <p>The status of the script. This parameter is returned only if the <code>ScriptType</code> parameter is set to <code>NORMAL</code>. Valid values:</p>
+             * <ul>
+             * <li>SCRIPT_COMPLETED</li>
+             * <li>SCRIPT_SUBMISSION_FAILED</li>
+             * <li>SCRIPT_RUNNING</li>
+             * </ul>
              * 
-             * *   SCRIPT_COMPLETED
-             * *   SCRIPT_SUBMISSION_FAILED
-             * *   SCRIPT_RUNNING
+             * <strong>example:</strong>
+             * <p>SCRIPT_COMPLETED</p>
              */
             public Builder executionState(String executionState) {
                 this.executionState = executionState;
@@ -354,7 +388,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the script was last modified.
+             * <p>The time when the script was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1639714634819</p>
              */
             public Builder lastUpdateTime(Long lastUpdateTime) {
                 this.lastUpdateTime = lastUpdateTime;
@@ -362,7 +399,7 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * The node selector.
+             * <p>The node selector.</p>
              */
             public Builder nodeSelector(NodeSelector nodeSelector) {
                 this.nodeSelector = nodeSelector;
@@ -370,7 +407,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -378,7 +418,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * The runtime parameters of the script.
+             * <p>The runtime parameters of the script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>--mode=client -h -p</p>
              */
             public Builder scriptArgs(String scriptArgs) {
                 this.scriptArgs = scriptArgs;
@@ -386,7 +429,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * The script ID.
+             * <p>The script ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cs-bf25219d103043a0820613e32781****</p>
              */
             public Builder scriptId(String scriptId) {
                 this.scriptId = scriptId;
@@ -394,7 +440,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the script.
+             * <p>The name of the script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>check_env</p>
              */
             public Builder scriptName(String scriptName) {
                 this.scriptName = scriptName;
@@ -402,7 +451,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * The path in which the script is stored.
+             * <p>The path in which the script is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket1/check_evn.sh</p>
              */
             public Builder scriptPath(String scriptPath) {
                 this.scriptPath = scriptPath;
@@ -410,7 +462,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the system starts to run the script. This parameter is returned only if the ScriptType parameter is set to NORMAL.
+             * <p>The time when the system starts to run the script. This parameter is returned only if the ScriptType parameter is set to NORMAL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1639714634000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

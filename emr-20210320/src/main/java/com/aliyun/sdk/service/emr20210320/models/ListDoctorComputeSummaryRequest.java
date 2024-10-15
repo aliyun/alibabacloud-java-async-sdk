@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDoctorComputeSummaryRequest} extends {@link RequestModel}
  *
  * <p>ListDoctorComputeSummaryRequest</p>
@@ -154,7 +155,11 @@ public class ListDoctorComputeSummaryRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b933c5aac8fe****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -163,14 +168,16 @@ public class ListDoctorComputeSummaryRequest extends Request {
         }
 
         /**
-         * The resource types, which are used to filter query results. Valid values:
-         * <p>
+         * <p>The resource types, which are used to filter query results. Valid values:</p>
+         * <ul>
+         * <li>engine: filters results by engine.</li>
+         * <li>queue: filters results by queue.</li>
+         * <li>cluster: displays the results at the cluster level.</li>
+         * </ul>
+         * <p>If you do not specify this parameter, the information at the cluster level is displayed by default. Currently, only one resource type is supported. If you specify multiple resource types, the first resource type is used by default.</p>
          * 
-         * *   engine: filters results by engine.
-         * *   queue: filters results by queue.
-         * *   cluster: displays the results at the cluster level.
-         * 
-         * If you do not specify this parameter, the information at the cluster level is displayed by default. Currently, only one resource type is supported. If you specify multiple resource types, the first resource type is used by default.
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder componentTypes(java.util.List < String > componentTypes) {
             this.putQueryParameter("ComponentTypes", componentTypes);
@@ -179,7 +186,11 @@ public class ListDoctorComputeSummaryRequest extends Request {
         }
 
         /**
-         * Specify the date in the ISO 8601 standard. For example, 2023-01-01 represents January 1, 2023.
+         * <p>Specify the date in the ISO 8601 standard. For example, 2023-01-01 represents January 1, 2023.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-01</p>
          */
         public Builder dateTime(String dateTime) {
             this.putQueryParameter("DateTime", dateTime);
@@ -188,7 +199,10 @@ public class ListDoctorComputeSummaryRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page.
+         * <p>The maximum number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -197,7 +211,10 @@ public class ListDoctorComputeSummaryRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the request to retrieve a new page of results.
+         * <p>The pagination token that is used in the request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -206,23 +223,26 @@ public class ListDoctorComputeSummaryRequest extends Request {
         }
 
         /**
-         * The basis on which you want to sort the query results. Valid values:
-         * <p>
+         * <p>The basis on which you want to sort the query results. Valid values:</p>
+         * <ol>
+         * <li>vcoreSeconds: the total CPU consumption over time in seconds.</li>
+         * <li>memSeconds: the total memory consumption over time in seconds.</li>
+         * <li>vcoreUtilization: the average CPU utilization. The meaning is the same as the %CPU parameter in the output of the top command in Linux.</li>
+         * <li>memUtilization: the average memory usage.</li>
+         * <li>vcoreSecondsDayGrowthRatio: the day-to-day growth rate of the total CPU consumption over time in seconds.</li>
+         * <li>memSecondsDayGrowthRatio: the day-to-day growth rate of the total memory consumption over time in seconds.</li>
+         * <li>readSize: the total amount of data read from the file system.</li>
+         * <li>writeSize: the total amount of data written to the file system.</li>
+         * <li>healthyJobCount: the total number of healthy jobs.</li>
+         * <li>subHealthyJobCount: the total number of sub-healthy jobs.</li>
+         * <li>unhealthyJobCount: the total number of unhealthy jobs.</li>
+         * <li>needAttentionJobCount: the total number of jobs that require attention.</li>
+         * <li>score: the score for jobs.</li>
+         * <li>scoreDayGrowthRatio: the day-to-day growth rate of the score for jobs.</li>
+         * </ol>
          * 
-         * 1.  vcoreSeconds: the total CPU consumption over time in seconds.
-         * 2.  memSeconds: the total memory consumption over time in seconds.
-         * 3.  vcoreUtilization: the average CPU utilization. The meaning is the same as the %CPU parameter in the output of the top command in Linux.
-         * 4.  memUtilization: the average memory usage.
-         * 5.  vcoreSecondsDayGrowthRatio: the day-to-day growth rate of the total CPU consumption over time in seconds.
-         * 6.  memSecondsDayGrowthRatio: the day-to-day growth rate of the total memory consumption over time in seconds.
-         * 7.  readSize: the total amount of data read from the file system.
-         * 8.  writeSize: the total amount of data written to the file system.
-         * 9.  healthyJobCount: the total number of healthy jobs.
-         * 10. subHealthyJobCount: the total number of sub-healthy jobs.
-         * 11. unhealthyJobCount: the total number of unhealthy jobs.
-         * 12. needAttentionJobCount: the total number of jobs that require attention.
-         * 13. score: the score for jobs.
-         * 14. scoreDayGrowthRatio: the day-to-day growth rate of the score for jobs.
+         * <strong>example:</strong>
+         * <p>score</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -231,11 +251,14 @@ public class ListDoctorComputeSummaryRequest extends Request {
         }
 
         /**
-         * The order in which you want to sort the query results. Valid values:
-         * <p>
+         * <p>The order in which you want to sort the query results. Valid values:</p>
+         * <ul>
+         * <li>ASC: in ascending order.</li>
+         * <li>DESC: in descending order.</li>
+         * </ul>
          * 
-         * *   ASC: in ascending order.
-         * *   DESC: in descending order.
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -244,7 +267,11 @@ public class ListDoctorComputeSummaryRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

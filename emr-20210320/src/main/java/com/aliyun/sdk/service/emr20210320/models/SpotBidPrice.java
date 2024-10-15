@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SpotBidPrice} extends {@link TeaModel}
  *
  * <p>SpotBidPrice</p>
@@ -49,7 +50,10 @@ public class SpotBidPrice extends TeaModel {
         private String instanceType; 
 
         /**
-         * 实例的每小时最高出价。支持最大3位小数，参数SpotStrategy=SpotWithPriceLimit时，该参数生效。
+         * <p>实例的每小时最高出价。支持最大3位小数，参数SpotStrategy=SpotWithPriceLimit时，该参数生效。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000.0</p>
          */
         public Builder bidPrice(Double bidPrice) {
             this.bidPrice = bidPrice;
@@ -57,7 +61,10 @@ public class SpotBidPrice extends TeaModel {
         }
 
         /**
-         * 实例类型。
+         * <p>实例类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g7.2xlarge</p>
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;

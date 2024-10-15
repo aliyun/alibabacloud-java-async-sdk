@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateApplicationConfigsRequest} extends {@link RequestModel}
  *
  * <p>UpdateApplicationConfigsRequest</p>
@@ -183,7 +184,8 @@ public class UpdateApplicationConfigsRequest extends Request {
         } 
 
         /**
-         * 应用配置列表。
+         * <p>应用配置列表。</p>
+         * <p>This parameter is required.</p>
          */
         public Builder applicationConfigs(java.util.List < UpdateApplicationConfig > applicationConfigs) {
             this.putBodyParameter("ApplicationConfigs", applicationConfigs);
@@ -192,7 +194,11 @@ public class UpdateApplicationConfigsRequest extends Request {
         }
 
         /**
-         * The application name.
+         * <p>The application name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HDFS</p>
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -201,7 +207,11 @@ public class UpdateApplicationConfigsRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-e6a9d46e9267****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -210,12 +220,15 @@ public class UpdateApplicationConfigsRequest extends Request {
         }
 
         /**
-         * The operation performed on configuration items. Valid values:
-         * <p>
+         * <p>The operation performed on configuration items. Valid values:</p>
+         * <ul>
+         * <li>ADD</li>
+         * <li>UPDATE</li>
+         * <li>DELETE</li>
+         * </ul>
          * 
-         * *   ADD
-         * *   UPDATE
-         * *   DELETE
+         * <strong>example:</strong>
+         * <p>ADD</p>
          */
         public Builder configAction(String configAction) {
             this.putQueryParameter("ConfigAction", configAction);
@@ -224,11 +237,14 @@ public class UpdateApplicationConfigsRequest extends Request {
         }
 
         /**
-         * The operation scope. Valid values:
-         * <p>
+         * <p>The operation scope. Valid values:</p>
+         * <ul>
+         * <li>CLUSTER</li>
+         * <li>NODE_GROUP</li>
+         * </ul>
          * 
-         * *   CLUSTER
-         * *   NODE_GROUP
+         * <strong>example:</strong>
+         * <p>CLUSTER</p>
          */
         public Builder configScope(String configScope) {
             this.putQueryParameter("ConfigScope", configScope);
@@ -237,7 +253,10 @@ public class UpdateApplicationConfigsRequest extends Request {
         }
 
         /**
-         * The description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>更新YARN内存配置。</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -246,7 +265,10 @@ public class UpdateApplicationConfigsRequest extends Request {
         }
 
         /**
-         * The node group ID.
+         * <p>The node group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-869471354ecd****</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.putQueryParameter("NodeGroupId", nodeGroupId);
@@ -255,7 +277,10 @@ public class UpdateApplicationConfigsRequest extends Request {
         }
 
         /**
-         * The node ID.
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1cudc25w2bfwl5****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -264,7 +289,10 @@ public class UpdateApplicationConfigsRequest extends Request {
         }
 
         /**
-         * Specifies whether to refresh the configurations. Default value: True.
+         * <p>Specifies whether to refresh the configurations. Default value: True.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder refreshConfig(Boolean refreshConfig) {
             this.putQueryParameter("RefreshConfig", refreshConfig);
@@ -273,7 +301,11 @@ public class UpdateApplicationConfigsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstanceType} extends {@link TeaModel}
  *
  * <p>InstanceType</p>
@@ -121,7 +122,10 @@ public class InstanceType extends TeaModel {
         private Boolean optimized; 
 
         /**
-         * cpu架构。
+         * <p>cpu架构。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>X86</p>
          */
         public Builder cpuArchitecture(String cpuArchitecture) {
             this.cpuArchitecture = cpuArchitecture;
@@ -129,7 +133,10 @@ public class InstanceType extends TeaModel {
         }
 
         /**
-         * vCPU内核数目。
+         * <p>vCPU内核数目。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder cpuCore(Integer cpuCore) {
             this.cpuCore = cpuCore;
@@ -137,23 +144,27 @@ public class InstanceType extends TeaModel {
         }
 
         /**
-         * 实例规格分类。取值范围：
-         * <p>
-         * - General-purpose： 通用型。
-         * - Compute-optimized：计算型。
-         * - Memory-optimized：内存型。
-         * - Big data：大数据型。
-         * - Local SSDs ：本地SSD型。
-         * - High Clock Speed ：高主频型。
-         * - Enhanced ：增强型。
-         * - Shared：共享型。
-         * - Compute-optimized with GPU ：GPU计算型。
-         * - Visual Compute-optimized ：视觉计算型。
-         * - Heterogeneous Service ：异构服务型。
-         * - Compute-optimized with FPGA ：FPGA计算型。
-         * - Compute-optimized with NPU ：NPU计算型。
-         * - ECS Bare Metal ：弹性裸金属服务器。
-         * - Super Computing Cluster：超级计算集群。
+         * <p>实例规格分类。取值范围：</p>
+         * <ul>
+         * <li>General-purpose： 通用型。</li>
+         * <li>Compute-optimized：计算型。</li>
+         * <li>Memory-optimized：内存型。</li>
+         * <li>Big data：大数据型。</li>
+         * <li>Local SSDs ：本地SSD型。</li>
+         * <li>High Clock Speed ：高主频型。</li>
+         * <li>Enhanced ：增强型。</li>
+         * <li>Shared：共享型。</li>
+         * <li>Compute-optimized with GPU ：GPU计算型。</li>
+         * <li>Visual Compute-optimized ：视觉计算型。</li>
+         * <li>Heterogeneous Service ：异构服务型。</li>
+         * <li>Compute-optimized with FPGA ：FPGA计算型。</li>
+         * <li>Compute-optimized with NPU ：NPU计算型。</li>
+         * <li>ECS Bare Metal ：弹性裸金属服务器。</li>
+         * <li>Super Computing Cluster：超级计算集群。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Compute-optimized</p>
          */
         public Builder instanceCategory(String instanceCategory) {
             this.instanceCategory = instanceCategory;
@@ -161,7 +172,10 @@ public class InstanceType extends TeaModel {
         }
 
         /**
-         * 实例规格。
+         * <p>实例规格。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g6.large</p>
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -169,7 +183,10 @@ public class InstanceType extends TeaModel {
         }
 
         /**
-         * 实例规格所属的实例规格族。取值请参见DescribeInstanceTypeFamilies。
+         * <p>实例规格所属的实例规格族。取值请参见DescribeInstanceTypeFamilies。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g6</p>
          */
         public Builder instanceTypeFamily(String instanceTypeFamily) {
             this.instanceTypeFamily = instanceTypeFamily;
@@ -177,7 +194,10 @@ public class InstanceType extends TeaModel {
         }
 
         /**
-         * 实例挂载的本地盘的数量。
+         * <p>实例挂载的本地盘的数量。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder localStorageAmount(Integer localStorageAmount) {
             this.localStorageAmount = localStorageAmount;
@@ -185,7 +205,10 @@ public class InstanceType extends TeaModel {
         }
 
         /**
-         * 实例挂载的本地盘的单盘容量。单位：GiB
+         * <p>实例挂载的本地盘的单盘容量。单位：GiB</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         public Builder localStorageCapacity(Long localStorageCapacity) {
             this.localStorageCapacity = localStorageCapacity;
@@ -193,7 +216,10 @@ public class InstanceType extends TeaModel {
         }
 
         /**
-         * 是否IO优化类型。
+         * <p>是否IO优化类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder optimized(Boolean optimized) {
             this.optimized = optimized;

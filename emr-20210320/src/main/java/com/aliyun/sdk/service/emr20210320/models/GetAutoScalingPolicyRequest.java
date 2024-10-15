@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAutoScalingPolicyRequest} extends {@link RequestModel}
  *
  * <p>GetAutoScalingPolicyRequest</p>
@@ -84,7 +85,11 @@ public class GetAutoScalingPolicyRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b933c5aac8fe****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -93,7 +98,11 @@ public class GetAutoScalingPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the node group.
+         * <p>The ID of the node group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-869471354ecd****</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.putQueryParameter("NodeGroupId", nodeGroupId);
@@ -102,7 +111,11 @@ public class GetAutoScalingPolicyRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

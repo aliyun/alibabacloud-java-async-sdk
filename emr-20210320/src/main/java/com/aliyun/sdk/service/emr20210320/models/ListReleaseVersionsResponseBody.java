@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListReleaseVersionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListReleaseVersionsResponseBody</p>
@@ -85,7 +86,10 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The maximum number of entries returned.
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,7 +97,10 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * Returns the location of the data that was read.
+         * <p>Returns the location of the data that was read.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,7 +108,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The major EMR versions.
+         * <p>The major EMR versions.</p>
          */
         public Builder releaseVersions(java.util.List < ReleaseVersions> releaseVersions) {
             this.releaseVersions = releaseVersions;
@@ -109,7 +116,10 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListReleaseVersionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListReleaseVersionsResponseBody</p>
+     */
     public static class ReleaseVersions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IaasType")
         private String iaasType;
@@ -181,7 +200,10 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             private String series; 
 
             /**
-             * The IaaS type.
+             * <p>The IaaS type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder iaasType(String iaasType) {
                 this.iaasType = iaasType;
@@ -189,7 +211,10 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The EMR version.
+             * <p>The EMR version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EMR-5.3.0</p>
              */
             public Builder releaseVersion(String releaseVersion) {
                 this.releaseVersion = releaseVersion;
@@ -197,7 +222,10 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The version series.
+             * <p>The version series.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EMR-6.X</p>
              */
             public Builder series(String series) {
                 this.series = series;

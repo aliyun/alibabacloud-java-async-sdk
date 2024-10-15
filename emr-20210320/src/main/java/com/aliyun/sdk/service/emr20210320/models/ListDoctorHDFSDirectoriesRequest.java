@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDoctorHDFSDirectoriesRequest} extends {@link RequestModel}
  *
  * <p>ListDoctorHDFSDirectoriesRequest</p>
@@ -154,7 +155,11 @@ public class ListDoctorHDFSDirectoriesRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * <p>集群ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b933c5aac8fe****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -163,7 +168,10 @@ public class ListDoctorHDFSDirectoriesRequest extends Request {
         }
 
         /**
-         * DateTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-01</p>
          */
         public Builder dateTime(String dateTime) {
             this.putQueryParameter("DateTime", dateTime);
@@ -181,7 +189,10 @@ public class ListDoctorHDFSDirectoriesRequest extends Request {
         }
 
         /**
-         * 一次获取的最大记录数。取值范围：1~100。
+         * <p>一次获取的最大记录数。取值范围：1~100。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -190,7 +201,10 @@ public class ListDoctorHDFSDirectoriesRequest extends Request {
         }
 
         /**
-         * 标记当前开始读取的位置，置空表示从头开始。
+         * <p>标记当前开始读取的位置，置空表示从头开始。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -217,7 +231,11 @@ public class ListDoctorHDFSDirectoriesRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * <p>区域ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

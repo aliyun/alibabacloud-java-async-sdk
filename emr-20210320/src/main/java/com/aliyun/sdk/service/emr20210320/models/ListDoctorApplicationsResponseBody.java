@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDoctorApplicationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDoctorApplicationsResponseBody</p>
@@ -85,7 +86,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details of jobs.
+         * <p>The details of jobs.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -93,7 +94,10 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of entries returned.
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +105,10 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token.
+         * <p>A pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +116,10 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDoctorApplicationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorApplicationsResponseBody</p>
+     */
     public static class Analysis extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Score")
         private Integer score;
@@ -169,7 +188,10 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             private String suggestion; 
 
             /**
-             * The score of the job.
+             * <p>The score of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder score(Integer score) {
                 this.score = score;
@@ -177,7 +199,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The suggestion on executing the job.
+             * <p>The suggestion on executing the job.</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -191,6 +213,12 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorApplicationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorApplicationsResponseBody</p>
+     */
     public static class MemSeconds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -254,7 +282,10 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Total memory usage over time in seconds</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -262,7 +293,10 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>memSeconds</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -270,7 +304,10 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB * Sec</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -278,7 +315,10 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12312312</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -292,6 +332,12 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorApplicationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorApplicationsResponseBody</p>
+     */
     public static class MemUtilization extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -355,7 +401,10 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ratio of used memory to total available memory</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -363,7 +412,10 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>memUtilization</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -371,7 +423,10 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -379,7 +434,10 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.23</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -393,6 +451,12 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorApplicationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorApplicationsResponseBody</p>
+     */
     public static class VcoreSeconds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -456,7 +520,10 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Total vcore usage over time in seconds</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -464,7 +531,10 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vcoreSeconds</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -472,7 +542,10 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VCores * Sec</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -480,7 +553,10 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11123</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -494,6 +570,12 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorApplicationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorApplicationsResponseBody</p>
+     */
     public static class VcoreUtilization extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -557,7 +639,10 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ratio of used vcore to total available cores</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -565,7 +650,10 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vcoreUtilization</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -573,7 +661,10 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -581,7 +672,10 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23.1</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -595,6 +689,12 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorApplicationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorApplicationsResponseBody</p>
+     */
     public static class Metrics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MemSeconds")
         private MemSeconds memSeconds;
@@ -658,7 +758,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             private VcoreUtilization vcoreUtilization; 
 
             /**
-             * The amount of memory consumed.
+             * <p>The amount of memory consumed.</p>
              */
             public Builder memSeconds(MemSeconds memSeconds) {
                 this.memSeconds = memSeconds;
@@ -666,7 +766,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The memory usage
+             * <p>The memory usage</p>
              */
             public Builder memUtilization(MemUtilization memUtilization) {
                 this.memUtilization = memUtilization;
@@ -674,7 +774,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The CPU usage.
+             * <p>The CPU usage.</p>
              */
             public Builder vcoreSeconds(VcoreSeconds vcoreSeconds) {
                 this.vcoreSeconds = vcoreSeconds;
@@ -682,7 +782,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The CPU utilization. This parameter has the same meaning as %CPU in the Linux top command.
+             * <p>The CPU utilization. This parameter has the same meaning as %CPU in the Linux top command.</p>
              */
             public Builder vcoreUtilization(VcoreUtilization vcoreUtilization) {
                 this.vcoreUtilization = vcoreUtilization;
@@ -696,6 +796,12 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorApplicationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorApplicationsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Analysis")
         private Analysis analysis;
@@ -843,7 +949,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * The analysis results of the jobs.
+             * <p>The analysis results of the jobs.</p>
              */
             public Builder analysis(Analysis analysis) {
                 this.analysis = analysis;
@@ -851,7 +957,10 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The job ID in YARN. The value of QueryID or SessionID is returned for a Hive job.
+             * <p>The job ID in YARN. The value of QueryID or SessionID is returned for a Hive job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>application_1665056147236_*****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -859,7 +968,10 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the job.
+             * <p>The name of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data-upload</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -867,7 +979,10 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job ended. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.
+             * <p>The time when the job ended. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1682049088086</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -875,7 +990,10 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The job IDs. Multiple job IDs are separated with commas (,).
+             * <p>The job IDs. Multiple job IDs are separated with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder ids(java.util.List < String > ids) {
                 this.ids = ids;
@@ -883,7 +1001,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The data about metrics.
+             * <p>The data about metrics.</p>
              */
             public Builder metrics(Metrics metrics) {
                 this.metrics = metrics;
@@ -891,7 +1009,10 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The query statement. This parameter is left empty for non-SQL jobs.
+             * <p>The query statement. This parameter is left empty for non-SQL jobs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT id, count(1) FROM test group by id;</p>
              */
             public Builder querySql(String querySql) {
                 this.querySql = querySql;
@@ -899,7 +1020,10 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The YARN queue to which the job was submitted.
+             * <p>The YARN queue to which the job was submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DW</p>
              */
             public Builder queue(String queue) {
                 this.queue = queue;
@@ -907,7 +1031,10 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job was submitted. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.
+             * <p>The time when the job was submitted. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1677465658275</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -915,7 +1042,10 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the compute engine.
+             * <p>The type of the compute engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TEZ</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -923,7 +1053,10 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The username that was used to submit the job.
+             * <p>The username that was used to submit the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DW</p>
              */
             public Builder user(String user) {
                 this.user = user;

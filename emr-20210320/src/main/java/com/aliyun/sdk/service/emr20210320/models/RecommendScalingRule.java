@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecommendScalingRule} extends {@link TeaModel}
  *
  * <p>RecommendScalingRule</p>
@@ -125,10 +126,15 @@ public class RecommendScalingRule extends TeaModel {
         private String triggerType; 
 
         /**
-         * 伸缩活动类型。取值范围：
-         * <p>
-         * - SCALE_OUT：扩容。
-         * - SCALE_IN：缩容。
+         * <p>伸缩活动类型。取值范围：</p>
+         * <ul>
+         * <li>SCALE_OUT：扩容。</li>
+         * <li>SCALE_IN：缩容。</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SCALE_IN</p>
          */
         public Builder activityType(String activityType) {
             this.activityType = activityType;
@@ -136,7 +142,11 @@ public class RecommendScalingRule extends TeaModel {
         }
 
         /**
-         * 调整值。需要为正数，代表需要扩容或者缩容的实例数量。
+         * <p>调整值。需要为正数，代表需要扩容或者缩容的实例数量。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder adjustmentValue(Integer adjustmentValue) {
             this.adjustmentValue = adjustmentValue;
@@ -144,7 +154,7 @@ public class RecommendScalingRule extends TeaModel {
         }
 
         /**
-         * 推荐的规格类型。
+         * <p>推荐的规格类型。</p>
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -152,7 +162,10 @@ public class RecommendScalingRule extends TeaModel {
         }
 
         /**
-         * 最大节约成本。
+         * <p>最大节约成本。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.12</p>
          */
         public Builder maxSave(Float maxSave) {
             this.maxSave = maxSave;
@@ -160,8 +173,7 @@ public class RecommendScalingRule extends TeaModel {
         }
 
         /**
-         * 按照负载伸缩描述。
-         * <p>
+         * <p>按照负载伸缩描述。</p>
          * <p>
          */
         public Builder metricsTrigger(MetricsTrigger metricsTrigger) {
@@ -170,7 +182,11 @@ public class RecommendScalingRule extends TeaModel {
         }
 
         /**
-         * 规则名称。
+         * <p>规则名称。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scale-out-memory</p>
          */
         public Builder ruleName(String ruleName) {
             this.ruleName = ruleName;
@@ -178,8 +194,7 @@ public class RecommendScalingRule extends TeaModel {
         }
 
         /**
-         * 按照时间伸缩描述。
-         * <p>
+         * <p>按照时间伸缩描述。</p>
          * <p>
          */
         public Builder timeTrigger(TimeTrigger timeTrigger) {
@@ -188,10 +203,15 @@ public class RecommendScalingRule extends TeaModel {
         }
 
         /**
-         * 伸缩规则类型。 取值范围：
-         * <p>
-         * - TIME_TRIGGER: 按时间伸缩。
-         * - METRICS_TRIGGER: 按负载伸缩。
+         * <p>伸缩规则类型。 取值范围：</p>
+         * <ul>
+         * <li>TIME_TRIGGER: 按时间伸缩。</li>
+         * <li>METRICS_TRIGGER: 按负载伸缩。</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TIME_TRIGGER</p>
          */
         public Builder triggerType(String triggerType) {
             this.triggerType = triggerType;

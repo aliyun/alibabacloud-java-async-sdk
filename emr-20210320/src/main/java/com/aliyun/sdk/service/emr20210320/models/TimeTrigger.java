@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TimeTrigger} extends {@link TeaModel}
  *
  * <p>TimeTrigger</p>
@@ -98,7 +99,10 @@ public class TimeTrigger extends TeaModel {
         private Long startTime; 
 
         /**
-         * 结束时间戳。单位为毫秒。
+         * <p>结束时间戳。单位为毫秒。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1639714800000</p>
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -106,7 +110,10 @@ public class TimeTrigger extends TeaModel {
         }
 
         /**
-         * 定时任务触发操作失败后，在此时间内重试。单位为秒，取值范围：0~3600。
+         * <p>定时任务触发操作失败后，在此时间内重试。单位为秒，取值范围：0~3600。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         public Builder launchExpirationTime(Integer launchExpirationTime) {
             this.launchExpirationTime = launchExpirationTime;
@@ -114,7 +121,8 @@ public class TimeTrigger extends TeaModel {
         }
 
         /**
-         * 启动时间。
+         * <p>启动时间。</p>
+         * <p>This parameter is required.</p>
          */
         public Builder launchTime(String launchTime) {
             this.launchTime = launchTime;
@@ -122,7 +130,10 @@ public class TimeTrigger extends TeaModel {
         }
 
         /**
-         * 指定时间规则的执行类型。
+         * <p>指定时间规则的执行类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WEEKLY</p>
          */
         public Builder recurrenceType(String recurrenceType) {
             this.recurrenceType = recurrenceType;
@@ -130,13 +141,17 @@ public class TimeTrigger extends TeaModel {
         }
 
         /**
-         * 重复执行定时任务的数值。具体取值取决于 recurrenceType 设置。
-         * <p>
-         * - recurrenceType 取 MINUTELY 时，只能填一个数值，取值范围：1~1440。
-         * - recurrenceType 取 HOURLY 时，只能填一个数值，取值范围：1~24。
-         * - recurrenceType 取 DAILY 时，只能填一个数值，取值范围：1~31。
-         * - recurrenceType 取 WEEKLY 时，可以填入多个值，填多个值时使用英文逗号（,）分隔。周一到周天分别用MON，TUE，WED，THU，FRI，SAT，SUN代替。 比如 MON,FRI,SUN 代表周一、周五、周天。
-         * - recurrenceType 取 MONTHLY 时，格式为A-B或者A,B。A、B的取值范围为1~31，如果使用A-B时B必须大于A。
+         * <p>重复执行定时任务的数值。具体取值取决于 recurrenceType 设置。</p>
+         * <ul>
+         * <li>recurrenceType 取 MINUTELY 时，只能填一个数值，取值范围：1~1440。</li>
+         * <li>recurrenceType 取 HOURLY 时，只能填一个数值，取值范围：1~24。</li>
+         * <li>recurrenceType 取 DAILY 时，只能填一个数值，取值范围：1~31。</li>
+         * <li>recurrenceType 取 WEEKLY 时，可以填入多个值，填多个值时使用英文逗号（,）分隔。周一到周天分别用MON，TUE，WED，THU，FRI，SAT，SUN代替。 比如 MON,FRI,SUN 代表周一、周五、周天。</li>
+         * <li>recurrenceType 取 MONTHLY 时，格式为A-B或者A,B。A、B的取值范围为1~31，如果使用A-B时B必须大于A。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MON,FRI,SUN</p>
          */
         public Builder recurrenceValue(String recurrenceValue) {
             this.recurrenceValue = recurrenceValue;
@@ -144,7 +159,10 @@ public class TimeTrigger extends TeaModel {
         }
 
         /**
-         * 开始时间戳。单位为毫秒。
+         * <p>开始时间戳。单位为毫秒。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1639714800000</p>
          */
         public Builder startTime(Long startTime) {
             this.startTime = startTime;

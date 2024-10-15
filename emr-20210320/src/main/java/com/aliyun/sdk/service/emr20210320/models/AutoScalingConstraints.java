@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AutoScalingConstraints} extends {@link TeaModel}
  *
  * <p>AutoScalingConstraints</p>
@@ -121,7 +122,7 @@ public class AutoScalingConstraints extends TeaModel {
         private java.util.List < String > supportRuleTypes; 
 
         /**
-         * 按负载伸缩指标单位描述。
+         * <p>按负载伸缩指标单位描述。</p>
          */
         public Builder autoScalingMetricUnits(java.util.List < MetricUnitValue > autoScalingMetricUnits) {
             this.autoScalingMetricUnits = autoScalingMetricUnits;
@@ -129,7 +130,7 @@ public class AutoScalingConstraints extends TeaModel {
         }
 
         /**
-         * 默认按负载弹性伸缩规则列表
+         * <p>默认按负载弹性伸缩规则列表</p>
          */
         public Builder defaultMetricTriggeredRules(java.util.List < ScalingRule > defaultMetricTriggeredRules) {
             this.defaultMetricTriggeredRules = defaultMetricTriggeredRules;
@@ -137,7 +138,10 @@ public class AutoScalingConstraints extends TeaModel {
         }
 
         /**
-         * 单次伸缩活动最大扩缩容节点数量。
+         * <p>单次伸缩活动最大扩缩容节点数量。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxAdjustmentValue(Integer maxAdjustmentValue) {
             this.maxAdjustmentValue = maxAdjustmentValue;
@@ -145,7 +149,10 @@ public class AutoScalingConstraints extends TeaModel {
         }
 
         /**
-         * 按负载规则数量最大值。
+         * <p>按负载规则数量最大值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxByLoadRuleCount(Integer maxByLoadRuleCount) {
             this.maxByLoadRuleCount = maxByLoadRuleCount;
@@ -153,7 +160,10 @@ public class AutoScalingConstraints extends TeaModel {
         }
 
         /**
-         * 按时间规则数量最大值。
+         * <p>按时间规则数量最大值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxByTimeRuleCount(Integer maxByTimeRuleCount) {
             this.maxByTimeRuleCount = maxByTimeRuleCount;
@@ -161,7 +171,7 @@ public class AutoScalingConstraints extends TeaModel {
         }
 
         /**
-         * 支持的按负载弹性伸缩指标Tag列表。
+         * <p>支持的按负载弹性伸缩指标Tag列表。</p>
          */
         public Builder supportMetricTags(java.util.List < SupportMetricTags> supportMetricTags) {
             this.supportMetricTags = supportMetricTags;
@@ -169,7 +179,10 @@ public class AutoScalingConstraints extends TeaModel {
         }
 
         /**
-         * 支持的按负载弹性伸缩指标列表。
+         * <p>支持的按负载弹性伸缩指标列表。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;YarnRootAvailableMemoryUsage&quot;,&quot;YarnRootAvailableVcores&quot;]</p>
          */
         public Builder supportMetrics(java.util.List < String > supportMetrics) {
             this.supportMetrics = supportMetrics;
@@ -177,7 +190,10 @@ public class AutoScalingConstraints extends TeaModel {
         }
 
         /**
-         * 支持的弹性伸缩规则类型。
+         * <p>支持的弹性伸缩规则类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;TIME_TRIGGER&quot;,&quot;METRICS_TRIGGER&quot;]</p>
          */
         public Builder supportRuleTypes(java.util.List < String > supportRuleTypes) {
             this.supportRuleTypes = supportRuleTypes;
@@ -190,6 +206,12 @@ public class AutoScalingConstraints extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AutoScalingConstraints} extends {@link TeaModel}
+     *
+     * <p>AutoScalingConstraints</p>
+     */
     public static class SupportMetricTags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
@@ -229,7 +251,7 @@ public class AutoScalingConstraints extends TeaModel {
             private java.util.List < Tag > tags; 
 
             /**
-             * 指标名称。
+             * <p>指标名称。</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -237,7 +259,7 @@ public class AutoScalingConstraints extends TeaModel {
             }
 
             /**
-             * 指标Tag。
+             * <p>指标Tag。</p>
              */
             public Builder tags(java.util.List < Tag > tags) {
                 this.tags = tags;

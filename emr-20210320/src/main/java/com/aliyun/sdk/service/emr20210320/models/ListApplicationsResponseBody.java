@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListApplicationsResponseBody</p>
@@ -85,7 +86,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The applications.
+         * <p>The applications.</p>
          */
         public Builder applications(java.util.List < Applications> applications) {
             this.applications = applications;
@@ -93,7 +94,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +105,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the next page returned.
+         * <p>The page number of the next page returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +116,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9E3A7161-EB7B-172B-8D18-FFB06BA3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of pages.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListApplicationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListApplicationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsResponseBody</p>
+     */
     public static class Applications extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
@@ -194,7 +213,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String communityVersion; 
 
             /**
-             * The application name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HDFS</p>
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -202,13 +224,15 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the applications. Valid values:
-             * <p>
+             * <p>The status of the applications. Valid values:</p>
+             * <ul>
+             * <li>STOPPED: At least one application is in the Stopped state.</li>
+             * <li>RUNNING: All applications are in the Running state.</li>
+             * </ul>
+             * <p>This parameter is returned only for DataLake, OLAP, Dataflow, DataServing, and custom clusters. For other types of clusters, no value is returned for this parameter.</p>
              * 
-             * *   STOPPED: At least one application is in the Stopped state.
-             * *   RUNNING: All applications are in the Running state.
-             * 
-             * This parameter is returned only for DataLake, OLAP, Dataflow, DataServing, and custom clusters. For other types of clusters, no value is returned for this parameter.
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder applicationState(String applicationState) {
                 this.applicationState = applicationState;
@@ -216,7 +240,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the application.
+             * <p>The version of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.8.1</p>
              */
             public Builder applicationVersion(String applicationVersion) {
                 this.applicationVersion = applicationVersion;
@@ -224,7 +251,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The community edition.
+             * <p>The community edition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.8.5</p>
              */
             public Builder communityVersion(String communityVersion) {
                 this.communityVersion = communityVersion;

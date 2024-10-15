@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeploymentSetConstraints} extends {@link TeaModel}
  *
  * <p>DeploymentSetConstraints</p>
@@ -73,7 +74,10 @@ public class DeploymentSetConstraints extends TeaModel {
         private java.util.List < String > values; 
 
         /**
-         * 默认值。
+         * <p>默认值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CLUSTER</p>
          */
         public Builder defaultValue(String defaultValue) {
             this.defaultValue = defaultValue;
@@ -89,7 +93,7 @@ public class DeploymentSetConstraints extends TeaModel {
         }
 
         /**
-         * 替换策略。
+         * <p>替换策略。</p>
          */
         public Builder replacementStrategy(ReplacementStrategy replacementStrategy) {
             this.replacementStrategy = replacementStrategy;
@@ -97,7 +101,10 @@ public class DeploymentSetConstraints extends TeaModel {
         }
 
         /**
-         * 枚举值。
+         * <p>枚举值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;CLUSTER&quot;,&quot;NODE_GROUP&quot;,&quot;NONE&quot;]</p>
          */
         public Builder values(java.util.List < String > values) {
             this.values = values;

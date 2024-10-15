@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApiTemplate} extends {@link TeaModel}
  *
  * <p>ApiTemplate</p>
@@ -109,7 +110,10 @@ public class ApiTemplate extends TeaModel {
         private String templateName; 
 
         /**
-         * 接口名。
+         * <p>接口名。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateCluster</p>
          */
         public Builder apiName(String apiName) {
             this.apiName = apiName;
@@ -117,7 +121,7 @@ public class ApiTemplate extends TeaModel {
         }
 
         /**
-         * 模版接口参数。
+         * <p>模版接口参数。</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -125,7 +129,10 @@ public class ApiTemplate extends TeaModel {
         }
 
         /**
-         * 区域ID。
+         * <p>区域ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -133,7 +140,10 @@ public class ApiTemplate extends TeaModel {
         }
 
         /**
-         * 资源组ID。
+         * <p>资源组ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzabjyop****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -141,7 +151,10 @@ public class ApiTemplate extends TeaModel {
         }
 
         /**
-         * 模板状态。
+         * <p>模板状态。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>READY</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -149,7 +162,10 @@ public class ApiTemplate extends TeaModel {
         }
 
         /**
-         * 模板ID。
+         * <p>模板ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AT-Af***</p>
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;
@@ -157,7 +173,10 @@ public class ApiTemplate extends TeaModel {
         }
 
         /**
-         * 模板ID。
+         * <p>模板ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AT-Af***</p>
          */
         public Builder templateName(String templateName) {
             this.templateName = templateName;

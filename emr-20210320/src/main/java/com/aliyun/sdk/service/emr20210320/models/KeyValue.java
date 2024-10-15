@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link KeyValue} extends {@link TeaModel}
  *
  * <p>KeyValue</p>
@@ -49,7 +50,10 @@ public class KeyValue extends TeaModel {
         private String value; 
 
         /**
-         * 键。
+         * <p>键。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -57,7 +61,10 @@ public class KeyValue extends TeaModel {
         }
 
         /**
-         * 值。
+         * <p>值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         public Builder value(String value) {
             this.value = value;

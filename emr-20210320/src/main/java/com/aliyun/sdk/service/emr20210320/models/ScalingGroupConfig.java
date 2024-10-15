@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScalingGroupConfig} extends {@link TeaModel}
  *
  * <p>ScalingGroupConfig</p>
@@ -193,7 +194,10 @@ public class ScalingGroupConfig extends TeaModel {
         private String triggerMode; 
 
         /**
-         * 数据盘类型。
+         * <p>数据盘类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
          */
         public Builder dataDiskCategory(String dataDiskCategory) {
             this.dataDiskCategory = dataDiskCategory;
@@ -201,7 +205,10 @@ public class ScalingGroupConfig extends TeaModel {
         }
 
         /**
-         * 数据盘个数。
+         * <p>数据盘个数。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder dataDiskCount(Integer dataDiskCount) {
             this.dataDiskCount = dataDiskCount;
@@ -209,7 +216,10 @@ public class ScalingGroupConfig extends TeaModel {
         }
 
         /**
-         * 数据盘大小,单位GB。
+         * <p>数据盘大小,单位GB。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         public Builder dataDiskSize(Long dataDiskSize) {
             this.dataDiskSize = dataDiskSize;
@@ -217,7 +227,10 @@ public class ScalingGroupConfig extends TeaModel {
         }
 
         /**
-         * 默认冷却时间。
+         * <p>默认冷却时间。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder defaultCoolDownTime(Long defaultCoolDownTime) {
             this.defaultCoolDownTime = defaultCoolDownTime;
@@ -225,7 +238,7 @@ public class ScalingGroupConfig extends TeaModel {
         }
 
         /**
-         * 抢占实例列表。
+         * <p>抢占实例列表。</p>
          */
         public Builder instanceTypeList(java.util.List < InstanceTypeList> instanceTypeList) {
             this.instanceTypeList = instanceTypeList;
@@ -233,7 +246,7 @@ public class ScalingGroupConfig extends TeaModel {
         }
 
         /**
-         * 资源可用性策略(成本优化参数)。
+         * <p>资源可用性策略(成本优化参数)。</p>
          */
         public Builder multiAvailablePolicy(MultiAvailablePolicy multiAvailablePolicy) {
             this.multiAvailablePolicy = multiAvailablePolicy;
@@ -241,7 +254,7 @@ public class ScalingGroupConfig extends TeaModel {
         }
 
         /**
-         * 节点下线策略。
+         * <p>节点下线策略。</p>
          */
         public Builder nodeOfflinePolicy(NodeOfflinePolicy nodeOfflinePolicy) {
             this.nodeOfflinePolicy = nodeOfflinePolicy;
@@ -249,7 +262,7 @@ public class ScalingGroupConfig extends TeaModel {
         }
 
         /**
-         * 私有池选项	。
+         * <p>私有池选项	。</p>
          */
         public Builder privatePoolOptions(PrivatePoolOptions privatePoolOptions) {
             this.privatePoolOptions = privatePoolOptions;
@@ -257,7 +270,10 @@ public class ScalingGroupConfig extends TeaModel {
         }
 
         /**
-         * 伸缩组节点最大个数。
+         * <p>伸缩组节点最大个数。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder scalingMaxSize(Integer scalingMaxSize) {
             this.scalingMaxSize = scalingMaxSize;
@@ -265,7 +281,10 @@ public class ScalingGroupConfig extends TeaModel {
         }
 
         /**
-         * 伸缩组节点最小个数。
+         * <p>伸缩组节点最小个数。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scalingMinSize(Integer scalingMinSize) {
             this.scalingMinSize = scalingMinSize;
@@ -273,7 +292,10 @@ public class ScalingGroupConfig extends TeaModel {
         }
 
         /**
-         * 抢占式Spot实例策略。
+         * <p>抢占式Spot实例策略。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NoSpot</p>
          */
         public Builder spotStrategy(String spotStrategy) {
             this.spotStrategy = spotStrategy;
@@ -281,7 +303,10 @@ public class ScalingGroupConfig extends TeaModel {
         }
 
         /**
-         * 系统盘类型。
+         * <p>系统盘类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
          */
         public Builder sysDiskCategory(String sysDiskCategory) {
             this.sysDiskCategory = sysDiskCategory;
@@ -289,7 +314,10 @@ public class ScalingGroupConfig extends TeaModel {
         }
 
         /**
-         * 系统盘大小,单位GB。
+         * <p>系统盘大小,单位GB。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder sysDiskSize(Long sysDiskSize) {
             this.sysDiskSize = sysDiskSize;
@@ -297,7 +325,10 @@ public class ScalingGroupConfig extends TeaModel {
         }
 
         /**
-         * 伸缩活动触发模式。
+         * <p>伸缩活动触发模式。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ByLoad</p>
          */
         public Builder triggerMode(String triggerMode) {
             this.triggerMode = triggerMode;
@@ -310,6 +341,12 @@ public class ScalingGroupConfig extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ScalingGroupConfig} extends {@link TeaModel}
+     *
+     * <p>ScalingGroupConfig</p>
+     */
     public static class InstanceTypeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
@@ -349,7 +386,10 @@ public class ScalingGroupConfig extends TeaModel {
             private Float spotPriceLimit; 
 
             /**
-             * Ecs类型。
+             * <p>Ecs类型。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.c5.xlarge</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -357,7 +397,10 @@ public class ScalingGroupConfig extends TeaModel {
             }
 
             /**
-             * 抢占价格上限,可空。
+             * <p>抢占价格上限,可空。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.79</p>
              */
             public Builder spotPriceLimit(Float spotPriceLimit) {
                 this.spotPriceLimit = spotPriceLimit;
@@ -371,6 +414,12 @@ public class ScalingGroupConfig extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ScalingGroupConfig} extends {@link TeaModel}
+     *
+     * <p>ScalingGroupConfig</p>
+     */
     public static class PolicyParam extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OnDemandBaseCapacity")
         private Integer onDemandBaseCapacity;
@@ -434,7 +483,10 @@ public class ScalingGroupConfig extends TeaModel {
             private Boolean spotInstanceRemedy; 
 
             /**
-             * 按需实例最小个数。
+             * <p>按需实例最小个数。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder onDemandBaseCapacity(Integer onDemandBaseCapacity) {
                 this.onDemandBaseCapacity = onDemandBaseCapacity;
@@ -442,7 +494,10 @@ public class ScalingGroupConfig extends TeaModel {
             }
 
             /**
-             * 按需实例百分比。
+             * <p>按需实例百分比。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder onDemandPercentageAboveBaseCapacity(Integer onDemandPercentageAboveBaseCapacity) {
                 this.onDemandPercentageAboveBaseCapacity = onDemandPercentageAboveBaseCapacity;
@@ -450,7 +505,10 @@ public class ScalingGroupConfig extends TeaModel {
             }
 
             /**
-             * 抢占实例类型池规模。
+             * <p>抢占实例类型池规模。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder spotInstancePools(Integer spotInstancePools) {
                 this.spotInstancePools = spotInstancePools;
@@ -458,7 +516,10 @@ public class ScalingGroupConfig extends TeaModel {
             }
 
             /**
-             * 是否使用按量补偿。
+             * <p>是否使用按量补偿。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder spotInstanceRemedy(Boolean spotInstanceRemedy) {
                 this.spotInstanceRemedy = spotInstanceRemedy;
@@ -472,6 +533,12 @@ public class ScalingGroupConfig extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ScalingGroupConfig} extends {@link TeaModel}
+     *
+     * <p>ScalingGroupConfig</p>
+     */
     public static class MultiAvailablePolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PolicyParam")
         private PolicyParam policyParam;
@@ -511,7 +578,7 @@ public class ScalingGroupConfig extends TeaModel {
             private String policyType; 
 
             /**
-             * 资源可用性策略(成本优化参数)。
+             * <p>资源可用性策略(成本优化参数)。</p>
              */
             public Builder policyParam(PolicyParam policyParam) {
                 this.policyParam = policyParam;
@@ -519,7 +586,10 @@ public class ScalingGroupConfig extends TeaModel {
             }
 
             /**
-             * 策略类型。
+             * <p>策略类型。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIORITY</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -533,6 +603,12 @@ public class ScalingGroupConfig extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ScalingGroupConfig} extends {@link TeaModel}
+     *
+     * <p>ScalingGroupConfig</p>
+     */
     public static class NodeOfflinePolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
@@ -572,7 +648,10 @@ public class ScalingGroupConfig extends TeaModel {
             private Long timeoutMs; 
 
             /**
-             * 下线模式,是否为优雅下线。
+             * <p>下线模式,是否为优雅下线。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFAULT</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -580,7 +659,10 @@ public class ScalingGroupConfig extends TeaModel {
             }
 
             /**
-             * 下线超时时间,单位毫秒。
+             * <p>下线超时时间,单位毫秒。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder timeoutMs(Long timeoutMs) {
                 this.timeoutMs = timeoutMs;
@@ -594,6 +676,12 @@ public class ScalingGroupConfig extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ScalingGroupConfig} extends {@link TeaModel}
+     *
+     * <p>ScalingGroupConfig</p>
+     */
     public static class PrivatePoolOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -633,7 +721,10 @@ public class ScalingGroupConfig extends TeaModel {
             private String matchCriteria; 
 
             /**
-             * 私有池id。
+             * <p>私有池id。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eap-bp67acfmxazb4****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -641,7 +732,10 @@ public class ScalingGroupConfig extends TeaModel {
             }
 
             /**
-             * 实例启动的私有池容量选项。。
+             * <p>实例启动的私有池容量选项。。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Open</p>
              */
             public Builder matchCriteria(String matchCriteria) {
                 this.matchCriteria = matchCriteria;

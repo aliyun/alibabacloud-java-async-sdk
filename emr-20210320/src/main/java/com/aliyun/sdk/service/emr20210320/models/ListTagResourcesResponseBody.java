@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTagResourcesResponseBody</p>
@@ -85,7 +86,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The maximum number of entries returned.
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,7 +97,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Returns the location of the data that was read. Empty indicates that the data has been read.
+         * <p>Returns the location of the data that was read. Empty indicates that the data has been read.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,7 +108,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>372D4E9B-2509-5EFA-846B-B34FBF143F56</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the tag. Contains the resource ID, resource type, and tag key-value information.
+         * <p>The details about the tag. Contains the resource ID, resource type, and tag key-value information.</p>
          */
         public Builder tagResources(java.util.List < TagResources> tagResources) {
             this.tagResources = tagResources;
@@ -117,7 +127,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesResponseBody</p>
+     */
     public static class TagResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
@@ -193,7 +212,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * Indicates the ID of a resource.
+             * <p>Indicates the ID of a resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-b933c5aac8fe****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -201,7 +223,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cluster</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -209,7 +234,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key of the ENI.
+             * <p>The tag key of the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Department</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -217,7 +245,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the ENI.
+             * <p>The tag value of the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dev</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

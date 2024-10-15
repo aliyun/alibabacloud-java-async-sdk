@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplicationConfigFile} extends {@link TeaModel}
  *
  * <p>ApplicationConfigFile</p>
@@ -51,7 +52,11 @@ public class ApplicationConfigFile extends TeaModel {
         private String configFileName; 
 
         /**
-         * 应用名称。
+         * <p>应用名称。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HDFS</p>
          */
         public Builder applicationName(String applicationName) {
             this.applicationName = applicationName;
@@ -59,7 +64,11 @@ public class ApplicationConfigFile extends TeaModel {
         }
 
         /**
-         * 配置文件名称。
+         * <p>配置文件名称。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>core-site.xml</p>
          */
         public Builder configFileName(String configFileName) {
             this.configFileName = configFileName;

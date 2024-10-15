@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConvertNodeGroupParam} extends {@link TeaModel}
  *
  * <p>ConvertNodeGroupParam</p>
@@ -76,7 +77,7 @@ public class ConvertNodeGroupParam extends TeaModel {
         private String paymentType; 
 
         /**
-         * NodeGroupId.
+         * <p>This parameter is required.</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.nodeGroupId = nodeGroupId;
@@ -84,7 +85,7 @@ public class ConvertNodeGroupParam extends TeaModel {
         }
 
         /**
-         * PaymentDuration.
+         * <p>This parameter is required.</p>
          */
         public Builder paymentDuration(Long paymentDuration) {
             this.paymentDuration = paymentDuration;
@@ -100,7 +101,7 @@ public class ConvertNodeGroupParam extends TeaModel {
         }
 
         /**
-         * PaymentType.
+         * <p>This parameter is required.</p>
          */
         public Builder paymentType(String paymentType) {
             this.paymentType = paymentType;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ValueConstraints} extends {@link TeaModel}
  *
  * <p>ValueConstraints</p>
@@ -97,7 +98,7 @@ public class ValueConstraints extends TeaModel {
         private java.util.List < Integer > values; 
 
         /**
-         * 默认值。
+         * <p>默认值。</p>
          */
         public Builder defaultValue(Integer defaultValue) {
             this.defaultValue = defaultValue;
@@ -105,7 +106,7 @@ public class ValueConstraints extends TeaModel {
         }
 
         /**
-         * 结束值。
+         * <p>结束值。</p>
          */
         public Builder end(Integer end) {
             this.end = end;
@@ -113,7 +114,7 @@ public class ValueConstraints extends TeaModel {
         }
 
         /**
-         * 起始值。
+         * <p>起始值。</p>
          */
         public Builder start(Integer start) {
             this.start = start;
@@ -121,7 +122,7 @@ public class ValueConstraints extends TeaModel {
         }
 
         /**
-         * 步长。
+         * <p>步长。</p>
          */
         public Builder step(Integer step) {
             this.step = step;
@@ -129,7 +130,7 @@ public class ValueConstraints extends TeaModel {
         }
 
         /**
-         * 值限制类型。
+         * <p>值限制类型。</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -137,7 +138,10 @@ public class ValueConstraints extends TeaModel {
         }
 
         /**
-         * 枚举值。
+         * <p>枚举值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder values(java.util.List < Integer > values) {
             this.values = values;

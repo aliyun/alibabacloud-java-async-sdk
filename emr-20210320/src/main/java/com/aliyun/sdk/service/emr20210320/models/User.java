@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link User} extends {@link TeaModel}
  *
  * <p>User</p>
@@ -88,7 +89,10 @@ public class User extends TeaModel {
         private String userType; 
 
         /**
-         * 用户组。
+         * <p>用户组。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hadoop</p>
          */
         public Builder group(String group) {
             this.group = group;
@@ -96,7 +100,11 @@ public class User extends TeaModel {
         }
 
         /**
-         * 用户密码。
+         * <p>用户密码。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345****</p>
          */
         public Builder password(String password) {
             this.password = password;
@@ -104,7 +112,11 @@ public class User extends TeaModel {
         }
 
         /**
-         * 用户ID。
+         * <p>用户ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1238539****</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -112,7 +124,11 @@ public class User extends TeaModel {
         }
 
         /**
-         * 用户名称。
+         * <p>用户名称。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>王五</p>
          */
         public Builder userName(String userName) {
             this.userName = userName;
@@ -120,7 +136,10 @@ public class User extends TeaModel {
         }
 
         /**
-         * 用户类型。
+         * <p>用户类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LDAP</p>
          */
         public Builder userType(String userType) {
             this.userType = userType;

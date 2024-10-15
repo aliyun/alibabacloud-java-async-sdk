@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDoctorHBaseTableResponseBody} extends {@link TeaModel}
  *
  * <p>GetDoctorHBaseTableResponseBody</p>
@@ -49,7 +50,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * <p>请求ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDoctorHBaseTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseTableResponseBody</p>
+     */
     public static class Analysis extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReadRequestHotspotRegionList")
         private java.util.List < String > readRequestHotspotRegionList;
@@ -177,7 +187,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * The description of read imbalance.
+             * <p>The description of read imbalance.</p>
              */
             public Builder readRequestUnbalanceSuggestion(String readRequestUnbalanceSuggestion) {
                 this.readRequestUnbalanceSuggestion = readRequestUnbalanceSuggestion;
@@ -193,7 +203,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * The description of read/write imbalance.
+             * <p>The description of read/write imbalance.</p>
              */
             public Builder requestUnbalanceSuggestion(String requestUnbalanceSuggestion) {
                 this.requestUnbalanceSuggestion = requestUnbalanceSuggestion;
@@ -217,7 +227,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * The description of write imbalance.
+             * <p>The description of write imbalance.</p>
              */
             public Builder writeRequestUnbalanceSuggestion(String writeRequestUnbalanceSuggestion) {
                 this.writeRequestUnbalanceSuggestion = writeRequestUnbalanceSuggestion;
@@ -231,6 +241,12 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHBaseTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseTableResponseBody</p>
+     */
     public static class ColdAccessDay extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -332,6 +348,12 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHBaseTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseTableResponseBody</p>
+     */
     public static class ColdConfigDay extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -433,6 +455,12 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHBaseTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseTableResponseBody</p>
+     */
     public static class ColdDataSize extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -534,6 +562,12 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHBaseTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseTableResponseBody</p>
+     */
     public static class DailyReadRequest extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -635,6 +669,12 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHBaseTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseTableResponseBody</p>
+     */
     public static class DailyReadRequestDayGrowthRatio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -736,6 +776,12 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHBaseTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseTableResponseBody</p>
+     */
     public static class DailyWriteRequest extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -837,6 +883,12 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHBaseTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseTableResponseBody</p>
+     */
     public static class DailyWriteRequestDayGrowthRatio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -938,6 +990,12 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHBaseTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseTableResponseBody</p>
+     */
     public static class FreezeConfigDay extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -1039,6 +1097,12 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHBaseTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseTableResponseBody</p>
+     */
     public static class FreezeDataSize extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -1140,6 +1204,12 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHBaseTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseTableResponseBody</p>
+     */
     public static class HotDataSize extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -1241,6 +1311,12 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHBaseTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseTableResponseBody</p>
+     */
     public static class Locality extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -1342,6 +1418,12 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHBaseTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseTableResponseBody</p>
+     */
     public static class ReadRequestBalance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -1443,6 +1525,12 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHBaseTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseTableResponseBody</p>
+     */
     public static class RegionBalance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -1544,6 +1632,12 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHBaseTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseTableResponseBody</p>
+     */
     public static class RegionCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -1645,6 +1739,12 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHBaseTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseTableResponseBody</p>
+     */
     public static class RegionCountDayGrowthRatio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -1746,6 +1846,12 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHBaseTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseTableResponseBody</p>
+     */
     public static class RegionServerCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -1847,6 +1953,12 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHBaseTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseTableResponseBody</p>
+     */
     public static class RequestBalance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -1948,6 +2060,12 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHBaseTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseTableResponseBody</p>
+     */
     public static class StoreFileCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -2049,6 +2167,12 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHBaseTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseTableResponseBody</p>
+     */
     public static class StoreFileCountDayGrowthRatio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -2150,6 +2274,12 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHBaseTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseTableResponseBody</p>
+     */
     public static class TableSize extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -2251,6 +2381,12 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHBaseTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseTableResponseBody</p>
+     */
     public static class TableSizeDayGrowthRatio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -2352,6 +2488,12 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHBaseTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseTableResponseBody</p>
+     */
     public static class WarmConfigDay extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -2453,6 +2595,12 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHBaseTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseTableResponseBody</p>
+     */
     public static class WarmDataSize extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -2554,6 +2702,12 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHBaseTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseTableResponseBody</p>
+     */
     public static class WriteRequestBalance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -2655,6 +2809,12 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHBaseTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseTableResponseBody</p>
+     */
     public static class Metrics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColdAccessDay")
         private ColdAccessDay coldAccessDay;
@@ -3156,6 +3316,12 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHBaseTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseTableResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Analysis")
         private Analysis analysis;
@@ -3195,7 +3361,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             private Metrics metrics; 
 
             /**
-             * The diagnosis result.
+             * <p>The diagnosis result.</p>
              */
             public Builder analysis(Analysis analysis) {
                 this.analysis = analysis;

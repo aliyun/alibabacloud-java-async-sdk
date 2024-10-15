@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link NodeGroup} extends {@link TeaModel}
  *
  * <p>NodeGroup</p>
@@ -289,7 +290,10 @@ public class NodeGroup extends TeaModel {
         private String zoneId; 
 
         /**
-         * 安全组ID。
+         * <p>安全组ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;sg-hp3abbae8lb6lmb1****&quot;]</p>
          */
         public Builder additionalSecurityGroupIds(java.util.List < String > additionalSecurityGroupIds) {
             this.additionalSecurityGroupIds = additionalSecurityGroupIds;
@@ -297,7 +301,7 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * 成本优化模式配置。
+         * <p>成本优化模式配置。</p>
          */
         public Builder costOptimizedConfig(CostOptimizedConfig costOptimizedConfig) {
             this.costOptimizedConfig = costOptimizedConfig;
@@ -305,7 +309,7 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * 数据盘列表。
+         * <p>数据盘列表。</p>
          */
         public Builder dataDisks(java.util.List < DataDisk > dataDisks) {
             this.dataDisks = dataDisks;
@@ -313,13 +317,16 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * 部署集策略。取值范围：
-         * <p>
-         * - NONE：不适用部署集。
-         * - CLUSTER：使用集群级别部署集。
-         * - NODE_GROUP：使用节点组级别部署集。
+         * <p>部署集策略。取值范围：</p>
+         * <ul>
+         * <li>NONE：不适用部署集。</li>
+         * <li>CLUSTER：使用集群级别部署集。</li>
+         * <li>NODE_GROUP：使用节点组级别部署集。</li>
+         * </ul>
+         * <p>默认值：NONE。</p>
          * 
-         * 默认值：NONE。
+         * <strong>example:</strong>
+         * <p>NONE</p>
          */
         public Builder deploymentSetStrategy(String deploymentSetStrategy) {
             this.deploymentSetStrategy = deploymentSetStrategy;
@@ -327,10 +334,14 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * 节点组上部署的组件是否开启优雅下线。取值范围：
-         * <p>
-         * - true：开启优雅下线。
-         * - false：不开启优雅下线。
+         * <p>节点组上部署的组件是否开启优雅下线。取值范围：</p>
+         * <ul>
+         * <li>true：开启优雅下线。</li>
+         * <li>false：不开启优雅下线。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder gracefulShutdown(Boolean gracefulShutdown) {
             this.gracefulShutdown = gracefulShutdown;
@@ -338,7 +349,10 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * 实例类型列表。
+         * <p>实例类型列表。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;ecs.g6.4xlarge&quot;]</p>
          */
         public Builder instanceTypes(java.util.List < String > instanceTypes) {
             this.instanceTypes = instanceTypes;
@@ -346,7 +360,10 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * 节点组ID。
+         * <p>节点组ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-869471354ecd****</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.nodeGroupId = nodeGroupId;
@@ -354,7 +371,10 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * 节点组名称。最大长度128个字符。
+         * <p>节点组名称。最大长度128个字符。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>core-1</p>
          */
         public Builder nodeGroupName(String nodeGroupName) {
             this.nodeGroupName = nodeGroupName;
@@ -362,7 +382,10 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * 节点组状态。
+         * <p>节点组状态。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATED</p>
          */
         public Builder nodeGroupState(String nodeGroupState) {
             this.nodeGroupState = nodeGroupState;
@@ -370,11 +393,15 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * 节点组类型。取值范围：
-         * <p>
-         * - MASTER：管理类型节点组。
-         * - CORE：存储类型节点组。
-         * - TASK：计算类型节点组。
+         * <p>节点组类型。取值范围：</p>
+         * <ul>
+         * <li>MASTER：管理类型节点组。</li>
+         * <li>CORE：存储类型节点组。</li>
+         * <li>TASK：计算类型节点组。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CORE</p>
          */
         public Builder nodeGroupType(String nodeGroupType) {
             this.nodeGroupType = nodeGroupType;
@@ -382,9 +409,13 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * - COST_OPTIMIZED：成本优化策略。
-         * <p>
-         * - PRIORITY：优先级策略。
+         * <ul>
+         * <li>COST_OPTIMIZED：成本优化策略。</li>
+         * <li>PRIORITY：优先级策略。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIORITY</p>
          */
         public Builder nodeResizeStrategy(String nodeResizeStrategy) {
             this.nodeResizeStrategy = nodeResizeStrategy;
@@ -392,10 +423,14 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * 节点组付费类型。取值范围：
-         * <p>
-         * - PayAsYouGo：后付费，按量付费。
-         * - Subscription：预付费，包年包月。
+         * <p>节点组付费类型。取值范围：</p>
+         * <ul>
+         * <li>PayAsYouGo：后付费，按量付费。</li>
+         * <li>Subscription：预付费，包年包月。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PayAsYouGo</p>
          */
         public Builder paymentType(String paymentType) {
             this.paymentType = paymentType;
@@ -403,7 +438,10 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * 存活节点数量。
+         * <p>存活节点数量。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder runningNodeCount(Integer runningNodeCount) {
             this.runningNodeCount = runningNodeCount;
@@ -419,12 +457,15 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * 开启补齐抢占式实例后，当收到抢占式实例将被回收的系统消息时，伸缩组将尝试创建新的实例，替换掉将被回收的抢占式实例。取值范围：
-         * <p>
-         * - true：开启补齐抢占式实例。
-         * - false：不开启补齐抢占式实例。
+         * <p>开启补齐抢占式实例后，当收到抢占式实例将被回收的系统消息时，伸缩组将尝试创建新的实例，替换掉将被回收的抢占式实例。取值范围：</p>
+         * <ul>
+         * <li>true：开启补齐抢占式实例。</li>
+         * <li>false：不开启补齐抢占式实例。</li>
+         * </ul>
+         * <p>默认值：false。</p>
          * 
-         * 默认值：false。
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder spotInstanceRemedy(Boolean spotInstanceRemedy) {
             this.spotInstanceRemedy = spotInstanceRemedy;
@@ -432,7 +473,10 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * 是否支持竞价实例。
+         * <p>是否支持竞价实例。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NoSpot</p>
          */
         public Builder spotStrategy(String spotStrategy) {
             this.spotStrategy = spotStrategy;
@@ -440,7 +484,7 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * 状态变化原因。
+         * <p>状态变化原因。</p>
          */
         public Builder stateChangeReason(NodeGroupStateChangeReason stateChangeReason) {
             this.stateChangeReason = stateChangeReason;
@@ -448,7 +492,10 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * 节点组状态，NodeGroupState别名。
+         * <p>节点组状态，NodeGroupState别名。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATED</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -456,7 +503,7 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * 系统盘信息。
+         * <p>系统盘信息。</p>
          */
         public Builder systemDisk(SystemDisk systemDisk) {
             this.systemDisk = systemDisk;
@@ -464,7 +511,10 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * 虚拟机交换机ID列表。
+         * <p>虚拟机交换机ID列表。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;vsw-hp35g7ya5ymw68mmg****&quot;]</p>
          */
         public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
@@ -472,10 +522,14 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * 是否开公网IP。取值范围：
-         * <p>
-         * - true：开公网。
-         * - false：不开公网。
+         * <p>是否开公网IP。取值范围：</p>
+         * <ul>
+         * <li>true：开公网。</li>
+         * <li>false：不开公网。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder withPublicIp(Boolean withPublicIp) {
             this.withPublicIp = withPublicIp;
@@ -483,7 +537,10 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * 可用区ID。
+         * <p>可用区ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-h</p>
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;

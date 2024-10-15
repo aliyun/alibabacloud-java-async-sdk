@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListComponentsRequest} extends {@link RequestModel}
  *
  * <p>ListComponentsRequest</p>
@@ -139,7 +140,10 @@ public class ListComponentsRequest extends Request {
         } 
 
         /**
-         * 应用名称列表。
+         * <p>应用名称列表。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;HDFS&quot;]</p>
          */
         public Builder applicationNames(java.util.List < String > applicationNames) {
             this.putQueryParameter("ApplicationNames", applicationNames);
@@ -148,7 +152,11 @@ public class ListComponentsRequest extends Request {
         }
 
         /**
-         * 集群ID。
+         * <p>集群ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b933c5aac8fe****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -157,7 +165,10 @@ public class ListComponentsRequest extends Request {
         }
 
         /**
-         * 组件名称列表。
+         * <p>组件名称列表。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;DataNode&quot;]</p>
          */
         public Builder componentNames(java.util.List < String > componentNames) {
             this.putQueryParameter("ComponentNames", componentNames);
@@ -175,7 +186,10 @@ public class ListComponentsRequest extends Request {
         }
 
         /**
-         * 一次获取的最大记录数。取值范围：1~100。
+         * <p>一次获取的最大记录数。取值范围：1~100。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -184,7 +198,10 @@ public class ListComponentsRequest extends Request {
         }
 
         /**
-         * 标记当前开始读取的位置，置空表示从头开始。
+         * <p>标记当前开始读取的位置，置空表示从头开始。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -193,7 +210,11 @@ public class ListComponentsRequest extends Request {
         }
 
         /**
-         * 地域ID。
+         * <p>地域ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

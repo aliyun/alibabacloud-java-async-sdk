@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IncreaseNodesRequest} extends {@link RequestModel}
  *
  * <p>IncreaseNodesRequest</p>
@@ -183,7 +184,10 @@ public class IncreaseNodesRequest extends Request {
         } 
 
         /**
-         * The application configurations. You can specify a maximum of 1,000 items.
+         * <p>The application configurations. You can specify a maximum of 1,000 items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder applicationConfigs(java.util.List < ApplicationConfig > applicationConfigs) {
             this.putQueryParameter("ApplicationConfigs", applicationConfigs);
@@ -192,13 +196,15 @@ public class IncreaseNodesRequest extends Request {
         }
 
         /**
-         * Indicates whether to automatically pay for the orders involved in the scale-out operation. This parameter takes effect only when the PaymentType parameter is set to Subscription. Valid values:
-         * <p>
+         * <p>Indicates whether to automatically pay for the orders involved in the scale-out operation. This parameter takes effect only when the PaymentType parameter is set to Subscription. Valid values:</p>
+         * <ul>
+         * <li>true: automatically pays for the order involved in this operation.</li>
+         * <li>false: does not automatically pay for the orders involved in this operation.</li>
+         * </ul>
+         * <p>Default value: false</p>
          * 
-         * *   true: automatically pays for the order involved in this operation.
-         * *   false: does not automatically pay for the orders involved in this operation.
-         * 
-         * Default value: false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPayOrder(Boolean autoPayOrder) {
             this.putQueryParameter("AutoPayOrder", autoPayOrder);
@@ -207,11 +213,14 @@ public class IncreaseNodesRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal for nodes. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto-renewal for nodes. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false (default value)</li>
+         * </ul>
          * 
-         * *   true
-         * *   false (default value)
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -220,7 +229,11 @@ public class IncreaseNodesRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b933c5aac8fe****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -229,7 +242,11 @@ public class IncreaseNodesRequest extends Request {
         }
 
         /**
-         * The number of nodes. The number of incremental nodes for this scale-out. Valid values: 1 to 500.
+         * <p>The number of nodes. The number of incremental nodes for this scale-out. Valid values: 1 to 500.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder increaseNodeCount(Integer increaseNodeCount) {
             this.putQueryParameter("IncreaseNodeCount", increaseNodeCount);
@@ -238,11 +255,11 @@ public class IncreaseNodesRequest extends Request {
         }
 
         /**
-         * The minimum number of nodes that can be added. Valid values: 1 to 500.
-         * <p>
-         * 
-         * *   If you configure this parameter, and the number of available Elastic Compute Service (ECS) instances is less than the value of the IncreaseNodeCount parameter, the system tries to add nodes based on the number specified by the `MinIncreaseNodeCount` parameter. If the minimum number of nodes are added, the scale-out status is `PARTIAL_COMPLETED`.
-         * *   If you do not configure this parameter, and the number of available ECS instances is less than the value of the IncreaseNodeCount parameter, the scale-out process fails. The scale-out status is `FAILED`.
+         * <p>The minimum number of nodes that can be added. Valid values: 1 to 500.</p>
+         * <ul>
+         * <li>If you configure this parameter, and the number of available Elastic Compute Service (ECS) instances is less than the value of the IncreaseNodeCount parameter, the system tries to add nodes based on the number specified by the <code>MinIncreaseNodeCount</code> parameter. If the minimum number of nodes are added, the scale-out status is <code>PARTIAL_COMPLETED</code>.</li>
+         * <li>If you do not configure this parameter, and the number of available ECS instances is less than the value of the IncreaseNodeCount parameter, the scale-out process fails. The scale-out status is <code>FAILED</code>.</li>
+         * </ul>
          */
         public Builder minIncreaseNodeCount(Integer minIncreaseNodeCount) {
             this.putQueryParameter("MinIncreaseNodeCount", minIncreaseNodeCount);
@@ -251,7 +268,11 @@ public class IncreaseNodesRequest extends Request {
         }
 
         /**
-         * The ID of the node group. The target node group to which you want to scale out the cluster.
+         * <p>The ID of the node group. The target node group to which you want to scale out the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-869471354ecd****</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.putQueryParameter("NodeGroupId", nodeGroupId);
@@ -260,7 +281,10 @@ public class IncreaseNodesRequest extends Request {
         }
 
         /**
-         * The subscription duration. Valid values when the PaymentDurationUnit value is Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.
+         * <p>The subscription duration. Valid values when the PaymentDurationUnit value is Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder paymentDuration(Integer paymentDuration) {
             this.putQueryParameter("PaymentDuration", paymentDuration);
@@ -269,10 +293,13 @@ public class IncreaseNodesRequest extends Request {
         }
 
         /**
-         * The unit of the subscription duration. Valid values:
-         * <p>
+         * <p>The unit of the subscription duration. Valid values:</p>
+         * <ul>
+         * <li>Month</li>
+         * </ul>
          * 
-         * *   Month
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder paymentDurationUnit(String paymentDurationUnit) {
             this.putQueryParameter("PaymentDurationUnit", paymentDurationUnit);
@@ -281,7 +308,11 @@ public class IncreaseNodesRequest extends Request {
         }
 
         /**
-         * The ID of the region in which you want to create the instance.
+         * <p>The ID of the region in which you want to create the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

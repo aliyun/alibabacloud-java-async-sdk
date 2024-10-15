@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunApiTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>RunApiTemplateResponseBody</p>
@@ -57,7 +58,10 @@ public class RunApiTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * <p>请求ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

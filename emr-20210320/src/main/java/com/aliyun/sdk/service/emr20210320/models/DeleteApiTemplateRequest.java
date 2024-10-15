@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteApiTemplateRequest} extends {@link RequestModel}
  *
  * <p>DeleteApiTemplateRequest</p>
@@ -98,7 +99,11 @@ public class DeleteApiTemplateRequest extends Request {
         } 
 
         /**
-         * 接口名。
+         * <p>接口名。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateCluster</p>
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -107,7 +112,11 @@ public class DeleteApiTemplateRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * <p>区域ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -116,7 +125,10 @@ public class DeleteApiTemplateRequest extends Request {
         }
 
         /**
-         * 资源组ID。
+         * <p>资源组ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzabjyop****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -125,7 +137,11 @@ public class DeleteApiTemplateRequest extends Request {
         }
 
         /**
-         * 集群模板id。
+         * <p>集群模板id。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>at-****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

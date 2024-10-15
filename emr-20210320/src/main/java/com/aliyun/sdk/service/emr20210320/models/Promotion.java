@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Promotion} extends {@link TeaModel}
  *
  * <p>Promotion</p>
@@ -86,7 +87,10 @@ public class Promotion extends TeaModel {
         private String promotionOptionNo; 
 
         /**
-         * 产品码。
+         * <p>产品码。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder productCode(String productCode) {
             this.productCode = productCode;
@@ -94,7 +98,10 @@ public class Promotion extends TeaModel {
         }
 
         /**
-         * 优惠券描述。
+         * <p>优惠券描述。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5元优惠券（有效期至23年8月11日）</p>
          */
         public Builder promotionDesc(String promotionDesc) {
             this.promotionDesc = promotionDesc;
@@ -102,7 +109,10 @@ public class Promotion extends TeaModel {
         }
 
         /**
-         * 优惠券名称。
+         * <p>优惠券名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5元优惠券</p>
          */
         public Builder promotionName(String promotionName) {
             this.promotionName = promotionName;
@@ -110,7 +120,10 @@ public class Promotion extends TeaModel {
         }
 
         /**
-         * 优惠券码。
+         * <p>优惠券码。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhui_quan</p>
          */
         public Builder promotionOptionCode(String promotionOptionCode) {
             this.promotionOptionCode = promotionOptionCode;
@@ -118,7 +131,11 @@ public class Promotion extends TeaModel {
         }
 
         /**
-         * 优惠券号。
+         * <p>优惠券号。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABC123</p>
          */
         public Builder promotionOptionNo(String promotionOptionNo) {
             this.promotionOptionNo = promotionOptionNo;

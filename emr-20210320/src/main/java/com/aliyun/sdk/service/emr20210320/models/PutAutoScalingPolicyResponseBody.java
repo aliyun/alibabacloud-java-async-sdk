@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutAutoScalingPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>PutAutoScalingPolicyResponseBody</p>
@@ -37,7 +38,10 @@ public class PutAutoScalingPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 请求ID。
+         * <p>请求ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

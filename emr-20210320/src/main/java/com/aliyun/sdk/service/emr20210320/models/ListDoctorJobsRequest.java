@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDoctorJobsRequest} extends {@link RequestModel}
  *
  * <p>ListDoctorJobsRequest</p>
@@ -209,7 +210,10 @@ public class ListDoctorJobsRequest extends Request {
         } 
 
         /**
-         * The IDs of the jobs that are submitted to YARN.
+         * <p>The IDs of the jobs that are submitted to YARN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder appIds(java.util.List < String > appIds) {
             this.putQueryParameter("AppIds", appIds);
@@ -218,7 +222,11 @@ public class ListDoctorJobsRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b933c5aac8fe****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -227,7 +235,7 @@ public class ListDoctorJobsRequest extends Request {
         }
 
         /**
-         * The range of end time. You can filter jobs whose end time falls within the specified time range.
+         * <p>The range of end time. You can filter jobs whose end time falls within the specified time range.</p>
          */
         public Builder endRange(EndRange endRange) {
             this.putQueryParameter("EndRange", endRange);
@@ -236,7 +244,10 @@ public class ListDoctorJobsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page.
+         * <p>The maximum number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -245,7 +256,10 @@ public class ListDoctorJobsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the request to retrieve a new page of results.
+         * <p>The pagination token that is used in the request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -254,11 +268,14 @@ public class ListDoctorJobsRequest extends Request {
         }
 
         /**
-         * The field that you use to sort the query results. Valid values:
-         * <p>
+         * <p>The field that you use to sort the query results. Valid values:</p>
+         * <ul>
+         * <li>vcoreSeconds: the aggregated number of vCPUs that are allocated to the job multiplied by the number of seconds the job has been running</li>
+         * <li>memSeconds: the aggregated amount of memory that is allocated to the job multiplied by the number of seconds the job has been running</li>
+         * </ul>
          * 
-         * *   vcoreSeconds: the aggregated number of vCPUs that are allocated to the job multiplied by the number of seconds the job has been running
-         * *   memSeconds: the aggregated amount of memory that is allocated to the job multiplied by the number of seconds the job has been running
+         * <strong>example:</strong>
+         * <p>vcoreSeconds</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -267,11 +284,14 @@ public class ListDoctorJobsRequest extends Request {
         }
 
         /**
-         * The order in which you want to sort the query results. Valid values:
-         * <p>
+         * <p>The order in which you want to sort the query results. Valid values:</p>
+         * <ul>
+         * <li>ASC: the ascending order</li>
+         * <li>DESC: the descending order</li>
+         * </ul>
          * 
-         * *   ASC: the ascending order
-         * *   DESC: the descending order
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -280,7 +300,10 @@ public class ListDoctorJobsRequest extends Request {
         }
 
         /**
-         * The YARN queues to which the jobs are submitted.
+         * <p>The YARN queues to which the jobs are submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder queues(java.util.List < String > queues) {
             this.putQueryParameter("Queues", queues);
@@ -289,7 +312,11 @@ public class ListDoctorJobsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -298,7 +325,7 @@ public class ListDoctorJobsRequest extends Request {
         }
 
         /**
-         * The range of start time. You can filter jobs whose start time falls within the specified time range.
+         * <p>The range of start time. You can filter jobs whose start time falls within the specified time range.</p>
          */
         public Builder startRange(StartRange startRange) {
             this.putQueryParameter("StartRange", startRange);
@@ -307,7 +334,10 @@ public class ListDoctorJobsRequest extends Request {
         }
 
         /**
-         * The YARN engines to which the jobs are submitted.
+         * <p>The YARN engines to which the jobs are submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder types(java.util.List < String > types) {
             this.putQueryParameter("Types", types);
@@ -316,7 +346,10 @@ public class ListDoctorJobsRequest extends Request {
         }
 
         /**
-         * The users who submit the jobs.
+         * <p>The users who submit the jobs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder users(java.util.List < String > users) {
             this.putQueryParameter("Users", users);
@@ -331,6 +364,12 @@ public class ListDoctorJobsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListDoctorJobsRequest} extends {@link TeaModel}
+     *
+     * <p>ListDoctorJobsRequest</p>
+     */
     public static class EndRange extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
@@ -370,7 +409,10 @@ public class ListDoctorJobsRequest extends Request {
             private Long startTime; 
 
             /**
-             * The end of the time range during which jobs ended. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.
+             * <p>The end of the time range during which jobs ended. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1666865137099</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -378,7 +420,10 @@ public class ListDoctorJobsRequest extends Request {
             }
 
             /**
-             * The beginning of the time range during which jobs ended. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.
+             * <p>The beginning of the time range during which jobs ended. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1679135111960</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -392,6 +437,12 @@ public class ListDoctorJobsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorJobsRequest} extends {@link TeaModel}
+     *
+     * <p>ListDoctorJobsRequest</p>
+     */
     public static class StartRange extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
@@ -431,7 +482,10 @@ public class ListDoctorJobsRequest extends Request {
             private Long startTime; 
 
             /**
-             * The end of the time range during which jobs were submitted. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.
+             * <p>The end of the time range during which jobs were submitted. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1683340662020</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -439,7 +493,10 @@ public class ListDoctorJobsRequest extends Request {
             }
 
             /**
-             * The beginning of the time range during which jobs were submitted. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.
+             * <p>The beginning of the time range during which jobs were submitted. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1683340662016</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

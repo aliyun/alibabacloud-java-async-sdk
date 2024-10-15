@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Disk} extends {@link TeaModel}
  *
  * <p>Disk</p>
@@ -73,7 +74,10 @@ public class Disk extends TeaModel {
         private Integer size; 
 
         /**
-         * 磁盘类型。
+         * <p>磁盘类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
          */
         public Builder category(String category) {
             this.category = category;
@@ -81,7 +85,10 @@ public class Disk extends TeaModel {
         }
 
         /**
-         * 每个节点磁盘数量。
+         * <p>每个节点磁盘数量。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -89,7 +96,10 @@ public class Disk extends TeaModel {
         }
 
         /**
-         * 性能级别。
+         * <p>性能级别。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S0</p>
          */
         public Builder performanceLevel(String performanceLevel) {
             this.performanceLevel = performanceLevel;
@@ -97,7 +107,10 @@ public class Disk extends TeaModel {
         }
 
         /**
-         * 单位GB。
+         * <p>单位GB。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder size(Integer size) {
             this.size = size;

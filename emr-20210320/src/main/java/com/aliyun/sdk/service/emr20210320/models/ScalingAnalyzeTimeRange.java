@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScalingAnalyzeTimeRange} extends {@link TeaModel}
  *
  * <p>ScalingAnalyzeTimeRange</p>
@@ -61,7 +62,10 @@ public class ScalingAnalyzeTimeRange extends TeaModel {
         private String type; 
 
         /**
-         * 结束时间。
+         * <p>结束时间。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1676441972000</p>
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -69,7 +73,10 @@ public class ScalingAnalyzeTimeRange extends TeaModel {
         }
 
         /**
-         * 起始时间。
+         * <p>起始时间。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1676441971000</p>
          */
         public Builder startTime(Long startTime) {
             this.startTime = startTime;
@@ -77,7 +84,10 @@ public class ScalingAnalyzeTimeRange extends TeaModel {
         }
 
         /**
-         * 峰谷类型。 peak/valley
+         * <p>峰谷类型。 peak/valley</p>
+         * 
+         * <strong>example:</strong>
+         * <p>peak</p>
          */
         public Builder type(String type) {
             this.type = type;

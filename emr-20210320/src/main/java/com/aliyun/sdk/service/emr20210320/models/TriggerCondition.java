@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TriggerCondition} extends {@link TeaModel}
  *
  * <p>TriggerCondition</p>
@@ -89,14 +90,19 @@ public class TriggerCondition extends TeaModel {
         private Double threshold; 
 
         /**
-         * 比较符。取值范围：
-         * <p>
-         * - EQ:等于。
-         * - NE:不等于。
-         * - GT:大于。
-         * - LT:小于。
-         * - GE:大于等于。
-         * - LE:小于等于。
+         * <p>比较符。取值范围：</p>
+         * <ul>
+         * <li>EQ:等于。</li>
+         * <li>NE:不等于。</li>
+         * <li>GT:大于。</li>
+         * <li>LT:小于。</li>
+         * <li>GE:大于等于。</li>
+         * <li>LE:小于等于。</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LT</p>
          */
         public Builder comparisonOperator(String comparisonOperator) {
             this.comparisonOperator = comparisonOperator;
@@ -104,7 +110,11 @@ public class TriggerCondition extends TeaModel {
         }
 
         /**
-         * 指标名称。指标名称需要在 ListAutoScalingMetrics 接口返回的指标名称列表中。
+         * <p>指标名称。指标名称需要在 ListAutoScalingMetrics 接口返回的指标名称列表中。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yarn_resourcemanager_root_availablememoryusage</p>
          */
         public Builder metricName(String metricName) {
             this.metricName = metricName;
@@ -112,11 +122,16 @@ public class TriggerCondition extends TeaModel {
         }
 
         /**
-         * 统计量名称。取值范围：
-         * <p>
-         * - MAX：最大值。
-         * - MIN：最小值。
-         * - AVG：平均值。
+         * <p>统计量名称。取值范围：</p>
+         * <ul>
+         * <li>MAX：最大值。</li>
+         * <li>MIN：最小值。</li>
+         * <li>AVG：平均值。</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AVG</p>
          */
         public Builder statistics(String statistics) {
             this.statistics = statistics;
@@ -124,7 +139,7 @@ public class TriggerCondition extends TeaModel {
         }
 
         /**
-         * 指标Tag。
+         * <p>指标Tag。</p>
          */
         public Builder tags(java.util.List < Tag > tags) {
             this.tags = tags;
@@ -132,7 +147,11 @@ public class TriggerCondition extends TeaModel {
         }
 
         /**
-         * 阈值。
+         * <p>阈值。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12.5</p>
          */
         public Builder threshold(Double threshold) {
             this.threshold = threshold;

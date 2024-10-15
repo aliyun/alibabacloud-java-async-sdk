@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateScriptResponseBody} extends {@link TeaModel}
  *
  * <p>CreateScriptResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateScriptResponseBody extends TeaModel {
         private String scriptId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class CreateScriptResponseBody extends TeaModel {
         }
 
         /**
-         * The script ID.
+         * <p>The script ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cs-d6d6bc841c0d415fb81808bc6d09****</p>
          */
         public Builder scriptId(String scriptId) {
             this.scriptId = scriptId;

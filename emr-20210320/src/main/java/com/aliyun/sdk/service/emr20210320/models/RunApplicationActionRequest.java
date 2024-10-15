@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunApplicationActionRequest} extends {@link RequestModel}
  *
  * <p>RunApplicationActionRequest</p>
@@ -169,15 +170,19 @@ public class RunApplicationActionRequest extends Request {
         } 
 
         /**
-         * The name of the action. Valid values:
-         * <p>
+         * <p>The name of the action. Valid values:</p>
+         * <ul>
+         * <li>start</li>
+         * <li>stop</li>
+         * <li>config</li>
+         * <li>restart</li>
+         * <li>refresh_queues</li>
+         * <li>refresh_labels</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   start
-         * *   stop
-         * *   config
-         * *   restart
-         * *   refresh_queues
-         * *   refresh_labels
+         * <strong>example:</strong>
+         * <p>start</p>
          */
         public Builder actionName(String actionName) {
             this.putQueryParameter("ActionName", actionName);
@@ -186,7 +191,10 @@ public class RunApplicationActionRequest extends Request {
         }
 
         /**
-         * The number of applications in each batch.
+         * <p>The number of applications in each batch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder batchSize(Integer batchSize) {
             this.putQueryParameter("BatchSize", batchSize);
@@ -195,7 +203,11 @@ public class RunApplicationActionRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C-C95F0A39D8FF****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -204,7 +216,8 @@ public class RunApplicationActionRequest extends Request {
         }
 
         /**
-         * The operation object.
+         * <p>The operation object.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder componentInstanceSelector(ComponentInstanceSelector componentInstanceSelector) {
             this.putQueryParameter("ComponentInstanceSelector", componentInstanceSelector);
@@ -213,7 +226,10 @@ public class RunApplicationActionRequest extends Request {
         }
 
         /**
-         * The description of the execution.
+         * <p>The description of the execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>运行描述</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -222,11 +238,14 @@ public class RunApplicationActionRequest extends Request {
         }
 
         /**
-         * The execution policy. Valid values:
-         * <p>
+         * <p>The execution policy. Valid values:</p>
+         * <ul>
+         * <li>FAILED_BLOCK: The system stops the execution if the execution fails.</li>
+         * <li>FAILED_CONTINUE: The system continues the execution if the execution fails.</li>
+         * </ul>
          * 
-         * *   FAILED_BLOCK: The system stops the execution if the execution fails.
-         * *   FAILED_CONTINUE: The system continues the execution if the execution fails.
+         * <strong>example:</strong>
+         * <p>FAILED_CONTINUE</p>
          */
         public Builder executeStrategy(String executeStrategy) {
             this.putQueryParameter("ExecuteStrategy", executeStrategy);
@@ -235,7 +254,10 @@ public class RunApplicationActionRequest extends Request {
         }
 
         /**
-         * The interval for rolling execution. Unit: seconds.
+         * <p>The interval for rolling execution. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder interval(Long interval) {
             this.putQueryParameter("Interval", interval);
@@ -244,7 +266,11 @@ public class RunApplicationActionRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -253,7 +279,10 @@ public class RunApplicationActionRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable rolling execution.
+         * <p>Specifies whether to enable rolling execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder rollingExecute(Boolean rollingExecute) {
             this.putQueryParameter("RollingExecute", rollingExecute);

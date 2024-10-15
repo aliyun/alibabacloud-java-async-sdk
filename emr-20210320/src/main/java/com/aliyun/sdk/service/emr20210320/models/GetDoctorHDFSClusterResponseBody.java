@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
  *
  * <p>GetDoctorHDFSClusterResponseBody</p>
@@ -49,7 +50,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HDFS analysis results.
+         * <p>The HDFS analysis results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class Analysis extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HdfsScore")
         private Integer hdfsScore;
@@ -97,7 +107,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Integer hdfsScore; 
 
             /**
-             * The overall score of HDFS storage resources.
+             * <p>The overall score of HDFS storage resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>55</p>
              */
             public Builder hdfsScore(Integer hdfsScore) {
                 this.hdfsScore = hdfsScore;
@@ -111,6 +124,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class ColdDataDayGrowthSize extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -174,7 +193,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth size of cold data</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -182,7 +204,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>coldDataDayGrowthSize</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -190,7 +215,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -198,7 +226,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-182636577752</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -212,6 +243,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class ColdDataRatio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -275,7 +312,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cold data ratio</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -283,7 +323,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>coldDataRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -291,7 +334,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -299,7 +345,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.01</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -313,6 +362,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class ColdDataSize extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -376,7 +431,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Size of the cold data size</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -384,7 +442,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>coldDataSize</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -392,7 +453,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -400,7 +464,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5570958082267</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -414,6 +481,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class ColdDataSizeDayGrowthRatio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -477,7 +550,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth ratio of cold data size</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -485,7 +561,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>coldDataSizeDayGrowthRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -493,7 +572,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -501,7 +583,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-0.03</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -515,6 +600,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class EmptyFileCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -578,7 +669,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Number of empty files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -586,7 +680,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>emptyFileCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -594,7 +691,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -602,7 +702,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15595897</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -616,6 +719,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class EmptyFileCountDayGrowthRatio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -679,7 +788,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth ratio of empty files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -687,7 +799,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>emptyFileCountDayGrowthRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -695,7 +810,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -703,7 +821,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.005</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -717,6 +838,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class EmptyFileDayGrowthCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -780,7 +907,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth count of empty files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -788,7 +918,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>emptyFileDayGrowthCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -796,7 +929,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -804,7 +940,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>114</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -818,6 +957,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class EmptyFileRatio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -881,7 +1026,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ratio of empty files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -889,7 +1037,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>emptyFileRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -897,7 +1048,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -905,7 +1059,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.3</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -919,6 +1076,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class FreezeDataDayGrowthSize extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -982,7 +1145,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth size of freeze data</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -990,7 +1156,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>freezeDataDayGrowthSize</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -998,7 +1167,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1006,7 +1178,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-167683929450</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1020,6 +1195,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class FreezeDataRatio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -1083,7 +1264,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ratio of freeze data</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1091,7 +1275,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>freezeDataRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1099,7 +1286,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1107,7 +1297,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.12</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1121,6 +1314,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class FreezeDataSize extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -1184,7 +1383,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Size of the freeze data size</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1192,7 +1394,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>freezeDataSize</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1200,7 +1405,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1208,7 +1416,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1231312431</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1222,6 +1433,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class FreezeDataSizeDayGrowthRatio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -1285,7 +1502,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth ratio of freeze data size</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1293,7 +1513,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>freezeDataSizeDayGrowthRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1301,7 +1524,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1309,7 +1535,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-0.09</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1323,6 +1552,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class HotDataDayGrowthSize extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -1386,7 +1621,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth size of hot data</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1394,7 +1632,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hotDataDayGrowthSize</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1402,7 +1643,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1410,7 +1654,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123154</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1424,6 +1671,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class HotDataRatio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -1487,7 +1740,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hot data ratio</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1495,7 +1751,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hotDataRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1503,7 +1762,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1511,7 +1773,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.22</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1525,6 +1790,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class HotDataSize extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -1588,7 +1859,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Size of the hot data size</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1596,7 +1870,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hotDataSize</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1604,7 +1881,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1612,7 +1892,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6701531944206</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1626,6 +1909,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class HotDataSizeDayGrowthRatio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -1689,7 +1978,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth ratio of hot data size</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1697,7 +1989,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hotDataSizeDayGrowthRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1705,7 +2000,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1713,7 +2011,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1114</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1727,6 +2028,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class LargeFileCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -1790,7 +2097,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Number of large files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1798,7 +2108,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>largeFileCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1806,7 +2119,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1814,7 +2130,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1828,6 +2147,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class LargeFileCountDayGrowthRatio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -1891,7 +2216,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth ratio of large files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1899,7 +2227,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>largeFileCountDayGrowthRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1907,7 +2238,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1915,7 +2249,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.39</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1929,6 +2266,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class LargeFileDayGrowthCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -1992,7 +2335,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth count of large files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2000,7 +2346,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>largeFileDayGrowthCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2008,7 +2357,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2016,7 +2368,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -2030,6 +2385,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class LargeFileRatio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -2093,7 +2454,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ratio of large files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2101,7 +2465,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>largeFileRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2109,7 +2476,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2117,7 +2487,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.22</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -2131,6 +2504,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class MediumFileCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -2194,7 +2573,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Number of medium files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2202,7 +2584,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mediumFileCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2210,7 +2595,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2218,7 +2606,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -2232,6 +2623,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class MediumFileCountDayGrowthRatio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -2295,7 +2692,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth ratio of medium files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2303,7 +2703,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mediumFileCountDayGrowthRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2311,7 +2714,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2319,7 +2725,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.19</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -2333,6 +2742,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class MediumFileDayGrowthCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -2396,7 +2811,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth count of medium files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2404,7 +2822,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mediumFileDayGrowthCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2412,7 +2833,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2420,7 +2844,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>176</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -2434,6 +2861,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class MediumFileRatio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -2497,7 +2930,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ratio of medium files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2505,7 +2941,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mediumFileRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2513,7 +2952,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2521,7 +2963,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.21</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -2535,6 +2980,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class SmallFileCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -2598,7 +3049,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Number of small files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2606,7 +3060,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>smallFileCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2614,7 +3071,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2622,7 +3082,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -2636,6 +3099,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class SmallFileCountDayGrowthRatio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -2699,7 +3168,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth ratio of small files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2707,7 +3179,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>smallFileCountDayGrowthRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2715,7 +3190,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2723,7 +3201,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.02</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -2737,6 +3218,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class SmallFileDayGrowthCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -2800,7 +3287,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth count of small files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2808,7 +3298,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>smallFileDayGrowthCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2816,7 +3309,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2824,7 +3320,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12321</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -2838,6 +3337,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class SmallFileRatio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -2901,7 +3406,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ratio of small files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2909,7 +3417,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>smallFileRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2917,7 +3428,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2925,7 +3439,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.19</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -2939,6 +3456,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class TinyFileCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -3002,7 +3525,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Number of tiny files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3010,7 +3536,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tinyFileCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3018,7 +3547,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3026,7 +3558,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>232131</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -3040,6 +3575,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class TinyFileCountDayGrowthRatio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -3103,7 +3644,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth ratio of tiny files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3111,7 +3655,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tinyFileCountDayGrowthRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3119,7 +3666,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3127,7 +3677,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.003</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -3141,6 +3694,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class TinyFileDayGrowthCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -3204,7 +3763,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth count of tiny files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3212,7 +3774,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tinyFileDayGrowthCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3220,7 +3785,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3228,7 +3796,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-123</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -3242,6 +3813,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class TinyFileRatio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -3305,7 +3882,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ratio of tiny files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3313,7 +3893,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tinyFileRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3321,7 +3904,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3329,7 +3915,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.19</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -3343,6 +3932,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class TotalDataDayGrowthSize extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -3406,7 +4001,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth size of total data</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3414,7 +4012,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>totalDataDayGrowthSize</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3422,7 +4023,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3430,7 +4034,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>256482228248</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -3444,6 +4051,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class TotalDataSize extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -3507,7 +4120,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Total data size in megabytes (MB)</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3515,7 +4131,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>totalDataSize</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3523,7 +4142,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3531,7 +4153,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>62086342083623</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -3545,6 +4170,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class TotalDataSizeDayGrowthRatio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -3608,7 +4239,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth ratio of total data size</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3616,7 +4250,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>totalDataSizeDayGrowthRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3624,7 +4261,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3632,7 +4272,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.14</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -3646,6 +4289,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class TotalFileCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -3709,7 +4358,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Number of total files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3717,7 +4369,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>totalFileCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3725,7 +4380,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3733,7 +4391,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51683279</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -3747,6 +4408,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class TotalFileCountDayGrowthRatio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -3810,7 +4477,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth ratio of total files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3818,7 +4488,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>totalFileCountDayGrowthRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3826,7 +4499,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3834,7 +4510,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.02</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -3848,6 +4527,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class TotalFileDayGrowthCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -3911,7 +4596,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth count of total files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3919,7 +4607,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>totalFileDayGrowthCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3927,7 +4618,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3935,7 +4629,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27809</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -3949,6 +4646,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class WarmDataDayGrowthSize extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -4012,7 +4715,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth size of warm data</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -4020,7 +4726,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>warmDataDayGrowthSize</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4028,7 +4737,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -4036,7 +4748,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-64806998319</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -4050,6 +4765,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class WarmDataRatio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -4113,7 +4834,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ratio of warm data</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -4121,7 +4845,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>warmDataRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4129,7 +4856,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -4137,7 +4867,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.12</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -4151,6 +4884,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class WarmDataSize extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -4214,7 +4953,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Size of the warm data size</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -4222,7 +4964,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>warmDataSize</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4230,7 +4975,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -4238,7 +4986,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4062349775577</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -4252,6 +5003,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class WarmDataSizeDayGrowthRatio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -4315,7 +5072,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth ratio of warm data size</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -4323,7 +5083,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>warmDataSizeDayGrowthRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4331,7 +5094,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -4339,7 +5105,10 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-0.015</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -4353,6 +5122,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class Metrics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColdDataDayGrowthSize")
         private ColdDataDayGrowthSize coldDataDayGrowthSize;
@@ -4872,7 +5647,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private WarmDataSizeDayGrowthRatio warmDataSizeDayGrowthRatio; 
 
             /**
-             * The daily increment of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.
+             * <p>The daily increment of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.</p>
              */
             public Builder coldDataDayGrowthSize(ColdDataDayGrowthSize coldDataDayGrowthSize) {
                 this.coldDataDayGrowthSize = coldDataDayGrowthSize;
@@ -4880,7 +5655,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.
+             * <p>The proportion of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.</p>
              */
             public Builder coldDataRatio(ColdDataRatio coldDataRatio) {
                 this.coldDataRatio = coldDataRatio;
@@ -4888,7 +5663,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.
+             * <p>The amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.</p>
              */
             public Builder coldDataSize(ColdDataSize coldDataSize) {
                 this.coldDataSize = coldDataSize;
@@ -4896,7 +5671,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The day-to-day growth rate of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.
+             * <p>The day-to-day growth rate of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.</p>
              */
             public Builder coldDataSizeDayGrowthRatio(ColdDataSizeDayGrowthRatio coldDataSizeDayGrowthRatio) {
                 this.coldDataSizeDayGrowthRatio = coldDataSizeDayGrowthRatio;
@@ -4904,7 +5679,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The number of empty files. Empty files are those with a size of 0 MB.
+             * <p>The number of empty files. Empty files are those with a size of 0 MB.</p>
              */
             public Builder emptyFileCount(EmptyFileCount emptyFileCount) {
                 this.emptyFileCount = emptyFileCount;
@@ -4912,7 +5687,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The day-to-day growth rate of the number of empty files. Empty files are those with a size of 0 MB.
+             * <p>The day-to-day growth rate of the number of empty files. Empty files are those with a size of 0 MB.</p>
              */
             public Builder emptyFileCountDayGrowthRatio(EmptyFileCountDayGrowthRatio emptyFileCountDayGrowthRatio) {
                 this.emptyFileCountDayGrowthRatio = emptyFileCountDayGrowthRatio;
@@ -4920,7 +5695,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The daily increment of the number of empty files. Empty files are those with a size of 0 MB.
+             * <p>The daily increment of the number of empty files. Empty files are those with a size of 0 MB.</p>
              */
             public Builder emptyFileDayGrowthCount(EmptyFileDayGrowthCount emptyFileDayGrowthCount) {
                 this.emptyFileDayGrowthCount = emptyFileDayGrowthCount;
@@ -4928,7 +5703,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of empty files. Empty files are those with a size of 0 MB.
+             * <p>The proportion of empty files. Empty files are those with a size of 0 MB.</p>
              */
             public Builder emptyFileRatio(EmptyFileRatio emptyFileRatio) {
                 this.emptyFileRatio = emptyFileRatio;
@@ -4936,7 +5711,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The daily increment of the amount of very cold data. Very cold data refers to data that is not accessed for more than 90 days.
+             * <p>The daily increment of the amount of very cold data. Very cold data refers to data that is not accessed for more than 90 days.</p>
              */
             public Builder freezeDataDayGrowthSize(FreezeDataDayGrowthSize freezeDataDayGrowthSize) {
                 this.freezeDataDayGrowthSize = freezeDataDayGrowthSize;
@@ -4944,7 +5719,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of very cold data. Very cold data refers to data that is not accessed for more than 90 days.
+             * <p>The proportion of very cold data. Very cold data refers to data that is not accessed for more than 90 days.</p>
              */
             public Builder freezeDataRatio(FreezeDataRatio freezeDataRatio) {
                 this.freezeDataRatio = freezeDataRatio;
@@ -4952,7 +5727,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of very cold data. Very cold data refers to data that is not accessed for more than 90 days.
+             * <p>The amount of very cold data. Very cold data refers to data that is not accessed for more than 90 days.</p>
              */
             public Builder freezeDataSize(FreezeDataSize freezeDataSize) {
                 this.freezeDataSize = freezeDataSize;
@@ -4960,7 +5735,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The day-to-day growth rate of the amount of very cold data. Very cold data refers to data that is not accessed for more than 90 days.
+             * <p>The day-to-day growth rate of the amount of very cold data. Very cold data refers to data that is not accessed for more than 90 days.</p>
              */
             public Builder freezeDataSizeDayGrowthRatio(FreezeDataSizeDayGrowthRatio freezeDataSizeDayGrowthRatio) {
                 this.freezeDataSizeDayGrowthRatio = freezeDataSizeDayGrowthRatio;
@@ -4968,7 +5743,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The daily increment of the amount of hot data. Hot data refers to data that is accessed in recent seven days.
+             * <p>The daily increment of the amount of hot data. Hot data refers to data that is accessed in recent seven days.</p>
              */
             public Builder hotDataDayGrowthSize(HotDataDayGrowthSize hotDataDayGrowthSize) {
                 this.hotDataDayGrowthSize = hotDataDayGrowthSize;
@@ -4976,7 +5751,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of hot data. Hot data refers to data that is accessed in recent seven days.
+             * <p>The proportion of hot data. Hot data refers to data that is accessed in recent seven days.</p>
              */
             public Builder hotDataRatio(HotDataRatio hotDataRatio) {
                 this.hotDataRatio = hotDataRatio;
@@ -4984,7 +5759,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of hot data. Hot data refers to data that is accessed in recent seven days.
+             * <p>The amount of hot data. Hot data refers to data that is accessed in recent seven days.</p>
              */
             public Builder hotDataSize(HotDataSize hotDataSize) {
                 this.hotDataSize = hotDataSize;
@@ -4992,7 +5767,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The day-to-day growth rate of the amount of hot data. Hot data refers to data that is accessed in recent seven days.
+             * <p>The day-to-day growth rate of the amount of hot data. Hot data refers to data that is accessed in recent seven days.</p>
              */
             public Builder hotDataSizeDayGrowthRatio(HotDataSizeDayGrowthRatio hotDataSizeDayGrowthRatio) {
                 this.hotDataSizeDayGrowthRatio = hotDataSizeDayGrowthRatio;
@@ -5000,7 +5775,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The number of large files. Large files are those with a size greater than 1 GB.
+             * <p>The number of large files. Large files are those with a size greater than 1 GB.</p>
              */
             public Builder largeFileCount(LargeFileCount largeFileCount) {
                 this.largeFileCount = largeFileCount;
@@ -5008,7 +5783,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The day-to-day growth rate of the number of large files. Large files are those with a size greater than 1 GB.
+             * <p>The day-to-day growth rate of the number of large files. Large files are those with a size greater than 1 GB.</p>
              */
             public Builder largeFileCountDayGrowthRatio(LargeFileCountDayGrowthRatio largeFileCountDayGrowthRatio) {
                 this.largeFileCountDayGrowthRatio = largeFileCountDayGrowthRatio;
@@ -5016,7 +5791,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The daily increment of the number of large files. Large files are those with a size greater than 1 GB.
+             * <p>The daily increment of the number of large files. Large files are those with a size greater than 1 GB.</p>
              */
             public Builder largeFileDayGrowthCount(LargeFileDayGrowthCount largeFileDayGrowthCount) {
                 this.largeFileDayGrowthCount = largeFileDayGrowthCount;
@@ -5024,7 +5799,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of large files. Large files are those with a size greater than 1 GB.
+             * <p>The proportion of large files. Large files are those with a size greater than 1 GB.</p>
              */
             public Builder largeFileRatio(LargeFileRatio largeFileRatio) {
                 this.largeFileRatio = largeFileRatio;
@@ -5032,7 +5807,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The number of medium files. Medium files are those with a size greater than or equal to 128 MB and less than or equal to 1 GB.
+             * <p>The number of medium files. Medium files are those with a size greater than or equal to 128 MB and less than or equal to 1 GB.</p>
              */
             public Builder mediumFileCount(MediumFileCount mediumFileCount) {
                 this.mediumFileCount = mediumFileCount;
@@ -5040,7 +5815,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The day-to-day growth rate of the number of medium files. Medium files are those with a size greater than or equal to 128 MB and less than or equal to 1 GB.
+             * <p>The day-to-day growth rate of the number of medium files. Medium files are those with a size greater than or equal to 128 MB and less than or equal to 1 GB.</p>
              */
             public Builder mediumFileCountDayGrowthRatio(MediumFileCountDayGrowthRatio mediumFileCountDayGrowthRatio) {
                 this.mediumFileCountDayGrowthRatio = mediumFileCountDayGrowthRatio;
@@ -5048,7 +5823,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The daily increment of the number of medium files. Medium files are those with a size greater than or equal to 128 MB and less than or equal to 1 GB.
+             * <p>The daily increment of the number of medium files. Medium files are those with a size greater than or equal to 128 MB and less than or equal to 1 GB.</p>
              */
             public Builder mediumFileDayGrowthCount(MediumFileDayGrowthCount mediumFileDayGrowthCount) {
                 this.mediumFileDayGrowthCount = mediumFileDayGrowthCount;
@@ -5056,7 +5831,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of medium files. Medium files are those with a size greater than or equal to 128 MB and less than or equal to 1 GB.
+             * <p>The proportion of medium files. Medium files are those with a size greater than or equal to 128 MB and less than or equal to 1 GB.</p>
              */
             public Builder mediumFileRatio(MediumFileRatio mediumFileRatio) {
                 this.mediumFileRatio = mediumFileRatio;
@@ -5064,7 +5839,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The number of small files. Small files are those with a size greater than or equal to 10 MB and less than 128 MB.
+             * <p>The number of small files. Small files are those with a size greater than or equal to 10 MB and less than 128 MB.</p>
              */
             public Builder smallFileCount(SmallFileCount smallFileCount) {
                 this.smallFileCount = smallFileCount;
@@ -5072,7 +5847,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The day-to-day growth rate of the number of small files. Small files are those with a size greater than or equal to 10 MB and less than 128 MB.
+             * <p>The day-to-day growth rate of the number of small files. Small files are those with a size greater than or equal to 10 MB and less than 128 MB.</p>
              */
             public Builder smallFileCountDayGrowthRatio(SmallFileCountDayGrowthRatio smallFileCountDayGrowthRatio) {
                 this.smallFileCountDayGrowthRatio = smallFileCountDayGrowthRatio;
@@ -5080,7 +5855,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The daily increment of the number of small files. Small files are those with a size greater than or equal to 10 MB and less than 128 MB.
+             * <p>The daily increment of the number of small files. Small files are those with a size greater than or equal to 10 MB and less than 128 MB.</p>
              */
             public Builder smallFileDayGrowthCount(SmallFileDayGrowthCount smallFileDayGrowthCount) {
                 this.smallFileDayGrowthCount = smallFileDayGrowthCount;
@@ -5088,7 +5863,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of small files. Small files are those with a size greater than or equal to 10 MB and less than 128 MB.
+             * <p>The proportion of small files. Small files are those with a size greater than or equal to 10 MB and less than 128 MB.</p>
              */
             public Builder smallFileRatio(SmallFileRatio smallFileRatio) {
                 this.smallFileRatio = smallFileRatio;
@@ -5096,7 +5871,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The number of very small files. Very small files are those with a size greater than 0 MB and less than 10 MB.
+             * <p>The number of very small files. Very small files are those with a size greater than 0 MB and less than 10 MB.</p>
              */
             public Builder tinyFileCount(TinyFileCount tinyFileCount) {
                 this.tinyFileCount = tinyFileCount;
@@ -5104,7 +5879,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The day-to-day growth rate of the number of very small files. Very small files are those with a size greater than 0 MB and less than 10 MB.
+             * <p>The day-to-day growth rate of the number of very small files. Very small files are those with a size greater than 0 MB and less than 10 MB.</p>
              */
             public Builder tinyFileCountDayGrowthRatio(TinyFileCountDayGrowthRatio tinyFileCountDayGrowthRatio) {
                 this.tinyFileCountDayGrowthRatio = tinyFileCountDayGrowthRatio;
@@ -5112,7 +5887,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The daily increment of the number of very small files. Very small files are those with a size greater than 0 MB and less than 10 MB.
+             * <p>The daily increment of the number of very small files. Very small files are those with a size greater than 0 MB and less than 10 MB.</p>
              */
             public Builder tinyFileDayGrowthCount(TinyFileDayGrowthCount tinyFileDayGrowthCount) {
                 this.tinyFileDayGrowthCount = tinyFileDayGrowthCount;
@@ -5120,7 +5895,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of very small files. Very small files are those with a size greater than 0 MB and less than 10 MB.
+             * <p>The proportion of very small files. Very small files are those with a size greater than 0 MB and less than 10 MB.</p>
              */
             public Builder tinyFileRatio(TinyFileRatio tinyFileRatio) {
                 this.tinyFileRatio = tinyFileRatio;
@@ -5128,7 +5903,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The daily incremental of the total data volume.
+             * <p>The daily incremental of the total data volume.</p>
              */
             public Builder totalDataDayGrowthSize(TotalDataDayGrowthSize totalDataDayGrowthSize) {
                 this.totalDataDayGrowthSize = totalDataDayGrowthSize;
@@ -5136,7 +5911,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The total amount of data.
+             * <p>The total amount of data.</p>
              */
             public Builder totalDataSize(TotalDataSize totalDataSize) {
                 this.totalDataSize = totalDataSize;
@@ -5144,7 +5919,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The day-to-day growth rate of the total data volume.
+             * <p>The day-to-day growth rate of the total data volume.</p>
              */
             public Builder totalDataSizeDayGrowthRatio(TotalDataSizeDayGrowthRatio totalDataSizeDayGrowthRatio) {
                 this.totalDataSizeDayGrowthRatio = totalDataSizeDayGrowthRatio;
@@ -5152,7 +5927,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of files.
+             * <p>The total number of files.</p>
              */
             public Builder totalFileCount(TotalFileCount totalFileCount) {
                 this.totalFileCount = totalFileCount;
@@ -5160,7 +5935,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The day-to-day growth rate of the total number of files.
+             * <p>The day-to-day growth rate of the total number of files.</p>
              */
             public Builder totalFileCountDayGrowthRatio(TotalFileCountDayGrowthRatio totalFileCountDayGrowthRatio) {
                 this.totalFileCountDayGrowthRatio = totalFileCountDayGrowthRatio;
@@ -5168,7 +5943,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The daily increment of the total number of files.
+             * <p>The daily increment of the total number of files.</p>
              */
             public Builder totalFileDayGrowthCount(TotalFileDayGrowthCount totalFileDayGrowthCount) {
                 this.totalFileDayGrowthCount = totalFileDayGrowthCount;
@@ -5176,7 +5951,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The daily increment of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.
+             * <p>The daily increment of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.</p>
              */
             public Builder warmDataDayGrowthSize(WarmDataDayGrowthSize warmDataDayGrowthSize) {
                 this.warmDataDayGrowthSize = warmDataDayGrowthSize;
@@ -5184,7 +5959,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.
+             * <p>The proportion of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.</p>
              */
             public Builder warmDataRatio(WarmDataRatio warmDataRatio) {
                 this.warmDataRatio = warmDataRatio;
@@ -5192,7 +5967,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.
+             * <p>The amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.</p>
              */
             public Builder warmDataSize(WarmDataSize warmDataSize) {
                 this.warmDataSize = warmDataSize;
@@ -5200,7 +5975,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The day-to-day growth rate of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.
+             * <p>The day-to-day growth rate of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.</p>
              */
             public Builder warmDataSizeDayGrowthRatio(WarmDataSizeDayGrowthRatio warmDataSizeDayGrowthRatio) {
                 this.warmDataSizeDayGrowthRatio = warmDataSizeDayGrowthRatio;
@@ -5214,6 +5989,12 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHDFSClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHDFSClusterResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Analysis")
         private Analysis analysis;
@@ -5253,7 +6034,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Metrics metrics; 
 
             /**
-             * The analysis results.
+             * <p>The analysis results.</p>
              */
             public Builder analysis(Analysis analysis) {
                 this.analysis = analysis;
@@ -5261,7 +6042,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The metric information.
+             * <p>The metric information.</p>
              */
             public Builder metrics(Metrics metrics) {
                 this.metrics = metrics;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDoctorReportComponentSummaryRequest} extends {@link RequestModel}
  *
  * <p>GetDoctorReportComponentSummaryRequest</p>
@@ -99,7 +100,11 @@ public class GetDoctorReportComponentSummaryRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * <p>集群ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b933c5aac8fe****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -108,7 +113,11 @@ public class GetDoctorReportComponentSummaryRequest extends Request {
         }
 
         /**
-         * component type
+         * <p>component type</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>compute</p>
          */
         public Builder componentType(String componentType) {
             this.putQueryParameter("ComponentType", componentType);
@@ -117,7 +126,11 @@ public class GetDoctorReportComponentSummaryRequest extends Request {
         }
 
         /**
-         * dateTime for specify report
+         * <p>dateTime for specify report</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-01</p>
          */
         public Builder dateTime(String dateTime) {
             this.putQueryParameter("DateTime", dateTime);
@@ -126,7 +139,11 @@ public class GetDoctorReportComponentSummaryRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * <p>区域ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDoctorReportComponentSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>GetDoctorReportComponentSummaryResponseBody</p>
@@ -49,7 +50,7 @@ public class GetDoctorReportComponentSummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The content of the report.
+         * <p>The content of the report.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetDoctorReportComponentSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * <p>请求ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetDoctorReportComponentSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDoctorReportComponentSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorReportComponentSummaryResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Score")
         private Integer score;
@@ -137,7 +147,7 @@ public class GetDoctorReportComponentSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The summary of the report.
+             * <p>The summary of the report.</p>
              */
             public Builder summary(String summary) {
                 this.summary = summary;

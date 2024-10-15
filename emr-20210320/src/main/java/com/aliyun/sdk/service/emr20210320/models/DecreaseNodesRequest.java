@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DecreaseNodesRequest} extends {@link RequestModel}
  *
  * <p>DecreaseNodesRequest</p>
@@ -112,7 +113,11 @@ public class DecreaseNodesRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b933c5aac8fe****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -121,7 +126,10 @@ public class DecreaseNodesRequest extends Request {
         }
 
         /**
-         * The number of nodes to scale in. The number of nodes to be scaled in. The value should be less than the number of surviving nodes in the current node group.
+         * <p>The number of nodes to scale in. The number of nodes to be scaled in. The value should be less than the number of surviving nodes in the current node group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder decreaseNodeCount(Integer decreaseNodeCount) {
             this.putQueryParameter("DecreaseNodeCount", decreaseNodeCount);
@@ -130,7 +138,11 @@ public class DecreaseNodesRequest extends Request {
         }
 
         /**
-         * The ID of the node group.
+         * <p>The ID of the node group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-869471354ecd****</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.putQueryParameter("NodeGroupId", nodeGroupId);
@@ -139,7 +151,10 @@ public class DecreaseNodesRequest extends Request {
         }
 
         /**
-         * The array of node IDs. Valid values of array element N: 1 to 500.
+         * <p>The array of node IDs. Valid values of array element N: 1 to 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;i-bp1cudc25w2bfwl5****&quot;]</p>
          */
         public Builder nodeIds(java.util.List < String > nodeIds) {
             this.putQueryParameter("NodeIds", nodeIds);
@@ -148,7 +163,11 @@ public class DecreaseNodesRequest extends Request {
         }
 
         /**
-         * The ID of the region in which you want to create the instance.
+         * <p>The ID of the region in which you want to create the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

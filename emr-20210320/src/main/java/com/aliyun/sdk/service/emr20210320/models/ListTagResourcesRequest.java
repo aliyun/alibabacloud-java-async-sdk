@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesRequest} extends {@link RequestModel}
  *
  * <p>ListTagResourcesRequest</p>
@@ -126,7 +127,10 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * The number of maximum number of records to obtain at a time.
+         * <p>The number of maximum number of records to obtain at a time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -135,7 +139,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the request to retrieve a new page of results. If NextToken is empty, the query starts from the beginning.
+         * <p>The pagination token that is used in the request to retrieve a new page of results. If NextToken is empty, the query starts from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -144,7 +151,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the region in which you want to create the instance.
+         * <p>The ID of the region in which you want to create the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -153,7 +164,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The list of resource IDs. Number of array elements N Valid values: 1 to 1
+         * <p>The list of resource IDs. Number of array elements N Valid values: 1 to 1</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -162,7 +177,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Set the value to cluster.
+         * <p>The type of the resource. Set the value to cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -171,7 +190,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The array of tags. The number of array elements N. Valid values: 1 to 20.
+         * <p>The array of tags. The number of array elements N. Valid values: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder tags(java.util.List < Tag > tags) {
             this.putQueryParameter("Tags", tags);

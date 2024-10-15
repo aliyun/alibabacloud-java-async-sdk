@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ByLoadScalingRule} extends {@link TeaModel}
  *
  * <p>ByLoadScalingRule</p>
@@ -115,7 +116,11 @@ public class ByLoadScalingRule extends TeaModel {
         private Integer timeWindow; 
 
         /**
-         * 比较符。
+         * <p>比较符。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LT</p>
          */
         public Builder comparisonOperator(String comparisonOperator) {
             this.comparisonOperator = comparisonOperator;
@@ -131,7 +136,11 @@ public class ByLoadScalingRule extends TeaModel {
         }
 
         /**
-         * 统计次数。
+         * <p>统计次数。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder evaluationCount(Integer evaluationCount) {
             this.evaluationCount = evaluationCount;
@@ -139,7 +148,11 @@ public class ByLoadScalingRule extends TeaModel {
         }
 
         /**
-         * 指标名称。指标名称需要在 ListAutoScalingMetrics 接口返回的指标名称列表中。
+         * <p>指标名称。指标名称需要在 ListAutoScalingMetrics 接口返回的指标名称列表中。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yarn_resourcemanager_root_availablememoryusage</p>
          */
         public Builder metricName(String metricName) {
             this.metricName = metricName;
@@ -147,7 +160,11 @@ public class ByLoadScalingRule extends TeaModel {
         }
 
         /**
-         * 统计量名称。
+         * <p>统计量名称。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AVG</p>
          */
         public Builder statistics(String statistics) {
             this.statistics = statistics;
@@ -155,7 +172,11 @@ public class ByLoadScalingRule extends TeaModel {
         }
 
         /**
-         * 阈值。
+         * <p>阈值。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12.5</p>
          */
         public Builder threshold(Double threshold) {
             this.threshold = threshold;
@@ -163,7 +184,11 @@ public class ByLoadScalingRule extends TeaModel {
         }
 
         /**
-         * 统计窗口。单位为秒。
+         * <p>统计窗口。单位为秒。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder timeWindow(Integer timeWindow) {
             this.timeWindow = timeWindow;

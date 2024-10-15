@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNodeGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListNodeGroupsResponseBody</p>
@@ -85,7 +86,10 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The maximum number of entries returned.
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,7 +97,10 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Returns the location of the data that was read. Empty indicates that the data has been read.
+         * <p>Returns the location of the data that was read. Empty indicates that the data has been read.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,7 +108,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The array of node groups.
+         * <p>The array of node groups.</p>
          */
         public Builder nodeGroups(java.util.List < NodeGroup > nodeGroups) {
             this.nodeGroups = nodeGroups;
@@ -109,7 +116,10 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

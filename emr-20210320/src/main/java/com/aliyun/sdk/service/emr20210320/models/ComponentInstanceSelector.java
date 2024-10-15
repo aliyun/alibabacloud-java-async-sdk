@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ComponentInstanceSelector} extends {@link TeaModel}
  *
  * <p>ComponentInstanceSelector</p>
@@ -95,7 +96,10 @@ public class ComponentInstanceSelector extends TeaModel {
         }
 
         /**
-         * 应用名称。
+         * <p>应用名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HDFS</p>
          */
         public Builder applicationName(String applicationName) {
             this.applicationName = applicationName;
@@ -103,7 +107,7 @@ public class ComponentInstanceSelector extends TeaModel {
         }
 
         /**
-         * 组件实例列表。actionScope为COPONENT_INSTANCE时使用。
+         * <p>组件实例列表。actionScope为COPONENT_INSTANCE时使用。</p>
          */
         public Builder componentInstances(java.util.List < ComponentInstances> componentInstances) {
             this.componentInstances = componentInstances;
@@ -111,9 +115,8 @@ public class ComponentInstanceSelector extends TeaModel {
         }
 
         /**
-         * 组件列表。
-         * <p>
-         * actionScope为COPONENT时使用。
+         * <p>组件列表。
+         * actionScope为COPONENT时使用。</p>
          */
         public Builder components(java.util.List < Components> components) {
             this.components = components;
@@ -121,11 +124,16 @@ public class ComponentInstanceSelector extends TeaModel {
         }
 
         /**
-         * 动作执行范围。取值范围：
-         * <p>
-         * - APPLICATION：应用级别。
-         * - COMPONENT：组件级别。
-         * - COMPONENT_INSTANCE：组件实例级别。
+         * <p>动作执行范围。取值范围：</p>
+         * <ul>
+         * <li>APPLICATION：应用级别。</li>
+         * <li>COMPONENT：组件级别。</li>
+         * <li>COMPONENT_INSTANCE：组件实例级别。</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>APPLICATION</p>
          */
         public Builder runActionScope(String runActionScope) {
             this.runActionScope = runActionScope;
@@ -138,6 +146,12 @@ public class ComponentInstanceSelector extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ComponentInstanceSelector} extends {@link TeaModel}
+     *
+     * <p>ComponentInstanceSelector</p>
+     */
     public static class ComponentInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
@@ -189,7 +203,10 @@ public class ComponentInstanceSelector extends TeaModel {
             private String nodeId; 
 
             /**
-             * 应用名称。
+             * <p>应用名称。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HDFS</p>
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -197,7 +214,10 @@ public class ComponentInstanceSelector extends TeaModel {
             }
 
             /**
-             * 组件名称。
+             * <p>组件名称。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DataNode</p>
              */
             public Builder componentName(String componentName) {
                 this.componentName = componentName;
@@ -205,7 +225,10 @@ public class ComponentInstanceSelector extends TeaModel {
             }
 
             /**
-             * 节点ID。
+             * <p>节点ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1cudc25w2bfwl5****</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -219,6 +242,12 @@ public class ComponentInstanceSelector extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ComponentInstanceSelector} extends {@link TeaModel}
+     *
+     * <p>ComponentInstanceSelector</p>
+     */
     public static class Components extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
@@ -258,7 +287,10 @@ public class ComponentInstanceSelector extends TeaModel {
             private String componentName; 
 
             /**
-             * 应用名称。
+             * <p>应用名称。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HDFS</p>
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -266,7 +298,10 @@ public class ComponentInstanceSelector extends TeaModel {
             }
 
             /**
-             * 组件名称。
+             * <p>组件名称。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DataNode</p>
              */
             public Builder componentName(String componentName) {
                 this.componentName = componentName;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAutoScalingPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>GetAutoScalingPolicyResponseBody</p>
@@ -49,7 +50,10 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
         private ScalingPolicy scalingPolicy; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the auto scaling policy.
+         * <p>The information about the auto scaling policy.</p>
          */
         public Builder scalingPolicy(ScalingPolicy scalingPolicy) {
             this.scalingPolicy = scalingPolicy;
@@ -70,6 +74,12 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAutoScalingPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAutoScalingPolicyResponseBody</p>
+     */
     public static class Constraints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxCapacity")
         private Integer maxCapacity;
@@ -109,7 +119,10 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             private Integer minCapacity; 
 
             /**
-             * The maximum number of nodes in the node group. Default value: 2000.
+             * <p>The maximum number of nodes in the node group. Default value: 2000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder maxCapacity(Integer maxCapacity) {
                 this.maxCapacity = maxCapacity;
@@ -117,7 +130,10 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum number of nodes in the node group. Default value: 0.
+             * <p>The minimum number of nodes in the node group. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder minCapacity(Integer minCapacity) {
                 this.minCapacity = minCapacity;
@@ -131,6 +147,12 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAutoScalingPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAutoScalingPolicyResponseBody</p>
+     */
     public static class ScalingRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActivityType")
         private String activityType;
@@ -230,11 +252,14 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             private String triggerType; 
 
             /**
-             * The scaling type. Valid values:
-             * <p>
+             * <p>The scaling type. Valid values:</p>
+             * <ul>
+             * <li>SCALE_OUT</li>
+             * <li>SCALE_IN</li>
+             * </ul>
              * 
-             * *   SCALE_OUT
-             * *   SCALE_IN
+             * <strong>example:</strong>
+             * <p>SCALE_OUT</p>
              */
             public Builder activityType(String activityType) {
                 this.activityType = activityType;
@@ -242,7 +267,10 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The adjustment type.
+             * <p>The adjustment type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHANGE_IN_CAPACITY</p>
              */
             public Builder adjustmentType(String adjustmentType) {
                 this.adjustmentType = adjustmentType;
@@ -250,7 +278,10 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The adjustment value. The parameter value must be a positive integer, which indicates the number of instances that you want to add or remove.
+             * <p>The adjustment value. The parameter value must be a positive integer, which indicates the number of instances that you want to add or remove.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder adjustmentValue(Integer adjustmentValue) {
                 this.adjustmentValue = adjustmentValue;
@@ -258,7 +289,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The description of load-based scaling.
+             * <p>The description of load-based scaling.</p>
              */
             public Builder metricsTrigger(MetricsTrigger metricsTrigger) {
                 this.metricsTrigger = metricsTrigger;
@@ -266,7 +297,10 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the auto scaling rule.
+             * <p>The name of the auto scaling rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>scaling-out-memory</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -274,7 +308,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The description of time-based scaling.
+             * <p>The description of time-based scaling.</p>
              */
             public Builder timeTrigger(TimeTrigger timeTrigger) {
                 this.timeTrigger = timeTrigger;
@@ -282,11 +316,14 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the auto scaling rule. Valid values:
-             * <p>
+             * <p>The type of the auto scaling rule. Valid values:</p>
+             * <ul>
+             * <li>TIME_TRIGGER: time-based scaling</li>
+             * <li>METRICS_TRIGGER: load-based scaling</li>
+             * </ul>
              * 
-             * *   TIME_TRIGGER: time-based scaling
-             * *   METRICS_TRIGGER: load-based scaling
+             * <strong>example:</strong>
+             * <p>TIME_TRIGGER</p>
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;
@@ -300,6 +337,12 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAutoScalingPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAutoScalingPolicyResponseBody</p>
+     */
     public static class ScalingPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
@@ -375,7 +418,10 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             private java.util.List < ScalingRules> scalingRules; 
 
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-b933c5aac8fe****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -383,7 +429,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum and minimum number of nodes in the node group.
+             * <p>The maximum and minimum number of nodes in the node group.</p>
              */
             public Builder constraints(Constraints constraints) {
                 this.constraints = constraints;
@@ -391,7 +437,10 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node group.
+             * <p>The ID of the node group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ng-869471354ecd****</p>
              */
             public Builder nodeGroupId(String nodeGroupId) {
                 this.nodeGroupId = nodeGroupId;
@@ -399,7 +448,10 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the scaling policy.
+             * <p>The ID of the scaling policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asp-asduwe23znl***</p>
              */
             public Builder scalingPolicyId(String scalingPolicyId) {
                 this.scalingPolicyId = scalingPolicyId;
@@ -407,7 +459,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The auto scaling rules.
+             * <p>The auto scaling rules.</p>
              */
             public Builder scalingRules(java.util.List < ScalingRules> scalingRules) {
                 this.scalingRules = scalingRules;

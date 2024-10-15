@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DecreaseNodesResponseBody} extends {@link TeaModel}
  *
  * <p>DecreaseNodesResponseBody</p>
@@ -49,7 +50,10 @@ public class DecreaseNodesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Operation ID.
+         * <p>Operation ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>op-13c37a77c505****</p>
          */
         public Builder operationId(String operationId) {
             this.operationId = operationId;
@@ -57,7 +61,10 @@ public class DecreaseNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44430037-E59A-3E66-A2B0-97D155346F22</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

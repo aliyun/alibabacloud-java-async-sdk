@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MetricUnitValue} extends {@link TeaModel}
  *
  * <p>MetricUnitValue</p>
@@ -49,7 +50,7 @@ public class MetricUnitValue extends TeaModel {
         private String metricUnit; 
 
         /**
-         * 指标名称。
+         * <p>指标名称。</p>
          */
         public Builder metricName(String metricName) {
             this.metricName = metricName;
@@ -57,7 +58,7 @@ public class MetricUnitValue extends TeaModel {
         }
 
         /**
-         * 指标单位。
+         * <p>指标单位。</p>
          */
         public Builder metricUnit(String metricUnit) {
             this.metricUnit = metricUnit;

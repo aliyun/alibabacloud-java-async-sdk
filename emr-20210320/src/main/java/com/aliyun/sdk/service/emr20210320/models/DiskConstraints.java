@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DiskConstraints} extends {@link TeaModel}
  *
  * <p>DiskConstraints</p>
@@ -61,7 +62,10 @@ public class DiskConstraints extends TeaModel {
         private ValueConstraints sizeConstraint; 
 
         /**
-         * 支持的磁盘类型。
+         * <p>支持的磁盘类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;cloud_efficiency&quot;,&quot;cloud_ssd&quot;,&quot;cloud_essd&quot;,&quot;local_disk&quot;]</p>
          */
         public Builder categories(java.util.List < String > categories) {
             this.categories = categories;
@@ -69,7 +73,7 @@ public class DiskConstraints extends TeaModel {
         }
 
         /**
-         * 磁盘数量最小值。
+         * <p>磁盘数量最小值。</p>
          */
         public Builder countConstraint(ValueConstraints countConstraint) {
             this.countConstraint = countConstraint;
@@ -77,7 +81,7 @@ public class DiskConstraints extends TeaModel {
         }
 
         /**
-         * 磁盘容量限制。
+         * <p>磁盘容量限制。</p>
          */
         public Builder sizeConstraint(ValueConstraints sizeConstraint) {
             this.sizeConstraint = sizeConstraint;

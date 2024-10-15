@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateApiTemplateRequest} extends {@link RequestModel}
  *
  * <p>CreateApiTemplateRequest</p>
@@ -113,7 +114,11 @@ public class CreateApiTemplateRequest extends Request {
         } 
 
         /**
-         * The name of the API operation. You can create only a cluster API operation template. Set the value to CreateCluster.
+         * <p>The name of the API operation. You can create only a cluster API operation template. Set the value to CreateCluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateCluster</p>
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -122,7 +127,11 @@ public class CreateApiTemplateRequest extends Request {
         }
 
         /**
-         * The content of the cluster API operation template. Set the value to JSON strings of the request parameters of the [CreateCluster](https://help.aliyun.com/zh/emr/emr-on-ecs/developer-reference/api-emr-2021-03-20-createcluster) API operation for creating a cluster.
+         * <p>The content of the cluster API operation template. Set the value to JSON strings of the request parameters of the <a href="https://help.aliyun.com/zh/emr/emr-on-ecs/developer-reference/api-emr-2021-03-20-createcluster">CreateCluster</a> API operation for creating a cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>content</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -131,7 +140,11 @@ public class CreateApiTemplateRequest extends Request {
         }
 
         /**
-         * 地域ID。
+         * <p>地域ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -140,7 +153,10 @@ public class CreateApiTemplateRequest extends Request {
         }
 
         /**
-         * 资源组ID。
+         * <p>资源组ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzabjyop****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -149,7 +165,11 @@ public class CreateApiTemplateRequest extends Request {
         }
 
         /**
-         * 集群模板名字。
+         * <p>集群模板名字。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DATALAKE模板</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListReleaseVersionsRequest} extends {@link RequestModel}
  *
  * <p>ListReleaseVersionsRequest</p>
@@ -83,7 +84,11 @@ public class ListReleaseVersionsRequest extends Request {
         } 
 
         /**
-         * The type of the cluster.
+         * <p>The type of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DATALAKE</p>
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -92,7 +97,10 @@ public class ListReleaseVersionsRequest extends Request {
         }
 
         /**
-         * The type of the IaaS resource.
+         * <p>The type of the IaaS resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder iaasType(String iaasType) {
             this.putQueryParameter("IaasType", iaasType);
@@ -101,7 +109,11 @@ public class ListReleaseVersionsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

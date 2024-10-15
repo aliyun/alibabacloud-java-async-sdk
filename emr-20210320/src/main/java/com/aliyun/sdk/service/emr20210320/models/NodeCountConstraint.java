@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link NodeCountConstraint} extends {@link TeaModel}
  *
  * <p>NodeCountConstraint</p>
@@ -90,7 +91,10 @@ public class NodeCountConstraint extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>range</p>
          */
         public Builder type(String type) {
             this.type = type;

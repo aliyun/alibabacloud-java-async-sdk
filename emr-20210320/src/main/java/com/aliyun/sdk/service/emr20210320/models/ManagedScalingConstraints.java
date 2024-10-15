@@ -7,19 +7,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ScalingConstraints} extends {@link TeaModel}
+ * {@link ManagedScalingConstraints} extends {@link TeaModel}
  *
- * <p>ScalingConstraints</p>
+ * <p>ManagedScalingConstraints</p>
  */
-public class ScalingConstraints extends TeaModel {
+public class ManagedScalingConstraints extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MaxCapacity")
     private Integer maxCapacity;
+
+    @com.aliyun.core.annotation.NameInMap("MaxOnDemandCapacity")
+    private Integer maxOnDemandCapacity;
 
     @com.aliyun.core.annotation.NameInMap("MinCapacity")
     private Integer minCapacity;
 
-    private ScalingConstraints(Builder builder) {
+    private ManagedScalingConstraints(Builder builder) {
         this.maxCapacity = builder.maxCapacity;
+        this.maxOnDemandCapacity = builder.maxOnDemandCapacity;
         this.minCapacity = builder.minCapacity;
     }
 
@@ -27,7 +31,7 @@ public class ScalingConstraints extends TeaModel {
         return new Builder();
     }
 
-    public static ScalingConstraints create() {
+    public static ManagedScalingConstraints create() {
         return builder().build();
     }
 
@@ -39,6 +43,13 @@ public class ScalingConstraints extends TeaModel {
     }
 
     /**
+     * @return maxOnDemandCapacity
+     */
+    public Integer getMaxOnDemandCapacity() {
+        return this.maxOnDemandCapacity;
+    }
+
+    /**
      * @return minCapacity
      */
     public Integer getMinCapacity() {
@@ -47,6 +58,7 @@ public class ScalingConstraints extends TeaModel {
 
     public static final class Builder {
         private Integer maxCapacity; 
+        private Integer maxOnDemandCapacity; 
         private Integer minCapacity; 
 
         /**
@@ -61,6 +73,17 @@ public class ScalingConstraints extends TeaModel {
         }
 
         /**
+         * <p>最大按量节点数量</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        public Builder maxOnDemandCapacity(Integer maxOnDemandCapacity) {
+            this.maxOnDemandCapacity = maxOnDemandCapacity;
+            return this;
+        }
+
+        /**
          * <p>最小值。</p>
          * 
          * <strong>example:</strong>
@@ -71,8 +94,8 @@ public class ScalingConstraints extends TeaModel {
             return this;
         }
 
-        public ScalingConstraints build() {
-            return new ScalingConstraints(this);
+        public ManagedScalingConstraints build() {
+            return new ManagedScalingConstraints(this);
         } 
 
     } 

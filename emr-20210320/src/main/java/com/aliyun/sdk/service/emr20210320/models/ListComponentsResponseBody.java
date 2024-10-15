@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListComponentsResponseBody} extends {@link TeaModel}
  *
  * <p>ListComponentsResponseBody</p>
@@ -93,7 +94,10 @@ public class ListComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * 本次请求所返回的最大记录条数。
+         * <p>本次请求所返回的最大记录条数。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +105,10 @@ public class ListComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * 返回读取到的数据位置，空代表数据已经读取完毕。
+         * <p>返回读取到的数据位置，空代表数据已经读取完毕。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +116,10 @@ public class ListComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * <p>请求ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * 本次请求条件下的数据总量。
+         * <p>本次请求条件下的数据总量。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListComponentsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListComponentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListComponentsResponseBody</p>
+     */
     public static class Components extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
@@ -205,7 +224,10 @@ public class ListComponentsResponseBody extends TeaModel {
             private Integer replica; 
 
             /**
-             * 应用名称。
+             * <p>应用名称。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HDFS</p>
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -213,7 +235,7 @@ public class ListComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * 属性列表。
+             * <p>属性列表。</p>
              */
             public Builder attributes(java.util.List < Attribute > attributes) {
                 this.attributes = attributes;
@@ -221,7 +243,10 @@ public class ListComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * 组件名称。
+             * <p>组件名称。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DataNode</p>
              */
             public Builder componentName(String componentName) {
                 this.componentName = componentName;
@@ -229,7 +254,7 @@ public class ListComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * 命名空间。
+             * <p>命名空间。</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -237,7 +262,10 @@ public class ListComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * 安装该组件的机器总数。
+             * <p>安装该组件的机器总数。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder replica(Integer replica) {
                 this.replica = replica;

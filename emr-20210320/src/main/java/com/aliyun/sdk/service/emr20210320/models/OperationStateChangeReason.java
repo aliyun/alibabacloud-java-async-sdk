@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperationStateChangeReason} extends {@link TeaModel}
  *
  * <p>OperationStateChangeReason</p>
@@ -49,7 +50,10 @@ public class OperationStateChangeReason extends TeaModel {
         private String message; 
 
         /**
-         * 状态码。
+         * <p>状态码。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OutOfStock</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -57,7 +61,10 @@ public class OperationStateChangeReason extends TeaModel {
         }
 
         /**
-         * 状态变化信息。
+         * <p>状态变化信息。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The requested resource is sold out in the specified zone, try other types of resources or other regions and zones.</p>
          */
         public Builder message(String message) {
             this.message = message;

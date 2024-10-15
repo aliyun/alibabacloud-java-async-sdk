@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
@@ -112,13 +113,15 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove all tags. This parameter is valid only when the **Tagkeys** is empty. Valid values:
-         * <p>
+         * <p>Specifies whether to remove all tags. This parameter is valid only when the <strong>Tagkeys</strong> is empty. Valid values:</p>
+         * <ul>
+         * <li>true: All the data is deleted.</li>
+         * <li>false: Not all of them are deleted.</li>
+         * </ul>
+         * <p>Default value: false</p>
          * 
-         * *   true: All the data is deleted.
-         * *   false: Not all of them are deleted.
-         * 
-         * Default value: false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -127,7 +130,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the region in which you want to create the instance.
+         * <p>The ID of the region in which you want to create the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -136,7 +143,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The list of resource IDs.
+         * <p>The list of resource IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster</p>
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -145,7 +156,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Set the value to cluster.
+         * <p>The type of the resource. Set the value to cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -154,7 +169,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The key of the label. Valid values of N: 1 to 20.
+         * <p>The key of the label. Valid values of N: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;c-b933c5aac8fe****&quot;]</p>
          */
         public Builder tagKeys(java.util.List < String > tagKeys) {
             this.putQueryParameter("TagKeys", tagKeys);

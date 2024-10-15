@@ -82,6 +82,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of CreateApiTemplate  CreateApiTemplateRequest
+     * @return CreateApiTemplateResponse
+     */
     @Override
     public CompletableFuture<CreateApiTemplateResponse> createApiTemplate(CreateApiTemplateRequest request) {
         try {
@@ -96,6 +100,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateCluster  CreateClusterRequest
+     * @return CreateClusterResponse
+     */
     @Override
     public CompletableFuture<CreateClusterResponse> createCluster(CreateClusterRequest request) {
         try {
@@ -111,8 +119,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 创建节点组。
-      *
+     * <b>description</b> :
+     * <p>创建节点组。</p>
+     * 
+     * @param request the request parameters of CreateNodeGroup  CreateNodeGroupRequest
+     * @return CreateNodeGroupResponse
      */
     @Override
     public CompletableFuture<CreateNodeGroupResponse> createNodeGroup(CreateNodeGroupRequest request) {
@@ -128,6 +139,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateScript  CreateScriptRequest
+     * @return CreateScriptResponse
+     */
     @Override
     public CompletableFuture<CreateScriptResponse> createScript(CreateScriptRequest request) {
         try {
@@ -142,6 +157,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DecreaseNodes  DecreaseNodesRequest
+     * @return DecreaseNodesResponse
+     */
     @Override
     public CompletableFuture<DecreaseNodesResponse> decreaseNodes(DecreaseNodesRequest request) {
         try {
@@ -157,8 +176,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 创建集群模板
-      *
+     * <b>description</b> :
+     * <p>创建集群模板</p>
+     * 
+     * @param request the request parameters of DeleteApiTemplate  DeleteApiTemplateRequest
+     * @return DeleteApiTemplateResponse
      */
     @Override
     public CompletableFuture<DeleteApiTemplateResponse> deleteApiTemplate(DeleteApiTemplateRequest request) {
@@ -174,6 +196,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCluster  DeleteClusterRequest
+     * @return DeleteClusterResponse
+     */
     @Override
     public CompletableFuture<DeleteClusterResponse> deleteCluster(DeleteClusterRequest request) {
         try {
@@ -188,6 +214,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteScript  DeleteScriptRequest
+     * @return DeleteScriptResponse
+     */
     @Override
     public CompletableFuture<DeleteScriptResponse> deleteScript(DeleteScriptRequest request) {
         try {
@@ -202,6 +232,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetApiTemplate  GetApiTemplateRequest
+     * @return GetApiTemplateResponse
+     */
     @Override
     public CompletableFuture<GetApiTemplateResponse> getApiTemplate(GetApiTemplateRequest request) {
         try {
@@ -217,8 +251,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 查询应用详情。
-      *
+     * <b>description</b> :
+     * <p>查询应用详情。</p>
+     * 
+     * @param request the request parameters of GetApplication  GetApplicationRequest
+     * @return GetApplicationResponse
      */
     @Override
     public CompletableFuture<GetApplicationResponse> getApplication(GetApplicationRequest request) {
@@ -235,8 +272,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 获取弹性伸缩活动详情。
-      *
+     * <b>description</b> :
+     * <p>获取弹性伸缩活动详情。</p>
+     * 
+     * @param request the request parameters of GetAutoScalingActivity  GetAutoScalingActivityRequest
+     * @return GetAutoScalingActivityResponse
      */
     @Override
     public CompletableFuture<GetAutoScalingActivityResponse> getAutoScalingActivity(GetAutoScalingActivityRequest request) {
@@ -252,6 +292,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAutoScalingPolicy  GetAutoScalingPolicyRequest
+     * @return GetAutoScalingPolicyResponse
+     */
     @Override
     public CompletableFuture<GetAutoScalingPolicyResponse> getAutoScalingPolicy(GetAutoScalingPolicyRequest request) {
         try {
@@ -266,6 +310,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCluster  GetClusterRequest
+     * @return GetClusterResponse
+     */
     @Override
     public CompletableFuture<GetClusterResponse> getCluster(GetClusterRequest request) {
         try {
@@ -280,6 +328,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetClusterCloneMeta  GetClusterCloneMetaRequest
+     * @return GetClusterCloneMetaResponse
+     */
     @Override
     public CompletableFuture<GetClusterCloneMetaResponse> getClusterCloneMeta(GetClusterCloneMetaRequest request) {
         try {
@@ -295,8 +347,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * get one doctor analysis app
-      *
+     * <b>description</b> :
+     * <p>get one doctor analysis app</p>
+     * 
+     * @param request the request parameters of GetDoctorApplication  GetDoctorApplicationRequest
+     * @return GetDoctorApplicationResponse
      */
     @Override
     public CompletableFuture<GetDoctorApplicationResponse> getDoctorApplication(GetDoctorApplicationRequest request) {
@@ -313,8 +368,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * get one specific luster engine queue by <type, name>
-      *
+     * <b>description</b> :
+     * <p>get one specific luster engine queue by &lt;type, name&gt;</p>
+     * 
+     * @param request the request parameters of GetDoctorComputeSummary  GetDoctorComputeSummaryRequest
+     * @return GetDoctorComputeSummaryResponse
      */
     @Override
     public CompletableFuture<GetDoctorComputeSummaryResponse> getDoctorComputeSummary(GetDoctorComputeSummaryRequest request) {
@@ -331,8 +389,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * get Doctor HBaseCluster
-      *
+     * <b>description</b> :
+     * <p>get Doctor HBaseCluster</p>
+     * 
+     * @param request the request parameters of GetDoctorHBaseCluster  GetDoctorHBaseClusterRequest
+     * @return GetDoctorHBaseClusterResponse
      */
     @Override
     public CompletableFuture<GetDoctorHBaseClusterResponse> getDoctorHBaseCluster(GetDoctorHBaseClusterRequest request) {
@@ -349,8 +410,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * list Doctor HBaseRegions
-      *
+     * <b>description</b> :
+     * <p>list Doctor HBaseRegions</p>
+     * 
+     * @param request the request parameters of GetDoctorHBaseRegion  GetDoctorHBaseRegionRequest
+     * @return GetDoctorHBaseRegionResponse
      */
     @Override
     public CompletableFuture<GetDoctorHBaseRegionResponse> getDoctorHBaseRegion(GetDoctorHBaseRegionRequest request) {
@@ -367,8 +431,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * get Doctor HBaseRegionServer
-      *
+     * <b>description</b> :
+     * <p>get Doctor HBaseRegionServer</p>
+     * 
+     * @param request the request parameters of GetDoctorHBaseRegionServer  GetDoctorHBaseRegionServerRequest
+     * @return GetDoctorHBaseRegionServerResponse
      */
     @Override
     public CompletableFuture<GetDoctorHBaseRegionServerResponse> getDoctorHBaseRegionServer(GetDoctorHBaseRegionServerRequest request) {
@@ -385,8 +452,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * get Doctor HBaseTable
-      *
+     * <b>description</b> :
+     * <p>get Doctor HBaseTable</p>
+     * 
+     * @param request the request parameters of GetDoctorHBaseTable  GetDoctorHBaseTableRequest
+     * @return GetDoctorHBaseTableResponse
      */
     @Override
     public CompletableFuture<GetDoctorHBaseTableResponse> getDoctorHBaseTable(GetDoctorHBaseTableRequest request) {
@@ -403,8 +473,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * list Doctor HBaseTableRegions
-      *
+     * <b>description</b> :
+     * <p>list Doctor HBaseTableRegions</p>
+     * 
+     * @param request the request parameters of GetDoctorHDFSCluster  GetDoctorHDFSClusterRequest
+     * @return GetDoctorHDFSClusterResponse
      */
     @Override
     public CompletableFuture<GetDoctorHDFSClusterResponse> getDoctorHDFSCluster(GetDoctorHDFSClusterRequest request) {
@@ -421,8 +494,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * get Doctor HDFSNode
-      *
+     * <b>description</b> :
+     * <p>get Doctor HDFSNode</p>
+     * 
+     * @param request the request parameters of GetDoctorHDFSDirectory  GetDoctorHDFSDirectoryRequest
+     * @return GetDoctorHDFSDirectoryResponse
      */
     @Override
     public CompletableFuture<GetDoctorHDFSDirectoryResponse> getDoctorHDFSDirectory(GetDoctorHDFSDirectoryRequest request) {
@@ -439,8 +515,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * get Doctor HDFS UGI
-      *
+     * <b>description</b> :
+     * <p>get Doctor HDFS UGI</p>
+     * 
+     * @param request the request parameters of GetDoctorHDFSUGI  GetDoctorHDFSUGIRequest
+     * @return GetDoctorHDFSUGIResponse
      */
     @Override
     public CompletableFuture<GetDoctorHDFSUGIResponse> getDoctorHDFSUGI(GetDoctorHDFSUGIRequest request) {
@@ -457,8 +536,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * list Doctor Hive Cluster
-      *
+     * <b>description</b> :
+     * <p>list Doctor Hive Cluster</p>
+     * 
+     * @param request the request parameters of GetDoctorHiveCluster  GetDoctorHiveClusterRequest
+     * @return GetDoctorHiveClusterResponse
      */
     @Override
     public CompletableFuture<GetDoctorHiveClusterResponse> getDoctorHiveCluster(GetDoctorHiveClusterRequest request) {
@@ -475,8 +557,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * get Doctor Hive Database
-      *
+     * <b>description</b> :
+     * <p>get Doctor Hive Database</p>
+     * 
+     * @param request the request parameters of GetDoctorHiveDatabase  GetDoctorHiveDatabaseRequest
+     * @return GetDoctorHiveDatabaseResponse
      */
     @Override
     public CompletableFuture<GetDoctorHiveDatabaseResponse> getDoctorHiveDatabase(GetDoctorHiveDatabaseRequest request) {
@@ -493,8 +578,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * get Doctor Hive Table
-      *
+     * <b>description</b> :
+     * <p>get Doctor Hive Table</p>
+     * 
+     * @param request the request parameters of GetDoctorHiveTable  GetDoctorHiveTableRequest
+     * @return GetDoctorHiveTableResponse
      */
     @Override
     public CompletableFuture<GetDoctorHiveTableResponse> getDoctorHiveTable(GetDoctorHiveTableRequest request) {
@@ -511,8 +599,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Get realtime job by yarn
-      *
+     * <b>description</b> :
+     * <p>Get realtime job by yarn</p>
+     * 
+     * @param request the request parameters of GetDoctorJob  GetDoctorJobRequest
+     * @return GetDoctorJobResponse
      */
     @Override
     public CompletableFuture<GetDoctorJobResponse> getDoctorJob(GetDoctorJobRequest request) {
@@ -529,8 +620,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * get specify component's report analysis by emr doctor
-      *
+     * <b>description</b> :
+     * <p>get specify component&#39;s report analysis by emr doctor</p>
+     * 
+     * @param request the request parameters of GetDoctorReportComponentSummary  GetDoctorReportComponentSummaryRequest
+     * @return GetDoctorReportComponentSummaryResponse
      */
     @Override
     public CompletableFuture<GetDoctorReportComponentSummaryResponse> getDoctorReportComponentSummary(GetDoctorReportComponentSummaryRequest request) {
@@ -547,8 +641,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 获取节点组详情。
-      *
+     * <b>description</b> :
+     * <p>获取节点组详情。</p>
+     * 
+     * @param request the request parameters of GetNodeGroup  GetNodeGroupRequest
+     * @return GetNodeGroupResponse
      */
     @Override
     public CompletableFuture<GetNodeGroupResponse> getNodeGroup(GetNodeGroupRequest request) {
@@ -564,6 +661,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetOperation  GetOperationRequest
+     * @return GetOperationResponse
+     */
     @Override
     public CompletableFuture<GetOperationResponse> getOperation(GetOperationRequest request) {
         try {
@@ -578,6 +679,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of IncreaseNodes  IncreaseNodesRequest
+     * @return IncreaseNodesResponse
+     */
     @Override
     public CompletableFuture<IncreaseNodesResponse> increaseNodes(IncreaseNodesRequest request) {
         try {
@@ -592,6 +697,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of JoinResourceGroup  JoinResourceGroupRequest
+     * @return JoinResourceGroupResponse
+     */
     @Override
     public CompletableFuture<JoinResourceGroupResponse> joinResourceGroup(JoinResourceGroupRequest request) {
         try {
@@ -606,6 +715,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListApiTemplates  ListApiTemplatesRequest
+     * @return ListApiTemplatesResponse
+     */
     @Override
     public CompletableFuture<ListApiTemplatesResponse> listApiTemplates(ListApiTemplatesRequest request) {
         try {
@@ -621,8 +734,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 查询应用配置。
-      *
+     * <b>description</b> :
+     * <p>查询应用配置。</p>
+     * 
+     * @param request the request parameters of ListApplicationConfigs  ListApplicationConfigsRequest
+     * @return ListApplicationConfigsResponse
      */
     @Override
     public CompletableFuture<ListApplicationConfigsResponse> listApplicationConfigs(ListApplicationConfigsRequest request) {
@@ -638,6 +754,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListApplications  ListApplicationsRequest
+     * @return ListApplicationsResponse
+     */
     @Override
     public CompletableFuture<ListApplicationsResponse> listApplications(ListApplicationsRequest request) {
         try {
@@ -653,8 +773,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 查询弹性伸缩活动列表。
-      *
+     * <b>description</b> :
+     * <p>查询弹性伸缩活动列表。</p>
+     * 
+     * @param request the request parameters of ListAutoScalingActivities  ListAutoScalingActivitiesRequest
+     * @return ListAutoScalingActivitiesResponse
      */
     @Override
     public CompletableFuture<ListAutoScalingActivitiesResponse> listAutoScalingActivities(ListAutoScalingActivitiesRequest request) {
@@ -670,6 +793,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListClusters  ListClustersRequest
+     * @return ListClustersResponse
+     */
     @Override
     public CompletableFuture<ListClustersResponse> listClusters(ListClustersRequest request) {
         try {
@@ -685,8 +812,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 查询组件实例列表。
-      *
+     * <b>description</b> :
+     * <p>查询组件实例列表。</p>
+     * 
+     * @param request the request parameters of ListComponentInstances  ListComponentInstancesRequest
+     * @return ListComponentInstancesResponse
      */
     @Override
     public CompletableFuture<ListComponentInstancesResponse> listComponentInstances(ListComponentInstancesRequest request) {
@@ -702,6 +832,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListComponents  ListComponentsRequest
+     * @return ListComponentsResponse
+     */
     @Override
     public CompletableFuture<ListComponentsResponse> listComponents(ListComponentsRequest request) {
         try {
@@ -717,8 +851,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * list all doctor analysis apps
-      *
+     * <b>description</b> :
+     * <p>list all doctor analysis apps</p>
+     * 
+     * @param request the request parameters of ListDoctorApplications  ListDoctorApplicationsRequest
+     * @return ListDoctorApplicationsResponse
      */
     @Override
     public CompletableFuture<ListDoctorApplicationsResponse> listDoctorApplications(ListDoctorApplicationsRequest request) {
@@ -735,8 +872,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * list Doctor analysis result of cluster engine queue view
-      *
+     * <b>description</b> :
+     * <p>list Doctor analysis result of cluster engine queue view</p>
+     * 
+     * @param request the request parameters of ListDoctorComputeSummary  ListDoctorComputeSummaryRequest
+     * @return ListDoctorComputeSummaryResponse
      */
     @Override
     public CompletableFuture<ListDoctorComputeSummaryResponse> listDoctorComputeSummary(ListDoctorComputeSummaryRequest request) {
@@ -753,8 +893,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * list Doctor HBaseRegionServers
-      *
+     * <b>description</b> :
+     * <p>list Doctor HBaseRegionServers</p>
+     * 
+     * @param request the request parameters of ListDoctorHBaseRegionServers  ListDoctorHBaseRegionServersRequest
+     * @return ListDoctorHBaseRegionServersResponse
      */
     @Override
     public CompletableFuture<ListDoctorHBaseRegionServersResponse> listDoctorHBaseRegionServers(ListDoctorHBaseRegionServersRequest request) {
@@ -771,8 +914,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * list Doctor HBaseTables
-      *
+     * <b>description</b> :
+     * <p>list Doctor HBaseTables</p>
+     * 
+     * @param request the request parameters of ListDoctorHBaseTables  ListDoctorHBaseTablesRequest
+     * @return ListDoctorHBaseTablesResponse
      */
     @Override
     public CompletableFuture<ListDoctorHBaseTablesResponse> listDoctorHBaseTables(ListDoctorHBaseTablesRequest request) {
@@ -789,8 +935,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * list Doctor HDFSNodes
-      *
+     * <b>description</b> :
+     * <p>list Doctor HDFSNodes</p>
+     * 
+     * @param request the request parameters of ListDoctorHDFSDirectories  ListDoctorHDFSDirectoriesRequest
+     * @return ListDoctorHDFSDirectoriesResponse
      */
     @Override
     public CompletableFuture<ListDoctorHDFSDirectoriesResponse> listDoctorHDFSDirectories(ListDoctorHDFSDirectoriesRequest request) {
@@ -807,8 +956,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * list Doctor HDFS UGIs
-      *
+     * <b>description</b> :
+     * <p>list Doctor HDFS UGIs</p>
+     * 
+     * @param request the request parameters of ListDoctorHDFSUGI  ListDoctorHDFSUGIRequest
+     * @return ListDoctorHDFSUGIResponse
      */
     @Override
     public CompletableFuture<ListDoctorHDFSUGIResponse> listDoctorHDFSUGI(ListDoctorHDFSUGIRequest request) {
@@ -825,8 +977,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * list Doctor Hive Databases
-      *
+     * <b>description</b> :
+     * <p>list Doctor Hive Databases</p>
+     * 
+     * @param request the request parameters of ListDoctorHiveDatabases  ListDoctorHiveDatabasesRequest
+     * @return ListDoctorHiveDatabasesResponse
      */
     @Override
     public CompletableFuture<ListDoctorHiveDatabasesResponse> listDoctorHiveDatabases(ListDoctorHiveDatabasesRequest request) {
@@ -843,8 +998,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * list Doctor Hive Tables
-      *
+     * <b>description</b> :
+     * <p>list Doctor Hive Tables</p>
+     * 
+     * @param request the request parameters of ListDoctorHiveTables  ListDoctorHiveTablesRequest
+     * @return ListDoctorHiveTablesResponse
      */
     @Override
     public CompletableFuture<ListDoctorHiveTablesResponse> listDoctorHiveTables(ListDoctorHiveTablesRequest request) {
@@ -861,8 +1019,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * list realtime jobs by yarn
-      *
+     * <b>description</b> :
+     * <p>list realtime jobs by yarn</p>
+     * 
+     * @param request the request parameters of ListDoctorJobs  ListDoctorJobsRequest
+     * @return ListDoctorJobsResponse
      */
     @Override
     public CompletableFuture<ListDoctorJobsResponse> listDoctorJobs(ListDoctorJobsRequest request) {
@@ -879,8 +1040,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * list stats groupBy jobs by yarn
-      *
+     * <b>description</b> :
+     * <p>list stats groupBy jobs by yarn</p>
+     * 
+     * @param request the request parameters of ListDoctorJobsStats  ListDoctorJobsStatsRequest
+     * @return ListDoctorJobsStatsResponse
      */
     @Override
     public CompletableFuture<ListDoctorJobsStatsResponse> listDoctorJobsStats(ListDoctorJobsStatsRequest request) {
@@ -897,8 +1061,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * list all reports analysis by emr doctor
-      *
+     * <b>description</b> :
+     * <p>list all reports analysis by emr doctor</p>
+     * 
+     * @param request the request parameters of ListDoctorReports  ListDoctorReportsRequest
+     * @return ListDoctorReportsResponse
      */
     @Override
     public CompletableFuture<ListDoctorReportsResponse> listDoctorReports(ListDoctorReportsRequest request) {
@@ -914,6 +1081,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInstanceTypes  ListInstanceTypesRequest
+     * @return ListInstanceTypesResponse
+     */
     @Override
     public CompletableFuture<ListInstanceTypesResponse> listInstanceTypes(ListInstanceTypesRequest request) {
         try {
@@ -928,6 +1099,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListNodeGroups  ListNodeGroupsRequest
+     * @return ListNodeGroupsResponse
+     */
     @Override
     public CompletableFuture<ListNodeGroupsResponse> listNodeGroups(ListNodeGroupsRequest request) {
         try {
@@ -942,6 +1117,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListNodes  ListNodesRequest
+     * @return ListNodesResponse
+     */
     @Override
     public CompletableFuture<ListNodesResponse> listNodes(ListNodesRequest request) {
         try {
@@ -957,8 +1136,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 查询主版本。
-      *
+     * <b>description</b> :
+     * <p>查询主版本。</p>
+     * 
+     * @param request the request parameters of ListReleaseVersions  ListReleaseVersionsRequest
+     * @return ListReleaseVersionsResponse
      */
     @Override
     public CompletableFuture<ListReleaseVersionsResponse> listReleaseVersions(ListReleaseVersionsRequest request) {
@@ -974,6 +1156,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListScripts  ListScriptsRequest
+     * @return ListScriptsResponse
+     */
     @Override
     public CompletableFuture<ListScriptsResponse> listScripts(ListScriptsRequest request) {
         try {
@@ -988,6 +1174,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
     @Override
     public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
         try {
@@ -1003,8 +1193,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to configure auto scaling policies.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to configure auto scaling policies.</p>
+     * 
+     * @param request the request parameters of PutAutoScalingPolicy  PutAutoScalingPolicyRequest
+     * @return PutAutoScalingPolicyResponse
      */
     @Override
     public CompletableFuture<PutAutoScalingPolicyResponse> putAutoScalingPolicy(PutAutoScalingPolicyRequest request) {
@@ -1020,6 +1213,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveAutoScalingPolicy  RemoveAutoScalingPolicyRequest
+     * @return RemoveAutoScalingPolicyResponse
+     */
     @Override
     public CompletableFuture<RemoveAutoScalingPolicyResponse> removeAutoScalingPolicy(RemoveAutoScalingPolicyRequest request) {
         try {
@@ -1034,6 +1231,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RunApiTemplate  RunApiTemplateRequest
+     * @return RunApiTemplateResponse
+     */
     @Override
     public CompletableFuture<RunApiTemplateResponse> runApiTemplate(RunApiTemplateRequest request) {
         try {
@@ -1048,6 +1249,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RunApplicationAction  RunApplicationActionRequest
+     * @return RunApplicationActionResponse
+     */
     @Override
     public CompletableFuture<RunApplicationActionResponse> runApplicationAction(RunApplicationActionRequest request) {
         try {
@@ -1062,6 +1267,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
     @Override
     public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
         try {
@@ -1076,6 +1285,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
     @Override
     public CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request) {
         try {
@@ -1091,8 +1304,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 修改集群模板
-      *
+     * <b>description</b> :
+     * <p>修改集群模板</p>
+     * 
+     * @param request the request parameters of UpdateApiTemplate  UpdateApiTemplateRequest
+     * @return UpdateApiTemplateResponse
      */
     @Override
     public CompletableFuture<UpdateApiTemplateResponse> updateApiTemplate(UpdateApiTemplateRequest request) {
@@ -1108,6 +1324,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateApplicationConfigs  UpdateApplicationConfigsRequest
+     * @return UpdateApplicationConfigsResponse
+     */
     @Override
     public CompletableFuture<UpdateApplicationConfigsResponse> updateApplicationConfigs(UpdateApplicationConfigsRequest request) {
         try {
@@ -1122,6 +1342,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateScript  UpdateScriptRequest
+     * @return UpdateScriptResponse
+     */
     @Override
     public CompletableFuture<UpdateScriptResponse> updateScript(UpdateScriptRequest request) {
         try {

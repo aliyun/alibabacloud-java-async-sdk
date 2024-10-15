@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutAutoScalingPolicyRequest} extends {@link RequestModel}
  *
  * <p>PutAutoScalingPolicyRequest</p>
@@ -112,7 +113,11 @@ public class PutAutoScalingPolicyRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * <p>集群ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b933c5aac8fe****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -121,7 +126,7 @@ public class PutAutoScalingPolicyRequest extends Request {
         }
 
         /**
-         * The maximum and minimum numbers of nodes in a node group.
+         * <p>The maximum and minimum numbers of nodes in a node group.</p>
          */
         public Builder constraints(ScalingConstraints constraints) {
             this.putQueryParameter("Constraints", constraints);
@@ -130,7 +135,11 @@ public class PutAutoScalingPolicyRequest extends Request {
         }
 
         /**
-         * 节点组ID。节点组 Id-针对 ACK 集群，此字段为空。
+         * <p>节点组ID。节点组 Id-针对 ACK 集群，此字段为空。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-869471354ecd****</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.putQueryParameter("NodeGroupId", nodeGroupId);
@@ -139,7 +148,11 @@ public class PutAutoScalingPolicyRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * <p>区域ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -148,7 +161,7 @@ public class PutAutoScalingPolicyRequest extends Request {
         }
 
         /**
-         * The auto scaling rules. Number of elements in the array: 0 to 100.
+         * <p>The auto scaling rules. Number of elements in the array: 0 to 100.</p>
          */
         public Builder scalingRules(java.util.List < ScalingRule > scalingRules) {
             this.putQueryParameter("ScalingRules", scalingRules);

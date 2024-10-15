@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDoctorHBaseRegionResponseBody} extends {@link TeaModel}
  *
  * <p>GetDoctorHBaseRegionResponseBody</p>
@@ -49,7 +50,7 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * <p>请求ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDoctorHBaseRegionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseRegionResponseBody</p>
+     */
     public static class DailyReadRequest extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -171,6 +181,12 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHBaseRegionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseRegionResponseBody</p>
+     */
     public static class DailyWriteRequest extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -272,6 +288,12 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHBaseRegionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseRegionResponseBody</p>
+     */
     public static class StoreFileCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -343,7 +365,10 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>storeFileCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -359,7 +384,10 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -373,6 +401,12 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHBaseRegionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseRegionResponseBody</p>
+     */
     public static class TotalReadRequest extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -444,7 +478,10 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>storeFileCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -460,7 +497,10 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -474,6 +514,12 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHBaseRegionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseRegionResponseBody</p>
+     */
     public static class TotalWriteRequest extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -545,7 +591,10 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>storeFileCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -561,7 +610,10 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -575,6 +627,12 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHBaseRegionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseRegionResponseBody</p>
+     */
     public static class Metrics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DailyReadRequest")
         private DailyReadRequest dailyReadRequest;
@@ -666,7 +724,7 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
             }
 
             /**
-             * The number of StoreFiles.
+             * <p>The number of StoreFiles.</p>
              */
             public Builder storeFileCount(StoreFileCount storeFileCount) {
                 this.storeFileCount = storeFileCount;
@@ -696,6 +754,12 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHBaseRegionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHBaseRegionResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Metrics")
         private Metrics metrics;
@@ -747,7 +811,7 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The metric information.
+             * <p>The metric information.</p>
              */
             public Builder metrics(Metrics metrics) {
                 this.metrics = metrics;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IncreaseNodeGroup} extends {@link TeaModel}
  *
  * <p>IncreaseNodeGroup</p>
@@ -99,7 +100,10 @@ public class IncreaseNodeGroup extends TeaModel {
         private String vSwitchId; 
 
         /**
-         * 描述。
+         * <p>描述。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>描述</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -107,7 +111,11 @@ public class IncreaseNodeGroup extends TeaModel {
         }
 
         /**
-         * 节点数量。
+         * <p>节点数量。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder nodeCount(Integer nodeCount) {
             this.nodeCount = nodeCount;
@@ -115,7 +123,11 @@ public class IncreaseNodeGroup extends TeaModel {
         }
 
         /**
-         * 节点组ID。
+         * <p>节点组ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-869471354ecd****</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.nodeGroupId = nodeGroupId;
@@ -123,7 +135,10 @@ public class IncreaseNodeGroup extends TeaModel {
         }
 
         /**
-         * 付费时长。
+         * <p>付费时长。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder paymentDuration(Integer paymentDuration) {
             this.paymentDuration = paymentDuration;
@@ -131,7 +146,10 @@ public class IncreaseNodeGroup extends TeaModel {
         }
 
         /**
-         * 付费时长单位。
+         * <p>付费时长单位。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder paymentDurationUnit(String paymentDurationUnit) {
             this.paymentDurationUnit = paymentDurationUnit;
@@ -139,7 +157,10 @@ public class IncreaseNodeGroup extends TeaModel {
         }
 
         /**
-         * 虚拟机交换机ID。
+         * <p>虚拟机交换机ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-hp35g7ya5ymw68mmg****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;

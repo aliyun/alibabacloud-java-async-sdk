@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDoctorReportsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDoctorReportsResponseBody</p>
@@ -85,7 +86,7 @@ public class ListDoctorReportsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The reports.
+         * <p>The reports.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -93,7 +94,10 @@ public class ListDoctorReportsResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of entries returned.
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +105,10 @@ public class ListDoctorReportsResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token.
+         * <p>A pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +116,10 @@ public class ListDoctorReportsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListDoctorReportsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListDoctorReportsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDoctorReportsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorReportsResponseBody</p>
+     */
     public static class SummaryReport extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Score")
         private Integer score;
@@ -181,7 +200,10 @@ public class ListDoctorReportsResponseBody extends TeaModel {
             private String summary; 
 
             /**
-             * The score.
+             * <p>The score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>88</p>
              */
             public Builder score(Integer score) {
                 this.score = score;
@@ -189,7 +211,10 @@ public class ListDoctorReportsResponseBody extends TeaModel {
             }
 
             /**
-             * The optimization suggestion.
+             * <p>The optimization suggestion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>block</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -197,7 +222,10 @@ public class ListDoctorReportsResponseBody extends TeaModel {
             }
 
             /**
-             * The summary of the report.
+             * <p>The summary of the report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eastbuy-mse-plugin-auth</p>
              */
             public Builder summary(String summary) {
                 this.summary = summary;
@@ -211,6 +239,12 @@ public class ListDoctorReportsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorReportsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorReportsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComponentTypes")
         private java.util.List < String > componentTypes;
@@ -262,58 +296,54 @@ public class ListDoctorReportsResponseBody extends TeaModel {
             private SummaryReport summaryReport; 
 
             /**
-             * The component types.
-             * <p>
+             * <p>The component types.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>compute</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   compute
+             * <!-- -->
+             * </li>
+             * <li><p>hive</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>hdfs</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   hive
+             * <!-- -->
+             * </li>
+             * <li><p>yarn</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>oss</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   hdfs
+             * <!-- -->
+             * </li>
+             * <li><p>hbase</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   yarn
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   oss
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   hbase
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder componentTypes(java.util.List < String > componentTypes) {
                 this.componentTypes = componentTypes;
@@ -321,7 +351,10 @@ public class ListDoctorReportsResponseBody extends TeaModel {
             }
 
             /**
-             * The date on which the report was generated.
+             * <p>The date on which the report was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-06-29</p>
              */
             public Builder dateTime(String dateTime) {
                 this.dateTime = dateTime;
@@ -329,7 +362,7 @@ public class ListDoctorReportsResponseBody extends TeaModel {
             }
 
             /**
-             * The summary of the report.
+             * <p>The summary of the report.</p>
              */
             public Builder summaryReport(SummaryReport summaryReport) {
                 this.summaryReport = summaryReport;

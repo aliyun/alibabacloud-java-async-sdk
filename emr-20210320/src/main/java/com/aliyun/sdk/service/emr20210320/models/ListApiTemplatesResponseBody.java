@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApiTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListApiTemplatesResponseBody</p>
@@ -86,7 +87,7 @@ public class ListApiTemplatesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The API operation templates.
+         * <p>The API operation templates.</p>
          */
         public Builder apiTemplates(java.util.List < ApiTemplate > apiTemplates) {
             this.apiTemplates = apiTemplates;
@@ -94,7 +95,10 @@ public class ListApiTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * 本次请求所返回的最大记录条数。
+         * <p>本次请求所返回的最大记录条数。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +106,10 @@ public class ListApiTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * 返回读取到的数据位置，空代表数据已经读取完毕。
+         * <p>返回读取到的数据位置，空代表数据已经读取完毕。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +117,10 @@ public class ListApiTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * <p>请求ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +128,10 @@ public class ListApiTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * 本次请求条件下的数据总量。
+         * <p>本次请求条件下的数据总量。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

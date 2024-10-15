@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDoctorJobsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDoctorJobsResponseBody</p>
@@ -85,7 +86,7 @@ public class ListDoctorJobsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about the jobs.
+         * <p>The information about the jobs.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -93,7 +94,10 @@ public class ListDoctorJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of entries returned.
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +105,10 @@ public class ListDoctorJobsResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token.
+         * <p>A pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +116,10 @@ public class ListDoctorJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListDoctorJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListDoctorJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDoctorJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorJobsResponseBody</p>
+     */
     public static class MemSeconds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -193,7 +212,10 @@ public class ListDoctorJobsResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Total memory usage over time in seconds</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -201,7 +223,10 @@ public class ListDoctorJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>memSeconds</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -209,7 +234,10 @@ public class ListDoctorJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB * Sec</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -217,7 +245,10 @@ public class ListDoctorJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12312312</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -231,6 +262,12 @@ public class ListDoctorJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorJobsResponseBody</p>
+     */
     public static class VcoreSeconds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -294,7 +331,10 @@ public class ListDoctorJobsResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Total vcore usage over time in seconds</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -302,7 +342,10 @@ public class ListDoctorJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vcoreSeconds</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -310,7 +353,10 @@ public class ListDoctorJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VCores * Sec</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -318,7 +364,10 @@ public class ListDoctorJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11123</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -332,6 +381,12 @@ public class ListDoctorJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorJobsResponseBody</p>
+     */
     public static class Metrics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MemSeconds")
         private MemSeconds memSeconds;
@@ -371,7 +426,7 @@ public class ListDoctorJobsResponseBody extends TeaModel {
             private VcoreSeconds vcoreSeconds; 
 
             /**
-             * The amount of memory consumed.
+             * <p>The amount of memory consumed.</p>
              */
             public Builder memSeconds(MemSeconds memSeconds) {
                 this.memSeconds = memSeconds;
@@ -379,7 +434,7 @@ public class ListDoctorJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The CPU usage.
+             * <p>The CPU usage.</p>
              */
             public Builder vcoreSeconds(VcoreSeconds vcoreSeconds) {
                 this.vcoreSeconds = vcoreSeconds;
@@ -393,6 +448,12 @@ public class ListDoctorJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorJobsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -552,7 +613,10 @@ public class ListDoctorJobsResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * The ID of the job that was submitted to YARN.
+             * <p>The ID of the job that was submitted to YARN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>application_1607584549220_*****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -560,7 +624,10 @@ public class ListDoctorJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the job.
+             * <p>The name of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tpcds</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -568,7 +635,10 @@ public class ListDoctorJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The total running time of the job. Unit: milliseconds.
+             * <p>The total running time of the job. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>242</p>
              */
             public Builder elapsedTime(Long elapsedTime) {
                 this.elapsedTime = elapsedTime;
@@ -576,14 +646,17 @@ public class ListDoctorJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The final state of the job. Valid values:
-             * <p>
+             * <p>The final state of the job. Valid values:</p>
+             * <ul>
+             * <li>SUCCEEDED</li>
+             * <li>FAILED</li>
+             * <li>KILLED</li>
+             * <li>ENDED</li>
+             * <li>UNDEFINED</li>
+             * </ul>
              * 
-             * *   SUCCEEDED
-             * *   FAILED
-             * *   KILLED
-             * *   ENDED
-             * *   UNDEFINED
+             * <strong>example:</strong>
+             * <p>KILLED</p>
              */
             public Builder finalStatus(String finalStatus) {
                 this.finalStatus = finalStatus;
@@ -591,7 +664,10 @@ public class ListDoctorJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the job. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.
+             * <p>The end time of the job. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1683690929000</p>
              */
             public Builder finishTime(Long finishTime) {
                 this.finishTime = finishTime;
@@ -599,7 +675,10 @@ public class ListDoctorJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job was started. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.
+             * <p>The time when the job was started. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1672148400000</p>
              */
             public Builder launchTime(Long launchTime) {
                 this.launchTime = launchTime;
@@ -607,7 +686,7 @@ public class ListDoctorJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The data about the metrics.
+             * <p>The data about the metrics.</p>
              */
             public Builder metrics(Metrics metrics) {
                 this.metrics = metrics;
@@ -615,7 +694,10 @@ public class ListDoctorJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The YARN queue to which the job was submitted.
+             * <p>The YARN queue to which the job was submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DW</p>
              */
             public Builder queue(String queue) {
                 this.queue = queue;
@@ -623,7 +705,10 @@ public class ListDoctorJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job was submitted. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.
+             * <p>The time when the job was submitted. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1675180800000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -631,12 +716,15 @@ public class ListDoctorJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The running state of the job. Valid values:
-             * <p>
+             * <p>The running state of the job. Valid values:</p>
+             * <ul>
+             * <li>FINISHED</li>
+             * <li>FAILED</li>
+             * <li>KILLED</li>
+             * </ul>
              * 
-             * *   FINISHED
-             * *   FAILED
-             * *   KILLED
+             * <strong>example:</strong>
+             * <p>FINISHED</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -644,7 +732,10 @@ public class ListDoctorJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the compute engine.
+             * <p>The type of the compute engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SPARK</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -652,7 +743,10 @@ public class ListDoctorJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The username that was used to submit the job.
+             * <p>The username that was used to submit the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DW</p>
              */
             public Builder user(String user) {
                 this.user = user;

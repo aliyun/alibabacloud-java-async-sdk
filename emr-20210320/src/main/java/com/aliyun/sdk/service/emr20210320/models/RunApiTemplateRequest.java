@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunApiTemplateRequest} extends {@link RequestModel}
  *
  * <p>RunApiTemplateRequest</p>
@@ -98,7 +99,11 @@ public class RunApiTemplateRequest extends Request {
         } 
 
         /**
-         * 接口名。
+         * <p>接口名。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateCluster</p>
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -107,7 +112,10 @@ public class RunApiTemplateRequest extends Request {
         }
 
         /**
-         * 幂等客户端TOKEN。
+         * <p>幂等客户端TOKEN。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A7D960FA-6DBA-5E07-8746-A63E3E4D****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -116,7 +124,11 @@ public class RunApiTemplateRequest extends Request {
         }
 
         /**
-         * 地域ID。
+         * <p>地域ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -125,7 +137,11 @@ public class RunApiTemplateRequest extends Request {
         }
 
         /**
-         * 集群模板id。
+         * <p>集群模板id。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AT-****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetApplicationRequest} extends {@link RequestModel}
  *
  * <p>GetApplicationRequest</p>
@@ -84,7 +85,11 @@ public class GetApplicationRequest extends Request {
         } 
 
         /**
-         * 应用名称。
+         * <p>应用名称。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HDFS</p>
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -93,7 +98,11 @@ public class GetApplicationRequest extends Request {
         }
 
         /**
-         * 集群ID。
+         * <p>集群ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b933c5aac8fe****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -102,7 +111,11 @@ public class GetApplicationRequest extends Request {
         }
 
         /**
-         * 地域ID。
+         * <p>地域ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

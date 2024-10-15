@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateApiTemplateRequest} extends {@link RequestModel}
  *
  * <p>UpdateApiTemplateRequest</p>
@@ -128,7 +129,11 @@ public class UpdateApiTemplateRequest extends Request {
         } 
 
         /**
-         * The name of the API. You can create only a cluster API operation template. Set the value to CreateCluster.
+         * <p>The name of the API. You can create only a cluster API operation template. Set the value to CreateCluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateCluster</p>
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -137,7 +142,11 @@ public class UpdateApiTemplateRequest extends Request {
         }
 
         /**
-         * The content of the cluster API operation template. Set the value to JSON strings of the request parameters of the [CreateCluster](~~454393~~) API for creating a cluster.
+         * <p>The content of the cluster API operation template. Set the value to JSON strings of the request parameters of the <a href="https://help.aliyun.com/document_detail/454393.html">CreateCluster</a> API for creating a cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateCluster</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -146,7 +155,11 @@ public class UpdateApiTemplateRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * <p>区域ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -155,7 +168,10 @@ public class UpdateApiTemplateRequest extends Request {
         }
 
         /**
-         * 资源组ID。
+         * <p>资源组ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzabjyop****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -164,7 +180,11 @@ public class UpdateApiTemplateRequest extends Request {
         }
 
         /**
-         * 集群模板id。
+         * <p>集群模板id。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AT-****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -173,7 +193,11 @@ public class UpdateApiTemplateRequest extends Request {
         }
 
         /**
-         * 集群模板名字。
+         * <p>集群模板名字。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DATALAKE模板</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

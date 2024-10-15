@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScalingActivityResult} extends {@link TeaModel}
  *
  * <p>ScalingActivityResult</p>
@@ -37,7 +38,10 @@ public class ScalingActivityResult extends TeaModel {
         private String instanceId; 
 
         /**
-         * 实例ID。
+         * <p>实例ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1cudc25w2bfwl5****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;

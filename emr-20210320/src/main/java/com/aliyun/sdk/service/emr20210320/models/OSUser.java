@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OSUser} extends {@link TeaModel}
  *
  * <p>OSUser</p>
@@ -61,7 +62,10 @@ public class OSUser extends TeaModel {
         private String user; 
 
         /**
-         * 用户组。
+         * <p>用户组。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hadoop</p>
          */
         public Builder group(String group) {
             this.group = group;
@@ -69,7 +73,10 @@ public class OSUser extends TeaModel {
         }
 
         /**
-         * 用户密码。
+         * <p>用户密码。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345****</p>
          */
         public Builder password(String password) {
             this.password = password;
@@ -77,7 +84,10 @@ public class OSUser extends TeaModel {
         }
 
         /**
-         * 用户名称。
+         * <p>用户名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>王五</p>
          */
         public Builder user(String user) {
             this.user = user;

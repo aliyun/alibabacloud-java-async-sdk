@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigEffectActions} extends {@link TeaModel}
  *
  * <p>ConfigEffectActions</p>
@@ -49,7 +50,10 @@ public class ConfigEffectActions extends TeaModel {
         private java.util.List < String > configFiles; 
 
         /**
-         * 配置生效动作。
+         * <p>配置生效动作。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>restart</p>
          */
         public Builder configEffectAction(String configEffectAction) {
             this.configEffectAction = configEffectAction;
@@ -57,7 +61,10 @@ public class ConfigEffectActions extends TeaModel {
         }
 
         /**
-         * 配置生效配置文件。
+         * <p>配置生效配置文件。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder configFiles(java.util.List < String > configFiles) {
             this.configFiles = configFiles;

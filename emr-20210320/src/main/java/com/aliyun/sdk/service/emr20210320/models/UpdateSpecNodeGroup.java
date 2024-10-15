@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSpecNodeGroup} extends {@link TeaModel}
  *
  * <p>UpdateSpecNodeGroup</p>
@@ -51,7 +52,11 @@ public class UpdateSpecNodeGroup extends TeaModel {
         private String nodeGroupId; 
 
         /**
-         * 新实例类型。
+         * <p>新实例类型。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g7.xlarge</p>
          */
         public Builder newInstanceType(String newInstanceType) {
             this.newInstanceType = newInstanceType;
@@ -59,7 +64,11 @@ public class UpdateSpecNodeGroup extends TeaModel {
         }
 
         /**
-         * 节点组ID。
+         * <p>节点组ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-869471354ecd****</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.nodeGroupId = nodeGroupId;

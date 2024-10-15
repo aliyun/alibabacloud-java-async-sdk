@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Application} extends {@link TeaModel}
  *
  * <p>Application</p>
@@ -38,7 +39,11 @@ public class Application extends TeaModel {
         private String applicationName; 
 
         /**
-         * 应用名称。从EMR控制台集群创建页面可查看到指定发行版的应用名称列表。
+         * <p>应用名称。从EMR控制台集群创建页面可查看到指定发行版的应用名称列表。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HDFS</p>
          */
         public Builder applicationName(String applicationName) {
             this.applicationName = applicationName;

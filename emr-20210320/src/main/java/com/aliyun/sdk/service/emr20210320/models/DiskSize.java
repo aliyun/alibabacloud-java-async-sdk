@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DiskSize} extends {@link TeaModel}
  *
  * <p>DiskSize</p>
@@ -50,7 +51,11 @@ public class DiskSize extends TeaModel {
         private Integer size; 
 
         /**
-         * 磁盘类型。
+         * <p>磁盘类型。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
          */
         public Builder category(String category) {
             this.category = category;
@@ -58,7 +63,10 @@ public class DiskSize extends TeaModel {
         }
 
         /**
-         * 单位GB。
+         * <p>单位GB。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder size(Integer size) {
             this.size = size;

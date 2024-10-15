@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScalingAnalyzeResult} extends {@link TeaModel}
  *
  * <p>ScalingAnalyzeResult</p>
@@ -73,7 +74,10 @@ public class ScalingAnalyzeResult extends TeaModel {
         private Integer reservedCores; 
 
         /**
-         * 实际资源利用率。
+         * <p>实际资源利用率。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.12</p>
          */
         public Builder actualUsage(Float actualUsage) {
             this.actualUsage = actualUsage;
@@ -81,7 +85,10 @@ public class ScalingAnalyzeResult extends TeaModel {
         }
 
         /**
-         * 理想资源用量。
+         * <p>理想资源用量。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.12</p>
          */
         public Builder idealUsage(Float idealUsage) {
             this.idealUsage = idealUsage;
@@ -89,7 +96,10 @@ public class ScalingAnalyzeResult extends TeaModel {
         }
 
         /**
-         * 固定资源释放核数（非master）core。
+         * <p>固定资源释放核数（非master）core。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder releaseCores(Integer releaseCores) {
             this.releaseCores = releaseCores;
@@ -97,7 +107,10 @@ public class ScalingAnalyzeResult extends TeaModel {
         }
 
         /**
-         * 固定资源保留核数（非master）core。
+         * <p>固定资源保留核数（非master）core。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder reservedCores(Integer reservedCores) {
             this.reservedCores = reservedCores;

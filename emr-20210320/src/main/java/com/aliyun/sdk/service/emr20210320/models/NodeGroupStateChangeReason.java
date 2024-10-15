@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link NodeGroupStateChangeReason} extends {@link TeaModel}
  *
  * <p>NodeGroupStateChangeReason</p>
@@ -49,7 +50,10 @@ public class NodeGroupStateChangeReason extends TeaModel {
         private String message; 
 
         /**
-         * 状态码。
+         * <p>状态码。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MissingParameter</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -57,7 +61,10 @@ public class NodeGroupStateChangeReason extends TeaModel {
         }
 
         /**
-         * 描述信息。
+         * <p>描述信息。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The instance type is required.</p>
          */
         public Builder message(String message) {
             this.message = message;

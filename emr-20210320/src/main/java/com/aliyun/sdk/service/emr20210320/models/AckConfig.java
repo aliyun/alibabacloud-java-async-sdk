@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AckConfig} extends {@link TeaModel}
  *
  * <p>AckConfig</p>
@@ -265,7 +266,7 @@ public class AckConfig extends TeaModel {
         private java.util.List < Volumes> volumes; 
 
         /**
-         * ack集群id
+         * <p>ack集群id</p>
          */
         public Builder ackInstanceId(String ackInstanceId) {
             this.ackInstanceId = ackInstanceId;
@@ -305,7 +306,7 @@ public class AckConfig extends TeaModel {
         }
 
         /**
-         * Pod的CPU限制值。
+         * <p>Pod的CPU限制值。</p>
          */
         public Builder limitCpu(Float limitCpu) {
             this.limitCpu = limitCpu;
@@ -313,7 +314,7 @@ public class AckConfig extends TeaModel {
         }
 
         /**
-         * Pod的内存限制值。
+         * <p>Pod的内存限制值。</p>
          */
         public Builder limitMemory(Float limitMemory) {
             this.limitMemory = limitMemory;
@@ -329,7 +330,7 @@ public class AckConfig extends TeaModel {
         }
 
         /**
-         * ack 命名空间
+         * <p>ack 命名空间</p>
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -345,7 +346,7 @@ public class AckConfig extends TeaModel {
         }
 
         /**
-         * ack的节点标签限制
+         * <p>ack的节点标签限制</p>
          */
         public Builder nodeSelectors(java.util.List < Tag > nodeSelectors) {
             this.nodeSelectors = nodeSelectors;
@@ -385,7 +386,7 @@ public class AckConfig extends TeaModel {
         }
 
         /**
-         * Pod的CPU请求值
+         * <p>Pod的CPU请求值</p>
          */
         public Builder requestCpu(Float requestCpu) {
             this.requestCpu = requestCpu;
@@ -393,7 +394,7 @@ public class AckConfig extends TeaModel {
         }
 
         /**
-         * Pod的内存请求值。
+         * <p>Pod的内存请求值。</p>
          */
         public Builder requestMemory(Float requestMemory) {
             this.requestMemory = requestMemory;
@@ -401,7 +402,7 @@ public class AckConfig extends TeaModel {
         }
 
         /**
-         * ack的节点污点容忍
+         * <p>ack的节点污点容忍</p>
          */
         public Builder tolerations(java.util.List < Toleration > tolerations) {
             this.tolerations = tolerations;
@@ -430,6 +431,12 @@ public class AckConfig extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AckConfig} extends {@link TeaModel}
+     *
+     * <p>AckConfig</p>
+     */
     public static class Pvcs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataDiskSize")
         private Long dataDiskSize;
@@ -531,6 +538,12 @@ public class AckConfig extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AckConfig} extends {@link TeaModel}
+     *
+     * <p>AckConfig</p>
+     */
     public static class VolumeMounts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -592,6 +605,12 @@ public class AckConfig extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AckConfig} extends {@link TeaModel}
+     *
+     * <p>AckConfig</p>
+     */
     public static class Volumes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;

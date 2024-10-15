@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Script} extends {@link TeaModel}
  *
  * <p>Script</p>
@@ -113,7 +114,10 @@ public class Script extends TeaModel {
         private String scriptPath; 
 
         /**
-         * 执行失败策略。
+         * <p>执行失败策略。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FAILED_CONTINUE</p>
          */
         public Builder executionFailStrategy(String executionFailStrategy) {
             this.executionFailStrategy = executionFailStrategy;
@@ -121,7 +125,10 @@ public class Script extends TeaModel {
         }
 
         /**
-         * 脚本的执行时机。
+         * <p>脚本的执行时机。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEFORE_INSTALL</p>
          */
         public Builder executionMoment(String executionMoment) {
             this.executionMoment = executionMoment;
@@ -129,7 +136,8 @@ public class Script extends TeaModel {
         }
 
         /**
-         * 节点选择器。
+         * <p>节点选择器。</p>
+         * <p>This parameter is required.</p>
          */
         public Builder nodeSelector(NodeSelector nodeSelector) {
             this.nodeSelector = nodeSelector;
@@ -137,7 +145,10 @@ public class Script extends TeaModel {
         }
 
         /**
-         * 脚本执行优先级。取值范围：1~100。
+         * <p>脚本执行优先级。取值范围：1~100。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder priority(Integer priority) {
             this.priority = priority;
@@ -145,7 +156,10 @@ public class Script extends TeaModel {
         }
 
         /**
-         * 脚本执行参数。
+         * <p>脚本执行参数。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-host 10.0.10.5 -m 30</p>
          */
         public Builder scriptArgs(String scriptArgs) {
             this.scriptArgs = scriptArgs;
@@ -153,7 +167,11 @@ public class Script extends TeaModel {
         }
 
         /**
-         * 脚本名称。长度为1~64个字符，必须以大小字母或中文开头，不能以http://和https://开头。可以包含中文、英文、数字、下划线（_）、或者短划线（-）
+         * <p>脚本名称。长度为1~64个字符，必须以大小字母或中文开头，不能以http://和https://开头。可以包含中文、英文、数字、下划线（_）、或者短划线（-）</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>脚本名-1</p>
          */
         public Builder scriptName(String scriptName) {
             this.scriptName = scriptName;
@@ -161,7 +179,11 @@ public class Script extends TeaModel {
         }
 
         /**
-         * 脚本所在OSS路径。
+         * <p>脚本所在OSS路径。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://bucket1/update_hosts.sh</p>
          */
         public Builder scriptPath(String scriptPath) {
             this.scriptPath = scriptPath;

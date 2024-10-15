@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AutoScalingPolicy} extends {@link TeaModel}
  *
  * <p>AutoScalingPolicy</p>
@@ -70,6 +71,12 @@ public class AutoScalingPolicy extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AutoScalingPolicy} extends {@link TeaModel}
+     *
+     * <p>AutoScalingPolicy</p>
+     */
     public static class Constraints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("maxCapacity")
         private Integer maxCapacity;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDoctorHDFSUGIResponseBody} extends {@link TeaModel}
  *
  * <p>ListDoctorHDFSUGIResponseBody</p>
@@ -85,7 +86,7 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The results of batch HDFS analysis.
+         * <p>The results of batch HDFS analysis.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -93,7 +94,10 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of entries that are returned.
+         * <p>The maximum number of entries that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +105,10 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token.
+         * <p>A pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +116,10 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDoctorHDFSUGIResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSUGIResponseBody</p>
+     */
     public static class TotalDataSize extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -193,7 +212,10 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Total data size in megabytes (MB)</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -201,7 +223,10 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>totalDataSize</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -209,7 +234,10 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -217,7 +245,10 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40440503</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -231,6 +262,12 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSUGIResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSUGIResponseBody</p>
+     */
     public static class TotalDirCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -294,7 +331,10 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Number of total dirs</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -302,7 +342,10 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>totalDirCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -310,7 +353,10 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -318,7 +364,10 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -332,6 +381,12 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSUGIResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSUGIResponseBody</p>
+     */
     public static class TotalFileCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -395,7 +450,10 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Number of total files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -403,7 +461,10 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>totalFileCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -411,7 +472,10 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -419,7 +483,10 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -433,6 +500,12 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSUGIResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSUGIResponseBody</p>
+     */
     public static class Metrics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TotalDataSize")
         private TotalDataSize totalDataSize;
@@ -484,7 +557,7 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
             private TotalFileCount totalFileCount; 
 
             /**
-             * The total data size.
+             * <p>The total data size.</p>
              */
             public Builder totalDataSize(TotalDataSize totalDataSize) {
                 this.totalDataSize = totalDataSize;
@@ -492,7 +565,7 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of directories.
+             * <p>The total number of directories.</p>
              */
             public Builder totalDirCount(TotalDirCount totalDirCount) {
                 this.totalDirCount = totalDirCount;
@@ -500,7 +573,7 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of files.
+             * <p>The total number of files.</p>
              */
             public Builder totalFileCount(TotalFileCount totalFileCount) {
                 this.totalFileCount = totalFileCount;
@@ -514,6 +587,12 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSUGIResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSUGIResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Metrics")
         private Metrics metrics;
@@ -553,7 +632,7 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The metric information.
+             * <p>The metric information.</p>
              */
             public Builder metrics(Metrics metrics) {
                 this.metrics = metrics;
@@ -561,7 +640,10 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
             }
 
             /**
-             * The actual name of the owner or group returned based on the value of Type.
+             * <p>The actual name of the owner or group returned based on the value of Type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DW</p>
              */
             public Builder name(String name) {
                 this.name = name;

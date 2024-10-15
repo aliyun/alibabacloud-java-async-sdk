@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Cluster} extends {@link TeaModel}
  *
  * <p>Cluster</p>
@@ -265,7 +266,10 @@ public class Cluster extends TeaModel {
         private java.util.List < Tag > tags; 
 
         /**
-         * 集群ID。
+         * <p>集群ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b933c5aac8fe****</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -273,7 +277,10 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * 集群名称。
+         * <p>集群名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emrtest</p>
          */
         public Builder clusterName(String clusterName) {
             this.clusterName = clusterName;
@@ -281,7 +288,10 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * 集群状态。
+         * <p>集群状态。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder clusterState(String clusterState) {
             this.clusterState = clusterState;
@@ -289,7 +299,10 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * 集群类型。
+         * <p>集群类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DATALAKE</p>
          */
         public Builder clusterType(String clusterType) {
             this.clusterType = clusterType;
@@ -297,7 +310,10 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * 创建时间。
+         * <p>创建时间。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1592837465784</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -305,7 +321,10 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * 部署模式。
+         * <p>部署模式。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HA</p>
          */
         public Builder deployMode(String deployMode) {
             this.deployMode = deployMode;
@@ -321,7 +340,10 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * EMR默认角色。
+         * <p>EMR默认角色。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunEMRDefaultRole</p>
          */
         public Builder emrDefaultRole(String emrDefaultRole) {
             this.emrDefaultRole = emrDefaultRole;
@@ -329,7 +351,10 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * 删除时间。
+         * <p>删除时间。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1592837465784</p>
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -337,7 +362,10 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * 过期时间。
+         * <p>过期时间。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1592837465784</p>
          */
         public Builder expireTime(Long expireTime) {
             this.expireTime = expireTime;
@@ -345,7 +373,7 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * 节点属性。
+         * <p>节点属性。</p>
          */
         public Builder nodeAttributes(NodeAttributes nodeAttributes) {
             this.nodeAttributes = nodeAttributes;
@@ -353,7 +381,10 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * 付费类型。
+         * <p>付费类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PayAsYouGo</p>
          */
         public Builder paymentType(String paymentType) {
             this.paymentType = paymentType;
@@ -361,7 +392,10 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * 可用时间。
+         * <p>可用时间。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1592837465784</p>
          */
         public Builder readyTime(Long readyTime) {
             this.readyTime = readyTime;
@@ -369,7 +403,10 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * 地域ID。
+         * <p>地域ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -377,7 +414,10 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * EMR发行版。
+         * <p>EMR发行版。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EMR-5.3.0</p>
          */
         public Builder releaseVersion(String releaseVersion) {
             this.releaseVersion = releaseVersion;
@@ -385,7 +425,10 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * 资源组ID。
+         * <p>资源组ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzabjyop****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -393,7 +436,10 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * Kerberos安全模式。
+         * <p>Kerberos安全模式。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder securityMode(String securityMode) {
             this.securityMode = securityMode;
@@ -409,7 +455,7 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * 预付费配置。
+         * <p>预付费配置。</p>
          */
         public Builder subscriptionConfig(SubscriptionConfig subscriptionConfig) {
             this.subscriptionConfig = subscriptionConfig;
@@ -417,7 +463,7 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * 集群标签。
+         * <p>集群标签。</p>
          */
         public Builder tags(java.util.List < Tag > tags) {
             this.tags = tags;

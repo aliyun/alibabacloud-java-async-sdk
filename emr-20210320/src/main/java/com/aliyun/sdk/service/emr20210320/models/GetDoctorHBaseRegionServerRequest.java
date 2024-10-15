@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDoctorHBaseRegionServerRequest} extends {@link RequestModel}
  *
  * <p>GetDoctorHBaseRegionServerRequest</p>
@@ -99,7 +100,11 @@ public class GetDoctorHBaseRegionServerRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b933c5aac8fe****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -108,7 +113,11 @@ public class GetDoctorHBaseRegionServerRequest extends Request {
         }
 
         /**
-         * The date.
+         * <p>The date.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-01</p>
          */
         public Builder dateTime(String dateTime) {
             this.putQueryParameter("DateTime", dateTime);
@@ -117,7 +126,11 @@ public class GetDoctorHBaseRegionServerRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -126,7 +139,11 @@ public class GetDoctorHBaseRegionServerRequest extends Request {
         }
 
         /**
-         * The host of the region server.
+         * <p>The host of the region server.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emr-worker-4.cluster-20****</p>
          */
         public Builder regionServerHost(String regionServerHost) {
             this.putQueryParameter("RegionServerHost", regionServerHost);

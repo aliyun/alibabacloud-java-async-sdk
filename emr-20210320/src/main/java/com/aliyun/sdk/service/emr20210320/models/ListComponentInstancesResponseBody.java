@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListComponentInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ListComponentInstancesResponseBody</p>
@@ -93,7 +94,10 @@ public class ListComponentInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * 本次请求所返回的最大记录条数。
+         * <p>本次请求所返回的最大记录条数。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +105,10 @@ public class ListComponentInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * 返回读取到的数据位置，空代表数据已经读取完毕。
+         * <p>返回读取到的数据位置，空代表数据已经读取完毕。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +116,10 @@ public class ListComponentInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * <p>请求ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListComponentInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * 本次请求条件下的数据总量。
+         * <p>本次请求条件下的数据总量。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListComponentInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListComponentInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListComponentInstancesResponseBody</p>
+     */
     public static class ComponentInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
@@ -253,7 +272,10 @@ public class ListComponentInstancesResponseBody extends TeaModel {
             private String nodeName; 
 
             /**
-             * 应用名称。
+             * <p>应用名称。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HDFS</p>
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -261,10 +283,14 @@ public class ListComponentInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 组件服务状态，取值如下：
-             * <p>
-             * - active：主服务
-             * - standby：备用服务。
+             * <p>组件服务状态，取值如下：</p>
+             * <ul>
+             * <li>active：主服务</li>
+             * <li>standby：备用服务。</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder bizState(String bizState) {
                 this.bizState = bizState;
@@ -272,16 +298,19 @@ public class ListComponentInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Commission状态，取值如下：
-             * <p>
-             * - COMMISSIONED：已上线
-             * - COMMISSIONING：上线中
-             * - DECOMMISSIONED：已下线
-             * - DECOMMISSIONINPROGRESS：下线进程中
-             * - DECOMMISSIONFAILED：下线失败
-             * - INSERVICE：服务中
-             * - UNKNOWN：未知状态。
-             * <p>
+             * <p>Commission状态，取值如下：</p>
+             * <ul>
+             * <li>COMMISSIONED：已上线</li>
+             * <li>COMMISSIONING：上线中</li>
+             * <li>DECOMMISSIONED：已下线</li>
+             * <li>DECOMMISSIONINPROGRESS：下线进程中</li>
+             * <li>DECOMMISSIONFAILED：下线失败</li>
+             * <li>INSERVICE：服务中</li>
+             * <li>UNKNOWN：未知状态。<p></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>INSERVICE</p>
              */
             public Builder commissionState(String commissionState) {
                 this.commissionState = commissionState;
@@ -289,18 +318,19 @@ public class ListComponentInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 组件实例操作状态，取值如下：
-             * <p>
-             * - WAITING：等待中
-             * - INSTALLING：安装中
-             * - INSTALLED：已安装
-             * - INSTALL_FAILED：安装失败
-             * - STARTING：启动中
-             * - STARTED：已启动
-             * - START_FAILED：启动失败
-             * - STOPPING：停止中
-             * - STOPPED：已停止
-             * - STOP_FAILED：停止失败
+             * <p>组件实例操作状态，取值如下：</p>
+             * <ul>
+             * <li>WAITING：等待中</li>
+             * <li>INSTALLING：安装中</li>
+             * <li>INSTALLED：已安装</li>
+             * <li>INSTALL_FAILED：安装失败</li>
+             * <li>STARTING：启动中</li>
+             * <li>STARTED：已启动</li>
+             * <li>START_FAILED：启动失败</li>
+             * <li>STOPPING：停止中</li>
+             * <li>STOPPED：已停止</li>
+             * <li>STOP_FAILED：停止失败</li>
+             * </ul>
              */
             public Builder componentInstanceState(String componentInstanceState) {
                 this.componentInstanceState = componentInstanceState;
@@ -308,7 +338,10 @@ public class ListComponentInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 组件名称。
+             * <p>组件名称。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DataNode</p>
              */
             public Builder componentName(String componentName) {
                 this.componentName = componentName;
@@ -316,7 +349,10 @@ public class ListComponentInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 安装时间戳。
+             * <p>安装时间戳。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1628248947000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -324,18 +360,22 @@ public class ListComponentInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 期望状态，取值如下：
-             * <p>
-             * - WAITING：等待中
-             * - INSTALLING：安装中
-             * - INSTALLED：已安装
-             * - INSTALL_FAILED：安装失败
-             * - STARTING：启动中
-             * - STARTED：已启动
-             * - START_FAILED：启动失败
-             * - STOPPING：停止中
-             * - STOPPED：已停止
-             * - STOP_FAILED：停止失败。
+             * <p>期望状态，取值如下：</p>
+             * <ul>
+             * <li>WAITING：等待中</li>
+             * <li>INSTALLING：安装中</li>
+             * <li>INSTALLED：已安装</li>
+             * <li>INSTALL_FAILED：安装失败</li>
+             * <li>STARTING：启动中</li>
+             * <li>STARTED：已启动</li>
+             * <li>START_FAILED：启动失败</li>
+             * <li>STOPPING：停止中</li>
+             * <li>STOPPED：已停止</li>
+             * <li>STOP_FAILED：停止失败。</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>STARTED</p>
              */
             public Builder desiredState(String desiredState) {
                 this.desiredState = desiredState;
@@ -343,7 +383,10 @@ public class ListComponentInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 节点ID。
+             * <p>节点ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1cudc25w2bfwl5****</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -351,7 +394,10 @@ public class ListComponentInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 节点名称。
+             * <p>节点名称。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>core1-1</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;

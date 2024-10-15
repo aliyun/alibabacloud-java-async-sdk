@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClustersRequest} extends {@link RequestModel}
  *
  * <p>ListClustersRequest</p>
@@ -180,7 +181,10 @@ public class ListClustersRequest extends Request {
         } 
 
         /**
-         * The IDs of the clusters. You can specify a maximum of 100 items.
+         * <p>The IDs of the clusters. You can specify a maximum of 100 items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzabjyop****</p>
          */
         public Builder clusterIds(java.util.List < String > clusterIds) {
             this.putQueryParameter("ClusterIds", clusterIds);
@@ -189,7 +193,10 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * The name of the cluster.
+         * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emrtest</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -198,7 +205,10 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * The states of clusters. You can specify a maximum of 100 items.
+         * <p>The states of clusters. You can specify a maximum of 100 items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;HADOOP&quot;]</p>
          */
         public Builder clusterStates(java.util.List < String > clusterStates) {
             this.putQueryParameter("ClusterStates", clusterStates);
@@ -207,7 +217,10 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * The types of the clusters. You can specify a maximum of 100 items.
+         * <p>The types of the clusters. You can specify a maximum of 100 items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;c-b933c5aac8fe****&quot;]</p>
          */
         public Builder clusterTypes(java.util.List < String > clusterTypes) {
             this.putQueryParameter("ClusterTypes", clusterTypes);
@@ -216,7 +229,10 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 100.
+         * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -225,7 +241,10 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * The starting point of the current query. If you do not configure this parameter, the query starts from the beginning.
+         * <p>The starting point of the current query. If you do not configure this parameter, the query starts from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJlY21OZXh0VG9rZW4iOiIxIiwidGFpaGFvTmV4dFRva2VuIjoiNTYiLCJ0YWloYW9OZXh0VG9rZW5JbnQiOjU2LCJlY21OZXh0VG9rZW5JbnQiOjF9</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -234,7 +253,10 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * The billing methods. You can specify a maximum of 2 items.
+         * <p>The billing methods. You can specify a maximum of 2 items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;ECS&quot;]</p>
          */
         public Builder paymentTypes(java.util.List < String > paymentTypes) {
             this.putQueryParameter("PaymentTypes", paymentTypes);
@@ -243,36 +265,39 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * The region ID.
-         * <p>
+         * <p>The region ID.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>cn-qingdao</li>
+         * <li>cn-beijing</li>
+         * <li>cn-zhangjiakou</li>
+         * <li>cn-huhehaote</li>
+         * <li>cn-hangzhou</li>
+         * <li>cn-shanghai</li>
+         * <li>cn-shenzhen</li>
+         * <li>cn-chengdu</li>
+         * <li>cn-hongkong</li>
+         * <li>cn-wulanchabu</li>
+         * <li>cn-heyuan-acdr-1</li>
+         * <li>cn-qingdao-acdr-ut-1</li>
+         * <li>ap-northeast-1</li>
+         * <li>ap-southeast-1</li>
+         * <li>ap-southeast-2</li>
+         * <li>ap-southeast-3</li>
+         * <li>ap-southeast-5</li>
+         * <li>ap-south-1</li>
+         * <li>us-east-1</li>
+         * <li>us-west-1</li>
+         * <li>me-east-1</li>
+         * <li>me-central-1</li>
+         * <li>eu-central-1</li>
+         * <li>eu-west-1</li>
+         * <li>cn-north-2-gov-1</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   cn-qingdao
-         * *   cn-beijing
-         * *   cn-zhangjiakou
-         * *   cn-huhehaote
-         * *   cn-hangzhou
-         * *   cn-shanghai
-         * *   cn-shenzhen
-         * *   cn-chengdu
-         * *   cn-hongkong
-         * *   cn-wulanchabu
-         * *   cn-heyuan-acdr-1
-         * *   cn-qingdao-acdr-ut-1
-         * *   ap-northeast-1
-         * *   ap-southeast-1
-         * *   ap-southeast-2
-         * *   ap-southeast-3
-         * *   ap-southeast-5
-         * *   ap-south-1
-         * *   us-east-1
-         * *   us-west-1
-         * *   me-east-1
-         * *   me-central-1
-         * *   eu-central-1
-         * *   eu-west-1
-         * *   cn-north-2-gov-1
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -281,7 +306,10 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzabjyop****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -290,7 +318,10 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * The tags. Number of elements in the array: 1 to 20.
+         * <p>The tags. Number of elements in the array: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;PayAsYouGo&quot;]</p>
          */
         public Builder tags(java.util.List < Tag > tags) {
             this.putQueryParameter("Tags", tags);

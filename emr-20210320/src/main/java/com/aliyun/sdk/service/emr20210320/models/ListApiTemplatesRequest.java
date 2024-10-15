@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApiTemplatesRequest} extends {@link RequestModel}
  *
  * <p>ListApiTemplatesRequest</p>
@@ -153,7 +154,11 @@ public class ListApiTemplatesRequest extends Request {
         } 
 
         /**
-         * 接口名。
+         * <p>接口名。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateCluster</p>
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -162,7 +167,10 @@ public class ListApiTemplatesRequest extends Request {
         }
 
         /**
-         * 一次获取的最大记录数。
+         * <p>一次获取的最大记录数。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -171,7 +179,10 @@ public class ListApiTemplatesRequest extends Request {
         }
 
         /**
-         * 标记当前开始读取的位置，置空表示从头开始。
+         * <p>标记当前开始读取的位置，置空表示从头开始。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -180,7 +191,11 @@ public class ListApiTemplatesRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * <p>区域ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -189,7 +204,10 @@ public class ListApiTemplatesRequest extends Request {
         }
 
         /**
-         * 资源组ID。
+         * <p>资源组ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzabjyop****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -198,7 +216,10 @@ public class ListApiTemplatesRequest extends Request {
         }
 
         /**
-         * 集群模板id。
+         * <p>集群模板id。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>at-41b4c6a0fc63****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -207,7 +228,10 @@ public class ListApiTemplatesRequest extends Request {
         }
 
         /**
-         * 集群模板id列表。
+         * <p>集群模板id列表。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;AT-****&quot;]</p>
          */
         public Builder templateIds(java.util.List < String > templateIds) {
             this.putQueryParameter("TemplateIds", templateIds);
@@ -216,7 +240,10 @@ public class ListApiTemplatesRequest extends Request {
         }
 
         /**
-         * 集群模板名字。
+         * <p>集群模板名字。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DATALAKE模板</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

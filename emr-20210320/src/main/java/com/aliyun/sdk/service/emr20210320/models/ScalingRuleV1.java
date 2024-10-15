@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScalingRuleV1} extends {@link TeaModel}
  *
  * <p>ScalingRuleV1</p>
@@ -109,7 +110,10 @@ public class ScalingRuleV1 extends TeaModel {
         private String scalingConfigBizId; 
 
         /**
-         * 调整类型。
+         * <p>调整类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>QUANTITY_CHANGE_IN_CAPACITY</p>
          */
         public Builder adjustmentType(String adjustmentType) {
             this.adjustmentType = adjustmentType;
@@ -117,7 +121,10 @@ public class ScalingRuleV1 extends TeaModel {
         }
 
         /**
-         * 调整值,正数为扩容,负数为缩容。
+         * <p>调整值,正数为扩容,负数为缩容。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder adjustmentValue(Integer adjustmentValue) {
             this.adjustmentValue = adjustmentValue;
@@ -125,7 +132,10 @@ public class ScalingRuleV1 extends TeaModel {
         }
 
         /**
-         * 冷却时间,单位秒。
+         * <p>冷却时间,单位秒。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder coolDownTime(Integer coolDownTime) {
             this.coolDownTime = coolDownTime;
@@ -133,7 +143,10 @@ public class ScalingRuleV1 extends TeaModel {
         }
 
         /**
-         * 规则名称。
+         * <p>规则名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tule1</p>
          */
         public Builder ruleName(String ruleName) {
             this.ruleName = ruleName;
@@ -141,7 +154,7 @@ public class ScalingRuleV1 extends TeaModel {
         }
 
         /**
-         * 规则参数。
+         * <p>规则参数。</p>
          */
         public Builder ruleParam(RuleParam ruleParam) {
             this.ruleParam = ruleParam;
@@ -149,7 +162,10 @@ public class ScalingRuleV1 extends TeaModel {
         }
 
         /**
-         * 规则类型。
+         * <p>规则类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BY_LOAD</p>
          */
         public Builder ruleType(String ruleType) {
             this.ruleType = ruleType;
@@ -157,7 +173,10 @@ public class ScalingRuleV1 extends TeaModel {
         }
 
         /**
-         * 弹性规则配置ID。
+         * <p>弹性规则配置ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SCB-DCD96BCCFED1****</p>
          */
         public Builder scalingConfigBizId(String scalingConfigBizId) {
             this.scalingConfigBizId = scalingConfigBizId;
@@ -170,6 +189,12 @@ public class ScalingRuleV1 extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ScalingRuleV1} extends {@link TeaModel}
+     *
+     * <p>ScalingRuleV1</p>
+     */
     public static class RuleParam extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
         private String comparisonOperator;
@@ -317,7 +342,11 @@ public class ScalingRuleV1 extends TeaModel {
             private Integer threshold; 
 
             /**
-             * [负载触发参数] 比较符。
+             * <p>[负载触发参数] 比较符。</p>
+             * 
+             * <strong>example:</strong>
+             * <blockquote>
+             * </blockquote>
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
@@ -325,7 +354,10 @@ public class ScalingRuleV1 extends TeaModel {
             }
 
             /**
-             * [负载触发参数] 统计次数。
+             * <p>[负载触发参数] 统计次数。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder evaluationCount(Integer evaluationCount) {
                 this.evaluationCount = evaluationCount;
@@ -333,7 +365,10 @@ public class ScalingRuleV1 extends TeaModel {
             }
 
             /**
-             * [时间调度参数] 周期类型周期过期时间。
+             * <p>[时间调度参数] 周期类型周期过期时间。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder launchExpirationTime(Integer launchExpirationTime) {
                 this.launchExpirationTime = launchExpirationTime;
@@ -341,7 +376,10 @@ public class ScalingRuleV1 extends TeaModel {
             }
 
             /**
-             * [时间调度参数] 周期类型周期开始时间。
+             * <p>[时间调度参数] 周期类型周期开始时间。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-15T04:02Z</p>
              */
             public Builder launchTime(String launchTime) {
                 this.launchTime = launchTime;
@@ -349,7 +387,10 @@ public class ScalingRuleV1 extends TeaModel {
             }
 
             /**
-             * [负载触发参数] 度量名称。
+             * <p>[负载触发参数] 度量名称。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>YarnRootAvailableVCores</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -357,7 +398,10 @@ public class ScalingRuleV1 extends TeaModel {
             }
 
             /**
-             * [负载触发参数] 统计时长,单位分钟。
+             * <p>[负载触发参数] 统计时长,单位分钟。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder period(Integer period) {
                 this.period = period;
@@ -365,7 +409,10 @@ public class ScalingRuleV1 extends TeaModel {
             }
 
             /**
-             * [时间调度参数] 周期类型周期结束时间。
+             * <p>[时间调度参数] 周期类型周期结束时间。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-16T05:02Z</p>
              */
             public Builder recurrenceEndTime(String recurrenceEndTime) {
                 this.recurrenceEndTime = recurrenceEndTime;
@@ -373,7 +420,10 @@ public class ScalingRuleV1 extends TeaModel {
             }
 
             /**
-             * [时间调度参数] 周期类型。
+             * <p>[时间调度参数] 周期类型。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Daily</p>
              */
             public Builder recurrenceType(String recurrenceType) {
                 this.recurrenceType = recurrenceType;
@@ -381,7 +431,10 @@ public class ScalingRuleV1 extends TeaModel {
             }
 
             /**
-             * [时间调度参数] 周期类型周期值。
+             * <p>[时间调度参数] 周期类型周期值。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder recurrenceValue(String recurrenceValue) {
                 this.recurrenceValue = recurrenceValue;
@@ -389,7 +442,10 @@ public class ScalingRuleV1 extends TeaModel {
             }
 
             /**
-             * [负载触发参数] 统计方式。
+             * <p>[负载触发参数] 统计方式。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Average</p>
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -397,7 +453,10 @@ public class ScalingRuleV1 extends TeaModel {
             }
 
             /**
-             * [负载触发参数] 阈值。
+             * <p>[负载触发参数] 阈值。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder threshold(Integer threshold) {
                 this.threshold = threshold;

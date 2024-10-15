@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DecreaseNodeGroupParam} extends {@link TeaModel}
  *
  * <p>DecreaseNodeGroupParam</p>
@@ -51,7 +52,10 @@ public class DecreaseNodeGroupParam extends TeaModel {
         private java.util.List < String > releaseInstanceIds; 
 
         /**
-         * NodeGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>G-21E39B11837E****</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.nodeGroupId = nodeGroupId;
@@ -59,7 +63,7 @@ public class DecreaseNodeGroupParam extends TeaModel {
         }
 
         /**
-         * ReleaseInstanceIds.
+         * <p>This parameter is required.</p>
          */
         public Builder releaseInstanceIds(java.util.List < String > releaseInstanceIds) {
             this.releaseInstanceIds = releaseInstanceIds;

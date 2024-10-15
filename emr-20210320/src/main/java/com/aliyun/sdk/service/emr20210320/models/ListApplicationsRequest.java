@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationsRequest} extends {@link RequestModel}
  *
  * <p>ListApplicationsRequest</p>
@@ -111,7 +112,10 @@ public class ListApplicationsRequest extends Request {
         } 
 
         /**
-         * The application names.
+         * <p>The application names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b933c5aac8fe****</p>
          */
         public Builder applicationNames(java.util.List < String > applicationNames) {
             this.putQueryParameter("ApplicationNames", applicationNames);
@@ -120,7 +124,11 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-e6a9d46e92675****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -129,7 +137,10 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * The total number of pages.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -138,7 +149,10 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * The page number of the next page returned.
+         * <p>The page number of the next page returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -147,7 +161,11 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AckNode} extends {@link TeaModel}
  *
  * <p>AckNode</p>
@@ -49,7 +50,10 @@ public class AckNode extends TeaModel {
         private AckNodeSelector nodeSelector; 
 
         /**
-         * 节点ID。
+         * <p>节点ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1cudc25w2bfwl5****</p>
          */
         public Builder nodeId(String nodeId) {
             this.nodeId = nodeId;
@@ -57,7 +61,7 @@ public class AckNode extends TeaModel {
         }
 
         /**
-         * ACK节点选择器。
+         * <p>ACK节点选择器。</p>
          */
         public Builder nodeSelector(AckNodeSelector nodeSelector) {
             this.nodeSelector = nodeSelector;

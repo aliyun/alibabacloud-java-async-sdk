@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateScriptRequest} extends {@link RequestModel}
  *
  * <p>CreateScriptRequest</p>
@@ -99,7 +100,11 @@ public class CreateScriptRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b933c5aac8fe****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -108,7 +113,11 @@ public class CreateScriptRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -117,11 +126,15 @@ public class CreateScriptRequest extends Request {
         }
 
         /**
-         * The type of the script. Valid values:
-         * <p>
+         * <p>The type of the script. Valid values:</p>
+         * <ul>
+         * <li>BOOTSTRAP: indicates a bootstrap action of the Elastic Compute Service (ECS) instance.</li>
+         * <li>NORMAL: indicates a common script.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   BOOTSTRAP: indicates a bootstrap action of the Elastic Compute Service (ECS) instance.
-         * *   NORMAL: indicates a common script.
+         * <strong>example:</strong>
+         * <p>BOOTSTRAP</p>
          */
         public Builder scriptType(String scriptType) {
             this.putQueryParameter("ScriptType", scriptType);
@@ -130,7 +143,8 @@ public class CreateScriptRequest extends Request {
         }
 
         /**
-         * The scripts.
+         * <p>The scripts.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder scripts(java.util.List < Script > scripts) {
             this.putQueryParameter("Scripts", scripts);

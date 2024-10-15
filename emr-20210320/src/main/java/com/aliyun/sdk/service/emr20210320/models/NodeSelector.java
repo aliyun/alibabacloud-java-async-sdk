@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link NodeSelector} extends {@link TeaModel}
  *
  * <p>NodeSelector</p>
@@ -112,7 +113,10 @@ public class NodeSelector extends TeaModel {
         private String nodeSelectType; 
 
         /**
-         * 节点组ID。当NodeSelectType取值NodeGroup时，该参数生效。
+         * <p>节点组ID。当NodeSelectType取值NodeGroup时，该参数生效。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-869471354ecd****</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.nodeGroupId = nodeGroupId;
@@ -128,7 +132,10 @@ public class NodeSelector extends TeaModel {
         }
 
         /**
-         * 节点组名称。当NodeSelectType取值NodeGroup，且参数NodeGroupId为空时生效，该参数生效。
+         * <p>节点组名称。当NodeSelectType取值NodeGroup，且参数NodeGroupId为空时生效，该参数生效。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>master-1</p>
          */
         public Builder nodeGroupName(String nodeGroupName) {
             this.nodeGroupName = nodeGroupName;
@@ -144,7 +151,10 @@ public class NodeSelector extends TeaModel {
         }
 
         /**
-         * 节点组类型。当NodeSelectType取值NodeGroup，且参数NodeGroupId为空时生效。数组元数个数N取值范围：0~10。
+         * <p>节点组类型。当NodeSelectType取值NodeGroup，且参数NodeGroupId为空时生效。数组元数个数N取值范围：0~10。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;CORE&quot;,&quot;TASK&quot;]</p>
          */
         public Builder nodeGroupTypes(java.util.List < String > nodeGroupTypes) {
             this.nodeGroupTypes = nodeGroupTypes;
@@ -152,7 +162,10 @@ public class NodeSelector extends TeaModel {
         }
 
         /**
-         * 节点名称列表。当NodeSelectType取值Node时，该参数生效。
+         * <p>节点名称列表。当NodeSelectType取值Node时，该参数生效。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;core1-1&quot;]</p>
          */
         public Builder nodeNames(java.util.List < String > nodeNames) {
             this.nodeNames = nodeNames;
@@ -160,11 +173,16 @@ public class NodeSelector extends TeaModel {
         }
 
         /**
-         * 节点选择类型。取值范围：
-         * <p>
-         * - CLUSTER：集群。
-         * - NODE_GROUP：节点组。
-         * - NODE：节点。
+         * <p>节点选择类型。取值范围：</p>
+         * <ul>
+         * <li>CLUSTER：集群。</li>
+         * <li>NODE_GROUP：节点组。</li>
+         * <li>NODE：节点。</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CLUSTER</p>
          */
         public Builder nodeSelectType(String nodeSelectType) {
             this.nodeSelectType = nodeSelectType;

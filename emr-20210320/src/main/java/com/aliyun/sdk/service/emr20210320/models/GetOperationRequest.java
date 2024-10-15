@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOperationRequest} extends {@link RequestModel}
  *
  * <p>GetOperationRequest</p>
@@ -84,7 +85,11 @@ public class GetOperationRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster that you want to query.
+         * <p>The ID of the cluster that you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b933c5aac8fe****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -93,13 +98,16 @@ public class GetOperationRequest extends Request {
         }
 
         /**
-         * The operation ID.
-         * <p>
+         * <p>The operation ID.</p>
+         * <p>References:</p>
+         * <ul>
+         * <li><a href="https://help.aliyun.com/document_detail/454393.html">CreateCluster</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/454397.html">IncreaseNodes</a></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * References:
-         * 
-         * *   [CreateCluster](~~454393~~)
-         * *   [IncreaseNodes](~~454397~~)
+         * <strong>example:</strong>
+         * <p>op-13c37a77c505****</p>
          */
         public Builder operationId(String operationId) {
             this.putQueryParameter("OperationId", operationId);
@@ -108,7 +116,11 @@ public class GetOperationRequest extends Request {
         }
 
         /**
-         * The district ID.
+         * <p>The district ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

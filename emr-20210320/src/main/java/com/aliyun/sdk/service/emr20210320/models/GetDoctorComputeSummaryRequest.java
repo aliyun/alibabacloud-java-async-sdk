@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDoctorComputeSummaryRequest} extends {@link RequestModel}
  *
  * <p>GetDoctorComputeSummaryRequest</p>
@@ -98,7 +99,11 @@ public class GetDoctorComputeSummaryRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b933c5aac8fe****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -107,7 +112,7 @@ public class GetDoctorComputeSummaryRequest extends Request {
         }
 
         /**
-         * The resource information, which is used to filter the results.
+         * <p>The resource information, which is used to filter the results.</p>
          */
         public Builder componentInfo(ComponentInfo componentInfo) {
             this.putQueryParameter("ComponentInfo", componentInfo);
@@ -116,7 +121,11 @@ public class GetDoctorComputeSummaryRequest extends Request {
         }
 
         /**
-         * Specify the date in the ISO 8601 standard. For example, 2023-01-01 represents January 1, 2023.
+         * <p>Specify the date in the ISO 8601 standard. For example, 2023-01-01 represents January 1, 2023.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-01</p>
          */
         public Builder dateTime(String dateTime) {
             this.putQueryParameter("DateTime", dateTime);
@@ -125,7 +134,11 @@ public class GetDoctorComputeSummaryRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -140,6 +153,12 @@ public class GetDoctorComputeSummaryRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetDoctorComputeSummaryRequest} extends {@link TeaModel}
+     *
+     * <p>GetDoctorComputeSummaryRequest</p>
+     */
     public static class ComponentInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComponentName")
         private String componentName;
@@ -179,7 +198,10 @@ public class GetDoctorComputeSummaryRequest extends Request {
             private String componentType; 
 
             /**
-             * Set the filter condition name based on the value of ComponentType. For example, if you set ComponentType to queue, you can specify a specific queue name to obtain the resource usage of a specific queue.
+             * <p>Set the filter condition name based on the value of ComponentType. For example, if you set ComponentType to queue, you can specify a specific queue name to obtain the resource usage of a specific queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MAPREDUCE</p>
              */
             public Builder componentName(String componentName) {
                 this.componentName = componentName;
@@ -187,14 +209,16 @@ public class GetDoctorComputeSummaryRequest extends Request {
             }
 
             /**
-             * The resource type for filtering. Valid values:
-             * <p>
+             * <p>The resource type for filtering. Valid values:</p>
+             * <ul>
+             * <li>engine: filters results by engine.</li>
+             * <li>queue: filters results by queue.</li>
+             * <li>cluster: displays the results at the cluster level.</li>
+             * </ul>
+             * <p>If you do not specify this parameter, the information at the cluster level is displayed by default.</p>
              * 
-             * *   engine: filters results by engine.
-             * *   queue: filters results by queue.
-             * *   cluster: displays the results at the cluster level.
-             * 
-             * If you do not specify this parameter, the information at the cluster level is displayed by default.
+             * <strong>example:</strong>
+             * <p>engine</p>
              */
             public Builder componentType(String componentType) {
                 this.componentType = componentType;

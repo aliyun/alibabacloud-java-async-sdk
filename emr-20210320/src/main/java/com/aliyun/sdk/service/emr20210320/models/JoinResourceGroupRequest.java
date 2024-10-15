@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link JoinResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>JoinResourceGroupRequest</p>
@@ -99,7 +100,11 @@ public class JoinResourceGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the region in which you want to create the instance.
+         * <p>The ID of the region in which you want to create the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -108,7 +113,11 @@ public class JoinResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzabjyop****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -117,7 +126,11 @@ public class JoinResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource.
+         * <p>The ID of the resource.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-c95f0a39d8ff****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -126,10 +139,14 @@ public class JoinResourceGroupRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values:
-         * <p>
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li>cluster: cluster</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   cluster: cluster
+         * <strong>example:</strong>
+         * <p>cluster</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

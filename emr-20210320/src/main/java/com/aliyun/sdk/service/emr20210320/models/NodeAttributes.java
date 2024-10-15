@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link NodeAttributes} extends {@link TeaModel}
  *
  * <p>NodeAttributes</p>
@@ -100,7 +101,10 @@ public class NodeAttributes extends TeaModel {
         private String zoneId; 
 
         /**
-         * ECS ssh登录秘钥。
+         * <p>ECS ssh登录秘钥。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emr_login</p>
          */
         public Builder keyPairName(String keyPairName) {
             this.keyPairName = keyPairName;
@@ -108,7 +112,10 @@ public class NodeAttributes extends TeaModel {
         }
 
         /**
-         * MASTER节点root密码。
+         * <p>MASTER节点root密码。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Adxefswfd****</p>
          */
         public Builder masterRootPassword(String masterRootPassword) {
             this.masterRootPassword = masterRootPassword;
@@ -116,7 +123,10 @@ public class NodeAttributes extends TeaModel {
         }
 
         /**
-         * ECS访问资源绑定的角色。
+         * <p>ECS访问资源绑定的角色。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunECSInstanceForEMRRole</p>
          */
         public Builder ramRole(String ramRole) {
             this.ramRole = ramRole;
@@ -124,7 +134,11 @@ public class NodeAttributes extends TeaModel {
         }
 
         /**
-         * 安全组ID。EMR只支持普通安全组，不支持企业安全组。
+         * <p>安全组ID。EMR只支持普通安全组，不支持企业安全组。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-hp3abbae8lb6lmb1****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
@@ -132,7 +146,11 @@ public class NodeAttributes extends TeaModel {
         }
 
         /**
-         * 专有网络ID。
+         * <p>专有网络ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1tgey2p0ytxmdo5****</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;
@@ -140,7 +158,11 @@ public class NodeAttributes extends TeaModel {
         }
 
         /**
-         * 可用区ID。
+         * <p>可用区ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-h</p>
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;

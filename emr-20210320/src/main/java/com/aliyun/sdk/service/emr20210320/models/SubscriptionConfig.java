@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubscriptionConfig} extends {@link TeaModel}
  *
  * <p>SubscriptionConfig</p>
@@ -87,11 +88,15 @@ public class SubscriptionConfig extends TeaModel {
         private String paymentDurationUnit; 
 
         /**
-         * 自动续费。取值范围：
-         * <p>
-         * - true：开启启动续费。
-         * - false：不开启自动续费。
-         * 默认值：false。
+         * <p>自动续费。取值范围：</p>
+         * <ul>
+         * <li>true：开启启动续费。</li>
+         * <li>false：不开启自动续费。
+         * 默认值：false。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.autoRenew = autoRenew;
@@ -99,7 +104,10 @@ public class SubscriptionConfig extends TeaModel {
         }
 
         /**
-         * 自动续费时长。当AutoRenew取值为true时生效。当AutoRenewDurationUnit取值为Month时，取值：1、2、3、4、5、6、7、8、9、12、24、36、48、60。
+         * <p>自动续费时长。当AutoRenew取值为true时生效。当AutoRenewDurationUnit取值为Month时，取值：1、2、3、4、5、6、7、8、9、12、24、36、48、60。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder autoRenewDuration(Integer autoRenewDuration) {
             this.autoRenewDuration = autoRenewDuration;
@@ -107,7 +115,12 @@ public class SubscriptionConfig extends TeaModel {
         }
 
         /**
-         * - Month：月。
+         * <ul>
+         * <li>Month：月。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder autoRenewDurationUnit(String autoRenewDurationUnit) {
             this.autoRenewDurationUnit = autoRenewDurationUnit;
@@ -115,7 +128,11 @@ public class SubscriptionConfig extends TeaModel {
         }
 
         /**
-         * 付费时长。PaymentDurationUnit取值为Month时，取值：1、2、3、4、5、6、7、8、9、12、24、36、48、60。
+         * <p>付费时长。PaymentDurationUnit取值为Month时，取值：1、2、3、4、5、6、7、8、9、12、24、36、48、60。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder paymentDuration(Integer paymentDuration) {
             this.paymentDuration = paymentDuration;
@@ -123,9 +140,14 @@ public class SubscriptionConfig extends TeaModel {
         }
 
         /**
-         * 付费时长单位。取值范围：
-         * <p>
-         * - Month：月。
+         * <p>付费时长单位。取值范围：</p>
+         * <ul>
+         * <li>Month：月。</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder paymentDurationUnit(String paymentDurationUnit) {
             this.paymentDurationUnit = paymentDurationUnit;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AutoRenewInstance} extends {@link TeaModel}
  *
  * <p>AutoRenewInstance</p>
@@ -98,7 +99,10 @@ public class AutoRenewInstance extends TeaModel {
         private String instanceId; 
 
         /**
-         * 自动续费。
+         * <p>自动续费。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.autoRenew = autoRenew;
@@ -106,7 +110,10 @@ public class AutoRenewInstance extends TeaModel {
         }
 
         /**
-         * 自动续费时长。
+         * <p>自动续费时长。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder autoRenewDuration(Integer autoRenewDuration) {
             this.autoRenewDuration = autoRenewDuration;
@@ -114,7 +121,10 @@ public class AutoRenewInstance extends TeaModel {
         }
 
         /**
-         * 自动付费时长单位。
+         * <p>自动付费时长单位。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder autoRenewDurationUnit(String autoRenewDurationUnit) {
             this.autoRenewDurationUnit = autoRenewDurationUnit;
@@ -122,7 +132,10 @@ public class AutoRenewInstance extends TeaModel {
         }
 
         /**
-         * emr实例自动续费时长。
+         * <p>emr实例自动续费时长。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder emrAutoRenewDuration(Integer emrAutoRenewDuration) {
             this.emrAutoRenewDuration = emrAutoRenewDuration;
@@ -130,7 +143,10 @@ public class AutoRenewInstance extends TeaModel {
         }
 
         /**
-         * emr实例自动续费时长单位。
+         * <p>emr实例自动续费时长单位。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder emrAutoRenewDurationUnit(String emrAutoRenewDurationUnit) {
             this.emrAutoRenewDurationUnit = emrAutoRenewDurationUnit;
@@ -138,7 +154,11 @@ public class AutoRenewInstance extends TeaModel {
         }
 
         /**
-         * 节点ID。
+         * <p>节点ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1cudc25w2bfwl5****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;

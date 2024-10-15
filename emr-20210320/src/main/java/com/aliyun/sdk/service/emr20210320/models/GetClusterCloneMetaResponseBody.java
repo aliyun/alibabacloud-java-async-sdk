@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClusterCloneMetaResponseBody} extends {@link TeaModel}
  *
  * <p>GetClusterCloneMetaResponseBody</p>
@@ -49,7 +50,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The metadata of the cluster that you want to clone.
+         * <p>The metadata of the cluster that you want to clone.</p>
          */
         public Builder clusterCloneMeta(ClusterCloneMeta clusterCloneMeta) {
             this.clusterCloneMeta = clusterCloneMeta;
@@ -57,7 +58,10 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetClusterCloneMetaResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterCloneMetaResponseBody</p>
+     */
     public static class Constraints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxCapacity")
         private Integer maxCapacity;
@@ -109,7 +119,10 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             private Integer minCapacity; 
 
             /**
-             * The maximum number of nodes in the node group. Default value: 2000.
+             * <p>The maximum number of nodes in the node group. Default value: 2000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder maxCapacity(Integer maxCapacity) {
                 this.maxCapacity = maxCapacity;
@@ -117,7 +130,10 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum number of nodes in the node group. Default value: 0.
+             * <p>The minimum number of nodes in the node group. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder minCapacity(Integer minCapacity) {
                 this.minCapacity = minCapacity;
@@ -131,6 +147,12 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClusterCloneMetaResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterCloneMetaResponseBody</p>
+     */
     public static class ScalingRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActivityType")
         private String activityType;
@@ -218,11 +240,14 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             private String triggerType; 
 
             /**
-             * The scaling type. This parameter is required. Valid values:
-             * <p>
+             * <p>The scaling type. This parameter is required. Valid values:</p>
+             * <ul>
+             * <li>SCALE_OUT</li>
+             * <li>SCALE_IN</li>
+             * </ul>
              * 
-             * *   SCALE_OUT
-             * *   SCALE_IN
+             * <strong>example:</strong>
+             * <p>SCALE_OUT</p>
              */
             public Builder activityType(String activityType) {
                 this.activityType = activityType;
@@ -230,7 +255,10 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The adjustment value of the auto scaling rule. This parameter is required. The parameter value must be a positive integer, which indicates the number of instances to be added or removed.
+             * <p>The adjustment value of the auto scaling rule. This parameter is required. The parameter value must be a positive integer, which indicates the number of instances to be added or removed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder adjustmentValue(Integer adjustmentValue) {
                 this.adjustmentValue = adjustmentValue;
@@ -238,7 +266,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The description of load-based scaling.
+             * <p>The description of load-based scaling.</p>
              */
             public Builder metricsTrigger(MetricsTrigger metricsTrigger) {
                 this.metricsTrigger = metricsTrigger;
@@ -246,7 +274,10 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the auto scaling rule.
+             * <p>The name of the auto scaling rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>scaling-out-memory</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -254,7 +285,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The description of time-based scaling.
+             * <p>The description of time-based scaling.</p>
              */
             public Builder timeTrigger(TimeTrigger timeTrigger) {
                 this.timeTrigger = timeTrigger;
@@ -262,11 +293,14 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The trigger mode of the auto scaling rule. This parameter is required. Valid values:
-             * <p>
+             * <p>The trigger mode of the auto scaling rule. This parameter is required. Valid values:</p>
+             * <ul>
+             * <li>TIME_TRIGGER: time-based scaling.</li>
+             * <li>METRICS_TRIGGER: load-based scaling.</li>
+             * </ul>
              * 
-             * *   TIME_TRIGGER: time-based scaling.
-             * *   METRICS_TRIGGER: load-based scaling.
+             * <strong>example:</strong>
+             * <p>TIME_TRIGGER</p>
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;
@@ -280,6 +314,12 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClusterCloneMetaResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterCloneMetaResponseBody</p>
+     */
     public static class ScalingPolicies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
@@ -355,7 +395,10 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             private java.util.List < ScalingRules> scalingRules; 
 
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-b933c5aac8fe****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -363,7 +406,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum and minimum number of nodes in the node group.
+             * <p>The maximum and minimum number of nodes in the node group.</p>
              */
             public Builder constraints(Constraints constraints) {
                 this.constraints = constraints;
@@ -371,7 +414,10 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The node group ID.
+             * <p>The node group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ng-869471354ecd****</p>
              */
             public Builder nodeGroupId(String nodeGroupId) {
                 this.nodeGroupId = nodeGroupId;
@@ -379,7 +425,10 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the auto scaling policy.
+             * <p>The ID of the auto scaling policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asp-asduwe23znl***</p>
              */
             public Builder scalingPolicyId(String scalingPolicyId) {
                 this.scalingPolicyId = scalingPolicyId;
@@ -387,7 +436,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The list of auto scaling rules.
+             * <p>The list of auto scaling rules.</p>
              */
             public Builder scalingRules(java.util.List < ScalingRules> scalingRules) {
                 this.scalingRules = scalingRules;
@@ -401,6 +450,12 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClusterCloneMetaResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterCloneMetaResponseBody</p>
+     */
     public static class ClusterCloneMeta extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationConfigs")
         private java.util.List < ApplicationConfig > applicationConfigs;
@@ -656,7 +711,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             private java.util.List < Tag > tags; 
 
             /**
-             * The modified configuration items.
+             * <p>The modified configuration items.</p>
              */
             public Builder applicationConfigs(java.util.List < ApplicationConfig > applicationConfigs) {
                 this.applicationConfigs = applicationConfigs;
@@ -664,7 +719,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The services deployed in the cluster.
+             * <p>The services deployed in the cluster.</p>
              */
             public Builder applications(java.util.List < Application > applications) {
                 this.applications = applications;
@@ -672,7 +727,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The bootstrap actions. Number of elements in the array: 1 to 10.
+             * <p>The bootstrap actions. Number of elements in the array: 1 to 10.</p>
              */
             public Builder bootstrapScripts(java.util.List < Script > bootstrapScripts) {
                 this.bootstrapScripts = bootstrapScripts;
@@ -680,7 +735,10 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-b933c5aac7f7****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -688,7 +746,10 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>emrtest</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -696,17 +757,20 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cluster. Valid values:
-             * <p>
+             * <p>The status of the cluster. Valid values:</p>
+             * <ul>
+             * <li>STARTING</li>
+             * <li>START_FAILED</li>
+             * <li>BOOTSTRAPPING</li>
+             * <li>RUNNING</li>
+             * <li>TERMINATING</li>
+             * <li>TERMINATED</li>
+             * <li>TERMINATED_WITH_ERRORS</li>
+             * <li>TERMINATE_FAILED</li>
+             * </ul>
              * 
-             * *   STARTING
-             * *   START_FAILED
-             * *   BOOTSTRAPPING
-             * *   RUNNING
-             * *   TERMINATING
-             * *   TERMINATED
-             * *   TERMINATED_WITH_ERRORS
-             * *   TERMINATE_FAILED
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder clusterState(String clusterState) {
                 this.clusterState = clusterState;
@@ -714,15 +778,18 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster type. Valid values:
-             * <p>
+             * <p>The cluster type. Valid values:</p>
+             * <ul>
+             * <li>DATALAKE</li>
+             * <li>OLAP</li>
+             * <li>DATAFLOW</li>
+             * <li>DATASERVING</li>
+             * <li>CUSTOM</li>
+             * <li>HADOOP</li>
+             * </ul>
              * 
-             * *   DATALAKE
-             * *   OLAP
-             * *   DATAFLOW
-             * *   DATASERVING
-             * *   CUSTOM
-             * *   HADOOP
+             * <strong>example:</strong>
+             * <p>DATALAKE</p>
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -730,11 +797,14 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment mode of master nodes in the cluster. Valid values:
-             * <p>
+             * <p>The deployment mode of master nodes in the cluster. Valid values:</p>
+             * <ul>
+             * <li>NORMAL: regular mode.</li>
+             * <li>HA: high availability mode.</li>
+             * </ul>
              * 
-             * *   NORMAL: regular mode.
-             * *   HA: high availability mode.
+             * <strong>example:</strong>
+             * <p>HA</p>
              */
             public Builder deployMode(String deployMode) {
                 this.deployMode = deployMode;
@@ -742,7 +812,10 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The EMR service role.
+             * <p>The EMR service role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunEMRDefaultRole</p>
              */
             public Builder emrDefaultRole(String emrDefaultRole) {
                 this.emrDefaultRole = emrDefaultRole;
@@ -750,11 +823,11 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the service configurations of a Hadoop cluster that you made during cluster creation can be cloned. Valid values:
-             * <p>
-             * 
-             * *   False
-             * *   True
+             * <p>Indicates whether the service configurations of a Hadoop cluster that you made during cluster creation can be cloned. Valid values:</p>
+             * <ul>
+             * <li>False</li>
+             * <li>True</li>
+             * </ul>
              */
             public Builder existCloneConfig(Boolean existCloneConfig) {
                 this.existCloneConfig = existCloneConfig;
@@ -762,7 +835,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The attributes of the node.
+             * <p>The attributes of the node.</p>
              */
             public Builder nodeAttributes(NodeAttributes nodeAttributes) {
                 this.nodeAttributes = nodeAttributes;
@@ -770,7 +843,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The node groups. Number of elements in the array: 1 to 100.
+             * <p>The node groups. Number of elements in the array: 1 to 100.</p>
              */
             public Builder nodeGroups(java.util.List < NodeGroup > nodeGroups) {
                 this.nodeGroups = nodeGroups;
@@ -778,11 +851,14 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the cluster. Valid values:
-             * <p>
+             * <p>The billing method of the cluster. Valid values:</p>
+             * <ul>
+             * <li>PayAsYouGo</li>
+             * <li>Subscription</li>
+             * </ul>
              * 
-             * *   PayAsYouGo
-             * *   Subscription
+             * <strong>example:</strong>
+             * <p>PayAsYouGo</p>
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
@@ -790,7 +866,10 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -798,7 +877,10 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The EMR version.
+             * <p>The EMR version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EMR-5.6.0</p>
              */
             public Builder releaseVersion(String releaseVersion) {
                 this.releaseVersion = releaseVersion;
@@ -806,7 +888,10 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmzabjyop****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -814,7 +899,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The auto scaling policies of each node group in the cluster.
+             * <p>The auto scaling policies of each node group in the cluster.</p>
              */
             public Builder scalingPolicies(java.util.List < ScalingPolicies> scalingPolicies) {
                 this.scalingPolicies = scalingPolicies;
@@ -822,11 +907,14 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The security mode of the cluster. Valid values:
-             * <p>
+             * <p>The security mode of the cluster. Valid values:</p>
+             * <ul>
+             * <li>NORMAL: regular mode. Kerberos is not enabled.</li>
+             * <li>KERBEROS: Kerberos mode. Kerberos is enabled.</li>
+             * </ul>
              * 
-             * *   NORMAL: regular mode. Kerberos is not enabled.
-             * *   KERBEROS: Kerberos mode. Kerberos is enabled.
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder securityMode(String securityMode) {
                 this.securityMode = securityMode;
@@ -834,7 +922,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The subscription configurations.
+             * <p>The subscription configurations.</p>
              */
             public Builder subscriptionConfig(SubscriptionConfig subscriptionConfig) {
                 this.subscriptionConfig = subscriptionConfig;
@@ -842,7 +930,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The list of tags.
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List < Tag > tags) {
                 this.tags = tags;

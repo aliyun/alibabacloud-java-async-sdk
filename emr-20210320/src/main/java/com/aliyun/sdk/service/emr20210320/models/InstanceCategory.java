@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstanceCategory} extends {@link TeaModel}
  *
  * <p>InstanceCategory</p>
@@ -61,7 +62,10 @@ public class InstanceCategory extends TeaModel {
         private java.util.List < String > values; 
 
         /**
-         * 默认值。
+         * <p>默认值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CLUSTER</p>
          */
         public Builder defaultValue(String defaultValue) {
             this.defaultValue = defaultValue;

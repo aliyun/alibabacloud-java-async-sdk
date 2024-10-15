@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FailedReason} extends {@link TeaModel}
  *
  * <p>FailedReason</p>
@@ -61,7 +62,10 @@ public class FailedReason extends TeaModel {
         private String requestId; 
 
         /**
-         * 错误码。
+         * <p>错误码。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MissingParameter.InstanceType</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -69,7 +73,10 @@ public class FailedReason extends TeaModel {
         }
 
         /**
-         * 错误信息。
+         * <p>错误信息。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The instance type is required.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -77,7 +84,10 @@ public class FailedReason extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * <p>请求ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944abcd</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

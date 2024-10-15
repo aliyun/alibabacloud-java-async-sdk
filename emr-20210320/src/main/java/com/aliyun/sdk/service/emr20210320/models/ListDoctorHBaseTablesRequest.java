@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDoctorHBaseTablesRequest} extends {@link RequestModel}
  *
  * <p>ListDoctorHBaseTablesRequest</p>
@@ -154,7 +155,11 @@ public class ListDoctorHBaseTablesRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b933c5aac8fe****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -163,7 +168,11 @@ public class ListDoctorHBaseTablesRequest extends Request {
         }
 
         /**
-         * The query date.
+         * <p>The query date.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-01</p>
          */
         public Builder dateTime(String dateTime) {
             this.putQueryParameter("DateTime", dateTime);
@@ -172,7 +181,10 @@ public class ListDoctorHBaseTablesRequest extends Request {
         }
 
         /**
-         * The maximum number of entries that are returned.
+         * <p>The maximum number of entries that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -181,7 +193,10 @@ public class ListDoctorHBaseTablesRequest extends Request {
         }
 
         /**
-         * Marks the current position to start reading. If this field is empty, the data is read from the beginning.
+         * <p>Marks the current position to start reading. If this field is empty, the data is read from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -190,12 +205,14 @@ public class ListDoctorHBaseTablesRequest extends Request {
         }
 
         /**
-         * The field that you use to sort the query results.
-         * <p>
+         * <p>The field that you use to sort the query results.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>tableSize</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   tableSize
+         * <strong>example:</strong>
+         * <p>tableSize</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -204,11 +221,14 @@ public class ListDoctorHBaseTablesRequest extends Request {
         }
 
         /**
-         * The order in which you want to sort the query results. Valid value:
-         * <p>
+         * <p>The order in which you want to sort the query results. Valid value:</p>
+         * <ul>
+         * <li>ASC: in ascending order</li>
+         * <li>DESC: in descending order</li>
+         * </ul>
          * 
-         * *   ASC: in ascending order
-         * *   DESC: in descending order
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -217,7 +237,11 @@ public class ListDoctorHBaseTablesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -226,7 +250,10 @@ public class ListDoctorHBaseTablesRequest extends Request {
         }
 
         /**
-         * The table names, which are used to filter the query results.
+         * <p>The table names, which are used to filter the query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder tableNames(java.util.List < String > tableNames) {
             this.putQueryParameter("TableNames", tableNames);

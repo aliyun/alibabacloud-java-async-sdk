@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAutoScalingActivityResponseBody} extends {@link TeaModel}
  *
  * <p>GetAutoScalingActivityResponseBody</p>
@@ -49,7 +50,10 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
         private ScalingActivity scalingActivity; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the scaling activity.
+         * <p>The information about the scaling activity.</p>
          */
         public Builder scalingActivity(ScalingActivity scalingActivity) {
             this.scalingActivity = scalingActivity;
@@ -70,6 +74,12 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAutoScalingActivityResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAutoScalingActivityResponseBody</p>
+     */
     public static class ScalingActivity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActivityId")
         private String activityId;
@@ -253,7 +263,10 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
             private Long startTime; 
 
             /**
-             * The ID of the scaling activity.
+             * <p>The ID of the scaling activity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asa-36373b084d6b4b13aa50f4129a9e****</p>
              */
             public Builder activityId(String activityId) {
                 this.activityId = activityId;
@@ -261,7 +274,7 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The instances that correspond to the scaling activity.
+             * <p>The instances that correspond to the scaling activity.</p>
              */
             public Builder activityResults(java.util.List < ScalingActivityResult > activityResults) {
                 this.activityResults = activityResults;
@@ -269,13 +282,16 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the scaling activity. Valid values:
-             * <p>
+             * <p>The status of the scaling activity. Valid values:</p>
+             * <ul>
+             * <li>REJECTED</li>
+             * <li>SUCCESSFUL</li>
+             * <li>FAILED</li>
+             * <li>IN_PROGRESS</li>
+             * </ul>
              * 
-             * *   REJECTED
-             * *   SUCCESSFUL
-             * *   FAILED
-             * *   IN_PROGRESS
+             * <strong>example:</strong>
+             * <p>IN_PROGRESS</p>
              */
             public Builder activityState(String activityState) {
                 this.activityState = activityState;
@@ -283,11 +299,14 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the scaling activity. Valid value:
-             * <p>
+             * <p>The type of the scaling activity. Valid value:</p>
+             * <ul>
+             * <li>SCALE_OUT</li>
+             * <li>SCALE_IN</li>
+             * </ul>
              * 
-             * *   SCALE_OUT
-             * *   SCALE_IN
+             * <strong>example:</strong>
+             * <p>SCALE_OUT</p>
              */
             public Builder activityType(String activityType) {
                 this.activityType = activityType;
@@ -295,7 +314,10 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-b933c5aac8fe****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -303,7 +325,10 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the scaling activity.
+             * <p>The description of the scaling activity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>clusterId not exist</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -311,7 +336,10 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The time when scaling ended.
+             * <p>The time when scaling ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1639715634819</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -319,7 +347,10 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The number of added or removed instances.
+             * <p>The number of added or removed instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder expectNum(Integer expectNum) {
                 this.expectNum = expectNum;
@@ -327,7 +358,10 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node group.
+             * <p>The ID of the node group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ng-869471354ecd****</p>
              */
             public Builder nodeGroupId(String nodeGroupId) {
                 this.nodeGroupId = nodeGroupId;
@@ -335,7 +369,10 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node group.
+             * <p>The name of the node group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task-01</p>
              */
             public Builder nodeGroupName(String nodeGroupName) {
                 this.nodeGroupName = nodeGroupName;
@@ -343,7 +380,10 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The operation ID.
+             * <p>The operation ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>op-13c37a77c505****</p>
              */
             public Builder operationId(String operationId) {
                 this.operationId = operationId;
@@ -351,7 +391,7 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the scaling rule.
+             * <p>The description of the scaling rule.</p>
              */
             public Builder ruleDetail(ScalingRule ruleDetail) {
                 this.ruleDetail = ruleDetail;
@@ -359,7 +399,10 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the scaling rule.
+             * <p>The name of the scaling rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>scaling-out-memory</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -367,7 +410,10 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The time when scaling started.
+             * <p>The time when scaling started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1639714634819</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
