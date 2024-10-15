@@ -356,6 +356,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCacheReserveSpecificationResponse> getCacheReserveSpecification(GetCacheReserveSpecificationRequest request);
 
     /**
+     * @param request the request parameters of GetErService  GetErServiceRequest
+     * @return GetErServiceResponse
+     */
+    CompletableFuture<GetErServiceResponse> getErService(GetErServiceRequest request);
+
+    /**
      * @param request the request parameters of GetKv  GetKvRequest
      * @return GetKvResponse
      */
