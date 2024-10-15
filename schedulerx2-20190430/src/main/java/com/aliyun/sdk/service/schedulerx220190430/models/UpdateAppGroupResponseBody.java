@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAppGroupResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateAppGroupResponseBody</p>
@@ -73,7 +74,10 @@ public class UpdateAppGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,10 @@ public class UpdateAppGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app is not existed, groupId=xxxx, namesapce=xxxx</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -89,7 +96,10 @@ public class UpdateAppGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4F68ABED-AC31-4412-9297-D9A8F0401108</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +107,14 @@ public class UpdateAppGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

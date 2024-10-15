@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListGroupsResponseBody</p>
@@ -85,7 +86,10 @@ public class ListGroupsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the applications.
+         * <p>The information about the applications.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>message</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>71BCC0E3-64B2-4B63-A870-AFB64EBCB58A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class ListGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGroupsResponseBody</p>
+     */
     public static class AppGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppGroupId")
         private Long appGroupId;
@@ -221,7 +240,10 @@ public class ListGroupsResponseBody extends TeaModel {
             private String groupId; 
 
             /**
-             * The application group ID.
+             * <p>The application group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder appGroupId(Long appGroupId) {
                 this.appGroupId = appGroupId;
@@ -229,7 +251,10 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The AppKey for the application.
+             * <p>The AppKey for the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a3G77O6NZxq/lyo1NC****==</p>
              */
             public Builder appKey(String appKey) {
                 this.appKey = appKey;
@@ -237,7 +262,10 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DocTest</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -245,7 +273,10 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * AppVersion.
+             * <p>The application version. 1: Basic version, 2: Professional version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder appVersion(Integer appVersion) {
                 this.appVersion = appVersion;
@@ -253,7 +284,10 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the application.
+             * <p>The description of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -261,7 +295,10 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The application ID.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DocTest.Group</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -275,6 +312,12 @@ public class ListGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGroupsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppGroups")
         private java.util.List < AppGroups> appGroups;
@@ -302,7 +345,7 @@ public class ListGroupsResponseBody extends TeaModel {
             private java.util.List < AppGroups> appGroups; 
 
             /**
-             * The applications and their details.
+             * <p>The applications and their details.</p>
              */
             public Builder appGroups(java.util.List < AppGroups> appGroups) {
                 this.appGroups = appGroups;

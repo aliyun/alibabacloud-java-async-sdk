@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOverviewRequest} extends {@link RequestModel}
  *
  * <p>GetOverviewRequest</p>
@@ -173,7 +174,10 @@ public class GetOverviewRequest extends Request {
         }
 
         /**
-         * MetricType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder metricType(Integer metricType) {
             this.putQueryParameter("MetricType", metricType);
@@ -200,7 +204,10 @@ public class GetOverviewRequest extends Request {
         }
 
         /**
-         * Operate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>query</p>
          */
         public Builder operate(String operate) {
             this.putQueryParameter("Operate", operate);
@@ -209,7 +216,10 @@ public class GetOverviewRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -218,7 +228,10 @@ public class GetOverviewRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1684166400</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

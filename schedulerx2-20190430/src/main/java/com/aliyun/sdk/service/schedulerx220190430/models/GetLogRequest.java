@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLogRequest} extends {@link RequestModel}
  *
  * <p>GetLogRequest</p>
@@ -211,7 +212,10 @@ public class GetLogRequest extends Request {
         } 
 
         /**
-         * The time when the job stops running. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The time when the job stops running. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1675739484000</p>
          */
         public Builder endTimestamp(Long endTimestamp) {
             this.putQueryParameter("EndTimestamp", endTimestamp);
@@ -220,7 +224,11 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * The application group ID. You can obtain the application group ID on the Application Management page in the SchedulerX console.
+         * <p>The application group ID. You can obtain the application group ID on the Application Management page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testSchedulerx.defaultGroup</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -229,7 +237,10 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * The job ID.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -238,7 +249,10 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * The job instance ID.
+         * <p>The job instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder jobInstanceId(String jobInstanceId) {
             this.putQueryParameter("JobInstanceId", jobInstanceId);
@@ -247,7 +261,10 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * The keyword.
+         * <p>The keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -256,7 +273,10 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * The number of rows to return. The maximum number is 200.
+         * <p>The number of rows to return. The maximum number is 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder line(Integer line) {
             this.putQueryParameter("Line", line);
@@ -265,7 +285,11 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
+         * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -274,7 +298,10 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * The source of the namespace. This parameter is required only for a special third party.
+         * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schedulerx</p>
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -283,7 +310,10 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * The number of offset rows. This parameter can be used for a paged query.
+         * <p>The number of offset rows. This parameter can be used for a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder offset(Integer offset) {
             this.putQueryParameter("Offset", offset);
@@ -292,7 +322,11 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -301,7 +335,10 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * Specifies whether to reverse the order. By default, the order is reversed.
+         * <p>Specifies whether to reverse the order. By default, the order is reversed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder reverse(Boolean reverse) {
             this.putQueryParameter("Reverse", reverse);
@@ -310,7 +347,10 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * The time when the job starts to run. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The time when the job starts to run. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1675739364000</p>
          */
         public Builder startTimestamp(Long startTimestamp) {
             this.putQueryParameter("StartTimestamp", startTimestamp);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWorkerListRequest} extends {@link RequestModel}
  *
  * <p>GetWorkerListRequest</p>
@@ -98,7 +99,11 @@ public class GetWorkerListRequest extends Request {
         } 
 
         /**
-         * The ID of the permission group.
+         * <p>The ID of the permission group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>usercenter</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -107,7 +112,11 @@ public class GetWorkerListRequest extends Request {
         }
 
         /**
-         * The ID of the namespace. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
+         * <p>The ID of the namespace. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -116,7 +125,10 @@ public class GetWorkerListRequest extends Request {
         }
 
         /**
-         * The source of the namespace. This parameter is required only for a special third party.
+         * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schedulerx</p>
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -125,7 +137,11 @@ public class GetWorkerListRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

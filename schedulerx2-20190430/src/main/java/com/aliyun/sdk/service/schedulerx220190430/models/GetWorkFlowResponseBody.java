@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWorkFlowResponseBody} extends {@link TeaModel}
  *
  * <p>GetWorkFlowResponseBody</p>
@@ -85,7 +86,10 @@ public class GetWorkFlowResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Error codes
+         * <p>Error codes</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The data of the workflow.
+         * <p>The data of the workflow.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class GetWorkFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Error message
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workflow is not existed</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class GetWorkFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45678xxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class GetWorkFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the API call.
+         * <p>The result of the API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class GetWorkFlowResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetWorkFlowResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkFlowResponseBody</p>
+     */
     public static class WorkFlowInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -217,7 +236,10 @@ public class GetWorkFlowResponseBody extends TeaModel {
             private Long workflowId; 
 
             /**
-             * The description of the workflow.
+             * <p>The description of the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my first workflow</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -225,7 +247,10 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the workflow.
+             * <p>The name of the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workflow_111</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -233,7 +258,10 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the workflow.
+             * <p>The status of the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Successful</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -241,7 +269,10 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The time expression of the workflow.
+             * <p>The time expression of the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 2 * * ?</p>
              */
             public Builder timeExpression(String timeExpression) {
                 this.timeExpression = timeExpression;
@@ -249,7 +280,10 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The time type of the workflow.
+             * <p>The time type of the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cron</p>
              */
             public Builder timeType(String timeType) {
                 this.timeType = timeType;
@@ -257,7 +291,10 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workflow.
+             * <p>The ID of the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234xxx</p>
              */
             public Builder workflowId(Long workflowId) {
                 this.workflowId = workflowId;
@@ -271,6 +308,12 @@ public class GetWorkFlowResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetWorkFlowResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkFlowResponseBody</p>
+     */
     public static class Edges extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Source")
         private Long source;
@@ -310,7 +353,10 @@ public class GetWorkFlowResponseBody extends TeaModel {
             private Long target; 
 
             /**
-             * The ID of the source job.
+             * <p>The ID of the source job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder source(Long source) {
                 this.source = source;
@@ -318,7 +364,10 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the object job.
+             * <p>The ID of the object job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder target(Long target) {
                 this.target = target;
@@ -332,6 +381,12 @@ public class GetWorkFlowResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetWorkFlowResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkFlowResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -383,7 +438,10 @@ public class GetWorkFlowResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The ID of the job.
+             * <p>The ID of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456xxx</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -391,7 +449,10 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the job.
+             * <p>The name of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job_111</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -399,7 +460,10 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the job.
+             * <p>The status of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -413,6 +477,12 @@ public class GetWorkFlowResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetWorkFlowResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkFlowResponseBody</p>
+     */
     public static class WorkFlowNodeInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Edges")
         private java.util.List < Edges> edges;
@@ -452,7 +522,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
             private java.util.List < Nodes> nodes; 
 
             /**
-             * The workflow edges.
+             * <p>The workflow edges.</p>
              */
             public Builder edges(java.util.List < Edges> edges) {
                 this.edges = edges;
@@ -460,7 +530,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The list of workflow nodes.
+             * <p>The list of workflow nodes.</p>
              */
             public Builder nodes(java.util.List < Nodes> nodes) {
                 this.nodes = nodes;
@@ -474,6 +544,12 @@ public class GetWorkFlowResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetWorkFlowResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkFlowResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WorkFlowInfo")
         private WorkFlowInfo workFlowInfo;
@@ -513,7 +589,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
             private WorkFlowNodeInfo workFlowNodeInfo; 
 
             /**
-             * The basic information of the workflow.
+             * <p>The basic information of the workflow.</p>
              */
             public Builder workFlowInfo(WorkFlowInfo workFlowInfo) {
                 this.workFlowInfo = workFlowInfo;
@@ -521,7 +597,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The node information of the workflow.
+             * <p>The node information of the workflow.</p>
              */
             public Builder workFlowNodeInfo(WorkFlowNodeInfo workFlowNodeInfo) {
                 this.workFlowNodeInfo = workFlowNodeInfo;

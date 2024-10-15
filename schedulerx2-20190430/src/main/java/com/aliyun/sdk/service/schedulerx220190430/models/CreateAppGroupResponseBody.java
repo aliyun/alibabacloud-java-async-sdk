@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAppGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAppGroupResponseBody</p>
@@ -85,7 +86,10 @@ public class CreateAppGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class CreateAppGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the job group.
+         * <p>The information about the job group.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class CreateAppGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned only if the corresponding error occurs.
+         * <p>The error message that is returned only if the corresponding error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Your request is denied as lack of ssl protect.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class CreateAppGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>883AFE93-FB03-4FA9-A958-E750C6DE120C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class CreateAppGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the application was created. Valid values:
-         * <p>
+         * <p>Indicates whether the application was created. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class CreateAppGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAppGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateAppGroupResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppGroupId")
         private Long appGroupId;
@@ -173,7 +192,10 @@ public class CreateAppGroupResponseBody extends TeaModel {
             private String appKey; 
 
             /**
-             * The job group ID.
+             * <p>The job group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6607</p>
              */
             public Builder appGroupId(Long appGroupId) {
                 this.appGroupId = appGroupId;
@@ -181,7 +203,10 @@ public class CreateAppGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The AppKey for the application.
+             * <p>The AppKey for the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adcExHZviL******</p>
              */
             public Builder appKey(String appKey) {
                 this.appKey = appKey;

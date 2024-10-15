@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWorkflowInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>ListWorkflowInstanceResponseBody</p>
@@ -85,7 +86,10 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The information about workflow instances.
+         * <p>The information about workflow instances.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The returned error message.
+         * <p>The returned error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workflowId=xxx is not existed</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39090022-1F3B-4797-8518-6B61095F1AF0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListWorkflowInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkflowInstanceResponseBody</p>
+     */
     public static class WfInstanceInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataTime")
         private String dataTime;
@@ -233,7 +252,10 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
             private Long workflowId; 
 
             /**
-             * The data timestamp of the workflow instance.
+             * <p>The data timestamp of the workflow instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-03 18:00:00</p>
              */
             public Builder dataTime(String dataTime) {
                 this.dataTime = dataTime;
@@ -241,7 +263,10 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the workflow instance stopped running.
+             * <p>The time when the workflow instance stopped running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-03 18:00:21</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -249,7 +274,10 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the workflow instance was scheduled to run.
+             * <p>The time when the workflow instance was scheduled to run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-03 18:00:00</p>
              */
             public Builder scheduleTime(String scheduleTime) {
                 this.scheduleTime = scheduleTime;
@@ -257,7 +285,10 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the workflow instance started to run.
+             * <p>The time when the workflow instance started to run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-03 18:00:01</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -265,14 +296,17 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the workflow instance. Valid values:
-             * <p>
+             * <p>The state of the workflow instance. Valid values:</p>
+             * <ul>
+             * <li>1: pending</li>
+             * <li>2: preparing</li>
+             * <li>3: running</li>
+             * <li>4: successful</li>
+             * <li>5: failed</li>
+             * </ul>
              * 
-             * *   1: pending
-             * *   2: preparing
-             * *   3: running
-             * *   4: successful
-             * *   5: failed
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -280,7 +314,10 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The workflow instance ID.
+             * <p>The workflow instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder wfInstanceId(Long wfInstanceId) {
                 this.wfInstanceId = wfInstanceId;
@@ -288,7 +325,10 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The workflow ID.
+             * <p>The workflow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder workflowId(Long workflowId) {
                 this.workflowId = workflowId;
@@ -302,6 +342,12 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWorkflowInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkflowInstanceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WfInstanceInfos")
         private java.util.List < WfInstanceInfos> wfInstanceInfos;
@@ -329,7 +375,7 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
             private java.util.List < WfInstanceInfos> wfInstanceInfos; 
 
             /**
-             * The workflow instances.
+             * <p>The workflow instances.</p>
              */
             public Builder wfInstanceInfos(java.util.List < WfInstanceInfos> wfInstanceInfos) {
                 this.wfInstanceInfos = wfInstanceInfos;

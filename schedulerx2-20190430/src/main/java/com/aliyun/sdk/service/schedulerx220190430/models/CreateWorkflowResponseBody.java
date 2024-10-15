@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateWorkflowResponseBody} extends {@link TeaModel}
  *
  * <p>CreateWorkflowResponseBody</p>
@@ -85,7 +86,10 @@ public class CreateWorkflowResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class CreateWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * The data that was returned for the request.
+         * <p>The data that was returned for the request.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class CreateWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * The returned error message.
+         * <p>The returned error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>timetype is invalid</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class CreateWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39090022-1F3B-4797-8518-6B61095F1AF0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class CreateWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the workflow was created. Valid values:
-         * <p>
+         * <p>Indicates whether the workflow was created. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class CreateWorkflowResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateWorkflowResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateWorkflowResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WorkflowId")
         private Long workflowId;
@@ -161,7 +180,10 @@ public class CreateWorkflowResponseBody extends TeaModel {
             private Long workflowId; 
 
             /**
-             * The workflow ID.
+             * <p>The workflow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>92583</p>
              */
             public Builder workflowId(Long workflowId) {
                 this.workflowId = workflowId;

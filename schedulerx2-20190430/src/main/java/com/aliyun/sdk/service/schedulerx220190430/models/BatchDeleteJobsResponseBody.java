@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchDeleteJobsResponseBody} extends {@link TeaModel}
  *
  * <p>BatchDeleteJobsResponseBody</p>
@@ -73,7 +74,10 @@ public class BatchDeleteJobsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,10 @@ public class BatchDeleteJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information returned.
+         * <p>The additional information returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>message</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -89,7 +96,10 @@ public class BatchDeleteJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>71BCC0E3-64B2-4B63-A870-AFB64EBCB5A7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,11 +107,14 @@ public class BatchDeleteJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether multiple jobs were deleted at a time. Valid values:
-         * <p>
+         * <p>Indicates whether multiple jobs were deleted at a time. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Multiple jobs were deleted at a time.</li>
+         * <li><strong>false</strong>: Multiple jobs were not deleted at a time.</li>
+         * </ul>
          * 
-         * *   **true**: Multiple jobs were deleted at a time.
-         * *   **false**: Multiple jobs were not deleted at a time.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

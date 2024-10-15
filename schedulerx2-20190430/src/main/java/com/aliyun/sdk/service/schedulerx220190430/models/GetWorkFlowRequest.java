@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWorkFlowRequest} extends {@link RequestModel}
  *
  * <p>GetWorkFlowRequest</p>
@@ -113,7 +114,11 @@ public class GetWorkFlowRequest extends Request {
         } 
 
         /**
-         * The ID of the application group.
+         * <p>The ID of the application group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hxm.test</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -122,7 +127,11 @@ public class GetWorkFlowRequest extends Request {
         }
 
         /**
-         * The ID of the namespace.
+         * <p>The ID of the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4a06d5ea-f576-4326-842c-fb14ea043d8d</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -131,7 +140,10 @@ public class GetWorkFlowRequest extends Request {
         }
 
         /**
-         * The source of the namespace.
+         * <p>The source of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>source</p>
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -140,7 +152,11 @@ public class GetWorkFlowRequest extends Request {
         }
 
         /**
-         * The region information.
+         * <p>The region information.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -149,7 +165,11 @@ public class GetWorkFlowRequest extends Request {
         }
 
         /**
-         * The ID of the workflow.
+         * <p>The ID of the workflow.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder workflowId(Long workflowId) {
             this.putQueryParameter("WorkflowId", workflowId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWorkflowInstanceRequest} extends {@link RequestModel}
  *
  * <p>ListWorkflowInstanceRequest</p>
@@ -113,7 +114,11 @@ public class ListWorkflowInstanceRequest extends Request {
         } 
 
         /**
-         * The application group ID. You can obtain the ID on the Application Management page in the SchedulerX console.
+         * <p>The application group ID. You can obtain the ID on the Application Management page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testSchedulerx.defaultGroup</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -122,7 +127,11 @@ public class ListWorkflowInstanceRequest extends Request {
         }
 
         /**
-         * The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
+         * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -131,7 +140,10 @@ public class ListWorkflowInstanceRequest extends Request {
         }
 
         /**
-         * The source of the namespace. This parameter is required only for a special third party.
+         * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schedulerx</p>
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -140,7 +152,11 @@ public class ListWorkflowInstanceRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -149,7 +165,11 @@ public class ListWorkflowInstanceRequest extends Request {
         }
 
         /**
-         * The workflow ID.
+         * <p>The workflow ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder workflowId(String workflowId) {
             this.putQueryParameter("WorkflowId", workflowId);

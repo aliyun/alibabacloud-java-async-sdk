@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateJobRequest} extends {@link RequestModel}
  *
  * <p>UpdateJobRequest</p>
@@ -563,7 +564,10 @@ public class UpdateJobRequest extends Request {
         } 
 
         /**
-         * The interval of retries after a job failure. Default value: 30. Unit: seconds.
+         * <p>The interval of retries after a job failure. Default value: 30. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder attemptInterval(Integer attemptInterval) {
             this.putBodyParameter("AttemptInterval", attemptInterval);
@@ -572,7 +576,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * If you set TimeType to 1 (cron), you can specify calendar days.
+         * <p>If you set TimeType to 1 (cron), you can specify calendar days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Business days</p>
          */
         public Builder calendar(String calendar) {
             this.putBodyParameter("Calendar", calendar);
@@ -581,10 +588,11 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * The full path of the job interface class.
-         * <p>
+         * <p>The full path of the job interface class.</p>
+         * <p>This field is available only when you set the job type to java. In this case, you must enter a full path.</p>
          * 
-         * This field is available only when you set the job type to java. In this case, you must enter a full path.
+         * <strong>example:</strong>
+         * <p>com.alibaba.test.helloworld</p>
          */
         public Builder className(String className) {
             this.putBodyParameter("ClassName", className);
@@ -593,7 +601,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * The number of threads that are triggered by a single worker at a time. Default value: 5. This parameter is an advanced configuration item of the MapReduce job.
+         * <p>The number of threads that are triggered by a single worker at a time. Default value: 5. This parameter is an advanced configuration item of the MapReduce job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder consumerSize(Integer consumerSize) {
             this.putBodyParameter("ConsumerSize", consumerSize);
@@ -602,7 +613,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * The information about the alert contact.
+         * <p>The information about the alert contact.</p>
          */
         public Builder contactInfo(java.util.List < ContactInfo> contactInfo) {
             this.putBodyParameter("ContactInfo", contactInfo);
@@ -611,7 +622,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * The script content. This parameter is required when you set the job type to python, shell, go, or k8s.
+         * <p>The script content. This parameter is required when you set the job type to python, shell, go, or k8s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>echo &quot;hello&quot;</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -620,7 +634,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * If you set TimeType to 1 (cron), you can specify a time offset. Unit: seconds.
+         * <p>If you set TimeType to 1 (cron), you can specify a time offset. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2400</p>
          */
         public Builder dataOffset(Integer dataOffset) {
             this.putBodyParameter("DataOffset", dataOffset);
@@ -629,7 +646,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * The job description.
+         * <p>The job description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -638,7 +658,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * The number of task distribution threads. Default value: 5. This parameter is an advanced configuration item of the MapReduce job.
+         * <p>The number of task distribution threads. Default value: 5. This parameter is an advanced configuration item of the MapReduce job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder dispatcherSize(Integer dispatcherSize) {
             this.putBodyParameter("DispatcherSize", dispatcherSize);
@@ -647,14 +670,17 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * The execution mode of the job. Valid values:
-         * <p>
+         * <p>The execution mode of the job. Valid values:</p>
+         * <ul>
+         * <li><strong>Stand-alone operation</strong>: standalone</li>
+         * <li><strong>Broadcast run</strong>: broadcatst</li>
+         * <li><strong>Visual MapReduce</strong>: parallel</li>
+         * <li><strong>MapReduce</strong>: batch</li>
+         * <li><strong>Shard run</strong>: shard</li>
+         * </ul>
          * 
-         * *   **Stand-alone operation**
-         * *   **Broadcast run**
-         * *   **Visual MapReduce**
-         * *   **MapReduce**
-         * *   **Shard run**
+         * <strong>example:</strong>
+         * <p>standalone</p>
          */
         public Builder executeMode(String executeMode) {
             this.putBodyParameter("ExecuteMode", executeMode);
@@ -663,11 +689,14 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * Specifies whether to turn on Failure alarm. If the switch is turned on, an alert will be generated upon a failure. Valid values:
-         * <p>
+         * <p>Specifies whether to turn on Failure alarm. If the switch is turned on, an alert will be generated upon a failure. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder failEnable(Boolean failEnable) {
             this.putBodyParameter("FailEnable", failEnable);
@@ -676,7 +705,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * The number of consecutive failures. An alert will be received if the number of consecutive failures reaches the value of this parameter.
+         * <p>The number of consecutive failures. An alert will be received if the number of consecutive failures reaches the value of this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder failTimes(Integer failTimes) {
             this.putBodyParameter("FailTimes", failTimes);
@@ -685,7 +717,11 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.
+         * <p>The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testSchedulerx.defaultGroup</p>
          */
         public Builder groupId(String groupId) {
             this.putBodyParameter("GroupId", groupId);
@@ -694,7 +730,11 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * The job ID. You can obtain the job ID on the Task Management page in the SchedulerX console.
+         * <p>The job ID. You can obtain the job ID on the Task Management page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>92583</p>
          */
         public Builder jobId(Long jobId) {
             this.putBodyParameter("JobId", jobId);
@@ -703,7 +743,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * The maximum number of retries after a job failure. This parameter is specified based on your business requirements.
+         * <p>The maximum number of retries after a job failure. This parameter is specified based on your business requirements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder maxAttempt(Integer maxAttempt) {
             this.putBodyParameter("MaxAttempt", maxAttempt);
@@ -712,7 +755,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * The maximum number of concurrent instances. Default value: 1. The default value indicates that only one instance is allowed to run at a time. When an instance is running, another instance is not triggered even if the scheduled time for running the instance is reached.
+         * <p>The maximum number of concurrent instances. Default value: 1. The default value indicates that only one instance is allowed to run at a time. When an instance is running, another instance is not triggered even if the scheduled time for running the instance is reached.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maxConcurrency(Integer maxConcurrency) {
             this.putBodyParameter("MaxConcurrency", maxConcurrency);
@@ -721,11 +767,14 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * Specifies whether to turn on No machine alarm available. If the switch is turned on, an alert will be generated when no machine is available for running the job. Valid values:
-         * <p>
+         * <p>Specifies whether to turn on No machine alarm available. If the switch is turned on, an alert will be generated when no machine is available for running the job. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder missWorkerEnable(Boolean missWorkerEnable) {
             this.putBodyParameter("MissWorkerEnable", missWorkerEnable);
@@ -734,7 +783,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * The job name.
+         * <p>The job name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>helloword</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -743,7 +795,11 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
+         * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -752,7 +808,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * The namespace source. This parameter is required only for a special third party.
+         * <p>The namespace source. This parameter is required only for a special third party.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schedulerx</p>
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putBodyParameter("NamespaceSource", namespaceSource);
@@ -761,7 +820,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * The number of tasks that can be pulled at a time. Default value: 100. This parameter is an advanced configuration item of the MapReduce job.
+         * <p>The number of tasks that can be pulled at a time. Default value: 100. This parameter is an advanced configuration item of the MapReduce job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -770,7 +832,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * The user-defined parameters that you can obtain when the job is running.
+         * <p>The user-defined parameters that you can obtain when the job is running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder parameters(String parameters) {
             this.putBodyParameter("Parameters", parameters);
@@ -779,7 +844,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * The maximum number of tasks that can be queued. Default value: 10000. This parameter is an advanced configuration item of the MapReduce job.
+         * <p>The maximum number of tasks that can be queued. Default value: 10000. This parameter is an advanced configuration item of the MapReduce job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder queueSize(Integer queueSize) {
             this.putBodyParameter("QueueSize", queueSize);
@@ -788,7 +856,11 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -797,7 +869,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * The method that is used to send alerts. Only Short Message Service (SMS) is supported.
+         * <p>The method that is used to send alerts. Only Short Message Service (SMS) is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sms</p>
          */
         public Builder sendChannel(String sendChannel) {
             this.putBodyParameter("SendChannel", sendChannel);
@@ -806,7 +881,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * Specifies whether to turn on Successful notice. If the switch is turned on, a notice will be sent when a job succeeds.
+         * <p>Specifies whether to turn on Successful notice. If the switch is turned on, a notice will be sent when a job succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder successNoticeEnable(Boolean successNoticeEnable) {
             this.putBodyParameter("SuccessNoticeEnable", successNoticeEnable);
@@ -815,7 +893,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * The interval of retries after a task failure. This parameter is an advanced configuration item of the MapReduce job.
+         * <p>The interval of retries after a task failure. This parameter is an advanced configuration item of the MapReduce job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder taskAttemptInterval(Integer taskAttemptInterval) {
             this.putBodyParameter("TaskAttemptInterval", taskAttemptInterval);
@@ -824,7 +905,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * The job mode. Valid values: push and pull. This parameter is an advanced configuration item of the MapReduce job.
+         * <p>The job mode. Valid values: push and pull. This parameter is an advanced configuration item of the MapReduce job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>push</p>
          */
         public Builder taskDispatchMode(String taskDispatchMode) {
             this.putBodyParameter("TaskDispatchMode", taskDispatchMode);
@@ -833,7 +917,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * The number of retries after a task failure. This parameter is an advanced configuration item of the MapReduce job.
+         * <p>The number of retries after a task failure. This parameter is an advanced configuration item of the MapReduce job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder taskMaxAttempt(Integer taskMaxAttempt) {
             this.putBodyParameter("TaskMaxAttempt", taskMaxAttempt);
@@ -842,7 +929,37 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * Template.
+         * <p>Custom task template for the k8s task type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apiVersion: v1
+         * kind: Pod
+         * metadata:
+         *   name: schedulerx-node-{JOB_ID}
+         *   namespace: {NAMESPACE}
+         * spec:
+         *   containers:</p>
+         * <ul>
+         * <li>name: node-job
+         * image: node:16
+         * imagePullPolicy: IfNotPresent
+         * volumeMounts:<ul>
+         * <li>name: script-node
+         * mountPath: script/node
+         * command: [&quot;node&quot;, &quot;script/node/node-{JOB_ID}.js&quot;]
+         * volumes:</li>
+         * </ul>
+         * </li>
+         * <li>name: script-node
+         * configMap:
+         *   name: schedulerx-configmap
+         *   items:<ul>
+         * <li>key: schedulerx-node-{JOB_ID}
+         * path: node-{JOB_ID}.js</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <p>  restartPolicy: Never</p>
          */
         public Builder template(String template) {
             this.putBodyParameter("Template", template);
@@ -851,13 +968,16 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * The time expression. Specify the time expression based on the value of TimeType:
-         * <p>
+         * <p>The time expression. Specify the time expression based on the value of TimeType:</p>
+         * <ul>
+         * <li>If you set TimeType to <strong>1</strong> (cron), specify this parameter to a standard CRON expression.</li>
+         * <li>If you set TimeType to <strong>100</strong> (api), no time expression is required.</li>
+         * <li>If you set TimeType to <strong>3</strong> (fixed_rate), specify this parameter to a fixed frequency in seconds. For example, if you set this parameter to 30, the system triggers a job every 30 seconds.</li>
+         * <li>If you set TimeType to <strong>4</strong> (second_delay), specify this parameter to a fixed delay after which the job is triggered. Valid values: 1 to 60. Unit: seconds.</li>
+         * </ul>
          * 
-         * *   If you set TimeType to **1** (cron), specify this parameter to a standard CRON expression.
-         * *   If you set TimeType to **100** (api), no time expression is required.
-         * *   If you set TimeType to **3** (fixed_rate), specify this parameter to a fixed frequency in seconds. For example, if you set this parameter to 30, the system triggers a job every 30 seconds.
-         * *   If you set TimeType to **4** (second_delay), specify this parameter to a fixed delay after which the job is triggered. Valid values: 1 to 60. Unit: seconds.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder timeExpression(String timeExpression) {
             this.putBodyParameter("TimeExpression", timeExpression);
@@ -866,13 +986,16 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * The time type. Valid values:
-         * <p>
+         * <p>The time type. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: cron</li>
+         * <li><strong>3</strong>: fix_rate</li>
+         * <li><strong>4</strong>: second_delay</li>
+         * <li><strong>100</strong>: api</li>
+         * </ul>
          * 
-         * *   **1**: cron
-         * *   **3**: fix_rate
-         * *   **4**: second_delay
-         * *   **100**: api
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder timeType(Integer timeType) {
             this.putBodyParameter("TimeType", timeType);
@@ -881,7 +1004,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * The timeout threshold. Unit: seconds.
+         * <p>The timeout threshold. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7200</p>
          */
         public Builder timeout(Long timeout) {
             this.putBodyParameter("Timeout", timeout);
@@ -890,11 +1016,14 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * Specifies whether to turn on Timeout alarm. If the switch is turned on, an alert will be generated upon a timeout. Valid values:
-         * <p>
+         * <p>Specifies whether to turn on Timeout alarm. If the switch is turned on, an alert will be generated upon a timeout. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder timeoutEnable(Boolean timeoutEnable) {
             this.putBodyParameter("TimeoutEnable", timeoutEnable);
@@ -903,11 +1032,14 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * Specifies whether to turn on Timeout termination. If the switch is turned on, the job will be terminated upon a timeout. Valid values:
-         * <p>
+         * <p>Specifies whether to turn on Timeout termination. If the switch is turned on, the job will be terminated upon a timeout. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder timeoutKillEnable(Boolean timeoutKillEnable) {
             this.putBodyParameter("TimeoutKillEnable", timeoutKillEnable);
@@ -916,7 +1048,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * Time zone.
+         * <p>Time zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GMT+8</p>
          */
         public Builder timezone(String timezone) {
             this.putBodyParameter("Timezone", timezone);
@@ -925,7 +1060,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * XAttrs.
+         * <p>If you set JobType to k8s, this parameter is required. xxljob task: {&quot;resource&quot;:&quot;job&quot;} shell task: {&quot;image&quot;:&quot;busybox&quot;,&quot;resource&quot;:&quot;shell&quot;}</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;resource&quot;:&quot;shell&quot;,&quot;fileFormat&quot;:&quot;unix&quot;,&quot;templateType&quot;:&quot;customTemplate&quot;}</p>
          */
         public Builder xAttrs(String xAttrs) {
             this.putBodyParameter("XAttrs", xAttrs);
@@ -940,6 +1078,12 @@ public class UpdateJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateJobRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateJobRequest</p>
+     */
     public static class ContactInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ding")
         private String ding;
@@ -1003,7 +1147,10 @@ public class UpdateJobRequest extends Request {
             private String userPhone; 
 
             /**
-             * The webhook URL of the DingTalk chatbot.[](https://open.dingtalk.com/document/org/application-types)
+             * <p>The webhook URL of the DingTalk chatbot.<a href="https://open.dingtalk.com/document/org/application-types"></a></p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=">https://oapi.dingtalk.com/robot/send?access_token=</a>**********</p>
              */
             public Builder ding(String ding) {
                 this.ding = ding;
@@ -1011,7 +1158,10 @@ public class UpdateJobRequest extends Request {
             }
 
             /**
-             * The email address of the alert contact.
+             * <p>The email address of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test***@***.com</p>
              */
             public Builder userMail(String userMail) {
                 this.userMail = userMail;
@@ -1019,7 +1169,10 @@ public class UpdateJobRequest extends Request {
             }
 
             /**
-             * The name of the alert contact.
+             * <p>The name of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>userA</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -1027,7 +1180,10 @@ public class UpdateJobRequest extends Request {
             }
 
             /**
-             * The mobile phone number of the alert contact.
+             * <p>The mobile phone number of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1381111****</p>
              */
             public Builder userPhone(String userPhone) {
                 this.userPhone = userPhone;

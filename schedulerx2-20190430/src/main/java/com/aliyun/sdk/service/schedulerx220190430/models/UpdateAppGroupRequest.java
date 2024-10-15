@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAppGroupRequest} extends {@link RequestModel}
  *
  * <p>UpdateAppGroupRequest</p>
@@ -126,7 +127,10 @@ public class UpdateAppGroupRequest extends Request {
         } 
 
         /**
-         * AppVersion.
+         * <p>The application version. 1: Basic version, 2: Professional version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder appVersion(Integer appVersion) {
             this.putQueryParameter("AppVersion", appVersion);
@@ -135,7 +139,10 @@ public class UpdateAppGroupRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -144,7 +151,11 @@ public class UpdateAppGroupRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>The ID of the application. You can obtain the application ID on the <strong>Application Management</strong> page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testSchedulerx.defaultGroup</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -153,7 +164,10 @@ public class UpdateAppGroupRequest extends Request {
         }
 
         /**
-         * MaxConcurrency.
+         * <p>The maximum number of concurrent instances. Default value: 1. A value of 1 specifies that if the last triggered instance is running, the next instance is not triggered even if the scheduled point in time for running the next instance is reached.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maxConcurrency(Integer maxConcurrency) {
             this.putQueryParameter("MaxConcurrency", maxConcurrency);
@@ -162,7 +176,11 @@ public class UpdateAppGroupRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>The ID of the namespace. You can obtain the ID of the namespace on the Namespace page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -171,7 +189,11 @@ public class UpdateAppGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

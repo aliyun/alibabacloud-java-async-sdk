@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateWorkflowDagRequest} extends {@link RequestModel}
  *
  * <p>UpdateWorkflowDagRequest</p>
@@ -128,7 +129,11 @@ public class UpdateWorkflowDagRequest extends Request {
         } 
 
         /**
-         * The directed acyclic graph (DAG) of the workflow, including the information about the nodes and the edges. Specify the value of this parameter in the JSON format.
+         * <p>The directed acyclic graph (DAG) of the workflow, including the information about the nodes and the edges. Specify the value of this parameter in the JSON format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;nodes&quot;:[{&quot;id&quot;:2300691},{&quot;id&quot;:10518089},{&quot;id&quot;:1758851}],&quot;edges&quot;:[{&quot;source&quot;:10518089,&quot;target&quot;:1758851},{&quot;source&quot;:10518089,&quot;target&quot;:2300691}]}</p>
          */
         public Builder dagJson(String dagJson) {
             this.putBodyParameter("DagJson", dagJson);
@@ -137,7 +142,11 @@ public class UpdateWorkflowDagRequest extends Request {
         }
 
         /**
-         * The application group ID. You can obtain the application group ID on the Application Management page in the SchedulerX console.
+         * <p>The application group ID. You can obtain the application group ID on the Application Management page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testSchedulerx.defaultGroup</p>
          */
         public Builder groupId(String groupId) {
             this.putBodyParameter("GroupId", groupId);
@@ -146,7 +155,11 @@ public class UpdateWorkflowDagRequest extends Request {
         }
 
         /**
-         * The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
+         * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -155,7 +168,10 @@ public class UpdateWorkflowDagRequest extends Request {
         }
 
         /**
-         * The source of the namespace. This parameter is required only for a special third party.
+         * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schedulerx</p>
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putBodyParameter("NamespaceSource", namespaceSource);
@@ -164,7 +180,11 @@ public class UpdateWorkflowDagRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -173,7 +193,11 @@ public class UpdateWorkflowDagRequest extends Request {
         }
 
         /**
-         * The workflow ID.
+         * <p>The workflow ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder workflowId(String workflowId) {
             this.putBodyParameter("WorkflowId", workflowId);

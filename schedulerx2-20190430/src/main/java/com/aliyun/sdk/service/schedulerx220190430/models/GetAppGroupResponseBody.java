@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAppGroupResponseBody} extends {@link TeaModel}
  *
  * <p>GetAppGroupResponseBody</p>
@@ -85,7 +86,10 @@ public class GetAppGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class GetAppGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The information about the application group.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class GetAppGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app is not existed, groupId=xxxx, namesapce=xxxx</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class GetAppGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39090022-1F3B-4797-8518-6B61095F1AF0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,14 @@ public class GetAppGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +147,12 @@ public class GetAppGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAppGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAppGroupResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppKey")
         private String appKey;
@@ -241,7 +264,10 @@ public class GetAppGroupResponseBody extends TeaModel {
             private String monitorConfigJson; 
 
             /**
-             * AppKey.
+             * <p>The AppKey of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>QI4lWMZ+xk1rNB67jFUhaw==</p>
              */
             public Builder appKey(String appKey) {
                 this.appKey = appKey;
@@ -249,7 +275,10 @@ public class GetAppGroupResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DocTest</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -257,7 +286,10 @@ public class GetAppGroupResponseBody extends TeaModel {
             }
 
             /**
-             * AppVersion.
+             * <p>The application version. 1: Basic version, 2: Professional version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -265,7 +297,10 @@ public class GetAppGroupResponseBody extends TeaModel {
             }
 
             /**
-             * CurJobs.
+             * <p>The number of jobs that are configured for the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder curJobs(Integer curJobs) {
                 this.curJobs = curJobs;
@@ -273,7 +308,10 @@ public class GetAppGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -281,7 +319,10 @@ public class GetAppGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testSchedulerx.defaultGroup</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -289,7 +330,10 @@ public class GetAppGroupResponseBody extends TeaModel {
             }
 
             /**
-             * MaxJobs.
+             * <p>The maximum number of jobs that can be configured for the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder maxJobs(Integer maxJobs) {
                 this.maxJobs = maxJobs;
@@ -297,7 +341,10 @@ public class GetAppGroupResponseBody extends TeaModel {
             }
 
             /**
-             * MonitorConfigJson.
+             * <p>The configuration of the alert. The value is a JSON string. For more information, see <strong>the additional information about response parameters below this table.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;sendChannel&quot;:&quot;sms,mail,ding&quot;}</p>
              */
             public Builder monitorConfigJson(String monitorConfigJson) {
                 this.monitorConfigJson = monitorConfigJson;

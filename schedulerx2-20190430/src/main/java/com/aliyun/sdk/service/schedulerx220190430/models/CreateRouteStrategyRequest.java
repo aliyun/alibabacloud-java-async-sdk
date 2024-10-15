@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRouteStrategyRequest} extends {@link RequestModel}
  *
  * <p>CreateRouteStrategyRequest</p>
@@ -155,7 +156,11 @@ public class CreateRouteStrategyRequest extends Request {
         } 
 
         /**
-         * The ID of the application group. You can obtain the ID on the **Application Management** page in the SchedulerX console.
+         * <p>The ID of the application group. You can obtain the ID on the <strong>Application Management</strong> page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testSchedulerx.defaultGroup</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -164,7 +169,10 @@ public class CreateRouteStrategyRequest extends Request {
         }
 
         /**
-         * The job ID. You can obtain the ID on the **Task Management** page in the SchedulerX console.
+         * <p>The job ID. You can obtain the ID on the <strong>Task Management</strong> page in the SchedulerX console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54978</p>
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -173,7 +181,11 @@ public class CreateRouteStrategyRequest extends Request {
         }
 
         /**
-         * The name of the routing policy.
+         * <p>The name of the routing policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-strategy</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -182,7 +194,11 @@ public class CreateRouteStrategyRequest extends Request {
         }
 
         /**
-         * The namespace ID. You can obtain the namespace ID on the **Namespace** page in the SchedulerX console.
+         * <p>The namespace ID. You can obtain the namespace ID on the <strong>Namespace</strong> page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -191,7 +207,11 @@ public class CreateRouteStrategyRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -200,11 +220,14 @@ public class CreateRouteStrategyRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the routing policy. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the routing policy. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: disables the routing policy.</li>
+         * <li><strong>1</strong>: enables the routing policy.</li>
+         * </ul>
          * 
-         * *   **0**: disables the routing policy.
-         * *   **1**: enables the routing policy.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -213,7 +236,10 @@ public class CreateRouteStrategyRequest extends Request {
         }
 
         /**
-         * The details of the routing policy. The value is a JSON string. For more information about this parameter, see **the additional information about request parameters** below this table.
+         * <p>The details of the routing policy. The value is a JSON string. For more information about this parameter, see <strong>the additional information about request parameters</strong> below this table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;percentage&quot;:20,&quot;target&quot;:&quot;[&quot;version1&quot;]&quot;,&quot;targetType&quot;:&quot;label&quot;}]</p>
          */
         public Builder strategyContent(String strategyContent) {
             this.putQueryParameter("StrategyContent", strategyContent);
@@ -222,10 +248,13 @@ public class CreateRouteStrategyRequest extends Request {
         }
 
         /**
-         * The type of the routing policy. Valid value:
-         * <p>
+         * <p>The type of the routing policy. Valid value:</p>
+         * <ul>
+         * <li><strong>3</strong>: routes by proportion.</li>
+         * </ul>
          * 
-         * *   **3**: routes by proportion.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder type(Integer type) {
             this.putQueryParameter("Type", type);

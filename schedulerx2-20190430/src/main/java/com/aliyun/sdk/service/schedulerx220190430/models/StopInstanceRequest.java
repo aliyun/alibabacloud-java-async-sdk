@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopInstanceRequest} extends {@link RequestModel}
  *
  * <p>StopInstanceRequest</p>
@@ -128,7 +129,11 @@ public class StopInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the application. You can obtain the application ID on the Application Management page in the SchedulerX console.
+         * <p>The ID of the application. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testSchedulerx.defaultGroup</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -137,7 +142,11 @@ public class StopInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the job instance in the running state.
+         * <p>The ID of the job instance in the running state.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11111111</p>
          */
         public Builder instanceId(Long instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -146,7 +155,11 @@ public class StopInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the job. You can obtain the ID of the job on the Task Management page in the SchedulerX console.
+         * <p>The ID of the job. You can obtain the ID of the job on the Task Management page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>92583</p>
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -155,7 +168,11 @@ public class StopInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the namespace. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
+         * <p>The ID of the namespace. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -164,7 +181,10 @@ public class StopInstanceRequest extends Request {
         }
 
         /**
-         * The source of the namespace. This parameter is required only for a special third party.
+         * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schedulerx</p>
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -173,7 +193,11 @@ public class StopInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

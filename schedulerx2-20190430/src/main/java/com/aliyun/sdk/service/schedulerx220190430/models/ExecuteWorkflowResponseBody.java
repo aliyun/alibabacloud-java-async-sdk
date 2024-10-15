@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExecuteWorkflowResponseBody} extends {@link TeaModel}
  *
  * <p>ExecuteWorkflowResponseBody</p>
@@ -85,7 +86,10 @@ public class ExecuteWorkflowResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class ExecuteWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * If the request is successful, the ID of the workflow instance is returned.
+         * <p>If the request is successful, the ID of the workflow instance is returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class ExecuteWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned only if the corresponding error occurs.
+         * <p>The error message that is returned only if the corresponding error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cannot find product according to your domain.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class ExecuteWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4F68ABED-AC31-4412-9297-D9A8F0401108</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ExecuteWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class ExecuteWorkflowResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ExecuteWorkflowResponseBody} extends {@link TeaModel}
+     *
+     * <p>ExecuteWorkflowResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WfInstanceId")
         private Long wfInstanceId;
@@ -157,7 +176,10 @@ public class ExecuteWorkflowResponseBody extends TeaModel {
             private Long wfInstanceId; 
 
             /**
-             * The workflow instance ID.
+             * <p>The workflow instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111111</p>
              */
             public Builder wfInstanceId(Long wfInstanceId) {
                 this.wfInstanceId = wfInstanceId;

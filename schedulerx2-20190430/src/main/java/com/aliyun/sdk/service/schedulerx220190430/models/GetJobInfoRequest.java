@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetJobInfoRequest} extends {@link RequestModel}
  *
  * <p>GetJobInfoRequest</p>
@@ -127,7 +128,11 @@ public class GetJobInfoRequest extends Request {
         } 
 
         /**
-         * The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.
+         * <p>The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testSchedulerx.defaultGroup</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -136,7 +141,11 @@ public class GetJobInfoRequest extends Request {
         }
 
         /**
-         * The job ID. You can obtain the job ID on the Task Management page in the SchedulerX console.
+         * <p>The job ID. You can obtain the job ID on the Task Management page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>92583</p>
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -145,7 +154,10 @@ public class GetJobInfoRequest extends Request {
         }
 
         /**
-         * The job name.
+         * <p>The job name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>simpleJob</p>
          */
         public Builder jobName(String jobName) {
             this.putQueryParameter("JobName", jobName);
@@ -154,7 +166,11 @@ public class GetJobInfoRequest extends Request {
         }
 
         /**
-         * The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
+         * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -163,7 +179,10 @@ public class GetJobInfoRequest extends Request {
         }
 
         /**
-         * The namespace source. This parameter is required only for a special third party.
+         * <p>The namespace source. This parameter is required only for a special third party.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schedulerx</p>
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -172,7 +191,11 @@ public class GetJobInfoRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

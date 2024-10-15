@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchEnableJobsResponseBody} extends {@link TeaModel}
  *
  * <p>BatchEnableJobsResponseBody</p>
@@ -73,7 +74,10 @@ public class BatchEnableJobsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,10 @@ public class BatchEnableJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned additional information.
+         * <p>The returned additional information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>message</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -89,7 +96,10 @@ public class BatchEnableJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>71BCC0E3-64B2-4B63-A870-AFB64EBCB5A7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,11 +107,14 @@ public class BatchEnableJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the jobs were enabled at a time. Valid values:
-         * <p>
+         * <p>Indicates whether the jobs were enabled at a time. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

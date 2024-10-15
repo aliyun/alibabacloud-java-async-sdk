@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteJobResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteJobResponseBody</p>
@@ -73,7 +74,10 @@ public class DeleteJobResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,10 @@ public class DeleteJobResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information returned.
+         * <p>The additional information returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>message</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -89,7 +96,10 @@ public class DeleteJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4F68ABED-AC31-4412-9297-D9A8F0401108</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,11 +107,14 @@ public class DeleteJobResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the job was deleted. Valid values:
-         * <p>
+         * <p>Indicates whether the job was deleted. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The job was deleted.</li>
+         * <li><strong>false</strong>: The job was not deleted.</li>
+         * </ul>
          * 
-         * *   **true**: The job was deleted.
-         * *   **false**: The job was not deleted.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateJobResponseBody} extends {@link TeaModel}
  *
  * <p>CreateJobResponseBody</p>
@@ -85,7 +86,10 @@ public class CreateJobResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class CreateJobResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the job.
+         * <p>The details of the job.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class CreateJobResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information returned.
+         * <p>The additional information returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>message</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class CreateJobResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39090022-1F3B-4797-8518-6B61095F1AF0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class CreateJobResponseBody extends TeaModel {
         }
 
         /**
-         * If you set JobType to k8s, this parameter is required. Valid values:
-         * <p>
+         * <p>If you set JobType to k8s, this parameter is required. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class CreateJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateJobResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("JobId")
         private Long jobId;
@@ -161,7 +180,10 @@ public class CreateJobResponseBody extends TeaModel {
             private Long jobId; 
 
             /**
-             * The job ID.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>92583</p>
              */
             public Builder jobId(Long jobId) {
                 this.jobId = jobId;

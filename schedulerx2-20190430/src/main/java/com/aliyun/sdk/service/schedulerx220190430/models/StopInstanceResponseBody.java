@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>StopInstanceResponseBody</p>
@@ -73,7 +74,10 @@ public class StopInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,10 @@ public class StopInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned only if an error occurs.
+         * <p>The error message that is returned only if an error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Your request is denied as lack of ssl protect.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -89,7 +96,10 @@ public class StopInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4F68ABED-AC31-4412-9297-D9A8F0401108</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,11 +107,14 @@ public class StopInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call is successful.</li>
+         * <li><strong>false</strong>: The call fails.</li>
+         * </ul>
          * 
-         * *   **true**: The call is successful.
-         * *   **false**: The call fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

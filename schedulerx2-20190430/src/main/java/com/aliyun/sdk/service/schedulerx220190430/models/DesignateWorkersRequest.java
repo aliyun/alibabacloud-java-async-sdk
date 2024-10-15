@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DesignateWorkersRequest} extends {@link RequestModel}
  *
  * <p>DesignateWorkersRequest</p>
@@ -171,7 +172,11 @@ public class DesignateWorkersRequest extends Request {
         } 
 
         /**
-         * The type of the machines to be designated. Valid values: 1 and 2. The value 1 specifies the worker type. The value 2 specifies the label type.
+         * <p>The type of the machines to be designated. Valid values: 1 and 2. The value 1 specifies the worker type. The value 2 specifies the label type.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder designateType(Integer designateType) {
             this.putQueryParameter("DesignateType", designateType);
@@ -180,7 +185,11 @@ public class DesignateWorkersRequest extends Request {
         }
 
         /**
-         * The application group ID.
+         * <p>The application group ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hxm.test</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -189,7 +198,11 @@ public class DesignateWorkersRequest extends Request {
         }
 
         /**
-         * The job ID.
+         * <p>The job ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>144153</p>
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -198,7 +211,10 @@ public class DesignateWorkersRequest extends Request {
         }
 
         /**
-         * The designated `labels`. Specify the value of the parameter in a `JSON` string.
+         * <p>The designated <code>labels</code>. Specify the value of the parameter in a <code>JSON</code> string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;gray&quot;]</p>
          */
         public Builder labels(String labels) {
             this.putQueryParameter("Labels", labels);
@@ -207,7 +223,11 @@ public class DesignateWorkersRequest extends Request {
         }
 
         /**
-         * The unique identifier (UID) of the namespace.
+         * <p>The unique identifier (UID) of the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4a06d5ea-f576-4326-842c-fb14ea043d8d</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -216,7 +236,10 @@ public class DesignateWorkersRequest extends Request {
         }
 
         /**
-         * The source of the namespace.
+         * <p>The source of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schedulerx</p>
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -225,7 +248,11 @@ public class DesignateWorkersRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -234,7 +261,11 @@ public class DesignateWorkersRequest extends Request {
         }
 
         /**
-         * Specifies whether to allow a failover.
+         * <p>Specifies whether to allow a failover.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder transferable(Boolean transferable) {
             this.putQueryParameter("Transferable", transferable);
@@ -243,7 +274,10 @@ public class DesignateWorkersRequest extends Request {
         }
 
         /**
-         * The designated machines. Specify the value of the parameter in a JSON string.
+         * <p>The designated machines. Specify the value of the parameter in a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;127.0.0.1&quot;,&quot;127.0.0.2&quot;]</p>
          */
         public Builder workers(String workers) {
             this.putQueryParameter("Workers", workers);

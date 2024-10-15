@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteJobRequest} extends {@link RequestModel}
  *
  * <p>DeleteJobRequest</p>
@@ -113,7 +114,11 @@ public class DeleteJobRequest extends Request {
         } 
 
         /**
-         * The ID of the application. You can obtain the application ID on the **Application Management** page in the SchedulerX console.
+         * <p>The ID of the application. You can obtain the application ID on the <strong>Application Management</strong> page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testSchedulerx.defaultGroup</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -122,7 +127,11 @@ public class DeleteJobRequest extends Request {
         }
 
         /**
-         * The ID of the job. You can obtain the ID on the **Task Management** page in the SchedulerX console.
+         * <p>The ID of the job. You can obtain the ID on the <strong>Task Management</strong> page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>92583</p>
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -131,7 +140,11 @@ public class DeleteJobRequest extends Request {
         }
 
         /**
-         * The ID of the namespace. You can obtain the ID of the namespace on the **Namespace** page in the SchedulerX console.
+         * <p>The ID of the namespace. You can obtain the ID of the namespace on the <strong>Namespace</strong> page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -140,7 +153,10 @@ public class DeleteJobRequest extends Request {
         }
 
         /**
-         * The source of the namespace. This parameter is required only for a special third party.
+         * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schedulerx</p>
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -149,7 +165,11 @@ public class DeleteJobRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

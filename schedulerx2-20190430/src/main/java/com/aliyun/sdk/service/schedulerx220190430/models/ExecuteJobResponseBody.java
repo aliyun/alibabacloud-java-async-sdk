@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExecuteJobResponseBody} extends {@link TeaModel}
  *
  * <p>ExecuteJobResponseBody</p>
@@ -85,7 +86,10 @@ public class ExecuteJobResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class ExecuteJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the job instance that is returned if the request is successful.
+         * <p>The ID of the job instance that is returned if the request is successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class ExecuteJobResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned only if the corresponding error occurs.
+         * <p>The error message that is returned only if the corresponding error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>groupid not exist groupId: testSchedulerx.defaultGroup namespace: adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class ExecuteJobResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4F68ABED-AC31-4412-9297-D9A8F0401108****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class ExecuteJobResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
          * 
-         * *   `true`
-         * *   `false`
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class ExecuteJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ExecuteJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>ExecuteJobResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("JobInstanceId")
         private Long jobInstanceId;
@@ -161,7 +180,10 @@ public class ExecuteJobResponseBody extends TeaModel {
             private Long jobInstanceId; 
 
             /**
-             * The job instance ID.
+             * <p>The job instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11111111</p>
              */
             public Builder jobInstanceId(Long jobInstanceId) {
                 this.jobInstanceId = jobInstanceId;

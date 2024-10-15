@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNamespaceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateNamespaceResponseBody</p>
@@ -85,7 +86,10 @@ public class CreateNamespaceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the namespace.
+         * <p>The information about the namespace.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned only if the corresponding error occurs.
+         * <p>The error message that is returned only if the corresponding error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>namespace=test3 is existed, noting update</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4F68ABED-AC31-4412-9297-D9A8F0401108</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the application was created. Valid values:
-         * <p>
+         * <p>Indicates whether the application was created. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class CreateNamespaceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateNamespaceResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateNamespaceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NamespaceUid")
         private String namespaceUid;
@@ -161,7 +180,10 @@ public class CreateNamespaceResponseBody extends TeaModel {
             private String namespaceUid; 
 
             /**
-             * The UID of the namespace.
+             * <p>The UID of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
              */
             public Builder namespaceUid(String namespaceUid) {
                 this.namespaceUid = namespaceUid;

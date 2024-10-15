@@ -45,15 +45,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, you must add the following dependency to the pom.xml file:
-      * ```xml
-      * <dependency>
-      *     <groupId>com.aliyun</groupId>
-      *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
-      *     <version>1.0.4</version>
-      * </dependency>
-      * ```
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, you must add the following dependency to the pom.xml file:</p>
+     * <pre><code class="language-xml">&lt;dependency&gt;
+     *     &lt;groupId&gt;com.aliyun&lt;/groupId&gt;
+     *     &lt;artifactId&gt;aliyun-java-sdk-schedulerx2&lt;/artifactId&gt;
+     *     &lt;version&gt;1.0.4&lt;/version&gt;
+     * &lt;/dependency&gt;
+     * </code></pre>
+     * 
+     * @param request the request parameters of BatchDeleteJobs  BatchDeleteJobsRequest
+     * @return BatchDeleteJobsResponse
      */
     @Override
     public CompletableFuture<BatchDeleteJobsResponse> batchDeleteJobs(BatchDeleteJobsRequest request) {
@@ -69,6 +71,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchDeleteRouteStrategy  BatchDeleteRouteStrategyRequest
+     * @return BatchDeleteRouteStrategyResponse
+     */
     @Override
     public CompletableFuture<BatchDeleteRouteStrategyResponse> batchDeleteRouteStrategy(BatchDeleteRouteStrategyRequest request) {
         try {
@@ -84,15 +90,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, you must add the following dependency to the pom.xml file:
-      * ```xml
-      * <dependency>
-      *     <groupId>com.aliyun</groupId>
-      *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
-      *     <version>1.0.4</version>
-      * </dependency>
-      * ```
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, you must add the following dependency to the pom.xml file:</p>
+     * <pre><code class="language-xml">&lt;dependency&gt;
+     *     &lt;groupId&gt;com.aliyun&lt;/groupId&gt;
+     *     &lt;artifactId&gt;aliyun-java-sdk-schedulerx2&lt;/artifactId&gt;
+     *     &lt;version&gt;1.0.4&lt;/version&gt;
+     * &lt;/dependency&gt;
+     * </code></pre>
+     * 
+     * @param request the request parameters of BatchDisableJobs  BatchDisableJobsRequest
+     * @return BatchDisableJobsResponse
      */
     @Override
     public CompletableFuture<BatchDisableJobsResponse> batchDisableJobs(BatchDisableJobsRequest request) {
@@ -109,15 +117,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, you must add the following dependency to the pom.xml file:
-      * ```xml
-      * <dependency>
-      *     <groupId>com.aliyun</groupId>
-      *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
-      *     <version>1.0.4</version>
-      * </dependency>
-      * ```
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, you must add the following dependency to the pom.xml file:</p>
+     * <pre><code class="language-xml">&lt;dependency&gt;
+     *     &lt;groupId&gt;com.aliyun&lt;/groupId&gt;
+     *     &lt;artifactId&gt;aliyun-java-sdk-schedulerx2&lt;/artifactId&gt;
+     *     &lt;version&gt;1.0.4&lt;/version&gt;
+     * &lt;/dependency&gt;
+     * </code></pre>
+     * 
+     * @param request the request parameters of BatchEnableJobs  BatchEnableJobsRequest
+     * @return BatchEnableJobsResponse
      */
     @Override
     public CompletableFuture<BatchEnableJobsResponse> batchEnableJobs(BatchEnableJobsRequest request) {
@@ -133,6 +143,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAppGroup  CreateAppGroupRequest
+     * @return CreateAppGroupResponse
+     */
     @Override
     public CompletableFuture<CreateAppGroupResponse> createAppGroup(CreateAppGroupRequest request) {
         try {
@@ -147,6 +161,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateJob  CreateJobRequest
+     * @return CreateJobResponse
+     */
     @Override
     public CompletableFuture<CreateJobResponse> createJob(CreateJobRequest request) {
         try {
@@ -161,6 +179,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateNamespace  CreateNamespaceRequest
+     * @return CreateNamespaceResponse
+     */
     @Override
     public CompletableFuture<CreateNamespaceResponse> createNamespace(CreateNamespaceRequest request) {
         try {
@@ -175,6 +197,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateRouteStrategy  CreateRouteStrategyRequest
+     * @return CreateRouteStrategyResponse
+     */
     @Override
     public CompletableFuture<CreateRouteStrategyResponse> createRouteStrategy(CreateRouteStrategyRequest request) {
         try {
@@ -189,6 +215,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateWorkflow  CreateWorkflowRequest
+     * @return CreateWorkflowResponse
+     */
     @Override
     public CompletableFuture<CreateWorkflowResponse> createWorkflow(CreateWorkflowRequest request) {
         try {
@@ -203,6 +233,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAppGroup  DeleteAppGroupRequest
+     * @return DeleteAppGroupResponse
+     */
     @Override
     public CompletableFuture<DeleteAppGroupResponse> deleteAppGroup(DeleteAppGroupRequest request) {
         try {
@@ -217,6 +251,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteJob  DeleteJobRequest
+     * @return DeleteJobResponse
+     */
     @Override
     public CompletableFuture<DeleteJobResponse> deleteJob(DeleteJobRequest request) {
         try {
@@ -231,6 +269,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteRouteStrategy  DeleteRouteStrategyRequest
+     * @return DeleteRouteStrategyResponse
+     */
     @Override
     public CompletableFuture<DeleteRouteStrategyResponse> deleteRouteStrategy(DeleteRouteStrategyRequest request) {
         try {
@@ -245,6 +287,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteWorkflow  DeleteWorkflowRequest
+     * @return DeleteWorkflowResponse
+     */
     @Override
     public CompletableFuture<DeleteWorkflowResponse> deleteWorkflow(DeleteWorkflowRequest request) {
         try {
@@ -259,6 +305,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
     @Override
     public CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request) {
         try {
@@ -273,6 +323,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DesignateWorkers  DesignateWorkersRequest
+     * @return DesignateWorkersResponse
+     */
     @Override
     public CompletableFuture<DesignateWorkersResponse> designateWorkers(DesignateWorkersRequest request) {
         try {
@@ -287,6 +341,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisableJob  DisableJobRequest
+     * @return DisableJobResponse
+     */
     @Override
     public CompletableFuture<DisableJobResponse> disableJob(DisableJobRequest request) {
         try {
@@ -301,6 +359,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisableWorkflow  DisableWorkflowRequest
+     * @return DisableWorkflowResponse
+     */
     @Override
     public CompletableFuture<DisableWorkflowResponse> disableWorkflow(DisableWorkflowRequest request) {
         try {
@@ -315,6 +377,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableJob  EnableJobRequest
+     * @return EnableJobResponse
+     */
     @Override
     public CompletableFuture<EnableJobResponse> enableJob(EnableJobRequest request) {
         try {
@@ -329,6 +395,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableWorkflow  EnableWorkflowRequest
+     * @return EnableWorkflowResponse
+     */
     @Override
     public CompletableFuture<EnableWorkflowResponse> enableWorkflow(EnableWorkflowRequest request) {
         try {
@@ -344,8 +414,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > The combination of the `JobID` and `ScheduleTime` parameters serves as a unique index. Therefore, after the ExecuteJob operation is called to run a job once, a sleep for one second is required before the ExecuteJob operation is called to run the job again. Otherwise, the job may fail.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The combination of the <code>JobID</code> and <code>ScheduleTime</code> parameters serves as a unique index. Therefore, after the ExecuteJob operation is called to run a job once, a sleep for one second is required before the ExecuteJob operation is called to run the job again. Otherwise, the job may fail.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ExecuteJob  ExecuteJobRequest
+     * @return ExecuteJobResponse
      */
     @Override
     public CompletableFuture<ExecuteJobResponse> executeJob(ExecuteJobRequest request) {
@@ -361,6 +436,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExecuteWorkflow  ExecuteWorkflowRequest
+     * @return ExecuteWorkflowResponse
+     */
     @Override
     public CompletableFuture<ExecuteWorkflowResponse> executeWorkflow(ExecuteWorkflowRequest request) {
         try {
@@ -375,6 +454,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAppGroup  GetAppGroupRequest
+     * @return GetAppGroupResponse
+     */
     @Override
     public CompletableFuture<GetAppGroupResponse> getAppGroup(GetAppGroupRequest request) {
         try {
@@ -389,6 +472,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetJobInfo  GetJobInfoRequest
+     * @return GetJobInfoResponse
+     */
     @Override
     public CompletableFuture<GetJobInfoResponse> getJobInfo(GetJobInfoRequest request) {
         try {
@@ -403,6 +490,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetJobInstance  GetJobInstanceRequest
+     * @return GetJobInstanceResponse
+     */
     @Override
     public CompletableFuture<GetJobInstanceResponse> getJobInstance(GetJobInstanceRequest request) {
         try {
@@ -417,6 +508,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetJobInstanceList  GetJobInstanceListRequest
+     * @return GetJobInstanceListResponse
+     */
     @Override
     public CompletableFuture<GetJobInstanceListResponse> getJobInstanceList(GetJobInstanceListRequest request) {
         try {
@@ -431,6 +526,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetLog  GetLogRequest
+     * @return GetLogResponse
+     */
     @Override
     public CompletableFuture<GetLogResponse> getLog(GetLogRequest request) {
         try {
@@ -445,6 +544,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetOverview  GetOverviewRequest
+     * @return GetOverviewResponse
+     */
     @Override
     public CompletableFuture<GetOverviewResponse> getOverview(GetOverviewRequest request) {
         try {
@@ -459,6 +562,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetWorkFlow  GetWorkFlowRequest
+     * @return GetWorkFlowResponse
+     */
     @Override
     public CompletableFuture<GetWorkFlowResponse> getWorkFlow(GetWorkFlowRequest request) {
         try {
@@ -473,6 +580,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetWorkerList  GetWorkerListRequest
+     * @return GetWorkerListResponse
+     */
     @Override
     public CompletableFuture<GetWorkerListResponse> getWorkerList(GetWorkerListRequest request) {
         try {
@@ -487,6 +598,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetWorkflowInstance  GetWorkflowInstanceRequest
+     * @return GetWorkflowInstanceResponse
+     */
     @Override
     public CompletableFuture<GetWorkflowInstanceResponse> getWorkflowInstance(GetWorkflowInstanceRequest request) {
         try {
@@ -501,6 +616,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GrantPermission  GrantPermissionRequest
+     * @return GrantPermissionResponse
+     */
     @Override
     public CompletableFuture<GrantPermissionResponse> grantPermission(GrantPermissionRequest request) {
         try {
@@ -516,15 +635,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, you must add the following dependency to the pom.xml file:
-      * ```xml
-      * <dependency>
-      *     <groupId>com.aliyun</groupId>
-      *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
-      *     <version>1.0.5</version>
-      * </dependency>
-      * ```
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, you must add the following dependency to the pom.xml file:</p>
+     * <pre><code class="language-xml">&lt;dependency&gt;
+     *     &lt;groupId&gt;com.aliyun&lt;/groupId&gt;
+     *     &lt;artifactId&gt;aliyun-java-sdk-schedulerx2&lt;/artifactId&gt;
+     *     &lt;version&gt;1.0.5&lt;/version&gt;
+     * &lt;/dependency&gt;
+     * </code></pre>
+     * 
+     * @param request the request parameters of ListGroups  ListGroupsRequest
+     * @return ListGroupsResponse
      */
     @Override
     public CompletableFuture<ListGroupsResponse> listGroups(ListGroupsRequest request) {
@@ -541,13 +662,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, you must add the following dependency to the pom.xml file:
-      *     <dependency>
-      *           <groupId>com.aliyun</groupId>
-      *           <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
-      *           <version>1.0.5</version>
-      *     </dependency>
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, you must add the following dependency to the pom.xml file:
+     *     <dependency>
+     *           <groupId>com.aliyun</groupId>
+     *           <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+     *           <version>1.0.5</version>
+     *     </dependency></p>
+     * 
+     * @param request the request parameters of ListJobs  ListJobsRequest
+     * @return ListJobsResponse
      */
     @Override
     public CompletableFuture<ListJobsResponse> listJobs(ListJobsRequest request) {
@@ -564,13 +688,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, you must add the following dependency to the pom.xml file:
-      *     <dependency>
-      *         <groupId>com.aliyun</groupId>
-      *         <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
-      *         <version>1.0.5</version>
-      *     </dependency>
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, you must add the following dependency to the pom.xml file:
+     *     <dependency>
+     *         <groupId>com.aliyun</groupId>
+     *         <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+     *         <version>1.0.5</version>
+     *     </dependency></p>
+     * 
+     * @param request the request parameters of ListNamespaces  ListNamespacesRequest
+     * @return ListNamespacesResponse
      */
     @Override
     public CompletableFuture<ListNamespacesResponse> listNamespaces(ListNamespacesRequest request) {
@@ -586,6 +713,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListWorkflowInstance  ListWorkflowInstanceRequest
+     * @return ListWorkflowInstanceResponse
+     */
     @Override
     public CompletableFuture<ListWorkflowInstanceResponse> listWorkflowInstance(ListWorkflowInstanceRequest request) {
         try {
@@ -600,6 +731,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RerunJob  RerunJobRequest
+     * @return RerunJobResponse
+     */
     @Override
     public CompletableFuture<RerunJobResponse> rerunJob(RerunJobRequest request) {
         try {
@@ -614,6 +749,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RetryJobInstance  RetryJobInstanceRequest
+     * @return RetryJobInstanceResponse
+     */
     @Override
     public CompletableFuture<RetryJobInstanceResponse> retryJobInstance(RetryJobInstanceRequest request) {
         try {
@@ -628,6 +767,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RevokePermission  RevokePermissionRequest
+     * @return RevokePermissionResponse
+     */
     @Override
     public CompletableFuture<RevokePermissionResponse> revokePermission(RevokePermissionRequest request) {
         try {
@@ -642,6 +785,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetJobInstanceSuccess  SetJobInstanceSuccessRequest
+     * @return SetJobInstanceSuccessResponse
+     */
     @Override
     public CompletableFuture<SetJobInstanceSuccessResponse> setJobInstanceSuccess(SetJobInstanceSuccessRequest request) {
         try {
@@ -656,6 +803,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetWfInstanceSuccess  SetWfInstanceSuccessRequest
+     * @return SetWfInstanceSuccessResponse
+     */
     @Override
     public CompletableFuture<SetWfInstanceSuccessResponse> setWfInstanceSuccess(SetWfInstanceSuccessRequest request) {
         try {
@@ -670,6 +821,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopInstance  StopInstanceRequest
+     * @return StopInstanceResponse
+     */
     @Override
     public CompletableFuture<StopInstanceResponse> stopInstance(StopInstanceRequest request) {
         try {
@@ -684,6 +839,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateAppGroup  UpdateAppGroupRequest
+     * @return UpdateAppGroupResponse
+     */
     @Override
     public CompletableFuture<UpdateAppGroupResponse> updateAppGroup(UpdateAppGroupRequest request) {
         try {
@@ -698,6 +857,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateJob  UpdateJobRequest
+     * @return UpdateJobResponse
+     */
     @Override
     public CompletableFuture<UpdateJobResponse> updateJob(UpdateJobRequest request) {
         try {
@@ -712,6 +875,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateWorkflow  UpdateWorkflowRequest
+     * @return UpdateWorkflowResponse
+     */
     @Override
     public CompletableFuture<UpdateWorkflowResponse> updateWorkflow(UpdateWorkflowRequest request) {
         try {
@@ -726,6 +893,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateWorkflowDag  UpdateWorkflowDagRequest
+     * @return UpdateWorkflowDagResponse
+     */
     @Override
     public CompletableFuture<UpdateWorkflowDagResponse> updateWorkflowDag(UpdateWorkflowDagRequest request) {
         try {

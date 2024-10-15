@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWorkerListResponseBody} extends {@link TeaModel}
  *
  * <p>GetWorkerListResponseBody</p>
@@ -85,7 +86,10 @@ public class GetWorkerListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class GetWorkerListResponseBody extends TeaModel {
         }
 
         /**
-         * The job information.
+         * <p>The job information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class GetWorkerListResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cannot find product according to your domain.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class GetWorkerListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4F68ABED-AC31-4412-9297-D9A8F0401108****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class GetWorkerListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call is successful.</li>
+         * <li><strong>false</strong>: The call fails.</li>
+         * </ul>
          * 
-         * *   **true**: The call is successful.
-         * *   **false**: The call fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class GetWorkerListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetWorkerListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkerListResponseBody</p>
+     */
     public static class WorkerInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
@@ -221,7 +240,10 @@ public class GetWorkerListResponseBody extends TeaModel {
             private String workerAddress; 
 
             /**
-             * The IP address of the worker.
+             * <p>The IP address of the worker.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30.225.16.49</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -229,7 +251,10 @@ public class GetWorkerListResponseBody extends TeaModel {
             }
 
             /**
-             * The label of the worker.
+             * <p>The label of the worker.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gray</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -237,7 +262,10 @@ public class GetWorkerListResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of the worker.
+             * <p>The port number of the worker.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60831</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -245,7 +273,10 @@ public class GetWorkerListResponseBody extends TeaModel {
             }
 
             /**
-             * The startup method of the worker.
+             * <p>The startup method of the worker.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>springboot</p>
              */
             public Builder starter(String starter) {
                 this.starter = starter;
@@ -253,7 +284,10 @@ public class GetWorkerListResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the worker.
+             * <p>The version of the worker.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.3.4</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -261,7 +295,10 @@ public class GetWorkerListResponseBody extends TeaModel {
             }
 
             /**
-             * The address of the worker. The address is in the format of ${worker_id}@${worker_ip}:${worker_port}.
+             * <p>The address of the worker. The address is in the format of ${worker_id}@${worker_ip}:${worker_port}.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:030225016049_11734_25917@30.225.16.49">030225016049_11734_25917@30.225.16.49</a>:60831</p>
              */
             public Builder workerAddress(String workerAddress) {
                 this.workerAddress = workerAddress;
@@ -275,6 +312,12 @@ public class GetWorkerListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetWorkerListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkerListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WorkerInfos")
         private java.util.List < WorkerInfos> workerInfos;
@@ -302,7 +345,7 @@ public class GetWorkerListResponseBody extends TeaModel {
             private java.util.List < WorkerInfos> workerInfos; 
 
             /**
-             * The worker information.
+             * <p>The worker information.</p>
              */
             public Builder workerInfos(java.util.List < WorkerInfos> workerInfos) {
                 this.workerInfos = workerInfos;

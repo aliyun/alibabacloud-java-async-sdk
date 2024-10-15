@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RerunJobRequest} extends {@link RequestModel}
  *
  * <p>RerunJobRequest</p>
@@ -158,7 +159,11 @@ public class RerunJobRequest extends Request {
         } 
 
         /**
-         * The data timestamp of the job. Specify a string in the HH:mm:ss format.
+         * <p>The data timestamp of the job. Specify a string in the HH:mm:ss format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10:00:00</p>
          */
         public Builder dataTime(String dataTime) {
             this.putBodyParameter("DataTime", dataTime);
@@ -167,7 +172,11 @@ public class RerunJobRequest extends Request {
         }
 
         /**
-         * The time when the job stops running. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The time when the job stops running. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1645718400000</p>
          */
         public Builder endDate(Long endDate) {
             this.putBodyParameter("EndDate", endDate);
@@ -176,7 +185,11 @@ public class RerunJobRequest extends Request {
         }
 
         /**
-         * The application group ID. You can obtain the application group ID on the Application Management page in the SchedulerX console.
+         * <p>The application group ID. You can obtain the application group ID on the Application Management page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testSchedulerx.defaultGroup</p>
          */
         public Builder groupId(String groupId) {
             this.putBodyParameter("GroupId", groupId);
@@ -185,7 +198,11 @@ public class RerunJobRequest extends Request {
         }
 
         /**
-         * The job ID.
+         * <p>The job ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder jobId(Long jobId) {
             this.putBodyParameter("JobId", jobId);
@@ -194,7 +211,11 @@ public class RerunJobRequest extends Request {
         }
 
         /**
-         * The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
+         * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -203,7 +224,10 @@ public class RerunJobRequest extends Request {
         }
 
         /**
-         * The source of the namespace. This parameter is required only for a special third party.
+         * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schedulerx</p>
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putBodyParameter("NamespaceSource", namespaceSource);
@@ -212,7 +236,11 @@ public class RerunJobRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -221,7 +249,11 @@ public class RerunJobRequest extends Request {
         }
 
         /**
-         * The time when the job starts to rerun. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The time when the job starts to rerun. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1645459200000</p>
          */
         public Builder startDate(Long startDate) {
             this.putBodyParameter("StartDate", startDate);

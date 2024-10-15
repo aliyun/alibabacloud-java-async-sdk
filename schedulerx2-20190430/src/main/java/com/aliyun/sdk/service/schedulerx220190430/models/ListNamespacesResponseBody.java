@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNamespacesResponseBody} extends {@link TeaModel}
  *
  * <p>ListNamespacesResponseBody</p>
@@ -85,7 +86,10 @@ public class ListNamespacesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the namespaces.
+         * <p>The information about the namespaces.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>message</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>71BCC0E3-64B2-4B63-A870-AFB64EBCB58C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class ListNamespacesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListNamespacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNamespacesResponseBody</p>
+     */
     public static class Namespaces extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -185,7 +204,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             private String uId; 
 
             /**
-             * The description of the namespace.
+             * <p>The description of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -193,7 +215,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the namespace.
+             * <p>The name of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>doc</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -201,7 +226,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace ID.
+             * <p>The namespace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1a72ecb1-b4cc-400a-a71b-20cdec9b****</p>
              */
             public Builder uId(String uId) {
                 this.uId = uId;
@@ -215,6 +243,12 @@ public class ListNamespacesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListNamespacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNamespacesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Namespaces")
         private java.util.List < Namespaces> namespaces;
@@ -242,7 +276,7 @@ public class ListNamespacesResponseBody extends TeaModel {
             private java.util.List < Namespaces> namespaces; 
 
             /**
-             * The namespaces and their details.
+             * <p>The namespaces and their details.</p>
              */
             public Builder namespaces(java.util.List < Namespaces> namespaces) {
                 this.namespaces = namespaces;

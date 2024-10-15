@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetJobInstanceListRequest} extends {@link RequestModel}
  *
  * <p>GetJobInstanceListRequest</p>
@@ -182,7 +183,10 @@ public class GetJobInstanceListRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. Specify the time as a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The end of the time range to query. Specify a UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1684202400000</p>
          */
         public Builder endTimestamp(Long endTimestamp) {
             this.putQueryParameter("EndTimestamp", endTimestamp);
@@ -191,7 +195,11 @@ public class GetJobInstanceListRequest extends Request {
         }
 
         /**
-         * The application group ID.
+         * <p>The application group ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testSchedulerx.defaultGroup</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -200,7 +208,10 @@ public class GetJobInstanceListRequest extends Request {
         }
 
         /**
-         * The job ID.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>92583</p>
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -209,7 +220,11 @@ public class GetJobInstanceListRequest extends Request {
         }
 
         /**
-         * The namespace ID. You can obtain the namespace ID on the **Namespace** page in the SchedulerX console.
+         * <p>The namespace ID. You can obtain the namespace ID on the <strong>Namespace</strong> page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -218,7 +233,10 @@ public class GetJobInstanceListRequest extends Request {
         }
 
         /**
-         * The source of the namespace. This parameter is required only for a special third party.
+         * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schedulerx</p>
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -227,7 +245,10 @@ public class GetJobInstanceListRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -236,7 +257,10 @@ public class GetJobInstanceListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -245,7 +269,11 @@ public class GetJobInstanceListRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -254,7 +282,10 @@ public class GetJobInstanceListRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time as a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The beginning of the time range to query. Specify a UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1684116000000</p>
          */
         public Builder startTimestamp(Long startTimestamp) {
             this.putQueryParameter("StartTimestamp", startTimestamp);
@@ -263,10 +294,11 @@ public class GetJobInstanceListRequest extends Request {
         }
 
         /**
-         * The state of the job instance. Valid values:
-         * <p>
+         * <p>The status of the job instance. Valid values:</p>
+         * <p>1: The job instance is pending. 3: The job instance is running. 4: The job instance is run. 5: The job instance fails. 9: The request for running the job instance is rejected. To specify this parameter, you must declare the following enumeration class: com.alibaba.schedulerx.common.domain.InstanceStatus.</p>
          * 
-         * 1: The job instance is waiting for execution. 3: The job instance is running. 4: The job instance is successful. 5: The job instance fails. 9: The job instance is rejected. Enumeration class: com.alibaba.schedulerx.common.domain.InstanceStatus
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

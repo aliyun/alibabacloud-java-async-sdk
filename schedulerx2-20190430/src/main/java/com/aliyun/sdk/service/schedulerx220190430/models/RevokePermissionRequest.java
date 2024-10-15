@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RevokePermissionRequest} extends {@link RequestModel}
  *
  * <p>RevokePermissionRequest</p>
@@ -113,7 +114,11 @@ public class RevokePermissionRequest extends Request {
         } 
 
         /**
-         * The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.
+         * <p>The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.defalutGroup</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -122,7 +127,11 @@ public class RevokePermissionRequest extends Request {
         }
 
         /**
-         * The unique identifier (UID) of the namespace. You can obtain the namespace UID on the Namespace page in the SchedulerX console.
+         * <p>The unique identifier (UID) of the namespace. You can obtain the namespace UID on the Namespace page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffcdf01</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -131,7 +140,10 @@ public class RevokePermissionRequest extends Request {
         }
 
         /**
-         * The source of the namespace. This parameter is required only for a special third party.
+         * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schedulerx</p>
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -140,7 +152,11 @@ public class RevokePermissionRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -149,7 +165,11 @@ public class RevokePermissionRequest extends Request {
         }
 
         /**
-         * The UID of the RAM user.
+         * <p>The UID of the RAM user.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>277641081920123456</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

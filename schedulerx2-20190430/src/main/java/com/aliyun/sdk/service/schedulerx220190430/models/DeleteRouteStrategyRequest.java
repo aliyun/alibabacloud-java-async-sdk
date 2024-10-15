@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteRouteStrategyRequest} extends {@link RequestModel}
  *
  * <p>DeleteRouteStrategyRequest</p>
@@ -98,7 +99,11 @@ public class DeleteRouteStrategyRequest extends Request {
         } 
 
         /**
-         * The application ID. You can obtain the application ID on the **Application Management** page in the SchedulerX console.
+         * <p>The application ID. You can obtain the application ID on the <strong>Application Management</strong> page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testSchedulerx.defaultGroup</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -107,7 +112,10 @@ public class DeleteRouteStrategyRequest extends Request {
         }
 
         /**
-         * The job ID. You can obtain the job ID on the **Task Management** page in the SchedulerX console.
+         * <p>The job ID. You can obtain the job ID on the <strong>Task Management</strong> page in the SchedulerX console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>92583</p>
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -116,7 +124,11 @@ public class DeleteRouteStrategyRequest extends Request {
         }
 
         /**
-         * The namespace ID. You can obtain the ID of the namespace on the **Namespace** page in the SchedulerX console.
+         * <p>The namespace ID. You can obtain the ID of the namespace on the <strong>Namespace</strong> page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -125,7 +137,11 @@ public class DeleteRouteStrategyRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

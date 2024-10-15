@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRouteStrategyResponseBody} extends {@link TeaModel}
  *
  * <p>CreateRouteStrategyResponseBody</p>
@@ -85,7 +86,10 @@ public class CreateRouteStrategyResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class CreateRouteStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class CreateRouteStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information, including errors and tips.
+         * <p>The additional information, including errors and tips.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>strategy name is null or empty.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class CreateRouteStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4F68ABED-AC31-4412-9297-D9A8F0401108</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class CreateRouteStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class CreateRouteStrategyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateRouteStrategyResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateRouteStrategyResponseBody</p>
+     */
     public static class Data extends TeaModel {
         private Data(Builder builder) {
         }
