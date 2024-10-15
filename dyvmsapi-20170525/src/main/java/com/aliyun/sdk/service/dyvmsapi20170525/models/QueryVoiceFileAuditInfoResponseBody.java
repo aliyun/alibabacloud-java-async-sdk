@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryVoiceFileAuditInfoResponseBody} extends {@link TeaModel}
  *
  * <p>QueryVoiceFileAuditInfoResponseBody</p>
  */
 public class QueryVoiceFileAuditInfoResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryVoiceFileAuditInfoResponseBody(Builder builder) {
@@ -74,10 +74,11 @@ public class QueryVoiceFileAuditInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <p>The value OK indicates that the request was successful. For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/112502.html">API error codes</a>.</p>
          * 
-         * The value OK indicates that the request was successful. For more information about other response codes, see [API error codes](~~112502~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -85,7 +86,7 @@ public class QueryVoiceFileAuditInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -93,7 +94,10 @@ public class QueryVoiceFileAuditInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -101,7 +105,10 @@ public class QueryVoiceFileAuditInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A90E4451-FED7-49D2-87C8-00700A8C4D0D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -114,14 +121,20 @@ public class QueryVoiceFileAuditInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryVoiceFileAuditInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryVoiceFileAuditInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AuditState")
+        @com.aliyun.core.annotation.NameInMap("AuditState")
         private String auditState;
 
-        @NameInMap("RejectInfo")
+        @com.aliyun.core.annotation.NameInMap("RejectInfo")
         private String rejectInfo;
 
-        @NameInMap("VoiceCode")
+        @com.aliyun.core.annotation.NameInMap("VoiceCode")
         private String voiceCode;
 
         private Data(Builder builder) {
@@ -165,17 +178,20 @@ public class QueryVoiceFileAuditInfoResponseBody extends TeaModel {
             private String voiceCode; 
 
             /**
-             * The review state of the voice file. Valid values:
-             * <p>
+             * <p>The review state of the voice file. Valid values:</p>
+             * <ul>
+             * <li><strong>AUDIT_STATE_INIT</strong>: The voice file was under review.</li>
+             * <li><strong>AUDIT_STATE_PASS</strong>: The voice file was approved.</li>
+             * <li><strong>AUDIT_STATE_NOT_PASS</strong>: The voice file was rejected.</li>
+             * <li><strong>AUDIT_STATE_UPLOADING</strong>: The voice file was approved and is being uploaded.</li>
+             * <li><strong>AUDIT_STATE_REDOING</strong>: The voice file was being reprocessed.</li>
+             * <li><strong>AUDIT_SATE_CANCEL</strong>: The review of the voice file was canceled.</li>
+             * <li><strong>AUDIT_PAUSE</strong>: The review of the voice file was suspended.</li>
+             * <li><strong>AUDIT_ORDER_FINISHED</strong>: The voice file was approved by the ticket system and was waiting for the review of the Internet service provider (ISP).</li>
+             * </ul>
              * 
-             * *   **AUDIT_STATE_INIT**: The voice file was under review.
-             * *   **AUDIT_STATE_PASS**: The voice file was approved.
-             * *   **AUDIT_STATE_NOT_PASS**: The voice file was rejected.
-             * *   **AUDIT_STATE_UPLOADING**: The voice file was approved and is being uploaded.
-             * *   **AUDIT_STATE_REDOING**: The voice file was being reprocessed.
-             * *   **AUDIT_SATE_CANCEL**: The review of the voice file was canceled.
-             * *   **AUDIT_PAUSE**: The review of the voice file was suspended.
-             * *   **AUDIT_ORDER_FINISHED**: The voice file was approved by the ticket system and was waiting for the review of the Internet service provider (ISP).
+             * <strong>example:</strong>
+             * <p>AUDIT_STATE_NOT_PASS</p>
              */
             public Builder auditState(String auditState) {
                 this.auditState = auditState;
@@ -183,7 +199,10 @@ public class QueryVoiceFileAuditInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the voice file was rejected.
+             * <p>The reason why the voice file was rejected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This business is not supported</p>
              */
             public Builder rejectInfo(String rejectInfo) {
                 this.rejectInfo = rejectInfo;
@@ -191,7 +210,10 @@ public class QueryVoiceFileAuditInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the voice file.
+             * <p>The code of the voice file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8501d2eb-efbb-471f-xxx8-****.wav</p>
              */
             public Builder voiceCode(String voiceCode) {
                 this.voiceCode = voiceCode;

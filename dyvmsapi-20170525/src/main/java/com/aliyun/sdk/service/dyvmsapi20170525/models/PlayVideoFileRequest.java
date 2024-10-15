@@ -1,51 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PlayVideoFileRequest} extends {@link RequestModel}
  *
  * <p>PlayVideoFileRequest</p>
  */
 public class PlayVideoFileRequest extends Request {
-    @Query
-    @NameInMap("CallId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallId")
     private String callId;
 
-    @Query
-    @NameInMap("CalledNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CalledNumber")
     private String calledNumber;
 
-    @Query
-    @NameInMap("OutId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OnlyPhone")
+    private Boolean onlyPhone;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutId")
     private String outId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("VideoId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VideoId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String videoId;
 
     private PlayVideoFileRequest(Builder builder) {
         super(builder);
         this.callId = builder.callId;
         this.calledNumber = builder.calledNumber;
+        this.onlyPhone = builder.onlyPhone;
         this.outId = builder.outId;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -78,6 +82,13 @@ public class PlayVideoFileRequest extends Request {
      */
     public String getCalledNumber() {
         return this.calledNumber;
+    }
+
+    /**
+     * @return onlyPhone
+     */
+    public Boolean getOnlyPhone() {
+        return this.onlyPhone;
     }
 
     /**
@@ -118,6 +129,7 @@ public class PlayVideoFileRequest extends Request {
     public static final class Builder extends Request.Builder<PlayVideoFileRequest, Builder> {
         private String callId; 
         private String calledNumber; 
+        private Boolean onlyPhone; 
         private String outId; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -132,6 +144,7 @@ public class PlayVideoFileRequest extends Request {
             super(request);
             this.callId = request.callId;
             this.calledNumber = request.calledNumber;
+            this.onlyPhone = request.onlyPhone;
             this.outId = request.outId;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -154,6 +167,15 @@ public class PlayVideoFileRequest extends Request {
         public Builder calledNumber(String calledNumber) {
             this.putQueryParameter("CalledNumber", calledNumber);
             this.calledNumber = calledNumber;
+            return this;
+        }
+
+        /**
+         * OnlyPhone.
+         */
+        public Builder onlyPhone(Boolean onlyPhone) {
+            this.putQueryParameter("OnlyPhone", onlyPhone);
+            this.onlyPhone = onlyPhone;
             return this;
         }
 
@@ -194,7 +216,10 @@ public class PlayVideoFileRequest extends Request {
         }
 
         /**
-         * VideoId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
          */
         public Builder videoId(String videoId) {
             this.putQueryParameter("VideoId", videoId);

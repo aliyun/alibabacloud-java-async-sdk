@@ -1,61 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SingleCallByTtsRequest} extends {@link RequestModel}
  *
  * <p>SingleCallByTtsRequest</p>
  */
 public class SingleCallByTtsRequest extends Request {
-    @Query
-    @NameInMap("CalledNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CalledNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String calledNumber;
 
-    @Query
-    @NameInMap("CalledShowNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CalledShowNumber")
     private String calledShowNumber;
 
-    @Query
-    @NameInMap("OutId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutId")
     private String outId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PlayTimes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlayTimes")
     private Integer playTimes;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Speed")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Speed")
     private Integer speed;
 
-    @Query
-    @NameInMap("TtsCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TtsCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ttsCode;
 
-    @Query
-    @NameInMap("TtsParam")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TtsParam")
     private String ttsParam;
 
-    @Query
-    @NameInMap("Volume")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Volume")
     private Integer volume;
 
     private SingleCallByTtsRequest(Builder builder) {
@@ -196,21 +196,29 @@ public class SingleCallByTtsRequest extends Request {
         } 
 
         /**
-         * The mobile phone number that receives voice notifications.
-         * <p>
+         * <p>The mobile phone number that receives voice notifications.</p>
+         * <ul>
+         * <li><p>Number format in the Chinese mainland:</p>
+         * <ul>
+         * <li>Mobile phone number, for example, 159****0000.</li>
+         * <li>Landline number, for example, 0571****5678.</li>
+         * </ul>
+         * </li>
+         * <li><p>Number format outside the Chinese mainland: country code + phone number, for example, 85200****00.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>Each request supports only one called number. For more information, see <a href="https://help.aliyun.com/document_detail/150016.html">How to use voice notifications in the Chinese mainland</a> or <a href="https://help.aliyun.com/document_detail/270044.html">How to use voice verification codes in regions outside the Chinese mainland</a>.</p>
+         * </li>
+         * <li><p>Voice verification codes are sent to a called number at the following frequency: one time per minute, five times per hour, and 20 times per 24 hours.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Number format in the Chinese mainland:
-         * 
-         *     *   Mobile phone number, for example, 159\*\*\*\*0000.
-         *     *   Landline number, for example, 0571\*\*\*\*5678.
-         * 
-         * *   Number format outside the Chinese mainland: country code + phone number, for example, 85200\*\*\*\*00.
-         * 
-         * > 
-         * 
-         * *   Each request supports only one called number. For more information, see [How to use voice notifications in the Chinese mainland](~~150016~~) or [How to use voice verification codes in regions outside the Chinese mainland](~~270044~~).
-         * 
-         * *   Voice verification codes are sent to a called number at the following frequency: one time per minute, five times per hour, and 20 times per 24 hours.
+         * <strong>example:</strong>
+         * <p>1590****000</p>
          */
         public Builder calledNumber(String calledNumber) {
             this.putQueryParameter("CalledNumber", calledNumber);
@@ -219,11 +227,14 @@ public class SingleCallByTtsRequest extends Request {
         }
 
         /**
-         * The number displayed to the called party.
-         * <p>
+         * <p>The number displayed to the called party.</p>
+         * <ul>
+         * <li>You do not need to specify this parameter if you use the text-to-speech (TTS) notification template or voice verification code template for outbound calls in the common mode. For more information, see <a href="https://help.aliyun.com/document_detail/172104.html">FAQ about the common outbound call mode</a>.</li>
+         * <li>If you use the TTS notification template or voice verification code template for outbound calls in the dedicated mode, you must specify a number you purchased and only one number can be specified. You can log on to the <a href="https://dyvms.console.aliyun.com/overview/home">Voice Messaging Service console</a> and choose <strong>Voice Numbers</strong> &gt; <strong>Real Number Management</strong> to view the number you purchased.</li>
+         * </ul>
          * 
-         * *   You do not need to specify this parameter if you use the text-to-speech (TTS) notification template or voice verification code template for outbound calls in the common mode. For more information, see [FAQ about the common outbound call mode](~~172104~~).
-         * *   If you use the TTS notification template or voice verification code template for outbound calls in the dedicated mode, you must specify a number you purchased and only one number can be specified. You can log on to the [Voice Messaging Service console](https://dyvms.console.aliyun.com/overview/home) and choose **Voice Numbers** > **Real Number Management** to view the number you purchased.
+         * <strong>example:</strong>
+         * <p>0571****5678</p>
          */
         public Builder calledShowNumber(String calledShowNumber) {
             this.putQueryParameter("CalledShowNumber", calledShowNumber);
@@ -232,10 +243,11 @@ public class SingleCallByTtsRequest extends Request {
         }
 
         /**
-         * The custom ID that is reserved for the caller of the operation when the request is initiated. This ID is returned to the caller in a receipt message.
-         * <p>
+         * <p>The custom ID that is reserved for the caller of the operation when the request is initiated. This ID is returned to the caller in a receipt message.</p>
+         * <p>The value is of the STRING type and must be 1 to 15 bytes in length.</p>
          * 
-         * The value is of the STRING type and must be 1 to 15 bytes in length.
+         * <strong>example:</strong>
+         * <p>225869*****</p>
          */
         public Builder outId(String outId) {
             this.putQueryParameter("OutId", outId);
@@ -253,7 +265,10 @@ public class SingleCallByTtsRequest extends Request {
         }
 
         /**
-         * The number of times a voice notification is played back in a call. Valid values: 1 to 3. Default value: 3.
+         * <p>The number of times a voice notification is played back in a call. Valid values: 1 to 3. Default value: 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder playTimes(Integer playTimes) {
             this.putQueryParameter("PlayTimes", playTimes);
@@ -280,7 +295,10 @@ public class SingleCallByTtsRequest extends Request {
         }
 
         /**
-         * The playback speed. Valid value: -500 to 500.
+         * <p>The playback speed. Valid value: -500 to 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder speed(Integer speed) {
             this.putQueryParameter("Speed", speed);
@@ -289,12 +307,15 @@ public class SingleCallByTtsRequest extends Request {
         }
 
         /**
-         * The ID of the approved TTS notification template or voice verification code template.
-         * <p>
+         * <p>The ID of the approved TTS notification template or voice verification code template.</p>
+         * <p>You can log on to the <a href="https://dyvms.console.aliyun.com/overview/home">Voice Messaging Service console</a>, and choose <strong>Voice Messages</strong> &gt; <strong>Voice Verification Codes</strong> or choose <strong>Voice Messages</strong> &gt; <strong>Voice Notifications</strong> to view the <strong>template ID</strong>.</p>
+         * <blockquote>
+         * <p>The account to which the TTS template belongs must be the same as the account that is used to call the SingleCallByTts operation.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * You can log on to the [Voice Messaging Service console](https://dyvms.console.aliyun.com/overview/home), and choose **Voice Messages** > **Voice Verification Codes** or choose **Voice Messages** > **Voice Notifications** to view the **template ID**.
-         * 
-         * > The account to which the TTS template belongs must be the same as the account that is used to call the SingleCallByTts operation.
+         * <strong>example:</strong>
+         * <p>TTS_100****</p>
          */
         public Builder ttsCode(String ttsCode) {
             this.putQueryParameter("TtsCode", ttsCode);
@@ -303,10 +324,13 @@ public class SingleCallByTtsRequest extends Request {
         }
 
         /**
-         * The variables in the template, in the JSON format.
-         * <p>
+         * <p>The variables in the template, in the JSON format.</p>
+         * <blockquote>
+         * <p>The variables in the template must be less than 250 characters in length. The length of each single variable is not limited. These variables do not support URLs. The variables in the verification code template support only digits and letters.</p>
+         * </blockquote>
          * 
-         * > The variables in the template must be less than 250 characters in length. The length of each single variable is not limited. These variables do not support URLs. The variables in the verification code template support only digits and letters.
+         * <strong>example:</strong>
+         * <p>{&quot;AckNum&quot;:&quot;123456&quot;}</p>
          */
         public Builder ttsParam(String ttsParam) {
             this.putQueryParameter("TtsParam", ttsParam);
@@ -315,7 +339,10 @@ public class SingleCallByTtsRequest extends Request {
         }
 
         /**
-         * The playback volume of the voice notification. Valid values: 0 to 100. Default value: 100.
+         * <p>The playback volume of the voice notification. Valid values: 0 to 100. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder volume(Integer volume) {
             this.putQueryParameter("Volume", volume);

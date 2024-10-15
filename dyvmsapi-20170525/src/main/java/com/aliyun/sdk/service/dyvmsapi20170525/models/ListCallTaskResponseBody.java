@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCallTaskResponseBody} extends {@link TeaModel}
  *
  * <p>ListCallTaskResponseBody</p>
  */
 public class ListCallTaskResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private ListCallTaskResponseBody(Builder builder) {
@@ -98,7 +98,10 @@ public class ListCallTaskResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * The response code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +109,7 @@ public class ListCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The task information.
+         * <p>The task information.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -114,7 +117,10 @@ public class ListCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +128,10 @@ public class ListCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +139,10 @@ public class ListCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5B0F201F-DCDA-45C2-AA92-1AE177F94991</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class ListCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of tasks.
+         * <p>The total number of tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -151,50 +166,56 @@ public class ListCallTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCallTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCallTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("BizType")
+        @com.aliyun.core.annotation.NameInMap("BizType")
         private String bizType;
 
-        @NameInMap("CompleteTime")
+        @com.aliyun.core.annotation.NameInMap("CompleteTime")
         private String completeTime;
 
-        @NameInMap("CompletedCount")
+        @com.aliyun.core.annotation.NameInMap("CompletedCount")
         private Long completedCount;
 
-        @NameInMap("CompletedRate")
+        @com.aliyun.core.annotation.NameInMap("CompletedRate")
         private Integer completedRate;
 
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
 
-        @NameInMap("DataType")
+        @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
 
-        @NameInMap("FireTime")
+        @com.aliyun.core.annotation.NameInMap("FireTime")
         private String fireTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private String resource;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StopTime")
+        @com.aliyun.core.annotation.NameInMap("StopTime")
         private String stopTime;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("TemplateCode")
+        @com.aliyun.core.annotation.NameInMap("TemplateCode")
         private String templateCode;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private Data(Builder builder) {
@@ -346,12 +367,15 @@ public class ListCallTaskResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The type of the task template. Valid values:
-             * <p>
+             * <p>The type of the task template. Valid values:</p>
+             * <ul>
+             * <li><strong>VMS_VOICE_TTS</strong>: the TTS notification template.</li>
+             * <li><strong>VMS_VOICE_CODE</strong>: the voice notification template.</li>
+             * <li><strong>VMS_TTS</strong>: the voice verification code template.</li>
+             * </ul>
              * 
-             * *   **VMS_VOICE_TTS**: the TTS notification template.
-             * *   **VMS_VOICE_CODE**: the voice notification template.
-             * *   **VMS_TTS**: the voice verification code template.
+             * <strong>example:</strong>
+             * <p>VMS_VOICE_TTS</p>
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
@@ -359,7 +383,10 @@ public class ListCallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was completed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the task was completed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1614330986000</p>
              */
             public Builder completeTime(String completeTime) {
                 this.completeTime = completeTime;
@@ -367,7 +394,10 @@ public class ListCallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The number of tasks that were complete.
+             * <p>The number of tasks that were complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder completedCount(Long completedCount) {
                 this.completedCount = completedCount;
@@ -375,7 +405,10 @@ public class ListCallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The task progress.
+             * <p>The task progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26%</p>
              */
             public Builder completedRate(Integer completedRate) {
                 this.completedRate = completedRate;
@@ -383,7 +416,10 @@ public class ListCallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is unavailable.
+             * <p>This parameter is unavailable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder data(String data) {
                 this.data = data;
@@ -391,7 +427,10 @@ public class ListCallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the called number.
+             * <p>The type of the called number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LIST</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -399,7 +438,10 @@ public class ListCallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the scheduled task was started. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the scheduled task was started. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1614330978000</p>
              */
             public Builder fireTime(String fireTime) {
                 this.fireTime = fireTime;
@@ -407,7 +449,10 @@ public class ListCallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The task ID.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123879546214</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -415,7 +460,10 @@ public class ListCallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The calling number.
+             * <p>The calling number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0571000****</p>
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -423,17 +471,20 @@ public class ListCallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The task state. Valid values:
-             * <p>
+             * <p>The task state. Valid values:</p>
+             * <ul>
+             * <li><strong>INIT</strong>: The task was in the initial state.</li>
+             * <li><strong>RELEASE</strong>: The task was being parsed.</li>
+             * <li><strong>RUNNING</strong>: The task was running.</li>
+             * <li><strong>STOP</strong>: The task was manually suspended.</li>
+             * <li><strong>SYSTEM_STOP</strong>: The task was suspended by the system.</li>
+             * <li><strong>CANCEL</strong>: The task was manually canceled.</li>
+             * <li><strong>SYSTEM_CANCEL</strong>: The task was canceled by the system.</li>
+             * <li><strong>DONE</strong>: The task was complete.</li>
+             * </ul>
              * 
-             * *   **INIT**: The task was in the initial state.
-             * *   **RELEASE**: The task was being parsed.
-             * *   **RUNNING**: The task was running.
-             * *   **STOP**: The task was manually suspended.
-             * *   **SYSTEM_STOP**: The task was suspended by the system.
-             * *   **CANCEL**: The task was manually canceled.
-             * *   **SYSTEM_CANCEL**: The task was canceled by the system.
-             * *   **DONE**: The task was complete.
+             * <strong>example:</strong>
+             * <p>DONE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -441,7 +492,10 @@ public class ListCallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is unavailable.
+             * <p>This parameter is unavailable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder stopTime(String stopTime) {
                 this.stopTime = stopTime;
@@ -449,7 +503,10 @@ public class ListCallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The task name.
+             * <p>The task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Aliyun</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -457,7 +514,10 @@ public class ListCallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the voice template.
+             * <p>The ID of the voice template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TTS_2100****</p>
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;
@@ -465,7 +525,10 @@ public class ListCallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The template name.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test Template</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -473,7 +536,10 @@ public class ListCallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of called numbers.
+             * <p>The total number of called numbers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

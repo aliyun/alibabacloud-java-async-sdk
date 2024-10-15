@@ -1,36 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryRobotTaskListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryRobotTaskListResponseBody</p>
  */
 public class QueryRobotTaskListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private String pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private QueryRobotTaskListResponseBody(Builder builder) {
@@ -110,7 +110,10 @@ public class QueryRobotTaskListResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * The response code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,20 +121,23 @@ public class QueryRobotTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * The robocall tasks, in the JSON format.
-         * <p>
+         * <p>The robocall tasks, in the JSON format.</p>
+         * <ul>
+         * <li><strong>id</strong>: the unique ID of the robocall task.</li>
+         * <li><strong>taskName</strong>: the task name.</li>
+         * <li><strong>robotId</strong>: the robot ID.</li>
+         * <li><strong>robotName</strong>: the robot name.</li>
+         * <li><strong>status</strong>: the task state.</li>
+         * <li><strong>scheduleType</strong>: the scheduling type. Valid values: <strong>SINGLE</strong> and <strong>ORDER</strong>. The value SINGLE indicates that the task was started immediately after it was created. The value ORDER indicates that the task was started at a scheduled time.</li>
+         * <li><strong>createTime</strong>: the time when the task was created, in the yyyy.MM.dd HH:mm:ss format.</li>
+         * <li><strong>completeTime</strong>: the time when the task was completed, in the yyyy.MM.dd HH:mm:ss format.</li>
+         * <li><strong>fireTime</strong>: the time when the task was started, in the yyyy.MM.dd HH:mm:ss format.</li>
+         * <li><strong>totalCount</strong>: the total number of calls processed.</li>
+         * <li><strong>finishCount</strong>: the number of calls completed.</li>
+         * </ul>
          * 
-         * *   **id**: the unique ID of the robocall task.
-         * *   **taskName**: the task name.
-         * *   **robotId**: the robot ID.
-         * *   **robotName**: the robot name.
-         * *   **status**: the task state.
-         * *   **scheduleType**: the scheduling type. Valid values: **SINGLE** and **ORDER**. The value SINGLE indicates that the task was started immediately after it was created. The value ORDER indicates that the task was started at a scheduled time.
-         * *   **createTime**: the time when the task was created, in the yyyy.MM.dd HH:mm:ss format.
-         * *   **completeTime**: the time when the task was completed, in the yyyy.MM.dd HH:mm:ss format.
-         * *   **fireTime**: the time when the task was started, in the yyyy.MM.dd HH:mm:ss format.
-         * *   **totalCount**: the total number of calls processed.
-         * *   **finishCount**: the number of calls completed.
+         * <strong>example:</strong>
+         * <p>[ {&quot;id&quot;: 1045001, &quot;taskName&quot;: &quot;Test Template&quot;, &quot;robotId&quot;: 1000000075003, &quot;robotName&quot;: &quot;robot&quot;, &quot;status&quot;: &quot;INIT&quot;,&quot;scheduleType&quot;: &quot;SINGLE&quot;, &quot;createTime&quot;: &quot;2019.06.14 14:55:23&quot;, &quot;completeTime&quot;: &quot;2019.06.14 14:55:23&quot;, &quot;fireTime&quot;: &quot;2019.06.14 14:55:23&quot;, &quot;totalCount&quot;: 1000, &quot;finishCount&quot;: 998} ]</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -139,7 +145,10 @@ public class QueryRobotTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -147,7 +156,10 @@ public class QueryRobotTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(String pageNo) {
             this.pageNo = pageNo;
@@ -155,7 +167,10 @@ public class QueryRobotTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -163,7 +178,10 @@ public class QueryRobotTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -171,7 +189,10 @@ public class QueryRobotTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of tasks.
+         * <p>The total number of tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;

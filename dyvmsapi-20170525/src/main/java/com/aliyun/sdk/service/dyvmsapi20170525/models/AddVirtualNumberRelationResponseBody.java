@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddVirtualNumberRelationResponseBody} extends {@link TeaModel}
  *
  * <p>AddVirtualNumberRelationResponseBody</p>
  */
 public class AddVirtualNumberRelationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AddVirtualNumberRelationResponseBody(Builder builder) {
@@ -74,11 +74,14 @@ public class AddVirtualNumberRelationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <ul>
+         * <li>The value 200 indicates that the request was successful.</li>
+         * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/112502.html">API error codes</a>.</li>
+         * </ul>
          * 
-         * *   The value 200 indicates that the request was successful.
-         * *   For more information about other response codes, see [API error codes](~~112502~~).
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -86,10 +89,13 @@ public class AddVirtualNumberRelationResponseBody extends TeaModel {
         }
 
         /**
-         * The numbers that failed to be associated.
-         * <p>
+         * <p>The numbers that failed to be associated.</p>
+         * <blockquote>
+         * <p>If all numbers are associated, no value is returned for this parameter.</p>
+         * </blockquote>
          * 
-         * > If all numbers are associated, no value is returned for this parameter.
+         * <strong>example:</strong>
+         * <p>1321111****</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -97,7 +103,10 @@ public class AddVirtualNumberRelationResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -105,7 +114,10 @@ public class AddVirtualNumberRelationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F655A8D5-B967-440B-8683-DAD6FF8DE990</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

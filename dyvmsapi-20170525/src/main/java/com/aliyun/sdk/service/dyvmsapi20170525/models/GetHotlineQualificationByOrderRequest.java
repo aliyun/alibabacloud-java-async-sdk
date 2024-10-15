@@ -1,32 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHotlineQualificationByOrderRequest} extends {@link RequestModel}
  *
  * <p>GetHotlineQualificationByOrderRequest</p>
  */
 public class GetHotlineQualificationByOrderRequest extends Request {
-    @Query
-    @NameInMap("OrderId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String orderId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private GetHotlineQualificationByOrderRequest(Builder builder) {
@@ -97,10 +97,12 @@ public class GetHotlineQualificationByOrderRequest extends Request {
         } 
 
         /**
-         * The ticket ID.
-         * <p>
+         * <p>The ticket ID.</p>
+         * <p>You can log on to the <a href="https://dyvms.console.aliyun.com/overview/home">Voice Messaging Service console</a>, choose <strong>Qualification&amp;Communication Script Management</strong> &gt; <strong>Qualification Management</strong>, and then click the <strong>400 Qualifications</strong> tab to view the ticket ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can log on to the [Voice Messaging Service console](https://dyvms.console.aliyun.com/overview/home), choose **Qualification\&Communication Script Management** > **Qualification Management**, and then click the **400 Qualifications** tab to view the ticket ID.
+         * <strong>example:</strong>
+         * <p>22456****</p>
          */
         public Builder orderId(String orderId) {
             this.putQueryParameter("OrderId", orderId);

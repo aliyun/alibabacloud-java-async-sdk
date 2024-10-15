@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHotlineQualificationByOrderResponseBody} extends {@link TeaModel}
  *
  * <p>GetHotlineQualificationByOrderResponseBody</p>
  */
 public class GetHotlineQualificationByOrderResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetHotlineQualificationByOrderResponseBody(Builder builder) {
@@ -74,11 +74,14 @@ public class GetHotlineQualificationByOrderResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/112502.html">API error codes</a>.</li>
+         * </ul>
          * 
-         * *   The value OK indicates that the request was successful.
-         * *   For more information about other response codes, see [API error codes](~~112502~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -86,7 +89,7 @@ public class GetHotlineQualificationByOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -94,7 +97,10 @@ public class GetHotlineQualificationByOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +108,10 @@ public class GetHotlineQualificationByOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6086693B-2250-17CE-A41F-06259AB6DB1B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -115,14 +124,20 @@ public class GetHotlineQualificationByOrderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHotlineQualificationByOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHotlineQualificationByOrderResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("OrderId")
+        @com.aliyun.core.annotation.NameInMap("OrderId")
         private String orderId;
 
-        @NameInMap("QualificationId")
+        @com.aliyun.core.annotation.NameInMap("QualificationId")
         private String qualificationId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {
@@ -166,7 +181,10 @@ public class GetHotlineQualificationByOrderResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the qualification application ticket.
+             * <p>The ID of the qualification application ticket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22456****</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -174,7 +192,10 @@ public class GetHotlineQualificationByOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The qualification ID.
+             * <p>The qualification ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1478*****</p>
              */
             public Builder qualificationId(String qualificationId) {
                 this.qualificationId = qualificationId;
@@ -182,11 +203,14 @@ public class GetHotlineQualificationByOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The qualification state. Valid values:
-             * <p>
+             * <p>The qualification state. Valid values:</p>
+             * <ul>
+             * <li><strong>NORMAL</strong></li>
+             * <li><strong>OTHER</strong></li>
+             * </ul>
              * 
-             * *   **NORMAL**
-             * *   **OTHER**
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder status(String status) {
                 this.status = status;

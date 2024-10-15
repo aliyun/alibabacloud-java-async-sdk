@@ -1,63 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryVirtualNumberRelationRequest} extends {@link RequestModel}
  *
  * <p>QueryVirtualNumberRelationRequest</p>
  */
 public class QueryVirtualNumberRelationRequest extends Request {
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("PhoneNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNum")
     private String phoneNum;
 
-    @Query
-    @NameInMap("ProdCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProdCode")
     private String prodCode;
 
-    @Query
-    @NameInMap("QualificationId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QualificationId")
     private Long qualificationId;
 
-    @Query
-    @NameInMap("RegionNameCity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionNameCity")
     private String regionNameCity;
 
-    @Query
-    @NameInMap("RelatedNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelatedNum")
     private String relatedNum;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RouteType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteType")
     private Integer routeType;
 
-    @Query
-    @NameInMap("SpecId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpecId")
     private Long specId;
 
     private QueryVirtualNumberRelationRequest(Builder builder) {
@@ -217,7 +217,10 @@ public class QueryVirtualNumberRelationRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -226,7 +229,10 @@ public class QueryVirtualNumberRelationRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -235,7 +241,10 @@ public class QueryVirtualNumberRelationRequest extends Request {
         }
 
         /**
-         * The virtual number.
+         * <p>The virtual number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05516214****</p>
          */
         public Builder phoneNum(String phoneNum) {
             this.putQueryParameter("PhoneNum", phoneNum);
@@ -244,7 +253,10 @@ public class QueryVirtualNumberRelationRequest extends Request {
         }
 
         /**
-         * The service name. Default value: **dyvms**.
+         * <p>The service name. Default value: <strong>dyvms</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dyvms</p>
          */
         public Builder prodCode(String prodCode) {
             this.putQueryParameter("ProdCode", prodCode);
@@ -253,10 +265,11 @@ public class QueryVirtualNumberRelationRequest extends Request {
         }
 
         /**
-         * The qualification ID.
-         * <p>
+         * <p>The qualification ID.</p>
+         * <p>You can log on to the <a href="https://dyvms.console.aliyun.com/overview/home">Voice Messaging Service console</a>, choose <strong>Qualifications&amp;Communication Scripts &gt; Qualification Management</strong>, and then click <strong>Details</strong> in the Actions column to view the qualification ID.</p>
          * 
-         * You can log on to the [Voice Messaging Service console](https://dyvms.console.aliyun.com/overview/home), choose **Qualifications\&Communication Scripts > Qualification Management**, and then click **Details** in the Actions column to view the qualification ID.
+         * <strong>example:</strong>
+         * <p>1000000542****</p>
          */
         public Builder qualificationId(Long qualificationId) {
             this.putQueryParameter("QualificationId", qualificationId);
@@ -265,7 +278,10 @@ public class QueryVirtualNumberRelationRequest extends Request {
         }
 
         /**
-         * The city to which the virtual number belongs.
+         * <p>The city to which the virtual number belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hangzhou</p>
          */
         public Builder regionNameCity(String regionNameCity) {
             this.putQueryParameter("RegionNameCity", regionNameCity);
@@ -274,7 +290,10 @@ public class QueryVirtualNumberRelationRequest extends Request {
         }
 
         /**
-         * The real number.
+         * <p>The real number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1705559****</p>
          */
         public Builder relatedNum(String relatedNum) {
             this.putQueryParameter("RelatedNum", relatedNum);
@@ -301,10 +320,11 @@ public class QueryVirtualNumberRelationRequest extends Request {
         }
 
         /**
-         * The route type. Valid values:
-         * <p>
+         * <p>The route type. Valid values:</p>
+         * <p><strong>0</strong>: number location first. <strong>1</strong>: random.</p>
          * 
-         * **0**: number location first. **1**: random.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder routeType(Integer routeType) {
             this.putQueryParameter("RouteType", routeType);
@@ -313,12 +333,15 @@ public class QueryVirtualNumberRelationRequest extends Request {
         }
 
         /**
-         * The number type. Valid values:
-         * <p>
+         * <p>The number type. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: the number provided by a virtual network operator, in the 05710000**** format.</li>
+         * <li><strong>2</strong>: the number provided by an Internet service provider (ISP).</li>
+         * <li><strong>3</strong>: a 5-digit phone number that starts with 95.</li>
+         * </ul>
          * 
-         * *   **1**: the number provided by a virtual network operator, in the 05710000\*\*\*\* format.
-         * *   **2**: the number provided by an Internet service provider (ISP).
-         * *   **3**: a 5-digit phone number that starts with 95.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder specId(Long specId) {
             this.putQueryParameter("SpecId", specId);

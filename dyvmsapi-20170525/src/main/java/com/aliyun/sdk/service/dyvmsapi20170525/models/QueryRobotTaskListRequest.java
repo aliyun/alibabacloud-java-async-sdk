@@ -1,47 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryRobotTaskListRequest} extends {@link RequestModel}
  *
  * <p>QueryRobotTaskListRequest</p>
  */
 public class QueryRobotTaskListRequest extends Request {
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("TaskName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskName")
     private String taskName;
 
-    @Query
-    @NameInMap("Time")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Time")
     private String time;
 
     private QueryRobotTaskListRequest(Builder builder) {
@@ -161,7 +161,10 @@ public class QueryRobotTaskListRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -170,7 +173,10 @@ public class QueryRobotTaskListRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -197,19 +203,22 @@ public class QueryRobotTaskListRequest extends Request {
         }
 
         /**
-         * The task state. Valid values:
-         * <p>
+         * <p>The task state. Valid values:</p>
+         * <ul>
+         * <li><strong>INIT</strong>: The task is not started.</li>
+         * <li><strong>READY</strong>: The task is ready to start.</li>
+         * <li><strong>DISPATCH</strong>: The task is being parsed.</li>
+         * <li><strong>EXCUTING</strong>: The task is being executed.</li>
+         * <li><strong>MANUAL_STOP</strong>: The task is manually suspended.</li>
+         * <li><strong>SYSTEM_STOP</strong>: The task is suspended by the system.</li>
+         * <li><strong>ARREARS_STOP</strong>: The task is suspended due to overdue payments.</li>
+         * <li><strong>CANCEL</strong>: The task is manually canceled.</li>
+         * <li><strong>SYSTEM_CANCEL</strong>: The task is canceled by the system.</li>
+         * <li><strong>FINISH</strong>: The task is complete.</li>
+         * </ul>
          * 
-         * *   **INIT**: The task is not started.
-         * *   **READY**: The task is ready to start.
-         * *   **DISPATCH**: The task is being parsed.
-         * *   **EXCUTING**: The task is being executed.
-         * *   **MANUAL_STOP**: The task is manually suspended.
-         * *   **SYSTEM_STOP**: The task is suspended by the system.
-         * *   **ARREARS_STOP**: The task is suspended due to overdue payments.
-         * *   **CANCEL**: The task is manually canceled.
-         * *   **SYSTEM_CANCEL**: The task is canceled by the system.
-         * *   **FINISH**: The task is complete.
+         * <strong>example:</strong>
+         * <p>EXCUTING</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -218,7 +227,10 @@ public class QueryRobotTaskListRequest extends Request {
         }
 
         /**
-         * The task name.
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test Template</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -227,7 +239,10 @@ public class QueryRobotTaskListRequest extends Request {
         }
 
         /**
-         * The date when the task is created, in the yyyy-MM-dd format.
+         * <p>The date when the task is created, in the yyyy-MM-dd format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-06-14</p>
          */
         public Builder time(String time) {
             this.putQueryParameter("Time", time);

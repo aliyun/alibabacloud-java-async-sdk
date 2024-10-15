@@ -1,45 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SkipVideoFileRequest} extends {@link RequestModel}
  *
  * <p>SkipVideoFileRequest</p>
  */
 public class SkipVideoFileRequest extends Request {
-    @Query
-    @NameInMap("CallId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallId")
     private String callId;
 
-    @Query
-    @NameInMap("CalledNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CalledNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String calledNumber;
 
-    @Query
-    @NameInMap("OutId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutId")
     private String outId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SkipTimes")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkipTimes")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long skipTimes;
 
     private SkipVideoFileRequest(Builder builder) {
@@ -149,7 +149,10 @@ public class SkipVideoFileRequest extends Request {
         }
 
         /**
-         * CalledNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1590****000</p>
          */
         public Builder calledNumber(String calledNumber) {
             this.putQueryParameter("CalledNumber", calledNumber);
@@ -194,7 +197,10 @@ public class SkipVideoFileRequest extends Request {
         }
 
         /**
-         * SkipTimes.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04:02:01</p>
          */
         public Builder skipTimes(Long skipTimes) {
             this.putQueryParameter("SkipTimes", skipTimes);

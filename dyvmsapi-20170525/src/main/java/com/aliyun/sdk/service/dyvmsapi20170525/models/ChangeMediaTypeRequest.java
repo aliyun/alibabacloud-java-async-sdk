@@ -1,44 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeMediaTypeRequest} extends {@link RequestModel}
  *
  * <p>ChangeMediaTypeRequest</p>
  */
 public class ChangeMediaTypeRequest extends Request {
-    @Query
-    @NameInMap("CallId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallId")
     private String callId;
 
-    @Query
-    @NameInMap("CalledNum")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CalledNum")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String calledNum;
 
-    @Query
-    @NameInMap("MediaType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaType")
     private String mediaType;
 
-    @Query
-    @NameInMap("OutId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutId")
     private String outId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ChangeMediaTypeRequest(Builder builder) {
@@ -148,7 +148,10 @@ public class ChangeMediaTypeRequest extends Request {
         }
 
         /**
-         * CalledNum.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
          */
         public Builder calledNum(String calledNum) {
             this.putQueryParameter("CalledNum", calledNum);

@@ -1,41 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SmartCallOperateRequest} extends {@link RequestModel}
  *
  * <p>SmartCallOperateRequest</p>
  */
 public class SmartCallOperateRequest extends Request {
-    @Query
-    @NameInMap("CallId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callId;
 
-    @Query
-    @NameInMap("Command")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Command")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String command;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Param")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Param")
     private String param;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private SmartCallOperateRequest(Builder builder) {
@@ -126,7 +126,11 @@ public class SmartCallOperateRequest extends Request {
         } 
 
         /**
-         * The unique receipt ID of the call. You can call the [SmartCall](~~393526~~) operation to obtain the receipt ID.
+         * <p>The unique receipt ID of the call. You can call the <a href="https://help.aliyun.com/document_detail/393526.html">SmartCall</a> operation to obtain the receipt ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>116012854210^1028142****</p>
          */
         public Builder callId(String callId) {
             this.putQueryParameter("CallId", callId);
@@ -135,10 +139,14 @@ public class SmartCallOperateRequest extends Request {
         }
 
         /**
-         * The action that is initiated to the called number of an outbound robocall.
-         * <p>
+         * <p>The action that is initiated to the called number of an outbound robocall.</p>
+         * <blockquote>
+         * <p>Only the value <strong>parallelBridge</strong> is supported. This value indicates that a bridge action is initiated between a called number and an agent of the call center.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > Only the value **parallelBridge** is supported. This value indicates that a bridge action is initiated between a called number and an agent of the call center.
+         * <strong>example:</strong>
+         * <p>parallelBridge</p>
          */
         public Builder command(String command) {
             this.putQueryParameter("Command", command);
@@ -156,7 +164,10 @@ public class SmartCallOperateRequest extends Request {
         }
 
         /**
-         * The extended field.
+         * <p>The extended field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Param</p>
          */
         public Builder param(String param) {
             this.putQueryParameter("Param", param);

@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SmartCallResponseBody} extends {@link TeaModel}
  *
  * <p>SmartCallResponseBody</p>
  */
 public class SmartCallResponseBody extends TeaModel {
-    @NameInMap("CallId")
+    @com.aliyun.core.annotation.NameInMap("CallId")
     private String callId;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SmartCallResponseBody(Builder builder) {
@@ -74,10 +74,11 @@ public class SmartCallResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The unique receipt ID for this call.
-         * <p>
+         * <p>The unique receipt ID for this call.</p>
+         * <p>You can call the <a href="~~QueryCallDetailByCallId~~">QueryCallDetailByCallId</a> operation to query the details of the call based on the receipt ID.</p>
          * 
-         * You can call the [QueryCallDetailByCallId](~~QueryCallDetailByCallId~~) operation to query the details of the call based on the receipt ID.
+         * <strong>example:</strong>
+         * <p>116012854210^10281427****</p>
          */
         public Builder callId(String callId) {
             this.callId = callId;
@@ -85,11 +86,14 @@ public class SmartCallResponseBody extends TeaModel {
         }
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/112502.html">API error codes</a>.</li>
+         * </ul>
          * 
-         * *   The value OK indicates that the request was successful.
-         * *   For more information about other response codes, see [API error codes](~~112502~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -97,7 +101,10 @@ public class SmartCallResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -105,7 +112,10 @@ public class SmartCallResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A90E4451-FED7-49D2-87C8-00700A8C4D0D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

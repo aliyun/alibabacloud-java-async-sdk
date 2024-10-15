@@ -1,47 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetTransferCalleePoolConfigRequest} extends {@link RequestModel}
  *
  * <p>SetTransferCalleePoolConfigRequest</p>
  */
 public class SetTransferCalleePoolConfigRequest extends Request {
-    @Query
-    @NameInMap("CalledRouteMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CalledRouteMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String calledRouteMode;
 
-    @Query
-    @NameInMap("Details")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Details")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Details> details;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PhoneNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNumber;
 
-    @Query
-    @NameInMap("QualificationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QualificationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String qualificationId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private SetTransferCalleePoolConfigRequest(Builder builder) {
@@ -142,11 +142,15 @@ public class SetTransferCalleePoolConfigRequest extends Request {
         } 
 
         /**
-         * The call mode. Valid values:
-         * <p>
+         * <p>The call mode. Valid values:</p>
+         * <ul>
+         * <li><strong>roundRobin</strong></li>
+         * <li><strong>random</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **roundRobin**
-         * *   **random**
+         * <strong>example:</strong>
+         * <p>roundRobin</p>
          */
         public Builder calledRouteMode(String calledRouteMode) {
             this.putQueryParameter("CalledRouteMode", calledRouteMode);
@@ -155,7 +159,8 @@ public class SetTransferCalleePoolConfigRequest extends Request {
         }
 
         /**
-         * The information about the phone numbers for transferring the call.
+         * <p>The information about the phone numbers for transferring the call.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder details(java.util.List < Details> details) {
             this.putQueryParameter("Details", details);
@@ -173,7 +178,11 @@ public class SetTransferCalleePoolConfigRequest extends Request {
         }
 
         /**
-         * The phone number used for transferring the call.
+         * <p>The phone number used for transferring the call.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400****</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -182,7 +191,11 @@ public class SetTransferCalleePoolConfigRequest extends Request {
         }
 
         /**
-         * The qualification ID. You can call the [GetHotlineQualificationByOrder](~~393548~~) operation to obtain the qualification ID.
+         * <p>The qualification ID. You can call the <a href="https://help.aliyun.com/document_detail/393548.html">GetHotlineQualificationByOrder</a> operation to obtain the qualification ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>190***</p>
          */
         public Builder qualificationId(String qualificationId) {
             this.putQueryParameter("QualificationId", qualificationId);
@@ -215,12 +228,18 @@ public class SetTransferCalleePoolConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SetTransferCalleePoolConfigRequest} extends {@link TeaModel}
+     *
+     * <p>SetTransferCalleePoolConfigRequest</p>
+     */
     public static class Details extends TeaModel {
-        @NameInMap("Called")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Called")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String called;
 
-        @NameInMap("Caller")
+        @com.aliyun.core.annotation.NameInMap("Caller")
         private String caller;
 
         private Details(Builder builder) {
@@ -255,7 +274,11 @@ public class SetTransferCalleePoolConfigRequest extends Request {
             private String caller; 
 
             /**
-             * The called number.
+             * <p>The called number.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>151****0000</p>
              */
             public Builder called(String called) {
                 this.called = called;
@@ -263,7 +286,10 @@ public class SetTransferCalleePoolConfigRequest extends Request {
             }
 
             /**
-             * The calling number.
+             * <p>The calling number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>150****0000</p>
              */
             public Builder caller(String caller) {
                 this.caller = caller;

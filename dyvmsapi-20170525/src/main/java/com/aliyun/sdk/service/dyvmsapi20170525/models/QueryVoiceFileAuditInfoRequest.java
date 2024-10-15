@@ -1,36 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryVoiceFileAuditInfoRequest} extends {@link RequestModel}
  *
  * <p>QueryVoiceFileAuditInfoRequest</p>
  */
 public class QueryVoiceFileAuditInfoRequest extends Request {
-    @Query
-    @NameInMap("BusinessType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessType")
     private Integer businessType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("VoiceCodes")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VoiceCodes")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String voiceCodes;
 
     private QueryVoiceFileAuditInfoRequest(Builder builder) {
@@ -111,11 +111,14 @@ public class QueryVoiceFileAuditInfoRequest extends Request {
         } 
 
         /**
-         * The type of the voice file. Valid values:
-         * <p>
+         * <p>The type of the voice file. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong> (default): the voice notification file.</li>
+         * <li><strong>2</strong>: the recording file.</li>
+         * </ul>
          * 
-         * *   **0** (default): the voice notification file.
-         * *   **2**: the recording file.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder businessType(Integer businessType) {
             this.putQueryParameter("BusinessType", businessType);
@@ -151,10 +154,14 @@ public class QueryVoiceFileAuditInfoRequest extends Request {
         }
 
         /**
-         * The ID of the voice file. You can log on to the [Voice Messaging Service console](https://dyvms.console.aliyun.com/overview/home), choose **Voice Messages** > **Voice Notifications** or **Voice File Management**, and then click the **Voice Notification Files** tab to view the **voice ID**.
-         * <p>
+         * <p>The ID of the voice file. You can log on to the <a href="https://dyvms.console.aliyun.com/overview/home">Voice Messaging Service console</a>, choose <strong>Voice Messages</strong> &gt; <strong>Voice Notifications</strong> or <strong>Voice File Management</strong>, and then click the <strong>Voice Notification Files</strong> tab to view the <strong>voice ID</strong>.</p>
+         * <blockquote>
+         * <p>You can query up to 10 voice files each time. Separate the voice file names with commas (,).</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can query up to 10 voice files each time. Separate the voice file names with commas (,).
+         * <strong>example:</strong>
+         * <p>8501d2eb-efbb-471f-xxx8-****.wav</p>
          */
         public Builder voiceCodes(String voiceCodes) {
             this.putQueryParameter("VoiceCodes", voiceCodes);

@@ -1,41 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExecuteCallTaskRequest} extends {@link RequestModel}
  *
  * <p>ExecuteCallTaskRequest</p>
  */
 public class ExecuteCallTaskRequest extends Request {
-    @Query
-    @NameInMap("FireTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FireTime")
     private String fireTime;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String status;
 
-    @Query
-    @NameInMap("TaskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long taskId;
 
     private ExecuteCallTaskRequest(Builder builder) {
@@ -126,10 +126,13 @@ public class ExecuteCallTaskRequest extends Request {
         } 
 
         /**
-         * The time when the call task is executed, in the yyyy-MM-dd HH:mm:ss format.
-         * <p>
+         * <p>The time when the call task is executed, in the yyyy-MM-dd HH:mm:ss format.</p>
+         * <blockquote>
+         * <p>You can leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * > You can leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>2021-03-09 00:00:00</p>
          */
         public Builder fireTime(String fireTime) {
             this.putQueryParameter("FireTime", fireTime);
@@ -165,12 +168,16 @@ public class ExecuteCallTaskRequest extends Request {
         }
 
         /**
-         * The task state. Valid values:
-         * <p>
+         * <p>The task state. Valid values:</p>
+         * <ul>
+         * <li><strong>RUNNING</strong></li>
+         * <li><strong>STOP</strong></li>
+         * <li><strong>CANCEL</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **RUNNING**
-         * *   **STOP**
-         * *   **CANCEL**
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -179,7 +186,11 @@ public class ExecuteCallTaskRequest extends Request {
         }
 
         /**
-         * The task ID. You can call the [CreateCallTask](~~CreateCallTask~~) operation to obtain the task ID.
+         * <p>The task ID. You can call the <a href="~~CreateCallTask~~">CreateCallTask</a> operation to obtain the task ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2256****</p>
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

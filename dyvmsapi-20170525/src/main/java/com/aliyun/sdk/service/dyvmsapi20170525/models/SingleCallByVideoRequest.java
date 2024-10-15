@@ -1,62 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SingleCallByVideoRequest} extends {@link RequestModel}
  *
  * <p>SingleCallByVideoRequest</p>
  */
 public class SingleCallByVideoRequest extends Request {
-    @Query
-    @NameInMap("CalledNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CalledNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String calledNumber;
 
-    @Query
-    @NameInMap("CalledShowNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CalledShowNumber")
     private String calledShowNumber;
 
-    @Query
-    @NameInMap("OutId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutId")
     private String outId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PlayTimes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlayTimes")
     private Integer playTimes;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Speed")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Speed")
     private Integer speed;
 
-    @Query
-    @NameInMap("VideoCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VideoCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String videoCode;
 
-    @Query
-    @NameInMap("VoiceCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VoiceCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String voiceCode;
 
-    @Query
-    @NameInMap("Volume")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Volume")
     private Integer volume;
 
     private SingleCallByVideoRequest(Builder builder) {
@@ -197,7 +197,10 @@ public class SingleCallByVideoRequest extends Request {
         } 
 
         /**
-         * CalledNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1590****000</p>
          */
         public Builder calledNumber(String calledNumber) {
             this.putQueryParameter("CalledNumber", calledNumber);
@@ -269,7 +272,7 @@ public class SingleCallByVideoRequest extends Request {
         }
 
         /**
-         * VideoCode.
+         * <p>This parameter is required.</p>
          */
         public Builder videoCode(String videoCode) {
             this.putQueryParameter("VideoCode", videoCode);
@@ -278,7 +281,10 @@ public class SingleCallByVideoRequest extends Request {
         }
 
         /**
-         * VoiceCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2d4c-4e78-8d2a-afbb06cf****.wav</p>
          */
         public Builder voiceCode(String voiceCode) {
             this.putQueryParameter("VoiceCode", voiceCode);

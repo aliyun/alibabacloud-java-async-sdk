@@ -1,68 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryRobotTaskCallListRequest} extends {@link RequestModel}
  *
  * <p>QueryRobotTaskCallListRequest</p>
  */
 public class QueryRobotTaskCallListRequest extends Request {
-    @Query
-    @NameInMap("CallResult")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallResult")
     private String callResult;
 
-    @Query
-    @NameInMap("Called")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Called")
     private String called;
 
-    @Query
-    @NameInMap("DialogCountFrom")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DialogCountFrom")
     private String dialogCountFrom;
 
-    @Query
-    @NameInMap("DialogCountTo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DialogCountTo")
     private String dialogCountTo;
 
-    @Query
-    @NameInMap("DurationFrom")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DurationFrom")
     private String durationFrom;
 
-    @Query
-    @NameInMap("DurationTo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DurationTo")
     private String durationTo;
 
-    @Query
-    @NameInMap("HangupDirection")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HangupDirection")
     private String hangupDirection;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TaskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskId;
 
     private QueryRobotTaskCallListRequest(Builder builder) {
@@ -223,14 +223,17 @@ public class QueryRobotTaskCallListRequest extends Request {
         } 
 
         /**
-         * The call result. Valid values:
-         * <p>
+         * <p>The call result. Valid values:</p>
+         * <ul>
+         * <li><strong>200002</strong>: The line is busy.</li>
+         * <li><strong>200005</strong>: The called party cannot be connected.</li>
+         * <li><strong>200010</strong>: The phone of the called party is powered off.</li>
+         * <li><strong>200011</strong>: The called party is out of service.</li>
+         * <li><strong>200012</strong>: The call is lost.</li>
+         * </ul>
          * 
-         * *   **200002**: The line is busy.
-         * *   **200005**: The called party cannot be connected.
-         * *   **200010**: The phone of the called party is powered off.
-         * *   **200011**: The called party is out of service.
-         * *   **200012**: The call is lost.
+         * <strong>example:</strong>
+         * <p>200002</p>
          */
         public Builder callResult(String callResult) {
             this.putQueryParameter("CallResult", callResult);
@@ -239,7 +242,10 @@ public class QueryRobotTaskCallListRequest extends Request {
         }
 
         /**
-         * The called number.
+         * <p>The called number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1300****0000</p>
          */
         public Builder called(String called) {
             this.putQueryParameter("Called", called);
@@ -248,7 +254,10 @@ public class QueryRobotTaskCallListRequest extends Request {
         }
 
         /**
-         * The minimum number of conversation rounds in the call.
+         * <p>The minimum number of conversation rounds in the call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder dialogCountFrom(String dialogCountFrom) {
             this.putQueryParameter("DialogCountFrom", dialogCountFrom);
@@ -257,7 +266,10 @@ public class QueryRobotTaskCallListRequest extends Request {
         }
 
         /**
-         * The maximum number of conversation rounds in the call.
+         * <p>The maximum number of conversation rounds in the call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder dialogCountTo(String dialogCountTo) {
             this.putQueryParameter("DialogCountTo", dialogCountTo);
@@ -266,7 +278,10 @@ public class QueryRobotTaskCallListRequest extends Request {
         }
 
         /**
-         * The minimum call duration.
+         * <p>The minimum call duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder durationFrom(String durationFrom) {
             this.putQueryParameter("DurationFrom", durationFrom);
@@ -275,7 +290,10 @@ public class QueryRobotTaskCallListRequest extends Request {
         }
 
         /**
-         * The maximum call duration.
+         * <p>The maximum call duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder durationTo(String durationTo) {
             this.putQueryParameter("DurationTo", durationTo);
@@ -284,11 +302,14 @@ public class QueryRobotTaskCallListRequest extends Request {
         }
 
         /**
-         * The party who hangs up. Valid values:
-         * <p>
+         * <p>The party who hangs up. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: the called party.</li>
+         * <li><strong>1</strong>: the robot.</li>
+         * </ul>
          * 
-         * *   **0**: the called party.
-         * *   **1**: the robot.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder hangupDirection(String hangupDirection) {
             this.putQueryParameter("HangupDirection", hangupDirection);
@@ -306,7 +327,10 @@ public class QueryRobotTaskCallListRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -315,7 +339,10 @@ public class QueryRobotTaskCallListRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -342,7 +369,11 @@ public class QueryRobotTaskCallListRequest extends Request {
         }
 
         /**
-         * The unique ID of the robocall task. You can call the [CreateRobotTask](~~393531~~) operation to obtain the task ID.
+         * <p>The unique ID of the robocall task. You can call the <a href="https://help.aliyun.com/document_detail/393531.html">CreateRobotTask</a> operation to obtain the task ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1045001****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

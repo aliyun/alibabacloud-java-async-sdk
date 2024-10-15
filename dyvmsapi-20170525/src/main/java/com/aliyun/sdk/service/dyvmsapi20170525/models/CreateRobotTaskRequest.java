@@ -1,72 +1,72 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRobotTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateRobotTaskRequest</p>
  */
 public class CreateRobotTaskRequest extends Request {
-    @Query
-    @NameInMap("Caller")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Caller")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String caller;
 
-    @Query
-    @NameInMap("CorpName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CorpName")
     private String corpName;
 
-    @Query
-    @NameInMap("DialogId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DialogId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long dialogId;
 
-    @Query
-    @NameInMap("IsSelfLine")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsSelfLine")
     private Boolean isSelfLine;
 
-    @Query
-    @NameInMap("NumberStatusIdent")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NumberStatusIdent")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean numberStatusIdent;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RecallInterval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecallInterval")
     private Integer recallInterval;
 
-    @Query
-    @NameInMap("RecallStateCodes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecallStateCodes")
     private String recallStateCodes;
 
-    @Query
-    @NameInMap("RecallTimes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecallTimes")
     private Integer recallTimes;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RetryType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetryType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer retryType;
 
-    @Query
-    @NameInMap("TaskName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskName;
 
     private CreateRobotTaskRequest(Builder builder) {
@@ -227,10 +227,12 @@ public class CreateRobotTaskRequest extends Request {
         } 
 
         /**
-         * The calling number.
-         * <p>
+         * <p>The calling number.</p>
+         * <p>You must use the phone numbers that you have purchased and separate multiple numbers with commas (,). You can log on to the <a href="https://dyvms.console.aliyun.com/overview/home">Voice Messaging Service console</a> and choose <strong>Real Number Service</strong> &gt; <strong>Real Number Management</strong> to view the numbers you purchased.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You must use the phone numbers that you have purchased and separate multiple numbers with commas (,). You can log on to the [Voice Messaging Service console](https://dyvms.console.aliyun.com/overview/home) and choose **Real Number Service** > **Real Number Management** to view the numbers you purchased.
+         * <strong>example:</strong>
+         * <p>0571****5678</p>
          */
         public Builder caller(String caller) {
             this.putQueryParameter("Caller", caller);
@@ -239,7 +241,10 @@ public class CreateRobotTaskRequest extends Request {
         }
 
         /**
-         * The company name, which must be the same as the **enterprise name** on the qualification management page.
+         * <p>The company name, which must be the same as the <strong>enterprise name</strong> on the qualification management page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba</p>
          */
         public Builder corpName(String corpName) {
             this.putQueryParameter("CorpName", corpName);
@@ -248,10 +253,12 @@ public class CreateRobotTaskRequest extends Request {
         }
 
         /**
-         * The ID of the robot or communication script that is used to initiate the call.
-         * <p>
+         * <p>The ID of the robot or communication script that is used to initiate the call.</p>
+         * <p>You can log on to the <a href="https://dyvms.console.aliyun.com/overview/home">Voice Messaging Service console</a> and choose <strong>Intelligent Voice Robot</strong> &gt; <strong>Communication Script Management</strong> to view the communication script ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can log on to the [Voice Messaging Service console](https://dyvms.console.aliyun.com/overview/home) and choose **Intelligent Voice Robot** > **Communication Script Management** to view the communication script ID.
+         * <strong>example:</strong>
+         * <p>1000023****</p>
          */
         public Builder dialogId(Long dialogId) {
             this.putQueryParameter("DialogId", dialogId);
@@ -260,13 +267,17 @@ public class CreateRobotTaskRequest extends Request {
         }
 
         /**
-         * Specifies whether to call the self-managed line. Valid values:
-         * <p>
+         * <p>Specifies whether to call the self-managed line. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default)</li>
+         * <li><strong>true</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>If you set this parameter to <strong>true</strong>, calling numbers are not verified.</p>
+         * </blockquote>
          * 
-         * *   **false** (default)
-         * *   **true**
-         * 
-         * > If you set this parameter to **true**, calling numbers are not verified.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isSelfLine(Boolean isSelfLine) {
             this.putQueryParameter("IsSelfLine", isSelfLine);
@@ -275,13 +286,18 @@ public class CreateRobotTaskRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable number status identification. Valid values:
-         * <p>
+         * <p>Specifies whether to enable number status identification. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default)</li>
+         * <li><strong>true</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>If you set this parameter to <strong>true</strong>, the reason why a call is not answered is recorded.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **false** (default)
-         * *   **true**
-         * 
-         * > If you set this parameter to **true**, the reason why a call is not answered is recorded.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder numberStatusIdent(Boolean numberStatusIdent) {
             this.putQueryParameter("NumberStatusIdent", numberStatusIdent);
@@ -299,10 +315,13 @@ public class CreateRobotTaskRequest extends Request {
         }
 
         /**
-         * The redial interval. Unit: minutes. The value must be greater than 1.
-         * <p>
+         * <p>The redial interval. Unit: minutes. The value must be greater than 1.</p>
+         * <blockquote>
+         * <p>The maximum redial interval is 30 minutes.</p>
+         * </blockquote>
          * 
-         * > The maximum redial interval is 30 minutes.
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder recallInterval(Integer recallInterval) {
             this.putQueryParameter("RecallInterval", recallInterval);
@@ -311,15 +330,18 @@ public class CreateRobotTaskRequest extends Request {
         }
 
         /**
-         * The call state in which redial is required. Separate multiple call states with commas (,). Valid values:
-         * <p>
+         * <p>The call state in which redial is required. Separate multiple call states with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>200010</strong>: The phone of the called party is powered off.</li>
+         * <li><strong>200011</strong>: The number of the called party is out of service.</li>
+         * <li><strong>200002</strong>: The line is busy.</li>
+         * <li><strong>200012</strong>: The call is lost.</li>
+         * <li><strong>200005</strong>: The called party cannot be connected.</li>
+         * <li><strong>200003</strong>: The called party does not respond to the call.</li>
+         * </ul>
          * 
-         * *   **200010**: The phone of the called party is powered off.
-         * *   **200011**: The number of the called party is out of service.
-         * *   **200002**: The line is busy.
-         * *   **200012**: The call is lost.
-         * *   **200005**: The called party cannot be connected.
-         * *   **200003**: The called party does not respond to the call.
+         * <strong>example:</strong>
+         * <p>200010,200011</p>
          */
         public Builder recallStateCodes(String recallStateCodes) {
             this.putQueryParameter("RecallStateCodes", recallStateCodes);
@@ -328,7 +350,10 @@ public class CreateRobotTaskRequest extends Request {
         }
 
         /**
-         * The number of redial times.
+         * <p>The number of redial times.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder recallTimes(Integer recallTimes) {
             this.putQueryParameter("RecallTimes", recallTimes);
@@ -355,11 +380,15 @@ public class CreateRobotTaskRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-redial. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto-redial. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: enables auto-redial.</li>
+         * <li><strong>0</strong>: disables auto-redial.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**: enables auto-redial.
-         * *   **0**: disables auto-redial.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder retryType(Integer retryType) {
             this.putQueryParameter("RetryType", retryType);
@@ -368,7 +397,11 @@ public class CreateRobotTaskRequest extends Request {
         }
 
         /**
-         * The task name. The task name can be up to 30 characters in length.
+         * <p>The task name. The task name can be up to 30 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test Template</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

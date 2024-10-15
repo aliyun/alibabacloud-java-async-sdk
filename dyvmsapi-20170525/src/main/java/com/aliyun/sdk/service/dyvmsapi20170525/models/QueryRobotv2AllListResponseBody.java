@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryRobotv2AllListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryRobotv2AllListResponseBody</p>
  */
 public class QueryRobotv2AllListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryRobotv2AllListResponseBody(Builder builder) {
@@ -74,11 +74,14 @@ public class QueryRobotv2AllListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/112502.html">API error codes</a>.</li>
+         * </ul>
          * 
-         * *   The value OK indicates that the request was successful.
-         * *   For more information about other response codes, see [API error codes](~~112502~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -86,12 +89,15 @@ public class QueryRobotv2AllListResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the robot communication script, in the JSON format.
-         * <p>
+         * <p>The information about the robot communication script, in the JSON format.</p>
+         * <ul>
+         * <li><strong>id</strong>: the ID of the robot communication script.</li>
+         * <li><strong>robotName</strong>: the name of the robot communication script.</li>
+         * <li><strong>robotType</strong>: the type of the robot communication script.</li>
+         * </ul>
          * 
-         * *   **id**: the ID of the robot communication script.
-         * *   **robotName**: the name of the robot communication script.
-         * *   **robotType**: the type of the robot communication script.
+         * <strong>example:</strong>
+         * <p>{&quot;id&quot;:100000007****,&quot;robotName&quot;:&quot;Robot&quot;,&quot;robotType&quot;:&quot;CUSTOM&quot;}</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -99,7 +105,10 @@ public class QueryRobotv2AllListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -107,7 +116,10 @@ public class QueryRobotv2AllListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

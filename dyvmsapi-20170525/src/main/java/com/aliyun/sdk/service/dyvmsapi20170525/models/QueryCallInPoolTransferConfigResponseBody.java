@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCallInPoolTransferConfigResponseBody} extends {@link TeaModel}
  *
  * <p>QueryCallInPoolTransferConfigResponseBody</p>
  */
 public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryCallInPoolTransferConfigResponseBody(Builder builder) {
@@ -74,11 +74,14 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/112502.html">API error codes</a>.</li>
+         * </ul>
          * 
-         * *   The value OK indicates that the request was successful.
-         * *   For more information about other response codes, see [API error codes](~~112502~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -86,7 +89,7 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -94,7 +97,10 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +108,10 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7BF47617-7851-48F7-A3A1-2021342A78E2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -115,8 +124,14 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryCallInPoolTransferConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCallInPoolTransferConfigResponseBody</p>
+     */
     public static class Details extends TeaModel {
-        @NameInMap("Called")
+        @com.aliyun.core.annotation.NameInMap("Called")
         private String called;
 
         private Details(Builder builder) {
@@ -142,7 +157,10 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
             private String called; 
 
             /**
-             * The number used to transfer the call.
+             * <p>The number used to transfer the call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>400****</p>
              */
             public Builder called(String called) {
                 this.called = called;
@@ -156,17 +174,23 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryCallInPoolTransferConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCallInPoolTransferConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CalledRouteMode")
+        @com.aliyun.core.annotation.NameInMap("CalledRouteMode")
         private String calledRouteMode;
 
-        @NameInMap("Details")
+        @com.aliyun.core.annotation.NameInMap("Details")
         private java.util.List < Details> details;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("TransferTimeout")
+        @com.aliyun.core.annotation.NameInMap("TransferTimeout")
         private String transferTimeout;
 
         private Data(Builder builder) {
@@ -219,11 +243,14 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
             private String transferTimeout; 
 
             /**
-             * The call mode. Valid values:
-             * <p>
+             * <p>The call mode. Valid values:</p>
+             * <ul>
+             * <li><strong>roundRobin</strong></li>
+             * <li><strong>random</strong></li>
+             * </ul>
              * 
-             * *   **roundRobin**
-             * *   **random**
+             * <strong>example:</strong>
+             * <p>random</p>
              */
             public Builder calledRouteMode(String calledRouteMode) {
                 this.calledRouteMode = calledRouteMode;
@@ -231,7 +258,7 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the response parameters.
+             * <p>The details of the response parameters.</p>
              */
             public Builder details(java.util.List < Details> details) {
                 this.details = details;
@@ -239,7 +266,10 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the call transfer task was created.
+             * <p>The time when the call transfer task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1623137002000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -247,7 +277,10 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period for transferring the call.
+             * <p>The timeout period for transferring the call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder transferTimeout(String transferTimeout) {
                 this.transferTimeout = transferTimeout;

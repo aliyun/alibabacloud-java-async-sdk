@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryVirtualNumberRelationResponseBody} extends {@link TeaModel}
  *
  * <p>QueryVirtualNumberRelationResponseBody</p>
  */
 public class QueryVirtualNumberRelationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryVirtualNumberRelationResponseBody(Builder builder) {
@@ -62,11 +62,14 @@ public class QueryVirtualNumberRelationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <ul>
+         * <li>The value 200 indicates that the request was successful.</li>
+         * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/112502.html">API error codes</a>.</li>
+         * </ul>
          * 
-         * *   The value 200 indicates that the request was successful.
-         * *   For more information about other response codes, see [API error codes](~~112502~~).
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -74,14 +77,17 @@ public class QueryVirtualNumberRelationResponseBody extends TeaModel {
         }
 
         /**
-         * The list of associations between virtual numbers and real numbers. The following fields are returned:
-         * <p>
+         * <p>The list of associations between virtual numbers and real numbers. The following fields are returned:</p>
+         * <ul>
+         * <li><strong>relatedNum</strong>: the real number.</li>
+         * <li><strong>createTime</strong>: the time when the number was activated.</li>
+         * <li><strong>pageNo</strong>: the page number.</li>
+         * <li><strong>pageSize</strong>: the number of entries per page.</li>
+         * <li><strong>total</strong>: the total number of entries returned.</li>
+         * </ul>
          * 
-         * *   **relatedNum**: the real number.
-         * *   **createTime**: the time when the number was activated.
-         * *   **pageNo**: the page number.
-         * *   **pageSize**: the number of entries per page.
-         * *   **total**: the total number of entries returned.
+         * <strong>example:</strong>
+         * <p>{&quot;data&quot;:[{&quot;relatedNum&quot;:&quot;1705559****&quot;,&quot;createTime&quot;:&quot;2021-03-26 12:34:08&quot;}],&quot;pageSize&quot;:20,&quot;total&quot;:1,&quot;pageNo&quot;:1}</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -89,7 +95,10 @@ public class QueryVirtualNumberRelationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8FAD5988-B483-48A4-B251-6E8470A67371</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

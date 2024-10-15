@@ -1,51 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCallInTransferRecordRequest} extends {@link RequestModel}
  *
  * <p>QueryCallInTransferRecordRequest</p>
  */
 public class QueryCallInTransferRecordRequest extends Request {
-    @Query
-    @NameInMap("CallInCaller")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallInCaller")
     private String callInCaller;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long pageNo;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long pageSize;
 
-    @Query
-    @NameInMap("PhoneNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNumber;
 
-    @Query
-    @NameInMap("QueryDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String queryDate;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private QueryCallInTransferRecordRequest(Builder builder) {
@@ -156,7 +156,10 @@ public class QueryCallInTransferRecordRequest extends Request {
         } 
 
         /**
-         * The calling number of the inbound call.
+         * <p>The calling number of the inbound call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150****0000</p>
          */
         public Builder callInCaller(String callInCaller) {
             this.putQueryParameter("CallInCaller", callInCaller);
@@ -174,7 +177,11 @@ public class QueryCallInTransferRecordRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -183,7 +190,11 @@ public class QueryCallInTransferRecordRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 10.
+         * <p>The number of entries per page. Valid values: 1 to 10.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -192,7 +203,11 @@ public class QueryCallInTransferRecordRequest extends Request {
         }
 
         /**
-         * The phone number to which a call is transferred.
+         * <p>The phone number to which a call is transferred.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400****</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -201,10 +216,14 @@ public class QueryCallInTransferRecordRequest extends Request {
         }
 
         /**
-         * The time at which call transfer records are queried, in the YYYY-MM-DD hh:mm:ss format.
-         * <p>
+         * <p>The time at which call transfer records are queried, in the YYYY-MM-DD hh:mm:ss format.</p>
+         * <blockquote>
+         * <p>The query result is all the call transfer records of the specified day.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The query result is all the call transfer records of the specified day.
+         * <strong>example:</strong>
+         * <p>2021-06-28 00:00:00</p>
          */
         public Builder queryDate(String queryDate) {
             this.putQueryParameter("QueryDate", queryDate);

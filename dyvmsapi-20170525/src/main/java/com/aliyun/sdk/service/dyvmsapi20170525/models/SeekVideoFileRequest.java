@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SeekVideoFileRequest} extends {@link RequestModel}
  *
  * <p>SeekVideoFileRequest</p>
  */
 public class SeekVideoFileRequest extends Request {
-    @Query
-    @NameInMap("CallId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallId")
     private String callId;
 
-    @Query
-    @NameInMap("CalledNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CalledNumber")
     private String calledNumber;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SeekTimes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SeekTimes")
     private Long seekTimes;
 
     private SeekVideoFileRequest(Builder builder) {
@@ -124,7 +124,10 @@ public class SeekVideoFileRequest extends Request {
         } 
 
         /**
-         * 呼叫唯一ID
+         * <p>呼叫唯一ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值</p>
          */
         public Builder callId(String callId) {
             this.putQueryParameter("CallId", callId);
@@ -133,7 +136,10 @@ public class SeekVideoFileRequest extends Request {
         }
 
         /**
-         * 被叫号码
+         * <p>被叫号码</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
          */
         public Builder calledNumber(String calledNumber) {
             this.putQueryParameter("CalledNumber", calledNumber);
@@ -169,7 +175,10 @@ public class SeekVideoFileRequest extends Request {
         }
 
         /**
-         * 快进或快退值，负数为快退，单位秒
+         * <p>快进或快退值，负数为快退，单位秒</p>
+         * 
+         * <strong>example:</strong>
+         * <p>92</p>
          */
         public Builder seekTimes(Long seekTimes) {
             this.putQueryParameter("SeekTimes", seekTimes);

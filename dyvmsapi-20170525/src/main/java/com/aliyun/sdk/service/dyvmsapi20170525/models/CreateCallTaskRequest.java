@@ -1,71 +1,71 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCallTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateCallTaskRequest</p>
  */
 public class CreateCallTaskRequest extends Request {
-    @Query
-    @NameInMap("BizType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizType")
     private String bizType;
 
-    @Query
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @Query
-    @NameInMap("DataType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataType")
     private String dataType;
 
-    @Query
-    @NameInMap("FireTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FireTime")
     private String fireTime;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Resource")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Resource")
     private String resource;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @Query
-    @NameInMap("ScheduleType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScheduleType")
     private String scheduleType;
 
-    @Query
-    @NameInMap("StopTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StopTime")
     private String stopTime;
 
-    @Query
-    @NameInMap("TaskName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskName")
     private String taskName;
 
-    @Query
-    @NameInMap("TemplateCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateCode")
     private String templateCode;
 
-    @Query
-    @NameInMap("TemplateName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
     private String templateName;
 
     private CreateCallTaskRequest(Builder builder) {
@@ -236,12 +236,15 @@ public class CreateCallTaskRequest extends Request {
         } 
 
         /**
-         * The type of the task template. Valid values:
-         * <p>
+         * <p>The type of the task template. Valid values:</p>
+         * <ul>
+         * <li><strong>VMS_VOICE_TTS</strong>: the text-to-speech (TTS) notification template.</li>
+         * <li><strong>VMS_VOICE_CODE</strong>: the voice notification template.</li>
+         * <li><strong>VMS_TTS</strong>: the voice verification code template.</li>
+         * </ul>
          * 
-         * *   **VMS_VOICE_TTS**: the text-to-speech (TTS) notification template.
-         * *   **VMS_VOICE_CODE**: the voice notification template.
-         * *   **VMS_TTS**: the voice verification code template.
+         * <strong>example:</strong>
+         * <p>VMS_VOICE_TTS</p>
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -250,11 +253,14 @@ public class CreateCallTaskRequest extends Request {
         }
 
         /**
-         * The called numbers.
-         * <p>
+         * <p>The called numbers.</p>
+         * <ul>
+         * <li>If you set DataType to LIST, the value of Data is in the LIST format.</li>
+         * <li>If you set DataType to JSON, the value of Data is in the JSON format.</li>
+         * </ul>
          * 
-         * *   If you set DataType to LIST, the value of Data is in the LIST format.
-         * *   If you set DataType to JSON, the value of Data is in the JSON format.
+         * <strong>example:</strong>
+         * <p>{ &quot;paramNames&quot;:[&quot;name1&quot;,&quot;name2&quot;,&quot;key3&quot;], &quot;calleeList&quot;:[ { &quot;callee&quot;:&quot;131222222&quot;, &quot;params&quot;:[&quot;zangsan&quot;,&quot;zhangsan01&quot;,&quot;zhangsan02&quot;] }, { &quot;callee&quot;:&quot;131222222&quot;, &quot;params&quot;:[&quot;zangsan&quot;,&quot;zhangsan01&quot;,&quot;zhangsan02&quot;] }, ] }</p>
          */
         public Builder data(String data) {
             this.putQueryParameter("Data", data);
@@ -263,11 +269,14 @@ public class CreateCallTaskRequest extends Request {
         }
 
         /**
-         * The type of called numbers. Valid values:
-         * <p>
+         * <p>The type of called numbers. Valid values:</p>
+         * <ul>
+         * <li><strong>LIST</strong>: the called numbers that are separated by commas (,).</li>
+         * <li><strong>JSON</strong>: a JSON-formatted list of called numbers with template parameters.</li>
+         * </ul>
          * 
-         * *   **LIST**: the called numbers that are separated by commas (,).
-         * *   **JSON**: a JSON-formatted list of called numbers with template parameters.
+         * <strong>example:</strong>
+         * <p>JSON</p>
          */
         public Builder dataType(String dataType) {
             this.putQueryParameter("DataType", dataType);
@@ -276,7 +285,10 @@ public class CreateCallTaskRequest extends Request {
         }
 
         /**
-         * This parameter is unavailable.
+         * <p>This parameter is unavailable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder fireTime(String fireTime) {
             this.putQueryParameter("FireTime", fireTime);
@@ -294,7 +306,10 @@ public class CreateCallTaskRequest extends Request {
         }
 
         /**
-         * The calling number. Only virtual numbers are supported.
+         * <p>The calling number. Only virtual numbers are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05516214****</p>
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -321,7 +336,10 @@ public class CreateCallTaskRequest extends Request {
         }
 
         /**
-         * The type of the calling number. Set the value to **LIST**.
+         * <p>The type of the calling number. Set the value to <strong>LIST</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LIST</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -330,7 +348,10 @@ public class CreateCallTaskRequest extends Request {
         }
 
         /**
-         * This parameter is unavailable.
+         * <p>This parameter is unavailable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scheduleType(String scheduleType) {
             this.putQueryParameter("ScheduleType", scheduleType);
@@ -339,7 +360,10 @@ public class CreateCallTaskRequest extends Request {
         }
 
         /**
-         * This parameter is unavailable.
+         * <p>This parameter is unavailable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder stopTime(String stopTime) {
             this.putQueryParameter("StopTime", stopTime);
@@ -348,7 +372,10 @@ public class CreateCallTaskRequest extends Request {
         }
 
         /**
-         * The task name.
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -357,7 +384,10 @@ public class CreateCallTaskRequest extends Request {
         }
 
         /**
-         * The template ID.
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TTS_2122****</p>
          */
         public Builder templateCode(String templateCode) {
             this.putQueryParameter("TemplateCode", templateCode);
@@ -366,7 +396,10 @@ public class CreateCallTaskRequest extends Request {
         }
 
         /**
-         * The template name.
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test Template</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
