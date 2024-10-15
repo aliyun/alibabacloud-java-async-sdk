@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCategoryResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteCategoryResponseBody</p>
@@ -105,7 +106,7 @@ public class DeleteCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * data
+         * <p>data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -121,7 +122,10 @@ public class DeleteCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17204B98-xxxx-4F9A-8464-2446A84821CA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,6 +154,12 @@ public class DeleteCategoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteCategoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteCategoryResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CategoryId")
         private String categoryId;

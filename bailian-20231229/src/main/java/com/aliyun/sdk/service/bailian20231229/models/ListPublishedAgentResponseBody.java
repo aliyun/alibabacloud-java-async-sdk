@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPublishedAgentResponseBody} extends {@link TeaModel}
  *
  * <p>ListPublishedAgentResponseBody</p>
@@ -150,6 +151,12 @@ public class ListPublishedAgentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPublishedAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPublishedAgentResponseBody</p>
+     */
     public static class HistoryConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enableAdbRecord")
         private Boolean enableAdbRecord;
@@ -271,6 +278,12 @@ public class ListPublishedAgentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPublishedAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPublishedAgentResponseBody</p>
+     */
     public static class LongTermMemory extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enable")
         private Boolean enable;
@@ -312,6 +325,12 @@ public class ListPublishedAgentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPublishedAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPublishedAgentResponseBody</p>
+     */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dialogRound")
         private Integer dialogRound;
@@ -393,6 +412,12 @@ public class ListPublishedAgentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPublishedAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPublishedAgentResponseBody</p>
+     */
     public static class RagConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enableCitation")
         private Boolean enableCitation;
@@ -494,6 +519,12 @@ public class ListPublishedAgentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPublishedAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPublishedAgentResponseBody</p>
+     */
     public static class Security extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("processingStrategy")
         private String processingStrategy;
@@ -535,6 +566,12 @@ public class ListPublishedAgentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPublishedAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPublishedAgentResponseBody</p>
+     */
     public static class Tools extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
@@ -576,6 +613,12 @@ public class ListPublishedAgentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPublishedAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPublishedAgentResponseBody</p>
+     */
     public static class WorkFlows extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
@@ -617,6 +660,12 @@ public class ListPublishedAgentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPublishedAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPublishedAgentResponseBody</p>
+     */
     public static class ApplicationConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("historyConfig")
         private HistoryConfig historyConfig;
@@ -778,6 +827,12 @@ public class ListPublishedAgentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPublishedAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPublishedAgentResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("applicationConfig")
         private ApplicationConfig applicationConfig;
@@ -899,6 +954,12 @@ public class ListPublishedAgentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPublishedAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPublishedAgentResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("list")
         private java.util.List < List> list;

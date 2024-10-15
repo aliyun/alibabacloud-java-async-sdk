@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIndexDocumentsRequest} extends {@link RequestModel}
  *
  * <p>ListIndexDocumentsRequest</p>
@@ -125,7 +126,11 @@ public class ListIndexDocumentsRequest extends Request {
         } 
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace to which the knowledge base belongs. To view the workspace ID, you can click the Workspace Details icon in the upper-left corner on the <a href="https://bailian.console.aliyun.com/#/home">homepage</a> of the console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws_3Nt27MYcoK191ISp</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -134,7 +139,7 @@ public class ListIndexDocumentsRequest extends Request {
         }
 
         /**
-         * DocumentName.
+         * <p>The names of the queried documents. The default value is null, which means the names are not used to filter the results.</p>
          */
         public Builder documentName(String documentName) {
             this.putQueryParameter("DocumentName", documentName);
@@ -143,7 +148,17 @@ public class ListIndexDocumentsRequest extends Request {
         }
 
         /**
-         * DocumentStatus.
+         * <p>The import status of the documents to be queried. Valid values:</p>
+         * <ul>
+         * <li>INSERT_ERROR</li>
+         * <li>RUNNING</li>
+         * <li>DELETED</li>
+         * <li>FINISH</li>
+         * </ul>
+         * <p>The default value is null, which means the import status is not used to filter the results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FINISH</p>
          */
         public Builder documentStatus(String documentStatus) {
             this.putQueryParameter("DocumentStatus", documentStatus);
@@ -152,7 +167,11 @@ public class ListIndexDocumentsRequest extends Request {
         }
 
         /**
-         * IndexId.
+         * <p>The primary key ID of the knowledge base, which is the <code>Data.Id</code> parameter returned by the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79c0aly8zw</p>
          */
         public Builder indexId(String indexId) {
             this.putQueryParameter("IndexId", indexId);
@@ -161,7 +180,10 @@ public class ListIndexDocumentsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page numbers of the pages to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -170,7 +192,10 @@ public class ListIndexDocumentsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of documents displayed on each page. No maximum value. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddFileResponseBody} extends {@link TeaModel}
  *
  * <p>AddFileResponseBody</p>
@@ -97,7 +98,10 @@ public class AddFileResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DataCenter.FileTooLarge</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class AddFileResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data fields.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class AddFileResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User not authorized to operate on the specified resource.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +128,10 @@ public class AddFileResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>778C0B3B-xxxx-5FC1-A947-36EDD13606AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +139,10 @@ public class AddFileResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -137,7 +150,14 @@ public class AddFileResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indications whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -150,6 +170,12 @@ public class AddFileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddFileResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileId")
         private String fileId;
@@ -189,7 +215,10 @@ public class AddFileResponseBody extends TeaModel {
             private String parser; 
 
             /**
-             * FileId.
+             * <p>The primary key ID of the document. We recommend that you store the ID because it is required for all subsequent API operations related to this document.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>file_9a65732555b54d5ea10796ca5742ba22_XXXXXXXX</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -197,7 +226,13 @@ public class AddFileResponseBody extends TeaModel {
             }
 
             /**
-             * Parser.
+             * <p>The parser that is used to parse the document. Valid value:</p>
+             * <ul>
+             * <li>DASHSCOPE_DOCMIND: Intelligent document parsing by Alibaba Cloud.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DASHSCOPE_DOCMIND</p>
              */
             public Builder parser(String parser) {
                 this.parser = parser;

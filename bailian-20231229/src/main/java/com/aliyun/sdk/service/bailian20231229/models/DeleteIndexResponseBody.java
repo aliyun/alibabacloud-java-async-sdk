@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteIndexResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteIndexResponseBody</p>
@@ -85,7 +86,10 @@ public class DeleteIndexResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Index.InvalidParameter</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,10 @@ public class DeleteIndexResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Required parameter(%s) missing or invalid, please check the request parameters.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -101,7 +108,10 @@ public class DeleteIndexResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17204B98-xxxx-4F9A-8464-2446A84821CA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,10 @@ public class DeleteIndexResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -117,7 +130,14 @@ public class DeleteIndexResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indications whether the API call is successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

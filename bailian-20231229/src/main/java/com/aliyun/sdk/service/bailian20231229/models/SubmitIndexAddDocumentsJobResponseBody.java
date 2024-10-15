@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitIndexAddDocumentsJobResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitIndexAddDocumentsJobResponseBody</p>
@@ -97,7 +98,10 @@ public class SubmitIndexAddDocumentsJobResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Index.InvalidParameter</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class SubmitIndexAddDocumentsJobResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class SubmitIndexAddDocumentsJobResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Required parameter(%s) missing or invalid, please check the request parameters.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +128,10 @@ public class SubmitIndexAddDocumentsJobResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>778C0B3B-03C1-5FC1-A947-36EDD13606AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +139,10 @@ public class SubmitIndexAddDocumentsJobResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -137,7 +150,14 @@ public class SubmitIndexAddDocumentsJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indications whether the API call is successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +170,12 @@ public class SubmitIndexAddDocumentsJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitIndexAddDocumentsJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitIndexAddDocumentsJobResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -177,7 +203,10 @@ public class SubmitIndexAddDocumentsJobResponseBody extends TeaModel {
             private String id; 
 
             /**
-             * Id.
+             * <p>The primary key ID of the task, <code>JobId</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>42687eb254a34802bed398357f5498ae</p>
              */
             public Builder id(String id) {
                 this.id = id;

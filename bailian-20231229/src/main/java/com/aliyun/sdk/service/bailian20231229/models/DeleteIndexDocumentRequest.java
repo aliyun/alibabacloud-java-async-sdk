@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteIndexDocumentRequest} extends {@link RequestModel}
  *
  * <p>DeleteIndexDocumentRequest</p>
@@ -84,7 +85,11 @@ public class DeleteIndexDocumentRequest extends Request {
         } 
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace to which the knowledge base belongs. To view the workspace ID, you can click the Workspace Details icon in the upper-left corner on the <a href="https://bailian.console.aliyun.com/#/home">homepage</a> of the console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws_3Nt27MYcoK191ISp</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -93,7 +98,8 @@ public class DeleteIndexDocumentRequest extends Request {
         }
 
         /**
-         * DocumentIds.
+         * <p>The list of the primary key IDs of the documents.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder documentIds(java.util.List < String > documentIds) {
             String documentIdsShrink = shrink(documentIds, "DocumentIds", "json");
@@ -103,7 +109,11 @@ public class DeleteIndexDocumentRequest extends Request {
         }
 
         /**
-         * IndexId.
+         * <p>The primary key ID of the knowledge base, which is the <code>Data.Id</code> parameter returned by the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79c0aly8zw</p>
          */
         public Builder indexId(String indexId) {
             this.putQueryParameter("IndexId", indexId);

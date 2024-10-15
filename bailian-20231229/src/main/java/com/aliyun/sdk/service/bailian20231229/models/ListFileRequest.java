@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFileRequest} extends {@link RequestModel}
  *
  * <p>ListFileRequest</p>
@@ -26,6 +27,10 @@ public class ListFileRequest extends Request {
     private String categoryId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileName")
+    private String fileName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -38,6 +43,7 @@ public class ListFileRequest extends Request {
         this.workspaceId = builder.workspaceId;
         this.regionId = builder.regionId;
         this.categoryId = builder.categoryId;
+        this.fileName = builder.fileName;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
     }
@@ -77,6 +83,13 @@ public class ListFileRequest extends Request {
     }
 
     /**
+     * @return fileName
+     */
+    public String getFileName() {
+        return this.fileName;
+    }
+
+    /**
      * @return maxResults
      */
     public Integer getMaxResults() {
@@ -94,6 +107,7 @@ public class ListFileRequest extends Request {
         private String workspaceId; 
         private String regionId; 
         private String categoryId; 
+        private String fileName; 
         private Integer maxResults; 
         private String nextToken; 
 
@@ -106,12 +120,16 @@ public class ListFileRequest extends Request {
             this.workspaceId = request.workspaceId;
             this.regionId = request.regionId;
             this.categoryId = request.categoryId;
+            this.fileName = request.fileName;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
         } 
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws_3Nt27MYcoK191ISp</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -120,7 +138,7 @@ public class ListFileRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -129,11 +147,23 @@ public class ListFileRequest extends Request {
         }
 
         /**
-         * CategoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cate_cdd11b1b79a74e8bbd675c356a91ee3510024405</p>
          */
         public Builder categoryId(String categoryId) {
             this.putQueryParameter("CategoryId", categoryId);
             this.categoryId = categoryId;
+            return this;
+        }
+
+        /**
+         * FileName.
+         */
+        public Builder fileName(String fileName) {
+            this.putQueryParameter("FileName", fileName);
+            this.fileName = fileName;
             return this;
         }
 

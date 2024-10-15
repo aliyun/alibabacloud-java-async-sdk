@@ -1,3 +1,6 @@
+2024-10-15 Version: 1.0.15
+- Generated java-async 2023-12-29 for bailian.
+
 2024-09-19 Version: 1.0.14
 - Generated java-async 2023-12-29 for bailian.
 

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMemoryNodeRequest} extends {@link RequestModel}
  *
  * <p>CreateMemoryNodeRequest</p>
@@ -106,7 +107,10 @@ public class CreateMemoryNodeRequest extends Request {
         }
 
         /**
-         * memoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6bff4f317a14442fbc9f73d29dbd5fc3</p>
          */
         public Builder memoryId(String memoryId) {
             this.putPathParameter("memoryId", memoryId);
@@ -115,7 +119,7 @@ public class CreateMemoryNodeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -124,7 +128,7 @@ public class CreateMemoryNodeRequest extends Request {
         }
 
         /**
-         * content.
+         * <p>This parameter is required.</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("content", content);

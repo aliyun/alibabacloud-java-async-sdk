@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListChunksRequest} extends {@link RequestModel}
  *
  * <p>ListChunksRequest</p>
@@ -125,7 +126,11 @@ public class ListChunksRequest extends Request {
         } 
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace to which the knowledge base belongs. To view the workspace ID, you can click the Workspace Details icon in the upper-left corner on the <a href="https://bailian.console.aliyun.com/#/home">homepage</a> of the console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws_3AXoiweeTyTd03IN</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -134,7 +139,7 @@ public class ListChunksRequest extends Request {
         }
 
         /**
-         * Fields.
+         * <p>An array of field names. This parameter is used to filter non-private fields (prefixed with_underscores) in the Metadata parameter returned by this operation. By default, this parameter is left empty, which means all non-private fields in the Metadata parameter are returned. If you only want specified non-private fields, such as title, set this parameter to title.</p>
          */
         public Builder fields(java.util.List < String > fields) {
             this.putBodyParameter("Fields", fields);
@@ -143,7 +148,10 @@ public class ListChunksRequest extends Request {
         }
 
         /**
-         * Filed.
+         * <p>The primary key ID of the document, which is the <code>FieldID</code> parameter returned by the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addfile">AddFile</a> operation. This parameter is not required for structured knowledge base, but is required for unstructured knowledge base. To view the ID, you can click the ID icon next to the file name on the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> page. You can filter returned chunks by the document ID. This parameter is left empty by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>file_5f03dfea56da4050ab68d61871fc4cb3_10151493</p>
          */
         public Builder filed(String filed) {
             this.putBodyParameter("Filed", filed);
@@ -152,7 +160,11 @@ public class ListChunksRequest extends Request {
         }
 
         /**
-         * IndexId.
+         * <p>The primary key ID of the knowledge base, which is the <code>Data.Id</code> parameter returned by the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>otoru9en4v</p>
          */
         public Builder indexId(String indexId) {
             this.putBodyParameter("IndexId", indexId);
@@ -161,7 +173,10 @@ public class ListChunksRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The number of the pages to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putBodyParameter("PageNum", pageNum);
@@ -170,7 +185,10 @@ public class ListChunksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of chunks to display on each page. Maximum value: 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteIndexDocumentResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteIndexDocumentResponseBody</p>
@@ -97,7 +98,10 @@ public class DeleteIndexDocumentResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Index.InvalidParameter</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class DeleteIndexDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The parameters returned by the operation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class DeleteIndexDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Required parameter(%s) missing or invalid, please check the request parameters.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +128,10 @@ public class DeleteIndexDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17204B98-xxxx-4F9A-8464-2446A84821CA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +139,10 @@ public class DeleteIndexDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -137,7 +150,14 @@ public class DeleteIndexDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indications whether the API call is successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +170,12 @@ public class DeleteIndexDocumentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteIndexDocumentResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteIndexDocumentResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeletedDocument")
         private java.util.List < String > deletedDocument;
@@ -177,7 +203,7 @@ public class DeleteIndexDocumentResponseBody extends TeaModel {
             private java.util.List < String > deletedDocument; 
 
             /**
-             * DeletedDocument.
+             * <p>The list of primary key IDs of documents that are deleted.</p>
              */
             public Builder deletedDocument(java.util.List < String > deletedDocument) {
                 this.deletedDocument = deletedDocument;

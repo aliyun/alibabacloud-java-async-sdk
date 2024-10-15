@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMemoryNodeRequest} extends {@link RequestModel}
  *
  * <p>DeleteMemoryNodeRequest</p>
@@ -98,7 +99,10 @@ public class DeleteMemoryNodeRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-us9hjmt32nysdm5v</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -107,7 +111,10 @@ public class DeleteMemoryNodeRequest extends Request {
         }
 
         /**
-         * memoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6bff4f317a14442fbc9f73d29dbd5fc3</p>
          */
         public Builder memoryId(String memoryId) {
             this.putPathParameter("memoryId", memoryId);
@@ -116,7 +123,10 @@ public class DeleteMemoryNodeRequest extends Request {
         }
 
         /**
-         * memoryNodeId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68de06c95368463a8be4a84efc872cc5</p>
          */
         public Builder memoryNodeId(String memoryNodeId) {
             this.putPathParameter("memoryNodeId", memoryNodeId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMemoryRequest} extends {@link RequestModel}
  *
  * <p>UpdateMemoryRequest</p>
@@ -97,7 +98,10 @@ public class UpdateMemoryRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-us9hjmt32nysdm5v</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -106,7 +110,10 @@ public class UpdateMemoryRequest extends Request {
         }
 
         /**
-         * memoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6bff4f317a14442fbc9f73d29dbd5fc3</p>
          */
         public Builder memoryId(String memoryId) {
             this.putPathParameter("memoryId", memoryId);

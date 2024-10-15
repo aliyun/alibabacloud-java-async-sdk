@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAndPulishAgentRequest} extends {@link RequestModel}
  *
  * <p>CreateAndPulishAgentRequest</p>
@@ -161,6 +162,12 @@ public class CreateAndPulishAgentRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAndPulishAgentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAndPulishAgentRequest</p>
+     */
     public static class HistoryConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enableAdbRecord")
         private Boolean enableAdbRecord;
@@ -282,6 +289,12 @@ public class CreateAndPulishAgentRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAndPulishAgentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAndPulishAgentRequest</p>
+     */
     public static class LongTermMemory extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enable")
         private Boolean enable;
@@ -323,6 +336,12 @@ public class CreateAndPulishAgentRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAndPulishAgentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAndPulishAgentRequest</p>
+     */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dialogRound")
         private Integer dialogRound;
@@ -404,6 +423,12 @@ public class CreateAndPulishAgentRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAndPulishAgentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAndPulishAgentRequest</p>
+     */
     public static class RagConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enableCitation")
         private Boolean enableCitation;
@@ -505,6 +530,12 @@ public class CreateAndPulishAgentRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAndPulishAgentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAndPulishAgentRequest</p>
+     */
     public static class SecurityConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("processingStrategy")
         private String processingStrategy;
@@ -546,6 +577,12 @@ public class CreateAndPulishAgentRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAndPulishAgentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAndPulishAgentRequest</p>
+     */
     public static class Tools extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
@@ -587,6 +624,12 @@ public class CreateAndPulishAgentRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAndPulishAgentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAndPulishAgentRequest</p>
+     */
     public static class WorkFlows extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
@@ -628,6 +671,12 @@ public class CreateAndPulishAgentRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAndPulishAgentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAndPulishAgentRequest</p>
+     */
     public static class ApplicationConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("historyConfig")
         private HistoryConfig historyConfig;

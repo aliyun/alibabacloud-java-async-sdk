@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitIndexJobResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitIndexJobResponseBody</p>
@@ -97,7 +98,10 @@ public class SubmitIndexJobResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class SubmitIndexJobResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class SubmitIndexJobResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Required parameter(%s) missing or invalid, please check the request parameters.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +128,10 @@ public class SubmitIndexJobResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17204B98-xxxx-4F9A-8464-2446A84821CA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +139,10 @@ public class SubmitIndexJobResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -137,7 +150,14 @@ public class SubmitIndexJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indications whether the API call is successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +170,12 @@ public class SubmitIndexJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitIndexJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitIndexJobResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -189,7 +215,10 @@ public class SubmitIndexJobResponseBody extends TeaModel {
             private String indexId; 
 
             /**
-             * Id.
+             * <p>The primary key ID of the job, which is the <code>JobId</code> parameter of the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eFDr2fGRzP9gdDZWAdo3YQ==</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -197,7 +226,10 @@ public class SubmitIndexJobResponseBody extends TeaModel {
             }
 
             /**
-             * IndexId.
+             * <p>The primary key ID of the knowledge base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>khdyak1uuj</p>
              */
             public Builder indexId(String indexId) {
                 this.indexId = indexId;

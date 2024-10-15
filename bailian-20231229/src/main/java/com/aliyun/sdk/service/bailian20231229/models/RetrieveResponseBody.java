@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RetrieveResponseBody} extends {@link TeaModel}
  *
  * <p>RetrieveResponseBody</p>
@@ -97,7 +98,10 @@ public class RetrieveResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Index.InvalidParameter</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class RetrieveResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class RetrieveResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Required parameter(%s) missing or invalid, please check the request parameters.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +128,10 @@ public class RetrieveResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17204B98-7734-4F9A-8464-2446A84821CA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +139,10 @@ public class RetrieveResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -137,7 +150,14 @@ public class RetrieveResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indications whether the API call is successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +170,12 @@ public class RetrieveResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RetrieveResponseBody} extends {@link TeaModel}
+     *
+     * <p>RetrieveResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Metadata")
         private Object metadata;
@@ -201,7 +227,7 @@ public class RetrieveResponseBody extends TeaModel {
             private String text; 
 
             /**
-             * Metadata.
+             * <p>The metadata map of the chunk.</p>
              */
             public Builder metadata(Object metadata) {
                 this.metadata = metadata;
@@ -209,7 +235,10 @@ public class RetrieveResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * <p>The similarity score of the chunk. Valid values:[0-1].</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.3</p>
              */
             public Builder score(Double score) {
                 this.score = score;
@@ -217,7 +246,7 @@ public class RetrieveResponseBody extends TeaModel {
             }
 
             /**
-             * Text.
+             * <p>The text of the chunk.</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -231,6 +260,12 @@ public class RetrieveResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RetrieveResponseBody} extends {@link TeaModel}
+     *
+     * <p>RetrieveResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Nodes")
         private java.util.List < Nodes> nodes;
@@ -258,7 +293,7 @@ public class RetrieveResponseBody extends TeaModel {
             private java.util.List < Nodes> nodes; 
 
             /**
-             * Nodes.
+             * <p>The list of queried chunks.</p>
              */
             public Builder nodes(java.util.List < Nodes> nodes) {
                 this.nodes = nodes;

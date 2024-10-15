@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFileResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFileResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeFileResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class DescribeFileResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data fields.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class DescribeFileResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Requests throttling triggered.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +128,10 @@ public class DescribeFileResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17204B98-xxxx-4F9A-8464-2446A84821CA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +139,10 @@ public class DescribeFileResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -137,7 +150,14 @@ public class DescribeFileResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indications whether the API call is successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +170,12 @@ public class DescribeFileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CategoryId")
         private String categoryId;
@@ -273,7 +299,10 @@ public class DescribeFileResponseBody extends TeaModel {
             private java.util.List < String > tags; 
 
             /**
-             * CategoryId.
+             * <p>The ID of the category to which the document belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cate_cdd11b1b79a74e8bbd675c356a91ee3XXXXXXXX</p>
              */
             public Builder categoryId(String categoryId) {
                 this.categoryId = categoryId;
@@ -281,7 +310,10 @@ public class DescribeFileResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The timestamp when the document was uploaded to Model Studio. Format: yyyy-MM-dd HH:mm:ss. Time zone: UTC + 8.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-26 12:45:43</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -289,7 +321,10 @@ public class DescribeFileResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * <p>The primary key ID of the document.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>file_9a65732555b54d5ea10796ca5742ba22_XXXXXXXX</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -297,7 +332,10 @@ public class DescribeFileResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The name of the document.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.pdf</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -305,7 +343,10 @@ public class DescribeFileResponseBody extends TeaModel {
             }
 
             /**
-             * FileType.
+             * <p>The file type of the document. The value is an extension. Valid values: pdf, docx, doc, txt, md, pptx, and ppt.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pdf</p>
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -313,7 +354,13 @@ public class DescribeFileResponseBody extends TeaModel {
             }
 
             /**
-             * Parser.
+             * <p>The parser that is used to parse the document. Valid value:</p>
+             * <ul>
+             * <li>DASHSCOPE_DOCMIND: The default document parser.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DASHSCOPE_DOCMIND</p>
              */
             public Builder parser(String parser) {
                 this.parser = parser;
@@ -321,7 +368,10 @@ public class DescribeFileResponseBody extends TeaModel {
             }
 
             /**
-             * SizeInBytes.
+             * <p>The size of the document. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder sizeInBytes(Long sizeInBytes) {
                 this.sizeInBytes = sizeInBytes;
@@ -329,7 +379,16 @@ public class DescribeFileResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the document. Valid values:</p>
+             * <ul>
+             * <li>INIT: pending parsing.</li>
+             * <li>PARSING</li>
+             * <li>PARSE_SUCCESS</li>
+             * <li>PARSE_FAILED</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PARSE_SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -337,7 +396,7 @@ public class DescribeFileResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags that are associated with the document. A document can be associated with multiple tags.</p>
              */
             public Builder tags(java.util.List < String > tags) {
                 this.tags = tags;

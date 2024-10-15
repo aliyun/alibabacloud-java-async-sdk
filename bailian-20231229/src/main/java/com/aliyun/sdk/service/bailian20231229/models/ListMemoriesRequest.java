@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMemoriesRequest} extends {@link RequestModel}
  *
  * <p>ListMemoriesRequest</p>
@@ -96,7 +97,10 @@ public class ListMemoriesRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-us9hjmt32nysdm5v</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -105,7 +109,7 @@ public class ListMemoriesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCategoryRequest} extends {@link RequestModel}
  *
  * <p>DeleteCategoryRequest</p>
@@ -83,7 +84,10 @@ public class DeleteCategoryRequest extends Request {
         } 
 
         /**
-         * CategoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cate_cdd11b1b79a74e8bbd675c356a91ee3510024405</p>
          */
         public Builder categoryId(String categoryId) {
             this.putPathParameter("CategoryId", categoryId);
@@ -92,7 +96,10 @@ public class DeleteCategoryRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws_3AXoiweeTyTd03IN</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -101,7 +108,7 @@ public class DeleteCategoryRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);

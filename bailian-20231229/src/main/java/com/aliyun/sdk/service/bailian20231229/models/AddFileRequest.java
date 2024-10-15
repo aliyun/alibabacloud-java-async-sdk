@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddFileRequest} extends {@link RequestModel}
  *
  * <p>AddFileRequest</p>
@@ -127,7 +128,11 @@ public class AddFileRequest extends Request {
         } 
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace to which the document is uploaded. On the <a href="https://bailian.console.aliyun.com/knowledge-base#/home">homepage</a> of the console, click the workspace Details icon in the upper-left corner to view the workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws_3AXoiweeTyTd03IN</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -136,7 +141,7 @@ public class AddFileRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -145,7 +150,11 @@ public class AddFileRequest extends Request {
         }
 
         /**
-         * CategoryId.
+         * <p>The primary key ID of the category to which the document is uploaded. This parameter corresponds to the <code>CategoryId</code> returned by the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addcategory">AddCategory</a> operation. You can also click the ID icon next to the category name on the Unstructured Data tab of the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> page to view the ID. You can set the parameter to default, which specifies the Default Category created by the system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cate_cdd11b1b79a74e8bbd675c356a91ee3510024405</p>
          */
         public Builder categoryId(String categoryId) {
             this.putBodyParameter("CategoryId", categoryId);
@@ -154,7 +163,11 @@ public class AddFileRequest extends Request {
         }
 
         /**
-         * LeaseId.
+         * <p>The lease ID, which corresponds to the <code>FileUploadLeaseId</code> parameter returned by the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-applyfileuploadlease">ApplyFileUploadLease</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68abd1dea7b6404d8f7d7b9f7fbd332d.1716698936847</p>
          */
         public Builder leaseId(String leaseId) {
             this.putBodyParameter("LeaseId", leaseId);
@@ -163,7 +176,14 @@ public class AddFileRequest extends Request {
         }
 
         /**
-         * Parser.
+         * <p>The parser. Valid value:</p>
+         * <ul>
+         * <li>DASHSCOPE_DOCMIND: Intelligent document parsing by Alibaba Cloud.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DASHSCOPE_DOCMIND</p>
          */
         public Builder parser(String parser) {
             this.putBodyParameter("Parser", parser);
@@ -172,7 +192,7 @@ public class AddFileRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>A list of tags associated with the document. The default value is null, which means no tags. You can specify up to 10 tags.</p>
          */
         public Builder tags(java.util.List < String > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");

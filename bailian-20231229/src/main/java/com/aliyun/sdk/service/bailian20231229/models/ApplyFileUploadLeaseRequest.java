@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyFileUploadLeaseRequest} extends {@link RequestModel}
  *
  * <p>ApplyFileUploadLeaseRequest</p>
@@ -128,7 +129,11 @@ public class ApplyFileUploadLeaseRequest extends Request {
         } 
 
         /**
-         * CategoryId.
+         * <p>The primary key ID of the category to which the uploaded document belongs, which is the <code>CategoryId</code> returned by the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addcategory">AddCategory</a> interface. You can also click the ID icon next to the category name on the Unstructured Data tab of the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> page to view the ID. You can set the parameter to default, which specifies the Default Category created by the system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cate_cdd11b1b79a74e8bbd675c356a91ee3510024405</p>
          */
         public Builder categoryId(String categoryId) {
             this.putPathParameter("CategoryId", categoryId);
@@ -137,7 +142,11 @@ public class ApplyFileUploadLeaseRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace to which the uploaded document belongs. On the <a href="https://bailian.console.aliyun.com/knowledge-base#/home">homepage</a> of the console, click the workspace Details icon in the upper-left corner to view the workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws_3AXoiweeTyTd03IN</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -146,7 +155,7 @@ public class ApplyFileUploadLeaseRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -155,7 +164,8 @@ public class ApplyFileUploadLeaseRequest extends Request {
         }
 
         /**
-         * FileName.
+         * <p>The name of the uploaded document, including the extension. Supported formats: pdf, doc, docx, md, txt, ppt, and pptx. The document name must be 4 to 128 characters in length.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder fileName(String fileName) {
             this.putBodyParameter("FileName", fileName);
@@ -164,7 +174,11 @@ public class ApplyFileUploadLeaseRequest extends Request {
         }
 
         /**
-         * Md5.
+         * <p>The MD5 value of the uploaded document. This parameter is verified by the server (not in the current version).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19657c391f6c70bcea63c154d8606bb3</p>
          */
         public Builder md5(String md5) {
             this.putBodyParameter("Md5", md5);
@@ -173,7 +187,11 @@ public class ApplyFileUploadLeaseRequest extends Request {
         }
 
         /**
-         * SizeInBytes.
+         * <p>The size of the uploaded document, in bytes. This parameter is verified by the server (not in the current version). Valid values: 1 to 100000000.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder sizeInBytes(String sizeInBytes) {
             this.putBodyParameter("SizeInBytes", sizeInBytes);

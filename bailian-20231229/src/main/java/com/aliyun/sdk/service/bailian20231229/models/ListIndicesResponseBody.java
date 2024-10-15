@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIndicesResponseBody} extends {@link TeaModel}
  *
  * <p>ListIndicesResponseBody</p>
@@ -97,7 +98,10 @@ public class ListIndicesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Index.InvalidParameter</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class ListIndicesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class ListIndicesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Required parameter(%s) missing or invalid, please check the request parameters.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +128,10 @@ public class ListIndicesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17204B98-xxxx-4F9A-8464-2446A84821CA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +139,10 @@ public class ListIndicesResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -137,7 +150,14 @@ public class ListIndicesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indications whether the API call is successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +170,12 @@ public class ListIndicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListIndicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIndicesResponseBody</p>
+     */
     public static class Indices extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChunkSize")
         private Integer chunkSize;
@@ -345,7 +371,10 @@ public class ListIndicesResponseBody extends TeaModel {
             private String structureType; 
 
             /**
-             * ChunkSize.
+             * <p>The estimated length of chunks. Valid values: [1-2048].</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder chunkSize(Integer chunkSize) {
                 this.chunkSize = chunkSize;
@@ -353,7 +382,10 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the knowledge base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>If each RAM user belongs to a RAM group, the configuration is considered compliant.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -361,7 +393,7 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * DocumentIds.
+             * <p>The list of the primary key IDs of the documents.</p>
              */
             public Builder documentIds(java.util.List < String > documentIds) {
                 this.documentIds = documentIds;
@@ -369,7 +401,13 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * EmbeddingModelName.
+             * <p>The name of the embedding model. Valid values:</p>
+             * <ul>
+             * <li>text-embedding-v2</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>conv-rewrite-qwen-1.8b</p>
              */
             public Builder embeddingModelName(String embeddingModelName) {
                 this.embeddingModelName = embeddingModelName;
@@ -377,7 +415,10 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The primary key ID of the knowledge base, which is the <code>Data.Id</code> parameter returned by the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>259899</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -385,7 +426,10 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the knowledge base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>temp_mUB4j</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -393,7 +437,10 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * OverlapSize.
+             * <p>The overlap length. Valid values: [0-1024].</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder overlapSize(Integer overlapSize) {
                 this.overlapSize = overlapSize;
@@ -401,7 +448,10 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * RerankMinScore.
+             * <p>Similarity Threshold Valid values: [0.01-1.00].</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.01</p>
              */
             public Builder rerankMinScore(String rerankMinScore) {
                 this.rerankMinScore = rerankMinScore;
@@ -409,7 +459,14 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * RerankModelName.
+             * <p>The name of the rank model. Valid values:</p>
+             * <ul>
+             * <li>gte-rerank-hybrid</li>
+             * <li>gte-rerank</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>gte-rerank-hybrid</p>
              */
             public Builder rerankModelName(String rerankModelName) {
                 this.rerankModelName = rerankModelName;
@@ -417,7 +474,23 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * Separator.
+             * <p>The clause identifier. Separate multiple clause identifiers with |. Valid values:</p>
+             * <ul>
+             * <li>\n: line break</li>
+             * <li>，: Chinese comma</li>
+             * <li>,: English comma</li>
+             * <li>。 : Chinese full stop</li>
+             * <li>.: English full stop</li>
+             * <li>！ : Chinese exclamation point</li>
+             * <li>! : English exclamation point</li>
+             * <li>；: Chinese semicolon</li>
+             * <li>;: English semicolon</li>
+             * <li>？ : Chinese question mark</li>
+             * <li>?: English question mark</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>\n</p>
              */
             public Builder separator(String separator) {
                 this.separator = separator;
@@ -425,7 +498,10 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * SinkInstanceId.
+             * <p>The ID of the vector storage instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gp-bp1gq62t1788yw2ol</p>
              */
             public Builder sinkInstanceId(String sinkInstanceId) {
                 this.sinkInstanceId = sinkInstanceId;
@@ -433,7 +509,10 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * SinkRegion.
+             * <p>The region of the vector storage instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder sinkRegion(String sinkRegion) {
                 this.sinkRegion = sinkRegion;
@@ -441,7 +520,15 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * SinkType.
+             * <p>The vector storage type of the knowledge base. Valid values:</p>
+             * <ul>
+             * <li>ES: Built-in vector database.</li>
+             * <li>BUILT_IN: Built-in vector database.</li>
+             * <li>ADB: AnalyticDB for PostgreSQL database.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>es</p>
              */
             public Builder sinkType(String sinkType) {
                 this.sinkType = sinkType;
@@ -449,7 +536,18 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * <p>The data type of <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a>. For unstructured knowledge base, possible values:</p>
+             * <ul>
+             * <li>DATA_CENTER_CATEGORY: The category type.</li>
+             * <li>DATA_CENTER_FILE: The document type.</li>
+             * </ul>
+             * <p>For structured knowledge base, possible values:</p>
+             * <ul>
+             * <li>DATA_CENTER_STRUCTURED_TABLE: The data table type.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DATA_CENTER_FILE</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -457,7 +555,13 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * StructureType.
+             * <p>The vector storage type of the knowledge base. Valid values:</p>
+             * <ul>
+             * <li>UNSTRUCTURED</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>structured</p>
              */
             public Builder structureType(String structureType) {
                 this.structureType = structureType;
@@ -471,6 +575,12 @@ public class ListIndicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListIndicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIndicesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Indices")
         private java.util.List < Indices> indices;
@@ -534,7 +644,7 @@ public class ListIndicesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Indices.
+             * <p>The list of knowledge bases.</p>
              */
             public Builder indices(java.util.List < Indices> indices) {
                 this.indices = indices;
@@ -542,7 +652,10 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The specified page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -550,7 +663,10 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The specified number of documents on each page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -558,7 +674,10 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of knowledge bases returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>48</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

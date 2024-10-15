@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFileRequest} extends {@link RequestModel}
  *
  * <p>DescribeFileRequest</p>
@@ -83,7 +84,11 @@ public class DescribeFileRequest extends Request {
         } 
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace to which the document belongs. On the <a href="https://bailian.console.aliyun.com/knowledge-base#/home">homepage</a> of the console, click the workspace Details icon in the upper-left corner to view the workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws_3AXoiweeTyTd03IN</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -92,7 +97,11 @@ public class DescribeFileRequest extends Request {
         }
 
         /**
-         * FileId.
+         * <p>The primary key ID of the document, which is the <code>FileId</code> returned by the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addfile">AddFile</a> operation. You can also click the ID icon next to the file name on the <a href="https://bailian.console.aliyun.com/knowledge-base#/data-center">Data Management</a> page to view the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>file_9a65732555b54d5ea10796ca5742ba22_XXXXXXXX</p>
          */
         public Builder fileId(String fileId) {
             this.putPathParameter("FileId", fileId);
@@ -101,7 +110,7 @@ public class DescribeFileRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);

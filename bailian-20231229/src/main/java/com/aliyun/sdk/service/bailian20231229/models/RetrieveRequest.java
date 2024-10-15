@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RetrieveRequest} extends {@link RequestModel}
  *
  * <p>RetrieveRequest</p>
@@ -237,7 +238,11 @@ public class RetrieveRequest extends Request {
         } 
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace to which the knowledge base belongs. To view the workspace ID, you can click the Workspace Details icon in the upper-left corner on the <a href="https://bailian.console.aliyun.com/#/home">homepage</a> of the console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws_3Nt27MYcoK191ISp</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -246,7 +251,11 @@ public class RetrieveRequest extends Request {
         }
 
         /**
-         * DenseSimilarityTopK.
+         * <p>Vector retrieval top K. After generating vectors based on input text, the top K chunks in the knowledge base that are most similar to the vector representation of the input text are retrieved. Valid values: 0 to 100. The sum of the <code>DenseSimilarityTopK</code> and <code>SparseSimilarityTopK</code> parameters must be less than or equal to 200.</p>
+         * <p>Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder denseSimilarityTopK(Integer denseSimilarityTopK) {
             this.putQueryParameter("DenseSimilarityTopK", denseSimilarityTopK);
@@ -255,7 +264,15 @@ public class RetrieveRequest extends Request {
         }
 
         /**
-         * EnableReranking.
+         * <p>Specifies whether to enable reranking. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableReranking(Boolean enableReranking) {
             this.putQueryParameter("EnableReranking", enableReranking);
@@ -264,7 +281,15 @@ public class RetrieveRequest extends Request {
         }
 
         /**
-         * EnableRewrite.
+         * <p>Specifies whether to enable multi-round conversation rewriting. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableRewrite(Boolean enableRewrite) {
             this.putQueryParameter("EnableRewrite", enableRewrite);
@@ -283,7 +308,11 @@ public class RetrieveRequest extends Request {
         }
 
         /**
-         * IndexId.
+         * <p>The primary key ID of the knowledge base, which is the <code>Data.Id</code> parameter returned by the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5pwe0m2g6t</p>
          */
         public Builder indexId(String indexId) {
             this.putQueryParameter("IndexId", indexId);
@@ -292,7 +321,7 @@ public class RetrieveRequest extends Request {
         }
 
         /**
-         * Query.
+         * <p>The input query prompt. The length and characters of the query are not limited.</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -301,7 +330,7 @@ public class RetrieveRequest extends Request {
         }
 
         /**
-         * Rerank.
+         * <p>Ranking configurations.</p>
          */
         public Builder rerank(java.util.List < Rerank> rerank) {
             String rerankShrink = shrink(rerank, "Rerank", "json");
@@ -311,7 +340,11 @@ public class RetrieveRequest extends Request {
         }
 
         /**
-         * RerankMinScore.
+         * <p>Similarity Threshold The lowest similarity score of chunks that can be returned. This parameter is used to filter text chunks returned by the rank model. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values: [0.01-1.00]. The priority of this parameter is greater than the similarity threshold configured for the knowledge base.</p>
+         * <p>By default, this parameter is left empty. In this case, the similarity threshold of the knowledge base is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.20</p>
          */
         public Builder rerankMinScore(Float rerankMinScore) {
             this.putQueryParameter("RerankMinScore", rerankMinScore);
@@ -320,7 +353,10 @@ public class RetrieveRequest extends Request {
         }
 
         /**
-         * RerankTopN.
+         * <p>The top N return data after reranking. Valid values: 1 to 20. Default value: 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder rerankTopN(Integer rerankTopN) {
             this.putQueryParameter("RerankTopN", rerankTopN);
@@ -329,7 +365,7 @@ public class RetrieveRequest extends Request {
         }
 
         /**
-         * Rewrite.
+         * <p>Conversation rewriting configurations.</p>
          */
         public Builder rewrite(java.util.List < Rewrite> rewrite) {
             String rewriteShrink = shrink(rewrite, "Rewrite", "json");
@@ -339,7 +375,15 @@ public class RetrieveRequest extends Request {
         }
 
         /**
-         * SaveRetrieverHistory.
+         * <p>Specifies whether to save the retrieve test history. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder saveRetrieverHistory(Boolean saveRetrieverHistory) {
             this.putQueryParameter("SaveRetrieverHistory", saveRetrieverHistory);
@@ -348,7 +392,7 @@ public class RetrieveRequest extends Request {
         }
 
         /**
-         * SearchFilters.
+         * <p>Specifies complex filter conditions. For more information about the syntax of SearchFilters, see the SearchFilter syntax section of this topic.</p>
          */
         public Builder searchFilters(java.util.List < java.util.Map<String, String>> searchFilters) {
             String searchFiltersShrink = shrink(searchFilters, "SearchFilters", "json");
@@ -358,7 +402,11 @@ public class RetrieveRequest extends Request {
         }
 
         /**
-         * SparseSimilarityTopK.
+         * <p>The top K of keyword retrieval. Chunks that exactly match the keywords of the input text are retrieved from the knowledge base. This filters out irrelevant chunks and boosts accuracy. Valid values: 0 to 100. The sum of the <code>DenseSimilarityTopK</code> and <code>SparseSimilarityTopK</code> parameters must be less than or equal to 200.</p>
+         * <p>Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder sparseSimilarityTopK(Integer sparseSimilarityTopK) {
             this.putQueryParameter("SparseSimilarityTopK", sparseSimilarityTopK);
@@ -373,6 +421,12 @@ public class RetrieveRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RetrieveRequest} extends {@link TeaModel}
+     *
+     * <p>RetrieveRequest</p>
+     */
     public static class Rerank extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModelName")
         private String modelName;
@@ -400,7 +454,14 @@ public class RetrieveRequest extends Request {
             private String modelName; 
 
             /**
-             * ModelName.
+             * <p>The name of the rank model. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</p>
+             * <ul>
+             * <li>gte-rerank-hybrid: Recommended official model.</li>
+             * <li>gte-rerank</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>gte-rerank-hybrid</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -414,6 +475,12 @@ public class RetrieveRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RetrieveRequest} extends {@link TeaModel}
+     *
+     * <p>RetrieveRequest</p>
+     */
     public static class Rewrite extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModelName")
         private String modelName;
@@ -441,7 +508,14 @@ public class RetrieveRequest extends Request {
             private String modelName; 
 
             /**
-             * ModelName.
+             * <p>Conversation rewriting model name. The query rewriting model automatically adjusts the original prompt based on the context to improve retrieval performance. Valid value:</p>
+             * <ul>
+             * <li>conv-rewrite-qwen-1.8b</li>
+             * </ul>
+             * <p>By default, this parameter is left empty, which means conv-rewrite-qwen-1.8b is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>conv-rewrite-qwen-1.8b</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;

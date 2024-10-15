@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIndexDocumentsResponseBody} extends {@link TeaModel}
  *
  * <p>ListIndexDocumentsResponseBody</p>
@@ -97,7 +98,10 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Required parameter(%s) missing or invalid, please check the request parameters.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +128,10 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35A267BF-xxxx-54DB-8394-AA3B0742D833</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +139,10 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -137,7 +150,14 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indications whether the API call is successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +170,12 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListIndexDocumentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIndexDocumentsResponseBody</p>
+     */
     public static class Documents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -261,7 +287,10 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Code.
+             * <p>The error status code of document import.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>110002</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -269,7 +298,10 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * DocumentType.
+             * <p>The format of the document. Valid values: pdf, docx, doc, txt, md, pptx, ppt, and EXCEL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pdf</p>
              */
             public Builder documentType(String documentType) {
                 this.documentType = documentType;
@@ -277,7 +309,10 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The primary key ID of the document.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>doc_c134aa2073204a5d936d870bf960f56a10024701</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -285,7 +320,10 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message of document import.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>check fileUrlKey[file_path] / fileNameKey[null] / fileExtensionKey[file_extension] is invalid</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -293,7 +331,7 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the document.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -301,7 +339,10 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The size of the document. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>996764</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -309,7 +350,11 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceId.
+             * <p>For unstructured knowledge base, this parameter is the category ID, which is the <code>CategoryId</code> returned by the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addcategory">AddCategory</a> interface. To view the category ID, you can click the ID icon next to the category name on the Unstructured Data tab of the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> page.</p>
+             * <p>For structured knowledge base, this parameter is the data table ID. To view the table ID, you can click the ID icon next to the table name on the Structured Data tab of the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cate_21a407a3372c4ba7aedc649709143f0c10021401</p>
              */
             public Builder sourceId(String sourceId) {
                 this.sourceId = sourceId;
@@ -317,7 +362,16 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The import status of the document. Valid values:</p>
+             * <ul>
+             * <li>INSERT_ERROR</li>
+             * <li>RUNNING</li>
+             * <li>DELETED</li>
+             * <li>FINISH</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -331,6 +385,12 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListIndexDocumentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIndexDocumentsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Documents")
         private java.util.List < Documents> documents;
@@ -406,7 +466,7 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * Documents.
+             * <p>The list of documents in the knowledge base.</p>
              */
             public Builder documents(java.util.List < Documents> documents) {
                 this.documents = documents;
@@ -414,7 +474,10 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * IndexId.
+             * <p>The primary key ID of the knowledge base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pno97tn8iu</p>
              */
             public Builder indexId(String indexId) {
                 this.indexId = indexId;
@@ -422,7 +485,10 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The specified page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -430,7 +496,10 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The specified number of documents on each page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -438,7 +507,10 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of documents returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2437</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

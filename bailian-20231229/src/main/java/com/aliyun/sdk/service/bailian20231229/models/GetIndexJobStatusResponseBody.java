@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetIndexJobStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetIndexJobStatusResponseBody</p>
@@ -97,7 +98,10 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Index.Forbidden</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User not authorized to operate on the specified resource.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +128,10 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17204B98-xxxx-4F9A-8464-2446A84821CA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +139,10 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -137,7 +150,14 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indications whether the API call is successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +170,12 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetIndexJobStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIndexJobStatusResponseBody</p>
+     */
     public static class Documents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -225,7 +251,10 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Code.
+             * <p>HTTP status code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Index.Document.ChunkError</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -233,7 +262,10 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DocId.
+             * <p>The primary key ID of the document.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>file_9a65732555b54d5ea10796ca5742ba22_XXXXXXXX</p>
              */
             public Builder docId(String docId) {
                 this.docId = docId;
@@ -241,7 +273,7 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DocName.
+             * <p>The name of the document.</p>
              */
             public Builder docName(String docName) {
                 this.docName = docName;
@@ -249,7 +281,10 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>document parse error</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -257,7 +292,16 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The import status of the document. Valid values:</p>
+             * <ul>
+             * <li>INSERT_ERROR</li>
+             * <li>RUNNING</li>
+             * <li>DELETED</li>
+             * <li>FINISH</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -271,6 +315,12 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetIndexJobStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIndexJobStatusResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Documents")
         private java.util.List < Documents> documents;
@@ -322,7 +372,7 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Documents.
+             * <p>The list of imported documents.</p>
              */
             public Builder documents(java.util.List < Documents> documents) {
                 this.documents = documents;
@@ -330,7 +380,10 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The ID of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>66122af12a4e45ddae6bd6c845556647</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -338,7 +391,16 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the knowledge base job. Valid values:</p>
+             * <ul>
+             * <li>COMPLETED</li>
+             * <li>FAILED</li>
+             * <li>RUNNING</li>
+             * <li>PENDING</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PENDING</p>
              */
             public Builder status(String status) {
                 this.status = status;

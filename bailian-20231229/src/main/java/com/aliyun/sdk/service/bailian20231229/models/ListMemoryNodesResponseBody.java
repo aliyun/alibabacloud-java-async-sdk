@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMemoryNodesResponseBody} extends {@link TeaModel}
  *
  * <p>ListMemoryNodesResponseBody</p>
@@ -130,6 +131,12 @@ public class ListMemoryNodesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMemoryNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMemoryNodesResponseBody</p>
+     */
     public static class MemoryNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;

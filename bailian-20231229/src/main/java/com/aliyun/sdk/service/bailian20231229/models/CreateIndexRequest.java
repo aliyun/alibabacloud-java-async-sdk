@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateIndexRequest} extends {@link RequestModel}
  *
  * <p>CreateIndexRequest</p>
@@ -296,7 +297,11 @@ public class CreateIndexRequest extends Request {
         } 
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace to which the knowledge base belongs. To view the workspace ID, you can click the Workspace Details icon in the upper-left corner on the <a href="https://bailian.console.aliyun.com/#/home">homepage</a> of the console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws_3Nt27MYcoK191ISp</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -305,7 +310,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * CategoryIds.
+         * <p>The list of primary key IDs of the categories to be imported into the knowledge base.</p>
          */
         public Builder categoryIds(java.util.List < String > categoryIds) {
             String categoryIdsShrink = shrink(categoryIds, "CategoryIds", "json");
@@ -315,7 +320,14 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * ChunkSize.
+         * <p>The estimated length of chunks. The maximum number of characters for a chunk. Texts exceeding this limit are splited. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values: [1-2048].</p>
+         * <p>The default value is empty, which means using the intelligent splitting method.</p>
+         * <blockquote>
+         * <p> If you specify the <code>ChunkSize</code> parameter, you must also specify the <code>OverlapSize</code> and <code>Separator</code> parameters. If you do not specify these three parameters, the system uses the intelligent splitting method by default.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>128</p>
          */
         public Builder chunkSize(Integer chunkSize) {
             this.putQueryParameter("ChunkSize", chunkSize);
@@ -334,7 +346,9 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * DataSource.
+         * <blockquote>
+         * <p> This parameter is not available. Do not specify this parameter.</p>
+         * </blockquote>
          */
         public Builder dataSource(DataSource dataSource) {
             String dataSourceShrink = shrink(dataSource, "DataSource", "json");
@@ -344,7 +358,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the knowledge base. The description must be 0 to 1,000 characters in length. This parameter is empty by default.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -353,7 +367,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * DocumentIds.
+         * <p>The list of primary key IDs of the documents to be imported into the knowledge base.</p>
          */
         public Builder documentIds(java.util.List < String > documentIds) {
             String documentIdsShrink = shrink(documentIds, "DocumentIds", "json");
@@ -363,7 +377,14 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * EmbeddingModelName.
+         * <p>The name of the embedding model. The embedding model converts the original input prompt and knowledge text into numerical vectors for similarity comparison. The default and only model available is DashScope text-embedding-v2. It supports multiple languages including Chinese and English and normalizes the vector results. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid value:</p>
+         * <ul>
+         * <li>text-embedding-v2</li>
+         * </ul>
+         * <p>The default value is null, which means using the text-embedding-v2 model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text-embedding-v2</p>
          */
         public Builder embeddingModelName(String embeddingModelName) {
             this.putQueryParameter("EmbeddingModelName", embeddingModelName);
@@ -372,7 +393,8 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the knowledge base. The name must be 1 to 20 characters in length and can contain characters classified as letter in Unicode, including English letters, Chinese characters, digits, among others. The name can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -381,7 +403,11 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * OverlapSize.
+         * <p>The overlap length. The number of overlapping characters between two consecutive chunks. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values: 0 to 1024.</p>
+         * <p>The default value is empty, which means using the intelligent splitting method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder overlapSize(Integer overlapSize) {
             this.putQueryParameter("OverlapSize", overlapSize);
@@ -390,7 +416,11 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * RerankMinScore.
+         * <p>Similarity Threshold. The lowest similarity score of chunks that can be returned. This parameter is used to filter text chunks returned by the rank model. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values: [0.01-1.00].</p>
+         * <p>Default value: 0.20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.20</p>
          */
         public Builder rerankMinScore(Double rerankMinScore) {
             this.putQueryParameter("RerankMinScore", rerankMinScore);
@@ -399,7 +429,18 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * RerankModelName.
+         * <p>The name of the rank model. The rank model is a scoring system outside the knowledge base. It calculates the similarity score of each text chunk in the input question and knowledge base and ranks them in descending order. Then, the model returns the top K chunks with the highest scores. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</p>
+         * <ul>
+         * <li>gte-rerank-hybrid</li>
+         * <li>gte-rerank</li>
+         * </ul>
+         * <p>The default value is empty, which means using the official gte-rerank-hybrid model.</p>
+         * <blockquote>
+         * <p> If you need only semantic ranking, we recommend that you use gte-rerank. If you need both semantic ranking and text matching features to ensure relevance, we recommend that you use gte-rerank-hybrid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>gte-rerank-hybrid</p>
          */
         public Builder rerankModelName(String rerankModelName) {
             this.putQueryParameter("RerankModelName", rerankModelName);
@@ -408,7 +449,24 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * Separator.
+         * <p>The clause identifier. The document is split into chunks based on this identifier. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. You can specify multiple identifiers and do not need to add any other characters to separate them. For example: !,\\n. Valid values:</p>
+         * <ul>
+         * <li>\n: line break</li>
+         * <li>，: Chinese comma</li>
+         * <li>,: English comma</li>
+         * <li>。 : Chinese full stop</li>
+         * <li>.: English full stop</li>
+         * <li>！ : Chinese exclamation point</li>
+         * <li>! : English exclamation point</li>
+         * <li>；: Chinese semicolon</li>
+         * <li>;: English semicolon</li>
+         * <li>？ : Chinese question mark</li>
+         * <li>?: English question mark</li>
+         * </ul>
+         * <p>The default value is empty, which means using the intelligent splitting method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>,</p>
          */
         public Builder separator(String separator) {
             this.putQueryParameter("Separator", separator);
@@ -417,7 +475,10 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * SinkInstanceId.
+         * <p>The ID of the vector storage instance. This parameter is available only when SinkType is set to ADB. You can view the ID on the <a href="https://gpdbnext.console.aliyun.com/gpdb/list">Instances</a> page of AnalyticDB for PostgreSQL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp321093j84</p>
          */
         public Builder sinkInstanceId(String sinkInstanceId) {
             this.putQueryParameter("SinkInstanceId", sinkInstanceId);
@@ -426,7 +487,10 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * SinkRegion.
+         * <p>The region of the vector storage instance. This parameter is available only when SinkType is set to ADB. You can call the <a href="https://help.aliyun.com/zh/analyticdb-for-postgresql/developer-reference/api-gpdb-2016-05-03-describeregions">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder sinkRegion(String sinkRegion) {
             this.putQueryParameter("SinkRegion", sinkRegion);
@@ -435,7 +499,18 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * SinkType.
+         * <p>The vector storage type of the knowledge base. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</p>
+         * <ul>
+         * <li>DEFAULT: The built-in vector database.</li>
+         * <li>ADB: AnalyticDB for PostgreSQL database. If you need advanced features, such as managing, auditing, and monitoring, we recommend that you specify ADB.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you have not used AnalyticDB for AnalyticDB in Model Studio before, go to the <a href="https://bailian.console.aliyun.com/#/knowledge-base/create">Create Knowledge Base</a> page, select ADB-PG as Vector Storage Type, and follow the instructions to grant permissions. If you specify ADB, you must also specify the <code>SinkInstanceId</code> and <code>SinkRegion</code> parameters.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT</p>
          */
         public Builder sinkType(String sinkType) {
             this.putQueryParameter("SinkType", sinkType);
@@ -444,7 +519,21 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>The data type of <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a>. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</p>
+         * <ul>
+         * <li>DATA_CENTER_CATEGORY: The category type. Import all documents from one or more categories in Data Center.</li>
+         * <li>DATA_CENTER_FILE: The document type. Import one or more documents from Data Center.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If this parameter is set to DATA_CENTER_CATEGORY, you must specify the <code>CategoryIds</code> parameter. If this parameter is set to DATA_CENTER_FILE, you must specify the <code>DocumentIds</code> parameter.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p> If you want to create an empty knowledge base, you can use an empty category. Set this parameter to DATA_CENTER_CATEGORY. And specify the ID of an empty category for the <code>CategoryIds</code> parameter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DATA_CENTER_FILE</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -453,7 +542,17 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * StructureType.
+         * <p>The data type of the knowledge base. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid value:</p>
+         * <ul>
+         * <li>unstructured</li>
+         * </ul>
+         * <blockquote>
+         * <p> After a knowledge base is created, its data type cannot be changed. You cannot create a structured knowledge base by calling an API operation. Use the console instead.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>structured</p>
          */
         public Builder structureType(String structureType) {
             this.putQueryParameter("StructureType", structureType);
@@ -468,6 +567,12 @@ public class CreateIndexRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateIndexRequest} extends {@link TeaModel}
+     *
+     * <p>CreateIndexRequest</p>
+     */
     public static class Columns extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Column")
         private String column;
@@ -567,7 +672,8 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the knowledge base. The name must be 1 to 20 characters in length and can contain characters classified as letter in Unicode, including English letters, Chinese characters, digits, among others. The name can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
+             * <p>This parameter is required.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -589,6 +695,12 @@ public class CreateIndexRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateIndexRequest} extends {@link TeaModel}
+     *
+     * <p>CreateIndexRequest</p>
+     */
     public static class DataSource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CredentialId")
         private String credentialId;
@@ -724,7 +836,9 @@ public class CreateIndexRequest extends Request {
             private String type; 
 
             /**
-             * CredentialId.
+             * <blockquote>
+             * <p> This parameter is not available. Do not specify this parameter.</p>
+             * </blockquote>
              */
             public Builder credentialId(String credentialId) {
                 this.credentialId = credentialId;
@@ -732,7 +846,9 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * CredentialKey.
+             * <blockquote>
+             * <p> This parameter is not available. Do not specify this parameter.</p>
+             * </blockquote>
              */
             public Builder credentialKey(String credentialKey) {
                 this.credentialKey = credentialKey;
@@ -740,7 +856,9 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * Database.
+             * <blockquote>
+             * <p> This parameter is not available. Do not specify this parameter.</p>
+             * </blockquote>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -748,7 +866,9 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * Endpoint.
+             * <blockquote>
+             * <p> This parameter is not available. Do not specify this parameter.</p>
+             * </blockquote>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -756,7 +876,9 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * IsPrivateLink.
+             * <blockquote>
+             * <p> This parameter is not available. Do not specify this parameter.</p>
+             * </blockquote>
              */
             public Builder isPrivateLink(Boolean isPrivateLink) {
                 this.isPrivateLink = isPrivateLink;
@@ -764,7 +886,9 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * Region.
+             * <blockquote>
+             * <p> This parameter is not available. Do not specify this parameter.</p>
+             * </blockquote>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -772,7 +896,9 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * SubPath.
+             * <blockquote>
+             * <p> This parameter is not available. Do not specify this parameter.</p>
+             * </blockquote>
              */
             public Builder subPath(String subPath) {
                 this.subPath = subPath;
@@ -780,7 +906,9 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * SubType.
+             * <blockquote>
+             * <p> This parameter is not available. Do not specify this parameter.</p>
+             * </blockquote>
              */
             public Builder subType(String subType) {
                 this.subType = subType;
@@ -788,7 +916,9 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * Table.
+             * <blockquote>
+             * <p> This parameter is not available. Do not specify this parameter.</p>
+             * </blockquote>
              */
             public Builder table(String table) {
                 this.table = table;
@@ -796,7 +926,9 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * Type.
+             * <blockquote>
+             * <p> This parameter is not available. Do not specify this parameter.</p>
+             * </blockquote>
              */
             public Builder type(String type) {
                 this.type = type;

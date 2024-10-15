@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddCategoryRequest} extends {@link RequestModel}
  *
  * <p>AddCategoryRequest</p>
@@ -112,7 +113,7 @@ public class AddCategoryRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -121,7 +122,10 @@ public class AddCategoryRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws_3AXoiweeTyTd03IN</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -130,7 +134,7 @@ public class AddCategoryRequest extends Request {
         }
 
         /**
-         * CategoryName.
+         * <p>This parameter is required.</p>
          */
         public Builder categoryName(String categoryName) {
             this.putBodyParameter("CategoryName", categoryName);
@@ -139,7 +143,10 @@ public class AddCategoryRequest extends Request {
         }
 
         /**
-         * CategoryType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNSTRUCTURED</p>
          */
         public Builder categoryType(String categoryType) {
             this.putBodyParameter("CategoryType", categoryType);

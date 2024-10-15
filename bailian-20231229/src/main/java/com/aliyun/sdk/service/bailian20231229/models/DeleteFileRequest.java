@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteFileRequest} extends {@link RequestModel}
  *
  * <p>DeleteFileRequest</p>
@@ -83,7 +84,10 @@ public class DeleteFileRequest extends Request {
         } 
 
         /**
-         * FileId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>file_9a65732555b54d5ea10796ca5742ba22_XXXXXXXX</p>
          */
         public Builder fileId(String fileId) {
             this.putPathParameter("FileId", fileId);
@@ -92,7 +96,10 @@ public class DeleteFileRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws_3Nt27MYcoK191ISp</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -101,7 +108,7 @@ public class DeleteFileRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);

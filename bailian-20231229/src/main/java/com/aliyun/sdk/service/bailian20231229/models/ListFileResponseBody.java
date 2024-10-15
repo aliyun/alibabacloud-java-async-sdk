@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFileResponseBody} extends {@link TeaModel}
  *
  * <p>ListFileResponseBody</p>
@@ -121,7 +122,10 @@ public class ListFileResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8F97A63B-55F1-527F-9D6E-467B6A7E8CF1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,6 +154,12 @@ public class ListFileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFileResponseBody</p>
+     */
     public static class FileList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CategoryId")
         private String categoryId;
@@ -351,6 +361,12 @@ public class ListFileResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFileResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileList")
         private java.util.List < FileList> fileList;

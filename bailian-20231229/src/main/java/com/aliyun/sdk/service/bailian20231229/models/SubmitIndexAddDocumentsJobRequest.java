@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitIndexAddDocumentsJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitIndexAddDocumentsJobRequest</p>
@@ -112,7 +113,11 @@ public class SubmitIndexAddDocumentsJobRequest extends Request {
         } 
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace to which the knowledge base belongs. To view the workspace ID, you can click the Workspace Details icon in the upper-left corner on the <a href="https://bailian.console.aliyun.com/#/home">homepage</a> of the console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws_3Nt27MYcoK191ISp</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -121,7 +126,7 @@ public class SubmitIndexAddDocumentsJobRequest extends Request {
         }
 
         /**
-         * CategoryIds.
+         * <p>The list of primary key IDs of the category.</p>
          */
         public Builder categoryIds(java.util.List < String > categoryIds) {
             String categoryIdsShrink = shrink(categoryIds, "CategoryIds", "json");
@@ -131,7 +136,7 @@ public class SubmitIndexAddDocumentsJobRequest extends Request {
         }
 
         /**
-         * DocumentIds.
+         * <p>The list of the primary key IDs of the documents.</p>
          */
         public Builder documentIds(java.util.List < String > documentIds) {
             String documentIdsShrink = shrink(documentIds, "DocumentIds", "json");
@@ -141,7 +146,11 @@ public class SubmitIndexAddDocumentsJobRequest extends Request {
         }
 
         /**
-         * IndexId.
+         * <p>The primary key ID of the knowledge base, which is the <code>Data.Id</code> parameter returned by the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79c0aly8zw</p>
          */
         public Builder indexId(String indexId) {
             this.putQueryParameter("IndexId", indexId);
@@ -150,7 +159,18 @@ public class SubmitIndexAddDocumentsJobRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>The data type of <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a>. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</p>
+         * <ul>
+         * <li>DATA_CENTER_CATEGORY: The category type. Import all documents from one or more categories in Data Center.</li>
+         * <li>DATA_CENTER_FILE: The document type. Import one or more documents from Data Center.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If this parameter is set to DATA_CENTER_CATEGORY, you must specify the <code>CategoryIds</code> parameter. If this parameter is set to DATA_CENTER_FILE, you must specify the <code>DocumentIds</code> parameter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DATA_CENTER_FILE</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);

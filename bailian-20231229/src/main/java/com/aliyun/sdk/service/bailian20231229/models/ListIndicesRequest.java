@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIndicesRequest} extends {@link RequestModel}
  *
  * <p>ListIndicesRequest</p>
@@ -96,7 +97,11 @@ public class ListIndicesRequest extends Request {
         } 
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace to which the knowledge base belongs. To view the workspace ID, you can click the Workspace Details icon in the upper-left corner on the <a href="https://bailian.console.aliyun.com/#/home">homepage</a> of the console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws_3Nt27MYcoK191ISp</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -105,7 +110,11 @@ public class ListIndicesRequest extends Request {
         }
 
         /**
-         * IndexName.
+         * <p>The name of the knowledge base. You can query knowledge base by name. The name must be 1 to 20 characters in length and can contain characters classified as letter in Unicode, including English letters, Chinese characters, digits, among others. The name can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <p>This parameter is left empty by default, which means that all knowledge bases in the specified workspace are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idx_status_score</p>
          */
         public Builder indexName(String indexName) {
             this.putQueryParameter("IndexName", indexName);
@@ -114,7 +123,10 @@ public class ListIndicesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the pages to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -123,7 +135,10 @@ public class ListIndicesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of knowledge bases to display on each page. No maximum value. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
