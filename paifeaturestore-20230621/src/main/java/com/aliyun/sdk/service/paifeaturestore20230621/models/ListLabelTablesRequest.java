@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLabelTablesRequest} extends {@link RequestModel}
  *
  * <p>ListLabelTablesRequest</p>
@@ -181,7 +182,10 @@ public class ListLabelTablesRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>featurestore-test*</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -254,7 +258,10 @@ public class ListLabelTablesRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project1</p>
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);

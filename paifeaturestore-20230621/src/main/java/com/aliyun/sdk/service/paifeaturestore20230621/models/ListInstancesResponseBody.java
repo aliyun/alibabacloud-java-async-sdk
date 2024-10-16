@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstancesResponseBody</p>
@@ -90,7 +91,63 @@ public class ListInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
+    public static class FeatureDBInstanceInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        private FeatureDBInstanceInfo(Builder builder) {
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FeatureDBInstanceInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String status; 
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public FeatureDBInstanceInfo build() {
+                return new FeatureDBInstanceInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class Instances extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FeatureDBInstanceInfo")
+        private FeatureDBInstanceInfo featureDBInstanceInfo;
+
         @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
@@ -110,6 +167,7 @@ public class ListInstancesResponseBody extends TeaModel {
         private String type;
 
         private Instances(Builder builder) {
+            this.featureDBInstanceInfo = builder.featureDBInstanceInfo;
             this.gmtCreateTime = builder.gmtCreateTime;
             this.gmtModifiedTime = builder.gmtModifiedTime;
             this.instanceId = builder.instanceId;
@@ -124,6 +182,13 @@ public class ListInstancesResponseBody extends TeaModel {
 
         public static Instances create() {
             return builder().build();
+        }
+
+        /**
+         * @return featureDBInstanceInfo
+         */
+        public FeatureDBInstanceInfo getFeatureDBInstanceInfo() {
+            return this.featureDBInstanceInfo;
         }
 
         /**
@@ -169,12 +234,21 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private FeatureDBInstanceInfo featureDBInstanceInfo; 
             private String gmtCreateTime; 
             private String gmtModifiedTime; 
             private String instanceId; 
             private String regionId; 
             private String status; 
             private String type; 
+
+            /**
+             * FeatureDBInstanceInfo.
+             */
+            public Builder featureDBInstanceInfo(FeatureDBInstanceInfo featureDBInstanceInfo) {
+                this.featureDBInstanceInfo = featureDBInstanceInfo;
+                return this;
+            }
 
             /**
              * GmtCreateTime.

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFeatureViewOnlineFeaturesRequest} extends {@link RequestModel}
  *
  * <p>ListFeatureViewOnlineFeaturesRequest</p>
@@ -107,7 +108,10 @@ public class ListFeatureViewOnlineFeaturesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fs-cn-********</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -116,7 +120,10 @@ public class ListFeatureViewOnlineFeaturesRequest extends Request {
         }
 
         /**
-         * FeatureViewId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder featureViewId(String featureViewId) {
             this.putPathParameter("FeatureViewId", featureViewId);
@@ -125,7 +132,7 @@ public class ListFeatureViewOnlineFeaturesRequest extends Request {
         }
 
         /**
-         * JoinIds.
+         * <p>This parameter is required.</p>
          */
         public Builder joinIds(java.util.List < String > joinIds) {
             String joinIdsShrink = shrink(joinIds, "JoinIds", "json");

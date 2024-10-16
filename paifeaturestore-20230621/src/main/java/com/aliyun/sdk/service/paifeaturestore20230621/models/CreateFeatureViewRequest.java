@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFeatureViewRequest} extends {@link RequestModel}
  *
  * <p>CreateFeatureViewRequest</p>
@@ -255,7 +256,10 @@ public class CreateFeatureViewRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fs-cn-********</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -300,7 +304,10 @@ public class CreateFeatureViewRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FeatureView1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -309,7 +316,10 @@ public class CreateFeatureViewRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(String projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -336,7 +346,10 @@ public class CreateFeatureViewRequest extends Request {
         }
 
         /**
-         * SyncOnlineTable.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder syncOnlineTable(Boolean syncOnlineTable) {
             this.putBodyParameter("SyncOnlineTable", syncOnlineTable);
@@ -363,7 +376,10 @@ public class CreateFeatureViewRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Batch</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);
@@ -372,7 +388,10 @@ public class CreateFeatureViewRequest extends Request {
         }
 
         /**
-         * WriteMethod.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         public Builder writeMethod(String writeMethod) {
             this.putBodyParameter("WriteMethod", writeMethod);
@@ -396,6 +415,12 @@ public class CreateFeatureViewRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateFeatureViewRequest} extends {@link TeaModel}
+     *
+     * <p>CreateFeatureViewRequest</p>
+     */
     public static class Fields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attributes")
         private java.util.List < String > attributes;
@@ -455,7 +480,10 @@ public class CreateFeatureViewRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FeatureView1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -463,7 +491,10 @@ public class CreateFeatureViewRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Batch</p>
              */
             public Builder type(String type) {
                 this.type = type;

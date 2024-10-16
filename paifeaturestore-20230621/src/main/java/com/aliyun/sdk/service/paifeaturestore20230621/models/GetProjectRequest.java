@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetProjectRequest} extends {@link RequestModel}
  *
  * <p>GetProjectRequest</p>
@@ -83,7 +84,10 @@ public class GetProjectRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fs-cn-********</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -92,7 +96,10 @@ public class GetProjectRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder projectId(String projectId) {
             this.putPathParameter("ProjectId", projectId);

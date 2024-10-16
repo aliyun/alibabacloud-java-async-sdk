@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckInstanceDatasourceRequest} extends {@link RequestModel}
  *
  * <p>CheckInstanceDatasourceRequest</p>
@@ -112,7 +113,10 @@ public class CheckInstanceDatasourceRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fs-cn-********</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -139,7 +143,10 @@ public class CheckInstanceDatasourceRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hologres</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);
@@ -148,7 +155,10 @@ public class CheckInstanceDatasourceRequest extends Request {
         }
 
         /**
-         * Uri.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>igraph1</p>
          */
         public Builder uri(String uri) {
             this.putBodyParameter("Uri", uri);

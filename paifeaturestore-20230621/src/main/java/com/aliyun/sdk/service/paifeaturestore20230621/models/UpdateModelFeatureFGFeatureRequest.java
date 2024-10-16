@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateModelFeatureFGFeatureRequest} extends {@link RequestModel}
  *
  * <p>UpdateModelFeatureFGFeatureRequest</p>
@@ -140,7 +141,10 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fs-cn-********</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -149,7 +153,10 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
         }
 
         /**
-         * ModelFeatureId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder modelFeatureId(String modelFeatureId) {
             this.putPathParameter("ModelFeatureId", modelFeatureId);
@@ -185,7 +192,7 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
         }
 
         /**
-         * Reserves.
+         * <p>This parameter is required.</p>
          */
         public Builder reserves(java.util.List < String > reserves) {
             this.putBodyParameter("Reserves", reserves);
@@ -209,6 +216,12 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateModelFeatureFGFeatureRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateModelFeatureFGFeatureRequest</p>
+     */
     public static class LookupFeatures extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultValue")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -315,7 +328,10 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
             private String valueType; 
 
             /**
-             * DefaultValue.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1024</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -323,7 +339,10 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
             }
 
             /**
-             * FeatureName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>item_id</p>
              */
             public Builder featureName(String featureName) {
                 this.featureName = featureName;
@@ -331,7 +350,10 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
             }
 
             /**
-             * KeyFeatureDomain.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Item</p>
              */
             public Builder keyFeatureDomain(String keyFeatureDomain) {
                 this.keyFeatureDomain = keyFeatureDomain;
@@ -339,7 +361,10 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
             }
 
             /**
-             * KeyFeatureName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder keyFeatureName(String keyFeatureName) {
                 this.keyFeatureName = keyFeatureName;
@@ -347,7 +372,10 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
             }
 
             /**
-             * MapFeatureDomain.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>User</p>
              */
             public Builder mapFeatureDomain(String mapFeatureDomain) {
                 this.mapFeatureDomain = mapFeatureDomain;
@@ -355,7 +383,10 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
             }
 
             /**
-             * MapFeatureName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>item_id</p>
              */
             public Builder mapFeatureName(String mapFeatureName) {
                 this.mapFeatureName = mapFeatureName;
@@ -363,7 +394,10 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
             }
 
             /**
-             * ValueType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder valueType(String valueType) {
                 this.valueType = valueType;
@@ -377,6 +411,12 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateModelFeatureFGFeatureRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateModelFeatureFGFeatureRequest</p>
+     */
     public static class RawFeatures extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultValue")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -470,7 +510,10 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
             private String valueType; 
 
             /**
-             * DefaultValue.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1024</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -478,7 +521,10 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
             }
 
             /**
-             * FeatureDomain.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>User</p>
              */
             public Builder featureDomain(String featureDomain) {
                 this.featureDomain = featureDomain;
@@ -486,7 +532,10 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
             }
 
             /**
-             * FeatureName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>item_id</p>
              */
             public Builder featureName(String featureName) {
                 this.featureName = featureName;
@@ -494,7 +543,10 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
             }
 
             /**
-             * FeatureType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IdFeature</p>
              */
             public Builder featureType(String featureType) {
                 this.featureType = featureType;
@@ -502,7 +554,10 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
             }
 
             /**
-             * InputFeatureName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>item_id</p>
              */
             public Builder inputFeatureName(String inputFeatureName) {
                 this.inputFeatureName = inputFeatureName;
@@ -510,7 +565,10 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
             }
 
             /**
-             * ValueType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder valueType(String valueType) {
                 this.valueType = valueType;
@@ -524,6 +582,12 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateModelFeatureFGFeatureRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateModelFeatureFGFeatureRequest</p>
+     */
     public static class SubFeatures extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultValue")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -617,7 +681,10 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
             private String valueType; 
 
             /**
-             * DefaultValue.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1024</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -625,7 +692,10 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
             }
 
             /**
-             * FeatureDomain.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>User</p>
              */
             public Builder featureDomain(String featureDomain) {
                 this.featureDomain = featureDomain;
@@ -633,7 +703,10 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
             }
 
             /**
-             * FeatureName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>item_id</p>
              */
             public Builder featureName(String featureName) {
                 this.featureName = featureName;
@@ -641,7 +714,10 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
             }
 
             /**
-             * FeatureType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RawFeature</p>
              */
             public Builder featureType(String featureType) {
                 this.featureType = featureType;
@@ -649,7 +725,10 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
             }
 
             /**
-             * InputFeatureName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>item_id</p>
              */
             public Builder inputFeatureName(String inputFeatureName) {
                 this.inputFeatureName = inputFeatureName;
@@ -657,7 +736,10 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
             }
 
             /**
-             * ValueType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder valueType(String valueType) {
                 this.valueType = valueType;
@@ -671,6 +753,12 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateModelFeatureFGFeatureRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateModelFeatureFGFeatureRequest</p>
+     */
     public static class SequenceFeatures extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttributeDelim")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -750,7 +838,10 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
             private java.util.List < SubFeatures> subFeatures; 
 
             /**
-             * AttributeDelim.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <h1></h1>
              */
             public Builder attributeDelim(String attributeDelim) {
                 this.attributeDelim = attributeDelim;
@@ -758,7 +849,10 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
             }
 
             /**
-             * FeatureName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>item_id</p>
              */
             public Builder featureName(String featureName) {
                 this.featureName = featureName;
@@ -766,7 +860,10 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
             }
 
             /**
-             * SequenceDelim.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>;</p>
              */
             public Builder sequenceDelim(String sequenceDelim) {
                 this.sequenceDelim = sequenceDelim;
@@ -774,7 +871,10 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
             }
 
             /**
-             * SequenceLength.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder sequenceLength(Long sequenceLength) {
                 this.sequenceLength = sequenceLength;

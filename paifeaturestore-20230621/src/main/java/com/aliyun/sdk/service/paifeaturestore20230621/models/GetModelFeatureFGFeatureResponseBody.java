@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetModelFeatureFGFeatureResponseBody} extends {@link TeaModel}
  *
  * <p>GetModelFeatureFGFeatureResponseBody</p>
@@ -130,6 +131,12 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetModelFeatureFGFeatureResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetModelFeatureFGFeatureResponseBody</p>
+     */
     public static class LookupFeatures extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private String defaultValue;
@@ -291,6 +298,12 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetModelFeatureFGFeatureResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetModelFeatureFGFeatureResponseBody</p>
+     */
     public static class RawFeatures extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private String defaultValue;
@@ -432,6 +445,12 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetModelFeatureFGFeatureResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetModelFeatureFGFeatureResponseBody</p>
+     */
     public static class SubFeatures extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private String defaultValue;
@@ -573,6 +592,12 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetModelFeatureFGFeatureResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetModelFeatureFGFeatureResponseBody</p>
+     */
     public static class SequenceFeatures extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttributeDelim")
         private String attributeDelim;

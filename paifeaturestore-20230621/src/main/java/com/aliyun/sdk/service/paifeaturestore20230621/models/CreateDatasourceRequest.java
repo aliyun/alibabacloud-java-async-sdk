@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDatasourceRequest} extends {@link RequestModel}
  *
  * <p>CreateDatasourceRequest</p>
@@ -142,7 +143,10 @@ public class CreateDatasourceRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>featureStore-cn-test1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -169,7 +173,10 @@ public class CreateDatasourceRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>datasource1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -178,7 +185,10 @@ public class CreateDatasourceRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hologres</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);
@@ -187,7 +197,10 @@ public class CreateDatasourceRequest extends Request {
         }
 
         /**
-         * Uri.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>igraph_instance1</p>
          */
         public Builder uri(String uri) {
             this.putBodyParameter("Uri", uri);
@@ -196,7 +209,10 @@ public class CreateDatasourceRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>234</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateLabelTableRequest} extends {@link RequestModel}
  *
  * <p>UpdateLabelTableRequest</p>
@@ -126,7 +127,10 @@ public class UpdateLabelTableRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>featurestore-test1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -135,7 +139,10 @@ public class UpdateLabelTableRequest extends Request {
         }
 
         /**
-         * LabelTableId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder labelTableId(String labelTableId) {
             this.putPathParameter("LabelTableId", labelTableId);
@@ -162,7 +169,7 @@ public class UpdateLabelTableRequest extends Request {
         }
 
         /**
-         * Fields.
+         * <p>This parameter is required.</p>
          */
         public Builder fields(java.util.List < Fields> fields) {
             this.putBodyParameter("Fields", fields);
@@ -186,6 +193,12 @@ public class UpdateLabelTableRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateLabelTableRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateLabelTableRequest</p>
+     */
     public static class Fields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attributes")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -240,7 +253,7 @@ public class UpdateLabelTableRequest extends Request {
             private String type; 
 
             /**
-             * Attributes.
+             * <p>This parameter is required.</p>
              */
             public Builder attributes(java.util.List < String > attributes) {
                 this.attributes = attributes;
@@ -248,7 +261,10 @@ public class UpdateLabelTableRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lat</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -256,7 +272,10 @@ public class UpdateLabelTableRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DOUBLE</p>
              */
             public Builder type(String type) {
                 this.type = type;

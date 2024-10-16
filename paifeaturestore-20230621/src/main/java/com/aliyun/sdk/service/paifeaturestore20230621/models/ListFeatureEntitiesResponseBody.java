@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFeatureEntitiesResponseBody} extends {@link TeaModel}
  *
  * <p>ListFeatureEntitiesResponseBody</p>
@@ -90,6 +91,12 @@ public class ListFeatureEntitiesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFeatureEntitiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFeatureEntitiesResponseBody</p>
+     */
     public static class FeatureEntities extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FeatureEntityId")
         private String featureEntityId;

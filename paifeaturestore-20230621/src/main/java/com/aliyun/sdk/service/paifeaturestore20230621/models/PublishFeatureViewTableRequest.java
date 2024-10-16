@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PublishFeatureViewTableRequest} extends {@link RequestModel}
  *
  * <p>PublishFeatureViewTableRequest</p>
@@ -155,7 +156,10 @@ public class PublishFeatureViewTableRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fs-cn-********</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -164,7 +168,10 @@ public class PublishFeatureViewTableRequest extends Request {
         }
 
         /**
-         * FeatureViewId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder featureViewId(String featureViewId) {
             this.putPathParameter("FeatureViewId", featureViewId);
@@ -200,7 +207,10 @@ public class PublishFeatureViewTableRequest extends Request {
         }
 
         /**
-         * Mode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Overwrite</p>
          */
         public Builder mode(String mode) {
             this.putBodyParameter("Mode", mode);
@@ -209,7 +219,10 @@ public class PublishFeatureViewTableRequest extends Request {
         }
 
         /**
-         * OfflineToOnline.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder offlineToOnline(Boolean offlineToOnline) {
             this.putBodyParameter("OfflineToOnline", offlineToOnline);

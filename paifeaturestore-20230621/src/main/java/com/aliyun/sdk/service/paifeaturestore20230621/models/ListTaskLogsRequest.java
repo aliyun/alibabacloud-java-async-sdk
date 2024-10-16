@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTaskLogsRequest} extends {@link RequestModel}
  *
  * <p>ListTaskLogsRequest</p>
@@ -111,7 +112,10 @@ public class ListTaskLogsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fs-cn-********</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -120,7 +124,10 @@ public class ListTaskLogsRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder taskId(String taskId) {
             this.putPathParameter("TaskId", taskId);

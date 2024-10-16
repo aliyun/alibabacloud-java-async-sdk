@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportModelFeatureTrainingSetTableRequest} extends {@link RequestModel}
  *
  * <p>ExportModelFeatureTrainingSetTableRequest</p>
@@ -153,7 +154,10 @@ public class ExportModelFeatureTrainingSetTableRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fs-cn-********</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -162,7 +166,10 @@ public class ExportModelFeatureTrainingSetTableRequest extends Request {
         }
 
         /**
-         * ModelFeatureId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder modelFeatureId(String modelFeatureId) {
             this.putPathParameter("ModelFeatureId", modelFeatureId);
@@ -231,6 +238,12 @@ public class ExportModelFeatureTrainingSetTableRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ExportModelFeatureTrainingSetTableRequest} extends {@link TeaModel}
+     *
+     * <p>ExportModelFeatureTrainingSetTableRequest</p>
+     */
     public static class LabelInputConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventTime")
         private String eventTime;
@@ -292,6 +305,12 @@ public class ExportModelFeatureTrainingSetTableRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ExportModelFeatureTrainingSetTableRequest} extends {@link TeaModel}
+     *
+     * <p>ExportModelFeatureTrainingSetTableRequest</p>
+     */
     public static class TrainingSetConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Partitions")
         private java.util.Map < String, java.util.Map<String, ?>> partitions;

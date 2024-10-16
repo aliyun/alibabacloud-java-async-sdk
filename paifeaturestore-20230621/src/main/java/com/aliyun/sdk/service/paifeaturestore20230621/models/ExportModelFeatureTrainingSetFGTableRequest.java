@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportModelFeatureTrainingSetFGTableRequest} extends {@link RequestModel}
  *
  * <p>ExportModelFeatureTrainingSetFGTableRequest</p>
@@ -98,7 +99,10 @@ public class ExportModelFeatureTrainingSetFGTableRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fs-cn-********</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -107,7 +111,10 @@ public class ExportModelFeatureTrainingSetFGTableRequest extends Request {
         }
 
         /**
-         * ModelFeatureId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder modelFeatureId(String modelFeatureId) {
             this.putPathParameter("ModelFeatureId", modelFeatureId);
@@ -125,7 +132,7 @@ public class ExportModelFeatureTrainingSetFGTableRequest extends Request {
         }
 
         /**
-         * TrainingSetFgConfig.
+         * <p>This parameter is required.</p>
          */
         public Builder trainingSetFgConfig(TrainingSetFgConfig trainingSetFgConfig) {
             this.putBodyParameter("TrainingSetFgConfig", trainingSetFgConfig);
@@ -140,6 +147,12 @@ public class ExportModelFeatureTrainingSetFGTableRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ExportModelFeatureTrainingSetFGTableRequest} extends {@link TeaModel}
+     *
+     * <p>ExportModelFeatureTrainingSetFGTableRequest</p>
+     */
     public static class TrainingSetFgConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FgJsonName")
         private String fgJsonName;
@@ -208,7 +221,7 @@ public class ExportModelFeatureTrainingSetFGTableRequest extends Request {
             }
 
             /**
-             * Partitions.
+             * <p>This parameter is required.</p>
              */
             public Builder partitions(java.util.Map < String, java.util.Map<String, ?>> partitions) {
                 this.partitions = partitions;

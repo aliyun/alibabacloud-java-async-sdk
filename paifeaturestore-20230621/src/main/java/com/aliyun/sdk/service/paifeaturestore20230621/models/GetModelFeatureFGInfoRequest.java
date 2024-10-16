@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetModelFeatureFGInfoRequest} extends {@link RequestModel}
  *
  * <p>GetModelFeatureFGInfoRequest</p>
@@ -83,7 +84,10 @@ public class GetModelFeatureFGInfoRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fs-cn-********</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -92,7 +96,10 @@ public class GetModelFeatureFGInfoRequest extends Request {
         }
 
         /**
-         * ModelFeatureId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder modelFeatureId(String modelFeatureId) {
             this.putPathParameter("ModelFeatureId", modelFeatureId);

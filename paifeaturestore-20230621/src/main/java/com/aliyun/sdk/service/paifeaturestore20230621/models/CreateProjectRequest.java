@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateProjectRequest} extends {@link RequestModel}
  *
  * <p>CreateProjectRequest</p>
@@ -156,7 +157,10 @@ public class CreateProjectRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fs-cn-********</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -183,7 +187,10 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -192,7 +199,10 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * OfflineDatasourceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder offlineDatasourceId(String offlineDatasourceId) {
             this.putBodyParameter("OfflineDatasourceId", offlineDatasourceId);
@@ -210,7 +220,10 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * OnlineDatasourceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder onlineDatasourceId(String onlineDatasourceId) {
             this.putBodyParameter("OnlineDatasourceId", onlineDatasourceId);
@@ -219,7 +232,10 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>324</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

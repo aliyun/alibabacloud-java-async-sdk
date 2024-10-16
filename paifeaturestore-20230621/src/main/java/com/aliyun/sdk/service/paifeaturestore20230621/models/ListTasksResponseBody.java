@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTasksResponseBody} extends {@link TeaModel}
  *
  * <p>ListTasksResponseBody</p>
@@ -90,6 +91,12 @@ public class ListTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTasksResponseBody</p>
+     */
     public static class Tasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;

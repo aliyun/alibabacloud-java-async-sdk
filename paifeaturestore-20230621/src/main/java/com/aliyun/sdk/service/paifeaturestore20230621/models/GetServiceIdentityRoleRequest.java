@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceIdentityRoleRequest} extends {@link RequestModel}
  *
  * <p>GetServiceIdentityRoleRequest</p>
@@ -68,7 +69,10 @@ public class GetServiceIdentityRoleRequest extends Request {
         } 
 
         /**
-         * RoleName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunServiceRoleForFeatureStore</p>
          */
         public Builder roleName(String roleName) {
             this.putPathParameter("RoleName", roleName);

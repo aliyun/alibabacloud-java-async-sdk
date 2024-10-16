@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetModelFeatureResponseBody} extends {@link TeaModel}
  *
  * <p>GetModelFeatureResponseBody</p>
@@ -330,6 +331,12 @@ public class GetModelFeatureResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetModelFeatureResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetModelFeatureResponseBody</p>
+     */
     public static class Features extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
@@ -451,6 +458,12 @@ public class GetModelFeatureResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetModelFeatureResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetModelFeatureResponseBody</p>
+     */
     public static class Domains extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainType")
         private String domainType;
@@ -510,7 +523,10 @@ public class GetModelFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * Domain ID。
+             * <p>Domain ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -532,6 +548,12 @@ public class GetModelFeatureResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetModelFeatureResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetModelFeatureResponseBody</p>
+     */
     public static class Links extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("From")
         private String from;
@@ -613,6 +635,12 @@ public class GetModelFeatureResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetModelFeatureResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetModelFeatureResponseBody</p>
+     */
     public static class Relations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domains")
         private java.util.List < Domains> domains;

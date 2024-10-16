@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLabelTablesResponseBody} extends {@link TeaModel}
  *
  * <p>ListLabelTablesResponseBody</p>
@@ -90,6 +91,12 @@ public class ListLabelTablesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLabelTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLabelTablesResponseBody</p>
+     */
     public static class LabelTables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatasourceId")
         private String datasourceId;

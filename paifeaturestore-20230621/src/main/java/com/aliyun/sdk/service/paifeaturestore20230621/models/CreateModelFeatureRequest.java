@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateModelFeatureRequest} extends {@link RequestModel}
  *
  * <p>CreateModelFeatureRequest</p>
@@ -173,7 +174,7 @@ public class CreateModelFeatureRequest extends Request {
         }
 
         /**
-         * Features.
+         * <p>This parameter is required.</p>
          */
         public Builder features(java.util.List < Features> features) {
             this.putBodyParameter("Features", features);
@@ -191,7 +192,10 @@ public class CreateModelFeatureRequest extends Request {
         }
 
         /**
-         * LabelTableId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder labelTableId(String labelTableId) {
             this.putBodyParameter("LabelTableId", labelTableId);
@@ -200,7 +204,10 @@ public class CreateModelFeatureRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>model_feature_1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -209,7 +216,10 @@ public class CreateModelFeatureRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(String projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -233,6 +243,12 @@ public class CreateModelFeatureRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateModelFeatureRequest} extends {@link TeaModel}
+     *
+     * <p>CreateModelFeatureRequest</p>
+     */
     public static class Features extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
@@ -307,7 +323,10 @@ public class CreateModelFeatureRequest extends Request {
             }
 
             /**
-             * FeatureViewId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder featureViewId(String featureViewId) {
                 this.featureViewId = featureViewId;
@@ -315,7 +334,10 @@ public class CreateModelFeatureRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_id</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -323,7 +345,10 @@ public class CreateModelFeatureRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder type(String type) {
                 this.type = type;

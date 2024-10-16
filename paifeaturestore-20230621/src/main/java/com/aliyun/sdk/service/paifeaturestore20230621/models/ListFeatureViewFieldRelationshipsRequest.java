@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFeatureViewFieldRelationshipsRequest} extends {@link RequestModel}
  *
  * <p>ListFeatureViewFieldRelationshipsRequest</p>
@@ -98,7 +99,10 @@ public class ListFeatureViewFieldRelationshipsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fs-cn-********</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -107,7 +111,10 @@ public class ListFeatureViewFieldRelationshipsRequest extends Request {
         }
 
         /**
-         * FeatureViewId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder featureViewId(String featureViewId) {
             this.putPathParameter("FeatureViewId", featureViewId);
@@ -116,7 +123,10 @@ public class ListFeatureViewFieldRelationshipsRequest extends Request {
         }
 
         /**
-         * FieldName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_id</p>
          */
         public Builder fieldName(String fieldName) {
             this.putPathParameter("FieldName", fieldName);

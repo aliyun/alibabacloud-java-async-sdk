@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateModelFeatureRequest} extends {@link RequestModel}
  *
  * <p>UpdateModelFeatureRequest</p>
@@ -125,7 +126,10 @@ public class UpdateModelFeatureRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fs-cn-********</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -134,7 +138,10 @@ public class UpdateModelFeatureRequest extends Request {
         }
 
         /**
-         * ModelFeatureId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder modelFeatureId(String modelFeatureId) {
             this.putPathParameter("ModelFeatureId", modelFeatureId);
@@ -185,6 +192,12 @@ public class UpdateModelFeatureRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateModelFeatureRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateModelFeatureRequest</p>
+     */
     public static class Features extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
@@ -259,7 +272,10 @@ public class UpdateModelFeatureRequest extends Request {
             }
 
             /**
-             * FeatureViewId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder featureViewId(String featureViewId) {
                 this.featureViewId = featureViewId;
@@ -267,7 +283,10 @@ public class UpdateModelFeatureRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gender</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -275,7 +294,10 @@ public class UpdateModelFeatureRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder type(String type) {
                 this.type = type;

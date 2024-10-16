@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFeatureViewResponseBody} extends {@link TeaModel}
  *
  * <p>GetFeatureViewResponseBody</p>
@@ -510,6 +511,12 @@ public class GetFeatureViewResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFeatureViewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFeatureViewResponseBody</p>
+     */
     public static class Fields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attributes")
         private java.util.List < String > attributes;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FeatureViewConfigValuePartitionsValue} extends {@link TeaModel}
  *
  * <p>FeatureViewConfigValuePartitionsValue</p>
