@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sysom20231230.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDiagnosisResultRequest} extends {@link RequestModel}
  *
  * <p>GetDiagnosisResultRequest</p>
  */
 public class GetDiagnosisResultRequest extends Request {
-    @Query
-    @NameInMap("task_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("task_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskId;
 
     private GetDiagnosisResultRequest(Builder builder) {
@@ -55,7 +55,10 @@ public class GetDiagnosisResultRequest extends Request {
         } 
 
         /**
-         * task_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quzuYl23</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("task_id", taskId);

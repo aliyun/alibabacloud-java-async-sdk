@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AuthDiagnosis  AuthDiagnosisRequest
+     * @return AuthDiagnosisResponse
+     */
     @Override
     public CompletableFuture<AuthDiagnosisResponse> authDiagnosis(AuthDiagnosisRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GenerateCopilotResponse  GenerateCopilotResponseRequest
+     * @return GenerateCopilotResponseResponse
+     */
     @Override
     public CompletableFuture<GenerateCopilotResponseResponse> generateCopilotResponse(GenerateCopilotResponseRequest request) {
         try {
@@ -67,6 +75,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAbnormalEventsCount  GetAbnormalEventsCountRequest
+     * @return GetAbnormalEventsCountResponse
+     */
+    @Override
+    public CompletableFuture<GetAbnormalEventsCountResponse> getAbnormalEventsCount(GetAbnormalEventsCountRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAbnormalEventsCount").setMethod(HttpMethod.GET).setPathRegex("/api/v1/openapi/cluster_health/range/abnormaly_events_count").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAbnormalEventsCountResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAbnormalEventsCountResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDiagnosisResult  GetDiagnosisResultRequest
+     * @return GetDiagnosisResultResponse
+     */
     @Override
     public CompletableFuture<GetDiagnosisResultResponse> getDiagnosisResult(GetDiagnosisResultRequest request) {
         try {
@@ -81,6 +111,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetHealthPercentage  GetHealthPercentageRequest
+     * @return GetHealthPercentageResponse
+     */
+    @Override
+    public CompletableFuture<GetHealthPercentageResponse> getHealthPercentage(GetHealthPercentageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetHealthPercentage").setMethod(HttpMethod.GET).setPathRegex("/api/v1/openapi/cluster_health/range/health_percentage").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetHealthPercentageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetHealthPercentageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of InvokeDiagnosis  InvokeDiagnosisRequest
+     * @return InvokeDiagnosisResponse
+     */
     @Override
     public CompletableFuture<InvokeDiagnosisResponse> invokeDiagnosis(InvokeDiagnosisRequest request) {
         try {

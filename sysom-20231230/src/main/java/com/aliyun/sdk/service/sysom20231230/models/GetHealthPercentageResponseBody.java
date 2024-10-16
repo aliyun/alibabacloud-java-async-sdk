@@ -7,35 +7,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link InvokeDiagnosisResponseBody} extends {@link TeaModel}
+ * {@link GetHealthPercentageResponseBody} extends {@link TeaModel}
  *
- * <p>InvokeDiagnosisResponseBody</p>
+ * <p>GetHealthPercentageResponseBody</p>
  */
-public class InvokeDiagnosisResponseBody extends TeaModel {
+public class GetHealthPercentageResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("data")
-    private Data data;
+    private java.util.List < Data> data;
 
     @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @com.aliyun.core.annotation.NameInMap("request_id")
-    private String requestId;
-
-    private InvokeDiagnosisResponseBody(Builder builder) {
+    private GetHealthPercentageResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
-        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static InvokeDiagnosisResponseBody create() {
+    public static GetHealthPercentageResponseBody create() {
         return builder().build();
     }
 
@@ -49,7 +45,7 @@ public class InvokeDiagnosisResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public Data getData() {
+    public java.util.List < Data> getData() {
         return this.data;
     }
 
@@ -60,18 +56,10 @@ public class InvokeDiagnosisResponseBody extends TeaModel {
         return this.message;
     }
 
-    /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public static final class Builder {
         private String code; 
-        private Data data; 
+        private java.util.List < Data> data; 
         private String message; 
-        private String requestId; 
 
         /**
          * code.
@@ -84,7 +72,7 @@ public class InvokeDiagnosisResponseBody extends TeaModel {
         /**
          * data.
          */
-        public Builder data(Data data) {
+        public Builder data(java.util.List < Data> data) {
             this.data = data;
             return this;
         }
@@ -97,32 +85,28 @@ public class InvokeDiagnosisResponseBody extends TeaModel {
             return this;
         }
 
-        /**
-         * request_id.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        public InvokeDiagnosisResponseBody build() {
-            return new InvokeDiagnosisResponseBody(this);
+        public GetHealthPercentageResponseBody build() {
+            return new GetHealthPercentageResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link InvokeDiagnosisResponseBody} extends {@link TeaModel}
+     * {@link GetHealthPercentageResponseBody} extends {@link TeaModel}
      *
-     * <p>InvokeDiagnosisResponseBody</p>
+     * <p>GetHealthPercentageResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("task_id")
-        private String taskId;
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private Long value;
 
         private Data(Builder builder) {
-            this.taskId = builder.taskId;
+            this.type = builder.type;
+            this.value = builder.value;
         }
 
         public static Builder builder() {
@@ -134,20 +118,36 @@ public class InvokeDiagnosisResponseBody extends TeaModel {
         }
 
         /**
-         * @return taskId
+         * @return type
          */
-        public String getTaskId() {
-            return this.taskId;
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return value
+         */
+        public Long getValue() {
+            return this.value;
         }
 
         public static final class Builder {
-            private String taskId; 
+            private String type; 
+            private Long value; 
 
             /**
-             * task_id.
+             * type.
              */
-            public Builder taskId(String taskId) {
-                this.taskId = taskId;
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(Long value) {
+                this.value = value;
                 return this;
             }
 

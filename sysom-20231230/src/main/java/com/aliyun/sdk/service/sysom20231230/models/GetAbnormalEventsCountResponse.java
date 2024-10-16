@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link InvokeDiagnosisResponse} extends {@link TeaModel}
+ * {@link GetAbnormalEventsCountResponse} extends {@link TeaModel}
  *
- * <p>InvokeDiagnosisResponse</p>
+ * <p>GetAbnormalEventsCountResponse</p>
  */
-public class InvokeDiagnosisResponse extends Response {
+public class GetAbnormalEventsCountResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class InvokeDiagnosisResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private InvokeDiagnosisResponseBody body;
+    private GetAbnormalEventsCountResponseBody body;
 
-    private InvokeDiagnosisResponse(BuilderImpl builder) {
+    private GetAbnormalEventsCountResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static InvokeDiagnosisResponse create() {
+    public static GetAbnormalEventsCountResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class InvokeDiagnosisResponse extends Response {
     /**
      * @return body
      */
-    public InvokeDiagnosisResponseBody getBody() {
+    public GetAbnormalEventsCountResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<InvokeDiagnosisResponse, Builder> {
+    public interface Builder extends Response.Builder<GetAbnormalEventsCountResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(InvokeDiagnosisResponseBody body);
+        Builder body(GetAbnormalEventsCountResponseBody body);
 
         @Override
-        InvokeDiagnosisResponse build();
+        GetAbnormalEventsCountResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<InvokeDiagnosisResponse, Builder>
+            extends Response.BuilderImpl<GetAbnormalEventsCountResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private InvokeDiagnosisResponseBody body; 
+        private GetAbnormalEventsCountResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(InvokeDiagnosisResponse response) {
+        private BuilderImpl(GetAbnormalEventsCountResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class InvokeDiagnosisResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(InvokeDiagnosisResponseBody body) {
+        public Builder body(GetAbnormalEventsCountResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public InvokeDiagnosisResponse build() {
-            return new InvokeDiagnosisResponse(this);
+        public GetAbnormalEventsCountResponse build() {
+            return new GetAbnormalEventsCountResponse(this);
         } 
 
     } 

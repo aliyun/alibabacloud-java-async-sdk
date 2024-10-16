@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sysom20231230.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDiagnosisResultResponseBody} extends {@link TeaModel}
  *
  * <p>GetDiagnosisResultResponseBody</p>
  */
 public class GetDiagnosisResultResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("request_id")
+    @com.aliyun.core.annotation.NameInMap("request_id")
     private String requestId;
 
     private GetDiagnosisResultResponseBody(Builder builder) {
@@ -111,43 +111,57 @@ public class GetDiagnosisResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDiagnosisResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDiagnosisResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("code")
+        @com.aliyun.core.annotation.NameInMap("code")
         private Integer code;
 
-        @NameInMap("command")
+        @com.aliyun.core.annotation.NameInMap("command")
         private Object command;
 
-        @NameInMap("err_msg")
+        @com.aliyun.core.annotation.NameInMap("created_at")
+        private String createdAt;
+
+        @com.aliyun.core.annotation.NameInMap("err_msg")
         private String errMsg;
 
-        @NameInMap("params")
+        @com.aliyun.core.annotation.NameInMap("params")
         private Object params;
 
-        @NameInMap("result")
+        @com.aliyun.core.annotation.NameInMap("result")
         private Object result;
 
-        @NameInMap("service_name")
+        @com.aliyun.core.annotation.NameInMap("service_name")
         private String serviceName;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("task_id")
+        @com.aliyun.core.annotation.NameInMap("task_id")
         private String taskId;
 
-        @NameInMap("url")
+        @com.aliyun.core.annotation.NameInMap("updated_at")
+        private String updatedAt;
+
+        @com.aliyun.core.annotation.NameInMap("url")
         private String url;
 
         private Data(Builder builder) {
             this.code = builder.code;
             this.command = builder.command;
+            this.createdAt = builder.createdAt;
             this.errMsg = builder.errMsg;
             this.params = builder.params;
             this.result = builder.result;
             this.serviceName = builder.serviceName;
             this.status = builder.status;
             this.taskId = builder.taskId;
+            this.updatedAt = builder.updatedAt;
             this.url = builder.url;
         }
 
@@ -171,6 +185,13 @@ public class GetDiagnosisResultResponseBody extends TeaModel {
          */
         public Object getCommand() {
             return this.command;
+        }
+
+        /**
+         * @return createdAt
+         */
+        public String getCreatedAt() {
+            return this.createdAt;
         }
 
         /**
@@ -216,6 +237,13 @@ public class GetDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return updatedAt
+         */
+        public String getUpdatedAt() {
+            return this.updatedAt;
+        }
+
+        /**
          * @return url
          */
         public String getUrl() {
@@ -225,12 +253,14 @@ public class GetDiagnosisResultResponseBody extends TeaModel {
         public static final class Builder {
             private Integer code; 
             private Object command; 
+            private String createdAt; 
             private String errMsg; 
             private Object params; 
             private Object result; 
             private String serviceName; 
             private String status; 
             private String taskId; 
+            private String updatedAt; 
             private String url; 
 
             /**
@@ -246,6 +276,14 @@ public class GetDiagnosisResultResponseBody extends TeaModel {
              */
             public Builder command(Object command) {
                 this.command = command;
+                return this;
+            }
+
+            /**
+             * created_at.
+             */
+            public Builder createdAt(String createdAt) {
+                this.createdAt = createdAt;
                 return this;
             }
 
@@ -294,6 +332,14 @@ public class GetDiagnosisResultResponseBody extends TeaModel {
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
+                return this;
+            }
+
+            /**
+             * updated_at.
+             */
+            public Builder updatedAt(String updatedAt) {
+                this.updatedAt = updatedAt;
                 return this;
             }
 

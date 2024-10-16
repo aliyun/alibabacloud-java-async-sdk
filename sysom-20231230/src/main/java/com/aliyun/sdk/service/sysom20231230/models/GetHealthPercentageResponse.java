@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link InvokeDiagnosisResponse} extends {@link TeaModel}
+ * {@link GetHealthPercentageResponse} extends {@link TeaModel}
  *
- * <p>InvokeDiagnosisResponse</p>
+ * <p>GetHealthPercentageResponse</p>
  */
-public class InvokeDiagnosisResponse extends Response {
+public class GetHealthPercentageResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class InvokeDiagnosisResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private InvokeDiagnosisResponseBody body;
+    private GetHealthPercentageResponseBody body;
 
-    private InvokeDiagnosisResponse(BuilderImpl builder) {
+    private GetHealthPercentageResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static InvokeDiagnosisResponse create() {
+    public static GetHealthPercentageResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class InvokeDiagnosisResponse extends Response {
     /**
      * @return body
      */
-    public InvokeDiagnosisResponseBody getBody() {
+    public GetHealthPercentageResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<InvokeDiagnosisResponse, Builder> {
+    public interface Builder extends Response.Builder<GetHealthPercentageResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(InvokeDiagnosisResponseBody body);
+        Builder body(GetHealthPercentageResponseBody body);
 
         @Override
-        InvokeDiagnosisResponse build();
+        GetHealthPercentageResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<InvokeDiagnosisResponse, Builder>
+            extends Response.BuilderImpl<GetHealthPercentageResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private InvokeDiagnosisResponseBody body; 
+        private GetHealthPercentageResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(InvokeDiagnosisResponse response) {
+        private BuilderImpl(GetHealthPercentageResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class InvokeDiagnosisResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(InvokeDiagnosisResponseBody body) {
+        public Builder body(GetHealthPercentageResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public InvokeDiagnosisResponse build() {
-            return new InvokeDiagnosisResponse(this);
+        public GetHealthPercentageResponse build() {
+            return new GetHealthPercentageResponse(this);
         } 
 
     } 

@@ -1,19 +1,19 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sysom20231230.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateCopilotResponseRequest} extends {@link RequestModel}
  *
  * <p>GenerateCopilotResponseRequest</p>
  */
 public class GenerateCopilotResponseRequest extends Request {
-    @Body
-    @NameInMap("llmParamString")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("llmParamString")
     private String llmParamString;
 
     private GenerateCopilotResponseRequest(Builder builder) {

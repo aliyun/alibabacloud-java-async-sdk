@@ -19,12 +19,40 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    /**
+     * @param request the request parameters of AuthDiagnosis  AuthDiagnosisRequest
+     * @return AuthDiagnosisResponse
+     */
     CompletableFuture<AuthDiagnosisResponse> authDiagnosis(AuthDiagnosisRequest request);
 
+    /**
+     * @param request the request parameters of GenerateCopilotResponse  GenerateCopilotResponseRequest
+     * @return GenerateCopilotResponseResponse
+     */
     CompletableFuture<GenerateCopilotResponseResponse> generateCopilotResponse(GenerateCopilotResponseRequest request);
 
+    /**
+     * @param request the request parameters of GetAbnormalEventsCount  GetAbnormalEventsCountRequest
+     * @return GetAbnormalEventsCountResponse
+     */
+    CompletableFuture<GetAbnormalEventsCountResponse> getAbnormalEventsCount(GetAbnormalEventsCountRequest request);
+
+    /**
+     * @param request the request parameters of GetDiagnosisResult  GetDiagnosisResultRequest
+     * @return GetDiagnosisResultResponse
+     */
     CompletableFuture<GetDiagnosisResultResponse> getDiagnosisResult(GetDiagnosisResultRequest request);
 
+    /**
+     * @param request the request parameters of GetHealthPercentage  GetHealthPercentageRequest
+     * @return GetHealthPercentageResponse
+     */
+    CompletableFuture<GetHealthPercentageResponse> getHealthPercentage(GetHealthPercentageRequest request);
+
+    /**
+     * @param request the request parameters of InvokeDiagnosis  InvokeDiagnosisRequest
+     * @return InvokeDiagnosisResponse
+     */
     CompletableFuture<InvokeDiagnosisResponse> invokeDiagnosis(InvokeDiagnosisRequest request);
 
 }
