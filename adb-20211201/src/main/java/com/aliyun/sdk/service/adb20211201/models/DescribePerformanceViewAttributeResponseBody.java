@@ -214,6 +214,15 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
      * <p>DescribePerformanceViewAttributeResponseBody</p>
      */
     public static class Keys extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableAutoMc")
+        private Boolean enableAutoMc;
+
+        @com.aliyun.core.annotation.NameInMap("Engine")
+        private java.util.List < String > engine;
+
+        @com.aliyun.core.annotation.NameInMap("GroupType")
+        private java.util.List < String > groupType;
+
         @com.aliyun.core.annotation.NameInMap("KeyName")
         private String keyName;
 
@@ -221,6 +230,9 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
         private Boolean selected;
 
         private Keys(Builder builder) {
+            this.enableAutoMc = builder.enableAutoMc;
+            this.engine = builder.engine;
+            this.groupType = builder.groupType;
             this.keyName = builder.keyName;
             this.selected = builder.selected;
         }
@@ -231,6 +243,27 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
 
         public static Keys create() {
             return builder().build();
+        }
+
+        /**
+         * @return enableAutoMc
+         */
+        public Boolean getEnableAutoMc() {
+            return this.enableAutoMc;
+        }
+
+        /**
+         * @return engine
+         */
+        public java.util.List < String > getEngine() {
+            return this.engine;
+        }
+
+        /**
+         * @return groupType
+         */
+        public java.util.List < String > getGroupType() {
+            return this.groupType;
         }
 
         /**
@@ -248,8 +281,35 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean enableAutoMc; 
+            private java.util.List < String > engine; 
+            private java.util.List < String > groupType; 
             private String keyName; 
             private Boolean selected; 
+
+            /**
+             * EnableAutoMc.
+             */
+            public Builder enableAutoMc(Boolean enableAutoMc) {
+                this.enableAutoMc = enableAutoMc;
+                return this;
+            }
+
+            /**
+             * Engine.
+             */
+            public Builder engine(java.util.List < String > engine) {
+                this.engine = engine;
+                return this;
+            }
+
+            /**
+             * GroupType.
+             */
+            public Builder groupType(java.util.List < String > groupType) {
+                this.groupType = groupType;
+                return this;
+            }
 
             /**
              * <p>The name of the metric.</p>

@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyDBResourceGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoStopInterval")
+    private String autoStopInterval;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterMode")
     private String clusterMode;
 
@@ -80,11 +84,16 @@ public class ModifyDBResourceGroupRequest extends Request {
     private String specName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private String status;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetResourceGroupName")
     private String targetResourceGroupName;
 
     private ModifyDBResourceGroupRequest(Builder builder) {
         super(builder);
+        this.autoStopInterval = builder.autoStopInterval;
         this.clusterMode = builder.clusterMode;
         this.clusterSizeResource = builder.clusterSizeResource;
         this.DBClusterId = builder.DBClusterId;
@@ -101,6 +110,7 @@ public class ModifyDBResourceGroupRequest extends Request {
         this.regionId = builder.regionId;
         this.rules = builder.rules;
         this.specName = builder.specName;
+        this.status = builder.status;
         this.targetResourceGroupName = builder.targetResourceGroupName;
     }
 
@@ -115,6 +125,13 @@ public class ModifyDBResourceGroupRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoStopInterval
+     */
+    public String getAutoStopInterval() {
+        return this.autoStopInterval;
     }
 
     /**
@@ -230,6 +247,13 @@ public class ModifyDBResourceGroupRequest extends Request {
     }
 
     /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return targetResourceGroupName
      */
     public String getTargetResourceGroupName() {
@@ -237,6 +261,7 @@ public class ModifyDBResourceGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDBResourceGroupRequest, Builder> {
+        private String autoStopInterval; 
         private String clusterMode; 
         private String clusterSizeResource; 
         private String DBClusterId; 
@@ -253,6 +278,7 @@ public class ModifyDBResourceGroupRequest extends Request {
         private String regionId; 
         private java.util.List < Rules> rules; 
         private String specName; 
+        private String status; 
         private String targetResourceGroupName; 
 
         private Builder() {
@@ -261,6 +287,7 @@ public class ModifyDBResourceGroupRequest extends Request {
 
         private Builder(ModifyDBResourceGroupRequest request) {
             super(request);
+            this.autoStopInterval = request.autoStopInterval;
             this.clusterMode = request.clusterMode;
             this.clusterSizeResource = request.clusterSizeResource;
             this.DBClusterId = request.DBClusterId;
@@ -277,8 +304,18 @@ public class ModifyDBResourceGroupRequest extends Request {
             this.regionId = request.regionId;
             this.rules = request.rules;
             this.specName = request.specName;
+            this.status = request.status;
             this.targetResourceGroupName = request.targetResourceGroupName;
         } 
+
+        /**
+         * AutoStopInterval.
+         */
+        public Builder autoStopInterval(String autoStopInterval) {
+            this.putQueryParameter("AutoStopInterval", autoStopInterval);
+            this.autoStopInterval = autoStopInterval;
+            return this;
+        }
 
         /**
          * <p>A reserved parameter.</p>
@@ -484,6 +521,15 @@ public class ModifyDBResourceGroupRequest extends Request {
         public Builder specName(String specName) {
             this.putQueryParameter("SpecName", specName);
             this.specName = specName;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
             return this;
         }
 

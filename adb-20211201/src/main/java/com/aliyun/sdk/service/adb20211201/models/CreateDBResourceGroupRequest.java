@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateDBResourceGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoStopInterval")
+    private String autoStopInterval;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterMode")
     private String clusterMode;
 
@@ -89,6 +93,7 @@ public class CreateDBResourceGroupRequest extends Request {
 
     private CreateDBResourceGroupRequest(Builder builder) {
         super(builder);
+        this.autoStopInterval = builder.autoStopInterval;
         this.clusterMode = builder.clusterMode;
         this.clusterSizeResource = builder.clusterSizeResource;
         this.DBClusterId = builder.DBClusterId;
@@ -120,6 +125,13 @@ public class CreateDBResourceGroupRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoStopInterval
+     */
+    public String getAutoStopInterval() {
+        return this.autoStopInterval;
     }
 
     /**
@@ -249,6 +261,7 @@ public class CreateDBResourceGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDBResourceGroupRequest, Builder> {
+        private String autoStopInterval; 
         private String clusterMode; 
         private String clusterSizeResource; 
         private String DBClusterId; 
@@ -274,6 +287,7 @@ public class CreateDBResourceGroupRequest extends Request {
 
         private Builder(CreateDBResourceGroupRequest request) {
             super(request);
+            this.autoStopInterval = request.autoStopInterval;
             this.clusterMode = request.clusterMode;
             this.clusterSizeResource = request.clusterSizeResource;
             this.DBClusterId = request.DBClusterId;
@@ -293,6 +307,15 @@ public class CreateDBResourceGroupRequest extends Request {
             this.specName = request.specName;
             this.targetResourceGroupName = request.targetResourceGroupName;
         } 
+
+        /**
+         * AutoStopInterval.
+         */
+        public Builder autoStopInterval(String autoStopInterval) {
+            this.putQueryParameter("AutoStopInterval", autoStopInterval);
+            this.autoStopInterval = autoStopInterval;
+            return this;
+        }
 
         /**
          * <p>A reserved parameter.</p>

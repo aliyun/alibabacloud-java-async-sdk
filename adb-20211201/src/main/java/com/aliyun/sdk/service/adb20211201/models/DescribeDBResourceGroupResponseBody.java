@@ -177,6 +177,9 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
      * <p>DescribeDBResourceGroupResponseBody</p>
      */
     public static class GroupsInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AutoStopInterval")
+        private String autoStopInterval;
+
         @com.aliyun.core.annotation.NameInMap("ClusterMode")
         private String clusterMode;
 
@@ -248,6 +251,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         private String updateTime;
 
         private GroupsInfo(Builder builder) {
+            this.autoStopInterval = builder.autoStopInterval;
             this.clusterMode = builder.clusterMode;
             this.clusterSizeResource = builder.clusterSizeResource;
             this.createTime = builder.createTime;
@@ -279,6 +283,13 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
 
         public static GroupsInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoStopInterval
+         */
+        public String getAutoStopInterval() {
+            return this.autoStopInterval;
         }
 
         /**
@@ -443,6 +454,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String autoStopInterval; 
             private String clusterMode; 
             private String clusterSizeResource; 
             private String createTime; 
@@ -466,6 +478,14 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             private String status; 
             private String targetResourceGroupName; 
             private String updateTime; 
+
+            /**
+             * AutoStopInterval.
+             */
+            public Builder autoStopInterval(String autoStopInterval) {
+                this.autoStopInterval = autoStopInterval;
+                return this;
+            }
 
             /**
              * <p>A reserved parameter.</p>
