@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelByMsgIdResponseBody} extends {@link TeaModel}
  *
  * <p>CancelByMsgIdResponseBody</p>
@@ -150,6 +151,12 @@ public class CancelByMsgIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CancelByMsgIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>CancelByMsgIdResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MsgId")
         private String msgId;

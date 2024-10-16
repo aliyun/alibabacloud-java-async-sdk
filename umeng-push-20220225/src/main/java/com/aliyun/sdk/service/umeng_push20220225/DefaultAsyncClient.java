@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of CancelByMsgId  CancelByMsgIdRequest
+     * @return CancelByMsgIdResponse
+     */
     @Override
     public CompletableFuture<CancelByMsgIdResponse> cancelByMsgId(CancelByMsgIdRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryMsgStat  QueryMsgStatRequest
+     * @return QueryMsgStatResponse
+     */
     @Override
     public CompletableFuture<QueryMsgStatResponse> queryMsgStat(QueryMsgStatRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SendByAlias  SendByAliasRequest
+     * @return SendByAliasResponse
+     */
     @Override
     public CompletableFuture<SendByAliasResponse> sendByAlias(SendByAliasRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SendByAliasFileId  SendByAliasFileIdRequest
+     * @return SendByAliasFileIdResponse
+     */
     @Override
     public CompletableFuture<SendByAliasFileIdResponse> sendByAliasFileId(SendByAliasFileIdRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SendByApp  SendByAppRequest
+     * @return SendByAppResponse
+     */
     @Override
     public CompletableFuture<SendByAppResponse> sendByApp(SendByAppRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SendByDevice  SendByDeviceRequest
+     * @return SendByDeviceResponse
+     */
     @Override
     public CompletableFuture<SendByDeviceResponse> sendByDevice(SendByDeviceRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SendByDeviceFileId  SendByDeviceFileIdRequest
+     * @return SendByDeviceFileIdResponse
+     */
     @Override
     public CompletableFuture<SendByDeviceFileIdResponse> sendByDeviceFileId(SendByDeviceFileIdRequest request) {
         try {
@@ -137,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SendByFilter  SendByFilterRequest
+     * @return SendByFilterResponse
+     */
     @Override
     public CompletableFuture<SendByFilterResponse> sendByFilter(SendByFilterRequest request) {
         try {
@@ -151,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UploadDevice  UploadDeviceRequest
+     * @return UploadDeviceResponse
+     */
     @Override
     public CompletableFuture<UploadDeviceResponse> uploadDevice(UploadDeviceRequest request) {
         try {

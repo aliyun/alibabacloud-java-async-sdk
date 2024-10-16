@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendByAliasRequest} extends {@link RequestModel}
  *
  * <p>SendByAliasRequest</p>
@@ -194,7 +195,10 @@ public class SendByAliasRequest extends Request {
         } 
 
         /**
-         * Alias.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder alias(String alias) {
             this.putBodyParameter("Alias", alias);

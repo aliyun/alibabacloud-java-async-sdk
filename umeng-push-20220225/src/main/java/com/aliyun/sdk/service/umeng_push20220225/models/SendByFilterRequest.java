@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendByFilterRequest} extends {@link RequestModel}
  *
  * <p>SendByFilterRequest</p>

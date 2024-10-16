@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendByDeviceResponseBody} extends {@link TeaModel}
  *
  * <p>SendByDeviceResponseBody</p>
@@ -150,6 +151,12 @@ public class SendByDeviceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SendByDeviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>SendByDeviceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MsgId")
         private String msgId;

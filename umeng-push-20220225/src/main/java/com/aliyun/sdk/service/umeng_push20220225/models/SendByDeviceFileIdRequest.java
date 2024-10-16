@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendByDeviceFileIdRequest} extends {@link RequestModel}
  *
  * <p>SendByDeviceFileIdRequest</p>
@@ -209,7 +210,10 @@ public class SendByDeviceFileIdRequest extends Request {
         }
 
         /**
-         * FileId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PF835431668603208261</p>
          */
         public Builder fileId(String fileId) {
             this.putBodyParameter("FileId", fileId);

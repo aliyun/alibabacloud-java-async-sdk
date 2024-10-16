@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendByDeviceRequest} extends {@link RequestModel}
  *
  * <p>SendByDeviceRequest</p>
@@ -209,7 +210,10 @@ public class SendByDeviceRequest extends Request {
         }
 
         /**
-         * DeviceTokens.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ArdNyIzFCH2K3szXA8arpu0Y7ywOdA67mCSumtpnMnmf</p>
          */
         public Builder deviceTokens(String deviceTokens) {
             this.putBodyParameter("DeviceTokens", deviceTokens);
