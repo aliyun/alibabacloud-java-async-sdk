@@ -485,6 +485,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RunApplicationActionResponse> runApplicationAction(RunApplicationActionRequest request);
 
     /**
+     * @param request the request parameters of RunCluster  RunClusterRequest
+     * @return RunClusterResponse
+     */
+    CompletableFuture<RunClusterResponse> runCluster(RunClusterRequest request);
+
+    /**
      * @param request the request parameters of TagResources  TagResourcesRequest
      * @return TagResourcesResponse
      */
