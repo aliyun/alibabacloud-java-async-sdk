@@ -15,20 +15,8 @@ public class QueryResult extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List < Data> data;
 
-    @com.aliyun.core.annotation.NameInMap("errorCode")
-    private String errorCode;
-
-    @com.aliyun.core.annotation.NameInMap("errorMessage")
-    private String errorMessage;
-
-    @com.aliyun.core.annotation.NameInMap("success")
-    private Boolean success;
-
     private QueryResult(Builder builder) {
         this.data = builder.data;
-        this.errorCode = builder.errorCode;
-        this.errorMessage = builder.errorMessage;
-        this.success = builder.success;
     }
 
     public static Builder builder() {
@@ -46,62 +34,14 @@ public class QueryResult extends TeaModel {
         return this.data;
     }
 
-    /**
-     * @return errorCode
-     */
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    /**
-     * @return errorMessage
-     */
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    /**
-     * @return success
-     */
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public static final class Builder {
         private java.util.List < Data> data; 
-        private String errorCode; 
-        private String errorMessage; 
-        private Boolean success; 
 
         /**
          * data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
-            return this;
-        }
-
-        /**
-         * errorCode.
-         */
-        public Builder errorCode(String errorCode) {
-            this.errorCode = errorCode;
-            return this;
-        }
-
-        /**
-         * errorMessage.
-         */
-        public Builder errorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
-            return this;
-        }
-
-        /**
-         * success.
-         */
-        public Builder success(Boolean success) {
-            this.success = success;
             return this;
         }
 

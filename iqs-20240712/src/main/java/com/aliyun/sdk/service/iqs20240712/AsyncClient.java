@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of CommonQueryByScene  CommonQueryBySceneRequest
+     * @return CommonQueryBySceneResponse
+     */
+    CompletableFuture<CommonQueryBySceneResponse> commonQueryByScene(CommonQueryBySceneRequest request);
+
+    /**
      * @param request the request parameters of QueryAttractions  QueryAttractionsRequest
      * @return QueryAttractionsResponse
      */
