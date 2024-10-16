@@ -139,6 +139,10 @@ public class ModifyScalingGroupRequest extends Request {
     private Boolean spotInstanceRemedy;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StopInstanceTimeout")
+    private Integer stopInstanceTimeout;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchIds")
     private java.util.List < String > vSwitchIds;
 
@@ -175,6 +179,7 @@ public class ModifyScalingGroupRequest extends Request {
         this.spotAllocationStrategy = builder.spotAllocationStrategy;
         this.spotInstancePools = builder.spotInstancePools;
         this.spotInstanceRemedy = builder.spotInstanceRemedy;
+        this.stopInstanceTimeout = builder.stopInstanceTimeout;
         this.vSwitchIds = builder.vSwitchIds;
     }
 
@@ -409,6 +414,13 @@ public class ModifyScalingGroupRequest extends Request {
     }
 
     /**
+     * @return stopInstanceTimeout
+     */
+    public Integer getStopInstanceTimeout() {
+        return this.stopInstanceTimeout;
+    }
+
+    /**
      * @return vSwitchIds
      */
     public java.util.List < String > getVSwitchIds() {
@@ -447,6 +459,7 @@ public class ModifyScalingGroupRequest extends Request {
         private String spotAllocationStrategy; 
         private Integer spotInstancePools; 
         private Boolean spotInstanceRemedy; 
+        private Integer stopInstanceTimeout; 
         private java.util.List < String > vSwitchIds; 
 
         private Builder() {
@@ -486,6 +499,7 @@ public class ModifyScalingGroupRequest extends Request {
             this.spotAllocationStrategy = request.spotAllocationStrategy;
             this.spotInstancePools = request.spotInstancePools;
             this.spotInstanceRemedy = request.spotInstanceRemedy;
+            this.stopInstanceTimeout = request.stopInstanceTimeout;
             this.vSwitchIds = request.vSwitchIds;
         } 
 
@@ -926,6 +940,15 @@ public class ModifyScalingGroupRequest extends Request {
         public Builder spotInstanceRemedy(Boolean spotInstanceRemedy) {
             this.putQueryParameter("SpotInstanceRemedy", spotInstanceRemedy);
             this.spotInstanceRemedy = spotInstanceRemedy;
+            return this;
+        }
+
+        /**
+         * StopInstanceTimeout.
+         */
+        public Builder stopInstanceTimeout(Integer stopInstanceTimeout) {
+            this.putQueryParameter("StopInstanceTimeout", stopInstanceTimeout);
+            this.stopInstanceTimeout = stopInstanceTimeout;
             return this;
         }
 

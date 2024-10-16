@@ -58,6 +58,10 @@ public class RemoveInstancesRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String scalingGroupId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StopInstanceTimeout")
+    private Integer stopInstanceTimeout;
+
     private RemoveInstancesRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
@@ -71,6 +75,7 @@ public class RemoveInstancesRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.scalingGroupId = builder.scalingGroupId;
+        this.stopInstanceTimeout = builder.stopInstanceTimeout;
     }
 
     public static Builder builder() {
@@ -163,6 +168,13 @@ public class RemoveInstancesRequest extends Request {
         return this.scalingGroupId;
     }
 
+    /**
+     * @return stopInstanceTimeout
+     */
+    public Integer getStopInstanceTimeout() {
+        return this.stopInstanceTimeout;
+    }
+
     public static final class Builder extends Request.Builder<RemoveInstancesRequest, Builder> {
         private String clientToken; 
         private Boolean decreaseDesiredCapacity; 
@@ -175,6 +187,7 @@ public class RemoveInstancesRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String scalingGroupId; 
+        private Integer stopInstanceTimeout; 
 
         private Builder() {
             super();
@@ -193,6 +206,7 @@ public class RemoveInstancesRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.scalingGroupId = request.scalingGroupId;
+            this.stopInstanceTimeout = request.stopInstanceTimeout;
         } 
 
         /**
@@ -337,6 +351,15 @@ public class RemoveInstancesRequest extends Request {
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);
             this.scalingGroupId = scalingGroupId;
+            return this;
+        }
+
+        /**
+         * StopInstanceTimeout.
+         */
+        public Builder stopInstanceTimeout(Integer stopInstanceTimeout) {
+            this.putQueryParameter("StopInstanceTimeout", stopInstanceTimeout);
+            this.stopInstanceTimeout = stopInstanceTimeout;
             return this;
         }
 

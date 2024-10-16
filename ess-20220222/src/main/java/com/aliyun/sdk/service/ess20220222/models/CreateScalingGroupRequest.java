@@ -176,6 +176,10 @@ public class CreateScalingGroupRequest extends Request {
     private Boolean spotInstanceRemedy;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StopInstanceTimeout")
+    private Integer stopInstanceTimeout;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SyncAlarmRuleToCms")
     private Boolean syncAlarmRuleToCms;
 
@@ -237,6 +241,7 @@ public class CreateScalingGroupRequest extends Request {
         this.spotAllocationStrategy = builder.spotAllocationStrategy;
         this.spotInstancePools = builder.spotInstancePools;
         this.spotInstanceRemedy = builder.spotInstanceRemedy;
+        this.stopInstanceTimeout = builder.stopInstanceTimeout;
         this.syncAlarmRuleToCms = builder.syncAlarmRuleToCms;
         this.tags = builder.tags;
         this.vServerGroups = builder.vServerGroups;
@@ -538,6 +543,13 @@ public class CreateScalingGroupRequest extends Request {
     }
 
     /**
+     * @return stopInstanceTimeout
+     */
+    public Integer getStopInstanceTimeout() {
+        return this.stopInstanceTimeout;
+    }
+
+    /**
      * @return syncAlarmRuleToCms
      */
     public Boolean getSyncAlarmRuleToCms() {
@@ -613,6 +625,7 @@ public class CreateScalingGroupRequest extends Request {
         private String spotAllocationStrategy; 
         private Integer spotInstancePools; 
         private Boolean spotInstanceRemedy; 
+        private Integer stopInstanceTimeout; 
         private Boolean syncAlarmRuleToCms; 
         private java.util.List < Tags> tags; 
         private java.util.List < VServerGroups> vServerGroups; 
@@ -665,6 +678,7 @@ public class CreateScalingGroupRequest extends Request {
             this.spotAllocationStrategy = request.spotAllocationStrategy;
             this.spotInstancePools = request.spotInstancePools;
             this.spotInstanceRemedy = request.spotInstanceRemedy;
+            this.stopInstanceTimeout = request.stopInstanceTimeout;
             this.syncAlarmRuleToCms = request.syncAlarmRuleToCms;
             this.tags = request.tags;
             this.vServerGroups = request.vServerGroups;
@@ -1234,6 +1248,15 @@ public class CreateScalingGroupRequest extends Request {
         public Builder spotInstanceRemedy(Boolean spotInstanceRemedy) {
             this.putQueryParameter("SpotInstanceRemedy", spotInstanceRemedy);
             this.spotInstanceRemedy = spotInstanceRemedy;
+            return this;
+        }
+
+        /**
+         * StopInstanceTimeout.
+         */
+        public Builder stopInstanceTimeout(Integer stopInstanceTimeout) {
+            this.putQueryParameter("StopInstanceTimeout", stopInstanceTimeout);
+            this.stopInstanceTimeout = stopInstanceTimeout;
             return this;
         }
 

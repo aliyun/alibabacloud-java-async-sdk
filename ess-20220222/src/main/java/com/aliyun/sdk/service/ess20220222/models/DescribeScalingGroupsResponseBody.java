@@ -1059,6 +1059,9 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StandbyCapacity")
         private Integer standbyCapacity;
 
+        @com.aliyun.core.annotation.NameInMap("StopInstanceTimeout")
+        private Integer stopInstanceTimeout;
+
         @com.aliyun.core.annotation.NameInMap("StoppedCapacity")
         private Integer stoppedCapacity;
 
@@ -1141,6 +1144,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             this.spotInstancePools = builder.spotInstancePools;
             this.spotInstanceRemedy = builder.spotInstanceRemedy;
             this.standbyCapacity = builder.standbyCapacity;
+            this.stopInstanceTimeout = builder.stopInstanceTimeout;
             this.stoppedCapacity = builder.stoppedCapacity;
             this.suspendedProcesses = builder.suspendedProcesses;
             this.systemSuspended = builder.systemSuspended;
@@ -1519,6 +1523,13 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return stopInstanceTimeout
+         */
+        public Integer getStopInstanceTimeout() {
+            return this.stopInstanceTimeout;
+        }
+
+        /**
          * @return stoppedCapacity
          */
         public Integer getStoppedCapacity() {
@@ -1640,6 +1651,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             private Integer spotInstancePools; 
             private Boolean spotInstanceRemedy; 
             private Integer standbyCapacity; 
+            private Integer stopInstanceTimeout; 
             private Integer stoppedCapacity; 
             private java.util.List < String > suspendedProcesses; 
             private Boolean systemSuspended; 
@@ -2255,6 +2267,14 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
              */
             public Builder standbyCapacity(Integer standbyCapacity) {
                 this.standbyCapacity = standbyCapacity;
+                return this;
+            }
+
+            /**
+             * StopInstanceTimeout.
+             */
+            public Builder stopInstanceTimeout(Integer stopInstanceTimeout) {
+                this.stopInstanceTimeout = stopInstanceTimeout;
                 return this;
             }
 
