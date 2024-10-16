@@ -92,6 +92,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckUserProjectNameResponse> checkUserProjectName(CheckUserProjectNameRequest request);
 
     /**
+     * @param request the request parameters of CommitRoutineStagingCode  CommitRoutineStagingCodeRequest
+     * @return CommitRoutineStagingCodeResponse
+     */
+    CompletableFuture<CommitRoutineStagingCodeResponse> commitRoutineStagingCode(CommitRoutineStagingCodeRequest request);
+
+    /**
      * @param request the request parameters of CreateCustomScenePolicy  CreateCustomScenePolicyRequest
      * @return CreateCustomScenePolicyResponse
      */
@@ -120,6 +126,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateRecordResponse
      */
     CompletableFuture<CreateRecordResponse> createRecord(CreateRecordRequest request);
+
+    /**
+     * @param request the request parameters of CreateRoutine  CreateRoutineRequest
+     * @return CreateRoutineResponse
+     */
+    CompletableFuture<CreateRoutineResponse> createRoutine(CreateRoutineRequest request);
+
+    /**
+     * @param request the request parameters of CreateRoutineRelatedRecord  CreateRoutineRelatedRecordRequest
+     * @return CreateRoutineRelatedRecordResponse
+     */
+    CompletableFuture<CreateRoutineRelatedRecordResponse> createRoutineRelatedRecord(CreateRoutineRelatedRecordRequest request);
+
+    /**
+     * @param request the request parameters of CreateRoutineRelatedRoute  CreateRoutineRelatedRouteRequest
+     * @return CreateRoutineRelatedRouteResponse
+     */
+    CompletableFuture<CreateRoutineRelatedRouteResponse> createRoutineRelatedRoute(CreateRoutineRelatedRouteRequest request);
 
     /**
      * @param request the request parameters of CreateScheduledPreloadExecutions  CreateScheduledPreloadExecutionsRequest
@@ -216,6 +240,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteRecordResponse
      */
     CompletableFuture<DeleteRecordResponse> deleteRecord(DeleteRecordRequest request);
+
+    /**
+     * @param request the request parameters of DeleteRoutine  DeleteRoutineRequest
+     * @return DeleteRoutineResponse
+     */
+    CompletableFuture<DeleteRoutineResponse> deleteRoutine(DeleteRoutineRequest request);
+
+    /**
+     * @param request the request parameters of DeleteRoutineCodeVersion  DeleteRoutineCodeVersionRequest
+     * @return DeleteRoutineCodeVersionResponse
+     */
+    CompletableFuture<DeleteRoutineCodeVersionResponse> deleteRoutineCodeVersion(DeleteRoutineCodeVersionRequest request);
+
+    /**
+     * @param request the request parameters of DeleteRoutineRelatedRecord  DeleteRoutineRelatedRecordRequest
+     * @return DeleteRoutineRelatedRecordResponse
+     */
+    CompletableFuture<DeleteRoutineRelatedRecordResponse> deleteRoutineRelatedRecord(DeleteRoutineRelatedRecordRequest request);
+
+    /**
+     * @param request the request parameters of DeleteRoutineRelatedRoute  DeleteRoutineRelatedRouteRequest
+     * @return DeleteRoutineRelatedRouteResponse
+     */
+    CompletableFuture<DeleteRoutineRelatedRouteResponse> deleteRoutineRelatedRoute(DeleteRoutineRelatedRouteRequest request);
 
     /**
      * @param request the request parameters of DeleteScheduledPreloadExecution  DeleteScheduledPreloadExecutionRequest
@@ -410,6 +458,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetRecordResponse> getRecord(GetRecordRequest request);
 
     /**
+     * @param request the request parameters of GetRoutine  GetRoutineRequest
+     * @return GetRoutineResponse
+     */
+    CompletableFuture<GetRoutineResponse> getRoutine(GetRoutineRequest request);
+
+    /**
+     * @param request the request parameters of GetRoutineStagingCodeUploadInfo  GetRoutineStagingCodeUploadInfoRequest
+     * @return GetRoutineStagingCodeUploadInfoResponse
+     */
+    CompletableFuture<GetRoutineStagingCodeUploadInfoResponse> getRoutineStagingCodeUploadInfo(GetRoutineStagingCodeUploadInfoRequest request);
+
+    /**
+     * @param request the request parameters of GetRoutineStagingEnvIp  GetRoutineStagingEnvIpRequest
+     * @return GetRoutineStagingEnvIpResponse
+     */
+    CompletableFuture<GetRoutineStagingEnvIpResponse> getRoutineStagingEnvIp(GetRoutineStagingEnvIpRequest request);
+
+    /**
+     * @param request the request parameters of GetRoutineUserInfo  GetRoutineUserInfoRequest
+     * @return GetRoutineUserInfoResponse
+     */
+    CompletableFuture<GetRoutineUserInfoResponse> getRoutineUserInfo(GetRoutineUserInfoRequest request);
+
+    /**
      * @param request the request parameters of GetScheduledPreloadJob  GetScheduledPreloadJobRequest
      * @return GetScheduledPreloadJobResponse
      */
@@ -590,6 +662,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRecordsResponse> listRecords(ListRecordsRequest request);
 
     /**
+     * @param request the request parameters of ListRoutineCanaryAreas  ListRoutineCanaryAreasRequest
+     * @return ListRoutineCanaryAreasResponse
+     */
+    CompletableFuture<ListRoutineCanaryAreasResponse> listRoutineCanaryAreas(ListRoutineCanaryAreasRequest request);
+
+    /**
+     * @param request the request parameters of ListRoutineOptionalSpecs  ListRoutineOptionalSpecsRequest
+     * @return ListRoutineOptionalSpecsResponse
+     */
+    CompletableFuture<ListRoutineOptionalSpecsResponse> listRoutineOptionalSpecs(ListRoutineOptionalSpecsRequest request);
+
+    /**
      * @param request the request parameters of ListScheduledPreloadExecutions  ListScheduledPreloadExecutionsRequest
      * @return ListScheduledPreloadExecutionsResponse
      */
@@ -696,6 +780,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return PreloadCachesResponse
      */
     CompletableFuture<PreloadCachesResponse> preloadCaches(PreloadCachesRequest request);
+
+    /**
+     * @param request the request parameters of PublishRoutineCodeVersion  PublishRoutineCodeVersionRequest
+     * @return PublishRoutineCodeVersionResponse
+     */
+    CompletableFuture<PublishRoutineCodeVersionResponse> publishRoutineCodeVersion(PublishRoutineCodeVersionRequest request);
 
     /**
      * @param request the request parameters of PurgeCaches  PurgeCachesRequest
