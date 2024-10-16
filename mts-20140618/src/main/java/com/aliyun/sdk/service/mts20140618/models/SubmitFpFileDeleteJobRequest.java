@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitFpFileDeleteJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitFpFileDeleteJobRequest</p>
@@ -166,7 +167,10 @@ public class SubmitFpFileDeleteJobRequest extends Request {
         } 
 
         /**
-         * The IDs of the media files that you want to delete. Separate multiple file IDs with commas (,). You can delete up to 200 media files at a time. You can obtain media file IDs from the response parameters of the [ListFpShotFiles](~~209266~~) operation.
+         * <p>The IDs of the media files that you want to delete. Separate multiple file IDs with commas (,). You can delete up to 200 media files at a time. You can obtain media file IDs from the response parameters of the <a href="https://help.aliyun.com/document_detail/209266.html">ListFpShotFiles</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>41e6536e4f2250e2e9bf26cdea19****</p>
          */
         public Builder fileIds(String fileIds) {
             this.putQueryParameter("FileIds", fileIds);
@@ -175,7 +179,11 @@ public class SubmitFpFileDeleteJobRequest extends Request {
         }
 
         /**
-         * The ID of the media fingerprint library. You can obtain the library ID from the response parameters of the [CreateFpShotDB](~~170149~~) operation.
+         * <p>The ID of the media fingerprint library. You can obtain the library ID from the response parameters of the <a href="https://help.aliyun.com/document_detail/170149.html">CreateFpShotDB</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88c6ca184c0e432bbf5b665e2a15****</p>
          */
         public Builder fpDBId(String fpDBId) {
             this.putQueryParameter("FpDBId", fpDBId);
@@ -202,7 +210,10 @@ public class SubmitFpFileDeleteJobRequest extends Request {
         }
 
         /**
-         * The ID of the ApsaraVideo Media Processing (MPS) queue to which the job is submitted. The MPS queue is bound with a notification method. To view the MPS queue ID, log on to the **MPS console** and choose **Global Settings** > **MPS queue and Callback** in the left-side navigation pane.
+         * <p>The ID of the ApsaraVideo Media Processing (MPS) queue to which the job is submitted. The MPS queue is bound with a notification method. To view the MPS queue ID, log on to the <strong>MPS console</strong> and choose <strong>Global Settings</strong> &gt; <strong>MPS queue and Callback</strong> in the left-side navigation pane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ed450ea0bfbd41e29f80a401fb4d****</p>
          */
         public Builder pipelineId(String pipelineId) {
             this.putQueryParameter("PipelineId", pipelineId);
@@ -211,10 +222,13 @@ public class SubmitFpFileDeleteJobRequest extends Request {
         }
 
         /**
-         * The primary keys of the files to be deleted. Separate multiple primary keys with commas (,). You can delete up to 200 primary keys at a time. You can obtain the primary keys of media files from the response parameters of the [ListFpShotFiles](~~209266~~) operation.
-         * <p>
+         * <p>The primary keys of the files to be deleted. Separate multiple primary keys with commas (,). You can delete up to 200 primary keys at a time. You can obtain the primary keys of media files from the response parameters of the <a href="https://help.aliyun.com/document_detail/209266.html">ListFpShotFiles</a> operation.</p>
+         * <blockquote>
+         * <p> This parameter is available only in the China (Beijing), China (Hangzhou), and China (Shanghai) regions.</p>
+         * </blockquote>
          * 
-         * >  This parameter is available only in the China (Beijing), China (Hangzhou), and China (Shanghai) regions.
+         * <strong>example:</strong>
+         * <p>24e0fba7188fae707e146esa54****</p>
          */
         public Builder primaryKeys(String primaryKeys) {
             this.putQueryParameter("PrimaryKeys", primaryKeys);
@@ -241,7 +255,10 @@ public class SubmitFpFileDeleteJobRequest extends Request {
         }
 
         /**
-         * The custom data. The value can contain letters and digits and can be up to 128 bytes in length.
+         * <p>The custom data. The value can contain letters and digits and can be up to 128 bytes in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example data</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

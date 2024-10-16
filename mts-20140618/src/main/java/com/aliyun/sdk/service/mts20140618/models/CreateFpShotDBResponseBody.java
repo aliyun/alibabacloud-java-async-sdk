@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFpShotDBResponseBody} extends {@link TeaModel}
  *
  * <p>CreateFpShotDBResponseBody</p>
@@ -49,7 +50,7 @@ public class CreateFpShotDBResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the media fingerprint library.
+         * <p>The details of the media fingerprint library.</p>
          */
         public Builder fpShotDB(FpShotDB fpShotDB) {
             this.fpShotDB = fpShotDB;
@@ -57,7 +58,10 @@ public class CreateFpShotDBResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4A13-BEF6-D7393642CA58</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class CreateFpShotDBResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateFpShotDBResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateFpShotDBResponseBody</p>
+     */
     public static class FpShotDB extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
@@ -157,7 +167,10 @@ public class CreateFpShotDBResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The configurations of the media fingerprint library.
+             * <p>The configurations of the media fingerprint library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -165,7 +178,10 @@ public class CreateFpShotDBResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the media fingerprint library.
+             * <p>The description of the media fingerprint library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The library is a text fingerprint library.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -173,7 +189,10 @@ public class CreateFpShotDBResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the media fingerprint library. We recommend that you keep this ID for subsequent operation calls.
+             * <p>The ID of the media fingerprint library. We recommend that you keep this ID for subsequent operation calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>88c6ca184c0e47098a5b665e2a12****</p>
              */
             public Builder fpDBId(String fpDBId) {
                 this.fpDBId = fpDBId;
@@ -181,7 +200,10 @@ public class CreateFpShotDBResponseBody extends TeaModel {
             }
 
             /**
-             * The model ID of the media fingerprint library.
+             * <p>The model ID of the media fingerprint library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder modelId(Integer modelId) {
                 this.modelId = modelId;
@@ -189,7 +211,10 @@ public class CreateFpShotDBResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the media fingerprint library.
+             * <p>The name of the media fingerprint library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-name-****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -197,7 +222,10 @@ public class CreateFpShotDBResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the media fingerprint library. After the media fingerprint library is created, it enters the **offline** state. After the media fingerprint library is processed at the backend, it enters the **active** state.
+             * <p>The status of the media fingerprint library. After the media fingerprint library is created, it enters the <strong>offline</strong> state. After the media fingerprint library is processed at the backend, it enters the <strong>active</strong> state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>offline</p>
              */
             public Builder state(String state) {
                 this.state = state;

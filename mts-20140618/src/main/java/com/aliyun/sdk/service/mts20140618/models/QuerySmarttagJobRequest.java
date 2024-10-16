@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySmarttagJobRequest} extends {@link RequestModel}
  *
  * <p>QuerySmarttagJobRequest</p>
@@ -124,7 +125,10 @@ public class QuerySmarttagJobRequest extends Request {
         } 
 
         /**
-         * JobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39f8e0bc005e4f309379701645f4****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

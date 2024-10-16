@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAnalysisJobListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryAnalysisJobListResponseBody</p>
@@ -61,7 +62,7 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IDs of template analysis jobs.
+         * <p>The IDs of template analysis jobs.</p>
          */
         public Builder analysisJobList(AnalysisJobList analysisJobList) {
             this.analysisJobList = analysisJobList;
@@ -69,7 +70,7 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
         }
 
         /**
-         * The message sent by Message Service (MNS) to notify the user of the job result.
+         * <p>The message sent by Message Service (MNS) to notify the user of the job result.</p>
          */
         public Builder nonExistAnalysisJobIds(NonExistAnalysisJobIds nonExistAnalysisJobIds) {
             this.nonExistAnalysisJobIds = nonExistAnalysisJobIds;
@@ -77,13 +78,16 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the job. Valid values:
-         * <p>
+         * <p>The status of the job. Valid values:</p>
+         * <ul>
+         * <li><strong>Submitted</strong>: The job has been submitted.</li>
+         * <li><strong>Analyzing</strong>: The job is being run.</li>
+         * <li><strong>Success</strong>: The job is successful.</li>
+         * <li><strong>Fail</strong>: The job fails.</li>
+         * </ul>
          * 
-         * *   **Submitted**: The job has been submitted.
-         * *   **Analyzing**: The job is being run.
-         * *   **Success**: The job is successful.
-         * *   **Fail**: The job fails.
+         * <strong>example:</strong>
+         * <p>5CA6E020-4102-4FFF-AA56-5ED7ECD811A1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,6 +100,12 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryAnalysisJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAnalysisJobListResponseBody</p>
+     */
     public static class Crop extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
@@ -171,10 +181,13 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             private String width; 
 
             /**
-             * The height of the video image after the margins are cropped out.
-             * <p>
+             * <p>The height of the video image after the margins are cropped out.</p>
+             * <blockquote>
+             * <p> This parameter is invalid if the Mode parameter is set to Auto or None.</p>
+             * </blockquote>
              * 
-             * >  This parameter is invalid if the Mode parameter is set to Auto or None.
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -182,10 +195,13 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The left margin to be cropped out.
-             * <p>
+             * <p>The left margin to be cropped out.</p>
+             * <blockquote>
+             * <p> This parameter is invalid if the Mode parameter is set to Auto or None.</p>
+             * </blockquote>
              * 
-             * >  This parameter is invalid if the Mode parameter is set to Auto or None.
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder left(String left) {
                 this.left = left;
@@ -193,13 +209,16 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The cropping mode. Valid values:
-             * <p>
+             * <p>The cropping mode. Valid values:</p>
+             * <ul>
+             * <li><strong>Auto</strong>: Cropping was automatically run.</li>
+             * <li><strong>Force</strong>: Cropping was forced to run.</li>
+             * <li><strong>None</strong>: Cropping was forced not to run.</li>
+             * <li>This parameter is required if the value of the Crop parameter is not an empty JSON {}.</li>
+             * </ul>
              * 
-             * *   **Auto**: Cropping was automatically run.
-             * *   **Force**: Cropping was forced to run.
-             * *   **None**: Cropping was forced not to run.
-             * *   This parameter is required if the value of the Crop parameter is not an empty JSON {}.
+             * <strong>example:</strong>
+             * <p>Auto</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -207,10 +226,13 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The top margin to be cropped out.
-             * <p>
+             * <p>The top margin to be cropped out.</p>
+             * <blockquote>
+             * <p> This parameter is invalid if the Mode parameter is set to Auto or None.</p>
+             * </blockquote>
              * 
-             * >  This parameter is invalid if the Mode parameter is set to Auto or None.
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder top(String top) {
                 this.top = top;
@@ -218,10 +240,13 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The width of the video image after the margins are cropped out.
-             * <p>
+             * <p>The width of the video image after the margins are cropped out.</p>
+             * <blockquote>
+             * <p> This parameter is invalid if the Mode parameter is set to Auto or None.</p>
+             * </blockquote>
              * 
-             * >  This parameter is invalid if the Mode parameter is set to Auto or None.
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder width(String width) {
                 this.width = width;
@@ -235,6 +260,12 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAnalysisJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAnalysisJobListResponseBody</p>
+     */
     public static class PropertiesControl extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Crop")
         private Crop crop;
@@ -274,7 +305,7 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             private String deinterlace; 
 
             /**
-             * The cropping configuration of the video image.
+             * <p>The cropping configuration of the video image.</p>
              */
             public Builder crop(Crop crop) {
                 this.crop = crop;
@@ -282,12 +313,15 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether deinterlacing was forced to run. Valid values:
-             * <p>
+             * <p>Specifies whether deinterlacing was forced to run. Valid values:</p>
+             * <ul>
+             * <li><strong>Auto</strong>: Deinterlacing was automatically run.</li>
+             * <li><strong>Force</strong>: Deinterlacing was forced to run.</li>
+             * <li><strong>None</strong>: Deinterlacing was forced not to run.</li>
+             * </ul>
              * 
-             * *   **Auto**: Deinterlacing was automatically run.
-             * *   **Force**: Deinterlacing was forced to run.
-             * *   **None**: Deinterlacing was forced not to run.
+             * <strong>example:</strong>
+             * <p>Auto</p>
              */
             public Builder deinterlace(String deinterlace) {
                 this.deinterlace = deinterlace;
@@ -301,6 +335,12 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAnalysisJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAnalysisJobListResponseBody</p>
+     */
     public static class QualityControl extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MethodStreaming")
         private String methodStreaming;
@@ -340,12 +380,15 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             private String rateQuality; 
 
             /**
-             * The playback mode. Valid values:
-             * <p>
+             * <p>The playback mode. Valid values:</p>
+             * <ul>
+             * <li><strong>network</strong>: online playback.</li>
+             * <li><strong>local</strong>: playback on on-premises devices.</li>
+             * <li>Default value: <strong>network</strong>.</li>
+             * </ul>
              * 
-             * *   **network**: online playback.
-             * *   **local**: playback on on-premises devices.
-             * *   Default value: **network**.
+             * <strong>example:</strong>
+             * <p>network</p>
              */
             public Builder methodStreaming(String methodStreaming) {
                 this.methodStreaming = methodStreaming;
@@ -353,7 +396,10 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The quality level of the job output. Default value: **25**.
+             * <p>The quality level of the job output. Default value: <strong>25</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder rateQuality(String rateQuality) {
                 this.rateQuality = rateQuality;
@@ -367,6 +413,12 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAnalysisJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAnalysisJobListResponseBody</p>
+     */
     public static class AnalysisConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PropertiesControl")
         private PropertiesControl propertiesControl;
@@ -406,7 +458,7 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             private QualityControl qualityControl; 
 
             /**
-             * The control on the attributes of the job output.
+             * <p>The control on the attributes of the job output.</p>
              */
             public Builder propertiesControl(PropertiesControl propertiesControl) {
                 this.propertiesControl = propertiesControl;
@@ -414,7 +466,7 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The quality control on the job output.
+             * <p>The quality control on the job output.</p>
              */
             public Builder qualityControl(QualityControl qualityControl) {
                 this.qualityControl = qualityControl;
@@ -428,6 +480,12 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAnalysisJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAnalysisJobListResponseBody</p>
+     */
     public static class InputFile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
@@ -479,7 +537,10 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             private String object; 
 
             /**
-             * The name of the OSS bucket in which the input file is stored.
+             * <p>The name of the OSS bucket in which the input file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-bucket</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -487,7 +548,10 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The region in which OSS resides.
+             * <p>The region in which OSS resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-hangzhou</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -495,7 +559,10 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Object Storage Service (OSS) object that is used as the input file.
+             * <p>The name of the Object Storage Service (OSS) object that is used as the input file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.flv</p>
              */
             public Builder object(String object) {
                 this.object = object;
@@ -509,6 +576,12 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAnalysisJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAnalysisJobListResponseBody</p>
+     */
     public static class MNSMessageResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -560,7 +633,10 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             private String messageId; 
 
             /**
-             * The error code returned if the job failed. This parameter is not returned if the job was successful.
+             * <p>The error code returned if the job failed. This parameter is not returned if the job was successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidParameter.ResourceNotFound</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -568,7 +644,10 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if the job failed. This parameter is not returned if the job was successful.
+             * <p>The error message returned if the job failed. This parameter is not returned if the job was successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The resource operated &quot;PipelineId&quot; cannot be found</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -576,7 +655,10 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the message returned if the job was successful. This parameter is not returned if the job failed.
+             * <p>The ID of the message returned if the job was successful. This parameter is not returned if the job failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3ca84a39a9024f19853b21be9cf9****</p>
              */
             public Builder messageId(String messageId) {
                 this.messageId = messageId;
@@ -590,6 +672,12 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAnalysisJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAnalysisJobListResponseBody</p>
+     */
     public static class Audio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
@@ -677,12 +765,15 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             private String samplerate; 
 
             /**
-             * The audio bitrate of the output file.
-             * <p>
+             * <p>The audio bitrate of the output file.</p>
+             * <ul>
+             * <li>Valid values: <strong>8 to 1000</strong>.</li>
+             * <li>Unit: Kbit/s.</li>
+             * <li>Default value: <strong>128</strong>.</li>
+             * </ul>
              * 
-             * *   Valid values: **8 to 1000**.
-             * *   Unit: Kbit/s.
-             * *   Default value: **128**.
+             * <strong>example:</strong>
+             * <p>128</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -690,7 +781,10 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of sound channels. Default value: **2**.
+             * <p>The number of sound channels. Default value: <strong>2</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder channels(String channels) {
                 this.channels = channels;
@@ -698,13 +792,16 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The audio codec. Default value: **aac**. Valid values:
-             * <p>
+             * <p>The audio codec. Default value: <strong>aac</strong>. Valid values:</p>
+             * <ul>
+             * <li><strong>aac</strong></li>
+             * <li><strong>mp3</strong></li>
+             * <li><strong>vorbis</strong></li>
+             * <li><strong>flac</strong></li>
+             * </ul>
              * 
-             * *   **aac**
-             * *   **mp3**
-             * *   **vorbis**
-             * *   **flac**
+             * <strong>example:</strong>
+             * <p>aac</p>
              */
             public Builder codec(String codec) {
                 this.codec = codec;
@@ -712,14 +809,17 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The codec profile of the audio. Valid values when the **Codec** parameter is set to **aac**:
-             * <p>
+             * <p>The codec profile of the audio. Valid values when the <strong>Codec</strong> parameter is set to <strong>aac</strong>:</p>
+             * <ul>
+             * <li><strong>aac_low</strong></li>
+             * <li><strong>aac_he</strong></li>
+             * <li><strong>aac_he_v2</strong></li>
+             * <li><strong>aac_ld</strong></li>
+             * <li><strong>aac_eld</strong></li>
+             * </ul>
              * 
-             * *   **aac_low**
-             * *   **aac_he**
-             * *   **aac_he_v2**
-             * *   **aac_ld**
-             * *   **aac_eld**
+             * <strong>example:</strong>
+             * <p>aac_low</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -727,7 +827,10 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The level of quality control on the audio.
+             * <p>The level of quality control on the audio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder qscale(String qscale) {
                 this.qscale = qscale;
@@ -735,11 +838,14 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The sampling rate.
-             * <p>
+             * <p>The sampling rate.</p>
+             * <ul>
+             * <li>Unit: Hz.</li>
+             * <li>Default value: <strong>44100</strong>.</li>
+             * </ul>
              * 
-             * *   Unit: Hz.
-             * *   Default value: **44100**.
+             * <strong>example:</strong>
+             * <p>44100</p>
              */
             public Builder samplerate(String samplerate) {
                 this.samplerate = samplerate;
@@ -753,6 +859,12 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAnalysisJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAnalysisJobListResponseBody</p>
+     */
     public static class Container extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
@@ -780,7 +892,10 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             private String format; 
 
             /**
-             * The container format.
+             * <p>The container format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>flv</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -794,6 +909,12 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAnalysisJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAnalysisJobListResponseBody</p>
+     */
     public static class Gif extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FinalDelay")
         private String finalDelay;
@@ -833,7 +954,10 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             private String loop; 
 
             /**
-             * The interval between two consecutive loops for the GIF format. Unit: 0.01 second. For example, a value of 500 indicates 5 seconds.
+             * <p>The interval between two consecutive loops for the GIF format. Unit: 0.01 second. For example, a value of 500 indicates 5 seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder finalDelay(String finalDelay) {
                 this.finalDelay = finalDelay;
@@ -841,7 +965,10 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of loops for the GIF or WebP format. Default value: 0.
+             * <p>The number of loops for the GIF or WebP format. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder loop(String loop) {
                 this.loop = loop;
@@ -855,6 +982,12 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAnalysisJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAnalysisJobListResponseBody</p>
+     */
     public static class Segment extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
@@ -882,7 +1015,10 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             private String duration; 
 
             /**
-             * The segment length. Unit: seconds.
+             * <p>The segment length. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -896,6 +1032,12 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAnalysisJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAnalysisJobListResponseBody</p>
+     */
     public static class MuxConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Gif")
         private Gif gif;
@@ -935,7 +1077,7 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             private Segment segment; 
 
             /**
-             * The transmuxing configurations for the GIF format.
+             * <p>The transmuxing configurations for the GIF format.</p>
              */
             public Builder gif(Gif gif) {
                 this.gif = gif;
@@ -943,7 +1085,7 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The segment configurations.
+             * <p>The segment configurations.</p>
              */
             public Builder segment(Segment segment) {
                 this.segment = segment;
@@ -957,6 +1099,12 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAnalysisJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAnalysisJobListResponseBody</p>
+     */
     public static class TransConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TransMode")
         private String transMode;
@@ -984,12 +1132,15 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             private String transMode; 
 
             /**
-             * The transcoding mode. Default value: **onepass**. Valid values:
-             * <p>
+             * <p>The transcoding mode. Default value: <strong>onepass</strong>. Valid values:</p>
+             * <ul>
+             * <li><strong>onepass</strong></li>
+             * <li><strong>twopass</strong></li>
+             * <li><strong>CBR</strong></li>
+             * </ul>
              * 
-             * *   **onepass**
-             * *   **twopass**
-             * *   **CBR**
+             * <strong>example:</strong>
+             * <p>onepass</p>
              */
             public Builder transMode(String transMode) {
                 this.transMode = transMode;
@@ -1003,6 +1154,12 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAnalysisJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAnalysisJobListResponseBody</p>
+     */
     public static class BitrateBnd extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Max")
         private String max;
@@ -1042,7 +1199,10 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             private String min; 
 
             /**
-             * The upper limit of the total bitrate. Unit: Kbit/s.
+             * <p>The upper limit of the total bitrate. Unit: Kbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1500</p>
              */
             public Builder max(String max) {
                 this.max = max;
@@ -1050,7 +1210,10 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The lower limit of the total bitrate. Unit: Kbit/s.
+             * <p>The lower limit of the total bitrate. Unit: Kbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>800</p>
              */
             public Builder min(String min) {
                 this.min = min;
@@ -1064,6 +1227,12 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAnalysisJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAnalysisJobListResponseBody</p>
+     */
     public static class Video extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
@@ -1271,7 +1440,10 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             private String width; 
 
             /**
-             * The average bitrate of the video. Unit: Kbit/s.
+             * <p>The average bitrate of the video. Unit: Kbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -1279,7 +1451,7 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The average bitrate range of the video.
+             * <p>The average bitrate range of the video.</p>
              */
             public Builder bitrateBnd(BitrateBnd bitrateBnd) {
                 this.bitrateBnd = bitrateBnd;
@@ -1287,11 +1459,14 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The buffer size.
-             * <p>
+             * <p>The buffer size.</p>
+             * <ul>
+             * <li>Unit: KB.</li>
+             * <li>Default value: <strong>6000</strong>.</li>
+             * </ul>
              * 
-             * *   Unit: KB.
-             * *   Default value: **6000**.
+             * <strong>example:</strong>
+             * <p>6000</p>
              */
             public Builder bufsize(String bufsize) {
                 this.bufsize = bufsize;
@@ -1299,7 +1474,10 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The codec. Valid values: H.264 and H.265. Default value: **H.264**.
+             * <p>The codec. Valid values: H.264 and H.265. Default value: <strong>H.264</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>H.264</p>
              */
             public Builder codec(String codec) {
                 this.codec = codec;
@@ -1307,11 +1485,14 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The constant rate factor.
-             * <p>
+             * <p>The constant rate factor.</p>
+             * <ul>
+             * <li>Default value when the the Codec parameter is set to H.264: <strong>23</strong>, default value when the the Codec parameter is set to H.265: <strong>26</strong>.</li>
+             * <li>If this parameter is specified, the value of the Bitrate parameter becomes invalid.</li>
+             * </ul>
              * 
-             * *   Default value when the the Codec parameter is set to H.264: **23**, default value when the the Codec parameter is set to H.265: **26**.
-             * *   If this parameter is specified, the value of the Bitrate parameter becomes invalid.
+             * <strong>example:</strong>
+             * <p>26</p>
              */
             public Builder crf(String crf) {
                 this.crf = crf;
@@ -1319,7 +1500,10 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The strength of the independent noise reduction algorithm.
+             * <p>The strength of the independent noise reduction algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder degrain(String degrain) {
                 this.degrain = degrain;
@@ -1327,11 +1511,14 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The frame rate of the video.
-             * <p>
+             * <p>The frame rate of the video.</p>
+             * <ul>
+             * <li>The value is 60 if the frame rate of the input file exceeds 60.</li>
+             * <li>Default value: <strong>the frame rate of the input video</strong>.</li>
+             * </ul>
              * 
-             * *   The value is 60 if the frame rate of the input file exceeds 60.
-             * *   Default value: **the frame rate of the input video**.
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -1339,7 +1526,10 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of frames between two keyframes. Default value: **250**.
+             * <p>The maximum number of frames between two keyframes. Default value: <strong>250</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>250</p>
              */
             public Builder gop(String gop) {
                 this.gop = gop;
@@ -1347,11 +1537,14 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The height of the video.
-             * <p>
+             * <p>The height of the video.</p>
+             * <ul>
+             * <li>Unit: pixel.</li>
+             * <li>Default value: <strong>the height of the input video</strong>.</li>
+             * </ul>
              * 
-             * *   Unit: pixel.
-             * *   Default value: **the height of the input video**.
+             * <strong>example:</strong>
+             * <p>720</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -1359,11 +1552,14 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum bitrate of the video.
-             * <p>
+             * <p>The maximum bitrate of the video.</p>
+             * <ul>
+             * <li>Valid values: <strong>10 to 50000</strong>.</li>
+             * <li>Unit: Kbit/s.</li>
+             * </ul>
              * 
-             * *   Valid values: **10 to 50000**.
-             * *   Unit: Kbit/s.
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder maxrate(String maxrate) {
                 this.maxrate = maxrate;
@@ -1371,7 +1567,10 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The pixel format of the video. Valid values: standard pixel formats such as yuv420p and yuvj420p.
+             * <p>The pixel format of the video. Valid values: standard pixel formats such as yuv420p and yuvj420p.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yuv420p</p>
              */
             public Builder pixFmt(String pixFmt) {
                 this.pixFmt = pixFmt;
@@ -1379,7 +1578,10 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The preset video algorithm. Valid values: veryfast, fast, medium, slow, and slower. Default value: **medium**.
+             * <p>The preset video algorithm. Valid values: veryfast, fast, medium, slow, and slower. Default value: <strong>medium</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>medium</p>
              */
             public Builder preset(String preset) {
                 this.preset = preset;
@@ -1387,13 +1589,16 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The codec profile. Valid values:
-             * <p>
+             * <p>The codec profile. Valid values:</p>
+             * <ul>
+             * <li><strong>baseline</strong>: applicable to mobile devices.</li>
+             * <li><strong>main</strong>: applicable to standard-definition devices.</li>
+             * <li><strong>high</strong>: applicable to high-definition devices.</li>
+             * <li>Default value: <strong>high</strong>.</li>
+             * </ul>
              * 
-             * *   **baseline**: applicable to mobile devices.
-             * *   **main**: applicable to standard-definition devices.
-             * *   **high**: applicable to high-definition devices.
-             * *   Default value: **high**.
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -1401,7 +1606,10 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The level of quality control on the video.
+             * <p>The level of quality control on the video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder qscale(String qscale) {
                 this.qscale = qscale;
@@ -1409,11 +1617,14 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The scan mode. Valid values:
-             * <p>
+             * <p>The scan mode. Valid values:</p>
+             * <ul>
+             * <li><strong>interlaced</strong></li>
+             * <li><strong>progressive</strong></li>
+             * </ul>
              * 
-             * *   **interlaced**
-             * *   **progressive**
+             * <strong>example:</strong>
+             * <p>interlaced</p>
              */
             public Builder scanMode(String scanMode) {
                 this.scanMode = scanMode;
@@ -1421,11 +1632,14 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The width of the video.
-             * <p>
+             * <p>The width of the video.</p>
+             * <ul>
+             * <li>Unit: pixel.</li>
+             * <li>Default value: <strong>the width of the input video</strong>.</li>
+             * </ul>
              * 
-             * *   Unit: pixel.
-             * *   Default value: **the width of the input video**.
+             * <strong>example:</strong>
+             * <p>1280</p>
              */
             public Builder width(String width) {
                 this.width = width;
@@ -1439,6 +1653,12 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAnalysisJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAnalysisJobListResponseBody</p>
+     */
     public static class Template extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Audio")
         private Audio audio;
@@ -1550,7 +1770,7 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             private Video video; 
 
             /**
-             * The audio codec configurations.
+             * <p>The audio codec configurations.</p>
              */
             public Builder audio(Audio audio) {
                 this.audio = audio;
@@ -1558,7 +1778,7 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The container format configurations.
+             * <p>The container format configurations.</p>
              */
             public Builder container(Container container) {
                 this.container = container;
@@ -1566,7 +1786,10 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The transcoding template ID.
+             * <p>The transcoding template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S00000000-00****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1574,7 +1797,7 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The transmuxing configurations.
+             * <p>The transmuxing configurations.</p>
              */
             public Builder muxConfig(MuxConfig muxConfig) {
                 this.muxConfig = muxConfig;
@@ -1582,7 +1805,10 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the template.
+             * <p>The name of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FLV-UD</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1590,11 +1816,14 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the template. Valid values:
-             * <p>
+             * <p>The state of the template. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong></li>
+             * <li><strong>Deleted</strong></li>
+             * </ul>
              * 
-             * *   **Normal**
-             * *   **Deleted**
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -1602,7 +1831,7 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The general transcoding configurations.
+             * <p>The general transcoding configurations.</p>
              */
             public Builder transConfig(TransConfig transConfig) {
                 this.transConfig = transConfig;
@@ -1610,7 +1839,7 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The video codec configurations.
+             * <p>The video codec configurations.</p>
              */
             public Builder video(Video video) {
                 this.video = video;
@@ -1624,6 +1853,12 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAnalysisJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAnalysisJobListResponseBody</p>
+     */
     public static class TemplateList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Template")
         private java.util.List < Template> template;
@@ -1665,6 +1900,12 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAnalysisJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAnalysisJobListResponseBody</p>
+     */
     public static class AnalysisJob extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnalysisConfig")
         private AnalysisConfig analysisConfig;
@@ -1836,7 +2077,7 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             private String userData; 
 
             /**
-             * The job configurations.
+             * <p>The job configurations.</p>
              */
             public Builder analysisConfig(AnalysisConfig analysisConfig) {
                 this.analysisConfig = analysisConfig;
@@ -1844,7 +2085,10 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The error code returned if the job fails.
+             * <p>The error code returned if the job fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidParameter.ResourceNotFound</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -1852,7 +2096,10 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job was created.
+             * <p>The time when the job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2014-01-10T12:00:00Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1860,7 +2107,10 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the template analysis job.
+             * <p>The ID of the template analysis job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>57f6aa3f84824309bcba67231b406****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1868,7 +2118,7 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the job input.
+             * <p>The information about the job input.</p>
              */
             public Builder inputFile(InputFile inputFile) {
                 this.inputFile = inputFile;
@@ -1876,7 +2126,7 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The message sent by Message Service (MNS) to notify users of the job result.
+             * <p>The message sent by Message Service (MNS) to notify users of the job result.</p>
              */
             public Builder MNSMessageResult(MNSMessageResult MNSMessageResult) {
                 this.MNSMessageResult = MNSMessageResult;
@@ -1884,7 +2134,10 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if the job failed.
+             * <p>The error message returned if the job failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The resource operated &quot;PipelineId&quot; cannot be found</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -1892,7 +2145,10 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The transcoding progress.
+             * <p>The transcoding progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86</p>
              */
             public Builder percent(Long percent) {
                 this.percent = percent;
@@ -1900,7 +2156,10 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the MPS queue to which the job was submitted.
+             * <p>The ID of the MPS queue to which the job was submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bb558c1cc25b45309aab5be44d19****</p>
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -1908,11 +2167,14 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the job in the ApsaraVideo Media Processing (MPS) queue to which the job was submitted.
-             * <p>
+             * <p>The priority of the job in the ApsaraVideo Media Processing (MPS) queue to which the job was submitted.</p>
+             * <ul>
+             * <li>Valid values: <strong>1 to 10</strong>. The value 10 indicates the highest priority.</li>
+             * <li>Default value: <strong>10</strong>.</li>
+             * </ul>
              * 
-             * *   Valid values: **1 to 10**. The value 10 indicates the highest priority.
-             * *   Default value: **10**.
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -1920,13 +2182,16 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The job status.
-             * <p>
+             * <p>The job status.</p>
+             * <ul>
+             * <li><strong>Submitted</strong>: The job was submitted.</li>
+             * <li><strong>Analyzing</strong>: The job is in progress.</li>
+             * <li><strong>Success</strong>: The job was successful.</li>
+             * <li><strong>Fail</strong>: The job failed.</li>
+             * </ul>
              * 
-             * *   **Submitted**: The job was submitted.
-             * *   **Analyzing**: The job is in progress.
-             * *   **Success**: The job was successful.
-             * *   **Fail**: The job failed.
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -1934,7 +2199,7 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The matched preset templates.
+             * <p>The matched preset templates.</p>
              */
             public Builder templateList(TemplateList templateList) {
                 this.templateList = templateList;
@@ -1942,7 +2207,10 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The custom data.
+             * <p>The custom data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testid-001</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -1956,6 +2224,12 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAnalysisJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAnalysisJobListResponseBody</p>
+     */
     public static class AnalysisJobList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnalysisJob")
         private java.util.List < AnalysisJob> analysisJob;
@@ -1997,6 +2271,12 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAnalysisJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAnalysisJobListResponseBody</p>
+     */
     public static class NonExistAnalysisJobIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("String")
         private java.util.List < String > string;

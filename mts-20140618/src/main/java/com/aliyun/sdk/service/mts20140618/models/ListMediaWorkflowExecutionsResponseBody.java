@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMediaWorkflowExecutionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListMediaWorkflowExecutionsResponseBody</p>
@@ -61,7 +62,7 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the media workflows.
+         * <p>The details of the media workflows.</p>
          */
         public Builder mediaWorkflowExecutionList(MediaWorkflowExecutionList mediaWorkflowExecutionList) {
             this.mediaWorkflowExecutionList = mediaWorkflowExecutionList;
@@ -69,7 +70,10 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned value of NextPageToken is a pagination token, which can be used in the next request to retrieve a new page of results.
+         * <p>The returned value of NextPageToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39f8e0bc005e4f309379701645f4****</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.nextPageToken = nextPageToken;
@@ -77,7 +81,10 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D1D5C080-8E2F-5030-8AB4-13092F17631B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMediaWorkflowExecutionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMediaWorkflowExecutionsResponseBody</p>
+     */
     public static class MNSMessageResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -141,7 +154,10 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             private String messageId; 
 
             /**
-             * The error code returned if the job failed. If the job was successful, this parameter is not returned.
+             * <p>The error code returned if the job failed. If the job was successful, this parameter is not returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The Topic/Queue config is empty, not send message</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -149,7 +165,10 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if the job failed. If the job was successful, this parameter is not returned.
+             * <p>The error message returned if the job failed. If the job was successful, this parameter is not returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MessageConfigEmpty</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -157,7 +176,10 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the success message. If the job failed, this parameter is not returned.
+             * <p>The ID of the success message. If the job failed, this parameter is not returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4f3bc83233de4e2f81c7dade443e****</p>
              */
             public Builder messageId(String messageId) {
                 this.messageId = messageId;
@@ -171,6 +193,12 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMediaWorkflowExecutionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMediaWorkflowExecutionsResponseBody</p>
+     */
     public static class Activity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -294,11 +322,14 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The error code returned if the request failed.
-             * <p>
+             * <p>The error code returned if the request failed.</p>
+             * <ul>
+             * <li>The specific error code appears if the state of the activity is <strong>Fail</strong>.</li>
+             * <li>This parameter is not returned if the state of the activity is <strong>Success</strong>.</li>
+             * </ul>
              * 
-             * *   The specific error code appears if the state of the activity is **Fail**.
-             * *   This parameter is not returned if the state of the activity is **Success**.
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -306,7 +337,10 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the activity.
+             * <p>The end time of the activity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-04-01T06:54:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -314,7 +348,10 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the job generated when the activity is executed. We recommend that you keep this ID for subsequent operation calls.
+             * <p>The ID of the job generated when the activity is executed. We recommend that you keep this ID for subsequent operation calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2376030d9d0849399cd20e20c876****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -322,7 +359,7 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The message sent by Message Service (MNS) to notify the user of the job result.
+             * <p>The message sent by Message Service (MNS) to notify the user of the job result.</p>
              */
             public Builder MNSMessageResult(MNSMessageResult MNSMessageResult) {
                 this.MNSMessageResult = MNSMessageResult;
@@ -330,11 +367,14 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if the request failed.
-             * <p>
+             * <p>The error message returned if the request failed.</p>
+             * <ul>
+             * <li>The detailed error message appears if the state of the activity is <strong>Fail</strong>.</li>
+             * <li>This parameter is not returned if the state of the activity is <strong>Success</strong>.</li>
+             * </ul>
              * 
-             * *   The detailed error message appears if the state of the activity is **Fail**.
-             * *   This parameter is not returned if the state of the activity is **Success**.
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -342,10 +382,13 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the media workflow activity.
-             * <p>
+             * <p>The name of the media workflow activity.</p>
+             * <blockquote>
+             * <p>The name of an activity in a media workflow is unique.</p>
+             * </blockquote>
              * 
-             * > The name of an activity in a media workflow is unique.
+             * <strong>example:</strong>
+             * <p>Act-2</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -353,7 +396,10 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the activity.
+             * <p>The start time of the activity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-04-01T06:53:45Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -361,15 +407,19 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the activity. Valid values:
-             * <p>
+             * <p>The status of the activity. Valid values:</p>
+             * <ul>
+             * <li><strong>Running</strong>: The activity is being executed.</li>
+             * <li><strong>Fail</strong>: The activity failed to be executed.</li>
+             * <li><strong>Skipped</strong>: The activity was skipped.</li>
+             * <li><strong>Success</strong>: The activity was successfully executed.</li>
+             * </ul>
+             * <blockquote>
+             * <p>For example, the high-definition and standard-definition transcoding activities are to be run after the analysis activity is complete. The system determines the activity to run based on the analysis result. If the definition of the input video content is insufficient, the high-definition transcoding activity may be skipped.</p>
+             * </blockquote>
              * 
-             * *   **Running**: The activity is being executed.
-             * *   **Fail**: The activity failed to be executed.
-             * *   **Skipped**: The activity was skipped.
-             * *   **Success**: The activity was successfully executed.
-             * 
-             * > For example, the high-definition and standard-definition transcoding activities are to be run after the analysis activity is complete. The system determines the activity to run based on the analysis result. If the definition of the input video content is insufficient, the high-definition transcoding activity may be skipped.
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -377,7 +427,10 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the media workflow activity. Valid values: Start, Snapshot, Transcode, Analysis, and Report. For more information, see [Methods supported for media workflows](~~68494~~).
+             * <p>The type of the media workflow activity. Valid values: Start, Snapshot, Transcode, Analysis, and Report. For more information, see <a href="https://help.aliyun.com/document_detail/68494.html">Methods supported for media workflows</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Start</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -391,6 +444,12 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMediaWorkflowExecutionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMediaWorkflowExecutionsResponseBody</p>
+     */
     public static class ActivityList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Activity")
         private java.util.List < Activity> activity;
@@ -432,6 +491,12 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMediaWorkflowExecutionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMediaWorkflowExecutionsResponseBody</p>
+     */
     public static class InputFile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
@@ -483,7 +548,10 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             private String object; 
 
             /**
-             * The name of the OSS bucket in which the input media file is stored.
+             * <p>The name of the OSS bucket in which the input media file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-bucket-****</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -491,7 +559,10 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The OSS region in which the input file resides.
+             * <p>The OSS region in which the input file resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -499,7 +570,7 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the OSS object that is used as the input media file.
+             * <p>The name of the OSS object that is used as the input media file.</p>
              */
             public Builder object(String object) {
                 this.object = object;
@@ -513,6 +584,12 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMediaWorkflowExecutionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMediaWorkflowExecutionsResponseBody</p>
+     */
     public static class Input extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InputFile")
         private InputFile inputFile;
@@ -552,7 +629,7 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             private String userData; 
 
             /**
-             * The information about the storage location of the input file of the media workflow in OSS.
+             * <p>The information about the storage location of the input file of the media workflow in OSS.</p>
              */
             public Builder inputFile(InputFile inputFile) {
                 this.inputFile = inputFile;
@@ -560,7 +637,10 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The custom data.
+             * <p>The custom data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example data</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -574,6 +654,12 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMediaWorkflowExecutionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMediaWorkflowExecutionsResponseBody</p>
+     */
     public static class MediaWorkflowExecution extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActivityList")
         private ActivityList activityList;
@@ -685,7 +771,7 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The activities that are executed in the media workflow.
+             * <p>The activities that are executed in the media workflow.</p>
              */
             public Builder activityList(ActivityList activityList) {
                 this.activityList = activityList;
@@ -693,7 +779,10 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the media workflow was created.
+             * <p>The time when the media workflow was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-04-01T06:53:43Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -701,7 +790,7 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The custom data of the media workflow.
+             * <p>The custom data of the media workflow.</p>
              */
             public Builder input(Input input) {
                 this.input = input;
@@ -709,7 +798,10 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the media file. A media file contains all the information about a media workflow.
+             * <p>The ID of the media file. A media file contains all the information about a media workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>512046582a924698a41e0f8b0d2b****</p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -717,7 +809,10 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the media workflow.
+             * <p>The ID of the media workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>43b7335a4b1d4fe883670036affb****</p>
              */
             public Builder mediaWorkflowId(String mediaWorkflowId) {
                 this.mediaWorkflowId = mediaWorkflowId;
@@ -725,7 +820,10 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the media workflow.
+             * <p>The name of the media workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-mediaworkflow-****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -733,7 +831,10 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the execution instance.
+             * <p>The ID of the execution instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>48e33690ac19445488c706924321****</p>
              */
             public Builder runId(String runId) {
                 this.runId = runId;
@@ -741,16 +842,21 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the media workflow. Valid values:
-             * <p>
+             * <p>The status of the media workflow. Valid values:</p>
+             * <ul>
+             * <li><strong>running</strong>: The execution is in progress.</li>
+             * <li><strong>Completed</strong>: The execution is complete.</li>
+             * </ul>
+             * <blockquote>
+             * <p>A value of Completed indicates that the execution is complete. For the information about whether each activity, such as Transcode or Snapshot, is successful, check the status of the activity.</p>
+             * </blockquote>
+             * <ul>
+             * <li><strong>Fail</strong>: The execution failed.</li>
+             * <li><strong>Success</strong>: The execution was successful.</li>
+             * </ul>
              * 
-             * *   **running**: The execution is in progress.
-             * *   **Completed**: The execution is complete.
-             * 
-             * > A value of Completed indicates that the execution is complete. For the information about whether each activity, such as Transcode or Snapshot, is successful, check the status of the activity.
-             * 
-             * *   **Fail**: The execution failed.
-             * *   **Success**: The execution was successful.
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -764,6 +870,12 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMediaWorkflowExecutionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMediaWorkflowExecutionsResponseBody</p>
+     */
     public static class MediaWorkflowExecutionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MediaWorkflowExecution")
         private java.util.List < MediaWorkflowExecution> mediaWorkflowExecution;

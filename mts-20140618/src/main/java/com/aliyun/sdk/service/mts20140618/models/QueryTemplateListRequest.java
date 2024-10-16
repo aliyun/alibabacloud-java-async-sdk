@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTemplateListRequest} extends {@link RequestModel}
  *
  * <p>QueryTemplateListRequest</p>
@@ -146,7 +147,11 @@ public class QueryTemplateListRequest extends Request {
         }
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16f01ad6175e4230ac42bb5182cd****,88c6ca184c0e424d5w5b665e2a12****</p>
          */
         public Builder templateIds(String templateIds) {
             this.putQueryParameter("TemplateIds", templateIds);

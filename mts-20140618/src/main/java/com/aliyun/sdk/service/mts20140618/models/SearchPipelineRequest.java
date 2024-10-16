@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchPipelineRequest} extends {@link RequestModel}
  *
  * <p>SearchPipelineRequest</p>
@@ -156,7 +157,10 @@ public class SearchPipelineRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -165,11 +169,14 @@ public class SearchPipelineRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <ul>
+         * <li>A maximum of <strong>100</strong> entries can be returned on each page.</li>
+         * <li>Default value: <strong>10</strong>.</li>
+         * </ul>
          * 
-         * *   A maximum of **100** entries can be returned on each page.
-         * *   Default value: **10**.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -196,13 +203,16 @@ public class SearchPipelineRequest extends Request {
         }
 
         /**
-         * The status of the MPS queues that you want to query. If you leave this parameter empty, all MPS queues are queried.
-         * <p>
+         * <p>The status of the MPS queues that you want to query. If you leave this parameter empty, all MPS queues are queried.</p>
+         * <ul>
+         * <li><strong>All</strong>: queries all MPS queues.</li>
+         * <li><strong>Active</strong>: queries the MPS queues that are active.</li>
+         * <li><strong>Paused</strong>: queues the MPS queues that are paused.</li>
+         * <li>Default value: <strong>All</strong>.</li>
+         * </ul>
          * 
-         * *   **All**: queries all MPS queues.
-         * *   **Active**: queries the MPS queues that are active.
-         * *   **Paused**: queues the MPS queues that are paused.
-         * *   Default value: **All**.
+         * <strong>example:</strong>
+         * <p>Paused</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnbindOutputBucketResponseBody} extends {@link TeaModel}
  *
  * <p>UnbindOutputBucketResponseBody</p>
@@ -37,7 +38,10 @@ public class UnbindOutputBucketResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The operation that you want to perform. Set the value to **UnbindOutputBucket**.
+         * <p>The operation that you want to perform. Set the value to <strong>UnbindOutputBucket</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4AEA0480-32F4-1656-92B3-F4D4CDE6BBB3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

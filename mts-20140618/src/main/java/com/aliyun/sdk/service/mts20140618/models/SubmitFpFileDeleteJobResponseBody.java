@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitFpFileDeleteJobResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitFpFileDeleteJobResponseBody</p>
@@ -49,7 +50,10 @@ public class SubmitFpFileDeleteJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The job ID.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39f8e0bc005e4f309379701645f4****</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -57,7 +61,10 @@ public class SubmitFpFileDeleteJobResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D127C68E-F1A1-4CE5-A874-8FF724881A12</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

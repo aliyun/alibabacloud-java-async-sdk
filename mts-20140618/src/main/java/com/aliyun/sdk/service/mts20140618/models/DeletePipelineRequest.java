@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeletePipelineRequest} extends {@link RequestModel}
  *
  * <p>DeletePipelineRequest</p>
@@ -128,7 +129,11 @@ public class DeletePipelineRequest extends Request {
         }
 
         /**
-         * The ID of the MPS queue that you want to delete. To obtain the ID of the MPS queue, you can log on to the **MPS console** and choose **Global Settings** > **Pipelines** in the left-side navigation pane.
+         * <p>The ID of the MPS queue that you want to delete. To obtain the ID of the MPS queue, you can log on to the <strong>MPS console</strong> and choose <strong>Global Settings</strong> &gt; <strong>Pipelines</strong> in the left-side navigation pane.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d1ce4d3efcb549419193f50f1fcd****</p>
          */
         public Builder pipelineId(String pipelineId) {
             this.putQueryParameter("PipelineId", pipelineId);

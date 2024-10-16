@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitIProductionJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitIProductionJobRequest</p>
@@ -222,7 +223,10 @@ public class SubmitIProductionJobRequest extends Request {
         } 
 
         /**
-         * FunctionName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ImageCartoonize</p>
          */
         public Builder functionName(String functionName) {
             this.putQueryParameter("FunctionName", functionName);

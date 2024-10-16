@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFpShotFilesResponseBody} extends {@link TeaModel}
  *
  * <p>ListFpShotFilesResponseBody</p>
@@ -61,7 +62,7 @@ public class ListFpShotFilesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The media fingerprint files. For more information, see the "FpShotFile" section of the [Data types](~~29251~~) topic.
+         * <p>The media fingerprint files. For more information, see the &quot;FpShotFile&quot; section of the <a href="https://help.aliyun.com/document_detail/29251.html">Data types</a> topic.</p>
          */
         public Builder fpShotFileList(FpShotFileList fpShotFileList) {
             this.fpShotFileList = fpShotFileList;
@@ -69,7 +70,10 @@ public class ListFpShotFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned value of NextPageToken is a pagination token, which can be used in the next request to retrieve a new page of results.
+         * <p>The returned value of NextPageToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ae0fd49c0840e14daf0d66a75b83****</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.nextPageToken = nextPageToken;
@@ -77,7 +81,10 @@ public class ListFpShotFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4A13-BEF6-D7393642CA58</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class ListFpShotFilesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFpShotFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFpShotFilesResponseBody</p>
+     */
     public static class InputFile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
@@ -141,7 +154,10 @@ public class ListFpShotFilesResponseBody extends TeaModel {
             private String object; 
 
             /**
-             * The name of the OSS bucket in which the input file is stored.
+             * <p>The name of the OSS bucket in which the input file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-bucket-****</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -149,7 +165,10 @@ public class ListFpShotFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the OSS region in which the input file resides.
+             * <p>The ID of the OSS region in which the input file resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-beijing</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -157,7 +176,10 @@ public class ListFpShotFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the OSS object that is used as the input file.
+             * <p>The name of the OSS object that is used as the input file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-****.mp4</p>
              */
             public Builder object(String object) {
                 this.object = object;
@@ -171,6 +193,12 @@ public class ListFpShotFilesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListFpShotFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFpShotFilesResponseBody</p>
+     */
     public static class FpShotFile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileId")
         private String fileId;
@@ -234,7 +262,10 @@ public class ListFpShotFilesResponseBody extends TeaModel {
             private String storeTime; 
 
             /**
-             * The ID of the video file.
+             * <p>The ID of the video file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>41e6536e4f2250e2e9bf26cdea19****</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -242,7 +273,7 @@ public class ListFpShotFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the input file.
+             * <p>The information about the input file.</p>
              */
             public Builder inputFile(InputFile inputFile) {
                 this.inputFile = inputFile;
@@ -250,7 +281,10 @@ public class ListFpShotFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The unique primary key of the input video.
+             * <p>The unique primary key of the input video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fb712a6890464059b1b2ea7c8647****</p>
              */
             public Builder primaryKey(String primaryKey) {
                 this.primaryKey = primaryKey;
@@ -258,10 +292,13 @@ public class ListFpShotFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the media fingerprint file was stored. The time follows the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.
-             * <p>
+             * <p>The time when the media fingerprint file was stored. The time follows the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time is displayed in UTC.</p>
+             * <blockquote>
+             * <p>This parameter is available only in the China (Beijing), China (Hangzhou), and China (Shanghai) regions.</p>
+             * </blockquote>
              * 
-             * > This parameter is available only in the China (Beijing), China (Hangzhou), and China (Shanghai) regions.
+             * <strong>example:</strong>
+             * <p>2022-09-08T23:32:56Z</p>
              */
             public Builder storeTime(String storeTime) {
                 this.storeTime = storeTime;
@@ -275,6 +312,12 @@ public class ListFpShotFilesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListFpShotFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFpShotFilesResponseBody</p>
+     */
     public static class FpShotFileList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FpShotFile")
         private java.util.List < FpShotFile> fpShotFile;

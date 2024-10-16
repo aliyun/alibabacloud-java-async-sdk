@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddWaterMarkTemplateRequest} extends {@link RequestModel}
  *
  * <p>AddWaterMarkTemplateRequest</p>
@@ -125,10 +126,14 @@ public class AddWaterMarkTemplateRequest extends Request {
         } 
 
         /**
-         * The configuration of the watermark template. The value is a JSON object. For more information, see the "WaterMarks" section of the [Parameter details](~~29253~~) topic.
-         * <p>
+         * <p>The configuration of the watermark template. The value is a JSON object. For more information, see the &quot;WaterMarks&quot; section of the <a href="https://help.aliyun.com/document_detail/29253.html">Parameter details</a> topic.</p>
+         * <blockquote>
+         * <p>If you do not require a positive correlation between the size of text in the watermark and the resolution, you can enable adaptation for the watermark. To do so, add <code>[\&quot;adaptive\&quot;]=true</code> to the TextWaterMark parameter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > If you do not require a positive correlation between the size of text in the watermark and the resolution, you can enable adaptation for the watermark. To do so, add `[\"adaptive\"]=true` to the TextWaterMark parameter.
+         * <strong>example:</strong>
+         * <p>{&quot;Width&quot;:&quot;10&quot;,&quot;Height&quot;:&quot;30&quot;,&quot;Dx&quot;:&quot;10&quot;,&quot;Dy&quot;:&quot;5&quot;,&quot;ReferPos&quot;:&quot;TopRight&quot;,&quot;Type&quot;:&quot;Image&quot;,&quot;Timeline&quot;:{&quot;Start&quot;:&quot;0&quot;,&quot;Duration&quot;:&quot;10&quot;}}</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -137,7 +142,11 @@ public class AddWaterMarkTemplateRequest extends Request {
         }
 
         /**
-         * The name of the watermark template. The value can contain letters and digits and can be up to 128 bytes in size.
+         * <p>The name of the watermark template. The value can contain letters and digits and can be up to 128 bytes in size.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-watermark-****</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

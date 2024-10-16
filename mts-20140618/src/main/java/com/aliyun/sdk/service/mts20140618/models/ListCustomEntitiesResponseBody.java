@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCustomEntitiesResponseBody} extends {@link TeaModel}
  *
  * <p>ListCustomEntitiesResponseBody</p>
@@ -130,6 +131,12 @@ public class ListCustomEntitiesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCustomEntitiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomEntitiesResponseBody</p>
+     */
     public static class CustomEntity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomEntityId")
         private String customEntityId;
@@ -211,6 +218,12 @@ public class ListCustomEntitiesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCustomEntitiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomEntitiesResponseBody</p>
+     */
     public static class CustomEntities extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomEntity")
         private java.util.List < CustomEntity> customEntity;

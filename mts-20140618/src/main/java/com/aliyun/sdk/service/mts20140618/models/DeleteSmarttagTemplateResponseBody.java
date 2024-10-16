@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSmarttagTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteSmarttagTemplateResponseBody</p>
@@ -37,7 +38,10 @@ public class DeleteSmarttagTemplateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5F37036F-5267-43F1-AE47-10A18E840739</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

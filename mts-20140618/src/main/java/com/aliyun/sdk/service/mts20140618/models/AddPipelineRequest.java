@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddPipelineRequest} extends {@link RequestModel}
  *
  * <p>AddPipelineRequest</p>
@@ -166,7 +167,11 @@ public class AddPipelineRequest extends Request {
         } 
 
         /**
-         * The name of the MPS queue. The name can be up to 128 bytes in size.
+         * <p>The name of the MPS queue. The name can be up to 128 bytes in size.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-pipeline</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -175,7 +180,10 @@ public class AddPipelineRequest extends Request {
         }
 
         /**
-         * The Message Service (MNS) configuration.
+         * <p>The Message Service (MNS) configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Topic&quot;:&quot;mts-topic-1&quot;}</p>
          */
         public Builder notifyConfig(String notifyConfig) {
             this.putQueryParameter("NotifyConfig", notifyConfig);
@@ -220,7 +228,10 @@ public class AddPipelineRequest extends Request {
         }
 
         /**
-         * The role.
+         * <p>The role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunMTSDefaultRole</p>
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);
@@ -229,16 +240,18 @@ public class AddPipelineRequest extends Request {
         }
 
         /**
-         * The type of the MPS queue. Valid values:
-         * <p>
+         * <p>The type of the MPS queue. Valid values:</p>
+         * <ul>
+         * <li><strong>Boost</strong>: MPS queue with transcoding speed boosted.</li>
+         * <li><strong>Standard</strong>: standard MPS queue.</li>
+         * <li><strong>NarrowBandHDV2</strong>: MPS queue that supports Narrowband HD 2.0.</li>
+         * <li><strong>AIVideoCover</strong>: MPS queue for intelligent snapshot capture.</li>
+         * <li><strong>AIVideoTag</strong>: MPS queue for video tagging. The supported regions are China (Shanghai), China (Beijing), and China (Hangzhou).</li>
+         * </ul>
+         * <p>Default value: <strong>Standard</strong>.</p>
          * 
-         * *   **Boost**: MPS queue with transcoding speed boosted.
-         * *   **Standard**: standard MPS queue.
-         * *   **NarrowBandHDV2**: MPS queue that supports Narrowband HD 2.0.
-         * *   **AIVideoCover**: MPS queue for intelligent snapshot capture.
-         * *   **AIVideoTag**: MPS queue for video tagging. The supported regions are China (Shanghai), China (Beijing), and China (Hangzhou).
-         * 
-         * Default value: **Standard**.
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder speed(String speed) {
             this.putQueryParameter("Speed", speed);
@@ -247,7 +260,10 @@ public class AddPipelineRequest extends Request {
         }
 
         /**
-         * The level of the MPS queue. Valid values: **1 to 3**.
+         * <p>The level of the MPS queue. Valid values: <strong>1 to 3</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder speedLevel(Long speedLevel) {
             this.putQueryParameter("SpeedLevel", speedLevel);

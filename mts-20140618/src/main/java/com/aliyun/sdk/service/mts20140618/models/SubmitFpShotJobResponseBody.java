@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitFpShotJobResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitFpShotJobResponseBody</p>
@@ -49,7 +50,10 @@ public class SubmitFpShotJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the media fingerprint analysis job. We recommend that you keep this ID for subsequent operation calls.
+         * <p>The ID of the media fingerprint analysis job. We recommend that you keep this ID for subsequent operation calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2a0697e35a7342859f733a9190c4****</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -57,7 +61,10 @@ public class SubmitFpShotJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4A13-BEF6-D7393642CA58</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

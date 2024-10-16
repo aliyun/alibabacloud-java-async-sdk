@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTraceM3u8JobResponseBody} extends {@link TeaModel}
  *
  * <p>QueryTraceM3u8JobResponseBody</p>
@@ -89,7 +90,10 @@ public class QueryTraceM3u8JobResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5CA6E020-4102-4FFF-AA56-5ED7ECD8****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +114,12 @@ public class QueryTraceM3u8JobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryTraceM3u8JobResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTraceM3u8JobResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;

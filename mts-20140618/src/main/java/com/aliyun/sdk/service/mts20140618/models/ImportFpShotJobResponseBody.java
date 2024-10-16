@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportFpShotJobResponseBody} extends {@link TeaModel}
  *
  * <p>ImportFpShotJobResponseBody</p>
@@ -49,7 +50,10 @@ public class ImportFpShotJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the import job. We recommend that you save this ID for subsequent operations.
+         * <p>The ID of the import job. We recommend that you save this ID for subsequent operations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c074b118ace44395a02063a5ab94****</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -57,7 +61,10 @@ public class ImportFpShotJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4A13-BEF6-D7393642CA58</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

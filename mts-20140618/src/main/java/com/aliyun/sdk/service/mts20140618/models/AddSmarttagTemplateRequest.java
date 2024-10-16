@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddSmarttagTemplateRequest} extends {@link RequestModel}
  *
  * <p>AddSmarttagTemplateRequest</p>
@@ -281,7 +282,10 @@ public class AddSmarttagTemplateRequest extends Request {
         } 
 
         /**
-         * AnalyseTypes.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ocr</p>
          */
         public Builder analyseTypes(String analyseTypes) {
             this.putQueryParameter("AnalyseTypes", analyseTypes);
@@ -308,7 +312,10 @@ public class AddSmarttagTemplateRequest extends Request {
         }
 
         /**
-         * Industry.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>common</p>
          */
         public Builder industry(String industry) {
             this.putQueryParameter("Industry", industry);
@@ -416,7 +423,10 @@ public class AddSmarttagTemplateRequest extends Request {
         }
 
         /**
-         * Scene.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>search</p>
          */
         public Builder scene(String scene) {
             this.putQueryParameter("Scene", scene);
@@ -425,7 +435,10 @@ public class AddSmarttagTemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>template-example-****</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

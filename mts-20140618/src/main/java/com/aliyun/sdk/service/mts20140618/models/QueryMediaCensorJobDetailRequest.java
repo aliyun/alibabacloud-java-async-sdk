@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMediaCensorJobDetailRequest} extends {@link RequestModel}
  *
  * <p>QueryMediaCensorJobDetailRequest</p>
@@ -138,7 +139,11 @@ public class QueryMediaCensorJobDetailRequest extends Request {
         } 
 
         /**
-         * The ID of the content moderation job. You can obtain the job ID from the response parameters of the [SubmitMediaCensorJob](~~91774~~) operation.
+         * <p>The ID of the content moderation job. You can obtain the job ID from the response parameters of the <a href="https://help.aliyun.com/document_detail/91774.html">SubmitMediaCensorJob</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2288c6ca184c0e47098a5b665e2a12****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -147,11 +152,14 @@ public class QueryMediaCensorJobDetailRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page.
-         * <p>
+         * <p>The maximum number of entries to return on each page.</p>
+         * <ul>
+         * <li>Default value: <strong>30</strong>.</li>
+         * <li>Valid values: <strong>1 to 300</strong>.</li>
+         * </ul>
          * 
-         * *   Default value: **30**.
-         * *   Valid values: **1 to 300**.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maximumPageSize(Long maximumPageSize) {
             this.putQueryParameter("MaximumPageSize", maximumPageSize);
@@ -160,7 +168,10 @@ public class QueryMediaCensorJobDetailRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. The token of the next page is returned after you call this operation to query the results of a content moderation job for the first time.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. The token of the next page is returned after you call this operation to query the results of a content moderation job for the first time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ae0fd49c0840e14daf0d66a75b83****</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.putQueryParameter("NextPageToken", nextPageToken);

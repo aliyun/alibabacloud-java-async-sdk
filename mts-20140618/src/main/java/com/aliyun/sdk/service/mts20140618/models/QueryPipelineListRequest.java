@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPipelineListRequest} extends {@link RequestModel}
  *
  * <p>QueryPipelineListRequest</p>
@@ -128,7 +129,11 @@ public class QueryPipelineListRequest extends Request {
         }
 
         /**
-         * The IDs of the MPS queues that you want to query. To view the IDs, you can log on to the **MPS console** and choose **Global Settings** > **Pipelines** in the left-side navigation pane. You can query up to 10 MPS queues at a time. Separate multiple IDs of MPS queues with commas (,).
+         * <p>The IDs of the MPS queues that you want to query. To view the IDs, you can log on to the <strong>MPS console</strong> and choose <strong>Global Settings</strong> &gt; <strong>Pipelines</strong> in the left-side navigation pane. You can query up to 10 MPS queues at a time. Separate multiple IDs of MPS queues with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d1ce4d3efcb549419193f50f1fcd****,72dfa5e679ab4be9a3ed9974c736****</p>
          */
         public Builder pipelineIds(String pipelineIds) {
             this.putQueryParameter("PipelineIds", pipelineIds);

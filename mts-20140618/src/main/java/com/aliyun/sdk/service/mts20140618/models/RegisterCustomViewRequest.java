@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RegisterCustomViewRequest} extends {@link RequestModel}
  *
  * <p>RegisterCustomViewRequest</p>
@@ -155,7 +156,10 @@ public class RegisterCustomViewRequest extends Request {
         } 
 
         /**
-         * Algorithm.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>landmark</p>
          */
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -164,7 +168,10 @@ public class RegisterCustomViewRequest extends Request {
         }
 
         /**
-         * CustomEntityId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder customEntityId(String customEntityId) {
             this.putQueryParameter("CustomEntityId", customEntityId);
@@ -173,7 +180,10 @@ public class RegisterCustomViewRequest extends Request {
         }
 
         /**
-         * CustomGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder customGroupId(String customGroupId) {
             this.putQueryParameter("CustomGroupId", customGroupId);
@@ -182,7 +192,7 @@ public class RegisterCustomViewRequest extends Request {
         }
 
         /**
-         * ImageUrl.
+         * <p>This parameter is required.</p>
          */
         public Builder imageUrl(String imageUrl) {
             this.putQueryParameter("ImageUrl", imageUrl);

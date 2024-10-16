@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAnalysisJobListRequest} extends {@link RequestModel}
  *
  * <p>QueryAnalysisJobListRequest</p>
@@ -110,7 +111,11 @@ public class QueryAnalysisJobListRequest extends Request {
         } 
 
         /**
-         * The template analysis job ID list.
+         * <p>The template analysis job ID list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bb558c1cc25b45309aab5be44d19****</p>
          */
         public Builder analysisJobIds(String analysisJobIds) {
             this.putQueryParameter("AnalysisJobIds", analysisJobIds);

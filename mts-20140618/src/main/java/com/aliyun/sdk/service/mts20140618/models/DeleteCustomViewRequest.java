@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCustomViewRequest} extends {@link RequestModel}
  *
  * <p>DeleteCustomViewRequest</p>
@@ -155,7 +156,10 @@ public class DeleteCustomViewRequest extends Request {
         } 
 
         /**
-         * Algorithm.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>landmark</p>
          */
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -164,7 +168,10 @@ public class DeleteCustomViewRequest extends Request {
         }
 
         /**
-         * CustomEntityId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder customEntityId(String customEntityId) {
             this.putQueryParameter("CustomEntityId", customEntityId);
@@ -173,7 +180,10 @@ public class DeleteCustomViewRequest extends Request {
         }
 
         /**
-         * CustomGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder customGroupId(String customGroupId) {
             this.putQueryParameter("CustomGroupId", customGroupId);
@@ -182,7 +192,10 @@ public class DeleteCustomViewRequest extends Request {
         }
 
         /**
-         * CustomViewId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder customViewId(String customViewId) {
             this.putQueryParameter("CustomViewId", customViewId);

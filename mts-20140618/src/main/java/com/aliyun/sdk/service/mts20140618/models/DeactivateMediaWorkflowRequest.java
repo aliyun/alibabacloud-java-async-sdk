@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeactivateMediaWorkflowRequest} extends {@link RequestModel}
  *
  * <p>DeactivateMediaWorkflowRequest</p>
@@ -110,7 +111,11 @@ public class DeactivateMediaWorkflowRequest extends Request {
         } 
 
         /**
-         * The ID of the media workflow that is deactivated.
+         * <p>The ID of the media workflow that is deactivated.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93ab850b4f6f44eab54b6e9181d4****</p>
          */
         public Builder mediaWorkflowId(String mediaWorkflowId) {
             this.putQueryParameter("MediaWorkflowId", mediaWorkflowId);

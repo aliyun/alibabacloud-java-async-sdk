@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSmarttagTemplateRequest} extends {@link RequestModel}
  *
  * <p>UpdateSmarttagTemplateRequest</p>
@@ -436,7 +437,10 @@ public class UpdateSmarttagTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05de22f255284c7a8d2aab535dde****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

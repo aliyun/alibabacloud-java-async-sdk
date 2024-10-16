@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddMediaWorkflowRequest} extends {@link RequestModel}
  *
  * <p>AddMediaWorkflowRequest</p>
@@ -139,13 +140,17 @@ public class AddMediaWorkflowRequest extends Request {
         } 
 
         /**
-         * The name of the media workflow.
-         * <p>
+         * <p>The name of the media workflow.</p>
+         * <ul>
+         * <li>The value cannot be empty.</li>
+         * <li>The name cannot be the same as that of an existing media workflow within the current Alibaba Cloud account.</li>
+         * <li>The name can be up to 64 characters in length.</li>
+         * <li>The value must be encoded in the UTF-8 format.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The value cannot be empty.
-         * *   The name cannot be the same as that of an existing media workflow within the current Alibaba Cloud account.
-         * *   The name can be up to 64 characters in length.
-         * *   The value must be encoded in the UTF-8 format.
+         * <strong>example:</strong>
+         * <p>mediaworkflow-example</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -190,10 +195,11 @@ public class AddMediaWorkflowRequest extends Request {
         }
 
         /**
-         * The topology of the media workflow. The value must be a JSON object that contains the activities and activity dependencies. For more information, see the **Sample topology** section of this topic.
-         * <p>
-         * 
-         * >  The Object Storage Service (OSS) bucket must reside in the same region as your MPS service.
+         * <p>The topology of the media workflow. The value must be a JSON object that contains the activities and activity dependencies. For more information, see the <strong>Sample topology</strong> section of this topic.</p>
+         * <blockquote>
+         * <p> The Object Storage Service (OSS) bucket must reside in the same region as your MPS service.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          */
         public Builder topology(String topology) {
             this.putQueryParameter("Topology", topology);
@@ -202,11 +208,14 @@ public class AddMediaWorkflowRequest extends Request {
         }
 
         /**
-         * The triggering mode of the media workflow. Valid values:
-         * <p>
+         * <p>The triggering mode of the media workflow. Valid values:</p>
+         * <ul>
+         * <li><strong>OssAutoTrigger</strong>: The media workflow is automatically triggered.</li>
+         * <li><strong>NotInAuto</strong>: The media workflow is not automatically triggered.</li>
+         * </ul>
          * 
-         * *   **OssAutoTrigger**: The media workflow is automatically triggered.
-         * *   **NotInAuto**: The media workflow is not automatically triggered.
+         * <strong>example:</strong>
+         * <p>OssAutoTrigger</p>
          */
         public Builder triggerMode(String triggerMode) {
             this.putQueryParameter("TriggerMode", triggerMode);

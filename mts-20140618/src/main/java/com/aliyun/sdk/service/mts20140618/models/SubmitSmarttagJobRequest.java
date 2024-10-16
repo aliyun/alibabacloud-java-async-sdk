@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitSmarttagJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitSmarttagJobRequest</p>
@@ -323,7 +324,10 @@ public class SubmitSmarttagJobRequest extends Request {
         }
 
         /**
-         * PipelineId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pipelineId(String pipelineId) {
             this.putQueryParameter("PipelineId", pipelineId);
@@ -332,7 +336,10 @@ public class SubmitSmarttagJobRequest extends Request {
         }
 
         /**
-         * The priority of the job in the ApsaraVideo Media Processing (MPS) queue to which the job is added. Valid values: 0 to 9. Default value: 5.
+         * <p>The priority of the job in the ApsaraVideo Media Processing (MPS) queue to which the job is added. Valid values: 0 to 9. Default value: 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder priority(String priority) {
             this.putQueryParameter("Priority", priority);
@@ -359,7 +366,10 @@ public class SubmitSmarttagJobRequest extends Request {
         }
 
         /**
-         * The template ID, which is used to specify the analysis algorithm of the smart tagging job. For more information about how to manage templates, see [AddSmarttagTemplate](~~602910~~), [QuerySmarttagTemplateList](~~187770~~), [UpdateSmarttagTemplate](~~187776~~), and [DeleteSmarttagTemplate](~~187775~~).
+         * <p>The template ID, which is used to specify the analysis algorithm of the smart tagging job. For more information about how to manage templates, see <a href="https://help.aliyun.com/document_detail/602910.html">AddSmarttagTemplate</a>, <a href="https://help.aliyun.com/document_detail/187770.html">QuerySmarttagTemplateList</a>, <a href="https://help.aliyun.com/document_detail/187776.html">UpdateSmarttagTemplate</a>, and <a href="https://help.aliyun.com/document_detail/187775.html">DeleteSmarttagTemplate</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39f8e0bc005e4f309379701645f4****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -368,7 +378,10 @@ public class SubmitSmarttagJobRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-title-****</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

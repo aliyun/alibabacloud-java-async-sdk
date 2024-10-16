@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddWaterMarkTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>AddWaterMarkTemplateResponseBody</p>
@@ -49,7 +50,10 @@ public class AddWaterMarkTemplateResponseBody extends TeaModel {
         private WaterMarkTemplate waterMarkTemplate; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54BB917F-DD35-4F32-BABA-E60E31B21W63</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class AddWaterMarkTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the watermark template.
+         * <p>The details of the watermark template.</p>
          */
         public Builder waterMarkTemplate(WaterMarkTemplate waterMarkTemplate) {
             this.waterMarkTemplate = waterMarkTemplate;
@@ -70,6 +74,12 @@ public class AddWaterMarkTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddWaterMarkTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddWaterMarkTemplateResponseBody</p>
+     */
     public static class RatioRefer extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dx")
         private String dx;
@@ -133,11 +143,14 @@ public class AddWaterMarkTemplateResponseBody extends TeaModel {
             private String width; 
 
             /**
-             * The horizontal offset of the watermark relative to the output video image. Default value: **0**. The default value indicates no offset. The value can be an integer or a decimal.
-             * <p>
+             * <p>The horizontal offset of the watermark relative to the output video image. Default value: <strong>0</strong>. The default value indicates no offset. The value can be an integer or a decimal.</p>
+             * <ul>
+             * <li><strong>Integer</strong>: the vertical offset. This indicates the absolute position. Unit: pixel.</li>
+             * <li><strong>Decimal</strong>: the ratio of the horizontal offset to the width of the output video. The ratio varies based on the size of the video. Four decimal places are supported, such as 0.9999. More decimal places are discarded.</li>
+             * </ul>
              * 
-             * *   **Integer**: the vertical offset. This indicates the absolute position. Unit: pixel.
-             * *   **Decimal**: the ratio of the horizontal offset to the width of the output video. The ratio varies based on the size of the video. Four decimal places are supported, such as 0.9999. More decimal places are discarded.
+             * <strong>example:</strong>
+             * <p>0.51</p>
              */
             public Builder dx(String dx) {
                 this.dx = dx;
@@ -145,11 +158,14 @@ public class AddWaterMarkTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The vertical offset of the watermark relative to the output video image. Default value: **0**. The default value indicates no offset. The value can be an integer or a decimal.
-             * <p>
+             * <p>The vertical offset of the watermark relative to the output video image. Default value: <strong>0</strong>. The default value indicates no offset. The value can be an integer or a decimal.</p>
+             * <ul>
+             * <li><strong>Integer</strong>: the vertical offset. This indicates the absolute position. Unit: pixel.</li>
+             * <li><strong>Decimal</strong>: the ratio of the vertical offset to the height of the output video. The ratio varies based on the size of the video. Four decimal places are supported, such as 0.9999. More decimal places are discarded.</li>
+             * </ul>
              * 
-             * *   **Integer**: the vertical offset. This indicates the absolute position. Unit: pixel.
-             * *   **Decimal**: the ratio of the vertical offset to the height of the output video. The ratio varies based on the size of the video. Four decimal places are supported, such as 0.9999. More decimal places are discarded.
+             * <strong>example:</strong>
+             * <p>0.28</p>
              */
             public Builder dy(String dy) {
                 this.dy = dy;
@@ -157,11 +173,14 @@ public class AddWaterMarkTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The height of the watermark image in the output video. The value can be an integer or a decimal.
-             * <p>
+             * <p>The height of the watermark image in the output video. The value can be an integer or a decimal.</p>
+             * <ul>
+             * <li><strong>Integer</strong>: the height of the watermark image. This indicates the absolute position. Unit: pixel.</li>
+             * <li><strong>Decimal</strong>: the ratio of the height of the watermark image to the height of the output video. The ratio varies based on the size of the video. Four decimal places are supported, such as 0.9999. More decimal places are discarded.</li>
+             * </ul>
              * 
-             * *   **Integer**: the height of the watermark image. This indicates the absolute position. Unit: pixel.
-             * *   **Decimal**: the ratio of the height of the watermark image to the height of the output video. The ratio varies based on the size of the video. Four decimal places are supported, such as 0.9999. More decimal places are discarded.
+             * <strong>example:</strong>
+             * <p>0.33</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -169,11 +188,14 @@ public class AddWaterMarkTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The width of the watermark image in the output video. The value can be an integer or a decimal.
-             * <p>
+             * <p>The width of the watermark image in the output video. The value can be an integer or a decimal.</p>
+             * <ul>
+             * <li><strong>Integer</strong>: the width of the watermark image. This indicates the absolute position. Unit: pixel.</li>
+             * <li><strong>Decimal</strong>: the ratio of the width of the watermark image to the width of the output video. The ratio varies based on the size of the video. Four decimal places are supported, such as 0.9999. More decimal places are discarded.</li>
+             * </ul>
              * 
-             * *   **Integer**: the width of the watermark image. This indicates the absolute position. Unit: pixel.
-             * *   **Decimal**: the ratio of the width of the watermark image to the width of the output video. The ratio varies based on the size of the video. Four decimal places are supported, such as 0.9999. More decimal places are discarded.
+             * <strong>example:</strong>
+             * <p>0.36</p>
              */
             public Builder width(String width) {
                 this.width = width;
@@ -187,6 +209,12 @@ public class AddWaterMarkTemplateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AddWaterMarkTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddWaterMarkTemplateResponseBody</p>
+     */
     public static class Timeline extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
@@ -226,7 +254,10 @@ public class AddWaterMarkTemplateResponseBody extends TeaModel {
             private String start; 
 
             /**
-             * The display duration of the watermark. Default value: **ToEND**. The default value indicates that the watermark is displayed until the video ends.
+             * <p>The display duration of the watermark. Default value: <strong>ToEND</strong>. The default value indicates that the watermark is displayed until the video ends.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ToEND</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -234,11 +265,14 @@ public class AddWaterMarkTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range during which the watermark is displayed.
-             * <p>
+             * <p>The beginning of the time range during which the watermark is displayed.</p>
+             * <ul>
+             * <li>Unit: seconds.</li>
+             * <li>Default value: <strong>0</strong>.</li>
+             * </ul>
              * 
-             * *   Unit: seconds.
-             * *   Default value: **0**.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder start(String start) {
                 this.start = start;
@@ -252,6 +286,12 @@ public class AddWaterMarkTemplateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AddWaterMarkTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddWaterMarkTemplateResponseBody</p>
+     */
     public static class WaterMarkTemplate extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dx")
         private String dx;
@@ -399,7 +439,10 @@ public class AddWaterMarkTemplateResponseBody extends TeaModel {
             private String width; 
 
             /**
-             * The horizontal offset. Unit: pixel.
+             * <p>The horizontal offset. Unit: pixel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder dx(String dx) {
                 this.dx = dx;
@@ -407,7 +450,10 @@ public class AddWaterMarkTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The vertical offset. Unit: pixel.
+             * <p>The vertical offset. Unit: pixel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder dy(String dy) {
                 this.dy = dy;
@@ -415,7 +461,10 @@ public class AddWaterMarkTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The height of the watermark image. Unit: pixel.
+             * <p>The height of the watermark image. Unit: pixel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -423,7 +472,10 @@ public class AddWaterMarkTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the watermark template. We recommend that you keep this ID for subsequent operation calls.
+             * <p>The ID of the watermark template. We recommend that you keep this ID for subsequent operation calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3780bd69b2b74540bc7b1096f564****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -431,7 +483,10 @@ public class AddWaterMarkTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the watermark template.
+             * <p>The name of the watermark template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-watermark-****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -439,13 +494,13 @@ public class AddWaterMarkTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The values of the Height, Width, Dx, and Dy parameters relative to the reference edges. If the values of the Height, Width, Dx, and Dy parameters are decimals between 0 and 1, the values are calculated by referring to the following edges in sequence:
-             * <p>
-             * 
-             * *   **Width**: the width edge.
-             * *   **Height**: the height edge.
-             * *   **Long**: the long edge.
-             * *   **Short**: the short edge.
+             * <p>The values of the Height, Width, Dx, and Dy parameters relative to the reference edges. If the values of the Height, Width, Dx, and Dy parameters are decimals between 0 and 1, the values are calculated by referring to the following edges in sequence:</p>
+             * <ul>
+             * <li><strong>Width</strong>: the width edge.</li>
+             * <li><strong>Height</strong>: the height edge.</li>
+             * <li><strong>Long</strong>: the long edge.</li>
+             * <li><strong>Short</strong>: the short edge.</li>
+             * </ul>
              */
             public Builder ratioRefer(RatioRefer ratioRefer) {
                 this.ratioRefer = ratioRefer;
@@ -453,13 +508,16 @@ public class AddWaterMarkTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The position of the watermark. Valid values:
-             * <p>
+             * <p>The position of the watermark. Valid values:</p>
+             * <ul>
+             * <li><strong>TopRight</strong>: the upper-right corner.</li>
+             * <li><strong>TopLeft</strong>: the upper-left corner.</li>
+             * <li><strong>BottomRight</strong>: the lower-right corner.</li>
+             * <li><strong>BottomLeft</strong>: the lower-left corner.</li>
+             * </ul>
              * 
-             * *   **TopRight**: the upper-right corner.
-             * *   **TopLeft**: the upper-left corner.
-             * *   **BottomRight**: the lower-right corner.
-             * *   **BottomLeft**: the lower-left corner.
+             * <strong>example:</strong>
+             * <p>TopRight</p>
              */
             public Builder referPos(String referPos) {
                 this.referPos = referPos;
@@ -467,11 +525,14 @@ public class AddWaterMarkTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the watermark template.
-             * <p>
+             * <p>The status of the watermark template.</p>
+             * <ul>
+             * <li><strong>Normal</strong>: The watermark template is normal.</li>
+             * <li><strong>Deleted</strong>: The watermark template is deleted.</li>
+             * </ul>
              * 
-             * *   **Normal**: The watermark template is normal.
-             * *   **Deleted**: The watermark template is deleted.
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -479,7 +540,7 @@ public class AddWaterMarkTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The timeline of the watermark.
+             * <p>The timeline of the watermark.</p>
              */
             public Builder timeline(Timeline timeline) {
                 this.timeline = timeline;
@@ -487,11 +548,14 @@ public class AddWaterMarkTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the watermark. Valid values:
-             * <p>
+             * <p>The type of the watermark. Valid values:</p>
+             * <ul>
+             * <li>Image: an image watermark.</li>
+             * <li>Text: a text watermark.</li>
+             * </ul>
              * 
-             * *   Image: an image watermark.
-             * *   Text: a text watermark.
+             * <strong>example:</strong>
+             * <p>Image</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -499,7 +563,10 @@ public class AddWaterMarkTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The width of the watermark image. Unit: pixel.
+             * <p>The width of the watermark image. Unit: pixel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder width(String width) {
                 this.width = width;

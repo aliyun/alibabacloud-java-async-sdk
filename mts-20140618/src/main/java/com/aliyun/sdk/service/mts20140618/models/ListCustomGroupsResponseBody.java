@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCustomGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListCustomGroupsResponseBody</p>
@@ -130,6 +131,12 @@ public class ListCustomGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCustomGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomGroupsResponseBody</p>
+     */
     public static class CustomGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomGroupDescription")
         private String customGroupDescription;
@@ -211,6 +218,12 @@ public class ListCustomGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCustomGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomGroupsResponseBody</p>
+     */
     public static class CustomGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomGroup")
         private java.util.List < CustomGroup> customGroup;

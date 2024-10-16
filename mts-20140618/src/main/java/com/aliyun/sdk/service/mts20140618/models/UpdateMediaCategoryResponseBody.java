@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMediaCategoryResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateMediaCategoryResponseBody</p>
@@ -37,7 +38,10 @@ public class UpdateMediaCategoryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E3931857-E3D3-4D6E-9C7B-D2C09441BD01</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

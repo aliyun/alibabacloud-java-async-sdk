@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RegisterCustomFaceResponseBody} extends {@link TeaModel}
  *
  * <p>RegisterCustomFaceResponseBody</p>
@@ -49,7 +50,10 @@ public class RegisterCustomFaceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the face.
+         * <p>The ID of the face.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c6cc71cb44a9491093818faf9d60****</p>
          */
         public Builder faceId(String faceId) {
             this.faceId = faceId;
@@ -57,7 +61,10 @@ public class RegisterCustomFaceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91AEA76D-25B5-50DF-9126-AA6BB10FDAF4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

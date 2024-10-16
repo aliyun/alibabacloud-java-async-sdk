@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchTemplateRequest} extends {@link RequestModel}
  *
  * <p>SearchTemplateRequest</p>
@@ -152,7 +153,10 @@ public class SearchTemplateRequest extends Request {
         } 
 
         /**
-         * The name prefix based on which you want to search for templates.
+         * <p>The name prefix based on which you want to search for templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S00000001</p>
          */
         public Builder namePrefix(String namePrefix) {
             this.putQueryParameter("NamePrefix", namePrefix);
@@ -179,7 +183,10 @@ public class SearchTemplateRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -188,11 +195,14 @@ public class SearchTemplateRequest extends Request {
         }
 
         /**
-         * The size of each page set during the result paging query.
-         * <p>
+         * <p>The size of each page set during the result paging query.</p>
+         * <ul>
+         * <li>Upper limit: 100.</li>
+         * <li>Default value: 10.</li>
+         * </ul>
          * 
-         * - Upper limit: 100.
-         * - Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -219,13 +229,16 @@ public class SearchTemplateRequest extends Request {
         }
 
         /**
-         * The status of the custom transcoding templates that you want to query.
-         * <p>
+         * <p>The status of the custom transcoding templates that you want to query.</p>
+         * <ul>
+         * <li><strong>All</strong>: All custom transcoding templates are queried.</li>
+         * <li><strong>Normal</strong>: Normal custom transcoding templates are queried.</li>
+         * <li><strong>Deleted</strong>: Deleted custom transcoding templates are queried.</li>
+         * <li>Default value: <strong>All</strong>.</li>
+         * </ul>
          * 
-         * *   **All**: All custom transcoding templates are queried.
-         * *   **Normal**: Normal custom transcoding templates are queried.
-         * *   **Deleted**: Deleted custom transcoding templates are queried.
-         * *   Default value: **All**.
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);

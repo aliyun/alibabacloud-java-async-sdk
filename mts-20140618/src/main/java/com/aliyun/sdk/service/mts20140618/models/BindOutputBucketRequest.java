@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindOutputBucketRequest} extends {@link RequestModel}
  *
  * <p>BindOutputBucketRequest</p>
@@ -110,7 +111,11 @@ public class BindOutputBucketRequest extends Request {
         } 
 
         /**
-         * The name of the Object Storage Service (OSS) bucket that you want to bind. The name can be up to 64 bytes in size and can contain letters, digits, and hyphens (-). The name cannot start with a special character.
+         * <p>The name of the Object Storage Service (OSS) bucket that you want to bind. The name can be up to 64 bytes in size and can contain letters, digits, and hyphens (-). The name cannot start with a special character.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-bucket-****</p>
          */
         public Builder bucket(String bucket) {
             this.putQueryParameter("Bucket", bucket);

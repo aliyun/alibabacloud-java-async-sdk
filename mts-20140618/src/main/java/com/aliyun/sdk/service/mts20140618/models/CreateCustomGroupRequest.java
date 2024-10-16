@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCustomGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateCustomGroupRequest</p>
@@ -139,7 +140,10 @@ public class CreateCustomGroupRequest extends Request {
         } 
 
         /**
-         * Algorithm.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>landmark</p>
          */
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -157,7 +161,7 @@ public class CreateCustomGroupRequest extends Request {
         }
 
         /**
-         * CustomGroupName.
+         * <p>This parameter is required.</p>
          */
         public Builder customGroupName(String customGroupName) {
             this.putQueryParameter("CustomGroupName", customGroupName);

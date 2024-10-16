@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCustomGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteCustomGroupRequest</p>
@@ -125,11 +126,15 @@ public class DeleteCustomGroupRequest extends Request {
         } 
 
         /**
-         * The custom type of the image library. Valid values:
-         * <p>
+         * <p>The custom type of the image library. Valid values:</p>
+         * <ul>
+         * <li>landmark: custom landmarks.</li>
+         * <li>object: custom objects.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   landmark: custom landmarks.
-         * *   object: custom objects.
+         * <strong>example:</strong>
+         * <p>landmark</p>
          */
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -138,7 +143,11 @@ public class DeleteCustomGroupRequest extends Request {
         }
 
         /**
-         * The ID of the custom image library.
+         * <p>The ID of the custom image library.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder customGroupId(String customGroupId) {
             this.putQueryParameter("CustomGroupId", customGroupId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitJobsResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitJobsResponseBody</p>
@@ -49,7 +50,7 @@ public class SubmitJobsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The transcoding jobs that are generated.
+         * <p>The transcoding jobs that are generated.</p>
          */
         public Builder jobResultList(JobResultList jobResultList) {
             this.jobResultList = jobResultList;
@@ -57,7 +58,10 @@ public class SubmitJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4A45S71F6-D73936451234</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class SubmitJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class Input extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
@@ -121,7 +131,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             private String object; 
 
             /**
-             * The name of the OSS bucket in which the job input is stored.
+             * <p>The name of the OSS bucket in which the job input is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-bucket-****</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -129,7 +142,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the OSS region in which the job input is stored.
+             * <p>The ID of the OSS region in which the job input is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-hangzhou</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -137,7 +153,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the OSS object that is used as the job input.
+             * <p>The name of the OSS object that is used as the job input.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.flv</p>
              */
             public Builder object(String object) {
                 this.object = object;
@@ -151,6 +170,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class MNSMessageResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -202,7 +227,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             private String messageId; 
 
             /**
-             * The error code returned if the job failed. This parameter is not returned if the job was successful.
+             * <p>The error code returned if the job failed. This parameter is not returned if the job was successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidParameter.ResourceNotFound</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -210,7 +238,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if the job failed. This parameter is not returned if the job was successful.
+             * <p>The error message returned if the job failed. This parameter is not returned if the job was successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The resource operated &quot;%s&quot; cannot be found.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -218,7 +249,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the error message returned if the job failed. This parameter is not returned if the job was successful.
+             * <p>The ID of the error message returned if the job failed. This parameter is not returned if the job was successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder messageId(String messageId) {
                 this.messageId = messageId;
@@ -232,6 +266,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class Amix extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AmixURL")
         private String amixURL;
@@ -307,11 +347,14 @@ public class SubmitJobsResponseBody extends TeaModel {
             private String start; 
 
             /**
-             * The URL of the audio track that is mixed as the background music.
-             * <p>
+             * <p>The URL of the audio track that is mixed as the background music.</p>
+             * <ul>
+             * <li>The URL can be an OSS URL or the string <code>input</code>.</li>
+             * <li>A value of input indicates that two audio tracks are mixed in a video.</li>
+             * </ul>
              * 
-             * *   The URL can be an OSS URL or the string `input`.
-             * *   A value of input indicates that two audio tracks are mixed in a video.
+             * <strong>example:</strong>
+             * <p><a href="https://outpu***.oss-cn-shanghai.aliyuncs.com/mp4-to-mp3%5E1571025263578816%40.mp3">https://outpu***.oss-cn-shanghai.aliyuncs.com/mp4-to-mp3%5E1571025263578816%40.mp3</a></p>
              */
             public Builder amixURL(String amixURL) {
                 this.amixURL = amixURL;
@@ -319,7 +362,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the mixed audio track. The value is in the number or time format.
+             * <p>The duration of the mixed audio track. The value is in the number or time format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -327,7 +373,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The audio track that is mixed. Format: 0:a:{audio_index}. Example: 0:a:0.
+             * <p>The audio track that is mixed. Format: 0:a:{audio_index}. Example: 0:a:0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0:a:0</p>
              */
             public Builder map(String map) {
                 this.map = map;
@@ -335,12 +384,15 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The mode to specify the mixing duration. Valid values: **first** and **long**.
-             * <p>
+             * <p>The mode to specify the mixing duration. Valid values: <strong>first</strong> and <strong>long</strong>.</p>
+             * <ul>
+             * <li><strong>first</strong>: The length of the output media equals the length of the input media.</li>
+             * <li><strong>long</strong>: The length of the output media equals the length of the output media or the length of the input media, whichever is longer.</li>
+             * <li>Default value: <strong>long</strong>.</li>
+             * </ul>
              * 
-             * *   **first**: The length of the output media equals the length of the input media.
-             * *   **long**: The length of the output media equals the length of the output media or the length of the input media, whichever is longer.
-             * *   Default value: **long**.
+             * <strong>example:</strong>
+             * <p>long</p>
              */
             public Builder mixDurMode(String mixDurMode) {
                 this.mixDurMode = mixDurMode;
@@ -348,7 +400,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The start time. The value is in the number or time format. Examples: 1:25:36.240 and 32000.23.
+             * <p>The start time. The value is in the number or time format. Examples: 1:25:36.240 and 32000.23.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder start(String start) {
                 this.start = start;
@@ -362,6 +417,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class AmixList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Amix")
         private java.util.List < Amix> amix;
@@ -403,6 +464,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class Volume extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
@@ -442,11 +509,14 @@ public class SubmitJobsResponseBody extends TeaModel {
             private String method; 
 
             /**
-             * The volume adjustment range.
-             * <p>
+             * <p>The volume adjustment range.</p>
+             * <ul>
+             * <li>Unit: decibel.</li>
+             * <li>Default value: <strong>-20</strong>.</li>
+             * </ul>
              * 
-             * *   Unit: decibel.
-             * *   Default value: **-20**.
+             * <strong>example:</strong>
+             * <p>-20</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -454,12 +524,15 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The method that is used to adjust the volume. Valid values:
-             * <p>
+             * <p>The method that is used to adjust the volume. Valid values:</p>
+             * <ul>
+             * <li><strong>auto</strong></li>
+             * <li><strong>dynamic</strong></li>
+             * <li><strong>linear</strong></li>
+             * </ul>
              * 
-             * *   **auto**
-             * *   **dynamic**
-             * *   **linear**
+             * <strong>example:</strong>
+             * <p>auto</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -473,6 +546,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class Audio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
@@ -572,11 +651,14 @@ public class SubmitJobsResponseBody extends TeaModel {
             private Volume volume; 
 
             /**
-             * The audio bitrate of the output file.
-             * <p>
+             * <p>The audio bitrate of the output file.</p>
+             * <ul>
+             * <li>Unit: Kbit/s.</li>
+             * <li>Default value: <strong>128</strong>.</li>
+             * </ul>
              * 
-             * *   Unit: Kbit/s.
-             * *   Default value: **128**.
+             * <strong>example:</strong>
+             * <p>128</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -584,12 +666,15 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of sound channels.
-             * <p>
+             * <p>The number of sound channels.</p>
+             * <ul>
+             * <li>If the value of Codec is mp3, the value of this parameter can only be <strong>1</strong> or <strong>2</strong>.</li>
+             * <li>If the value of Codec is aac, the value of this parameter can only be <strong>1</strong>, <strong>2</strong>, <strong>4</strong>, <strong>5</strong>, <strong>6</strong>, or <strong>8</strong>.</li>
+             * <li>Default value: <strong>2</strong>.</li>
+             * </ul>
              * 
-             * *   If the value of Codec is mp3, the value of this parameter can only be **1** or **2**.
-             * *   If the value of Codec is aac, the value of this parameter can only be **1**, **2**, **4**, **5**, **6**, or **8**.
-             * *   Default value: **2**.
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder channels(String channels) {
                 this.channels = channels;
@@ -597,11 +682,14 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The audio codec.
-             * <p>
+             * <p>The audio codec.</p>
+             * <ul>
+             * <li>Valid values: <strong>aac</strong>, <strong>mp3</strong>, <strong>vorbis</strong>, and <strong>flac</strong>.</li>
+             * <li>Default value: <strong>aac</strong>.</li>
+             * </ul>
              * 
-             * *   Valid values: **aac**, **mp3**, **vorbis**, and **flac**.
-             * *   Default value: **aac**.
+             * <strong>example:</strong>
+             * <p>aac</p>
              */
             public Builder codec(String codec) {
                 this.codec = codec;
@@ -609,10 +697,13 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The codec profile of the audio.
-             * <p>
+             * <p>The codec profile of the audio.</p>
+             * <blockquote>
+             * <p> Valid values if the value of <strong>Codec</strong> is <strong>aac</strong>: <strong>aac_low</strong>, <strong>aac_he</strong>, <strong>aac_he_v2</strong>, <strong>aac_ld</strong>, and <strong>aac_eld</strong>.</p>
+             * </blockquote>
              * 
-             * >  Valid values if the value of **Codec** is **aac**: **aac_low**, **aac_he**, **aac_he_v2**, **aac_ld**, and **aac_eld**.
+             * <strong>example:</strong>
+             * <p>aac_low</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -620,7 +711,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The level of quality control on the audio.
+             * <p>The level of quality control on the audio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder qscale(String qscale) {
                 this.qscale = qscale;
@@ -628,14 +722,18 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The sampling rate.
-             * <p>
+             * <p>The sampling rate.</p>
+             * <ul>
+             * <li>Valid values: <strong>22050</strong>, <strong>32000</strong>, <strong>44100</strong>, <strong>48000</strong>, and <strong>96000</strong>.</li>
+             * <li>Unit: Hz.</li>
+             * <li>Default value: <strong>44100</strong>.</li>
+             * </ul>
+             * <blockquote>
+             * <p> If the video container format is FLV and the audio codec is MP3, the value of this parameter cannot be 32000, 48000, or 96000. If the audio codec is MP3, the value of this parameter cannot be 96000.</p>
+             * </blockquote>
              * 
-             * *   Valid values: **22050**, **32000**, **44100**, **48000**, and **96000**.
-             * *   Unit: Hz.
-             * *   Default value: **44100**.
-             * 
-             * >  If the video container format is FLV and the audio codec is MP3, the value of this parameter cannot be 32000, 48000, or 96000. If the audio codec is MP3, the value of this parameter cannot be 96000.
+             * <strong>example:</strong>
+             * <p>32000</p>
              */
             public Builder samplerate(String samplerate) {
                 this.samplerate = samplerate;
@@ -643,7 +741,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The volume configurations.
+             * <p>The volume configurations.</p>
              */
             public Builder volume(Volume volume) {
                 this.volume = volume;
@@ -657,6 +755,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class TimeSpan extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
@@ -696,11 +800,14 @@ public class SubmitJobsResponseBody extends TeaModel {
             private String seek; 
 
             /**
-             * The duration of the clip.
-             * <p>
+             * <p>The duration of the clip.</p>
+             * <ul>
+             * <li>Format: <code>hh:mm:ss[.SSS]</code> or <code>sssss[.SSS]</code>.</li>
+             * <li>Valid values: <code>[00:00:00.000,23:59:59.999]</code> or <code>[0.000,86399.999]</code>.</li>
+             * </ul>
              * 
-             * *   Format: `hh:mm:ss[.SSS]` or `sssss[.SSS]`.
-             * *   Valid values: `[00:00:00.000,23:59:59.999]` or `[0.000,86399.999]`.
+             * <strong>example:</strong>
+             * <p>01:00:59.999</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -708,11 +815,14 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The start time.
-             * <p>
+             * <p>The start time.</p>
+             * <ul>
+             * <li>Format: <code>hh:mm:ss[.SSS]</code> or <code>sssss[.SSS]</code>.</li>
+             * <li>Valid values: <code>[00:00:00.000,23:59:59.999]</code> or <code>[0.000,86399.999]</code>.</li>
+             * </ul>
              * 
-             * *   Format: `hh:mm:ss[.SSS]` or `sssss[.SSS]`.
-             * *   Valid values: `[00:00:00.000,23:59:59.999]` or `[0.000,86399.999]`.
+             * <strong>example:</strong>
+             * <p>01:59:59.999</p>
              */
             public Builder seek(String seek) {
                 this.seek = seek;
@@ -726,6 +836,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class Clip extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TimeSpan")
         private TimeSpan timeSpan;
@@ -753,7 +869,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             private TimeSpan timeSpan; 
 
             /**
-             * The time span of the clip.
+             * <p>The time span of the clip.</p>
              */
             public Builder timeSpan(TimeSpan timeSpan) {
                 this.timeSpan = timeSpan;
@@ -767,6 +883,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class Container extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
@@ -794,16 +916,19 @@ public class SubmitJobsResponseBody extends TeaModel {
             private String format; 
 
             /**
-             * The container format.
-             * <p>
+             * <p>The container format.</p>
+             * <ul>
+             * <li>Default value: <strong>mp4</strong>.</li>
+             * <li>Video formats include FLV, MP4, HLS (M3U8 + TS), and MPEG-DASH (MPD + fMP4).</li>
+             * <li>Audio formats include MP3, MP4, Ogg, FLAC, and M4A.</li>
+             * <li>Image formats include GIF and WebP.</li>
+             * <li>If the container format is GIF, the video codec must be GIF.</li>
+             * <li>If the container format is WebP, the video codec must be WebP.</li>
+             * <li>If the container format is FLV, the video codec cannot be H.265.</li>
+             * </ul>
              * 
-             * *   Default value: **mp4**.
-             * *   Video formats include FLV, MP4, HLS (M3U8 + TS), and MPEG-DASH (MPD + fMP4).
-             * *   Audio formats include MP3, MP4, Ogg, FLAC, and M4A.
-             * *   Image formats include GIF and WebP.
-             * *   If the container format is GIF, the video codec must be GIF.
-             * *   If the container format is WebP, the video codec must be WebP.
-             * *   If the container format is FLV, the video codec cannot be H.265.
+             * <strong>example:</strong>
+             * <p>flv</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -817,6 +942,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class InputFile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
@@ -868,7 +999,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             private String object; 
 
             /**
-             * The name of the OSS bucket in which the input file is stored.
+             * <p>The name of the OSS bucket in which the input file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-bucket-****</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -876,7 +1010,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the OSS region in which the input file is stored.
+             * <p>The ID of the OSS region in which the input file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-hangzhou</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -884,7 +1021,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the OSS object that is used as the input file.
+             * <p>The name of the OSS object that is used as the input file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-intput.flv</p>
              */
             public Builder object(String object) {
                 this.object = object;
@@ -898,6 +1038,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class DigiWaterMark extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alpha")
         private String alpha;
@@ -949,11 +1095,14 @@ public class SubmitJobsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The transparency of the text or image.
-             * <p>
+             * <p>The transparency of the text or image.</p>
+             * <ul>
+             * <li>Value values: <strong>(0,1]</strong>.</li>
+             * <li>Default value: <strong>1.0</strong>.</li>
+             * </ul>
              * 
-             * *   Value values: **(0,1]**.
-             * *   Default value: **1.0**.
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder alpha(String alpha) {
                 this.alpha = alpha;
@@ -961,7 +1110,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the input file.
+             * <p>The details of the input file.</p>
              */
             public Builder inputFile(InputFile inputFile) {
                 this.inputFile = inputFile;
@@ -969,11 +1118,14 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the watermark. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. Valid values:
-             * <p>
+             * <p>The type of the watermark. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. Valid values:</p>
+             * <ul>
+             * <li><strong>Image</strong> (default)</li>
+             * <li><strong>Text</strong></li>
+             * </ul>
              * 
-             * *   **Image** (default)
-             * *   **Text**
+             * <strong>example:</strong>
+             * <p>Image</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -987,6 +1139,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class Encryption extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -1074,7 +1232,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The encryption ID.
+             * <p>The encryption ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>31fa3c9ca8134f9cec2b4b0b0f78****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1082,7 +1243,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The key that is used to encrypt the video.
+             * <p>The key that is used to encrypt the video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>encryptionkey128</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1090,7 +1254,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The key encryption method. Keys cannot be transmitted to MPS in plaintext. Keys must be encrypted by using Base64 or Key Management Service (KMS). For example, if the key is encryptionkey128, you can encrypt the key by using the following method: Base64("encryptionkey128") or KMS(Base64("encryptionkey128").
+             * <p>The key encryption method. Keys cannot be transmitted to MPS in plaintext. Keys must be encrypted by using Base64 or Key Management Service (KMS). For example, if the key is encryptionkey128, you can encrypt the key by using the following method: Base64(&quot;encryptionkey128&quot;) or KMS(Base64(&quot;encryptionkey128&quot;).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Base64</p>
              */
             public Builder keyType(String keyType) {
                 this.keyType = keyType;
@@ -1098,7 +1265,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL that is used to request the key. The URL is Base64-encoded.
+             * <p>The URL that is used to request the key. The URL is Base64-encoded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://1161758785*****.cn-shanghai.fc.aliyuncs.com/2016-08-15/proxy/HLS-decyptServer/decyptServer/">https://1161758785*****.cn-shanghai.fc.aliyuncs.com/2016-08-15/proxy/HLS-decyptServer/decyptServer/</a></p>
              */
             public Builder keyUri(String keyUri) {
                 this.keyUri = keyUri;
@@ -1106,7 +1276,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of unencrypted frames at the beginning of the video. Leaving these frames unencrypted enables video playback to quickly start.
+             * <p>The number of unencrypted frames at the beginning of the video. Leaving these frames unencrypted enables video playback to quickly start.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder skipCnt(String skipCnt) {
                 this.skipCnt = skipCnt;
@@ -1114,7 +1287,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The encryption type. Only **hls-aes-128** may be returned.
+             * <p>The encryption type. Only <strong>hls-aes-128</strong> may be returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hls-aes-128</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1128,6 +1304,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class Ts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Md5Support")
         private Boolean md5Support;
@@ -1167,11 +1349,14 @@ public class SubmitJobsResponseBody extends TeaModel {
             private Boolean sizeSupport; 
 
             /**
-             * Indicates whether the output of the MD5 value of the TS file is supported in the M3U8 video. Valid values:
-             * <p>
+             * <p>Indicates whether the output of the MD5 value of the TS file is supported in the M3U8 video. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder md5Support(Boolean md5Support) {
                 this.md5Support = md5Support;
@@ -1179,11 +1364,14 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the size of the TS file is generated in the output M3U8 video. Valid values:
-             * <p>
+             * <p>Indicates whether the size of the TS file is generated in the output M3U8 video. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sizeSupport(Boolean sizeSupport) {
                 this.sizeSupport = sizeSupport;
@@ -1197,6 +1385,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class M3U8NonStandardSupport extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TS")
         private Ts ts;
@@ -1224,7 +1418,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             private Ts ts; 
 
             /**
-             * The non-standard support configurations for TS files. The value is a JSON object. For more information, see the **TS** section of the [Parameter details](~~29253~~) topic.
+             * <p>The non-standard support configurations for TS files. The value is a JSON object. For more information, see the <strong>TS</strong> section of the <a href="https://help.aliyun.com/document_detail/29253.html">Parameter details</a> topic.</p>
              */
             public Builder ts(Ts ts) {
                 this.ts = ts;
@@ -1238,6 +1432,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class Merge extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
@@ -1301,11 +1501,14 @@ public class SubmitJobsResponseBody extends TeaModel {
             private String start; 
 
             /**
-             * The duration of the clip.
-             * <p>
+             * <p>The duration of the clip.</p>
+             * <ul>
+             * <li>Format: <code>hh:mm:ss[.SSS]</code> or <code>sssss[.SSS]</code>.</li>
+             * <li>Examples: 01:59:59.999 and 32000.23.</li>
+             * </ul>
              * 
-             * *   Format: `hh:mm:ss[.SSS]` or `sssss[.SSS]`.
-             * *   Examples: 01:59:59.999 and 32000.23.
+             * <strong>example:</strong>
+             * <p>00000.20</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -1313,11 +1516,14 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The OSS URL of the clip.
-             * <p>
+             * <p>The OSS URL of the clip.</p>
+             * <ul>
+             * <li>Example: <code>http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com/example-object-****.flv</code>.</li>
+             * <li>The OSS URL of the object must be URL-encoded by using the UTF-8 standard.</li>
+             * </ul>
              * 
-             * *   Example: `http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com/example-object-****.flv`.
-             * *   The OSS URL of the object must be URL-encoded by using the UTF-8 standard.
+             * <strong>example:</strong>
+             * <p><a href="http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com/example-object-****.flv">http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com/example-object-****.flv</a></p>
              */
             public Builder mergeURL(String mergeURL) {
                 this.mergeURL = mergeURL;
@@ -1325,7 +1531,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role used for delegated authorization.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role used for delegated authorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::<your uid>:role/<your role name></p>
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -1333,11 +1542,14 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The start point in time of the clip.
-             * <p>
+             * <p>The start point in time of the clip.</p>
+             * <ul>
+             * <li>Format: <code>hh:mm:ss[.SSS]</code> or <code>sssss[.SSS]</code>.</li>
+             * <li>Examples: 01:59:59.999 and 32000.23.</li>
+             * </ul>
              * 
-             * *   Format: `hh:mm:ss[.SSS]` or `sssss[.SSS]`.
-             * *   Examples: 01:59:59.999 and 32000.23.
+             * <strong>example:</strong>
+             * <p>00000.50</p>
              */
             public Builder start(String start) {
                 this.start = start;
@@ -1351,6 +1563,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class MergeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Merge")
         private java.util.List < Merge> merge;
@@ -1392,6 +1610,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class Gif extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DitherMode")
         private String ditherMode;
@@ -1455,7 +1679,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             private String loop; 
 
             /**
-             * The color dithering algorithm of the palette. Valid values: **sierra** and **bayer**.
+             * <p>The color dithering algorithm of the palette. Valid values: <strong>sierra</strong> and <strong>bayer</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bayer</p>
              */
             public Builder ditherMode(String ditherMode) {
                 this.ditherMode = ditherMode;
@@ -1463,7 +1690,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The duration for which the final frame is paused. Unit: centisecond.
+             * <p>The duration for which the final frame is paused. Unit: centisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder finalDelay(String finalDelay) {
                 this.finalDelay = finalDelay;
@@ -1471,11 +1701,14 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a custom palette is used. Valid values:
-             * <p>
+             * <p>Indicates whether a custom palette is used. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isCustomPalette(String isCustomPalette) {
                 this.isCustomPalette = isCustomPalette;
@@ -1483,7 +1716,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The loop count.
+             * <p>The loop count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder loop(String loop) {
                 this.loop = loop;
@@ -1497,6 +1733,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class Segment extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
@@ -1524,11 +1766,14 @@ public class SubmitJobsResponseBody extends TeaModel {
             private String duration; 
 
             /**
-             * The length of the segment. The value is an integer. Unit: seconds.
-             * <p>
+             * <p>The length of the segment. The value is an integer. Unit: seconds.</p>
+             * <ul>
+             * <li>Valid values: <strong>[1,10]</strong>.</li>
+             * <li>Default value: <strong>10</strong>.</li>
+             * </ul>
              * 
-             * *   Valid values: **\[1,10]**.
-             * *   Default value: **10**.
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -1542,6 +1787,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class Webp extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Loop")
         private String loop;
@@ -1569,7 +1820,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             private String loop; 
 
             /**
-             * The loop count.
+             * <p>The loop count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder loop(String loop) {
                 this.loop = loop;
@@ -1583,6 +1837,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class MuxConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Gif")
         private Gif gif;
@@ -1634,7 +1894,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             private Webp webp; 
 
             /**
-             * The transmuxing configurations for GIF.
+             * <p>The transmuxing configurations for GIF.</p>
              */
             public Builder gif(Gif gif) {
                 this.gif = gif;
@@ -1642,7 +1902,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The segment configuration. The value is a JSON object.
+             * <p>The segment configuration. The value is a JSON object.</p>
              */
             public Builder segment(Segment segment) {
                 this.segment = segment;
@@ -1650,7 +1910,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The transmuxing configurations for WebP.
+             * <p>The transmuxing configurations for WebP.</p>
              */
             public Builder webp(Webp webp) {
                 this.webp = webp;
@@ -1664,6 +1924,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class Opening extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
@@ -1727,13 +1993,16 @@ public class SubmitJobsResponseBody extends TeaModel {
             private String openUrl; 
 
             /**
-             * The height of the opening part.
-             * <p>
+             * <p>The height of the opening part.</p>
+             * <ul>
+             * <li>Valid values: values in the range of <strong>(0,4096)</strong>, <strong>-1</strong>, and <strong>full</strong>.</li>
+             * <li>Default value: <strong>-1</strong>.</li>
+             * <li>A value of <strong>-1</strong> indicates that the height of the source of the opening part is retained.</li>
+             * <li>A value of <strong>full</strong> indicates that the height of the main part is used for the opening part.</li>
+             * </ul>
              * 
-             * *   Valid values: values in the range of **(0,4096)**, **-1**, and **full**.
-             * *   Default value: **-1**.
-             * *   A value of **-1** indicates that the height of the source of the opening part is retained.
-             * *   A value of **full** indicates that the height of the main part is used for the opening part.
+             * <strong>example:</strong>
+             * <p>1080</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -1741,11 +2010,14 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of time after which the opening part is played. The value starts from 0.
-             * <p>
+             * <p>The amount of time after which the opening part is played. The value starts from 0.</p>
+             * <ul>
+             * <li>Unit: seconds.</li>
+             * <li>Default value: <strong>0</strong>.</li>
+             * </ul>
              * 
-             * *   Unit: seconds.
-             * *   Default value: **0**.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder start(String start) {
                 this.start = start;
@@ -1753,13 +2025,16 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The width of the opening part.
-             * <p>
+             * <p>The width of the opening part.</p>
+             * <ul>
+             * <li>Valid values: values in the range of <strong>(0,4096)</strong>, <strong>-1</strong>, and <strong>full</strong>.</li>
+             * <li>Default value: <strong>-1</strong>.</li>
+             * <li>A value of <strong>-1</strong> indicates that the width of the source of the opening part is retained.</li>
+             * <li>A value of <strong>full</strong> indicates that the width of the main part is used for the opening part.</li>
+             * </ul>
              * 
-             * *   Valid values: values in the range of **(0,4096)**, **-1**, and **full**.
-             * *   Default value: **-1**.
-             * *   A value of **-1** indicates that the width of the source of the opening part is retained.
-             * *   A value of **full** indicates that the width of the main part is used for the opening part.
+             * <strong>example:</strong>
+             * <p>1920</p>
              */
             public Builder width(String width) {
                 this.width = width;
@@ -1767,7 +2042,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The OSS URL of the opening part.
+             * <p>The OSS URL of the opening part.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com/opening_01.flv">http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com/opening_01.flv</a></p>
              */
             public Builder openUrl(String openUrl) {
                 this.openUrl = openUrl;
@@ -1781,6 +2059,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class OpeningList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Opening")
         private java.util.List < Opening> opening;
@@ -1822,6 +2106,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class OutSubtitleFile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
@@ -1885,7 +2175,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             private String roleArn; 
 
             /**
-             * The name of the OSS bucket in which the input file is stored.
+             * <p>The name of the OSS bucket in which the input file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-bucket-****</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -1893,7 +2186,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the OSS region in which the output file is stored.
+             * <p>The ID of the OSS region in which the output file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-hangzhou</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -1901,7 +2197,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the OSS object that is used as the output file.
+             * <p>The name of the OSS object that is used as the output file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-output.flv</p>
              */
             public Builder object(String object) {
                 this.object = object;
@@ -1909,7 +2208,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ARN of the RAM role used for delegated authorization.
+             * <p>The ARN of the RAM role used for delegated authorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::<your uid>:role/<your role name></p>
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -1923,6 +2225,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class OutSubtitle extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Map")
         private String map;
@@ -1986,7 +2294,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * The video track. Format: `0:{Stream}:{Stream sequence number}`, which is `0:v:{video_index}`. The value of Stream is v, which indicates a video stream. The sequence number is the index of the video stream in the list and starts from 0.
+             * <p>The video track. Format: <code>0:{Stream}:{Stream sequence number}</code>, which is <code>0:v:{video_index}</code>. The value of Stream is v, which indicates a video stream. The sequence number is the index of the video stream in the list and starts from 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0:v:0</p>
              */
             public Builder map(String map) {
                 this.map = map;
@@ -1994,7 +2305,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if the job failed to be created. This parameter is not returned if the job was created.
+             * <p>The error message returned if the job failed to be created. This parameter is not returned if the job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The specified parameter “%s” cannot be null.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -2002,7 +2316,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the output file.
+             * <p>The details of the output file.</p>
              */
             public Builder outSubtitleFile(OutSubtitleFile outSubtitleFile) {
                 this.outSubtitleFile = outSubtitleFile;
@@ -2010,11 +2324,14 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the job was created. Valid values:
-             * <p>
+             * <p>Indicates whether the job was created. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -2028,6 +2345,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class OutSubtitleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OutSubtitle")
         private java.util.List < OutSubtitle> outSubtitle;
@@ -2069,6 +2392,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class OutputFile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
@@ -2132,7 +2461,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             private String roleArn; 
 
             /**
-             * The name of the OSS bucket in which the input file is stored.
+             * <p>The name of the OSS bucket in which the input file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-bucket-****</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -2140,7 +2472,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the OSS region in which the output file is stored.
+             * <p>The ID of the OSS region in which the output file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-hangzhou</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -2148,7 +2483,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the OSS object that is used as the output file.
+             * <p>The name of the OSS object that is used as the output file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-output.flv</p>
              */
             public Builder object(String object) {
                 this.object = object;
@@ -2156,7 +2494,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ARN of the RAM role used for delegated authorization.
+             * <p>The ARN of the RAM role used for delegated authorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::<your uid>:role/<your role name></p>
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -2170,6 +2511,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class Format extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
@@ -2281,7 +2628,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * The total bitrate.
+             * <p>The total bitrate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -2289,7 +2639,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The total duration.
+             * <p>The total duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>55</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -2297,7 +2650,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The full name of the container format.
+             * <p>The full name of the container format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>QuickTime / MOV</p>
              */
             public Builder formatLongName(String formatLongName) {
                 this.formatLongName = formatLongName;
@@ -2305,7 +2661,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The short name of the container format. Valid values: mov, mp4, m4a, 3gp, 3g2, and mj2.
+             * <p>The short name of the container format. Valid values: mov, mp4, m4a, 3gp, 3g2, and mj2.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mov</p>
              */
             public Builder formatName(String formatName) {
                 this.formatName = formatName;
@@ -2313,7 +2672,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of program streams.
+             * <p>The total number of program streams.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder numPrograms(String numPrograms) {
                 this.numPrograms = numPrograms;
@@ -2321,7 +2683,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of media streams.
+             * <p>The total number of media streams.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder numStreams(String numStreams) {
                 this.numStreams = numStreams;
@@ -2329,7 +2694,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the file.
+             * <p>The size of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3509895</p>
              */
             public Builder size(String size) {
                 this.size = size;
@@ -2337,7 +2705,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The start time.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.000000</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -2351,6 +2722,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class AudioStream extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
@@ -2558,7 +2935,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             private String timebase; 
 
             /**
-             * The bitrate of the audio stream.
+             * <p>The bitrate of the audio stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128.806</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -2566,7 +2946,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The output layout of the sound channels.
+             * <p>The output layout of the sound channels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stereo</p>
              */
             public Builder channelLayout(String channelLayout) {
                 this.channelLayout = channelLayout;
@@ -2574,7 +2957,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of sound channels.
+             * <p>The number of sound channels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder channels(String channels) {
                 this.channels = channels;
@@ -2582,7 +2968,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The full name of the codec.
+             * <p>The full name of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAC (Advanced Audio Coding)</p>
              */
             public Builder codecLongName(String codecLongName) {
                 this.codecLongName = codecLongName;
@@ -2590,7 +2979,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The short name of the codec.
+             * <p>The short name of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aac</p>
              */
             public Builder codecName(String codecName) {
                 this.codecName = codecName;
@@ -2598,7 +2990,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the codec.
+             * <p>The tag of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0x6134706d</p>
              */
             public Builder codecTag(String codecTag) {
                 this.codecTag = codecTag;
@@ -2606,7 +3001,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag string of the codec.
+             * <p>The tag string of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mp4a</p>
              */
             public Builder codecTagString(String codecTagString) {
                 this.codecTagString = codecTagString;
@@ -2614,7 +3012,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The codec time base.
+             * <p>The codec time base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1/44100</p>
              */
             public Builder codecTimeBase(String codecTimeBase) {
                 this.codecTimeBase = codecTimeBase;
@@ -2622,7 +3023,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the audio stream.
+             * <p>The duration of the audio stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17.159546</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -2630,7 +3034,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The sequence number of the audio stream. The value indicates the position of the audio stream in all audio streams.
+             * <p>The sequence number of the audio stream. The value indicates the position of the audio stream in all audio streams.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(String index) {
                 this.index = index;
@@ -2638,7 +3045,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The language of the audio stream. For more information, see [FFmpeg documentation](https://www.ffmpeg.org/ffmpeg-all.html#Metadata) and [ISO 639](https://en.wikipedia.org/wiki/List_of_ISO\_639-1\_codes).
+             * <p>The language of the audio stream. For more information, see <a href="https://www.ffmpeg.org/ffmpeg-all.html#Metadata">FFmpeg documentation</a> and <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eng</p>
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -2646,7 +3056,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of frames.
+             * <p>The total number of frames.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder numFrames(String numFrames) {
                 this.numFrames = numFrames;
@@ -2654,7 +3067,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The sampling format.
+             * <p>The sampling format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fltp</p>
              */
             public Builder sampleFmt(String sampleFmt) {
                 this.sampleFmt = sampleFmt;
@@ -2662,7 +3078,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The sampling rate of the audio stream.
+             * <p>The sampling rate of the audio stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44100</p>
              */
             public Builder samplerate(String samplerate) {
                 this.samplerate = samplerate;
@@ -2670,7 +3089,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the audio stream.
+             * <p>The start time of the audio stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.000000</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -2678,7 +3100,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time base of the audio stream.
+             * <p>The time base of the audio stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1/44100</p>
              */
             public Builder timebase(String timebase) {
                 this.timebase = timebase;
@@ -2692,6 +3117,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class AudioStreamList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AudioStream")
         private java.util.List < AudioStream> audioStream;
@@ -2733,6 +3164,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class SubtitleStream extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Index")
         private String index;
@@ -2772,7 +3209,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             private String lang; 
 
             /**
-             * The sequence number of the subtitle stream. The value indicates the position of the subtitle stream in all subtitle streams.
+             * <p>The sequence number of the subtitle stream. The value indicates the position of the subtitle stream in all subtitle streams.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(String index) {
                 this.index = index;
@@ -2780,7 +3220,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The language of the subtitle stream. For more information, see [FFmpeg documentation](https://www.ffmpeg.org/ffmpeg-all.html#Metadata) and [ISO 639](https://en.wikipedia.org/wiki/List_of_ISO\_639-1\_codes).
+             * <p>The language of the subtitle stream. For more information, see <a href="https://www.ffmpeg.org/ffmpeg-all.html#Metadata">FFmpeg documentation</a> and <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eng</p>
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -2794,6 +3237,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class SubtitleStreamList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SubtitleStream")
         private java.util.List < SubtitleStream> subtitleStream;
@@ -2835,6 +3284,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class NetworkCost extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvgBitrate")
         private String avgBitrate;
@@ -2886,7 +3341,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             private String preloadTime; 
 
             /**
-             * The average bitrate of the video stream.
+             * <p>The average bitrate of the video stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder avgBitrate(String avgBitrate) {
                 this.avgBitrate = avgBitrate;
@@ -2894,7 +3352,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum bandwidth that was consumed.
+             * <p>The maximum bandwidth that was consumed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder costBandwidth(String costBandwidth) {
                 this.costBandwidth = costBandwidth;
@@ -2902,7 +3363,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of time consumed to preload the video stream.
+             * <p>The amount of time consumed to preload the video stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder preloadTime(String preloadTime) {
                 this.preloadTime = preloadTime;
@@ -2916,6 +3380,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class VideoStream extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvgFPS")
         private String avgFPS;
@@ -3207,7 +3677,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             private String width; 
 
             /**
-             * The average frame rate of the video stream.
+             * <p>The average frame rate of the video stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23.976025</p>
              */
             public Builder avgFPS(String avgFPS) {
                 this.avgFPS = avgFPS;
@@ -3215,7 +3688,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The bitrate of the video stream.
+             * <p>The bitrate of the video stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1496.46</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -3223,7 +3699,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The full name of the codec.
+             * <p>The full name of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</p>
              */
             public Builder codecLongName(String codecLongName) {
                 this.codecLongName = codecLongName;
@@ -3231,7 +3710,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The short name of the codec.
+             * <p>The short name of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>h264</p>
              */
             public Builder codecName(String codecName) {
                 this.codecName = codecName;
@@ -3239,7 +3721,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the codec.
+             * <p>The tag of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0x31637661</p>
              */
             public Builder codecTag(String codecTag) {
                 this.codecTag = codecTag;
@@ -3247,7 +3732,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag string of the codec.
+             * <p>The tag string of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>avc1</p>
              */
             public Builder codecTagString(String codecTagString) {
                 this.codecTagString = codecTagString;
@@ -3255,7 +3743,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The codec time base.
+             * <p>The codec time base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001/48000</p>
              */
             public Builder codecTimeBase(String codecTimeBase) {
                 this.codecTimeBase = codecTimeBase;
@@ -3263,7 +3754,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The display aspect ratio (DAR) of the video stream.
+             * <p>The display aspect ratio (DAR) of the video stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16:9</p>
              */
             public Builder dar(String dar) {
                 this.dar = dar;
@@ -3271,7 +3765,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the video stream.
+             * <p>The duration of the video stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17.225542</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -3279,7 +3776,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The frame rate of the video stream.
+             * <p>The frame rate of the video stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23.976025</p>
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -3287,7 +3787,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the video stream contains B-frames.
+             * <p>Indicates whether the video stream contains B-frames.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder hasBFrames(String hasBFrames) {
                 this.hasBFrames = hasBFrames;
@@ -3295,7 +3798,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The height of the video stream in pixels.
+             * <p>The height of the video stream in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>720</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -3303,7 +3809,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The sequence number of the video stream. The value indicates the position of the video stream in all video streams.
+             * <p>The sequence number of the video stream. The value indicates the position of the video stream in all video streams.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder index(String index) {
                 this.index = index;
@@ -3311,7 +3820,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The language of the video stream. For more information, see [FFmpeg documentation](https://www.ffmpeg.org/ffmpeg-all.html#Metadata) and [ISO 639](https://en.wikipedia.org/wiki/List_of_ISO\_639-1\_codes).
+             * <p>The language of the video stream. For more information, see <a href="https://www.ffmpeg.org/ffmpeg-all.html#Metadata">FFmpeg documentation</a> and <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eng</p>
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -3319,7 +3831,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The codec level.
+             * <p>The codec level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -3327,7 +3842,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The network bandwidth that was consumed.
+             * <p>The network bandwidth that was consumed.</p>
              */
             public Builder networkCost(NetworkCost networkCost) {
                 this.networkCost = networkCost;
@@ -3335,7 +3850,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of frames.
+             * <p>The total number of frames.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder numFrames(String numFrames) {
                 this.numFrames = numFrames;
@@ -3343,7 +3861,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The pixel format of the video stream.
+             * <p>The pixel format of the video stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yuv420p</p>
              */
             public Builder pixFmt(String pixFmt) {
                 this.pixFmt = pixFmt;
@@ -3351,7 +3872,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The codec profile.
+             * <p>The codec profile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -3359,7 +3883,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The sample aspect ratio (SAR) of the video stream.
+             * <p>The sample aspect ratio (SAR) of the video stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1:1</p>
              */
             public Builder sar(String sar) {
                 this.sar = sar;
@@ -3367,7 +3894,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the video stream.
+             * <p>The start time of the video stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.000000</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -3375,7 +3905,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time base of the video stream.
+             * <p>The time base of the video stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1/24000</p>
              */
             public Builder timebase(String timebase) {
                 this.timebase = timebase;
@@ -3383,7 +3916,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The width of the video stream in pixels.
+             * <p>The width of the video stream in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1280</p>
              */
             public Builder width(String width) {
                 this.width = width;
@@ -3397,6 +3933,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class VideoStreamList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VideoStream")
         private java.util.List < VideoStream> videoStream;
@@ -3438,6 +3980,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class Streams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AudioStreamList")
         private AudioStreamList audioStreamList;
@@ -3489,7 +4037,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             private VideoStreamList videoStreamList; 
 
             /**
-             * The audio streams.
+             * <p>The audio streams.</p>
              */
             public Builder audioStreamList(AudioStreamList audioStreamList) {
                 this.audioStreamList = audioStreamList;
@@ -3497,7 +4045,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The subtitle streams.
+             * <p>The subtitle streams.</p>
              */
             public Builder subtitleStreamList(SubtitleStreamList subtitleStreamList) {
                 this.subtitleStreamList = subtitleStreamList;
@@ -3505,7 +4053,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The video streams.
+             * <p>The video streams.</p>
              */
             public Builder videoStreamList(VideoStreamList videoStreamList) {
                 this.videoStreamList = videoStreamList;
@@ -3519,6 +4067,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class Properties extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
@@ -3642,7 +4196,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             private String width; 
 
             /**
-             * The bitrate of the video.
+             * <p>The bitrate of the video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -3650,7 +4207,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the video.
+             * <p>The duration of the video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>55</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -3658,7 +4218,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The format of the video.
+             * <p>The format of the video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>QuickTime / MOV</p>
              */
             public Builder fileFormat(String fileFormat) {
                 this.fileFormat = fileFormat;
@@ -3666,7 +4229,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the file.
+             * <p>The size of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3509895</p>
              */
             public Builder fileSize(String fileSize) {
                 this.fileSize = fileSize;
@@ -3674,7 +4240,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The format information.
+             * <p>The format information.</p>
              */
             public Builder format(Format format) {
                 this.format = format;
@@ -3682,7 +4248,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The frame rate of the video. The value is a number.
+             * <p>The frame rate of the video. The value is a number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -3690,7 +4259,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The height of the video.
+             * <p>The height of the video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>720</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -3698,7 +4270,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The stream information.
+             * <p>The stream information.</p>
              */
             public Builder streams(Streams streams) {
                 this.streams = streams;
@@ -3706,7 +4278,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The width of the video.
+             * <p>The width of the video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1280</p>
              */
             public Builder width(String width) {
                 this.width = width;
@@ -3720,6 +4295,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class ExtSubtitleInput extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
@@ -3771,7 +4352,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             private String object; 
 
             /**
-             * The name of the OSS bucket in which the input file is stored.
+             * <p>The name of the OSS bucket in which the input file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-bucket-****</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -3779,7 +4363,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the OSS region in which the input file is stored.
+             * <p>The ID of the OSS region in which the input file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-hangzhou</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -3787,7 +4374,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the OSS object that is used as the input file.
+             * <p>The name of the OSS object that is used as the input file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-output.flv</p>
              */
             public Builder object(String object) {
                 this.object = object;
@@ -3801,6 +4391,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class ExtSubtitle extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CharEnc")
         private String charEnc;
@@ -3852,13 +4448,17 @@ public class SubmitJobsResponseBody extends TeaModel {
             private ExtSubtitleInput input; 
 
             /**
-             * The character set used by the external subtitle.
-             * <p>
+             * <p>The character set used by the external subtitle.</p>
+             * <ul>
+             * <li>Valid values: <strong>UTF-8</strong>, <strong>GBK</strong>, <strong>BIG5</strong>, and <strong>auto</strong>.</li>
+             * <li>Default value: <strong>auto</strong>.</li>
+             * </ul>
+             * <blockquote>
+             * <p> If this parameter is set to <strong>auto</strong>, the detected character set may not be the actual character set. We recommend that you set this parameter to another value.</p>
+             * </blockquote>
              * 
-             * *   Valid values: **UTF-8**, **GBK**, **BIG5**, and **auto**.
-             * *   Default value: **auto**.
-             * 
-             * >  If this parameter is set to **auto**, the detected character set may not be the actual character set. We recommend that you set this parameter to another value.
+             * <strong>example:</strong>
+             * <p>UTF-8</p>
              */
             public Builder charEnc(String charEnc) {
                 this.charEnc = charEnc;
@@ -3866,7 +4466,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The font of the hardcoded subtitles converted from external subtitles. Default value: **SimSun**. For more information, see [Fonts](~~59950~~).
+             * <p>The font of the hardcoded subtitles converted from external subtitles. Default value: <strong>SimSun</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/59950.html">Fonts</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;WenQuanYi Zen Hei&quot;, &quot;Yuanti SC Regular&quot;, &quot;SimSun&quot;</p>
              */
             public Builder fontName(String fontName) {
                 this.fontName = fontName;
@@ -3874,7 +4477,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The OSS object that is used as the external subtitle. The value is a JSON object. Files in the **SRT** or **ASS** format are supported.
+             * <p>The OSS object that is used as the external subtitle. The value is a JSON object. Files in the <strong>SRT</strong> or <strong>ASS</strong> format are supported.</p>
              */
             public Builder input(ExtSubtitleInput input) {
                 this.input = input;
@@ -3888,6 +4491,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class ExtSubtitleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExtSubtitle")
         private java.util.List < ExtSubtitle> extSubtitle;
@@ -3929,6 +4538,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class Subtitle extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Map")
         private String map;
@@ -3956,7 +4571,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             private String map; 
 
             /**
-             * The audio track. Format: `0:{Stream}:{Stream sequence number}`, which is `0:a:{audio_index}`. The value of Stream is a, which indicates an audio stream. The sequence number is the index of the audio stream in the list and starts from 0.
+             * <p>The audio track. Format: <code>0:{Stream}:{Stream sequence number}</code>, which is <code>0:a:{audio_index}</code>. The value of Stream is a, which indicates an audio stream. The sequence number is the index of the audio stream in the list and starts from 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0:a:0</p>
              */
             public Builder map(String map) {
                 this.map = map;
@@ -3970,6 +4588,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class SubtitleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Subtitle")
         private java.util.List < Subtitle> subtitle;
@@ -4011,6 +4635,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class SubtitleConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExtSubtitleList")
         private ExtSubtitleList extSubtitleList;
@@ -4050,7 +4680,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             private SubtitleList subtitleList; 
 
             /**
-             * The external subtitles. The value is a JSON array that contains up to **four** objects.
+             * <p>The external subtitles. The value is a JSON array that contains up to <strong>four</strong> objects.</p>
              */
             public Builder extSubtitleList(ExtSubtitleList extSubtitleList) {
                 this.extSubtitleList = extSubtitleList;
@@ -4058,7 +4688,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The subtitles.
+             * <p>The subtitles.</p>
              */
             public Builder subtitleList(SubtitleList subtitleList) {
                 this.subtitleList = subtitleList;
@@ -4072,6 +4702,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class SuperReso extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsHalfSample")
         private String isHalfSample;
@@ -4099,11 +4735,14 @@ public class SubmitJobsResponseBody extends TeaModel {
             private String isHalfSample; 
 
             /**
-             * Indicates whether parameters related to the sampling rate are obtained. Valid values:
-             * <p>
+             * <p>Indicates whether parameters related to the sampling rate are obtained. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isHalfSample(String isHalfSample) {
                 this.isHalfSample = isHalfSample;
@@ -4117,6 +4756,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class TailSlate extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BgColor")
         private String bgColor;
@@ -4216,7 +4861,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             private String width; 
 
             /**
-             * The color of the bars that are added to the ending part if the size of the ending part is smaller than that of the main part. Default value: **White**. For more information, see [Background colors](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/29253/cn_zh/1502784952344/color.txt?spm=a2c4g.11186623.2.63.241240f77qp3Yy\&file=color.txt).
+             * <p>The color of the bars that are added to the ending part if the size of the ending part is smaller than that of the main part. Default value: <strong>White</strong>. For more information, see <a href="https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/29253/cn_zh/1502784952344/color.txt?spm=a2c4g.11186623.2.63.241240f77qp3Yy&file=color.txt">Background colors</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>White</p>
              */
             public Builder bgColor(String bgColor) {
                 this.bgColor = bgColor;
@@ -4224,7 +4872,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the transition between the main part and the ending part. A fade transition is used: The last frame of the main part fades out, and the first frame of the ending part fades in. Unit: seconds. Default value: **0**.
+             * <p>The duration of the transition between the main part and the ending part. A fade transition is used: The last frame of the main part fades out, and the first frame of the ending part fades in. Unit: seconds. Default value: <strong>0</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder blendDuration(String blendDuration) {
                 this.blendDuration = blendDuration;
@@ -4232,12 +4883,15 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The height of the ending part.
-             * <p>
+             * <p>The height of the ending part.</p>
+             * <ul>
+             * <li>Valid values: values in the range of <strong>(0,4096)</strong>, <strong>-1</strong>, and <strong>full</strong>.</li>
+             * <li>A value of <strong>-1</strong> indicates that the height of the source of the ending part is retained. A value of <strong>full</strong> indicates that the height of the main part is used for the ending part.</li>
+             * <li>Default value: -1.</li>
+             * </ul>
              * 
-             * *   Valid values: values in the range of **(0,4096)**, **-1**, and **full**.
-             * *   A value of **-1** indicates that the height of the source of the ending part is retained. A value of **full** indicates that the height of the main part is used for the ending part.
-             * *   Default value: -1.
+             * <strong>example:</strong>
+             * <p>1080</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -4245,11 +4899,14 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the audio content of the ending part is merged. Valid values:
-             * <p>
+             * <p>Indicates whether the audio content of the ending part is merged. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isMergeAudio(Boolean isMergeAudio) {
                 this.isMergeAudio = isMergeAudio;
@@ -4257,7 +4914,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The start time.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder start(String start) {
                 this.start = start;
@@ -4265,7 +4925,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The OSS URL of the ending part.
+             * <p>The OSS URL of the ending part.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com/opening_01.flv">http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com/opening_01.flv</a></p>
              */
             public Builder tailUrl(String tailUrl) {
                 this.tailUrl = tailUrl;
@@ -4273,12 +4936,15 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The width of the ending part.
-             * <p>
+             * <p>The width of the ending part.</p>
+             * <ul>
+             * <li>Valid values: values in the range of <strong>(0,4096)</strong>, <strong>-1</strong>, and <strong>full</strong>.</li>
+             * <li>A value of <strong>-1</strong> indicates that the width of the source of the ending part is retained. A value of <strong>full</strong> indicates that the width of the main part is used for the ending part.</li>
+             * <li>Default value: -1.</li>
+             * </ul>
              * 
-             * *   Valid values: values in the range of **(0,4096)**, **-1**, and **full**.
-             * *   A value of **-1** indicates that the width of the source of the ending part is retained. A value of **full** indicates that the width of the main part is used for the ending part.
-             * *   Default value: -1.
+             * <strong>example:</strong>
+             * <p>1920</p>
              */
             public Builder width(String width) {
                 this.width = width;
@@ -4292,6 +4958,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class TailSlateList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TailSlate")
         private java.util.List < TailSlate> tailSlate;
@@ -4333,6 +5005,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class TransConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdjDarMethod")
         private String adjDarMethod;
@@ -4444,13 +5122,16 @@ public class SubmitJobsResponseBody extends TeaModel {
             private String transMode; 
 
             /**
-             * The method of resolution adjustment. Default value: **none**. Valid values:
-             * <p>
+             * <p>The method of resolution adjustment. Default value: <strong>none</strong>. Valid values:</p>
+             * <ul>
+             * <li>rescale: The video image is resized.</li>
+             * <li>crop: The video image is cropped.</li>
+             * <li>pad: The video image is scaled out to fill the view.</li>
+             * <li>none: The resolution is not adjusted.</li>
+             * </ul>
              * 
-             * *   rescale: The video image is resized.
-             * *   crop: The video image is cropped.
-             * *   pad: The video image is scaled out to fill the view.
-             * *   none: The resolution is not adjusted.
+             * <strong>example:</strong>
+             * <p>crop</p>
              */
             public Builder adjDarMethod(String adjDarMethod) {
                 this.adjDarMethod = adjDarMethod;
@@ -4458,17 +5139,22 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the audio bitrate is checked. If the bitrate of the output audio is higher than that of the input audio, the input bitrate is retained and the specified audio bitrate does not take effect. This parameter has a lower priority than IsCheckAudioBitrateFail. Valid values:
-             * <p>
+             * <p>Indicates whether the audio bitrate is checked. If the bitrate of the output audio is higher than that of the input audio, the input bitrate is retained and the specified audio bitrate does not take effect. This parameter has a lower priority than IsCheckAudioBitrateFail. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong></p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
+             * <li><p>Default value:</p>
+             * <ul>
+             * <li>If this parameter is empty and the codec of the output audio is different from the codec of the input audio, the default value is false.</li>
+             * <li>If this parameter is empty and the codec of the output audio is the same as the codec of the input audio, the default value is true.</li>
+             * </ul>
+             * </li>
+             * </ul>
              * 
-             * *   **true**
-             * 
-             * *   **false**
-             * 
-             * *   Default value:
-             * 
-             *     *   If this parameter is empty and the codec of the output audio is different from the codec of the input audio, the default value is false.
-             *     *   If this parameter is empty and the codec of the output audio is the same as the codec of the input audio, the default value is true.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isCheckAudioBitrate(String isCheckAudioBitrate) {
                 this.isCheckAudioBitrate = isCheckAudioBitrate;
@@ -4476,11 +5162,14 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the audio bitrate is checked. This parameter has a higher priority than **IsCheckAudioBitrate**. If the bitrate of the output audio is higher than that of the input audio, a transcoding failure is returned without transcoding the audio. Valid values:
-             * <p>
+             * <p>Indicates whether the audio bitrate is checked. This parameter has a higher priority than <strong>IsCheckAudioBitrate</strong>. If the bitrate of the output audio is higher than that of the input audio, a transcoding failure is returned without transcoding the audio. Valid values:</p>
+             * <ul>
+             * <li><strong>false</strong></li>
+             * <li><strong>true</strong></li>
+             * </ul>
              * 
-             * *   **false**
-             * *   **true**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isCheckAudioBitrateFail(String isCheckAudioBitrateFail) {
                 this.isCheckAudioBitrateFail = isCheckAudioBitrateFail;
@@ -4488,12 +5177,15 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the resolution is checked. If the output resolution is higher than the input resolution based on the width or height, the input resolution is retained. Valid values:
-             * <p>
+             * <p>Indicates whether the resolution is checked. If the output resolution is higher than the input resolution based on the width or height, the input resolution is retained. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * <li>Default value: <strong>false</strong>.</li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
-             * *   Default value: **false**.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isCheckReso(String isCheckReso) {
                 this.isCheckReso = isCheckReso;
@@ -4501,12 +5193,15 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the resolution is checked. This parameter has a higher priority than IsCheckReso. If the output resolution is higher than the input resolution based on the width or height, a transcoding failure is returned without transcoding the video. Valid values:
-             * <p>
+             * <p>Indicates whether the resolution is checked. This parameter has a higher priority than IsCheckReso. If the output resolution is higher than the input resolution based on the width or height, a transcoding failure is returned without transcoding the video. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * <li>Default value: <strong>false</strong>.</li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
-             * *   Default value: **false**.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isCheckResoFail(String isCheckResoFail) {
                 this.isCheckResoFail = isCheckResoFail;
@@ -4514,12 +5209,15 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the video bitrate is checked. If the bitrate of the output video is higher than that of the input video, the input bitrate is retained. Valid values:
-             * <p>
+             * <p>Indicates whether the video bitrate is checked. If the bitrate of the output video is higher than that of the input video, the input bitrate is retained. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * <li>Default value: <strong>false</strong>.</li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
-             * *   Default value: **false**.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isCheckVideoBitrate(String isCheckVideoBitrate) {
                 this.isCheckVideoBitrate = isCheckVideoBitrate;
@@ -4527,12 +5225,15 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the video bitrate is checked. If the bitrate of the output video is higher than that of the input video, a transcoding failure is returned without transcoding the video. This parameter has a higher priority than**IsCheckVideoBitrate**. Valid values:
-             * <p>
+             * <p>Indicates whether the video bitrate is checked. If the bitrate of the output video is higher than that of the input video, a transcoding failure is returned without transcoding the video. This parameter has a higher priority than<strong>IsCheckVideoBitrate</strong>. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * <li>Default value: <strong>false</strong>.</li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
-             * *   Default value: **false**.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isCheckVideoBitrateFail(String isCheckVideoBitrateFail) {
                 this.isCheckVideoBitrateFail = isCheckVideoBitrateFail;
@@ -4540,12 +5241,15 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The transcoding mode. Valid values:
-             * <p>
+             * <p>The transcoding mode. Valid values:</p>
+             * <ul>
+             * <li><strong>onepass</strong>: transcoding based on one-pass algorithms, which has higher accuracy.</li>
+             * <li><strong>twopass</strong>: transcoding based on two-pass algorithms, which has lower accuracy.</li>
+             * <li><strong>CBR</strong>: transcoding based on a fixed bitrate.</li>
+             * </ul>
              * 
-             * *   **onepass**: transcoding based on one-pass algorithms, which has higher accuracy.
-             * *   **twopass**: transcoding based on two-pass algorithms, which has lower accuracy.
-             * *   **CBR**: transcoding based on a fixed bitrate.
+             * <strong>example:</strong>
+             * <p>onepass</p>
              */
             public Builder transMode(String transMode) {
                 this.transMode = transMode;
@@ -4559,6 +5263,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class BitrateBnd extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Max")
         private String max;
@@ -4598,7 +5308,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             private String min; 
 
             /**
-             * The upper limit of the total bitrate. Unit: Kbit/s.
+             * <p>The upper limit of the total bitrate. Unit: Kbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder max(String max) {
                 this.max = max;
@@ -4606,7 +5319,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The lower limit of the total bitrate. Unit: Kbit/s.
+             * <p>The lower limit of the total bitrate. Unit: Kbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder min(String min) {
                 this.min = min;
@@ -4620,6 +5336,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class Video extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
@@ -4875,7 +5597,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             private String width; 
 
             /**
-             * The bitrate of the output video. Unit: Kbit/s.
+             * <p>The bitrate of the output video. Unit: Kbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -4883,7 +5608,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The average bitrate range of the video.
+             * <p>The average bitrate range of the video.</p>
              */
             public Builder bitrateBnd(BitrateBnd bitrateBnd) {
                 this.bitrateBnd = bitrateBnd;
@@ -4891,11 +5616,14 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the buffer.
-             * <p>
+             * <p>The size of the buffer.</p>
+             * <ul>
+             * <li>Unit: KB.</li>
+             * <li>Default value: <strong>6000</strong>.</li>
+             * </ul>
              * 
-             * *   Unit: KB.
-             * *   Default value: **6000**.
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder bufsize(String bufsize) {
                 this.bufsize = bufsize;
@@ -4903,11 +5631,14 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The video codec.
-             * <p>
+             * <p>The video codec.</p>
+             * <ul>
+             * <li>Valid values: <strong>H.264</strong>, <strong>H.265</strong>, <strong>GIF</strong>, and <strong>WEBP</strong>.</li>
+             * <li>Default value: <strong>H.264</strong>.</li>
+             * </ul>
              * 
-             * *   Valid values: **H.264**, **H.265**, **GIF**, and **WEBP**.
-             * *   Default value: **H.264**.
+             * <strong>example:</strong>
+             * <p>H.264</p>
              */
             public Builder codec(String codec) {
                 this.codec = codec;
@@ -4915,11 +5646,14 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The constant rate factor.
-             * <p>
+             * <p>The constant rate factor.</p>
+             * <ul>
+             * <li>If <strong>Crf</strong> is returned, the value of <strong>Bitrate</strong> is invalid.</li>
+             * <li>Default value if the value of Codec is H.264: <strong>23</strong>. Default value if the value of Codec is H.265: <strong>26</strong>.</li>
+             * </ul>
              * 
-             * *   If **Crf** is returned, the value of **Bitrate** is invalid.
-             * *   Default value if the value of Codec is H.264: **23**. Default value if the value of Codec is H.265: **26**.
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder crf(String crf) {
                 this.crf = crf;
@@ -4927,11 +5661,14 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The method of video cropping. Valid values:
-             * <p>
+             * <p>The method of video cropping. Valid values:</p>
+             * <ul>
+             * <li><strong>border</strong>: Black borders are automatically detected and removed.</li>
+             * <li>A value in the format of width:height:left:top: The video is cropped based on the custom settings.</li>
+             * </ul>
              * 
-             * *   **border**: Black borders are automatically detected and removed.
-             * *   A value in the format of width:height:left:top: The video is cropped based on the custom settings.
+             * <strong>example:</strong>
+             * <p>1280:800:0:140</p>
              */
             public Builder crop(String crop) {
                 this.crop = crop;
@@ -4939,7 +5676,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The strength of the independent noise reduction algorithm.
+             * <p>The strength of the independent noise reduction algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder degrain(String degrain) {
                 this.degrain = degrain;
@@ -4947,12 +5687,15 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The frame rate.
-             * <p>
+             * <p>The frame rate.</p>
+             * <ul>
+             * <li>Unit: frames per second.</li>
+             * <li>Valid values: 0 to 60. The value is 60 if the frame rate of the input file exceeds 60.</li>
+             * <li>Default value: the frame rate of the input file.</li>
+             * </ul>
              * 
-             * *   Unit: frames per second.
-             * *   Valid values: 0 to 60. The value is 60 if the frame rate of the input file exceeds 60.
-             * *   Default value: the frame rate of the input file.
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -4960,11 +5703,14 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum interval between keyframes or the maximum number of frames in a frame group. Unit: seconds.
-             * <p>
+             * <p>The maximum interval between keyframes or the maximum number of frames in a frame group. Unit: seconds.</p>
+             * <ul>
+             * <li>Default value: 10.</li>
+             * <li>If the maximum number of frames is returned, the value does not have a unit.</li>
+             * </ul>
              * 
-             * *   Default value: 10.
-             * *   If the maximum number of frames is returned, the value does not have a unit.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder gop(String gop) {
                 this.gop = gop;
@@ -4972,11 +5718,14 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The height of the video.
-             * <p>
+             * <p>The height of the video.</p>
+             * <ul>
+             * <li>Unit: pixel.</li>
+             * <li>Default value: the height of the input video.</li>
+             * </ul>
              * 
-             * *   Unit: pixel.
-             * *   Default value: the height of the input video.
+             * <strong>example:</strong>
+             * <p>1280</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -4984,7 +5733,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum frame rate.
+             * <p>The maximum frame rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder maxFps(String maxFps) {
                 this.maxFps = maxFps;
@@ -4992,7 +5744,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum bitrate of the video. Unit: Kbit/s.
+             * <p>The maximum bitrate of the video. Unit: Kbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxrate(String maxrate) {
                 this.maxrate = maxrate;
@@ -5000,11 +5755,14 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The black borders that are added to the video.
-             * <p>
+             * <p>The black borders that are added to the video.</p>
+             * <ul>
+             * <li>The value is in the width:height:left:top format.</li>
+             * <li>Unit: pixel.</li>
+             * </ul>
              * 
-             * *   The value is in the width:height:left:top format.
-             * *   Unit: pixel.
+             * <strong>example:</strong>
+             * <p>1280:800:0:140</p>
              */
             public Builder pad(String pad) {
                 this.pad = pad;
@@ -5012,16 +5770,18 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The pixel format of the video.
-             * <p>
+             * <p>The pixel format of the video.</p>
+             * <ul>
+             * <li><p>The default pixel format can be <strong>yuv420p</strong> or the pixel format of the input file.</p>
+             * </li>
+             * <li><p>Valid values: standard pixel formats such as <strong>yuv420p</strong> and <strong>yuvj420p</strong>.</p>
+             * <p>**</p>
+             * <p><strong>Note</strong> If a non-standard pixel format such as yuvj420p(pc, bt470bg/bt470bg/smpte170m) is used, compatibility with the pixel format must be configured. Otherwise, the transcoding job fails.</p>
+             * </li>
+             * </ul>
              * 
-             * *   The default pixel format can be **yuv420p** or the pixel format of the input file.
-             * 
-             * *   Valid values: standard pixel formats such as **yuv420p** and **yuvj420p**.
-             * 
-             *     **
-             * 
-             *     **Note** If a non-standard pixel format such as yuvj420p(pc, bt470bg/bt470bg/smpte170m) is used, compatibility with the pixel format must be configured. Otherwise, the transcoding job fails.
+             * <strong>example:</strong>
+             * <p>yuvj420p</p>
              */
             public Builder pixFmt(String pixFmt) {
                 this.pixFmt = pixFmt;
@@ -5029,14 +5789,17 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The preset video algorithm. Default value: **medium**. Valid values:
-             * <p>
+             * <p>The preset video algorithm. Default value: <strong>medium</strong>. Valid values:</p>
+             * <ul>
+             * <li><strong>veryfast</strong></li>
+             * <li><strong>fast</strong></li>
+             * <li><strong>medium</strong></li>
+             * <li><strong>slow</strong></li>
+             * <li><strong>slower</strong></li>
+             * </ul>
              * 
-             * *   **veryfast**
-             * *   **fast**
-             * *   **medium**
-             * *   **slow**
-             * *   **slower**
+             * <strong>example:</strong>
+             * <p>veryfast</p>
              */
             public Builder preset(String preset) {
                 this.preset = preset;
@@ -5044,14 +5807,18 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The encoding profile. This parameter is returned only for the H.264 codec. Default value: **high**. Valid values:
-             * <p>
+             * <p>The encoding profile. This parameter is returned only for the H.264 codec. Default value: <strong>high</strong>. Valid values:</p>
+             * <blockquote>
+             * <p> If multiple definitions are involved, we recommend that you use baseline for the lowest definition to ensure normal playback on low-definition devices, and use main or high for other definitions.</p>
+             * </blockquote>
+             * <ul>
+             * <li><strong>baseline</strong>: applicable to mobile devices.</li>
+             * <li><strong>main</strong>: applicable to standard-definition devices.</li>
+             * <li><strong>high</strong>: applicable to high-definition devices.</li>
+             * </ul>
              * 
-             * >  If multiple definitions are involved, we recommend that you use baseline for the lowest definition to ensure normal playback on low-definition devices, and use main or high for other definitions.
-             * 
-             * *   **baseline**: applicable to mobile devices.
-             * *   **main**: applicable to standard-definition devices.
-             * *   **high**: applicable to high-definition devices.
+             * <strong>example:</strong>
+             * <p>baseline</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -5059,7 +5826,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The level of quality control on the video.
+             * <p>The level of quality control on the video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder qscale(String qscale) {
                 this.qscale = qscale;
@@ -5067,7 +5837,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the resource.
+             * <p>The priority of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder resoPriority(String resoPriority) {
                 this.resoPriority = resoPriority;
@@ -5075,19 +5848,22 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The scan mode. Valid values:
-             * <p>
+             * <p>The scan mode. Valid values:</p>
+             * <ul>
+             * <li>If this parameter is <strong>empty</strong>, the scan mode of the input file is used.</li>
+             * <li><strong>auto</strong>: automatic deinterlacing.</li>
+             * <li><strong>progressive</strong>: progressive scan.</li>
+             * <li><strong>interlaced</strong>: interlaced scan.</li>
+             * <li><strong>By default</strong>, this parameter is empty.</li>
+             * </ul>
+             * <p><strong>Best practice</strong>: Interlaced scan consumes less bandwidth than progressive scan, but the image quality is poor. Therefore, mainstream video production uses progressive scan.</p>
+             * <ul>
+             * <li>If <strong>progressive scan</strong> or <strong>interlaced scan</strong> is used when the scan mode of the input file is neither of them, the transcoding job fails.</li>
+             * <li>We recommend that you use <strong>the scan mode of the input file</strong> or <strong>automatic deinterlacing</strong> to improve compatibility.</li>
+             * </ul>
              * 
-             * *   If this parameter is **empty**, the scan mode of the input file is used.
-             * *   **auto**: automatic deinterlacing.
-             * *   **progressive**: progressive scan.
-             * *   **interlaced**: interlaced scan.
-             * *   **By default**, this parameter is empty.
-             * 
-             * **Best practice**: Interlaced scan consumes less bandwidth than progressive scan, but the image quality is poor. Therefore, mainstream video production uses progressive scan.
-             * 
-             * *   If **progressive scan** or **interlaced scan** is used when the scan mode of the input file is neither of them, the transcoding job fails.
-             * *   We recommend that you use **the scan mode of the input file** or **automatic deinterlacing** to improve compatibility.
+             * <strong>example:</strong>
+             * <p>interlaced</p>
              */
             public Builder scanMode(String scanMode) {
                 this.scanMode = scanMode;
@@ -5095,11 +5871,14 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The width of the video.
-             * <p>
+             * <p>The width of the video.</p>
+             * <ul>
+             * <li>Unit: pixel.</li>
+             * <li>Default value: <strong>the width of the input video</strong>.</li>
+             * </ul>
              * 
-             * *   Unit: pixel.
-             * *   Default value: **the width of the input video**.
+             * <strong>example:</strong>
+             * <p>1080</p>
              */
             public Builder width(String width) {
                 this.width = width;
@@ -5113,6 +5892,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class WaterMarkInputFile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
@@ -5164,7 +5949,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             private String object; 
 
             /**
-             * The name of the OSS bucket in which the input file is stored.
+             * <p>The name of the OSS bucket in which the input file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-bucket</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -5172,7 +5960,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the OSS region in which the input file is stored.
+             * <p>The ID of the OSS region in which the input file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-hangzhou</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -5180,7 +5971,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the OSS object that is used as the input file.
+             * <p>The name of the OSS object that is used as the input file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-logo-****.png</p>
              */
             public Builder object(String object) {
                 this.object = object;
@@ -5194,6 +5988,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class WaterMark extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dx")
         private String dx;
@@ -5305,18 +6105,24 @@ public class SubmitJobsResponseBody extends TeaModel {
             private String width; 
 
             /**
-             * The horizontal offset of the watermark image relative to the output video. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. Default value: 0. The value can be an integer or a decimal number.
-             * <p>
+             * <p>The horizontal offset of the watermark image relative to the output video. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. Default value: 0. The value can be an integer or a decimal number.</p>
+             * <ul>
+             * <li><p>An integer indicates the pixel value of the horizontal offset.</p>
+             * <ul>
+             * <li>Valid values: <strong>[8,4096]</strong>.</li>
+             * <li>Unit: pixel.</li>
+             * </ul>
+             * </li>
+             * <li><p>A decimal number indicates the ratio of the horizontal offset to the width in the output video resolution.</p>
+             * <ul>
+             * <li>Valid values: (0,1).</li>
+             * <li>The decimal number can be accurate to four decimal places, such as 0.9999. Excess digits are automatically deleted.</li>
+             * </ul>
+             * </li>
+             * </ul>
              * 
-             * *   An integer indicates the pixel value of the horizontal offset.
-             * 
-             *     *   Valid values: **\[8,4096]**.
-             *     *   Unit: pixel.
-             * 
-             * *   A decimal number indicates the ratio of the horizontal offset to the width in the output video resolution.
-             * 
-             *     *   Valid values: (0,1).
-             *     *   The decimal number can be accurate to four decimal places, such as 0.9999. Excess digits are automatically deleted.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder dx(String dx) {
                 this.dx = dx;
@@ -5324,18 +6130,24 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The vertical offset of the watermark image relative to the output video. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. The value can be an integer or a decimal number.
-             * <p>
+             * <p>The vertical offset of the watermark image relative to the output video. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. The value can be an integer or a decimal number.</p>
+             * <ul>
+             * <li><p>An integer indicates the pixel value of the vertical offset.</p>
+             * <ul>
+             * <li>Valid values: <strong>[8,4096]</strong>.</li>
+             * <li>Unit: pixel.</li>
+             * </ul>
+             * </li>
+             * <li><p>A decimal number indicates the ratio of the vertical offset to the height in the output video resolution.</p>
+             * <ul>
+             * <li>Valid values: <strong>(0,1)</strong>.</li>
+             * <li>The decimal number can be accurate to four decimal places, such as 0.9999. Excess digits are automatically deleted.</li>
+             * </ul>
+             * </li>
+             * </ul>
              * 
-             * *   An integer indicates the pixel value of the vertical offset.
-             * 
-             *     *   Valid values: **\[8,4096]**.
-             *     *   Unit: pixel.
-             * 
-             * *   A decimal number indicates the ratio of the vertical offset to the height in the output video resolution.
-             * 
-             *     *   Valid values: **(0,1)**.
-             *     *   The decimal number can be accurate to four decimal places, such as 0.9999. Excess digits are automatically deleted.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder dy(String dy) {
                 this.dy = dy;
@@ -5343,18 +6155,24 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The height of the watermark. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. The value can be an integer or a decimal number.
-             * <p>
+             * <p>The height of the watermark. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. The value can be an integer or a decimal number.</p>
+             * <ul>
+             * <li><p>An integer indicates the pixel value of the watermark height.</p>
+             * <ul>
+             * <li>Valid values: <strong>[8,4096]</strong>.</li>
+             * <li>Unit: pixel.</li>
+             * </ul>
+             * </li>
+             * <li><p>A decimal number indicates the ratio of the watermark height to the height in the output video resolution.</p>
+             * <ul>
+             * <li>Valid values: <strong>(0,1)</strong>.</li>
+             * <li>The decimal number can be accurate to four decimal places, such as 0.9999. Excess digits are automatically deleted.</li>
+             * </ul>
+             * </li>
+             * </ul>
              * 
-             * *   An integer indicates the pixel value of the watermark height.
-             * 
-             *     *   Valid values: **\[8,4096]**.
-             *     *   Unit: pixel.
-             * 
-             * *   A decimal number indicates the ratio of the watermark height to the height in the output video resolution.
-             * 
-             *     *   Valid values: **(0,1)**.
-             *     *   The decimal number can be accurate to four decimal places, such as 0.9999. Excess digits are automatically deleted.
+             * <strong>example:</strong>
+             * <p>1280</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -5362,7 +6180,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The watermark input file. PNG images and MOV files are supported.
+             * <p>The watermark input file. PNG images and MOV files are supported.</p>
              */
             public Builder inputFile(WaterMarkInputFile inputFile) {
                 this.inputFile = inputFile;
@@ -5370,13 +6188,16 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The position of the watermark. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. Valid values:
-             * <p>
+             * <p>The position of the watermark. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. Valid values:</p>
+             * <ul>
+             * <li><strong>TopRight</strong></li>
+             * <li><strong>TopLeft</strong></li>
+             * <li><strong>BottomRight</strong></li>
+             * <li><strong>BottomLeft</strong></li>
+             * </ul>
              * 
-             * *   **TopRight**
-             * *   **TopLeft**
-             * *   **BottomRight**
-             * *   **BottomLeft**
+             * <strong>example:</strong>
+             * <p>TopRight</p>
              */
             public Builder referPos(String referPos) {
                 this.referPos = referPos;
@@ -5384,11 +6205,14 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the watermark. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. For more information, see [Parameter details](~~29253~~). Valid values:
-             * <p>
+             * <p>The type of the watermark. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. For more information, see <a href="https://help.aliyun.com/document_detail/29253.html">Parameter details</a>. Valid values:</p>
+             * <ul>
+             * <li><strong>Image</strong></li>
+             * <li><strong>Text</strong></li>
+             * </ul>
              * 
-             * *   **Image**
-             * *   **Text**
+             * <strong>example:</strong>
+             * <p>Image</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -5396,7 +6220,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the watermark template.
+             * <p>The ID of the watermark template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>88c6ca184c0e47098a5b665e2a12****</p>
              */
             public Builder waterMarkTemplateId(String waterMarkTemplateId) {
                 this.waterMarkTemplateId = waterMarkTemplateId;
@@ -5404,18 +6231,24 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The width of the watermark image. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. The value can be an integer or a decimal number.
-             * <p>
+             * <p>The width of the watermark image. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. The value can be an integer or a decimal number.</p>
+             * <ul>
+             * <li><p>An integer indicates the pixel value of the watermark width.</p>
+             * <ul>
+             * <li>Valid values: <strong>[8,4096]</strong>.</li>
+             * <li>Unit: pixel.</li>
+             * </ul>
+             * </li>
+             * <li><p>A decimal number indicates the ratio of the watermark width to the width in the output video resolution.</p>
+             * <ul>
+             * <li>Valid values: <strong>(0,1)</strong>.</li>
+             * <li>The decimal number can be accurate to four decimal places, such as 0.9999. Excess digits are automatically deleted.</li>
+             * </ul>
+             * </li>
+             * </ul>
              * 
-             * *   An integer indicates the pixel value of the watermark width.
-             * 
-             *     *   Valid values: **\[8,4096]**.
-             *     *   Unit: pixel.
-             * 
-             * *   A decimal number indicates the ratio of the watermark width to the width in the output video resolution.
-             * 
-             *     *   Valid values: **(0,1)**.
-             *     *   The decimal number can be accurate to four decimal places, such as 0.9999. Excess digits are automatically deleted.
+             * <strong>example:</strong>
+             * <p>1080</p>
              */
             public Builder width(String width) {
                 this.width = width;
@@ -5429,6 +6262,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class WaterMarkList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WaterMark")
         private java.util.List < WaterMark> waterMark;
@@ -5470,6 +6309,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class Output extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AmixList")
         private AmixList amixList;
@@ -5821,7 +6666,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             private WaterMarkList waterMarkList; 
 
             /**
-             * The audio tracks that are mixed.
+             * <p>The audio tracks that are mixed.</p>
              */
             public Builder amixList(AmixList amixList) {
                 this.amixList = amixList;
@@ -5829,10 +6674,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The audio configurations.
-             * <p>
-             * 
-             * >  If this parameter is specified in the request, the corresponding configurations in the specified transcoding template are overwritten.
+             * <p>The audio configurations.</p>
+             * <blockquote>
+             * <p> If this parameter is specified in the request, the corresponding configurations in the specified transcoding template are overwritten.</p>
+             * </blockquote>
              */
             public Builder audio(Audio audio) {
                 this.audio = audio;
@@ -5840,12 +6685,15 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The sequence number of the audio stream.
-             * <p>
+             * <p>The sequence number of the audio stream.</p>
+             * <ul>
+             * <li>Format: 0:a:{Sequence number}. Example: 0:a:0.</li>
+             * <li>The sequence number is the index of the audio stream in the list and starts from 0.</li>
+             * <li>If no sequence number is specified, the default audio stream is used.</li>
+             * </ul>
              * 
-             * *   Format: 0:a:{Sequence number}. Example: 0:a:0.
-             * *   The sequence number is the index of the audio stream in the list and starts from 0.
-             * *   If no sequence number is specified, the default audio stream is used.
+             * <strong>example:</strong>
+             * <p>0:a:0</p>
              */
             public Builder audioStreamMap(String audioStreamMap) {
                 this.audioStreamMap = audioStreamMap;
@@ -5853,7 +6701,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the clip.
+             * <p>The information about the clip.</p>
              */
             public Builder clip(Clip clip) {
                 this.clip = clip;
@@ -5861,7 +6709,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The container format configurations.
+             * <p>The container format configurations.</p>
              */
             public Builder container(Container container) {
                 this.container = container;
@@ -5869,7 +6717,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of watermark blurring. The value is a JSON object. For more information, see the **DeWatermark** section of the [Parameter details](~~29253~~) topic.
+             * <p>The configurations of watermark blurring. The value is a JSON object. For more information, see the <strong>DeWatermark</strong> section of the <a href="https://help.aliyun.com/document_detail/29253.html">Parameter details</a> topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;0&quot;: [{&quot;l&quot;: 10,&quot;t&quot;: 10,&quot;w&quot;: 10,&quot;h&quot;: 10},{&quot;l&quot;: 100,&quot;t&quot;: 0.1,&quot;w&quot;: 10,&quot;h&quot;: 10}],&quot;128000&quot;: [],&quot;250000&quot;: [{&quot;l&quot;: 0.2,&quot;t&quot;: 0.1,&quot;w&quot;: 0.01,&quot;h&quot;: 0.05}]}</p>
              */
             public Builder deWatermark(String deWatermark) {
                 this.deWatermark = deWatermark;
@@ -5877,7 +6728,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The digital watermarks.
+             * <p>The digital watermarks.</p>
              */
             public Builder digiWaterMark(DigiWaterMark digiWaterMark) {
                 this.digiWaterMark = digiWaterMark;
@@ -5885,7 +6736,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The encryption configurations. Only outputs in the M3U8 format are supported.
+             * <p>The encryption configurations. Only outputs in the M3U8 format are supported.</p>
              */
             public Builder encryption(Encryption encryption) {
                 this.encryption = encryption;
@@ -5893,7 +6744,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The non-standard support configuration for M3U8. The value is a JSON object. For more information, see the **M3U8NonStandardSupport** section of the [Parameter details](~~29253~~) topic.
+             * <p>The non-standard support configuration for M3U8. The value is a JSON object. For more information, see the <strong>M3U8NonStandardSupport</strong> section of the <a href="https://help.aliyun.com/document_detail/29253.html">Parameter details</a> topic.</p>
              */
             public Builder m3U8NonStandardSupport(M3U8NonStandardSupport m3U8NonStandardSupport) {
                 this.m3U8NonStandardSupport = m3U8NonStandardSupport;
@@ -5901,13 +6752,16 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the merging configuration file. Only one of **MergeList** and **MergeConfigUrl** takes effect.
-             * <p>
+             * <p>The URL of the merging configuration file. Only one of <strong>MergeList</strong> and <strong>MergeConfigUrl</strong> takes effect.</p>
+             * <ul>
+             * <li>The configuration file specified by MergeConfigUrl can contain up to 50 clips.</li>
+             * <li>MergeConfigUrl indicates the URL of the configuration file for merging clips.</li>
+             * <li>Make sure that the configuration file is stored as an object in OSS and that MPS can access the OSS object. For information about the file content, see the details about merging parameters.</li>
+             * <li>Example of the content of the merging configuration file: <code>{&quot;MergeList&quot;:[{&quot;MergeURL&quot;:&quot;http://exampleBucket****.oss-cn-hangzhou.aliyuncs.com/video_01.mp4&quot;}]}</code>.</li>
+             * </ul>
              * 
-             * *   The configuration file specified by MergeConfigUrl can contain up to 50 clips.
-             * *   MergeConfigUrl indicates the URL of the configuration file for merging clips.
-             * *   Make sure that the configuration file is stored as an object in OSS and that MPS can access the OSS object. For information about the file content, see the details about merging parameters.
-             * *   Example of the content of the merging configuration file: `{"MergeList":[{"MergeURL":"http://exampleBucket****.oss-cn-hangzhou.aliyuncs.com/video_01.mp4"}]}`.
+             * <strong>example:</strong>
+             * <p>`{&quot;MergeList&quot;:[{&quot;MergeURL&quot;:&quot;<a href="http://exampleBucket****.oss-cn-hangzhou.aliyuncs.com/video_01.mp4%22%7D%5D%7D">http://exampleBucket****.oss-cn-hangzhou.aliyuncs.com/video_01.mp4&quot;}]}</a></p>
              */
             public Builder mergeConfigUrl(String mergeConfigUrl) {
                 this.mergeConfigUrl = mergeConfigUrl;
@@ -5915,7 +6769,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations for merging clips.
+             * <p>The configurations for merging clips.</p>
              */
             public Builder mergeList(MergeList mergeList) {
                 this.mergeList = mergeList;
@@ -5923,7 +6777,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The transmuxing configurations. If this parameter is specified in the request, the corresponding configurations in the specified transcoding template are overwritten.
+             * <p>The transmuxing configurations. If this parameter is specified in the request, the corresponding configurations in the specified transcoding template are overwritten.</p>
              */
             public Builder muxConfig(MuxConfig muxConfig) {
                 this.muxConfig = muxConfig;
@@ -5931,7 +6785,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The opening parts. The value is a JSON object.
+             * <p>The opening parts. The value is a JSON object.</p>
              */
             public Builder openingList(OpeningList openingList) {
                 this.openingList = openingList;
@@ -5939,7 +6793,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The output subtitles.
+             * <p>The output subtitles.</p>
              */
             public Builder outSubtitleList(OutSubtitleList outSubtitleList) {
                 this.outSubtitleList = outSubtitleList;
@@ -5947,7 +6801,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the output file.
+             * <p>The details of the output file.</p>
              */
             public Builder outputFile(OutputFile outputFile) {
                 this.outputFile = outputFile;
@@ -5955,11 +6809,14 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the job in the MPS queue to which the job is added.
-             * <p>
+             * <p>The priority of the job in the MPS queue to which the job is added.</p>
+             * <ul>
+             * <li>A value of <strong>10</strong> indicates the highest priority.</li>
+             * <li>Default value: <strong>6</strong>.</li>
+             * </ul>
              * 
-             * *   A value of **10** indicates the highest priority.
-             * *   Default value: **6**.
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -5967,7 +6824,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The media properties.
+             * <p>The media properties.</p>
              */
             public Builder properties(Properties properties) {
                 this.properties = properties;
@@ -5975,7 +6832,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The rotation angle of the video, in the clockwise direction.
+             * <p>The rotation angle of the video, in the clockwise direction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>180</p>
              */
             public Builder rotate(String rotate) {
                 this.rotate = rotate;
@@ -5983,7 +6843,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The subtitle configurations.
+             * <p>The subtitle configurations.</p>
              */
             public Builder subtitleConfig(SubtitleConfig subtitleConfig) {
                 this.subtitleConfig = subtitleConfig;
@@ -5991,7 +6851,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations for using the resolution of the source video.
+             * <p>The configurations for using the resolution of the source video.</p>
              */
             public Builder superReso(SuperReso superReso) {
                 this.superReso = superReso;
@@ -5999,7 +6859,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ending parts. The value is a JSON object.
+             * <p>The ending parts. The value is a JSON object.</p>
              */
             public Builder tailSlateList(TailSlateList tailSlateList) {
                 this.tailSlateList = tailSlateList;
@@ -6007,7 +6867,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the transcoding template.
+             * <p>The ID of the transcoding template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S00000000-000010</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -6015,10 +6878,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The general transcoding configurations.
-             * <p>
-             * 
-             * >  If this parameter is specified in the request, the corresponding parameter in the specified transcoding template are overwritten.
+             * <p>The general transcoding configurations.</p>
+             * <blockquote>
+             * <p> If this parameter is specified in the request, the corresponding parameter in the specified transcoding template are overwritten.</p>
+             * </blockquote>
              */
             public Builder transConfig(TransConfig transConfig) {
                 this.transConfig = transConfig;
@@ -6026,7 +6889,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The custom data.
+             * <p>The custom data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example data</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -6034,10 +6900,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The video configurations.
-             * <p>
-             * 
-             * >  If this parameter is specified, **AliyunVideoCodec** in the template specified by **TemplateId** is overwritten.
+             * <p>The video configurations.</p>
+             * <blockquote>
+             * <p> If this parameter is specified, <strong>AliyunVideoCodec</strong> in the template specified by <strong>TemplateId</strong> is overwritten.</p>
+             * </blockquote>
              */
             public Builder video(Video video) {
                 this.video = video;
@@ -6045,12 +6911,15 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The sequence number of the video stream.
-             * <p>
+             * <p>The sequence number of the video stream.</p>
+             * <ul>
+             * <li>Format: 0:a:{Sequence number}. Example: 0:a:0.</li>
+             * <li>The sequence number is the index of the video stream in the list and starts from 0.</li>
+             * <li>If no sequence number is specified, the default video stream is used.</li>
+             * </ul>
              * 
-             * *   Format: 0:a:{Sequence number}. Example: 0:a:0.
-             * *   The sequence number is the index of the video stream in the list and starts from 0.
-             * *   If no sequence number is specified, the default video stream is used.
+             * <strong>example:</strong>
+             * <p>0:a:0</p>
              */
             public Builder videoStreamMap(String videoStreamMap) {
                 this.videoStreamMap = videoStreamMap;
@@ -6058,7 +6927,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the watermark configuration file.
+             * <p>The URL of the watermark configuration file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example.com/configure">http://example.com/configure</a></p>
              */
             public Builder waterMarkConfigUrl(String waterMarkConfigUrl) {
                 this.waterMarkConfigUrl = waterMarkConfigUrl;
@@ -6066,10 +6938,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The watermarks.
-             * <p>
-             * 
-             * >  If watermarks are truncated or fail to be generated, check whether the text watermarks that you add contain special characters. If the text watermarks contain special characters, you must escape the special characters before you add the watermarks. Alternatively, you can [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.12246746.top-nav.dticket.68797bbcm8H408#/ticket/add/?productId=1232) to contact Alibaba Cloud customer service for compatibility processing.
+             * <p>The watermarks.</p>
+             * <blockquote>
+             * <p> If watermarks are truncated or fail to be generated, check whether the text watermarks that you add contain special characters. If the text watermarks contain special characters, you must escape the special characters before you add the watermarks. Alternatively, you can <a href="https://workorder-intl.console.aliyun.com/?spm=5176.12246746.top-nav.dticket.68797bbcm8H408#/ticket/add/?productId=1232">submit a ticket</a> to contact Alibaba Cloud customer service for compatibility processing.</p>
+             * </blockquote>
              */
             public Builder waterMarkList(WaterMarkList waterMarkList) {
                 this.waterMarkList = waterMarkList;
@@ -6083,6 +6955,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class Job extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -6230,7 +7108,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The error code returned if the job failed. This parameter is not returned if the job was successful.
+             * <p>The error code returned if the job failed. This parameter is not returned if the job was successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InternalError</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -6238,7 +7119,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job was created.
+             * <p>The time when the job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2014-01-10T12:00:00Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -6246,7 +7130,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job was complete.
+             * <p>The time when the job was complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2014-01-10T12:20:00Z</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -6254,7 +7141,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the job input.
+             * <p>The information about the job input.</p>
              */
             public Builder input(Input input) {
                 this.input = input;
@@ -6262,7 +7149,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The job ID.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>31fa3c9ca8134f9cec2b4b0b0f78****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -6270,7 +7160,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The message sent by MNS to notify users of the job result.
+             * <p>The message sent by MNS to notify users of the job result.</p>
              */
             public Builder MNSMessageResult(MNSMessageResult MNSMessageResult) {
                 this.MNSMessageResult = MNSMessageResult;
@@ -6278,7 +7168,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if the job failed. This parameter is not returned if the job was successful.
+             * <p>The error message returned if the job failed. This parameter is not returned if the job was successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The operation has failed due to some unknown error, exception or failure.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -6286,7 +7179,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The output of the job.
+             * <p>The output of the job.</p>
              */
             public Builder output(Output output) {
                 this.output = output;
@@ -6294,7 +7187,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The transcoding progress.
+             * <p>The transcoding progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percent(Long percent) {
                 this.percent = percent;
@@ -6302,7 +7198,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the MPS queue.
+             * <p>The ID of the MPS queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>88c6ca184c0e47098a5b665e2a126797</p>
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -6310,11 +7209,14 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the job. Valid values:
-             * <p>
+             * <p>The state of the job. Valid values:</p>
+             * <ul>
+             * <li><strong>Submitted</strong></li>
+             * <li><strong>TranscodeFail</strong></li>
+             * </ul>
              * 
-             * *   **Submitted**
-             * *   **TranscodeFail**
+             * <strong>example:</strong>
+             * <p>Submitted</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -6328,6 +7230,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class JobResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -6391,7 +7299,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * The error code returned if the job failed to be created. This parameter is not returned if the job was created.
+             * <p>The error code returned if the job failed to be created. This parameter is not returned if the job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidParameter.NullValue</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -6399,7 +7310,7 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the job. If the job fails to be submitted, no job ID is generated.
+             * <p>The details of the job. If the job fails to be submitted, no job ID is generated.</p>
              */
             public Builder job(Job job) {
                 this.job = job;
@@ -6407,7 +7318,10 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if the job failed to be created. This parameter is not returned if the job was created.
+             * <p>The error message returned if the job failed to be created. This parameter is not returned if the job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The specified parameter &quot;%s&quot; cannot be null.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -6415,11 +7329,14 @@ public class SubmitJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the job was successful. Valid values:
-             * <p>
+             * <p>Indicates whether the job was successful. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -6433,6 +7350,12 @@ public class SubmitJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitJobsResponseBody</p>
+     */
     public static class JobResultList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("JobResult")
         private java.util.List < JobResult> jobResult;

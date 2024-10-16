@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitTraceM3u8JobResponse} extends {@link TeaModel}
  *
  * <p>SubmitTraceM3u8JobResponse</p>

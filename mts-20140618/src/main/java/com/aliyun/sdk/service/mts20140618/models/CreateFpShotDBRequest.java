@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFpShotDBRequest} extends {@link RequestModel}
  *
  * <p>CreateFpShotDBRequest</p>
@@ -152,7 +153,10 @@ public class CreateFpShotDBRequest extends Request {
         } 
 
         /**
-         * The configurations of the media fingerprint library. By default, this parameter is left empty. You can customize the configurations based on your business requirements. The value must be a string in the JSON format.
+         * <p>The configurations of the media fingerprint library. By default, this parameter is left empty. You can customize the configurations based on your business requirements. The value must be a string in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -161,7 +165,10 @@ public class CreateFpShotDBRequest extends Request {
         }
 
         /**
-         * The description of the media fingerprint library.
+         * <p>The description of the media fingerprint library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The library is a text fingerprint library.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -170,7 +177,10 @@ public class CreateFpShotDBRequest extends Request {
         }
 
         /**
-         * The model ID of the media fingerprint library. To create a text fingerprint library, set the parameter to **11**. To create a video fingerprint library, set the parameter to **12**. To create an audio fingerprint library, set the parameter to **13**. To create an image fingerprint library, set the parameter to **14**.
+         * <p>The model ID of the media fingerprint library. To create a text fingerprint library, set the parameter to <strong>11</strong>. To create a video fingerprint library, set the parameter to <strong>12</strong>. To create an audio fingerprint library, set the parameter to <strong>13</strong>. To create an image fingerprint library, set the parameter to <strong>14</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder modelId(Integer modelId) {
             this.putQueryParameter("ModelId", modelId);
@@ -179,7 +189,11 @@ public class CreateFpShotDBRequest extends Request {
         }
 
         /**
-         * The name of the media fingerprint library.
+         * <p>The name of the media fingerprint library.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

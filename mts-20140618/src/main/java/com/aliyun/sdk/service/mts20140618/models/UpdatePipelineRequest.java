@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePipelineRequest} extends {@link RequestModel}
  *
  * <p>UpdatePipelineRequest</p>
@@ -191,7 +192,11 @@ public class UpdatePipelineRequest extends Request {
         }
 
         /**
-         * The new name of the MPS queue. The value can contain letters, digits, and special characters such as hyphens (-) and can be up to 128 bytes in size. The value cannot start with a special character.
+         * <p>The new name of the MPS queue. The value can contain letters, digits, and special characters such as hyphens (-) and can be up to 128 bytes in size. The value cannot start with a special character.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-pipeline-****</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -200,7 +205,10 @@ public class UpdatePipelineRequest extends Request {
         }
 
         /**
-         * The Message Service (MNS) configuration, such as the information about the MNS queue or topic. For more information, see the "NotifyConfig" section of the [Parameter details](~~29253~~) topic.
+         * <p>The Message Service (MNS) configuration, such as the information about the MNS queue or topic. For more information, see the &quot;NotifyConfig&quot; section of the <a href="https://help.aliyun.com/document_detail/29253.html">Parameter details</a> topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Topic&quot;:&quot;example-topic-****&quot;}</p>
          */
         public Builder notifyConfig(String notifyConfig) {
             this.putQueryParameter("NotifyConfig", notifyConfig);
@@ -227,7 +235,11 @@ public class UpdatePipelineRequest extends Request {
         }
 
         /**
-         * The ID of the MPS queue that you want to update. To view the MPS queue ID, log on to the **MPS console** and choose **Global Settings** > **Pipelines** in the left-side navigation pane.
+         * <p>The ID of the MPS queue that you want to update. To view the MPS queue ID, log on to the <strong>MPS console</strong> and choose <strong>Global Settings</strong> &gt; <strong>Pipelines</strong> in the left-side navigation pane.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d1ce4d3efcb549419193f50f1fcd****</p>
          */
         public Builder pipelineId(String pipelineId) {
             this.putQueryParameter("PipelineId", pipelineId);
@@ -254,7 +266,10 @@ public class UpdatePipelineRequest extends Request {
         }
 
         /**
-         * The role that is assigned to the current RAM user. To obtain the role, you can log on to the **Resource Access Management (RAM) console** and choose **Identities** > **Roles** in the left-side navigation pane.
+         * <p>The role that is assigned to the current RAM user. To obtain the role, you can log on to the <strong>Resource Access Management (RAM) console</strong> and choose <strong>Identities</strong> &gt; <strong>Roles</strong> in the left-side navigation pane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunMTSDefaultRole</p>
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);
@@ -263,11 +278,15 @@ public class UpdatePipelineRequest extends Request {
         }
 
         /**
-         * The new state of the MPS queue.
-         * <p>
+         * <p>The new state of the MPS queue.</p>
+         * <ul>
+         * <li><strong>Active</strong>: The MPS queue is active. Jobs in the MPS queue can be scheduled and run by MPS.</li>
+         * <li><strong>Paused</strong>: The MPS queue is paused. Jobs in the MPS queue cannot be scheduled or run by MPS, and all jobs remain in the Submitted state. Jobs that are running will not be affected.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Active**: The MPS queue is active. Jobs in the MPS queue can be scheduled and run by MPS.
-         * *   **Paused**: The MPS queue is paused. Jobs in the MPS queue cannot be scheduled or run by MPS, and all jobs remain in the Submitted state. Jobs that are running will not be affected.
+         * <strong>example:</strong>
+         * <p>Paused</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);

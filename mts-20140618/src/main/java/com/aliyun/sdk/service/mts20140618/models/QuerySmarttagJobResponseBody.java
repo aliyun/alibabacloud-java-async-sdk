@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySmarttagJobResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySmarttagJobResponseBody</p>
@@ -13,6 +14,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class QuerySmarttagJobResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("JobStatus")
     private String jobStatus;
+
+    @com.aliyun.core.annotation.NameInMap("Message")
+    private String message;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -25,6 +29,7 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
 
     private QuerySmarttagJobResponseBody(Builder builder) {
         this.jobStatus = builder.jobStatus;
+        this.message = builder.message;
         this.requestId = builder.requestId;
         this.results = builder.results;
         this.userData = builder.userData;
@@ -43,6 +48,13 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
      */
     public String getJobStatus() {
         return this.jobStatus;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -68,6 +80,7 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
 
     public static final class Builder {
         private String jobStatus; 
+        private String message; 
         private String requestId; 
         private Results results; 
         private String userData; 
@@ -77,6 +90,14 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
          */
         public Builder jobStatus(String jobStatus) {
             this.jobStatus = jobStatus;
+            return this;
+        }
+
+        /**
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
             return this;
         }
 
@@ -110,6 +131,12 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySmarttagJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySmarttagJobResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
@@ -171,6 +198,12 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySmarttagJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySmarttagJobResponseBody</p>
+     */
     public static class Results extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Result")
         private java.util.List < Result> result;

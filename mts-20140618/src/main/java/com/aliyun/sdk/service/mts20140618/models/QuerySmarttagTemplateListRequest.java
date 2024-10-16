@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySmarttagTemplateListRequest} extends {@link RequestModel}
  *
  * <p>QuerySmarttagTemplateListRequest</p>
@@ -145,7 +146,10 @@ public class QuerySmarttagTemplateListRequest extends Request {
         }
 
         /**
-         * The ID of the template. You can obtain the template ID from the response of the [AddSmarttagTemplate](~~187759~~) operation. If you set this parameter to a specific value, the information about the corresponding template is returned. If you do not specify this parameter, the operation returns the information about all the templates that are created by the current RAM user.
+         * <p>The ID of the template. You can obtain the template ID from the response of the <a href="https://help.aliyun.com/document_detail/187759.html">AddSmarttagTemplate</a> operation. If you set this parameter to a specific value, the information about the corresponding template is returned. If you do not specify this parameter, the operation returns the information about all the templates that are created by the current RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05de22f255284c7a8d2aab535dde****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTemplateListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryTemplateListResponseBody</p>
@@ -61,7 +62,7 @@ public class QueryTemplateListResponseBody extends TeaModel {
         private TemplateList templateList; 
 
         /**
-         * The IDs of the templates that do not exist. This parameter is not returned if all specified transcoding templates are found.
+         * <p>The IDs of the templates that do not exist. This parameter is not returned if all specified transcoding templates are found.</p>
          */
         public Builder nonExistTids(NonExistTids nonExistTids) {
             this.nonExistTids = nonExistTids;
@@ -69,7 +70,10 @@ public class QueryTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BC860F04-778A-472F-AB39-E1BF329C1EA8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,7 @@ public class QueryTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * The transcoding templates.
+         * <p>The transcoding templates.</p>
          */
         public Builder templateList(TemplateList templateList) {
             this.templateList = templateList;
@@ -90,6 +94,12 @@ public class QueryTemplateListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryTemplateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTemplateListResponseBody</p>
+     */
     public static class NonExistTids extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("String")
         private java.util.List < String > string;
@@ -131,6 +141,12 @@ public class QueryTemplateListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTemplateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTemplateListResponseBody</p>
+     */
     public static class Volume extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IntegratedLoudnessTarget")
         private String integratedLoudnessTarget;
@@ -218,13 +234,16 @@ public class QueryTemplateListResponseBody extends TeaModel {
             private String truePeak; 
 
             /**
-             * The output volume.
-             * <p>
+             * <p>The output volume.</p>
+             * <ul>
+             * <li>This parameter takes effect only if the value of Method is dynamic.</li>
+             * <li>Unit: dB.</li>
+             * <li>Valid values: [-70,-5].</li>
+             * <li>Default value: -6.</li>
+             * </ul>
              * 
-             * *   This parameter takes effect only if the value of Method is dynamic.
-             * *   Unit: dB.
-             * *   Valid values: \[-70,-5].
-             * *   Default value: -6.
+             * <strong>example:</strong>
+             * <p>-6</p>
              */
             public Builder integratedLoudnessTarget(String integratedLoudnessTarget) {
                 this.integratedLoudnessTarget = integratedLoudnessTarget;
@@ -232,13 +251,16 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The increased volume relative to the volume of the input audio.
-             * <p>
+             * <p>The increased volume relative to the volume of the input audio.</p>
+             * <ul>
+             * <li>This parameter takes effect only if the value of Method is linear.</li>
+             * <li>Unit: dB.</li>
+             * <li>Valid values: less than or equal to 20.</li>
+             * <li>Default value: -20.</li>
+             * </ul>
              * 
-             * *   This parameter takes effect only if the value of Method is linear.
-             * *   Unit: dB.
-             * *   Valid values: less than or equal to 20.
-             * *   Default value: -20.
+             * <strong>example:</strong>
+             * <p>-20</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -246,13 +268,16 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The range of the volume relative to the output volume.
-             * <p>
+             * <p>The range of the volume relative to the output volume.</p>
+             * <ul>
+             * <li>This parameter takes effect only if the value of Method is dynamic.</li>
+             * <li>Unit: dB.</li>
+             * <li>Valid values: [1,20].</li>
+             * <li>Default value: 8.</li>
+             * </ul>
              * 
-             * *   This parameter takes effect only if the value of Method is dynamic.
-             * *   Unit: dB.
-             * *   Valid values: \[1,20].
-             * *   Default value: 8.
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder loudnessRangeTarget(String loudnessRangeTarget) {
                 this.loudnessRangeTarget = loudnessRangeTarget;
@@ -260,13 +285,16 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The method that is used to adjust the volume. Valid values:
-             * <p>
+             * <p>The method that is used to adjust the volume. Valid values:</p>
+             * <ul>
+             * <li><strong>auto</strong></li>
+             * <li><strong>dynamic</strong></li>
+             * <li><strong>linear</strong></li>
+             * <li>Default value: dynamic.</li>
+             * </ul>
              * 
-             * *   **auto**
-             * *   **dynamic**
-             * *   **linear**
-             * *   Default value: dynamic.
+             * <strong>example:</strong>
+             * <p>auto</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -274,14 +302,13 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The volume adjustment coefficient.
-             * <p>
+             * <p>The volume adjustment coefficient.</p>
+             * <p>This parameter takes effect only if the value of Method is adaptive.</p>
+             * <p>Valid values: [0,1].</p>
+             * <p>Default value: 0.9.</p>
              * 
-             * This parameter takes effect only if the value of Method is adaptive.
-             * 
-             * Valid values: \[0,1].
-             * 
-             * Default value: 0.9.
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder peakLevel(String peakLevel) {
                 this.peakLevel = peakLevel;
@@ -289,13 +316,16 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The peak volume.
-             * <p>
+             * <p>The peak volume.</p>
+             * <ul>
+             * <li>This parameter takes effect only if the value of Method is dynamic.</li>
+             * <li>Unit: dB.</li>
+             * <li>Valid values: [-9,0].</li>
+             * <li>Default value: -1.</li>
+             * </ul>
              * 
-             * *   This parameter takes effect only if the value of Method is dynamic.
-             * *   Unit: dB.
-             * *   Valid values: \[-9,0].
-             * *   Default value: -1.
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder truePeak(String truePeak) {
                 this.truePeak = truePeak;
@@ -309,6 +339,12 @@ public class QueryTemplateListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTemplateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTemplateListResponseBody</p>
+     */
     public static class Audio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
@@ -420,12 +456,15 @@ public class QueryTemplateListResponseBody extends TeaModel {
             private Volume volume; 
 
             /**
-             * The audio bitrate of the output file.
-             * <p>
+             * <p>The audio bitrate of the output file.</p>
+             * <ul>
+             * <li>Valid values: <strong>[8,1000]</strong>.</li>
+             * <li>Unit: Kbit/s.</li>
+             * <li>Default value: <strong>128</strong>.</li>
+             * </ul>
              * 
-             * *   Valid values: **\[8,1000]**.
-             * *   Unit: Kbit/s.
-             * *   Default value: **128**.
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -433,7 +472,10 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of sound channels. Default value: **2**.
+             * <p>The number of sound channels. Default value: <strong>2</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder channels(String channels) {
                 this.channels = channels;
@@ -441,13 +483,16 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The audio codec format. Default value: **aac**. Valid values:
-             * <p>
+             * <p>The audio codec format. Default value: <strong>aac</strong>. Valid values:</p>
+             * <ul>
+             * <li><strong>aac</strong></li>
+             * <li><strong>mp3</strong></li>
+             * <li><strong>vorbis</strong></li>
+             * <li><strong>flac</strong></li>
+             * </ul>
              * 
-             * *   **aac**
-             * *   **mp3**
-             * *   **vorbis**
-             * *   **flac**
+             * <strong>example:</strong>
+             * <p>aac</p>
              */
             public Builder codec(String codec) {
                 this.codec = codec;
@@ -455,14 +500,17 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The codec profile of the audio. Valid values when the value of Codec is aac:
-             * <p>
+             * <p>The codec profile of the audio. Valid values when the value of Codec is aac:</p>
+             * <ul>
+             * <li><strong>aac_low</strong></li>
+             * <li><strong>aac_he</strong></li>
+             * <li><strong>aac_he_v2</strong></li>
+             * <li><strong>aac_ld</strong></li>
+             * <li><strong>aac_eld</strong></li>
+             * </ul>
              * 
-             * *   **aac_low**
-             * *   **aac_he**
-             * *   **aac_he_v2**
-             * *   **aac_ld**
-             * *   **aac_eld**
+             * <strong>example:</strong>
+             * <p>aac_low</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -470,7 +518,10 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The strength of the independent denoising algorithm.
+             * <p>The strength of the independent denoising algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder qscale(String qscale) {
                 this.qscale = qscale;
@@ -478,12 +529,15 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the audio stream is deleted. Valid values:
-             * <p>
+             * <p>Indicates whether the audio stream is deleted. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * <li>Default value: <strong>false</strong>.</li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
-             * *   Default value: **false**.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder remove(String remove) {
                 this.remove = remove;
@@ -491,11 +545,14 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The sampling rate.
-             * <p>
+             * <p>The sampling rate.</p>
+             * <ul>
+             * <li>Unit: Hz</li>
+             * <li>Default value: <strong>44100</strong>.</li>
+             * </ul>
              * 
-             * *   Unit: Hz
-             * *   Default value: **44100**.
+             * <strong>example:</strong>
+             * <p>44100</p>
              */
             public Builder samplerate(String samplerate) {
                 this.samplerate = samplerate;
@@ -503,7 +560,7 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The volume control configurations.
+             * <p>The volume control configurations.</p>
              */
             public Builder volume(Volume volume) {
                 this.volume = volume;
@@ -517,6 +574,12 @@ public class QueryTemplateListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTemplateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTemplateListResponseBody</p>
+     */
     public static class Container extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
@@ -544,7 +607,10 @@ public class QueryTemplateListResponseBody extends TeaModel {
             private String format; 
 
             /**
-             * The format of the container. Valid values: flv, mp4, ts, m3u8, gif, mp3, ogg, and flac.
+             * <p>The format of the container. Valid values: flv, mp4, ts, m3u8, gif, mp3, ogg, and flac.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>flv</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -558,6 +624,12 @@ public class QueryTemplateListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTemplateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTemplateListResponseBody</p>
+     */
     public static class Gif extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DitherMode")
         private String ditherMode;
@@ -621,7 +693,10 @@ public class QueryTemplateListResponseBody extends TeaModel {
             private String loop; 
 
             /**
-             * The color dithering algorithm of the palette. Valid values: sierra and bayer.
+             * <p>The color dithering algorithm of the palette. Valid values: sierra and bayer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sierra</p>
              */
             public Builder ditherMode(String ditherMode) {
                 this.ditherMode = ditherMode;
@@ -629,7 +704,10 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The duration for which the final frame is paused.
+             * <p>The duration for which the final frame is paused.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder finalDelay(String finalDelay) {
                 this.finalDelay = finalDelay;
@@ -637,7 +715,10 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a custom palette is used.
+             * <p>Indicates whether a custom palette is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isCustomPalette(String isCustomPalette) {
                 this.isCustomPalette = isCustomPalette;
@@ -645,7 +726,10 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The loop count.
+             * <p>The loop count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder loop(String loop) {
                 this.loop = loop;
@@ -659,6 +743,12 @@ public class QueryTemplateListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTemplateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTemplateListResponseBody</p>
+     */
     public static class Segment extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
@@ -686,7 +776,10 @@ public class QueryTemplateListResponseBody extends TeaModel {
             private String duration; 
 
             /**
-             * The length of the segment. Unit: seconds.
+             * <p>The length of the segment. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -700,6 +793,12 @@ public class QueryTemplateListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTemplateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTemplateListResponseBody</p>
+     */
     public static class Webp extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Loop")
         private String loop;
@@ -727,7 +826,10 @@ public class QueryTemplateListResponseBody extends TeaModel {
             private String loop; 
 
             /**
-             * The loop count.
+             * <p>The loop count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder loop(String loop) {
                 this.loop = loop;
@@ -741,6 +843,12 @@ public class QueryTemplateListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTemplateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTemplateListResponseBody</p>
+     */
     public static class MuxConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Gif")
         private Gif gif;
@@ -792,7 +900,7 @@ public class QueryTemplateListResponseBody extends TeaModel {
             private Webp webp; 
 
             /**
-             * The transmuxing configurations for GIF.
+             * <p>The transmuxing configurations for GIF.</p>
              */
             public Builder gif(Gif gif) {
                 this.gif = gif;
@@ -800,7 +908,7 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The segment configurations.
+             * <p>The segment configurations.</p>
              */
             public Builder segment(Segment segment) {
                 this.segment = segment;
@@ -808,7 +916,7 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The transmuxing configurations for WebP.
+             * <p>The transmuxing configurations for WebP.</p>
              */
             public Builder webp(Webp webp) {
                 this.webp = webp;
@@ -822,6 +930,12 @@ public class QueryTemplateListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTemplateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTemplateListResponseBody</p>
+     */
     public static class TransConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdjDarMethod")
         private String adjDarMethod;
@@ -933,12 +1047,15 @@ public class QueryTemplateListResponseBody extends TeaModel {
             private String transMode; 
 
             /**
-             * The method of resolution adjustment. Default value: **none**. Valid values:
-             * <p>
+             * <p>The method of resolution adjustment. Default value: <strong>none</strong>. Valid values:</p>
+             * <ul>
+             * <li>rescale</li>
+             * <li>crop</li>
+             * <li>none</li>
+             * </ul>
              * 
-             * *   rescale
-             * *   crop
-             * *   none
+             * <strong>example:</strong>
+             * <p>none</p>
              */
             public Builder adjDarMethod(String adjDarMethod) {
                 this.adjDarMethod = adjDarMethod;
@@ -946,17 +1063,22 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the audio bitrate is checked. If the bitrate of the output audio is higher than that of the input audio, the input bitrate is retained and the specified audio bitrate does not take effect. This parameter has a lower priority than IsCheckAudioBitrateFail. Valid values:
-             * <p>
+             * <p>Indicates whether the audio bitrate is checked. If the bitrate of the output audio is higher than that of the input audio, the input bitrate is retained and the specified audio bitrate does not take effect. This parameter has a lower priority than IsCheckAudioBitrateFail. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong></p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
+             * <li><p>Default value:</p>
+             * <ul>
+             * <li>If this parameter is not specified and the codec of the output audio is different from that of the input audio, the default value is false.</li>
+             * <li>If this parameter is not specified and the codec of the output audio is the same as that of the input audio, the default value is true.</li>
+             * </ul>
+             * </li>
+             * </ul>
              * 
-             * *   **true**
-             * 
-             * *   **false**
-             * 
-             * *   Default value:
-             * 
-             *     *   If this parameter is not specified and the codec of the output audio is different from that of the input audio, the default value is false.
-             *     *   If this parameter is not specified and the codec of the output audio is the same as that of the input audio, the default value is true.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isCheckAudioBitrate(String isCheckAudioBitrate) {
                 this.isCheckAudioBitrate = isCheckAudioBitrate;
@@ -964,12 +1086,15 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether audio bitrate check errors are allowed. This parameter has a greater priority than IsCheckAudioBitrate. Valid values:
-             * <p>
+             * <p>Indicates whether audio bitrate check errors are allowed. This parameter has a greater priority than IsCheckAudioBitrate. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: If the audio bitrate check fails, the input file is not transcoded.</li>
+             * <li><strong>false</strong>: The audio bitrate is not checked.</li>
+             * <li>Default value: <strong>false</strong>.</li>
+             * </ul>
              * 
-             * *   **true**: If the audio bitrate check fails, the input file is not transcoded.
-             * *   **false**: The audio bitrate is not checked.
-             * *   Default value: **false**.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isCheckAudioBitrateFail(String isCheckAudioBitrateFail) {
                 this.isCheckAudioBitrateFail = isCheckAudioBitrateFail;
@@ -977,12 +1102,15 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the resolution is checked. If the output resolution is higher than the input resolution based on the width or height, the input resolution is retained. Valid values:
-             * <p>
+             * <p>Indicates whether the resolution is checked. If the output resolution is higher than the input resolution based on the width or height, the input resolution is retained. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * <li>Default value: <strong>false</strong>.</li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
-             * *   Default value: **false**.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isCheckReso(String isCheckReso) {
                 this.isCheckReso = isCheckReso;
@@ -990,12 +1118,15 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the resolution is checked. If the output resolution is higher than the input resolution based on the width or height, a transcoding failure is returned. Valid values:
-             * <p>
+             * <p>Indicates whether the resolution is checked. If the output resolution is higher than the input resolution based on the width or height, a transcoding failure is returned. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * <li>Default value: <strong>false</strong>.</li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
-             * *   Default value: **false**.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isCheckResoFail(String isCheckResoFail) {
                 this.isCheckResoFail = isCheckResoFail;
@@ -1003,12 +1134,15 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the video bitrate is checked. If the bitrate of the output video is higher than that of the input video, the input bitrate is retained. Valid values:
-             * <p>
+             * <p>Indicates whether the video bitrate is checked. If the bitrate of the output video is higher than that of the input video, the input bitrate is retained. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * <li>Default value: <strong>false</strong>.</li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
-             * *   Default value: **false**.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isCheckVideoBitrate(String isCheckVideoBitrate) {
                 this.isCheckVideoBitrate = isCheckVideoBitrate;
@@ -1016,12 +1150,15 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether video bitrate check errors are allowed. This parameter has a higher priority than IsCheckVideoBitrate. Valid values:
-             * <p>
+             * <p>Indicates whether video bitrate check errors are allowed. This parameter has a higher priority than IsCheckVideoBitrate. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: If the video bitrate check fails, the input file is not transcoded.</li>
+             * <li><strong>false</strong>: The video bitrate is not checked.</li>
+             * <li>Default value: <strong>false</strong>.</li>
+             * </ul>
              * 
-             * *   **true**: If the video bitrate check fails, the input file is not transcoded.
-             * *   **false**: The video bitrate is not checked.
-             * *   Default value: **false**.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isCheckVideoBitrateFail(String isCheckVideoBitrateFail) {
                 this.isCheckVideoBitrateFail = isCheckVideoBitrateFail;
@@ -1029,12 +1166,15 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The transcoding mode. Default value: **onepass**. Valid values:
-             * <p>
+             * <p>The transcoding mode. Default value: <strong>onepass</strong>. Valid values:</p>
+             * <ul>
+             * <li><strong>onepass</strong></li>
+             * <li><strong>twopass</strong></li>
+             * <li><strong>CBR</strong></li>
+             * </ul>
              * 
-             * *   **onepass**
-             * *   **twopass**
-             * *   **CBR**
+             * <strong>example:</strong>
+             * <p>onepass</p>
              */
             public Builder transMode(String transMode) {
                 this.transMode = transMode;
@@ -1048,6 +1188,12 @@ public class QueryTemplateListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTemplateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTemplateListResponseBody</p>
+     */
     public static class BitrateBnd extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Max")
         private String max;
@@ -1087,7 +1233,10 @@ public class QueryTemplateListResponseBody extends TeaModel {
             private String min; 
 
             /**
-             * The upper limit of the total bitrate. Unit: Kbit/s.
+             * <p>The upper limit of the total bitrate. Unit: Kbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder max(String max) {
                 this.max = max;
@@ -1095,7 +1244,10 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The lower limit of the total bitrate. Unit: Kbit/s.
+             * <p>The lower limit of the total bitrate. Unit: Kbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder min(String min) {
                 this.min = min;
@@ -1109,6 +1261,12 @@ public class QueryTemplateListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTemplateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTemplateListResponseBody</p>
+     */
     public static class NarrowBand extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Abrmax")
         private Float abrmax;
@@ -1160,7 +1318,10 @@ public class QueryTemplateListResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The upper limit of the dynamic bitrate. If this parameter is set, the average bitrate is in the range of (0, 1000000].
+             * <p>The upper limit of the dynamic bitrate. If this parameter is set, the average bitrate is in the range of (0, 1000000].</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3000</p>
              */
             public Builder abrmax(Float abrmax) {
                 this.abrmax = abrmax;
@@ -1168,7 +1329,10 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum ratio of the upper limit of dynamic bitrate. If this parameter is set, the value of Abrmax does not exceed x times of the source video bitrate. Valid values: (0,1.0].
+             * <p>The maximum ratio of the upper limit of dynamic bitrate. If this parameter is set, the value of Abrmax does not exceed x times of the source video bitrate. Valid values: (0,1.0].</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder maxAbrRatio(Float maxAbrRatio) {
                 this.maxAbrRatio = maxAbrRatio;
@@ -1176,7 +1340,10 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The Narrowband HD version. Only 1.0 may be returned.
+             * <p>The Narrowband HD version. Only 1.0 may be returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1190,6 +1357,12 @@ public class QueryTemplateListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTemplateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTemplateListResponseBody</p>
+     */
     public static class Video extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
@@ -1493,7 +1666,10 @@ public class QueryTemplateListResponseBody extends TeaModel {
             private String width; 
 
             /**
-             * The average bitrate of the video. Unit: Kbit/s.
+             * <p>The average bitrate of the video. Unit: Kbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -1501,7 +1677,7 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The average bitrate range of the video.
+             * <p>The average bitrate range of the video.</p>
              */
             public Builder bitrateBnd(BitrateBnd bitrateBnd) {
                 this.bitrateBnd = bitrateBnd;
@@ -1509,11 +1685,14 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The buffer size.
-             * <p>
+             * <p>The buffer size.</p>
+             * <ul>
+             * <li>Unit: KB.</li>
+             * <li>Default value: <strong>6000</strong>.</li>
+             * </ul>
              * 
-             * *   Unit: KB.
-             * *   Default value: **6000**.
+             * <strong>example:</strong>
+             * <p>6000</p>
              */
             public Builder bufsize(String bufsize) {
                 this.bufsize = bufsize;
@@ -1521,7 +1700,10 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The codec. Default value: **H.264**.
+             * <p>The codec. Default value: <strong>H.264</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>H.264</p>
              */
             public Builder codec(String codec) {
                 this.codec = codec;
@@ -1529,11 +1711,14 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The constant rate factor.
-             * <p>
+             * <p>The constant rate factor.</p>
+             * <ul>
+             * <li>Default value when the encoding format is H.264: <strong>23</strong>. Default value when the encoding format is H.265: <strong>26</strong>.</li>
+             * <li>If this parameter is set, the value of Bitrate becomes invalid.</li>
+             * </ul>
              * 
-             * *   Default value when the encoding format is H.264: **23**. Default value when the encoding format is H.265: **26**.
-             * *   If this parameter is set, the value of Bitrate becomes invalid.
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder crf(String crf) {
                 this.crf = crf;
@@ -1541,11 +1726,14 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The method of video cropping. Valid values:
-             * <p>
+             * <p>The method of video cropping. Valid values:</p>
+             * <ul>
+             * <li><strong>border</strong>: automatically detects and removes black bars.</li>
+             * <li><strong>Value in the width:height:left:top format</strong>: crops the video based on custom settings. Format: width:height:left:top. Example: 1280:800:0:140.</li>
+             * </ul>
              * 
-             * *   **border**: automatically detects and removes black bars.
-             * *   **Value in the width:height:left:top format**: crops the video based on custom settings. Format: width:height:left:top. Example: 1280:800:0:140.
+             * <strong>example:</strong>
+             * <p>border</p>
              */
             public Builder crop(String crop) {
                 this.crop = crop;
@@ -1553,7 +1741,10 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The level of video quality control.
+             * <p>The level of video quality control.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder degrain(String degrain) {
                 this.degrain = degrain;
@@ -1561,11 +1752,14 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The frame rate.
-             * <p>
+             * <p>The frame rate.</p>
+             * <ul>
+             * <li>The value is 60 if the frame rate of the input file exceeds 60.</li>
+             * <li>Default value: <strong>the frame rate of the input file</strong>.</li>
+             * </ul>
              * 
-             * *   The value is 60 if the frame rate of the input file exceeds 60.
-             * *   Default value: **the frame rate of the input file**.
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -1573,7 +1767,10 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of frames between two keyframes. Default value: **250**.
+             * <p>The maximum number of frames between two keyframes. Default value: <strong>250</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder gop(String gop) {
                 this.gop = gop;
@@ -1581,7 +1778,10 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the HDR2SDR conversion feature is enabled. If this feature is enabled, high dynamic range (HDR) videos are transcoded to standard dynamic range (SDR) videos.
+             * <p>Indicates whether the HDR2SDR conversion feature is enabled. If this feature is enabled, high dynamic range (HDR) videos are transcoded to standard dynamic range (SDR) videos.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hdr2sdr(String hdr2sdr) {
                 this.hdr2sdr = hdr2sdr;
@@ -1589,11 +1789,14 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The height of the video.
-             * <p>
+             * <p>The height of the video.</p>
+             * <ul>
+             * <li>Unit: pixel.</li>
+             * <li>Default value: <strong>the height of the input video</strong>.</li>
+             * </ul>
              * 
-             * *   Unit: pixel.
-             * *   Default value: **the height of the input video**.
+             * <strong>example:</strong>
+             * <p>800</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -1601,13 +1804,16 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the auto-rotate screen feature is enabled.
-             * <p>
+             * <p>Indicates whether the auto-rotate screen feature is enabled.</p>
+             * <ul>
+             * <li>If this feature is enabled, the width of the output video corresponds to the long side of the input video, which is the height of the input video in portrait mode. The height of the output video corresponds to the short side of the input video, which is the width of the input video in portrait mode. Valid values:</li>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * <li>Default value: <strong>false</strong>.</li>
+             * </ul>
              * 
-             * *   If this feature is enabled, the width of the output video corresponds to the long side of the input video, which is the height of the input video in portrait mode. The height of the output video corresponds to the short side of the input video, which is the width of the input video in portrait mode. Valid values:
-             * *   **true**
-             * *   **false**
-             * *   Default value: **false**.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder longShortMode(String longShortMode) {
                 this.longShortMode = longShortMode;
@@ -1615,7 +1821,10 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum frame rate.
+             * <p>The maximum frame rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder maxFps(String maxFps) {
                 this.maxFps = maxFps;
@@ -1623,7 +1832,10 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum bitrate of the video. Unit: Kbit/s.
+             * <p>The maximum bitrate of the video. Unit: Kbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder maxrate(String maxrate) {
                 this.maxrate = maxrate;
@@ -1631,7 +1843,7 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The Narrowband HD settings.
+             * <p>The Narrowband HD settings.</p>
              */
             public Builder narrowBand(NarrowBand narrowBand) {
                 this.narrowBand = narrowBand;
@@ -1639,7 +1851,10 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The black bars that are added to the video. Format: width:height:left:top. Example: 1280:800:0:140.
+             * <p>The black bars that are added to the video. Format: width:height:left:top. Example: 1280:800:0:140.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1280:800:0:140</p>
              */
             public Builder pad(String pad) {
                 this.pad = pad;
@@ -1647,7 +1862,10 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The pixel format of the video. Valid values: standard pixel formats such as yuv420p and yuvj420p.
+             * <p>The pixel format of the video. Valid values: standard pixel formats such as yuv420p and yuvj420p.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yuv420p</p>
              */
             public Builder pixFmt(String pixFmt) {
                 this.pixFmt = pixFmt;
@@ -1655,7 +1873,10 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The preset video algorithm. Valid values: veryfast, fast, medium, slow, and slower. Default value: **medium**.
+             * <p>The preset video algorithm. Valid values: veryfast, fast, medium, slow, and slower. Default value: <strong>medium</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>medium</p>
              */
             public Builder preset(String preset) {
                 this.preset = preset;
@@ -1663,13 +1884,16 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The encoding profile. Valid values:
-             * <p>
+             * <p>The encoding profile. Valid values:</p>
+             * <ul>
+             * <li><strong>baseline</strong>: applicable to mobile devices.</li>
+             * <li><strong>main</strong>: applicable to standard-definition devices.</li>
+             * <li><strong>high</strong>: applicable to high-definition devices.</li>
+             * <li>Default value: <strong>high</strong>.</li>
+             * </ul>
              * 
-             * *   **baseline**: applicable to mobile devices.
-             * *   **main**: applicable to standard-definition devices.
-             * *   **high**: applicable to high-definition devices.
-             * *   Default value: **high**.
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -1677,7 +1901,10 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The strength of the independent denoising algorithm.
+             * <p>The strength of the independent denoising algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder qscale(String qscale) {
                 this.qscale = qscale;
@@ -1685,12 +1912,15 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the video stream is deleted. Valid values:
-             * <p>
+             * <p>Indicates whether the video stream is deleted. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * <li>Default value: <strong>false</strong>.</li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
-             * *   Default value: **false**.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder remove(String remove) {
                 this.remove = remove;
@@ -1698,7 +1928,10 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The policy of resolution adjustment. Valid values: cropFirst, widthFirst, and heightFirst.
+             * <p>The policy of resolution adjustment. Valid values: cropFirst, widthFirst, and heightFirst.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>heightFirst</p>
              */
             public Builder resoPriority(String resoPriority) {
                 this.resoPriority = resoPriority;
@@ -1706,11 +1939,14 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The scan mode. Valid values:
-             * <p>
+             * <p>The scan mode. Valid values:</p>
+             * <ul>
+             * <li><strong>interlaced</strong></li>
+             * <li><strong>progressive</strong></li>
+             * </ul>
              * 
-             * *   **interlaced**
-             * *   **progressive**
+             * <strong>example:</strong>
+             * <p>interlaced</p>
              */
             public Builder scanMode(String scanMode) {
                 this.scanMode = scanMode;
@@ -1718,11 +1954,14 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The width of the video.
-             * <p>
+             * <p>The width of the video.</p>
+             * <ul>
+             * <li>Unit: pixel.</li>
+             * <li>Default value: <strong>the width of the input video</strong>.</li>
+             * </ul>
              * 
-             * *   Unit: pixel.
-             * *   Default value: **the width of the input video**.
+             * <strong>example:</strong>
+             * <p>256</p>
              */
             public Builder width(String width) {
                 this.width = width;
@@ -1736,6 +1975,12 @@ public class QueryTemplateListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTemplateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTemplateListResponseBody</p>
+     */
     public static class Template extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Audio")
         private Audio audio;
@@ -1859,7 +2104,7 @@ public class QueryTemplateListResponseBody extends TeaModel {
             private Video video; 
 
             /**
-             * The audio codec configurations.
+             * <p>The audio codec configurations.</p>
              */
             public Builder audio(Audio audio) {
                 this.audio = audio;
@@ -1867,7 +2112,7 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The container format configurations.
+             * <p>The container format configurations.</p>
              */
             public Builder container(Container container) {
                 this.container = container;
@@ -1875,7 +2120,10 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the template was created.
+             * <p>The time when the template was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-04T06:44:43Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1883,7 +2131,10 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The transcoding template ID.
+             * <p>The transcoding template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16f01ad6175e4230ac42bb5182cd****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1891,7 +2142,7 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The transmuxing configurations.
+             * <p>The transmuxing configurations.</p>
              */
             public Builder muxConfig(MuxConfig muxConfig) {
                 this.muxConfig = muxConfig;
@@ -1899,7 +2150,10 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the template.
+             * <p>The name of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MPS-example</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1907,11 +2161,14 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the template. Valid values:
-             * <p>
+             * <p>The status of the template. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong></li>
+             * <li><strong>Deleted</strong></li>
+             * </ul>
              * 
-             * *   **Normal**
-             * *   **Deleted**
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -1919,7 +2176,7 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The general transcoding configurations.
+             * <p>The general transcoding configurations.</p>
              */
             public Builder transConfig(TransConfig transConfig) {
                 this.transConfig = transConfig;
@@ -1927,7 +2184,7 @@ public class QueryTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The video codec configurations.
+             * <p>The video codec configurations.</p>
              */
             public Builder video(Video video) {
                 this.video = video;
@@ -1941,6 +2198,12 @@ public class QueryTemplateListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTemplateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTemplateListResponseBody</p>
+     */
     public static class TemplateList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Template")
         private java.util.List < Template> template;

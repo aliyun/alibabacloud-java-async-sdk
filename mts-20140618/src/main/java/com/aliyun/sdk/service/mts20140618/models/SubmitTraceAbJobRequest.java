@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitTraceAbJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitTraceAbJobRequest</p>
@@ -202,7 +203,10 @@ public class SubmitTraceAbJobRequest extends Request {
         }
 
         /**
-         * Output.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Bucket&quot;:&quot;ivison-test&quot;,&quot;Location&quot;:&quot;oss-cn-shanghai&quot;,&quot;Dir&quot;:&quot;out/&quot;}</p>
          */
         public Builder output(String output) {
             this.putQueryParameter("Output", output);

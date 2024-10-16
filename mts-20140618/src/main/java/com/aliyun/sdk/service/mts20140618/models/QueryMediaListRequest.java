@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMediaListRequest} extends {@link RequestModel}
  *
  * <p>QueryMediaListRequest</p>
@@ -166,11 +167,14 @@ public class QueryMediaListRequest extends Request {
         } 
 
         /**
-         * Specifies whether to include media information in the returned result.
-         * <p>
+         * <p>Specifies whether to include media information in the returned result.</p>
+         * <ul>
+         * <li>Valid values: true and false.</li>
+         * <li>Default value: <strong>false</strong>.</li>
+         * </ul>
          * 
-         * *   Valid values: true and false.
-         * *   Default value: **false**.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeMediaInfo(Boolean includeMediaInfo) {
             this.putQueryParameter("IncludeMediaInfo", includeMediaInfo);
@@ -179,11 +183,14 @@ public class QueryMediaListRequest extends Request {
         }
 
         /**
-         * Specifies whether to include playback information in the returned result.
-         * <p>
+         * <p>Specifies whether to include playback information in the returned result.</p>
+         * <ul>
+         * <li>Valid values: true and false.</li>
+         * <li>Default value: <strong>false</strong>.</li>
+         * </ul>
          * 
-         * *   Valid values: true and false.
-         * *   Default value: **false**.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includePlayList(Boolean includePlayList) {
             this.putQueryParameter("IncludePlayList", includePlayList);
@@ -192,11 +199,14 @@ public class QueryMediaListRequest extends Request {
         }
 
         /**
-         * Specifies whether to include snapshot information in the returned result.
-         * <p>
+         * <p>Specifies whether to include snapshot information in the returned result.</p>
+         * <ul>
+         * <li>Valid values: true and false.</li>
+         * <li>Default value: <strong>false</strong>.</li>
+         * </ul>
          * 
-         * *   Valid values: true and false.
-         * *   Default value: **false**.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeSnapshotList(Boolean includeSnapshotList) {
             this.putQueryParameter("IncludeSnapshotList", includeSnapshotList);
@@ -205,11 +215,14 @@ public class QueryMediaListRequest extends Request {
         }
 
         /**
-         * Specifies whether to include summaries in the returned result.
-         * <p>
+         * <p>Specifies whether to include summaries in the returned result.</p>
+         * <ul>
+         * <li>Valid values: true and false.</li>
+         * <li>Default value: <strong>false</strong>.</li>
+         * </ul>
          * 
-         * *   Valid values: true and false.
-         * *   Default value: **false**.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeSummaryList(Boolean includeSummaryList) {
             this.putQueryParameter("IncludeSummaryList", includeSummaryList);
@@ -218,7 +231,11 @@ public class QueryMediaListRequest extends Request {
         }
 
         /**
-         * The IDs of the media files. To obtain the ID of a media file, you can perform the following operations in the ApsaraVideo Media Processing (MPS) console: In the left-side navigation pane, choose **Media Management** > **Media List**. Find the required video and click Manage. The ID of the video is displayed on the Basics tab. Separate multiple IDs with commas (,). You can query up to 10 media files at a time.
+         * <p>The IDs of the media files. To obtain the ID of a media file, you can perform the following operations in the ApsaraVideo Media Processing (MPS) console: In the left-side navigation pane, choose <strong>Media Management</strong> &gt; <strong>Media List</strong>. Find the required video and click Manage. The ID of the video is displayed on the Basics tab. Separate multiple IDs with commas (,). You can query up to 10 media files at a time.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3e1cd21131a94525be55acf65888****,e26cfa29e784402388463f61dbec****</p>
          */
         public Builder mediaIds(String mediaIds) {
             this.putQueryParameter("MediaIds", mediaIds);

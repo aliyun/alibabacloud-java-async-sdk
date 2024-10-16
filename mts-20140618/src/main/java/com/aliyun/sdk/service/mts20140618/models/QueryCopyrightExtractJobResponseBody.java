@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCopyrightExtractJobResponseBody} extends {@link TeaModel}
  *
  * <p>QueryCopyrightExtractJobResponseBody</p>
@@ -89,7 +90,10 @@ public class QueryCopyrightExtractJobResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F24EAE86-5356-528E-A2B1-FEDE269F42DD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +114,12 @@ public class QueryCopyrightExtractJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryCopyrightExtractJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCopyrightExtractJobResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;

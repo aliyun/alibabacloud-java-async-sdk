@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteTemplateResponseBody</p>
@@ -49,7 +50,10 @@ public class DeleteTemplateResponseBody extends TeaModel {
         private String templateId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2247541A-9F27-47EE-B6EC-484B5475****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class DeleteTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the custom transcoding template that is deleted.
+         * <p>The ID of the custom transcoding template that is deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16f01ad6175e4230ac42bb5182cd****</p>
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;

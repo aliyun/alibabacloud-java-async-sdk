@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchPipelineResponseBody} extends {@link TeaModel}
  *
  * <p>SearchPipelineResponseBody</p>
@@ -85,7 +86,10 @@ public class SearchPipelineResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class SearchPipelineResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,7 @@ public class SearchPipelineResponseBody extends TeaModel {
         }
 
         /**
-         * The MPS queues.
+         * <p>The MPS queues.</p>
          */
         public Builder pipelineList(PipelineList pipelineList) {
             this.pipelineList = pipelineList;
@@ -109,7 +116,10 @@ public class SearchPipelineResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>338CA33A-AE83-5DF4-B6F2-C6D3ED8143F5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class SearchPipelineResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class SearchPipelineResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchPipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchPipelineResponseBody</p>
+     */
     public static class NotifyConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MqTag")
         private String mqTag;
@@ -193,7 +212,10 @@ public class SearchPipelineResponseBody extends TeaModel {
             private String topic; 
 
             /**
-             * The tags.
+             * <p>The tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mts-test</p>
              */
             public Builder mqTag(String mqTag) {
                 this.mqTag = mqTag;
@@ -201,7 +223,10 @@ public class SearchPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * The queue of messages that are received.
+             * <p>The queue of messages that are received.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example1,example2</p>
              */
             public Builder mqTopic(String mqTopic) {
                 this.mqTopic = mqTopic;
@@ -209,7 +234,10 @@ public class SearchPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the queue that is created in MNS.
+             * <p>The name of the queue that is created in MNS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-queue-****</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -217,7 +245,10 @@ public class SearchPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the topic that is created in MNS.
+             * <p>The name of the topic that is created in MNS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-topic-****</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -231,6 +262,12 @@ public class SearchPipelineResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchPipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchPipelineResponseBody</p>
+     */
     public static class Pipeline extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -362,7 +399,10 @@ public class SearchPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the MPS queue.
+             * <p>The ID of the MPS queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d1ce4d3efcb549419193f50f1fcd****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -370,7 +410,10 @@ public class SearchPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the MPS queue.
+             * <p>The name of the MPS queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-pipeline-****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -378,7 +421,7 @@ public class SearchPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * The Message Service (MNS) configuration.
+             * <p>The Message Service (MNS) configuration.</p>
              */
             public Builder notifyConfig(NotifyConfig notifyConfig) {
                 this.notifyConfig = notifyConfig;
@@ -386,7 +429,10 @@ public class SearchPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * The quota that is allocated to the MPS queue.
+             * <p>The quota that is allocated to the MPS queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder quotaAllocate(Long quotaAllocate) {
                 this.quotaAllocate = quotaAllocate;
@@ -394,7 +440,10 @@ public class SearchPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * The role that is assigned to the current RAM user.
+             * <p>The role that is assigned to the current RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunMTSDefaultRole</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -402,20 +451,23 @@ public class SearchPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the MPS queue. Default value: **Standard**. Valid values:
-             * <p>
+             * <p>The type of the MPS queue. Default value: <strong>Standard</strong>. Valid values:</p>
+             * <ul>
+             * <li><strong>Boost</strong>: MPS queue with transcoding speed boosted</li>
+             * <li><strong>Standard</strong>: standard MPS queue</li>
+             * <li><strong>NarrowBandHDV2</strong>: MPS queue that supports Narrowband HD 2.0</li>
+             * <li><strong>AIVideoCover</strong>: MPS queue for intelligent snapshot capture</li>
+             * <li><strong>AIVideoFPShot</strong>: MPS queue for media fingerprinting</li>
+             * <li><strong>AIVideoCensor</strong>: MPS queue for automated review</li>
+             * <li><strong>AIVideoMCU</strong>: MPS queue for smart tagging</li>
+             * <li><strong>AIVideoSummary</strong>: MPS queue for video synopsis</li>
+             * <li><strong>AIVideoPorn</strong>: MPS queue for pornography detection in videos</li>
+             * <li><strong>AIAudioKWS</strong>: MPS queue for keyword recognition in audio</li>
+             * <li><strong>AIAudioASR</strong>: MPS queue for speech-to-text conversion</li>
+             * </ul>
              * 
-             * *   **Boost**: MPS queue with transcoding speed boosted
-             * *   **Standard**: standard MPS queue
-             * *   **NarrowBandHDV2**: MPS queue that supports Narrowband HD 2.0
-             * *   **AIVideoCover**: MPS queue for intelligent snapshot capture
-             * *   **AIVideoFPShot**: MPS queue for media fingerprinting
-             * *   **AIVideoCensor**: MPS queue for automated review
-             * *   **AIVideoMCU**: MPS queue for smart tagging
-             * *   **AIVideoSummary**: MPS queue for video synopsis
-             * *   **AIVideoPorn**: MPS queue for pornography detection in videos
-             * *   **AIAudioKWS**: MPS queue for keyword recognition in audio
-             * *   **AIAudioASR**: MPS queue for speech-to-text conversion
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder speed(String speed) {
                 this.speed = speed;
@@ -423,7 +475,10 @@ public class SearchPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the MPS queue.
+             * <p>The level of the MPS queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder speedLevel(Long speedLevel) {
                 this.speedLevel = speedLevel;
@@ -431,11 +486,14 @@ public class SearchPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the MPS queue. Valid values:
-             * <p>
+             * <p>The state of the MPS queue. Valid values:</p>
+             * <ul>
+             * <li><strong>Active</strong>: The MPS queue is active.</li>
+             * <li><strong>Paused</strong>: The MPS queue is paused.</li>
+             * </ul>
              * 
-             * *   **Active**: The MPS queue is active.
-             * *   **Paused**: The MPS queue is paused.
+             * <strong>example:</strong>
+             * <p>Paused</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -449,6 +507,12 @@ public class SearchPipelineResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchPipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchPipelineResponseBody</p>
+     */
     public static class PipelineList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Pipeline")
         private java.util.List < Pipeline> pipeline;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCustomEntitiesRequest} extends {@link RequestModel}
  *
  * <p>ListCustomEntitiesRequest</p>
@@ -155,7 +156,10 @@ public class ListCustomEntitiesRequest extends Request {
         } 
 
         /**
-         * Algorithm.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>landmark</p>
          */
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -164,7 +168,10 @@ public class ListCustomEntitiesRequest extends Request {
         }
 
         /**
-         * CustomGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder customGroupId(String customGroupId) {
             this.putQueryParameter("CustomGroupId", customGroupId);
@@ -191,7 +198,10 @@ public class ListCustomEntitiesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -200,7 +210,10 @@ public class ListCustomEntitiesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

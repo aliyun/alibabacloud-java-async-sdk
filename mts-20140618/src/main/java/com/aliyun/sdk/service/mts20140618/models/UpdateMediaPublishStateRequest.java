@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMediaPublishStateRequest} extends {@link RequestModel}
  *
  * <p>UpdateMediaPublishStateRequest</p>
@@ -124,7 +125,11 @@ public class UpdateMediaPublishStateRequest extends Request {
         } 
 
         /**
-         * The ID of the media file whose publishing status you want to update. You can obtain the ID of a media file from the response of the [AddMedia](~~44458~~) operation. Alternatively, perform the following operations in the ApsaraVideo Media Processing (MPS) console: In the left-side navigation pane, choose **Media Management** > **Media List**. Find the required video and click **Manage**. The ID of the video is displayed on the Basics tab.
+         * <p>The ID of the media file whose publishing status you want to update. You can obtain the ID of a media file from the response of the <a href="https://help.aliyun.com/document_detail/44458.html">AddMedia</a> operation. Alternatively, perform the following operations in the ApsaraVideo Media Processing (MPS) console: In the left-side navigation pane, choose <strong>Media Management</strong> &gt; <strong>Media List</strong>. Find the required video and click <strong>Manage</strong>. The ID of the video is displayed on the Basics tab.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3e6149d5a8c944c09b1a8d2dc3e4****</p>
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);
@@ -151,11 +156,14 @@ public class UpdateMediaPublishStateRequest extends Request {
         }
 
         /**
-         * The publishing status. Default value: **Initialed**. Valid values:
-         * <p>
+         * <p>The publishing status. Default value: <strong>Initialed</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: published.</li>
+         * <li><strong>false</strong>: unpublished.</li>
+         * </ul>
          * 
-         * *   **true**: published.
-         * *   **false**: unpublished.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder publish(Boolean publish) {
             this.putQueryParameter("Publish", publish);

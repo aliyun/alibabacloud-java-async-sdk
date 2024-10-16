@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePipelineResponseBody} extends {@link TeaModel}
  *
  * <p>UpdatePipelineResponseBody</p>
@@ -49,7 +50,7 @@ public class UpdatePipelineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the MPS queue.
+         * <p>The details of the MPS queue.</p>
          */
         public Builder pipeline(Pipeline pipeline) {
             this.pipeline = pipeline;
@@ -57,7 +58,10 @@ public class UpdatePipelineResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1FE0F96B-544D-4244-9D83-DFCFB0E5A231</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class UpdatePipelineResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdatePipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdatePipelineResponseBody</p>
+     */
     public static class NotifyConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MqTag")
         private String mqTag;
@@ -133,7 +143,10 @@ public class UpdatePipelineResponseBody extends TeaModel {
             private String topic; 
 
             /**
-             * The tags of the messages.
+             * <p>The tags of the messages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mts-test</p>
              */
             public Builder mqTag(String mqTag) {
                 this.mqTag = mqTag;
@@ -141,7 +154,10 @@ public class UpdatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * The queue of messages that are received.
+             * <p>The queue of messages that are received.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example1,example2</p>
              */
             public Builder mqTopic(String mqTopic) {
                 this.mqTopic = mqTopic;
@@ -149,7 +165,10 @@ public class UpdatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * The queue that is created in MNS.
+             * <p>The queue that is created in MNS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-queue-****</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -157,7 +176,10 @@ public class UpdatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * The topic that is created in MNS.
+             * <p>The topic that is created in MNS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-topic-****</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -171,6 +193,12 @@ public class UpdatePipelineResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdatePipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdatePipelineResponseBody</p>
+     */
     public static class Pipeline extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -270,7 +298,10 @@ public class UpdatePipelineResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The ID of the MPS queue.
+             * <p>The ID of the MPS queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d1ce4d3efcb549419193f50f1fcd****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -278,7 +309,10 @@ public class UpdatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * The new name of the MPS queue.
+             * <p>The new name of the MPS queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-pipeline-****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -286,7 +320,7 @@ public class UpdatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * The MNS configuration.
+             * <p>The MNS configuration.</p>
              */
             public Builder notifyConfig(NotifyConfig notifyConfig) {
                 this.notifyConfig = notifyConfig;
@@ -294,7 +328,10 @@ public class UpdatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * The quota that is allocated to the MPS queue.
+             * <p>The quota that is allocated to the MPS queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder quotaAllocate(Long quotaAllocate) {
                 this.quotaAllocate = quotaAllocate;
@@ -302,7 +339,10 @@ public class UpdatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * The role that is assigned to the current RAM user.
+             * <p>The role that is assigned to the current RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunMTSExampleRole</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -310,20 +350,23 @@ public class UpdatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the MPS queue. Default value: **Standard**. Valid values:
-             * <p>
+             * <p>The type of the MPS queue. Default value: <strong>Standard</strong>. Valid values:</p>
+             * <ul>
+             * <li><strong>Boost</strong>: MPS queue with transcoding speed boosted</li>
+             * <li><strong>Standard</strong>: standard MPS queue</li>
+             * <li><strong>NarrowBandHDV2</strong>: MPS queue that supports Narrowband HD 2.0</li>
+             * <li><strong>AIVideoCover</strong>: MPS queue for intelligent snapshot capture</li>
+             * <li><strong>AIVideoFPShot</strong>: MPS queue for media fingerprinting</li>
+             * <li><strong>AIVideoCensor</strong>: MPS queue for automated review</li>
+             * <li><strong>AIVideoMCU</strong>: MPS queue for smart tagging</li>
+             * <li><strong>AIVideoSummary</strong>: MPS queue for video synopsis</li>
+             * <li><strong>AIVideoPorn</strong>: MPS queue for pornography detection in videos</li>
+             * <li><strong>AIAudioKWS</strong>: MPS queue for keyword recognition in audio</li>
+             * <li><strong>AIAudioASR</strong>: MPS queue for speech-to-text conversion</li>
+             * </ul>
              * 
-             * *   **Boost**: MPS queue with transcoding speed boosted
-             * *   **Standard**: standard MPS queue
-             * *   **NarrowBandHDV2**: MPS queue that supports Narrowband HD 2.0
-             * *   **AIVideoCover**: MPS queue for intelligent snapshot capture
-             * *   **AIVideoFPShot**: MPS queue for media fingerprinting
-             * *   **AIVideoCensor**: MPS queue for automated review
-             * *   **AIVideoMCU**: MPS queue for smart tagging
-             * *   **AIVideoSummary**: MPS queue for video synopsis
-             * *   **AIVideoPorn**: MPS queue for pornography detection in videos
-             * *   **AIAudioKWS**: MPS queue for keyword recognition in audio
-             * *   **AIAudioASR**: MPS queue for speech-to-text conversion
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder speed(String speed) {
                 this.speed = speed;
@@ -331,11 +374,14 @@ public class UpdatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the MPS queue. Valid values:
-             * <p>
+             * <p>The state of the MPS queue. Valid values:</p>
+             * <ul>
+             * <li><strong>Active</strong>: The MPS queue is active.</li>
+             * <li><strong>Paused</strong>: The MPS queue is paused.</li>
+             * </ul>
              * 
-             * *   **Active**: The MPS queue is active.
-             * *   **Paused**: The MPS queue is paused.
+             * <strong>example:</strong>
+             * <p>Paused</p>
              */
             public Builder state(String state) {
                 this.state = state;

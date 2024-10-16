@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitCopyrightJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitCopyrightJobRequest</p>
@@ -231,7 +232,7 @@ public class SubmitCopyrightJobRequest extends Request {
         }
 
         /**
-         * Message.
+         * <p>This parameter is required.</p>
          */
         public Builder message(String message) {
             this.putQueryParameter("Message", message);
@@ -240,7 +241,10 @@ public class SubmitCopyrightJobRequest extends Request {
         }
 
         /**
-         * Output.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Bucket&quot;:&quot;example-bucket&quot;,&quot;Location&quot;:&quot;oss-cn-shanghai&quot;,&quot;Object&quot;:&quot;example_result.mp4&quot;}</p>
          */
         public Builder output(String output) {
             this.putQueryParameter("Output", output);

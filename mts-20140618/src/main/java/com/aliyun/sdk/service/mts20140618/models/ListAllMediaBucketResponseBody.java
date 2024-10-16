@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAllMediaBucketResponseBody} extends {@link TeaModel}
  *
  * <p>ListAllMediaBucketResponseBody</p>
@@ -61,7 +62,7 @@ public class ListAllMediaBucketResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The media buckets returned.
+         * <p>The media buckets returned.</p>
          */
         public Builder mediaBucketList(MediaBucketList mediaBucketList) {
             this.mediaBucketList = mediaBucketList;
@@ -69,7 +70,10 @@ public class ListAllMediaBucketResponseBody extends TeaModel {
         }
 
         /**
-         * The returned value of NextPageToken is a pagination token, which can be used in the next request to retrieve a new page of results.
+         * <p>The returned value of NextPageToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>P2Zqo1PLGhZdygo-ajSsjUX5zrBHCgXy6j4hEvv****</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.nextPageToken = nextPageToken;
@@ -77,7 +81,10 @@ public class ListAllMediaBucketResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79760D91-D3CF-4165-****-B7E2836EF62A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class ListAllMediaBucketResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAllMediaBucketResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAllMediaBucketResponseBody</p>
+     */
     public static class MediaBucket extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
@@ -141,7 +154,10 @@ public class ListAllMediaBucketResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The name of the media bucket.
+             * <p>The name of the media bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-bucket-****</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -149,7 +165,10 @@ public class ListAllMediaBucketResponseBody extends TeaModel {
             }
 
             /**
-             * The settings of Object Storage Service (OSS) hotlink protection. For more information, see [Hotlink protection](~~31869~~).
+             * <p>The settings of Object Storage Service (OSS) hotlink protection. For more information, see <a href="https://help.aliyun.com/document_detail/31869.html">Hotlink protection</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">http://www.example.com</a></p>
              */
             public Builder referer(String referer) {
                 this.referer = referer;
@@ -157,11 +176,14 @@ public class ListAllMediaBucketResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the media bucket. Valid values:
-             * <p>
+             * <p>The type of the media bucket. Valid values:</p>
+             * <ul>
+             * <li>Input: input media bucket</li>
+             * <li>Output: output media bucket</li>
+             * </ul>
              * 
-             * *   Input: input media bucket
-             * *   Output: output media bucket
+             * <strong>example:</strong>
+             * <p>Input</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -175,6 +197,12 @@ public class ListAllMediaBucketResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAllMediaBucketResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAllMediaBucketResponseBody</p>
+     */
     public static class MediaBucketList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MediaBucket")
         private java.util.List < MediaBucket> mediaBucket;

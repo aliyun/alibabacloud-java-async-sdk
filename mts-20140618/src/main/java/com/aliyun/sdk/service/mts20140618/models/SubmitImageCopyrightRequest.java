@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitImageCopyrightRequest} extends {@link RequestModel}
  *
  * <p>SubmitImageCopyrightRequest</p>
@@ -82,7 +83,7 @@ public class SubmitImageCopyrightRequest extends Request {
         } 
 
         /**
-         * Message.
+         * <p>This parameter is required.</p>
          */
         public Builder message(String message) {
             this.putQueryParameter("Message", message);

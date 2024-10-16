@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchWaterMarkTemplateRequest} extends {@link RequestModel}
  *
  * <p>SearchWaterMarkTemplateRequest</p>
@@ -156,7 +157,10 @@ public class SearchWaterMarkTemplateRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -165,11 +169,14 @@ public class SearchWaterMarkTemplateRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <ul>
+         * <li>A maximum of <strong>100</strong> entries can be returned on each page.</li>
+         * <li>Default value: <strong>10</strong>.</li>
+         * </ul>
          * 
-         * *   A maximum of **100** entries can be returned on each page.
-         * *   Default value: **10**.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -196,12 +203,15 @@ public class SearchWaterMarkTemplateRequest extends Request {
         }
 
         /**
-         * The state of the watermark templates that you want to query. Valid values:
-         * <p>
+         * <p>The state of the watermark templates that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>All (default)</strong></li>
+         * <li><strong>Normal</strong></li>
+         * <li><strong>Deleted</strong></li>
+         * </ul>
          * 
-         * *   **All (default)**
-         * *   **Normal**
-         * *   **Deleted**
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTemplateRequest} extends {@link RequestModel}
  *
  * <p>UpdateTemplateRequest</p>
@@ -195,7 +196,10 @@ public class UpdateTemplateRequest extends Request {
         } 
 
         /**
-         * The transmuxing configurations. The value is a JSON object. For more information, see the [MuxConfig](~~29253~~) parameter of the "Parameter details" topic.
+         * <p>The transmuxing configurations. The value is a JSON object. For more information, see the <a href="https://help.aliyun.com/document_detail/29253.html">MuxConfig</a> parameter of the &quot;Parameter details&quot; topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Codec&quot;:&quot;aac&quot;,&quot;Samplerate&quot;:&quot;44100&quot;,&quot;Bitrate&quot;:&quot;500&quot;,&quot;Channels&quot;:&quot;2&quot;}</p>
          */
         public Builder audio(String audio) {
             this.putQueryParameter("Audio", audio);
@@ -204,7 +208,10 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * The configurations of the video stream. The value is a JSON object. For more information, see the [Video](~~29253~~) parameter of the "Parameter details" topic.
+         * <p>The configurations of the video stream. The value is a JSON object. For more information, see the <a href="https://help.aliyun.com/document_detail/29253.html">Video</a> parameter of the &quot;Parameter details&quot; topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Format&quot;:&quot;mp4&quot;}</p>
          */
         public Builder container(String container) {
             this.putQueryParameter("Container", container);
@@ -213,7 +220,10 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * The general transcoding configurations. The value is a JSON object. For more information, see the [TransConfig](~~29253~~) parameter of the "Parameter details" topic.
+         * <p>The general transcoding configurations. The value is a JSON object. For more information, see the <a href="https://help.aliyun.com/document_detail/29253.html">TransConfig</a> parameter of the &quot;Parameter details&quot; topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Segment&quot;:{&quot;Duration&quot;:&quot;10&quot;}}</p>
          */
         public Builder muxConfig(String muxConfig) {
             this.putQueryParameter("MuxConfig", muxConfig);
@@ -222,14 +232,17 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * The container format. The value is a JSON object. Default format: **MP4**.
-         * <p>
+         * <p>The container format. The value is a JSON object. Default format: <strong>MP4</strong>.</p>
+         * <ul>
+         * <li>Video formats: FLV, MP4, HLS (M3U8 + TS), and MPEG-DASH (MPD + fMP4)</li>
+         * <li>Audio formats: MP3, MP4, OGG, FLAC, and M4A</li>
+         * <li>Images formats: GIF and WebP</li>
+         * </ul>
+         * <p>For more information, see the <a href="https://help.aliyun.com/document_detail/29253.html">Container</a> parameter of the &quot;Parameter details&quot; topic.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   Video formats: FLV, MP4, HLS (M3U8 + TS), and MPEG-DASH (MPD + fMP4)
-         * *   Audio formats: MP3, MP4, OGG, FLAC, and M4A
-         * *   Images formats: GIF and WebP
-         * 
-         * For more information, see the [Container](~~29253~~) parameter of the "Parameter details" topic.
+         * <strong>example:</strong>
+         * <p>MPS-example</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -274,7 +287,11 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * The name of the template. The name can be up to 128 bytes in length.
+         * <p>The name of the template. The name can be up to 128 bytes in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16f01ad6175e4230ac42bb5182cd****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -283,7 +300,10 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;TransMode&quot;:&quot;onepass&quot;}</p>
          */
         public Builder transConfig(String transConfig) {
             this.putQueryParameter("TransConfig", transConfig);
@@ -292,7 +312,10 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * The configurations of the audio stream. The value is a JSON object. For more information, see the [Audio](~~29253~~) parameter of the "Parameter details" topic.
+         * <p>The configurations of the audio stream. The value is a JSON object. For more information, see the <a href="https://help.aliyun.com/document_detail/29253.html">Audio</a> parameter of the &quot;Parameter details&quot; topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Codec&quot;:&quot;H.264&quot;,&quot;Profile&quot;:&quot;high&quot;,&quot;Bitrate&quot;:&quot;500&quot;,&quot;Crf&quot;:&quot;15&quot;,&quot;Width&quot;:&quot;256&quot;,&quot;Height&quot;:&quot;800&quot;,&quot;Fps&quot;:&quot;25&quot;,&quot;Gop&quot;:&quot;10&quot;}</p>
          */
         public Builder video(String video) {
             this.putQueryParameter("Video", video);

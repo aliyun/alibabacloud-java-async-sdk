@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMediaRequest} extends {@link RequestModel}
  *
  * <p>DeleteMediaRequest</p>
@@ -110,10 +111,14 @@ public class DeleteMediaRequest extends Request {
         } 
 
         /**
-         * The IDs of the media files that you want to remove. Separate multiple IDs with commas (,). You can remove up to 10 media files at a time.
-         * <p>
+         * <p>The IDs of the media files that you want to remove. Separate multiple IDs with commas (,). You can remove up to 10 media files at a time.</p>
+         * <blockquote>
+         * <p>You can obtain the ID of the media file from the response parameters of the <a href="https://help.aliyun.com/document_detail/44458.html">AddMedia</a> operation. Alternatively, you can log on to the MPS console. In the left-side navigation pane, choose <strong>Media Management</strong> &gt; <strong>Media List</strong>. Find the required video and click <strong>Manage</strong> in the Actions column. The ID of the video is displayed on the Basics tab.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can obtain the ID of the media file from the response parameters of the [AddMedia](~~44458~~) operation. Alternatively, you can log on to the MPS console. In the left-side navigation pane, choose **Media Management** > **Media List**. Find the required video and click **Manage** in the Actions column. The ID of the video is displayed on the Basics tab.
+         * <strong>example:</strong>
+         * <p>3e1cd21131a94525be55acf65888****,3e6149d5a8c944c09b1a8d2dc3e4****</p>
          */
         public Builder mediaIds(String mediaIds) {
             this.putQueryParameter("MediaIds", mediaIds);

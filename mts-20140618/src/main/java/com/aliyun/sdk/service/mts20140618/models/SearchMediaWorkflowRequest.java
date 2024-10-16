@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchMediaWorkflowRequest} extends {@link RequestModel}
  *
  * <p>SearchMediaWorkflowRequest</p>
@@ -156,7 +157,10 @@ public class SearchMediaWorkflowRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -165,11 +169,14 @@ public class SearchMediaWorkflowRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <ul>
+         * <li>A maximum of <strong>100</strong> entries can be returned on each page.</li>
+         * <li>Default value: <strong>10</strong>.</li>
+         * </ul>
          * 
-         * *   A maximum of **100** entries can be returned on each page.
-         * *   Default value: **10**.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -196,12 +203,15 @@ public class SearchMediaWorkflowRequest extends Request {
         }
 
         /**
-         * The status of the media workflows that you want to query. You can specify multiple states. Separate multiple states with commas (,). Default value: **Inactive,Active,Deleted**. Valid values:
-         * <p>
+         * <p>The status of the media workflows that you want to query. You can specify multiple states. Separate multiple states with commas (,). Default value: <strong>Inactive,Active,Deleted</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>Inactive</strong>: Deactivated media workflows are queried.</li>
+         * <li><strong>Active</strong>: Activated media workflows are queried.</li>
+         * <li><strong>Deleted</strong>: Deleted media workflows are queried.</li>
+         * </ul>
          * 
-         * *   **Inactive**: Deactivated media workflows are queried.
-         * *   **Active**: Activated media workflows are queried.
-         * *   **Deleted**: Deleted media workflows are queried.
+         * <strong>example:</strong>
+         * <p>Inactive,Active,Deleted</p>
          */
         public Builder stateList(String stateList) {
             this.putQueryParameter("StateList", stateList);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitFpDBDeleteJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitFpDBDeleteJobRequest</p>
@@ -152,12 +153,15 @@ public class SubmitFpDBDeleteJobRequest extends Request {
         } 
 
         /**
-         * The operation type. Valid values:
-         * <p>
+         * <p>The operation type. Valid values:</p>
+         * <ul>
+         * <li><strong>Purge</strong>: clears the media fingerprint library. The content in the library is deleted, but the library is not deleted.</li>
+         * <li><strong>Delete</strong>: deletes the media fingerprint library. Both the library and its content are deleted.</li>
+         * <li>Default value: <strong>Purge</strong>.</li>
+         * </ul>
          * 
-         * *   **Purge**: clears the media fingerprint library. The content in the library is deleted, but the library is not deleted.
-         * *   **Delete**: deletes the media fingerprint library. Both the library and its content are deleted.
-         * *   Default value: **Purge**.
+         * <strong>example:</strong>
+         * <p>Purge</p>
          */
         public Builder delType(String delType) {
             this.putQueryParameter("DelType", delType);
@@ -166,7 +170,11 @@ public class SubmitFpDBDeleteJobRequest extends Request {
         }
 
         /**
-         * The ID of the media fingerprint library. You can obtain the library ID from the response parameters of the [CreateFpShotDB](~~170149~~) operation.
+         * <p>The ID of the media fingerprint library. You can obtain the library ID from the response parameters of the <a href="https://help.aliyun.com/document_detail/170149.html">CreateFpShotDB</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88c6ca184c0e47098a5b665e2a12****</p>
          */
         public Builder fpDBId(String fpDBId) {
             this.putQueryParameter("FpDBId", fpDBId);
@@ -193,7 +201,10 @@ public class SubmitFpDBDeleteJobRequest extends Request {
         }
 
         /**
-         * The ID of the ApsaraVideo Media Processing (MPS) queue. This ID can be used to associate the job with a notification method. To view the MPS queue ID, log on to the **MPS console** and choose **Global Settings** > **Pipelines** in the left-side navigation pane.
+         * <p>The ID of the ApsaraVideo Media Processing (MPS) queue. This ID can be used to associate the job with a notification method. To view the MPS queue ID, log on to the <strong>MPS console</strong> and choose <strong>Global Settings</strong> &gt; <strong>Pipelines</strong> in the left-side navigation pane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fb712a6890464059b1b2ea7c8647****</p>
          */
         public Builder pipelineId(String pipelineId) {
             this.putQueryParameter("PipelineId", pipelineId);
@@ -220,7 +231,10 @@ public class SubmitFpDBDeleteJobRequest extends Request {
         }
 
         /**
-         * The custom data. The value can contain letters and digits and can be up to 128 bytes in length.
+         * <p>The custom data. The value can contain letters and digits and can be up to 128 bytes in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example data</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

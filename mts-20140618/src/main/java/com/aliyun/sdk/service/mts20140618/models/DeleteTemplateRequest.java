@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTemplateRequest} extends {@link RequestModel}
  *
  * <p>DeleteTemplateRequest</p>
@@ -146,7 +147,11 @@ public class DeleteTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the custom transcoding template that you want to delete. To obtain the ID of the custom transcoding template, you can log on to the **ApsaraVideo Media Processing (MPS) console** and choose **Global Settings** > **Encoding Templates** in the left-side navigation pane.
+         * <p>The ID of the custom transcoding template that you want to delete. To obtain the ID of the custom transcoding template, you can log on to the <strong>ApsaraVideo Media Processing (MPS) console</strong> and choose <strong>Global Settings</strong> &gt; <strong>Encoding Templates</strong> in the left-side navigation pane.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16f01ad6175e4230ac42bb5182cd****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

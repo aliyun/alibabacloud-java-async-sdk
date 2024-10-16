@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelJobRequest} extends {@link RequestModel}
  *
  * <p>CancelJobRequest</p>
@@ -110,7 +111,11 @@ public class CancelJobRequest extends Request {
         } 
 
         /**
-         * The ID of the transcoding job to be canceled. You can log on to the **MPS console** and click **Tasks** in the left-side navigation pane to obtain job IDs. Alternatively, you can obtain job IDs from the response of the [SubmitJobs](~~29226~~) operation.
+         * <p>The ID of the transcoding job to be canceled. You can log on to the <strong>MPS console</strong> and click <strong>Tasks</strong> in the left-side navigation pane to obtain job IDs. Alternatively, you can obtain job IDs from the response of the <a href="https://help.aliyun.com/document_detail/29226.html">SubmitJobs</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d1ce4d3efcb549419193f50f1fcd****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteWaterMarkTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteWaterMarkTemplateResponseBody</p>
@@ -49,7 +50,10 @@ public class DeleteWaterMarkTemplateResponseBody extends TeaModel {
         private String waterMarkTemplateId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>030E2671-806A-52AF-A93C-DA8E308603A6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class DeleteWaterMarkTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the deleted watermark template.
+         * <p>The ID of the deleted watermark template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3780bd69b2b74540bc7b1096f564****</p>
          */
         public Builder waterMarkTemplateId(String waterMarkTemplateId) {
             this.waterMarkTemplateId = waterMarkTemplateId;

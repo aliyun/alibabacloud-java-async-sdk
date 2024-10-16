@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ActivateMediaWorkflowRequest} extends {@link RequestModel}
  *
  * <p>ActivateMediaWorkflowRequest</p>
@@ -110,7 +111,11 @@ public class ActivateMediaWorkflowRequest extends Request {
         } 
 
         /**
-         * The ID of the media workflow. You can obtain the ID from the response of the [AddMediaWorkflow](~~44437~~) operation.
+         * <p>The ID of the media workflow. You can obtain the ID from the response of the <a href="https://help.aliyun.com/document_detail/44437.html">AddMediaWorkflow</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93ab850b4f6f44eab54b6e9181d4****</p>
          */
         public Builder mediaWorkflowId(String mediaWorkflowId) {
             this.putQueryParameter("MediaWorkflowId", mediaWorkflowId);

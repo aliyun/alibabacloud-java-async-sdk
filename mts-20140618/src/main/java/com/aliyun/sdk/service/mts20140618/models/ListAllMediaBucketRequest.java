@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAllMediaBucketRequest} extends {@link RequestModel}
  *
  * <p>ListAllMediaBucketRequest</p>
@@ -123,7 +124,10 @@ public class ListAllMediaBucketRequest extends Request {
         } 
 
         /**
-         * The maximum number of media buckets to return. Valid values: 1 to 100. Default value: 50.
+         * <p>The maximum number of media buckets to return. Valid values: 1 to 100. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maximumPageSize(Integer maximumPageSize) {
             this.putQueryParameter("MaximumPageSize", maximumPageSize);
@@ -132,7 +136,10 @@ public class ListAllMediaBucketRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. The response to the first request contains this parameter, which is added to the next request.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. The response to the first request contains this parameter, which is added to the next request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>P2Zqo1PLGhZdygo-ajSsjUX5zrBHCgXy6j4hEvv****</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.putQueryParameter("NextPageToken", nextPageToken);

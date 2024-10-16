@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFpShotFilesRequest} extends {@link RequestModel}
  *
  * <p>ListFpShotFilesRequest</p>
@@ -167,10 +168,13 @@ public class ListFpShotFilesRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. The media files to be returned must be stored before the specified end time. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
-         * <p>
+         * <p>The end of the time range to query. The media files to be returned must be stored before the specified end time. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>This parameter is available only in the China (Beijing), China (Hangzhou), and China (Shanghai) regions.</p>
+         * </blockquote>
          * 
-         * > This parameter is available only in the China (Beijing), China (Hangzhou), and China (Shanghai) regions.
+         * <strong>example:</strong>
+         * <p>2022-09-08T23:32:56Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -179,7 +183,11 @@ public class ListFpShotFilesRequest extends Request {
         }
 
         /**
-         * The ID of the media fingerprint library whose files you want to query. You can obtain the library ID from the response parameters of the [CreateFpShotDB](~~170149~~) operation.
+         * <p>The ID of the media fingerprint library whose files you want to query. You can obtain the library ID from the response parameters of the <a href="https://help.aliyun.com/document_detail/170149.html">CreateFpShotDB</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2288c6ca184c0e47098a5b665e2a12****</p>
          */
         public Builder fpDBId(String fpDBId) {
             this.putQueryParameter("FpDBId", fpDBId);
@@ -188,7 +196,10 @@ public class ListFpShotFilesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ae0fd49c0840e14daf0d66a75b83****</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.putQueryParameter("NextPageToken", nextPageToken);
@@ -215,7 +226,10 @@ public class ListFpShotFilesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20.
+         * <p>The number of entries to return on each page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -242,10 +256,13 @@ public class ListFpShotFilesRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The media files to be returned must be stored after the specified start time. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
-         * <p>
+         * <p>The beginning of the time range to query. The media files to be returned must be stored after the specified start time. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>This parameter is available only in the China (Beijing), China (Hangzhou), and China (Shanghai) regions.</p>
+         * </blockquote>
          * 
-         * > This parameter is available only in the China (Beijing), China (Hangzhou), and China (Shanghai) regions.
+         * <strong>example:</strong>
+         * <p>2022-09-01T00:00:28Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

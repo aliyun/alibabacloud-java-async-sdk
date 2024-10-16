@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMediaWorkflowExecutionsRequest} extends {@link RequestModel}
  *
  * <p>ListMediaWorkflowExecutionsRequest</p>
@@ -166,7 +167,10 @@ public class ListMediaWorkflowExecutionsRequest extends Request {
         } 
 
         /**
-         * The Object Storage Service (OSS) URL of the input file of the media workflow. The URL complies with RFC 3986 and is encoded in UTF-8, with reserved characters being percent-encoded. For more information, see [URL encoding](~~423796~~).
+         * <p>The Object Storage Service (OSS) URL of the input file of the media workflow. The URL complies with RFC 3986 and is encoded in UTF-8, with reserved characters being percent-encoded. For more information, see <a href="https://help.aliyun.com/document_detail/423796.html">URL encoding</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example-****.cn-hangzhou.aliyuncs.com/test****.flv">http://example-****.cn-hangzhou.aliyuncs.com/test****.flv</a></p>
          */
         public Builder inputFileURL(String inputFileURL) {
             this.putQueryParameter("InputFileURL", inputFileURL);
@@ -175,7 +179,10 @@ public class ListMediaWorkflowExecutionsRequest extends Request {
         }
 
         /**
-         * The maximum number of media workflow execution instances to return. Valid values: `[1,100]`. Default value: **10**.
+         * <p>The maximum number of media workflow execution instances to return. Valid values: <code>[1,100]</code>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maximumPageSize(Long maximumPageSize) {
             this.putQueryParameter("MaximumPageSize", maximumPageSize);
@@ -184,7 +191,10 @@ public class ListMediaWorkflowExecutionsRequest extends Request {
         }
 
         /**
-         * The ID of the media workflow whose execution instances you want to query. To obtain the workflow ID, you can log on to the **ApsaraVideo Media Processing (MPS) console** and choose **Workflows** > **Workflow Settings**.
+         * <p>The ID of the media workflow whose execution instances you want to query. To obtain the workflow ID, you can log on to the <strong>ApsaraVideo Media Processing (MPS) console</strong> and choose <strong>Workflows</strong> &gt; <strong>Workflow Settings</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43b7335a4b1d4fe883670036affb****</p>
          */
         public Builder mediaWorkflowId(String mediaWorkflowId) {
             this.putQueryParameter("MediaWorkflowId", mediaWorkflowId);
@@ -193,7 +203,10 @@ public class ListMediaWorkflowExecutionsRequest extends Request {
         }
 
         /**
-         * The name of the media workflow. To obtain the workflow name, you can log on to the **MPS console** and choose **Workflows** > **Workflow Settings**.
+         * <p>The name of the media workflow. To obtain the workflow name, you can log on to the <strong>MPS console</strong> and choose <strong>Workflows</strong> &gt; <strong>Workflow Settings</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-mediaworkflow-****</p>
          */
         public Builder mediaWorkflowName(String mediaWorkflowName) {
             this.putQueryParameter("MediaWorkflowName", mediaWorkflowName);
@@ -202,7 +215,10 @@ public class ListMediaWorkflowExecutionsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. The value is a UUID that contains 32 characters. When you request the first page of query results, leave the NextPageToken parameter empty. When you request more query results, specify the value of the NextPageToken parameter returned in the query results on the previous page.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. The value is a UUID that contains 32 characters. When you request the first page of query results, leave the NextPageToken parameter empty. When you request more query results, specify the value of the NextPageToken parameter returned in the query results on the previous page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39f8e0bc005e4f309379701645f4****</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.putQueryParameter("NextPageToken", nextPageToken);

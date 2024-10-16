@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RegisterCustomFaceRequest} extends {@link RequestModel}
  *
  * <p>RegisterCustomFaceRequest</p>
@@ -35,6 +36,10 @@ public class RegisterCustomFaceRequest extends Request {
     private String personId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PersonName")
+    private String personName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -49,6 +54,7 @@ public class RegisterCustomFaceRequest extends Request {
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.personId = builder.personId;
+        this.personName = builder.personName;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -102,6 +108,13 @@ public class RegisterCustomFaceRequest extends Request {
     }
 
     /**
+     * @return personName
+     */
+    public String getPersonName() {
+        return this.personName;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -121,6 +134,7 @@ public class RegisterCustomFaceRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String personId; 
+        private String personName; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -135,12 +149,17 @@ public class RegisterCustomFaceRequest extends Request {
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.personId = request.personId;
+            this.personName = request.personName;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * The ID of the figure library in which you want to register a custom face. The ID is used to uniquely identify a figure library. You can specify the ID of a custom figure library. Make sure that the ID is unique and keep the ID for future API operation calls. If you set this parameter to the ID of a system figure library, the custom face is registered in the system figure library. The ID can be up to 120 characters in length and is not case-sensitive.
+         * <p>The ID of the figure library in which you want to register a custom face. The ID is used to uniquely identify a figure library. You can specify the ID of a custom figure library. Make sure that the ID is unique and keep the ID for future API operation calls. If you set this parameter to the ID of a system figure library, the custom face is registered in the system figure library. The ID can be up to 120 characters in length and is not case-sensitive.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CategoryId001-****</p>
          */
         public Builder categoryId(String categoryId) {
             this.putQueryParameter("CategoryId", categoryId);
@@ -149,7 +168,11 @@ public class RegisterCustomFaceRequest extends Request {
         }
 
         /**
-         * The URL of the facial image that you want to register for the specified figure. The image must contain only one face.
+         * <p>The URL of the facial image that you want to register for the specified figure. The image must contain only one face.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example-****.jpeg">http://example-****.jpeg</a></p>
          */
         public Builder imageUrl(String imageUrl) {
             this.putQueryParameter("ImageUrl", imageUrl);
@@ -176,11 +199,24 @@ public class RegisterCustomFaceRequest extends Request {
         }
 
         /**
-         * The ID of the figure for which you want to register a custom face. The ID is used to uniquely identify a figure. You can specify a figure ID. Make sure that the ID is unique and keep the ID for future API operation calls. The ID can be up to 120 characters in length and is not case-sensitive. The value returned is of the String type.
+         * <p>The ID of the figure for which you want to register a custom face. The ID is used to uniquely identify a figure. You can specify a figure ID. Make sure that the ID is unique and keep the ID for future API operation calls. The ID can be up to 120 characters in length and is not case-sensitive. The value returned is of the String type.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PersonId001-****</p>
          */
         public Builder personId(String personId) {
             this.putQueryParameter("PersonId", personId);
             this.personId = personId;
+            return this;
+        }
+
+        /**
+         * PersonName.
+         */
+        public Builder personName(String personName) {
+            this.putQueryParameter("PersonName", personName);
+            this.personName = personName;
             return this;
         }
 

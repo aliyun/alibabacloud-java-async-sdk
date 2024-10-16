@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindInputBucketRequest} extends {@link RequestModel}
  *
  * <p>BindInputBucketRequest</p>
@@ -124,10 +125,14 @@ public class BindInputBucketRequest extends Request {
         } 
 
         /**
-         * The name of the input media bucket to be bound. The name can be up to 64 bytes in size. To obtain the media bucket name, you can log on to the **ApsaraVideo Media Processing (MPS) console** and choose **Workflows** > **Media Buckets** in the left-side navigation pane.
-         * <p>
+         * <p>The name of the input media bucket to be bound. The name can be up to 64 bytes in size. To obtain the media bucket name, you can log on to the <strong>ApsaraVideo Media Processing (MPS) console</strong> and choose <strong>Workflows</strong> &gt; <strong>Media Buckets</strong> in the left-side navigation pane.</p>
+         * <blockquote>
+         * <p>The bucket name can contain lowercase letters, digits, and hyphens (-), and cannot start or end with a hyphen (-).</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The bucket name can contain lowercase letters, digits, and hyphens (-), and cannot start or end with a hyphen (-).
+         * <strong>example:</strong>
+         * <p>example-bucket-****</p>
          */
         public Builder bucket(String bucket) {
             this.putQueryParameter("Bucket", bucket);
@@ -154,7 +159,10 @@ public class BindInputBucketRequest extends Request {
         }
 
         /**
-         * The settings of Object Storage Service (OSS) hotlink protection. For more information, see [Hotlink protection](~~31869~~).
+         * <p>The settings of Object Storage Service (OSS) hotlink protection. For more information, see <a href="https://help.aliyun.com/document_detail/31869.html">Hotlink protection</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">http://www.example.com</a></p>
          */
         public Builder referer(String referer) {
             this.putQueryParameter("Referer", referer);

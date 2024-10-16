@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnbindOutputBucketRequest} extends {@link RequestModel}
  *
  * <p>UnbindOutputBucketRequest</p>
@@ -110,7 +111,11 @@ public class UnbindOutputBucketRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-bucket-****</p>
          */
         public Builder bucket(String bucket) {
             this.putQueryParameter("Bucket", bucket);

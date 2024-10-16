@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryFpDBDeleteJobListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryFpDBDeleteJobListResponseBody</p>
@@ -61,7 +62,7 @@ public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The jobs of deleting a media fingerprint library. For more information, see the "FpDBDeleteJob" section of the [Data types](https://www.alibabacloud.com/help/en/apsaravideo-for-media-processing/latest/datatypes) topic.
+         * <p>The jobs of deleting a media fingerprint library. For more information, see the &quot;FpDBDeleteJob&quot; section of the <a href="https://www.alibabacloud.com/help/en/apsaravideo-for-media-processing/latest/datatypes">Data types</a> topic.</p>
          */
         public Builder fpDBDeleteJobList(FpDBDeleteJobList fpDBDeleteJobList) {
             this.fpDBDeleteJobList = fpDBDeleteJobList;
@@ -69,7 +70,7 @@ public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
         }
 
         /**
-         * The IDs of the jobs that do not exist.
+         * <p>The IDs of the jobs that do not exist.</p>
          */
         public Builder nonExistIds(NonExistIds nonExistIds) {
             this.nonExistIds = nonExistIds;
@@ -77,7 +78,10 @@ public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4247B23C-26DE-529F-8D9F-FD6811AE979B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryFpDBDeleteJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryFpDBDeleteJobListResponseBody</p>
+     */
     public static class FpDBDeleteJob extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -225,7 +235,10 @@ public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
             private String userData; 
 
             /**
-             * The error code returned if the job fails. This parameter is not returned if the job is successful.
+             * <p>The error code returned if the job fails. This parameter is not returned if the job is successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ServiceUnavailable</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -233,7 +246,10 @@ public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job was created.
+             * <p>The time when the job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-30T00:33:18Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -241,7 +257,10 @@ public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the operation.
+             * <p>The type of the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Purge</p>
              */
             public Builder delType(String delType) {
                 this.delType = delType;
@@ -249,7 +268,10 @@ public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job was complete.
+             * <p>The time when the job was complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-30T00:34:02Z</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -257,7 +279,10 @@ public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the media fingerprint library.
+             * <p>The ID of the media fingerprint library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>88c6ca184c0e47098a5b665e2a12****</p>
              */
             public Builder fpDBId(String fpDBId) {
                 this.fpDBId = fpDBId;
@@ -265,7 +290,10 @@ public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the job.
+             * <p>The ID of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25bacf2824614bcf9273dc0744db****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -273,7 +301,10 @@ public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if the job fails. This parameter is not returned if the job is successful.
+             * <p>The error message returned if the job fails. This parameter is not returned if the job is successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The request has failed due to a temporary failure of the server.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -281,7 +312,10 @@ public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ApsaraVideo Media Processing (MPS) queue to which the job was submitted.
+             * <p>The ID of the ApsaraVideo Media Processing (MPS) queue to which the job was submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fb712a6890464059b1b2ea7c8647****</p>
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -289,13 +323,16 @@ public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the job. Valid values:
-             * <p>
+             * <p>The status of the job. Valid values:</p>
+             * <ul>
+             * <li><strong>Queuing</strong>: The job is waiting in the queue.</li>
+             * <li><strong>Analysing</strong>: The job is in progress.</li>
+             * <li><strong>Success</strong>: The job is successful.</li>
+             * <li><strong>Fail</strong>: The job fails.</li>
+             * </ul>
              * 
-             * *   **Queuing**: The job is waiting in the queue.
-             * *   **Analysing**: The job is in progress.
-             * *   **Success**: The job is successful.
-             * *   **Fail**: The job fails.
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -303,7 +340,10 @@ public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
             }
 
             /**
-             * The user-defined data.
+             * <p>The user-defined data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example data</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -317,6 +357,12 @@ public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryFpDBDeleteJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryFpDBDeleteJobListResponseBody</p>
+     */
     public static class FpDBDeleteJobList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FpDBDeleteJob")
         private java.util.List < FpDBDeleteJob> fpDBDeleteJob;
@@ -358,6 +404,12 @@ public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryFpDBDeleteJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryFpDBDeleteJobListResponseBody</p>
+     */
     public static class NonExistIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("String")
         private java.util.List < String > string;

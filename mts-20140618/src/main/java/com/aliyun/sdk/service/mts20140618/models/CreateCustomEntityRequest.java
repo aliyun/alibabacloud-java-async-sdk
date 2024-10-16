@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCustomEntityRequest} extends {@link RequestModel}
  *
  * <p>CreateCustomEntityRequest</p>
@@ -154,7 +155,10 @@ public class CreateCustomEntityRequest extends Request {
         } 
 
         /**
-         * Algorithm.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>landmark</p>
          */
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -172,7 +176,7 @@ public class CreateCustomEntityRequest extends Request {
         }
 
         /**
-         * CustomEntityName.
+         * <p>This parameter is required.</p>
          */
         public Builder customEntityName(String customEntityName) {
             this.putQueryParameter("CustomEntityName", customEntityName);
@@ -181,7 +185,10 @@ public class CreateCustomEntityRequest extends Request {
         }
 
         /**
-         * CustomGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder customGroupId(String customGroupId) {
             this.putQueryParameter("CustomGroupId", customGroupId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySnapshotJobListRequest} extends {@link RequestModel}
  *
  * <p>QuerySnapshotJobListRequest</p>
@@ -194,7 +195,10 @@ public class QuerySnapshotJobListRequest extends Request {
         } 
 
         /**
-         * The snapshot configuration.
+         * <p>The snapshot configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2014-01-12T12:00:00Z</p>
          */
         public Builder endOfJobCreatedTimeRange(String endOfJobCreatedTimeRange) {
             this.putQueryParameter("EndOfJobCreatedTimeRange", endOfJobCreatedTimeRange);
@@ -203,7 +207,10 @@ public class QuerySnapshotJobListRequest extends Request {
         }
 
         /**
-         * The ID of the MPS queue to which the snapshot jobs that you want to query are submitted. To obtain the ID, you can log on to the **MPS console** and choose **Global Settings** > **Pipelines** in the left-side navigation pane.
+         * <p>The ID of the MPS queue to which the snapshot jobs that you want to query are submitted. To obtain the ID, you can log on to the <strong>MPS console</strong> and choose <strong>Global Settings</strong> &gt; <strong>Pipelines</strong> in the left-side navigation pane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maximumPageSize(Long maximumPageSize) {
             this.putQueryParameter("MaximumPageSize", maximumPageSize);
@@ -212,11 +219,14 @@ public class QuerySnapshotJobListRequest extends Request {
         }
 
         /**
-         * The end of the time range within which the creation time of snapshot jobs to be queried is.
-         * <p>
+         * <p>The end of the time range within which the creation time of snapshot jobs to be queried is.</p>
+         * <ul>
+         * <li>Specify the time in the ISO 8601 standard in the</li>
+         * <li>YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</li>
+         * </ul>
          * 
-         * *   Specify the time in the ISO 8601 standard in the
-         * *   YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
+         * <strong>example:</strong>
+         * <p>cc6cbef8e8d5481ca536f5d2a466****</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.putQueryParameter("NextPageToken", nextPageToken);
@@ -243,7 +253,10 @@ public class QuerySnapshotJobListRequest extends Request {
         }
 
         /**
-         * The start time for taking snapshots. Unit: milliseconds.
+         * <p>The start time for taking snapshots. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b11c171cced04565b1f38f1ecc39****</p>
          */
         public Builder pipelineId(String pipelineId) {
             this.putQueryParameter("PipelineId", pipelineId);
@@ -270,11 +283,14 @@ public class QuerySnapshotJobListRequest extends Request {
         }
 
         /**
-         * The beginning of the time range within which the creation time of snapshot jobs to be queried is.
-         * <p>
+         * <p>The beginning of the time range within which the creation time of snapshot jobs to be queried is.</p>
+         * <ul>
+         * <li>Specify the time in the ISO 8601 standard in the</li>
+         * <li>YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</li>
+         * </ul>
          * 
-         * *   Specify the time in the ISO 8601 standard in the
-         * *   YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
+         * <strong>example:</strong>
+         * <p>72dfa5e679ab4be9a3ed9974c736****</p>
          */
         public Builder snapshotJobIds(String snapshotJobIds) {
             this.putQueryParameter("SnapshotJobIds", snapshotJobIds);
@@ -283,7 +299,10 @@ public class QuerySnapshotJobListRequest extends Request {
         }
 
         /**
-         * The time when the job was created.
+         * <p>The time when the job was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2014-01-10T12:00:00Z</p>
          */
         public Builder startOfJobCreatedTimeRange(String startOfJobCreatedTimeRange) {
             this.putQueryParameter("StartOfJobCreatedTimeRange", startOfJobCreatedTimeRange);
@@ -292,7 +311,10 @@ public class QuerySnapshotJobListRequest extends Request {
         }
 
         /**
-         * The information about the snapshot jobs.
+         * <p>The information about the snapshot jobs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Snapshoting</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);

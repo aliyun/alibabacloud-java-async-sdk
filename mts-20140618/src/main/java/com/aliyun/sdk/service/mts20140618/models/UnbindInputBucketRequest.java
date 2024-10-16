@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnbindInputBucketRequest} extends {@link RequestModel}
  *
  * <p>UnbindInputBucketRequest</p>
@@ -124,7 +125,11 @@ public class UnbindInputBucketRequest extends Request {
         } 
 
         /**
-         * The name of the input media bucket to be unbound. To obtain the media bucket name, you can log on to the **ApsaraVideo Media Processing (MPS) console** and choose **Workflows** > **Media Buckets** in the left-side navigation pane. Alternatively, you can log on to the **Object Storage Service (OSS) console** and click **Historical Paths**.
+         * <p>The name of the input media bucket to be unbound. To obtain the media bucket name, you can log on to the <strong>ApsaraVideo Media Processing (MPS) console</strong> and choose <strong>Workflows</strong> &gt; <strong>Media Buckets</strong> in the left-side navigation pane. Alternatively, you can log on to the <strong>Object Storage Service (OSS) console</strong> and click <strong>Historical Paths</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-bucket-****</p>
          */
         public Builder bucket(String bucket) {
             this.putQueryParameter("Bucket", bucket);
@@ -169,7 +174,10 @@ public class UnbindInputBucketRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud Resource Name (ARN) of the role used for delegated authorization.
+         * <p>The Alibaba Cloud Resource Name (ARN) of the role used for delegated authorization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::174809843091****:role/exampleRole</p>
          */
         public Builder roleArn(String roleArn) {
             this.putQueryParameter("RoleArn", roleArn);

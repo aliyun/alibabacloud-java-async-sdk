@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTraceAbJobResponseBody} extends {@link TeaModel}
  *
  * <p>QueryTraceAbJobResponseBody</p>
@@ -89,7 +90,10 @@ public class QueryTraceAbJobResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>338CA33A-AE83-5DF4-B6F2-C6D3ED8143F5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +114,12 @@ public class QueryTraceAbJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryTraceAbJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTraceAbJobResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Callback")
         private String callback;

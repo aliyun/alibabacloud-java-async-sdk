@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteWaterMarkTemplateRequest} extends {@link RequestModel}
  *
  * <p>DeleteWaterMarkTemplateRequest</p>
@@ -146,7 +147,11 @@ public class DeleteWaterMarkTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the watermark template that you want to delete. To obtain the template ID, you can log on to the **ApsaraVideo Media Processing (MPS) console** and choose **Global Settings** > **Watermark Templates** in the left-side navigation pane.
+         * <p>The ID of the watermark template that you want to delete. To obtain the template ID, you can log on to the <strong>ApsaraVideo Media Processing (MPS) console</strong> and choose <strong>Global Settings</strong> &gt; <strong>Watermark Templates</strong> in the left-side navigation pane.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3780bd69b2b74540bc7b1096f564****</p>
          */
         public Builder waterMarkTemplateId(String waterMarkTemplateId) {
             this.putQueryParameter("WaterMarkTemplateId", waterMarkTemplateId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMediaWorkflowTriggerModeRequest} extends {@link RequestModel}
  *
  * <p>UpdateMediaWorkflowTriggerModeRequest</p>
@@ -125,7 +126,11 @@ public class UpdateMediaWorkflowTriggerModeRequest extends Request {
         } 
 
         /**
-         * The ID of the media workflow that you want to update. To obtain the ID of the media workflow, you can log on to the **ApsaraVideo Media Processing (MPS) console** and choose **Workflows** > **Workflow Settings** in the left-side navigation pane.
+         * <p>The ID of the media workflow that you want to update. To obtain the ID of the media workflow, you can log on to the <strong>ApsaraVideo Media Processing (MPS) console</strong> and choose <strong>Workflows</strong> &gt; <strong>Workflow Settings</strong> in the left-side navigation pane.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e00732b977da427d9177a4dee646****</p>
          */
         public Builder mediaWorkflowId(String mediaWorkflowId) {
             this.putQueryParameter("MediaWorkflowId", mediaWorkflowId);
@@ -170,11 +175,15 @@ public class UpdateMediaWorkflowTriggerModeRequest extends Request {
         }
 
         /**
-         * The trigger mode of the media workflow. Valid values:
-         * <p>
+         * <p>The trigger mode of the media workflow. Valid values:</p>
+         * <ul>
+         * <li><strong>OssAutoTrigger</strong>: automatically triggers the media workflow.</li>
+         * <li><strong>NotInAuto</strong>: does not automatically trigger the media workflow.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **OssAutoTrigger**: automatically triggers the media workflow.
-         * *   **NotInAuto**: does not automatically trigger the media workflow.
+         * <strong>example:</strong>
+         * <p>NotInAuto</p>
          */
         public Builder triggerMode(String triggerMode) {
             this.putQueryParameter("TriggerMode", triggerMode);

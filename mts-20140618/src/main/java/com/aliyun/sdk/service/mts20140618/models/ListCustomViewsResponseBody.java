@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCustomViewsResponseBody} extends {@link TeaModel}
  *
  * <p>ListCustomViewsResponseBody</p>
@@ -130,6 +131,12 @@ public class ListCustomViewsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCustomViewsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomViewsResponseBody</p>
+     */
     public static class CustomView extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomViewId")
         private String customViewId;
@@ -191,6 +198,12 @@ public class ListCustomViewsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCustomViewsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomViewsResponseBody</p>
+     */
     public static class CustomViews extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomView")
         private java.util.List < CustomView> customView;

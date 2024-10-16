@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMediaRequest} extends {@link RequestModel}
  *
  * <p>UpdateMediaRequest</p>
@@ -180,11 +181,14 @@ public class UpdateMediaRequest extends Request {
         } 
 
         /**
-         * The ID of the category to which the media file belongs. The value must be an integer.
-         * <p>
+         * <p>The ID of the category to which the media file belongs. The value must be an integer.</p>
+         * <ul>
+         * <li>If you do not specify this parameter, the value is NULL.</li>
+         * <li>The value cannot be negative.</li>
+         * </ul>
          * 
-         * *   If you do not specify this parameter, the value is NULL.
-         * *   The value cannot be negative.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder cateId(Long cateId) {
             this.putQueryParameter("CateId", cateId);
@@ -193,11 +197,14 @@ public class UpdateMediaRequest extends Request {
         }
 
         /**
-         * The URL of the thumbnail. This parameter is used to specify the storage location of the thumbnail. To obtain the URL, you can log on to the **MPS console** and choose **Workflows** > **Media Buckets** in the left-side navigation pane. Alternatively, you can log on to the **OSS console** and click **Buckets** in the left-side navigation pane.
-         * <p>
+         * <p>The URL of the thumbnail. This parameter is used to specify the storage location of the thumbnail. To obtain the URL, you can log on to the <strong>MPS console</strong> and choose <strong>Workflows</strong> &gt; <strong>Media Buckets</strong> in the left-side navigation pane. Alternatively, you can log on to the <strong>OSS console</strong> and click <strong>Buckets</strong> in the left-side navigation pane.</p>
+         * <ul>
+         * <li>The value can be up to 3,200 bytes in length.</li>
+         * <li>The URL complies with RFC 2396 and is encoded in UTF-8, with reserved characters being percent-encoded. For more information, see <a href="https://help.aliyun.com/document_detail/423796.html">URL encoding</a>.</li>
+         * </ul>
          * 
-         * *   The value can be up to 3,200 bytes in length.
-         * *   The URL complies with RFC 2396 and is encoded in UTF-8, with reserved characters being percent-encoded. For more information, see [URL encoding](~~423796~~).
+         * <strong>example:</strong>
+         * <p><a href="http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com/test****.jpg">http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com/test****.jpg</a></p>
          */
         public Builder coverURL(String coverURL) {
             this.putQueryParameter("CoverURL", coverURL);
@@ -206,11 +213,14 @@ public class UpdateMediaRequest extends Request {
         }
 
         /**
-         * The description of the media file. Multiple character types, such as letters and digits, are supported.
-         * <p>
+         * <p>The description of the media file. Multiple character types, such as letters and digits, are supported.</p>
+         * <ul>
+         * <li>If you do not specify this parameter, the value is NULL.</li>
+         * <li>The value is encoded in UTF-8 and can be up to 1,024 bytes in length.</li>
+         * </ul>
          * 
-         * *   If you do not specify this parameter, the value is NULL.
-         * *   The value is encoded in UTF-8 and can be up to 1,024 bytes in length.
+         * <strong>example:</strong>
+         * <p>example description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -219,7 +229,11 @@ public class UpdateMediaRequest extends Request {
         }
 
         /**
-         * The ID of the media file whose basic information you want to update. To obtain the ID of the media file, you can log on to the **ApsaraVideo Media Processing (MPS) console** and choose **Media Management** > **Media List** in the left-side navigation pane.
+         * <p>The ID of the media file whose basic information you want to update. To obtain the ID of the media file, you can log on to the <strong>ApsaraVideo Media Processing (MPS) console</strong> and choose <strong>Media Management</strong> &gt; <strong>Media List</strong> in the left-side navigation pane.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3e1cd21131a94525be55acf65888****</p>
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);
@@ -264,12 +278,15 @@ public class UpdateMediaRequest extends Request {
         }
 
         /**
-         * The tags that you want to add to the media file.
-         * <p>
+         * <p>The tags that you want to add to the media file.</p>
+         * <ul>
+         * <li>You can specify up to 16 tags for a media file. Separate multiple tags with commas (,).</li>
+         * <li>Each tag can be up to 32 bytes in length.</li>
+         * <li>The value is encoded in UTF-8.</li>
+         * </ul>
          * 
-         * *   You can specify up to 16 tags for a media file. Separate multiple tags with commas (,).
-         * *   Each tag can be up to 32 bytes in length.
-         * *   The value is encoded in UTF-8.
+         * <strong>example:</strong>
+         * <p>tag1,tag2</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -278,11 +295,14 @@ public class UpdateMediaRequest extends Request {
         }
 
         /**
-         * The title of the media file. Multiple character types, such as letters and digits, are supported.
-         * <p>
+         * <p>The title of the media file. Multiple character types, such as letters and digits, are supported.</p>
+         * <ul>
+         * <li>If you do not specify this parameter, the value is NULL.</li>
+         * <li>The value is encoded in UTF-8 and can be up to 128 bytes in length.</li>
+         * </ul>
          * 
-         * *   If you do not specify this parameter, the value is NULL.
-         * *   The value is encoded in UTF-8 and can be up to 128 bytes in length.
+         * <strong>example:</strong>
+         * <p>hello</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

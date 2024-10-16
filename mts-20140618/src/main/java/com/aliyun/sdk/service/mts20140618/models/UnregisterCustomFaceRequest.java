@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnregisterCustomFaceRequest} extends {@link RequestModel}
  *
  * <p>UnregisterCustomFaceRequest</p>
@@ -140,7 +141,11 @@ public class UnregisterCustomFaceRequest extends Request {
         } 
 
         /**
-         * The ID of the figure library. The ID is used to uniquely identify a figure library. You can specify the ID of a custom figure library. Make sure that the ID is unique. If you set this parameter to the ID of a system figure library, the system figure library is used. The ID can be up to 120 characters in length and is not case-sensitive. You can call the [ListCustomPersons](~~187787~~) operation to query the figure library ID.
+         * <p>The ID of the figure library. The ID is used to uniquely identify a figure library. You can specify the ID of a custom figure library. Make sure that the ID is unique. If you set this parameter to the ID of a system figure library, the system figure library is used. The ID can be up to 120 characters in length and is not case-sensitive. You can call the <a href="https://help.aliyun.com/document_detail/187787.html">ListCustomPersons</a> operation to query the figure library ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CategoryId001-****</p>
          */
         public Builder categoryId(String categoryId) {
             this.putQueryParameter("CategoryId", categoryId);
@@ -149,7 +154,11 @@ public class UnregisterCustomFaceRequest extends Request {
         }
 
         /**
-         * The ID of the face. The ID is used to uniquely identify a face. Make sure that the ID is unique. The ID can be up to 120 characters in length and is not case-sensitive. You can call the [ListCustomPersons](~~187787~~) operation to query the face ID. If you set this parameter to ALL, all the faces associated with the specified figure are deleted.
+         * <p>The ID of the face. The ID is used to uniquely identify a face. Make sure that the ID is unique. The ID can be up to 120 characters in length and is not case-sensitive. You can call the <a href="https://help.aliyun.com/document_detail/187787.html">ListCustomPersons</a> operation to query the face ID. If you set this parameter to ALL, all the faces associated with the specified figure are deleted.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15****</p>
          */
         public Builder faceId(String faceId) {
             this.putQueryParameter("FaceId", faceId);
@@ -176,7 +185,11 @@ public class UnregisterCustomFaceRequest extends Request {
         }
 
         /**
-         * The ID of the figure. The ID is used to uniquely identify a custom figure. Make sure that the ID is unique. The ID can be up to 120 characters in length and is not case-sensitive. You can call the [ListCustomPersons](~~187787~~) operation to query the figure ID. If you set this parameter to ALL, all the faces in the specified figure library are deleted, and the custom figure library is deleted.
+         * <p>The ID of the figure. The ID is used to uniquely identify a custom figure. Make sure that the ID is unique. The ID can be up to 120 characters in length and is not case-sensitive. You can call the <a href="https://help.aliyun.com/document_detail/187787.html">ListCustomPersons</a> operation to query the figure ID. If you set this parameter to ALL, all the faces in the specified figure library are deleted, and the custom figure library is deleted.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PersonId001-****</p>
          */
         public Builder personId(String personId) {
             this.putQueryParameter("PersonId", personId);

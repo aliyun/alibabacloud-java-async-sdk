@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMediaWorkflowRequest} extends {@link RequestModel}
  *
  * <p>DeleteMediaWorkflowRequest</p>
@@ -110,7 +111,11 @@ public class DeleteMediaWorkflowRequest extends Request {
         } 
 
         /**
-         * The ID of the media workflow that you want to delete. To obtain the ID of the media workflow, you can log on to the **ApsaraVideo Media Processing (MPS) console** and choose **Workflows** > **Workflow Settings** in the left-side navigation pane.
+         * <p>The ID of the media workflow that you want to delete. To obtain the ID of the media workflow, you can log on to the <strong>ApsaraVideo Media Processing (MPS) console</strong> and choose <strong>Workflows</strong> &gt; <strong>Workflow Settings</strong> in the left-side navigation pane.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93ab850b4f6f44eab54b6e9181d4****</p>
          */
         public Builder mediaWorkflowId(String mediaWorkflowId) {
             this.putQueryParameter("MediaWorkflowId", mediaWorkflowId);

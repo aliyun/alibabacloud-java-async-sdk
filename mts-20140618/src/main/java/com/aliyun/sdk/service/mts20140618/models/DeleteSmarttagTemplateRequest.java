@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSmarttagTemplateRequest} extends {@link RequestModel}
  *
  * <p>DeleteSmarttagTemplateRequest</p>
@@ -146,7 +147,11 @@ public class DeleteSmarttagTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the template that you want to delete. You can obtain the template ID from the response of the [AddSmarttagTemplate](~~187759~~) operation.
+         * <p>The ID of the template that you want to delete. You can obtain the template ID from the response of the <a href="https://help.aliyun.com/document_detail/187759.html">AddSmarttagTemplate</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05de22f255284c7a8d2aab535dde****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
