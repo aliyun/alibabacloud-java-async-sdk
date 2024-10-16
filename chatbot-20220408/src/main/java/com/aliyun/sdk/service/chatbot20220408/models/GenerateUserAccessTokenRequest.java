@@ -202,7 +202,10 @@ public class GenerateUserAccessTokenRequest extends Request {
         }
 
         /**
-         * ForeignId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8882022040000000171</p>
          */
         public Builder foreignId(String foreignId) {
             this.putQueryParameter("ForeignId", foreignId);
@@ -211,7 +214,7 @@ public class GenerateUserAccessTokenRequest extends Request {
         }
 
         /**
-         * Nick.
+         * <p>This parameter is required.</p>
          */
         public Builder nick(String nick) {
             this.putQueryParameter("Nick", nick);

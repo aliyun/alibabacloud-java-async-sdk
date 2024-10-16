@@ -116,7 +116,10 @@ public class DeleteIntentRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbot-cn-yjzbyrEvqd</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -125,7 +128,10 @@ public class DeleteIntentRequest extends Request {
         }
 
         /**
-         * IntentId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder intentId(Long intentId) {
             this.putQueryParameter("IntentId", intentId);

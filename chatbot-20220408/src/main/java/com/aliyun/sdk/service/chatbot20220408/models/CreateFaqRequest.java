@@ -172,7 +172,10 @@ public class CreateFaqRequest extends Request {
         }
 
         /**
-         * CategoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000053274</p>
          */
         public Builder categoryId(Long categoryId) {
             this.putBodyParameter("CategoryId", categoryId);
@@ -217,7 +220,7 @@ public class CreateFaqRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>This parameter is required.</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("Title", title);

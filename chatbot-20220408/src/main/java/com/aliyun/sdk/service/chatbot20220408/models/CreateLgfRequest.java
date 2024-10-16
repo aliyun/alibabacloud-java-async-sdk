@@ -115,7 +115,10 @@ public class CreateLgfRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbot-cn-yjzbyrEvqd</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -187,7 +190,10 @@ public class CreateLgfRequest extends Request {
             private String ruleText; 
 
             /**
-             * IntentId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4675678567</p>
              */
             public Builder intentId(Long intentId) {
                 this.intentId = intentId;
@@ -195,7 +201,7 @@ public class CreateLgfRequest extends Request {
             }
 
             /**
-             * RuleText.
+             * <p>This parameter is required.</p>
              */
             public Builder ruleText(String ruleText) {
                 this.ruleText = ruleText;

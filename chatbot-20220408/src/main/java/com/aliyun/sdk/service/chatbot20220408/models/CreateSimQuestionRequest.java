@@ -116,7 +116,10 @@ public class CreateSimQuestionRequest extends Request {
         }
 
         /**
-         * KnowledgeId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001905617</p>
          */
         public Builder knowledgeId(Long knowledgeId) {
             this.putBodyParameter("KnowledgeId", knowledgeId);
@@ -125,7 +128,7 @@ public class CreateSimQuestionRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>This parameter is required.</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("Title", title);

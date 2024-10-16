@@ -101,7 +101,10 @@ public class DeleteSolutionRequest extends Request {
         }
 
         /**
-         * SolutionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100001321580</p>
          */
         public Builder solutionId(Long solutionId) {
             this.putBodyParameter("SolutionId", solutionId);

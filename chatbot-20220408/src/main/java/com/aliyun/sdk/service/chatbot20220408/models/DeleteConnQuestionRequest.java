@@ -101,7 +101,10 @@ public class DeleteConnQuestionRequest extends Request {
         }
 
         /**
-         * OutlineId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>877397683</p>
          */
         public Builder outlineId(Long outlineId) {
             this.putBodyParameter("OutlineId", outlineId);

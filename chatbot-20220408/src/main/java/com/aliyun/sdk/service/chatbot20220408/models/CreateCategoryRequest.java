@@ -162,7 +162,7 @@ public class CreateCategoryRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

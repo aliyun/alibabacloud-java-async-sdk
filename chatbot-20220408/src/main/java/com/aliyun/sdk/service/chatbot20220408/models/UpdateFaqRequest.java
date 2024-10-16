@@ -159,7 +159,10 @@ public class UpdateFaqRequest extends Request {
         }
 
         /**
-         * CategoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30000049006</p>
          */
         public Builder categoryId(Long categoryId) {
             this.putBodyParameter("CategoryId", categoryId);
@@ -177,7 +180,10 @@ public class UpdateFaqRequest extends Request {
         }
 
         /**
-         * KnowledgeId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001905617</p>
          */
         public Builder knowledgeId(Long knowledgeId) {
             this.putBodyParameter("KnowledgeId", knowledgeId);
@@ -195,7 +201,7 @@ public class UpdateFaqRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>This parameter is required.</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("Title", title);

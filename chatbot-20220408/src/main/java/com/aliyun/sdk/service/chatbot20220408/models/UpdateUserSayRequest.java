@@ -130,7 +130,10 @@ public class UpdateUserSayRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbot-cn-yjzbyrEvqd</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -149,7 +152,10 @@ public class UpdateUserSayRequest extends Request {
         }
 
         /**
-         * UserSayId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34512323</p>
          */
         public Builder userSayId(Long userSayId) {
             this.putQueryParameter("UserSayId", userSayId);
@@ -310,7 +316,7 @@ public class UpdateUserSayRequest extends Request {
             private java.util.List < SlotInfos> slotInfos; 
 
             /**
-             * Content.
+             * <p>This parameter is required.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -318,7 +324,10 @@ public class UpdateUserSayRequest extends Request {
             }
 
             /**
-             * IntentId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder intentId(Long intentId) {
                 this.intentId = intentId;

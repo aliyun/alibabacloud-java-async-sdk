@@ -160,7 +160,7 @@ public class UpdateDSEntityValueRequest extends Request {
         }
 
         /**
-         * Content.
+         * <p>This parameter is required.</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -169,7 +169,10 @@ public class UpdateDSEntityValueRequest extends Request {
         }
 
         /**
-         * EntityId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>223423423</p>
          */
         public Builder entityId(Long entityId) {
             this.putQueryParameter("EntityId", entityId);
@@ -178,7 +181,10 @@ public class UpdateDSEntityValueRequest extends Request {
         }
 
         /**
-         * EntityValueId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2342377423</p>
          */
         public Builder entityValueId(Long entityValueId) {
             this.putQueryParameter("EntityValueId", entityValueId);
@@ -187,7 +193,10 @@ public class UpdateDSEntityValueRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbot-cn-yjzbyrEvqd</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

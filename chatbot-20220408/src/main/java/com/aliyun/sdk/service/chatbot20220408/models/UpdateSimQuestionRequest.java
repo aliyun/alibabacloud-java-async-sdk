@@ -116,7 +116,10 @@ public class UpdateSimQuestionRequest extends Request {
         }
 
         /**
-         * SimQuestionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000002788</p>
          */
         public Builder simQuestionId(Long simQuestionId) {
             this.putBodyParameter("SimQuestionId", simQuestionId);
@@ -125,7 +128,7 @@ public class UpdateSimQuestionRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>This parameter is required.</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("Title", title);

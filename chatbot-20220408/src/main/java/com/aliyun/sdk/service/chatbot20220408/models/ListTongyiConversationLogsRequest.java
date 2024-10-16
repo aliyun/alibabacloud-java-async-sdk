@@ -7,19 +7,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetBotSessionDataRequest} extends {@link RequestModel}
+ * {@link ListTongyiConversationLogsRequest} extends {@link RequestModel}
  *
- * <p>GetBotSessionDataRequest</p>
+ * <p>ListTongyiConversationLogsRequest</p>
  */
-public class GetBotSessionDataRequest extends Request {
+public class ListTongyiConversationLogsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AgentKey")
     private String agentKey;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("EndTime")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String endTime;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RobotInstanceId")
@@ -27,23 +22,22 @@ public class GetBotSessionDataRequest extends Request {
     private String robotInstanceId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("SessionId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String startTime;
+    private String sessionId;
 
-    private GetBotSessionDataRequest(Builder builder) {
+    private ListTongyiConversationLogsRequest(Builder builder) {
         super(builder);
         this.agentKey = builder.agentKey;
-        this.endTime = builder.endTime;
         this.robotInstanceId = builder.robotInstanceId;
-        this.startTime = builder.startTime;
+        this.sessionId = builder.sessionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetBotSessionDataRequest create() {
+    public static ListTongyiConversationLogsRequest create() {
         return builder().build();
     }
 
@@ -60,13 +54,6 @@ public class GetBotSessionDataRequest extends Request {
     }
 
     /**
-     * @return endTime
-     */
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    /**
      * @return robotInstanceId
      */
     public String getRobotInstanceId() {
@@ -74,28 +61,26 @@ public class GetBotSessionDataRequest extends Request {
     }
 
     /**
-     * @return startTime
+     * @return sessionId
      */
-    public String getStartTime() {
-        return this.startTime;
+    public String getSessionId() {
+        return this.sessionId;
     }
 
-    public static final class Builder extends Request.Builder<GetBotSessionDataRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListTongyiConversationLogsRequest, Builder> {
         private String agentKey; 
-        private String endTime; 
         private String robotInstanceId; 
-        private String startTime; 
+        private String sessionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetBotSessionDataRequest request) {
+        private Builder(ListTongyiConversationLogsRequest request) {
             super(request);
             this.agentKey = request.agentKey;
-            this.endTime = request.endTime;
             this.robotInstanceId = request.robotInstanceId;
-            this.startTime = request.startTime;
+            this.sessionId = request.sessionId;
         } 
 
         /**
@@ -104,18 +89,6 @@ public class GetBotSessionDataRequest extends Request {
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
             this.agentKey = agentKey;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20240605</p>
-         */
-        public Builder endTime(String endTime) {
-            this.putQueryParameter("EndTime", endTime);
-            this.endTime = endTime;
             return this;
         }
 
@@ -135,17 +108,17 @@ public class GetBotSessionDataRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>20240505</p>
+         * <p>7c3cec23cc8940bc9db4a318c8f4f0aa</p>
          */
-        public Builder startTime(String startTime) {
-            this.putQueryParameter("StartTime", startTime);
-            this.startTime = startTime;
+        public Builder sessionId(String sessionId) {
+            this.putQueryParameter("SessionId", sessionId);
+            this.sessionId = sessionId;
             return this;
         }
 
         @Override
-        public GetBotSessionDataRequest build() {
-            return new GetBotSessionDataRequest(this);
+        public ListTongyiConversationLogsRequest build() {
+            return new ListTongyiConversationLogsRequest(this);
         } 
 
     } 

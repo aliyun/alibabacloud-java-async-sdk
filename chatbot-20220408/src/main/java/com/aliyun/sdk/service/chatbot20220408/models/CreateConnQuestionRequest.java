@@ -116,7 +116,10 @@ public class CreateConnQuestionRequest extends Request {
         }
 
         /**
-         * ConnQuestionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30002654628</p>
          */
         public Builder connQuestionId(Long connQuestionId) {
             this.putBodyParameter("ConnQuestionId", connQuestionId);
@@ -125,7 +128,10 @@ public class CreateConnQuestionRequest extends Request {
         }
 
         /**
-         * KnowledgeId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30002174773</p>
          */
         public Builder knowledgeId(Long knowledgeId) {
             this.putBodyParameter("KnowledgeId", knowledgeId);

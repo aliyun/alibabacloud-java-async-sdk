@@ -101,7 +101,10 @@ public class DescribeCategoryRequest extends Request {
         }
 
         /**
-         * CategoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30000049006</p>
          */
         public Builder categoryId(Long categoryId) {
             this.putBodyParameter("CategoryId", categoryId);

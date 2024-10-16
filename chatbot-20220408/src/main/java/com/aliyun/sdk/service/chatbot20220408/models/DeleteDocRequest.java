@@ -101,7 +101,10 @@ public class DeleteDocRequest extends Request {
         }
 
         /**
-         * KnowledgeId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001905617</p>
          */
         public Builder knowledgeId(Long knowledgeId) {
             this.putQueryParameter("KnowledgeId", knowledgeId);

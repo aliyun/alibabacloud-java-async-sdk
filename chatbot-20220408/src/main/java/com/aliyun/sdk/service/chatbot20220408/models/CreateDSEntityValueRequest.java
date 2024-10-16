@@ -145,7 +145,10 @@ public class CreateDSEntityValueRequest extends Request {
         }
 
         /**
-         * Content.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ada</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -154,7 +157,10 @@ public class CreateDSEntityValueRequest extends Request {
         }
 
         /**
-         * EntityId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder entityId(Long entityId) {
             this.putQueryParameter("EntityId", entityId);
@@ -163,7 +169,10 @@ public class CreateDSEntityValueRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbot-cn-yjzbyrEvqd</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

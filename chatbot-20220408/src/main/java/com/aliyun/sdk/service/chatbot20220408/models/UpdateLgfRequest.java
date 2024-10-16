@@ -131,7 +131,10 @@ public class UpdateLgfRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbot-cn-yjzbyrEvqd</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -140,7 +143,7 @@ public class UpdateLgfRequest extends Request {
         }
 
         /**
-         * LgfDefinition.
+         * <p>This parameter is required.</p>
          */
         public Builder lgfDefinition(LgfDefinition lgfDefinition) {
             String lgfDefinitionShrink = shrink(lgfDefinition, "LgfDefinition", "json");
@@ -151,6 +154,7 @@ public class UpdateLgfRequest extends Request {
 
         /**
          * <p>LGF ID</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>12121</p>
@@ -215,7 +219,10 @@ public class UpdateLgfRequest extends Request {
             private String ruleText; 
 
             /**
-             * IntentId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23234523522</p>
              */
             public Builder intentId(Long intentId) {
                 this.intentId = intentId;
@@ -223,7 +230,7 @@ public class UpdateLgfRequest extends Request {
             }
 
             /**
-             * RuleText.
+             * <p>This parameter is required.</p>
              */
             public Builder ruleText(String ruleText) {
                 this.ruleText = ruleText;

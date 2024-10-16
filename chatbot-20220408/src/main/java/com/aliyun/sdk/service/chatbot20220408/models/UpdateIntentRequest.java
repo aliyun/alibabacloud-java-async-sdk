@@ -130,7 +130,10 @@ public class UpdateIntentRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbot-cn-yjzbyrEvqd</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -149,7 +152,10 @@ public class UpdateIntentRequest extends Request {
         }
 
         /**
-         * IntentId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>234234234534</p>
          */
         public Builder intentId(Long intentId) {
             this.putQueryParameter("IntentId", intentId);
@@ -284,7 +290,7 @@ public class UpdateIntentRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>This parameter is required.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -292,7 +298,10 @@ public class UpdateIntentRequest extends Request {
             }
 
             /**
-             * SlotId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dgadf23dfg2f</p>
              */
             public Builder slotId(String slotId) {
                 this.slotId = slotId;
@@ -300,7 +309,7 @@ public class UpdateIntentRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>This parameter is required.</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -380,7 +389,7 @@ public class UpdateIntentRequest extends Request {
             }
 
             /**
-             * IntentName.
+             * <p>This parameter is required.</p>
              */
             public Builder intentName(String intentName) {
                 this.intentName = intentName;

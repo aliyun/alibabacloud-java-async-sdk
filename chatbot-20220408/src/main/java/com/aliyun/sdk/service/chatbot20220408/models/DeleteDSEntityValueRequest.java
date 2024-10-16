@@ -131,7 +131,10 @@ public class DeleteDSEntityValueRequest extends Request {
         }
 
         /**
-         * EntityId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>345346223452</p>
          */
         public Builder entityId(Long entityId) {
             this.putQueryParameter("EntityId", entityId);
@@ -140,7 +143,10 @@ public class DeleteDSEntityValueRequest extends Request {
         }
 
         /**
-         * EntityValueId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3453453452</p>
          */
         public Builder entityValueId(Long entityValueId) {
             this.putQueryParameter("EntityValueId", entityValueId);
@@ -149,7 +155,10 @@ public class DeleteDSEntityValueRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbot-cn-yjzbyrEvqd</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

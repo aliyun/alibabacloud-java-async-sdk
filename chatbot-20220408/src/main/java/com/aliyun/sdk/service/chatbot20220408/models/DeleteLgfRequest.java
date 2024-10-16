@@ -131,7 +131,10 @@ public class DeleteLgfRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbot-cn-yjzbyrEvqd</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -140,7 +143,10 @@ public class DeleteLgfRequest extends Request {
         }
 
         /**
-         * IntentId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23242342</p>
          */
         public Builder intentId(Long intentId) {
             this.putQueryParameter("IntentId", intentId);
@@ -150,6 +156,7 @@ public class DeleteLgfRequest extends Request {
 
         /**
          * <p>lgf Id</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2342424</p>

@@ -101,7 +101,10 @@ public class ListSaasInfoRequest extends Request {
         }
 
         /**
-         * SaasName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>userTest</p>
          */
         public Builder saasName(String saasName) {
             this.putQueryParameter("SaasName", saasName);

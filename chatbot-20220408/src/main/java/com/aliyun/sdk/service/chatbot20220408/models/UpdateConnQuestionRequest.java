@@ -116,7 +116,10 @@ public class UpdateConnQuestionRequest extends Request {
         }
 
         /**
-         * ConnQuestionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000295</p>
          */
         public Builder connQuestionId(Long connQuestionId) {
             this.putBodyParameter("ConnQuestionId", connQuestionId);
@@ -125,7 +128,10 @@ public class UpdateConnQuestionRequest extends Request {
         }
 
         /**
-         * OutlineId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>877397683</p>
          */
         public Builder outlineId(Long outlineId) {
             this.putBodyParameter("OutlineId", outlineId);

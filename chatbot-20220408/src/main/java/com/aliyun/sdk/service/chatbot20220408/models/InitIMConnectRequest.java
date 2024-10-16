@@ -115,7 +115,10 @@ public class InitIMConnectRequest extends Request {
         }
 
         /**
-         * From.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8XNBzDucJv</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);

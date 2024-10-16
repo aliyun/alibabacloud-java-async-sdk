@@ -115,7 +115,10 @@ public class CreateIntentRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbot-cn-yjzbyrEvqd</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -260,7 +263,7 @@ public class CreateIntentRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>This parameter is required.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -268,7 +271,10 @@ public class CreateIntentRequest extends Request {
             }
 
             /**
-             * SlotId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fg452dfg3df23</p>
              */
             public Builder slotId(String slotId) {
                 this.slotId = slotId;
@@ -276,7 +282,7 @@ public class CreateIntentRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>This parameter is required.</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -356,7 +362,7 @@ public class CreateIntentRequest extends Request {
             }
 
             /**
-             * IntentName.
+             * <p>This parameter is required.</p>
              */
             public Builder intentName(String intentName) {
                 this.intentName = intentName;

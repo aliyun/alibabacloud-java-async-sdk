@@ -101,7 +101,7 @@ public class GetAsyncResultRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>This parameter is required.</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

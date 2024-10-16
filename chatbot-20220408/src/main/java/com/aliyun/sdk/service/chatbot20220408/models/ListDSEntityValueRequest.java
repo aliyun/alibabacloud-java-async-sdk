@@ -173,7 +173,10 @@ public class ListDSEntityValueRequest extends Request {
         }
 
         /**
-         * EntityId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder entityId(Long entityId) {
             this.putBodyParameter("EntityId", entityId);
@@ -191,7 +194,10 @@ public class ListDSEntityValueRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbot-cn-yjzbyrEvqd</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

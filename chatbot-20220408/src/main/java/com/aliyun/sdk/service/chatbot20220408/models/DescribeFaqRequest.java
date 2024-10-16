@@ -101,7 +101,10 @@ public class DescribeFaqRequest extends Request {
         }
 
         /**
-         * KnowledgeId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001979424</p>
          */
         public Builder knowledgeId(Long knowledgeId) {
             this.putBodyParameter("KnowledgeId", knowledgeId);

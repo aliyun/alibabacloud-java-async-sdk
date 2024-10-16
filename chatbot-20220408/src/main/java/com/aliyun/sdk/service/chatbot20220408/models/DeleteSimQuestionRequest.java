@@ -101,7 +101,10 @@ public class DeleteSimQuestionRequest extends Request {
         }
 
         /**
-         * SimQuestionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000002788</p>
          */
         public Builder simQuestionId(Long simQuestionId) {
             this.putBodyParameter("SimQuestionId", simQuestionId);

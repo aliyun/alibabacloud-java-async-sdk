@@ -145,7 +145,7 @@ public class UpdateSolutionRequest extends Request {
         }
 
         /**
-         * Content.
+         * <p>This parameter is required.</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -163,7 +163,7 @@ public class UpdateSolutionRequest extends Request {
         }
 
         /**
-         * PerspectiveCodes.
+         * <p>This parameter is required.</p>
          */
         public Builder perspectiveCodes(java.util.List < String > perspectiveCodes) {
             this.putBodyParameter("PerspectiveCodes", perspectiveCodes);
@@ -172,7 +172,10 @@ public class UpdateSolutionRequest extends Request {
         }
 
         /**
-         * SolutionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100001333260</p>
          */
         public Builder solutionId(Long solutionId) {
             this.putBodyParameter("SolutionId", solutionId);

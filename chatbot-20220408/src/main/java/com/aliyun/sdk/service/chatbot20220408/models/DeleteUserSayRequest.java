@@ -131,7 +131,10 @@ public class DeleteUserSayRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>343df2sdf23</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -140,7 +143,10 @@ public class DeleteUserSayRequest extends Request {
         }
 
         /**
-         * IntentId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5564564546</p>
          */
         public Builder intentId(Long intentId) {
             this.putQueryParameter("IntentId", intentId);
@@ -149,7 +155,10 @@ public class DeleteUserSayRequest extends Request {
         }
 
         /**
-         * UserSayId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4562121234</p>
          */
         public Builder userSayId(Long userSayId) {
             this.putQueryParameter("UserSayId", userSayId);

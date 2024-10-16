@@ -228,7 +228,10 @@ public class CreateDocRequest extends Request {
         }
 
         /**
-         * CategoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30000049006</p>
          */
         public Builder categoryId(Long categoryId) {
             this.putQueryParameter("CategoryId", categoryId);
@@ -302,7 +305,7 @@ public class CreateDocRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>This parameter is required.</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

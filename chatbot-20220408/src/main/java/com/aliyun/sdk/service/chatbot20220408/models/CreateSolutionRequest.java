@@ -145,7 +145,7 @@ public class CreateSolutionRequest extends Request {
         }
 
         /**
-         * Content.
+         * <p>This parameter is required.</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -163,7 +163,10 @@ public class CreateSolutionRequest extends Request {
         }
 
         /**
-         * KnowledgeId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001905617</p>
          */
         public Builder knowledgeId(Long knowledgeId) {
             this.putQueryParameter("KnowledgeId", knowledgeId);
@@ -172,7 +175,7 @@ public class CreateSolutionRequest extends Request {
         }
 
         /**
-         * PerspectiveCodes.
+         * <p>This parameter is required.</p>
          */
         public Builder perspectiveCodes(java.util.List < String > perspectiveCodes) {
             this.putQueryParameter("PerspectiveCodes", perspectiveCodes);

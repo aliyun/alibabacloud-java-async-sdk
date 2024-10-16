@@ -139,7 +139,10 @@ public class UpdateCategoryRequest extends Request {
         }
 
         /**
-         * CategoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231001028593</p>
          */
         public Builder categoryId(Long categoryId) {
             this.putBodyParameter("CategoryId", categoryId);
@@ -148,7 +151,7 @@ public class UpdateCategoryRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

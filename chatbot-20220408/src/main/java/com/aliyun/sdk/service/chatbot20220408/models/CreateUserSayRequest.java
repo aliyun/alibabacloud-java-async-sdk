@@ -115,7 +115,10 @@ public class CreateUserSayRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbot-cn-yjzbyrEvqd</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -286,7 +289,7 @@ public class CreateUserSayRequest extends Request {
             private java.util.List < SlotInfos> slotInfos; 
 
             /**
-             * Content.
+             * <p>This parameter is required.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -294,7 +297,10 @@ public class CreateUserSayRequest extends Request {
             }
 
             /**
-             * IntentId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123232</p>
              */
             public Builder intentId(Long intentId) {
                 this.intentId = intentId;

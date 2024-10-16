@@ -123,7 +123,10 @@ public class ListTongyiChatHistorysRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-01 08:00:00</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -141,7 +144,10 @@ public class ListTongyiChatHistorysRequest extends Request {
         }
 
         /**
-         * RobotInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbot-cn-7QuUfaqMQe</p>
          */
         public Builder robotInstanceId(String robotInstanceId) {
             this.putQueryParameter("RobotInstanceId", robotInstanceId);
@@ -150,7 +156,10 @@ public class ListTongyiChatHistorysRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-01 00:00:00</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
