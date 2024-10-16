@@ -21,10 +21,14 @@ public class AndroidPayload extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("extra")
     private java.util.Map < String, ? > extra;
 
+    @com.aliyun.core.annotation.NameInMap("message2ThirdChannel")
+    private Message2ThirdChannel message2ThirdChannel;
+
     private AndroidPayload(Builder builder) {
         this.body = builder.body;
         this.displayType = builder.displayType;
         this.extra = builder.extra;
+        this.message2ThirdChannel = builder.message2ThirdChannel;
     }
 
     public static Builder builder() {
@@ -56,10 +60,18 @@ public class AndroidPayload extends TeaModel {
         return this.extra;
     }
 
+    /**
+     * @return message2ThirdChannel
+     */
+    public Message2ThirdChannel getMessage2ThirdChannel() {
+        return this.message2ThirdChannel;
+    }
+
     public static final class Builder {
         private Body body; 
         private String displayType; 
         private java.util.Map < String, ? > extra; 
+        private Message2ThirdChannel message2ThirdChannel; 
 
         /**
          * body.
@@ -82,6 +94,14 @@ public class AndroidPayload extends TeaModel {
          */
         public Builder extra(java.util.Map < String, ? > extra) {
             this.extra = extra;
+            return this;
+        }
+
+        /**
+         * message2ThirdChannel.
+         */
+        public Builder message2ThirdChannel(Message2ThirdChannel message2ThirdChannel) {
+            this.message2ThirdChannel = message2ThirdChannel;
             return this;
         }
 
