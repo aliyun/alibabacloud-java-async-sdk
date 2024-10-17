@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccessGroupsRequest} extends {@link RequestModel}
  *
  * <p>DescribeAccessGroupsRequest</p>
@@ -110,13 +111,15 @@ public class DescribeAccessGroupsRequest extends Request {
         } 
 
         /**
-         * The name of the permission group.
-         * <p>
+         * <p>The name of the permission group.</p>
+         * <p>Limits:</p>
+         * <ul>
+         * <li>The name must be 3 to 64 characters in length.</li>
+         * <li>The name must start with a letter and can contain letters, digits, underscores (_), and hyphens (-).</li>
+         * </ul>
          * 
-         * Limits:
-         * 
-         * *   The name must be 3 to 64 characters in length.
-         * *   The name must start with a letter and can contain letters, digits, underscores (\_), and hyphens (-).
+         * <strong>example:</strong>
+         * <p>DEFAULT_VPC_GROUP_NAME</p>
          */
         public Builder accessGroupName(String accessGroupName) {
             this.putQueryParameter("AccessGroupName", accessGroupName);
@@ -125,16 +128,19 @@ public class DescribeAccessGroupsRequest extends Request {
         }
 
         /**
-         * The type of the file system.
-         * <p>
+         * <p>The type of the file system.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>standard (default): General-purpose NAS file system</li>
+         * <li>extreme: Extreme NAS file system</li>
+         * <li>cpfs: Cloud Parallel File Storage (CPFS) file system</li>
+         * </ul>
+         * <blockquote>
+         * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
+         * </blockquote>
          * 
-         * Valid values:
-         * 
-         * *   standard (default): General-purpose NAS file system
-         * *   extreme: Extreme NAS file system
-         * *   cpfs: Cloud Parallel File Storage (CPFS) file system
-         * 
-         * > CPFS file systems are available only on the China site (aliyun.com).
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         public Builder fileSystemType(String fileSystemType) {
             this.putQueryParameter("FileSystemType", fileSystemType);
@@ -143,10 +149,11 @@ public class DescribeAccessGroupsRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -155,12 +162,12 @@ public class DescribeAccessGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -169,13 +176,15 @@ public class DescribeAccessGroupsRequest extends Request {
         }
 
         /**
-         * Specifies whether to display the creation time of the permission group in UTC.
-         * <p>
+         * <p>Specifies whether to display the creation time of the permission group in UTC.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true (default): The time is displayed in UTC.</li>
+         * <li>false: The time is not displayed in UTC.</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   true (default): The time is displayed in UTC.
-         * *   false: The time is not displayed in UTC.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder useUTCDateTime(Boolean useUTCDateTime) {
             this.putQueryParameter("UseUTCDateTime", useUTCDateTime);

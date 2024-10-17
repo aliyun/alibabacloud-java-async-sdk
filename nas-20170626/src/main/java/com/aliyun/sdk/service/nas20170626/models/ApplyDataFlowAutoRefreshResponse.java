@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyDataFlowAutoRefreshResponse} extends {@link TeaModel}
  *
  * <p>ApplyDataFlowAutoRefreshResponse</p>

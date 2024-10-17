@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDataFlowResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDataFlowResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateDataFlowResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The dataflow ID.
+         * <p>The dataflow ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dfid-194433a5be31****</p>
          */
         public Builder dataFlowId(String dataFlowId) {
             this.dataFlowId = dataFlowId;
@@ -57,7 +61,10 @@ public class CreateDataFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0D****3E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

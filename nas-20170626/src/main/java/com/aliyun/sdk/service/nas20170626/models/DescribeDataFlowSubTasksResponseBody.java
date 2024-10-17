@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataFlowSubTasksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDataFlowSubTasksResponseBody</p>
@@ -90,6 +91,12 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDataFlowSubTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataFlowSubTasksResponseBody</p>
+     */
     public static class FileDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Checksum")
         private String checksum;
@@ -171,6 +178,12 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataFlowSubTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataFlowSubTasksResponseBody</p>
+     */
     public static class ProgressStats extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActualBytes")
         private Long actualBytes;
@@ -272,6 +285,12 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataFlowSubTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataFlowSubTasksResponseBody</p>
+     */
     public static class DataFlowSubTaskDataFlowSubTask extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -573,6 +592,12 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataFlowSubTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataFlowSubTasksResponseBody</p>
+     */
     public static class DataFlowSubTask extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataFlowSubTask")
         private java.util.List < DataFlowSubTaskDataFlowSubTask> dataFlowSubTask;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyDataFlowAutoRefreshRequest} extends {@link RequestModel}
  *
  * <p>ApplyDataFlowAutoRefreshRequest</p>
@@ -142,10 +143,11 @@ public class ApplyDataFlowAutoRefreshRequest extends Request {
         } 
 
         /**
-         * The automatic update interval. CPFS checks whether data is updated in the directory at the interval specified by this parameter. If data is updated, CPFS starts an automatic update task. Unit: minutes.
-         * <p>
+         * <p>The automatic update interval. CPFS checks whether data is updated in the directory at the interval specified by this parameter. If data is updated, CPFS starts an automatic update task. Unit: minutes.</p>
+         * <p>Valid values: 5 to 526600. Default value: 10.</p>
          * 
-         * Valid values: 5 to 526600. Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder autoRefreshInterval(Long autoRefreshInterval) {
             this.putQueryParameter("AutoRefreshInterval", autoRefreshInterval);
@@ -154,11 +156,14 @@ public class ApplyDataFlowAutoRefreshRequest extends Request {
         }
 
         /**
-         * The automatic update policy. The updated data in the source storage is imported into the CPFS file system based on the policy. Valid values:
-         * <p>
+         * <p>The automatic update policy. The updated data in the source storage is imported into the CPFS file system based on the policy. Valid values:</p>
+         * <ul>
+         * <li>None (default): Updated data in the source storage is not automatically imported into the CPFS file system. You can run a dataflow task to import the updated data from the source storage.</li>
+         * <li>ImportChanged: Updated data in the source storage is automatically imported into the CPFS file system.</li>
+         * </ul>
          * 
-         * *   None (default): Updated data in the source storage is not automatically imported into the CPFS file system. You can run a dataflow task to import the updated data from the source storage.
-         * *   ImportChanged: Updated data in the source storage is automatically imported into the CPFS file system.
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder autoRefreshPolicy(String autoRefreshPolicy) {
             this.putQueryParameter("AutoRefreshPolicy", autoRefreshPolicy);
@@ -167,7 +172,8 @@ public class ApplyDataFlowAutoRefreshRequest extends Request {
         }
 
         /**
-         * The automatic update configurations.
+         * <p>The automatic update configurations.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder autoRefreshs(java.util.List < AutoRefreshs> autoRefreshs) {
             this.putQueryParameter("AutoRefreshs", autoRefreshs);
@@ -176,12 +182,14 @@ public class ApplyDataFlowAutoRefreshRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
+         * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence?</a></p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The value of RequestId may be different for each API request.</p>
+         * </blockquote>
          * 
-         * The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence?](~~25693~~)
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the request ID as the client token. The value of RequestId may be different for each API request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -190,7 +198,11 @@ public class ApplyDataFlowAutoRefreshRequest extends Request {
         }
 
         /**
-         * The dataflow ID.
+         * <p>The dataflow ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dfid-194433a5be31****</p>
          */
         public Builder dataFlowId(String dataFlowId) {
             this.putQueryParameter("DataFlowId", dataFlowId);
@@ -199,15 +211,16 @@ public class ApplyDataFlowAutoRefreshRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run.
-         * <p>
+         * <p>Specifies whether to perform a dry run.</p>
+         * <p>During the dry run, the system checks whether the request parameters are valid and whether the requested resources are available. During the dry run, no file system is created and no fee is incurred.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: performs a dry run. The system checks the required parameters, request syntax, limits, and available NAS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned. No value is returned for the FileSystemId parameter.</li>
+         * <li>false (default): performs a dry run and sends the request. If the request passes the dry run, a file system is created.</li>
+         * </ul>
          * 
-         * During the dry run, the system checks whether the request parameters are valid and whether the requested resources are available. During the dry run, no file system is created and no fee is incurred.
-         * 
-         * Valid values:
-         * 
-         * *   true: performs a dry run. The system checks the required parameters, request syntax, limits, and available NAS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned. No value is returned for the FileSystemId parameter.
-         * *   false (default): performs a dry run and sends the request. If the request passes the dry run, a file system is created.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -216,7 +229,11 @@ public class ApplyDataFlowAutoRefreshRequest extends Request {
         }
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpfs-099394bd928c****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -231,6 +248,12 @@ public class ApplyDataFlowAutoRefreshRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ApplyDataFlowAutoRefreshRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyDataFlowAutoRefreshRequest</p>
+     */
     public static class AutoRefreshs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RefreshPath")
         @com.aliyun.core.annotation.Validation(required = true, maxLength = 1024, minLength = 2)
@@ -259,16 +282,20 @@ public class ApplyDataFlowAutoRefreshRequest extends Request {
             private String refreshPath; 
 
             /**
-             * The automatic update directory. CPFS automatically checks whether the source data only in the directory is updated and imports the updated data.
-             * <p>
+             * <p>The automatic update directory. CPFS automatically checks whether the source data only in the directory is updated and imports the updated data.</p>
+             * <p>Limits:</p>
+             * <ul>
+             * <li>The directory must be 2 to 1,024 characters in length.</li>
+             * <li>The directory must be encoded in UTF-8.</li>
+             * <li>The directory must start and end with a forward slash (/).</li>
+             * </ul>
+             * <blockquote>
+             * <p> The directory must be an existing directory in the CPFS file system and must be in a fileset where the dataflow is enabled.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * Limits:
-             * 
-             * *   The directory must be 2 to 1,024 characters in length.
-             * *   The directory must be encoded in UTF-8.
-             * *   The directory must start and end with a forward slash (/).
-             * 
-             * >  The directory must be an existing directory in the CPFS file system and must be in a fileset where the dataflow is enabled.
+             * <strong>example:</strong>
+             * <p>/prefix1/prefix2/</p>
              */
             public Builder refreshPath(String refreshPath) {
                 this.refreshPath = refreshPath;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyMountTargetRequest} extends {@link RequestModel}
  *
  * <p>ModifyMountTargetRequest</p>
@@ -110,7 +111,10 @@ public class ModifyMountTargetRequest extends Request {
         } 
 
         /**
-         * The name of the permission group that is attached to the mount target.
+         * <p>The name of the permission group that is attached to the mount target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>classic-test</p>
          */
         public Builder accessGroupName(String accessGroupName) {
             this.putQueryParameter("AccessGroupName", accessGroupName);
@@ -119,10 +123,13 @@ public class ModifyMountTargetRequest extends Request {
         }
 
         /**
-         * The dual-stack (IPv4 and IPv6) domain name of the mount target.
-         * <p>
+         * <p>The dual-stack (IPv4 and IPv6) domain name of the mount target.</p>
+         * <blockquote>
+         * <p> Only Extreme NAS file systems that reside in the Chinese mainland support IPv6.</p>
+         * </blockquote>
          * 
-         * >  Only Extreme NAS file systems that reside in the Chinese mainland support IPv6.
+         * <strong>example:</strong>
+         * <p>174494b666-x****.dualstack.cn-hangzhou.nas.aliyuncs.com</p>
          */
         public Builder dualStackMountTargetDomain(String dualStackMountTargetDomain) {
             this.putQueryParameter("DualStackMountTargetDomain", dualStackMountTargetDomain);
@@ -131,11 +138,15 @@ public class ModifyMountTargetRequest extends Request {
         }
 
         /**
-         * The ID of the file system.
-         * <p>
+         * <p>The ID of the file system.</p>
+         * <ul>
+         * <li>Sample ID of a General-purpose NAS file system: <code>31a8e4****</code>.</li>
+         * <li>The IDs of Extreme NAS file systems must start with <code>extreme-</code>, for example, <code>extreme-0015****</code>.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Sample ID of a General-purpose NAS file system: `31a8e4****`.
-         * *   The IDs of Extreme NAS file systems must start with `extreme-`, for example, `extreme-0015****`.
+         * <strong>example:</strong>
+         * <p>1ca404****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -144,7 +155,10 @@ public class ModifyMountTargetRequest extends Request {
         }
 
         /**
-         * The IPv4 domain name of the mount target.
+         * <p>The IPv4 domain name of the mount target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ca404a666-w****.cn-hangzhou.nas.aliyuncs.com</p>
          */
         public Builder mountTargetDomain(String mountTargetDomain) {
             this.putQueryParameter("MountTargetDomain", mountTargetDomain);
@@ -153,15 +167,18 @@ public class ModifyMountTargetRequest extends Request {
         }
 
         /**
-         * The status of the mount target.
-         * <p>
+         * <p>The status of the mount target.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Active: The mount target is available.</li>
+         * <li>Inactive: The mount target is unavailable.</li>
+         * </ul>
+         * <blockquote>
+         * <p> Only General-purpose Apsara File Storage NAS (NAS) file systems support changing the mount target status.</p>
+         * </blockquote>
          * 
-         * Valid values:
-         * 
-         * *   Active: The mount target is available.
-         * *   Inactive: The mount target is unavailable.
-         * 
-         * >  Only General-purpose Apsara File Storage NAS (NAS) file systems support changing the mount target status.
+         * <strong>example:</strong>
+         * <p>Inactive</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

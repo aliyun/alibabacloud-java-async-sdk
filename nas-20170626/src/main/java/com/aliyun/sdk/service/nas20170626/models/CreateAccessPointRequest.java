@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAccessPointRequest} extends {@link RequestModel}
  *
  * <p>CreateAccessPointRequest</p>
@@ -225,12 +226,13 @@ public class CreateAccessPointRequest extends Request {
         } 
 
         /**
-         * The name of the permission group.
-         * <p>
+         * <p>The name of the permission group.</p>
+         * <p>This parameter is required for a General-purpose Apsara File Storage NAS (NAS) file system.</p>
+         * <p>The default permission group for virtual private clouds (VPCs) is named DEFAULT_VPC_GROUP_NAME.</p>
+         * <p>This parameter is required.</p>
          * 
-         * This parameter is required for a General-purpose Apsara File Storage NAS (NAS) file system.
-         * 
-         * The default permission group for virtual private clouds (VPCs) is named DEFAULT_VPC_GROUP_NAME.
+         * <strong>example:</strong>
+         * <p>DEFAULT_VPC_GROUP_NAME</p>
          */
         public Builder accessGroup(String accessGroup) {
             this.putQueryParameter("AccessGroup", accessGroup);
@@ -239,7 +241,10 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * The name of the access point.
+         * <p>The name of the access point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder accessPointName(String accessPointName) {
             this.putQueryParameter("AccessPointName", accessPointName);
@@ -248,13 +253,17 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the RAM policy. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the RAM policy. Valid values:</p>
+         * <ul>
+         * <li>true: The RAM policy is enabled.</li>
+         * <li>false (default): The RAM policy is disabled.</li>
+         * </ul>
+         * <blockquote>
+         * <p> After the RAM policy is enabled for access points, no RAM user is allowed to use access points to mount and access data by default. To use access points to mount and access data as a RAM user, you must grant the related access permissions to the RAM user. If the RAM policy is disabled, access points can be anonymously mounted.</p>
+         * </blockquote>
          * 
-         * *   true: The RAM policy is enabled.
-         * *   false (default): The RAM policy is disabled.
-         * 
-         * >  After the RAM policy is enabled for access points, no RAM user is allowed to use access points to mount and access data by default. To use access points to mount and access data as a RAM user, you must grant the related access permissions to the RAM user. If the RAM policy is disabled, access points can be anonymously mounted.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enabledRam(Boolean enabledRam) {
             this.putQueryParameter("EnabledRam", enabledRam);
@@ -263,7 +272,11 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31a8e4****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -272,10 +285,11 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * The ID of the owner group.
-         * <p>
+         * <p>The ID of the owner group.</p>
+         * <p>This parameter is required if the RootDirectory directory does not exist.</p>
          * 
-         * This parameter is required if the RootDirectory directory does not exist.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ownerGroupId(Integer ownerGroupId) {
             this.putQueryParameter("OwnerGroupId", ownerGroupId);
@@ -284,10 +298,11 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * The owner ID.
-         * <p>
+         * <p>The owner ID.</p>
+         * <p>This parameter is required if the RootDirectory directory does not exist.</p>
          * 
-         * This parameter is required if the RootDirectory directory does not exist.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ownerUserId(Integer ownerUserId) {
             this.putQueryParameter("OwnerUserId", ownerUserId);
@@ -296,10 +311,11 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * The Portable Operating System Interface for UNIX (POSIX) permission. Default value: 0777.
-         * <p>
+         * <p>The Portable Operating System Interface for UNIX (POSIX) permission. Default value: 0777.</p>
+         * <p>This field takes effect only if you specify the OwnerUserId and OwnerGroupId parameters.</p>
          * 
-         * This field takes effect only if you specify the OwnerUserId and OwnerGroupId parameters.
+         * <strong>example:</strong>
+         * <p>0777</p>
          */
         public Builder permission(String permission) {
             this.putQueryParameter("Permission", permission);
@@ -308,7 +324,10 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * The ID of the POSIX user group.
+         * <p>The ID of the POSIX user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder posixGroupId(Integer posixGroupId) {
             this.putQueryParameter("PosixGroupId", posixGroupId);
@@ -317,7 +336,10 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * The secondary user group. Separate multiple user group IDs with commas (,).
+         * <p>The secondary user group. Separate multiple user group IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123,345</p>
          */
         public Builder posixSecondaryGroupIds(String posixSecondaryGroupIds) {
             this.putQueryParameter("PosixSecondaryGroupIds", posixSecondaryGroupIds);
@@ -326,7 +348,10 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * The ID of the POSIX user.
+         * <p>The ID of the POSIX user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder posixUserId(Integer posixUserId) {
             this.putQueryParameter("PosixUserId", posixUserId);
@@ -335,7 +360,10 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * The root directory of the access point. The default value is /. If the directory does not exist, you must also specify the OwnerUserId and OwnerGroupId parameters.
+         * <p>The root directory of the access point. The default value is /. If the directory does not exist, you must also specify the OwnerUserId and OwnerGroupId parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder rootDirectory(String rootDirectory) {
             this.putQueryParameter("RootDirectory", rootDirectory);
@@ -344,7 +372,11 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * The VPC ID.
+         * <p>The VPC ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2zesj9afh3y518k9o****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -353,7 +385,11 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * The vSwitch ID.
+         * <p>The vSwitch ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-2zevmwkwyztjuoffg****</p>
          */
         public Builder vswId(String vswId) {
             this.putQueryParameter("VswId", vswId);

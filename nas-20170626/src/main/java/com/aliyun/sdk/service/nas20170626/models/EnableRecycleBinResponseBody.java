@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableRecycleBinResponseBody} extends {@link TeaModel}
  *
  * <p>EnableRecycleBinResponseBody</p>
@@ -37,7 +38,10 @@ public class EnableRecycleBinResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9E15E394-38A6-457A-A62A-D9797C9A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

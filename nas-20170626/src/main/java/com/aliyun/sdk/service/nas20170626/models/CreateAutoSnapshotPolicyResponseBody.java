@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAutoSnapshotPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAutoSnapshotPolicyResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateAutoSnapshotPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the automatic snapshot policy.
+         * <p>The ID of the automatic snapshot policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-extreme-233e6****</p>
          */
         public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
             this.autoSnapshotPolicyId = autoSnapshotPolicyId;
@@ -57,7 +61,10 @@ public class CreateAutoSnapshotPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

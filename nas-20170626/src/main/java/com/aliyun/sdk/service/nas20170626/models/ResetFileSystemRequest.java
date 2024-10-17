@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResetFileSystemRequest} extends {@link RequestModel}
  *
  * <p>ResetFileSystemRequest</p>
@@ -69,7 +70,11 @@ public class ResetFileSystemRequest extends Request {
         } 
 
         /**
-         * The ID of the advanced Extreme NAS file system.
+         * <p>The ID of the advanced Extreme NAS file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>extreme-012dd****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -78,7 +83,11 @@ public class ResetFileSystemRequest extends Request {
         }
 
         /**
-         * The snapshot ID.
+         * <p>The snapshot ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-extreme-snapsho****</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);

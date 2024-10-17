@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccessRulesRequest} extends {@link RequestModel}
  *
  * <p>DescribeAccessRulesRequest</p>
@@ -111,7 +112,11 @@ public class DescribeAccessRulesRequest extends Request {
         } 
 
         /**
-         * The name of the permission group.
+         * <p>The name of the permission group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-test</p>
          */
         public Builder accessGroupName(String accessGroupName) {
             this.putQueryParameter("AccessGroupName", accessGroupName);
@@ -120,7 +125,10 @@ public class DescribeAccessRulesRequest extends Request {
         }
 
         /**
-         * The rule ID.
+         * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder accessRuleId(String accessRuleId) {
             this.putQueryParameter("AccessRuleId", accessRuleId);
@@ -129,13 +137,15 @@ public class DescribeAccessRulesRequest extends Request {
         }
 
         /**
-         * The type of the file system.
-         * <p>
+         * <p>The type of the file system.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>standard (default): General-purpose NAS file system</li>
+         * <li>extreme: Extreme NAS file system</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   standard (default): General-purpose NAS file system
-         * *   extreme: Extreme NAS file system
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         public Builder fileSystemType(String fileSystemType) {
             this.putQueryParameter("FileSystemType", fileSystemType);
@@ -144,10 +154,11 @@ public class DescribeAccessRulesRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -156,12 +167,12 @@ public class DescribeAccessRulesRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

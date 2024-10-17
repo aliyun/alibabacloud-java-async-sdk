@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSnapshotRequest} extends {@link RequestModel}
  *
  * <p>DeleteSnapshotRequest</p>
@@ -54,7 +55,11 @@ public class DeleteSnapshotRequest extends Request {
         } 
 
         /**
-         * The snapshot ID.
+         * <p>The snapshot ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-extreme-snapsho****</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);

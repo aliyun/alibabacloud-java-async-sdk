@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLDAPConfigRequest} extends {@link RequestModel}
  *
  * <p>CreateLDAPConfigRequest</p>
@@ -98,7 +99,10 @@ public class CreateLDAPConfigRequest extends Request {
         } 
 
         /**
-         * An LDAP entry.
+         * <p>An LDAP entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn=alibaba,dc=com</p>
          */
         public Builder bindDN(String bindDN) {
             this.putQueryParameter("BindDN", bindDN);
@@ -107,7 +111,11 @@ public class CreateLDAPConfigRequest extends Request {
         }
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>109c04****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -116,7 +124,11 @@ public class CreateLDAPConfigRequest extends Request {
         }
 
         /**
-         * An LDAP search base.
+         * <p>An LDAP search base.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc=example</p>
          */
         public Builder searchBase(String searchBase) {
             this.putQueryParameter("SearchBase", searchBase);
@@ -125,7 +137,11 @@ public class CreateLDAPConfigRequest extends Request {
         }
 
         /**
-         * An LDAP URI.
+         * <p>An LDAP URI.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ldap://ldap.example.example</p>
          */
         public Builder URI(String URI) {
             this.putQueryParameter("URI", URI);

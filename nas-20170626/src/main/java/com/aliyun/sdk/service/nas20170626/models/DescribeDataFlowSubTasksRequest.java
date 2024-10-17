@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataFlowSubTasksRequest} extends {@link RequestModel}
  *
  * <p>DescribeDataFlowSubTasksRequest</p>
@@ -97,7 +98,10 @@ public class DescribeDataFlowSubTasksRequest extends Request {
         } 
 
         /**
-         * FileSystemId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bmcpfs-370lx1ev9ss27o0****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -139,6 +143,12 @@ public class DescribeDataFlowSubTasksRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDataFlowSubTasksRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDataFlowSubTasksRequest</p>
+     */
     public static class Filters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;

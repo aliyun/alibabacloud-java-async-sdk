@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMountTargetsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMountTargetsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about mount targets.
+         * <p>The information about mount targets.</p>
          */
         public Builder mountTargets(MountTargets mountTargets) {
             this.mountTargets = mountTargets;
@@ -93,7 +94,10 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3BAB90FD-B4A0-48DA-9F09-2B963510****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of mount targets.
+         * <p>The total number of mount targets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMountTargetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMountTargetsResponseBody</p>
+     */
     public static class ClientMasterNode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultPasswd")
         private String defaultPasswd;
@@ -181,7 +200,10 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             private String ecsIp; 
 
             /**
-             * The default logon password of the ECS instance.
+             * <p>The default logon password of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12****</p>
              */
             public Builder defaultPasswd(String defaultPasswd) {
                 this.defaultPasswd = defaultPasswd;
@@ -189,7 +211,10 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance on the client management node.
+             * <p>The ID of the ECS instance on the client management node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-hp3i3odi5ory1buo****</p>
              */
             public Builder ecsId(String ecsId) {
                 this.ecsId = ecsId;
@@ -197,7 +222,10 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the ECS instance on the client management node.
+             * <p>The IP address of the ECS instance on the client management node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.0</p>
              */
             public Builder ecsIp(String ecsIp) {
                 this.ecsIp = ecsIp;
@@ -211,6 +239,12 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMountTargetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMountTargetsResponseBody</p>
+     */
     public static class ClientMasterNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientMasterNode")
         private java.util.List < ClientMasterNode> clientMasterNode;
@@ -252,6 +286,12 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMountTargetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMountTargetsResponseBody</p>
+     */
     public static class MountTarget extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessGroup")
         private String accessGroup;
@@ -375,7 +415,10 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             private String vswId; 
 
             /**
-             * The name of the permission group that is attached to the mount target.
+             * <p>The name of the permission group that is attached to the mount target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFAULT_VPC_GROUP_NAME</p>
              */
             public Builder accessGroup(String accessGroup) {
                 this.accessGroup = accessGroup;
@@ -383,7 +426,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about client management nodes.
+             * <p>The information about client management nodes.</p>
              */
             public Builder clientMasterNodes(ClientMasterNodes clientMasterNodes) {
                 this.clientMasterNodes = clientMasterNodes;
@@ -391,7 +434,10 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The dual-stack (IPv4 and IPv6) domain name of the mount target.
+             * <p>The dual-stack (IPv4 and IPv6) domain name of the mount target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>174494b666-x****.dualstack.cn-hangzhou.nas.aliyuncs.com</p>
              */
             public Builder dualStackMountTargetDomain(String dualStackMountTargetDomain) {
                 this.dualStackMountTargetDomain = dualStackMountTargetDomain;
@@ -399,11 +445,14 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the mount target.
-             * <p>
+             * <p>The type of the mount target.</p>
+             * <ul>
+             * <li>IPv4: an IPv4 mount target</li>
+             * <li>DualStack: a dual-stack mount target</li>
+             * </ul>
              * 
-             * *   IPv4: an IPv4 mount target
-             * *   DualStack: a dual-stack mount target
+             * <strong>example:</strong>
+             * <p>IPv4</p>
              */
             public Builder IPVersion(String IPVersion) {
                 this.IPVersion = IPVersion;
@@ -411,7 +460,10 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The IPv4 domain name of the mount target.
+             * <p>The IPv4 domain name of the mount target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1ca404a666-w****.cn-hangzhou.nas.aliyuncs.com</p>
              */
             public Builder mountTargetDomain(String mountTargetDomain) {
                 this.mountTargetDomain = mountTargetDomain;
@@ -419,7 +471,10 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The network type. Valid value: **Vpc**.
+             * <p>The network type. Valid value: <strong>Vpc</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Vpc</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -427,19 +482,22 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the mount target.
-             * <p>
+             * <p>The status of the mount target.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Active: The mount target is available.</li>
+             * <li>Inactive: The mount target is unavailable.</li>
+             * <li>Pending: The mount target is being created or modified.</li>
+             * <li>Deleting: The mount target is being deleted.</li>
+             * <li>Hibernating: The mount target is being hibernated.</li>
+             * <li>Hibernated: The mount target is hibernated.</li>
+             * </ul>
+             * <blockquote>
+             * <p>You can mount a file system only when the mount target of the file system is in the Active state.</p>
+             * </blockquote>
              * 
-             * Valid values:
-             * 
-             * *   Active: The mount target is available.
-             * *   Inactive: The mount target is unavailable.
-             * *   Pending: The mount target is being created or modified.
-             * *   Deleting: The mount target is being deleted.
-             * *   Hibernating: The mount target is being hibernated.
-             * *   Hibernated: The mount target is hibernated.
-             * 
-             * > You can mount a file system only when the mount target of the file system is in the Active state.
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -447,7 +505,10 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC).
+             * <p>The ID of the virtual private cloud (VPC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2zesj9afh3y518k9o****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -455,7 +516,10 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-2zevmwkwyztjuoffg****</p>
              */
             public Builder vswId(String vswId) {
                 this.vswId = vswId;
@@ -469,6 +533,12 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMountTargetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMountTargetsResponseBody</p>
+     */
     public static class MountTargets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MountTarget")
         private java.util.List < MountTarget> mountTarget;

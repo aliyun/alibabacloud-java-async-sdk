@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLifecyclePoliciesRequest} extends {@link RequestModel}
  *
  * <p>DescribeLifecyclePoliciesRequest</p>
@@ -110,7 +111,10 @@ public class DescribeLifecyclePoliciesRequest extends Request {
         } 
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31a8e4****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -119,10 +123,11 @@ public class DescribeLifecyclePoliciesRequest extends Request {
         }
 
         /**
-         * The name of the lifecycle policy. The name must meet the following conventions:
-         * <p>
+         * <p>The name of the lifecycle policy. The name must meet the following conventions:</p>
+         * <p>The name must be 3 to 64 characters in length and must start with a letter. It can contain letters, digits, underscores (_), and hyphens (-).</p>
          * 
-         * The name must be 3 to 64 characters in length and must start with a letter. It can contain letters, digits, underscores (\_), and hyphens (-).
+         * <strong>example:</strong>
+         * <p>lifecyclepolicy_01</p>
          */
         public Builder lifecyclePolicyName(String lifecyclePolicyName) {
             this.putQueryParameter("LifecyclePolicyName", lifecyclePolicyName);
@@ -131,10 +136,11 @@ public class DescribeLifecyclePoliciesRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -143,12 +149,12 @@ public class DescribeLifecyclePoliciesRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -157,13 +163,17 @@ public class DescribeLifecyclePoliciesRequest extends Request {
         }
 
         /**
-         * The storage class.
-         * <p>
+         * <p>The storage class.</p>
+         * <ul>
+         * <li>InfrequentAccess: the Infrequent Access (IA) storage class.</li>
+         * <li>Archive: the Archive storage class.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If the StorageType parameter is not specified, data retrieval tasks of all types are returned.</p>
+         * </blockquote>
          * 
-         * *   InfrequentAccess: the Infrequent Access (IA) storage class.
-         * *   Archive: the Archive storage class.
-         * 
-         * >  If the StorageType parameter is not specified, data retrieval tasks of all types are returned.
+         * <strong>example:</strong>
+         * <p>InfrequentAccess</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);

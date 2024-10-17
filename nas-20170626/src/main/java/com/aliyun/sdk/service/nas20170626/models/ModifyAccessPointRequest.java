@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAccessPointRequest} extends {@link RequestModel}
  *
  * <p>ModifyAccessPointRequest</p>
@@ -111,12 +112,12 @@ public class ModifyAccessPointRequest extends Request {
         } 
 
         /**
-         * The name of the permission group.
-         * <p>
+         * <p>The name of the permission group.</p>
+         * <p>This parameter is required for a General-purpose Apsara File Storage NAS (NAS) file system.</p>
+         * <p>The default permission group for virtual private clouds (VPCs) is named DEFAULT_VPC_GROUP_NAME.</p>
          * 
-         * This parameter is required for a General-purpose Apsara File Storage NAS (NAS) file system.
-         * 
-         * The default permission group for virtual private clouds (VPCs) is named DEFAULT_VPC_GROUP_NAME.
+         * <strong>example:</strong>
+         * <p>DEFAULT_VPC_GROUP_NAME</p>
          */
         public Builder accessGroup(String accessGroup) {
             this.putQueryParameter("AccessGroup", accessGroup);
@@ -125,7 +126,11 @@ public class ModifyAccessPointRequest extends Request {
         }
 
         /**
-         * The ID of the access point.
+         * <p>The ID of the access point.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-ie15yd****</p>
          */
         public Builder accessPointId(String accessPointId) {
             this.putQueryParameter("AccessPointId", accessPointId);
@@ -134,7 +139,10 @@ public class ModifyAccessPointRequest extends Request {
         }
 
         /**
-         * The name of the access point.
+         * <p>The name of the access point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder accessPointName(String accessPointName) {
             this.putQueryParameter("AccessPointName", accessPointName);
@@ -143,13 +151,17 @@ public class ModifyAccessPointRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the Resource Access Management (RAM) policy. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the Resource Access Management (RAM) policy. Valid values:</p>
+         * <ul>
+         * <li>true: The RAM policy is enabled.</li>
+         * <li>false (default): The RAM policy is disabled.</li>
+         * </ul>
+         * <blockquote>
+         * <p> After the RAM policy is enabled for access points, no RAM user is allowed to use access points to mount and access data by default. To use access points to mount and access data as a RAM user, you must grant the related access permissions to the RAM user. If the RAM policy is disabled, access points can be anonymously mounted.</p>
+         * </blockquote>
          * 
-         * *   true: The RAM policy is enabled.
-         * *   false (default): The RAM policy is disabled.
-         * 
-         * >  After the RAM policy is enabled for access points, no RAM user is allowed to use access points to mount and access data by default. To use access points to mount and access data as a RAM user, you must grant the related access permissions to the RAM user. If the RAM policy is disabled, access points can be anonymously mounted.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enabledRam(Boolean enabledRam) {
             this.putQueryParameter("EnabledRam", enabledRam);
@@ -158,7 +170,11 @@ public class ModifyAccessPointRequest extends Request {
         }
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ca404****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);

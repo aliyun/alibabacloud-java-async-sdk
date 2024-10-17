@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeZonesRequest} extends {@link RequestModel}
  *
  * <p>DescribeZonesRequest</p>
@@ -68,16 +69,19 @@ public class DescribeZonesRequest extends Request {
         } 
 
         /**
-         * The type of the file system.
-         * <p>
+         * <p>The type of the file system.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>standard (default): General-purpose NAS file system</li>
+         * <li>extreme: Extreme NAS file system</li>
+         * <li>cpfs: Cloud Parallel File Storage (CPFS) file system</li>
+         * </ul>
+         * <blockquote>
+         * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
+         * </blockquote>
          * 
-         * Valid values:
-         * 
-         * *   standard (default): General-purpose NAS file system
-         * *   extreme: Extreme NAS file system
-         * *   cpfs: Cloud Parallel File Storage (CPFS) file system
-         * 
-         * > CPFS file systems are available only on the China site (aliyun.com).
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         public Builder fileSystemType(String fileSystemType) {
             this.putQueryParameter("FileSystemType", fileSystemType);
@@ -86,10 +90,12 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * The ID of the region where you want to query zones.
-         * <p>
+         * <p>The ID of the region where you want to query zones.</p>
+         * <p>You can call the DescribeRegions operation to query the latest region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the DescribeRegions operation to query the latest region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

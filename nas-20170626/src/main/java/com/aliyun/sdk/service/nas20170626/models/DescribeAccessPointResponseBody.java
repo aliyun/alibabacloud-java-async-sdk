@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccessPointResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAccessPointResponseBody</p>
@@ -50,7 +51,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the access point.
+         * <p>The information about the access point.</p>
          */
         public Builder accessPoint(AccessPoint accessPoint) {
             this.accessPoint = accessPoint;
@@ -58,7 +59,11 @@ public class DescribeAccessPointResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,6 +76,12 @@ public class DescribeAccessPointResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAccessPointResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccessPointResponseBody</p>
+     */
     public static class PosixUser extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PosixGroupId")
         private Integer posixGroupId;
@@ -122,7 +133,10 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             private Integer posixUserId; 
 
             /**
-             * The ID of the POSIX user group.
+             * <p>The ID of the POSIX user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder posixGroupId(Integer posixGroupId) {
                 this.posixGroupId = posixGroupId;
@@ -130,7 +144,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the secondary user groups.
+             * <p>The IDs of the secondary user groups.</p>
              */
             public Builder posixSecondaryGroupIds(java.util.List < Integer > posixSecondaryGroupIds) {
                 this.posixSecondaryGroupIds = posixSecondaryGroupIds;
@@ -138,7 +152,10 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the POSIX user.
+             * <p>The ID of the POSIX user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder posixUserId(Integer posixUserId) {
                 this.posixUserId = posixUserId;
@@ -152,6 +169,12 @@ public class DescribeAccessPointResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAccessPointResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccessPointResponseBody</p>
+     */
     public static class RootPathPermission extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OwnerGroupId")
         private Integer ownerGroupId;
@@ -203,7 +226,10 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             private String permission; 
 
             /**
-             * The ID of the owner group.
+             * <p>The ID of the owner group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder ownerGroupId(Integer ownerGroupId) {
                 this.ownerGroupId = ownerGroupId;
@@ -211,7 +237,10 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * The owner ID.
+             * <p>The owner ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ownerUserId(Integer ownerUserId) {
                 this.ownerUserId = ownerUserId;
@@ -219,7 +248,10 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * The POSIX permission.
+             * <p>The POSIX permission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0755</p>
              */
             public Builder permission(String permission) {
                 this.permission = permission;
@@ -233,6 +265,12 @@ public class DescribeAccessPointResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAccessPointResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccessPointResponseBody</p>
+     */
     public static class AccessPoint extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ARN")
         private String ARN;
@@ -452,7 +490,10 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the access point.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the access point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:nas:cn-hangzhou:178321033379****:accesspoint/ap-ie15yd****</p>
              */
             public Builder ARN(String ARN) {
                 this.ARN = ARN;
@@ -460,7 +501,10 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the permission group.
+             * <p>The name of the permission group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder accessGroup(String accessGroup) {
                 this.accessGroup = accessGroup;
@@ -468,7 +512,10 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the access point.
+             * <p>The ID of the access point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-ie15yd****</p>
              */
             public Builder accessPointId(String accessPointId) {
                 this.accessPointId = accessPointId;
@@ -476,7 +523,10 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the access point.
+             * <p>The name of the access point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder accessPointName(String accessPointName) {
                 this.accessPointName = accessPointName;
@@ -484,7 +534,10 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the access point was created.
+             * <p>The time when the access point was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1709619668276167</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -492,7 +545,10 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name of the access point.
+             * <p>The domain name of the access point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-ie15ydanoz.001014****-w****.cn-hangzhou.nas.aliyuncs.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -500,7 +556,10 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the RAM policy is enabled.
+             * <p>Indicates whether the RAM policy is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enabledRam(Boolean enabledRam) {
                 this.enabledRam = enabledRam;
@@ -508,7 +567,10 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the file system.
+             * <p>The ID of the file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>31a8e4****</p>
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -516,7 +578,10 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the access point was modified.
+             * <p>The time when the access point was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1709619668276167</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -524,7 +589,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * The POSIX user.
+             * <p>The POSIX user.</p>
              */
             public Builder posixUser(PosixUser posixUser) {
                 this.posixUser = posixUser;
@@ -532,7 +597,10 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -540,7 +608,10 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * The root directory.
+             * <p>The root directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder rootPath(String rootPath) {
                 this.rootPath = rootPath;
@@ -548,7 +619,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * The permissions to create the root directory.
+             * <p>The permissions to create the root directory.</p>
              */
             public Builder rootPathPermission(RootPathPermission rootPathPermission) {
                 this.rootPathPermission = rootPathPermission;
@@ -556,14 +627,16 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the root directory.
-             * <p>
+             * <p>The status of the root directory.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>0: The rootpath status is unknown.</li>
+             * <li>1: The rootpath does not exist and may be deleted.</li>
+             * <li>2: The rootpath is normal.</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   0: The rootpath status is unknown.
-             * *   1: The rootpath does not exist and may be deleted.
-             * *   2: The rootpath is normal.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder rootPathStatus(String rootPathStatus) {
                 this.rootPathStatus = rootPathStatus;
@@ -571,15 +644,17 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the access point.
-             * <p>
+             * <p>The status of the access point.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Active: The access point is available.</li>
+             * <li>Inactive: The access point is unavailable.</li>
+             * <li>Pending: The access point is being created.</li>
+             * <li>Deleting: The access point is being deleted.</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   Active: The access point is available.
-             * *   Inactive: The access point is unavailable.
-             * *   Pending: The access point is being created.
-             * *   Deleting: The access point is being deleted.
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -587,7 +662,10 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-2zevmwkwyztjuoffg****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -595,10 +673,11 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC).
-             * <p>
+             * <p>The ID of the virtual private cloud (VPC).</p>
+             * <p>You must select the VPC of the Elastic Compute Service (ECS) instance on which you want to mount the file system.</p>
              * 
-             * You must select the VPC of the Elastic Compute Service (ECS) instance on which you want to mount the file system.
+             * <strong>example:</strong>
+             * <p>vpc-2zesj9afh3y518k9o****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

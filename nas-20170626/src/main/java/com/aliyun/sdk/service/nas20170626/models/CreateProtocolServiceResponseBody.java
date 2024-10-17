@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateProtocolServiceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateProtocolServiceResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateProtocolServiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the protocol service.
+         * <p>The ID of the protocol service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ptc-123****</p>
          */
         public Builder protocolServiceId(String protocolServiceId) {
             this.protocolServiceId = protocolServiceId;
@@ -57,7 +61,10 @@ public class CreateProtocolServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>98696EF0-1607-4E9D-B01D-F20930B6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

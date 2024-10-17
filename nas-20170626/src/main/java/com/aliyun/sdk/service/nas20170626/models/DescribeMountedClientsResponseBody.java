@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMountedClientsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMountedClientsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The queried clients.
+         * <p>The queried clients.</p>
          */
         public Builder clients(Clients clients) {
             this.clients = clients;
@@ -93,7 +94,10 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of IP addresses returned per page.
+         * <p>The number of IP addresses returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A70BEE5D-76D3-49FB-B58F-1F398211****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of IP addresses.
+         * <p>The total number of IP addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMountedClientsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMountedClientsResponseBody</p>
+     */
     public static class Client extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientIP")
         private String clientIP;
@@ -157,7 +176,10 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
             private String clientIP; 
 
             /**
-             * The IP address of the client.
+             * <p>The IP address of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.10.10.1</p>
              */
             public Builder clientIP(String clientIP) {
                 this.clientIP = clientIP;
@@ -171,6 +193,12 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMountedClientsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMountedClientsResponseBody</p>
+     */
     public static class Clients extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Client")
         private java.util.List < Client> client;

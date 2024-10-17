@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAccessPointResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAccessPointResponseBody</p>
@@ -49,7 +50,7 @@ public class CreateAccessPointResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The access point.
+         * <p>The access point.</p>
          */
         public Builder accessPoint(AccessPoint accessPoint) {
             this.accessPoint = accessPoint;
@@ -57,7 +58,10 @@ public class CreateAccessPointResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>98696EF0-1607-4E9D-B01D-F20930B6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class CreateAccessPointResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAccessPointResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateAccessPointResponseBody</p>
+     */
     public static class AccessPoint extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessPointDomain")
         private String accessPointDomain;
@@ -109,7 +119,10 @@ public class CreateAccessPointResponseBody extends TeaModel {
             private String accessPointId; 
 
             /**
-             * The domain name of the access point.
+             * <p>The domain name of the access point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-ie15ydanoz.001014****-w****.cn-hangzhou.nas.aliyuncs.com</p>
              */
             public Builder accessPointDomain(String accessPointDomain) {
                 this.accessPointDomain = accessPointDomain;
@@ -117,7 +130,10 @@ public class CreateAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the access point.
+             * <p>The ID of the access point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-ie15yd****</p>
              */
             public Builder accessPointId(String accessPointId) {
                 this.accessPointId = accessPointId;

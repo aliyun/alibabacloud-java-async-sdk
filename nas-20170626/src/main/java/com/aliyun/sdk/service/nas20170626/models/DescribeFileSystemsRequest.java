@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFileSystemsRequest} extends {@link RequestModel}
  *
  * <p>DescribeFileSystemsRequest</p>
@@ -138,13 +139,18 @@ public class DescribeFileSystemsRequest extends Request {
         } 
 
         /**
-         * The ID of the file system.
-         * <p>
+         * <p>The ID of the file system.</p>
+         * <ul>
+         * <li>Sample ID of a General-purpose NAS file system: 31a8e4****.</li>
+         * <li>The IDs of Extreme NAS file systems must start with extreme-, for example, extreme-0015****.</li>
+         * <li>The IDs of Cloud Parallel File Storage (CPFS) file systems must start with cpfs-, for example, cpfs-125487****.<blockquote>
+         * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
+         * </blockquote>
+         * </li>
+         * </ul>
          * 
-         * - Sample ID of a General-purpose NAS file system: 31a8e4****.
-         * - The IDs of Extreme NAS file systems must start with extreme-, for example, extreme-0015****.
-         * - The IDs of Cloud Parallel File Storage (CPFS) file systems must start with cpfs-, for example, cpfs-125487****.
-         * > CPFS file systems are available only on the China site (aliyun.com).
+         * <strong>example:</strong>
+         * <p>31a8e4****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -153,15 +159,20 @@ public class DescribeFileSystemsRequest extends Request {
         }
 
         /**
-         * The type of the file system.
-         * <p>
+         * <p>The type of the file system.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>all (default): all types</li>
+         * <li>standard: General-purpose NAS file system</li>
+         * <li>extreme: Extreme NAS file system</li>
+         * <li>cpfs: CPFS file system<blockquote>
+         * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
+         * </blockquote>
+         * </li>
+         * </ul>
          * 
-         * Valid values:
-         * - all (default): all types
-         * - standard: General-purpose NAS file system
-         * - extreme: Extreme NAS file system
-         * - cpfs: CPFS file system
-         * > CPFS file systems are available only on the China site (aliyun.com).
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         public Builder fileSystemType(String fileSystemType) {
             this.putQueryParameter("FileSystemType", fileSystemType);
@@ -170,10 +181,11 @@ public class DescribeFileSystemsRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -182,12 +194,12 @@ public class DescribeFileSystemsRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -196,10 +208,11 @@ public class DescribeFileSystemsRequest extends Request {
         }
 
         /**
-         * The resource group ID.
-         * <p>
+         * <p>The resource group ID.</p>
+         * <p>You can log on to the <a href="https://resourcemanager.console.aliyun.com/resource-groups?">Resource Management console</a> to view resource group IDs.</p>
          * 
-         * You can log on to the [Resource Management console](https://resourcemanager.console.aliyun.com/resource-groups?) to view resource group IDs.
+         * <strong>example:</strong>
+         * <p>rg-acfmwavnfdf****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -208,7 +221,7 @@ public class DescribeFileSystemsRequest extends Request {
         }
 
         /**
-         * The details about the tags.
+         * <p>The details about the tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -217,10 +230,11 @@ public class DescribeFileSystemsRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC).
-         * <p>
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>If you want to mount the file system on an Elastic Compute Service (ECS) instance, the file system and the ECS instance must reside in the same VPC.</p>
          * 
-         * If you want to mount the file system on an Elastic Compute Service (ECS) instance, the file system and the ECS instance must reside in the same VPC.
+         * <strong>example:</strong>
+         * <p>vpc-bp1sevsgtqvk5gxbl****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -235,6 +249,12 @@ public class DescribeFileSystemsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFileSystemsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeFileSystemsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -274,14 +294,17 @@ public class DescribeFileSystemsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the resource.
-             * <p>
+             * <p>The key of tag N to add to the resource.</p>
+             * <p>Limits:</p>
+             * <ul>
+             * <li>Valid values of N: 1 to 20.</li>
+             * <li>The tag key must be 1 to 128 characters in length.</li>
+             * <li>The tag key cannot start with aliyun or acs:.</li>
+             * <li>The tag key cannot contain http:// or https://.</li>
+             * </ul>
              * 
-             * Limits:
-             * - Valid values of N: 1 to 20.
-             * - The tag key must be 1 to 128 characters in length.
-             * - The tag key cannot start with aliyun or acs:.
-             * - The tag key cannot contain http:// or https://.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -289,14 +312,17 @@ public class DescribeFileSystemsRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the resource.
-             * <p>
+             * <p>The value of tag N to add to the resource.</p>
+             * <p>Limits:</p>
+             * <ul>
+             * <li>Valid values of N: 1 to 20.</li>
+             * <li>The tag value must be 1 to 128 characters in length.</li>
+             * <li>The tag value cannot start with aliyun or acs:.</li>
+             * <li>The tag value cannot contain http:// or https://.</li>
+             * </ul>
              * 
-             * Limits:
-             * - Valid values of N: 1 to 20.
-             * - The tag value must be 1 to 128 characters in length.
-             * - The tag value cannot start with aliyun or acs:.
-             * - The tag value cannot contain http:// or https://.
+             * <strong>example:</strong>
+             * <p>test-value</p>
              */
             public Builder value(String value) {
                 this.value = value;

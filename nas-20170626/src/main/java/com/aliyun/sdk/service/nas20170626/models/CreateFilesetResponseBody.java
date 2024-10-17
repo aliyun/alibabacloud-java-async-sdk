@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFilesetResponseBody} extends {@link TeaModel}
  *
  * <p>CreateFilesetResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateFilesetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The fileset ID.
+         * <p>The fileset ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fset-1902718ea0ae****</p>
          */
         public Builder fsetId(String fsetId) {
             this.fsetId = fsetId;
@@ -57,7 +61,10 @@ public class CreateFilesetResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>98696EF0-1607-4E9D-B01D-F20930B6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDirQuotaRequest} extends {@link RequestModel}
  *
  * <p>SetDirQuotaRequest</p>
@@ -143,12 +144,12 @@ public class SetDirQuotaRequest extends Request {
         } 
 
         /**
-         * The number of files that a user can create in the directory.
-         * <p>
+         * <p>The number of files that a user can create in the directory.</p>
+         * <p>This number includes the number of files, subdirectories, and special files.</p>
+         * <p>If you set the QuotaType parameter to Enforcement, you must specify at least one of the SizeLimit and FileCountLimit parameters.</p>
          * 
-         * This number includes the number of files, subdirectories, and special files.
-         * 
-         * If you set the QuotaType parameter to Enforcement, you must specify at least one of the SizeLimit and FileCountLimit parameters.
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder fileCountLimit(Long fileCountLimit) {
             this.putQueryParameter("FileCountLimit", fileCountLimit);
@@ -157,7 +158,11 @@ public class SetDirQuotaRequest extends Request {
         }
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ca404****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -166,11 +171,17 @@ public class SetDirQuotaRequest extends Request {
         }
 
         /**
-         * The absolute path of the directory in the file system.
-         * <p>
+         * <p>The absolute path of the directory in the file system.</p>
+         * <blockquote>
+         * <ul>
+         * <li>You can set quotas only for the directories that have been created in a NAS file system. The path of the directory that you specify for a quota is the absolute path of the directory in the NAS file system, but not the local path of the compute node, such as an Elastic Compute Service (ECS) instance or a container.</li>
+         * <li>Directories whose names contain Chinese characters are not supported.</li>
+         * </ul>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > *   You can set quotas only for the directories that have been created in a NAS file system. The path of the directory that you specify for a quota is the absolute path of the directory in the NAS file system, but not the local path of the compute node, such as an Elastic Compute Service (ECS) instance or a container.
-         * > *   Directories whose names contain Chinese characters are not supported.
+         * <strong>example:</strong>
+         * <p>/data/sub1</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -179,13 +190,16 @@ public class SetDirQuotaRequest extends Request {
         }
 
         /**
-         * The type of the quota.
-         * <p>
+         * <p>The type of the quota.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Accounting: a statistical quota. If you set this parameter to Accounting, NAS calculates only the storage usage of the directory.</li>
+         * <li>Enforcement: a restricted quota. If you set this parameter to Enforcement and the storage usage exceeds the quota, you can no longer create files or subdirectories for the directory, or write data to the directory.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   Accounting: a statistical quota. If you set this parameter to Accounting, NAS calculates only the storage usage of the directory.
-         * *   Enforcement: a restricted quota. If you set this parameter to Enforcement and the storage usage exceeds the quota, you can no longer create files or subdirectories for the directory, or write data to the directory.
+         * <strong>example:</strong>
+         * <p>Accounting</p>
          */
         public Builder quotaType(String quotaType) {
             this.putQueryParameter("QuotaType", quotaType);
@@ -194,12 +208,12 @@ public class SetDirQuotaRequest extends Request {
         }
 
         /**
-         * The size of files that a user can create in the directory.
-         * <p>
+         * <p>The size of files that a user can create in the directory.</p>
+         * <p>Unit: GiB.</p>
+         * <p>If you set the QuotaType parameter to Enforcement, you must specify at least one of the SizeLimit and FileCountLimit parameters.</p>
          * 
-         * Unit: GiB.
-         * 
-         * If you set the QuotaType parameter to Enforcement, you must specify at least one of the SizeLimit and FileCountLimit parameters.
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder sizeLimit(Long sizeLimit) {
             this.putQueryParameter("SizeLimit", sizeLimit);
@@ -208,15 +222,16 @@ public class SetDirQuotaRequest extends Request {
         }
 
         /**
-         * The UID or GID of the user for whom you want to set a directory quota.
-         * <p>
+         * <p>The UID or GID of the user for whom you want to set a directory quota.</p>
+         * <p>This parameter is required and valid only if the UserType parameter is set to Uid or Gid.</p>
+         * <p>Examples:</p>
+         * <ul>
+         * <li>If you want to set a directory quota for a user whose UID is 500, set the UserType parameter to Uid and set the UserId parameter to 500.</li>
+         * <li>If you want to set a directory quota for a user group whose GID is 100, set the UserType parameter to Gid and set the UserId parameter to 100.</li>
+         * </ul>
          * 
-         * This parameter is required and valid only if the UserType parameter is set to Uid or Gid.
-         * 
-         * Examples:
-         * 
-         * *   If you want to set a directory quota for a user whose UID is 500, set the UserType parameter to Uid and set the UserId parameter to 500.
-         * *   If you want to set a directory quota for a user group whose GID is 100, set the UserType parameter to Gid and set the UserId parameter to 100.
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -225,14 +240,17 @@ public class SetDirQuotaRequest extends Request {
         }
 
         /**
-         * The type of the user.
-         * <p>
+         * <p>The type of the user.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Uid: user ID</li>
+         * <li>Gid: user group ID</li>
+         * <li>AllUsers: all users</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   Uid: user ID
-         * *   Gid: user group ID
-         * *   AllUsers: all users
+         * <strong>example:</strong>
+         * <p>Uid</p>
          */
         public Builder userType(String userType) {
             this.putQueryParameter("UserType", userType);

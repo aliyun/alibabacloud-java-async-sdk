@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateProtocolMountTargetRequest} extends {@link RequestModel}
  *
  * <p>CreateProtocolMountTargetRequest</p>
@@ -185,10 +186,11 @@ public class CreateProtocolMountTargetRequest extends Request {
         } 
 
         /**
-         * The name of the permission group.
-         * <p>
+         * <p>The name of the permission group.</p>
+         * <p>Default value: DEFAULT_VPC_GROUP_NAME.</p>
          * 
-         * Default value: DEFAULT_VPC_GROUP_NAME.
+         * <strong>example:</strong>
+         * <p>DEFAULT_VPC_GROUP_NAME</p>
          */
         public Builder accessGroupName(String accessGroupName) {
             this.putQueryParameter("AccessGroupName", accessGroupName);
@@ -197,12 +199,14 @@ public class CreateProtocolMountTargetRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
+         * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence?</a></p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * </blockquote>
          * 
-         * The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence?](~~25693~~)
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -211,14 +215,16 @@ public class CreateProtocolMountTargetRequest extends Request {
         }
 
         /**
-         * The description of the export directory for the protocol service. The **name of the export directory** appears in the console.
-         * <p>
+         * <p>The description of the export directory for the protocol service. The <strong>name of the export directory</strong> appears in the console.</p>
+         * <p>Limits:</p>
+         * <ul>
+         * <li>The description must be 2 to 128 characters in length.</li>
+         * <li>The description must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The description can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+         * </ul>
          * 
-         * Limits:
-         * 
-         * *   The description must be 2 to 128 characters in length.
-         * *   The description must start with a letter but cannot start with `http://` or `https://`.
-         * *   The description can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -227,13 +233,15 @@ public class CreateProtocolMountTargetRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. The dry run checks parameter validity and prerequisites. The dry run does not create an export directory or incur fees.
-         * <p>
+         * <p>Specifies whether to perform a dry run. The dry run checks parameter validity and prerequisites. The dry run does not create an export directory or incur fees.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: performs a dry run. The system checks the request format, service limits, prerequisites, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned. No value is returned for the ExportId parameter.</li>
+         * <li>false (default): performs a dry run and sends the request. If the request passes the dry run, an export directory is created.</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   true: performs a dry run. The system checks the request format, service limits, prerequisites, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned. No value is returned for the ExportId parameter.
-         * *   false (default): performs a dry run and sends the request. If the request passes the dry run, an export directory is created.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -242,7 +250,11 @@ public class CreateProtocolMountTargetRequest extends Request {
         }
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpfs-123****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -251,14 +263,16 @@ public class CreateProtocolMountTargetRequest extends Request {
         }
 
         /**
-         * The ID of the fileset that you want to export.
-         * <p>
+         * <p>The ID of the fileset that you want to export.</p>
+         * <p>Limits:</p>
+         * <ul>
+         * <li>The fileset already exists.</li>
+         * <li>You can create only one export directory for a fileset.</li>
+         * <li>You can specify either a fileset or a path.</li>
+         * </ul>
          * 
-         * Limits:
-         * 
-         * *   The fileset already exists.
-         * *   You can create only one export directory for a fileset.
-         * *   You can specify either a fileset or a path.
+         * <strong>example:</strong>
+         * <p>fset-123****</p>
          */
         public Builder fsetId(String fsetId) {
             this.putQueryParameter("FsetId", fsetId);
@@ -267,20 +281,22 @@ public class CreateProtocolMountTargetRequest extends Request {
         }
 
         /**
-         * The path of the CPFS directory that you want to export.
-         * <p>
+         * <p>The path of the CPFS directory that you want to export.</p>
+         * <p>Limits:</p>
+         * <ul>
+         * <li>The directory already exists in the CPFS file system.</li>
+         * <li>You can create only one export directory for a directory.</li>
+         * <li>You can specify either a fileset or a path.</li>
+         * </ul>
+         * <p>Format:</p>
+         * <ul>
+         * <li>The path must be 1 to 1,024 characters in length.</li>
+         * <li>The path must be encoded in UTF-8.</li>
+         * <li>The path must start and end with a forward slash (/). The root directory is <code>/</code>.</li>
+         * </ul>
          * 
-         * Limits:
-         * 
-         * *   The directory already exists in the CPFS file system.
-         * *   You can create only one export directory for a directory.
-         * *   You can specify either a fileset or a path.
-         * 
-         * Format:
-         * 
-         * *   The path must be 1 to 1,024 characters in length.
-         * *   The path must be encoded in UTF-8.
-         * *   The path must start and end with a forward slash (/). The root directory is `/`.
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -289,7 +305,11 @@ public class CreateProtocolMountTargetRequest extends Request {
         }
 
         /**
-         * The ID of the protocol service.
+         * <p>The ID of the protocol service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ptc-123****</p>
          */
         public Builder protocolServiceId(String protocolServiceId) {
             this.putQueryParameter("ProtocolServiceId", protocolServiceId);
@@ -298,7 +318,11 @@ public class CreateProtocolMountTargetRequest extends Request {
         }
 
         /**
-         * The vSwitch ID of the export directory for the protocol service.
+         * <p>The vSwitch ID of the export directory for the protocol service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-123****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -307,7 +331,11 @@ public class CreateProtocolMountTargetRequest extends Request {
         }
 
         /**
-         * The VPC ID of the export directory for the protocol service.
+         * <p>The VPC ID of the export directory for the protocol service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-123****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

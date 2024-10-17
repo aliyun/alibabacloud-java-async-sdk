@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBlackListClientsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBlackListClientsResponseBody</p>
@@ -49,15 +50,17 @@ public class DescribeBlackListClientsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IDs of clients and the status of each client. This parameter contains a JSON object, for example, {"client1": "EVICTING","client2":"EVICTED"}.
-         * <p>
+         * <p>The IDs of clients and the status of each client. This parameter contains a JSON object, for example, {&quot;client1&quot;: &quot;EVICTING&quot;,&quot;client2&quot;:&quot;EVICTED&quot;}.</p>
+         * <p>Available client statuses include:</p>
+         * <ul>
+         * <li>EVICTING indicates that a client is being removed</li>
+         * <li>EVICTED indicates that a client is removed</li>
+         * <li>ACCEPTING indicates that the write access to the file system is being granted to a client</li>
+         * <li>ACCEPTABLE indicates that the write access to the file system is granted to a client</li>
+         * </ul>
          * 
-         * Available client statuses include:
-         * 
-         * *   EVICTING indicates that a client is being removed
-         * *   EVICTED indicates that a client is removed
-         * *   ACCEPTING indicates that the write access to the file system is being granted to a client
-         * *   ACCEPTABLE indicates that the write access to the file system is granted to a client
+         * <strong>example:</strong>
+         * <p>{&quot;client1&quot;: &quot;EVICTING&quot;,&quot;client2&quot;:&quot;EVICTED&quot;}</p>
          */
         public Builder clients(String clients) {
             this.clients = clients;
@@ -65,7 +68,10 @@ public class DescribeBlackListClientsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A70BEE5D-76D3-49FB-B58F-1F398211A5C3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

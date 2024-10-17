@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>ChangeResourceGroupRequest</p>
@@ -98,10 +99,12 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the new resource group.
-         * <p>
+         * <p>The ID of the new resource group.</p>
+         * <p>You can log on to the <a href="https://resourcemanager.console.aliyun.com/resource-groups?">Resource Management console</a> to view resource group IDs.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can log on to the [Resource Management console](https://resourcemanager.console.aliyun.com/resource-groups?) to view resource group IDs.
+         * <strong>example:</strong>
+         * <p>rg-acfmwavnfdf****</p>
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putQueryParameter("NewResourceGroupId", newResourceGroupId);
@@ -110,10 +113,11 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the zone.
-         * <p>
+         * <p>The region ID of the zone.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2412111.html">DescribeRegions</a> operation to query the latest region list.</p>
          * 
-         * You can call the [DescribeRegions](~~2412111~~) operation to query the latest region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -122,7 +126,11 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The resource ID.
+         * <p>The resource ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31a8e4****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -131,10 +139,12 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The resource type.
-         * <p>
+         * <p>The resource type.</p>
+         * <p>Set the value to filesystem.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Set the value to filesystem.
+         * <strong>example:</strong>
+         * <p>filesystem</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

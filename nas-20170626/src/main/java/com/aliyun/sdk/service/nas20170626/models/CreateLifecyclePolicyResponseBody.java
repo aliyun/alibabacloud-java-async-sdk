@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLifecyclePolicyResponseBody} extends {@link TeaModel}
  *
  * <p>CreateLifecyclePolicyResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateLifecyclePolicyResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BC7C825C-5F65-4B56-BEF6-98C56C7C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,13 +61,15 @@ public class CreateLifecyclePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
-         * <p>
+         * <p>Indicates whether the request was successful.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

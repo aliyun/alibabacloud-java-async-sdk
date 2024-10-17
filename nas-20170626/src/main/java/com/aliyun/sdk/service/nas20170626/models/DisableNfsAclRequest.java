@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisableNfsAclRequest} extends {@link RequestModel}
  *
  * <p>DisableNfsAclRequest</p>
@@ -54,7 +55,11 @@ public class DisableNfsAclRequest extends Request {
         } 
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91fcdxxxx</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveClientFromBlackListRequest} extends {@link RequestModel}
  *
  * <p>RemoveClientFromBlackListRequest</p>
@@ -99,7 +100,10 @@ public class RemoveClientFromBlackListRequest extends Request {
         } 
 
         /**
-         * ClientIP.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0</p>
          */
         public Builder clientIP(String clientIP) {
             this.putQueryParameter("ClientIP", clientIP);
@@ -108,7 +112,10 @@ public class RemoveClientFromBlackListRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -117,7 +124,10 @@ public class RemoveClientFromBlackListRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpfs-00d91ca404a348****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -126,7 +136,11 @@ public class RemoveClientFromBlackListRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

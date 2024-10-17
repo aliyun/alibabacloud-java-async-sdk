@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteProtocolMountTargetRequest} extends {@link RequestModel}
  *
  * <p>DeleteProtocolMountTargetRequest</p>
@@ -112,12 +113,14 @@ public class DeleteProtocolMountTargetRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
+         * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence?</a></p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * </blockquote>
          * 
-         * The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence?](~~25693~~)
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -126,13 +129,15 @@ public class DeleteProtocolMountTargetRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. The dry run checks parameter validity and prerequisites. The dry run does not delete the specified export directory or incur fees.
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. The dry run checks parameter validity and prerequisites. The dry run does not delete the specified export directory or incur fees.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: performs only a dry run. The system checks the required parameters, request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned.</li>
+         * <li>false (default): performs a dry run and sends the request. If the request passes the dry run, the specified export directory is deleted.</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   true: performs only a dry run. The system checks the required parameters, request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned.
-         * *   false (default): performs a dry run and sends the request. If the request passes the dry run, the specified export directory is deleted.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -141,7 +146,11 @@ public class DeleteProtocolMountTargetRequest extends Request {
         }
 
         /**
-         * The ID of the export directory.
+         * <p>The ID of the export directory.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exp-123****</p>
          */
         public Builder exportId(String exportId) {
             this.putQueryParameter("ExportId", exportId);
@@ -150,7 +159,11 @@ public class DeleteProtocolMountTargetRequest extends Request {
         }
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpfs-123****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -159,7 +172,11 @@ public class DeleteProtocolMountTargetRequest extends Request {
         }
 
         /**
-         * The ID of the protocol service.
+         * <p>The ID of the protocol service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ptc-123****</p>
          */
         public Builder protocolServiceId(String protocolServiceId) {
             this.putQueryParameter("ProtocolServiceId", protocolServiceId);

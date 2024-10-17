@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDirectoryOrFilePropertiesRequest} extends {@link RequestModel}
  *
  * <p>GetDirectoryOrFilePropertiesRequest</p>
@@ -69,7 +70,11 @@ public class GetDirectoryOrFilePropertiesRequest extends Request {
         } 
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31a8e4****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -78,10 +83,12 @@ public class GetDirectoryOrFilePropertiesRequest extends Request {
         }
 
         /**
-         * The absolute path of the directory.
-         * <p>
+         * <p>The absolute path of the directory.</p>
+         * <p>The path must start with a forward slash (/) and must be a path that exists in the mount target.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The path must start with a forward slash (/) and must be a path that exists in the mount target.
+         * <strong>example:</strong>
+         * <p>/pathway/to/folder</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);

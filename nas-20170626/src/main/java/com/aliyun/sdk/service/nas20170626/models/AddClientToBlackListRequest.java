@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddClientToBlackListRequest} extends {@link RequestModel}
  *
  * <p>AddClientToBlackListRequest</p>
@@ -99,7 +100,11 @@ public class AddClientToBlackListRequest extends Request {
         } 
 
         /**
-         * The IP address of the client to add.
+         * <p>The IP address of the client to add.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0</p>
          */
         public Builder clientIP(String clientIP) {
             this.putQueryParameter("ClientIP", clientIP);
@@ -108,10 +113,12 @@ public class AddClientToBlackListRequest extends Request {
         }
 
         /**
-         * This parameter ensures the idempotency of each request. A ClientToken is generated for each client. Make sure that each ClientToken is unique between different requests. The parameter can be a maximum of 64 characters in length and contain ASCII characters.
-         * <p>
+         * <p>This parameter ensures the idempotency of each request. A ClientToken is generated for each client. Make sure that each ClientToken is unique between different requests. The parameter can be a maximum of 64 characters in length and contain ASCII characters.</p>
+         * <p>For more information, see <a href="https://www.alibabacloud.com/help/doc-detail/25693.htm">How to ensure idempotence</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information, see [How to ensure idempotence](https://www.alibabacloud.com/help/doc-detail/25693.htm).
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -120,7 +127,11 @@ public class AddClientToBlackListRequest extends Request {
         }
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ca404a348</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -129,7 +140,11 @@ public class AddClientToBlackListRequest extends Request {
         }
 
         /**
-         * The ID of the region where the file system resides.
+         * <p>The ID of the region where the file system resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

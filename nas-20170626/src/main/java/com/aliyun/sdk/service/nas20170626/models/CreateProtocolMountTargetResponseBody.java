@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateProtocolMountTargetResponseBody} extends {@link TeaModel}
  *
  * <p>CreateProtocolMountTargetResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateProtocolMountTargetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the export directory for the protocol service.
+         * <p>The ID of the export directory for the protocol service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exp-123****</p>
          */
         public Builder exportId(String exportId) {
             this.exportId = exportId;
@@ -57,7 +61,10 @@ public class CreateProtocolMountTargetResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

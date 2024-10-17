@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAccessGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAccessGroupResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateAccessGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The name of the permission group.
+         * <p>The name of the permission group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-test</p>
          */
         public Builder accessGroupName(String accessGroupName) {
             this.accessGroupName = accessGroupName;
@@ -57,7 +61,10 @@ public class CreateAccessGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55C5FFD6-BF99-41BD-9C66-FFF39189F4F8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

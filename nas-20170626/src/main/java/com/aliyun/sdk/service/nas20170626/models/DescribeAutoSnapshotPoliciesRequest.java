@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAutoSnapshotPoliciesRequest} extends {@link RequestModel}
  *
  * <p>DescribeAutoSnapshotPoliciesRequest</p>
@@ -96,7 +97,10 @@ public class DescribeAutoSnapshotPoliciesRequest extends Request {
         } 
 
         /**
-         * The ID of the automatic snapshot policy.
+         * <p>The ID of the automatic snapshot policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-extreme-233e6****</p>
          */
         public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
             this.putQueryParameter("AutoSnapshotPolicyId", autoSnapshotPolicyId);
@@ -105,10 +109,11 @@ public class DescribeAutoSnapshotPoliciesRequest extends Request {
         }
 
         /**
-         * The type of the file system.
-         * <p>
+         * <p>The type of the file system.</p>
+         * <p>Valid value: extreme, which indicates Extreme Apsara File Storage NAS (NAS) file systems.</p>
          * 
-         * Valid value: extreme, which indicates Extreme Apsara File Storage NAS (NAS) file systems.
+         * <strong>example:</strong>
+         * <p>extreme</p>
          */
         public Builder fileSystemType(String fileSystemType) {
             this.putQueryParameter("FileSystemType", fileSystemType);
@@ -117,10 +122,11 @@ public class DescribeAutoSnapshotPoliciesRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -129,12 +135,12 @@ public class DescribeAutoSnapshotPoliciesRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

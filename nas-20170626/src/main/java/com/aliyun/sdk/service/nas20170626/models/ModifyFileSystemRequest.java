@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyFileSystemRequest} extends {@link RequestModel}
  *
  * <p>ModifyFileSystemRequest</p>
@@ -82,14 +83,16 @@ public class ModifyFileSystemRequest extends Request {
         } 
 
         /**
-         * The description of the file system.
-         * <p>
+         * <p>The description of the file system.</p>
+         * <p>Limits:</p>
+         * <ul>
+         * <li>The description must be 2 to 128 characters in length.</li>
+         * <li>It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The description can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+         * </ul>
          * 
-         * Limits:
-         * 
-         * *   The description must be 2 to 128 characters in length.
-         * *   It must start with a letter but cannot start with `http://` or `https://`.
-         * *   The description can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * <strong>example:</strong>
+         * <p>NAS-test-1</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -98,13 +101,19 @@ public class ModifyFileSystemRequest extends Request {
         }
 
         /**
-         * The ID of the file system.
-         * <p>
+         * <p>The ID of the file system.</p>
+         * <ul>
+         * <li>Sample ID of a General-purpose NAS file system: <code>31a8e4****</code>.</li>
+         * <li>The IDs of Extreme NAS file systems must start with <code>extreme-</code>. Example: <code>extreme-0015****</code>.</li>
+         * <li>The IDs of Cloud Paralleled File System (CPFS) file systems must start with <code>cpfs-</code>. Example: <code>cpfs-125487****</code>.<blockquote>
+         * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Sample ID of a General-purpose NAS file system: `31a8e4****`.
-         * *   The IDs of Extreme NAS file systems must start with `extreme-`. Example: `extreme-0015****`.
-         * *   The IDs of Cloud Paralleled File System (CPFS) file systems must start with `cpfs-`. Example: `cpfs-125487****`.
-         * >CPFS file systems are available only on the China site (aliyun.com).
+         * <strong>example:</strong>
+         * <p>1ca404****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -113,7 +122,7 @@ public class ModifyFileSystemRequest extends Request {
         }
 
         /**
-         * The options.
+         * <p>The options.</p>
          */
         public Builder options(Options options) {
             String optionsShrink = shrink(options, "Options", "json");
@@ -129,6 +138,12 @@ public class ModifyFileSystemRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyFileSystemRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyFileSystemRequest</p>
+     */
     public static class Options extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableOplock")
         private Boolean enableOplock;
@@ -156,13 +171,17 @@ public class ModifyFileSystemRequest extends Request {
             private Boolean enableOplock; 
 
             /**
-             * Specifies whether to enable the oplock feature. Valid values:
-             * <p>
+             * <p>Specifies whether to enable the oplock feature. Valid values:</p>
+             * <ul>
+             * <li>true: enables the feature.</li>
+             * <li>false: disables the feature.</li>
+             * </ul>
+             * <blockquote>
+             * <p> Only Server Message Block (SMB) file systems support this feature.</p>
+             * </blockquote>
              * 
-             * *   true: enables the feature.
-             * *   false: disables the feature.
-             * 
-             * >  Only Server Message Block (SMB) file systems support this feature.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableOplock(Boolean enableOplock) {
                 this.enableOplock = enableOplock;

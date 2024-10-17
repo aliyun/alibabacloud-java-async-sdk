@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLifecycleRetrieveJobsResponseBody} extends {@link TeaModel}
  *
  * <p>ListLifecycleRetrieveJobsResponseBody</p>
@@ -85,7 +86,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details about the data retrieval tasks.
+         * <p>The details about the data retrieval tasks.</p>
          */
         public Builder lifecycleRetrieveJobs(java.util.List < LifecycleRetrieveJobs> lifecycleRetrieveJobs) {
             this.lifecycleRetrieveJobs = lifecycleRetrieveJobs;
@@ -93,7 +94,10 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BC7C825C-5F65-4B56-BEF6-98C56C7C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of data retrieval tasks.
+         * <p>The total number of data retrieval tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLifecycleRetrieveJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLifecycleRetrieveJobsResponseBody</p>
+     */
     public static class LifecycleRetrieveJobs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -253,10 +272,11 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The time when the task was created.
-             * <p>
+             * <p>The time when the task was created.</p>
+             * <p>The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
              * 
-             * The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format.
+             * <strong>example:</strong>
+             * <p>2021-02-30T10:08:08Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -264,7 +284,10 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of files that are read in the data retrieval task.
+             * <p>The total number of files that are read in the data retrieval task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder discoveredFileCount(Long discoveredFileCount) {
                 this.discoveredFileCount = discoveredFileCount;
@@ -272,7 +295,10 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the file system.
+             * <p>The ID of the file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>31a8e4****</p>
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -280,7 +306,10 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data retrieval task.
+             * <p>The ID of the data retrieval task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lrj-nfstest-ia-160****853-hshvw</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -288,7 +317,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The execution path of the data retrieval task.
+             * <p>The execution path of the data retrieval task.</p>
              */
             public Builder paths(java.util.List < String > paths) {
                 this.paths = paths;
@@ -296,7 +325,10 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of files that are retrieved.
+             * <p>The total number of files that are retrieved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder retrievedFileCount(Long retrievedFileCount) {
                 this.retrievedFileCount = retrievedFileCount;
@@ -304,13 +336,16 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the data retrieval task. Valid values:
-             * <p>
+             * <p>The status of the data retrieval task. Valid values:</p>
+             * <ul>
+             * <li>active: The task is running.</li>
+             * <li>canceled: The task is canceled.</li>
+             * <li>completed: The task is completed.</li>
+             * <li>failed: The task has failed.</li>
+             * </ul>
              * 
-             * *   active: The task is running.
-             * *   canceled: The task is canceled.
-             * *   completed: The task is completed.
-             * *   failed: The task has failed.
+             * <strong>example:</strong>
+             * <p>completed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -318,11 +353,14 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The storage class.
-             * <p>
+             * <p>The storage class.</p>
+             * <ul>
+             * <li>InfrequentAccess: the IA storage class.</li>
+             * <li>Archive: the Archive storage class.</li>
+             * </ul>
              * 
-             * *   InfrequentAccess: the IA storage class.
-             * *   Archive: the Archive storage class.
+             * <strong>example:</strong>
+             * <p>InfrequentAccess</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -330,10 +368,11 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was updated.
-             * <p>
+             * <p>The time when the task was updated.</p>
+             * <p>The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
              * 
-             * The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format.
+             * <strong>example:</strong>
+             * <p>2021-02-30T11:08:08Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRecycleBinDeleteJobResponseBody} extends {@link TeaModel}
  *
  * <p>CreateRecycleBinDeleteJobResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateRecycleBinDeleteJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The job ID.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8C****C54</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -57,7 +61,10 @@ public class CreateRecycleBinDeleteJobResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>98696EF0-1607-4E9D-B01D-F20930B6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

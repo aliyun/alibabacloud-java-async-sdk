@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveTagsRequest} extends {@link RequestModel}
  *
  * <p>RemoveTagsRequest</p>
@@ -69,7 +70,11 @@ public class RemoveTagsRequest extends Request {
         } 
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0addcw****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -78,7 +83,8 @@ public class RemoveTagsRequest extends Request {
         }
 
         /**
-         * The details about the tags.
+         * <p>The details about the tags.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -93,6 +99,12 @@ public class RemoveTagsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RemoveTagsRequest} extends {@link TeaModel}
+     *
+     * <p>RemoveTagsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -132,7 +144,10 @@ public class RemoveTagsRequest extends Request {
             private String value; 
 
             /**
-             * The key of each tag. Each tag that you want to remove consists of a tag key and a tag value. You can specify 1 to 10 tags at a time. The tag key cannot be empty. The tag value can be left empty.
+             * <p>The key of each tag. Each tag that you want to remove consists of a tag key and a tag value. You can specify 1 to 10 tags at a time. The tag key cannot be empty. The tag value can be left empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>keyN</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -140,7 +155,10 @@ public class RemoveTagsRequest extends Request {
             }
 
             /**
-             * The value of each tag. Each tag that you want to remove consists of a tag key and a tag value. You can specify a maximum of five tags at a time. The tag key cannot be empty. The tag value can be left empty.
+             * <p>The value of each tag. Each tag that you want to remove consists of a tag key and a tag value. You can specify a maximum of five tags at a time. The tag key cannot be empty. The tag value can be left empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>valueN</p>
              */
             public Builder value(String value) {
                 this.value = value;

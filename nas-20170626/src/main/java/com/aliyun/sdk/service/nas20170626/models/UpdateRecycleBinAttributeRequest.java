@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRecycleBinAttributeRequest} extends {@link RequestModel}
  *
  * <p>UpdateRecycleBinAttributeRequest</p>
@@ -69,7 +70,11 @@ public class UpdateRecycleBinAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ca404****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -78,12 +83,13 @@ public class UpdateRecycleBinAttributeRequest extends Request {
         }
 
         /**
-         * The retention period of the files in the recycle bin. Unit: days.
-         * <p>
+         * <p>The retention period of the files in the recycle bin. Unit: days.</p>
+         * <p>Valid values: 1 to 180.</p>
+         * <p>Default value: 3.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values: 1 to 180.
-         * 
-         * Default value: 3.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder reservedDays(Long reservedDays) {
             this.putQueryParameter("ReservedDays", reservedDays);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyLifecyclePolicyRequest} extends {@link RequestModel}
  *
  * <p>ModifyLifecyclePolicyRequest</p>
@@ -112,7 +113,11 @@ public class ModifyLifecyclePolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31a8e4****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -121,10 +126,12 @@ public class ModifyLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * The name of the lifecycle policy.
-         * <p>
+         * <p>The name of the lifecycle policy.</p>
+         * <p>The name must be 3 to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The name must be 3 to 64 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+         * <strong>example:</strong>
+         * <p>lifecyclepolicy_01</p>
          */
         public Builder lifecyclePolicyName(String lifecyclePolicyName) {
             this.putQueryParameter("LifecyclePolicyName", lifecyclePolicyName);
@@ -133,15 +140,18 @@ public class ModifyLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * The management rule that is associated with the lifecycle policy.
-         * <p>
+         * <p>The management rule that is associated with the lifecycle policy.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>DEFAULT_ATIME_14: Files that are not accessed in the last 14 days are dumped to the IA storage medium.</li>
+         * <li>DEFAULT_ATIME_30: Files that are not accessed in the last 30 days are dumped to the IA storage medium.</li>
+         * <li>DEFAULT_ATIME_60: Files that are not accessed in the last 60 days are dumped to the IA storage medium.</li>
+         * <li>DEFAULT_ATIME_90: Files that are not accessed in the last 90 days are dumped to the IA storage medium.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   DEFAULT_ATIME\_14: Files that are not accessed in the last 14 days are dumped to the IA storage medium.
-         * *   DEFAULT_ATIME\_30: Files that are not accessed in the last 30 days are dumped to the IA storage medium.
-         * *   DEFAULT_ATIME\_60: Files that are not accessed in the last 60 days are dumped to the IA storage medium.
-         * *   DEFAULT_ATIME\_90: Files that are not accessed in the last 90 days are dumped to the IA storage medium.
+         * <strong>example:</strong>
+         * <p>DEFAULT_ATIME_14</p>
          */
         public Builder lifecycleRuleName(String lifecycleRuleName) {
             this.putQueryParameter("LifecycleRuleName", lifecycleRuleName);
@@ -150,10 +160,11 @@ public class ModifyLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * The absolute path of a directory with which the lifecycle policy is associated.
-         * <p>
+         * <p>The absolute path of a directory with which the lifecycle policy is associated.</p>
+         * <p>The path must start with a forward slash (/) and must be a path that exists in the mount target.</p>
          * 
-         * The path must start with a forward slash (/) and must be a path that exists in the mount target.
+         * <strong>example:</strong>
+         * <p>/pathway/to/folder</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -162,10 +173,11 @@ public class ModifyLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * The storage type of the data that is dumped to the IA storage medium.
-         * <p>
+         * <p>The storage type of the data that is dumped to the IA storage medium.</p>
+         * <p>Default value: InfrequentAccess (IA).</p>
          * 
-         * Default value: InfrequentAccess (IA).
+         * <strong>example:</strong>
+         * <p>InfrequentAccess</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);

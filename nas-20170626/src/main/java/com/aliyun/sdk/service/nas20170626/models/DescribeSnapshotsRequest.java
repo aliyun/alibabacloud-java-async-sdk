@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSnapshotsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSnapshotsRequest</p>
@@ -152,7 +153,10 @@ public class DescribeSnapshotsRequest extends Request {
         } 
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>extreme-22f****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -161,10 +165,11 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The type of the file system.
-         * <p>
+         * <p>The type of the file system.</p>
+         * <p>Valid value: extreme, which indicates Extreme Apsara File Storage NAS (NAS) file systems.</p>
          * 
-         * Valid value: extreme, which indicates Extreme Apsara File Storage NAS (NAS) file systems.
+         * <strong>example:</strong>
+         * <p>extreme</p>
          */
         public Builder fileSystemType(String fileSystemType) {
             this.putQueryParameter("FileSystemType", fileSystemType);
@@ -173,10 +178,11 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -185,12 +191,12 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -199,10 +205,11 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The snapshot IDs.
-         * <p>
+         * <p>The snapshot IDs.</p>
+         * <p>You can specify a maximum of 100 snapshot IDs. You must separate snapshot IDs with commas (,).</p>
          * 
-         * You can specify a maximum of 100 snapshot IDs. You must separate snapshot IDs with commas (,).
+         * <strong>example:</strong>
+         * <p>s-extreme-67pxwk9aevrkr****,s-extreme-snapsho****,s-extreme-6tmsbas6ljhwh****</p>
          */
         public Builder snapshotIds(String snapshotIds) {
             this.putQueryParameter("SnapshotIds", snapshotIds);
@@ -211,7 +218,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The snapshot name.
+         * <p>The snapshot name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         public Builder snapshotName(String snapshotName) {
             this.putQueryParameter("SnapshotName", snapshotName);
@@ -220,14 +230,16 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The type of the snapshot.
-         * <p>
+         * <p>The type of the snapshot.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>auto: auto snapshot</li>
+         * <li>user: manual snapshot</li>
+         * <li>all (default): all snapshot types</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   auto: auto snapshot
-         * *   user: manual snapshot
-         * *   all (default): all snapshot types
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder snapshotType(String snapshotType) {
             this.putQueryParameter("SnapshotType", snapshotType);
@@ -236,15 +248,17 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The status of the snapshot.
-         * <p>
+         * <p>The status of the snapshot.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>progressing: The snapshot is being created.</li>
+         * <li>accomplished: The snapshot is created.</li>
+         * <li>failed: The snapshot fails to be created.</li>
+         * <li>all (default): all snapshot states.</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   progressing: The snapshot is being created.
-         * *   accomplished: The snapshot is created.
-         * *   failed: The snapshot fails to be created.
-         * *   all (default): all snapshot states.
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

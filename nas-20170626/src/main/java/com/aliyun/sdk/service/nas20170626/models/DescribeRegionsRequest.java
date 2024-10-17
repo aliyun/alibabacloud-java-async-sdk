@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRegionsRequest} extends {@link RequestModel}
  *
  * <p>DescribeRegionsRequest</p>
@@ -82,17 +83,20 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * The type of the file system.
-         * <p>
+         * <p>The type of the file system.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>all: all types of file systems</li>
+         * <li>standard (default): General-purpose NAS file system</li>
+         * <li>extreme: Extreme NAS file system</li>
+         * <li>cpfs: Cloud Parallel File Storage (CPFS) file system</li>
+         * </ul>
+         * <blockquote>
+         * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
+         * </blockquote>
          * 
-         * Valid values:
-         * 
-         * *   all: all types of file systems
-         * *   standard (default): General-purpose NAS file system
-         * *   extreme: Extreme NAS file system
-         * *   cpfs: Cloud Parallel File Storage (CPFS) file system
-         * 
-         * > CPFS file systems are available only on the China site (aliyun.com).
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         public Builder fileSystemType(String fileSystemType) {
             this.putQueryParameter("FileSystemType", fileSystemType);
@@ -101,10 +105,11 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -113,12 +118,12 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

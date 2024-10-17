@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFilesetsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFilesetsResponseBody</p>
@@ -73,7 +74,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The fileset information.
+         * <p>The fileset information.</p>
          */
         public Builder entries(Entries entries) {
             this.entries = entries;
@@ -81,7 +82,10 @@ public class DescribeFilesetsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpfs-099394bd928c****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = fileSystemId;
@@ -89,7 +93,10 @@ public class DescribeFilesetsResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -97,7 +104,10 @@ public class DescribeFilesetsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2D69A58F-345C-4FDE-88E4-BF518948****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class DescribeFilesetsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFilesetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFilesetsResponseBody</p>
+     */
     public static class Entrie extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -209,10 +225,11 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The time when the fileset was created.
-             * <p>
+             * <p>The time when the fileset was created.</p>
+             * <p>The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
              * 
-             * The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format.
+             * <strong>example:</strong>
+             * <p>2021-09-30T10:08:08Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -220,13 +237,17 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to enable deletion protection to allow you to release the fileset by using the console or by calling the [DeleteFileset](~~2402263~~) operation. Valid values:
-             * <p>
+             * <p>Specifies whether to enable deletion protection to allow you to release the fileset by using the console or by calling the <a href="https://help.aliyun.com/document_detail/2402263.html">DeleteFileset</a> operation. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter can protect filesets only against manual releases, but not against automatic releases.</p>
+             * </blockquote>
              * 
-             * *   true
-             * *   false
-             * 
-             * >  This parameter can protect filesets only against manual releases, but not against automatic releases.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder deletionProtection(Boolean deletionProtection) {
                 this.deletionProtection = deletionProtection;
@@ -234,7 +255,10 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             }
 
             /**
-             * The fileset description.
+             * <p>The fileset description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -242,7 +266,10 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             }
 
             /**
-             * The fileset path.
+             * <p>The fileset path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pathtoroot/fset</p>
              */
             public Builder fileSystemPath(String fileSystemPath) {
                 this.fileSystemPath = fileSystemPath;
@@ -250,7 +277,10 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             }
 
             /**
-             * The fileset ID.
+             * <p>The fileset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fset-1902718ea0ae****</p>
              */
             public Builder fsetId(String fsetId) {
                 this.fsetId = fsetId;
@@ -258,13 +288,16 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             }
 
             /**
-             * The fileset status. Valid values:
-             * <p>
+             * <p>The fileset status. Valid values:</p>
+             * <ul>
+             * <li>CREATING: The fileset is being created.</li>
+             * <li>CREATED: The fileset has been created and is running properly.</li>
+             * <li>RELEASING: The fileset is being released.</li>
+             * <li>RELEASED: The fileset has been deleted.</li>
+             * </ul>
              * 
-             * *   CREATING: The fileset is being created.
-             * *   CREATED: The fileset has been created and is running properly.
-             * *   RELEASING: The fileset is being released.
-             * *   RELEASED: The fileset has been deleted.
+             * <strong>example:</strong>
+             * <p>CREATED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -272,10 +305,11 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the fileset was last updated.
-             * <p>
+             * <p>The time when the fileset was last updated.</p>
+             * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * 
-             * The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.
+             * <strong>example:</strong>
+             * <p>2021-09-30T10:08:08Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -289,6 +323,12 @@ public class DescribeFilesetsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFilesetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFilesetsResponseBody</p>
+     */
     public static class Entries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Entrie")
         private java.util.List < Entrie> entrie;

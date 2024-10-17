@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRecycledDirectoriesAndFilesRequest} extends {@link RequestModel}
  *
  * <p>ListRecycledDirectoriesAndFilesRequest</p>
@@ -98,10 +99,12 @@ public class ListRecycledDirectoriesAndFilesRequest extends Request {
         } 
 
         /**
-         * The ID of the directory that you want to query.
-         * <p>
+         * <p>The ID of the directory that you want to query.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2412173.html">ListRecentlyRecycledDirectories </a>operation to query the file ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListRecentlyRecycledDirectories ](~~2412173~~)operation to query the file ID.
+         * <strong>example:</strong>
+         * <p>04***08</p>
          */
         public Builder fileId(String fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -110,7 +113,11 @@ public class ListRecycledDirectoriesAndFilesRequest extends Request {
         }
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ca404****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -119,12 +126,12 @@ public class ListRecycledDirectoriesAndFilesRequest extends Request {
         }
 
         /**
-         * The number of files or directories to return for each query.
-         * <p>
+         * <p>The number of files or directories to return for each query.</p>
+         * <p>Valid values: 10 to 1000.</p>
+         * <p>Default value: 100.</p>
          * 
-         * Valid values: 10 to 1000.
-         * 
-         * Default value: 100.
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -133,10 +140,11 @@ public class ListRecycledDirectoriesAndFilesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
+         * <p>If all the files and directories are incompletely returned in a query, the return value of the NextToken parameter is not empty. In this case, you can specify a valid value for the NextToken parameter to continue the query.</p>
          * 
-         * If all the files and directories are incompletely returned in a query, the return value of the NextToken parameter is not empty. In this case, you can specify a valid value for the NextToken parameter to continue the query.
+         * <strong>example:</strong>
+         * <p>CJyNARIsMTY5OTI2NjQ3NTEzMjY2OTMwOF8xODA5NF8ufnl0YkROTl9uZXcuaXB5bmI=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

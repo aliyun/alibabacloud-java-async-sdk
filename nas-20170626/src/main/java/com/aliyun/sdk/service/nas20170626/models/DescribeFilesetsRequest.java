@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFilesetsRequest} extends {@link RequestModel}
  *
  * <p>DescribeFilesetsRequest</p>
@@ -97,7 +98,11 @@ public class DescribeFilesetsRequest extends Request {
         } 
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpfs-099394bd928c****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -106,7 +111,7 @@ public class DescribeFilesetsRequest extends Request {
         }
 
         /**
-         * The filter that is used to query filesets.
+         * <p>The filter that is used to query filesets.</p>
          */
         public Builder filters(java.util.List < Filters> filters) {
             this.putQueryParameter("Filters", filters);
@@ -115,10 +120,11 @@ public class DescribeFilesetsRequest extends Request {
         }
 
         /**
-         * The number of results for each query.
-         * <p>
+         * <p>The number of results for each query.</p>
+         * <p>Valid values: 10 to 100. Default value: 20.</p>
          * 
-         * Valid values: 10 to 100. Default value: 20.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -127,7 +133,10 @@ public class DescribeFilesetsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -142,6 +151,12 @@ public class DescribeFilesetsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFilesetsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeFilesetsRequest</p>
+     */
     public static class Filters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -181,12 +196,15 @@ public class DescribeFilesetsRequest extends Request {
             private String value; 
 
             /**
-             * The filter name. Valid values:
-             * <p>
+             * <p>The filter name. Valid values:</p>
+             * <ul>
+             * <li>FsetIds: filters filesets by fileset ID.</li>
+             * <li>FileSystemPath: filters filesets based on the path of a fileset in a CPFS file system.</li>
+             * <li>Description: filters filesets based on the fileset description.</li>
+             * </ul>
              * 
-             * *   FsetIds: filters filesets by fileset ID.
-             * *   FileSystemPath: filters filesets based on the path of a fileset in a CPFS file system.
-             * *   Description: filters filesets based on the fileset description.
+             * <strong>example:</strong>
+             * <p>FsetIds</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -194,12 +212,15 @@ public class DescribeFilesetsRequest extends Request {
             }
 
             /**
-             * The filter value. This parameter does not support wildcards.
-             * <p>
+             * <p>The filter value. This parameter does not support wildcards.</p>
+             * <ul>
+             * <li>If Key is set to FsetIds, set Value to a fileset ID or a part of the fileset ID. You can specify a fileset ID or a group of fileset IDs. You can specify a maximum of 10 fileset IDs. Example: <code>fset-12345678</code> or <code>fset-12345678,fset-12345679</code>.</li>
+             * <li>If Key is set to FileSystemPath, set Value to the path or a part of the path of a fileset in a CPFS file system. The value must be 2 to 1,024 characters in length. The value must be encoded in UTF-8.</li>
+             * <li>If Key is set to Description, set Value to a fileset description or a part of the fileset description.</li>
+             * </ul>
              * 
-             * *   If Key is set to FsetIds, set Value to a fileset ID or a part of the fileset ID. You can specify a fileset ID or a group of fileset IDs. You can specify a maximum of 10 fileset IDs. Example: `fset-12345678` or `fset-12345678,fset-12345679`.
-             * *   If Key is set to FileSystemPath, set Value to the path or a part of the path of a fileset in a CPFS file system. The value must be 2 to 1,024 characters in length. The value must be encoded in UTF-8.
-             * *   If Key is set to Description, set Value to a fileset description or a part of the fileset description.
+             * <strong>example:</strong>
+             * <p>fset-12345678,fset-12345679</p>
              */
             public Builder value(String value) {
                 this.value = value;

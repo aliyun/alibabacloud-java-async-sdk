@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDirRequest} extends {@link RequestModel}
  *
  * <p>CreateDirRequest</p>
@@ -128,7 +129,11 @@ public class CreateDirRequest extends Request {
         } 
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31a8e4****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -137,7 +142,11 @@ public class CreateDirRequest extends Request {
         }
 
         /**
-         * The ID of the owner group for the directory. Valid values: 0 to 4294967295.
+         * <p>The ID of the owner group for the directory. Valid values: 0 to 4294967295.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder ownerGroupId(Integer ownerGroupId) {
             this.putQueryParameter("OwnerGroupId", ownerGroupId);
@@ -146,7 +155,11 @@ public class CreateDirRequest extends Request {
         }
 
         /**
-         * The owner ID for the directory. Valid values: 0 to 4294967295.
+         * <p>The owner ID for the directory. Valid values: 0 to 4294967295.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ownerUserId(Integer ownerUserId) {
             this.putQueryParameter("OwnerUserId", ownerUserId);
@@ -155,7 +168,11 @@ public class CreateDirRequest extends Request {
         }
 
         /**
-         * The Portable Operating System Interface (POSIX) permissions applied to the root directory. The value is a valid octal number, such as 0755.
+         * <p>The Portable Operating System Interface (POSIX) permissions applied to the root directory. The value is a valid octal number, such as 0755.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0755</p>
          */
         public Builder permission(String permission) {
             this.putQueryParameter("Permission", permission);
@@ -164,11 +181,14 @@ public class CreateDirRequest extends Request {
         }
 
         /**
-         * Specifies whether to create a multi-level directory. Valid values:
-         * <p>
+         * <p>Specifies whether to create a multi-level directory. Valid values:</p>
+         * <ul>
+         * <li>true (default): If no multi-level directory exists, directories are created level by level.</li>
+         * <li>false: Only the last level of directory is created. An error message is returned because the parent directory does not exist.</li>
+         * </ul>
          * 
-         * *   true (default): If no multi-level directory exists, directories are created level by level.
-         * *   false: Only the last level of directory is created. An error message is returned because the parent directory does not exist.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder recursion(Boolean recursion) {
             this.putQueryParameter("Recursion", recursion);
@@ -177,16 +197,23 @@ public class CreateDirRequest extends Request {
         }
 
         /**
-         * The directory name.
-         * <p>
+         * <p>The directory name.</p>
+         * <ul>
+         * <li>The directory must start with a forward slash (/).</li>
+         * <li>The directory can contain digits and letters.</li>
+         * <li>The directory can contain underscores (_), hyphens (-), and periods (.).</li>
+         * <li>The directory cannot contain symbolic links, such as the current directory (.), the upper-level directory (..), and other symbolic links.</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>If the root directory does not exist, configure the information for directory creation. The system then automatically creates the specified root directory based on your settings.</li>
+         * <li>If the root directory exists, you do not need to configure the information for directory creation. The configurations for directory creation are ignored even if you configure the information.</li>
+         * </ul>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   The directory must start with a forward slash (/).
-         * *   The directory can contain digits and letters.
-         * *   The directory can contain underscores (\_), hyphens (-), and periods (.).
-         * *   The directory cannot contain symbolic links, such as the current directory (.), the upper-level directory (..), and other symbolic links.
-         * 
-         * > *   If the root directory does not exist, configure the information for directory creation. The system then automatically creates the specified root directory based on your settings.
-         * > *  If the root directory exists, you do not need to configure the information for directory creation. The configurations for directory creation are ignored even if you configure the information.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder rootDirectory(String rootDirectory) {
             this.putQueryParameter("RootDirectory", rootDirectory);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAutoSnapshotPolicyRequest} extends {@link RequestModel}
  *
  * <p>DeleteAutoSnapshotPolicyRequest</p>
@@ -54,10 +55,12 @@ public class DeleteAutoSnapshotPolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the automatic snapshot policy.
-         * <p>
+         * <p>The ID of the automatic snapshot policy.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/126583.html">DescribeAutoSnapshotPolicies</a> operation to view available automatic snapshot policies.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeAutoSnapshotPolicies](~~126583~~) operation to view available automatic snapshot policies.
+         * <strong>example:</strong>
+         * <p>sp-extreme-233e6****</p>
          */
         public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
             this.putQueryParameter("AutoSnapshotPolicyId", autoSnapshotPolicyId);

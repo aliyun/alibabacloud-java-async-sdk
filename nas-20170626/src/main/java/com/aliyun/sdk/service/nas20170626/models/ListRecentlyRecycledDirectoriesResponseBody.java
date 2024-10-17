@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRecentlyRecycledDirectoriesResponseBody} extends {@link TeaModel}
  *
  * <p>ListRecentlyRecycledDirectoriesResponseBody</p>
@@ -61,7 +62,7 @@ public class ListRecentlyRecycledDirectoriesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the directories that are recently deleted.
+         * <p>The information about the directories that are recently deleted.</p>
          */
         public Builder entries(java.util.List < Entries> entries) {
             this.entries = entries;
@@ -69,10 +70,11 @@ public class ListRecentlyRecycledDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token.
-         * <p>
+         * <p>A pagination token.</p>
+         * <p>If not all directories are returned in a query, the return value of the NextToken parameter is not empty. In this case, you can specify a valid value for the NextToken parameter to continue the query.</p>
          * 
-         * If not all directories are returned in a query, the return value of the NextToken parameter is not empty. In this case, you can specify a valid value for the NextToken parameter to continue the query.
+         * <strong>example:</strong>
+         * <p>1256****25</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -80,7 +82,10 @@ public class ListRecentlyRecycledDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9E15E394-38A6-457A-A62A-D9797C9A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -93,6 +98,12 @@ public class ListRecentlyRecycledDirectoriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRecentlyRecycledDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRecentlyRecycledDirectoriesResponseBody</p>
+     */
     public static class Entries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileId")
         private String fileId;
@@ -156,7 +167,10 @@ public class ListRecentlyRecycledDirectoriesResponseBody extends TeaModel {
             private String path; 
 
             /**
-             * The ID of the directory.
+             * <p>The ID of the directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>04***08</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -164,7 +178,10 @@ public class ListRecentlyRecycledDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the directory was last deleted.
+             * <p>The time when the directory was last deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-30T10:08:08Z</p>
              */
             public Builder lastDeleteTime(String lastDeleteTime) {
                 this.lastDeleteTime = lastDeleteTime;
@@ -172,7 +189,10 @@ public class ListRecentlyRecycledDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the directory.
+             * <p>The name of the directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -180,7 +200,10 @@ public class ListRecentlyRecycledDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The absolute path to the directory.
+             * <p>The absolute path to the directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/a/b</p>
              */
             public Builder path(String path) {
                 this.path = path;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDataFlowTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateDataFlowTaskRequest</p>
@@ -210,12 +211,14 @@ public class CreateDataFlowTaskRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
+         * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence?</a></p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The value of RequestId may be different for each API request.</p>
+         * </blockquote>
          * 
-         * The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence?](~~25693~~)
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the request ID as the client token. The value of RequestId may be different for each API request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -224,14 +227,18 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * The conflict policy for files with the same name. Valid values:
-         * <p>
+         * <p>The conflict policy for files with the same name. Valid values:</p>
+         * <ul>
+         * <li>SKIP_THE_FILE: skips files with the same name.</li>
+         * <li>KEEP_LATEST: compares the update time and keeps the latest version.</li>
+         * <li>OVERWRITE_EXISTING: forcibly overwrites the existing file.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter does not take effect for CPFS file systems.</p>
+         * </blockquote>
          * 
-         * *   SKIP_THE_FILE: skips files with the same name.
-         * *   KEEP_LATEST: compares the update time and keeps the latest version.
-         * *   OVERWRITE_EXISTING: forcibly overwrites the existing file.
-         * 
-         * >  This parameter does not take effect for CPFS file systems.
+         * <strong>example:</strong>
+         * <p>SKIP_THE_FILE</p>
          */
         public Builder conflictPolicy(String conflictPolicy) {
             this.putQueryParameter("ConflictPolicy", conflictPolicy);
@@ -249,7 +256,11 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * The dataflow ID.
+         * <p>The dataflow ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dfid-123456</p>
          */
         public Builder dataFlowId(String dataFlowId) {
             this.putQueryParameter("DataFlowId", dataFlowId);
@@ -258,14 +269,16 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * The type of data on which operations are performed by the dataflow task.
-         * <p>
+         * <p>The type of data on which operations are performed by the dataflow task.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Metadata: the metadata of a file, including the timestamp, ownership, and permission information of the file. If you select Metadata, only the metadata of the file is imported. You can only query the file. When you access the file data, the file is loaded from the source storage as required.</li>
+         * <li>Data: the data blocks of a file.</li>
+         * <li>MetaAndData: the metadata and data blocks of the file.</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   Metadata: the metadata of a file, including the timestamp, ownership, and permission information of the file. If you select Metadata, only the metadata of the file is imported. You can only query the file. When you access the file data, the file is loaded from the source storage as required.
-         * *   Data: the data blocks of a file.
-         * *   MetaAndData: the metadata and data blocks of the file.
+         * <strong>example:</strong>
+         * <p>Metadata</p>
          */
         public Builder dataType(String dataType) {
             this.putQueryParameter("DataType", dataType);
@@ -274,17 +287,19 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * The directory in which the data flow task is executed.
-         * <p>
+         * <p>The directory in which the data flow task is executed.</p>
+         * <p>Limits:</p>
+         * <ul>
+         * <li>The directory must be 1 to 1,023 characters in length.</li>
+         * <li>The directory must be encoded in UTF-8.</li>
+         * <li>The directory must start and end with a forward slash (/).</li>
+         * <li>Only one directory can be listed at a time.</li>
+         * <li>If the TaskAction parameter is set to Export, the directory must be a relative path within the FileSystemPath.</li>
+         * <li>If the TaskAction parameter is set to Import, the directory must be a relative path within the SourceStoragePath.</li>
+         * </ul>
          * 
-         * Limits:
-         * 
-         * *   The directory must be 1 to 1,023 characters in length.
-         * *   The directory must be encoded in UTF-8.
-         * *   The directory must start and end with a forward slash (/).
-         * *   Only one directory can be listed at a time.
-         * *   If the TaskAction parameter is set to Export, the directory must be a relative path within the FileSystemPath.
-         * *   If the TaskAction parameter is set to Import, the directory must be a relative path within the SourceStoragePath.
+         * <strong>example:</strong>
+         * <p>/path_in_cpfs/</p>
          */
         public Builder directory(String directory) {
             this.putQueryParameter("Directory", directory);
@@ -293,15 +308,16 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run.
-         * <p>
+         * <p>Specifies whether to perform a dry run.</p>
+         * <p>During the dry run, the system checks whether the request parameters are valid and whether the requested resources are available. During the dry run, no file system is created and no fee is incurred.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: performs a dry run. The system checks the required parameters, request syntax, limits, and available NAS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned. No value is returned for the FileSystemId parameter.</li>
+         * <li>false (default): performs a dry run and sends the request. If the request passes the dry run, a file system is created.</li>
+         * </ul>
          * 
-         * During the dry run, the system checks whether the request parameters are valid and whether the requested resources are available. During the dry run, no file system is created and no fee is incurred.
-         * 
-         * Valid values:
-         * 
-         * *   true: performs a dry run. The system checks the required parameters, request syntax, limits, and available NAS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned. No value is returned for the FileSystemId parameter.
-         * *   false (default): performs a dry run and sends the request. If the request passes the dry run, a file system is created.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -319,17 +335,19 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * The list of files that are executed by the data flow task.
-         * <p>
+         * <p>The list of files that are executed by the data flow task.</p>
+         * <p>Limits:</p>
+         * <ul>
+         * <li>The list must be encoded in UTF-8.</li>
+         * <li>The total length of the file list cannot exceed 64 KB.</li>
+         * <li>The file list is in JSON format.</li>
+         * <li>The path of a single file must be 1 to 1,023 characters in length and must start with a forward slash (/).</li>
+         * <li>If the TaskAction parameter is set to Import, each element in the list represents an OSS object name.</li>
+         * <li>If the TaskAction parameter is set to Export, each element in the list represents a CPFS file path.</li>
+         * </ul>
          * 
-         * Limits:
-         * 
-         * *   The list must be encoded in UTF-8.
-         * *   The total length of the file list cannot exceed 64 KB.
-         * *   The file list is in JSON format.
-         * *   The path of a single file must be 1 to 1,023 characters in length and must start with a forward slash (/).
-         * *   If the TaskAction parameter is set to Import, each element in the list represents an OSS object name.
-         * *   If the TaskAction parameter is set to Export, each element in the list represents a CPFS file path.
+         * <strong>example:</strong>
+         * <p>[&quot;/path_in_cpfs/file1&quot;, &quot;/path_in_cpfs/file2&quot;]</p>
          */
         public Builder entryList(String entryList) {
             this.putQueryParameter("EntryList", entryList);
@@ -338,13 +356,18 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * The ID of the file system.
-         * <p>
+         * <p>The ID of the file system.</p>
+         * <ul>
+         * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-125487****.</li>
+         * <li>The IDs of CPFS for LINGJUN file systems must start with <code>bmcpfs-</code>. Example: bmcpfs-0015****.</li>
+         * </ul>
+         * <blockquote>
+         * <p> CPFS file systems are available only on the China site (aliyun.com).</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   The IDs of CPFS file systems must start with `cpfs-`. Example: cpfs-125487\*\*\*\*.
-         * *   The IDs of CPFS for LINGJUN file systems must start with `bmcpfs-`. Example: bmcpfs-0015\*\*\*\*.
-         * 
-         * >  CPFS file systems are available only on the China site (aliyun.com).
+         * <strong>example:</strong>
+         * <p>cpfs-12345678</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -353,7 +376,10 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * If you specify SrcTaskId, the configurations of the TaskAction, DataType, and EntryList parameters are copied from the desired dataflow task. You do not need to specify them.
+         * <p>If you specify SrcTaskId, the configurations of the TaskAction, DataType, and EntryList parameters are copied from the desired dataflow task. You do not need to specify them.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task-xxxx</p>
          */
         public Builder srcTaskId(String srcTaskId) {
             this.putQueryParameter("SrcTaskId", srcTaskId);
@@ -362,17 +388,20 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * The type of the data flow task.
-         * <p>
+         * <p>The type of the data flow task.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Import: imports data stored in the source storage to a CPFS file system.</li>
+         * <li>Export: exports specified data from a CPFS file system to the source storage.</li>
+         * <li>Evict: releases the data blocks of a file in a CPFS file system. After the eviction, only the metadata of the file is retained in the CPFS file system. You can still query the file. However, the data blocks of the file are cleared and do not occupy the storage space in the CPFS file system. When you access the file data, the file is loaded from the source storage as required.</li>
+         * <li>Inventory: obtains the inventory list managed by a data flow from the CPFS file system, providing the cache status of inventories in the data flow.</li>
+         * </ul>
+         * <blockquote>
+         * <p> CPFS for LINGJUN supports only the Import and Export tasks.</p>
+         * </blockquote>
          * 
-         * Valid values:
-         * 
-         * *   Import: imports data stored in the source storage to a CPFS file system.
-         * *   Export: exports specified data from a CPFS file system to the source storage.
-         * *   Evict: releases the data blocks of a file in a CPFS file system. After the eviction, only the metadata of the file is retained in the CPFS file system. You can still query the file. However, the data blocks of the file are cleared and do not occupy the storage space in the CPFS file system. When you access the file data, the file is loaded from the source storage as required.
-         * *   Inventory: obtains the inventory list managed by a data flow from the CPFS file system, providing the cache status of inventories in the data flow.
-         * 
-         * >  CPFS for LINGJUN supports only the Import and Export tasks.
+         * <strong>example:</strong>
+         * <p>Import</p>
          */
         public Builder taskAction(String taskAction) {
             this.putQueryParameter("TaskAction", taskAction);

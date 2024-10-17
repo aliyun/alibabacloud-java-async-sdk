@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBlackListClientsRequest} extends {@link RequestModel}
  *
  * <p>DescribeBlackListClientsRequest</p>
@@ -83,7 +84,10 @@ public class DescribeBlackListClientsRequest extends Request {
         } 
 
         /**
-         * The IP address of the client.
+         * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0</p>
          */
         public Builder clientIP(String clientIP) {
             this.putQueryParameter("ClientIP", clientIP);
@@ -92,7 +96,11 @@ public class DescribeBlackListClientsRequest extends Request {
         }
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpfs-123458****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -101,7 +109,11 @@ public class DescribeBlackListClientsRequest extends Request {
         }
 
         /**
-         * The ID of the region where the file system resides.
+         * <p>The ID of the region where the file system resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

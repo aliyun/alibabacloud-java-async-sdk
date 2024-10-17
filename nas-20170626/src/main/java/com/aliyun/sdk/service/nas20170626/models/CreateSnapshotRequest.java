@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSnapshotRequest} extends {@link RequestModel}
  *
  * <p>CreateSnapshotRequest</p>
@@ -97,14 +98,16 @@ public class CreateSnapshotRequest extends Request {
         } 
 
         /**
-         * The description of the snapshot.
-         * <p>
+         * <p>The description of the snapshot.</p>
+         * <p>Limits:</p>
+         * <ul>
+         * <li>The description must be 2 to 256 characters in length.</li>
+         * <li>The description cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>This parameter is empty by default.</li>
+         * </ul>
          * 
-         * Limits:
-         * 
-         * *   The description must be 2 to 256 characters in length.
-         * *   The description cannot start with `http://` or `https://`.
-         * *   This parameter is empty by default.
+         * <strong>example:</strong>
+         * <p>FinanceDepet</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -113,7 +116,11 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The ID of the advanced Extreme NAS file system. The value must start with `extreme-`, for example, `extreme-01dd****`.
+         * <p>The ID of the advanced Extreme NAS file system. The value must start with <code>extreme-</code>, for example, <code>extreme-01dd****</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>extreme-01dd****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -122,15 +129,16 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The retention period of the snapshot.
-         * <p>
+         * <p>The retention period of the snapshot.</p>
+         * <p>Unit: days.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>-1 (default). Auto snapshots are permanently retained. After the number of auto snapshots exceeds the upper limit, the earliest auto snapshot is automatically deleted.</li>
+         * <li>1 to 65536: Auto snapshots are retained for the specified days. After the retention period of auto snapshots expires, the auto snapshots are automatically deleted.</li>
+         * </ul>
          * 
-         * Unit: days.
-         * 
-         * Valid values:
-         * 
-         * *   \-1 (default). Auto snapshots are permanently retained. After the number of auto snapshots exceeds the upper limit, the earliest auto snapshot is automatically deleted.
-         * *   1 to 65536: Auto snapshots are retained for the specified days. After the retention period of auto snapshots expires, the auto snapshots are automatically deleted.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder retentionDays(Integer retentionDays) {
             this.putQueryParameter("RetentionDays", retentionDays);
@@ -139,14 +147,16 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The snapshot name.
-         * <p>
+         * <p>The snapshot name.</p>
+         * <p>Limits:</p>
+         * <ul>
+         * <li>The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+         * <li>The name cannot start with auto because snapshots whose names start with auto are recognized as auto snapshots.</li>
+         * </ul>
          * 
-         * Limits:
-         * 
-         * *   The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`.
-         * *   The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
-         * *   The name cannot start with auto because snapshots whose names start with auto are recognized as auto snapshots.
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         public Builder snapshotName(String snapshotName) {
             this.putQueryParameter("SnapshotName", snapshotName);

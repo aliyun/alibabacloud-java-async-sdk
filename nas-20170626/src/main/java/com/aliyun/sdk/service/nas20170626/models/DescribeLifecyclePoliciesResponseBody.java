@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLifecyclePoliciesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLifecyclePoliciesResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The queried lifecycle policies.
+         * <p>The queried lifecycle policies.</p>
          */
         public Builder lifecyclePolicies(java.util.List < LifecyclePolicies> lifecyclePolicies) {
             this.lifecyclePolicies = lifecyclePolicies;
@@ -93,7 +94,10 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BC7C825C-5F65-4B56-BEF6-98C56C7C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of lifecycle policies.
+         * <p>The total number of lifecycle policies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLifecyclePoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLifecyclePoliciesResponseBody</p>
+     */
     public static class LifecyclePolicies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -229,10 +248,11 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
             private String storageType; 
 
             /**
-             * The time when the lifecycle policy was created.
-             * <p>
+             * <p>The time when the lifecycle policy was created.</p>
+             * <p>The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
              * 
-             * The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format.
+             * <strong>example:</strong>
+             * <p>2019-10-30T10:08:08Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -240,7 +260,10 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the file system.
+             * <p>The ID of the file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>31a8e4****</p>
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -248,7 +271,10 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the lifecycle policy.
+             * <p>The name of the lifecycle policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lifecyclepolicy_01</p>
              */
             public Builder lifecyclePolicyName(String lifecyclePolicyName) {
                 this.lifecyclePolicyName = lifecyclePolicyName;
@@ -256,15 +282,17 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The management rule that is associated with the lifecycle policy.
-             * <p>
+             * <p>The management rule that is associated with the lifecycle policy.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>DEFAULT_ATIME_14: Files that are not accessed in the last 14 days are dumped to the IA storage medium.</li>
+             * <li>DEFAULT_ATIME_30: Files that are not accessed in the last 30 days are dumped to the IA storage medium.</li>
+             * <li>DEFAULT_ATIME_60: Files that are not accessed in the last 60 days are dumped to the IA storage medium.</li>
+             * <li>DEFAULT_ATIME_90: Files that are not accessed in the last 90 days are dumped to the IA storage medium.</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   DEFAULT_ATIME\_14: Files that are not accessed in the last 14 days are dumped to the IA storage medium.
-             * *   DEFAULT_ATIME\_30: Files that are not accessed in the last 30 days are dumped to the IA storage medium.
-             * *   DEFAULT_ATIME\_60: Files that are not accessed in the last 60 days are dumped to the IA storage medium.
-             * *   DEFAULT_ATIME\_90: Files that are not accessed in the last 90 days are dumped to the IA storage medium.
+             * <strong>example:</strong>
+             * <p>DEFAULT_ATIME_14</p>
              */
             public Builder lifecycleRuleName(String lifecycleRuleName) {
                 this.lifecycleRuleName = lifecycleRuleName;
@@ -272,7 +300,10 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The absolute path of a directory with which the lifecycle policy is associated.
+             * <p>The absolute path of a directory with which the lifecycle policy is associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/pathway/to/folder</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -280,7 +311,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The absolute paths to multiple directories associated with the lifecycle policy.
+             * <p>The absolute paths to multiple directories associated with the lifecycle policy.</p>
              */
             public Builder paths(java.util.List < String > paths) {
                 this.paths = paths;
@@ -288,10 +319,11 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type of the data that is dumped to the IA storage medium.
-             * <p>
+             * <p>The storage type of the data that is dumped to the IA storage medium.</p>
+             * <p>Default value: InfrequentAccess (IA).</p>
              * 
-             * Default value: InfrequentAccess (IA).
+             * <strong>example:</strong>
+             * <p>InfrequentAccess</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;

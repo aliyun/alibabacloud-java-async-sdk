@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSnapshotResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSnapshotResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateSnapshotResponseBody extends TeaModel {
         private String snapshotId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class CreateSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * The snapshot ID.
+         * <p>The snapshot ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-extreme-snapsho****</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.snapshotId = snapshotId;

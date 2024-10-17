@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelAutoSnapshotPolicyRequest} extends {@link RequestModel}
  *
  * <p>CancelAutoSnapshotPolicyRequest</p>
@@ -54,10 +55,12 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
         } 
 
         /**
-         * The IDs of file systems.
-         * <p>
+         * <p>The IDs of file systems.</p>
+         * <p>You can specify a maximum of 100 file system IDs. If you want to remove automatic snapshot policies from multiple file systems, separate the file system IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can specify a maximum of 100 file system IDs. If you want to remove automatic snapshot policies from multiple file systems, separate the file system IDs with commas (,).
+         * <strong>example:</strong>
+         * <p>extreme-233e6****,extreme-23vbp****,extreme-23vas****</p>
          */
         public Builder fileSystemIds(String fileSystemIds) {
             this.putQueryParameter("FileSystemIds", fileSystemIds);

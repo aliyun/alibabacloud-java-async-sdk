@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNfsAclResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNfsAclResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeNfsAclResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the ACL feature.
+         * <p>The information about the ACL feature.</p>
          */
         public Builder acl(Acl acl) {
             this.acl = acl;
@@ -57,7 +58,10 @@ public class DescribeNfsAclResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1098673-1746-505E-A5F1-08527B7EDBDF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeNfsAclResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNfsAclResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNfsAclResponseBody</p>
+     */
     public static class Acl extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
@@ -97,11 +107,14 @@ public class DescribeNfsAclResponseBody extends TeaModel {
             private Boolean enabled; 
 
             /**
-             * Indicates whether the NFS ACL feature is enabled.
-             * <p>
+             * <p>Indicates whether the NFS ACL feature is enabled.</p>
+             * <ul>
+             * <li>true: The NFS ACL feature is enabled.</li>
+             * <li>false: The NFS ACL feature is disabled.</li>
+             * </ul>
              * 
-             * *   true: The NFS ACL feature is enabled.
-             * *   false: The NFS ACL feature is disabled.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;

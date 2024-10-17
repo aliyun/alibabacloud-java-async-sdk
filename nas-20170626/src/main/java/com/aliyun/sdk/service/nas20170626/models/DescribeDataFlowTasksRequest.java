@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataFlowTasksRequest} extends {@link RequestModel}
  *
  * <p>DescribeDataFlowTasksRequest</p>
@@ -97,7 +98,10 @@ public class DescribeDataFlowTasksRequest extends Request {
         } 
 
         /**
-         * FileSystemId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpfs-099394bd928c****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -139,6 +143,12 @@ public class DescribeDataFlowTasksRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDataFlowTasksRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDataFlowTasksRequest</p>
+     */
     public static class Filters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -178,19 +188,23 @@ public class DescribeDataFlowTasksRequest extends Request {
             private String value; 
 
             /**
-             * *
-             * <p>
-             * *
-             * *
-             * *
-             * *
-             * *
-             * *
-             * *
-             * *
-             * *
-             * *
-             * *
+             * <ul>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DataFlowIds</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -198,19 +212,27 @@ public class DescribeDataFlowTasksRequest extends Request {
             }
 
             /**
-             * *   ````
-             * <p>
-             * *   ````
-             * *
-             * *
-             * *
-             * *
-             * *   ``
-             * *   ``
-             * *   ``
-             * *   ``
-             * *   ``
-             * *   ``
+             * <ul>
+             * <li><pre><code>
+             * </code></pre>
+             * </li>
+             * <li><pre><code>
+             * </code></pre>
+             * </li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li>``</li>
+             * <li>``</li>
+             * <li>``</li>
+             * <li>``</li>
+             * <li>``</li>
+             * <li>``</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>dfid-12345678</p>
              */
             public Builder value(String value) {
                 this.value = value;

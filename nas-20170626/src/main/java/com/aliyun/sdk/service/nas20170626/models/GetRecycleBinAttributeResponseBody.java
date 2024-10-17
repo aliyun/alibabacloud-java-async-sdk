@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRecycleBinAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>GetRecycleBinAttributeResponseBody</p>
@@ -49,7 +50,7 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The description of the recycle bin.
+         * <p>The description of the recycle bin.</p>
          */
         public Builder recycleBinAttribute(RecycleBinAttribute recycleBinAttribute) {
             this.recycleBinAttribute = recycleBinAttribute;
@@ -57,7 +58,10 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9E15E394-38A6-457A-A62A-D9797C9A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRecycleBinAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRecycleBinAttributeResponseBody</p>
+     */
     public static class RecycleBinAttribute extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ArchiveSize")
         private Long archiveSize;
@@ -157,7 +167,10 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ArchiveSize.
+             * <p>The size of the archived data that is dumped to the recycle bin. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1611661312</p>
              */
             public Builder archiveSize(Long archiveSize) {
                 this.archiveSize = archiveSize;
@@ -165,7 +178,10 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the recycle bin was enabled.
+             * <p>The time at which the recycle bin was enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-30T10:08:08Z</p>
              */
             public Builder enableTime(String enableTime) {
                 this.enableTime = enableTime;
@@ -173,10 +189,11 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The retention period of the files in the recycle bin. Unit: days.
-             * <p>
+             * <p>The retention period of the files in the recycle bin. Unit: days.</p>
+             * <p>If the recycle bin is disabled, 0 is returned for this parameter.</p>
              * 
-             * If the recycle bin is disabled, 0 is returned for this parameter.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder reservedDays(Long reservedDays) {
                 this.reservedDays = reservedDays;
@@ -184,7 +201,10 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the cold data that is dumped to the recycle bin. Unit: bytes.
+             * <p>The size of the Infrequent Access (IA) data that is dumped to the recycle bin. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder secondarySize(Long secondarySize) {
                 this.secondarySize = secondarySize;
@@ -192,7 +212,10 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the files that are dumped to the recycle bin. Unit: bytes.
+             * <p>The size of the files that are dumped to the recycle bin. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -200,13 +223,15 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the recycle bin.
-             * <p>
+             * <p>The status of the recycle bin.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Enable: The recycle bin is enabled.</li>
+             * <li>Disable: The recycle bin is disabled.</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   Enable: The recycle bin is enabled.
-             * *   Disable: The recycle bin is disabled.
+             * <strong>example:</strong>
+             * <p>Disable</p>
              */
             public Builder status(String status) {
                 this.status = status;

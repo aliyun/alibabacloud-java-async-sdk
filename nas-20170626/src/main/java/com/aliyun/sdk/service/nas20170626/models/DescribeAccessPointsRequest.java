@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccessPointsRequest} extends {@link RequestModel}
  *
  * <p>DescribeAccessPointsRequest</p>
@@ -95,12 +96,12 @@ public class DescribeAccessPointsRequest extends Request {
         } 
 
         /**
-         * The name of the permission group.
-         * <p>
+         * <p>The name of the permission group.</p>
+         * <p>This parameter is required for a General-purpose Apsara File Storage NAS (NAS) file system.</p>
+         * <p>The default permission group for virtual private clouds (VPCs) is named DEFAULT_VPC_GROUP_NAME.</p>
          * 
-         * This parameter is required for a General-purpose Apsara File Storage NAS (NAS) file system.
-         * 
-         * The default permission group for virtual private clouds (VPCs) is named DEFAULT_VPC_GROUP_NAME.
+         * <strong>example:</strong>
+         * <p>DEFAULT_VPC_GROUP_NAME</p>
          */
         public Builder accessGroup(String accessGroup) {
             this.putQueryParameter("AccessGroup", accessGroup);
@@ -109,7 +110,10 @@ public class DescribeAccessPointsRequest extends Request {
         }
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>174494****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -118,10 +122,11 @@ public class DescribeAccessPointsRequest extends Request {
         }
 
         /**
-         * The number of results for each query.
-         * <p>
+         * <p>The number of results for each query.</p>
+         * <p>Valid values: 10 to 100. Default value: 10.</p>
          * 
-         * Valid values: 10 to 100. Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -130,7 +135,10 @@ public class DescribeAccessPointsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTY4NzcxOTcwMjAzMDk2Nzc0MyM4MDM4****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

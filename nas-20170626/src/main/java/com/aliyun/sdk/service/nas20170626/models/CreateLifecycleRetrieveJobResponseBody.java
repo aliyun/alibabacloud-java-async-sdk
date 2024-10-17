@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLifecycleRetrieveJobResponseBody} extends {@link TeaModel}
  *
  * <p>CreateLifecycleRetrieveJobResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateLifecycleRetrieveJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the data retrieval task.
+         * <p>The ID of the data retrieval task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lrj-nfstest-ia-160****853-hshvw</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -57,7 +61,10 @@ public class CreateLifecycleRetrieveJobResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BC7C825C-5F65-4B56-BEF6-98C56C7C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

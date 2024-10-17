@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeProtocolMountTargetResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeProtocolMountTargetResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aBcdeg==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -69,7 +73,7 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
         }
 
         /**
-         * The export directories of the protocol service.
+         * <p>The export directories of the protocol service.</p>
          */
         public Builder protocolMountTargets(java.util.List < ProtocolMountTargets> protocolMountTargets) {
             this.protocolMountTargets = protocolMountTargets;
@@ -77,7 +81,10 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeProtocolMountTargetResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProtocolMountTargetResponseBody</p>
+     */
     public static class ProtocolMountTargets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessGroupName")
         private String accessGroupName;
@@ -249,7 +262,10 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The permission group that is associated with the export directory of the protocol service.
+             * <p>The permission group that is associated with the export directory of the protocol service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFAULT_VPC_GROUP_NAME</p>
              */
             public Builder accessGroupName(String accessGroupName) {
                 this.accessGroupName = accessGroupName;
@@ -257,7 +273,10 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the export directory of the protocol service was created.
+             * <p>The time when the export directory of the protocol service was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-12-12T07:28:38Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -265,7 +284,10 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the export directory for the protocol service.
+             * <p>The description of the export directory for the protocol service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -273,7 +295,10 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the export directory for the protocol service.
+             * <p>The ID of the export directory for the protocol service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exp-19abf5beab8d****</p>
              */
             public Builder exportId(String exportId) {
                 this.exportId = exportId;
@@ -281,7 +306,10 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The fileset ID of the export directory for the protocol service.
+             * <p>The fileset ID of the export directory for the protocol service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fset-1902718ea0ae****</p>
              */
             public Builder fsetId(String fsetId) {
                 this.fsetId = fsetId;
@@ -289,7 +317,10 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The export directory of the protocol service.
+             * <p>The export directory of the protocol service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/path/</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -297,7 +328,10 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name of the export directory for the protocol service.
+             * <p>The domain name of the export directory for the protocol service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cpfs-123****.cn-hangzhou.cpfs.aliyuncs.com</p>
              */
             public Builder protocolMountTargetDomain(String protocolMountTargetDomain) {
                 this.protocolMountTargetDomain = protocolMountTargetDomain;
@@ -305,7 +339,10 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the protocol service.
+             * <p>The ID of the protocol service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ptc-123****</p>
              */
             public Builder protocolServiceId(String protocolServiceId) {
                 this.protocolServiceId = protocolServiceId;
@@ -313,7 +350,10 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol type supported by the protocol service.
+             * <p>The protocol type supported by the protocol service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NFS</p>
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -321,7 +361,10 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the mount target.
+             * <p>The status of the mount target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -329,7 +372,10 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID of the export directory for the protocol service.
+             * <p>The vSwitch ID of the export directory for the protocol service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-2vc3c2lybvdllxyq4****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -337,7 +383,10 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID of the export directory for the protocol service.
+             * <p>The VPC ID of the export directory for the protocol service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2vct297b8157bth9z****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

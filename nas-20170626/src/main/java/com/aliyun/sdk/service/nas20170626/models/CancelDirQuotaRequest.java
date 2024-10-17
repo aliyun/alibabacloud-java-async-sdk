@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelDirQuotaRequest} extends {@link RequestModel}
  *
  * <p>CancelDirQuotaRequest</p>
@@ -98,7 +99,11 @@ public class CancelDirQuotaRequest extends Request {
         } 
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ca404****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -107,7 +112,11 @@ public class CancelDirQuotaRequest extends Request {
         }
 
         /**
-         * The absolute path of a directory.
+         * <p>The absolute path of a directory.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/data/sub1</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -116,15 +125,16 @@ public class CancelDirQuotaRequest extends Request {
         }
 
         /**
-         * The UID or GID of a user for whom you want to cancel the directory quota.
-         * <p>
+         * <p>The UID or GID of a user for whom you want to cancel the directory quota.</p>
+         * <p>This parameter is required and valid only if the UserType parameter is set to Uid or Gid.</p>
+         * <p>Examples:</p>
+         * <ul>
+         * <li>If you want to cancel a quota for a user whose UID is 500, set the UserType parameter to Uid and set the UserId parameter to 500.</li>
+         * <li>If you want to cancel a quota for a group whose GID is 100, set the UserType parameter to Gid and set the UserId parameter to 100.</li>
+         * </ul>
          * 
-         * This parameter is required and valid only if the UserType parameter is set to Uid or Gid.
-         * 
-         * Examples:
-         * 
-         * *   If you want to cancel a quota for a user whose UID is 500, set the UserType parameter to Uid and set the UserId parameter to 500.
-         * *   If you want to cancel a quota for a group whose GID is 100, set the UserType parameter to Gid and set the UserId parameter to 100.
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -133,14 +143,17 @@ public class CancelDirQuotaRequest extends Request {
         }
 
         /**
-         * The type of the user.
-         * <p>
+         * <p>The type of the user.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Uid: user ID</li>
+         * <li>Gid: user group ID</li>
+         * <li>AllUsers: all users</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   Uid: user ID
-         * *   Gid: user group ID
-         * *   AllUsers: all users
+         * <strong>example:</strong>
+         * <p>Uid</p>
          */
         public Builder userType(String userType) {
             this.putQueryParameter("UserType", userType);

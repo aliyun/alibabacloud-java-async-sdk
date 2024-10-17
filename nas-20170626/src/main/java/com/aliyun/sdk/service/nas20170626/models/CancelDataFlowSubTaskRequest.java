@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelDataFlowSubTaskRequest} extends {@link RequestModel}
  *
  * <p>CancelDataFlowSubTaskRequest</p>
@@ -136,7 +137,10 @@ public class CancelDataFlowSubTaskRequest extends Request {
         }
 
         /**
-         * DataFlowId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dfid-194433a5be31****</p>
          */
         public Builder dataFlowId(String dataFlowId) {
             this.putQueryParameter("DataFlowId", dataFlowId);
@@ -145,7 +149,10 @@ public class CancelDataFlowSubTaskRequest extends Request {
         }
 
         /**
-         * DataFlowSubTaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>subTaskId-370kyfmyknxcyzw****</p>
          */
         public Builder dataFlowSubTaskId(String dataFlowSubTaskId) {
             this.putQueryParameter("DataFlowSubTaskId", dataFlowSubTaskId);
@@ -154,7 +161,10 @@ public class CancelDataFlowSubTaskRequest extends Request {
         }
 
         /**
-         * DataFlowTaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>taskId-12345678</p>
          */
         public Builder dataFlowTaskId(String dataFlowTaskId) {
             this.putQueryParameter("DataFlowTaskId", dataFlowTaskId);
@@ -172,7 +182,10 @@ public class CancelDataFlowSubTaskRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bmcpfs-370lx1ev9ss27o0****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);

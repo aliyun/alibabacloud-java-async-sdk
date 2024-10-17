@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDataFlowSubTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateDataFlowSubTaskRequest</p>
@@ -174,7 +175,10 @@ public class CreateDataFlowSubTaskRequest extends Request {
         }
 
         /**
-         * DataFlowId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dfid-194433a5be31****</p>
          */
         public Builder dataFlowId(String dataFlowId) {
             this.putQueryParameter("DataFlowId", dataFlowId);
@@ -183,7 +187,10 @@ public class CreateDataFlowSubTaskRequest extends Request {
         }
 
         /**
-         * DataFlowTaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>taskId-12345678</p>
          */
         public Builder dataFlowTaskId(String dataFlowTaskId) {
             this.putQueryParameter("DataFlowTaskId", dataFlowTaskId);
@@ -201,7 +208,10 @@ public class CreateDataFlowSubTaskRequest extends Request {
         }
 
         /**
-         * DstFilePath.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/mnt/file.png</p>
          */
         public Builder dstFilePath(String dstFilePath) {
             this.putQueryParameter("DstFilePath", dstFilePath);
@@ -210,7 +220,10 @@ public class CreateDataFlowSubTaskRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bmcpfs-370lx1ev9ss27o0****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -219,7 +232,10 @@ public class CreateDataFlowSubTaskRequest extends Request {
         }
 
         /**
-         * SrcFilePath.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test/file.png</p>
          */
         public Builder srcFilePath(String srcFilePath) {
             this.putQueryParameter("SrcFilePath", srcFilePath);
@@ -234,6 +250,12 @@ public class CreateDataFlowSubTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDataFlowSubTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDataFlowSubTaskRequest</p>
+     */
     public static class Condition extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private Long modifyTime;

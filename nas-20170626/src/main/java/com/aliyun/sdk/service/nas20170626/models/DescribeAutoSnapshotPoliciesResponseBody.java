@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAutoSnapshotPoliciesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAutoSnapshotPoliciesResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The queried automatic snapshot policies.
+         * <p>The queried automatic snapshot policies.</p>
          */
         public Builder autoSnapshotPolicies(AutoSnapshotPolicies autoSnapshotPolicies) {
             this.autoSnapshotPolicies = autoSnapshotPolicies;
@@ -93,7 +94,10 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of automatic snapshot policies.
+         * <p>The total number of automatic snapshot policies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAutoSnapshotPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoSnapshotPoliciesResponseBody</p>
+     */
     public static class AutoSnapshotPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicyId")
         private String autoSnapshotPolicyId;
@@ -265,7 +284,10 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
             private String timePoints; 
 
             /**
-             * The ID of the automatic snapshot policy.
+             * <p>The ID of the automatic snapshot policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sp-extreme-233e6****</p>
              */
             public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
                 this.autoSnapshotPolicyId = autoSnapshotPolicyId;
@@ -273,7 +295,10 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the automatic snapshot policy.
+             * <p>The name of the automatic snapshot policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder autoSnapshotPolicyName(String autoSnapshotPolicyName) {
                 this.autoSnapshotPolicyName = autoSnapshotPolicyName;
@@ -281,10 +306,11 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the automatic snapshot policy was created.
-             * <p>
+             * <p>The time when the automatic snapshot policy was created.</p>
+             * <p>The time follows the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO8601</a> standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
              * 
-             * The time follows the [ISO8601](https://www.iso.org/iso-8601-date-and-time-format.html) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+             * <strong>example:</strong>
+             * <p>2014-04-21T12:08:52Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -292,7 +318,10 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of file systems to which the automatic snapshot policy applies.
+             * <p>The number of file systems to which the automatic snapshot policy applies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder fileSystemNums(Integer fileSystemNums) {
                 this.fileSystemNums = fileSystemNums;
@@ -300,7 +329,10 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the file system.
+             * <p>The type of the file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>extreme</p>
              */
             public Builder fileSystemType(String fileSystemType) {
                 this.fileSystemType = fileSystemType;
@@ -308,7 +340,10 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the automatic snapshot policy.
+             * <p>The region ID of the automatic snapshot policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -316,12 +351,12 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The days of a week on which auto snapshots are created.
-             * <p>
+             * <p>The days of a week on which auto snapshots are created.</p>
+             * <p>Auto snapshots are created on a weekly basis.</p>
+             * <p>Valid values: 1 to 7. The values from 1 to 7 indicate 7 days in a week from Monday to Sunday.</p>
              * 
-             * Auto snapshots are created on a weekly basis.
-             * 
-             * Valid values: 1 to 7. The values from 1 to 7 indicate 7 days in a week from Monday to Sunday.
+             * <strong>example:</strong>
+             * <p>1,5</p>
              */
             public Builder repeatWeekdays(String repeatWeekdays) {
                 this.repeatWeekdays = repeatWeekdays;
@@ -329,15 +364,16 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The retention period of auto snapshots.
-             * <p>
+             * <p>The retention period of auto snapshots.</p>
+             * <p>Unit: days.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>-1: Auto snapshots are permanently retained. After the number of auto snapshots exceeds the upper limit, the earliest auto snapshot is automatically deleted.</li>
+             * <li>1 to 65536: Auto snapshots are retained for the specified days. After the retention period of auto snapshots expires, the auto snapshots are automatically deleted.</li>
+             * </ul>
              * 
-             * Unit: days.
-             * 
-             * Valid values:
-             * 
-             * *   \-1: Auto snapshots are permanently retained. After the number of auto snapshots exceeds the upper limit, the earliest auto snapshot is automatically deleted.
-             * *   1 to 65536: Auto snapshots are retained for the specified days. After the retention period of auto snapshots expires, the auto snapshots are automatically deleted.
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder retentionDays(Integer retentionDays) {
                 this.retentionDays = retentionDays;
@@ -345,13 +381,15 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the automatic snapshot policy.
-             * <p>
+             * <p>The status of the automatic snapshot policy.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Creating: The automatic snapshot policy is being created.</li>
+             * <li>Available: The automatic snapshot policy is available.</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   Creating: The automatic snapshot policy is being created.
-             * *   Available: The automatic snapshot policy is available.
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -359,12 +397,12 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The points in time at which auto snapshots are created.
-             * <p>
+             * <p>The points in time at which auto snapshots are created.</p>
+             * <p>Unit: hours.</p>
+             * <p>Valid values: <code>0 to 23</code>. The values from 0 to 23 indicate a total of 24 hours from <code>00:00 to 23:00</code>. For example, 1 indicates 01:00. A maximum of 24 points in time can be returned. Multiple points in time are separated with commas (,).</p>
              * 
-             * Unit: hours.
-             * 
-             * Valid values: `0 to 23`. The values from 0 to 23 indicate a total of 24 hours from `00:00 to 23:00`. For example, 1 indicates 01:00. A maximum of 24 points in time can be returned. Multiple points in time are separated with commas (,).
+             * <strong>example:</strong>
+             * <p>4,19</p>
              */
             public Builder timePoints(String timePoints) {
                 this.timePoints = timePoints;
@@ -378,6 +416,12 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAutoSnapshotPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoSnapshotPoliciesResponseBody</p>
+     */
     public static class AutoSnapshotPolicies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicy")
         private java.util.List < AutoSnapshotPolicy> autoSnapshotPolicy;

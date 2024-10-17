@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelRecycleBinJobRequest} extends {@link RequestModel}
  *
  * <p>CancelRecycleBinJobRequest</p>
@@ -54,7 +55,11 @@ public class CancelRecycleBinJobRequest extends Request {
         } 
 
         /**
-         * The job ID.
+         * <p>The job ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rb-15<strong><strong>ed-r-1625</strong></strong>2441</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

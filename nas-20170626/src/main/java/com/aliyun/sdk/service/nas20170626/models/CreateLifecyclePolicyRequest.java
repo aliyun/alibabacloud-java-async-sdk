@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLifecyclePolicyRequest} extends {@link RequestModel}
  *
  * <p>CreateLifecyclePolicyRequest</p>
@@ -127,7 +128,11 @@ public class CreateLifecyclePolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31a8e4****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -136,7 +141,11 @@ public class CreateLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * The name of the lifecycle policy. The name must be 3 to 64 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+         * <p>The name of the lifecycle policy. The name must be 3 to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lifecyclepolicy_01</p>
          */
         public Builder lifecyclePolicyName(String lifecyclePolicyName) {
             this.putQueryParameter("LifecyclePolicyName", lifecyclePolicyName);
@@ -145,15 +154,18 @@ public class CreateLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * The management rule that is associated with the lifecycle policy.
-         * <p>
+         * <p>The management rule that is associated with the lifecycle policy.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>DEFAULT_ATIME_14: Files that are not accessed in the last 14 days are dumped to the IA storage medium.</li>
+         * <li>DEFAULT_ATIME_30: Files that are not accessed in the last 30 days are dumped to the IA storage medium.</li>
+         * <li>DEFAULT_ATIME_60: Files that are not accessed in the last 60 days are dumped to the IA storage medium.</li>
+         * <li>DEFAULT_ATIME_90: Files that are not accessed in the last 90 days are dumped to the IA storage medium.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   DEFAULT_ATIME\_14: Files that are not accessed in the last 14 days are dumped to the IA storage medium.
-         * *   DEFAULT_ATIME\_30: Files that are not accessed in the last 30 days are dumped to the IA storage medium.
-         * *   DEFAULT_ATIME\_60: Files that are not accessed in the last 60 days are dumped to the IA storage medium.
-         * *   DEFAULT_ATIME\_90: Files that are not accessed in the last 90 days are dumped to the IA storage medium.
+         * <strong>example:</strong>
+         * <p>DEFAULT_ATIME_14</p>
          */
         public Builder lifecycleRuleName(String lifecycleRuleName) {
             this.putQueryParameter("LifecycleRuleName", lifecycleRuleName);
@@ -162,12 +174,14 @@ public class CreateLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * The absolute path of the directory that is associated with the lifecycle policy.
-         * <p>
+         * <p>The absolute path of the directory that is associated with the lifecycle policy.</p>
+         * <p>If you specify this parameter, you can associate the lifecycle policy with only one directory. The path must start with a forward slash (/) and must be a path that exists in the mount target.</p>
+         * <blockquote>
+         * <p>We recommend that you specify the Paths.N parameter so that you can associate the lifecycle policy with multiple directories.</p>
+         * </blockquote>
          * 
-         * If you specify this parameter, you can associate the lifecycle policy with only one directory. The path must start with a forward slash (/) and must be a path that exists in the mount target.
-         * 
-         * > We recommend that you specify the Paths.N parameter so that you can associate the lifecycle policy with multiple directories.
+         * <strong>example:</strong>
+         * <p>/pathway/to/folder</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -176,10 +190,11 @@ public class CreateLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * The absolute paths of the directories that are associated with the lifecycle policy.
-         * <p>
+         * <p>The absolute paths of the directories that are associated with the lifecycle policy.</p>
+         * <p>If you specify this parameter, you can associate the lifecycle policy with multiple directories. Each path must start with a forward slash (/) and must be a path that exists in the mount target. Valid values of N: 1 to 10.</p>
          * 
-         * If you specify this parameter, you can associate the lifecycle policy with multiple directories. Each path must start with a forward slash (/) and must be a path that exists in the mount target. Valid values of N: 1 to 10.
+         * <strong>example:</strong>
+         * <p>&quot;/path1&quot;, &quot;/path2&quot;</p>
          */
         public Builder paths(java.util.List < String > paths) {
             this.putQueryParameter("Paths", paths);
@@ -188,10 +203,12 @@ public class CreateLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * The storage type of the data that is dumped to the IA storage medium.
-         * <p>
+         * <p>The storage type of the data that is dumped to the IA storage medium.</p>
+         * <p>Default value: InfrequentAccess (IA).</p>
+         * <p>This parameter is required.</p>
          * 
-         * Default value: InfrequentAccess (IA).
+         * <strong>example:</strong>
+         * <p>InfrequentAccess</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);

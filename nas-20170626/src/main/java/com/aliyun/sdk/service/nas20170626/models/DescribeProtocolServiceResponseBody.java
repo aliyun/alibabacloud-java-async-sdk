@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeProtocolServiceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeProtocolServiceResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aBcdeg==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -69,7 +73,7 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The information about protocol services.
+         * <p>The information about protocol services.</p>
          */
         public Builder protocolServices(java.util.List < ProtocolServices> protocolServices) {
             this.protocolServices = protocolServices;
@@ -77,7 +81,10 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeProtocolServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProtocolServiceResponseBody</p>
+     */
     public static class ProtocolServices extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -261,7 +274,10 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The time when the protocol service was created. The time is displayed in UTC.
+             * <p>The time when the protocol service was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-12-12T07:28:38Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -269,14 +285,16 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the protocol service.
-             * <p>
+             * <p>The description of the protocol service.</p>
+             * <p>Limits:</p>
+             * <ul>
+             * <li>The description must be 2 to 128 characters in length.</li>
+             * <li>The description must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</li>
+             * <li>The description can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+             * </ul>
              * 
-             * Limits:
-             * 
-             * *   The description must be 2 to 128 characters in length.
-             * *   The description must start with a letter and cannot start with `http://` or `https://`.
-             * *   The description can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -284,7 +302,10 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the file system.
+             * <p>The ID of the file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cpfs-099394bd928c****</p>
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -292,7 +313,10 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The base throughput of the protocol service. Unit: MB/s.
+             * <p>The base throughput of the protocol service. Unit: MB/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder instanceBaseThroughput(Integer instanceBaseThroughput) {
                 this.instanceBaseThroughput = instanceBaseThroughput;
@@ -300,7 +324,10 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The burst throughput of the protocol service. Unit: MB/s.
+             * <p>The burst throughput of the protocol service. Unit: MB/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder instanceBurstThroughput(Integer instanceBurstThroughput) {
                 this.instanceBurstThroughput = instanceBurstThroughput;
@@ -308,7 +335,10 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The memory cache size of the protocol service. Unit: GiB.
+             * <p>The memory cache size of the protocol service. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder instanceRAM(Integer instanceRAM) {
                 this.instanceRAM = instanceRAM;
@@ -316,7 +346,10 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the protocol service was modified. The time is displayed in UTC.
+             * <p>The time when the protocol service was modified. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-12-12T07:28:38Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -324,7 +357,10 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of CPFS directories and filesets exported in the protocol service.
+             * <p>The total number of CPFS directories and filesets exported in the protocol service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder mountTargetCount(Integer mountTargetCount) {
                 this.mountTargetCount = mountTargetCount;
@@ -332,7 +368,10 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the protocol service.
+             * <p>The ID of the protocol service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ptc-197ed6a00f2b****</p>
              */
             public Builder protocolServiceId(String protocolServiceId) {
                 this.protocolServiceId = protocolServiceId;
@@ -340,11 +379,14 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The specification of the protocol service.
-             * <p>
+             * <p>The specification of the protocol service.</p>
+             * <ul>
+             * <li>Valid value: General.</li>
+             * <li>Default value: General.</li>
+             * </ul>
              * 
-             * *   Valid value: General.
-             * *   Default value: General.
+             * <strong>example:</strong>
+             * <p>General</p>
              */
             public Builder protocolSpec(String protocolSpec) {
                 this.protocolSpec = protocolSpec;
@@ -352,7 +394,10 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The throughput of the protocol service. Unit: MB/s.
+             * <p>The throughput of the protocol service. Unit: MB/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder protocolThroughput(Integer protocolThroughput) {
                 this.protocolThroughput = protocolThroughput;
@@ -360,12 +405,14 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol type supported by the protocol service.
-             * <p>
+             * <p>The protocol type supported by the protocol service.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>NFS: The protocol service supports access over the Network File System (NFS) protocol.</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   NFS: The protocol service supports access over the Network File System (NFS) protocol.
+             * <strong>example:</strong>
+             * <p>NFS</p>
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -373,18 +420,20 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the protocol service.
-             * <p>
+             * <p>The status of the protocol service.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Creating: The protocol service is being created.</li>
+             * <li>Starting: The protocol service is being started.</li>
+             * <li>Running: The protocol service is running.</li>
+             * <li>Updating: The protocol service is being updated.</li>
+             * <li>Deleting: The protocol service is being deleted.</li>
+             * <li>Stopping: The protocol service is being stopped.</li>
+             * <li>Stopped: The protocol service is stopped.</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   Creating: The protocol service is being created.
-             * *   Starting: The protocol service is being started.
-             * *   Running: The protocol service is running.
-             * *   Updating: The protocol service is being updated.
-             * *   Deleting: The protocol service is being deleted.
-             * *   Stopping: The protocol service is being stopped.
-             * *   Stopped: The protocol service is stopped.
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;

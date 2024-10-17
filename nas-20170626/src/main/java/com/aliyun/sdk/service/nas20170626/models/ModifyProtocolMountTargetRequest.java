@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyProtocolMountTargetRequest} extends {@link RequestModel}
  *
  * <p>ModifyProtocolMountTargetRequest</p>
@@ -127,12 +128,14 @@ public class ModifyProtocolMountTargetRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
+         * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence?</a></p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * </blockquote>
          * 
-         * The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence?](~~25693~~)
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -141,14 +144,16 @@ public class ModifyProtocolMountTargetRequest extends Request {
         }
 
         /**
-         * The description of the export directory for the protocol service.
-         * <p>
+         * <p>The description of the export directory for the protocol service.</p>
+         * <p>Limits:</p>
+         * <ul>
+         * <li>The description must be 2 to 128 characters in length.</li>
+         * <li>The description must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The description can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+         * </ul>
          * 
-         * Limits:
-         * 
-         * *   The description must be 2 to 128 characters in length.
-         * *   The description must start with a letter but cannot start with `http://` or `https://`.
-         * *   The description can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -157,13 +162,15 @@ public class ModifyProtocolMountTargetRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. The dry run checks parameter validity and prerequisites. The dry run does not modify the specified export directory or incur fees.
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. The dry run checks parameter validity and prerequisites. The dry run does not modify the specified export directory or incur fees.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: performs only a dry run. The system checks the required parameters, request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned.</li>
+         * <li>false (default): performs a dry run and sends the request.</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   true: performs only a dry run. The system checks the required parameters, request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned.
-         * *   false (default): performs a dry run and sends the request.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -172,7 +179,11 @@ public class ModifyProtocolMountTargetRequest extends Request {
         }
 
         /**
-         * The ID of the export directory for the protocol service.
+         * <p>The ID of the export directory for the protocol service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exp-19abf5beab8d****</p>
          */
         public Builder exportId(String exportId) {
             this.putQueryParameter("ExportId", exportId);
@@ -181,7 +192,11 @@ public class ModifyProtocolMountTargetRequest extends Request {
         }
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpfs-099394bd928c****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -190,7 +205,11 @@ public class ModifyProtocolMountTargetRequest extends Request {
         }
 
         /**
-         * The ID of the protocol service.
+         * <p>The ID of the protocol service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ptc-197ed6a00f2b****</p>
          */
         public Builder protocolServiceId(String protocolServiceId) {
             this.putQueryParameter("ProtocolServiceId", protocolServiceId);

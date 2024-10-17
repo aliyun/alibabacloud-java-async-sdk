@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisableNfsAclResponseBody} extends {@link TeaModel}
  *
  * <p>DisableNfsAclResponseBody</p>
@@ -37,7 +38,10 @@ public class DisableNfsAclResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24487C24-AE54-57EC-B4E4-4EDEEEB83B01</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

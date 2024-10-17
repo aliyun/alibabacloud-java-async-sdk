@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLifecyclePolicyRequest} extends {@link RequestModel}
  *
  * <p>DeleteLifecyclePolicyRequest</p>
@@ -69,7 +70,11 @@ public class DeleteLifecyclePolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31a8e4****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -78,7 +83,11 @@ public class DeleteLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * The name of the lifecycle policy.
+         * <p>The name of the lifecycle policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lifecyclepolicy1</p>
          */
         public Builder lifecyclePolicyName(String lifecyclePolicyName) {
             this.putQueryParameter("LifecyclePolicyName", lifecyclePolicyName);

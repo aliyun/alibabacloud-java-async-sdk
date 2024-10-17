@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStoragePackagesRequest} extends {@link RequestModel}
  *
  * <p>DescribeStoragePackagesRequest</p>
@@ -97,10 +98,11 @@ public class DescribeStoragePackagesRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -109,12 +111,12 @@ public class DescribeStoragePackagesRequest extends Request {
         }
 
         /**
-         * The number of storage plans to return on each page.
-         * <p>
+         * <p>The number of storage plans to return on each page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -123,7 +125,11 @@ public class DescribeStoragePackagesRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -132,13 +138,15 @@ public class DescribeStoragePackagesRequest extends Request {
         }
 
         /**
-         * Specifies whether the time to return is in UTC.
-         * <p>
+         * <p>Specifies whether the time to return is in UTC.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true (default): returns UTC time.</li>
+         * <li>false: returns UNIX timestamp.</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   true (default): returns UTC time.
-         * *   false: returns UNIX timestamp.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder useUTCDateTime(Boolean useUTCDateTime) {
             this.putQueryParameter("UseUTCDateTime", useUTCDateTime);

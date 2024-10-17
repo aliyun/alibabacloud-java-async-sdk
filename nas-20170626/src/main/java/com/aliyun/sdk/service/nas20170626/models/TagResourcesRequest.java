@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
@@ -84,7 +85,11 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * The resource IDs. Valid values of N: 1 to 50.
+         * <p>The resource IDs. Valid values of N: 1 to 50.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03e08484f0</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -93,7 +98,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The resource type. Set the value to filesystem.
+         * <p>The resource type. Set the value to filesystem.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>filesystem</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -102,7 +111,8 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The details about the tags.
+         * <p>The details about the tags.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -117,6 +127,12 @@ public class TagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>TagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -158,16 +174,19 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the resource.
-             * <p>
+             * <p>The key of tag N to add to the resource.</p>
+             * <p>Limits:</p>
+             * <ul>
+             * <li>The tag key cannot be left empty.</li>
+             * <li>Valid values of N: 1 to 20.</li>
+             * <li>The tag key must be 1 to 128 characters in length.</li>
+             * <li>The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+             * <li>The tag key cannot contain <code>http://</code> or <code>https://</code>.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * Limits:
-             * 
-             * *   The tag key cannot be left empty.
-             * *   Valid values of N: 1 to 20.
-             * *   The tag key must be 1 to 128 characters in length.
-             * *   The tag key cannot start with `aliyun` or `acs:`.
-             * *   The tag key cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>nastest</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -175,15 +194,18 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the resource.
-             * <p>
+             * <p>The value of tag N to add to the resource.</p>
+             * <p>Limits:</p>
+             * <ul>
+             * <li>Valid values of N: 1 to 20.</li>
+             * <li>The tag value must be 1 to 128 characters in length.</li>
+             * <li>The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+             * <li>The tag value cannot contain <code>http://</code> or <code>https://</code>.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * Limits:
-             * 
-             * *   Valid values of N: 1 to 20.
-             * *   The tag value must be 1 to 128 characters in length.
-             * *   The tag value cannot start with `aliyun` or `acs:`.
-             * *   The tag value cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>filetest</p>
              */
             public Builder value(String value) {
                 this.value = value;

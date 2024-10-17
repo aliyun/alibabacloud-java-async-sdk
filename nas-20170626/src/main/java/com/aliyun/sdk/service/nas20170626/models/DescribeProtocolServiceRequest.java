@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeProtocolServiceRequest} extends {@link RequestModel}
  *
  * <p>DescribeProtocolServiceRequest</p>
@@ -141,10 +142,13 @@ public class DescribeProtocolServiceRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence?](~~25693~~)
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence?</a></p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * </blockquote>
          * 
-         * >  If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -153,14 +157,16 @@ public class DescribeProtocolServiceRequest extends Request {
         }
 
         /**
-         * The description or a part of the description of the protocol service.
-         * <p>
+         * <p>The description or a part of the description of the protocol service.</p>
+         * <p>Limits:</p>
+         * <ul>
+         * <li>The description must be 2 to 128 characters in length.</li>
+         * <li>The description must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The description can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+         * </ul>
          * 
-         * Limits:
-         * 
-         * *   The description must be 2 to 128 characters in length.
-         * *   The description must start with a letter and cannot start with `http://` or `https://`.
-         * *   The description can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -169,7 +175,11 @@ public class DescribeProtocolServiceRequest extends Request {
         }
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpfs-099394bd928c****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -178,12 +188,15 @@ public class DescribeProtocolServiceRequest extends Request {
         }
 
         /**
-         * The number of results for each query.
-         * <p>
+         * <p>The number of results for each query.</p>
+         * <ul>
+         * <li>Maximum value: 100.</li>
+         * <li>Minimum value: 10.</li>
+         * <li>Default value: 20.</li>
+         * </ul>
          * 
-         * *   Maximum value: 100.
-         * *   Minimum value: 10.
-         * *   Default value: 20.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -192,7 +205,10 @@ public class DescribeProtocolServiceRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aBcdg==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -201,11 +217,14 @@ public class DescribeProtocolServiceRequest extends Request {
         }
 
         /**
-         * The ID of the protocol service.
-         * <p>
+         * <p>The ID of the protocol service.</p>
+         * <ul>
+         * <li>Format: CSV.</li>
+         * <li>Limit: You can specify a maximum of 10 protocol service IDs.</li>
+         * </ul>
          * 
-         * *   Format: CSV.
-         * *   Limit: You can specify a maximum of 10 protocol service IDs.
+         * <strong>example:</strong>
+         * <p>ptc-197ed6a00f2b****,ptc-196ed6a00f2b****</p>
          */
         public Builder protocolServiceIds(String protocolServiceIds) {
             this.putQueryParameter("ProtocolServiceIds", protocolServiceIds);
@@ -214,20 +233,21 @@ public class DescribeProtocolServiceRequest extends Request {
         }
 
         /**
-         * The status of the protocol service.
-         * <p>
+         * <p>The status of the protocol service.</p>
+         * <p>Format: CSV.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Creating: The protocol service is being created.</li>
+         * <li>Starting: The protocol service is being started.</li>
+         * <li>Running: The protocol service is running.</li>
+         * <li>Updating: The protocol service is being updated.</li>
+         * <li>Deleting: The protocol service is being deleted.</li>
+         * <li>Stopping: The protocol service is being stopped.</li>
+         * <li>Stopped: The protocol service is stopped.</li>
+         * </ul>
          * 
-         * Format: CSV.
-         * 
-         * Valid values:
-         * 
-         * *   Creating: The protocol service is being created.
-         * *   Starting: The protocol service is being started.
-         * *   Running: The protocol service is running.
-         * *   Updating: The protocol service is being updated.
-         * *   Deleting: The protocol service is being deleted.
-         * *   Stopping: The protocol service is being stopped.
-         * *   Stopped: The protocol service is stopped.
+         * <strong>example:</strong>
+         * <p>Running,Updating</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

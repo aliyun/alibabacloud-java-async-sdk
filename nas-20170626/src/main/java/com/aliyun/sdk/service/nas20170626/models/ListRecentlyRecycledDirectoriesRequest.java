@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRecentlyRecycledDirectoriesRequest} extends {@link RequestModel}
  *
  * <p>ListRecentlyRecycledDirectoriesRequest</p>
@@ -83,7 +84,11 @@ public class ListRecentlyRecycledDirectoriesRequest extends Request {
         } 
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ca404****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -92,12 +97,12 @@ public class ListRecentlyRecycledDirectoriesRequest extends Request {
         }
 
         /**
-         * The number of directories to return for each query.
-         * <p>
+         * <p>The number of directories to return for each query.</p>
+         * <p>Valid values: 10 to 1000.</p>
+         * <p>Default value: 100.</p>
          * 
-         * Valid values: 10 to 1000.
-         * 
-         * Default value: 100.
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -106,10 +111,11 @@ public class ListRecentlyRecycledDirectoriesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
+         * <p>If not all directories are returned in a query, the return value of the NextToken parameter is not empty. In this case, you can specify a valid value for the NextToken parameter to continue the query.</p>
          * 
-         * If not all directories are returned in a query, the return value of the NextToken parameter is not empty. In this case, you can specify a valid value for the NextToken parameter to continue the query.
+         * <strong>example:</strong>
+         * <p>1256****25</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

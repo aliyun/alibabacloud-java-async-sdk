@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLogAnalysisRequest} extends {@link RequestModel}
  *
  * <p>DescribeLogAnalysisRequest</p>
@@ -97,14 +98,16 @@ public class DescribeLogAnalysisRequest extends Request {
         } 
 
         /**
-         * The type of the file system.
-         * <p>
+         * <p>The type of the file system.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>standard: General-purpose NAS file system</li>
+         * <li>extreme: Extreme NAS file system</li>
+         * <li>all (default): all types</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   standard: General-purpose NAS file system
-         * *   extreme: Extreme NAS file system
-         * *   all (default): all types
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder fileSystemType(String fileSystemType) {
             this.putQueryParameter("FileSystemType", fileSystemType);
@@ -113,7 +116,10 @@ public class DescribeLogAnalysisRequest extends Request {
         }
 
         /**
-         * The page number. Default value: 1.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -122,7 +128,10 @@ public class DescribeLogAnalysisRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100. Default value: 10.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -131,7 +140,11 @@ public class DescribeLogAnalysisRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

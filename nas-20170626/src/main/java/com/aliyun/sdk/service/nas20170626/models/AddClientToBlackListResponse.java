@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddClientToBlackListResponse} extends {@link TeaModel}
  *
  * <p>AddClientToBlackListResponse</p>

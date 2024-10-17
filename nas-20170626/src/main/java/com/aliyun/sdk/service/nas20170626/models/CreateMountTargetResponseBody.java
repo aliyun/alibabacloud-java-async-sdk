@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMountTargetResponseBody} extends {@link TeaModel}
  *
  * <p>CreateMountTargetResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateMountTargetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IPv4 domain name of the mount target.
+         * <p>The IPv4 domain name of the mount target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>174494b666-x****.cn-hangzhou.nas.aliyuncs.com</p>
          */
         public Builder mountTargetDomain(String mountTargetDomain) {
             this.mountTargetDomain = mountTargetDomain;
@@ -69,7 +73,7 @@ public class CreateMountTargetResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the mount target.
+         * <p>The information about the mount target.</p>
          */
         public Builder mountTargetExtra(MountTargetExtra mountTargetExtra) {
             this.mountTargetExtra = mountTargetExtra;
@@ -77,7 +81,10 @@ public class CreateMountTargetResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70EACC9C-D07A-4A34-ADA4-77506C42****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class CreateMountTargetResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateMountTargetResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMountTargetResponseBody</p>
+     */
     public static class MountTargetExtra extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DualStackMountTargetDomain")
         private String dualStackMountTargetDomain;
@@ -117,7 +130,10 @@ public class CreateMountTargetResponseBody extends TeaModel {
             private String dualStackMountTargetDomain; 
 
             /**
-             * The dual-stack (IPv4 and IPv6) domain name of the mount target.
+             * <p>The dual-stack (IPv4 and IPv6) domain name of the mount target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>174494b666-x****.dualstack.cn-hangzhou.nas.aliyuncs.com</p>
              */
             public Builder dualStackMountTargetDomain(String dualStackMountTargetDomain) {
                 this.dualStackMountTargetDomain = dualStackMountTargetDomain;

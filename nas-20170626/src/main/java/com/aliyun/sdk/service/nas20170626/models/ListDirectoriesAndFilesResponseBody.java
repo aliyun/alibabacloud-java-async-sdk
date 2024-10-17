@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDirectoriesAndFilesResponseBody} extends {@link TeaModel}
  *
  * <p>ListDirectoriesAndFilesResponseBody</p>
@@ -61,7 +62,7 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details about the files or directories.
+         * <p>The details about the files or directories.</p>
          */
         public Builder entries(java.util.List < Entries> entries) {
             this.entries = entries;
@@ -69,7 +70,10 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -77,7 +81,10 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2D69A58F-345C-4FDE-88E4-BF518948****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDirectoriesAndFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDirectoriesAndFilesResponseBody</p>
+     */
     public static class Entries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Atime")
         private String atime;
@@ -261,12 +274,12 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The time when the file was queried.
-             * <p>
+             * <p>The time when the file was queried.</p>
+             * <p>The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
+             * <p>This parameter is returned and valid only if the value of the Type parameter is File.</p>
              * 
-             * The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format.
-             * 
-             * This parameter is returned and valid only if the value of the Type parameter is File.
+             * <strong>example:</strong>
+             * <p>2021-02-01T10:08:08Z</p>
              */
             public Builder atime(String atime) {
                 this.atime = atime;
@@ -274,12 +287,12 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the raw data was modified.
-             * <p>
+             * <p>The time when the raw data was modified.</p>
+             * <p>The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
+             * <p>This parameter is returned and valid only if the value of the Type parameter is File.</p>
              * 
-             * The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format.
-             * 
-             * This parameter is returned and valid only if the value of the Type parameter is File.
+             * <strong>example:</strong>
+             * <p>2021-02-11T10:08:10Z</p>
              */
             public Builder ctime(String ctime) {
                 this.ctime = ctime;
@@ -287,7 +300,10 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the directory or file.
+             * <p>The ID of the directory or file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>66</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -295,15 +311,16 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the directory contains files stored in the Archive storage class.
-             * <p>
+             * <p>Indicates whether the directory contains files stored in the Archive storage class.</p>
+             * <p>This parameter is returned and valid only if the value of the Type parameter is Directory.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true: The directory contains files stored in the Archive storage class.</li>
+             * <li>false: The directory does not contain files stored in the Archive storage class.</li>
+             * </ul>
              * 
-             * This parameter is returned and valid only if the value of the Type parameter is Directory.
-             * 
-             * Valid values:
-             * 
-             * *   true: The directory contains files stored in the Archive storage class.
-             * *   false: The directory does not contain files stored in the Archive storage class.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasArchiveFile(String hasArchiveFile) {
                 this.hasArchiveFile = hasArchiveFile;
@@ -311,15 +328,16 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the directory contains files stored in the IA storage class.
-             * <p>
+             * <p>Indicates whether the directory contains files stored in the IA storage class.</p>
+             * <p>This parameter is returned and valid only if the value of the Type parameter is Directory.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true: The directory contains files stored in the IA storage class.</li>
+             * <li>false: The directory does not contain files stored in the IA storage class.</li>
+             * </ul>
              * 
-             * This parameter is returned and valid only if the value of the Type parameter is Directory.
-             * 
-             * Valid values:
-             * 
-             * *   true: The directory contains files stored in the IA storage class.
-             * *   false: The directory does not contain files stored in the IA storage class.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasInfrequentAccessFile(Boolean hasInfrequentAccessFile) {
                 this.hasInfrequentAccessFile = hasInfrequentAccessFile;
@@ -327,7 +345,10 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The file or directory inode.
+             * <p>The file or directory inode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>66</p>
              */
             public Builder inode(String inode) {
                 this.inode = inode;
@@ -335,12 +356,12 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the file was modified.
-             * <p>
+             * <p>The time when the file was modified.</p>
+             * <p>The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
+             * <p>This parameter is returned and valid only if the value of the Type parameter is File.</p>
              * 
-             * The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format.
-             * 
-             * This parameter is returned and valid only if the value of the Type parameter is File.
+             * <strong>example:</strong>
+             * <p>2021-02-11T10:08:08Z</p>
              */
             public Builder mtime(String mtime) {
                 this.mtime = mtime;
@@ -348,7 +369,10 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the file or directory.
+             * <p>The name of the file or directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>file.txt</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -356,7 +380,10 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the portable account. This parameter is returned and valid only if the value of the ProtocolType parameter is SMB and RAM-based access control is enabled.
+             * <p>The ID of the portable account. This parameter is returned and valid only if the value of the ProtocolType parameter is SMB and RAM-based access control is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>37862c****</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -364,12 +391,12 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the last data retrieval task was run.
-             * <p>
+             * <p>The time when the last data retrieval task was run.</p>
+             * <p>The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
+             * <p>This parameter is returned and valid only if the value of the Type parameter is File.</p>
              * 
-             * The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format.
-             * 
-             * This parameter is returned and valid only if the value of the Type parameter is File.
+             * <strong>example:</strong>
+             * <p>2021-02-11T10:08:08Z</p>
              */
             public Builder retrieveTime(String retrieveTime) {
                 this.retrieveTime = retrieveTime;
@@ -377,12 +404,12 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the file.
-             * <p>
+             * <p>The size of the file.</p>
+             * <p>Unit: bytes.</p>
+             * <p>This parameter is returned and valid only if the value of the Type parameter is File.</p>
              * 
-             * Unit: bytes.
-             * 
-             * This parameter is returned and valid only if the value of the Type parameter is File.
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -390,15 +417,16 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The storage class.
-             * <p>
+             * <p>The storage class.</p>
+             * <p>This parameter is returned and valid only if the value of the Type parameter is File.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>InfrequentAccess: the IA storage class.</li>
+             * <li>Archive: the Archive storage class.</li>
+             * </ul>
              * 
-             * This parameter is returned and valid only if the value of the Type parameter is File.
-             * 
-             * Valid values:
-             * 
-             * *   InfrequentAccess: the IA storage class.
-             * *   Archive: the Archive storage class.
+             * <strong>example:</strong>
+             * <p>InfrequentAccess</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -406,13 +434,15 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the query result.
-             * <p>
+             * <p>The type of the query result.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>File</li>
+             * <li>Directory</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   File
-             * *   Directory
+             * <strong>example:</strong>
+             * <p>Directory</p>
              */
             public Builder type(String type) {
                 this.type = type;

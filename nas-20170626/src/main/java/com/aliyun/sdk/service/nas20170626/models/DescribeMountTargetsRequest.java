@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMountTargetsRequest} extends {@link RequestModel}
  *
  * <p>DescribeMountTargetsRequest</p>
@@ -111,10 +112,13 @@ public class DescribeMountTargetsRequest extends Request {
         } 
 
         /**
-         * The dual-stack (IPv4 and IPv6) domain name of the mount target.
-         * <p>
+         * <p>The dual-stack (IPv4 and IPv6) domain name of the mount target.</p>
+         * <blockquote>
+         * <p>Only Extreme NAS file systems that reside in the Chinese mainland support IPv6.</p>
+         * </blockquote>
          * 
-         * > Only Extreme NAS file systems that reside in the Chinese mainland support IPv6.
+         * <strong>example:</strong>
+         * <p>174494b666-x****.dualstack.cn-hangzhou.nas.aliyuncs.com</p>
          */
         public Builder dualStackMountTargetDomain(String dualStackMountTargetDomain) {
             this.putQueryParameter("DualStackMountTargetDomain", dualStackMountTargetDomain);
@@ -123,14 +127,19 @@ public class DescribeMountTargetsRequest extends Request {
         }
 
         /**
-         * The ID of the file system.
-         * <p>
+         * <p>The ID of the file system.</p>
+         * <ul>
+         * <li>Sample ID of a General-purpose NAS file system: 31a8e4****.</li>
+         * <li>The IDs of Extreme NAS file systems must start with <code>extreme-</code>, for example, extreme-0015****.</li>
+         * <li>The IDs of Cloud Parallel File Storage (CPFS) file systems must start with <code>cpfs-</code>, for example, cpfs-125487****.</li>
+         * </ul>
+         * <blockquote>
+         * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   Sample ID of a General-purpose NAS file system: 31a8e4\*\*\*\*.
-         * *   The IDs of Extreme NAS file systems must start with `extreme-`, for example, extreme-0015\*\*\*\*.
-         * *   The IDs of Cloud Parallel File Storage (CPFS) file systems must start with `cpfs-`, for example, cpfs-125487\*\*\*\*.
-         * 
-         * > CPFS file systems are available only on the China site (aliyun.com).
+         * <strong>example:</strong>
+         * <p>1ca404****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -139,7 +148,10 @@ public class DescribeMountTargetsRequest extends Request {
         }
 
         /**
-         * The domain name of the mount target.
+         * <p>The domain name of the mount target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ca404a666-x****.cn-hangzhou.nas.aliyuncs.com</p>
          */
         public Builder mountTargetDomain(String mountTargetDomain) {
             this.putQueryParameter("MountTargetDomain", mountTargetDomain);
@@ -148,10 +160,11 @@ public class DescribeMountTargetsRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -160,12 +173,12 @@ public class DescribeMountTargetsRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

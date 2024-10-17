@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDirQuotasRequest} extends {@link RequestModel}
  *
  * <p>DescribeDirQuotasRequest</p>
@@ -97,7 +98,11 @@ public class DescribeDirQuotasRequest extends Request {
         } 
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ca404****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -106,10 +111,11 @@ public class DescribeDirQuotasRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -118,10 +124,11 @@ public class DescribeDirQuotasRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10.
-         * <p>
+         * <p>The number of entries per page. Default value: 10.</p>
+         * <p>Valid values: 1 to 100.</p>
          * 
-         * Valid values: 1 to 100.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -130,10 +137,11 @@ public class DescribeDirQuotasRequest extends Request {
         }
 
         /**
-         * The absolute path of a directory.
-         * <p>
+         * <p>The absolute path of a directory.</p>
+         * <p>If you do not specify this parameter, all directories for which quotas are created are returned.</p>
          * 
-         * If you do not specify this parameter, all directories for which quotas are created are returned.
+         * <strong>example:</strong>
+         * <p>/data/sub1</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);

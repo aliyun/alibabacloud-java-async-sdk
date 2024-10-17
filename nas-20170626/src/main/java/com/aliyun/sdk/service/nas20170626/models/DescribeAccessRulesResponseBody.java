@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccessRulesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAccessRulesResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The rules in the permission group.
+         * <p>The rules in the permission group.</p>
          */
         public Builder accessRules(AccessRules accessRules) {
             this.accessRules = accessRules;
@@ -93,7 +94,10 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86D89E82-4297-4343-8E1E-A2495B35****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of rules.
+         * <p>The total number of rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAccessRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccessRulesResponseBody</p>
+     */
     public static class AccessRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessGroupName")
         private String accessGroupName;
@@ -253,7 +272,10 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
             private String userAccess; 
 
             /**
-             * The name of the permission group.
+             * <p>The name of the permission group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder accessGroupName(String accessGroupName) {
                 this.accessGroupName = accessGroupName;
@@ -261,7 +283,10 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder accessRuleId(String accessRuleId) {
                 this.accessRuleId = accessRuleId;
@@ -269,13 +294,15 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the file system.
-             * <p>
+             * <p>The type of the file system.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>standard: General-purpose Apsara File Storage NAS (NAS) file system</li>
+             * <li>extreme: Extreme NAS file system</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   standard: General-purpose Apsara File Storage NAS (NAS) file system
-             * *   extreme: Extreme NAS file system
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder fileSystemType(String fileSystemType) {
                 this.fileSystemType = fileSystemType;
@@ -283,7 +310,10 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The IPv6 address or CIDR block of the authorized object.
+             * <p>The IPv6 address or CIDR block of the authorized object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2001:250:6000::***</p>
              */
             public Builder ipv6SourceCidrIp(String ipv6SourceCidrIp) {
                 this.ipv6SourceCidrIp = ipv6SourceCidrIp;
@@ -291,12 +321,12 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the rule.
-             * <p>
+             * <p>The priority of the rule.</p>
+             * <p>If multiple rules are attached to the authorized object, the rule with the highest priority takes effect.</p>
+             * <p>Valid values: 1 to 100. The value 1 indicates the highest priority.</p>
              * 
-             * If multiple rules are attached to the authorized object, the rule with the highest priority takes effect.
-             * 
-             * Valid values: 1 to 100. The value 1 indicates the highest priority.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -304,13 +334,15 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The access permissions of the authorized object on the file system.
-             * <p>
+             * <p>The access permissions of the authorized object on the file system.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>RDWR (default): the read and write permissions</li>
+             * <li>RDONLY: the read-only permissions</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   RDWR (default): the read and write permissions
-             * *   RDONLY: the read-only permissions
+             * <strong>example:</strong>
+             * <p>RDWR</p>
              */
             public Builder RWAccess(String RWAccess) {
                 this.RWAccess = RWAccess;
@@ -318,7 +350,10 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -326,7 +361,7 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address or CIDR block of the authorized object.
+             * <p>The IP address or CIDR block of the authorized object.</p>
              */
             public Builder sourceCidrIp(String sourceCidrIp) {
                 this.sourceCidrIp = sourceCidrIp;
@@ -334,16 +369,17 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The access permissions for different types of users in the authorized object.
-             * <p>
+             * <p>The access permissions for different types of users in the authorized object.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>no_squash: allows access from root users to the file system.</li>
+             * <li>root_squash: grants root users the least permissions as the nobody user.</li>
+             * <li>all_squash: grants all users the least permissions as the nobody user.</li>
+             * </ul>
+             * <p>The nobody user has the least permissions in Linux and can access only the public content of the file system. This ensures the security of the file system.</p>
              * 
-             * Valid values:
-             * 
-             * *   no_squash: allows access from root users to the file system.
-             * *   root_squash: grants root users the least permissions as the nobody user.
-             * *   all_squash: grants all users the least permissions as the nobody user.
-             * 
-             * The nobody user has the least permissions in Linux and can access only the public content of the file system. This ensures the security of the file system.
+             * <strong>example:</strong>
+             * <p>no_squash</p>
              */
             public Builder userAccess(String userAccess) {
                 this.userAccess = userAccess;
@@ -357,6 +393,12 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAccessRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccessRulesResponseBody</p>
+     */
     public static class AccessRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessRule")
         private java.util.List < AccessRule> accessRule;

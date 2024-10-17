@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataFlowTasksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDataFlowTasksResponseBody</p>
@@ -90,6 +91,12 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDataFlowTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataFlowTasksResponseBody</p>
+     */
     public static class ProgressStats extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActualBytes")
         private Long actualBytes;
@@ -271,6 +278,12 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataFlowTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataFlowTasksResponseBody</p>
+     */
     public static class Report extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -332,6 +345,12 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataFlowTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataFlowTasksResponseBody</p>
+     */
     public static class Reports extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Report")
         private java.util.List < Report> report;
@@ -373,6 +392,12 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataFlowTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataFlowTasksResponseBody</p>
+     */
     public static class Task extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConflictPolicy")
         private String conflictPolicy;
@@ -649,7 +674,10 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was created.
+             * <p>The time when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-08-04 18:27:35</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -665,12 +693,15 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * null Valid values:
-             * <p>
+             * <p>null Valid values:</p>
+             * <ul>
+             * <li>null null</li>
+             * <li>null</li>
+             * <li>null</li>
+             * </ul>
              * 
-             * *   null null
-             * *   null
-             * *   null
+             * <strong>example:</strong>
+             * <p>Metadata</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -694,7 +725,10 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task ended.
+             * <p>The time when the task ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-08-04 18:27:35</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -710,11 +744,15 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * *
-             * <p>
-             * *
-             * *
-             * *   null
+             * <ul>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li>null</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>/a/b/c/</p>
              */
             public Builder fileSystemPath(String fileSystemPath) {
                 this.fileSystemPath = fileSystemPath;
@@ -730,7 +768,10 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * null
+             * <p>null</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/aa/</p>
              */
             public Builder fsPath(String fsPath) {
                 this.fsPath = fsPath;
@@ -738,11 +779,14 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * null Valid values:
-             * <p>
+             * <p>null Valid values:</p>
+             * <ul>
+             * <li>null</li>
+             * <li>null</li>
+             * </ul>
              * 
-             * *   null
-             * *   null
+             * <strong>example:</strong>
+             * <p>User</p>
              */
             public Builder originator(String originator) {
                 this.originator = originator;
@@ -750,7 +794,10 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * null null
+             * <p>null null</p>
+             * 
+             * <strong>example:</strong>
+             * <p>240</p>
              */
             public Builder progress(Long progress) {
                 this.progress = progress;
@@ -766,15 +813,16 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * null
-             * <p>
+             * <p>null</p>
+             * <p>null``</p>
+             * <p>Limits:</p>
+             * <ul>
+             * <li>null</li>
+             * <li>The name must be encoded in UTF-8.</li>
+             * </ul>
              * 
-             * null``
-             * 
-             * Limits:
-             * 
-             * *   null
-             * *   The name must be encoded in UTF-8.
+             * <strong>example:</strong>
+             * <p>/path_in_cpfs/reportfile.cvs</p>
              */
             public Builder reportPath(String reportPath) {
                 this.reportPath = reportPath;
@@ -790,18 +838,22 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ://
-             * <p>
+             * <p>://</p>
+             * <ul>
+             * <li></li>
+             * <li><ul>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li><a href="http://https://%E3%80%82"></a></li>
+             * </ul>
+             * </li>
+             * </ul>
+             * <p>**</p>
+             * <hr>
              * 
-             * *
-             * *   *
-             *     *
-             *     *
-             *     *   [](http://https://。)
-             * 
-             * **
-             * 
-             * ****
+             * <strong>example:</strong>
+             * <p>oss://bucket1</p>
              */
             public Builder sourceStorage(String sourceStorage) {
                 this.sourceStorage = sourceStorage;
@@ -809,7 +861,10 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * null
+             * <p>null</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-08-04 18:27:35</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -817,15 +872,18 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * null Valid values:
-             * <p>
+             * <p>null Valid values:</p>
+             * <ul>
+             * <li>null</li>
+             * <li>null</li>
+             * <li>null</li>
+             * <li>null</li>
+             * <li>null</li>
+             * <li>null</li>
+             * </ul>
              * 
-             * *   null
-             * *   null
-             * *   null
-             * *   null
-             * *   null
-             * *   null
+             * <strong>example:</strong>
+             * <p>Executing</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -833,13 +891,16 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * null Valid values:
-             * <p>
+             * <p>null Valid values:</p>
+             * <ul>
+             * <li>null</li>
+             * <li>null</li>
+             * <li>null null</li>
+             * <li>null</li>
+             * </ul>
              * 
-             * *   null
-             * *   null
-             * *   null null
-             * *   null
+             * <strong>example:</strong>
+             * <p>Import</p>
              */
             public Builder taskAction(String taskAction) {
                 this.taskAction = taskAction;
@@ -861,6 +922,12 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataFlowTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataFlowTasksResponseBody</p>
+     */
     public static class TaskInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Task")
         private java.util.List < Task> task;

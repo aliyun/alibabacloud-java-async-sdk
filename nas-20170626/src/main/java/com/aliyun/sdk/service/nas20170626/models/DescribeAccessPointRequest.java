@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccessPointRequest} extends {@link RequestModel}
  *
  * <p>DescribeAccessPointRequest</p>
@@ -69,7 +70,11 @@ public class DescribeAccessPointRequest extends Request {
         } 
 
         /**
-         * The ID of the access point.
+         * <p>The ID of the access point.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-ie15yd****</p>
          */
         public Builder accessPointId(String accessPointId) {
             this.putQueryParameter("AccessPointId", accessPointId);
@@ -78,7 +83,11 @@ public class DescribeAccessPointRequest extends Request {
         }
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31a8e4****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);

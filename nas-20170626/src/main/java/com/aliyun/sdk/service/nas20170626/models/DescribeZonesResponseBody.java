@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeZonesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeZonesResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeZonesResponseBody extends TeaModel {
         private Zones zones; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A70BEE5D-76D3-49FB-B58F-1F398211****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * The queried zones.
+         * <p>The queried zones.</p>
          */
         public Builder zones(Zones zones) {
             this.zones = zones;
@@ -70,6 +74,12 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZonesResponseBody</p>
+     */
     public static class Capacity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Protocol")
         private java.util.List < String > protocol;
@@ -111,6 +121,12 @@ public class DescribeZonesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZonesResponseBody</p>
+     */
     public static class InstanceType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
@@ -150,14 +166,18 @@ public class DescribeZonesResponseBody extends TeaModel {
             private String storageType; 
 
             /**
-             * The protocol type.
-             * <p>
+             * <p>The protocol type.</p>
+             * <ul>
+             * <li>If the FileSystemType parameter is set to standard, the protocol type is nfs or smb.</li>
+             * <li>If the FileSystemType parameter is set to extreme, the protocol type is nfs.</li>
+             * <li>If the FileSystemType parameter is set to cpfs, the protocol type is cpfs.</li>
+             * </ul>
+             * <blockquote>
+             * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
+             * </blockquote>
              * 
-             * *   If the FileSystemType parameter is set to standard, the protocol type is nfs or smb.
-             * *   If the FileSystemType parameter is set to extreme, the protocol type is nfs.
-             * *   If the FileSystemType parameter is set to cpfs, the protocol type is cpfs.
-             * 
-             * > CPFS file systems are available only on the China site (aliyun.com).
+             * <strong>example:</strong>
+             * <p>nfs</p>
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -165,14 +185,18 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type.
-             * <p>
+             * <p>The storage type.</p>
+             * <ul>
+             * <li>If the FileSystemType parameter is set to standard, the storage type is Performance or Capacity.</li>
+             * <li>If the FileSystemType parameter is set to extreme, the storage type is standard or advance.</li>
+             * <li>If the FileSystemType parameter is set to cpfs, the storage type is advance_100 (100 MB/s/TiB baseline) or advance_200 (200 MB/s/TiB baseline).</li>
+             * </ul>
+             * <blockquote>
+             * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
+             * </blockquote>
              * 
-             * *   If the FileSystemType parameter is set to standard, the storage type is Performance or Capacity.
-             * *   If the FileSystemType parameter is set to extreme, the storage type is standard or advance.
-             * *   If the FileSystemType parameter is set to cpfs, the storage type is advance\_100 (100 MB/s/TiB baseline) or advance\_200 (200 MB/s/TiB baseline).
-             * 
-             * > CPFS file systems are available only on the China site (aliyun.com).
+             * <strong>example:</strong>
+             * <p>Capacity</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -186,6 +210,12 @@ public class DescribeZonesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZonesResponseBody</p>
+     */
     public static class InstanceTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private java.util.List < InstanceType> instanceType;
@@ -227,6 +257,12 @@ public class DescribeZonesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZonesResponseBody</p>
+     */
     public static class Performance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Protocol")
         private java.util.List < String > protocol;
@@ -268,6 +304,12 @@ public class DescribeZonesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZonesResponseBody</p>
+     */
     public static class Zone extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Capacity")
         private Capacity capacity;
@@ -331,7 +373,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * This parameter is reserved. You can ignore this parameter.
+             * <p>This parameter is reserved. You can ignore this parameter.</p>
              */
             public Builder capacity(Capacity capacity) {
                 this.capacity = capacity;
@@ -339,7 +381,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The details about file system types.
+             * <p>The details about file system types.</p>
              */
             public Builder instanceTypes(InstanceTypes instanceTypes) {
                 this.instanceTypes = instanceTypes;
@@ -347,7 +389,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is reserved. You can ignore this parameter.
+             * <p>This parameter is reserved. You can ignore this parameter.</p>
              */
             public Builder performance(Performance performance) {
                 this.performance = performance;
@@ -355,7 +397,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-b</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -369,6 +414,12 @@ public class DescribeZonesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZonesResponseBody</p>
+     */
     public static class Zones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Zone")
         private java.util.List < Zone> zone;

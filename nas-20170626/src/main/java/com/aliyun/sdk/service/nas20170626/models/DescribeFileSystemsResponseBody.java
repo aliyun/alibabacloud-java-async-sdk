@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFileSystemsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFileSystemsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The queried file systems.
+         * <p>The queried file systems.</p>
          */
         public Builder fileSystems(FileSystems fileSystems) {
             this.fileSystems = fileSystems;
@@ -93,7 +94,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>035B3A3A-E514-4B41-B906-5D906CFB****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of file systems.
+         * <p>The total number of file systems.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFileSystemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileSystemsResponseBody</p>
+     */
     public static class Ldap extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BindDN")
         private String bindDN;
@@ -181,7 +200,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private String URI; 
 
             /**
-             * An LDAP entry.
+             * <p>An LDAP entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn=alibaba,dc=com</p>
              */
             public Builder bindDN(String bindDN) {
                 this.bindDN = bindDN;
@@ -189,7 +211,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * An LDAP search base.
+             * <p>An LDAP search base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dc=example</p>
              */
             public Builder searchBase(String searchBase) {
                 this.searchBase = searchBase;
@@ -197,7 +222,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * An LDAP URI.
+             * <p>An LDAP URI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ldap://ldap.example.example</p>
              */
             public Builder URI(String URI) {
                 this.URI = URI;
@@ -211,6 +239,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFileSystemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileSystemsResponseBody</p>
+     */
     public static class ClientMasterNode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultPasswd")
         private String defaultPasswd;
@@ -262,7 +296,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private String ecsIp; 
 
             /**
-             * The default logon password of the ECS instance on the client management node.
+             * <p>The default logon password of the ECS instance on the client management node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder defaultPasswd(String defaultPasswd) {
                 this.defaultPasswd = defaultPasswd;
@@ -270,7 +307,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance on the client management node.
+             * <p>The ID of the ECS instance on the client management node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-hp3i3odi5ory1buo****</p>
              */
             public Builder ecsId(String ecsId) {
                 this.ecsId = ecsId;
@@ -278,7 +318,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the ECS instance on the client management node.
+             * <p>The IP address of the ECS instance on the client management node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.0</p>
              */
             public Builder ecsIp(String ecsIp) {
                 this.ecsIp = ecsIp;
@@ -292,6 +335,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFileSystemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileSystemsResponseBody</p>
+     */
     public static class ClientMasterNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientMasterNode")
         private java.util.List < ClientMasterNode> clientMasterNode;
@@ -333,6 +382,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFileSystemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileSystemsResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -372,7 +427,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -380,7 +438,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -394,6 +455,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFileSystemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileSystemsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
@@ -435,6 +502,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFileSystemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileSystemsResponseBody</p>
+     */
     public static class MountTarget extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessGroupName")
         private String accessGroupName;
@@ -558,7 +631,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private String vswId; 
 
             /**
-             * The name of the permission group that is attached to the mount target.
+             * <p>The name of the permission group that is attached to the mount target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-001</p>
              */
             public Builder accessGroupName(String accessGroupName) {
                 this.accessGroupName = accessGroupName;
@@ -566,10 +642,8 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about client management nodes.
-             * <p>
-             * 
-             * This parameter is available only for CPFS file systems.
+             * <p>The information about client management nodes.</p>
+             * <p>This parameter is available only for CPFS file systems.</p>
              */
             public Builder clientMasterNodes(ClientMasterNodes clientMasterNodes) {
                 this.clientMasterNodes = clientMasterNodes;
@@ -577,9 +651,13 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The dual-stack (IPv4 and IPv6) domain name of the mount target.
-             * <p>
-             * > Only Extreme NAS file systems that reside in the Chinese mainland support IPv6.
+             * <p>The dual-stack (IPv4 and IPv6) domain name of the mount target.</p>
+             * <blockquote>
+             * <p>Only Extreme NAS file systems that reside in the Chinese mainland support IPv6.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>174494b666-x****.dualstack.cn-hangzhou.nas.aliyuncs.com</p>
              */
             public Builder dualStackMountTargetDomain(String dualStackMountTargetDomain) {
                 this.dualStackMountTargetDomain = dualStackMountTargetDomain;
@@ -587,7 +665,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name of the mount target.
+             * <p>The domain name of the mount target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>109c042666-w****.cn-hangzhou.nas.aliyuncs.com</p>
              */
             public Builder mountTargetDomain(String mountTargetDomain) {
                 this.mountTargetDomain = mountTargetDomain;
@@ -595,7 +676,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The network type. Valid value: vpc.
+             * <p>The network type. Valid value: vpc.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -603,17 +687,19 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the mount target.
-             * <p>
+             * <p>The status of the mount target.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Active: The mount target is available.</li>
+             * <li>Inactive: The mount target is unavailable.</li>
+             * <li>Pending: The mount target is being processed.</li>
+             * <li>Deleting: The mount target is being deleted.</li>
+             * <li>Hibernating: The mount target is being hibernated.</li>
+             * <li>Hibernated: The mount target is hibernated.</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   Active: The mount target is available.
-             * *   Inactive: The mount target is unavailable.
-             * *   Pending: The mount target is being processed.
-             * *   Deleting: The mount target is being deleted.
-             * *   Hibernating: The mount target is being hibernated.
-             * *   Hibernated: The mount target is hibernated.
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -621,7 +707,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags that are attached to the mount target.
+             * <p>The tags that are attached to the mount target.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -629,7 +715,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1sevsgtqvk5gxbl****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -637,7 +726,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1omfzsszekkvaxn****</p>
              */
             public Builder vswId(String vswId) {
                 this.vswId = vswId;
@@ -651,6 +743,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFileSystemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileSystemsResponseBody</p>
+     */
     public static class MountTargets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MountTarget")
         private java.util.List < MountTarget> mountTarget;
@@ -692,6 +790,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFileSystemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileSystemsResponseBody</p>
+     */
     public static class Options extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableOplock")
         private Boolean enableOplock;
@@ -719,13 +823,17 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private Boolean enableOplock; 
 
             /**
-             * Specifies whether to enable the oplock feature. Valid values:
-             * <p>
+             * <p>Specifies whether to enable the oplock feature. Valid values:</p>
+             * <ul>
+             * <li>true: enables the feature.</li>
+             * <li>false: disables the feature.</li>
+             * </ul>
+             * <blockquote>
+             * <p> Only Server Message Block (SMB) file systems support this feature.</p>
+             * </blockquote>
              * 
-             * *   true: enables the feature.
-             * *   false: disables the feature.
-             * 
-             * >  Only Server Message Block (SMB) file systems support this feature.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableOplock(Boolean enableOplock) {
                 this.enableOplock = enableOplock;
@@ -739,6 +847,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFileSystemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileSystemsResponseBody</p>
+     */
     public static class Package extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
@@ -814,7 +928,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * The end time of the validity period for the storage plan.
+             * <p>The end time of the validity period for the storage plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-01-05T16:00:00Z</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -822,7 +939,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the storage plan.
+             * <p>The ID of the storage plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>naspackage-0be9c4b624-37****</p>
              */
             public Builder packageId(String packageId) {
                 this.packageId = packageId;
@@ -830,12 +950,15 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the storage plan.
-             * <p>
+             * <p>The type of the storage plan.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>ssd: the storage plan for Performance NAS file systems.</li>
+             * <li>hybrid: the storage plan for Capacity NAS file systems.</li>
+             * </ul>
              * 
-             * Valid values:
-             * - ssd: the storage plan for Performance NAS file systems.
-             * - hybrid: the storage plan for Capacity NAS file systems.
+             * <strong>example:</strong>
+             * <p>hybrid</p>
              */
             public Builder packageType(String packageType) {
                 this.packageType = packageType;
@@ -843,7 +966,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The capacity of the storage plan. Unit: bytes.
+             * <p>The capacity of the storage plan. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>107374182400</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -851,7 +977,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the validity period for the storage plan.
+             * <p>The start time of the validity period for the storage plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-12-05T01:40:56Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -865,6 +994,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFileSystemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileSystemsResponseBody</p>
+     */
     public static class Packages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Package")
         private java.util.List < Package> _package;
@@ -906,6 +1041,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFileSystemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileSystemsResponseBody</p>
+     */
     public static class SupportedFeatures extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedFeature")
         private java.util.List < String > supportedFeature;
@@ -947,6 +1088,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFileSystemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileSystemsResponseBody</p>
+     */
     public static class TagsTag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -986,7 +1133,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -994,7 +1144,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1008,6 +1161,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFileSystemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileSystemsResponseBody</p>
+     */
     public static class FileSystemTags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < TagsTag> tag;
@@ -1049,9 +1208,68 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFileSystemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileSystemsResponseBody</p>
+     */
+    public static class VswIds extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("VswId")
+        private java.util.List < String > vswId;
+
+        private VswIds(Builder builder) {
+            this.vswId = builder.vswId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VswIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return vswId
+         */
+        public java.util.List < String > getVswId() {
+            return this.vswId;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > vswId; 
+
+            /**
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1omfzsszekkvaxn****</p>
+             */
+            public Builder vswId(java.util.List < String > vswId) {
+                this.vswId = vswId;
+                return this;
+            }
+
+            public VswIds build() {
+                return new VswIds(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeFileSystemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileSystemsResponseBody</p>
+     */
     public static class FileSystem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessPointCount")
         private String accessPointCount;
+
+        @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicyId")
+        private String autoSnapshotPolicyId;
 
         @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Long bandwidth;
@@ -1107,6 +1325,9 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
 
+        @com.aliyun.core.annotation.NameInMap("QuorumVswId")
+        private String quorumVswId;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
@@ -1128,11 +1349,18 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
+
+        @com.aliyun.core.annotation.NameInMap("VswIds")
+        private VswIds vswIds;
+
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private FileSystem(Builder builder) {
             this.accessPointCount = builder.accessPointCount;
+            this.autoSnapshotPolicyId = builder.autoSnapshotPolicyId;
             this.bandwidth = builder.bandwidth;
             this.capacity = builder.capacity;
             this.chargeType = builder.chargeType;
@@ -1151,6 +1379,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             this.options = builder.options;
             this.packages = builder.packages;
             this.protocolType = builder.protocolType;
+            this.quorumVswId = builder.quorumVswId;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
             this.status = builder.status;
@@ -1158,6 +1387,8 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             this.supportedFeatures = builder.supportedFeatures;
             this.tags = builder.tags;
             this.version = builder.version;
+            this.vpcId = builder.vpcId;
+            this.vswIds = builder.vswIds;
             this.zoneId = builder.zoneId;
         }
 
@@ -1174,6 +1405,13 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
          */
         public String getAccessPointCount() {
             return this.accessPointCount;
+        }
+
+        /**
+         * @return autoSnapshotPolicyId
+         */
+        public String getAutoSnapshotPolicyId() {
+            return this.autoSnapshotPolicyId;
         }
 
         /**
@@ -1303,6 +1541,13 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
 
         /**
+         * @return quorumVswId
+         */
+        public String getQuorumVswId() {
+            return this.quorumVswId;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -1352,6 +1597,20 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
 
         /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        /**
+         * @return vswIds
+         */
+        public VswIds getVswIds() {
+            return this.vswIds;
+        }
+
+        /**
          * @return zoneId
          */
         public String getZoneId() {
@@ -1360,6 +1619,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String accessPointCount; 
+            private String autoSnapshotPolicyId; 
             private Long bandwidth; 
             private Long capacity; 
             private String chargeType; 
@@ -1378,6 +1638,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private Options options; 
             private Packages packages; 
             private String protocolType; 
+            private String quorumVswId; 
             private String regionId; 
             private String resourceGroupId; 
             private String status; 
@@ -1385,10 +1646,15 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private SupportedFeatures supportedFeatures; 
             private FileSystemTags tags; 
             private String version; 
+            private String vpcId; 
+            private VswIds vswIds; 
             private String zoneId; 
 
             /**
-             * Number of access points.
+             * <p>Number of access points.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder accessPointCount(String accessPointCount) {
                 this.accessPointCount = accessPointCount;
@@ -1396,10 +1662,19 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth of the file system.
-             * <p>
+             * AutoSnapshotPolicyId.
+             */
+            public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
+                this.autoSnapshotPolicyId = autoSnapshotPolicyId;
+                return this;
+            }
+
+            /**
+             * <p>The bandwidth of the file system.</p>
+             * <p>Unit: MB/s. This parameter is unavailable for General-purpose NAS file systems.</p>
              * 
-             * Unit: MB/s. This parameter is unavailable for General-purpose NAS file systems.
+             * <strong>example:</strong>
+             * <p>150</p>
              */
             public Builder bandwidth(Long bandwidth) {
                 this.bandwidth = bandwidth;
@@ -1407,10 +1682,11 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The capacity of the file system.
-             * <p>
+             * <p>The capacity of the file system.</p>
+             * <p>Unit: GiB.</p>
              * 
-             * Unit: GiB.
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder capacity(Long capacity) {
                 this.capacity = capacity;
@@ -1418,13 +1694,16 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method.
-             * <p>
+             * <p>The billing method.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Subscription: The subscription billing method is used.</li>
+             * <li>PayAsYouGo: The pay-as-you-go billing method is used.</li>
+             * <li>Package: A storage plan is attached to the file system.</li>
+             * </ul>
              * 
-             * Valid values:
-             * - Subscription: The subscription billing method is used.
-             * - PayAsYouGo: The pay-as-you-go billing method is used.
-             * - Package: A storage plan is attached to the file system.
+             * <strong>example:</strong>
+             * <p>PayAsYouGo</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -1432,7 +1711,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the file system was created.
+             * <p>The time when the file system was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-01-05T16:00:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1440,7 +1722,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the file system.
+             * <p>The description of the file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1448,14 +1733,16 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The encryption type.
-             * <p>
+             * <p>The encryption type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>0: The data in the file system is not encrypted.</li>
+             * <li>1: A NAS-managed key is used to encrypt the data in the file system.</li>
+             * <li>2: A KMS-managed key is used to encrypt the data in the file system.</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   0: The data in the file system is not encrypted.
-             * *   1: A NAS-managed key is used to encrypt the data in the file system.
-             * *   2: A KMS-managed key is used to encrypt the data in the file system.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder encryptType(Integer encryptType) {
                 this.encryptType = encryptType;
@@ -1463,7 +1750,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the file system expires.
+             * <p>The time when the file system expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-01-05T16:00:00Z</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -1471,7 +1761,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the file system.
+             * <p>The ID of the file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>109c04****</p>
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -1479,14 +1772,19 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the file system.
-             * <p>
+             * <p>The type of the file system.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>standard: General-purpose NAS file system</li>
+             * <li>extreme: Extreme NAS file system</li>
+             * <li>cpfs: CPFS file system<blockquote>
+             * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
+             * </blockquote>
+             * </li>
+             * </ul>
              * 
-             * Valid values:
-             * - standard: General-purpose NAS file system
-             * - extreme: Extreme NAS file system
-             * - cpfs: CPFS file system
-             * > CPFS file systems are available only on the China site (aliyun.com).
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder fileSystemType(String fileSystemType) {
                 this.fileSystemType = fileSystemType;
@@ -1494,7 +1792,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the key that is managed by Key Management Service (KMS).
+             * <p>The ID of the key that is managed by Key Management Service (KMS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
              */
             public Builder KMSKeyId(String KMSKeyId) {
                 this.KMSKeyId = KMSKeyId;
@@ -1502,10 +1803,8 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The Lightweight Directory Access Protocol (LDAP) configurations.
-             * <p>
-             * 
-             * This parameter is available only for CPFS file systems.
+             * <p>The Lightweight Directory Access Protocol (LDAP) configurations.</p>
+             * <p>This parameter is available only for CPFS file systems.</p>
              */
             public Builder ldap(Ldap ldap) {
                 this.ldap = ldap;
@@ -1513,10 +1812,11 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * Archive storage usage.
-             * <p>
+             * <p>Archive storage usage.</p>
+             * <p>Unit: Byte.</p>
              * 
-             * Unit: Byte.
+             * <strong>example:</strong>
+             * <p>1611661312</p>
              */
             public Builder meteredArchiveSize(Long meteredArchiveSize) {
                 this.meteredArchiveSize = meteredArchiveSize;
@@ -1524,10 +1824,11 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The storage usage of the Infrequent Access (IA) storage medium.
-             * <p>
+             * <p>The storage usage of the Infrequent Access (IA) storage medium.</p>
+             * <p>Unit: bytes.</p>
              * 
-             * Unit: bytes.
+             * <strong>example:</strong>
+             * <p>362832</p>
              */
             public Builder meteredIASize(Long meteredIASize) {
                 this.meteredIASize = meteredIASize;
@@ -1535,10 +1836,11 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The storage usage of the file system.
-             * <p>
+             * <p>The storage usage of the file system.</p>
+             * <p>The value of this parameter is the maximum storage usage of the file system over the last hour. Unit: bytes.</p>
              * 
-             * The value of this parameter is the maximum storage usage of the file system over the last hour. Unit: bytes.
+             * <strong>example:</strong>
+             * <p>1611661312</p>
              */
             public Builder meteredSize(Long meteredSize) {
                 this.meteredSize = meteredSize;
@@ -1546,7 +1848,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about mount targets.
+             * <p>The information about mount targets.</p>
              */
             public Builder mountTargets(MountTargets mountTargets) {
                 this.mountTargets = mountTargets;
@@ -1554,7 +1856,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The options.
+             * <p>The options.</p>
              */
             public Builder options(Options options) {
                 this.options = options;
@@ -1562,7 +1864,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about storage plans.
+             * <p>The information about storage plans.</p>
              */
             public Builder packages(Packages packages) {
                 this.packages = packages;
@@ -1570,16 +1872,19 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol type of the file system.
-             * <p>
+             * <p>The protocol type of the file system.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>NFS: Network File System (NFS)</li>
+             * <li>SMB: Server Message Block (SMB)</li>
+             * <li>cpfs: the protocol type supported by the CPFS file system</li>
+             * </ul>
+             * <blockquote>
+             * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
+             * </blockquote>
              * 
-             * Valid values:
-             * 
-             * *   NFS: Network File System (NFS)
-             * *   SMB: Server Message Block (SMB)
-             * *   cpfs: the protocol type supported by the CPFS file system
-             * 
-             * > CPFS file systems are available only on the China site (aliyun.com).
+             * <strong>example:</strong>
+             * <p>NFS</p>
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -1587,7 +1892,18 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * QuorumVswId.
+             */
+            public Builder quorumVswId(String quorumVswId) {
+                this.quorumVswId = quorumVswId;
+                return this;
+            }
+
+            /**
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1595,10 +1911,11 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID.
-             * <p>
+             * <p>The resource group ID.</p>
+             * <p>You can log on to the <a href="https://resourcemanager.console.aliyun.com/resource-groups?">Resource Management console</a> to view resource group IDs.</p>
              * 
-             * You can log on to the [Resource Management console](https://resourcemanager.console.aliyun.com/resource-groups?) to view resource group IDs.
+             * <strong>example:</strong>
+             * <p>rg-acfmwavnfdf****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1606,14 +1923,18 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the file system. Valid values:
-             * <p>
-             * - Pending: The file system is being created or modified.
-             * - Running: The file system is available. Before you create a mount target for the file system, make sure that the file system is in the Running state.
-             * - Stopped: The file system is unavailable.
-             * - Extending: The file system is being scaled up.
-             * - Stopping: The file system is being stopped.
-             * - Deleting: The file system is being deleted.
+             * <p>The status of the file system. Valid values:</p>
+             * <ul>
+             * <li>Pending: The file system is being created or modified.</li>
+             * <li>Running: The file system is available. Before you create a mount target for the file system, make sure that the file system is in the Running state.</li>
+             * <li>Stopped: The file system is unavailable.</li>
+             * <li>Extending: The file system is being scaled up.</li>
+             * <li>Stopping: The file system is being stopped.</li>
+             * <li>Deleting: The file system is being deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Pending</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1621,14 +1942,19 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type.
-             * <p>
+             * <p>The storage type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Valid values for General-purpose NAS file systems: Capacity,Premium and Performance.</li>
+             * <li>Valid values for Extreme NAS file systems: standard and advance.</li>
+             * <li>Valid values for CPFS file systems: advance_100 (100 MB/s/TiB baseline) and advance_200 (200 MB/s/TiB baseline).<blockquote>
+             * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
+             * </blockquote>
+             * </li>
+             * </ul>
              * 
-             * Valid values:
-             * - Valid values for General-purpose NAS file systems: Capacity,Premium and Performance.
-             * - Valid values for Extreme NAS file systems: standard and advance.
-             * - Valid values for CPFS file systems: advance_100 (100 MB/s/TiB baseline) and advance_200 (200 MB/s/TiB baseline).
-             *  > CPFS file systems are available only on the China site (aliyun.com).
+             * <strong>example:</strong>
+             * <p>Performance</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -1636,7 +1962,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The features that are supported by the file system.
+             * <p>The features that are supported by the file system.</p>
              */
             public Builder supportedFeatures(SupportedFeatures supportedFeatures) {
                 this.supportedFeatures = supportedFeatures;
@@ -1644,7 +1970,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags that are attached to the file system.
+             * <p>The tags that are attached to the file system.</p>
              */
             public Builder tags(FileSystemTags tags) {
                 this.tags = tags;
@@ -1652,10 +1978,11 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the file system.
-             * <p>
+             * <p>The version number of the file system.</p>
+             * <p>This parameter is available only for Extreme NAS file systems and CPFS file systems.</p>
              * 
-             * This parameter is available only for Extreme NAS file systems and CPFS file systems.
+             * <strong>example:</strong>
+             * <p>2.3.4</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1663,7 +1990,29 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone where the file system resides.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1sevsgtqvk5gxbl****</p>
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            /**
+             * VswIds.
+             */
+            public Builder vswIds(VswIds vswIds) {
+                this.vswIds = vswIds;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the zone where the file system resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-b</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -1677,6 +2026,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFileSystemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileSystemsResponseBody</p>
+     */
     public static class FileSystems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileSystem")
         private java.util.List < FileSystem> fileSystem;

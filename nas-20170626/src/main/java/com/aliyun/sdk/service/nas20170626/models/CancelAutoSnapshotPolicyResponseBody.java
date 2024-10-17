@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelAutoSnapshotPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>CancelAutoSnapshotPolicyResponseBody</p>
@@ -37,10 +38,11 @@ public class CancelAutoSnapshotPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
-         * <p>
+         * <p>The request ID.</p>
+         * <p>Every response returns a unique request ID regardless of whether the request is successful.</p>
          * 
-         * Every response returns a unique request ID regardless of whether the request is successful.
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DED****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

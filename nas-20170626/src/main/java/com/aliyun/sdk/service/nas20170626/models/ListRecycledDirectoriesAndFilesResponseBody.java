@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRecycledDirectoriesAndFilesResponseBody} extends {@link TeaModel}
  *
  * <p>ListRecycledDirectoriesAndFilesResponseBody</p>
@@ -61,7 +62,7 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about files or directories in the recycle bin.
+         * <p>The information about files or directories in the recycle bin.</p>
          */
         public Builder entries(java.util.List < Entries> entries) {
             this.entries = entries;
@@ -69,10 +70,11 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token.
-         * <p>
+         * <p>A pagination token.</p>
+         * <p>If all the files and directories are incompletely returned in a query, the return value of the NextToken parameter is not empty. In this case, you can specify a valid value for the NextToken parameter to continue the query.</p>
          * 
-         * If all the files and directories are incompletely returned in a query, the return value of the NextToken parameter is not empty. In this case, you can specify a valid value for the NextToken parameter to continue the query.
+         * <strong>example:</strong>
+         * <p>CKuO8QMSIjE2OTc3NzI0NjI5MTcyMTYyNDVfMzEzNTUyMF81MjEzODY=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -80,7 +82,10 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>98696EF0-1607-4E9D-B01D-F20930B6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -93,6 +98,12 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRecycledDirectoriesAndFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRecycledDirectoriesAndFilesResponseBody</p>
+     */
     public static class Entries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ATime")
         private String aTime;
@@ -216,7 +227,10 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The time when the file or directory was last accessed.
+             * <p>The time when the file or directory was last accessed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-10-30T10:08:08Z</p>
              */
             public Builder aTime(String aTime) {
                 this.aTime = aTime;
@@ -224,7 +238,10 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the metadata was last modified.
+             * <p>The time when the metadata was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-10-30T10:08:08Z</p>
              */
             public Builder cTime(String cTime) {
                 this.cTime = cTime;
@@ -232,7 +249,10 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the file or directory was deleted.
+             * <p>The time when the file or directory was deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-30T10:08:08Z</p>
              */
             public Builder deleteTime(String deleteTime) {
                 this.deleteTime = deleteTime;
@@ -240,7 +260,10 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the files or directories.
+             * <p>The IDs of the files or directories.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>04***08</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -248,7 +271,10 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The inode of the file or directory.
+             * <p>The inode of the file or directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>04***08</p>
              */
             public Builder inode(String inode) {
                 this.inode = inode;
@@ -256,7 +282,10 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the file or directory was last modified.
+             * <p>The time when the file or directory was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-10-30T10:08:08Z</p>
              */
             public Builder mTime(String mTime) {
                 this.mTime = mTime;
@@ -264,7 +293,10 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the file or directory before it was deleted.
+             * <p>The name of the file or directory before it was deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test001</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -272,10 +304,11 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the file. Unit: bytes.
-             * <p>
+             * <p>The size of the file. Unit: bytes.</p>
+             * <p>The value 0 is returned for this parameter if Directory is returned for the Type parameter.</p>
              * 
-             * The value 0 is returned for this parameter if Directory is returned for the Type parameter.
+             * <strong>example:</strong>
+             * <p>1073741824</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -283,11 +316,14 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the returned object. Valid values:
-             * <p>
+             * <p>The type of the returned object. Valid values:</p>
+             * <ul>
+             * <li>File</li>
+             * <li>Directory</li>
+             * </ul>
              * 
-             * *   File
-             * *   Directory
+             * <strong>example:</strong>
+             * <p>File</p>
              */
             public Builder type(String type) {
                 this.type = type;

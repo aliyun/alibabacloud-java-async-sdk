@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAccessGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteAccessGroupRequest</p>
@@ -68,7 +69,11 @@ public class DeleteAccessGroupRequest extends Request {
         } 
 
         /**
-         * The name of the permission group to be deleted.
+         * <p>The name of the permission group to be deleted.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-test</p>
          */
         public Builder accessGroupName(String accessGroupName) {
             this.putQueryParameter("AccessGroupName", accessGroupName);
@@ -77,13 +82,15 @@ public class DeleteAccessGroupRequest extends Request {
         }
 
         /**
-         * The type of the file system.
-         * <p>
+         * <p>The type of the file system.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>standard (default): General-purpose NAS file system</li>
+         * <li>extreme: Extreme NAS file system</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   standard (default): General-purpose NAS file system
-         * *   extreme: Extreme NAS file system
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         public Builder fileSystemType(String fileSystemType) {
             this.putQueryParameter("FileSystemType", fileSystemType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRecycleBinJobsRequest} extends {@link RequestModel}
  *
  * <p>ListRecycleBinJobsRequest</p>
@@ -111,7 +112,11 @@ public class ListRecycleBinJobsRequest extends Request {
         } 
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ca404****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -120,7 +125,10 @@ public class ListRecycleBinJobsRequest extends Request {
         }
 
         /**
-         * The job ID.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rb-15<strong><strong>ed-r-1625</strong></strong>2441</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -129,10 +137,11 @@ public class ListRecycleBinJobsRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -141,12 +150,12 @@ public class ListRecycleBinJobsRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -155,16 +164,19 @@ public class ListRecycleBinJobsRequest extends Request {
         }
 
         /**
-         * The job status. Valid values:
-         * <p>
+         * <p>The job status. Valid values:</p>
+         * <ul>
+         * <li>Running: The job is running.</li>
+         * <li>Defragmenting: The job is defragmenting data.</li>
+         * <li>PartialSuccess: The job is partially completed.</li>
+         * <li>Success: The job is completed.</li>
+         * <li>Fail: The job failed.</li>
+         * <li>Cancelled: The job is canceled.</li>
+         * <li>all (default)</li>
+         * </ul>
          * 
-         * *   Running: The job is running.
-         * *   Defragmenting: The job is defragmenting data.
-         * *   PartialSuccess: The job is partially completed.
-         * *   Success: The job is completed.
-         * *   Fail: The job failed.
-         * *   Cancelled: The job is canceled.
-         * *   all (default)
+         * <strong>example:</strong>
+         * <p>All</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

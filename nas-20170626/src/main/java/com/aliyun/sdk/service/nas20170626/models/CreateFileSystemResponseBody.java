@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFileSystemResponseBody} extends {@link TeaModel}
  *
  * <p>CreateFileSystemResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateFileSystemResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the file system that is created.
+         * <p>The ID of the file system that is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ca404****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = fileSystemId;
@@ -57,7 +61,10 @@ public class CreateFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>98696EF0-1607-4E9D-B01D-F20930B6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

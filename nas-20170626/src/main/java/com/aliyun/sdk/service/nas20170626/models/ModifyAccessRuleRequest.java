@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAccessRuleRequest} extends {@link RequestModel}
  *
  * <p>ModifyAccessRuleRequest</p>
@@ -154,7 +155,11 @@ public class ModifyAccessRuleRequest extends Request {
         } 
 
         /**
-         * The name of the permission group.
+         * <p>The name of the permission group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-test</p>
          */
         public Builder accessGroupName(String accessGroupName) {
             this.putQueryParameter("AccessGroupName", accessGroupName);
@@ -163,7 +168,11 @@ public class ModifyAccessRuleRequest extends Request {
         }
 
         /**
-         * The rule ID.
+         * <p>The rule ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder accessRuleId(String accessRuleId) {
             this.putQueryParameter("AccessRuleId", accessRuleId);
@@ -172,13 +181,15 @@ public class ModifyAccessRuleRequest extends Request {
         }
 
         /**
-         * The type of the file system.
-         * <p>
+         * <p>The type of the file system.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>standard (default): General-purpose NAS file system</li>
+         * <li>extreme: Extreme NAS file system</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   standard (default): General-purpose NAS file system
-         * *   extreme: Extreme NAS file system
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         public Builder fileSystemType(String fileSystemType) {
             this.putQueryParameter("FileSystemType", fileSystemType);
@@ -187,14 +198,18 @@ public class ModifyAccessRuleRequest extends Request {
         }
 
         /**
-         * The IPv6 address or CIDR block of the authorized object.
-         * <p>
+         * <p>The IPv6 address or CIDR block of the authorized object.</p>
+         * <p>You must set this parameter to an IPv6 IP address or CIDR block.</p>
+         * <blockquote>
+         * <ul>
+         * <li>Only Extreme NAS file systems that reside in the China (Hohhot) region support IPv6.</li>
+         * <li>Only permission groups that reside in virtual private clouds (VPCs) support IPv6.</li>
+         * <li>This parameter is unavailable if you specify the SourceCidrIp parameter.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * You must set this parameter to an IPv6 IP address or CIDR block.
-         * 
-         * > *   Only Extreme NAS file systems that reside in the China (Hohhot) region support IPv6.
-         * >*   Only permission groups that reside in virtual private clouds (VPCs) support IPv6.
-         * >*   This parameter is unavailable if you specify the SourceCidrIp parameter.
+         * <strong>example:</strong>
+         * <p>fe80::3d4a:80fd:f05d:****</p>
          */
         public Builder ipv6SourceCidrIp(String ipv6SourceCidrIp) {
             this.putQueryParameter("Ipv6SourceCidrIp", ipv6SourceCidrIp);
@@ -203,12 +218,12 @@ public class ModifyAccessRuleRequest extends Request {
         }
 
         /**
-         * The priority of the rule.
-         * <p>
+         * <p>The priority of the rule.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 1, which indicates the highest priority.</p>
          * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 1, which indicates the highest priority.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -217,13 +232,15 @@ public class ModifyAccessRuleRequest extends Request {
         }
 
         /**
-         * The access permissions of the authorized object on the file system.
-         * <p>
+         * <p>The access permissions of the authorized object on the file system.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>RDWR (default): the read and write permissions</li>
+         * <li>RDONLY: the read-only permissions</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   RDWR (default): the read and write permissions
-         * *   RDONLY: the read-only permissions
+         * <strong>example:</strong>
+         * <p>RDWR</p>
          */
         public Builder RWAccessType(String RWAccessType) {
             this.putQueryParameter("RWAccessType", RWAccessType);
@@ -232,10 +249,11 @@ public class ModifyAccessRuleRequest extends Request {
         }
 
         /**
-         * The IP address or CIDR block of the authorized object.
-         * <p>
+         * <p>The IP address or CIDR block of the authorized object.</p>
+         * <p>You must set this parameter to an IP address or CIDR block.</p>
          * 
-         * You must set this parameter to an IP address or CIDR block.
+         * <strong>example:</strong>
+         * <p><code>192.0.**.**</code></p>
          */
         public Builder sourceCidrIp(String sourceCidrIp) {
             this.putQueryParameter("SourceCidrIp", sourceCidrIp);
@@ -244,16 +262,17 @@ public class ModifyAccessRuleRequest extends Request {
         }
 
         /**
-         * The access permissions for different types of users in the authorized object.
-         * <p>
+         * <p>The access permissions for different types of users in the authorized object.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>no_squash: allows access from root users to the file system.</li>
+         * <li>root_squash: grants root users the least permissions as the nobody user.</li>
+         * <li>all_squash: grants all users the least permissions as the nobody user.</li>
+         * </ul>
+         * <p>The nobody user has the least permissions in Linux and can access only the public content of the file system. This ensures the security of the file system.</p>
          * 
-         * Valid values:
-         * 
-         * *   no_squash: allows access from root users to the file system.
-         * *   root_squash: grants root users the least permissions as the nobody user.
-         * *   all_squash: grants all users the least permissions as the nobody user.
-         * 
-         * The nobody user has the least permissions in Linux and can access only the public content of the file system. This ensures the security of the file system.
+         * <strong>example:</strong>
+         * <p>all_squash</p>
          */
         public Builder userAccessType(String userAccessType) {
             this.putQueryParameter("UserAccessType", userAccessType);

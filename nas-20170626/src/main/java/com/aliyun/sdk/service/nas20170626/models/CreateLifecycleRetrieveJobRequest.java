@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLifecycleRetrieveJobRequest} extends {@link RequestModel}
  *
  * <p>CreateLifecycleRetrieveJobRequest</p>
@@ -83,7 +84,11 @@ public class CreateLifecycleRetrieveJobRequest extends Request {
         } 
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31a8e4****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -92,7 +97,11 @@ public class CreateLifecycleRetrieveJobRequest extends Request {
         }
 
         /**
-         * The directories or files that you want to retrieve. You can specify a maximum of 10 paths.
+         * <p>The directories or files that you want to retrieve. You can specify a maximum of 10 paths.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Paths.1=/pathway/doc1,Paths.2=/pathway/doc2</p>
          */
         public Builder paths(java.util.List < String > paths) {
             this.putQueryParameter("Paths", paths);
@@ -101,11 +110,14 @@ public class CreateLifecycleRetrieveJobRequest extends Request {
         }
 
         /**
-         * The storage class.
-         * <p>
+         * <p>The storage class.</p>
+         * <ul>
+         * <li>InfrequentAccess (default): the Infrequent Access (IA) storage class.</li>
+         * <li>Archive: the Archive storage class.</li>
+         * </ul>
          * 
-         * *   InfrequentAccess (default): the Infrequent Access (IA) storage class.
-         * *   Archive: the Archive storage class.
+         * <strong>example:</strong>
+         * <p>InfrequentAccess</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);

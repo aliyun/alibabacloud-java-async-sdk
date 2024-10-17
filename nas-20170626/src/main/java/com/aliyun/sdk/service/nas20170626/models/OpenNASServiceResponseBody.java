@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OpenNASServiceResponseBody} extends {@link TeaModel}
  *
  * <p>OpenNASServiceResponseBody</p>
@@ -69,7 +70,10 @@ public class OpenNASServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The order ID.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20671870151****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -77,7 +81,10 @@ public class OpenNASServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>427DB0B3-9436-4A3C-B2BC-B961F95E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDirectoriesAndFilesRequest} extends {@link RequestModel}
  *
  * <p>ListDirectoriesAndFilesRequest</p>
@@ -127,15 +128,18 @@ public class ListDirectoriesAndFilesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to query only directories.
-         * <p>
+         * <p>Specifies whether to query only directories.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>false (default): queries both directories and files.</li>
+         * <li>true: queries only directories.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set the StorageType parameter to All, you must set the DirectoryOnly parameter to true.</p>
+         * </blockquote>
          * 
-         * Valid values:
-         * 
-         * *   false (default): queries both directories and files.
-         * *   true: queries only directories.
-         * 
-         * >  If you set the StorageType parameter to All, you must set the DirectoryOnly parameter to true.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder directoryOnly(Boolean directoryOnly) {
             this.putQueryParameter("DirectoryOnly", directoryOnly);
@@ -144,7 +148,11 @@ public class ListDirectoriesAndFilesRequest extends Request {
         }
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31a8e4****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -153,12 +161,12 @@ public class ListDirectoriesAndFilesRequest extends Request {
         }
 
         /**
-         * The maximum number of directories or files to include in the results of each query.
-         * <p>
+         * <p>The maximum number of directories or files to include in the results of each query.</p>
+         * <p>Valid values: 10 to 128.</p>
+         * <p>Default value: 100.</p>
          * 
-         * Valid values: 10 to 128.
-         * 
-         * Default value: 100.
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -167,7 +175,10 @@ public class ListDirectoriesAndFilesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -176,10 +187,12 @@ public class ListDirectoriesAndFilesRequest extends Request {
         }
 
         /**
-         * The absolute path of the directory.
-         * <p>
+         * <p>The absolute path of the directory.</p>
+         * <p>The path must start with a forward slash (/) and must be a path that exists in the mount target.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The path must start with a forward slash (/) and must be a path that exists in the mount target.
+         * <strong>example:</strong>
+         * <p>/pathway/to/folder</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -188,14 +201,19 @@ public class ListDirectoriesAndFilesRequest extends Request {
         }
 
         /**
-         * The storage class.
-         * <p>
+         * <p>The storage class.</p>
+         * <ul>
+         * <li>InfrequentAccess: the Infrequent Access (IA) storage class.</li>
+         * <li>Archive: the Archive storage class.</li>
+         * <li>All: all stored data.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set the StorageType parameter to All, you must set the DirectoryOnly parameter to true.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   InfrequentAccess: the Infrequent Access (IA) storage class.
-         * *   Archive: the Archive storage class.
-         * *   All: all stored data.
-         * 
-         * >  If you set the StorageType parameter to All, you must set the DirectoryOnly parameter to true.
+         * <strong>example:</strong>
+         * <p>InfrequentAccess</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);

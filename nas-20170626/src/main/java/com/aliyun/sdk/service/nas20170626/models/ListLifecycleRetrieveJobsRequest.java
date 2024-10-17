@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLifecycleRetrieveJobsRequest} extends {@link RequestModel}
  *
  * <p>ListLifecycleRetrieveJobsRequest</p>
@@ -110,7 +111,10 @@ public class ListLifecycleRetrieveJobsRequest extends Request {
         } 
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31a8e4****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -119,10 +123,11 @@ public class ListLifecycleRetrieveJobsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -131,12 +136,12 @@ public class ListLifecycleRetrieveJobsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -145,13 +150,16 @@ public class ListLifecycleRetrieveJobsRequest extends Request {
         }
 
         /**
-         * The status of the data retrieval task. Valid values:
-         * <p>
+         * <p>The status of the data retrieval task. Valid values:</p>
+         * <ul>
+         * <li>active: The task is running.</li>
+         * <li>canceled: The task is canceled.</li>
+         * <li>completed: The task is completed.</li>
+         * <li>failed: The task has failed.</li>
+         * </ul>
          * 
-         * *   active: The task is running.
-         * *   canceled: The task is canceled.
-         * *   completed: The task is completed.
-         * *   failed: The task has failed.
+         * <strong>example:</strong>
+         * <p>completed</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -160,13 +168,17 @@ public class ListLifecycleRetrieveJobsRequest extends Request {
         }
 
         /**
-         * The storage class.
-         * <p>
+         * <p>The storage class.</p>
+         * <ul>
+         * <li>InfrequentAccess: the Infrequent Access (IA) storage class.</li>
+         * <li>Archive: the Archive storage class.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If the StorageType parameter is not specified, data retrieval tasks of all types are returned.</p>
+         * </blockquote>
          * 
-         * *   InfrequentAccess: the Infrequent Access (IA) storage class.
-         * *   Archive: the Archive storage class.
-         * 
-         * >  If the StorageType parameter is not specified, data retrieval tasks of all types are returned.
+         * <strong>example:</strong>
+         * <p>InfrequentAccess</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);

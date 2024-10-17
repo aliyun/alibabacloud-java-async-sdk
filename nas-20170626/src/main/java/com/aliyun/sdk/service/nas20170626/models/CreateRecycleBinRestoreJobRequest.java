@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRecycleBinRestoreJobRequest} extends {@link RequestModel}
  *
  * <p>CreateRecycleBinRestoreJobRequest</p>
@@ -98,12 +99,14 @@ public class CreateRecycleBinRestoreJobRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
-         * 
-         * > If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -112,10 +115,12 @@ public class CreateRecycleBinRestoreJobRequest extends Request {
         }
 
         /**
-         * The ID of the file or directory that you want to restore.
-         * <p>
+         * <p>The ID of the file or directory that you want to restore.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/264192.html">ListRecycleBinJobs</a> operation to query the value of the FileId parameter.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListRecycleBinJobs](~~264192~~) operation to query the value of the FileId parameter.
+         * <strong>example:</strong>
+         * <p>04***08</p>
          */
         public Builder fileId(String fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -124,7 +129,11 @@ public class CreateRecycleBinRestoreJobRequest extends Request {
         }
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ca404****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -133,7 +142,11 @@ public class CreateRecycleBinRestoreJobRequest extends Request {
         }
 
         /**
-         * The ID of the directory to which the file is restored.
+         * <p>The ID of the directory to which the file is restored.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13***15</p>
          */
         public Builder targetFileId(String targetFileId) {
             this.putQueryParameter("TargetFileId", targetFileId);
