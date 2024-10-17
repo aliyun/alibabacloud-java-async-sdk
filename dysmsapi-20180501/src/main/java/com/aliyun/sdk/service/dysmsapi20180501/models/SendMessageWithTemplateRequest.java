@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendMessageWithTemplateRequest} extends {@link RequestModel}
  *
  * <p>SendMessageWithTemplateRequest</p>
@@ -140,7 +141,10 @@ public class SendMessageWithTemplateRequest extends Request {
         } 
 
         /**
-         * The ID of the channel.
+         * <p>The ID of the channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5739</p>
          */
         public Builder channelId(String channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -149,7 +153,11 @@ public class SendMessageWithTemplateRequest extends Request {
         }
 
         /**
-         * The signature. To query the signature, log on to the [Short Message Service (SMS) console](https://sms-intl.console.aliyun.com/overview) and navigate to the **Signatures** tab of the **Go China** page.
+         * <p>The signature. To query the signature, log on to the <a href="https://sms-intl.console.aliyun.com/overview">Short Message Service (SMS) console</a> and navigate to the <strong>Signatures</strong> tab of the <strong>Go China</strong> page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alicloud321</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -158,7 +166,10 @@ public class SendMessageWithTemplateRequest extends Request {
         }
 
         /**
-         * The extension code of the MO message.
+         * <p>The extension code of the MO message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90999</p>
          */
         public Builder smsUpExtendCode(String smsUpExtendCode) {
             this.putQueryParameter("SmsUpExtendCode", smsUpExtendCode);
@@ -167,7 +178,11 @@ public class SendMessageWithTemplateRequest extends Request {
         }
 
         /**
-         * The code of the message template. To query the code, log on to the [SMS console](https://sms-intl.console.aliyun.com/overview) and navigate to the **Templates** tab of the **Go China** page.
+         * <p>The code of the message template. To query the code, log on to the <a href="https://sms-intl.console.aliyun.com/overview">SMS console</a> and navigate to the <strong>Templates</strong> tab of the <strong>Go China</strong> page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SMS_****</p>
          */
         public Builder templateCode(String templateCode) {
             this.putQueryParameter("TemplateCode", templateCode);
@@ -176,7 +191,10 @@ public class SendMessageWithTemplateRequest extends Request {
         }
 
         /**
-         * The value of the variable in the message template. If a variable exists in the template, the parameter is required.
+         * <p>The value of the variable in the message template. If a variable exists in the template, the parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;code&quot;:&quot;1234&quot;,&quot;product&quot;:&quot;ytx&quot;}</p>
          */
         public Builder templateParam(String templateParam) {
             this.putQueryParameter("TemplateParam", templateParam);
@@ -185,10 +203,12 @@ public class SendMessageWithTemplateRequest extends Request {
         }
 
         /**
-         * The mobile phone number to which the message is sent. You must add the country code to the beginning of the mobile phone number. Example: 861503871\*\*\*\*.
-         * <p>
+         * <p>The mobile phone number to which the message is sent. You must add the country code to the beginning of the mobile phone number. Example: 861503871****.</p>
+         * <p>For more information, see <a href="https://www.alibabacloud.com/help/en/sms/product-overview/dialing-codes?spm=a2c63.p38356.0.0.367279cbwQFoeM">Dialing codes</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information, see [Dialing codes](https://www.alibabacloud.com/help/en/sms/product-overview/dialing-codes?spm=a2c63.p38356.0.0.367279cbwQFoeM).
+         * <strong>example:</strong>
+         * <p>861503871****</p>
          */
         public Builder to(String to) {
             this.putQueryParameter("To", to);
@@ -197,7 +217,10 @@ public class SendMessageWithTemplateRequest extends Request {
         }
 
         /**
-         * The validity period of the message.
+         * <p>The validity period of the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder validityPeriod(Long validityPeriod) {
             this.putQueryParameter("ValidityPeriod", validityPeriod);

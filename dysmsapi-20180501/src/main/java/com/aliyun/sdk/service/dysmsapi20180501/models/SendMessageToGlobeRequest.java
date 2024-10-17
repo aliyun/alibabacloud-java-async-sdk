@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendMessageToGlobeRequest} extends {@link RequestModel}
  *
  * <p>SendMessageToGlobeRequest</p>
@@ -125,7 +126,10 @@ public class SendMessageToGlobeRequest extends Request {
         } 
 
         /**
-         * The ID of the channel.
+         * <p>The ID of the channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3790</p>
          */
         public Builder channelId(String channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -134,7 +138,10 @@ public class SendMessageToGlobeRequest extends Request {
         }
 
         /**
-         * The mobile phone number of the sender. You can also specify a sender ID. The sender ID can contain both letters and digits. If it does, the ID must be between 1 to 11 characters in length. If the sender ID contains only digits, it must be 1 to 15 characters in length.
+         * <p>The mobile phone number of the sender. You can also specify a sender ID. The sender ID can contain both letters and digits. If it does, the ID must be between 1 to 11 characters in length. If the sender ID contains only digits, it must be 1 to 15 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alicloud321</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -143,7 +150,11 @@ public class SendMessageToGlobeRequest extends Request {
         }
 
         /**
-         * The content of the message.
+         * <p>The content of the message.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello</p>
          */
         public Builder message(String message) {
             this.putQueryParameter("Message", message);
@@ -152,7 +163,10 @@ public class SendMessageToGlobeRequest extends Request {
         }
 
         /**
-         * The ID of the messaging campaign. It must be 1 to 255 characters in length. The ID is the value of the TaskId field in the delivery receipt of the message.
+         * <p>The ID of the messaging campaign. It must be 1 to 255 characters in length. The ID is the value of the TaskId field in the delivery receipt of the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123****789</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -161,12 +175,15 @@ public class SendMessageToGlobeRequest extends Request {
         }
 
         /**
-         * The mobile phone number to which the message is sent. You must add the dialing code to the beginning of the mobile phone number. Example: 8521245567\*\*\*\*.
-         * <p>
+         * <p>The mobile phone number to which the message is sent. You must add the dialing code to the beginning of the mobile phone number. Example: 8521245567****.</p>
+         * <p>For more information, see <a href="https://www.alibabacloud.com/help/en/sms/product-overview/dialing-codes?spm=a2c63.p38356.0.0.48b940a1PFYRMz">Dialing codes</a>.</p>
+         * <blockquote>
+         * <p> You cannot call the SendMessageToGlobe operation to send messages to the Chinese mainland.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * For more information, see [Dialing codes](https://www.alibabacloud.com/help/en/sms/product-overview/dialing-codes?spm=a2c63.p38356.0.0.48b940a1PFYRMz).
-         * 
-         * >  You cannot call the SendMessageToGlobe operation to send messages to the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>8521245567****</p>
          */
         public Builder to(String to) {
             this.putQueryParameter("To", to);
@@ -175,7 +192,10 @@ public class SendMessageToGlobeRequest extends Request {
         }
 
         /**
-         * The validity period of the message. Unit: seconds.
+         * <p>The validity period of the message. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         public Builder validityPeriod(Long validityPeriod) {
             this.putQueryParameter("ValidityPeriod", validityPeriod);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SmsConversionRequest} extends {@link RequestModel}
  *
  * <p>SmsConversionRequest</p>
@@ -83,11 +84,14 @@ public class SmsConversionRequest extends Request {
         } 
 
         /**
-         * The time when the OTP message was delivered. The value is a UNIX timestamp. Unit: milliseconds.
-         * <p>
+         * <p>The time when the OTP message was delivered. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <ul>
+         * <li>If you leave the parameter empty, the current timestamp is specified by default.</li>
+         * <li>If you specify the parameter, the timestamp must be greater than the message sending time and less than the current timestamp.</li>
+         * </ul>
          * 
-         * *   If you leave the parameter empty, the current timestamp is specified by default.
-         * *   If you specify the parameter, the timestamp must be greater than the message sending time and less than the current timestamp.
+         * <strong>example:</strong>
+         * <p>1349055900000</p>
          */
         public Builder conversionTime(Long conversionTime) {
             this.putQueryParameter("ConversionTime", conversionTime);
@@ -96,7 +100,11 @@ public class SmsConversionRequest extends Request {
         }
 
         /**
-         * Specifies whether customers replied to the OTP message. Valid values: true and false.
+         * <p>Specifies whether customers replied to the OTP message. Valid values: true and false.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder delivered(Boolean delivered) {
             this.putQueryParameter("Delivered", delivered);
@@ -105,7 +113,11 @@ public class SmsConversionRequest extends Request {
         }
 
         /**
-         * The ID of the OTP message.
+         * <p>The ID of the OTP message.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1008030300****</p>
          */
         public Builder messageId(String messageId) {
             this.putQueryParameter("MessageId", messageId);

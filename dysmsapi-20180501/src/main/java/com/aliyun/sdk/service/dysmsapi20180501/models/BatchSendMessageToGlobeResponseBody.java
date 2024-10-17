@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchSendMessageToGlobeResponseBody} extends {@link TeaModel}
  *
  * <p>BatchSendMessageToGlobeResponseBody</p>
@@ -109,7 +110,10 @@ public class BatchSendMessageToGlobeResponseBody extends TeaModel {
         private String successCount; 
 
         /**
-         * The list of mobile phone numbers that failed to receive the message.
+         * <p>The list of mobile phone numbers that failed to receive the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;931520581****&quot;,&quot;931530581****&quot;]</p>
          */
         public Builder failedList(String failedList) {
             this.failedList = failedList;
@@ -117,7 +121,10 @@ public class BatchSendMessageToGlobeResponseBody extends TeaModel {
         }
 
         /**
-         * The sender ID returned.
+         * <p>The sender ID returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alicloud321</p>
          */
         public Builder from(String from) {
             this.from = from;
@@ -125,7 +132,10 @@ public class BatchSendMessageToGlobeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the message.
+         * <p>The ID of the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;123****&quot;,&quot;124****&quot;]</p>
          */
         public Builder messageIdList(String messageIdList) {
             this.messageIdList = messageIdList;
@@ -133,7 +143,10 @@ public class BatchSendMessageToGlobeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F655A8D5-B967-440B-8683-DAD6FF8D28D3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +154,10 @@ public class BatchSendMessageToGlobeResponseBody extends TeaModel {
         }
 
         /**
-         * The status code. If OK is returned, the request is successful. For more information, see [Error codes](https://www.alibabacloud.com/help/zh/short-message-service/latest/error-codes).
+         * <p>The status code. If OK is returned, the request is successful. For more information, see <a href="https://www.alibabacloud.com/help/en/short-message-service/latest/error-codes">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder responseCode(String responseCode) {
             this.responseCode = responseCode;
@@ -149,7 +165,10 @@ public class BatchSendMessageToGlobeResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the status code.
+         * <p>The description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The SMS Send Request was accepted</p>
          */
         public Builder responseDescription(String responseDescription) {
             this.responseDescription = responseDescription;
@@ -157,7 +176,10 @@ public class BatchSendMessageToGlobeResponseBody extends TeaModel {
         }
 
         /**
-         * The number of mobile phone numbers that received the message.
+         * <p>The number of mobile phone numbers that received the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder successCount(String successCount) {
             this.successCount = successCount;

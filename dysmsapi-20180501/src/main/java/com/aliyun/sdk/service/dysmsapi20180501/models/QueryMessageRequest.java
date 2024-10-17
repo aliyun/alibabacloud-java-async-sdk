@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMessageRequest} extends {@link RequestModel}
  *
  * <p>QueryMessageRequest</p>
@@ -54,7 +55,11 @@ public class QueryMessageRequest extends Request {
         } 
 
         /**
-         * The ID of the message.
+         * <p>The ID of the message.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1008030xxx3003</p>
          */
         public Builder messageId(String messageId) {
             this.putQueryParameter("MessageId", messageId);
