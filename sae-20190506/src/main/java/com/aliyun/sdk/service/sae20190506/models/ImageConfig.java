@@ -21,10 +21,14 @@ public class ImageConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("instanceID")
     private String instanceID;
 
+    @com.aliyun.core.annotation.NameInMap("registryConfig")
+    private RegistryConfig registryConfig;
+
     private ImageConfig(Builder builder) {
         this.accelerationType = builder.accelerationType;
         this.image = builder.image;
         this.instanceID = builder.instanceID;
+        this.registryConfig = builder.registryConfig;
     }
 
     public static Builder builder() {
@@ -56,10 +60,18 @@ public class ImageConfig extends TeaModel {
         return this.instanceID;
     }
 
+    /**
+     * @return registryConfig
+     */
+    public RegistryConfig getRegistryConfig() {
+        return this.registryConfig;
+    }
+
     public static final class Builder {
         private String accelerationType; 
         private String image; 
         private String instanceID; 
+        private RegistryConfig registryConfig; 
 
         /**
          * accelerationType.
@@ -82,6 +94,14 @@ public class ImageConfig extends TeaModel {
          */
         public Builder instanceID(String instanceID) {
             this.instanceID = instanceID;
+            return this;
+        }
+
+        /**
+         * registryConfig.
+         */
+        public Builder registryConfig(RegistryConfig registryConfig) {
+            this.registryConfig = registryConfig;
             return this;
         }
 

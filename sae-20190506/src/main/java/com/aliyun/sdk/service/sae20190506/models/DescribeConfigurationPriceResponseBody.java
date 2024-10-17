@@ -181,11 +181,15 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Float cpu;
 
+        @com.aliyun.core.annotation.NameInMap("Cu")
+        private Float cu;
+
         @com.aliyun.core.annotation.NameInMap("Mem")
         private Float mem;
 
         private BagUsage(Builder builder) {
             this.cpu = builder.cpu;
+            this.cu = builder.cu;
             this.mem = builder.mem;
         }
 
@@ -205,6 +209,13 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         }
 
         /**
+         * @return cu
+         */
+        public Float getCu() {
+            return this.cu;
+        }
+
+        /**
          * @return mem
          */
         public Float getMem() {
@@ -213,6 +224,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private Float cpu; 
+            private Float cu; 
             private Float mem; 
 
             /**
@@ -220,6 +232,14 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * Cu.
+             */
+            public Builder cu(Float cu) {
+                this.cu = cu;
                 return this;
             }
 

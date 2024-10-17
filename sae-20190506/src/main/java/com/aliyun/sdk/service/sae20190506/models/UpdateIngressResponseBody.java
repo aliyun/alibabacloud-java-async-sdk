@@ -110,7 +110,16 @@ public class UpdateIngressResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The request was successful.</li>
+         * <li><strong>3xx</strong>: The request was redirected.</li>
+         * <li><strong>4xx</strong>: The request failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +127,7 @@ public class UpdateIngressResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +135,11 @@ public class UpdateIngressResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * <ul>
+         * <li>If the request was successful, <strong>ErrorCode</strong> is not returned.</li>
+         * <li>If the request failed, <strong>ErrorCode</strong> is returned. For more information, see the <strong>Error codes</strong> section of this topic.</li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +147,14 @@ public class UpdateIngressResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned information.</p>
+         * <ul>
+         * <li>If the request was successful, <strong>success</strong> is returned.</li>
+         * <li>If the request failed, an error code is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +162,10 @@ public class UpdateIngressResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +173,14 @@ public class UpdateIngressResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the configurations of the routing rule were updated. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +188,10 @@ public class UpdateIngressResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * <p>The trace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a98a02315955564772843261e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -204,7 +237,10 @@ public class UpdateIngressResponseBody extends TeaModel {
             private Long ingressId; 
 
             /**
-             * IngressId.
+             * <p>The ID of the routing rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>87</p>
              */
             public Builder ingressId(Long ingressId) {
                 this.ingressId = ingressId;
