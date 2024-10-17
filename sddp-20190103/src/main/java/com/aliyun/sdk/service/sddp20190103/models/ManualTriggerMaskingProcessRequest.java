@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ManualTriggerMaskingProcessRequest} extends {@link RequestModel}
  *
  * <p>ManualTriggerMaskingProcessRequest</p>
@@ -68,10 +69,12 @@ public class ManualTriggerMaskingProcessRequest extends Request {
         } 
 
         /**
-         * The ID of the de-identification task.
-         * <p>
+         * <p>The ID of the de-identification task.</p>
+         * <p>The ID of the de-identification task is a string. You can call the DescribeDataMaskingTasks operation to query the ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The ID of the de-identification task is a string. You can call the DescribeDataMaskingTasks operation to query the ID.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -80,11 +83,14 @@ public class ManualTriggerMaskingProcessRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response, default value zh_cn. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response, default value zh_cn. Valid values:</p>
+         * <ul>
+         * <li><strong>zh_cn</strong>: Chinese</li>
+         * <li><strong>en_us</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh_cn**: Chinese
-         * *   **en_us**: English
+         * <strong>example:</strong>
+         * <p>zh_cn</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

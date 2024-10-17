@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSlrRoleRequest} extends {@link RequestModel}
  *
  * <p>CreateSlrRoleRequest</p>
@@ -81,7 +82,10 @@ public class CreateSlrRoleRequest extends Request {
         } 
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder featureType(Integer featureType) {
             this.putQueryParameter("FeatureType", featureType);
@@ -90,11 +94,14 @@ public class CreateSlrRoleRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh_cn**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh_cn</strong>: Simplified Chinese</li>
+         * <li><strong>en_us</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh_cn**: Simplified Chinese
-         * *   **en_us**: English
+         * <strong>example:</strong>
+         * <p>zh_cn</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -103,7 +110,10 @@ public class CreateSlrRoleRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39.170.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

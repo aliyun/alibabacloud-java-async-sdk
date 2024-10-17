@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDataLimitRequest} extends {@link RequestModel}
  *
  * <p>ModifyDataLimitRequest</p>
@@ -279,11 +280,14 @@ public class ModifyDataLimitRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable the security audit feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the security audit feature. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
          * 
-         * *   **0**: no
-         * *   **1**: yes
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder auditStatus(Integer auditStatus) {
             this.putQueryParameter("AuditStatus", auditStatus);
@@ -292,13 +296,17 @@ public class ModifyDataLimitRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically trigger a re-scan after a rule is modified. Valid values:
-         * <p>
+         * <p>Specifies whether to automatically trigger a re-scan after a rule is modified. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
+         * <blockquote>
+         * <p>When a re-scan is triggered, DSC scans all data in your data asset.</p>
+         * </blockquote>
          * 
-         * *   **0**: no
-         * *   **1**: yes
-         * 
-         * > When a re-scan is triggered, DSC scans all data in your data asset.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder autoScan(Integer autoScan) {
             this.putQueryParameter("AutoScan", autoScan);
@@ -307,11 +315,14 @@ public class ModifyDataLimitRequest extends Request {
         }
 
         /**
-         * The database engine that is run by the instance. Valid values:
-         * <p>
+         * <p>The database engine that is run by the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>SQLServer</strong></li>
+         * </ul>
          * 
-         * *   **MySQL**
-         * *   **SQLServer**
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder engineType(String engineType) {
             this.putQueryParameter("EngineType", engineType);
@@ -320,7 +331,10 @@ public class ModifyDataLimitRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder featureType(Integer featureType) {
             this.putQueryParameter("FeatureType", featureType);
@@ -329,10 +343,14 @@ public class ModifyDataLimitRequest extends Request {
         }
 
         /**
-         * The unique ID of the data asset for which you want to modify configuration items.
-         * <p>
+         * <p>The unique ID of the data asset for which you want to modify configuration items.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeDataLimits~~">DescribeDataLimits</a> operation to query the ID of the data asset.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDataLimits](~~DescribeDataLimits~~) operation to query the ID of the data asset.
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -341,11 +359,14 @@ public class ModifyDataLimitRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -354,13 +375,16 @@ public class ModifyDataLimitRequest extends Request {
         }
 
         /**
-         * The retention period of raw logs after you enable the security audit feature. Unit: days. Valid values:
-         * <p>
+         * <p>The retention period of raw logs after you enable the security audit feature. Unit: days. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong></li>
+         * <li><strong>90</strong></li>
+         * <li><strong>180</strong></li>
+         * <li><strong>365</strong></li>
+         * </ul>
          * 
-         * *   **30**
-         * *   **90**
-         * *   **180**
-         * *   **365**
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder logStoreDay(Integer logStoreDay) {
             this.putQueryParameter("LogStoreDay", logStoreDay);
@@ -369,11 +393,14 @@ public class ModifyDataLimitRequest extends Request {
         }
 
         /**
-         * Specifies whether to change the username and password that are used to log on to the ApsaraDB RDS database. Valid values:
-         * <p>
+         * <p>Specifies whether to change the username and password that are used to log on to the ApsaraDB RDS database. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder modifyPassword(Boolean modifyPassword) {
             this.putQueryParameter("ModifyPassword", modifyPassword);
@@ -382,7 +409,10 @@ public class ModifyDataLimitRequest extends Request {
         }
 
         /**
-         * The password used to log on to the ApsaraDB RDS database that you authorize DSC to access.
+         * <p>The password used to log on to the ApsaraDB RDS database that you authorize DSC to access.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -391,7 +421,10 @@ public class ModifyDataLimitRequest extends Request {
         }
 
         /**
-         * The port that is used to connect to the database.
+         * <p>The port that is used to connect to the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -400,14 +433,18 @@ public class ModifyDataLimitRequest extends Request {
         }
 
         /**
-         * The name of the service to which the data asset belongs. Valid values:
-         * <p>
+         * <p>The name of the service to which the data asset belongs. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: MaxCompute</li>
+         * <li><strong>2</strong>: Object Storage Service (OSS)</li>
+         * <li><strong>3</strong>: AnalyticDB for MySQL</li>
+         * <li><strong>4</strong>: Tablestore</li>
+         * <li><strong>5</strong>: ApsaraDB RDS</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**: MaxCompute
-         * *   **2**: Object Storage Service (OSS)
-         * *   **3**: AnalyticDB for MySQL
-         * *   **4**: Tablestore
-         * *   **5**: ApsaraDB RDS
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder resourceType(Integer resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -416,12 +453,15 @@ public class ModifyDataLimitRequest extends Request {
         }
 
         /**
-         * The number of sensitive data samples tht are collected after sensitive data detection is enabled. Valid values:
-         * <p>
+         * <p>The number of sensitive data samples tht are collected after sensitive data detection is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong></li>
+         * <li><strong>5</strong></li>
+         * <li><strong>10</strong></li>
+         * </ul>
          * 
-         * *   **0**
-         * *   **5**
-         * *   **10**
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder samplingSize(Integer samplingSize) {
             this.putQueryParameter("SamplingSize", samplingSize);
@@ -430,7 +470,7 @@ public class ModifyDataLimitRequest extends Request {
         }
 
         /**
-         * The security group that is used by PrivateLink when you install the DSC agent.
+         * <p>The security group that is used by PrivateLink when you install the DSC agent.</p>
          */
         public Builder securityGroupIdList(java.util.List < String > securityGroupIdList) {
             this.putQueryParameter("SecurityGroupIdList", securityGroupIdList);
@@ -439,16 +479,19 @@ public class ModifyDataLimitRequest extends Request {
         }
 
         /**
-         * The region in which the data asset resides. Valid values:
-         * <p>
+         * <p>The region in which the data asset resides. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-beijing</strong>: China (Beijing)</li>
+         * <li><strong>cn-zhangjiakou</strong>: China (Zhangjiakou)</li>
+         * <li><strong>cn-huhehaote</strong>: China (Hohhot)</li>
+         * <li><strong>cn-hangzhou</strong>: China (Hangzhou)</li>
+         * <li><strong>cn-shanghai</strong>: China (Shanghai)</li>
+         * <li><strong>cn-shenzhen</strong>: China (Shenzhen)</li>
+         * <li><strong>cn-hongkong</strong>: China (Hong Kong)</li>
+         * </ul>
          * 
-         * *   **cn-beijing**: China (Beijing)
-         * *   **cn-zhangjiakou**: China (Zhangjiakou)
-         * *   **cn-huhehaote**: China (Hohhot)
-         * *   **cn-hangzhou**: China (Hangzhou)
-         * *   **cn-shanghai**: China (Shanghai)
-         * *   **cn-shenzhen**: China (Shenzhen)
-         * *   **cn-hongkong**: China (Hong Kong)
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder serviceRegionId(String serviceRegionId) {
             this.putQueryParameter("ServiceRegionId", serviceRegionId);
@@ -457,7 +500,10 @@ public class ModifyDataLimitRequest extends Request {
         }
 
         /**
-         * The username used to log on to the ApsaraDB RDS database that you authorize DSC to access.
+         * <p>The username used to log on to the ApsaraDB RDS database that you authorize DSC to access.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User01</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);
@@ -466,7 +512,7 @@ public class ModifyDataLimitRequest extends Request {
         }
 
         /**
-         * The vSwitch that is used by PrivateLink when you install the DSC agent.
+         * <p>The vSwitch that is used by PrivateLink when you install the DSC agent.</p>
          */
         public Builder vSwitchIdList(java.util.List < String > vSwitchIdList) {
             this.putQueryParameter("VSwitchIdList", vSwitchIdList);
@@ -475,7 +521,10 @@ public class ModifyDataLimitRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) to which the data asset belongs.
+         * <p>The ID of the virtual private cloud (VPC) to which the data asset belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2zevcqke6hh09c41****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

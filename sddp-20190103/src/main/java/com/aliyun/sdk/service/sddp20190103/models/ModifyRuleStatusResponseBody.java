@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyRuleStatusResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyRuleStatusResponseBody</p>
@@ -49,7 +50,10 @@ public class ModifyRuleStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IDs of sensitive data detection rules whose status failed to be changed. Multiple IDs are separated with commas (,).
+         * <p>The IDs of sensitive data detection rules whose status failed to be changed. Multiple IDs are separated with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3,4</p>
          */
         public Builder failedIds(String failedIds) {
             this.failedIds = failedIds;
@@ -57,7 +61,10 @@ public class ModifyRuleStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C3AC882-E5A8-4855-BE77-B6837B695EF1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

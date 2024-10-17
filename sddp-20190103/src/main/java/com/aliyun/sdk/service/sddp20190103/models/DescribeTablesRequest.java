@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTablesRequest} extends {@link RequestModel}
  *
  * <p>DescribeTablesRequest</p>
@@ -207,7 +208,10 @@ public class DescribeTablesRequest extends Request {
         } 
 
         /**
-         * The page number of the page to return. Default value: 1.
+         * <p>The page number of the page to return. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -216,7 +220,10 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * The ID of the data asset to which the table belongs. You can call the [DescribeInstances](~~DescribeInstances~~) operation to obtain the ID of the data asset.
+         * <p>The ID of the data asset to which the table belongs. You can call the <a href="~~DescribeInstances~~">DescribeInstances</a> operation to obtain the ID of the data asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder instanceId(Long instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -225,11 +232,14 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh_cn**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh_cn</strong>: Chinese</li>
+         * <li><strong>en_us</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh_cn**: Chinese
-         * *   **en_us**: English
+         * <strong>example:</strong>
+         * <p>zh_cn</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -238,7 +248,10 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * The search keyword. Fuzzy match is supported. For example, if you specify test, all tables whose names contain test are retrieved.
+         * <p>The search keyword. Fuzzy match is supported. For example, if you specify test, all tables whose names contain test are retrieved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -247,7 +260,10 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * The ID of the package to which the table belongs. You can call the [DescribePackages](~~DescribePackages~~) operation to obtain the ID of the package.
+         * <p>The ID of the package to which the table belongs. You can call the <a href="~~DescribePackages~~">DescribePackages</a> operation to obtain the ID of the package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>555555</p>
          */
         public Builder packageId(Long packageId) {
             this.putQueryParameter("PackageId", packageId);
@@ -256,7 +272,10 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10.
+         * <p>The number of entries to return on each page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -265,7 +284,10 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * The name of the service to which the table belongs, such as MaxCompute, OSS, and ApsaraDB RDS. For more information about the types of data assets from which Data Security Center (DSC) can scan for sensitive data, see [Supported data assets](~~212906~~).
+         * <p>The name of the service to which the table belongs, such as MaxCompute, OSS, and ApsaraDB RDS. For more information about the types of data assets from which Data Security Center (DSC) can scan for sensitive data, see <a href="https://help.aliyun.com/document_detail/212906.html">Supported data assets</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MaxCompute</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -274,7 +296,10 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * The ID of the service to which the table belongs. You can call the [DescribeDataAssets](~~DescribeDataAssets~~) operation to obtain the ID of the service.
+         * <p>The ID of the service to which the table belongs. You can call the <a href="~~DescribeDataAssets~~">DescribeDataAssets</a> operation to obtain the ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder productId(Long productId) {
             this.putQueryParameter("ProductId", productId);
@@ -283,14 +308,17 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * The sensitivity level of the table. Each sensitivity level ID corresponds to a sensitivity level name. Valid values:
-         * <p>
+         * <p>The sensitivity level of the table. Each sensitivity level ID corresponds to a sensitivity level name. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: N/A, which indicates that no sensitive data is detected.</li>
+         * <li><strong>2</strong>: S1, which indicates the low sensitivity level.</li>
+         * <li><strong>3</strong>: S2, which indicates the medium sensitivity level.</li>
+         * <li><strong>4</strong>: S3, which indicates the high sensitivity level.</li>
+         * <li><strong>5</strong>: S4, which indicates the highest sensitivity level.</li>
+         * </ul>
          * 
-         * *   **1**: N/A, which indicates that no sensitive data is detected.
-         * *   **2**: S1, which indicates the low sensitivity level.
-         * *   **3**: S2, which indicates the medium sensitivity level.
-         * *   **4**: S3, which indicates the high sensitivity level.
-         * *   **5**: S4, which indicates the highest sensitivity level.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder riskLevelId(Long riskLevelId) {
             this.putQueryParameter("RiskLevelId", riskLevelId);
@@ -299,7 +327,10 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * The ID of the sensitive data detection rule that the table hits. You can call the [DescribeRules](~~DescribeRules~~) operation to obtain the ID of the sensitive data detection rule.
+         * <p>The ID of the sensitive data detection rule that the table hits. You can call the <a href="~~DescribeRules~~">DescribeRules</a> operation to obtain the ID of the sensitive data detection rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>333322</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -308,7 +339,10 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * The region in which DSC is activated. For more information, see [Supported regions](~~214257~~).
+         * <p>The region in which DSC is activated. For more information, see <a href="https://help.aliyun.com/document_detail/214257.html">Supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder serviceRegionId(String serviceRegionId) {
             this.putQueryParameter("ServiceRegionId", serviceRegionId);
@@ -317,7 +351,10 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * The ID of the industry-specific rule template.
+         * <p>The ID of the industry-specific rule template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);

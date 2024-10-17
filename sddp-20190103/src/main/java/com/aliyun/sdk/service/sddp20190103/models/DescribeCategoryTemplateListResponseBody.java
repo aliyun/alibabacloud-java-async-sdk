@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCategoryTemplateListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCategoryTemplateListResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeCategoryTemplateListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCategoryTemplateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCategoryTemplateListResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentRiskLevel")
         private Integer currentRiskLevel;

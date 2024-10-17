@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSlrRoleResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSlrRoleResponseBody</p>
@@ -49,11 +50,14 @@ public class CreateSlrRoleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the service-linked role was created. Valid values:
-         * <p>
+         * <p>Indicates whether the service-linked role was created. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder hasPermission(Boolean hasPermission) {
             this.hasPermission = hasPermission;
@@ -61,7 +65,10 @@ public class CreateSlrRoleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>208B016D-4CB9-4A85-96A5-0B8ED1EBF271</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

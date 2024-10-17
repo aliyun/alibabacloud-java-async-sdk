@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyReportTaskStatusResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyReportTaskStatusResponseBody</p>
@@ -37,7 +38,10 @@ public class ModifyReportTaskStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>208B016D-4CB9-4A85-96A5-0B8ED1EBF271</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

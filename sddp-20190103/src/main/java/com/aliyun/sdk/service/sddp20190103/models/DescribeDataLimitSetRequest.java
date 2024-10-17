@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataLimitSetRequest} extends {@link RequestModel}
  *
  * <p>DescribeDataLimitSetRequest</p>
@@ -95,7 +96,10 @@ public class DescribeDataLimitSetRequest extends Request {
         } 
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder featureType(Integer featureType) {
             this.putQueryParameter("FeatureType", featureType);
@@ -104,11 +108,14 @@ public class DescribeDataLimitSetRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh_cn</strong>: Simplified Chinese (default)</li>
+         * <li><strong>en_us</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh_cn**: Simplified Chinese (default)
-         * *   **en_us**: English
+         * <strong>example:</strong>
+         * <p>zh_cn</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -117,10 +124,11 @@ public class DescribeDataLimitSetRequest extends Request {
         }
 
         /**
-         * The parent asset ID of the data asset.
-         * <p>
+         * <p>The parent asset ID of the data asset.</p>
+         * <p>You can call the <a href="~~DescribeDataLimitDetail~~">DescribeDataLimitDetail</a> or <a href="~~DescribeDataLimits~~">DescribeDataLimits</a> operation to obtain the parent asset ID of the data asset from the value of the <strong>ParentId</strong> parameter.</p>
          * 
-         * You can call the [DescribeDataLimitDetail](~~DescribeDataLimitDetail~~) or [DescribeDataLimits](~~DescribeDataLimits~~) operation to obtain the parent asset ID of the data asset from the value of the **ParentId** parameter.
+         * <strong>example:</strong>
+         * <p>db</p>
          */
         public Builder parentId(String parentId) {
             this.putQueryParameter("ParentId", parentId);
@@ -129,14 +137,17 @@ public class DescribeDataLimitSetRequest extends Request {
         }
 
         /**
-         * The type of service to which the data asset belongs. Valid values:
-         * <p>
+         * <p>The type of service to which the data asset belongs. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: MaxCompute</li>
+         * <li><strong>2</strong>: OSS</li>
+         * <li><strong>3</strong>: AnalyticDB for MySQL</li>
+         * <li><strong>4</strong>: Tablestore</li>
+         * <li><strong>5</strong>: ApsaraDB RDS</li>
+         * </ul>
          * 
-         * *   **1**: MaxCompute
-         * *   **2**: OSS
-         * *   **3**: AnalyticDB for MySQL
-         * *   **4**: Tablestore
-         * *   **5**: ApsaraDB RDS
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder resourceType(Integer resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

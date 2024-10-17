@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeColumnsV2ResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeColumnsV2ResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -93,7 +97,7 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         }
 
         /**
-         * A list of column recognition results of the data table.
+         * <p>A list of column recognition results of the data table.</p>
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -101,7 +105,10 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page. Default value: **10**.
+         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B1F2BB1F-04EC-5D36-B136-B4DE17FD8DE0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeColumnsV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeColumnsV2ResponseBody</p>
+     */
     public static class ModelTags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -169,12 +188,15 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The tag ID. Valid values:
-             * <p>
+             * <p>The tag ID. Valid values:</p>
+             * <ul>
+             * <li><strong>101</strong>: personal sensitive information</li>
+             * <li><strong>102</strong>: personal information</li>
+             * <li><strong>107</strong>: general information</li>
+             * </ul>
              * 
-             * *   **101**: personal sensitive information
-             * *   **102**: personal information
-             * *   **107**: general information
+             * <strong>example:</strong>
+             * <p>101</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -182,12 +204,15 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The tag name. Valid values:
-             * <p>
+             * <p>The tag name. Valid values:</p>
+             * <ul>
+             * <li>Personal sensitive information</li>
+             * <li>Personal information</li>
+             * <li>General information</li>
+             * </ul>
              * 
-             * *   Personal sensitive information
-             * *   Personal information
-             * *   General information
+             * <strong>example:</strong>
+             * <p>personal sensitive information</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -201,6 +226,12 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeColumnsV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeColumnsV2ResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private Long creationTime;
@@ -456,7 +487,10 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The time when the data in the column of the table is created. Unit: milliseconds.
+             * <p>The time when the data in the column of the table is created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1536751124000</p>
              */
             public Builder creationTime(Long creationTime) {
                 this.creationTime = creationTime;
@@ -464,7 +498,10 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The type of data in the column of the table.
+             * <p>The type of data in the column of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>varchar</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -472,7 +509,10 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the column of the table.
+             * <p>The ID of the column of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111111</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -480,7 +520,10 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance to which data in the column of the table belongs.
+             * <p>The ID of the instance to which data in the column of the table belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1232122</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -488,7 +531,10 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance to which data in the column of the table belongs.
+             * <p>The name of the instance to which data in the column of the table belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-1234</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -496,7 +542,7 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * A list of data tags.
+             * <p>A list of data tags.</p>
              */
             public Builder modelTags(java.util.List < ModelTags> modelTags) {
                 this.modelTags = modelTags;
@@ -504,7 +550,10 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the column of the table.
+             * <p>The name of the column of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>obj_id</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -512,14 +561,17 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the sensitivity level for asset. Valid values:
-             * <p>
+             * <p>The name of the sensitivity level for asset. Valid values:</p>
+             * <ul>
+             * <li><strong>N/A</strong>: indicates that no sensitive data is detected.</li>
+             * <li><strong>S1</strong>: indicates the low sensitivity level.</li>
+             * <li><strong>S2</strong>: indicates the medium sensitivity level.</li>
+             * <li><strong>S3</strong>: indicates the high sensitivity level.</li>
+             * <li><strong>S4</strong>: indicates the highest sensitivity level.</li>
+             * </ul>
              * 
-             * *   **N/A**: indicates that no sensitive data is detected.
-             * *   **S1**: indicates the low sensitivity level.
-             * *   **S2**: indicates the medium sensitivity level.
-             * *   **S3**: indicates the high sensitivity level.
-             * *   **S4**: indicates the highest sensitivity level.
+             * <strong>example:</strong>
+             * <p>S4</p>
              */
             public Builder odpsRiskLevelName(String odpsRiskLevelName) {
                 this.odpsRiskLevelName = odpsRiskLevelName;
@@ -527,15 +579,20 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the sensitivity level of the asset. Valid values:
-             * <p>
+             * <p>The ID of the sensitivity level of the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: N/A</li>
+             * <li><strong>2</strong>: S1</li>
+             * <li><strong>3</strong>: S2</li>
+             * <li><strong>4</strong>: S3</li>
+             * <li><strong>5</strong>: S4<blockquote>
+             * <p>The return value &lt;=1 means N/A.</p>
+             * </blockquote>
+             * </li>
+             * </ul>
              * 
-             * *   **1**: N/A
-             * *   **2**: S1
-             * *   **3**: S2
-             * *   **4**: S3
-             * *   **5**: S4
-             * >The return value <=1 means N/A.
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder odpsRiskLevelValue(Integer odpsRiskLevelValue) {
                 this.odpsRiskLevelValue = odpsRiskLevelValue;
@@ -543,7 +600,10 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service to which data in the column of the table belongs. Valid values: **MaxCompute, OSS, ADS, OTS, and RDS**.
+             * <p>The name of the service to which data in the column of the table belongs. Valid values: <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -551,7 +611,10 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the revision record.
+             * <p>The ID of the revision record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder revisionId(Long revisionId) {
                 this.revisionId = revisionId;
@@ -559,11 +622,14 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the column is revised. Valid values:
-             * <p>
+             * <p>Indicates whether the column is revised. Valid values:</p>
+             * <ul>
+             * <li>1: yes</li>
+             * <li>0: no</li>
+             * </ul>
              * 
-             * *   1: yes
-             * *   0: no
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder revisionStatus(Long revisionStatus) {
                 this.revisionStatus = revisionStatus;
@@ -571,16 +637,20 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the sensitivity level of data in the column of the table. Valid values:
-             * <p>
+             * <p>The ID of the sensitivity level of data in the column of the table. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: N/A</li>
+             * <li><strong>2</strong>: S1</li>
+             * <li><strong>3</strong>: S2</li>
+             * <li><strong>4</strong>: S3</li>
+             * <li><strong>5</strong>: S4</li>
+             * </ul>
+             * <blockquote>
+             * <p>The return value &lt;=1 means N/A.</p>
+             * </blockquote>
              * 
-             * *   **1**: N/A
-             * *   **2**: S1
-             * *   **3**: S2
-             * *   **4**: S3
-             * *   **5**: S4
-             * 
-             * >The return value <=1 means N/A.
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder riskLevelId(Long riskLevelId) {
                 this.riskLevelId = riskLevelId;
@@ -588,14 +658,17 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the sensitivity level for data in the column of the table. Valid values:
-             * <p>
+             * <p>The name of the sensitivity level for data in the column of the table. Valid values:</p>
+             * <ul>
+             * <li><strong>N/A</strong>: indicates that no sensitive data is detected.</li>
+             * <li><strong>S1</strong>: indicates the low sensitivity level.</li>
+             * <li><strong>S2</strong>: indicates the medium sensitivity level.</li>
+             * <li><strong>S3</strong>: indicates the high sensitivity level.</li>
+             * <li><strong>S4</strong>: indicates the highest sensitivity level.</li>
+             * </ul>
              * 
-             * *   **N/A**: indicates that no sensitive data is detected.
-             * *   **S1**: indicates the low sensitivity level.
-             * *   **S2**: indicates the medium sensitivity level.
-             * *   **S3**: indicates the high sensitivity level.
-             * *   **S4**: indicates the highest sensitivity level.
+             * <strong>example:</strong>
+             * <p>S1</p>
              */
             public Builder riskLevelName(String riskLevelName) {
                 this.riskLevelName = riskLevelName;
@@ -603,7 +676,10 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the sensitive data detection rule that data in the column of the table hits.
+             * <p>The ID of the sensitive data detection rule that data in the column of the table hits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1004</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -611,7 +687,10 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the sensitive data detection rule that data in the column of the table hits.
+             * <p>The name of the sensitive data detection rule that data in the column of the table hits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -619,14 +698,17 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the sensitivity level. Valid values:
-             * <p>
+             * <p>The name of the sensitivity level. Valid values:</p>
+             * <ul>
+             * <li><strong>N/A</strong>: indicates that no sensitive data is detected.</li>
+             * <li><strong>S1</strong>: indicates the low sensitivity level.</li>
+             * <li><strong>S2</strong>: indicates the medium sensitivity level.</li>
+             * <li><strong>S3</strong>: indicates the high sensitivity level.</li>
+             * <li><strong>S4</strong>: indicates the highest sensitivity level.</li>
+             * </ul>
              * 
-             * *   **N/A**: indicates that no sensitive data is detected.
-             * *   **S1**: indicates the low sensitivity level.
-             * *   **S2**: indicates the medium sensitivity level.
-             * *   **S3**: indicates the high sensitivity level.
-             * *   **S4**: indicates the highest sensitivity level.
+             * <strong>example:</strong>
+             * <p>S2</p>
              */
             public Builder sensLevelName(String sensLevelName) {
                 this.sensLevelName = sensLevelName;
@@ -634,11 +716,14 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the column contains sensitive data. Valid values:
-             * <p>
+             * <p>Indicates whether the column contains sensitive data. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sensitive(Boolean sensitive) {
                 this.sensitive = sensitive;
@@ -646,7 +731,10 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the table.
+             * <p>The ID of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder tableId(Long tableId) {
                 this.tableId = tableId;
@@ -654,7 +742,10 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table to which the revised column belongs.
+             * <p>The name of the table to which the revised column belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>it_table</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

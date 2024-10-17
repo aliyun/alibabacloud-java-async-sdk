@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRulesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRulesResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeRulesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -93,7 +97,7 @@ public class DescribeRulesResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the sensitive data detection rules.
+         * <p>An array that consists of the sensitive data detection rules.</p>
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -101,7 +105,10 @@ public class DescribeRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>769FB3C1-F4C9-42DF-9B72-7077A8989C13</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRulesResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private Integer category;
@@ -457,11 +476,14 @@ public class DescribeRulesResponseBody extends TeaModel {
             private Integer warnLevel; 
 
             /**
-             * The content type of the sensitive data detection rule. Valid values:
-             * <p>
+             * <p>The content type of the sensitive data detection rule. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: keyword</li>
+             * <li><strong>2</strong>: regular expression</li>
+             * </ul>
              * 
-             * *   **0**: keyword
-             * *   **2**: regular expression
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder category(Integer category) {
                 this.category = category;
@@ -469,7 +491,10 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the content type of the sensitive data detection rule.
+             * <p>The name of the content type of the sensitive data detection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Regular expression</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -477,10 +502,13 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The content in the sensitive data detection rule.
-             * <p>
+             * <p>The content in the sensitive data detection rule.</p>
+             * <blockquote>
+             * <p> A built-in detection rule whose CustomType is 0 does not return the content of the rule.</p>
+             * </blockquote>
              * 
-             * >  A built-in detection rule whose CustomType is 0 does not return the content of the rule.
+             * <strong>example:</strong>
+             * <p>(?:\D|^)((?:(?:25[0-4]|2[0-4]\d|1\d{2}|[1-9]\d{1})\.)(?:(?:25[0-5]|2[0-4]\d|[01]?\d?\d)\.){2}(?:25[0-5]|2[0-4]\d|1[0-9]\d|[1-9]\d|[1-9]))(?:\D|$)</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -488,7 +516,10 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the content in the sensitive data detection rule. Valid values include **1**, **2**, **3**, **4**, and **5**. The value 1 indicates attempts to exploit SQL injections. The value 2 indicates bypass by using SQL injections. The value 3 indicates abuse of stored procedures. The value 4 indicates buffer overflow. The value 5 indicates SQL injections based on errors.
+             * <p>The type of the content in the sensitive data detection rule. Valid values include <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates attempts to exploit SQL injections. The value 2 indicates bypass by using SQL injections. The value 3 indicates abuse of stored procedures. The value 4 indicates buffer overflow. The value 5 indicates SQL injections based on errors.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder contentCategory(String contentCategory) {
                 this.contentCategory = contentCategory;
@@ -496,11 +527,14 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the sensitive data detection rule.
-             * <p>
+             * <p>The type of the sensitive data detection rule.</p>
+             * <ul>
+             * <li>0: built-in rule</li>
+             * <li>1: custom rule</li>
+             * </ul>
              * 
-             * *   0: built-in rule
-             * *   1: custom rule
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder customType(Integer customType) {
                 this.customType = customType;
@@ -508,7 +542,10 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the sensitive data detection rule.
+             * <p>The description of the sensitive data detection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The sensitive data detection rule is used to detect IP addresses.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -516,7 +553,10 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the account that is used to create the sensitive data detection rule.
+             * <p>The display name of the account that is used to create the sensitive data detection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>****test</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -524,7 +564,10 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the sensitive data detection rule is created. The value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the sensitive data detection rule is created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1545277010000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -532,7 +575,10 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the sensitive data detection rule is modified. The value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the sensitive data detection rule is modified. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1545277010000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -540,7 +586,10 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The parent group type of the rule.
+             * <p>The parent group type of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4_1</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -548,7 +597,10 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that the sensitive data detection rule is hit.
+             * <p>The number of times that the sensitive data detection rule is hit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder hitTotalCount(Integer hitTotalCount) {
                 this.hitTotalCount = hitTotalCount;
@@ -556,7 +608,10 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the sensitive data detection rule.
+             * <p>The ID of the sensitive data detection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20000</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -564,7 +619,10 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the account that is used to create the sensitive data detection rule.
+             * <p>The username of the account that is used to create the sensitive data detection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>det1111</p>
              */
             public Builder loginName(String loginName) {
                 this.loginName = loginName;
@@ -572,7 +630,10 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the primary dimension.
+             * <p>The key of the primary dimension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder majorKey(String majorKey) {
                 this.majorKey = majorKey;
@@ -580,11 +641,14 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The match type. Valid values:
-             * <p>
+             * <p>The match type. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: rule-based match</li>
+             * <li><strong>2</strong>: dictionary-based match</li>
+             * </ul>
              * 
-             * *   **1**: rule-based match
-             * *   **2**: dictionary-based match
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder matchType(Integer matchType) {
                 this.matchType = matchType;
@@ -592,7 +656,10 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the sensitive data detection rule.
+             * <p>The name of the sensitive data detection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IP address</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -600,7 +667,10 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service to which the data asset belongs. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.
+             * <p>The name of the service to which the data asset belongs. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MaxCompute</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -608,7 +678,10 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the service to which the sensitive data detection rule is applied. Valid values include **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.
+             * <p>The ID of the service to which the sensitive data detection rule is applied. Valid values include <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder productId(Long productId) {
                 this.productId = productId;
@@ -616,14 +689,17 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The sensitivity level of the sensitive data that hits the sensitive data detection rule. Valid values:
-             * <p>
+             * <p>The sensitivity level of the sensitive data that hits the sensitive data detection rule. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: N/A, which indicates that no sensitive data is detected.</li>
+             * <li><strong>2</strong>: S1, which indicates the low sensitivity level.</li>
+             * <li><strong>3</strong>: S2, which indicates the medium sensitivity level.</li>
+             * <li><strong>4</strong>: S3, which indicates the high sensitivity level.</li>
+             * <li><strong>5</strong>: S4, which indicates the highest sensitivity level.</li>
+             * </ul>
              * 
-             * *   **1**: N/A, which indicates that no sensitive data is detected.
-             * *   **2**: S1, which indicates the low sensitivity level.
-             * *   **3**: S2, which indicates the medium sensitivity level.
-             * *   **4**: S3, which indicates the high sensitivity level.
-             * *   **5**: S4, which indicates the highest sensitivity level.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder riskLevelId(Long riskLevelId) {
                 this.riskLevelId = riskLevelId;
@@ -631,14 +707,17 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The sensitivity level of data that hits the sensitive data detection rule. Valid values:
-             * <p>
+             * <p>The sensitivity level of data that hits the sensitive data detection rule. Valid values:</p>
+             * <ul>
+             * <li><strong>N/A</strong>: indicates that no sensitive data is detected.</li>
+             * <li><strong>S1</strong>: indicates the low sensitivity level.</li>
+             * <li><strong>S2</strong>: indicates the medium sensitivity level.</li>
+             * <li><strong>S3</strong>: indicates the high sensitivity level.</li>
+             * <li><strong>S4</strong>: indicates the highest sensitivity level.</li>
+             * </ul>
              * 
-             * *   **N/A**: indicates that no sensitive data is detected.
-             * *   **S1**: indicates the low sensitivity level.
-             * *   **S2**: indicates the medium sensitivity level.
-             * *   **S3**: indicates the high sensitivity level.
-             * *   **S4**: indicates the highest sensitivity level.
+             * <strong>example:</strong>
+             * <p>S2</p>
              */
             public Builder riskLevelName(String riskLevelName) {
                 this.riskLevelName = riskLevelName;
@@ -646,7 +725,10 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The statistical expression.
+             * <p>The statistical expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder statExpress(String statExpress) {
                 this.statExpress = statExpress;
@@ -654,11 +736,14 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the sensitive data detection rule. Valid values:
-             * <p>
+             * <p>The status of the sensitive data detection rule. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1</strong>: enabled</li>
+             * </ul>
              * 
-             * *   **0**: disabled
-             * *   **1**: enabled
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -666,12 +751,15 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The data asset type that is supported by the sensitive data detection rule. Valid values:
-             * <p>
+             * <p>The data asset type that is supported by the sensitive data detection rule. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: all data assets</li>
+             * <li><strong>1</strong>: structured data assets</li>
+             * <li><strong>2</strong>: unstructured data assets</li>
+             * </ul>
              * 
-             * *   **0**: all data assets
-             * *   **1**: structured data assets
-             * *   **2**: unstructured data assets
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder supportForm(Integer supportForm) {
                 this.supportForm = supportForm;
@@ -679,7 +767,10 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service to which the data asset belongs. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.
+             * <p>The name of the service to which the data asset belongs. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MaxCompute</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -687,7 +778,10 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the account that is used to create the sensitive data detection rule.
+             * <p>The ID of the account that is used to create the sensitive data detection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -695,12 +789,15 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level. Valid values:
-             * <p>
+             * <p>The severity level. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: low</li>
+             * <li><strong>2</strong>: medium</li>
+             * <li><strong>3</strong>: high</li>
+             * </ul>
              * 
-             * *   **1**: low
-             * *   **2**: medium
-             * *   **3**: high
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder warnLevel(Integer warnLevel) {
                 this.warnLevel = warnLevel;

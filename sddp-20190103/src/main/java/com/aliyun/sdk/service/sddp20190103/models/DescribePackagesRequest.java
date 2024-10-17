@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePackagesRequest} extends {@link RequestModel}
  *
  * <p>DescribePackagesRequest</p>
@@ -151,7 +152,10 @@ public class DescribePackagesRequest extends Request {
         } 
 
         /**
-         * The page number of the page to return.
+         * <p>The page number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -160,10 +164,13 @@ public class DescribePackagesRequest extends Request {
         }
 
         /**
-         * The ID of the instance to which the package belongs.
-         * <p>
+         * <p>The ID of the instance to which the package belongs.</p>
+         * <blockquote>
+         * <p>You can call the <strong>DescribeInstances</strong> operation to query the ID of the instance.</p>
+         * </blockquote>
          * 
-         * > You can call the **DescribeInstances** operation to query the ID of the instance.
+         * <strong>example:</strong>
+         * <p>12321</p>
          */
         public Builder instanceId(Long instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -172,11 +179,14 @@ public class DescribePackagesRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh_cn**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh_cn</strong>: Chinese</li>
+         * <li><strong>en_us</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh_cn**: Chinese
-         * *   **en_us**: English
+         * <strong>example:</strong>
+         * <p>zh_cn</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -185,7 +195,10 @@ public class DescribePackagesRequest extends Request {
         }
 
         /**
-         * The search keyword. Fuzzy match is supported.
+         * <p>The search keyword. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -194,7 +207,10 @@ public class DescribePackagesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -203,10 +219,13 @@ public class DescribePackagesRequest extends Request {
         }
 
         /**
-         * The ID of the service to which the package belongs.
-         * <p>
+         * <p>The ID of the service to which the package belongs.</p>
+         * <blockquote>
+         * <p>You can call the <strong>DescribeDataAssets</strong> operation to query the ID of the service.</p>
+         * </blockquote>
          * 
-         * > You can call the **DescribeDataAssets** operation to query the ID of the service.
+         * <strong>example:</strong>
+         * <p>2566600</p>
          */
         public Builder productId(Long productId) {
             this.putQueryParameter("ProductId", productId);
@@ -215,14 +234,17 @@ public class DescribePackagesRequest extends Request {
         }
 
         /**
-         * The sensitivity level of the package. Valid values:
-         * <p>
+         * <p>The sensitivity level of the package. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: N/A, which indicates that no sensitive data is detected.</li>
+         * <li><strong>2</strong>: S1, which indicates the low sensitivity level.</li>
+         * <li><strong>3</strong>: S2, which indicates the medium sensitivity level.</li>
+         * <li><strong>4</strong>: S3, which indicates the high sensitivity level.</li>
+         * <li><strong>5</strong>: S4, which indicates the highest sensitivity level.</li>
+         * </ul>
          * 
-         * *   **1**: N/A, which indicates that no sensitive data is detected.
-         * *   **2**: S1, which indicates the low sensitivity level.
-         * *   **3**: S2, which indicates the medium sensitivity level.
-         * *   **4**: S3, which indicates the high sensitivity level.
-         * *   **5**: S4, which indicates the highest sensitivity level.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder riskLevelId(Long riskLevelId) {
             this.putQueryParameter("RiskLevelId", riskLevelId);
@@ -231,10 +253,13 @@ public class DescribePackagesRequest extends Request {
         }
 
         /**
-         * The ID of the sensitive data detection rule that the package hits.
-         * <p>
+         * <p>The ID of the sensitive data detection rule that the package hits.</p>
+         * <blockquote>
+         * <p>You can call the <strong>DescribeRules</strong> operation to query the ID of the sensitive data detection rule.</p>
+         * </blockquote>
          * 
-         * > You can call the **DescribeRules** operation to query the ID of the sensitive data detection rule.
+         * <strong>example:</strong>
+         * <p>266666</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);

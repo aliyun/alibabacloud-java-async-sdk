@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTemplateAllRulesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTemplateAllRulesResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeTemplateAllRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTemplateAllRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTemplateAllRulesResponseBody</p>
+     */
     public static class RuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;

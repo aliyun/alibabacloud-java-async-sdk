@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScanOssObjectV1Request} extends {@link RequestModel}
  *
  * <p>ScanOssObjectV1Request</p>
@@ -112,7 +113,10 @@ public class ScanOssObjectV1Request extends Request {
         } 
 
         /**
-         * BucketName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sddp-api-demo-bucket</p>
          */
         public Builder bucketName(String bucketName) {
             this.putQueryParameter("BucketName", bucketName);
@@ -130,7 +134,7 @@ public class ScanOssObjectV1Request extends Request {
         }
 
         /**
-         * ObjectKeyList.
+         * <p>This parameter is required.</p>
          */
         public Builder objectKeyList(java.util.List < String > objectKeyList) {
             String objectKeyListShrink = shrink(objectKeyList, "ObjectKeyList", "json");
@@ -140,7 +144,10 @@ public class ScanOssObjectV1Request extends Request {
         }
 
         /**
-         * ServiceRegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder serviceRegionId(String serviceRegionId) {
             this.putQueryParameter("ServiceRegionId", serviceRegionId);

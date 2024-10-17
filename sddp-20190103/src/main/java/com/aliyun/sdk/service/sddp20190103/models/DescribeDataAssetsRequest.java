@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataAssetsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDataAssetsRequest</p>
@@ -137,7 +138,10 @@ public class DescribeDataAssetsRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -146,11 +150,14 @@ public class DescribeDataAssetsRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh_cn**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh_cn</strong>: Simplified Chinese</li>
+         * <li><strong>en_us</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh_cn**: Simplified Chinese
-         * *   **en_us**: English
+         * <strong>example:</strong>
+         * <p>zh_cn</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -159,7 +166,10 @@ public class DescribeDataAssetsRequest extends Request {
         }
 
         /**
-         * The keyword that is used to search for data assets. Fuzzy search is supported.
+         * <p>The keyword that is used to search for data assets. Fuzzy search is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -168,7 +178,10 @@ public class DescribeDataAssetsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**.
+         * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -177,28 +190,31 @@ public class DescribeDataAssetsRequest extends Request {
         }
 
         /**
-         * The type of the data asset that you want to query. Valid values:
-         * <p>
+         * <p>The type of the data asset that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: MaxCompute project</li>
+         * <li><strong>2</strong>: MaxCompute table</li>
+         * <li><strong>3</strong>: MaxCompute package</li>
+         * <li><strong>11</strong>: AnalyticDB for MySQL database</li>
+         * <li><strong>12</strong>: AnalyticDB for MySQL table</li>
+         * <li><strong>21</strong>: Object Storage Service (OSS) bucket</li>
+         * <li><strong>22</strong>: OSS object</li>
+         * <li><strong>31</strong>: Tablestore instance</li>
+         * <li><strong>32</strong>: Tablestore table</li>
+         * <li><strong>51</strong>: ApsaraDB RDS database</li>
+         * <li><strong>52</strong>: ApsaraDB RDS table</li>
+         * <li><strong>61</strong>: self-managed database hosted on an Elastic Compute Service (ECS) instance</li>
+         * <li><strong>62</strong>: self-managed table hosted on an ECS instance</li>
+         * <li><strong>71</strong>: PolarDB-X database</li>
+         * <li><strong>72</strong>: PolarDB-X table</li>
+         * <li><strong>81</strong>: PolarDB database</li>
+         * <li><strong>82</strong>: PolarDB table</li>
+         * <li><strong>91</strong>: AnalyticDB for PostgreSQL database</li>
+         * <li><strong>92</strong>: AnalyticDB for PostgreSQL table</li>
+         * </ul>
          * 
-         * *   **1**: MaxCompute project
-         * *   **2**: MaxCompute table
-         * *   **3**: MaxCompute package
-         * *   **11**: AnalyticDB for MySQL database
-         * *   **12**: AnalyticDB for MySQL table
-         * *   **21**: Object Storage Service (OSS) bucket
-         * *   **22**: OSS object
-         * *   **31**: Tablestore instance
-         * *   **32**: Tablestore table
-         * *   **51**: ApsaraDB RDS database
-         * *   **52**: ApsaraDB RDS table
-         * *   **61**: self-managed database hosted on an Elastic Compute Service (ECS) instance
-         * *   **62**: self-managed table hosted on an ECS instance
-         * *   **71**: PolarDB-X database
-         * *   **72**: PolarDB-X table
-         * *   **81**: PolarDB database
-         * *   **82**: PolarDB table
-         * *   **91**: AnalyticDB for PostgreSQL database
-         * *   **92**: AnalyticDB for PostgreSQL table
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder rangeId(Integer rangeId) {
             this.putQueryParameter("RangeId", rangeId);
@@ -207,13 +223,16 @@ public class DescribeDataAssetsRequest extends Request {
         }
 
         /**
-         * The sensitivity level of the data asset. Separate multiple sensitivity levels with commas (,). Valid values:
-         * <p>
+         * <p>The sensitivity level of the data asset. Separate multiple sensitivity levels with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>2</strong>: S1, indicating the low sensitivity level</li>
+         * <li><strong>3</strong>: S2, indicating the medium sensitivity level</li>
+         * <li><strong>4</strong>: S3, indicating the high sensitivity level</li>
+         * <li><strong>5</strong>: S4, indicating the highest sensitivity level</li>
+         * </ul>
          * 
-         * *   **2**: S1, indicating the low sensitivity level
-         * *   **3**: S2, indicating the medium sensitivity level
-         * *   **4**: S3, indicating the high sensitivity level
-         * *   **5**: S4, indicating the highest sensitivity level
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder riskLevels(String riskLevels) {
             this.putQueryParameter("RiskLevels", riskLevels);
@@ -222,10 +241,13 @@ public class DescribeDataAssetsRequest extends Request {
         }
 
         /**
-         * The unique ID of the sensitive data detection rule that the data assets to be queried hit.
-         * <p>
+         * <p>The unique ID of the sensitive data detection rule that the data assets to be queried hit.</p>
+         * <blockquote>
+         * <p>If you query sensitive data detection results based on the sensitive data detection rule that the data assets hit, you can call the <a href="~~DescribeRules~~">DescribeRules</a> operation to query the ID of the sensitive data detection rule.</p>
+         * </blockquote>
          * 
-         * > If you query sensitive data detection results based on the sensitive data detection rule that the data assets hit, you can call the [DescribeRules](~~DescribeRules~~) operation to query the ID of the sensitive data detection rule.
+         * <strong>example:</strong>
+         * <p>11122200</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);

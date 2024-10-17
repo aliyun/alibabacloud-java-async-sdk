@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateScanTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateScanTaskResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateScanTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the custom scan task.
+         * <p>The ID of the custom scan task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder id(Integer id) {
             this.id = id;
@@ -57,7 +61,10 @@ public class CreateScanTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B1F2BB1F-04EC-5D36-B136-B4DE17FD8DE0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

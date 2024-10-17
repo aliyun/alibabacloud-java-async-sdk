@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceSourcesRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceSourcesRequest</p>
@@ -221,11 +222,14 @@ public class DescribeInstanceSourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable the security audit feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the security audit feature. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
          * 
-         * *   **1**: yes
-         * *   **0**: no
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder auditStatus(Integer auditStatus) {
             this.putQueryParameter("AuditStatus", auditStatus);
@@ -234,11 +238,14 @@ public class DescribeInstanceSourcesRequest extends Request {
         }
 
         /**
-         * Specifies whether DSC is authorized to access the data asset.
-         * <p>
+         * <p>Specifies whether DSC is authorized to access the data asset.</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
          * 
-         * *   **0**: no
-         * *   **1**: yes
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder authStatus(Integer authStatus) {
             this.putQueryParameter("AuthStatus", authStatus);
@@ -247,7 +254,10 @@ public class DescribeInstanceSourcesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -256,7 +266,10 @@ public class DescribeInstanceSourcesRequest extends Request {
         }
 
         /**
-         * The type of the database engine. Valid values: **MySQL, MariaDB, Oracle, PostgreSQL, and SQLServer**.
+         * <p>The type of the database engine. Valid values: <strong>MySQL, MariaDB, Oracle, PostgreSQL, and SQLServer</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder engineType(String engineType) {
             this.putQueryParameter("EngineType", engineType);
@@ -265,7 +278,10 @@ public class DescribeInstanceSourcesRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder featureType(Integer featureType) {
             this.putQueryParameter("FeatureType", featureType);
@@ -274,7 +290,10 @@ public class DescribeInstanceSourcesRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance-demo-****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -283,11 +302,14 @@ public class DescribeInstanceSourcesRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh_cn</strong>: Simplified Chinese (default)</li>
+         * <li><strong>en_us</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh_cn**: Simplified Chinese (default)
-         * *   **en_us**: English
+         * <strong>example:</strong>
+         * <p>zh_cn</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -296,7 +318,10 @@ public class DescribeInstanceSourcesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**.
+         * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -305,7 +330,10 @@ public class DescribeInstanceSourcesRequest extends Request {
         }
 
         /**
-         * The name of the service to which the data asset to query belongs. Valid values: **MaxCompute, OSS, ADS, OTS, and RDS**.
+         * <p>The name of the service to which the data asset to query belongs. Valid values: <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MaxCompute</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -314,7 +342,10 @@ public class DescribeInstanceSourcesRequest extends Request {
         }
 
         /**
-         * The ID of the service to which the data asset to query belongs. Valid values: **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates Object Storage Service (OSS). The value indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.
+         * <p>The ID of the service to which the data asset to query belongs. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates MaxCompute. The value 2 indicates Object Storage Service (OSS). The value indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder productId(Long productId) {
             this.putQueryParameter("ProductId", productId);
@@ -323,7 +354,10 @@ public class DescribeInstanceSourcesRequest extends Request {
         }
 
         /**
-         * The content based on which a fuzzy search is performed.
+         * <p>The content based on which a fuzzy search is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -332,12 +366,15 @@ public class DescribeInstanceSourcesRequest extends Request {
         }
 
         /**
-         * The data asset type based on which a fuzzy search is performed.
-         * <p>
+         * <p>The data asset type based on which a fuzzy search is performed.</p>
+         * <ul>
+         * <li><strong>InstanceId</strong>: the ID of the instance.</li>
+         * <li><strong>InstanceName</strong>: the name of the instance.</li>
+         * <li><strong>DatabaseName</strong>: the name of the database.</li>
+         * </ul>
          * 
-         * *   **InstanceId**: the ID of the instance.
-         * *   **InstanceName**: the name of the instance.
-         * *   **DatabaseName**: the name of the database.
+         * <strong>example:</strong>
+         * <p>InstanceId</p>
          */
         public Builder searchType(String searchType) {
             this.putQueryParameter("SearchType", searchType);
@@ -346,7 +383,10 @@ public class DescribeInstanceSourcesRequest extends Request {
         }
 
         /**
-         * The region in which the data asset resides. For more information, see [Supported regions](~~214257~~).
+         * <p>The region in which the data asset resides. For more information, see <a href="https://help.aliyun.com/document_detail/214257.html">Supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder serviceRegionId(String serviceRegionId) {
             this.putQueryParameter("ServiceRegionId", serviceRegionId);

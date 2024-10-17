@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataMaskingTasksRequest} extends {@link RequestModel}
  *
  * <p>DescribeDataMaskingTasksRequest</p>
@@ -137,7 +138,10 @@ public class DescribeDataMaskingTasksRequest extends Request {
         } 
 
         /**
-         * The page number of the page to return.
+         * <p>The page number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -146,7 +150,10 @@ public class DescribeDataMaskingTasksRequest extends Request {
         }
 
         /**
-         * The service to which the data to be de-identified belongs. Valid values include **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates Object Storage Service (OSS). The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.
+         * <p>The service to which the data to be de-identified belongs. Valid values include <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates MaxCompute. The value 2 indicates Object Storage Service (OSS). The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder dstType(Integer dstType) {
             this.putQueryParameter("DstType", dstType);
@@ -155,7 +162,10 @@ public class DescribeDataMaskingTasksRequest extends Request {
         }
 
         /**
-         * The end of the time range during which the de-identification tasks to be queried are created. The value is a UNIX timestamp. Unit: milliseconds.
+         * <p>The end of the time range during which the de-identification tasks to be queried are created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1583856000000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -164,11 +174,14 @@ public class DescribeDataMaskingTasksRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh_cn**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh_cn</strong>: Chinese</li>
+         * <li><strong>en_us</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh_cn**: Chinese
-         * *   **en_us**: English
+         * <strong>example:</strong>
+         * <p>zh_cn</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -177,7 +190,10 @@ public class DescribeDataMaskingTasksRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -186,7 +202,10 @@ public class DescribeDataMaskingTasksRequest extends Request {
         }
 
         /**
-         * The keyword used to query the de-identification tasks, which can be the task name or ID.
+         * <p>The keyword used to query the de-identification tasks, which can be the task name or ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -195,7 +214,10 @@ public class DescribeDataMaskingTasksRequest extends Request {
         }
 
         /**
-         * The beginning of the time range during which the de-identification tasks to be queried are created. The value is a UNIX timestamp. Unit: milliseconds.
+         * <p>The beginning of the time range during which the de-identification tasks to be queried are created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1582992000000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

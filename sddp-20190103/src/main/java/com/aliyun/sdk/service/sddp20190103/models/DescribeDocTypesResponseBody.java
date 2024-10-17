@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDocTypesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDocTypesResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeDocTypesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDocTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDocTypesResponseBody</p>
+     */
     public static class DocTypeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private Long code;

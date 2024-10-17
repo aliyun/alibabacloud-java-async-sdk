@@ -1,3 +1,6 @@
+2024-10-17 Version: 1.0.15
+- Generated java-async 2019-01-03 for Sddp.
+
 2024-08-19 Version: 1.0.14
 - Generated java-async 2019-01-03 for Sddp.
 

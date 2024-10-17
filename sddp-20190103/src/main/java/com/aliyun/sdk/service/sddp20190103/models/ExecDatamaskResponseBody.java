@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExecDatamaskResponseBody} extends {@link TeaModel}
  *
  * <p>ExecDatamaskResponseBody</p>
@@ -49,12 +50,15 @@ public class ExecDatamaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The de-identified data, which is described in a JSON string. The JSON string contains the following parameters:
-         * <p>
+         * <p>The de-identified data, which is described in a JSON string. The JSON string contains the following parameters:</p>
+         * <ul>
+         * <li><strong>dataHeaderList</strong>: the names of columns that contain the de-identified data.</li>
+         * <li><strong>dataList</strong>: the de-identified data. The column order of the de-identified data is the same as that indicated by the dataHeaderList parameter.</li>
+         * <li><strong>ruleList</strong>: the IDs of sensitive data detection rules.</li>
+         * </ul>
          * 
-         * *   **dataHeaderList**: the names of columns that contain the de-identified data.
-         * *   **dataList**: the de-identified data. The column order of the de-identified data is the same as that indicated by the dataHeaderList parameter.
-         * *   **ruleList**: the IDs of sensitive data detection rules.
+         * <strong>example:</strong>
+         * <p>{&quot;dataHeaderList&quot;:[&quot;name&quot;,&quot;age&quot;],&quot;dataList&quot;:[[&quot;l***&quot;,18],[&quot;l***&quot;,17]],&quot;ruleList&quot;:[1002,null]}</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -62,7 +66,10 @@ public class ExecDatamaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>813BA9FA-D062-42C4-8CD5-11A7640B96E6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

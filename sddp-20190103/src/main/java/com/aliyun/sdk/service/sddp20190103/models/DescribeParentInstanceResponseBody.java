@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeParentInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeParentInstanceResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeParentInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParentInstanceResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuditStatus")
         private Integer auditStatus;

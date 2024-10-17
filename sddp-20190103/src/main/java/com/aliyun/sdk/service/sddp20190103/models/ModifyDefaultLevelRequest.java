@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDefaultLevelRequest} extends {@link RequestModel}
  *
  * <p>ModifyDefaultLevelRequest</p>
@@ -81,14 +82,17 @@ public class ModifyDefaultLevelRequest extends Request {
         } 
 
         /**
-         * The default sensitivity level of data that Data Security Center (DSC) cannot classify as sensitive or insensitive. Valid values:
-         * <p>
+         * <p>The default sensitivity level of data that Data Security Center (DSC) cannot classify as sensitive or insensitive. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: N/A</li>
+         * <li><strong>2</strong>: S1</li>
+         * <li><strong>3</strong>: S2</li>
+         * <li><strong>4</strong>: S3</li>
+         * <li><strong>5</strong>: S4</li>
+         * </ul>
          * 
-         * *   **1**: N/A
-         * *   **2**: S1
-         * *   **3**: S2
-         * *   **4**: S3
-         * *   **5**: S4
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder defaultId(Long defaultId) {
             this.putQueryParameter("DefaultId", defaultId);
@@ -97,11 +101,14 @@ public class ModifyDefaultLevelRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh_cn**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh_cn</strong>: Chinese</li>
+         * <li><strong>en_us</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh_cn**: Chinese
-         * *   **en_us**: English
+         * <strong>example:</strong>
+         * <p>zh_cn</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -110,14 +117,17 @@ public class ModifyDefaultLevelRequest extends Request {
         }
 
         /**
-         * The sensitivity level ID of data that DSC classifies as sensitive. Separate multiple IDs with commas (,). Valid values:
-         * <p>
+         * <p>The sensitivity level ID of data that DSC classifies as sensitive. Separate multiple IDs with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: N/A</li>
+         * <li><strong>2</strong>: S1</li>
+         * <li><strong>3</strong>: S2</li>
+         * <li><strong>4</strong>: S3</li>
+         * <li><strong>5</strong>: S4</li>
+         * </ul>
          * 
-         * *   **1**: N/A
-         * *   **2**: S1
-         * *   **3**: S2
-         * *   **4**: S3
-         * *   **5**: S4
+         * <strong>example:</strong>
+         * <p>1,2,3,4</p>
          */
         public Builder sensitiveIds(String sensitiveIds) {
             this.putQueryParameter("SensitiveIds", sensitiveIds);

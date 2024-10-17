@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateScanTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateScanTaskRequest</p>
@@ -229,7 +230,11 @@ public class CreateScanTaskRequest extends Request {
         } 
 
         /**
-         * The unique ID of the data asset, such as an instance, a database, and a bucket. You can call the [DescribeDataLimits](~~DescribeDataLimits~~) operation to query the unique ID.
+         * <p>The unique ID of the data asset, such as an instance, a database, and a bucket. You can call the <a href="~~DescribeDataLimits~~">DescribeDataLimits</a> operation to query the unique ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder dataLimitId(Long dataLimitId) {
             this.putQueryParameter("DataLimitId", dataLimitId);
@@ -238,7 +243,10 @@ public class CreateScanTaskRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder featureType(Integer featureType) {
             this.putQueryParameter("FeatureType", featureType);
@@ -247,7 +255,11 @@ public class CreateScanTaskRequest extends Request {
         }
 
         /**
-         * The interval between two consecutive custom scan tasks. Unit: days. Valid values: 1 to 2147483648.
+         * <p>The interval between two consecutive custom scan tasks. Unit: days. Valid values: 1 to 2147483648.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder intervalDay(Integer intervalDay) {
             this.putQueryParameter("IntervalDay", intervalDay);
@@ -256,11 +268,14 @@ public class CreateScanTaskRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response.
-         * <p>
+         * <p>The language of the content within the request and response.</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -269,7 +284,10 @@ public class CreateScanTaskRequest extends Request {
         }
 
         /**
-         * The data to be scanned in the Object Storage Service (OSS) bucket. Prefix match, suffix match, and regular expression match are supported.
+         * <p>The data to be scanned in the Object Storage Service (OSS) bucket. Prefix match, suffix match, and regular expression match are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test/test</p>
          */
         public Builder ossScanPath(String ossScanPath) {
             this.putQueryParameter("OssScanPath", ossScanPath);
@@ -278,7 +296,11 @@ public class CreateScanTaskRequest extends Request {
         }
 
         /**
-         * The type of the service to which the data assets to be scanned belong. Valid values include **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.
+         * <p>The type of the service to which the data assets to be scanned belong. Valid values include <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder resourceType(Long resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -287,7 +309,11 @@ public class CreateScanTaskRequest extends Request {
         }
 
         /**
-         * The time when the scan task is executed next time. Unit: hours.
+         * <p>The time when the scan task is executed next time. Unit: hours.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder runHour(Integer runHour) {
             this.putQueryParameter("RunHour", runHour);
@@ -296,7 +322,11 @@ public class CreateScanTaskRequest extends Request {
         }
 
         /**
-         * The time when the scan task is executed next time. Unit: minutes.
+         * <p>The time when the scan task is executed next time. Unit: minutes.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder runMinute(Integer runMinute) {
             this.putQueryParameter("RunMinute", runMinute);
@@ -305,13 +335,17 @@ public class CreateScanTaskRequest extends Request {
         }
 
         /**
-         * The matching rule that specifies the scan scope of the custom scan task. This parameter takes effect only if you set the **ScanRangeContent** parameter. Valid values:
-         * <p>
+         * <p>The matching rule that specifies the scan scope of the custom scan task. This parameter takes effect only if you set the <strong>ScanRangeContent</strong> parameter. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: exact match</li>
+         * <li><strong>1</strong>: prefix match</li>
+         * <li><strong>2</strong>: suffix match</li>
+         * <li><strong>3</strong>: regular expression match</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0**: exact match
-         * *   **1**: prefix match
-         * *   **2**: suffix match
-         * *   **3**: regular expression match
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder scanRange(Integer scanRange) {
             this.putQueryParameter("ScanRange", scanRange);
@@ -320,7 +354,11 @@ public class CreateScanTaskRequest extends Request {
         }
 
         /**
-         * The data to be scanned in a structured data asset. Prefix match, suffix match, and regular expression match are supported.
+         * <p>The data to be scanned in a structured data asset. Prefix match, suffix match, and regular expression match are supported.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>datamask/</p>
          */
         public Builder scanRangeContent(String scanRangeContent) {
             this.putQueryParameter("ScanRangeContent", scanRangeContent);
@@ -329,7 +367,10 @@ public class CreateScanTaskRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39.170.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -338,7 +379,11 @@ public class CreateScanTaskRequest extends Request {
         }
 
         /**
-         * The name of the scan task.
+         * <p>The name of the scan task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scan-test-sample****</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -347,7 +392,10 @@ public class CreateScanTaskRequest extends Request {
         }
 
         /**
-         * The account that is used to create the scan task.
+         * <p>The account that is used to create the scan task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         public Builder taskUserName(String taskUserName) {
             this.putQueryParameter("TaskUserName", taskUserName);

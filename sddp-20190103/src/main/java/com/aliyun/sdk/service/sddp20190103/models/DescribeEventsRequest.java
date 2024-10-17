@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventsRequest} extends {@link RequestModel}
  *
  * <p>DescribeEventsRequest</p>
@@ -263,7 +264,10 @@ public class DescribeEventsRequest extends Request {
         } 
 
         /**
-         * The page number of the page to return.
+         * <p>The page number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -272,7 +276,10 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * The ID of the account that handles the anomalous event.
+         * <p>The ID of the account that handles the anomalous event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yundun-***</p>
          */
         public Builder dealUserId(String dealUserId) {
             this.putQueryParameter("DealUserId", dealUserId);
@@ -281,7 +288,10 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * The end of the time range during which the anomalous events are detected. The value is a UNIX timestamp. Unit: milliseconds.
+         * <p>The end of the time range during which the anomalous events are detected. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1698700000</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -290,7 +300,10 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * The unique ID of the anomalous event.
+         * <p>The unique ID of the anomalous event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>789026</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -299,7 +312,10 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * The name of the data asset.
+         * <p>The name of the data asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6yzvbc2tg90iuxk.l****</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -308,11 +324,14 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh_cn**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh_cn</strong>: Chinese</li>
+         * <li><strong>en_us</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh_cn**: Chinese
-         * *   **en_us**: English
+         * <strong>example:</strong>
+         * <p>zh_cn</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -321,7 +340,10 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -330,7 +352,10 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * The name of the service to which the table belongs. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.
+         * <p>The name of the service to which the table belongs. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -339,7 +364,10 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range during which the anomalous events are detected. The value is a UNIX timestamp. Unit: milliseconds.
+         * <p>The beginning of the time range during which the anomalous events are detected. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1657900000</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -348,12 +376,15 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * The handling status of the anomalous event. Valid values:
-         * <p>
+         * <p>The handling status of the anomalous event. Valid values:</p>
+         * <ul>
+         * <li>0: unhandled</li>
+         * <li>1: confirmed</li>
+         * <li>2: marked as false positive</li>
+         * </ul>
          * 
-         * *   0: unhandled
-         * *   1: confirmed
-         * *   2: marked as false positive
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -362,10 +393,13 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * The name of the anomalous event subtype.
-         * <p>
+         * <p>The name of the anomalous event subtype.</p>
+         * <blockquote>
+         * <p>You can call the <strong>DescribeEventTypes</strong> operation to query the name of the anomalous event subtype.</p>
+         * </blockquote>
          * 
-         * > You can call the **DescribeEventTypes** operation to query the name of the anomalous event subtype.
+         * <strong>example:</strong>
+         * <p>Anomalous volume of downloaded data</p>
          */
         public Builder subTypeCode(String subTypeCode) {
             this.putQueryParameter("SubTypeCode", subTypeCode);
@@ -374,7 +408,10 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * The name of the destination service in an anomalous data flow. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**
+         * <p>The name of the destination service in an anomalous data flow. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         public Builder targetProductCode(String targetProductCode) {
             this.putQueryParameter("TargetProductCode", targetProductCode);
@@ -383,12 +420,15 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * The name of the anomalous event type. Valid values:
-         * <p>
+         * <p>The name of the anomalous event type. Valid values:</p>
+         * <ul>
+         * <li>01: anomalous permission usage</li>
+         * <li>02: anomalous data flow</li>
+         * <li>03: anomalous data operation</li>
+         * </ul>
          * 
-         * *   01: anomalous permission usage
-         * *   02: anomalous data flow
-         * *   03: anomalous data operation
+         * <strong>example:</strong>
+         * <p>02</p>
          */
         public Builder typeCode(String typeCode) {
             this.putQueryParameter("TypeCode", typeCode);
@@ -397,7 +437,10 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * The ID of the account that triggered the anomalous event.
+         * <p>The ID of the account that triggered the anomalous event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1978132506596***</p>
          */
         public Builder userId(Long userId) {
             this.putQueryParameter("UserId", userId);
@@ -406,7 +449,10 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * The username of the RAM user.
+         * <p>The username of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);
@@ -415,12 +461,15 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * The risk level of the alert that is triggered. Valid values:
-         * <p>
+         * <p>The risk level of the alert that is triggered. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: low</li>
+         * <li><strong>2</strong>: medium</li>
+         * <li><strong>3</strong>: high</li>
+         * </ul>
          * 
-         * *   **1**: low
-         * *   **2**: medium
-         * *   **3**: high
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder warnLevel(Integer warnLevel) {
             this.putQueryParameter("WarnLevel", warnLevel);

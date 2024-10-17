@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisableUserConfigRequest} extends {@link RequestModel}
  *
  * <p>DisableUserConfigRequest</p>
@@ -81,7 +82,10 @@ public class DisableUserConfigRequest extends Request {
         } 
 
         /**
-         * The code of the configuration item. You can call the [DescribeConfigs](~~DescribeConfigs~~) operation to obtain the code of the configuration item.
+         * <p>The code of the configuration item. You can call the <a href="~~DescribeConfigs~~">DescribeConfigs</a> operation to obtain the code of the configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>access_failed_cnt</p>
          */
         public Builder code(String code) {
             this.putQueryParameter("Code", code);
@@ -90,7 +94,10 @@ public class DisableUserConfigRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder featureType(Integer featureType) {
             this.putQueryParameter("FeatureType", featureType);
@@ -99,11 +106,14 @@ public class DisableUserConfigRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh_cn</strong>: Chinese (default)</li>
+         * <li><strong>en_us</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh_cn**: Chinese (default)
-         * *   **en_us**: English
+         * <strong>example:</strong>
+         * <p>zh_cn</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

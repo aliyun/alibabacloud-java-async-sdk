@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCategoryTemplateRuleListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCategoryTemplateRuleListResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -93,7 +97,7 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The list of rules.
+         * <p>The list of rules.</p>
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -101,7 +105,10 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>136082B3-B21F-5E9D-B68E-991FFD205D24</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of rules in the template.
+         * <p>The total number of rules in the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCategoryTemplateRuleListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCategoryTemplateRuleListResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -229,7 +248,10 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The description of the rule.
+             * <p>The description of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Rule for identifying ID card numbers</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -237,7 +259,10 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the rule.
+             * <p>The unique ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -245,7 +270,10 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of sensitive data types. Multiple IDs are separated by commas (,).
+             * <p>The IDs of sensitive data types. Multiple IDs are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001,1002</p>
              */
             public Builder identificationRuleIds(String identificationRuleIds) {
                 this.identificationRuleIds = identificationRuleIds;
@@ -253,16 +281,21 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The scan scope of the rule. The value is a JSON array of the STRING type. Each element in a JSON array indicates a scan scope that contains the following fields:
-             * <p>
+             * <p>The scan scope of the rule. The value is a JSON array of the STRING type. Each element in a JSON array indicates a scan scope that contains the following fields:</p>
+             * <ul>
+             * <li><p><strong>Asset</strong>: the data asset type. Valid values: RDS, DRDS, PolarDB, OTS, ADB, and OceanBase. The value is of the STRING type.</p>
+             * </li>
+             * <li><p><strong>Content</strong>: the scan scope. The value is of the STRING type. Each element in a JSON array indicates a scan scope that contains the following fields:</p>
+             * <ul>
+             * <li><strong>Range</strong>: the matching condition. Valid values: Instance, database, table, column, project, bucket, and object. The value project is valid only for data assets in MaxCompute. The values bucket and object are valid only for data assets in Object Storage Service (OSS). The value of this parameter is of the STRING type.</li>
+             * <li><strong>Operator</strong>: the operator. Valid values: equals, regex, prefix, and suffix. The operator equals indicates a full match. The operator regex indicates a match by regular expression. The operator prefix indicates a match by prefix. The operator suffix indicates a match by suffix.</li>
+             * <li><strong>Value</strong>: the matching content. The value is of the STRING type.</li>
+             * </ul>
+             * </li>
+             * </ul>
              * 
-             * *   **Asset**: the data asset type. Valid values: RDS, DRDS, PolarDB, OTS, ADB, and OceanBase. The value is of the STRING type.
-             * 
-             * *   **Content**: the scan scope. The value is of the STRING type. Each element in a JSON array indicates a scan scope that contains the following fields:
-             * 
-             *     *   **Range**: the matching condition. Valid values: Instance, database, table, column, project, bucket, and object. The value project is valid only for data assets in MaxCompute. The values bucket and object are valid only for data assets in Object Storage Service (OSS). The value of this parameter is of the STRING type.
-             *     *   **Operator**: the operator. Valid values: equals, regex, prefix, and suffix. The operator equals indicates a full match. The operator regex indicates a match by regular expression. The operator prefix indicates a match by prefix. The operator suffix indicates a match by suffix.
-             *     *   **Value**: the matching content. The value is of the STRING type.
+             * <strong>example:</strong>
+             * <p>[{&quot;Asset&quot;:&quot;RDS&quot;,&quot;Content&quot;:[{&quot;Range&quot;:&quot;database&quot;,&quot;Operator&quot;:&quot;regex&quot;,&quot;Value&quot;:&quot;register&quot;}]},{&quot;Asset&quot;:&quot;RDS&quot;,&quot;Content&quot;:[{&quot;Range&quot;:&quot;table&quot;,&quot;Operator&quot;:&quot;regex&quot;,&quot;Value&quot;:&quot;register&quot;}]},{&quot;Asset&quot;:&quot;RDS&quot;,&quot;Content&quot;:[{&quot;Range&quot;:&quot;column&quot;,&quot;Operator&quot;:&quot;regex&quot;,&quot;Value&quot;:&quot;register&quot;}]},{&quot;Asset&quot;:&quot;ODPS&quot;,&quot;Content&quot;:[{&quot;Range&quot;:&quot;project&quot;,&quot;Operator&quot;:&quot;regex&quot;,&quot;Value&quot;:&quot;register&quot;}]},{&quot;Asset&quot;:&quot;ODPS&quot;,&quot;Content&quot;:[{&quot;Range&quot;:&quot;table&quot;,&quot;Operator&quot;:&quot;regex&quot;,&quot;Value&quot;:&quot;register&quot;}]},{&quot;Asset&quot;:&quot;ODPS&quot;,&quot;Content&quot;:[{&quot;Range&quot;:&quot;column&quot;,&quot;Operator&quot;:&quot;regex&quot;,&quot;Value&quot;:&quot;register&quot;}]}]</p>
              */
             public Builder identificationScope(String identificationScope) {
                 this.identificationScope = identificationScope;
@@ -270,7 +303,10 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ID card number</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -278,21 +314,24 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The sensitivity level of the data that is not compliant with the rule. Valid values: **1** to **11**.
-             * <p>
+             * <p>The sensitivity level of the data that is not compliant with the rule. Valid values: <strong>1</strong> to <strong>11</strong>.</p>
+             * <ul>
+             * <li><strong>1</strong>: No sensitive data is detected.</li>
+             * <li><strong>2</strong>: indicates the S1 sensitivity level.</li>
+             * <li><strong>3</strong>: indicates the S2 sensitivity level.</li>
+             * <li><strong>4</strong>: indicates the S3 sensitivity level.</li>
+             * <li><strong>5</strong>: indicates the S4 sensitivity level.</li>
+             * <li><strong>6</strong>: indicates the S5 sensitivity level.</li>
+             * <li><strong>7</strong>: indicates the S6 sensitivity level.</li>
+             * <li><strong>8</strong>: indicates the S7 sensitivity level.</li>
+             * <li><strong>9</strong>: indicates the S8 sensitivity level.</li>
+             * <li><strong>10</strong>: indicates the S9 sensitivity level.</li>
+             * <li><strong>11</strong>: indicates the S10 sensitivity level.</li>
+             * <li><strong>null</strong>: indicates all preceding sensitivity levels.</li>
+             * </ul>
              * 
-             * *   **1**: No sensitive data is detected.
-             * *   **2**: indicates the S1 sensitivity level.
-             * *   **3**: indicates the S2 sensitivity level.
-             * *   **4**: indicates the S3 sensitivity level.
-             * *   **5**: indicates the S4 sensitivity level.
-             * *   **6**: indicates the S5 sensitivity level.
-             * *   **7**: indicates the S6 sensitivity level.
-             * *   **8**: indicates the S7 sensitivity level.
-             * *   **9**: indicates the S8 sensitivity level.
-             * *   **10**: indicates the S9 sensitivity level.
-             * *   **11**: indicates the S10 sensitivity level.
-             * *   **null**: indicates all preceding sensitivity levels.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder riskLevelId(Long riskLevelId) {
                 this.riskLevelId = riskLevelId;
@@ -300,12 +339,15 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the rule. Valid values:
-             * <p>
+             * <p>The status of the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1</strong>: enabled</li>
+             * <li><strong>null</strong>: all states</li>
+             * </ul>
              * 
-             * *   **0**: disabled
-             * *   **1**: enabled
-             * *   **null**: all states
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

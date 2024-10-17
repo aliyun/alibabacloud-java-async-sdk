@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataObjectsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDataObjectsResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDataObjectsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataObjectsResponseBody</p>
+     */
     public static class ModelTags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -191,6 +198,12 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataObjectsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataObjectsResponseBody</p>
+     */
     public static class RuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RiskLevelId")
         private Long riskLevelId;
@@ -312,6 +325,12 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataObjectsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataObjectsResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Categories")
         private java.util.List < String > categories;

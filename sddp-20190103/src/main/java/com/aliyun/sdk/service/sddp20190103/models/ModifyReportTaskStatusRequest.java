@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyReportTaskStatusRequest} extends {@link RequestModel}
  *
  * <p>ModifyReportTaskStatusRequest</p>
@@ -81,7 +82,10 @@ public class ModifyReportTaskStatusRequest extends Request {
         } 
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder featureType(Integer featureType) {
             this.putQueryParameter("FeatureType", featureType);
@@ -90,11 +94,14 @@ public class ModifyReportTaskStatusRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh_cn**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh_cn</strong>: Simplified Chinese</li>
+         * <li><strong>en_us</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh_cn**: Simplified Chinese
-         * *   **en_us**: English
+         * <strong>example:</strong>
+         * <p>zh_cn</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -103,13 +110,17 @@ public class ModifyReportTaskStatusRequest extends Request {
         }
 
         /**
-         * Specifies the status of the report task. Valid values:
-         * <p>
+         * <p>Specifies the status of the report task. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled</li>
+         * <li><strong>1</strong>: enabled</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is required.</p>
+         * </blockquote>
          * 
-         * *   **0**: disabled
-         * *   **1**: enabled
-         * 
-         * > This parameter is required.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder reportTaskStatus(Integer reportTaskStatus) {
             this.putQueryParameter("ReportTaskStatus", reportTaskStatus);

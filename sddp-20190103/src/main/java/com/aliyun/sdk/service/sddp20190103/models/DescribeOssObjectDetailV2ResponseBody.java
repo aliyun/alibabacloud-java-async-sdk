@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOssObjectDetailV2ResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeOssObjectDetailV2ResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeOssObjectDetailV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOssObjectDetailV2ResponseBody</p>
+     */
     public static class ModelTags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -131,6 +138,12 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeOssObjectDetailV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOssObjectDetailV2ResponseBody</p>
+     */
     public static class RuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CategoryName")
         private String categoryName;
@@ -272,6 +285,12 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeOssObjectDetailV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOssObjectDetailV2ResponseBody</p>
+     */
     public static class OssObjectDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BucketName")
         private String bucketName;
@@ -279,11 +298,26 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CategoryName")
         private String categoryName;
 
+        @com.aliyun.core.annotation.NameInMap("FileCategoryName")
+        private String fileCategoryName;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private String id;
+
+        @com.aliyun.core.annotation.NameInMap("ModelTagIds")
+        private String modelTagIds;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("ObjectAcl")
+        private String objectAcl;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
+
+        @com.aliyun.core.annotation.NameInMap("RiskLevelId")
+        private Integer riskLevelId;
 
         @com.aliyun.core.annotation.NameInMap("RiskLevelName")
         private String riskLevelName;
@@ -291,13 +325,22 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleList")
         private java.util.List < RuleList> ruleList;
 
+        @com.aliyun.core.annotation.NameInMap("Size")
+        private Long size;
+
         private OssObjectDetail(Builder builder) {
             this.bucketName = builder.bucketName;
             this.categoryName = builder.categoryName;
+            this.fileCategoryName = builder.fileCategoryName;
+            this.id = builder.id;
+            this.modelTagIds = builder.modelTagIds;
             this.name = builder.name;
+            this.objectAcl = builder.objectAcl;
             this.regionId = builder.regionId;
+            this.riskLevelId = builder.riskLevelId;
             this.riskLevelName = builder.riskLevelName;
             this.ruleList = builder.ruleList;
+            this.size = builder.size;
         }
 
         public static Builder builder() {
@@ -323,6 +366,27 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return fileCategoryName
+         */
+        public String getFileCategoryName() {
+            return this.fileCategoryName;
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return modelTagIds
+         */
+        public String getModelTagIds() {
+            return this.modelTagIds;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -330,10 +394,24 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return objectAcl
+         */
+        public String getObjectAcl() {
+            return this.objectAcl;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
             return this.regionId;
+        }
+
+        /**
+         * @return riskLevelId
+         */
+        public Integer getRiskLevelId() {
+            return this.riskLevelId;
         }
 
         /**
@@ -350,13 +428,26 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
             return this.ruleList;
         }
 
+        /**
+         * @return size
+         */
+        public Long getSize() {
+            return this.size;
+        }
+
         public static final class Builder {
             private String bucketName; 
             private String categoryName; 
+            private String fileCategoryName; 
+            private String id; 
+            private String modelTagIds; 
             private String name; 
+            private String objectAcl; 
             private String regionId; 
+            private Integer riskLevelId; 
             private String riskLevelName; 
             private java.util.List < RuleList> ruleList; 
+            private Long size; 
 
             /**
              * BucketName.
@@ -375,6 +466,30 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
             }
 
             /**
+             * FileCategoryName.
+             */
+            public Builder fileCategoryName(String fileCategoryName) {
+                this.fileCategoryName = fileCategoryName;
+                return this;
+            }
+
+            /**
+             * Id.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * ModelTagIds.
+             */
+            public Builder modelTagIds(String modelTagIds) {
+                this.modelTagIds = modelTagIds;
+                return this;
+            }
+
+            /**
              * Name.
              */
             public Builder name(String name) {
@@ -383,10 +498,26 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
             }
 
             /**
+             * ObjectAcl.
+             */
+            public Builder objectAcl(String objectAcl) {
+                this.objectAcl = objectAcl;
+                return this;
+            }
+
+            /**
              * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * RiskLevelId.
+             */
+            public Builder riskLevelId(Integer riskLevelId) {
+                this.riskLevelId = riskLevelId;
                 return this;
             }
 
@@ -403,6 +534,14 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
              */
             public Builder ruleList(java.util.List < RuleList> ruleList) {
                 this.ruleList = ruleList;
+                return this;
+            }
+
+            /**
+             * Size.
+             */
+            public Builder size(Long size) {
+                this.size = size;
                 return this;
             }
 

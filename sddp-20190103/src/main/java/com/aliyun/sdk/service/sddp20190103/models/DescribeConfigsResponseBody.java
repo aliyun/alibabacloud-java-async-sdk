@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeConfigsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeConfigsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of common configuration items for alerts.
+         * <p>An array that consists of common configuration items for alerts.</p>
          */
         public Builder configList(java.util.List < ConfigList> configList) {
             this.configList = configList;
@@ -57,7 +58,10 @@ public class DescribeConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>769FB3C1-F4C9-42DF-9B72-7077A8989C13</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeConfigsResponseBody</p>
+     */
     public static class ConfigList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -145,7 +155,10 @@ public class DescribeConfigsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The code of the common configuration item.
+             * <p>The code of the common configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -153,7 +166,10 @@ public class DescribeConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the default value for the common configuration item.
+             * <p>The description of the default value for the common configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The volume of logs of a specific type that are generated on the current day is less than 30% of the average volume of logs generated in the previous 10 days.</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -161,7 +177,10 @@ public class DescribeConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the common configuration item.
+             * <p>The description of the common configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Anomalous log output</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -169,7 +188,10 @@ public class DescribeConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the common configuration item.
+             * <p>The unique ID of the common configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2133</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -177,7 +199,10 @@ public class DescribeConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the common configuration item.
+             * <p>The value of the common configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateConfigRequest} extends {@link RequestModel}
  *
  * <p>CreateConfigRequest</p>
@@ -123,12 +124,15 @@ public class CreateConfigRequest extends Request {
         } 
 
         /**
-         * The code of the common configuration item. Valid values:
-         * <p>
+         * <p>The code of the common configuration item. Valid values:</p>
+         * <ul>
+         * <li><strong>access_failed_cnt</strong>: the maximum number of access attempts allowed when Data Security Center (DSC) fails to access an unauthorized resource.</li>
+         * <li><strong>access_permission_exprie_max_days</strong>: the maximum idle period allowed for access permissions before an alert is triggered.</li>
+         * <li><strong>log_datasize_avg_days</strong>: the minimum percentage of the volume of logs of a specific type generated on the current day to the average volume of logs generated in the previous 10 days before an alert is triggered.</li>
+         * </ul>
          * 
-         * *   **access_failed_cnt**: the maximum number of access attempts allowed when Data Security Center (DSC) fails to access an unauthorized resource.
-         * *   **access_permission_exprie_max_days**: the maximum idle period allowed for access permissions before an alert is triggered.
-         * *   **log_datasize_avg_days**: the minimum percentage of the volume of logs of a specific type generated on the current day to the average volume of logs generated in the previous 10 days before an alert is triggered.
+         * <strong>example:</strong>
+         * <p>access_failed_cnt</p>
          */
         public Builder code(String code) {
             this.putQueryParameter("Code", code);
@@ -137,7 +141,10 @@ public class CreateConfigRequest extends Request {
         }
 
         /**
-         * The description of the common configuration item.
+         * <p>The description of the common configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Maximum number of access attempts allowed when DSC fails to access an unauthorized resource: 10</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -146,7 +153,10 @@ public class CreateConfigRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder featureType(Integer featureType) {
             this.putQueryParameter("FeatureType", featureType);
@@ -155,11 +165,14 @@ public class CreateConfigRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh_cn**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh_cn</strong>: Chinese</li>
+         * <li><strong>en_us</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh_cn**: Chinese
-         * *   **en_us**: English
+         * <strong>example:</strong>
+         * <p>zh_cn</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -168,7 +181,10 @@ public class CreateConfigRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39.170.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -177,12 +193,15 @@ public class CreateConfigRequest extends Request {
         }
 
         /**
-         * The value of the common configuration item. The meaning of this parameter varies with the value of the Code parameter.
-         * <p>
+         * <p>The value of the common configuration item. The meaning of this parameter varies with the value of the Code parameter.</p>
+         * <ul>
+         * <li>If you set the Code parameter to <strong>access_failed_cnt</strong>, the Value parameter specifies the maximum number of access attempts allowed when DSC fails to access an unauthorized resource.</li>
+         * <li>If you set the Code parameter to <strong>access_permission_exprie_max_days</strong>, the Value parameter specifies the maximum idle period allowed for access permissions before an alert is triggered.</li>
+         * <li>If you set the Code parameter to <strong>log_datasize_avg_days</strong>, the Value parameter specifies the minimum percentage of the volume of logs of a specific type generated on the current day to the average amount of logs generated in the previous 10 days before an alert is triggered.</li>
+         * </ul>
          * 
-         * *   If you set the Code parameter to **access_failed_cnt**, the Value parameter specifies the maximum number of access attempts allowed when DSC fails to access an unauthorized resource.
-         * *   If you set the Code parameter to **access_permission_exprie_max_days**, the Value parameter specifies the maximum idle period allowed for access permissions before an alert is triggered.
-         * *   If you set the Code parameter to **log_datasize_avg_days**, the Value parameter specifies the minimum percentage of the volume of logs of a specific type generated on the current day to the average amount of logs generated in the previous 10 days before an alert is triggered.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

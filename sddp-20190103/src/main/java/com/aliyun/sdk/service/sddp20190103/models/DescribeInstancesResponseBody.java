@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstancesResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -93,7 +97,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the data assets.
+         * <p>An array that consists of the data assets.</p>
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -101,7 +105,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>71064826-726F-4ADA-B879-05D8055476FB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of data assets.
+         * <p>The total number of data assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class ModelTags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -169,12 +188,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The ID of the tag. Valid values:
-             * <p>
+             * <p>The ID of the tag. Valid values:</p>
+             * <ul>
+             * <li><strong>101</strong>: personal sensitive information</li>
+             * <li><strong>102</strong>: personal information</li>
+             * <li><strong>107</strong>: general information</li>
+             * </ul>
              * 
-             * *   **101**: personal sensitive information
-             * *   **102**: personal information
-             * *   **107**: general information
+             * <strong>example:</strong>
+             * <p>101</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -182,12 +204,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the tag. Valid values:
-             * <p>
+             * <p>The name of the tag. Valid values:</p>
+             * <ul>
+             * <li>Personal sensitive information</li>
+             * <li>Personal information</li>
+             * <li>General information</li>
+             * </ul>
              * 
-             * *   Personal sensitive information
-             * *   Personal information
-             * *   General information
+             * <strong>example:</strong>
+             * <p>personal sensitive data</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -201,6 +226,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private Long creationTime;
@@ -219,6 +250,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("LastFinishTime")
         private Long lastFinishTime;
+
+        @com.aliyun.core.annotation.NameInMap("MemberAliUid")
+        private String memberAliUid;
 
         @com.aliyun.core.annotation.NameInMap("ModelTags")
         private java.util.List < ModelTags> modelTags;
@@ -269,6 +303,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.instanceDescription = builder.instanceDescription;
             this.labelsec = builder.labelsec;
             this.lastFinishTime = builder.lastFinishTime;
+            this.memberAliUid = builder.memberAliUid;
             this.modelTags = builder.modelTags;
             this.name = builder.name;
             this.odpsRiskLevelName = builder.odpsRiskLevelName;
@@ -333,6 +368,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         public Long getLastFinishTime() {
             return this.lastFinishTime;
+        }
+
+        /**
+         * @return memberAliUid
+         */
+        public String getMemberAliUid() {
+            return this.memberAliUid;
         }
 
         /**
@@ -440,6 +482,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String instanceDescription; 
             private Boolean labelsec; 
             private Long lastFinishTime; 
+            private String memberAliUid; 
             private java.util.List < ModelTags> modelTags; 
             private String name; 
             private String odpsRiskLevelName; 
@@ -456,7 +499,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The time when the data asset was created. The value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the data asset was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1637226782000</p>
              */
             public Builder creationTime(Long creationTime) {
                 this.creationTime = creationTime;
@@ -464,7 +510,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the department to which the data asset belongs.
+             * <p>The name of the department to which the data asset belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>***DemoCenter</p>
              */
             public Builder departName(String departName) {
                 this.departName = departName;
@@ -472,7 +521,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the data asset in DSC.
+             * <p>The unique ID of the data asset in DSC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11111</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -480,7 +532,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the data asset.
+             * <p>The description of the data asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Data asset Information 1</p>
              */
             public Builder instanceDescription(String instanceDescription) {
                 this.instanceDescription = instanceDescription;
@@ -488,11 +543,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The security status of the data asset. Valid values:
-             * <p>
+             * <p>The security status of the data asset. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The data asset is secure.</li>
+             * <li><strong>false</strong>: The data asset is insecure.</li>
+             * </ul>
              * 
-             * *   **true**: The data asset is secure.
-             * *   **false**: The data asset is insecure.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder labelsec(Boolean labelsec) {
                 this.labelsec = labelsec;
@@ -500,7 +558,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the data asset was last scanned. The value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the data asset was last scanned. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1637622793000</p>
              */
             public Builder lastFinishTime(Long lastFinishTime) {
                 this.lastFinishTime = lastFinishTime;
@@ -508,7 +569,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * A list of tags.
+             * MemberAliUid.
+             */
+            public Builder memberAliUid(String memberAliUid) {
+                this.memberAliUid = memberAliUid;
+                return this;
+            }
+
+            /**
+             * <p>A list of tags.</p>
              */
             public Builder modelTags(java.util.List < ModelTags> modelTags) {
                 this.modelTags = modelTags;
@@ -516,7 +585,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data asset.
+             * <p>The name of the data asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gxdata</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -524,7 +596,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is deprecated.
+             * <p>This parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder odpsRiskLevelName(String odpsRiskLevelName) {
                 this.odpsRiskLevelName = odpsRiskLevelName;
@@ -532,7 +607,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud account to which the data asset belongs.
+             * <p>The Alibaba Cloud account to which the data asset belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtdep-239-******</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -540,7 +618,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service to which the data asset belongs, such as MaxCompute, OSS, and ApsaraDB RDS. For more information about the types of data assets that DSC can scan to detect sensitive data, see [Supported data assets](~~212906~~).
+             * <p>The name of the service to which the data asset belongs, such as MaxCompute, OSS, and ApsaraDB RDS. For more information about the types of data assets that DSC can scan to detect sensitive data, see <a href="https://help.aliyun.com/document_detail/212906.html">Supported data assets</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -548,7 +629,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the service to which the data asset belongs.
+             * <p>The ID of the service to which the data asset belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder productId(String productId) {
                 this.productId = productId;
@@ -556,11 +640,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The protection status of the data asset. Valid values:
-             * <p>
+             * <p>The protection status of the data asset. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The data asset is being protected.</li>
+             * <li><strong>false</strong>: The data asset is not protected.</li>
+             * </ul>
              * 
-             * *   **true**: The data asset is being protected.
-             * *   **false**: The data asset is not protected.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder protection(Boolean protection) {
                 this.protection = protection;
@@ -568,20 +655,23 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the sensitivity level for the data asset. A higher sensitivity level ID indicates that the identified data is more sensitive.
-             * <p>
+             * <p>The ID of the sensitivity level for the data asset. A higher sensitivity level ID indicates that the identified data is more sensitive.</p>
+             * <ul>
+             * <li><strong>1</strong>: No sensitive data is detected.</li>
+             * <li><strong>2</strong>: sensitive data at level 1.</li>
+             * <li><strong>3</strong>: sensitive data at level 2.</li>
+             * <li><strong>4</strong>: sensitive data at level 3.</li>
+             * <li><strong>5</strong>: sensitive data at level 4.</li>
+             * <li><strong>6</strong>: sensitive data at level 5.</li>
+             * <li><strong>7</strong>: sensitive data at level 6.</li>
+             * <li><strong>8</strong>: sensitive data at level 7.</li>
+             * <li><strong>9</strong>: sensitive data at level 8.</li>
+             * <li><strong>10</strong>: sensitive data at level 9.</li>
+             * <li><strong>11</strong>: sensitive data at level 10.</li>
+             * </ul>
              * 
-             * *   **1**: No sensitive data is detected.
-             * *   **2**: sensitive data at level 1.
-             * *   **3**: sensitive data at level 2.
-             * *   **4**: sensitive data at level 3.
-             * *   **5**: sensitive data at level 4.
-             * *   **6**: sensitive data at level 5.
-             * *   **7**: sensitive data at level 6.
-             * *   **8**: sensitive data at level 7.
-             * *   **9**: sensitive data at level 8.
-             * *   **10**: sensitive data at level 9.
-             * *   **11**: sensitive data at level 10.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder riskLevelId(Long riskLevelId) {
                 this.riskLevelId = riskLevelId;
@@ -589,7 +679,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the sensitivity level for the data asset.
+             * <p>The name of the sensitivity level for the data asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sensitive data at level 1</p>
              */
             public Builder riskLevelName(String riskLevelName) {
                 this.riskLevelName = riskLevelName;
@@ -597,7 +690,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the sensitive data detection rule that the data asset hits.
+             * <p>The name of the sensitive data detection rule that the data asset hits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>*** rule</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -605,11 +701,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the data asset contains sensitive data. Valid values:
-             * <p>
+             * <p>Indicates whether the data asset contains sensitive data. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sensitive(Boolean sensitive) {
                 this.sensitive = sensitive;
@@ -617,7 +716,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of sensitive data objects in the data asset. For example, if the data asset is an ApsaraDB RDS instance, the value indicates the number of sensitive tables in all databases of the instance.
+             * <p>The number of sensitive data objects in the data asset. For example, if the data asset is an ApsaraDB RDS instance, the value indicates the number of sensitive tables in all databases of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder sensitiveCount(Integer sensitiveCount) {
                 this.sensitiveCount = sensitiveCount;
@@ -625,7 +727,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the tenant.
+             * <p>The name of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tenant 1</p>
              */
             public Builder tenantName(String tenantName) {
                 this.tenantName = tenantName;
@@ -633,7 +738,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of data objects in the data asset. For example, if the data asset is an ApsaraDB RDS instance, the value indicates the total number of tables in all databases of the instance.
+             * <p>The total number of data objects in the data asset. For example, if the data asset is an ApsaraDB RDS instance, the value indicates the total number of tables in all databases of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>231</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

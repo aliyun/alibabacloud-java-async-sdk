@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeEventDetailRequest</p>
@@ -68,10 +69,14 @@ public class DescribeEventDetailRequest extends Request {
         } 
 
         /**
-         * The ID of the anomalous event.
-         * <p>
+         * <p>The ID of the anomalous event.</p>
+         * <blockquote>
+         * <p>You can call the <strong>DescribeEvents</strong> operation to query the ID of the anomalous event.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the **DescribeEvents** operation to query the ID of the anomalous event.
+         * <strong>example:</strong>
+         * <p>13456723343</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -80,11 +85,14 @@ public class DescribeEventDetailRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventTypesRequest} extends {@link RequestModel}
  *
  * <p>DescribeEventTypesRequest</p>
@@ -109,7 +110,10 @@ public class DescribeEventTypesRequest extends Request {
         } 
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder featureType(Integer featureType) {
             this.putQueryParameter("FeatureType", featureType);
@@ -118,11 +122,14 @@ public class DescribeEventTypesRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -131,12 +138,15 @@ public class DescribeEventTypesRequest extends Request {
         }
 
         /**
-         * The type of anomalous event for which you want to query the anomalous events of subtypes. Valid values:
-         * <p>
+         * <p>The type of anomalous event for which you want to query the anomalous events of subtypes. Valid values:</p>
+         * <ul>
+         * <li><strong>01</strong>: anomalous permission usage</li>
+         * <li><strong>02</strong>: anomalous data flow</li>
+         * <li><strong>03</strong>: anomalous data operation</li>
+         * </ul>
          * 
-         * *   **01**: anomalous permission usage
-         * *   **02**: anomalous data flow
-         * *   **03**: anomalous data operation
+         * <strong>example:</strong>
+         * <p>01</p>
          */
         public Builder parentTypeId(Long parentTypeId) {
             this.putQueryParameter("ParentTypeId", parentTypeId);
@@ -145,7 +155,10 @@ public class DescribeEventTypesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values include **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates Object Storage Service (OSS). The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.
+         * <p>The type of the resource. Valid values include <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates MaxCompute. The value 2 indicates Object Storage Service (OSS). The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder resourceId(Integer resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -154,11 +167,14 @@ public class DescribeEventTypesRequest extends Request {
         }
 
         /**
-         * The status of the anomalous event. Valid values:
-         * <p>
+         * <p>The status of the anomalous event. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: enabled</li>
+         * <li><strong>2</strong>: disabled</li>
+         * </ul>
          * 
-         * *   **1**: enabled
-         * *   **2**: disabled
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

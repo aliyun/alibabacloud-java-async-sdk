@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataMaskingTasksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDataMaskingTasksResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -93,7 +97,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         }
 
         /**
-         * A list of de-identification tasks.
+         * <p>A list of de-identification tasks.</p>
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -101,7 +105,10 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>769FB3C1-F4C9-4******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDataMaskingTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataMaskingTasksResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DstMemberAccount")
         private Long dstMemberAccount;
@@ -361,7 +380,10 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
             private Integer triggerType; 
 
             /**
-             * The member account to which the desensitization target belongs.
+             * <p>The member account to which the desensitization target belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192479427903xxxx</p>
              */
             public Builder dstMemberAccount(Long dstMemberAccount) {
                 this.dstMemberAccount = dstMemberAccount;
@@ -369,7 +391,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The destination path.
+             * <p>The destination path.</p>
              */
             public Builder dstPath(String dstPath) {
                 this.dstPath = dstPath;
@@ -377,7 +399,10 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The service to which the data to be de-identified belongs. Valid values: **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.
+             * <p>The service to which the data to be de-identified belongs. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder dstType(Integer dstType) {
                 this.dstType = dstType;
@@ -385,7 +410,10 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service to which the de-identified data belongs. Valid values: **MaxCompute, OSS, ADS, OTS, and RDS**.
+             * <p>The type of the service to which the de-identified data belongs. Valid values: <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder dstTypeCode(String dstTypeCode) {
                 this.dstTypeCode = dstTypeCode;
@@ -393,7 +421,10 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the de-identification task is created. The value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the de-identification task is created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1582992000000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -401,7 +432,10 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the de-identification task is running.
+             * <p>Indicates whether the de-identification task is running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasUnfinishProcess(Boolean hasUnfinishProcess) {
                 this.hasUnfinishProcess = hasUnfinishProcess;
@@ -409,7 +443,10 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The task ID.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -417,7 +454,10 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the source table is de-identified.
+             * <p>Indicates whether the source table is de-identified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder originalTable(Boolean originalTable) {
                 this.originalTable = originalTable;
@@ -425,7 +465,10 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The user who created the de-identification task.
+             * <p>The user who created the de-identification task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>owner</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -433,7 +476,10 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that the de-identification task is run.
+             * <p>The number of times that the de-identification task is run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder runCount(Integer runCount) {
                 this.runCount = runCount;
@@ -441,7 +487,10 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The member account to which the desensitization source belongs.
+             * <p>The member account to which the desensitization source belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192479427903xxxx</p>
              */
             public Builder srcMemberAccount(Long srcMemberAccount) {
                 this.srcMemberAccount = srcMemberAccount;
@@ -449,7 +498,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The source path.
+             * <p>The source path.</p>
              */
             public Builder srcPath(String srcPath) {
                 this.srcPath = srcPath;
@@ -457,7 +506,10 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service to which the data to be de-identified belongs. Valid values: **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.
+             * <p>The type of the service to which the data to be de-identified belongs. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder srcType(Integer srcType) {
                 this.srcType = srcType;
@@ -465,7 +517,10 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service to which the data to be de-identified belongs. Valid values: **MaxCompute, OSS, ADS, OTS, and RDS**.
+             * <p>The type of the service to which the data to be de-identified belongs. Valid values: <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder srcTypeCode(String srcTypeCode) {
                 this.srcTypeCode = srcTypeCode;
@@ -473,11 +528,14 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task. Valid values:
-             * <p>
+             * <p>The status of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1</strong>: enabled</li>
+             * </ul>
              * 
-             * *   **0**: disabled
-             * *   **1**: enabled
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -485,7 +543,10 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mt4HBgtw1B******</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -493,7 +554,10 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task.
+             * <p>The name of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Task name</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -501,12 +565,15 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The mode in which the de-identification task is run. Valid values:
-             * <p>
+             * <p>The mode in which the de-identification task is run. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: manual</li>
+             * <li><strong>2</strong>: scheduled</li>
+             * <li><strong>3</strong>: manual and scheduled</li>
+             * </ul>
              * 
-             * *   **1**: manual
-             * *   **2**: scheduled
-             * *   **3**: manual and scheduled
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder triggerType(Integer triggerType) {
                 this.triggerType = triggerType;

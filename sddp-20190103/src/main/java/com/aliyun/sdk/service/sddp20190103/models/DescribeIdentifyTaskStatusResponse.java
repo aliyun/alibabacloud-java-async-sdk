@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeEventTypesResponse} extends {@link TeaModel}
+ * {@link DescribeIdentifyTaskStatusResponse} extends {@link TeaModel}
  *
- * <p>DescribeEventTypesResponse</p>
+ * <p>DescribeIdentifyTaskStatusResponse</p>
  */
-public class DescribeEventTypesResponse extends Response {
+public class DescribeIdentifyTaskStatusResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class DescribeEventTypesResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribeEventTypesResponseBody body;
+    private DescribeIdentifyTaskStatusResponseBody body;
 
-    private DescribeEventTypesResponse(BuilderImpl builder) {
+    private DescribeIdentifyTaskStatusResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeEventTypesResponse create() {
+    public static DescribeIdentifyTaskStatusResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class DescribeEventTypesResponse extends Response {
     /**
      * @return body
      */
-    public DescribeEventTypesResponseBody getBody() {
+    public DescribeIdentifyTaskStatusResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeEventTypesResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeIdentifyTaskStatusResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeEventTypesResponseBody body);
+        Builder body(DescribeIdentifyTaskStatusResponseBody body);
 
         @Override
-        DescribeEventTypesResponse build();
+        DescribeIdentifyTaskStatusResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeEventTypesResponse, Builder>
+            extends Response.BuilderImpl<DescribeIdentifyTaskStatusResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DescribeEventTypesResponseBody body; 
+        private DescribeIdentifyTaskStatusResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeEventTypesResponse response) {
+        private BuilderImpl(DescribeIdentifyTaskStatusResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class DescribeEventTypesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeEventTypesResponseBody body) {
+        public Builder body(DescribeIdentifyTaskStatusResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeEventTypesResponse build() {
-            return new DescribeEventTypesResponse(this);
+        public DescribeIdentifyTaskStatusResponse build() {
+            return new DescribeIdentifyTaskStatusResponse(this);
         } 
 
     } 

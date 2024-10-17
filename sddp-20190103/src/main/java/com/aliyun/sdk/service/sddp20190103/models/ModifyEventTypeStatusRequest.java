@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyEventTypeStatusRequest} extends {@link RequestModel}
  *
  * <p>ModifyEventTypeStatusRequest</p>
@@ -81,7 +82,10 @@ public class ModifyEventTypeStatusRequest extends Request {
         } 
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder featureType(Integer featureType) {
             this.putQueryParameter("FeatureType", featureType);
@@ -90,7 +94,10 @@ public class ModifyEventTypeStatusRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values: **zh** and **en**. The value zh indicates Chinese, and the value en indicates English.
+         * <p>The language of the content within the request and response. Valid values: <strong>zh</strong> and <strong>en</strong>. The value zh indicates Chinese, and the value en indicates English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -99,10 +106,13 @@ public class ModifyEventTypeStatusRequest extends Request {
         }
 
         /**
-         * The ID of the anomalous event subtype. Separate multiple IDs with commas (,).
-         * <p>
+         * <p>The ID of the anomalous event subtype. Separate multiple IDs with commas (,).</p>
+         * <blockquote>
+         * <p>You can call the <strong>DescribeEventTypes</strong> operation to query the ID of anomalous event subtype.</p>
+         * </blockquote>
          * 
-         * > You can call the **DescribeEventTypes** operation to query the ID of anomalous event subtype.
+         * <strong>example:</strong>
+         * <p>020008</p>
          */
         public Builder subTypeIds(String subTypeIds) {
             this.putQueryParameter("SubTypeIds", subTypeIds);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyRuleStatusRequest} extends {@link RequestModel}
  *
  * <p>ModifyRuleStatusRequest</p>
@@ -96,10 +97,13 @@ public class ModifyRuleStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the sensitive data detection rule.
-         * <p>
+         * <p>The ID of the sensitive data detection rule.</p>
+         * <blockquote>
+         * <p>You can query the ID of the sensitive data detection rule by calling the <strong>DescribeRules</strong> operation.</p>
+         * </blockquote>
          * 
-         * > You can query the ID of the sensitive data detection rule by calling the **DescribeRules** operation.
+         * <strong>example:</strong>
+         * <p>12341</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -108,10 +112,13 @@ public class ModifyRuleStatusRequest extends Request {
         }
 
         /**
-         * The ID of the sensitive data detection rule. Separate multiple IDs with commas (,).
-         * <p>
+         * <p>The ID of the sensitive data detection rule. Separate multiple IDs with commas (,).</p>
+         * <blockquote>
+         * <p>You can query the ID of the sensitive data detection rule by calling the <strong>DescribeRules</strong> operation.</p>
+         * </blockquote>
          * 
-         * > You can query the ID of the sensitive data detection rule by calling the **DescribeRules** operation.
+         * <strong>example:</strong>
+         * <p>1,2,3,4</p>
          */
         public Builder ids(String ids) {
             this.putQueryParameter("Ids", ids);
@@ -120,11 +127,14 @@ public class ModifyRuleStatusRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -133,11 +143,15 @@ public class ModifyRuleStatusRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable or disable the sensitive data detection rule. Valid values:
-         * <p>
+         * <p>Specifies whether to enable or disable the sensitive data detection rule. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: disables the sensitive data detection rule.</li>
+         * <li><strong>1</strong>: enables the sensitive data detection rule.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0**: disables the sensitive data detection rule.
-         * *   **1**: enables the sensitive data detection rule.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

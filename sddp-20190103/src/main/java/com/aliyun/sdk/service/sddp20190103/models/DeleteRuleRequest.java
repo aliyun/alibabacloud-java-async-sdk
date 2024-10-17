@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteRuleRequest} extends {@link RequestModel}
  *
  * <p>DeleteRuleRequest</p>
@@ -96,7 +97,10 @@ public class DeleteRuleRequest extends Request {
         } 
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder featureType(Integer featureType) {
             this.putQueryParameter("FeatureType", featureType);
@@ -105,7 +109,11 @@ public class DeleteRuleRequest extends Request {
         }
 
         /**
-         * The ID of the sensitive data detection rule.
+         * <p>The ID of the sensitive data detection rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>122300</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -114,7 +122,10 @@ public class DeleteRuleRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values: **zh** and **en**. The value zh indicates Chinese, and the value en indicates English.
+         * <p>The language of the content within the request and response. Valid values: <strong>zh</strong> and <strong>en</strong>. The value zh indicates Chinese, and the value en indicates English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -123,7 +134,10 @@ public class DeleteRuleRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39.170.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

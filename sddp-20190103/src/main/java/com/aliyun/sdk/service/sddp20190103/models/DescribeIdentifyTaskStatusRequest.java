@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link StopMaskingProcessRequest} extends {@link RequestModel}
+ * {@link DescribeIdentifyTaskStatusRequest} extends {@link RequestModel}
  *
- * <p>StopMaskingProcessRequest</p>
+ * <p>DescribeIdentifyTaskStatusRequest</p>
  */
-public class StopMaskingProcessRequest extends Request {
+public class DescribeIdentifyTaskStatusRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Id")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -21,7 +21,7 @@ public class StopMaskingProcessRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    private StopMaskingProcessRequest(Builder builder) {
+    private DescribeIdentifyTaskStatusRequest(Builder builder) {
         super(builder);
         this.id = builder.id;
         this.lang = builder.lang;
@@ -31,7 +31,7 @@ public class StopMaskingProcessRequest extends Request {
         return new Builder();
     }
 
-    public static StopMaskingProcessRequest create() {
+    public static DescribeIdentifyTaskStatusRequest create() {
         return builder().build();
     }
 
@@ -54,7 +54,7 @@ public class StopMaskingProcessRequest extends Request {
         return this.lang;
     }
 
-    public static final class Builder extends Request.Builder<StopMaskingProcessRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeIdentifyTaskStatusRequest, Builder> {
         private Long id; 
         private String lang; 
 
@@ -62,18 +62,17 @@ public class StopMaskingProcessRequest extends Request {
             super();
         } 
 
-        private Builder(StopMaskingProcessRequest request) {
+        private Builder(DescribeIdentifyTaskStatusRequest request) {
             super(request);
             this.id = request.id;
             this.lang = request.lang;
         } 
 
         /**
-         * <p>The unique ID of the de-identification task. You can query the task ID by calling the <a href="~~DescribeDataMaskingTasks~~">DescribeDataMaskingTasks</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>3</p>
+         * <p>268</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -82,14 +81,7 @@ public class StopMaskingProcessRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Valid values:</p>
-         * <ul>
-         * <li><strong>zh_cn</strong>: Simplified Chinese (default)</li>
-         * <li><strong>en_us</strong>: English</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>zh_cn</p>
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -98,8 +90,8 @@ public class StopMaskingProcessRequest extends Request {
         }
 
         @Override
-        public StopMaskingProcessRequest build() {
-            return new StopMaskingProcessRequest(this);
+        public DescribeIdentifyTaskStatusRequest build() {
+            return new DescribeIdentifyTaskStatusRequest(this);
         } 
 
     } 

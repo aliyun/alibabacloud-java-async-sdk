@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRiskLevelsRequest} extends {@link RequestModel}
  *
  * <p>DescribeRiskLevelsRequest</p>
@@ -81,7 +82,10 @@ public class DescribeRiskLevelsRequest extends Request {
         } 
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder featureType(Integer featureType) {
             this.putQueryParameter("FeatureType", featureType);
@@ -90,11 +94,14 @@ public class DescribeRiskLevelsRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li>zh_cn: Chinese (default)</li>
+         * <li>en_us: English</li>
+         * </ul>
          * 
-         * *   zh_cn: Chinese (default)
-         * *   en_us: English
+         * <strong>example:</strong>
+         * <p>zh_cn</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -103,7 +110,10 @@ public class DescribeRiskLevelsRequest extends Request {
         }
 
         /**
-         * The ID of the industry-specific rule template.
+         * <p>The ID of the industry-specific rule template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);

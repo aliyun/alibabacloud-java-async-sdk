@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserStatusResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         private UserStatus userStatus; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>769FB3C1-F4C9-42DF-9B72-7077A8989C13</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the current account.
+         * <p>The information about the current account.</p>
          */
         public Builder userStatus(UserStatus userStatus) {
             this.userStatus = userStatus;
@@ -70,6 +74,12 @@ public class DescribeUserStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUserStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserStatusResponseBody</p>
+     */
     public static class UserStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessKeyId")
         private String accessKeyId;
@@ -325,7 +335,10 @@ public class DescribeUserStatusResponseBody extends TeaModel {
             private Long useOssSize; 
 
             /**
-             * The AccessKey ID of the current account.
+             * <p>The AccessKey ID of the current account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LTAI4G67HRBzNRmMhfyv****</p>
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -333,11 +346,14 @@ public class DescribeUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the SQL Explorer feature can be disabled. Valid values:
-             * <p>
+             * <p>Indicates whether the SQL Explorer feature can be disabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder auditClosable(Boolean auditClosable) {
                 this.auditClosable = auditClosable;
@@ -345,11 +361,14 @@ public class DescribeUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the audit resources can be released.
-             * <p>
+             * <p>Indicates whether the audit resources can be released.</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder auditReleasable(Boolean auditReleasable) {
                 this.auditReleasable = auditReleasable;
@@ -357,11 +376,14 @@ public class DescribeUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether DSC has permission to access user resources within the current account. Valid values:
-             * <p>
+             * <p>Indicates whether DSC has permission to access user resources within the current account. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder authed(Boolean authed) {
                 this.authed = authed;
@@ -369,11 +391,14 @@ public class DescribeUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of DCS that is purchased by using the current account. Valid values:
-             * <p>
+             * <p>The billing method of DCS that is purchased by using the current account. Valid values:</p>
+             * <ul>
+             * <li><strong>PREPAY</strong>: subscription</li>
+             * <li><strong>POSTPAY</strong>: pay-as-you-go</li>
+             * </ul>
              * 
-             * *   **PREPAY**: subscription
-             * *   **POSTPAY**: pay-as-you-go
+             * <strong>example:</strong>
+             * <p>PREPAY</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -381,11 +406,14 @@ public class DescribeUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The permissions that the current account has. Valid values:
-             * <p>
+             * <p>The permissions that the current account has. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The current account has the administrative permissions or read-only permissions on Data Security Center.</li>
+             * <li><strong>1</strong>: The current account has the permissions to manage data domains.</li>
+             * </ul>
              * 
-             * *   **0**: The current account has the administrative permissions or read-only permissions on Data Security Center.
-             * *   **1**: The current account has the permissions to manage data domains.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder dataManagerRole(Integer dataManagerRole) {
                 this.dataManagerRole = dataManagerRole;
@@ -393,7 +421,10 @@ public class DescribeUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data security center instance purchased by the main account.
+             * <p>The ID of the data security center instance purchased by the main account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sddp-cn-****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -401,7 +432,10 @@ public class DescribeUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances within the current account.
+             * <p>The number of instances within the current account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder instanceNum(Integer instanceNum) {
                 this.instanceNum = instanceNum;
@@ -409,7 +443,10 @@ public class DescribeUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of instances.
+             * <p>The total number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder instanceTotalCount(Long instanceTotalCount) {
                 this.instanceTotalCount = instanceTotalCount;
@@ -417,11 +454,14 @@ public class DescribeUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the data security lab feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the data security lab feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: yes</li>
+             * <li><strong>0</strong>: no</li>
+             * </ul>
              * 
-             * *   **1**: yes
-             * *   **0**: no
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder labStatus(Integer labStatus) {
                 this.labStatus = labStatus;
@@ -429,7 +469,10 @@ public class DescribeUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * OSS total storage capacity. Unit: Bytes.
+             * <p>OSS total storage capacity. Unit: Bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2048</p>
              */
             public Builder ossTotalSize(Long ossTotalSize) {
                 this.ossTotalSize = ossTotalSize;
@@ -437,7 +480,10 @@ public class DescribeUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Accumulate the number of days to protect user assets.
+             * <p>Accumulate the number of days to protect user assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder protectionDays(Integer protectionDays) {
                 this.protectionDays = protectionDays;
@@ -445,11 +491,14 @@ public class DescribeUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether DSC is purchased. Valid values:
-             * <p>
+             * <p>Indicates whether DSC is purchased. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder purchased(Boolean purchased) {
                 this.purchased = purchased;
@@ -457,7 +506,10 @@ public class DescribeUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The grace period between when DSC is expired and when DSC is released. Unit: days.
+             * <p>The grace period between when DSC is expired and when DSC is released. Unit: days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder releaseDays(Integer releaseDays) {
                 this.releaseDays = releaseDays;
@@ -465,7 +517,10 @@ public class DescribeUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the audit resources are released. Unit: milliseconds.
+             * <p>The time when the audit resources are released. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15000</p>
              */
             public Builder releaseTime(Long releaseTime) {
                 this.releaseTime = releaseTime;
@@ -473,7 +528,10 @@ public class DescribeUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The remaining period for which the data assets within the current account can be protected by DSC.
+             * <p>The remaining period for which the data assets within the current account can be protected by DSC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>131</p>
              */
             public Builder remainDays(Integer remainDays) {
                 this.remainDays = remainDays;
@@ -481,11 +539,14 @@ public class DescribeUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the current account uses a free trial of DSC. Valid values:
-             * <p>
+             * <p>Indicates whether the current account uses a free trial of DSC. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder trail(Boolean trail) {
                 this.trail = trail;
@@ -493,11 +554,14 @@ public class DescribeUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the agent audit feature is used. Valid values:
-             * <p>
+             * <p>Indicates whether the agent audit feature is used. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: yes</li>
+             * <li><strong>0</strong>: no</li>
+             * </ul>
              * 
-             * *   **1**: yes
-             * *   **0**: no
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder useAgentAudit(Boolean useAgentAudit) {
                 this.useAgentAudit = useAgentAudit;
@@ -505,7 +569,10 @@ public class DescribeUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances that are used.
+             * <p>The number of instances that are used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>125</p>
              */
             public Builder useInstanceNum(Integer useInstanceNum) {
                 this.useInstanceNum = useInstanceNum;
@@ -513,7 +580,10 @@ public class DescribeUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The occupied space of the Object Storage Service (OSS) bucket. Unit: bytes.
+             * <p>The occupied space of the Object Storage Service (OSS) bucket. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234</p>
              */
             public Builder useOssSize(Long useOssSize) {
                 this.useOssSize = useOssSize;

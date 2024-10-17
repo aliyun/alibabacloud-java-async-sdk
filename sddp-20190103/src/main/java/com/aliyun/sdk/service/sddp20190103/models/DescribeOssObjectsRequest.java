@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOssObjectsRequest} extends {@link RequestModel}
  *
  * <p>DescribeOssObjectsRequest</p>
@@ -221,7 +222,10 @@ public class DescribeOssObjectsRequest extends Request {
         } 
 
         /**
-         * The page number of the page to return.
+         * <p>The page number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -230,7 +234,10 @@ public class DescribeOssObjectsRequest extends Request {
         }
 
         /**
-         * The code of the file type.
+         * <p>The code of the file type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder fileCategoryCode(Long fileCategoryCode) {
             this.putQueryParameter("FileCategoryCode", fileCategoryCode);
@@ -239,10 +246,13 @@ public class DescribeOssObjectsRequest extends Request {
         }
 
         /**
-         * The ID of the instance to which the OSS object belongs.
-         * <p>
+         * <p>The ID of the instance to which the OSS object belongs.</p>
+         * <blockquote>
+         * <p>You can call the <strong>DescribeInstances</strong> operation to query the instance ID.</p>
+         * </blockquote>
          * 
-         * > You can call the **DescribeInstances** operation to query the instance ID.
+         * <strong>example:</strong>
+         * <p>ins-2222</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -251,11 +261,14 @@ public class DescribeOssObjectsRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -264,7 +277,10 @@ public class DescribeOssObjectsRequest extends Request {
         }
 
         /**
-         * The end time of the last scan. The value is a UNIX timestamp. Unit: milliseconds.
+         * <p>The end time of the last scan. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1536751124000</p>
          */
         public Builder lastScanTimeEnd(Long lastScanTimeEnd) {
             this.putQueryParameter("LastScanTimeEnd", lastScanTimeEnd);
@@ -273,7 +289,10 @@ public class DescribeOssObjectsRequest extends Request {
         }
 
         /**
-         * The start time of the last scan. The value is a UNIX timestamp. Unit: milliseconds.
+         * <p>The start time of the last scan. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1536751124000</p>
          */
         public Builder lastScanTimeStart(Long lastScanTimeStart) {
             this.putQueryParameter("LastScanTimeStart", lastScanTimeStart);
@@ -291,7 +310,10 @@ public class DescribeOssObjectsRequest extends Request {
         }
 
         /**
-         * The search keyword. Fuzzy match is supported.
+         * <p>The search keyword. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -300,7 +322,10 @@ public class DescribeOssObjectsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -309,14 +334,17 @@ public class DescribeOssObjectsRequest extends Request {
         }
 
         /**
-         * The sensitivity level of the OSS object. Valid values:
-         * <p>
+         * <p>The sensitivity level of the OSS object. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: N/A, which indicates that no sensitive data is detected.</li>
+         * <li><strong>2</strong>: S1, which indicates the low sensitivity level.</li>
+         * <li><strong>3</strong>: S2, which indicates the medium sensitivity level.</li>
+         * <li><strong>4</strong>: S3, which indicates the high sensitivity level.</li>
+         * <li><strong>5</strong>: S4, which indicates the highest sensitivity level.</li>
+         * </ul>
          * 
-         * *   **1**: N/A, which indicates that no sensitive data is detected.
-         * *   **2**: S1, which indicates the low sensitivity level.
-         * *   **3**: S2, which indicates the medium sensitivity level.
-         * *   **4**: S3, which indicates the high sensitivity level.
-         * *   **5**: S4, which indicates the highest sensitivity level.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder riskLevelId(Integer riskLevelId) {
             this.putQueryParameter("RiskLevelId", riskLevelId);
@@ -325,10 +353,13 @@ public class DescribeOssObjectsRequest extends Request {
         }
 
         /**
-         * The ID of the sensitive data detection rule that the OSS object hits.
-         * <p>
+         * <p>The ID of the sensitive data detection rule that the OSS object hits.</p>
+         * <blockquote>
+         * <p>You can call the <strong>DescribeRules</strong> operation to query the ID of the sensitive data detection rule.</p>
+         * </blockquote>
          * 
-         * > You can call the **DescribeRules** operation to query the ID of the sensitive data detection rule.
+         * <strong>example:</strong>
+         * <p>1222</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -337,7 +368,10 @@ public class DescribeOssObjectsRequest extends Request {
         }
 
         /**
-         * The region in which the data asset resides.
+         * <p>The region in which the data asset resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder serviceRegionId(String serviceRegionId) {
             this.putQueryParameter("ServiceRegionId", serviceRegionId);
@@ -346,7 +380,10 @@ public class DescribeOssObjectsRequest extends Request {
         }
 
         /**
-         * The ID of the industry-specific rule template.
+         * <p>The ID of the industry-specific rule template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRulesRequest} extends {@link RequestModel}
  *
  * <p>DescribeRulesRequest</p>
@@ -291,11 +292,14 @@ public class DescribeRulesRequest extends Request {
         } 
 
         /**
-         * The content type of the sensitive data detection rule. Valid values:
-         * <p>
+         * <p>The content type of the sensitive data detection rule. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: keyword</li>
+         * <li><strong>2</strong>: regular expression</li>
+         * </ul>
          * 
-         * *   **0**: keyword
-         * *   **2**: regular expression
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder category(Integer category) {
             this.putQueryParameter("Category", category);
@@ -304,7 +308,10 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * The type of the content in the sensitive data detection rule. Valid values include **1**, **2**, **3**, **4**, and **5**. The value 1 indicates attempts to exploit SQL injections. The value 2 indicates bypass by using SQL injections. The value 3 indicates abuse of stored procedures. The value 4 indicates buffer overflow. The value 5 indicates SQL injections based on errors.
+         * <p>The type of the content in the sensitive data detection rule. Valid values include <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates attempts to exploit SQL injections. The value 2 indicates bypass by using SQL injections. The value 3 indicates abuse of stored procedures. The value 4 indicates buffer overflow. The value 5 indicates SQL injections based on errors.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder contentCategory(Integer contentCategory) {
             this.putQueryParameter("ContentCategory", contentCategory);
@@ -313,7 +320,10 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * The page number of the page to return.
+         * <p>The page number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -322,11 +332,14 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * The type of the sensitive data detection rule. Valid values:
-         * <p>
+         * <p>The type of the sensitive data detection rule. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: built-in rule</li>
+         * <li><strong>1</strong>: custom rule</li>
+         * </ul>
          * 
-         * *   **0**: built-in rule
-         * *   **1**: custom rule
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder customType(Integer customType) {
             this.putQueryParameter("CustomType", customType);
@@ -335,7 +348,10 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder featureType(Integer featureType) {
             this.putQueryParameter("FeatureType", featureType);
@@ -344,7 +360,10 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * The parent group type of the rule.
+         * <p>The parent group type of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4_1</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -353,13 +372,17 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * Specifies whether to allow earlier versions of request parameters to support keywords that are supported in later versions of request parameters. Valid values:
-         * <p>
+         * <p>Specifies whether to allow earlier versions of request parameters to support keywords that are supported in later versions of request parameters. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * <blockquote>
+         * <p>To specify keywords as the content type of the sensitive data detection rule, you can set the Category parameter to 0 for earlier versions of request parameters and set the Category parameter to 5 for later versions of request parameters. You can specify the KeywordCompatible parameter based on your business requirements.</p>
+         * </blockquote>
          * 
-         * *   **true**: yes
-         * *   **false**: no
-         * 
-         * > To specify keywords as the content type of the sensitive data detection rule, you can set the Category parameter to 0 for earlier versions of request parameters and set the Category parameter to 5 for later versions of request parameters. You can specify the KeywordCompatible parameter based on your business requirements.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder keywordCompatible(Boolean keywordCompatible) {
             this.putQueryParameter("KeywordCompatible", keywordCompatible);
@@ -368,11 +391,14 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -381,11 +407,14 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * The match type. Valid values:
-         * <p>
+         * <p>The match type. Valid values:</p>
+         * <ul>
+         * <li>1: rule-based match</li>
+         * <li>2: dictionary-based match</li>
+         * </ul>
          * 
-         * *   1: rule-based match
-         * *   2: dictionary-based match
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder matchType(Integer matchType) {
             this.putQueryParameter("MatchType", matchType);
@@ -394,7 +423,10 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * The name of the sensitive data detection rule. Fuzzy match is supported.
+         * <p>The name of the sensitive data detection rule. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>*** rule</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -403,7 +435,10 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -412,7 +447,10 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * The name of the service to which the data asset belongs. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.
+         * <p>The name of the service to which the data asset belongs. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MaxCompute</p>
          */
         public Builder productCode(Integer productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -421,7 +459,10 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * The ID of the service to which the sensitive data detection rule is applied. Valid values include **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates Object Storage Service (OSS). The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.
+         * <p>The ID of the service to which the sensitive data detection rule is applied. Valid values include <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates MaxCompute. The value 2 indicates Object Storage Service (OSS). The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder productId(Long productId) {
             this.putQueryParameter("ProductId", productId);
@@ -430,14 +471,17 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * The sensitivity level of the sensitive data that hits the sensitive data detection rule. Valid values:
-         * <p>
+         * <p>The sensitivity level of the sensitive data that hits the sensitive data detection rule. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: N/A, which indicates that no sensitive data is detected.</li>
+         * <li><strong>2</strong>: S1, which indicates the low sensitivity level.</li>
+         * <li><strong>3</strong>: S2, which indicates the medium sensitivity level.</li>
+         * <li><strong>4</strong>: S3, which indicates the high sensitivity level.</li>
+         * <li><strong>5</strong>: S4, which indicates the highest sensitivity level.</li>
+         * </ul>
          * 
-         * *   **1**: N/A, which indicates that no sensitive data is detected.
-         * *   **2**: S1, which indicates the low sensitivity level.
-         * *   **3**: S2, which indicates the medium sensitivity level.
-         * *   **4**: S3, which indicates the high sensitivity level.
-         * *   **5**: S4, which indicates the highest sensitivity level.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder riskLevelId(Long riskLevelId) {
             this.putQueryParameter("RiskLevelId", riskLevelId);
@@ -446,13 +490,16 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * The type of the sensitive data detection rule. Valid values:
-         * <p>
+         * <p>The type of the sensitive data detection rule. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: sensitive data detection rule</li>
+         * <li><strong>2</strong>: audit rule</li>
+         * <li><strong>3</strong>: anomalous event detection rule</li>
+         * <li><strong>99</strong>: custom rule</li>
+         * </ul>
          * 
-         * *   **1**: sensitive data detection rule
-         * *   **2**: audit rule
-         * *   **3**: anomalous event detection rule
-         * *   **99**: custom rule
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ruleType(Integer ruleType) {
             this.putQueryParameter("RuleType", ruleType);
@@ -461,11 +508,14 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * The status of the sensitive data detection rule. Valid values:
-         * <p>
+         * <p>The status of the sensitive data detection rule. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: enabled</li>
+         * <li><strong>0</strong>: disabled</li>
+         * </ul>
          * 
-         * *   **1**: enabled
-         * *   **0**: disabled
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -474,14 +524,18 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * The type of the data asset. Valid values:
-         * <p>
+         * <p>The type of the data asset. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: all data assets</li>
+         * <li><strong>1</strong>: structured data asset</li>
+         * <li><strong>2</strong>: unstructured data asset</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you set the parameter to 1 or 2, rules that support all data assets and rules that support the queried data asset type are returned.</p>
+         * </blockquote>
          * 
-         * *   **0**: all data assets
-         * *   **1**: structured data asset
-         * *   **2**: unstructured data asset
-         * 
-         * > If you set the parameter to 1 or 2, rules that support all data assets and rules that support the queried data asset type are returned.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder supportForm(Integer supportForm) {
             this.putQueryParameter("SupportForm", supportForm);
@@ -490,12 +544,15 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * The severity level of the alert. Valid values:
-         * <p>
+         * <p>The severity level of the alert. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: low</li>
+         * <li><strong>2</strong>: medium</li>
+         * <li><strong>3</strong>: high</li>
+         * </ul>
          * 
-         * *   **1**: low
-         * *   **2**: medium
-         * *   **3**: high
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder warnLevel(Integer warnLevel) {
             this.putQueryParameter("WarnLevel", warnLevel);

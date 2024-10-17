@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataLimitsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDataLimitsRequest</p>
@@ -249,11 +250,14 @@ public class DescribeDataLimitsRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable the security audit feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the security audit feature. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
          * 
-         * *   **1**: yes
-         * *   **0**: no
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder auditStatus(Integer auditStatus) {
             this.putQueryParameter("AuditStatus", auditStatus);
@@ -262,14 +266,17 @@ public class DescribeDataLimitsRequest extends Request {
         }
 
         /**
-         * The data detection status. Valid values:
-         * <p>
+         * <p>The data detection status. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The data detection is ready.</li>
+         * <li><strong>1</strong>: The data detection is running.</li>
+         * <li><strong>2</strong>: The connectivity test is in progress.</li>
+         * <li><strong>3</strong>: The connectivity test passed.</li>
+         * <li><strong>4</strong>: The connectivity test failed.</li>
+         * </ul>
          * 
-         * *   **0**: The data detection is ready.
-         * *   **1**: The data detection is running.
-         * *   **2**: The connectivity test is in progress.
-         * *   **3**: The connectivity test passed.
-         * *   **4**: The connectivity test failed.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder checkStatus(Integer checkStatus) {
             this.putQueryParameter("CheckStatus", checkStatus);
@@ -278,7 +285,10 @@ public class DescribeDataLimitsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -287,11 +297,14 @@ public class DescribeDataLimitsRequest extends Request {
         }
 
         /**
-         * Specifies whether DSC has the data de-identification permissions on the data asset. Valid values:
-         * <p>
+         * <p>Specifies whether DSC has the data de-identification permissions on the data asset. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
          * 
-         * *   **1**: yes
-         * *   **0**: no
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder datamaskStatus(Integer datamaskStatus) {
             this.putQueryParameter("DatamaskStatus", datamaskStatus);
@@ -300,11 +313,14 @@ public class DescribeDataLimitsRequest extends Request {
         }
 
         /**
-         * Specifies whether DSC has the data detection permissions on the data asset. Valid values:
-         * <p>
+         * <p>Specifies whether DSC has the data detection permissions on the data asset. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
          * 
-         * *   **1**: yes
-         * *   **0**: no
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder enable(Integer enable) {
             this.putQueryParameter("Enable", enable);
@@ -313,7 +329,10 @@ public class DescribeDataLimitsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query The value is a UNIX timestamp. Unit: milliseconds.
+         * <p>The end of the time range to query The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1616068534877</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -322,7 +341,10 @@ public class DescribeDataLimitsRequest extends Request {
         }
 
         /**
-         * The type of the database engine. Valid values include **MySQL**, **SQLServer**, **Oracle**, **PostgreSQL**, and **MongoDB**.
+         * <p>The type of the database engine. Valid values include <strong>MySQL</strong>, <strong>SQLServer</strong>, <strong>Oracle</strong>, <strong>PostgreSQL</strong>, and <strong>MongoDB</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder engineType(String engineType) {
             this.putQueryParameter("EngineType", engineType);
@@ -331,7 +353,10 @@ public class DescribeDataLimitsRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder featureType(Integer featureType) {
             this.putQueryParameter("FeatureType", featureType);
@@ -340,11 +365,14 @@ public class DescribeDataLimitsRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -353,7 +381,10 @@ public class DescribeDataLimitsRequest extends Request {
         }
 
         /**
-         * The ID of the member.
+         * <p>The ID of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>**********8103</p>
          */
         public Builder memberAccount(Long memberAccount) {
             this.putQueryParameter("MemberAccount", memberAccount);
@@ -362,7 +393,10 @@ public class DescribeDataLimitsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -371,12 +405,15 @@ public class DescribeDataLimitsRequest extends Request {
         }
 
         /**
-         * The parent ID of the data asset to be queried. Valid values:
-         * <p>
+         * <p>The parent ID of the data asset to be queried. Valid values:</p>
+         * <ul>
+         * <li>The name or ID of the MaxCompute project.</li>
+         * <li>The name or ID of the OSS bucket.</li>
+         * <li>The name or ID of the ApsaraDB RDS instance or database.</li>
+         * </ul>
          * 
-         * *   The name or ID of the MaxCompute project.
-         * *   The name or ID of the OSS bucket.
-         * *   The name or ID of the ApsaraDB RDS instance or database.
+         * <strong>example:</strong>
+         * <p>1112</p>
          */
         public Builder parentId(String parentId) {
             this.putQueryParameter("ParentId", parentId);
@@ -385,15 +422,18 @@ public class DescribeDataLimitsRequest extends Request {
         }
 
         /**
-         * The type of the service to which the data asset belongs. This parameter is required. Valid values:
-         * <p>
+         * <p>The type of the service to which the data asset belongs. This parameter is required. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: MaxCompute</li>
+         * <li><strong>2</strong>: Object Storage Service (OSS)</li>
+         * <li><strong>3</strong>: AnalyticDB for MySQL</li>
+         * <li><strong>4</strong>: Tablestore</li>
+         * <li><strong>5</strong>: ApsaraDB RDS</li>
+         * <li><strong>6</strong>: self-managed database</li>
+         * </ul>
          * 
-         * *   **1**: MaxCompute
-         * *   **2**: Object Storage Service (OSS)
-         * *   **3**: AnalyticDB for MySQL
-         * *   **4**: Tablestore
-         * *   **5**: ApsaraDB RDS
-         * *   **6**: self-managed database
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder resourceType(Integer resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -402,7 +442,10 @@ public class DescribeDataLimitsRequest extends Request {
         }
 
         /**
-         * The region in which the data asset resides.
+         * <p>The region in which the data asset resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder serviceRegionId(String serviceRegionId) {
             this.putQueryParameter("ServiceRegionId", serviceRegionId);
@@ -411,7 +454,10 @@ public class DescribeDataLimitsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query The value is a UNIX timestamp. Unit: milliseconds.
+         * <p>The beginning of the time range to query The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1616068534877</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

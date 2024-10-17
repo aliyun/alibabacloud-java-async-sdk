@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataObjectColumnDetailV2Response} extends {@link TeaModel}
  *
  * <p>DescribeDataObjectColumnDetailV2Response</p>

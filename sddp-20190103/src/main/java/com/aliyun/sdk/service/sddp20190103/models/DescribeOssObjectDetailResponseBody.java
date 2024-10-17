@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOssObjectDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeOssObjectDetailResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the OSS object.
+         * <p>The details of the OSS object.</p>
          */
         public Builder ossObjectDetail(OssObjectDetail ossObjectDetail) {
             this.ossObjectDetail = ossObjectDetail;
@@ -57,7 +58,10 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>769FB3C1-F4C9-42DF-9B72-7077A8989C13</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeOssObjectDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOssObjectDetailResponseBody</p>
+     */
     public static class ModelTags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -109,12 +119,15 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The tag ID.
-             * <p>
+             * <p>The tag ID.</p>
+             * <ul>
+             * <li><strong>101</strong>: sensitive personal information</li>
+             * <li><strong>102</strong>: personal information</li>
+             * <li><strong>103</strong>: important information</li>
+             * </ul>
              * 
-             * *   **101**: sensitive personal information
-             * *   **102**: personal information
-             * *   **103**: important information
+             * <strong>example:</strong>
+             * <p>101</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -122,12 +135,15 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The tag name.
-             * <p>
+             * <p>The tag name.</p>
+             * <ul>
+             * <li>Sensitive personal information</li>
+             * <li>Personal information</li>
+             * <li>Important information</li>
+             * </ul>
              * 
-             * *   Sensitive personal information
-             * *   Personal information
-             * *   Important information
+             * <strong>example:</strong>
+             * <p>personal sensitive data</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -141,6 +157,12 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeOssObjectDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOssObjectDetailResponseBody</p>
+     */
     public static class RuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CategoryName")
         private String categoryName;
@@ -228,7 +250,10 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             private String ruleName; 
 
             /**
-             * The type of the OSS object.
+             * <p>The type of the OSS object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Excel file</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -236,7 +261,10 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that the OSS object hits the sensitive data detection rule.
+             * <p>The number of times that the OSS object hits the sensitive data detection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -244,7 +272,7 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * A list of tags for data that hits the recognition model.
+             * <p>A list of tags for data that hits the recognition model.</p>
              */
             public Builder modelTags(java.util.List < ModelTags> modelTags) {
                 this.modelTags = modelTags;
@@ -252,14 +280,17 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the sensitivity level of the OSS object.
-             * <p>
+             * <p>The ID of the sensitivity level of the OSS object.</p>
+             * <ul>
+             * <li><strong>1</strong>: No sensitive data is detected.</li>
+             * <li><strong>2</strong>: indicates the low sensitivity level.</li>
+             * <li><strong>3</strong>: indicates the medium sensitivity level.</li>
+             * <li><strong>4</strong>: indicates the high sensitivity level.</li>
+             * <li><strong>5</strong>: indicates the highest sensitivity level.</li>
+             * </ul>
              * 
-             * *   **1**: No sensitive data is detected.
-             * *   **2**: indicates the low sensitivity level.
-             * *   **3**: indicates the medium sensitivity level.
-             * *   **4**: indicates the high sensitivity level.
-             * *   **5**: indicates the highest sensitivity level.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder riskLevelId(Long riskLevelId) {
                 this.riskLevelId = riskLevelId;
@@ -267,7 +298,10 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the sensitivity level for the OSS object.
+             * <p>The name of the sensitivity level for the OSS object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Medium sensitivity level</p>
              */
             public Builder riskLevelName(String riskLevelName) {
                 this.riskLevelName = riskLevelName;
@@ -275,7 +309,10 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the sensitive data detection rule.
+             * <p>The name of the sensitive data detection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>*** rule</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -289,6 +326,12 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeOssObjectDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOssObjectDetailResponseBody</p>
+     */
     public static class OssObjectDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BucketName")
         private String bucketName;
@@ -376,7 +419,10 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             private java.util.List < RuleList> ruleList; 
 
             /**
-             * The name of the OSS bucket to which the OSS object belongs.
+             * <p>The name of the OSS bucket to which the OSS object belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bucke***</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -384,7 +430,10 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the OSS object.
+             * <p>The type of the OSS object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Excel file</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -392,7 +441,10 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the OSS object.
+             * <p>The name of the OSS object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>obj_id</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -400,7 +452,10 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the OSS object.
+             * <p>The region ID of the OSS object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-***</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -408,7 +463,10 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the sensitivity level for the OSS object.
+             * <p>The name of the sensitivity level for the OSS object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Medium sensitivity level</p>
              */
             public Builder riskLevelName(String riskLevelName) {
                 this.riskLevelName = riskLevelName;
@@ -416,7 +474,7 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * A list of the sensitive data detection rules that the OSS object hits.
+             * <p>A list of the sensitive data detection rules that the OSS object hits.</p>
              */
             public Builder ruleList(java.util.List < RuleList> ruleList) {
                 this.ruleList = ruleList;

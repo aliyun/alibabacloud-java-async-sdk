@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeColumnsRequest} extends {@link RequestModel}
  *
  * <p>DescribeColumnsRequest</p>
@@ -291,7 +292,10 @@ public class DescribeColumnsRequest extends Request {
         } 
 
         /**
-         * The page number of the page to return.
+         * <p>The page number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -309,10 +313,13 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * The ID of the instance to which data in the column of the table belongs.
-         * <p>
+         * <p>The ID of the instance to which data in the column of the table belongs.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeRules~~">DescribeInstances</a> operation to query the IDs of instances.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeInstances](~~DescribeRules~~) operation to query the IDs of instances.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder instanceId(Long instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -321,7 +328,10 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * The name of the instance to which data in the column of the table belongs.
+         * <p>The name of the instance to which data in the column of the table belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp17t1htja573l5i8****</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -330,11 +340,14 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh_cn**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh_cn</strong>: Chinese</li>
+         * <li><strong>en_us</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh_cn**: Chinese
-         * *   **en_us**: English
+         * <strong>example:</strong>
+         * <p>zh_cn</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -352,10 +365,11 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * The search keyword. Fuzzy match is supported.
-         * <p>
+         * <p>The search keyword. Fuzzy match is supported.</p>
+         * <p>For example, if you enter <strong>test</strong>, all columns whose names contain <strong>test</strong> are retrieved.</p>
          * 
-         * For example, if you enter **test**, all columns whose names contain **test** are retrieved.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -364,7 +378,10 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -373,7 +390,10 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * The name of the service to which data in the column of the table belongs. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.
+         * <p>The name of the service to which data in the column of the table belongs. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MaxCompute</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -391,14 +411,17 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * The sensitivity level of the sensitive data that hits the sensitive data detection rule. Valid values:
-         * <p>
+         * <p>The sensitivity level of the sensitive data that hits the sensitive data detection rule. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: N/A</li>
+         * <li><strong>2</strong>: S1</li>
+         * <li><strong>3</strong>: S2</li>
+         * <li><strong>4</strong>: S3</li>
+         * <li><strong>5</strong>: S4</li>
+         * </ul>
          * 
-         * *   **1**: N/A
-         * *   **2**: S1
-         * *   **3**: S2
-         * *   **4**: S3
-         * *   **5**: S4
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder riskLevelId(Long riskLevelId) {
             this.putQueryParameter("RiskLevelId", riskLevelId);
@@ -407,10 +430,13 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * The ID of the sensitive data detection rule that data in the column of the table hits.
-         * <p>
+         * <p>The ID of the sensitive data detection rule that data in the column of the table hits.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeRules~~">DescribeRules</a> operation to query the IDs of sensitive data detection rules.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeRules](~~DescribeRules~~) operation to query the IDs of sensitive data detection rules.
+         * <strong>example:</strong>
+         * <p>11111</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -419,7 +445,10 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * The name of the sensitive data detection rule that data in the column of the table hits.
+         * <p>The name of the sensitive data detection rule that data in the column of the table hits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ID card number (the Chinese mainland)</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -428,14 +457,17 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * The name of the sensitivity level of the data that hits the sensitive data detection rule. Valid values:
-         * <p>
+         * <p>The name of the sensitivity level of the data that hits the sensitive data detection rule. Valid values:</p>
+         * <ul>
+         * <li><strong>N/A</strong>: No sensitive data is detected.</li>
+         * <li><strong>S1</strong>: indicates the low sensitivity level.</li>
+         * <li><strong>S2</strong>: indicates the medium sensitivity level.</li>
+         * <li><strong>S3</strong>: indicates the high sensitivity level.</li>
+         * <li><strong>S4</strong>: indicates the highest sensitivity level.</li>
+         * </ul>
          * 
-         * *   **N/A**: No sensitive data is detected.
-         * *   **S1**: indicates the low sensitivity level.
-         * *   **S2**: indicates the medium sensitivity level.
-         * *   **S3**: indicates the high sensitivity level.
-         * *   **S4**: indicates the highest sensitivity level.
+         * <strong>example:</strong>
+         * <p>S2</p>
          */
         public Builder sensLevelName(String sensLevelName) {
             this.putQueryParameter("SensLevelName", sensLevelName);
@@ -444,10 +476,13 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * The ID of the table to which the column belongs.
-         * <p>
+         * <p>The ID of the table to which the column belongs.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeTables~~">DescribeTables</a> operation to query the IDs of tables.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeTables](~~DescribeTables~~) operation to query the IDs of tables.
+         * <strong>example:</strong>
+         * <p>11132334</p>
          */
         public Builder tableId(Long tableId) {
             this.putQueryParameter("TableId", tableId);
@@ -456,7 +491,10 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * The name of the table.
+         * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>it_table</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
