@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataTrackOrderDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetDataTrackOrderDetailResponseBody</p>
@@ -85,7 +86,7 @@ public class GetDataTrackOrderDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the ticket.
+         * <p>The details of the ticket.</p>
          */
         public Builder dataTrackOrderDetail(DataTrackOrderDetail dataTrackOrderDetail) {
             this.dataTrackOrderDetail = dataTrackOrderDetail;
@@ -93,7 +94,10 @@ public class GetDataTrackOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -101,7 +105,10 @@ public class GetDataTrackOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -109,7 +116,10 @@ public class GetDataTrackOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>283C461F-11D8-48AA-B695-DF092DA32AF3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class GetDataTrackOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class GetDataTrackOrderDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDataTrackOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataTrackOrderDetailResponseBody</p>
+     */
     public static class DataTrackOrderDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatabaseSearchName")
         private String databaseSearchName;
@@ -269,7 +288,10 @@ public class GetDataTrackOrderDetailResponseBody extends TeaModel {
             private java.util.List < String > trackTypes; 
 
             /**
-             * The name that is used to search for the database.
+             * <p>The name that is used to search for the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx@yyy:3306</p>
              */
             public Builder databaseSearchName(String databaseSearchName) {
                 this.databaseSearchName = databaseSearchName;
@@ -277,7 +299,10 @@ public class GetDataTrackOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the database.
+             * <p>The ID of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3431****</p>
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -285,7 +310,10 @@ public class GetDataTrackOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the time range in which data operations are tracked. The time is in the yyyy-MM-dd HH:mm:ss format.
+             * <p>The end time of the time range in which data operations are tracked. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-23 10:00:00</p>
              */
             public Builder jobEndTime(String jobEndTime) {
                 this.jobEndTime = jobEndTime;
@@ -293,7 +321,10 @@ public class GetDataTrackOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the time range in which data operations are tracked. The time is in the yyyy-MM-dd HH:mm:ss format.
+             * <p>The start time of the time range in which data operations are tracked. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-23 00:00:00</p>
              */
             public Builder jobStartTime(String jobStartTime) {
                 this.jobStartTime = jobStartTime;
@@ -301,18 +332,21 @@ public class GetDataTrackOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the data tracking task. Valid values:
-             * <p>
+             * <p>The status of the data tracking task. Valid values:</p>
+             * <ul>
+             * <li><strong>INIT</strong>: The task is being initialized.</li>
+             * <li><strong>LISTING</strong>: The binary logs are being obtained.</li>
+             * <li><strong>LIST_SUCCESS</strong>: The binary logs are successfully obtained.</li>
+             * <li><strong>DOWNLOADING</strong>: The binary logs are being downloaded.</li>
+             * <li><strong>DOWNLOAD_FAIL</strong>: The binary logs failed to be downloaded.</li>
+             * <li><strong>DOWNLOAD_SUCCESS</strong>: The binary logs are successfully downloaded.</li>
+             * <li><strong>FILTERING</strong>: The binary logs are being parsed.</li>
+             * <li><strong>FILTER_FAIL</strong>: The binary logs failed to be parsed.</li>
+             * <li><strong>FILTER_SUCCESS</strong>: The binary logs are successfully parsed.</li>
+             * </ul>
              * 
-             * *   **INIT**: The task is being initialized.
-             * *   **LISTING**: The binary logs are being obtained.
-             * *   **LIST_SUCCESS**: The binary logs are successfully obtained.
-             * *   **DOWNLOADING**: The binary logs are being downloaded.
-             * *   **DOWNLOAD_FAIL**: The binary logs failed to be downloaded.
-             * *   **DOWNLOAD_SUCCESS**: The binary logs are successfully downloaded.
-             * *   **FILTERING**: The binary logs are being parsed.
-             * *   **FILTER_FAIL**: The binary logs failed to be parsed.
-             * *   **FILTER_SUCCESS**: The binary logs are successfully parsed.
+             * <strong>example:</strong>
+             * <p>FILTER_SUCCESS</p>
              */
             public Builder jobStatus(String jobStatus) {
                 this.jobStatus = jobStatus;
@@ -320,11 +354,14 @@ public class GetDataTrackOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the database is a logical database. Valid values:
-             * <p>
+             * <p>Indicates whether the database is a logical database. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -332,7 +369,10 @@ public class GetDataTrackOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>as_task</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -340,7 +380,10 @@ public class GetDataTrackOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the task status.
+             * <p>The description of the task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>searching success</p>
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -348,7 +391,7 @@ public class GetDataTrackOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The names of the tables for which data operations are tracked.
+             * <p>The names of the tables for which data operations are tracked.</p>
              */
             public Builder tableNames(java.util.List < String > tableNames) {
                 this.tableNames = tableNames;
@@ -356,7 +399,7 @@ public class GetDataTrackOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The types of data operations that are tracked.
+             * <p>The types of data operations that are tracked.</p>
              */
             public Builder trackTypes(java.util.List < String > trackTypes) {
                 this.trackTypes = trackTypes;

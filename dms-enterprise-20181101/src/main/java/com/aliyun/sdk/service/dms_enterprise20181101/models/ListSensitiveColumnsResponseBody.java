@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSensitiveColumnsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSensitiveColumnsResponseBody</p>
@@ -97,7 +98,10 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -105,7 +109,10 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -113,7 +120,10 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09D82FD7-F87F-59EF-AA82-AEF71B09E306</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +131,7 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * The sensitive fields.
+         * <p>The sensitive fields.</p>
          */
         public Builder sensitiveColumnList(SensitiveColumnList sensitiveColumnList) {
             this.sensitiveColumnList = sensitiveColumnList;
@@ -129,11 +139,14 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
+         * </ul>
          * 
-         * - true: The request is successful.
-         * - false: The request fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -141,7 +154,10 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -154,6 +170,12 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSensitiveColumnsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSensitiveColumnsResponseBody</p>
+     */
     public static class SensitiveColumn extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColumnCount")
         private Long columnCount;
@@ -241,7 +263,10 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The number of sensitive fields.
+             * <p>The number of sensitive fields.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder columnCount(Long columnCount) {
                 this.columnCount = columnCount;
@@ -249,7 +274,10 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the field.
+             * <p>The name of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_column</p>
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -257,12 +285,15 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the de-identification algorithm. Valid values:
-             * <p>
+             * <p>The type of the de-identification algorithm. Valid values:</p>
+             * <ul>
+             * <li>DEFAULT: All characters are masked. This is the default value.</li>
+             * <li>FIX_POS: The characters at specific positions are masked.</li>
+             * <li>FIX_CHAR: Specific characters are masked.</li>
+             * </ul>
              * 
-             * *   DEFAULT: All characters are masked. This is the default value.
-             * *   FIX_POS: The characters at specific positions are masked.
-             * *   FIX_CHAR: Specific characters are masked.
+             * <strong>example:</strong>
+             * <p>DEFAULT</p>
              */
             public Builder functionType(String functionType) {
                 this.functionType = functionType;
@@ -270,7 +301,10 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_schema</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -278,11 +312,14 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * The sensitivity level of the field. Valid values:
-             * <p>
+             * <p>The sensitivity level of the field. Valid values:</p>
+             * <ul>
+             * <li>SENSITIVE</li>
+             * <li>CONFIDENTIAL</li>
+             * </ul>
              * 
-             * *   SENSITIVE
-             * *   CONFIDENTIAL
+             * <strong>example:</strong>
+             * <p>SENSITIVE</p>
              */
             public Builder securityLevel(String securityLevel) {
                 this.securityLevel = securityLevel;
@@ -290,7 +327,10 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_table</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -304,6 +344,12 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSensitiveColumnsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSensitiveColumnsResponseBody</p>
+     */
     public static class SensitiveColumnList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SensitiveColumn")
         private java.util.List < SensitiveColumn> sensitiveColumn;

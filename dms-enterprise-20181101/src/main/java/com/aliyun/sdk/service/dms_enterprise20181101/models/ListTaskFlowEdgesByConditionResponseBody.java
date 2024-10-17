@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTaskFlowEdgesByConditionResponseBody} extends {@link TeaModel}
  *
  * <p>ListTaskFlowEdgesByConditionResponseBody</p>
@@ -85,7 +86,7 @@ public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The list of task flow edges.
+         * <p>The list of task flow edges.</p>
          */
         public Builder edges(Edges edges) {
             this.edges = edges;
@@ -93,7 +94,10 @@ public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -101,7 +105,10 @@ public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -109,7 +116,10 @@ public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
+         * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D86249CD-422F-5ACF-85BA-9187C986AE0B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTaskFlowEdgesByConditionResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskFlowEdgesByConditionResponseBody</p>
+     */
     public static class Edge extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -185,7 +204,10 @@ public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
             private Long nodeFrom; 
 
             /**
-             * The ID of the task flow edge.
+             * <p>The ID of the task flow edge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24***</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -193,7 +215,10 @@ public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the end node on the edge.
+             * <p>The ID of the end node on the edge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44***</p>
              */
             public Builder nodeEnd(Long nodeEnd) {
                 this.nodeEnd = nodeEnd;
@@ -201,7 +226,10 @@ public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the start node on the edge.
+             * <p>The ID of the start node on the edge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44***</p>
              */
             public Builder nodeFrom(Long nodeFrom) {
                 this.nodeFrom = nodeFrom;
@@ -215,6 +243,12 @@ public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskFlowEdgesByConditionResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskFlowEdgesByConditionResponseBody</p>
+     */
     public static class Edges extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Edge")
         private java.util.List < Edge> edge;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataCorrectBackupFilesResponseBody} extends {@link TeaModel}
  *
  * <p>GetDataCorrectBackupFilesResponseBody</p>
@@ -85,7 +86,7 @@ public class GetDataCorrectBackupFilesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The download URL of the backup file for the ticket.
+         * <p>The download URL of the backup file for the ticket.</p>
          */
         public Builder dataCorrectBackupFiles(DataCorrectBackupFiles dataCorrectBackupFiles) {
             this.dataCorrectBackupFiles = dataCorrectBackupFiles;
@@ -93,7 +94,10 @@ public class GetDataCorrectBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -101,7 +105,10 @@ public class GetDataCorrectBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -109,7 +116,10 @@ public class GetDataCorrectBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4AFF4109-FEFB-44E8-96A3-923B1FA8C46E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class GetDataCorrectBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class GetDataCorrectBackupFilesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDataCorrectBackupFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataCorrectBackupFilesResponseBody</p>
+     */
     public static class DataCorrectBackupFiles extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileUrl")
         private java.util.List < String > fileUrl;

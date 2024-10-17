@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateProxyAccessRequest} extends {@link RequestModel}
  *
  * <p>CreateProxyAccessRequest</p>
@@ -135,7 +136,10 @@ public class CreateProxyAccessRequest extends Request {
         }
 
         /**
-         * The database account.
+         * <p>The database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder indepAccount(String indepAccount) {
             this.putQueryParameter("IndepAccount", indepAccount);
@@ -144,7 +148,10 @@ public class CreateProxyAccessRequest extends Request {
         }
 
         /**
-         * The password that is used to log on to the database.
+         * <p>The password that is used to log on to the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder indepPassword(String indepPassword) {
             this.putQueryParameter("IndepPassword", indepPassword);
@@ -153,7 +160,11 @@ public class CreateProxyAccessRequest extends Request {
         }
 
         /**
-         * The ID of the security protection agent. You can call the [ListProxies](https://www.alibabacloud.com/help/en/data-management-service/latest/listproxies) or [GetProxy](https://www.alibabacloud.com/help/en/data-management-service/latest/getproxy) operation to obtain this parameter.
+         * <p>The ID of the security protection agent. You can call the <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/listproxies">ListProxies</a> or <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/getproxy">GetProxy</a> operation to obtain this parameter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder proxyId(Long proxyId) {
             this.putQueryParameter("ProxyId", proxyId);
@@ -162,7 +173,10 @@ public class CreateProxyAccessRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant) or [ListUserTenants](https://www.alibabacloud.com/help/en/data-management-service/latest/listusertenants) operation to obtain this parameter.
+         * <p>The ID of the tenant. You can call the <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant">GetUserActiveTenant</a> or <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/listusertenants">ListUserTenants</a> operation to obtain this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -171,7 +185,11 @@ public class CreateProxyAccessRequest extends Request {
         }
 
         /**
-         * The ID of the user. You can call the [ListUsers](https://www.alibabacloud.com/help/en/data-management-service/latest/listusers) or [GetUser](https://www.alibabacloud.com/help/en/data-management-service/latest/getuser) operation to obtain this parameter.
+         * <p>The ID of the user. You can call the <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/listusers">ListUsers</a> or <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/getuser">GetUser</a> operation to obtain this parameter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder userId(Long userId) {
             this.putQueryParameter("UserId", userId);

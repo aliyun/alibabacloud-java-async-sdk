@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClassificationTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListClassificationTemplatesResponseBody</p>
@@ -85,7 +86,10 @@ public class ListClassificationTemplatesResponseBody extends TeaModel {
         private java.util.List < TemplateList> templateList; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class ListClassificationTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,10 @@ public class ListClassificationTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90260530-565C-42B9-A6E8-893481FE6AB6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,11 +119,14 @@ public class ListClassificationTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -121,7 +134,7 @@ public class ListClassificationTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of templates.
+         * <p>The list of templates.</p>
          */
         public Builder templateList(java.util.List < TemplateList> templateList) {
             this.templateList = templateList;
@@ -134,6 +147,12 @@ public class ListClassificationTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListClassificationTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClassificationTemplatesResponseBody</p>
+     */
     public static class TemplateList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -197,7 +216,10 @@ public class ListClassificationTemplatesResponseBody extends TeaModel {
             private String templateType; 
 
             /**
-             * The name of the classification template.
+             * <p>The name of the classification template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -205,7 +227,10 @@ public class ListClassificationTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks.
+             * <p>The remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -213,7 +238,10 @@ public class ListClassificationTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the classification template.
+             * <p>The ID of the classification template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3**</p>
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;
@@ -221,11 +249,14 @@ public class ListClassificationTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the classification template. Valid values:
-             * <p>
+             * <p>The type of the classification template. Valid values:</p>
+             * <ul>
+             * <li><strong>INNER</strong>: built-in template</li>
+             * <li><strong>USER_DEFINE</strong>: custom template</li>
+             * </ul>
              * 
-             * *   **INNER**: built-in template
-             * *   **USER_DEFINE**: custom template
+             * <strong>example:</strong>
+             * <p>USER_DEFINE</p>
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;

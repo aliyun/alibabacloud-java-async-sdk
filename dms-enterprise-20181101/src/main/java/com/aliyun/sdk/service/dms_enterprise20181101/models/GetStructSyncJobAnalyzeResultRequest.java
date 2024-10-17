@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetStructSyncJobAnalyzeResultRequest} extends {@link RequestModel}
  *
  * <p>GetStructSyncJobAnalyzeResultRequest</p>
@@ -136,14 +137,17 @@ public class GetStructSyncJobAnalyzeResultRequest extends Request {
         }
 
         /**
-         * The type of the comparison. Valid values:
-         * <p>
+         * <p>The type of the comparison. Valid values:</p>
+         * <ul>
+         * <li><strong>CREATE_TABLE</strong>: compares the created tables.</li>
+         * <li><strong>ALTER_TABLE</strong>: compares the modified tables.</li>
+         * <li><strong>EQUAL_TABLE</strong>: compares the identical tables.</li>
+         * <li><strong>PASS_TABLE</strong>: compares the tables that are skipped during schema synchronization.</li>
+         * <li><strong>NOT_COMPARE</strong>: does not compare tables.</li>
+         * </ul>
          * 
-         * *   **CREATE_TABLE**: compares the created tables.
-         * *   **ALTER_TABLE**: compares the modified tables.
-         * *   **EQUAL_TABLE**: compares the identical tables.
-         * *   **PASS_TABLE**: compares the tables that are skipped during schema synchronization.
-         * *   **NOT_COMPARE**: does not compare tables.
+         * <strong>example:</strong>
+         * <p>CREATE_TABLE</p>
          */
         public Builder compareType(String compareType) {
             this.putQueryParameter("CompareType", compareType);
@@ -152,7 +156,11 @@ public class GetStructSyncJobAnalyzeResultRequest extends Request {
         }
 
         /**
-         * The ID of the ticket.
+         * <p>The ID of the ticket.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1342355</p>
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -161,7 +169,10 @@ public class GetStructSyncJobAnalyzeResultRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -170,7 +181,10 @@ public class GetStructSyncJobAnalyzeResultRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -179,10 +193,13 @@ public class GetStructSyncJobAnalyzeResultRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p>To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a>.</p>
+         * </blockquote>
          * 
-         * > To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

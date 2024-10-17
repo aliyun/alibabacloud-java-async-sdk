@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTaskInstanceRelationResponseBody} extends {@link TeaModel}
  *
  * <p>GetTaskInstanceRelationResponseBody</p>
@@ -85,7 +86,10 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request fails.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request fails.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,7 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the nodes in the execution record of the task flow.
+         * <p>The information about the nodes in the execution record of the task flow.</p>
          */
         public Builder nodeList(NodeList nodeList) {
             this.nodeList = nodeList;
@@ -109,7 +116,10 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>028BF827-3801-5869-8548-F4A039256304</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
+         * </ul>
          * 
-         * *   **true**: The request is successful.
-         * *   **false**: The request fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTaskInstanceRelationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTaskInstanceRelationResponseBody</p>
+     */
     public static class Node extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BusinessTime")
         private String businessTime;
@@ -257,7 +276,10 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The business time of the node.
+             * <p>The business time of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-09 14:37:26</p>
              */
             public Builder businessTime(String businessTime) {
                 this.businessTime = businessTime;
@@ -265,7 +287,10 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the execution of the task flow was complete. The time is displayed in the yyyy-MM-DD HH:mm:ss format.
+             * <p>The time when the execution of the task flow was complete. The time is displayed in the yyyy-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-11 14:38:57</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -273,7 +298,10 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of time consumed for running the node. Unit: milliseconds.
+             * <p>The amount of time consumed for running the node. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>170655</p>
              */
             public Builder executeTime(Long executeTime) {
                 this.executeTime = executeTime;
@@ -281,7 +309,10 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the execution record of the task flow.
+             * <p>The ID of the execution record of the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14059</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -289,7 +320,10 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the task.
+             * <p>The description of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -297,7 +331,10 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14059</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -305,7 +342,10 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Spark SQL-1</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -313,7 +353,10 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node. For more information about the valid values for this parameter, see [NodeType parameter](~~424705~~).
+             * <p>The type of the node. For more information about the valid values for this parameter, see <a href="https://help.aliyun.com/document_detail/424705.html">NodeType parameter</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36</p>
              */
             public Builder nodeType(Integer nodeType) {
                 this.nodeType = nodeType;
@@ -321,15 +364,18 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the node. Valid values:
-             * <p>
+             * <p>The status of the node. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The node is waiting to be scheduled.</li>
+             * <li><strong>1</strong>: The node is running.</li>
+             * <li><strong>2</strong>: The node is suspended.</li>
+             * <li><strong>3</strong>: The node failed to run.</li>
+             * <li><strong>4</strong>: The node is run.</li>
+             * <li><strong>5</strong>: The node is complete.</li>
+             * </ul>
              * 
-             * *   **0**: The node is waiting to be scheduled.
-             * *   **1**: The node is running.
-             * *   **2**: The node is suspended.
-             * *   **3**: The node failed to run.
-             * *   **4**: The node is run.
-             * *   **5**: The node is complete.
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -343,6 +389,12 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTaskInstanceRelationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTaskInstanceRelationResponseBody</p>
+     */
     public static class NodeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Node")
         private java.util.List < Node> node;

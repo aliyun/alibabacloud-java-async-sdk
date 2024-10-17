@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPermApplyOrderDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetPermApplyOrderDetailResponseBody</p>
@@ -85,7 +86,10 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the permission application ticket.
+         * <p>The details of the permission application ticket.</p>
          */
         public Builder permApplyOrderDetail(PermApplyOrderDetail permApplyOrderDetail) {
             this.permApplyOrderDetail = permApplyOrderDetail;
@@ -109,7 +116,10 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can use the ID to query logs and troubleshoot issues.
+         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A4C4499E-5AC2-4318-9FCF-03E426781A04</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPermApplyOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPermApplyOrderDetailResponseBody</p>
+     */
     public static class ColumnInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
@@ -173,7 +192,10 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The name of the column.
+             * <p>The name of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_col</p>
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -181,7 +203,10 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_tb</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -195,6 +220,12 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPermApplyOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPermApplyOrderDetailResponseBody</p>
+     */
     public static class DatabaseInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DbId")
         private Long dbId;
@@ -294,7 +325,10 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             private String searchName; 
 
             /**
-             * The database ID.
+             * <p>The database ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -302,7 +336,10 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database engine.
+             * <p>The type of the database engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -310,7 +347,10 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the environment to which the instance belongs. For more information, see [Change the environment type of an instance](~~163309~~).
+             * <p>The type of the environment to which the instance belongs. For more information, see <a href="https://help.aliyun.com/document_detail/163309.html">Change the environment type of an instance</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -318,11 +358,14 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the database is a logical database. Valid values:
-             * <p>
+             * <p>Indicates whether the database is a logical database. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -330,7 +373,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the owners of the database.
+             * <p>The IDs of the owners of the database.</p>
              */
             public Builder ownerIds(java.util.List < Long > ownerIds) {
                 this.ownerIds = ownerIds;
@@ -338,7 +381,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The nicknames of the owners of the database.
+             * <p>The nicknames of the owners of the database.</p>
              */
             public Builder ownerNickNames(java.util.List < String > ownerNickNames) {
                 this.ownerNickNames = ownerNickNames;
@@ -346,7 +389,10 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name that is used to search for the database.
+             * <p>The name that is used to search for the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test@xxxx:3306【test】</p>
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -360,6 +406,12 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPermApplyOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPermApplyOrderDetailResponseBody</p>
+     */
     public static class InstanceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
@@ -495,7 +547,10 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             private String searchName; 
 
             /**
-             * The type of the database engine.
+             * <p>The type of the database engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -503,7 +558,10 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the database administrator (DBA) of the instance.
+             * <p>The ID of the database administrator (DBA) of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder dbaId(Long dbaId) {
                 this.dbaId = dbaId;
@@ -511,7 +569,10 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The nickname of the DBA of the instance.
+             * <p>The nickname of the DBA of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_dba</p>
              */
             public Builder dbaNickName(String dbaNickName) {
                 this.dbaNickName = dbaNickName;
@@ -519,7 +580,10 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the environment to which the instance belongs. For more information, see [Change the environment type of an instance](~~163309~~).
+             * <p>The type of the environment to which the instance belongs. For more information, see <a href="https://help.aliyun.com/document_detail/163309.html">Change the environment type of an instance</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -527,7 +591,10 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the instance.
+             * <p>The endpoint of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -535,7 +602,10 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -543,7 +613,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the owners of the instance.
+             * <p>The IDs of the owners of the instance.</p>
              */
             public Builder ownerIds(java.util.List < Long > ownerIds) {
                 this.ownerIds = ownerIds;
@@ -551,7 +621,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The nicknames of the owners of the instance.
+             * <p>The nicknames of the owners of the instance.</p>
              */
             public Builder ownerNickName(java.util.List < String > ownerNickName) {
                 this.ownerNickName = ownerNickName;
@@ -559,7 +629,10 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is used to connect to the instance.
+             * <p>The port that is used to connect to the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -567,7 +640,10 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name that is used to search for the instance.
+             * <p>The name that is used to search for the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx:3306</p>
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -581,6 +657,12 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPermApplyOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPermApplyOrderDetailResponseBody</p>
+     */
     public static class TableInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
@@ -608,7 +690,10 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The name of the table.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_tb</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -622,6 +707,12 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPermApplyOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPermApplyOrderDetailResponseBody</p>
+     */
     public static class Resources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColumnInfo")
         private ColumnInfo columnInfo;
@@ -685,7 +776,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             private TableInfo tableInfo; 
 
             /**
-             * The information about the column.
+             * <p>The information about the column.</p>
              */
             public Builder columnInfo(ColumnInfo columnInfo) {
                 this.columnInfo = columnInfo;
@@ -693,7 +784,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the database.
+             * <p>The information about the database.</p>
              */
             public Builder databaseInfo(DatabaseInfo databaseInfo) {
                 this.databaseInfo = databaseInfo;
@@ -701,7 +792,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the instance.
+             * <p>The information about the instance.</p>
              */
             public Builder instanceInfo(InstanceInfo instanceInfo) {
                 this.instanceInfo = instanceInfo;
@@ -709,7 +800,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the table.
+             * <p>The information about the table.</p>
              */
             public Builder tableInfo(TableInfo tableInfo) {
                 this.tableInfo = tableInfo;
@@ -723,6 +814,12 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPermApplyOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPermApplyOrderDetailResponseBody</p>
+     */
     public static class PermApplyOrderDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplyType")
         private String applyType;
@@ -786,13 +883,16 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             private Long seconds; 
 
             /**
-             * The type of objects on which you apply for permissions. Valid values:
-             * <p>
+             * <p>The type of objects on which you apply for permissions. Valid values:</p>
+             * <ul>
+             * <li><strong>DB</strong>: database</li>
+             * <li><strong>TAB</strong>: table</li>
+             * <li><strong>COL</strong>: column</li>
+             * <li><strong>INSTANT</strong>: instance</li>
+             * </ul>
              * 
-             * *   **DB**: database
-             * *   **TAB**: table
-             * *   **COL**: column
-             * *   **INSTANT**: instance
+             * <strong>example:</strong>
+             * <p>DB</p>
              */
             public Builder applyType(String applyType) {
                 this.applyType = applyType;
@@ -800,17 +900,20 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the permissions that you apply for. Valid values:
-             * <p>
+             * <p>The type of the permissions that you apply for. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: the permissions to query information.</li>
+             * <li><strong>2</strong>: the permissions to export information.</li>
+             * <li><strong>3</strong>: the permissions to query and export information.</li>
+             * <li><strong>4</strong>: the permissions to modify information.</li>
+             * <li><strong>5</strong>: the permissions to query and modify information.</li>
+             * <li><strong>6</strong>: the permissions to export and modify information.</li>
+             * <li><strong>7</strong>: the permissions to query, export, and modify information.</li>
+             * <li><strong>8</strong>: the permissions to log on to the database.</li>
+             * </ul>
              * 
-             * *   **1**: the permissions to query information.
-             * *   **2**: the permissions to export information.
-             * *   **3**: the permissions to query and export information.
-             * *   **4**: the permissions to modify information.
-             * *   **5**: the permissions to query and modify information.
-             * *   **6**: the permissions to export and modify information.
-             * *   **7**: the permissions to query, export, and modify information.
-             * *   **8**: the permissions to log on to the database.
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder permType(Long permType) {
                 this.permType = permType;
@@ -818,7 +921,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The list of resources.
+             * <p>The list of resources.</p>
              */
             public Builder resources(java.util.List < Resources> resources) {
                 this.resources = resources;
@@ -826,7 +929,10 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The validity duration of the permissions. Unit: seconds.
+             * <p>The validity duration of the permissions. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder seconds(Long seconds) {
                 this.seconds = seconds;

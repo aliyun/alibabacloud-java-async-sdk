@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RegisterUserResponseBody} extends {@link TeaModel}
  *
  * <p>RegisterUserResponseBody</p>
@@ -73,7 +74,10 @@ public class RegisterUserResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -81,7 +85,10 @@ public class RegisterUserResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified user already exists.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -89,7 +96,10 @@ public class RegisterUserResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34E01EDD-6A16-4CF0-9541-C644D1BE01AA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,9 +107,13 @@ public class RegisterUserResponseBody extends TeaModel {
         }
 
         /**
-         * *   true: The request was successful.
-         * <p>
-         * *   false: The request failed.
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

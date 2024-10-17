@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLogicTablesResponseBody} extends {@link TeaModel}
  *
  * <p>ListLogicTablesResponseBody</p>
@@ -97,7 +98,10 @@ public class ListLogicTablesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -105,7 +109,10 @@ public class ListLogicTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -113,7 +120,7 @@ public class ListLogicTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the logical tables.
+         * <p>The details of the logical tables.</p>
          */
         public Builder logicTableList(LogicTableList logicTableList) {
             this.logicTableList = logicTableList;
@@ -121,7 +128,10 @@ public class ListLogicTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F1E6484F-9DF1-4406-9BDE-0861C4629B69</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +139,10 @@ public class ListLogicTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -137,7 +150,10 @@ public class ListLogicTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of logical tables that meet the query conditions.
+         * <p>The total number of logical tables that meet the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -150,6 +166,12 @@ public class ListLogicTablesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLogicTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLogicTablesResponseBody</p>
+     */
     public static class OwnerIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OwnerIds")
         private java.util.List < String > ownerIds;
@@ -191,6 +213,12 @@ public class ListLogicTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLogicTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLogicTablesResponseBody</p>
+     */
     public static class OwnerNameList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OwnerNames")
         private java.util.List < String > ownerNames;
@@ -232,6 +260,12 @@ public class ListLogicTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLogicTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLogicTablesResponseBody</p>
+     */
     public static class LogicTable extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatabaseId")
         private String databaseId;
@@ -367,7 +401,10 @@ public class ListLogicTablesResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The ID of the logical database.
+             * <p>The ID of the logical database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -375,7 +412,10 @@ public class ListLogicTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the table is a logical table. The value is fixed to true.
+             * <p>Indicates whether the table is a logical table. The value is fixed to true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -383,7 +423,7 @@ public class ListLogicTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the owners of the logical tables.
+             * <p>The IDs of the owners of the logical tables.</p>
              */
             public Builder ownerIdList(OwnerIdList ownerIdList) {
                 this.ownerIdList = ownerIdList;
@@ -391,7 +431,7 @@ public class ListLogicTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The nicknames of the owners of the logical tables.
+             * <p>The nicknames of the owners of the logical tables.</p>
              */
             public Builder ownerNameList(OwnerNameList ownerNameList) {
                 this.ownerNameList = ownerNameList;
@@ -399,7 +439,10 @@ public class ListLogicTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The logical database to which the logical table belongs.
+             * <p>The logical database to which the logical table belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yuyang_test</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -407,7 +450,10 @@ public class ListLogicTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of logical tables.
+             * <p>The number of logical tables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder tableCount(String tableCount) {
                 this.tableCount = tableCount;
@@ -415,7 +461,10 @@ public class ListLogicTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The expression of the logical table.
+             * <p>The expression of the logical table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test[1-4]</p>
              */
             public Builder tableExpr(String tableExpr) {
                 this.tableExpr = tableExpr;
@@ -423,7 +472,10 @@ public class ListLogicTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The GUID of the logical table.
+             * <p>The GUID of the logical table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IDB_L_308302.yuyang_test.test_ch</p>
              */
             public Builder tableGuid(String tableGuid) {
                 this.tableGuid = tableGuid;
@@ -431,7 +483,10 @@ public class ListLogicTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the logical table.
+             * <p>The ID of the logical table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tableId(String tableId) {
                 this.tableId = tableId;
@@ -439,7 +494,10 @@ public class ListLogicTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the logical table.
+             * <p>The name of the logical table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -453,6 +511,12 @@ public class ListLogicTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLogicTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLogicTablesResponseBody</p>
+     */
     public static class LogicTableList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogicTable")
         private java.util.List < LogicTable> logicTable;

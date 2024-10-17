@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTableDesignProjectInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetTableDesignProjectInfoResponseBody</p>
@@ -85,7 +86,10 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,7 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the schema design project.
+         * <p>The information about the schema design project.</p>
          */
         public Builder projectInfo(ProjectInfo projectInfo) {
             this.projectInfo = projectInfo;
@@ -109,7 +116,10 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can use the request ID to query logs and troubleshoot issues.
+         * <p>The request ID. You can use the request ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48778434-5796-571A-8455-A59146588401</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTableDesignProjectInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTableDesignProjectInfoResponseBody</p>
+     */
     public static class BaseDatabase extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
@@ -233,7 +252,10 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             private String searchName; 
 
             /**
-             * The alias of the database instance.
+             * <p>The alias of the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>poc_test</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -241,7 +263,10 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The database ID.
+             * <p>The database ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11****</p>
              */
             public Builder dbId(Integer dbId) {
                 this.dbId = dbId;
@@ -249,7 +274,10 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
+             * <p>The type of the database. For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/198106.html">DbType parameter</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>POLARDB</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -257,17 +285,20 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the environment in which the database instance is deployed. Valid values:
-             * <p>
+             * <p>The type of the environment in which the database instance is deployed. Valid values:</p>
+             * <ul>
+             * <li><strong>product</strong>: production environment.</li>
+             * <li><strong>dev</strong>: development environment.</li>
+             * <li><strong>pre</strong>: pre-release environment.</li>
+             * <li><strong>test</strong>: test environment.</li>
+             * <li><strong>sit</strong>: system integration testing (SIT) environment.</li>
+             * <li><strong>uat</strong>: user acceptance testing (UAT) environment.</li>
+             * <li><strong>pet</strong>: stress testing environment.</li>
+             * <li><strong>stag</strong>: staging environment.</li>
+             * </ul>
              * 
-             * *   **product**: production environment.
-             * *   **dev**: development environment.
-             * *   **pre**: pre-release environment.
-             * *   **test**: test environment.
-             * *   **sit**: system integration testing (SIT) environment.
-             * *   **uat**: user acceptance testing (UAT) environment.
-             * *   **pet**: stress testing environment.
-             * *   **stag**: staging environment.
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -275,11 +306,14 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the database is a logical database. Valid values:
-             * <p>
+             * <p>Indicates whether the database is a logical database. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -287,7 +321,10 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The database name.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bk_atc020</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -295,7 +332,10 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name that is used to search for the database.
+             * <p>The name that is used to search for the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:schema_name@127.0.XX.XX">schema_name@127.0.XX.XX</a></p>
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -309,6 +349,12 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTableDesignProjectInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTableDesignProjectInfoResponseBody</p>
+     */
     public static class ProjectInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BaseDatabase")
         private BaseDatabase baseDatabase;
@@ -432,7 +478,7 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * The information about the change base database of the schema design ticket.
+             * <p>The information about the change base database of the schema design ticket.</p>
              */
             public Builder baseDatabase(BaseDatabase baseDatabase) {
                 this.baseDatabase = baseDatabase;
@@ -440,7 +486,10 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who created the ticket.
+             * <p>The ID of the user who created the ticket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>71****</p>
              */
             public Builder creatorId(Long creatorId) {
                 this.creatorId = creatorId;
@@ -448,7 +497,10 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the schema design project.
+             * <p>The description of the schema design project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -456,7 +508,10 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ticket was created.
+             * <p>The time when the ticket was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-23 02:57:01</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -464,7 +519,10 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ticket was last modified.
+             * <p>The time when the ticket was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-23 02:57:01</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -472,7 +530,10 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ticket ID.
+             * <p>The ticket ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>95****</p>
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;
@@ -480,7 +541,10 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The project ID.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12****</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -488,12 +552,15 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the schema design project. Valid values:
-             * <p>
+             * <p>The state of the schema design project. Valid values:</p>
+             * <ul>
+             * <li><strong>DESIGN</strong>: The schema is being designed.</li>
+             * <li><strong>PUBLISHED</strong>: The schema is published.</li>
+             * <li><strong>CLOSE</strong>: The ticket is closed.</li>
+             * </ul>
              * 
-             * *   **DESIGN**: The schema is being designed.
-             * *   **PUBLISHED**: The schema is published.
-             * *   **CLOSE**: The ticket is closed.
+             * <strong>example:</strong>
+             * <p>DESIGN</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -501,7 +568,10 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the schema design project.
+             * <p>The name of the schema design project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder title(String title) {
                 this.title = title;

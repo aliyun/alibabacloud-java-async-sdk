@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMetaTableColumnResponseBody} extends {@link TeaModel}
  *
  * <p>GetMetaTableColumnResponseBody</p>
@@ -85,7 +86,7 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details about fields in the table.
+         * <p>The details about fields in the table.</p>
          */
         public Builder columnList(java.util.List < ColumnList> columnList) {
             this.columnList = columnList;
@@ -93,7 +94,10 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MissingTableGuid</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -101,7 +105,10 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TableGuid is mandatory for this action.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -109,7 +116,10 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>087DFBA1-378B-5D25-B13B-31F6409F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMetaTableColumnResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMetaTableColumnResponseBody</p>
+     */
     public static class ColumnList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoIncrement")
         private Boolean autoIncrement;
@@ -293,11 +312,14 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             private String securityLevel; 
 
             /**
-             * Indicates whether the column is an auto-increment column. Valid values:
-             * <p>
+             * <p>Indicates whether the column is an auto-increment column. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The column is an auto-increment column.</li>
+             * <li><strong>false</strong>: The column is not an auto-increment column.</li>
+             * </ul>
              * 
-             * *   **true**: The column is an auto-increment column.
-             * *   **false**: The column is not an auto-increment column.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoIncrement(Boolean autoIncrement) {
                 this.autoIncrement = autoIncrement;
@@ -305,7 +327,10 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the column.
+             * <p>The ID of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>63513****</p>
              */
             public Builder columnId(String columnId) {
                 this.columnId = columnId;
@@ -313,7 +338,10 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the column.
+             * <p>The name of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>has_promotion</p>
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -321,10 +349,13 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the column.
-             * <p>
+             * <p>The data type of the column.</p>
+             * <blockquote>
+             * <p>The return value of a column is not unique, such as <strong>bigint</strong> or <strong>int</strong>.</p>
+             * </blockquote>
              * 
-             * > The return value of a column is not unique, such as **bigint** or **int**.
+             * <strong>example:</strong>
+             * <p>bigint(1)</p>
              */
             public Builder columnType(String columnType) {
                 this.columnType = columnType;
@@ -332,7 +363,10 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             }
 
             /**
-             * The length of the field.
+             * <p>The length of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dataLength(Long dataLength) {
                 this.dataLength = dataLength;
@@ -340,7 +374,10 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             }
 
             /**
-             * The precision of the field.
+             * <p>The precision of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19</p>
              */
             public Builder dataPrecision(Integer dataPrecision) {
                 this.dataPrecision = dataPrecision;
@@ -348,7 +385,10 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             }
 
             /**
-             * The number of decimal places for the field.
+             * <p>The number of decimal places for the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dataScale(Integer dataScale) {
                 this.dataScale = dataScale;
@@ -356,7 +396,10 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the column.
+             * <p>The description of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Whether discounts are provided</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -364,11 +407,14 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the field can be empty. Valid values:
-             * <p>
+             * <p>Indicates whether the field can be empty. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The field can be empty.</li>
+             * <li><strong>false</strong>: The field cannot be empty.</li>
+             * </ul>
              * 
-             * *   **true**: The field can be empty.
-             * *   **false**: The field cannot be empty.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder nullable(Boolean nullable) {
                 this.nullable = nullable;
@@ -376,7 +422,10 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             }
 
             /**
-             * The position of the field in the table.
+             * <p>The position of the field in the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder position(Integer position) {
                 this.position = position;
@@ -384,11 +433,14 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the field is the primary key. Valid values:
-             * <p>
+             * <p>Indicates whether the field is the primary key. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The field is the primary key.</li>
+             * <li><strong>false</strong>: The field is not the primary key.</li>
+             * </ul>
              * 
-             * *   **true**: The field is the primary key.
-             * *   **false**: The field is not the primary key.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder primaryKey(String primaryKey) {
                 this.primaryKey = primaryKey;
@@ -396,14 +448,18 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             }
 
             /**
-             * The sensitivity level of the column. Valid values:
-             * <p>
+             * <p>The sensitivity level of the column. Valid values:</p>
+             * <ul>
+             * <li><strong>INNER</strong>: The column is not sensitive.</li>
+             * <li><strong>SENSITIVE</strong>: The column is sensitive.</li>
+             * <li><strong>CONFIDENTIAL</strong>: The column is confidential.</li>
+             * </ul>
+             * <blockquote>
+             * <p>For more information, see <a href="https://help.aliyun.com/document_detail/66091.html">Sensitivity levels of columns</a>.</p>
+             * </blockquote>
              * 
-             * *   **INNER**: The column is not sensitive.
-             * *   **SENSITIVE**: The column is sensitive.
-             * *   **CONFIDENTIAL**: The column is confidential.
-             * 
-             * > For more information, see [Sensitivity levels of columns](~~66091~~).
+             * <strong>example:</strong>
+             * <p>INNER</p>
              */
             public Builder securityLevel(String securityLevel) {
                 this.securityLevel = securityLevel;

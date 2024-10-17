@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOnlineDDLProgressResponseBody} extends {@link TeaModel}
  *
  * <p>GetOnlineDDLProgressResponseBody</p>
@@ -85,7 +86,10 @@ public class GetOnlineDDLProgressResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class GetOnlineDDLProgressResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,7 @@ public class GetOnlineDDLProgressResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the task.
+         * <p>The details of the task.</p>
          */
         public Builder onlineDDLTaskDetail(OnlineDDLTaskDetail onlineDDLTaskDetail) {
             this.onlineDDLTaskDetail = onlineDDLTaskDetail;
@@ -109,7 +116,10 @@ public class GetOnlineDDLProgressResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34E01EDD-6A16-4CF0-9541-C644D1BE01AA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class GetOnlineDDLProgressResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class GetOnlineDDLProgressResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetOnlineDDLProgressResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOnlineDDLProgressResponseBody</p>
+     */
     public static class OnlineDDLTaskDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CleanStrategy")
         private String cleanStrategy;
@@ -305,12 +324,15 @@ public class GetOnlineDDLProgressResponseBody extends TeaModel {
             private String statusDesc; 
 
             /**
-             * The cleanup policy of the original table after the cut-over. Valid values:
-             * <p>
+             * <p>The cleanup policy of the original table after the cut-over. Valid values:</p>
+             * <ul>
+             * <li><strong>DROP</strong>: Invalid original tables are deleted.</li>
+             * <li><strong>MOVE</strong>: Invalid original tables are moved to the test database. You can delete the tables manually.</li>
+             * <li><strong>NOTHING</strong>: Invalid original tables are retained in the original database. You can delete the tables manually.</li>
+             * </ul>
              * 
-             * *   **DROP**: Invalid original tables are deleted.
-             * *   **MOVE**: Invalid original tables are moved to the test database. You can delete the tables manually.
-             * *   **NOTHING**: Invalid original tables are retained in the original database. You can delete the tables manually.
+             * <strong>example:</strong>
+             * <p>DROP</p>
              */
             public Builder cleanStrategy(String cleanStrategy) {
                 this.cleanStrategy = cleanStrategy;
@@ -318,11 +340,14 @@ public class GetOnlineDDLProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The policy of full replication. Valid values:
-             * <p>
+             * <p>The policy of full replication. Valid values:</p>
+             * <ul>
+             * <li><strong>AUTO</strong>: DMS dynamically adjusts the chunk size based on the performance of the database. Tables are locked for less than 1.5 seconds during a single replication operation.</li>
+             * <li><strong>RUNNING</strong>: DMS uses the specified value of the CopyChunkSize parameter. The valid value of the CopyChunkSize parameter ranges from 1 to 60000. If you set this parameter to RUNNING, you must specify the CopyChunkSize parameter.</li>
+             * </ul>
              * 
-             * *   **AUTO**: DMS dynamically adjusts the chunk size based on the performance of the database. Tables are locked for less than 1.5 seconds during a single replication operation.
-             * *   **RUNNING**: DMS uses the specified value of the CopyChunkSize parameter. The valid value of the CopyChunkSize parameter ranges from 1 to 60000. If you set this parameter to RUNNING, you must specify the CopyChunkSize parameter.
+             * <strong>example:</strong>
+             * <p>AUTO</p>
              */
             public Builder copyChunkMode(String copyChunkMode) {
                 this.copyChunkMode = copyChunkMode;
@@ -330,10 +355,13 @@ public class GetOnlineDDLProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The size of each chunk that is used to replicate data. This parameter is used to specify the size of each chunk. A larger chunk size increases the replication efficiency and decreases the business performance.
-             * <p>
+             * <p>The size of each chunk that is used to replicate data. This parameter is used to specify the size of each chunk. A larger chunk size increases the replication efficiency and decreases the business performance.</p>
+             * <blockquote>
+             * <p>During full replication, the original table is divided into N small chunks and each chunk is replicated to the temporary table one by one. By default, DMS dynamically adjusts the size of each chunk.</p>
+             * </blockquote>
              * 
-             * > During full replication, the original table is divided into N small chunks and each chunk is replicated to the temporary table one by one. By default, DMS dynamically adjusts the size of each chunk.
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder copyChunkSize(Long copyChunkSize) {
                 this.copyChunkSize = copyChunkSize;
@@ -341,7 +369,10 @@ public class GetOnlineDDLProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The actual amount of data replicated from the original table in the lock-free change operation.
+             * <p>The actual amount of data replicated from the original table in the lock-free change operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder copyCount(Long copyCount) {
                 this.copyCount = copyCount;
@@ -349,7 +380,10 @@ public class GetOnlineDDLProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The estimated total number of rows of the data. The value is obtained from the statistical data in the information_schema database. In most cases, the estimated total number of rows is smaller than the actual number of rows in a table.
+             * <p>The estimated total number of rows of the data. The value is obtained from the statistical data in the information_schema database. In most cases, the estimated total number of rows is smaller than the actual number of rows in a table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder copyTotal(Long copyTotal) {
                 this.copyTotal = copyTotal;
@@ -357,7 +391,10 @@ public class GetOnlineDDLProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The number of retries when the cut-over fails.
+             * <p>The number of retries when the cut-over fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder cutoverFailRetryTimes(Long cutoverFailRetryTimes) {
                 this.cutoverFailRetryTimes = cutoverFailRetryTimes;
@@ -365,7 +402,10 @@ public class GetOnlineDDLProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum period of time that a table can be locked during cut-over. Unit: seconds.
+             * <p>The maximum period of time that a table can be locked during cut-over. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cutoverLockTimeSeconds(Long cutoverLockTimeSeconds) {
                 this.cutoverLockTimeSeconds = cutoverLockTimeSeconds;
@@ -373,7 +413,10 @@ public class GetOnlineDDLProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the time window of the cut-over operation. This value is at least 30 minutes later than the CutoverWindowStartTime parameter. Default value: 23:59:59
+             * <p>The end of the time window of the cut-over operation. This value is at least 30 minutes later than the CutoverWindowStartTime parameter. Default value: 23:59:59</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13:00:00</p>
              */
             public Builder cutoverWindowEndTime(String cutoverWindowEndTime) {
                 this.cutoverWindowEndTime = cutoverWindowEndTime;
@@ -381,7 +424,10 @@ public class GetOnlineDDLProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time window of the cut-over operation. Default value: 00:00:00. This parameter controls the time window of the cut-over. Cut-over can be performed only when the cut-over conditions are met and the time is within the specified time window. If the time is not within the time window, the cut-over operation is not performed until the time reaches the beginning of the time window.
+             * <p>The beginning of the time window of the cut-over operation. Default value: 00:00:00. This parameter controls the time window of the cut-over. Cut-over can be performed only when the cut-over conditions are met and the time is within the specified time window. If the time is not within the time window, the cut-over operation is not performed until the time reaches the beginning of the time window.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12:00:00</p>
              */
             public Builder cutoverWindowStartTime(String cutoverWindowStartTime) {
                 this.cutoverWindowStartTime = cutoverWindowStartTime;
@@ -389,7 +435,10 @@ public class GetOnlineDDLProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The replay latency of DMS. Unit: seconds. The replay latency is the period of time that is taken to replay the binary logs of the table to the temporary table. The latency does not indicate the data migration latency between a primary database and a secondary database.
+             * <p>The replay latency of DMS. Unit: seconds. The replay latency is the period of time that is taken to replay the binary logs of the table to the temporary table. The latency does not indicate the data migration latency between a primary database and a secondary database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder delaySeconds(Long delaySeconds) {
                 this.delaySeconds = delaySeconds;
@@ -397,19 +446,22 @@ public class GetOnlineDDLProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the task. Valid values:
-             * <p>
+             * <p>The state of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>INIT</strong>: The task is being initialized.</li>
+             * <li><strong>SUCCESS</strong>: The task is complete.</li>
+             * <li><strong>RUNNING</strong>: The task is being executed.</li>
+             * <li><strong>WAITING_CUTOVER</strong>: The task is waiting for cut-over.</li>
+             * <li><strong>RESTARTING</strong>: The task is restarting.</li>
+             * <li><strong>PAUSE</strong>: The task is suspended.</li>
+             * <li><strong>UNSUPPORTED</strong>: The task is not supported.</li>
+             * <li><strong>CANCELED</strong>: The task is canceled.</li>
+             * <li><strong>FAIL</strong>: The task failed.</li>
+             * <li><strong>INTERRUPT</strong>: The task is interrupted.</li>
+             * </ul>
              * 
-             * *   **INIT**: The task is being initialized.
-             * *   **SUCCESS**: The task is complete.
-             * *   **RUNNING**: The task is being executed.
-             * *   **WAITING_CUTOVER**: The task is waiting for cut-over.
-             * *   **RESTARTING**: The task is restarting.
-             * *   **PAUSE**: The task is suspended.
-             * *   **UNSUPPORTED**: The task is not supported.
-             * *   **CANCELED**: The task is canceled.
-             * *   **FAIL**: The task failed.
-             * *   **INTERRUPT**: The task is interrupted.
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder jobStatus(String jobStatus) {
                 this.jobStatus = jobStatus;
@@ -417,7 +469,10 @@ public class GetOnlineDDLProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The estimated execution progress. The actual progress is subject to the task status.
+             * <p>The estimated execution progress. The actual progress is subject to the task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90%</p>
              */
             public Builder progressRatio(String progressRatio) {
                 this.progressRatio = progressRatio;
@@ -425,7 +480,10 @@ public class GetOnlineDDLProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the task status.
+             * <p>The description of the task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;

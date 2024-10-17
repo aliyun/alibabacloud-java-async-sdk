@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIndexesRequest} extends {@link RequestModel}
  *
  * <p>ListIndexesRequest</p>
@@ -105,7 +106,10 @@ public class ListIndexesRequest extends Request {
         }
 
         /**
-         * Specifies whether the table is a logical table.
+         * <p>Specifies whether the table is a logical table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder logic(Boolean logic) {
             this.putQueryParameter("Logic", logic);
@@ -114,7 +118,11 @@ public class ListIndexesRequest extends Request {
         }
 
         /**
-         * The ID of the table.
+         * <p>The ID of the table.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder tableId(String tableId) {
             this.putQueryParameter("TableId", tableId);
@@ -123,10 +131,13 @@ public class ListIndexesRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p>To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a>.</p>
+         * </blockquote>
          * 
-         * > To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

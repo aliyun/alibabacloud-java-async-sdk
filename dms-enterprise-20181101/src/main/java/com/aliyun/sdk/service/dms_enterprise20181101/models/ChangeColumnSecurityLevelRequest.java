@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeColumnSecurityLevelRequest} extends {@link RequestModel}
  *
  * <p>ChangeColumnSecurityLevelRequest</p>
@@ -166,7 +167,10 @@ public class ChangeColumnSecurityLevelRequest extends Request {
         }
 
         /**
-         * ColumnName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_column</p>
          */
         public Builder columnName(String columnName) {
             this.putQueryParameter("ColumnName", columnName);
@@ -175,7 +179,10 @@ public class ChangeColumnSecurityLevelRequest extends Request {
         }
 
         /**
-         * DbId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>325**</p>
          */
         public Builder dbId(Long dbId) {
             this.putQueryParameter("DbId", dbId);
@@ -184,7 +191,10 @@ public class ChangeColumnSecurityLevelRequest extends Request {
         }
 
         /**
-         * IsLogic.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isLogic(Boolean isLogic) {
             this.putQueryParameter("IsLogic", isLogic);
@@ -193,7 +203,10 @@ public class ChangeColumnSecurityLevelRequest extends Request {
         }
 
         /**
-         * NewSensitivityLevel.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S2</p>
          */
         public Builder newSensitivityLevel(String newSensitivityLevel) {
             this.putQueryParameter("NewSensitivityLevel", newSensitivityLevel);
@@ -202,7 +215,10 @@ public class ChangeColumnSecurityLevelRequest extends Request {
         }
 
         /**
-         * SchemaName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_schema</p>
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("SchemaName", schemaName);
@@ -211,7 +227,10 @@ public class ChangeColumnSecurityLevelRequest extends Request {
         }
 
         /**
-         * TableName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_table</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

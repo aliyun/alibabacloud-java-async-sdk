@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDataCronClearOrderRequest} extends {@link RequestModel}
  *
  * <p>CreateDataCronClearOrderRequest</p>
@@ -135,10 +136,11 @@ public class CreateDataCronClearOrderRequest extends Request {
         }
 
         /**
-         * The key of the attachment for the ticket. The attachment provides more instructions for this operation.
-         * <p>
+         * <p>The key of the attachment for the ticket. The attachment provides more instructions for this operation.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to query the key of the attachment.</p>
          * 
-         * You can call the [GetUserUploadFileJob](~~206069~~) operation to query the key of the attachment.
+         * <strong>example:</strong>
+         * <p>order_attachement.txt</p>
          */
         public Builder attachmentKey(String attachmentKey) {
             this.putQueryParameter("AttachmentKey", attachmentKey);
@@ -147,7 +149,11 @@ public class CreateDataCronClearOrderRequest extends Request {
         }
 
         /**
-         * The purpose or objective of the data change. This reduces unnecessary communication.
+         * <p>The purpose or objective of the data change. This reduces unnecessary communication.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -156,7 +162,8 @@ public class CreateDataCronClearOrderRequest extends Request {
         }
 
         /**
-         * The parameters of the ticket.
+         * <p>The parameters of the ticket.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder param(Param param) {
             String paramShrink = shrink(param, "Param", "json");
@@ -166,7 +173,7 @@ public class CreateDataCronClearOrderRequest extends Request {
         }
 
         /**
-         * The stakeholders of this operation. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than Data Management (DMS) administrators and database administrators (DBAs) are not allowed to view the ticket details.
+         * <p>The stakeholders of this operation. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than Data Management (DMS) administrators and database administrators (DBAs) are not allowed to view the ticket details.</p>
          */
         public Builder relatedUserList(java.util.List < Long > relatedUserList) {
             String relatedUserListShrink = shrink(relatedUserList, "RelatedUserList", "json");
@@ -176,10 +183,13 @@ public class CreateDataCronClearOrderRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p> The ID of the tenant is displayed when you move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the Manage DMS tenants topic.</p>
+         * </blockquote>
          * 
-         * >  The ID of the tenant is displayed when you move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the [View information about the current tenant](~~181330~~) section of the Manage DMS tenants topic.
+         * <strong>example:</strong>
+         * <p>123454324</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -194,6 +204,12 @@ public class CreateDataCronClearOrderRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDataCronClearOrderRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDataCronClearOrderRequest</p>
+     */
     public static class CronClearItemList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColumnName")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -272,7 +288,11 @@ public class CreateDataCronClearOrderRequest extends Request {
             private String timeUnit; 
 
             /**
-             * The name of the field.
+             * <p>The name of the field.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gmt_create</p>
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -280,7 +300,10 @@ public class CreateDataCronClearOrderRequest extends Request {
             }
 
             /**
-             * The filter conditions.
+             * <p>The filter conditions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>where 1 = 1</p>
              */
             public Builder filterSQL(String filterSQL) {
                 this.filterSQL = filterSQL;
@@ -288,7 +311,11 @@ public class CreateDataCronClearOrderRequest extends Request {
             }
 
             /**
-             * The retention period of the historical data. Unit: days. For example, if you set the parameter to 7, DMS deletes the data that is retained for more than seven days.
+             * <p>The retention period of the historical data. Unit: days. For example, if you set the parameter to 7, DMS deletes the data that is retained for more than seven days.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder remainDays(Long remainDays) {
                 this.remainDays = remainDays;
@@ -296,7 +323,11 @@ public class CreateDataCronClearOrderRequest extends Request {
             }
 
             /**
-             * The name of the table. You can call the [ListTables](~~141878~~) operation to query the name of the table.
+             * <p>The name of the table. You can call the <a href="https://help.aliyun.com/document_detail/141878.html">ListTables</a> operation to query the name of the table.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t1</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -304,11 +335,14 @@ public class CreateDataCronClearOrderRequest extends Request {
             }
 
             /**
-             * The type of time granularity. If the ColumnName parameter specifies a field of a time type, this parameter is required. Valid values:
-             * <p>
+             * <p>The type of time granularity. If the ColumnName parameter specifies a field of a time type, this parameter is required. Valid values:</p>
+             * <ul>
+             * <li><strong>MILLISECONDS</strong>: milliseconds</li>
+             * <li><strong>SECONDS</strong>: seconds</li>
+             * </ul>
              * 
-             * *   **MILLISECONDS**: milliseconds
-             * *   **SECONDS**: seconds
+             * <strong>example:</strong>
+             * <p>MILLISECONDS</p>
              */
             public Builder timeUnit(String timeUnit) {
                 this.timeUnit = timeUnit;
@@ -322,6 +356,12 @@ public class CreateDataCronClearOrderRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateDataCronClearOrderRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDataCronClearOrderRequest</p>
+     */
     public static class DbItemList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DbId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -363,7 +403,11 @@ public class CreateDataCronClearOrderRequest extends Request {
             private Boolean logic; 
 
             /**
-             * The ID of the database. You can call the [SearchDatabases](~~141876~~) operation to query the ID of the database.
+             * <p>The ID of the database. You can call the <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabases</a> operation to query the ID of the database.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -371,11 +415,15 @@ public class CreateDataCronClearOrderRequest extends Request {
             }
 
             /**
-             * Indicates whether the database is a logical database. Valid values:
-             * <p>
+             * <p>Indicates whether the database is a logical database. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The database is a logical database.</li>
+             * <li><strong>false</strong>: The database is not a logical database.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **true**: The database is a logical database.
-             * *   **false**: The database is not a logical database.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -389,6 +437,12 @@ public class CreateDataCronClearOrderRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateDataCronClearOrderRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDataCronClearOrderRequest</p>
+     */
     public static class Param extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Classify")
         private String classify;
@@ -480,7 +534,10 @@ public class CreateDataCronClearOrderRequest extends Request {
             private Boolean specifyDuration; 
 
             /**
-             * The reason for the data change.
+             * <p>The reason for the data change.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder classify(String classify) {
                 this.classify = classify;
@@ -488,7 +545,8 @@ public class CreateDataCronClearOrderRequest extends Request {
             }
 
             /**
-             * The tables for which you want to clear historical data.
+             * <p>The tables for which you want to clear historical data.</p>
+             * <p>This parameter is required.</p>
              */
             public Builder cronClearItemList(java.util.List < CronClearItemList> cronClearItemList) {
                 this.cronClearItemList = cronClearItemList;
@@ -496,7 +554,11 @@ public class CreateDataCronClearOrderRequest extends Request {
             }
 
             /**
-             * The crontab expression that you can use to run the task at a specified time. For more information, see [Crontab expression](~~206581~~).
+             * <p>The crontab expression that you can use to run the task at a specified time. For more information, see <a href="https://help.aliyun.com/document_detail/206581.html">Crontab expression</a>.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 2 * * ?</p>
              */
             public Builder cronFormat(String cronFormat) {
                 this.cronFormat = cronFormat;
@@ -504,7 +566,8 @@ public class CreateDataCronClearOrderRequest extends Request {
             }
 
             /**
-             * The databases for which you want to clear historical data.
+             * <p>The databases for which you want to clear historical data.</p>
+             * <p>This parameter is required.</p>
              */
             public Builder dbItemList(java.util.List < DbItemList> dbItemList) {
                 this.dbItemList = dbItemList;
@@ -512,10 +575,13 @@ public class CreateDataCronClearOrderRequest extends Request {
             }
 
             /**
-             * The amount of time taken to run the task. Unit: hours.
-             * <p>
+             * <p>The amount of time taken to run the task. Unit: hours.</p>
+             * <blockquote>
+             * <p> If the <strong>specifyDuration</strong> parameter is set to <strong>true</strong>, this parameter is required.</p>
+             * </blockquote>
              * 
-             * >  If the **specifyDuration** parameter is set to **true**, this parameter is required.
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder durationHour(Long durationHour) {
                 this.durationHour = durationHour;
@@ -523,11 +589,15 @@ public class CreateDataCronClearOrderRequest extends Request {
             }
 
             /**
-             * Specifies whether to specify an end time for the task. Valid values:
-             * <p>
+             * <p>Specifies whether to specify an end time for the task. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: specifies an end time for the task. The task is automatically suspended after this end time.</li>
+             * <li><strong>false</strong>: does not specify an end time for the task. The task is stopped after the historical data is cleared.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **true**: specifies an end time for the task. The task is automatically suspended after this end time.
-             * *   **false**: does not specify an end time for the task. The task is stopped after the historical data is cleared.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder specifyDuration(Boolean specifyDuration) {
                 this.specifyDuration = specifyDuration;

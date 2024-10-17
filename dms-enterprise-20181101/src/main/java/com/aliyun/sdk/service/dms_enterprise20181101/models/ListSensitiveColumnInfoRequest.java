@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSensitiveColumnInfoRequest} extends {@link RequestModel}
  *
  * <p>ListSensitiveColumnInfoRequest</p>
@@ -170,7 +171,10 @@ public class ListSensitiveColumnInfoRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>183****</p>
          */
         public Builder instanceId(Integer instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

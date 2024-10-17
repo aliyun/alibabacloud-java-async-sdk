@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitStructSyncOrderApprovalResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitStructSyncOrderApprovalResponseBody</p>
@@ -85,7 +86,10 @@ public class SubmitStructSyncOrderApprovalResponseBody extends TeaModel {
         private Long workflowInstanceId; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class SubmitStructSyncOrderApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,10 @@ public class SubmitStructSyncOrderApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4E1D2B4D-3E53-4ABC-999D-1D2520B3471D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,10 @@ public class SubmitStructSyncOrderApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -117,7 +130,10 @@ public class SubmitStructSyncOrderApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the approval process.
+         * <p>The ID of the approval process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>432523</p>
          */
         public Builder workflowInstanceId(Long workflowInstanceId) {
             this.workflowInstanceId = workflowInstanceId;

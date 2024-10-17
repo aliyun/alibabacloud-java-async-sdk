@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIndexesResponseBody} extends {@link TeaModel}
  *
  * <p>ListIndexesResponseBody</p>
@@ -85,7 +86,10 @@ public class ListIndexesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class ListIndexesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,7 @@ public class ListIndexesResponseBody extends TeaModel {
         }
 
         /**
-         * The details of indexes.
+         * <p>The details of indexes.</p>
          */
         public Builder indexList(IndexList indexList) {
             this.indexList = indexList;
@@ -109,7 +116,10 @@ public class ListIndexesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1F4DE2F1-5B47-462A-A973-E02EB7AF386B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListIndexesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class ListIndexesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListIndexesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIndexesResponseBody</p>
+     */
     public static class Index extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IndexComment")
         private String indexComment;
@@ -205,7 +224,10 @@ public class ListIndexesResponseBody extends TeaModel {
             private String tableId; 
 
             /**
-             * The description of the index.
+             * <p>The description of the index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder indexComment(String indexComment) {
                 this.indexComment = indexComment;
@@ -213,7 +235,10 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the index.
+             * <p>The ID of the index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder indexId(String indexId) {
                 this.indexId = indexId;
@@ -221,7 +246,10 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the index.
+             * <p>The name of the index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idx_test</p>
              */
             public Builder indexName(String indexName) {
                 this.indexName = indexName;
@@ -229,14 +257,17 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the index. Valid values:
-             * <p>
+             * <p>The type of the index. Valid values:</p>
+             * <ul>
+             * <li>Primary</li>
+             * <li>Unique</li>
+             * <li>Normal</li>
+             * <li>FullText</li>
+             * <li>Spatial</li>
+             * </ul>
              * 
-             * *   Primary
-             * *   Unique
-             * *   Normal
-             * *   FullText
-             * *   Spatial
+             * <strong>example:</strong>
+             * <p>Primary</p>
              */
             public Builder indexType(String indexType) {
                 this.indexType = indexType;
@@ -244,7 +275,10 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the table.
+             * <p>The ID of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tableId(String tableId) {
                 this.tableId = tableId;
@@ -258,6 +292,12 @@ public class ListIndexesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListIndexesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIndexesResponseBody</p>
+     */
     public static class IndexList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Index")
         private java.util.List < Index> index;

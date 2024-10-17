@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDataExportOrderResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDataExportOrderResponseBody</p>
@@ -85,7 +86,7 @@ public class CreateDataExportOrderResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The content of the ticket.
+         * <p>The content of the ticket.</p>
          */
         public Builder createOrderResult(CreateOrderResult createOrderResult) {
             this.createOrderResult = createOrderResult;
@@ -93,7 +94,10 @@ public class CreateDataExportOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -101,7 +105,10 @@ public class CreateDataExportOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -109,7 +116,10 @@ public class CreateDataExportOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can use the ID to query logs and troubleshoot issues.
+         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7FAD400F-7A5C-4193-8F9A-39D86C4F0231</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class CreateDataExportOrderResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class CreateDataExportOrderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDataExportOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDataExportOrderResponseBody</p>
+     */
     public static class CreateOrderResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateOrderResult")
         private java.util.List < Long > createOrderResult;
@@ -161,7 +180,7 @@ public class CreateDataExportOrderResponseBody extends TeaModel {
             private java.util.List < Long > createOrderResult; 
 
             /**
-             * The content of the ticket.
+             * <p>The content of the ticket.</p>
              */
             public Builder createOrderResult(java.util.List < Long > createOrderResult) {
                 this.createOrderResult = createOrderResult;

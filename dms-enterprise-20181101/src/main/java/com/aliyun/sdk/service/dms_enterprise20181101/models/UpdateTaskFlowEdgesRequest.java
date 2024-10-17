@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTaskFlowEdgesRequest} extends {@link RequestModel}
  *
  * <p>UpdateTaskFlowEdgesRequest</p>
@@ -107,7 +108,11 @@ public class UpdateTaskFlowEdgesRequest extends Request {
         }
 
         /**
-         * The task flow ID. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
+         * <p>The task flow ID. You can call the <a href="https://help.aliyun.com/document_detail/424565.html">ListTaskFlow</a> or <a href="https://help.aliyun.com/document_detail/426672.html">ListLhTaskFlowAndScenario</a> operation to query the task flow ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15***</p>
          */
         public Builder dagId(Long dagId) {
             this.putQueryParameter("DagId", dagId);
@@ -116,7 +121,8 @@ public class UpdateTaskFlowEdgesRequest extends Request {
         }
 
         /**
-         * The list of updated task flow edges.
+         * <p>The list of updated task flow edges.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder edges(java.util.List < Edges> edges) {
             String edgesShrink = shrink(edges, "Edges", "json");
@@ -126,10 +132,13 @@ public class UpdateTaskFlowEdgesRequest extends Request {
         }
 
         /**
-         * The tenant ID.
-         * <p>
+         * <p>The tenant ID.</p>
+         * <blockquote>
+         * <p>To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a>.</p>
+         * </blockquote>
          * 
-         * > To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -144,6 +153,12 @@ public class UpdateTaskFlowEdgesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateTaskFlowEdgesRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTaskFlowEdgesRequest</p>
+     */
     public static class Edges extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -198,7 +213,11 @@ public class UpdateTaskFlowEdgesRequest extends Request {
             private Long nodeFrom; 
 
             /**
-             * The ID of the task flow edge.
+             * <p>The ID of the task flow edge.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24***</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -206,7 +225,11 @@ public class UpdateTaskFlowEdgesRequest extends Request {
             }
 
             /**
-             * The ID of the end node of the edge.
+             * <p>The ID of the end node of the edge.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44***</p>
              */
             public Builder nodeEnd(Long nodeEnd) {
                 this.nodeEnd = nodeEnd;
@@ -214,7 +237,11 @@ public class UpdateTaskFlowEdgesRequest extends Request {
             }
 
             /**
-             * The ID of the start node of the edge.
+             * <p>The ID of the start node of the edge.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44***</p>
              */
             public Builder nodeFrom(Long nodeFrom) {
                 this.nodeFrom = nodeFrom;

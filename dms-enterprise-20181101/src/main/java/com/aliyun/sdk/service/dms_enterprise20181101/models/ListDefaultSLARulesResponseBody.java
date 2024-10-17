@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDefaultSLARulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListDefaultSLARulesResponseBody</p>
@@ -85,7 +86,10 @@ public class ListDefaultSLARulesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class ListDefaultSLARulesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,10 @@ public class ListDefaultSLARulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+         * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3E8AF4C3-A822-53A8-970C-059EE83BBD5A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class ListDefaultSLARulesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of SLA rules.
+         * <p>The list of SLA rules.</p>
          */
         public Builder SLARuleList(SLARuleList SLARuleList) {
             this.SLARuleList = SLARuleList;
@@ -117,11 +127,14 @@ public class ListDefaultSLARulesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class ListDefaultSLARulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDefaultSLARulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDefaultSLARulesResponseBody</p>
+     */
     public static class SLARule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DagId")
         private Long dagId;
@@ -209,7 +228,10 @@ public class ListDefaultSLARulesResponseBody extends TeaModel {
             private Integer ruleType; 
 
             /**
-             * The ID of the task flow.
+             * <p>The ID of the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dagId(Long dagId) {
                 this.dagId = dagId;
@@ -217,7 +239,10 @@ public class ListDefaultSLARulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SLA rule.
+             * <p>The ID of the SLA rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -225,7 +250,10 @@ public class ListDefaultSLARulesResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period. Unit: minutes.
+             * <p>The timeout period. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1080</p>
              */
             public Builder intervalMinutes(Integer intervalMinutes) {
                 this.intervalMinutes = intervalMinutes;
@@ -233,7 +261,10 @@ public class ListDefaultSLARulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task node.
+             * <p>The ID of the task node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -241,11 +272,14 @@ public class ListDefaultSLARulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the rule. Valid values:
-             * <p>
+             * <p>The type of the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: an SLA rule for a task flow</li>
+             * <li><strong>1</strong>: an SLA rule for a task node</li>
+             * </ul>
              * 
-             * *   **0**: an SLA rule for a task flow
-             * *   **1**: an SLA rule for a task node
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ruleType(Integer ruleType) {
                 this.ruleType = ruleType;
@@ -259,6 +293,12 @@ public class ListDefaultSLARulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDefaultSLARulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDefaultSLARulesResponseBody</p>
+     */
     public static class SLARuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SLARule")
         private java.util.List < SLARule> SLARule;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddInstanceRequest} extends {@link RequestModel}
  *
  * <p>AddInstanceRequest</p>
@@ -490,7 +491,10 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
-         * DatabasePassword.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test***</p>
          */
         public Builder databasePassword(String databasePassword) {
             this.putQueryParameter("DatabasePassword", databasePassword);
@@ -499,7 +503,10 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
-         * DatabaseUser.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testsdb</p>
          */
         public Builder databaseUser(String databaseUser) {
             this.putQueryParameter("DatabaseUser", databaseUser);
@@ -571,7 +578,10 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
-         * EnableSellTrust.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Y</p>
          */
         public Builder enableSellTrust(String enableSellTrust) {
             this.putQueryParameter("EnableSellTrust", enableSellTrust);
@@ -580,7 +590,10 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
-         * EnvType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>product</p>
          */
         public Builder envType(String envType) {
             this.putQueryParameter("EnvType", envType);
@@ -589,7 +602,10 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
-         * ExportTimeout.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
          */
         public Builder exportTimeout(Integer exportTimeout) {
             this.putQueryParameter("ExportTimeout", exportTimeout);
@@ -598,7 +614,10 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
-         * Host.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.XX.XXX.254</p>
          */
         public Builder host(String host) {
             this.putQueryParameter("Host", host);
@@ -607,7 +626,7 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
-         * InstanceAlias.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceAlias(String instanceAlias) {
             this.putQueryParameter("InstanceAlias", instanceAlias);
@@ -616,7 +635,10 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
-         * InstanceSource.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         public Builder instanceSource(String instanceSource) {
             this.putQueryParameter("InstanceSource", instanceSource);
@@ -625,7 +647,10 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -634,7 +659,10 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
-         * NetworkType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -643,7 +671,10 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
-         * Port.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -652,7 +683,10 @@ public class AddInstanceRequest extends Request {
         }
 
         /**
-         * QueryTimeout.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7200</p>
          */
         public Builder queryTimeout(Integer queryTimeout) {
             this.putQueryParameter("QueryTimeout", queryTimeout);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BuyPayAsYouGoOrderRequest} extends {@link RequestModel}
  *
  * <p>BuyPayAsYouGoOrderRequest</p>
@@ -121,11 +122,15 @@ public class BuyPayAsYouGoOrderRequest extends Request {
         }
 
         /**
-         * The type of the resource that you want to purchase.
-         * <p>
+         * <p>The type of the resource that you want to purchase.</p>
+         * <ul>
+         * <li><strong>VersionType</strong>: DMS that supports control modes</li>
+         * <li><strong>SensitiveDataProtection</strong>: DMS that supports sensitive data protection</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **VersionType**: DMS that supports control modes
-         * *   **SensitiveDataProtection**: DMS that supports sensitive data protection
+         * <strong>example:</strong>
+         * <p>SensitiveDataProtection</p>
          */
         public Builder commodityType(String commodityType) {
             this.putQueryParameter("CommodityType", commodityType);
@@ -134,10 +139,14 @@ public class BuyPayAsYouGoOrderRequest extends Request {
         }
 
         /**
-         * The number of database instances that you want to use DMS to manage.
-         * <p>
+         * <p>The number of database instances that you want to use DMS to manage.</p>
+         * <blockquote>
+         * <p>A quota can be used for only one database instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > A quota can be used for only one database instance.
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder insNum(Integer insNum) {
             this.putQueryParameter("InsNum", insNum);
@@ -146,10 +155,13 @@ public class BuyPayAsYouGoOrderRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p>To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a>.</p>
+         * </blockquote>
          * 
-         * > To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -158,11 +170,14 @@ public class BuyPayAsYouGoOrderRequest extends Request {
         }
 
         /**
-         * The control mode of DMS. Valid values:
-         * <p>
+         * <p>The control mode of DMS. Valid values:</p>
+         * <ul>
+         * <li><strong>stand</strong>: Stable Change</li>
+         * <li><strong>safety</strong>: Security Collaboration</li>
+         * </ul>
          * 
-         * *   **stand**: Stable Change
-         * *   **safety**: Security Collaboration
+         * <strong>example:</strong>
+         * <p>stand</p>
          */
         public Builder versionType(String versionType) {
             this.putQueryParameter("VersionType", versionType);

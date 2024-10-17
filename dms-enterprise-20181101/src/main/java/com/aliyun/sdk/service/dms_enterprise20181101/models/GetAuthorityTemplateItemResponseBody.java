@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAuthorityTemplateItemResponseBody} extends {@link TeaModel}
  *
  * <p>GetAuthorityTemplateItemResponseBody</p>
@@ -97,7 +98,7 @@ public class GetAuthorityTemplateItemResponseBody extends TeaModel {
         private Long tid; 
 
         /**
-         * The permission templates.
+         * <p>The permission templates.</p>
          */
         public Builder authorityTemplateItemList(AuthorityTemplateItemList authorityTemplateItemList) {
             this.authorityTemplateItemList = authorityTemplateItemList;
@@ -105,7 +106,10 @@ public class GetAuthorityTemplateItemResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class GetAuthorityTemplateItemResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class GetAuthorityTemplateItemResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5B96E35F-A58E-5399-9041-09CF9A1E46EA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,11 +139,14 @@ public class GetAuthorityTemplateItemResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -141,7 +154,10 @@ public class GetAuthorityTemplateItemResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the tenant.
+         * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.tid = tid;
@@ -154,6 +170,12 @@ public class GetAuthorityTemplateItemResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAuthorityTemplateItemResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAuthorityTemplateItemResponseBody</p>
+     */
     public static class AuthorityTemplateItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attribute")
         private String attribute;
@@ -265,7 +287,12 @@ public class GetAuthorityTemplateItemResponseBody extends TeaModel {
             private Long templateId; 
 
             /**
-             * The additional information. For example, permissions to log on to an instance are added to the permission template.
+             * <p>The additional information. For example, permissions to log on to an instance are added to the permission template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;permissionTypes&quot;: [
+             *             &quot;LOGIN&quot;
+             *           ]</p>
              */
             public Builder attribute(String attribute) {
                 this.attribute = attribute;
@@ -273,7 +300,10 @@ public class GetAuthorityTemplateItemResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the database.
+             * <p>The ID of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>43***</p>
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -281,7 +311,10 @@ public class GetAuthorityTemplateItemResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>188****</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -289,7 +322,10 @@ public class GetAuthorityTemplateItemResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource.
+             * <p>The ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12***</p>
              */
             public Builder itemId(Long itemId) {
                 this.itemId = itemId;
@@ -297,7 +333,10 @@ public class GetAuthorityTemplateItemResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who modifies the resource.
+             * <p>The ID of the user who modifies the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51***</p>
              */
             public Builder modifierId(Long modifierId) {
                 this.modifierId = modifierId;
@@ -305,14 +344,17 @@ public class GetAuthorityTemplateItemResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource. Valid values:
-             * <p>
+             * <p>The type of the resource. Valid values:</p>
+             * <ul>
+             * <li><strong>INSTANCE</strong>: instance</li>
+             * <li><strong>LOGIC_DB</strong>: logical database</li>
+             * <li><strong>META_DB</strong>: physical database</li>
+             * <li><strong>LOGIC_TABLE</strong>: logical table</li>
+             * <li><strong>LOGIC_TABLE</strong>: physical table</li>
+             * </ul>
              * 
-             * *   **INSTANCE**: instance
-             * *   **LOGIC_DB**: logical database
-             * *   **META_DB**: physical database
-             * *   **LOGIC_TABLE**: logical table
-             * *   **LOGIC_TABLE**: physical table
+             * <strong>example:</strong>
+             * <p>INSTANCE</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -320,7 +362,10 @@ public class GetAuthorityTemplateItemResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ExampleTable</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -328,7 +373,10 @@ public class GetAuthorityTemplateItemResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the permission template.
+             * <p>The ID of the permission template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1563</p>
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;
@@ -342,6 +390,12 @@ public class GetAuthorityTemplateItemResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAuthorityTemplateItemResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAuthorityTemplateItemResponseBody</p>
+     */
     public static class AuthorityTemplateItemList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthorityTemplateItem")
         private java.util.List < AuthorityTemplateItem> authorityTemplateItem;

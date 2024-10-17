@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateStandardGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateStandardGroupRequest</p>
@@ -122,7 +123,11 @@ public class CreateStandardGroupRequest extends Request {
         }
 
         /**
-         * The type of the database engine. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
+         * <p>The type of the database engine. For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/198106.html">DbType parameter</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         public Builder dbType(String dbType) {
             this.putQueryParameter("DbType", dbType);
@@ -131,7 +136,11 @@ public class CreateStandardGroupRequest extends Request {
         }
 
         /**
-         * The description of the security rule set.
+         * <p>The description of the security rule set.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_rule</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -140,7 +149,11 @@ public class CreateStandardGroupRequest extends Request {
         }
 
         /**
-         * The name of the security rule set.
+         * <p>The name of the security rule set.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_group</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -149,7 +162,10 @@ public class CreateStandardGroupRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3000</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

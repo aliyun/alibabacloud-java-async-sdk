@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataCronClearTaskDetailListRequest} extends {@link RequestModel}
  *
  * <p>GetDataCronClearTaskDetailListRequest</p>
@@ -122,7 +123,11 @@ public class GetDataCronClearTaskDetailListRequest extends Request {
         }
 
         /**
-         * The ID of the ticket. You can query the ticket ID from the response parameters of the [CreateDataCronClearOrder](~~208385~~) operation.
+         * <p>The ID of the ticket. You can query the ticket ID from the response parameters of the <a href="https://help.aliyun.com/document_detail/208385.html">CreateDataCronClearOrder</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>432532</p>
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -131,7 +136,10 @@ public class GetDataCronClearTaskDetailListRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -140,7 +148,10 @@ public class GetDataCronClearTaskDetailListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -149,10 +160,13 @@ public class GetDataCronClearTaskDetailListRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p>To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the &quot;View information about the current tenant&quot; section of the <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a> topic.</p>
+         * </blockquote>
          * 
-         * > To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

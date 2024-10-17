@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataExportOrderDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetDataExportOrderDetailResponseBody</p>
@@ -85,7 +86,7 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information about the data export ticket.
+         * <p>The information about the data export ticket.</p>
          */
         public Builder dataExportOrderDetail(DataExportOrderDetail dataExportOrderDetail) {
             this.dataExportOrderDetail = dataExportOrderDetail;
@@ -93,7 +94,10 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -101,7 +105,10 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -109,7 +116,10 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>427688B8-ADFB-4C4E-9D45-EF5C1FD6E23D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values: Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values: Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,7 +147,16 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDataExportOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataExportOrderDetailResponseBody</p>
+     */
     public static class KeyInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("JobId")
+        private Long jobId;
+
         @com.aliyun.core.annotation.NameInMap("JobStatus")
         private String jobStatus;
 
@@ -142,6 +164,7 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
         private Long preCheckId;
 
         private KeyInfo(Builder builder) {
+            this.jobId = builder.jobId;
             this.jobStatus = builder.jobStatus;
             this.preCheckId = builder.preCheckId;
         }
@@ -152,6 +175,13 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
 
         public static KeyInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return jobId
+         */
+        public Long getJobId() {
+            return this.jobId;
         }
 
         /**
@@ -169,23 +199,35 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long jobId; 
             private String jobStatus; 
             private Long preCheckId; 
 
             /**
-             * The state of the data export ticket. Valid values:
-             * <p>
+             * JobId.
+             */
+            public Builder jobId(Long jobId) {
+                this.jobId = jobId;
+                return this;
+            }
+
+            /**
+             * <p>The state of the data export ticket. Valid values:</p>
+             * <ul>
+             * <li><strong>PRE_CHECKING</strong>: The ticket was being prechecked.</li>
+             * <li><strong>PRE_CHECK_SUCCESS</strong>: The ticket passed the precheck.</li>
+             * <li><strong>PRE_CHECK_FAIL</strong>: The ticket failed to pass the prechecked.</li>
+             * <li><strong>WAITING_APPLY_AUDIT</strong>: The ticket was to be submitted for approval.</li>
+             * <li><strong>APPLY_AUDIT_SUCCESS</strong>: The ticket was submitted for approval.</li>
+             * <li><strong>ENABLE_EXPORT</strong>: The ticket was approved. Data can be exported.</li>
+             * <li><strong>WAITING_EXPORT</strong>: Data was to be scheduled for export.</li>
+             * <li><strong>DOING_EXPORT</strong>: Data was being exported.</li>
+             * <li><strong>EXPORT_FAIL</strong>: Data failed to be exported.</li>
+             * <li><strong>EXPORT_SUCCESS</strong>: Data was exported.</li>
+             * </ul>
              * 
-             * *   **PRE_CHECKING**: The ticket was being prechecked.
-             * *   **PRE_CHECK_SUCCESS**: The ticket passed the precheck.
-             * *   **PRE_CHECK_FAIL**: The ticket failed to pass the prechecked.
-             * *   **WAITING_APPLY_AUDIT**: The ticket was to be submitted for approval.
-             * *   **APPLY_AUDIT_SUCCESS**: The ticket was submitted for approval.
-             * *   **ENABLE_EXPORT**: The ticket was approved. Data can be exported.
-             * *   **WAITING_EXPORT**: Data was to be scheduled for export.
-             * *   **DOING_EXPORT**: Data was being exported.
-             * *   **EXPORT_FAIL**: Data failed to be exported.
-             * *   **EXPORT_SUCCESS**: Data was exported.
+             * <strong>example:</strong>
+             * <p>EXPORT_SUCCESS</p>
              */
             public Builder jobStatus(String jobStatus) {
                 this.jobStatus = jobStatus;
@@ -193,7 +235,10 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The precheck ID.
+             * <p>The precheck ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder preCheckId(Long preCheckId) {
                 this.preCheckId = preCheckId;
@@ -207,6 +252,12 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataExportOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataExportOrderDetailResponseBody</p>
+     */
     public static class OrderDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActualAffectRows")
         private Long actualAffectRows;
@@ -330,7 +381,10 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
             private Boolean logic; 
 
             /**
-             * The number of rows that were affected by the SQL statement.
+             * <p>The number of rows that were affected by the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder actualAffectRows(Long actualAffectRows) {
                 this.actualAffectRows = actualAffectRows;
@@ -338,7 +392,10 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the reason for the data export.
+             * <p>The category of the reason for the data export.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder classify(String classify) {
                 this.classify = classify;
@@ -346,7 +403,10 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database from which data was exported.
+             * <p>The name of the database from which data was exported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx@xxx:3306</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -354,7 +414,10 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the database from which data was exported.
+             * <p>The ID of the database from which data was exported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder dbId(Integer dbId) {
                 this.dbId = dbId;
@@ -362,7 +425,10 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the environment to which the database belongs.
+             * <p>The type of the environment to which the database belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -370,7 +436,10 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement that was executed to export data.
+             * <p>The SQL statement that was executed to export data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select 1</p>
              */
             public Builder exeSQL(String exeSQL) {
                 this.exeSQL = exeSQL;
@@ -378,7 +447,10 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the affected rows are skipped.
+             * <p>Indicates whether the affected rows are skipped.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder ignoreAffectRows(Boolean ignoreAffectRows) {
                 this.ignoreAffectRows = ignoreAffectRows;
@@ -386,7 +458,10 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the affected rows are skipped.
+             * <p>The reason why the affected rows are skipped.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>empty</p>
              */
             public Builder ignoreAffectRowsReason(String ignoreAffectRowsReason) {
                 this.ignoreAffectRowsReason = ignoreAffectRowsReason;
@@ -394,7 +469,10 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the database is a logical database.
+             * <p>Indicates whether the database is a logical database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -408,6 +486,12 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataExportOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataExportOrderDetailResponseBody</p>
+     */
     public static class DataExportOrderDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeyInfo")
         private KeyInfo keyInfo;
@@ -447,7 +531,7 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
             private OrderDetail orderDetail; 
 
             /**
-             * The information about the ticket.
+             * <p>The information about the ticket.</p>
              */
             public Builder keyInfo(KeyInfo keyInfo) {
                 this.keyInfo = keyInfo;
@@ -455,7 +539,7 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the ticket.
+             * <p>The details of the ticket.</p>
              */
             public Builder orderDetail(OrderDetail orderDetail) {
                 this.orderDetail = orderDetail;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLakeHouseSpaceResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteLakeHouseSpaceResponseBody</p>
@@ -73,7 +74,10 @@ public class DeleteLakeHouseSpaceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request fails.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NoPermission</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -81,7 +85,10 @@ public class DeleteLakeHouseSpaceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request fails.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You are not authorized to perform this operation.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -89,7 +96,10 @@ public class DeleteLakeHouseSpaceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E76DD2E7-EBAC-5724-B163-19AAC233F8F2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,11 +107,14 @@ public class DeleteLakeHouseSpaceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
+         * </ul>
          * 
-         * *   true: The request is successful.
-         * *   false: The request fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

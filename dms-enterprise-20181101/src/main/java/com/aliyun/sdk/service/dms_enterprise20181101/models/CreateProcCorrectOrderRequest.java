@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateProcCorrectOrderRequest} extends {@link RequestModel}
  *
  * <p>CreateProcCorrectOrderRequest</p>
@@ -144,7 +145,10 @@ public class CreateProcCorrectOrderRequest extends Request {
         }
 
         /**
-         * Comment.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -153,7 +157,7 @@ public class CreateProcCorrectOrderRequest extends Request {
         }
 
         /**
-         * Param.
+         * <p>This parameter is required.</p>
          */
         public Builder param(Param param) {
             String paramShrink = shrink(param, "Param", "json");
@@ -188,6 +192,12 @@ public class CreateProcCorrectOrderRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateProcCorrectOrderRequest} extends {@link TeaModel}
+     *
+     * <p>CreateProcCorrectOrderRequest</p>
+     */
     public static class DbItemList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DbId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -229,7 +239,10 @@ public class CreateProcCorrectOrderRequest extends Request {
             private Boolean logic; 
 
             /**
-             * DbId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19721978</p>
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -237,7 +250,10 @@ public class CreateProcCorrectOrderRequest extends Request {
             }
 
             /**
-             * Logic.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -251,6 +267,12 @@ public class CreateProcCorrectOrderRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateProcCorrectOrderRequest} extends {@link TeaModel}
+     *
+     * <p>CreateProcCorrectOrderRequest</p>
+     */
     public static class Param extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Classify")
         private String classify;
@@ -360,7 +382,7 @@ public class CreateProcCorrectOrderRequest extends Request {
             }
 
             /**
-             * DbItemList.
+             * <p>This parameter is required.</p>
              */
             public Builder dbItemList(java.util.List < DbItemList> dbItemList) {
                 this.dbItemList = dbItemList;
@@ -376,7 +398,14 @@ public class CreateProcCorrectOrderRequest extends Request {
             }
 
             /**
-             * ExecSQL.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DELIMITER ///
+             * CREATE PROCEDURE GetAllProducts()
+             * BEGIN
+             * SELECT *  FROM base_user;
+             * END ///</p>
              */
             public Builder execSQL(String execSQL) {
                 this.execSQL = execSQL;

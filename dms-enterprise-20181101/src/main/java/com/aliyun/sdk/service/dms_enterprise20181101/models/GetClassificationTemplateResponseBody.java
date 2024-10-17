@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClassificationTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>GetClassificationTemplateResponseBody</p>
@@ -130,6 +131,12 @@ public class GetClassificationTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetClassificationTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClassificationTemplateResponseBody</p>
+     */
     public static class ClassificationResourceTemplateMap extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private Long resourceId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReDeployLhDagVersionRequest} extends {@link RequestModel}
  *
  * <p>ReDeployLhDagVersionRequest</p>
@@ -106,7 +107,11 @@ public class ReDeployLhDagVersionRequest extends Request {
         }
 
         /**
-         * The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the ID of the task flow.
+         * <p>The ID of the task flow. You can call the <a href="https://help.aliyun.com/document_detail/424565.html">ListTaskFlow</a> or <a href="https://help.aliyun.com/document_detail/426672.html">ListLhTaskFlowAndScenario</a> operation to obtain the ID of the task flow.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7***</p>
          */
         public Builder dagId(Long dagId) {
             this.putQueryParameter("DagId", dagId);
@@ -115,7 +120,10 @@ public class ReDeployLhDagVersionRequest extends Request {
         }
 
         /**
-         * The ID of the task flow version. You can call the [ListDAGVersions](~~424682~~) operation to obtain the ID of the task flow version.
+         * <p>The ID of the task flow version. You can call the <a href="https://help.aliyun.com/document_detail/424682.html">ListDAGVersions</a> operation to obtain the ID of the task flow version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2****</p>
          */
         public Builder dagVersion(Long dagVersion) {
             this.putQueryParameter("DagVersion", dagVersion);
@@ -124,7 +132,10 @@ public class ReDeployLhDagVersionRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the ID of the tenant.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

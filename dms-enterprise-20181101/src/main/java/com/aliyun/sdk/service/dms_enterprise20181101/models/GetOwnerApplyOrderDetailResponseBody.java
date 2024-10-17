@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOwnerApplyOrderDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetOwnerApplyOrderDetailResponseBody</p>
@@ -85,7 +86,10 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,7 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the ticket.
+         * <p>The details of the ticket.</p>
          */
         public Builder ownerApplyOrderDetail(OwnerApplyOrderDetail ownerApplyOrderDetail) {
             this.ownerApplyOrderDetail = ownerApplyOrderDetail;
@@ -109,7 +116,10 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB784055-E8CB-4461-AB0B-483A1DA32BB5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetOwnerApplyOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOwnerApplyOrderDetailResponseBody</p>
+     */
     public static class ResourceDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
@@ -217,7 +236,10 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The type of the database engine.
+             * <p>The type of the database engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MYSQL</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -225,7 +247,10 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the environment to which the instance belongs. For more information, see [Change the environment type of an instance](~~163309~~).
+             * <p>The type of the environment to which the instance belongs. For more information, see <a href="https://help.aliyun.com/document_detail/163309.html">Change the environment type of an instance</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRODUCT</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -233,7 +258,7 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the original owners.
+             * <p>The IDs of the original owners.</p>
              */
             public Builder ownerIds(java.util.List < Long > ownerIds) {
                 this.ownerIds = ownerIds;
@@ -241,7 +266,7 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The nicknames of the owners.
+             * <p>The nicknames of the owners.</p>
              */
             public Builder ownerNickNames(java.util.List < String > ownerNickNames) {
                 this.ownerNickNames = ownerNickNames;
@@ -249,7 +274,10 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The search name of the resource.
+             * <p>The search name of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yuyang【test】</p>
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -257,10 +285,13 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
-             * <p>
+             * <p>The name of the table.</p>
+             * <blockquote>
+             * <p>: This parameter is returned when you submit a Database-OWNER ticket.</p>
+             * </blockquote>
              * 
-             * > : This parameter is returned when you submit a Database-OWNER ticket.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -274,6 +305,12 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOwnerApplyOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOwnerApplyOrderDetailResponseBody</p>
+     */
     public static class Resources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Logic")
         private Boolean logic;
@@ -325,11 +362,14 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
             private String targetId; 
 
             /**
-             * Indicates whether the database is a logical database. Valid values:
-             * <p>
+             * <p>Indicates whether the database is a logical database. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The instance is a logical database.</li>
+             * <li><strong>false</strong>: The instance is not a logical database.</li>
+             * </ul>
              * 
-             * *   **true**: The instance is a logical database.
-             * *   **false**: The instance is not a logical database.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -337,7 +377,7 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the resource.
+             * <p>The details of the resource.</p>
              */
             public Builder resourceDetail(ResourceDetail resourceDetail) {
                 this.resourceDetail = resourceDetail;
@@ -345,7 +385,10 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource.
+             * <p>The ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -359,6 +402,12 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOwnerApplyOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOwnerApplyOrderDetailResponseBody</p>
+     */
     public static class OwnerApplyOrderDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplyType")
         private String applyType;
@@ -398,12 +447,15 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
             private java.util.List < Resources> resources; 
 
             /**
-             * The type of the submitted ticket. Valid values:
-             * <p>
+             * <p>The type of the submitted ticket. Valid values:</p>
+             * <ul>
+             * <li><strong>INSTANCE</strong>: the ticket that applies for the permissions to be an instance owner</li>
+             * <li><strong>DB</strong>: the ticket that applies for the permissions to be a database owner</li>
+             * <li><strong>TABLE</strong>: the ticket that applies for the permissions to be a table owner</li>
+             * </ul>
              * 
-             * *   **INSTANCE**: the ticket that applies for the permissions to be an instance owner
-             * *   **DB**: the ticket that applies for the permissions to be a database owner
-             * *   **TABLE**: the ticket that applies for the permissions to be a table owner
+             * <strong>example:</strong>
+             * <p>DB</p>
              */
             public Builder applyType(String applyType) {
                 this.applyType = applyType;
@@ -411,7 +463,7 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the requested resource.
+             * <p>The details of the requested resource.</p>
              */
             public Builder resources(java.util.List < Resources> resources) {
                 this.resources = resources;

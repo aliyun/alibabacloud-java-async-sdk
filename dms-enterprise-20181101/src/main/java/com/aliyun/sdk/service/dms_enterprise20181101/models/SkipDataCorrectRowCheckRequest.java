@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SkipDataCorrectRowCheckRequest} extends {@link RequestModel}
  *
  * <p>SkipDataCorrectRowCheckRequest</p>
@@ -107,7 +108,11 @@ public class SkipDataCorrectRowCheckRequest extends Request {
         }
 
         /**
-         * The ticket ID. You can call the [ListOrders](~~144643~~) operation to obtain the ticket ID.
+         * <p>The ticket ID. You can call the <a href="https://help.aliyun.com/document_detail/144643.html">ListOrders</a> operation to obtain the ticket ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>420****</p>
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -116,7 +121,11 @@ public class SkipDataCorrectRowCheckRequest extends Request {
         }
 
         /**
-         * The reason for skipping the verification on the number of rows in the precheck for data change.
+         * <p>The reason for skipping the verification on the number of rows in the precheck for data change.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>save test time</p>
          */
         public Builder reason(String reason) {
             this.putQueryParameter("Reason", reason);
@@ -125,7 +134,10 @@ public class SkipDataCorrectRowCheckRequest extends Request {
         }
 
         /**
-         * The tenant ID. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+         * <p>The tenant ID. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

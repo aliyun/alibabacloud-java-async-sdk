@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataCronClearConfigResponseBody} extends {@link TeaModel}
  *
  * <p>GetDataCronClearConfigResponseBody</p>
@@ -85,7 +86,7 @@ public class GetDataCronClearConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data configuration.
+         * <p>Data configuration.</p>
          */
         public Builder dataCronClearConfig(DataCronClearConfig dataCronClearConfig) {
             this.dataCronClearConfig = dataCronClearConfig;
@@ -93,7 +94,10 @@ public class GetDataCronClearConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -101,7 +105,10 @@ public class GetDataCronClearConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -109,7 +116,10 @@ public class GetDataCronClearConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>283C461F-11D8-48AA-B695-DF092DA32AF3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class GetDataCronClearConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class GetDataCronClearConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDataCronClearConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataCronClearConfigResponseBody</p>
+     */
     public static class DataCronClearConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CronCallTimes")
         private String cronCallTimes;
@@ -245,7 +264,10 @@ public class GetDataCronClearConfigResponseBody extends TeaModel {
             private Long optimizeTableAfterEveryClearTimes; 
 
             /**
-             * The number of times that the task is run.
+             * <p>The number of times that the task is run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cronCallTimes(String cronCallTimes) {
                 this.cronCallTimes = cronCallTimes;
@@ -253,7 +275,10 @@ public class GetDataCronClearConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The crontab expression that you can use to run the task at a specified time. For more information, see [Crontab expression](~~206581~~).
+             * <p>The crontab expression that you can use to run the task at a specified time. For more information, see <a href="https://help.aliyun.com/document_detail/206581.html">Crontab expression</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 23 ? * 7,1</p>
              */
             public Builder cronFormat(String cronFormat) {
                 this.cronFormat = cronFormat;
@@ -261,7 +286,10 @@ public class GetDataCronClearConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was last run.
+             * <p>The time when the task was last run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-18 00:00:00</p>
              */
             public Builder cronLastCallStartTime(String cronLastCallStartTime) {
                 this.cronLastCallStartTime = cronLastCallStartTime;
@@ -269,7 +297,10 @@ public class GetDataCronClearConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task is run next time. This parameter is displayed only when the status of the scheduled task is SUCCESS.
+             * <p>The time when the task is run next time. This parameter is displayed only when the status of the scheduled task is SUCCESS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-19 00:00:00</p>
              */
             public Builder cronNextCallTime(String cronNextCallTime) {
                 this.cronNextCallTime = cronNextCallTime;
@@ -277,12 +308,15 @@ public class GetDataCronClearConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the scheduled task. If this parameter is empty, it indicates the task is not run. Valid values:
-             * <p>
+             * <p>The status of the scheduled task. If this parameter is empty, it indicates the task is not run. Valid values:</p>
+             * <ul>
+             * <li>PAUSE: The task is suspended.</li>
+             * <li>WAITING: The task is waiting to be run.</li>
+             * <li>SUCCESS: The task is complete.</li>
+             * </ul>
              * 
-             * *   PAUSE: The task is suspended.
-             * *   WAITING: The task is waiting to be run.
-             * *   SUCCESS: The task is complete.
+             * <strong>example:</strong>
+             * <p>PAUSE</p>
              */
             public Builder cronStatus(String cronStatus) {
                 this.cronStatus = cronStatus;
@@ -290,7 +324,10 @@ public class GetDataCronClearConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that the Optimize Table statement is automatically exeuted. This parameter is valid only when the value of the OptimizeTableAfterEveryClearTimes parameter is greater than 0.
+             * <p>The number of times that the Optimize Table statement is automatically exeuted. This parameter is valid only when the value of the OptimizeTableAfterEveryClearTimes parameter is greater than 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentClearTaskCount(Long currentClearTaskCount) {
                 this.currentClearTaskCount = currentClearTaskCount;
@@ -298,7 +335,10 @@ public class GetDataCronClearConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The execution duration of the task. Unit: hours. If the value is 0, it indicates the duration is not specified.
+             * <p>The execution duration of the task. Unit: hours. If the value is 0, it indicates the duration is not specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -306,11 +346,14 @@ public class GetDataCronClearConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to enable automatic execution of the OPTIMIZE TABLE statement. Valid values:
-             * <p>
+             * <p>Specifies whether to enable automatic execution of the OPTIMIZE TABLE statement. Valid values:</p>
+             * <ul>
+             * <li>0: disables automatic execution</li>
+             * <li>A number greater than 0: enables automatic execution. The number specifies the number of times that cleanup operations must be performed before the OPTIMIZE TABLE statement is automatically executed.</li>
+             * </ul>
              * 
-             * *   0: disables automatic execution
-             * *   A number greater than 0: enables automatic execution. The number specifies the number of times that cleanup operations must be performed before the OPTIMIZE TABLE statement is automatically executed.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder optimizeTableAfterEveryClearTimes(Long optimizeTableAfterEveryClearTimes) {
                 this.optimizeTableAfterEveryClearTimes = optimizeTableAfterEveryClearTimes;

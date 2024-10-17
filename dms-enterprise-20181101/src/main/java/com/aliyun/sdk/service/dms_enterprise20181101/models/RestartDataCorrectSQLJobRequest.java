@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RestartDataCorrectSQLJobRequest} extends {@link RequestModel}
  *
  * <p>RestartDataCorrectSQLJobRequest</p>
@@ -121,10 +122,11 @@ public class RestartDataCorrectSQLJobRequest extends Request {
         }
 
         /**
-         * The ID of the SQL task. You can call the [GetDataCorrectTaskDetail](~~208481~~) and [ListDBTaskSQLJob](~~207049~~) operations to obtain the value of this parameter.
-         * <p>
+         * <p>The ID of the SQL task. You can call the <a href="https://help.aliyun.com/document_detail/208481.html">GetDataCorrectTaskDetail</a> and <a href="https://help.aliyun.com/document_detail/207049.html">ListDBTaskSQLJob</a> operations to obtain the value of this parameter.</p>
+         * <p>If the Type parameter is set to SINGLE, you must pass the value of the JobId parameter to confirm the ID of the SQL task that you want to rerun.</p>
          * 
-         * If the Type parameter is set to SINGLE, you must pass the value of the JobId parameter to confirm the ID of the SQL task that you want to rerun.
+         * <strong>example:</strong>
+         * <p>43253</p>
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -133,7 +135,11 @@ public class RestartDataCorrectSQLJobRequest extends Request {
         }
 
         /**
-         * The ID of the data change ticket. You can call the [ListOrders](~~144643~~) operation to query the ID of the data change ticket.
+         * <p>The ID of the data change ticket. You can call the <a href="https://help.aliyun.com/document_detail/144643.html">ListOrders</a> operation to query the ID of the data change ticket.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>453****</p>
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -142,7 +148,10 @@ public class RestartDataCorrectSQLJobRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to query the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -151,11 +160,15 @@ public class RestartDataCorrectSQLJobRequest extends Request {
         }
 
         /**
-         * The type of the rerun operation. Valid values:
-         * <p>
+         * <p>The type of the rerun operation. Valid values:</p>
+         * <ul>
+         * <li><strong>ALL</strong>: reruns all SQL tasks.</li>
+         * <li><strong>SINGLE</strong>: reruns a single SQL task.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **ALL**: reruns all SQL tasks.
-         * *   **SINGLE**: reruns a single SQL task.
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

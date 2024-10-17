@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExecuteDataExportRequest} extends {@link RequestModel}
  *
  * <p>ExecuteDataExportRequest</p>
@@ -119,15 +120,15 @@ public class ExecuteDataExportRequest extends Request {
         }
 
         /**
-         * The parameters that are required to perform the operation:
-         * <p>
-         * 
-         * ```json
-         * {
-         *    "fileType": "CSV", // The format of the exported file.
-         *    "encoding": "" // The encoding format.
+         * <p>The parameters that are required to perform the operation:</p>
+         * <pre><code class="language-json">{
+         *    &quot;fileType&quot;: &quot;CSV&quot;, // The format of the exported file.
+         *    &quot;encoding&quot;: &quot;&quot; // The encoding format.
          *  }
-         * ```
+         * </code></pre>
+         * 
+         * <strong>example:</strong>
+         * <p>{    &quot;fileType&quot;: &quot;CSV&quot;,    &quot;encoding&quot;: &quot;&quot;  }</p>
          */
         public Builder actionDetail(java.util.Map < String, ? > actionDetail) {
             String actionDetailShrink = shrink(actionDetail, "ActionDetail", "json");
@@ -137,7 +138,11 @@ public class ExecuteDataExportRequest extends Request {
         }
 
         /**
-         * The ID of the ticket.
+         * <p>The ID of the ticket.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -155,10 +160,13 @@ public class ExecuteDataExportRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p>: To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a>.</p>
+         * </blockquote>
          * 
-         * > : To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [Manage DMS tenants](~~181330~~).
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

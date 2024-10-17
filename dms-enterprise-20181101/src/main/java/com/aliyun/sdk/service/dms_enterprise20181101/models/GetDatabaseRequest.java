@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDatabaseRequest} extends {@link RequestModel}
  *
  * <p>GetDatabaseRequest</p>
@@ -135,7 +136,11 @@ public class GetDatabaseRequest extends Request {
         }
 
         /**
-         * The endpoint that is used to connect to the database.
+         * <p>The endpoint that is used to connect to the database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder host(String host) {
             this.putQueryParameter("Host", host);
@@ -144,7 +149,11 @@ public class GetDatabaseRequest extends Request {
         }
 
         /**
-         * The port that is used to connect to the database.
+         * <p>The port that is used to connect to the database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -153,7 +162,11 @@ public class GetDatabaseRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("SchemaName", schemaName);
@@ -162,10 +175,13 @@ public class GetDatabaseRequest extends Request {
         }
 
         /**
-         * The system identifier (SID) of the database.
-         * <p>
+         * <p>The system identifier (SID) of the database.</p>
+         * <blockquote>
+         * <p> The SID uniquely identifies an Oracle database. After a database is created, a SID is generated for the database.</p>
+         * </blockquote>
          * 
-         * >  The SID uniquely identifies an Oracle database. After a database is created, a SID is generated for the database.
+         * <strong>example:</strong>
+         * <p>test_sid</p>
          */
         public Builder sid(String sid) {
             this.putQueryParameter("Sid", sid);
@@ -174,7 +190,10 @@ public class GetDatabaseRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the ID of the tenant.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to query the ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

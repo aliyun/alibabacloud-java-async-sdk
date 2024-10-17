@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDatabaseExportOrderResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDatabaseExportOrderResponseBody</p>
@@ -85,7 +86,7 @@ public class CreateDatabaseExportOrderResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information about the ticket.
+         * <p>The information about the ticket.</p>
          */
         public Builder createOrderResult(CreateOrderResult createOrderResult) {
             this.createOrderResult = createOrderResult;
@@ -93,7 +94,10 @@ public class CreateDatabaseExportOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -101,7 +105,10 @@ public class CreateDatabaseExportOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -109,7 +116,10 @@ public class CreateDatabaseExportOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can use the ID to query logs and troubleshoot issues.
+         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class CreateDatabaseExportOrderResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class CreateDatabaseExportOrderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDatabaseExportOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDatabaseExportOrderResponseBody</p>
+     */
     public static class CreateOrderResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateOrderResult")
         private java.util.List < Long > createOrderResult;
@@ -161,7 +180,7 @@ public class CreateDatabaseExportOrderResponseBody extends TeaModel {
             private java.util.List < Long > createOrderResult; 
 
             /**
-             * The information about the ticket.
+             * <p>The information about the ticket.</p>
              */
             public Builder createOrderResult(java.util.List < Long > createOrderResult) {
                 this.createOrderResult = createOrderResult;

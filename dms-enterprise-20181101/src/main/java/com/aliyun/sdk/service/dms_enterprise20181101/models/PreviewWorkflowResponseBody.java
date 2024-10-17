@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PreviewWorkflowResponseBody} extends {@link TeaModel}
  *
  * <p>PreviewWorkflowResponseBody</p>
@@ -130,6 +131,12 @@ public class PreviewWorkflowResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PreviewWorkflowResponseBody} extends {@link TeaModel}
+     *
+     * <p>PreviewWorkflowResponseBody</p>
+     */
     public static class AuditUser extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NickName")
         private String nickName;
@@ -211,6 +218,12 @@ public class PreviewWorkflowResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PreviewWorkflowResponseBody} extends {@link TeaModel}
+     *
+     * <p>PreviewWorkflowResponseBody</p>
+     */
     public static class AuditUserList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuditUser")
         private java.util.List < AuditUser> auditUser;
@@ -252,6 +265,12 @@ public class PreviewWorkflowResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PreviewWorkflowResponseBody} extends {@link TeaModel}
+     *
+     * <p>PreviewWorkflowResponseBody</p>
+     */
     public static class WorkflowNode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuditUserList")
         private AuditUserList auditUserList;
@@ -353,6 +372,12 @@ public class PreviewWorkflowResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PreviewWorkflowResponseBody} extends {@link TeaModel}
+     *
+     * <p>PreviewWorkflowResponseBody</p>
+     */
     public static class WorkflowNodeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WorkflowNode")
         private java.util.List < WorkflowNode> workflowNode;
@@ -394,6 +419,12 @@ public class PreviewWorkflowResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PreviewWorkflowResponseBody} extends {@link TeaModel}
+     *
+     * <p>PreviewWorkflowResponseBody</p>
+     */
     public static class WorkflowDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSLARulesRequest} extends {@link RequestModel}
  *
  * <p>UpdateSLARulesRequest</p>
@@ -106,7 +107,11 @@ public class UpdateSLARulesRequest extends Request {
         }
 
         /**
-         * The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
+         * <p>The ID of the task flow. You can call the <a href="https://help.aliyun.com/document_detail/424565.html">ListTaskFlow</a> or <a href="https://help.aliyun.com/document_detail/426672.html">ListLhTaskFlowAndScenario</a> operation to query the task flow ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11****</p>
          */
         public Builder dagId(Long dagId) {
             this.putQueryParameter("DagId", dagId);
@@ -115,7 +120,7 @@ public class UpdateSLARulesRequest extends Request {
         }
 
         /**
-         * The list of SLA rules.
+         * <p>The list of SLA rules.</p>
          */
         public Builder slaRuleList(java.util.List < SlaRuleList> slaRuleList) {
             String slaRuleListShrink = shrink(slaRuleList, "SlaRuleList", "json");
@@ -125,10 +130,13 @@ public class UpdateSLARulesRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p>:To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a>.</p>
+         * </blockquote>
          * 
-         * > :To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -143,6 +151,12 @@ public class UpdateSLARulesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateSLARulesRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateSLARulesRequest</p>
+     */
     public static class SlaRuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DagId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -209,7 +223,11 @@ public class UpdateSLARulesRequest extends Request {
             private Integer type; 
 
             /**
-             * The ID of the task flow.
+             * <p>The ID of the task flow.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15***</p>
              */
             public Builder dagId(Long dagId) {
                 this.dagId = dagId;
@@ -217,7 +235,11 @@ public class UpdateSLARulesRequest extends Request {
             }
 
             /**
-             * The timeout period. Unit: minutes.
+             * <p>The timeout period. Unit: minutes.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1080</p>
              */
             public Builder intervalMinutes(Integer intervalMinutes) {
                 this.intervalMinutes = intervalMinutes;
@@ -225,7 +247,10 @@ public class UpdateSLARulesRequest extends Request {
             }
 
             /**
-             * The ID of the task node.
+             * <p>The ID of the task node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -233,11 +258,15 @@ public class UpdateSLARulesRequest extends Request {
             }
 
             /**
-             * The rule type. Valid values:
-             * <p>
+             * <p>The rule type. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: SLA rules for task flows</li>
+             * <li><strong>1</strong>: SLA rules for nodes</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **0**: SLA rules for task flows
-             * *   **1**: SLA rules for nodes
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder type(Integer type) {
                 this.type = type;

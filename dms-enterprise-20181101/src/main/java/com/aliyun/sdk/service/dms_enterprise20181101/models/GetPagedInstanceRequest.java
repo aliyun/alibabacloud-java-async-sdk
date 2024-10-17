@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPagedInstanceRequest} extends {@link RequestModel}
  *
  * <p>GetPagedInstanceRequest</p>
@@ -92,7 +93,10 @@ public class GetPagedInstanceRequest extends Request {
         }
 
         /**
-         * OrderId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>868*****</p>
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);

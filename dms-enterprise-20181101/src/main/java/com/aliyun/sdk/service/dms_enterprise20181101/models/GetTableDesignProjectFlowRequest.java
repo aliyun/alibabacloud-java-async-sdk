@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTableDesignProjectFlowRequest} extends {@link RequestModel}
  *
  * <p>GetTableDesignProjectFlowRequest</p>
@@ -92,7 +93,11 @@ public class GetTableDesignProjectFlowRequest extends Request {
         }
 
         /**
-         * The ID of the schema design ticket. You can call the [ListOrders](~~144643~~) operation to obtain the ID.
+         * <p>The ID of the schema design ticket. You can call the <a href="https://help.aliyun.com/document_detail/144643.html">ListOrders</a> operation to obtain the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95****</p>
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -101,10 +106,13 @@ public class GetTableDesignProjectFlowRequest extends Request {
         }
 
         /**
-         * The tenant ID.
-         * <p>
+         * <p>The tenant ID.</p>
+         * <blockquote>
+         * <p> To view the tenant ID, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the &quot;Manage DMS tenants&quot; topic.</p>
+         * </blockquote>
          * 
-         * >  To view the tenant ID, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see the [View information about the current tenant](~~181330~~) section of the "Manage DMS tenants" topic.
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

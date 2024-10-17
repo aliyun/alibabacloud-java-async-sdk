@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteScenarioRequest} extends {@link RequestModel}
  *
  * <p>DeleteScenarioRequest</p>
@@ -92,7 +93,11 @@ public class DeleteScenarioRequest extends Request {
         }
 
         /**
-         * The ID of the business scenario.
+         * <p>The ID of the business scenario.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12***</p>
          */
         public Builder scenarioId(Long scenarioId) {
             this.putQueryParameter("ScenarioId", scenarioId);
@@ -101,10 +106,13 @@ public class DeleteScenarioRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p> To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the &quot;View information about the current tenant&quot; section of the <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a> topic.</p>
+         * </blockquote>
          * 
-         * >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

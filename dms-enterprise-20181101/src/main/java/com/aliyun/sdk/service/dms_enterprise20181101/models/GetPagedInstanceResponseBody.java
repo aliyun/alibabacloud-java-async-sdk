@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPagedInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>GetPagedInstanceResponseBody</p>
@@ -197,7 +198,10 @@ public class GetPagedInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a06e1e316757357507896067d3780</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -210,6 +214,12 @@ public class GetPagedInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPagedInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPagedInstanceResponseBody</p>
+     */
     public static class Instance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BusinessTime")
         private String businessTime;
@@ -551,6 +561,12 @@ public class GetPagedInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPagedInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPagedInstanceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Instance")
         private java.util.List < Instance> instance;

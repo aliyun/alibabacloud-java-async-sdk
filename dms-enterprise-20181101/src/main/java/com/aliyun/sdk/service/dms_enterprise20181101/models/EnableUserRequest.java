@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableUserRequest} extends {@link RequestModel}
  *
  * <p>EnableUserRequest</p>
@@ -91,10 +92,13 @@ public class EnableUserRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p> To obtain the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">Tenant information</a>.</p>
+         * </blockquote>
          * 
-         * >  To obtain the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Tenant information](~~181330~~).
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -103,7 +107,11 @@ public class EnableUserRequest extends Request {
         }
 
         /**
-         * The UID of the Alibaba Cloud account.
+         * <p>The UID of the Alibaba Cloud account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder uid(String uid) {
             this.putQueryParameter("Uid", uid);

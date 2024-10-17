@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTableDBTopologyResponseBody} extends {@link TeaModel}
  *
  * <p>GetTableDBTopologyResponseBody</p>
@@ -85,7 +86,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The topology of the data table.
+         * <p>The topology of the data table.</p>
          */
         public Builder DBTopology(DBTopology DBTopology) {
             this.DBTopology = DBTopology;
@@ -93,7 +94,10 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -101,7 +105,10 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -109,7 +116,10 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>853F7FD4-D922-4EFB-931C-D253EF159E06</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTableDBTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTableDBTopologyResponseBody</p>
+     */
     public static class TableList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TableId")
         private String tableId;
@@ -181,7 +200,10 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             private String tableType; 
 
             /**
-             * The ID of the table.
+             * <p>The ID of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder tableId(String tableId) {
                 this.tableId = tableId;
@@ -189,7 +211,10 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the physical table.
+             * <p>The name of the physical table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>151977812</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -197,7 +222,10 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the table. This is a reserved parameter.
+             * <p>The type of the table. This is a reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yuyang_test_0000</p>
              */
             public Builder tableType(String tableType) {
                 this.tableType = tableType;
@@ -211,6 +239,12 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTableDBTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTableDBTopologyResponseBody</p>
+     */
     public static class DatabaseList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DbId")
         private String dbId;
@@ -286,7 +320,10 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             private java.util.List < TableList> tableList; 
 
             /**
-             * The ID of the database.
+             * <p>The ID of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>489347</p>
              */
             public Builder dbId(String dbId) {
                 this.dbId = dbId;
@@ -294,7 +331,10 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>db-test</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -302,7 +342,10 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
+             * <p>The type of the database. For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/198106.html">DbType parameter</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -310,19 +353,23 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the environment to which the database belongs. Valid values:
-             * <p>
+             * <p>The type of the environment to which the database belongs. Valid values:</p>
+             * <ul>
+             * <li><strong>product</strong>: production environment</li>
+             * <li><strong>dev</strong>: development environment</li>
+             * <li><strong>pre</strong>: pre-release environment</li>
+             * <li><strong>test</strong>: test environment</li>
+             * <li><strong>sit</strong>: system integration testing (SIT) environment</li>
+             * <li><strong>uat</strong>: user acceptance testing (UAT) environment</li>
+             * <li><strong>pet</strong>: stress testing environment</li>
+             * <li><strong>stag</strong>: staging environment</li>
+             * </ul>
+             * <blockquote>
+             * <p>For more information, see <a href="https://help.aliyun.com/document_detail/163309.html">Change the environment type of an instance</a>.</p>
+             * </blockquote>
              * 
-             * *   **product**: production environment
-             * *   **dev**: development environment
-             * *   **pre**: pre-release environment
-             * *   **test**: test environment
-             * *   **sit**: system integration testing (SIT) environment
-             * *   **uat**: user acceptance testing (UAT) environment
-             * *   **pet**: stress testing environment
-             * *   **stag**: staging environment
-             * 
-             * > For more information, see [Change the environment type of an instance](~~163309~~).
+             * <strong>example:</strong>
+             * <p>pre</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -330,7 +377,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The physical tables.
+             * <p>The physical tables.</p>
              */
             public Builder tableList(java.util.List < TableList> tableList) {
                 this.tableList = tableList;
@@ -344,6 +391,12 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTableDBTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTableDBTopologyResponseBody</p>
+     */
     public static class DataSourceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatabaseList")
         private java.util.List < DatabaseList> databaseList;
@@ -419,7 +472,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             private String sid; 
 
             /**
-             * The physical databases.
+             * <p>The physical databases.</p>
              */
             public Builder databaseList(java.util.List < DatabaseList> databaseList) {
                 this.databaseList = databaseList;
@@ -427,7 +480,10 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
+             * <p>The type of the database. For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/198106.html">DbType parameter</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -435,7 +491,10 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the data source.
+             * <p>The endpoint of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx.mysql.polardb.rds.aliyuncs.com</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -443,7 +502,10 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is used to connect to the data source.
+             * <p>The port that is used to connect to the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -451,7 +513,10 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The system ID (SID) of the data source.
+             * <p>The system ID (SID) of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>def</p>
              */
             public Builder sid(String sid) {
                 this.sid = sid;
@@ -465,6 +530,12 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTableDBTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTableDBTopologyResponseBody</p>
+     */
     public static class DBTopology extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataSourceList")
         private java.util.List < DataSourceList> dataSourceList;
@@ -516,7 +587,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The data sources.
+             * <p>The data sources.</p>
              */
             public Builder dataSourceList(java.util.List < DataSourceList> dataSourceList) {
                 this.dataSourceList = dataSourceList;
@@ -524,7 +595,10 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The GUID of the table in DMS.
+             * <p>The GUID of the table in DMS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IDB_L_9032.db-test.yuyang_test</p>
              */
             public Builder tableGuid(String tableGuid) {
                 this.tableGuid = tableGuid;
@@ -532,14 +606,18 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
-             * <p>
+             * <p>The name of the table.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>If a logical table is queried, the name of the logical table is returned.</p>
+             * </li>
+             * <li><p>If a physical table is queried, the name of the physical table is returned.</p>
+             * </li>
+             * </ul>
              * 
-             * > 
-             * 
-             * *   If a logical table is queried, the name of the logical table is returned.
-             * 
-             * *   If a physical table is queried, the name of the physical table is returned.
+             * <strong>example:</strong>
+             * <p>yuyang_test</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

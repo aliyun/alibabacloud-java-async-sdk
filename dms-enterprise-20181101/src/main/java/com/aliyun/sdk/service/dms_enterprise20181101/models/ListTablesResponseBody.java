@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTablesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTablesResponseBody</p>
@@ -97,7 +98,10 @@ public class ListTablesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -105,7 +109,10 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -113,7 +120,10 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B16FB618-5E96-4FFD-BB0D-490C890A4030</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +131,14 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -133,7 +146,7 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the tables.
+         * <p>The details of the tables.</p>
          */
         public Builder tableList(TableList tableList) {
             this.tableList = tableList;
@@ -141,7 +154,10 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of tables that meet the query conditions.
+         * <p>The total number of tables that meet the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -154,6 +170,12 @@ public class ListTablesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTablesResponseBody</p>
+     */
     public static class OwnerIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OwnerIds")
         private java.util.List < String > ownerIds;
@@ -195,6 +217,12 @@ public class ListTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTablesResponseBody</p>
+     */
     public static class OwnerNameList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OwnerNames")
         private java.util.List < String > ownerNames;
@@ -236,6 +264,12 @@ public class ListTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTablesResponseBody</p>
+     */
     public static class Table extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatabaseId")
         private String databaseId;
@@ -407,7 +441,10 @@ public class ListTablesResponseBody extends TeaModel {
             private String tableType; 
 
             /**
-             * The ID of the physical database.
+             * <p>The ID of the physical database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1860****</p>
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -415,7 +452,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the table.
+             * <p>The description of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -423,7 +463,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The encoding format of the table.
+             * <p>The encoding format of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>utf8</p>
              */
             public Builder encoding(String encoding) {
                 this.encoding = encoding;
@@ -431,7 +474,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The engine of the table.
+             * <p>The engine of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InnoDB</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -439,7 +485,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows in the table. This is a statistical value and does not indicate the actual number of rows.
+             * <p>The number of rows in the table. This is a statistical value and does not indicate the actual number of rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10085</p>
              */
             public Builder numRows(Long numRows) {
                 this.numRows = numRows;
@@ -447,7 +496,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID list of the table owners.
+             * <p>The ID list of the table owners.</p>
              */
             public Builder ownerIdList(OwnerIdList ownerIdList) {
                 this.ownerIdList = ownerIdList;
@@ -455,7 +504,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The nickname list of the table owners.
+             * <p>The nickname list of the table owners.</p>
              */
             public Builder ownerNameList(OwnerNameList ownerNameList) {
                 this.ownerNameList = ownerNameList;
@@ -463,7 +512,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The storage space that is occupied by the table. This is a statistical value and does not indicate the accurate storage space. Unit: MB.
+             * <p>The storage space that is occupied by the table. This is a statistical value and does not indicate the accurate storage space. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder storeCapacity(Long storeCapacity) {
                 this.storeCapacity = storeCapacity;
@@ -471,7 +523,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The GUID of the table in DMS.
+             * <p>The GUID of the table in DMS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IDB_44743****.qntest.consumption_records</p>
              */
             public Builder tableGuid(String tableGuid) {
                 this.tableGuid = tableGuid;
@@ -479,7 +534,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the table.
+             * <p>The ID of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44743****</p>
              */
             public Builder tableId(String tableId) {
                 this.tableId = tableId;
@@ -487,7 +545,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The table name.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>consumption_records</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -495,7 +556,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The database in which the table resides.
+             * <p>The database in which the table resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qntest</p>
              */
             public Builder tableSchemaName(String tableSchemaName) {
                 this.tableSchemaName = tableSchemaName;
@@ -503,7 +567,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the table. Default value: NORMAL.
+             * <p>The type of the table. Default value: NORMAL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder tableType(String tableType) {
                 this.tableType = tableType;
@@ -517,6 +584,12 @@ public class ListTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTablesResponseBody</p>
+     */
     public static class TableList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Table")
         private java.util.List < Table> table;

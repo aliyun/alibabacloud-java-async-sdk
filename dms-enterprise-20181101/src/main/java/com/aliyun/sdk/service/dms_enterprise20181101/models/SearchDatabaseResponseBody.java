@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchDatabaseResponseBody} extends {@link TeaModel}
  *
  * <p>SearchDatabaseResponseBody</p>
@@ -97,7 +98,10 @@ public class SearchDatabaseResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -105,7 +109,10 @@ public class SearchDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -113,7 +120,10 @@ public class SearchDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E0D21075-CD3E-4D98-8264-FD8AD04A63B6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +131,7 @@ public class SearchDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the databases.
+         * <p>The information about the databases.</p>
          */
         public Builder searchDatabaseList(SearchDatabaseList searchDatabaseList) {
             this.searchDatabaseList = searchDatabaseList;
@@ -129,11 +139,14 @@ public class SearchDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
+         * </ul>
          * 
-         * *   **true**: The request is successful.
-         * *   **false**: The request fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -141,7 +154,10 @@ public class SearchDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -154,6 +170,12 @@ public class SearchDatabaseResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchDatabaseResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchDatabaseResponseBody</p>
+     */
     public static class OwnerIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OwnerIds")
         private java.util.List < String > ownerIds;
@@ -195,6 +217,12 @@ public class SearchDatabaseResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchDatabaseResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchDatabaseResponseBody</p>
+     */
     public static class OwnerNameList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OwnerNames")
         private java.util.List < String > ownerNames;
@@ -236,6 +264,12 @@ public class SearchDatabaseResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchDatabaseResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchDatabaseResponseBody</p>
+     */
     public static class SearchDatabase extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
@@ -443,7 +477,10 @@ public class SearchDatabaseResponseBody extends TeaModel {
             private String sid; 
 
             /**
-             * The alias of the database.
+             * <p>The alias of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_rds</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -451,10 +488,13 @@ public class SearchDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the catalog to which the database belongs.
-             * <p>
+             * <p>The name of the catalog to which the database belongs.</p>
+             * <blockquote>
+             * <p>If the type of the database engine is PostgreSQL, the name of the database is displayed.</p>
+             * </blockquote>
              * 
-             * > If the type of the database engine is PostgreSQL, the name of the database is displayed.
+             * <strong>example:</strong>
+             * <p>dmstest</p>
              */
             public Builder catalogName(String catalogName) {
                 this.catalogName = catalogName;
@@ -462,7 +502,10 @@ public class SearchDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the database.
+             * <p>The ID of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2528****</p>
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -470,7 +513,10 @@ public class SearchDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data link for cross-database queries.
+             * <p>The name of the data link for cross-database queries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>datalink_name</p>
              */
             public Builder datalinkName(String datalinkName) {
                 this.datalinkName = datalinkName;
@@ -478,7 +524,10 @@ public class SearchDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database engine.
+             * <p>The type of the database engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -486,7 +535,10 @@ public class SearchDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who assumes the database administrator (DBA) role.
+             * <p>The ID of the user who assumes the database administrator (DBA) role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10****</p>
              */
             public Builder dbaId(String dbaId) {
                 this.dbaId = dbaId;
@@ -494,7 +546,10 @@ public class SearchDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The encoding method of the database.
+             * <p>The encoding method of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>utf8</p>
              */
             public Builder encoding(String encoding) {
                 this.encoding = encoding;
@@ -502,7 +557,10 @@ public class SearchDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The environment type of the database. For more information, see [Change the environment type of an instance](~~163309~~).
+             * <p>The environment type of the database. For more information, see <a href="https://help.aliyun.com/document_detail/163309.html">Change the environment type of an instance</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -510,7 +568,10 @@ public class SearchDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the instance in which the database resides.
+             * <p>The endpoint of the instance in which the database resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-xxxx.mysql.rds.aliyuncs.com</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -518,11 +579,14 @@ public class SearchDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the database is a logical database. Valid values:
-             * <p>
+             * <p>Indicates whether the database is a logical database. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The database is a logical database.</li>
+             * <li><strong>false</strong>: The database is not a logical database.</li>
+             * </ul>
              * 
-             * *   **true**: The database is a logical database.
-             * *   **false**: The database is not a logical database.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -530,7 +594,7 @@ public class SearchDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the owners of the databases.
+             * <p>The IDs of the owners of the databases.</p>
              */
             public Builder ownerIdList(OwnerIdList ownerIdList) {
                 this.ownerIdList = ownerIdList;
@@ -538,7 +602,7 @@ public class SearchDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The nicknames of the database owners.
+             * <p>The nicknames of the database owners.</p>
              */
             public Builder ownerNameList(OwnerNameList ownerNameList) {
                 this.ownerNameList = ownerNameList;
@@ -546,7 +610,10 @@ public class SearchDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The port of the instance in which the database resides.
+             * <p>The port of the instance in which the database resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -554,7 +621,10 @@ public class SearchDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -562,7 +632,10 @@ public class SearchDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The name that is used to search for the database.
+             * <p>The name that is used to search for the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@xxx.xxx.xxx.xxx">test@xxx.xxx.xxx.xxx</a>:3306</p>
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -570,7 +643,10 @@ public class SearchDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The system ID (SID) of the instance in which the database resides.
+             * <p>The system ID (SID) of the instance in which the database resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testSid</p>
              */
             public Builder sid(String sid) {
                 this.sid = sid;
@@ -584,6 +660,12 @@ public class SearchDatabaseResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchDatabaseResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchDatabaseResponseBody</p>
+     */
     public static class SearchDatabaseList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SearchDatabase")
         private java.util.List < SearchDatabase> searchDatabase;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResumeTaskFlowInstanceRequest} extends {@link RequestModel}
  *
  * <p>ResumeTaskFlowInstanceRequest</p>
@@ -121,7 +122,11 @@ public class ResumeTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
+         * <p>The ID of the task flow. You can call the <a href="https://help.aliyun.com/document_detail/424565.html">ListTaskFlow</a> or <a href="https://help.aliyun.com/document_detail/426672.html">ListLhTaskFlowAndScenario</a> operation to query the task flow ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11****</p>
          */
         public Builder dagId(Long dagId) {
             this.putQueryParameter("DagId", dagId);
@@ -130,7 +135,11 @@ public class ResumeTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the execution record of the task flow. You can call the [ListTaskFlowInstance](~~424689~~) operation to query the execution record ID.
+         * <p>The ID of the execution record of the task flow. You can call the <a href="https://help.aliyun.com/document_detail/424689.html">ListTaskFlowInstance</a> operation to query the execution record ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3****</p>
          */
         public Builder dagInstanceId(Long dagInstanceId) {
             this.putQueryParameter("DagInstanceId", dagInstanceId);
@@ -139,7 +148,10 @@ public class ResumeTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * The version number of the task flow. You can call the [ListDAGVersions](~~424682~~) operation to query the version number.
+         * <p>The version number of the task flow. You can call the <a href="https://help.aliyun.com/document_detail/424682.html">ListDAGVersions</a> operation to query the version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder dagVersion(String dagVersion) {
             this.putQueryParameter("DagVersion", dagVersion);
@@ -148,7 +160,10 @@ public class ResumeTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to query the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateStandardGroupResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateStandardGroupResponseBody</p>
@@ -85,7 +86,10 @@ public class UpdateStandardGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class UpdateStandardGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,10 @@ public class UpdateStandardGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can use the request ID to locate logs and troubleshoot issues.
+         * <p>The request ID. You can use the request ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4E1D2B4D-3E53-4ABC-999D-1D2520B3471A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class UpdateStandardGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the security rule set.
+         * <p>The information about the security rule set.</p>
          */
         public Builder standardGroup(StandardGroup standardGroup) {
             this.standardGroup = standardGroup;
@@ -117,11 +127,14 @@ public class UpdateStandardGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class UpdateStandardGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateStandardGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateStandardGroupResponseBody</p>
+     */
     public static class StandardGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
@@ -221,7 +240,10 @@ public class UpdateStandardGroupResponseBody extends TeaModel {
             private Long lastMenderId; 
 
             /**
-             * The type of the database for which the security rules are used.
+             * <p>The type of the database for which the security rules are used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -229,7 +251,10 @@ public class UpdateStandardGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the security rule set.
+             * <p>The description of the security rule set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Production Environment test rules</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -237,7 +262,10 @@ public class UpdateStandardGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The security rule set ID.
+             * <p>The security rule set ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>41****</p>
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -245,12 +273,15 @@ public class UpdateStandardGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The control mode. Valid values:
-             * <p>
+             * <p>The control mode. Valid values:</p>
+             * <ul>
+             * <li><strong>NONE_CONTROL</strong>: Flexible Management</li>
+             * <li><strong>STABLE</strong>: Stable Change</li>
+             * <li><strong>COMMON</strong>: Security Collaboration</li>
+             * </ul>
              * 
-             * *   **NONE_CONTROL**: Flexible Management
-             * *   **STABLE**: Stable Change
-             * *   **COMMON**: Security Collaboration
+             * <strong>example:</strong>
+             * <p>COMMON</p>
              */
             public Builder groupMode(String groupMode) {
                 this.groupMode = groupMode;
@@ -258,7 +289,10 @@ public class UpdateStandardGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the security rule set.
+             * <p>The name of the security rule set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>poc_test</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -266,7 +300,10 @@ public class UpdateStandardGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who last modified the security rules.
+             * <p>The ID of the user who last modified the security rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51****</p>
              */
             public Builder lastMenderId(Long lastMenderId) {
                 this.lastMenderId = lastMenderId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateScenarioRequest} extends {@link RequestModel}
  *
  * <p>CreateScenarioRequest</p>
@@ -106,7 +107,10 @@ public class CreateScenarioRequest extends Request {
         }
 
         /**
-         * The description of the business scenario.
+         * <p>The description of the business scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -115,7 +119,11 @@ public class CreateScenarioRequest extends Request {
         }
 
         /**
-         * The name of the business scenario.
+         * <p>The name of the business scenario.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Business scenario - test</p>
          */
         public Builder scenarioName(String scenarioName) {
             this.putQueryParameter("ScenarioName", scenarioName);
@@ -124,10 +132,13 @@ public class CreateScenarioRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p>To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the &quot;View information about the current tenant&quot; section of the <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a> topic.</p>
+         * </blockquote>
          * 
-         * > To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

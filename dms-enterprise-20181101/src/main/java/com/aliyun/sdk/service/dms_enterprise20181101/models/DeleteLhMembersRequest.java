@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLhMembersRequest} extends {@link RequestModel}
  *
  * <p>DeleteLhMembersRequest</p>
@@ -122,7 +123,8 @@ public class DeleteLhMembersRequest extends Request {
         }
 
         /**
-         * The ID of the user to be removed. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain the user ID.
+         * <p>The ID of the user to be removed. You can call the <a href="https://help.aliyun.com/document_detail/141938.html">ListUsers</a> or <a href="https://help.aliyun.com/document_detail/147098.html">GetUser</a> operation to obtain the user ID.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder memberIds(java.util.List < Integer > memberIds) {
             String memberIdsShrink = shrink(memberIds, "MemberIds", "json");
@@ -132,11 +134,15 @@ public class DeleteLhMembersRequest extends Request {
         }
 
         /**
-         * The ID of the object.
-         * <p>
+         * <p>The ID of the object.</p>
+         * <ul>
+         * <li>If the object is a workspace, you can call the <a href="https://help.aliyun.com/document_detail/424379.html">GetLhSpaceByName</a> operation to obtain the workspace ID.</li>
+         * <li>If the object is a task flow, you can call the <a href="https://help.aliyun.com/document_detail/426672.html">ListLhTaskFlowAndScenario</a> operation to obtain the task flow ID.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If the object is a workspace, you can call the [GetLhSpaceByName](~~424379~~) operation to obtain the workspace ID.
-         * *   If the object is a task flow, you can call the [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the task flow ID.
+         * <strong>example:</strong>
+         * <p>9***</p>
          */
         public Builder objectId(Long objectId) {
             this.putQueryParameter("ObjectId", objectId);
@@ -145,11 +151,15 @@ public class DeleteLhMembersRequest extends Request {
         }
 
         /**
-         * The type of the object. Valid values:
-         * <p>
+         * <p>The type of the object. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: workspace</li>
+         * <li><strong>1</strong>: task flow</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0**: workspace
-         * *   **1**: task flow
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder objectType(Integer objectType) {
             this.putQueryParameter("ObjectType", objectType);
@@ -158,7 +168,10 @@ public class DeleteLhMembersRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PreviewWorkflowRequest} extends {@link RequestModel}
  *
  * <p>PreviewWorkflowRequest</p>
@@ -91,7 +92,10 @@ public class PreviewWorkflowRequest extends Request {
         }
 
         /**
-         * OrderId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1069****</p>
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);

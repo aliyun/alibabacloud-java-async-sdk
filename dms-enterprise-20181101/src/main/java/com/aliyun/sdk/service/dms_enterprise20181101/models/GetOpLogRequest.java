@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOpLogRequest} extends {@link RequestModel}
  *
  * <p>GetOpLogRequest</p>
@@ -178,7 +179,10 @@ public class GetOpLogRequest extends Request {
         }
 
         /**
-         * DatabaseName.
+         * <p>DatabaseName.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dmstest@rm-bp1qb97d4b****.mysql.rds.aliyuncs.com:3306[poc_dev]</p>
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -187,7 +191,11 @@ public class GetOpLogRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the yyyy-MM-DD HH:mm:ss format.
+         * <p>The end of the time range to query. Specify the time in the yyyy-MM-DD HH:mm:ss format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-03-29 10:00:00</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -196,33 +204,36 @@ public class GetOpLogRequest extends Request {
         }
 
         /**
-         * The functional module for which you want to query operation logs. If you do not specify this parameter, operation logs for all functional modules are returned. Valid values:
-         * <p>
+         * <p>The functional module for which you want to query operation logs. If you do not specify this parameter, operation logs for all functional modules are returned. Valid values:</p>
+         * <ul>
+         * <li><strong>PERMISSION</strong>: permissions</li>
+         * <li><strong>OWNER</strong>: data owner</li>
+         * <li><strong>SQL_CONSOLE</strong>: data query</li>
+         * <li><strong>SQL_CONSOLE_EXPORT</strong>: query result export</li>
+         * <li><strong>DATA_CHANGE</strong>: data change</li>
+         * <li><strong>DATA_EXPORT</strong>: data export</li>
+         * <li><strong>SQL_REVIEW</strong>: SQL review</li>
+         * <li><strong>DT_SYNC</strong>: database and table synchronization</li>
+         * <li><strong>DT_DETAIL</strong>: database and table details</li>
+         * <li><strong>DB_TASK</strong>: task management</li>
+         * <li><strong>INSTANCE_MANAGE</strong>: instance management</li>
+         * <li><strong>USER_MANAGE</strong>: user management</li>
+         * <li><strong>SECURITY_RULE</strong>: security rules</li>
+         * <li><strong>CONFIG_MANAGE</strong>: configuration management</li>
+         * <li><strong>RESOURCE_AUTH</strong>: resource authorization</li>
+         * <li><strong>ACCESS_WHITE_IP</strong>: access IP address whitelist</li>
+         * <li><strong>NDDL</strong>: schema design</li>
+         * <li><strong>DSQL_CONSOLE</strong>: cross-database data query</li>
+         * <li><strong>DSQL_CONSOLE_EXPORT</strong>: cross-database query result export</li>
+         * <li><strong>DATA_TRACT</strong>: data tracking</li>
+         * <li><strong>DATA_QUALITY</strong>: data quality</li>
+         * <li><strong>DATALINK_MANAGE</strong> :DBLink management</li>
+         * <li><strong>DATASEC_MANAGE</strong>: sensitive data management</li>
+         * <li><strong>SELL</strong>: sales</li>
+         * </ul>
          * 
-         * *   **PERMISSION**: permissions
-         * *   **OWNER**: data owner
-         * *   **SQL_CONSOLE**: data query
-         * *   **SQL_CONSOLE_EXPORT**: query result export
-         * *   **DATA_CHANGE**: data change
-         * *   **DATA_EXPORT**: data export
-         * *   **SQL_REVIEW**: SQL review
-         * *   **DT_SYNC**: database and table synchronization
-         * *   **DT_DETAIL**: database and table details
-         * *   **DB_TASK**: task management
-         * *   **INSTANCE_MANAGE**: instance management
-         * *   **USER_MANAGE**: user management
-         * *   **SECURITY_RULE**: security rules
-         * *   **CONFIG_MANAGE**: configuration management
-         * *   **RESOURCE_AUTH**: resource authorization
-         * *   **ACCESS_WHITE_IP**: access IP address whitelist
-         * *   **NDDL**: schema design
-         * *   **DSQL_CONSOLE**: cross-database data query
-         * *   **DSQL_CONSOLE_EXPORT**: cross-database query result export
-         * *   **DATA_TRACT**: data tracking
-         * *   **DATA_QUALITY**: data quality
-         * *   **DATALINK_MANAGE** :DBLink management
-         * *   **DATASEC_MANAGE**: sensitive data management
-         * *   **SELL**: sales
+         * <strong>example:</strong>
+         * <p>SECURITY_RULE</p>
          */
         public Builder module(String module) {
             this.putQueryParameter("Module", module);
@@ -231,7 +242,11 @@ public class GetOpLogRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1.
+         * <p>The number of the page to return. Pages start from page 1.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -240,12 +255,16 @@ public class GetOpLogRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values:
-         * <p>
+         * <p>The number of entries to return on each page. Valid values:</p>
+         * <ul>
+         * <li>30</li>
+         * <li>50</li>
+         * <li>100</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   30
-         * *   50
-         * *   100
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -254,7 +273,11 @@ public class GetOpLogRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the yyyy-MM-DD HH:mm:ss format.
+         * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-DD HH:mm:ss format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-03-23 10:00:00</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -263,7 +286,10 @@ public class GetOpLogRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to query the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -272,7 +298,10 @@ public class GetOpLogRequest extends Request {
         }
 
         /**
-         * UserNick.
+         * <p>UserNick.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_name</p>
          */
         public Builder userNick(String userNick) {
             this.putQueryParameter("UserNick", userNick);

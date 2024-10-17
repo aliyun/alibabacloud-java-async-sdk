@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTaskFlowConstantsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTaskFlowConstantsResponseBody</p>
@@ -85,7 +86,7 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * A list of constant key-value pairs for the task flow.
+         * <p>A list of constant key-value pairs for the task flow.</p>
          */
         public Builder dagConstants(DagConstants dagConstants) {
             this.dagConstants = dagConstants;
@@ -93,7 +94,10 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -101,7 +105,10 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -109,7 +116,10 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
+         * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>028BF827-3801-5869-8548-F4A039256304</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTaskFlowConstantsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskFlowConstantsResponseBody</p>
+     */
     public static class DagConstant extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -173,7 +192,10 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The constant key.
+             * <p>The constant key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -181,7 +203,10 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
             }
 
             /**
-             * The constant value.
+             * <p>The constant value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -195,6 +220,12 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskFlowConstantsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskFlowConstantsResponseBody</p>
+     */
     public static class DagConstants extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DagConstant")
         private java.util.List < DagConstant> dagConstant;

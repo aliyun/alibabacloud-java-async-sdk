@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddLhMembersRequest} extends {@link RequestModel}
  *
  * <p>AddLhMembersRequest</p>
@@ -122,7 +123,8 @@ public class AddLhMembersRequest extends Request {
         }
 
         /**
-         * The information about the users to be added.
+         * <p>The information about the users to be added.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder members(java.util.List < Members> members) {
             String membersShrink = shrink(members, "Members", "json");
@@ -132,11 +134,15 @@ public class AddLhMembersRequest extends Request {
         }
 
         /**
-         * The ID of the object.
-         * <p>
+         * <p>The ID of the object.</p>
+         * <ul>
+         * <li>If the object is a workspace, you can call the <a href="https://help.aliyun.com/document_detail/424379.html">GetLhSpaceByName</a> operation to obtain the workspace ID.</li>
+         * <li>If the object is a task flow, you can call the <a href="https://help.aliyun.com/document_detail/426672.html">ListLhTaskFlowAndScenario</a> operation to obtain the task flow ID.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If the object is a workspace, you can call the [GetLhSpaceByName](~~424379~~) operation to obtain the workspace ID.
-         * *   If the object is a task flow, you can call the [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the task flow ID.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder objectId(Long objectId) {
             this.putQueryParameter("ObjectId", objectId);
@@ -145,11 +151,15 @@ public class AddLhMembersRequest extends Request {
         }
 
         /**
-         * The type of the object. Valid values:
-         * <p>
+         * <p>The type of the object. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: workspace</li>
+         * <li><strong>1</strong>: task flow</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0**: workspace
-         * *   **1**: task flow
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder objectType(Integer objectType) {
             this.putQueryParameter("ObjectType", objectType);
@@ -158,7 +168,10 @@ public class AddLhMembersRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3000</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -173,6 +186,12 @@ public class AddLhMembersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddLhMembersRequest} extends {@link TeaModel}
+     *
+     * <p>AddLhMembersRequest</p>
+     */
     public static class Members extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Roles")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -214,12 +233,13 @@ public class AddLhMembersRequest extends Request {
             private Long userId; 
 
             /**
-             * The role. Valid values:
-             * <p>
-             * 
-             * *   **ADMIN**: workspace administrator. You can add a workspace administrator only as a DMS administrator or a DBA.
-             * *   **MEMBER**: workspace member.
-             * *   **DEVELOPER**: task flow developer. Only a workspace member can be added as a task flow developer.
+             * <p>The role. Valid values:</p>
+             * <ul>
+             * <li><strong>ADMIN</strong>: workspace administrator. You can add a workspace administrator only as a DMS administrator or a DBA.</li>
+             * <li><strong>MEMBER</strong>: workspace member.</li>
+             * <li><strong>DEVELOPER</strong>: task flow developer. Only a workspace member can be added as a task flow developer.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              */
             public Builder roles(java.util.List < String > roles) {
                 this.roles = roles;
@@ -227,7 +247,11 @@ public class AddLhMembersRequest extends Request {
             }
 
             /**
-             * The ID of the user to be added. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain the user ID.
+             * <p>The ID of the user to be added. You can call the <a href="https://help.aliyun.com/document_detail/141938.html">ListUsers</a> or <a href="https://help.aliyun.com/document_detail/147098.html">GetUser</a> operation to obtain the user ID.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15****</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;

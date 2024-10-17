@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOwnerApplyOrderDetailRequest} extends {@link RequestModel}
  *
  * <p>GetOwnerApplyOrderDetailRequest</p>
@@ -92,7 +93,11 @@ public class GetOwnerApplyOrderDetailRequest extends Request {
         }
 
         /**
-         * The ID of the ticket.
+         * <p>The ID of the ticket.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>730000</p>
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -101,10 +106,13 @@ public class GetOwnerApplyOrderDetailRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p>: To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a>.</p>
+         * </blockquote>
          * 
-         * > : To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [Manage DMS tenants](~~181330~~).
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

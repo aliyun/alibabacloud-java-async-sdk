@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLogicTablesRequest} extends {@link RequestModel}
  *
  * <p>ListLogicTablesRequest</p>
@@ -147,7 +148,11 @@ public class ListLogicTablesRequest extends Request {
         }
 
         /**
-         * The ID of the logical database.
+         * <p>The ID of the logical database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder databaseId(String databaseId) {
             this.putQueryParameter("DatabaseId", databaseId);
@@ -156,7 +161,10 @@ public class ListLogicTablesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -165,7 +173,10 @@ public class ListLogicTablesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -174,7 +185,10 @@ public class ListLogicTablesRequest extends Request {
         }
 
         /**
-         * Specifies whether to return the GUID of the table.
+         * <p>Specifies whether to return the GUID of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder returnGuid(Boolean returnGuid) {
             this.putQueryParameter("ReturnGuid", returnGuid);
@@ -183,7 +197,10 @@ public class ListLogicTablesRequest extends Request {
         }
 
         /**
-         * The keyword that is used to search for the logical tables. Prefix match is supported.
+         * <p>The keyword that is used to search for the logical tables. Prefix match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder searchName(String searchName) {
             this.putQueryParameter("SearchName", searchName);
@@ -192,10 +209,13 @@ public class ListLogicTablesRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p>To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a>.</p>
+         * </blockquote>
          * 
-         * > To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

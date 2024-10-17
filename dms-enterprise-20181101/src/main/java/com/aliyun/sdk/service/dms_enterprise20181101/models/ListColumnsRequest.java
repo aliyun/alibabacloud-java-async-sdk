@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListColumnsRequest} extends {@link RequestModel}
  *
  * <p>ListColumnsRequest</p>
@@ -105,11 +106,14 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * Specifies whether the database is a logical database. Valid values:
-         * <p>
+         * <p>Specifies whether the database is a logical database. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The database is a logical database.</li>
+         * <li><strong>false</strong>: The database is a physical database.</li>
+         * </ul>
          * 
-         * *   **true**: The database is a logical database.
-         * *   **false**: The database is a physical database.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder logic(Boolean logic) {
             this.putQueryParameter("Logic", logic);
@@ -118,7 +122,11 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * The ID of the table. You can call the [ListTables](~~141878~~) operation to obtain the table ID.
+         * <p>The ID of the table. You can call the <a href="https://help.aliyun.com/document_detail/141878.html">ListTables</a> operation to obtain the table ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39281****</p>
          */
         public Builder tableId(String tableId) {
             this.putQueryParameter("TableId", tableId);
@@ -127,7 +135,10 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to obtain the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTaskFlowsByPageResponseBody} extends {@link TeaModel}
  *
  * <p>ListTaskFlowsByPageResponseBody</p>
@@ -97,7 +98,10 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -105,7 +109,10 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -113,7 +120,10 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6CB28697-BFE2-5739-9228-3971990E982C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +131,14 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -133,7 +146,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the returned task flows.
+         * <p>The details of the returned task flows.</p>
          */
         public Builder taskFlowList(TaskFlowList taskFlowList) {
             this.taskFlowList = taskFlowList;
@@ -141,7 +154,10 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -154,6 +170,12 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTaskFlowsByPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskFlowsByPageResponseBody</p>
+     */
     public static class TaskFlow extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatorId")
         private String creatorId;
@@ -409,7 +431,10 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             private Integer triggerType; 
 
             /**
-             * The ID of the user who created the task flow.
+             * <p>The ID of the user who created the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51****</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -417,7 +442,10 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the user who created the task flow.
+             * <p>The username of the user who created the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Creator_NickName</p>
              */
             public Builder creatorNickName(String creatorNickName) {
                 this.creatorNickName = creatorNickName;
@@ -425,7 +453,10 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of scheduled scheduling. The task flow is not scheduled before this point in time.
+             * <p>The start time of scheduled scheduling. The task flow is not scheduled before this point in time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1970-01-01</p>
              */
             public Builder cronBeginDate(String cronBeginDate) {
                 this.cronBeginDate = cronBeginDate;
@@ -433,7 +464,10 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of scheduled scheduling. The task flow is not scheduled after this point in time.
+             * <p>The end time of scheduled scheduling. The task flow is not scheduled after this point in time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-01</p>
              */
             public Builder cronEndDate(String cronEndDate) {
                 this.cronEndDate = cronEndDate;
@@ -441,7 +475,10 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Scheduled Cron.
+             * <p>Scheduled Cron.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 1 * * ? *</p>
              */
             public Builder cronStr(String cronStr) {
                 this.cronStr = cronStr;
@@ -449,7 +486,10 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Whether to enable scheduled scheduling.
+             * <p>Whether to enable scheduled scheduling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder cronSwitch(Boolean cronSwitch) {
                 this.cronSwitch = cronSwitch;
@@ -457,12 +497,16 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Scheduling cycle type. Valid values:
-             * <p>
-             * - **2**: Hourly scheduling
-             * - **3**: Daily scheduling
-             * - **4**: Weekly scheduling
-             * - **5**: Monthly scheduling
+             * <p>Scheduling cycle type. Valid values:</p>
+             * <ul>
+             * <li><strong>2</strong>: Hourly scheduling</li>
+             * <li><strong>3</strong>: Daily scheduling</li>
+             * <li><strong>4</strong>: Weekly scheduling</li>
+             * <li><strong>5</strong>: Monthly scheduling</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cronType(Integer cronType) {
                 this.cronType = cronType;
@@ -470,7 +514,10 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task flow.
+             * <p>The name of the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>poc_task_test</p>
              */
             public Builder dagName(String dagName) {
                 this.dagName = dagName;
@@ -478,7 +525,10 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID of the task flow owner.
+             * <p>The user ID of the task flow owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12***89</p>
              */
             public Builder dagOwnerId(String dagOwnerId) {
                 this.dagOwnerId = dagOwnerId;
@@ -486,7 +536,10 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the owner of the task flow.
+             * <p>The username of the owner of the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Owner_NickName</p>
              */
             public Builder dagOwnerNickName(String dagOwnerNickName) {
                 this.dagOwnerNickName = dagOwnerNickName;
@@ -494,7 +547,10 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the last deployment record of the task flow.
+             * <p>The ID of the last deployment record of the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65***</p>
              */
             public Builder deployId(Long deployId) {
                 this.deployId = deployId;
@@ -502,7 +558,10 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the task flow.
+             * <p>The description of the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -510,7 +569,10 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task flow.
+             * <p>The ID of the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7***</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -518,12 +580,15 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the last execution of the task flow. Valid values:
-             * <p>
+             * <p>The status of the last execution of the task flow. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: invalid</li>
+             * <li><strong>1</strong>: scheduling disabled</li>
+             * <li><strong>2</strong>: waiting to be scheduled</li>
+             * </ul>
              * 
-             * *   **0**: invalid
-             * *   **1**: scheduling disabled
-             * *   **2**: waiting to be scheduled
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder latestInstanceStatus(Integer latestInstanceStatus) {
                 this.latestInstanceStatus = latestInstanceStatus;
@@ -531,7 +596,10 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the last execution record was created.
+             * <p>The time when the last execution record was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-13</p>
              */
             public Builder latestInstanceTime(String latestInstanceTime) {
                 this.latestInstanceTime = latestInstanceTime;
@@ -539,7 +607,10 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application scenario.
+             * <p>The ID of the application scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1245</p>
              */
             public Builder scenarioId(String scenarioId) {
                 this.scenarioId = scenarioId;
@@ -547,7 +618,10 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Event scheduling configuration, JSON string format.
+             * <p>Event scheduling configuration, JSON string format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;triggerType&quot;:&quot;1&quot;,&quot;specificTime&quot;:&quot;2022-11-15 11:59&quot;}</p>
              */
             public Builder scheduleParam(String scheduleParam) {
                 this.scheduleParam = scheduleParam;
@@ -555,12 +629,15 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task flow. Valid values:
-             * <p>
+             * <p>The status of the task flow. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: invalid</li>
+             * <li><strong>1</strong>: scheduling disabled</li>
+             * <li><strong>2</strong>: waiting to be scheduled</li>
+             * </ul>
              * 
-             * *   **0**: invalid
-             * *   **1**: scheduling disabled
-             * *   **2**: waiting to be scheduled
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -568,7 +645,10 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Time zone setting. Default value: East 8(Asia/Shanghai).
+             * <p>Time zone setting. Default value: East 8(Asia/Shanghai).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia/Shanghai</p>
              */
             public Builder timeZoneId(String timeZoneId) {
                 this.timeZoneId = timeZoneId;
@@ -576,10 +656,14 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The trigger type. Valid values:
-             * <p>
-             * - **0**: Periodic scheduling
-             * - **1**: Run manually
+             * <p>The trigger type. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Periodic scheduling</li>
+             * <li><strong>1</strong>: Run manually</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder triggerType(Integer triggerType) {
                 this.triggerType = triggerType;
@@ -593,6 +677,12 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskFlowsByPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskFlowsByPageResponseBody</p>
+     */
     public static class TaskFlowList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskFlow")
         private java.util.List < TaskFlow> taskFlow;

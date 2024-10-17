@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDataTrackOrderRequest} extends {@link RequestModel}
  *
  * <p>CreateDataTrackOrderRequest</p>
@@ -121,7 +122,11 @@ public class CreateDataTrackOrderRequest extends Request {
         }
 
         /**
-         * The purpose or objective of the data tracking ticket. This parameter is used to help reduce unnecessary communication.
+         * <p>The purpose or objective of the data tracking ticket. This parameter is used to help reduce unnecessary communication.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -130,7 +135,8 @@ public class CreateDataTrackOrderRequest extends Request {
         }
 
         /**
-         * The parameters of the ticket.
+         * <p>The parameters of the ticket.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder param(Param param) {
             String paramShrink = shrink(param, "Param", "json");
@@ -140,7 +146,7 @@ public class CreateDataTrackOrderRequest extends Request {
         }
 
         /**
-         * The IDs of the operators that are related to the ticket.
+         * <p>The IDs of the operators that are related to the ticket.</p>
          */
         public Builder relatedUserList(java.util.List < String > relatedUserList) {
             String relatedUserListShrink = shrink(relatedUserList, "RelatedUserList", "json");
@@ -150,7 +156,10 @@ public class CreateDataTrackOrderRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to query the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -165,6 +174,12 @@ public class CreateDataTrackOrderRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDataTrackOrderRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDataTrackOrderRequest</p>
+     */
     public static class Param extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DbId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -245,10 +260,14 @@ public class CreateDataTrackOrderRequest extends Request {
             private java.util.List < String > trackTypes; 
 
             /**
-             * The ID of the database. You can call the [SearchDatabases](~~141876~~) operation to query the ID of the database.
-             * <p>
+             * <p>The ID of the database. You can call the <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabases</a> operation to query the ID of the database.</p>
+             * <blockquote>
+             * <p>You can call this operation to create a data tracking ticket for only physical databases. This operation is not applicable to logical databases.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * > You can call this operation to create a data tracking ticket for only physical databases. This operation is not applicable to logical databases.
+             * <strong>example:</strong>
+             * <p>123***</p>
              */
             public Builder dbId(String dbId) {
                 this.dbId = dbId;
@@ -256,7 +275,11 @@ public class CreateDataTrackOrderRequest extends Request {
             }
 
             /**
-             * The end time of the time range in which you want to track data operations. The time must be in the yyyy-MM-dd HH:mm:ss format.
+             * <p>The end time of the time range in which you want to track data operations. The time must be in the yyyy-MM-dd HH:mm:ss format.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-23 10:00:00</p>
              */
             public Builder jobEndTime(String jobEndTime) {
                 this.jobEndTime = jobEndTime;
@@ -264,7 +287,11 @@ public class CreateDataTrackOrderRequest extends Request {
             }
 
             /**
-             * The start time of the time range in which you want to track data operations. The time must be in the yyyy-MM-dd HH:mm:ss format.
+             * <p>The start time of the time range in which you want to track data operations. The time must be in the yyyy-MM-dd HH:mm:ss format.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-23 00:00:00</p>
              */
             public Builder jobStartTime(String jobStartTime) {
                 this.jobStartTime = jobStartTime;
@@ -272,7 +299,8 @@ public class CreateDataTrackOrderRequest extends Request {
             }
 
             /**
-             * The names of the tables for which you want to track data operations.
+             * <p>The names of the tables for which you want to track data operations.</p>
+             * <p>This parameter is required.</p>
              */
             public Builder tableNames(java.util.List < String > tableNames) {
                 this.tableNames = tableNames;
@@ -280,7 +308,8 @@ public class CreateDataTrackOrderRequest extends Request {
             }
 
             /**
-             * The types of data operations that you want to track.
+             * <p>The types of data operations that you want to track.</p>
+             * <p>This parameter is required.</p>
              */
             public Builder trackTypes(java.util.List < String > trackTypes) {
                 this.trackTypes = trackTypes;

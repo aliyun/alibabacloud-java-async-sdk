@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExecuteScriptResponseBody} extends {@link TeaModel}
  *
  * <p>ExecuteScriptResponseBody</p>
@@ -85,7 +86,10 @@ public class ExecuteScriptResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class ExecuteScriptResponseBody extends TeaModel {
         }
 
         /**
-         * The error message about the gateway.
+         * <p>The error message about the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,10 @@ public class ExecuteScriptResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE8EE2F1-4880-46BC-A704-5CF63EAF9A04</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class ExecuteScriptResponseBody extends TeaModel {
         }
 
         /**
-         * The results of the SQL statements that are executed, in the format of an array. Each entry in the array indicates the result of an SQL statement.
+         * <p>The results of the SQL statements that are executed, in the format of an array. Each entry in the array indicates the result of an SQL statement.</p>
          */
         public Builder results(java.util.List < Results> results) {
             this.results = results;
@@ -117,7 +127,10 @@ public class ExecuteScriptResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class ExecuteScriptResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ExecuteScriptResponseBody} extends {@link TeaModel}
+     *
+     * <p>ExecuteScriptResponseBody</p>
+     */
     public static class Results extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColumnNames")
         private java.util.List < String > columnNames;
@@ -205,7 +224,7 @@ public class ExecuteScriptResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * The fields that are queried after the SQL statement is executed.
+             * <p>The fields that are queried after the SQL statement is executed.</p>
              */
             public Builder columnNames(java.util.List < String > columnNames) {
                 this.columnNames = columnNames;
@@ -213,7 +232,10 @@ public class ExecuteScriptResponseBody extends TeaModel {
             }
 
             /**
-             * The error message that is returned if the SQL statement fails to be executed. For example, an error message is returned because the SQL statement is invalid.
+             * <p>The error message that is returned if the SQL statement fails to be executed. For example, an error message is returned because the SQL statement is invalid.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UnknownError</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -221,7 +243,10 @@ public class ExecuteScriptResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries that are returned.
+             * <p>The total number of entries that are returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder rowCount(Long rowCount) {
                 this.rowCount = rowCount;
@@ -229,7 +254,7 @@ public class ExecuteScriptResponseBody extends TeaModel {
             }
 
             /**
-             * The rows that are queried after the SQL statement is executed.
+             * <p>The rows that are queried after the SQL statement is executed.</p>
              */
             public Builder rows(java.util.List < java.util.Map<String, ?>> rows) {
                 this.rows = rows;
@@ -237,7 +262,10 @@ public class ExecuteScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the SQL statement is executed.
+             * <p>Indicates whether the SQL statement is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

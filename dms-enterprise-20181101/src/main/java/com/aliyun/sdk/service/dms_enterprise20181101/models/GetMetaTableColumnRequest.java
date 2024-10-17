@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMetaTableColumnRequest} extends {@link RequestModel}
  *
  * <p>GetMetaTableColumnRequest</p>
@@ -92,11 +93,15 @@ public class GetMetaTableColumnRequest extends Request {
         }
 
         /**
-         * The globally unique identifier (GUID) of the table in Data Management (DMS).
-         * <p>
+         * <p>The globally unique identifier (GUID) of the table in Data Management (DMS).</p>
+         * <ul>
+         * <li>If the database to which the table belongs is a logical database, you can call the <a href="https://help.aliyun.com/document_detail/141875.html">ListLogicTables</a> operation to obtain the value of this parameter.</li>
+         * <li>If the database to which the table belongs is a physical database, you can call the <a href="https://help.aliyun.com/document_detail/141878.html">ListTables</a> operation to obtain the value of this parameter.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If the database to which the table belongs is a logical database, you can call the [ListLogicTables](~~141875~~) operation to obtain the value of this parameter.
-         * *   If the database to which the table belongs is a physical database, you can call the [ListTables](~~141878~~) operation to obtain the value of this parameter.
+         * <strong>example:</strong>
+         * <p>IDB_40753****.qntest2.activity_setting</p>
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);
@@ -105,7 +110,10 @@ public class GetMetaTableColumnRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to obtain the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

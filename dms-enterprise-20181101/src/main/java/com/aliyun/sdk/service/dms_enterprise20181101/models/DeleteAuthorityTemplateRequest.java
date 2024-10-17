@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAuthorityTemplateRequest} extends {@link RequestModel}
  *
  * <p>DeleteAuthorityTemplateRequest</p>
@@ -91,7 +92,10 @@ public class DeleteAuthorityTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2592</p>
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetStructSyncJobAnalyzeResultResponseBody} extends {@link TeaModel}
  *
  * <p>GetStructSyncJobAnalyzeResultResponseBody</p>
@@ -85,7 +86,10 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,10 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1810E635-A2D7-428B-BAA9-85DAEB9B1A77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
         }
 
         /**
-         * The analysis result of the schema synchronization task.
+         * <p>The analysis result of the schema synchronization task.</p>
          */
         public Builder structSyncJobAnalyzeResult(StructSyncJobAnalyzeResult structSyncJobAnalyzeResult) {
             this.structSyncJobAnalyzeResult = structSyncJobAnalyzeResult;
@@ -117,7 +127,10 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetStructSyncJobAnalyzeResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStructSyncJobAnalyzeResultResponseBody</p>
+     */
     public static class ResultList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Script")
         private String script;
@@ -181,7 +200,7 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
             private String targetTableName; 
 
             /**
-             * The SQL script.
+             * <p>The SQL script.</p>
              */
             public Builder script(String script) {
                 this.script = script;
@@ -189,7 +208,10 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the source table.
+             * <p>The name of the source table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>helloz_bak</p>
              */
             public Builder sourceTableName(String sourceTableName) {
                 this.sourceTableName = sourceTableName;
@@ -197,7 +219,10 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the destination table.
+             * <p>The name of the destination table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>helloz_bak</p>
              */
             public Builder targetTableName(String targetTableName) {
                 this.targetTableName = targetTableName;
@@ -211,6 +236,12 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetStructSyncJobAnalyzeResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStructSyncJobAnalyzeResultResponseBody</p>
+     */
     public static class SummaryList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CompareType")
         private String compareType;
@@ -250,14 +281,17 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
             private Long count; 
 
             /**
-             * The type of the comparison. Valid values:
-             * <p>
+             * <p>The type of the comparison. Valid values:</p>
+             * <ul>
+             * <li><strong>CREATE_TABLE</strong>: compares the created tables.</li>
+             * <li><strong>ALTER_TABLE</strong>: compares the modified tables.</li>
+             * <li><strong>EQUAL_TABLE</strong>: compares the identical tables.</li>
+             * <li><strong>PASS_TABLE</strong>: compares the tables that are skipped during schema synchronization.</li>
+             * <li><strong>NOT_COMPARE</strong>: does not compare tables.</li>
+             * </ul>
              * 
-             * *   **CREATE_TABLE**: compares the created tables.
-             * *   **ALTER_TABLE**: compares the modified tables.
-             * *   **EQUAL_TABLE**: compares the identical tables.
-             * *   **PASS_TABLE**: compares the tables that are skipped during schema synchronization.
-             * *   **NOT_COMPARE**: does not compare tables.
+             * <strong>example:</strong>
+             * <p>CREATE_TABLE</p>
              */
             public Builder compareType(String compareType) {
                 this.compareType = compareType;
@@ -265,7 +299,10 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
             }
 
             /**
-             * The number of tables.
+             * <p>The number of tables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -279,6 +316,12 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetStructSyncJobAnalyzeResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStructSyncJobAnalyzeResultResponseBody</p>
+     */
     public static class StructSyncJobAnalyzeResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResultList")
         private java.util.List < ResultList> resultList;
@@ -318,7 +361,7 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
             private java.util.List < SummaryList> summaryList; 
 
             /**
-             * The details of the analysis results.
+             * <p>The details of the analysis results.</p>
              */
             public Builder resultList(java.util.List < ResultList> resultList) {
                 this.resultList = resultList;
@@ -326,7 +369,7 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
             }
 
             /**
-             * The statistics on the analysis results.
+             * <p>The statistics on the analysis results.</p>
              */
             public Builder summaryList(java.util.List < SummaryList> summaryList) {
                 this.summaryList = summaryList;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTaskResponseBody} extends {@link TeaModel}
  *
  * <p>GetTaskResponseBody</p>
@@ -85,7 +86,10 @@ public class GetTaskResponseBody extends TeaModel {
         private Task task; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class GetTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,10 @@ public class GetTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+         * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7838266C-E17B-58F4-B072-4DC356B58258</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,11 +119,14 @@ public class GetTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -121,7 +134,7 @@ public class GetTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The task node.
+         * <p>The task node.</p>
          */
         public Builder task(Task task) {
             this.task = task;
@@ -134,6 +147,12 @@ public class GetTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTaskResponseBody</p>
+     */
     public static class Task extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DagId")
         private Long dagId;
@@ -245,7 +264,10 @@ public class GetTaskResponseBody extends TeaModel {
             private String timeVariables; 
 
             /**
-             * The ID of the task flow to which the node belongs.
+             * <p>The ID of the task flow to which the node belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7321</p>
              */
             public Builder dagId(Long dagId) {
                 this.dagId = dagId;
@@ -253,7 +275,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The position of the node on the Directed Acyclic Graph (DAG).
+             * <p>The position of the node on the Directed Acyclic Graph (DAG).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;{&quot;x&quot;:0,&quot;y&quot;:0,&quot;layoutType&quot;:&quot;Horizontal&quot;}&quot;,  &quot;id&quot;: 51***}</p>
              */
             public Builder graphParam(String graphParam) {
                 this.graphParam = graphParam;
@@ -261,7 +286,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The advanced configuration for the node.
+             * <p>The advanced configuration for the node.</p>
              */
             public Builder nodeConfig(String nodeConfig) {
                 this.nodeConfig = nodeConfig;
@@ -269,7 +294,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration for the node.
+             * <p>The configuration for the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;dbList&quot;:[{&quot;instanceId&quot;:177****}&quot;   }</p>
              */
             public Builder nodeContent(String nodeContent) {
                 this.nodeContent = nodeContent;
@@ -277,7 +305,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cross-database Spark SQL-1</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -285,7 +316,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The output variables for the node. This parameter is available only for some types of nodes.
+             * <p>The output variables for the node. This parameter is available only for some types of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;outputs&quot;:[ &quot;extractMethod&quot;:&quot;json&quot; , &quot;variableName&quot;:&quot;var&quot;,   &quot;description&quot;:&quot;demo desc&quot; } ] }</p>
              */
             public Builder nodeOutput(String nodeOutput) {
                 this.nodeOutput = nodeOutput;
@@ -293,7 +327,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node. For more information about the valid values for this parameter, see [NodeType parameter](~~424705~~).
+             * <p>The type of the node. For more information about the valid values for this parameter, see <a href="https://help.aliyun.com/document_detail/424705.html">NodeType parameter</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SPARK_SQL</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -301,7 +338,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The time variables configured for the node.
+             * <p>The time variables configured for the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;variables&quot;:[{&quot;name&quot;:&quot;Today&quot;,&quot;pattern&quot;:&quot;yyyy-MM-dd|+1d&quot;}]}</p>
              */
             public Builder timeVariables(String timeVariables) {
                 this.timeVariables = timeVariables;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDataCorrectPreCheckDBRequest} extends {@link RequestModel}
  *
  * <p>ListDataCorrectPreCheckDBRequest</p>
@@ -120,7 +121,11 @@ public class ListDataCorrectPreCheckDBRequest extends Request {
         }
 
         /**
-         * The ID of the ticket for the data change.
+         * <p>The ID of the ticket for the data change.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>432****</p>
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -129,12 +134,12 @@ public class ListDataCorrectPreCheckDBRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <p>Valid values: an integer that is greater than 0.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Valid values: an integer that is greater than 0.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -143,7 +148,10 @@ public class ListDataCorrectPreCheckDBRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -152,7 +160,10 @@ public class ListDataCorrectPreCheckDBRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the ID of the tenant.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to query the ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4321****</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

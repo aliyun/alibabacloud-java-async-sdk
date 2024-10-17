@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExecuteDataCorrectRequest} extends {@link RequestModel}
  *
  * <p>ExecuteDataCorrectRequest</p>
@@ -119,19 +120,19 @@ public class ExecuteDataCorrectRequest extends Request {
         }
 
         /**
-         * The parameters that are required to perform the data change.
-         * <p>
-         * 
-         * ```
-         * 
+         * <p>The parameters that are required to perform the data change.</p>
+         * <pre><code>
          * json
-         * "actionDetail" : {
-         *     "startTime" :"2021-07-01 00:00:00", // Specify the start time to change data. If you want to immediately change data, you do not need to set this parameter. 
-         *     "endTime" : "2021-07-01 01:00:00", // Specify the end time to change data. If you want to immediately change data, you do not need to set this parameter. 
-         *     "transaction" : false, // Specify whether to change data as a transaction. 
-         *     "backupData" : true // Specify whether to back up data. 
+         * &quot;actionDetail&quot; : {
+         *     &quot;startTime&quot; :&quot;2021-07-01 00:00:00&quot;, // Specify the start time to change data. If you want to immediately change data, you do not need to set this parameter. 
+         *     &quot;endTime&quot; : &quot;2021-07-01 01:00:00&quot;, // Specify the end time to change data. If you want to immediately change data, you do not need to set this parameter. 
+         *     &quot;transaction&quot; : false, // Specify whether to change data as a transaction. 
+         *     &quot;backupData&quot; : true // Specify whether to back up data. 
          *   }
-         * ```
+         * </code></pre>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;startTime&quot; : &quot;2021-07-01 00:00:00&quot;, &quot;endTime&quot; : &quot;2021-07-01 01:00:00&quot;, &quot;transaction&quot; : false, &quot;backupData&quot; : true }</p>
          */
         public Builder actionDetail(java.util.Map < String, ? > actionDetail) {
             String actionDetailShrink = shrink(actionDetail, "ActionDetail", "json");
@@ -141,7 +142,11 @@ public class ExecuteDataCorrectRequest extends Request {
         }
 
         /**
-         * The ID of the ticket. You can call the [ListOrders](~~144643~~) operation to query the ID of the ticket.
+         * <p>The ID of the ticket. You can call the <a href="https://help.aliyun.com/document_detail/144643.html">ListOrders</a> operation to query the ID of the ticket.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>406****</p>
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -159,7 +164,10 @@ public class ExecuteDataCorrectRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to query the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(String tid) {
             this.putQueryParameter("Tid", tid);

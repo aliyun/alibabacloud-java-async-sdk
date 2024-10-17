@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataCorrectOrderDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetDataCorrectOrderDetailResponseBody</p>
@@ -85,7 +86,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information about the data change ticket.
+         * <p>The information about the data change ticket.</p>
          */
         public Builder dataCorrectOrderDetail(DataCorrectOrderDetail dataCorrectOrderDetail) {
             this.dataCorrectOrderDetail = dataCorrectOrderDetail;
@@ -93,7 +94,10 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request fails.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -101,7 +105,10 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request fails.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -109,7 +116,10 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>427688B8-ADFB-4C4E-9D45-EF5C1FD6E23D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * - **true**: The request is successful.
-         * - **false**: The request fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDataCorrectOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataCorrectOrderDetailResponseBody</p>
+     */
     public static class CronExtConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentClearTaskCount")
         private Integer currentClearTaskCount;
@@ -173,7 +192,10 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             private Integer optimizeTableAfterEveryClearTimes; 
 
             /**
-             * CurrentClearTaskCount.
+             * <p>The number of times defragmentation is performed. This parameter is valid only if the value of OptimizeTableAfterEveryClearTimes is greater than 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentClearTaskCount(Integer currentClearTaskCount) {
                 this.currentClearTaskCount = currentClearTaskCount;
@@ -181,7 +203,14 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OptimizeTableAfterEveryClearTimes.
+             * <p>Indicates whether the Periodically Optimize Table feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong> (default): The feature is disabled.</li>
+             * <li><strong>A value greater than 0</strong>: The feature is enabled. The value indicates the number of cleanups after which the system performs defragmentation.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder optimizeTableAfterEveryClearTimes(Integer optimizeTableAfterEveryClearTimes) {
                 this.optimizeTableAfterEveryClearTimes = optimizeTableAfterEveryClearTimes;
@@ -195,6 +224,12 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataCorrectOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataCorrectOrderDetailResponseBody</p>
+     */
     public static class ImportExtConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CsvFirstRowIsColumnDef")
         private Boolean csvFirstRowIsColumnDef;
@@ -258,7 +293,17 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             private String insertType; 
 
             /**
-             * CsvFirstRowIsColumnDef.
+             * <p>Indicates whether the first row of the CSV file contains field names. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The first row in the CSV file contains field names.</li>
+             * <li><strong>false</strong>: The first row in the CSV file contains data.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is valid if the value of <strong>FileType</strong> is <strong>CSV</strong> or <strong>EXCEL</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder csvFirstRowIsColumnDef(Boolean csvFirstRowIsColumnDef) {
                 this.csvFirstRowIsColumnDef = csvFirstRowIsColumnDef;
@@ -266,7 +311,14 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * IgnoreError.
+             * <p>Indicates whether an error that occurs is ignored. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: If an error occurs when SQL statements are being executed, DMS skips the current SQL statement and continues to execute subsequent SQL statements.</li>
+             * <li><strong>false</strong>: If an error occurs when SQL statements are being executed, DMS stops executing subsequent SQL statements.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder ignoreError(Boolean ignoreError) {
                 this.ignoreError = ignoreError;
@@ -274,7 +326,14 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ImportMode.
+             * <p>The import mode. Valid values:</p>
+             * <ul>
+             * <li><strong>FAST_MODE</strong>: fast mode. In the Execute step, the uploaded file is read and SQL statements are executed to import data to the specified destination database. Compared with the security mode, this mode can be used to import data in a less secure but more efficient manner.</li>
+             * <li><strong>SAFE_MODE</strong>: security mode. In the Precheck step, the uploaded file is parsed, and SQL statements or CSV file data is cached. In the Execute step, the cached SQL statements are read and executed to import data, or the cached CSV file data is read and imported to the specified destination database. Compared with the fast mode, this mode can be used to import data in a more secure but less efficient manner.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FAST_MODE</p>
              */
             public Builder importMode(String importMode) {
                 this.importMode = importMode;
@@ -282,7 +341,18 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InsertType.
+             * <p>The mode in which data is to be imported to the destination table. Valid values:</p>
+             * <ul>
+             * <li><strong>INSERT</strong>: The database checks the primary key during data insertion. If the primary key is duplicated, an error is reported.</li>
+             * <li><strong>INSERT_IGNORE</strong>: If the imported data contains data records that are the same as those in the destination table, the new data records are ignored.</li>
+             * <li><strong>REPLACE_INTO</strong>: If the imported data contains a row that has the same value for the primary key or unique index as an existing row in the destination table, the system deletes the existing row and inserts the new row into the destination table.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is valid if the value of FileType is CSV or EXCEL.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>INSERT</p>
              */
             public Builder insertType(String insertType) {
                 this.insertType = insertType;
@@ -296,6 +366,12 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataCorrectOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataCorrectOrderDetailResponseBody</p>
+     */
     public static class ConfigDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cron")
         private Boolean cron;
@@ -479,7 +555,10 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             private ImportExtConfig importExtConfig; 
 
             /**
-             * Cron.
+             * <p>Indicates whether the task is a scheduled task for historical data cleanup. This parameter is a reserved parameter and is valid only if the value of DetailType is CRON_CLEAR_DATA.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder cron(Boolean cron) {
                 this.cron = cron;
@@ -487,7 +566,10 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CronCallTimes.
+             * <p>The number of times the scheduled task is run. This parameter is valid only if the value of DetailType is CRON_CLEAR_DATA.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cronCallTimes(Integer cronCallTimes) {
                 this.cronCallTimes = cronCallTimes;
@@ -495,7 +577,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CronExtConfig.
+             * <p>The additional configuration information about historical data cleanup. This parameter is valid only if the value of DetailType is CRON_CLEAR_DATA.</p>
              */
             public Builder cronExtConfig(CronExtConfig cronExtConfig) {
                 this.cronExtConfig = cronExtConfig;
@@ -503,7 +585,10 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CronFormat.
+             * <p>The CRON expression of the scheduled task. This parameter is valid only if the value of DetailType is CRON_CLEAR_DATA.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 2 * * ?</p>
              */
             public Builder cronFormat(String cronFormat) {
                 this.cronFormat = cronFormat;
@@ -511,7 +596,10 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CronLastCallStartTime.
+             * <p>The time when the task was last run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-19 02:00:00.0</p>
              */
             public Builder cronLastCallStartTime(String cronLastCallStartTime) {
                 this.cronLastCallStartTime = cronLastCallStartTime;
@@ -519,7 +607,10 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CronNextCallTime.
+             * <p>The time when the task is run next time. This parameter is returned only if the value of CronStatus is SUCCESS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-19 02:00:00</p>
              */
             public Builder cronNextCallTime(String cronNextCallTime) {
                 this.cronNextCallTime = cronNextCallTime;
@@ -527,7 +618,15 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CronStatus.
+             * <p>The state of the scheduled task. If this parameter is empty, the task is not run. Valid values:</p>
+             * <ul>
+             * <li>PAUSE: The task is suspended.</li>
+             * <li>WAITING: The task is waiting to be run.</li>
+             * <li>SUCCESS: The task is run.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder cronStatus(String cronStatus) {
                 this.cronStatus = cronStatus;
@@ -535,7 +634,10 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CsvTableName.
+             * <p>The name of the table to which data is to be imported. This parameter is valid only if the value of DetailType is BIG_FILE. If the value of FileType is SQL, this parameter is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tb_import_tb_name</p>
              */
             public Builder csvTableName(String csvTableName) {
                 this.csvTableName = csvTableName;
@@ -543,7 +645,10 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentTaskId.
+             * <p>The ID of the current data change task. This is a reserved parameter and can be ignored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13***</p>
              */
             public Builder currentTaskId(Long currentTaskId) {
                 this.currentTaskId = currentTaskId;
@@ -551,7 +656,17 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DetailType.
+             * <p>The type of the ticket. Valid values:</p>
+             * <ul>
+             * <li>COMMON: regular data change.</li>
+             * <li>CHUNK_DML: lock-free data change.</li>
+             * <li>BIG_FILE: large data import.</li>
+             * <li>CRON_CLEAR_DATA: historical data cleanup.</li>
+             * <li>PROCEDURE: programmable object change.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BIG_FILE</p>
              */
             public Builder detailType(String detailType) {
                 this.detailType = detailType;
@@ -559,7 +674,10 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The execution duration of the scheduled task. Unit: hour. This parameter is valid only if the value of DetailType is CRON_CLEAR_DATA. If the value is greater than 0, an execution duration is set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -567,7 +685,16 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FileEncoding.
+             * <p>The encoding method of the file. This parameter may be empty, which indicates the value of AUTO. Valid values:</p>
+             * <ul>
+             * <li><strong>AUTO</strong>: automatic identification.</li>
+             * <li><strong>UTF-8</strong>: UTF-8 encoding.</li>
+             * <li><strong>GBK</strong>: GBK encoding.</li>
+             * <li><strong>ISO-8859-1</strong>: ISO-8859-1 encoding.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>UTF-8</p>
              */
             public Builder fileEncoding(String fileEncoding) {
                 this.fileEncoding = fileEncoding;
@@ -575,7 +702,16 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FileType.
+             * <p>The type of the file to be imported. This parameter is valid if the value of DetailType is BIG_FILE. Valid values:</p>
+             * <ul>
+             * <li><strong>SQL</strong>: an SQL file.</li>
+             * <li><strong>CSV</strong>: a CSV file.</li>
+             * <li><strong>EXCEL</strong>: an Excel file.</li>
+             * <li><strong>JSON</strong>: a JSON file, which is supported only by MongoDB databases.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CSV</p>
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -583,7 +719,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ImportExtConfig.
+             * <p>The additional configuration information about data import. This parameter is valid if the value of DetailType is BIG_FILE.</p>
              */
             public Builder importExtConfig(ImportExtConfig importExtConfig) {
                 this.importExtConfig = importExtConfig;
@@ -597,6 +733,12 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataCorrectOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataCorrectOrderDetailResponseBody</p>
+     */
     public static class Database extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DbId")
         private Integer dbId;
@@ -672,7 +814,10 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             private String searchName; 
 
             /**
-             * The ID of the database.
+             * <p>The database ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1860****</p>
              */
             public Builder dbId(Integer dbId) {
                 this.dbId = dbId;
@@ -680,7 +825,10 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The engine of the database.
+             * <p>The engine of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -688,17 +836,20 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the environment to which the database belongs. Valid values:
-             * <p>
+             * <p>The type of the environment to which the database belongs. Valid values:</p>
+             * <ul>
+             * <li>product: production environment.</li>
+             * <li>dev: development environment.</li>
+             * <li>pre: pre-release environment.</li>
+             * <li>test: test environment.</li>
+             * <li>sit: system integration testing (SIT) environment</li>
+             * <li>uat: user acceptance testing (UAT) environment.</li>
+             * <li>pet: stress testing environment.</li>
+             * <li>stag: staging environment.</li>
+             * </ul>
              * 
-             * - product: production environment
-             * - dev: development environment
-             * - pre: staging environment
-             * - test: test environment
-             * - sit: system integration testing (SIT) environment
-             * - uat: user acceptance testing (UAT) environment
-             * - pet: stress testing environment
-             * - stag: STAG environment
+             * <strong>example:</strong>
+             * <p>product</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -706,11 +857,14 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the database is a logical database. Valid values:
-             * <p>
+             * <p>Indicates whether the database is a logical database. Valid values:</p>
+             * <ul>
+             * <li><strong>true.</strong>: The database is a logical database.</li>
+             * <li><strong>false</strong>: The database is a physical database.</li>
+             * </ul>
              * 
-             * - **true**: The database is a logical database.
-             * - **false**: The database is a physical database.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -718,7 +872,10 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name that is used to search for the database.
+             * <p>The name that is used to search for the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx@xxx:3306</p>
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -732,6 +889,12 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataCorrectOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataCorrectOrderDetailResponseBody</p>
+     */
     public static class DatabaseList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Database")
         private java.util.List < Database> database;
@@ -773,6 +936,12 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataCorrectOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataCorrectOrderDetailResponseBody</p>
+     */
     public static class OrderDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActualAffectRows")
         private Long actualAffectRows;
@@ -920,7 +1089,10 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             private String sqlType; 
 
             /**
-             * The number of affected rows that is obtained by the precheck.
+             * <p>The number of affected rows that is obtained by the precheck.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder actualAffectRows(Long actualAffectRows) {
                 this.actualAffectRows = actualAffectRows;
@@ -928,7 +1100,10 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the attachment that contains the SQL statements used to change data.
+             * <p>The name of the attachment that contains the SQL statements used to change data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder attachmentName(String attachmentName) {
                 this.attachmentName = attachmentName;
@@ -936,7 +1111,10 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the reason for the data change.
+             * <p>The category of the reason for the data change.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder classify(String classify) {
                 this.classify = classify;
@@ -944,7 +1122,10 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The estimated number of affected rows.
+             * <p>The estimated number of affected rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder estimateAffectRows(Long estimateAffectRows) {
                 this.estimateAffectRows = estimateAffectRows;
@@ -952,7 +1133,10 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The executed SQL statements.
+             * <p>The executed SQL statements.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>update t1 set name = &quot;xxx&quot; where id &lt;= 100</p>
              */
             public Builder exeSQL(String exeSQL) {
                 this.exeSQL = exeSQL;
@@ -960,11 +1144,14 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the precheck result is ignored. Valid values:
-             * <p>
+             * <p>Indicates whether the precheck result is ignored. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The precheck result is ignored.</li>
+             * <li><strong>false</strong>: The precheck result is not ignored.</li>
+             * </ul>
              * 
-             * - **true**: The precheck result is ignored.
-             * - **false**: The precheck result is not ignored.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder ignoreAffectRows(Boolean ignoreAffectRows) {
                 this.ignoreAffectRows = ignoreAffectRows;
@@ -972,7 +1159,10 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the precheck result is ignored.
+             * <p>The reason why the precheck result is ignored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ignoreAffectRowsReason(String ignoreAffectRowsReason) {
                 this.ignoreAffectRowsReason = ignoreAffectRowsReason;
@@ -980,7 +1170,10 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the attachment that contains the SQL statements used to roll back the data change.
+             * <p>The name of the attachment that contains the SQL statements used to roll back the data change.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder rbAttachmentName(String rbAttachmentName) {
                 this.rbAttachmentName = rbAttachmentName;
@@ -988,7 +1181,10 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statements used to roll back the data change.
+             * <p>The SQL statements used to roll back the data change.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>empty</p>
              */
             public Builder rbSQL(String rbSQL) {
                 this.rbSQL = rbSQL;
@@ -996,11 +1192,14 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The format of the SQL statements used to roll back the data change. Valid values:
-             * <p>
+             * <p>The format of the SQL statements used to roll back the data change. Valid values:</p>
+             * <ul>
+             * <li><strong>TEXT</strong>: text</li>
+             * <li><strong>ATTACHMENT</strong>: attachment</li>
+             * </ul>
              * 
-             * - **TEXT**: text
-             * - **ATTACHMENT**: attachment
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder rbSQLType(String rbSQLType) {
                 this.rbSQLType = rbSQLType;
@@ -1008,11 +1207,14 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The format of the SQL statements used to change data. Valid values:
-             * <p>
+             * <p>The format of the SQL statements used to change data. Valid values:</p>
+             * <ul>
+             * <li><strong>TEXT</strong>: text</li>
+             * <li><strong>ATTACHMENT</strong>: attachment</li>
+             * </ul>
              * 
-             * - **TEXT**: text
-             * - **ATTACHMENT**: attachment
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder sqlType(String sqlType) {
                 this.sqlType = sqlType;
@@ -1026,6 +1228,12 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataCorrectOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataCorrectOrderDetailResponseBody</p>
+     */
     public static class TaskCheckDO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckStatus")
         private String checkStatus;
@@ -1077,13 +1285,16 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             private String userTip; 
 
             /**
-             * The status of the precheck. Valid values:
-             * <p>
+             * <p>The state of the precheck. Valid values:</p>
+             * <ul>
+             * <li><strong>WAITING</strong>: The ticket is pending precheck.</li>
+             * <li><strong>RUNNING</strong>: The ticket is being prechecked.</li>
+             * <li><strong>SUCCESS</strong>: The ticket passes the precheck.</li>
+             * <li><strong>FAIL</strong>: The ticket fails the precheck.</li>
+             * </ul>
              * 
-             * *   **WAITING**: The ticket is pending precheck.
-             * *   **RUNNING**: The ticket is being prechecked.
-             * *   **SUCCESS**: The ticket passes the precheck.
-             * *   **FAIL**: The ticket fails the precheck.
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder checkStatus(String checkStatus) {
                 this.checkStatus = checkStatus;
@@ -1091,13 +1302,16 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The check step of the precheck. Valid values:
-             * <p>
+             * <p>The check step of the precheck. Valid values:</p>
+             * <ul>
+             * <li><strong>SQL_PARSE</strong>: The system checks the syntax of the SQL statement.</li>
+             * <li><strong>SQL_TYPE_CHECK</strong>: The system checks the type of the SQL statement.</li>
+             * <li><strong>PERMISSION_CHECK</strong>: The system checks the permissions required for the data change.</li>
+             * <li><strong>ROW_CHECK</strong>: The system checks the number of affected rows.</li>
+             * </ul>
              * 
-             * *   **SQL_PARSE**: The system checks the syntax of the SQL statement.
-             * *   **SQL_TYPE_CHECK**: The system checks the type of the SQL statement.
-             * *   **PERMISSION_CHECK**: The system checks the permissions required for the data change.
-             * *   **ROW_CHECK**: The system checks the number of affected rows.
+             * <strong>example:</strong>
+             * <p>PERMISSION_CHECK</p>
              */
             public Builder checkStep(String checkStep) {
                 this.checkStep = checkStep;
@@ -1105,7 +1319,10 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The message that indicates a check step.
+             * <p>The message that appears when a check step is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tip messsage</p>
              */
             public Builder userTip(String userTip) {
                 this.userTip = userTip;
@@ -1119,6 +1336,12 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataCorrectOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataCorrectOrderDetailResponseBody</p>
+     */
     public static class PreCheckDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskCheckDO")
         private java.util.List < TaskCheckDO> taskCheckDO;
@@ -1160,6 +1383,12 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataCorrectOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataCorrectOrderDetailResponseBody</p>
+     */
     public static class DataCorrectOrderDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigDetail")
         private ConfigDetail configDetail;
@@ -1247,7 +1476,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ConfigDetail.
+             * <p>The configurations of the ticket. This parameter is used to store the configuration information specific to a data change ticket type.</p>
              */
             public Builder configDetail(ConfigDetail configDetail) {
                 this.configDetail = configDetail;
@@ -1255,7 +1484,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the database in which data is changed.
+             * <p>The information about the database in which data is changed.</p>
              */
             public Builder databaseList(DatabaseList databaseList) {
                 this.databaseList = databaseList;
@@ -1263,12 +1492,15 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The execution mode of the ticket after the ticket is approved. Valid values:
-             * <p>
+             * <p>The execution mode of the ticket after the ticket is approved. Valid values:</p>
+             * <ul>
+             * <li><strong>COMMITOR</strong>: The data change is performed by the user who submits the ticket.</li>
+             * <li><strong>AUTO</strong>: The data change is automatically performed after the ticket is approved.</li>
+             * <li><strong>LAST_AUDITOR</strong>: The data change is performed by the last approver of the ticket.</li>
+             * </ul>
              * 
-             * - **COMMITOR**: The data change is performed by the user who submits the ticket.
-             * - **AUTO**: The data change is automatically performed after the ticket is approved.
-             * - **LAST_AUDITOR**: The data change is performed by the last approver of the ticket.
+             * <strong>example:</strong>
+             * <p>COMMITOR</p>
              */
             public Builder execMode(String execMode) {
                 this.execMode = execMode;
@@ -1276,7 +1508,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the ticket.
+             * <p>The details of the ticket.</p>
              */
             public Builder orderDetail(OrderDetail orderDetail) {
                 this.orderDetail = orderDetail;
@@ -1284,7 +1516,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The precheck details of the ticket.
+             * <p>The precheck details of the ticket.</p>
              */
             public Builder preCheckDetail(PreCheckDetail preCheckDetail) {
                 this.preCheckDetail = preCheckDetail;
@@ -1292,20 +1524,25 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the ticket. Valid values:
-             * <p>
+             * <p>The specific state of the data change ticket. Valid values:</p>
+             * <blockquote>
+             * <p> The state of the ticket is not exactly equivalent to the status code for the ticket. To query the status code of the ticket, you can call the <a href="https://help.aliyun.com/document_detail/465868.html">GetOrderBaseInfo</a> operation and check the value of StatusCode in the response.</p>
+             * </blockquote>
+             * <ul>
+             * <li><strong>new</strong>: The ticket is created.</li>
+             * <li><strong>precheck</strong>: The ticket is in the pre-check phase.</li>
+             * <li><strong>precheckFailed</strong>: The ticket failed to pass the precheck.</li>
+             * <li><strong>precheck_success</strong>: The ticket passes the precheck and waits to be submitted for approval.</li>
+             * <li><strong>toaudit</strong>: The ticket is being reviewed.</li>
+             * <li><strong>Approved</strong>: The ticket is approved.</li>
+             * <li><strong>reject</strong>: The ticket is rejected.</li>
+             * <li><strong>waiting</strong>: The task is submitted and waits to be scheduled.</li>
+             * <li><strong>processing</strong>: The task is being executed.</li>
+             * <li><strong>Success</strong>: The task is successful.</li>
+             * </ul>
              * 
-             * - **new**: The ticket is created.
-             * - **precheck**: The ticket is being prechecked.
-             * - **precheck_fail**: The ticket fails the precheck.
-             * - **precheck_success**: The ticket passes the precheck and waits to be submitted for approval.
-             * - **toaudit**: The ticket is being reviewed.
-             * - **Approved**: The ticket is approved.
-             * - **reject**: The ticket is rejected.
-             * - **waiting**: The ticket is submitted and waits to be scheduled.
-             * - **processing**: The ticket is being executed.
-             * - **success**: The ticket is executed.
-             * - **closed**: The ticket is closed.
+             * <strong>example:</strong>
+             * <p>approved</p>
              */
             public Builder status(String status) {
                 this.status = status;

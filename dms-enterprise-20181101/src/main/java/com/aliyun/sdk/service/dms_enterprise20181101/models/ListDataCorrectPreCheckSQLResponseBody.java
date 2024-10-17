@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDataCorrectPreCheckSQLResponseBody} extends {@link TeaModel}
  *
  * <p>ListDataCorrectPreCheckSQLResponseBody</p>
@@ -85,7 +86,10 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,7 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
         }
 
         /**
-         * The precheck information about SQL statements.
+         * <p>The precheck information about SQL statements.</p>
          */
         public Builder preCheckSQLList(java.util.List < PreCheckSQLList> preCheckSQLList) {
             this.preCheckSQLList = preCheckSQLList;
@@ -109,7 +116,10 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31853A2B-DC9D-5B39-8492-D2AC8BCF550E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
+         * </ul>
          * 
-         * *   **true**: The request is successful.
-         * *   **false**: The request fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDataCorrectPreCheckSQLResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataCorrectPreCheckSQLResponseBody</p>
+     */
     public static class PreCheckSQLList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AffectRows")
         private Long affectRows;
@@ -233,7 +252,10 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
             private String tableNames; 
 
             /**
-             * The estimated number of affected rows.
+             * <p>The estimated number of affected rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder affectRows(Long affectRows) {
                 this.affectRows = affectRows;
@@ -241,7 +263,10 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement.
+             * <p>The SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OPTIMIZE TABLE <code>Text_TableNames</code></p>
              */
             public Builder checkSQL(String checkSQL) {
                 this.checkSQL = checkSQL;
@@ -249,7 +274,10 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the database.
+             * <p>The ID of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1930****</p>
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -257,7 +285,10 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
             }
 
             /**
-             * The key that is used to query the details of optimization suggestions. You can call the [GetSQLReviewOptimizeDetail](~~265977~~) operation to query the details of optimization suggestions based on the key.
+             * <p>The key that is used to query the details of optimization suggestions. You can call the <a href="https://help.aliyun.com/document_detail/265977.html">GetSQLReviewOptimizeDetail</a> operation to query the details of optimization suggestions based on the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b9e771fc6ec247dea6d06a32c777****</p>
              */
             public Builder SQLReviewQueryKey(String SQLReviewQueryKey) {
                 this.SQLReviewQueryKey = SQLReviewQueryKey;
@@ -265,14 +296,17 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
             }
 
             /**
-             * The review status of the SQL statement. Valid values:
-             * <p>
+             * <p>The review status of the SQL statement. Valid values:</p>
+             * <ul>
+             * <li><strong>WAITING</strong>: The SQL statement is pending for review.</li>
+             * <li><strong>RUNNING</strong>: The SQL statement is being reviewed.</li>
+             * <li><strong>IGNORE</strong>: The SQL statement review is skipped.</li>
+             * <li><strong>PASS</strong>: The SQL statement passed the review.</li>
+             * <li><strong>BLOCK</strong>: The SQL statement failed the review.</li>
+             * </ul>
              * 
-             * *   **WAITING**: The SQL statement is pending for review.
-             * *   **RUNNING**: The SQL statement is being reviewed.
-             * *   **IGNORE**: The SQL statement review is skipped.
-             * *   **PASS**: The SQL statement passed the review.
-             * *   **BLOCK**: The SQL statement failed the review.
+             * <strong>example:</strong>
+             * <p>WAITING</p>
              */
             public Builder sqlReviewStatus(String sqlReviewStatus) {
                 this.sqlReviewStatus = sqlReviewStatus;
@@ -280,7 +314,10 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the SQL statement, such as DELETE, UPDATE, or ALTER_TABLE.
+             * <p>The type of the SQL statement, such as DELETE, UPDATE, or ALTER_TABLE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OPTIMIZE</p>
              */
             public Builder sqlType(String sqlType) {
                 this.sqlType = sqlType;
@@ -288,7 +325,10 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table whose data is changed.
+             * <p>The name of the table whose data is changed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Text_TableNames</p>
              */
             public Builder tableNames(String tableNames) {
                 this.tableNames = tableNames;

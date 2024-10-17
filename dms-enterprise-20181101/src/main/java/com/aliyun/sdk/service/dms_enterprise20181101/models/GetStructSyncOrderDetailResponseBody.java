@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetStructSyncOrderDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetStructSyncOrderDetailResponseBody</p>
@@ -85,7 +86,10 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,10 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4E1D2B4D-3E53-4ABC-999D-1D2520B3471A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the schema synchronization ticket.
+         * <p>The details of the schema synchronization ticket.</p>
          */
         public Builder structSyncOrderDetail(StructSyncOrderDetail structSyncOrderDetail) {
             this.structSyncOrderDetail = structSyncOrderDetail;
@@ -117,7 +127,10 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetStructSyncOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStructSyncOrderDetailResponseBody</p>
+     */
     public static class SourceDatabaseInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DbId")
         private Long dbId;
@@ -205,7 +224,10 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             private String searchName; 
 
             /**
-             * The ID of the source database.
+             * <p>The ID of the source database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>432532</p>
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -213,7 +235,10 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database engine.
+             * <p>The type of the database engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -221,7 +246,10 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the environment to which the database instance belongs. For more information, see [Change the environment type of an instance](~~163309~~).
+             * <p>The type of the environment to which the database instance belongs. For more information, see <a href="https://help.aliyun.com/document_detail/163309.html">Change the environment type of an instance</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -229,11 +257,14 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the database is a logical database. Valid values:
-             * <p>
+             * <p>Indicates whether the database is a logical database. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The database is a logical database.</li>
+             * <li><strong>false</strong>: The database is not a logical database</li>
+             * </ul>
              * 
-             * *   **true**: The database is a logical database.
-             * *   **false**: The database is not a logical database
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -241,7 +272,10 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name that is used to search for the database.
+             * <p>The name that is used to search for the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -255,6 +289,12 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetStructSyncOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStructSyncOrderDetailResponseBody</p>
+     */
     public static class SourceVersionInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VersionId")
         private String versionId;
@@ -282,7 +322,10 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             private String versionId; 
 
             /**
-             * The version number.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e179bbb8163dcdcfacda24858bedb4d8006ae2b8</p>
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;
@@ -296,6 +339,12 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetStructSyncOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStructSyncOrderDetailResponseBody</p>
+     */
     public static class TableInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourceTableName")
         private String sourceTableName;
@@ -335,7 +384,10 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             private String targetTableName; 
 
             /**
-             * The name of the table whose schema you want to synchronize.
+             * <p>The name of the table whose schema you want to synchronize.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_tbl</p>
              */
             public Builder sourceTableName(String sourceTableName) {
                 this.sourceTableName = sourceTableName;
@@ -343,7 +395,10 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table to which you want to synchronize the schema of a table.
+             * <p>The name of the table to which you want to synchronize the schema of a table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_tbl</p>
              */
             public Builder targetTableName(String targetTableName) {
                 this.targetTableName = targetTableName;
@@ -357,6 +412,12 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetStructSyncOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStructSyncOrderDetailResponseBody</p>
+     */
     public static class TargetDatabaseInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DbId")
         private Long dbId;
@@ -432,7 +493,10 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             private String searchName; 
 
             /**
-             * The ID of the destination database.
+             * <p>The ID of the destination database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>432543</p>
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -440,7 +504,10 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database engine.
+             * <p>The type of the database engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -448,7 +515,10 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the environment to which the database instance belongs. For more information, see [Change the environment type of an instance](~~163309~~).
+             * <p>The type of the environment to which the database instance belongs. For more information, see <a href="https://help.aliyun.com/document_detail/163309.html">Change the environment type of an instance</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -456,11 +526,14 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the database is a logical database. Valid values:
-             * <p>
+             * <p>Indicates whether the database is a logical database. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The database is a logical database.</li>
+             * <li><strong>false</strong>: The database is not a logical database</li>
+             * </ul>
              * 
-             * *   **true**: The database is a logical database.
-             * *   **false**: The database is not a logical database
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -468,7 +541,10 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name that is used to search for the database.
+             * <p>The name that is used to search for the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -482,6 +558,12 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetStructSyncOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStructSyncOrderDetailResponseBody</p>
+     */
     public static class TargetVersionInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VersionId")
         private String versionId;
@@ -509,7 +591,10 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             private String versionId; 
 
             /**
-             * The version number.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e179bbb8163dcdcfacda24858bedb4d8006ae2b8</p>
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;
@@ -523,6 +608,12 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetStructSyncOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStructSyncOrderDetailResponseBody</p>
+     */
     public static class StructSyncOrderDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IgnoreError")
         private Boolean ignoreError;
@@ -634,11 +725,14 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             private TargetVersionInfo targetVersionInfo; 
 
             /**
-             * Indicates whether to skip errors. Valid values:
-             * <p>
+             * <p>Indicates whether to skip errors. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: skips the error and continues to execute SQL statements.</li>
+             * <li><strong>false</strong>: stops executing SQL statements.</li>
+             * </ul>
              * 
-             * *   **true**: skips the error and continues to execute SQL statements.
-             * *   **false**: stops executing SQL statements.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder ignoreError(Boolean ignoreError) {
                 this.ignoreError = ignoreError;
@@ -646,7 +740,7 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the source database.
+             * <p>The information about the source database.</p>
              */
             public Builder sourceDatabaseInfo(SourceDatabaseInfo sourceDatabaseInfo) {
                 this.sourceDatabaseInfo = sourceDatabaseInfo;
@@ -654,11 +748,14 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The schema version of the source database. Valid values:
-             * <p>
+             * <p>The schema version of the source database. Valid values:</p>
+             * <ul>
+             * <li><strong>DATASOURCE</strong>: the default latest version of the system</li>
+             * <li><strong>VERSION</strong>: a previous schema version that you manually specify</li>
+             * </ul>
              * 
-             * *   **DATASOURCE**: the default latest version of the system
-             * *   **VERSION**: a previous schema version that you manually specify
+             * <strong>example:</strong>
+             * <p>VERSION</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -666,10 +763,10 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The version information about the source instance.
-             * <p>
-             * 
-             * > This parameter is displayed only when the value of the **SourceType** parameter is **VERSION**.
+             * <p>The version information about the source instance.</p>
+             * <blockquote>
+             * <p>This parameter is displayed only when the value of the <strong>SourceType</strong> parameter is <strong>VERSION</strong>.</p>
+             * </blockquote>
              */
             public Builder sourceVersionInfo(SourceVersionInfo sourceVersionInfo) {
                 this.sourceVersionInfo = sourceVersionInfo;
@@ -677,7 +774,7 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the table whose schema you want to synchronize.
+             * <p>The information about the table whose schema you want to synchronize.</p>
              */
             public Builder tableInfoList(java.util.List < TableInfoList> tableInfoList) {
                 this.tableInfoList = tableInfoList;
@@ -685,7 +782,7 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the destination database.
+             * <p>The information about the destination database.</p>
              */
             public Builder targetDatabaseInfo(TargetDatabaseInfo targetDatabaseInfo) {
                 this.targetDatabaseInfo = targetDatabaseInfo;
@@ -693,11 +790,14 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The schema version of the destination database. Valid values:
-             * <p>
+             * <p>The schema version of the destination database. Valid values:</p>
+             * <ul>
+             * <li><strong>DATASOURCE</strong>: the default latest version of the system</li>
+             * <li><strong>VERSION</strong>: a previous schema version that you manually specify</li>
+             * </ul>
              * 
-             * *   **DATASOURCE**: the default latest version of the system
-             * *   **VERSION**: a previous schema version that you manually specify
+             * <strong>example:</strong>
+             * <p>DATASOURCE</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -705,10 +805,10 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The version information about the destination instance.
-             * <p>
-             * 
-             * > This parameter is displayed only when the value of the **SourceType** parameter is **VERSION**.
+             * <p>The version information about the destination instance.</p>
+             * <blockquote>
+             * <p>This parameter is displayed only when the value of the <strong>SourceType</strong> parameter is <strong>VERSION</strong>.</p>
+             * </blockquote>
              */
             public Builder targetVersionInfo(TargetVersionInfo targetVersionInfo) {
                 this.targetVersionInfo = targetVersionInfo;

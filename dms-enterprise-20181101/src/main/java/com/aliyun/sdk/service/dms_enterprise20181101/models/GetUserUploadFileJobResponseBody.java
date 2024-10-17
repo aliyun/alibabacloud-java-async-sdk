@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserUploadFileJobResponseBody} extends {@link TeaModel}
  *
  * <p>GetUserUploadFileJobResponseBody</p>
@@ -85,7 +86,10 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
         private UploadFileJobDetail uploadFileJobDetail; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,10 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BDEFE9F2-B3B4-42D0-83AE-ECF9FC067DCD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,10 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -117,7 +130,7 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the file upload task.
+         * <p>The details of the file upload task.</p>
          */
         public Builder uploadFileJobDetail(UploadFileJobDetail uploadFileJobDetail) {
             this.uploadFileJobDetail = uploadFileJobDetail;
@@ -130,6 +143,12 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetUserUploadFileJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserUploadFileJobResponseBody</p>
+     */
     public static class UploadOSSParam extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BucketName")
         private String bucketName;
@@ -181,7 +200,10 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             private String objectName; 
 
             /**
-             * The name of the OSS bucket.
+             * <p>The name of the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_bucket</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -189,7 +211,10 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the OSS bucket.
+             * <p>The endpoint of the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://oss-cn-hangzhou.aliyuncs.com">http://oss-cn-hangzhou.aliyuncs.com</a></p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -197,7 +222,10 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the OSS object.
+             * <p>The name of the OSS object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.sql</p>
              */
             public Builder objectName(String objectName) {
                 this.objectName = objectName;
@@ -211,6 +239,12 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetUserUploadFileJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserUploadFileJobResponseBody</p>
+     */
     public static class UploadFileJobDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttachmentKey")
         private String attachmentKey;
@@ -358,7 +392,10 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             private Long uploadedSize; 
 
             /**
-             * The key of the file that is returned after the file is uploaded. You can use this key when you upload the file as an attachment in a ticket.
+             * <p>The key of the file that is returned after the file is uploaded. You can use this key when you upload the file as an attachment in a ticket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>upload_3c7edea3-e4c3-4403-857d-737043036f69_test.sql</p>
              */
             public Builder attachmentKey(String attachmentKey) {
                 this.attachmentKey = attachmentKey;
@@ -366,7 +403,10 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the file.
+             * <p>The name of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.sql</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -374,7 +414,10 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the file. Unit: byte.
+             * <p>The size of the file. Unit: byte.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2968269</p>
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -382,13 +425,16 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             }
 
             /**
-             * The purpose of the uploaded file. Valid values:
-             * <p>
+             * <p>The purpose of the uploaded file. Valid values:</p>
+             * <ul>
+             * <li><strong>datacorrect</strong>: The file is uploaded to change data.</li>
+             * <li><strong>order_info_attachment</strong>: The file is uploaded as an attachment in a ticket.</li>
+             * <li><strong>big-file</strong>: The file is uploaded to import multiple data records at a time.</li>
+             * <li><strong>sqlreview</strong>: The file is uploaded for SQL review.</li>
+             * </ul>
              * 
-             * *   **datacorrect**: The file is uploaded to change data.
-             * *   **order_info_attachment**: The file is uploaded as an attachment in a ticket.
-             * *   **big-file**: The file is uploaded to import multiple data records at a time.
-             * *   **sqlreview**: The file is uploaded for SQL review.
+             * <strong>example:</strong>
+             * <p>datacorrect</p>
              */
             public Builder fileSource(String fileSource) {
                 this.fileSource = fileSource;
@@ -396,7 +442,10 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the file upload task.
+             * <p>The key of the file upload task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65254a4c1614235217749100e</p>
              */
             public Builder jobKey(String jobKey) {
                 this.jobKey = jobKey;
@@ -404,15 +453,18 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the file upload task. Valid values:
-             * <p>
+             * <p>The status of the file upload task. Valid values:</p>
+             * <ul>
+             * <li><strong>INIT</strong>: The file upload task was initialized.</li>
+             * <li><strong>PENDING</strong>: The file upload task waited to be run.</li>
+             * <li><strong>BE_SCHEDULED</strong>: The file upload task waited to be scheduled.</li>
+             * <li><strong>FAIL</strong>: The file upload task failed.</li>
+             * <li><strong>SUCCESS</strong>: The file upload task was successful.</li>
+             * <li><strong>RUNNING</strong>: The file upload task was being run.</li>
+             * </ul>
              * 
-             * *   **INIT**: The file upload task was initialized.
-             * *   **PENDING**: The file upload task waited to be run.
-             * *   **BE_SCHEDULED**: The file upload task waited to be scheduled.
-             * *   **FAIL**: The file upload task failed.
-             * *   **SUCCESS**: The file upload task was successful.
-             * *   **RUNNING**: The file upload task was being run.
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder jobStatus(String jobStatus) {
                 this.jobStatus = jobStatus;
@@ -420,7 +472,10 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the status of the file upload task.
+             * <p>The information about the status of the file upload task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder jobStatusDesc(String jobStatusDesc) {
                 this.jobStatusDesc = jobStatusDesc;
@@ -428,10 +483,10 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the Object Storage Service (OSS) bucket from which the file is uploaded.
-             * <p>
-             * 
-             * > This parameter is returned if the value of **UploadType** is **OSS**.
+             * <p>The information about the Object Storage Service (OSS) bucket from which the file is uploaded.</p>
+             * <blockquote>
+             * <p>This parameter is returned if the value of <strong>UploadType</strong> is <strong>OSS</strong>.</p>
+             * </blockquote>
              */
             public Builder uploadOSSParam(UploadOSSParam uploadOSSParam) {
                 this.uploadOSSParam = uploadOSSParam;
@@ -439,11 +494,14 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             }
 
             /**
-             * The method used to upload the file. Valid values:
-             * <p>
+             * <p>The method used to upload the file. Valid values:</p>
+             * <ul>
+             * <li><strong>URL</strong></li>
+             * <li><strong>OSS</strong></li>
+             * </ul>
              * 
-             * *   **URL**
-             * *   **OSS**
+             * <strong>example:</strong>
+             * <p>URL</p>
              */
             public Builder uploadType(String uploadType) {
                 this.uploadType = uploadType;
@@ -451,10 +509,13 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the file.
-             * <p>
+             * <p>The URL of the file.</p>
+             * <blockquote>
+             * <p>This parameter is returned if the value of <strong>UploadType</strong> is <strong>URL</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned if the value of **UploadType** is **URL**.
+             * <strong>example:</strong>
+             * <p><a href="http://xxxx/test.sql">http://xxxx/test.sql</a></p>
              */
             public Builder uploadURL(String uploadURL) {
                 this.uploadURL = uploadURL;
@@ -462,7 +523,10 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the uploaded file. Unit: byte.
+             * <p>The size of the uploaded file. Unit: byte.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2968269</p>
              */
             public Builder uploadedSize(Long uploadedSize) {
                 this.uploadedSize = uploadedSize;

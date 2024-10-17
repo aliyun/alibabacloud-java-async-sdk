@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserRequest} extends {@link RequestModel}
  *
  * <p>UpdateUserRequest</p>
@@ -161,7 +162,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The maximum number of queries that can be performed each day.
+         * <p>The maximum number of queries that can be performed each day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxExecuteCount(Long maxExecuteCount) {
             this.putQueryParameter("MaxExecuteCount", maxExecuteCount);
@@ -170,7 +174,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The maximum number of rows that can be queried each day.
+         * <p>The maximum number of rows that can be queried each day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxResultCount(Long maxResultCount) {
             this.putQueryParameter("MaxResultCount", maxResultCount);
@@ -179,7 +186,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The DingTalk ID or mobile number of the user.
+         * <p>The DingTalk ID or mobile number of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>188xxxxxxxx</p>
          */
         public Builder mobile(String mobile) {
             this.putQueryParameter("Mobile", mobile);
@@ -188,7 +198,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The roles that the user assumes. For more information about the valid values, see the Request parameters section in the [UpdateUser](~~465812~~) topic.
+         * <p>The roles that the user assumes. For more information about the valid values, see the Request parameters section in the <a href="https://help.aliyun.com/document_detail/465812.html">UpdateUser</a> topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADMIN,DBA</p>
          */
         public Builder roleNames(String roleNames) {
             this.putQueryParameter("RoleNames", roleNames);
@@ -197,10 +210,13 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p>: To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a>.</p>
+         * </blockquote>
          * 
-         * > : To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [Manage DMS tenants](~~181330~~).
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -209,7 +225,11 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud unique ID (UID) of the user to update.
+         * <p>The Alibaba Cloud unique ID (UID) of the user to update.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);
@@ -218,7 +238,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The nickname of the user.
+         * <p>The nickname of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder userNick(String userNick) {
             this.putQueryParameter("UserNick", userNick);

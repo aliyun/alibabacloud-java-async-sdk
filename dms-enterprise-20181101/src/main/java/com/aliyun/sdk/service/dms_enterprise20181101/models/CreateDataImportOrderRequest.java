@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDataImportOrderRequest} extends {@link RequestModel}
  *
  * <p>CreateDataImportOrderRequest</p>
@@ -135,7 +136,10 @@ public class CreateDataImportOrderRequest extends Request {
         }
 
         /**
-         * The key of the attachment that provides more instructions for the ticket. You can call the [GetUserUploadFileJob](~~206069~~) operation to obtain the attachment key from the value of the AttachmentKey parameter.
+         * <p>The key of the attachment that provides more instructions for the ticket. You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to obtain the attachment key from the value of the AttachmentKey parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order_attachment.txt</p>
          */
         public Builder attachmentKey(String attachmentKey) {
             this.putQueryParameter("AttachmentKey", attachmentKey);
@@ -144,7 +148,11 @@ public class CreateDataImportOrderRequest extends Request {
         }
 
         /**
-         * The purpose or objective of the data import. This parameter is used to help reduce unnecessary communication.
+         * <p>The purpose or objective of the data import. This parameter is used to help reduce unnecessary communication.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -153,7 +161,8 @@ public class CreateDataImportOrderRequest extends Request {
         }
 
         /**
-         * The parameters of the ticket.
+         * <p>The parameters of the ticket.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder param(Param param) {
             String paramShrink = shrink(param, "Param", "json");
@@ -163,7 +172,7 @@ public class CreateDataImportOrderRequest extends Request {
         }
 
         /**
-         * The stakeholders of the data import. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than DMS administrators and database administrators (DBAs) are not allowed to view the ticket details.
+         * <p>The stakeholders of the data import. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than DMS administrators and database administrators (DBAs) are not allowed to view the ticket details.</p>
          */
         public Builder relatedUserList(java.util.List < Long > relatedUserList) {
             String relatedUserListShrink = shrink(relatedUserList, "RelatedUserList", "json");
@@ -173,7 +182,10 @@ public class CreateDataImportOrderRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -188,6 +200,12 @@ public class CreateDataImportOrderRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDataImportOrderRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDataImportOrderRequest</p>
+     */
     public static class DbItemList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DbId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -229,11 +247,15 @@ public class CreateDataImportOrderRequest extends Request {
             private Boolean logic; 
 
             /**
-             * The ID of the database. The database can be a physical database or a logical database.
-             * <p>
+             * <p>The ID of the database. The database can be a physical database or a logical database.</p>
+             * <ul>
+             * <li>To obtain the ID of a physical database, call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</li>
+             * <li>To obtain the ID of a logical database, call the <a href="https://help.aliyun.com/document_detail/141874.html">ListLogicDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   To obtain the ID of a physical database, call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation.
-             * *   To obtain the ID of a logical database, call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation.
+             * <strong>example:</strong>
+             * <p>1860****</p>
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -241,13 +263,18 @@ public class CreateDataImportOrderRequest extends Request {
             }
 
             /**
-             * Specifies whether the database is a logical database. Valid values:
-             * <p>
+             * <p>Specifies whether the database is a logical database. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The database is a logical database.</li>
+             * <li><strong>false</strong>: The database is a physical database.</li>
+             * </ul>
+             * <blockquote>
+             * <p> If you set this parameter to <strong>true</strong>, the database that you specify must be a logical database.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * *   **true**: The database is a logical database.
-             * *   **false**: The database is a physical database.
-             * 
-             * >  If you set this parameter to **true**, the database that you specify must be a logical database.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -261,6 +288,12 @@ public class CreateDataImportOrderRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateDataImportOrderRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDataImportOrderRequest</p>
+     */
     public static class Param extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttachmentName")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -435,7 +468,11 @@ public class CreateDataImportOrderRequest extends Request {
             private String tableName; 
 
             /**
-             * The key of the attachment that contains the SQL statements used to import data. You can call the [GetUserUploadFileJob](~~206069~~) operation to the attachment key from the value of the AttachmentKey parameter.
+             * <p>The key of the attachment that contains the SQL statements used to import data. You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to the attachment key from the value of the AttachmentKey parameter.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>order_text</p>
              */
             public Builder attachmentName(String attachmentName) {
                 this.attachmentName = attachmentName;
@@ -443,7 +480,10 @@ public class CreateDataImportOrderRequest extends Request {
             }
 
             /**
-             * The reason for the data import.
+             * <p>The reason for the data import.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder classify(String classify) {
                 this.classify = classify;
@@ -451,13 +491,17 @@ public class CreateDataImportOrderRequest extends Request {
             }
 
             /**
-             * The type of the CSV file. Valid values:
-             * <p>
+             * <p>The type of the CSV file. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The first row in the CSV file contains field names.</li>
+             * <li><strong>false</strong>: The first row in the CSV file contains data.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is required if you set the <strong>FileType</strong> parameter to <strong>CSV</strong>.</p>
+             * </blockquote>
              * 
-             * *   **true**: The first row in the CSV file contains field names.
-             * *   **false**: The first row in the CSV file contains data.
-             * 
-             * >  This parameter is required if you set the **FileType** parameter to **CSV**.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder csvFirstRowIsColumnDef(Boolean csvFirstRowIsColumnDef) {
                 this.csvFirstRowIsColumnDef = csvFirstRowIsColumnDef;
@@ -465,7 +509,8 @@ public class CreateDataImportOrderRequest extends Request {
             }
 
             /**
-             * The database to which you want to import data. You can specify only one database.
+             * <p>The database to which you want to import data. You can specify only one database.</p>
+             * <p>This parameter is required.</p>
              */
             public Builder dbItemList(java.util.List < DbItemList> dbItemList) {
                 this.dbItemList = dbItemList;
@@ -473,13 +518,16 @@ public class CreateDataImportOrderRequest extends Request {
             }
 
             /**
-             * The encoding algorithm to be used by the destination database. Valid values:
-             * <p>
+             * <p>The encoding algorithm to be used by the destination database. Valid values:</p>
+             * <ul>
+             * <li><strong>AUTO</strong>: automatic identification</li>
+             * <li><strong>UTF-8</strong>: UTF-8 encoding</li>
+             * <li><strong>GBK</strong>: GBK encoding</li>
+             * <li><strong>ISO-8859-1</strong>: ISO-8859-1 encoding</li>
+             * </ul>
              * 
-             * *   **AUTO**: automatic identification
-             * *   **UTF-8**: UTF-8 encoding
-             * *   **GBK**: GBK encoding
-             * *   **ISO-8859-1**: ISO-8859-1 encoding
+             * <strong>example:</strong>
+             * <p>AUTO</p>
              */
             public Builder fileEncoding(String fileEncoding) {
                 this.fileEncoding = fileEncoding;
@@ -487,11 +535,15 @@ public class CreateDataImportOrderRequest extends Request {
             }
 
             /**
-             * The format of the file for the data import. Valid values:
-             * <p>
+             * <p>The format of the file for the data import. Valid values:</p>
+             * <ul>
+             * <li><strong>SQL</strong>: an SQL file</li>
+             * <li><strong>CSV</strong>: a CSV file</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **SQL**: an SQL file
-             * *   **CSV**: a CSV file
+             * <strong>example:</strong>
+             * <p>CSV</p>
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -499,11 +551,14 @@ public class CreateDataImportOrderRequest extends Request {
             }
 
             /**
-             * Specifies whether to skip an error that occurs. Valid values:
-             * <p>
+             * <p>Specifies whether to skip an error that occurs. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: skips the error and continues to execute SQL statements.</li>
+             * <li><strong>false</strong>: stops executing SQL statements.</li>
+             * </ul>
              * 
-             * *   **true**: skips the error and continues to execute SQL statements.
-             * *   **false**: stops executing SQL statements.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder ignoreError(Boolean ignoreError) {
                 this.ignoreError = ignoreError;
@@ -511,11 +566,14 @@ public class CreateDataImportOrderRequest extends Request {
             }
 
             /**
-             * The import mode. Valid values:
-             * <p>
+             * <p>The import mode. Valid values:</p>
+             * <ul>
+             * <li><strong>FAST_MODE</strong>: In the Execute step, the uploaded file is read and SQL statements are executed to import data to the specified destination database. Compared with the security mode, this mode can be used to import data in a less secure but more efficient manner.</li>
+             * <li><strong>SAFE_MODE</strong>: In the Precheck step, the uploaded file is parsed, and SQL statements or CSV file data is cached. In the Execute step, the cached SQL statements are read and executed to import data, or the cached CSV file data is read and imported to the specified destination database. This mode can be used to import data in a more secure but less efficient manner.</li>
+             * </ul>
              * 
-             * *   **FAST_MODE**: In the Execute step, the uploaded file is read and SQL statements are executed to import data to the specified destination database. Compared with the security mode, this mode can be used to import data in a less secure but more efficient manner.
-             * *   **SAFE_MODE**: In the Precheck step, the uploaded file is parsed, and SQL statements or CSV file data is cached. In the Execute step, the cached SQL statements are read and executed to import data, or the cached CSV file data is read and imported to the specified destination database. This mode can be used to import data in a more secure but less efficient manner.
+             * <strong>example:</strong>
+             * <p>FAST_MODE</p>
              */
             public Builder importMode(String importMode) {
                 this.importMode = importMode;
@@ -523,14 +581,18 @@ public class CreateDataImportOrderRequest extends Request {
             }
 
             /**
-             * The mode in which the data in the CSV format is to be written to the destination table. Valid values:
-             * <p>
+             * <p>The mode in which the data in the CSV format is to be written to the destination table. Valid values:</p>
+             * <ul>
+             * <li><strong>INSERT</strong>: The database checks the primary key when data is written. If a duplicate primary key value exists, an error message is returned.</li>
+             * <li><strong>INSERT_IGNORE</strong>: If the imported data contains data records that are the same as those in the destination table, the new data records are ignored.</li>
+             * <li><strong>REPLACE_INTO</strong>: If the imported data contains a row that has the same value for the primary key or unique index as one row in the destination table, the database deletes the existing row and inserts the new row into the destination table.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is required if you set the <strong>FileType</strong> parameter to <strong>CSV</strong>.</p>
+             * </blockquote>
              * 
-             * *   **INSERT**: The database checks the primary key when data is written. If a duplicate primary key value exists, an error message is returned.
-             * *   **INSERT_IGNORE**: If the imported data contains data records that are the same as those in the destination table, the new data records are ignored.
-             * *   **REPLACE_INTO**: If the imported data contains a row that has the same value for the primary key or unique index as one row in the destination table, the database deletes the existing row and inserts the new row into the destination table.
-             * 
-             * >  This parameter is required if you set the **FileType** parameter to **CSV**.
+             * <strong>example:</strong>
+             * <p>INSERT</p>
              */
             public Builder insertType(String insertType) {
                 this.insertType = insertType;
@@ -538,10 +600,13 @@ public class CreateDataImportOrderRequest extends Request {
             }
 
             /**
-             * The key of the attachment that contains the SQL statements used to roll back the data import. You can call the [GetUserUploadFileJob](~~206069~~) operation to obtain the attachment key from the value of the AttachmentKey parameter.
-             * <p>
+             * <p>The key of the attachment that contains the SQL statements used to roll back the data import. You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to obtain the attachment key from the value of the AttachmentKey parameter.</p>
+             * <blockquote>
+             * <p> This parameter is required if you set the <strong>RollbackSqlType</strong> parameter to <strong>ATTACHMENT</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is required if you set the **RollbackSqlType** parameter to **ATTACHMENT**.
+             * <strong>example:</strong>
+             * <p>rollback.sql</p>
              */
             public Builder rollbackAttachmentName(String rollbackAttachmentName) {
                 this.rollbackAttachmentName = rollbackAttachmentName;
@@ -549,10 +614,13 @@ public class CreateDataImportOrderRequest extends Request {
             }
 
             /**
-             * The SQL statements used to roll back the data import.
-             * <p>
+             * <p>The SQL statements used to roll back the data import.</p>
+             * <blockquote>
+             * <p> This parameter is required if you set the <strong>RollbackSqlType</strong> parameter to <strong>TEXT</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is required if you set the **RollbackSqlType** parameter to **TEXT**.
+             * <strong>example:</strong>
+             * <p>empty</p>
              */
             public Builder rollbackSQL(String rollbackSQL) {
                 this.rollbackSQL = rollbackSQL;
@@ -560,11 +628,14 @@ public class CreateDataImportOrderRequest extends Request {
             }
 
             /**
-             * The format of the SQL statements used to roll back the data import. Valid values:
-             * <p>
+             * <p>The format of the SQL statements used to roll back the data import. Valid values:</p>
+             * <ul>
+             * <li><strong>TEXT</strong>: text</li>
+             * <li><strong>ATTACHMENT</strong>: attachment</li>
+             * </ul>
              * 
-             * *   **TEXT**: text
-             * *   **ATTACHMENT**: attachment
+             * <strong>example:</strong>
+             * <p>TEXT</p>
              */
             public Builder rollbackSqlType(String rollbackSqlType) {
                 this.rollbackSqlType = rollbackSqlType;
@@ -572,10 +643,13 @@ public class CreateDataImportOrderRequest extends Request {
             }
 
             /**
-             * The destination table to which you want to import the data in the CSV format.
-             * <p>
+             * <p>The destination table to which you want to import the data in the CSV format.</p>
+             * <blockquote>
+             * <p> This parameter is required if you set the <strong>FileType</strong> parameter to <strong>CSV</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is required if you set the **FileType** parameter to **CSV**.
+             * <strong>example:</strong>
+             * <p>Table_text</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

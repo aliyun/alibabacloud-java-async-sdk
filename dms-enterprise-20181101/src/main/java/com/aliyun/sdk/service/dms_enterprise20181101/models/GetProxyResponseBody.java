@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetProxyResponseBody} extends {@link TeaModel}
  *
  * <p>GetProxyResponseBody</p>
@@ -217,7 +218,10 @@ public class GetProxyResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the user who enabled the secure access proxy feature.
+         * <p>The ID of the user who enabled the secure access proxy feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****</p>
          */
         public Builder creatorId(Long creatorId) {
             this.creatorId = creatorId;
@@ -225,7 +229,10 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The nickname of the user who enabled the secure access proxy feature.
+         * <p>The nickname of the user who enabled the secure access proxy feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_name</p>
          */
         public Builder creatorName(String creatorName) {
             this.creatorName = creatorName;
@@ -233,7 +240,10 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -241,7 +251,10 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The condition cannot be empty!</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -249,7 +262,10 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The port number used by the HTTPS protocol.
+         * <p>The port number used by the HTTPS protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443</p>
          */
         public Builder httpsPort(Integer httpsPort) {
             this.httpsPort = httpsPort;
@@ -257,7 +273,10 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>183****</p>
          */
         public Builder instanceId(Long instanceId) {
             this.instanceId = instanceId;
@@ -265,7 +284,10 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the internal endpoint was enabled. Default value: **true**.
+         * <p>Indicates whether the internal endpoint was enabled. Default value: <strong>true</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder privateEnable(Boolean privateEnable) {
             this.privateEnable = privateEnable;
@@ -273,7 +295,10 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The internal endpoint.
+         * <p>The internal endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dphzmy-5j8oimjsz6ze****.proxy.dms.aliyuncs.com</p>
          */
         public Builder privateHost(String privateHost) {
             this.privateHost = privateHost;
@@ -281,7 +306,10 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The port number used by the protocol.
+         * <p>The port number used by the protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder protocolPort(Integer protocolPort) {
             this.protocolPort = protocolPort;
@@ -289,7 +317,10 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The protocol type of the database. Example: MYSQL.
+         * <p>The protocol type of the database. Example: MYSQL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MYSQL</p>
          */
         public Builder protocolType(String protocolType) {
             this.protocolType = protocolType;
@@ -297,7 +328,10 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the secure access proxy.
+         * <p>The ID of the secure access proxy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4**</p>
          */
         public Builder proxyId(Long proxyId) {
             this.proxyId = proxyId;
@@ -305,11 +339,14 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the public endpoint was enabled. Valid values:
-         * <p>
+         * <p>Indicates whether the public endpoint was enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The public endpoint was enabled.</li>
+         * <li><strong>false</strong>: The public endpoint was disabled.</li>
+         * </ul>
          * 
-         * *   **true**: The public endpoint was enabled.
-         * *   **false**: The public endpoint was disabled.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder publicEnable(Boolean publicEnable) {
             this.publicEnable = publicEnable;
@@ -317,14 +354,18 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The public endpoint. A public endpoint is returned no matter whether the public endpoint is enabled or disabled.
-         * <p>
+         * <p>The public endpoint. A public endpoint is returned no matter whether the public endpoint is enabled or disabled.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If the value of the PublicEnable parameter is <strong>true</strong>, a valid public endpoint that can be resolved by using Alibaba Cloud DNS is returned.</p>
+         * </li>
+         * <li><p>If the value of the PublicEnable parameter is <strong>false</strong>, an invalid public endpoint that cannot be resolved by using Alibaba Cloud DNS is returned.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   If the value of the PublicEnable parameter is **true**, a valid public endpoint that can be resolved by using Alibaba Cloud DNS is returned.
-         * 
-         * *   If the value of the PublicEnable parameter is **false**, an invalid public endpoint that cannot be resolved by using Alibaba Cloud DNS is returned.
+         * <strong>example:</strong>
+         * <p>dphzmy-5j8oimjsz6zed7k****.proxy.dms.aliyuncs.com</p>
          */
         public Builder publicHost(String publicHost) {
             this.publicHost = publicHost;
@@ -332,7 +373,10 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region in which the instance resides.
+         * <p>The ID of the region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -340,7 +384,10 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F49D4598-2B3C-5723-865E-2CCB818E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -348,11 +395,14 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

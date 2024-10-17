@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDataCorrectExecSQLRequest} extends {@link RequestModel}
  *
  * <p>ModifyDataCorrectExecSQLRequest</p>
@@ -107,7 +108,11 @@ public class ModifyDataCorrectExecSQLRequest extends Request {
         }
 
         /**
-         * The new SQL script.
+         * <p>The new SQL script.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>update tb set id = 1 where id = 1;</p>
          */
         public Builder execSQL(String execSQL) {
             this.putQueryParameter("ExecSQL", execSQL);
@@ -116,7 +121,11 @@ public class ModifyDataCorrectExecSQLRequest extends Request {
         }
 
         /**
-         * The ID of the data change ticket.
+         * <p>The ID of the data change ticket.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4328****</p>
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -125,7 +134,10 @@ public class ModifyDataCorrectExecSQLRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to query the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4****</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

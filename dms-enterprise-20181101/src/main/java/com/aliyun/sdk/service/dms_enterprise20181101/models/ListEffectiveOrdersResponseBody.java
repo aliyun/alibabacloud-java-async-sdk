@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEffectiveOrdersResponseBody} extends {@link TeaModel}
  *
  * <p>ListEffectiveOrdersResponseBody</p>
@@ -85,7 +86,10 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,7 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * The information about orders.
+         * <p>The information about orders.</p>
          */
         public Builder orderSummary(java.util.List < OrderSummary> orderSummary) {
             this.orderSummary = orderSummary;
@@ -109,7 +116,10 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A8FE12AA-300D-5FDF-806F-C2CB99161F32</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEffectiveOrdersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEffectiveOrdersResponseBody</p>
+     */
     public static class OrderList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BuyerId")
         private String buyerId;
@@ -221,7 +240,10 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * The UID of the user who placed the order.
+             * <p>The UID of the user who placed the order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2698420314****</p>
              */
             public Builder buyerId(String buyerId) {
                 this.buyerId = buyerId;
@@ -229,7 +251,10 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance expires.
+             * <p>The time when the instance expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-24 00:00:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -237,7 +262,10 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of database instances that you can use DMS to manage.
+             * <p>The maximum number of database instances that you can use DMS to manage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder insNum(String insNum) {
                 this.insNum = insNum;
@@ -245,7 +273,10 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance for the purchased service.
+             * <p>The ID of the instance for the purchased service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp1xd1v866****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -253,7 +284,10 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the order.
+             * <p>The ID of the order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2190037****</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -261,7 +295,10 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance is started.
+             * <p>The time when the instance is started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-24 00:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -275,6 +312,12 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEffectiveOrdersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEffectiveOrdersResponseBody</p>
+     */
     public static class OrderSummary extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
@@ -350,11 +393,14 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
             private String versionType; 
 
             /**
-             * The commodity code of DMS.
-             * <p>
+             * <p>The commodity code of DMS.</p>
+             * <ul>
+             * <li>dms_pre_public_cn: DMS that uses the subscription billing method</li>
+             * <li>dms_post_public_cn: DMS that uses the pay-as-you-go billing method</li>
+             * </ul>
              * 
-             * *   dms_pre_public_cn: DMS that uses the subscription billing method
-             * *   dms_post_public_cn: DMS that uses the pay-as-you-go billing method
+             * <strong>example:</strong>
+             * <p>dms_pre_public_cn</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -362,11 +408,14 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service.
-             * <p>
+             * <p>The type of the service.</p>
+             * <ul>
+             * <li><strong>VersionType</strong>: DMS that supports control modes</li>
+             * <li><strong>SensitiveDataProtection</strong>: DMS that supports sensitive data protection</li>
+             * </ul>
              * 
-             * *   **VersionType**: DMS that supports control modes
-             * *   **SensitiveDataProtection**: DMS that supports sensitive data protection
+             * <strong>example:</strong>
+             * <p>VersionType</p>
              */
             public Builder commodityType(String commodityType) {
                 this.commodityType = commodityType;
@@ -374,7 +423,7 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the orders.
+             * <p>Details about the orders.</p>
              */
             public Builder orderList(java.util.List < OrderList> orderList) {
                 this.orderList = orderList;
@@ -382,7 +431,10 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The sum of the number of instances that you can use DMS to manage in all orders.
+             * <p>The sum of the number of instances that you can use DMS to manage in all orders.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder totalQuota(Integer totalQuota) {
                 this.totalQuota = totalQuota;
@@ -390,11 +442,14 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The control mode of DMS. Valid values:
-             * <p>
+             * <p>The control mode of DMS. Valid values:</p>
+             * <ul>
+             * <li><strong>stand</strong>: Stable Change</li>
+             * <li><strong>safety</strong>: Security Collaboration</li>
+             * </ul>
              * 
-             * *   **stand**: Stable Change
-             * *   **safety**: Security Collaboration
+             * <strong>example:</strong>
+             * <p>safety</p>
              */
             public Builder versionType(String versionType) {
                 this.versionType = versionType;

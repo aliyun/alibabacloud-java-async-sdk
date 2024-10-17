@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOrderBaseInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetOrderBaseInfoResponseBody</p>
@@ -85,7 +86,10 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,7 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The basic information about the ticket.
+         * <p>The basic information about the ticket.</p>
          */
         public Builder orderBaseInfo(OrderBaseInfo orderBaseInfo) {
             this.orderBaseInfo = orderBaseInfo;
@@ -109,7 +116,10 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7133DF67-5B25-460F-8285-C4CC93472C2F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetOrderBaseInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOrderBaseInfoResponseBody</p>
+     */
     public static class RelatedUserList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserIds")
         private java.util.List < String > userIds;
@@ -171,6 +190,12 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOrderBaseInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOrderBaseInfoResponseBody</p>
+     */
     public static class RelatedUserNickList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserNicks")
         private java.util.List < String > userNicks;
@@ -212,6 +237,12 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOrderBaseInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOrderBaseInfoResponseBody</p>
+     */
     public static class OrderBaseInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttachmentKey")
         private String attachmentKey;
@@ -407,7 +438,10 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             private String workflowStatusDesc; 
 
             /**
-             * The Key of the ticket attachment. This information is returned only when an attachment is uploaded when a ticket is created.
+             * <p>The Key of the ticket attachment. This information is returned only when an attachment is uploaded when a ticket is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>upload_order_info_856887_f356366f-f0f8-42fc-ba57-4a509303e814_18072d8a9bce876e3073bc655c2865f.png</p>
              */
             public Builder attachmentKey(String attachmentKey) {
                 this.attachmentKey = attachmentKey;
@@ -415,7 +449,10 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks of the ticket.
+             * <p>The remarks of the ticket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -423,7 +460,10 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The applicant.
+             * <p>The applicant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder committer(String committer) {
                 this.committer = committer;
@@ -431,7 +471,10 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the applicant. Note: The ID is different from the Alibaba Cloud account ID of the applicant.
+             * <p>The ID of the applicant. Note: The ID is different from the Alibaba Cloud account ID of the applicant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder committerId(Long committerId) {
                 this.committerId = committerId;
@@ -439,7 +482,10 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ticket was created.
+             * <p>The time when the ticket was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-10-10 00:00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -447,7 +493,10 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ticket was last modified.
+             * <p>The time when the ticket was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-10-10 00:00:00</p>
              */
             public Builder lastModifyTime(String lastModifyTime) {
                 this.lastModifyTime = lastModifyTime;
@@ -455,7 +504,10 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ticket.
+             * <p>The ID of the ticket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;
@@ -463,7 +515,10 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The original file name of the ticket attachment. This information is returned only when an attachment is uploaded when a ticket is created.
+             * <p>The original file name of the ticket attachment. This information is returned only when an attachment is uploaded when a ticket is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18072d8a9bce876e3073bc655c2865f.png</p>
              */
             public Builder originAttachmentName(String originAttachmentName) {
                 this.originAttachmentName = originAttachmentName;
@@ -471,7 +526,10 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the ticket. For more information about the value of this parameter, see the request parameters of the [CreateOrder](~~465865~~) operation.
+             * <p>The type of the ticket. For more information about the value of this parameter, see the request parameters of the <a href="https://help.aliyun.com/document_detail/465865.html">CreateOrder</a> operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DC_COMMON</p>
              */
             public Builder pluginType(String pluginType) {
                 this.pluginType = pluginType;
@@ -479,7 +537,7 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the operators that are related to the ticket.
+             * <p>The IDs of the operators that are related to the ticket.</p>
              */
             public Builder relatedUserList(RelatedUserList relatedUserList) {
                 this.relatedUserList = relatedUserList;
@@ -487,7 +545,7 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The nicknames of the operators that are related to the ticket.
+             * <p>The nicknames of the operators that are related to the ticket.</p>
              */
             public Builder relatedUserNickList(RelatedUserNickList relatedUserNickList) {
                 this.relatedUserNickList = relatedUserNickList;
@@ -495,16 +553,19 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status code of the ticket. Valid values:
-             * <p>
+             * <p>The status code of the ticket. Valid values:</p>
+             * <ul>
+             * <li><strong>new</strong>: The ticket is created.</li>
+             * <li><strong>toaudit</strong>: The ticket is being reviewed.</li>
+             * <li><strong>Approved</strong>: The ticket is approved.</li>
+             * <li><strong>reject</strong>: The ticket is rejected.</li>
+             * <li><strong>processing</strong>: The ticket is being executed.</li>
+             * <li><strong>success</strong>: The ticket is executed.</li>
+             * <li><strong>closed</strong>: The ticket is closed.</li>
+             * </ul>
              * 
-             * *   **new**: The ticket is created.
-             * *   **toaudit**: The ticket is being reviewed.
-             * *   **Approved**: The ticket is approved.
-             * *   **reject**: The ticket is rejected.
-             * *   **processing**: The ticket is being executed.
-             * *   **success**: The ticket is executed.
-             * *   **closed**: The ticket is closed.
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder statusCode(String statusCode) {
                 this.statusCode = statusCode;
@@ -512,7 +573,10 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the status.
+             * <p>The description of the status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -520,7 +584,10 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the approval process.
+             * <p>The ID of the approval process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder workflowInstanceId(Long workflowInstanceId) {
                 this.workflowInstanceId = workflowInstanceId;
@@ -528,7 +595,10 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the approval process.
+             * <p>The description of the approval process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approved</p>
              */
             public Builder workflowStatusDesc(String workflowStatusDesc) {
                 this.workflowStatusDesc = workflowStatusDesc;

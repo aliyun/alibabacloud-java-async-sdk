@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataArchiveOrderDetailRequest} extends {@link RequestModel}
  *
  * <p>GetDataArchiveOrderDetailRequest</p>
@@ -92,7 +93,11 @@ public class GetDataArchiveOrderDetailRequest extends Request {
         }
 
         /**
-         * The IDs of data archiving tickets.
+         * <p>The IDs of data archiving tickets.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>868****</p>
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -101,10 +106,13 @@ public class GetDataArchiveOrderDetailRequest extends Request {
         }
 
         /**
-         * The tenant ID.
-         * <p>
+         * <p>The tenant ID.</p>
+         * <blockquote>
+         * <p> To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a>.</p>
+         * </blockquote>
          * 
-         * >  To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).
+         * <strong>example:</strong>
+         * <p>5***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

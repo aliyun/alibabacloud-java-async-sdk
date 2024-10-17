@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchTableResponseBody} extends {@link TeaModel}
  *
  * <p>SearchTableResponseBody</p>
@@ -97,7 +98,10 @@ public class SearchTableResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -105,7 +109,10 @@ public class SearchTableResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -113,7 +120,10 @@ public class SearchTableResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1489257F-1B5D-4B5B-89EF-923C12CEEBD1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +131,7 @@ public class SearchTableResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the tables.
+         * <p>The details of the tables.</p>
          */
         public Builder searchTableList(SearchTableList searchTableList) {
             this.searchTableList = searchTableList;
@@ -129,7 +139,10 @@ public class SearchTableResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -137,7 +150,10 @@ public class SearchTableResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries that are returned.
+         * <p>The total number of entries that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -150,6 +166,12 @@ public class SearchTableResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchTableResponseBody</p>
+     */
     public static class OwnerIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OwnerIds")
         private java.util.List < String > ownerIds;
@@ -191,6 +213,12 @@ public class SearchTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchTableResponseBody</p>
+     */
     public static class OwnerNameList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OwnerNames")
         private java.util.List < String > ownerNames;
@@ -232,6 +260,12 @@ public class SearchTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchTableResponseBody</p>
+     */
     public static class SearchTable extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBSearchName")
         private String DBSearchName;
@@ -427,7 +461,10 @@ public class SearchTableResponseBody extends TeaModel {
             private String tableSchemaName; 
 
             /**
-             * The name that is used to search for the database to which the table belongs.
+             * <p>The name that is used to search for the database to which the table belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder DBSearchName(String DBSearchName) {
                 this.DBSearchName = DBSearchName;
@@ -435,7 +472,10 @@ public class SearchTableResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the database to which the table belongs.
+             * <p>The ID of the database to which the table belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -443,7 +483,10 @@ public class SearchTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -451,17 +494,20 @@ public class SearchTableResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database. Valid values:
-             * <p>
+             * <p>The type of the database. Valid values:</p>
+             * <ul>
+             * <li><strong>MySQL</strong></li>
+             * <li><strong>SQLServer</strong></li>
+             * <li><strong>PostgreSQL</strong></li>
+             * <li><strong>Oracle</strong></li>
+             * <li><strong>DRDS</strong></li>
+             * <li><strong>OceanBase</strong></li>
+             * <li><strong>Mongo</strong></li>
+             * <li><strong>Redis</strong></li>
+             * </ul>
              * 
-             * *   **MySQL**
-             * *   **SQLServer**
-             * *   **PostgreSQL**
-             * *   **Oracle**
-             * *   **DRDS**
-             * *   **OceanBase**
-             * *   **Mongo**
-             * *   **Redis**
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -469,7 +515,10 @@ public class SearchTableResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the table.
+             * <p>The description of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -477,7 +526,10 @@ public class SearchTableResponseBody extends TeaModel {
             }
 
             /**
-             * The encoding format of the table.
+             * <p>The encoding format of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>utf8</p>
              */
             public Builder encoding(String encoding) {
                 this.encoding = encoding;
@@ -485,7 +537,10 @@ public class SearchTableResponseBody extends TeaModel {
             }
 
             /**
-             * The engine of the table.
+             * <p>The engine of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>innodb</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -493,7 +548,10 @@ public class SearchTableResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the environment to which the database belongs.
+             * <p>The type of the environment to which the database belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -501,11 +559,14 @@ public class SearchTableResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the table is a logical table. Valid values:
-             * <p>
+             * <p>Indicates whether the table is a logical table. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The table is a logical table.</li>
+             * <li><strong>false</strong>: The table is not a logical table.</li>
+             * </ul>
              * 
-             * *   **true**: The table is a logical table.
-             * *   **false**: The table is not a logical table.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -513,7 +574,7 @@ public class SearchTableResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the table owners.
+             * <p>The IDs of the table owners.</p>
              */
             public Builder ownerIdList(OwnerIdList ownerIdList) {
                 this.ownerIdList = ownerIdList;
@@ -521,7 +582,7 @@ public class SearchTableResponseBody extends TeaModel {
             }
 
             /**
-             * The nicknames of the table owners.
+             * <p>The nicknames of the table owners.</p>
              */
             public Builder ownerNameList(OwnerNameList ownerNameList) {
                 this.ownerNameList = ownerNameList;
@@ -529,7 +590,10 @@ public class SearchTableResponseBody extends TeaModel {
             }
 
             /**
-             * The GUID of the table.
+             * <p>The GUID of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IDB_L_9032.db-test.yuyang_test</p>
              */
             public Builder tableGuid(String tableGuid) {
                 this.tableGuid = tableGuid;
@@ -537,7 +601,10 @@ public class SearchTableResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the table.
+             * <p>The ID of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tableId(String tableId) {
                 this.tableId = tableId;
@@ -545,7 +612,10 @@ public class SearchTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_table</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -553,7 +623,10 @@ public class SearchTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database to which the table belongs.
+             * <p>The name of the database to which the table belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@xxx.xxx.xxx.xxx">test@xxx.xxx.xxx.xxx</a>:3306</p>
              */
             public Builder tableSchemaName(String tableSchemaName) {
                 this.tableSchemaName = tableSchemaName;
@@ -567,6 +640,12 @@ public class SearchTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchTableResponseBody</p>
+     */
     public static class SearchTableList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SearchTable")
         private java.util.List < SearchTable> searchTable;

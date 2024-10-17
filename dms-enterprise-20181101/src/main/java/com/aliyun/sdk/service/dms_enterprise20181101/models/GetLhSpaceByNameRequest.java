@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLhSpaceByNameRequest} extends {@link RequestModel}
  *
  * <p>GetLhSpaceByNameRequest</p>
@@ -92,7 +93,11 @@ public class GetLhSpaceByNameRequest extends Request {
         }
 
         /**
-         * The name of the workspace.
+         * <p>The name of the workspace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_space</p>
          */
         public Builder spaceName(String spaceName) {
             this.putQueryParameter("SpaceName", spaceName);
@@ -101,7 +106,10 @@ public class GetLhSpaceByNameRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3000</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateStandardGroupRequest} extends {@link RequestModel}
  *
  * <p>UpdateStandardGroupRequest</p>
@@ -122,7 +123,11 @@ public class UpdateStandardGroupRequest extends Request {
         }
 
         /**
-         * The description of the security rule set.
+         * <p>The description of the security rule set.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Production Environment test rules</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -131,7 +136,11 @@ public class UpdateStandardGroupRequest extends Request {
         }
 
         /**
-         * The security rule set ID. You can call the [ListStandardGroups](~~465940~~) operation to obtain the ID of the security rule set.
+         * <p>The security rule set ID. You can call the <a href="https://help.aliyun.com/document_detail/465940.html">ListStandardGroups</a> operation to obtain the ID of the security rule set.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>242***</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -140,7 +149,11 @@ public class UpdateStandardGroupRequest extends Request {
         }
 
         /**
-         * The name of the security rule set.
+         * <p>The name of the security rule set.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>poc_test</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -149,10 +162,13 @@ public class UpdateStandardGroupRequest extends Request {
         }
 
         /**
-         * The tenant ID.
-         * <p>
+         * <p>The tenant ID.</p>
+         * <blockquote>
+         * <p> To view the tenant ID, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the &quot;Manage DMS tenants&quot; topic.</p>
+         * </blockquote>
          * 
-         * >  To view the tenant ID, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see the [View information about the current tenant](~~181330~~) section of the "Manage DMS tenants" topic.
+         * <strong>example:</strong>
+         * <p>23****</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

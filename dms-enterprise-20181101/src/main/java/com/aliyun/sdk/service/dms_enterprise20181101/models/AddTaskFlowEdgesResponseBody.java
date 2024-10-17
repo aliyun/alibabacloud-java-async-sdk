@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddTaskFlowEdgesResponseBody} extends {@link TeaModel}
  *
  * <p>AddTaskFlowEdgesResponseBody</p>
@@ -85,7 +86,7 @@ public class AddTaskFlowEdgesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The list of task flow edge IDs.
+         * <p>The list of task flow edge IDs.</p>
          */
         public Builder edgeIds(EdgeIds edgeIds) {
             this.edgeIds = edgeIds;
@@ -93,7 +94,10 @@ public class AddTaskFlowEdgesResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -101,7 +105,10 @@ public class AddTaskFlowEdgesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -109,7 +116,10 @@ public class AddTaskFlowEdgesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+         * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E5EE2B9E-2F95-57FA-B284-CB441CEE49D6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class AddTaskFlowEdgesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class AddTaskFlowEdgesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddTaskFlowEdgesResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddTaskFlowEdgesResponseBody</p>
+     */
     public static class EdgeIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EdgeId")
         private java.util.List < Long > edgeId;

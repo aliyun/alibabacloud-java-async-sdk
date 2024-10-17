@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RevokeTemplateAuthorityRequest} extends {@link RequestModel}
  *
  * <p>RevokeTemplateAuthorityRequest</p>
@@ -106,7 +107,11 @@ public class RevokeTemplateAuthorityRequest extends Request {
         }
 
         /**
-         * The ID of the permission template.
+         * <p>The ID of the permission template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1563</p>
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -115,7 +120,10 @@ public class RevokeTemplateAuthorityRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to query the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -124,7 +132,11 @@ public class RevokeTemplateAuthorityRequest extends Request {
         }
 
         /**
-         * The IDs of users from whom you want to revoke permissions by using a permission template.
+         * <p>The IDs of users from whom you want to revoke permissions by using a permission template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[12***,34***,56***]</p>
          */
         public Builder userIds(String userIds) {
             this.putQueryParameter("UserIds", userIds);

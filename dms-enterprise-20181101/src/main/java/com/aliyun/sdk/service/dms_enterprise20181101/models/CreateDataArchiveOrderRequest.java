@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDataArchiveOrderRequest} extends {@link RequestModel}
  *
  * <p>CreateDataArchiveOrderRequest</p>
@@ -149,7 +150,11 @@ public class CreateDataArchiveOrderRequest extends Request {
         }
 
         /**
-         * The description of the task.
+         * <p>The description of the task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -158,7 +163,8 @@ public class CreateDataArchiveOrderRequest extends Request {
         }
 
         /**
-         * The parameters for archiving data.
+         * <p>The parameters for archiving data.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder param(Param param) {
             String paramShrink = shrink(param, "Param", "json");
@@ -168,7 +174,10 @@ public class CreateDataArchiveOrderRequest extends Request {
         }
 
         /**
-         * The ID of the parent ticket. A parent ticket is generated only when a child ticket is created.
+         * <p>The ID of the parent ticket. A parent ticket is generated only when a child ticket is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123****</p>
          */
         public Builder parentId(Long parentId) {
             this.putQueryParameter("ParentId", parentId);
@@ -177,7 +186,10 @@ public class CreateDataArchiveOrderRequest extends Request {
         }
 
         /**
-         * The type of the plug-in. Default value: DATA_ARCHIVE.
+         * <p>The type of the plug-in. Default value: DATA_ARCHIVE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DATA_ARCHIVE</p>
          */
         public Builder pluginType(String pluginType) {
             this.putQueryParameter("PluginType", pluginType);
@@ -186,7 +198,7 @@ public class CreateDataArchiveOrderRequest extends Request {
         }
 
         /**
-         * The list of the related users.
+         * <p>The list of the related users.</p>
          */
         public Builder relatedUserList(java.util.List < String > relatedUserList) {
             String relatedUserListShrink = shrink(relatedUserList, "RelatedUserList", "json");
@@ -196,7 +208,10 @@ public class CreateDataArchiveOrderRequest extends Request {
         }
 
         /**
-         * The tenant ID. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+         * <p>The tenant ID. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -211,6 +226,12 @@ public class CreateDataArchiveOrderRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDataArchiveOrderRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDataArchiveOrderRequest</p>
+     */
     public static class TableIncludes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TableName")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -251,7 +272,11 @@ public class CreateDataArchiveOrderRequest extends Request {
             private String tableWhere; 
 
             /**
-             * The table name.
+             * <p>The table name.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table1</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -259,7 +284,10 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * The filter condition that is specified by the WHERE clause of the archiving configuration. If a time variable is used in the filter condition, the filter condition is specified in the following format: field name <=\"${variable name}\". The variable name in the filter condition must be the same as the time variable name that is specified in the Variables parameter.
+             * <p>The filter condition that is specified by the WHERE clause of the archiving configuration. If a time variable is used in the filter condition, the filter condition is specified in the following format: field name &lt;=&quot;${variable name}&quot;. The variable name in the filter condition must be the same as the time variable name that is specified in the Variables parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gmt_modified&lt;&quot;${time}&quot;</p>
              */
             public Builder tableWhere(String tableWhere) {
                 this.tableWhere = tableWhere;
@@ -273,6 +301,12 @@ public class CreateDataArchiveOrderRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateDataArchiveOrderRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDataArchiveOrderRequest</p>
+     */
     public static class Variables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -334,6 +368,12 @@ public class CreateDataArchiveOrderRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateDataArchiveOrderRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDataArchiveOrderRequest</p>
+     */
     public static class Param extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ArchiveMethod")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -512,17 +552,22 @@ public class CreateDataArchiveOrderRequest extends Request {
             private java.util.List < Variables> variables; 
 
             /**
-             * The archiving destination to which you want to archive data. Valid values:
-             * <p>
+             * <p>The archiving destination to which you want to archive data. Valid values:</p>
+             * <blockquote>
+             * <p> If you set ArchiveMethod to a value other than inner_oss, you must register the corresponding destination database with Data Management (DMS) before you create the data archiving ticket. After the database is registered with DMS, the database is displayed in the Instances Connected section of the DMS console.</p>
+             * </blockquote>
+             * <ul>
+             * <li><strong>inner_oss</strong>: dedicated storage, which is a built-in Object Storage Service (OSS) bucket.</li>
+             * <li><strong>oss_userself</strong>: OSS bucket of the user.</li>
+             * <li><strong>mysql</strong>: ApsaraDB RDS for MySQL instance.</li>
+             * <li><strong>polardb</strong>: PolarDB for MySQL cluster.</li>
+             * <li><strong>adb_mysql</strong>: AnalyticDB for MySQL V3.0 cluster.</li>
+             * <li><strong>lindorm</strong>: Lindorm instance.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * >  If you set ArchiveMethod to a value other than inner_oss, you must register the corresponding destination database with Data Management (DMS) before you create the data archiving ticket. After the database is registered with DMS, the database is displayed in the Instances Connected section of the DMS console.
-             * 
-             * *   **inner_oss**: dedicated storage, which is a built-in Object Storage Service (OSS) bucket.
-             * *   **oss_userself**: OSS bucket of the user.
-             * *   **mysql**: ApsaraDB RDS for MySQL instance.
-             * *   **polardb**: PolarDB for MySQL cluster.
-             * *   **adb_mysql**: AnalyticDB for MySQL V3.0 cluster.
-             * *   **lindorm**: Lindorm instance.
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder archiveMethod(String archiveMethod) {
                 this.archiveMethod = archiveMethod;
@@ -530,7 +575,10 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * A crontab expression that specifies the scheduling cycle of the data archiving task. For more information, see the [Crontab expressions](~~206581~~) section of the "Create shadow tables for synchronization" topic. You must specify this parameter if you set RunMethod to schedule.
+             * <p>A crontab expression that specifies the scheduling cycle of the data archiving task. For more information, see the <a href="https://help.aliyun.com/document_detail/206581.html">Crontab expressions</a> section of the &quot;Create shadow tables for synchronization&quot; topic. You must specify this parameter if you set RunMethod to schedule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00 05 11 * * ?</p>
              */
             public Builder cronStr(String cronStr) {
                 this.cronStr = cronStr;
@@ -538,7 +586,10 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * The database ID. If the database is a self-managed database or a third-party cloud database, you can call the [GetDatabase](~~465856~~) operation to query the database ID. If the database is an Alibaba Cloud database, ignore this parameter.
+             * <p>The database ID. If the database is a self-managed database or a third-party cloud database, you can call the <a href="https://help.aliyun.com/document_detail/465856.html">GetDatabase</a> operation to query the database ID. If the database is an Alibaba Cloud database, ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1***</p>
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -546,7 +597,10 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * Specifies whether the database is a logical database.
+             * <p>Specifies whether the database is a logical database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -554,7 +608,7 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * The post behaviors.
+             * <p>The post behaviors.</p>
              */
             public Builder orderAfter(java.util.List < String > orderAfter) {
                 this.orderAfter = orderAfter;
@@ -562,11 +616,15 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * The method that is used to run the data archiving task. Valid values:
-             * <p>
+             * <p>The method that is used to run the data archiving task. Valid values:</p>
+             * <ul>
+             * <li><strong>schedule</strong>: The data archiving task is periodically scheduled.</li>
+             * <li><strong>now</strong>: The data archiving task is immediately run.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **schedule**: The data archiving task is periodically scheduled.
-             * *   **now**: The data archiving task is immediately run.
+             * <strong>example:</strong>
+             * <p>now</p>
              */
             public Builder runMethod(String runMethod) {
                 this.runMethod = runMethod;
@@ -574,12 +632,16 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * The catalog of the source database. Valid values:
-             * <p>
+             * <p>The catalog of the source database. Valid values:</p>
+             * <ul>
+             * <li><strong>def</strong>: Set this parameter to def if the source database is of the two-layer logical schema, such as a MySQL database, a PolarDB for MySQL cluster, or an AnalyticDB for MySQL instance.</li>
+             * <li><strong>Empty string</strong>: Set this parameter to an empty string if the source database is a Lindorm or ApsaraDB for MongoDB instance.</li>
+             * <li><strong>Catalog name</strong>: Set this parameter to the catalog name of the source database if the source database is of the three-layer logical schema, such as a PostgreSQL database.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **def**: Set this parameter to def if the source database is of the two-layer logical schema, such as a MySQL database, a PolarDB for MySQL cluster, or an AnalyticDB for MySQL instance.
-             * *   **Empty string**: Set this parameter to an empty string if the source database is a Lindorm or ApsaraDB for MongoDB instance.
-             * *   **Catalog name**: Set this parameter to the catalog name of the source database if the source database is of the three-layer logical schema, such as a PostgreSQL database.
+             * <strong>example:</strong>
+             * <p>def</p>
              */
             public Builder sourceCatalogName(String sourceCatalogName) {
                 this.sourceCatalogName = sourceCatalogName;
@@ -587,7 +649,11 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * The name of the source instance. If the database instance is a self-managed database or a third-party cloud database, you can call the [GetInstance](~~465826~~) operation to query the instance ID.
+             * <p>The name of the source instance. If the database instance is a self-managed database or a third-party cloud database, you can call the <a href="https://help.aliyun.com/document_detail/465826.html">GetInstance</a> operation to query the instance ID.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-bp1*******</p>
              */
             public Builder sourceInstanceName(String sourceInstanceName) {
                 this.sourceInstanceName = sourceInstanceName;
@@ -595,7 +661,11 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * The schema name of the source database. The schema name of the source database is the same as that of the destination database. If the source database is a MySQL database, this parameter specifies the name of the source database. If the source database is a PostgreSQL database, this parameter specifies the schema name of the source database.
+             * <p>The schema name of the source database. The schema name of the source database is the same as that of the destination database. If the source database is a MySQL database, this parameter specifies the name of the source database. If the source database is a PostgreSQL database, this parameter specifies the schema name of the source database.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>schema_test</p>
              */
             public Builder sourceSchemaName(String sourceSchemaName) {
                 this.sourceSchemaName = sourceSchemaName;
@@ -603,7 +673,8 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * The collection of tables to be archived.
+             * <p>The collection of tables to be archived.</p>
+             * <p>This parameter is required.</p>
              */
             public Builder tableIncludes(java.util.List < TableIncludes> tableIncludes) {
                 this.tableIncludes = tableIncludes;
@@ -611,7 +682,7 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * The table names mapped to the destination database. This parameter is not required and the default value is used.
+             * <p>The table names mapped to the destination database. This parameter is not required and the default value is used.</p>
              */
             public Builder tableMapping(java.util.List < String > tableMapping) {
                 this.tableMapping = tableMapping;
@@ -619,11 +690,15 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * The host of the destination instance. If the destination instance can be accessed over an internal network or the Internet, preferentially set the value to the internal endpoint of the destination instance.
-             * <p>
+             * <p>The host of the destination instance. If the destination instance can be accessed over an internal network or the Internet, preferentially set the value to the internal endpoint of the destination instance.</p>
+             * <ul>
+             * <li>If data is archived in an OSS bucket, set the value to the name of the bucket.</li>
+             * <li>If data is archived in dedicated storage space, set the value to inner_oss.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   If data is archived in an OSS bucket, set the value to the name of the bucket.
-             * *   If data is archived in dedicated storage space, set the value to inner_oss.
+             * <strong>example:</strong>
+             * <p>am-bp1*********.ads.aliyuncs.com</p>
              */
             public Builder targetInstanceHost(String targetInstanceHost) {
                 this.targetInstanceHost = targetInstanceHost;
@@ -631,7 +706,7 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * The configuration of archiving variables. You can use a time variable as a filter condition for archiving data. Each variable has two attributes: name and pattern.
+             * <p>The configuration of archiving variables. You can use a time variable as a filter condition for archiving data. Each variable has two attributes: name and pattern.</p>
              */
             public Builder variables(java.util.List < Variables> variables) {
                 this.variables = variables;

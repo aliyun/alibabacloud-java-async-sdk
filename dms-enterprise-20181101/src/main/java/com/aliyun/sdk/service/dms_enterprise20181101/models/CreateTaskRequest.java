@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateTaskRequest</p>
@@ -178,7 +179,11 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
+         * <p>The ID of the task flow. You can call the <a href="https://help.aliyun.com/document_detail/424565.html">ListTaskFlow</a> or <a href="https://help.aliyun.com/document_detail/426672.html">ListLhTaskFlowAndScenario</a> operation to query the task flow ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7***</p>
          */
         public Builder dagId(Long dagId) {
             this.putQueryParameter("DagId", dagId);
@@ -187,7 +192,10 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * The position of the node on the Directed Acyclic Graph (DAG).
+         * <p>The position of the node on the Directed Acyclic Graph (DAG).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder graphParam(String graphParam) {
             this.putQueryParameter("GraphParam", graphParam);
@@ -196,7 +204,10 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * The configuration of the node.
+         * <p>The configuration of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder nodeContent(String nodeContent) {
             this.putQueryParameter("NodeContent", nodeContent);
@@ -205,7 +216,11 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * The name of the node that you want to create.
+         * <p>The name of the node that you want to create.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhttest</p>
          */
         public Builder nodeName(String nodeName) {
             this.putQueryParameter("NodeName", nodeName);
@@ -214,7 +229,10 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * The output variables configured for the task.
+         * <p>The output variables configured for the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder nodeOutput(String nodeOutput) {
             this.putQueryParameter("NodeOutput", nodeOutput);
@@ -223,7 +241,11 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * The type of the node that you want to create. For more information about the valid values for this parameter, see [NodeType parameter](~~424705~~).
+         * <p>The type of the node that you want to create. For more information about the valid values for this parameter, see <a href="https://help.aliyun.com/document_detail/424705.html">NodeType parameter</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36</p>
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("NodeType", nodeType);
@@ -232,10 +254,13 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * The tenant ID.
-         * <p>
+         * <p>The tenant ID.</p>
+         * <blockquote>
+         * <p> To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the &quot;View information about the current tenant&quot; section of the <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a> topic.</p>
+         * </blockquote>
          * 
-         * >  To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -244,7 +269,10 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * The time variables configured for the node.
+         * <p>The time variables configured for the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder timeVariables(String timeVariables) {
             this.putQueryParameter("TimeVariables", timeVariables);

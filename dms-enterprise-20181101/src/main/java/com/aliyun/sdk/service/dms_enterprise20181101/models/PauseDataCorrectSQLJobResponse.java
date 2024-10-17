@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PauseDataCorrectSQLJobResponse} extends {@link TeaModel}
  *
  * <p>PauseDataCorrectSQLJobResponse</p>

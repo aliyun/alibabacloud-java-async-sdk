@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddDesensitizationRuleRequest} extends {@link RequestModel}
  *
  * <p>AddDesensitizationRuleRequest</p>
@@ -150,7 +151,7 @@ public class AddDesensitizationRuleRequest extends Request {
         }
 
         /**
-         * The parameters of the algorithm.
+         * <p>The parameters of the algorithm.</p>
          */
         public Builder functionParams(java.util.List < java.util.Map<String, String>> functionParams) {
             this.putBodyParameter("FunctionParams", functionParams);
@@ -159,26 +160,29 @@ public class AddDesensitizationRuleRequest extends Request {
         }
 
         /**
-         * The type of the masking algorithm.
-         * <p>
+         * <p>The type of the masking algorithm.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>FIX_POS : masks characters in the specified position.</li>
+         * <li>DATE_ROUNDING: rounds the date.</li>
+         * <li>PLAINTEXT: does not mask data.</li>
+         * <li>SHA1: masks characters by using the secure hash algorithm 1 (SHA-1)</li>
+         * <li>HMAC: masks characters by using the hash-based message authentication code (HMAC).</li>
+         * <li>STRING_TRANSFORM: shift characters.</li>
+         * <li>NUMBER_ROUNDING: rounds numbers.</li>
+         * <li>AES: masks characters by using the advanced encryption standard (AES) algorithm.</li>
+         * <li>SHA256: masks characters by using SHA-256 algorithm.</li>
+         * <li>DES: masks characters by using the data encryption standard (DES) algorithm.</li>
+         * <li>MAP_REPLACE: masks the mapped data.</li>
+         * <li>FIX_CHAR: masks fixed characters.</li>
+         * <li>DEFAULT: masks all characters.</li>
+         * <li>RANDOM_REPLACE: randomly replaces characters.</li>
+         * <li>MD5: masks characters by using the MD5 algorithm.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   FIX_POS : masks characters in the specified position.
-         * *   DATE_ROUNDING: rounds the date.
-         * *   PLAINTEXT: does not mask data.
-         * *   SHA1: masks characters by using the secure hash algorithm 1 (SHA-1)
-         * *   HMAC: masks characters by using the hash-based message authentication code (HMAC).
-         * *   STRING_TRANSFORM: shift characters.
-         * *   NUMBER_ROUNDING: rounds numbers.
-         * *   AES: masks characters by using the advanced encryption standard (AES) algorithm.
-         * *   SHA256: masks characters by using SHA-256 algorithm.
-         * *   DES: masks characters by using the data encryption standard (DES) algorithm.
-         * *   MAP_REPLACE: masks the mapped data.
-         * *   FIX_CHAR: masks fixed characters.
-         * *   DEFAULT: masks all characters.
-         * *   RANDOM_REPLACE: randomly replaces characters.
-         * *   MD5: masks characters by using the MD5 algorithm.
+         * <strong>example:</strong>
+         * <p>MD5</p>
          */
         public Builder functionType(String functionType) {
             this.putQueryParameter("FunctionType", functionType);
@@ -187,7 +191,10 @@ public class AddDesensitizationRuleRequest extends Request {
         }
 
         /**
-         * The description of the rule.
+         * <p>The description of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hash algorithm</p>
          */
         public Builder ruleDescription(String ruleDescription) {
             this.putQueryParameter("RuleDescription", ruleDescription);
@@ -196,7 +203,11 @@ public class AddDesensitizationRuleRequest extends Request {
         }
 
         /**
-         * The name of the rule.
+         * <p>The name of the rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desensitization algorithm test</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -205,58 +216,55 @@ public class AddDesensitizationRuleRequest extends Request {
         }
 
         /**
-         * The masking algorithm.
-         * <p>
+         * <p>The masking algorithm.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>PLAINTEXT</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   PLAINTEXT
+         * <!-- -->
+         * </li>
+         * <li><p>TRANSFORM</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>ENCRYPT</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   TRANSFORM
+         * <!-- -->
+         * </li>
+         * <li><p>REPLACE</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>HASH</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   ENCRYPT
+         * <!-- -->
+         * </li>
+         * <li><p>MASK</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         *     <!-- -->
-         * 
-         * *   REPLACE
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   HASH
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   MASK
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>HASH</p>
          */
         public Builder ruleType(String ruleType) {
             this.putQueryParameter("RuleType", ruleType);
@@ -265,10 +273,13 @@ public class AddDesensitizationRuleRequest extends Request {
         }
 
         /**
-         * The tenant ID.
-         * <p>
+         * <p>The tenant ID.</p>
+         * <blockquote>
+         * <p> To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the &quot;Manage DMS tenants&quot; topic.</p>
+         * </blockquote>
          * 
-         * >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the [View information about the current tenant](~~181330~~) section of the "Manage DMS tenants" topic.
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserPermissionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserPermissionsResponseBody</p>
@@ -97,7 +98,10 @@ public class ListUserPermissionsResponseBody extends TeaModel {
         private UserPermissions userPermissions; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -105,7 +109,10 @@ public class ListUserPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -113,7 +120,10 @@ public class ListUserPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C51420E3-144A-4A94-B473-8662FCF4AD10</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +131,14 @@ public class ListUserPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
+         * </ul>
          * 
-         * - true: The request is successful.
-         * - false: The request fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -133,7 +146,10 @@ public class ListUserPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries that meet the query conditions.
+         * <p>The total number of entries that meet the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -141,7 +157,7 @@ public class ListUserPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the permissions that the user has.
+         * <p>The details of the permissions that the user has.</p>
          */
         public Builder userPermissions(UserPermissions userPermissions) {
             this.userPermissions = userPermissions;
@@ -154,6 +170,12 @@ public class ListUserPermissionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserPermissionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserPermissionsResponseBody</p>
+     */
     public static class PermDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
@@ -241,7 +263,10 @@ public class ListUserPermissionsResponseBody extends TeaModel {
             private String userAccessId; 
 
             /**
-             * The time when the permissions were granted.
+             * <p>The time when the permissions were granted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-12-12 00:00:00</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -249,7 +274,10 @@ public class ListUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the permissions expire.
+             * <p>The time when the permissions expire.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-12 00:00:00</p>
              */
             public Builder expireDate(String expireDate) {
                 this.expireDate = expireDate;
@@ -257,7 +285,10 @@ public class ListUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is reserved.
+             * <p>This parameter is reserved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder extraData(String extraData) {
                 this.extraData = extraData;
@@ -265,7 +296,10 @@ public class ListUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The user who grants the permissions.
+             * <p>The user who grants the permissions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx authorization</p>
              */
             public Builder originFrom(String originFrom) {
                 this.originFrom = originFrom;
@@ -273,12 +307,15 @@ public class ListUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the permissions. Valid values:
-             * <p>
+             * <p>The type of the permissions. Valid values:</p>
+             * <ul>
+             * <li>QUERY: the query permissions</li>
+             * <li>EXPORT: the export permissions</li>
+             * <li>CORRECT: the change permissions</li>
+             * </ul>
              * 
-             * *   QUERY: the query permissions
-             * *   EXPORT: the export permissions
-             * *   CORRECT: the change permissions
+             * <strong>example:</strong>
+             * <p>QUERY</p>
              */
             public Builder permType(String permType) {
                 this.permType = permType;
@@ -286,7 +323,10 @@ public class ListUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the authorization record.
+             * <p>The ID of the authorization record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>758****</p>
              */
             public Builder userAccessId(String userAccessId) {
                 this.userAccessId = userAccessId;
@@ -300,6 +340,12 @@ public class ListUserPermissionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUserPermissionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserPermissionsResponseBody</p>
+     */
     public static class PermDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PermDetail")
         private java.util.List < PermDetail> permDetail;
@@ -341,6 +387,12 @@ public class ListUserPermissionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUserPermissionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserPermissionsResponseBody</p>
+     */
     public static class UserPermission extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
@@ -560,7 +612,10 @@ public class ListUserPermissionsResponseBody extends TeaModel {
             private String userNickName; 
 
             /**
-             * The alias of the instance.
+             * <p>The alias of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance_alias</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -568,7 +623,10 @@ public class ListUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the field.
+             * <p>The name of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>column_name</p>
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -576,7 +634,10 @@ public class ListUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the database.
+             * <p>The ID of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1860****</p>
              */
             public Builder dbId(String dbId) {
                 this.dbId = dbId;
@@ -584,7 +645,10 @@ public class ListUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database. For more information about the valid values of this parameter, see [DbType parameter](https://www.alibabacloud.com/help/en/data-management-service/latest/dbtype-parameter).
+             * <p>The type of the database. For more information about the valid values of this parameter, see <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/dbtype-parameter">DbType parameter</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polardb</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -592,13 +656,16 @@ public class ListUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The permissions on a specific type of objects that are granted to the user. Valid values: 
-             * <p>
+             * <p>The permissions on a specific type of objects that are granted to the user. Valid values: </p>
+             * <ul>
+             * <li>DATABASE: permissions on physical databases</li>
+             * <li>LOGIC_DATABASE: permissions on logical databases</li>
+             * <li>TABLE: permissions on physical tables</li>
+             * <li>LOGIC_TABLE: permissions on logical tables</li>
+             * </ul>
              * 
-             * - DATABASE: permissions on physical databases
-             * - LOGIC_DATABASE: permissions on logical databases
-             * - TABLE: permissions on physical tables
-             * - LOGIC_TABLE: permissions on logical tables
+             * <strong>example:</strong>
+             * <p>DATABASE</p>
              */
             public Builder dsType(String dsType) {
                 this.dsType = dsType;
@@ -606,17 +673,20 @@ public class ListUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the environment to which the database belongs. Valid values:
-             * <p>
+             * <p>The type of the environment to which the database belongs. Valid values:</p>
+             * <ul>
+             * <li>product: production environment</li>
+             * <li>dev: development environment</li>
+             * <li>pre: staging environment</li>
+             * <li>test: test environment</li>
+             * <li>sit: SIT environment</li>
+             * <li>uat: UAT environment</li>
+             * <li>pet: stress testing environment</li>
+             * <li>stag: STAG environment</li>
+             * </ul>
              * 
-             * - product: production environment
-             * - dev: development environment
-             * - pre: staging environment
-             * - test: test environment
-             * - sit: SIT environment
-             * - uat: UAT environment
-             * - pet: stress testing environment
-             * - stag: STAG environment
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -624,7 +694,10 @@ public class ListUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint that is used to connect the database.
+             * <p>The endpoint that is used to connect the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp144d5ky4l4r****</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -632,7 +705,10 @@ public class ListUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>174****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -640,11 +716,14 @@ public class ListUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the database is a logical database. Valid values:
-             * <p>
+             * <p>Indicates whether the database is a logical database. Valid values:</p>
+             * <ul>
+             * <li>true: The database is a logical database.</li>
+             * <li>false: The database is a physical database.</li>
+             * </ul>
              * 
-             * *   true: The database is a logical database.
-             * *   false: The database is a physical database.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -652,7 +731,7 @@ public class ListUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The details of permissions.
+             * <p>The details of permissions.</p>
              */
             public Builder permDetails(PermDetails permDetails) {
                 this.permDetails = permDetails;
@@ -660,7 +739,10 @@ public class ListUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is used to connect to the instance.
+             * <p>The port that is used to connect to the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -668,7 +750,10 @@ public class ListUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_db</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -676,7 +761,10 @@ public class ListUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name that is used to search for the database.
+             * <p>The name that is used to search for the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_db@xxx:3306</p>
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -684,7 +772,10 @@ public class ListUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the table.
+             * <p>The ID of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13434</p>
              */
             public Builder tableId(String tableId) {
                 this.tableId = tableId;
@@ -692,7 +783,10 @@ public class ListUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_table</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -700,7 +794,10 @@ public class ListUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -708,7 +805,10 @@ public class ListUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The nickname of the user.
+             * <p>The nickname of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nick_name</p>
              */
             public Builder userNickName(String userNickName) {
                 this.userNickName = userNickName;
@@ -722,6 +822,12 @@ public class ListUserPermissionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUserPermissionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserPermissionsResponseBody</p>
+     */
     public static class UserPermissions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserPermission")
         private java.util.List < UserPermission> userPermission;

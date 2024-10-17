@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPhysicalDatabaseResponseBody} extends {@link TeaModel}
  *
  * <p>GetPhysicalDatabaseResponseBody</p>
@@ -85,7 +86,7 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information about the physical database.
+         * <p>The information about the physical database.</p>
          */
         public Builder database(Database database) {
             this.database = database;
@@ -93,7 +94,10 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -101,7 +105,10 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -109,7 +116,10 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7FAD400F-7A5C-4193-8F9A-39D86C4F0231</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPhysicalDatabaseResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPhysicalDatabaseResponseBody</p>
+     */
     public static class OwnerIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OwnerIds")
         private java.util.List < String > ownerIds;
@@ -171,6 +190,12 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPhysicalDatabaseResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPhysicalDatabaseResponseBody</p>
+     */
     public static class OwnerNameList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OwnerNames")
         private java.util.List < String > ownerNames;
@@ -212,6 +237,12 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPhysicalDatabaseResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPhysicalDatabaseResponseBody</p>
+     */
     public static class Database extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CatalogName")
         private String catalogName;
@@ -431,10 +462,13 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The name of the catalog to which the database belongs.
-             * <p>
+             * <p>The name of the catalog to which the database belongs.</p>
+             * <blockquote>
+             * <p>: If the database is a PostgreSQL database, the name of the database is displayed.</p>
+             * </blockquote>
              * 
-             * > : If the database is a PostgreSQL database, the name of the database is displayed.
+             * <strong>example:</strong>
+             * <p>def</p>
              */
             public Builder catalogName(String catalogName) {
                 this.catalogName = catalogName;
@@ -442,7 +476,10 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the physical database.
+             * <p>The ID of the physical database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>43125312</p>
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -450,7 +487,10 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database engine.
+             * <p>The type of the database engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -458,7 +498,10 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID of the DBA in the destination database.
+             * <p>The user ID of the DBA in the destination database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>43253</p>
              */
             public Builder dbaId(String dbaId) {
                 this.dbaId = dbaId;
@@ -466,7 +509,10 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The nickname of the database administrator (DBA) in the destination database.
+             * <p>The nickname of the database administrator (DBA) in the destination database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dmstest</p>
              */
             public Builder dbaName(String dbaName) {
                 this.dbaName = dbaName;
@@ -474,7 +520,10 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The encoding format of the database.
+             * <p>The encoding format of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>utf8mb4</p>
              */
             public Builder encoding(String encoding) {
                 this.encoding = encoding;
@@ -482,7 +531,10 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the environment to which the database belongs. For more information, see [Change the environment type of an instance](~~163309~~).
+             * <p>The type of the environment to which the database belongs. For more information, see <a href="https://help.aliyun.com/document_detail/163309.html">Change the environment type of an instance</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -490,7 +542,10 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint that is used to connect to the database.
+             * <p>The endpoint that is used to connect to the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-xxxab3r272.mysql.rds.aliyuncs.com</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -498,7 +553,10 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the database instance.
+             * <p>The alias of the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder instanceAlias(String instanceAlias) {
                 this.instanceAlias = instanceAlias;
@@ -506,7 +564,10 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the destination database.
+             * <p>The instance ID of the destination database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>43215325</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -514,7 +575,7 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The user IDs of the database owners.
+             * <p>The user IDs of the database owners.</p>
              */
             public Builder ownerIdList(OwnerIdList ownerIdList) {
                 this.ownerIdList = ownerIdList;
@@ -522,7 +583,7 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The nicknames of the database owners.
+             * <p>The nicknames of the database owners.</p>
              */
             public Builder ownerNameList(OwnerNameList ownerNameList) {
                 this.ownerNameList = ownerNameList;
@@ -530,7 +591,10 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is used to connect to the database.
+             * <p>The port that is used to connect to the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -538,10 +602,13 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
-             * <p>
+             * <p>The name of the database.</p>
+             * <blockquote>
+             * <p>: If the database is a PostgreSQL database, the name of the mode is displayed.</p>
+             * </blockquote>
              * 
-             * > : If the database is a PostgreSQL database, the name of the mode is displayed.
+             * <strong>example:</strong>
+             * <p>dmstest</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -549,7 +616,10 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The name that is used for searching the database.
+             * <p>The name that is used for searching the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:dmstest@rm-xxxab3r272.mysql.rds.aliyuncs.com">dmstest@rm-xxxab3r272.mysql.rds.aliyuncs.com</a>:3306</p>
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -557,10 +627,13 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The system ID (SID) of the database.
-             * <p>
+             * <p>The system ID (SID) of the database.</p>
+             * <blockquote>
+             * <p>: The value of the parameter is returned only for Oracle databases.</p>
+             * </blockquote>
              * 
-             * > : The value of the parameter is returned only for Oracle databases.
+             * <strong>example:</strong>
+             * <p>def</p>
              */
             public Builder sid(String sid) {
                 this.sid = sid;
@@ -568,13 +641,16 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the database. Valid values:
-             * <p>
+             * <p>The state of the database. Valid values:</p>
+             * <ul>
+             * <li><strong>NORMAL</strong>: The database is normal.</li>
+             * <li><strong>DISABLE</strong>: The database is disabled.</li>
+             * <li><strong>OFFLINE</strong>: The database is unpublished.</li>
+             * <li><strong>NOT_EXIST</strong>: The database does not exist.</li>
+             * </ul>
              * 
-             * *   **NORMAL**: The database is normal.
-             * *   **DISABLE**: The database is disabled.
-             * *   **OFFLINE**: The database is unpublished.
-             * *   **NOT_EXIST**: The database does not exist.
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder state(String state) {
                 this.state = state;

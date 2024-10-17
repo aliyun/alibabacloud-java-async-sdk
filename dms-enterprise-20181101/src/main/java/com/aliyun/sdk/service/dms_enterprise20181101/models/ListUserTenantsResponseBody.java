@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserTenantsResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserTenantsResponseBody</p>
@@ -85,7 +86,10 @@ public class ListUserTenantsResponseBody extends TeaModel {
         private java.util.List < TenantList> tenantList; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TenantNotExist</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class ListUserTenantsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified tenant does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,10 @@ public class ListUserTenantsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C478D9DA-3615-50F6-A2BC-7855AD65****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,11 +119,14 @@ public class ListUserTenantsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
+         * </ul>
          * 
-         * *   **true**: The request is successful.
-         * *   **false**: The request fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -121,7 +134,7 @@ public class ListUserTenantsResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the tenants that were returned.
+         * <p>The details of the tenants that were returned.</p>
          */
         public Builder tenantList(java.util.List < TenantList> tenantList) {
             this.tenantList = tenantList;
@@ -134,6 +147,12 @@ public class ListUserTenantsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserTenantsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserTenantsResponseBody</p>
+     */
     public static class TenantList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -185,11 +204,14 @@ public class ListUserTenantsResponseBody extends TeaModel {
             private Long tid; 
 
             /**
-             * The status of the tenant. Valid values:
-             * <p>
+             * <p>The status of the tenant. Valid values:</p>
+             * <ul>
+             * <li><strong>ACTIVE</strong>: The tenant is used to access DMS.</li>
+             * <li><strong>IN_ACTIVE</strong>: The tenant is not used.</li>
+             * </ul>
              * 
-             * *   **ACTIVE**: The tenant is used to access DMS.
-             * *   **IN_ACTIVE**: The tenant is not used.
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -197,7 +219,10 @@ public class ListUserTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the tenant.
+             * <p>The name of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_name</p>
              */
             public Builder tenantName(String tenantName) {
                 this.tenantName = tenantName;
@@ -205,7 +230,10 @@ public class ListUserTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tenant.
+             * <p>The ID of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3***</p>
              */
             public Builder tid(Long tid) {
                 this.tid = tid;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAuthorityTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>ListAuthorityTemplateResponseBody</p>
@@ -170,6 +171,12 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAuthorityTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAuthorityTemplateResponseBody</p>
+     */
     public static class AuthorityTemplateView extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -291,6 +298,12 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAuthorityTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAuthorityTemplateResponseBody</p>
+     */
     public static class AuthorityTemplateViewList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthorityTemplateView")
         private java.util.List < AuthorityTemplateView> authorityTemplateView;

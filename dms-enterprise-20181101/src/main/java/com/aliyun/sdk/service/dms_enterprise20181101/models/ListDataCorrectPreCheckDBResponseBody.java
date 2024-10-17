@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDataCorrectPreCheckDBResponseBody} extends {@link TeaModel}
  *
  * <p>ListDataCorrectPreCheckDBResponseBody</p>
@@ -85,7 +86,10 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,7 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the databases that are involved in the precheck.
+         * <p>The information about the databases that are involved in the precheck.</p>
          */
         public Builder preCheckDBList(java.util.List < PreCheckDBList> preCheckDBList) {
             this.preCheckDBList = preCheckDBList;
@@ -109,7 +116,10 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95A972AF-FAED-4768-9360-7C0DF5D594D0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDataCorrectPreCheckDBResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataCorrectPreCheckDBResponseBody</p>
+     */
     public static class PreCheckDBList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DbId")
         private Long dbId;
@@ -181,7 +200,10 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
             private Long sqlNum; 
 
             /**
-             * The ID of the database.
+             * <p>The ID of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>43***</p>
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -189,7 +211,10 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test@localhost:3306</p>
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -197,7 +222,10 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
             }
 
             /**
-             * The number of SQL statements.
+             * <p>The number of SQL statements.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sqlNum(Long sqlNum) {
                 this.sqlNum = sqlNum;

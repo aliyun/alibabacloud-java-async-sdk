@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDesensitizationStrategyRequest} extends {@link RequestModel}
  *
  * <p>ModifyDesensitizationStrategyRequest</p>
@@ -194,10 +195,14 @@ public class ModifyDesensitizationStrategyRequest extends Request {
         }
 
         /**
-         * The name of the field. You can call the [ListSensitiveColumns](~~188103~~) operation to obtain the field name.
-         * <p>
+         * <p>The name of the field. You can call the <a href="https://help.aliyun.com/document_detail/188103.html">ListSensitiveColumns</a> operation to obtain the field name.</p>
+         * <blockquote>
+         * <p> You can also call the <a href="https://help.aliyun.com/document_detail/141870.html">ListColumns</a> operation to obtain the field name.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can also call the [ListColumns](~~141870~~) operation to obtain the field name.
+         * <strong>example:</strong>
+         * <p>test_column</p>
          */
         public Builder columnName(String columnName) {
             this.putQueryParameter("ColumnName", columnName);
@@ -206,7 +211,11 @@ public class ModifyDesensitizationStrategyRequest extends Request {
         }
 
         /**
-         * The ID of the database. You can call the [ListDatabases](~~141873~~) operation to obtain the ID.
+         * <p>The ID of the database. You can call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> operation to obtain the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder dbId(Integer dbId) {
             this.putQueryParameter("DbId", dbId);
@@ -215,12 +224,16 @@ public class ModifyDesensitizationStrategyRequest extends Request {
         }
 
         /**
-         * The desensitization algorithm of the field setting. The default value is false. The values are as follows:
-         * <p>
+         * <p>The desensitization algorithm of the field setting. The default value is false. The values are as follows:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: default desensitization algorithm.</p>
+         * </li>
+         * <li><p><strong>false</strong> :semi-desensitization algorithm.</p>
+         * </li>
+         * </ul>
          * 
-         * - **true**: default desensitization algorithm.
-         * 
-         * - **false** :semi-desensitization algorithm.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isDefault(Boolean isDefault) {
             this.putQueryParameter("IsDefault", isDefault);
@@ -229,11 +242,15 @@ public class ModifyDesensitizationStrategyRequest extends Request {
         }
 
         /**
-         * Specifies whether the database is a logical database. Valid values:
-         * <p>
+         * <p>Specifies whether the database is a logical database. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The database is a physical database.</li>
+         * <li><strong>false</strong>: The database is a logical database.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **true**: The database is a physical database.
-         * *   **false**: The database is a logical database.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isLogic(Boolean isLogic) {
             this.putQueryParameter("IsLogic", isLogic);
@@ -242,11 +259,14 @@ public class ModifyDesensitizationStrategyRequest extends Request {
         }
 
         /**
-         * Specifies whether to reset the masking rule. Valid value:
-         * <p>
+         * <p>Specifies whether to reset the masking rule. Valid value:</p>
+         * <ul>
+         * <li><strong>true</strong>: Reset the masking rule.</li>
+         * <li><strong>false</strong>: Do not reset the masking rule. This is the default value.</li>
+         * </ul>
          * 
-         * *   **true**: Reset the masking rule.
-         * *   **false**: Do not reset the masking rule. This is the default value.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isReset(Boolean isReset) {
             this.putQueryParameter("IsReset", isReset);
@@ -255,7 +275,10 @@ public class ModifyDesensitizationStrategyRequest extends Request {
         }
 
         /**
-         * The ID of the masking rule.
+         * <p>The ID of the masking rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>53</p>
          */
         public Builder ruleId(Integer ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -264,14 +287,19 @@ public class ModifyDesensitizationStrategyRequest extends Request {
         }
 
         /**
-         * The name of the database. You can call the [ListSensitiveColumns](~~188103~~) operation to obtain the database name.
-         * <p>
+         * <p>The name of the database. You can call the <a href="https://help.aliyun.com/document_detail/188103.html">ListSensitiveColumns</a> operation to obtain the database name.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If the database is a physical database, you can call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation to obtain the database name.</p>
+         * </li>
+         * <li><p>If the database is a logical database, you can call the <a href="https://help.aliyun.com/document_detail/141874.html">ListLogicDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation to obtain the name of the database.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * > 
-         * 
-         * *   If the database is a physical database, you can call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation to obtain the database name.
-         * 
-         * *   If the database is a logical database, you can call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation to obtain the name of the database.
+         * <strong>example:</strong>
+         * <p>test_schema</p>
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("SchemaName", schemaName);
@@ -280,10 +308,14 @@ public class ModifyDesensitizationStrategyRequest extends Request {
         }
 
         /**
-         * The name of the table. You can call the [ListSensitiveColumns](~~188103~~) operation to obtain the table name.
-         * <p>
+         * <p>The name of the table. You can call the <a href="https://help.aliyun.com/document_detail/188103.html">ListSensitiveColumns</a> operation to obtain the table name.</p>
+         * <blockquote>
+         * <p> You can also call the <a href="https://help.aliyun.com/document_detail/141878.html">ListTables</a> operation to obtain the table name.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can also call the [ListTables](~~141878~~) operation to obtain the table name.
+         * <strong>example:</strong>
+         * <p>test_table</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
@@ -292,10 +324,13 @@ public class ModifyDesensitizationStrategyRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p> To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> in the topic &quot;Manage DMS tenants.&quot;</p>
+         * </blockquote>
          * 
-         * >  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~) in the topic "Manage DMS tenants."
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

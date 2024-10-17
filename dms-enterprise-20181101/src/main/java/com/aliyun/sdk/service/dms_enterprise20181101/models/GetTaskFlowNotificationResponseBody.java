@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTaskFlowNotificationResponseBody} extends {@link TeaModel}
  *
  * <p>GetTaskFlowNotificationResponseBody</p>
@@ -85,7 +86,10 @@ public class GetTaskFlowNotificationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class GetTaskFlowNotificationResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,7 @@ public class GetTaskFlowNotificationResponseBody extends TeaModel {
         }
 
         /**
-         * The notification settings specified by the user.
+         * <p>The notification settings specified by the user.</p>
          */
         public Builder notification(Notification notification) {
             this.notification = notification;
@@ -109,7 +116,10 @@ public class GetTaskFlowNotificationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+         * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F19D575F-EBEA-5683-AFA3-A8F6D9A7DE03</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class GetTaskFlowNotificationResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class GetTaskFlowNotificationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTaskFlowNotificationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTaskFlowNotificationResponseBody</p>
+     */
     public static class Notification extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DagNotificationFail")
         private Boolean dagNotificationFail;
@@ -185,11 +204,14 @@ public class GetTaskFlowNotificationResponseBody extends TeaModel {
             private Boolean dagNotificationSuccess; 
 
             /**
-             * Indicates whether notifications for failed task flows are enabled. Valid values:
-             * <p>
+             * <p>Indicates whether notifications for failed task flows are enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: enabled</li>
+             * <li><strong>false</strong>: disabled</li>
+             * </ul>
              * 
-             * *   **true**: enabled
-             * *   **false**: disabled
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dagNotificationFail(Boolean dagNotificationFail) {
                 this.dagNotificationFail = dagNotificationFail;
@@ -197,11 +219,14 @@ public class GetTaskFlowNotificationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether service level agreement (SLA) global notifications for task flows are enabled. Valid values:
-             * <p>
+             * <p>Indicates whether service level agreement (SLA) global notifications for task flows are enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: enabled</li>
+             * <li><strong>false</strong>: disabled</li>
+             * </ul>
              * 
-             * *   **true**: enabled
-             * *   **false**: disabled
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dagNotificationSla(Boolean dagNotificationSla) {
                 this.dagNotificationSla = dagNotificationSla;
@@ -209,11 +234,14 @@ public class GetTaskFlowNotificationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether notifications for successful task flows are enabled. Valid values:
-             * <p>
+             * <p>Indicates whether notifications for successful task flows are enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: enabled</li>
+             * <li><strong>false</strong>: disabled</li>
+             * </ul>
              * 
-             * *   **true**: enabled
-             * *   **false**: disabled
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dagNotificationSuccess(Boolean dagNotificationSuccess) {
                 this.dagNotificationSuccess = dagNotificationSuccess;

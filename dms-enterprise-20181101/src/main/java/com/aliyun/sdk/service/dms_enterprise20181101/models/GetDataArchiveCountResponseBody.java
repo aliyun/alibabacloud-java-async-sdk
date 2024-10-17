@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataArchiveCountResponseBody} extends {@link TeaModel}
  *
  * <p>GetDataArchiveCountResponseBody</p>
@@ -61,7 +62,7 @@ public class GetDataArchiveCountResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -69,7 +70,10 @@ public class GetDataArchiveCountResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4B63CAC5-BD7F-5C7C-82C9-59DFFBC3C5C2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,11 +81,14 @@ public class GetDataArchiveCountResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -94,6 +101,12 @@ public class GetDataArchiveCountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDataArchiveCountResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataArchiveCountResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailCount")
         private Long failCount;
@@ -157,7 +170,10 @@ public class GetDataArchiveCountResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The number of tickets that data archiving failed.
+             * <p>The number of tickets that data archiving failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1**</p>
              */
             public Builder failCount(Long failCount) {
                 this.failCount = failCount;
@@ -165,7 +181,10 @@ public class GetDataArchiveCountResponseBody extends TeaModel {
             }
 
             /**
-             * The number of tickets that data archiving is in progress.
+             * <p>The number of tickets that data archiving is in progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2**</p>
              */
             public Builder processingCount(Long processingCount) {
                 this.processingCount = processingCount;
@@ -173,7 +192,10 @@ public class GetDataArchiveCountResponseBody extends TeaModel {
             }
 
             /**
-             * The number of tickets that data archiving is successful.
+             * <p>The number of tickets that data archiving is successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3**</p>
              */
             public Builder successCount(Long successCount) {
                 this.successCount = successCount;
@@ -181,7 +203,10 @@ public class GetDataArchiveCountResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of data archiving tickets.
+             * <p>The total number of data archiving tickets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6**</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserPermissionsRequest} extends {@link RequestModel}
  *
  * <p>ListUserPermissionsRequest</p>
@@ -204,7 +205,10 @@ public class ListUserPermissionsRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db_name</p>
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -213,7 +217,10 @@ public class ListUserPermissionsRequest extends Request {
         }
 
         /**
-         * The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
+         * <p>The type of the database. For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/198106.html">DbType parameter</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polardb</p>
          */
         public Builder dbType(String dbType) {
             this.putQueryParameter("DbType", dbType);
@@ -222,17 +229,20 @@ public class ListUserPermissionsRequest extends Request {
         }
 
         /**
-         * The type of the environment to which the database belongs. Valid values:
-         * <p>
+         * <p>The type of the environment to which the database belongs. Valid values:</p>
+         * <ul>
+         * <li>product: production environment</li>
+         * <li>dev: development environment</li>
+         * <li>pre: staging environment</li>
+         * <li>test: test environment</li>
+         * <li>sit: SIT environment</li>
+         * <li>uat: user acceptance testing (UAT) environment</li>
+         * <li>pet: stress testing environment</li>
+         * <li>stag: STAG environment</li>
+         * </ul>
          * 
-         * *   product: production environment
-         * *   dev: development environment
-         * *   pre: staging environment
-         * *   test: test environment
-         * *   sit: SIT environment
-         * *   uat: user acceptance testing (UAT) environment
-         * *   pet: stress testing environment
-         * *   stag: STAG environment
+         * <strong>example:</strong>
+         * <p>dev</p>
          */
         public Builder envType(String envType) {
             this.putQueryParameter("EnvType", envType);
@@ -241,11 +251,14 @@ public class ListUserPermissionsRequest extends Request {
         }
 
         /**
-         * Specifies whether the database is a logical database. Valid values:
-         * <p>
+         * <p>Specifies whether the database is a logical database. Valid values:</p>
+         * <ul>
+         * <li>true: The database is a logical database.</li>
+         * <li>false: The database is a physical database.</li>
+         * </ul>
          * 
-         * *   true: The database is a logical database.
-         * *   false: The database is a physical database.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder logic(Boolean logic) {
             this.putQueryParameter("Logic", logic);
@@ -254,7 +267,10 @@ public class ListUserPermissionsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -263,7 +279,10 @@ public class ListUserPermissionsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -272,13 +291,17 @@ public class ListUserPermissionsRequest extends Request {
         }
 
         /**
-         * The permissions on a specific type of resources that you want to query. Valid values:
-         * <p>
+         * <p>The permissions on a specific type of resources that you want to query. Valid values:</p>
+         * <ul>
+         * <li>DATABASE: permissions on databases</li>
+         * <li>TABLE: permissions on tables</li>
+         * <li>COLUMN: permissions on fields</li>
+         * <li>INSTANCE: permissions on instances</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   DATABASE: permissions on databases
-         * *   TABLE: permissions on tables
-         * *   COLUMN: permissions on fields
-         * *   INSTANCE: permissions on instances
+         * <strong>example:</strong>
+         * <p>DATABASE</p>
          */
         public Builder permType(String permType) {
             this.putQueryParameter("PermType", permType);
@@ -287,7 +310,10 @@ public class ListUserPermissionsRequest extends Request {
         }
 
         /**
-         * The keyword used in the query. For example, if you want to query permissions on an instance, you can specify the endpoint of the instance, such as rm-bp144d5ky4l4r****.
+         * <p>The keyword used in the query. For example, if you want to query permissions on an instance, you can specify the endpoint of the instance, such as rm-bp144d5ky4l4r****.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp144d5ky4l4r****</p>
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -296,10 +322,13 @@ public class ListUserPermissionsRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p> To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the &quot;View information about the current tenant&quot; section of the <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a> topic.</p>
+         * </blockquote>
          * 
-         * >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -308,10 +337,14 @@ public class ListUserPermissionsRequest extends Request {
         }
 
         /**
-         * The ID of the user. You can call the [GetUser](~~147098~~) or [ListUsers](~~141938~~) operation to query the ID of the user.
-         * <p>
+         * <p>The ID of the user. You can call the <a href="https://help.aliyun.com/document_detail/147098.html">GetUser</a> or <a href="https://help.aliyun.com/document_detail/141938.html">ListUsers</a> operation to query the ID of the user.</p>
+         * <blockquote>
+         * <p> The user ID is different from the ID of your Alibaba Cloud account.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The user ID is different from the ID of your Alibaba Cloud account.
+         * <strong>example:</strong>
+         * <p>51****</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

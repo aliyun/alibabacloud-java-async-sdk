@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLhTaskFlowAndScenarioResponseBody} extends {@link TeaModel}
  *
  * <p>ListLhTaskFlowAndScenarioResponseBody</p>
@@ -97,7 +98,10 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request fails.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -105,7 +109,10 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request fails.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -113,7 +120,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
         }
 
         /**
-         * The task flows in the default business scenario.
+         * <p>The task flows in the default business scenario.</p>
          */
         public Builder rawDAGList(RawDAGList rawDAGList) {
             this.rawDAGList = rawDAGList;
@@ -121,7 +128,10 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48602B78-0DDF-414C-8688-70CAB6070115</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +139,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
         }
 
         /**
-         * The task flows in other business scenarios.
+         * <p>The task flows in other business scenarios.</p>
          */
         public Builder scenarioDAGList(ScenarioDAGList scenarioDAGList) {
             this.scenarioDAGList = scenarioDAGList;
@@ -137,11 +147,14 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
+         * </ul>
          * 
-         * - **true**: The request is successful.
-         * - **false**: The request fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +167,12 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLhTaskFlowAndScenarioResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLhTaskFlowAndScenarioResponseBody</p>
+     */
     public static class Dag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CanEdit")
         private Boolean canEdit;
@@ -361,11 +380,14 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * Indicates whether the task flow can be modified. Valid values:
-             * <p>
+             * <p>Indicates whether the task flow can be modified. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The task flow can be modified.</li>
+             * <li><strong>false</strong>: The task flow cannot be modified.</li>
+             * </ul>
              * 
-             * *   **true**: The task flow can be modified.
-             * *   **false**: The task flow cannot be modified.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder canEdit(Boolean canEdit) {
                 this.canEdit = canEdit;
@@ -373,7 +395,10 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who creates the task flow.
+             * <p>The ID of the user who creates the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51****</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -381,7 +406,10 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user who creates the workspace.
+             * <p>The name of the user who creates the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Creator_Name</p>
              */
             public Builder creatorNickName(String creatorNickName) {
                 this.creatorNickName = creatorNickName;
@@ -389,7 +417,10 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task flow.
+             * <p>The name of the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dag_Name</p>
              */
             public Builder dagName(String dagName) {
                 this.dagName = dagName;
@@ -397,7 +428,10 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID of the task flow owner.
+             * <p>The user ID of the task flow owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51****</p>
              */
             public Builder dagOwnerId(String dagOwnerId) {
                 this.dagOwnerId = dagOwnerId;
@@ -405,7 +439,10 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task flow owner.
+             * <p>The name of the task flow owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Owner_Name</p>
              */
             public Builder dagOwnerNickName(String dagOwnerNickName) {
                 this.dagOwnerNickName = dagOwnerNickName;
@@ -413,7 +450,12 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The extended field. No meaning is specified for this field.
+             * <p>The extended field. No meaning is specified for this field.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder dataFlowId(Long dataFlowId) {
                 this.dataFlowId = dataFlowId;
@@ -421,7 +463,12 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The extended field. No meaning is specified for this field.
+             * <p>The extended field. No meaning is specified for this field.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder demoId(String demoId) {
                 this.demoId = demoId;
@@ -429,7 +476,10 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the latest deployment record.
+             * <p>The ID of the latest deployment record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12**</p>
              */
             public Builder deployId(Long deployId) {
                 this.deployId = deployId;
@@ -437,7 +487,10 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task flow.
+             * <p>The ID of the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>134137****</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -445,11 +498,14 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the task flow is deleted. Valid values:
-             * <p>
+             * <p>Indicates whether the task flow is deleted. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: deleted</li>
+             * <li><strong>false</strong>: not deleted</li>
+             * </ul>
              * 
-             * *   **true**: deleted
-             * *   **false**: not deleted
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDeleted(Boolean isDeleted) {
                 this.isDeleted = isDeleted;
@@ -457,12 +513,15 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the latest execution. Valid values:
-             * <p>
+             * <p>The status of the latest execution. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: invalid</li>
+             * <li><strong>1</strong>: scheduling disabled</li>
+             * <li><strong>2</strong>: waiting to be scheduled</li>
+             * </ul>
              * 
-             * *   **0**: invalid
-             * *   **1**: scheduling disabled
-             * *   **2**: waiting to be scheduled
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder latestInstanceStatus(Integer latestInstanceStatus) {
                 this.latestInstanceStatus = latestInstanceStatus;
@@ -470,7 +529,10 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the latest execution record was generated.
+             * <p>The time when the latest execution record was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-14</p>
              */
             public Builder latestInstanceTime(Integer latestInstanceTime) {
                 this.latestInstanceTime = latestInstanceTime;
@@ -478,7 +540,10 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the business scenario.
+             * <p>The ID of the business scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2**</p>
              */
             public Builder scenarioId(Long scenarioId) {
                 this.scenarioId = scenarioId;
@@ -486,7 +551,10 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * <p>The ID of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder spaceId(Long spaceId) {
                 this.spaceId = spaceId;
@@ -494,12 +562,15 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task flow. Valid values:
-             * <p>
+             * <p>The status of the task flow. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: invalid</li>
+             * <li><strong>1</strong>: scheduling disabled</li>
+             * <li><strong>2</strong>: waiting to be scheduled</li>
+             * </ul>
              * 
-             * *   **0**: invalid
-             * *   **1**: scheduling disabled
-             * *   **2**: waiting to be scheduled
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -513,6 +584,12 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLhTaskFlowAndScenarioResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLhTaskFlowAndScenarioResponseBody</p>
+     */
     public static class RawDAGList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dag")
         private java.util.List < Dag> dag;
@@ -554,6 +631,12 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLhTaskFlowAndScenarioResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLhTaskFlowAndScenarioResponseBody</p>
+     */
     public static class DagListDag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CanEdit")
         private Boolean canEdit;
@@ -761,11 +844,14 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * Indicates whether the task flow can be modified. Valid values:
-             * <p>
+             * <p>Indicates whether the task flow can be modified. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The task flow can be modified.</li>
+             * <li><strong>false</strong>: The task flow cannot be modified.</li>
+             * </ul>
              * 
-             * - **true**: The task flow can be modified.
-             * - **false**: The task flow cannot be modified.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder canEdit(Boolean canEdit) {
                 this.canEdit = canEdit;
@@ -773,7 +859,10 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who creates the task flow.
+             * <p>The ID of the user who creates the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51****</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -781,7 +870,10 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user who creates the workspace.
+             * <p>The name of the user who creates the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Creator_Name</p>
              */
             public Builder creatorNickName(String creatorNickName) {
                 this.creatorNickName = creatorNickName;
@@ -789,7 +881,10 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task flow.
+             * <p>The name of the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dag_Name</p>
              */
             public Builder dagName(String dagName) {
                 this.dagName = dagName;
@@ -797,7 +892,10 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID of the task flow owner.
+             * <p>The user ID of the task flow owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51****</p>
              */
             public Builder dagOwnerId(String dagOwnerId) {
                 this.dagOwnerId = dagOwnerId;
@@ -805,7 +903,10 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task flow owner.
+             * <p>The name of the task flow owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Owner_Name</p>
              */
             public Builder dagOwnerNickName(String dagOwnerNickName) {
                 this.dagOwnerNickName = dagOwnerNickName;
@@ -813,7 +914,12 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The extended field. No meaning is specified for this field.
+             * <p>The extended field. No meaning is specified for this field.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder dataFlowId(Long dataFlowId) {
                 this.dataFlowId = dataFlowId;
@@ -821,7 +927,12 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The extended field. No meaning is specified for this field.
+             * <p>The extended field. No meaning is specified for this field.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder demoId(String demoId) {
                 this.demoId = demoId;
@@ -829,7 +940,10 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the latest deployment record.
+             * <p>The ID of the latest deployment record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12**</p>
              */
             public Builder deployId(Long deployId) {
                 this.deployId = deployId;
@@ -837,7 +951,10 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task flow.
+             * <p>The ID of the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9***</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -845,11 +962,14 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the task flow is deleted. Valid values:
-             * <p>
+             * <p>Indicates whether the task flow is deleted. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: deleted</li>
+             * <li><strong>false</strong>: not deleted</li>
+             * </ul>
              * 
-             * - **true**: deleted
-             * - **false**: not deleted
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDeleted(Boolean isDeleted) {
                 this.isDeleted = isDeleted;
@@ -857,12 +977,15 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the latest execution. Valid values:
-             * <p>
+             * <p>The status of the latest execution. Valid values:</p>
+             * <ul>
+             * <li>0: invalid</li>
+             * <li>1: scheduling disabled</li>
+             * <li>2: waiting to be scheduled</li>
+             * </ul>
              * 
-             * - 0: invalid
-             * - 1: scheduling disabled
-             * - 2: waiting to be scheduled
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder latestInstanceStatus(Integer latestInstanceStatus) {
                 this.latestInstanceStatus = latestInstanceStatus;
@@ -870,7 +993,10 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the latest execution record was generated.
+             * <p>The time when the latest execution record was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-14</p>
              */
             public Builder latestInstanceTime(Integer latestInstanceTime) {
                 this.latestInstanceTime = latestInstanceTime;
@@ -878,7 +1004,10 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the business scenario.
+             * <p>The ID of the business scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2**</p>
              */
             public Builder scenarioId(Long scenarioId) {
                 this.scenarioId = scenarioId;
@@ -886,7 +1015,10 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * <p>The ID of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder spaceId(Long spaceId) {
                 this.spaceId = spaceId;
@@ -894,12 +1026,15 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task flow. Valid values:
-             * <p>
+             * <p>The status of the task flow. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: invalid</li>
+             * <li><strong>1</strong>: scheduling disabled</li>
+             * <li><strong>2</strong>: waiting to be scheduled</li>
+             * </ul>
              * 
-             * - **0**: invalid
-             * - **1**: scheduling disabled
-             * - **2**: waiting to be scheduled
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -913,6 +1048,12 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLhTaskFlowAndScenarioResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLhTaskFlowAndScenarioResponseBody</p>
+     */
     public static class DagList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dag")
         private java.util.List < DagListDag> dag;
@@ -954,6 +1095,12 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLhTaskFlowAndScenarioResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLhTaskFlowAndScenarioResponseBody</p>
+     */
     public static class Scenario extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatorId")
         private String creatorId;
@@ -1005,7 +1152,10 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             private String scenarioName; 
 
             /**
-             * The ID of the user who creates the business scenario.
+             * <p>The ID of the user who creates the business scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51****</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -1013,7 +1163,10 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the business scenario.
+             * <p>The description of the business scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1021,7 +1174,10 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the business scenario.
+             * <p>The name of the business scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Scenario_2</p>
              */
             public Builder scenarioName(String scenarioName) {
                 this.scenarioName = scenarioName;
@@ -1035,6 +1191,12 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLhTaskFlowAndScenarioResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLhTaskFlowAndScenarioResponseBody</p>
+     */
     public static class ScenarioDAG extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DagList")
         private DagList dagList;
@@ -1074,7 +1236,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             private Scenario scenario; 
 
             /**
-             * The list of task flows.
+             * <p>The list of task flows.</p>
              */
             public Builder dagList(DagList dagList) {
                 this.dagList = dagList;
@@ -1082,7 +1244,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the business scenario.
+             * <p>The information about the business scenario.</p>
              */
             public Builder scenario(Scenario scenario) {
                 this.scenario = scenario;
@@ -1096,6 +1258,12 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLhTaskFlowAndScenarioResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLhTaskFlowAndScenarioResponseBody</p>
+     */
     public static class ScenarioDAGList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ScenarioDAG")
         private java.util.List < ScenarioDAG> scenarioDAG;

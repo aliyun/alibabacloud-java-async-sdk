@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSQLReviewOrderRequest} extends {@link RequestModel}
  *
  * <p>CreateSQLReviewOrderRequest</p>
@@ -121,7 +122,11 @@ public class CreateSQLReviewOrderRequest extends Request {
         }
 
         /**
-         * The purpose or objective of the SQL review. This reduces unnecessary communication.
+         * <p>The purpose or objective of the SQL review. This reduces unnecessary communication.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -130,7 +135,8 @@ public class CreateSQLReviewOrderRequest extends Request {
         }
 
         /**
-         * The parameters of the ticket.
+         * <p>The parameters of the ticket.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder param(Param param) {
             String paramShrink = shrink(param, "Param", "json");
@@ -140,7 +146,7 @@ public class CreateSQLReviewOrderRequest extends Request {
         }
 
         /**
-         * The stakeholders involved in this operation. All the specified stakeholders can view the ticket details and take part in the approval process. Irrelevant users other than DMS administrators and database administrators (DBAs) are not allowed to view the ticket details.
+         * <p>The stakeholders involved in this operation. All the specified stakeholders can view the ticket details and take part in the approval process. Irrelevant users other than DMS administrators and database administrators (DBAs) are not allowed to view the ticket details.</p>
          */
         public Builder relatedUserList(java.util.List < Long > relatedUserList) {
             String relatedUserListShrink = shrink(relatedUserList, "RelatedUserList", "json");
@@ -150,7 +156,10 @@ public class CreateSQLReviewOrderRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -165,6 +174,12 @@ public class CreateSQLReviewOrderRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSQLReviewOrderRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSQLReviewOrderRequest</p>
+     */
     public static class Param extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttachmentKeyList")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -219,7 +234,8 @@ public class CreateSQLReviewOrderRequest extends Request {
             private String projectName; 
 
             /**
-             * The files to be reviewed. Multiple files can be reviewed at a time.
+             * <p>The files to be reviewed. Multiple files can be reviewed at a time.</p>
+             * <p>This parameter is required.</p>
              */
             public Builder attachmentKeyList(java.util.List < String > attachmentKeyList) {
                 this.attachmentKeyList = attachmentKeyList;
@@ -227,10 +243,14 @@ public class CreateSQLReviewOrderRequest extends Request {
             }
 
             /**
-             * The ID of the database. You can call the [SearchDatabases](~~141876~~) operation to query the ID of the database.
-             * <p>
+             * <p>The ID of the database. You can call the <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabases</a> operation to query the ID of the database.</p>
+             * <blockquote>
+             * <p> You can call this operation to query only physical databases. This operation is unavailable to query logical databases.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * >  You can call this operation to query only physical databases. This operation is unavailable to query logical databases.
+             * <strong>example:</strong>
+             * <p>123321</p>
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -238,7 +258,11 @@ public class CreateSQLReviewOrderRequest extends Request {
             }
 
             /**
-             * The name of the project.
+             * <p>The name of the project.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL review for xxx</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;

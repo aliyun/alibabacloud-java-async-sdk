@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDatabaseUserPermssionsRequest} extends {@link RequestModel}
  *
  * <p>ListDatabaseUserPermssionsRequest</p>
@@ -162,7 +163,11 @@ public class ListDatabaseUserPermssionsRequest extends Request {
         }
 
         /**
-         * The ID of the database.
+         * <p>The ID of the database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder dbId(String dbId) {
             this.putQueryParameter("DbId", dbId);
@@ -171,7 +176,10 @@ public class ListDatabaseUserPermssionsRequest extends Request {
         }
 
         /**
-         * Specifies whether the database is a logical database.
+         * <p>Specifies whether the database is a logical database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder logic(Boolean logic) {
             this.putQueryParameter("Logic", logic);
@@ -180,7 +188,10 @@ public class ListDatabaseUserPermssionsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -189,7 +200,10 @@ public class ListDatabaseUserPermssionsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -198,12 +212,16 @@ public class ListDatabaseUserPermssionsRequest extends Request {
         }
 
         /**
-         * The type of the permission. Valid values:
-         * <p>
+         * <p>The type of the permission. Valid values:</p>
+         * <ul>
+         * <li>DATABASE: permissions on databases</li>
+         * <li>TABLE: permissions on tables</li>
+         * <li>COLUMN: permissions on fields</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   DATABASE: permissions on databases
-         * *   TABLE: permissions on tables
-         * *   COLUMN: permissions on fields
+         * <strong>example:</strong>
+         * <p>DATABASE</p>
          */
         public Builder permType(String permType) {
             this.putQueryParameter("PermType", permType);
@@ -212,10 +230,13 @@ public class ListDatabaseUserPermssionsRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p>: To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a>.</p>
+         * </blockquote>
          * 
-         * > : To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [Manage DMS tenants](~~181330~~).
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -224,7 +245,10 @@ public class ListDatabaseUserPermssionsRequest extends Request {
         }
 
         /**
-         * The nickname of the user.
+         * <p>The nickname of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>search_user_name</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

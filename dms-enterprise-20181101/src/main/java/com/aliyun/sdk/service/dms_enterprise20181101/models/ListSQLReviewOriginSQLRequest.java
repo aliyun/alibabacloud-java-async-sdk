@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSQLReviewOriginSQLRequest} extends {@link RequestModel}
  *
  * <p>ListSQLReviewOriginSQLRequest</p>
@@ -106,7 +107,7 @@ public class ListSQLReviewOriginSQLRequest extends Request {
         }
 
         /**
-         * The parameters that are used to filter SQL statements involved in the ticket.
+         * <p>The parameters that are used to filter SQL statements involved in the ticket.</p>
          */
         public Builder orderActionDetail(OrderActionDetail orderActionDetail) {
             String orderActionDetailShrink = shrink(orderActionDetail, "OrderActionDetail", "json");
@@ -116,7 +117,11 @@ public class ListSQLReviewOriginSQLRequest extends Request {
         }
 
         /**
-         * The ID of the ticket for the SQL review. You can call the [CreateSQLReviewOrder](~~257777~~) operation to query the ID of the ticket.
+         * <p>The ID of the SQL review ticket. You can call the <a href="https://help.aliyun.com/document_detail/257777.html">CreateSQLReviewOrder</a> operation to query the ticket ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123321</p>
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -125,7 +130,10 @@ public class ListSQLReviewOriginSQLRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~465818~~) operation to query the ID of the tenant.
+         * <p>The tenant ID. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to query the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -140,6 +148,12 @@ public class ListSQLReviewOriginSQLRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListSQLReviewOriginSQLRequest} extends {@link TeaModel}
+     *
+     * <p>ListSQLReviewOriginSQLRequest</p>
+     */
     public static class Page extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -180,7 +194,10 @@ public class ListSQLReviewOriginSQLRequest extends Request {
             private Integer pageSize; 
 
             /**
-             * The number of the page to return.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -188,7 +205,10 @@ public class ListSQLReviewOriginSQLRequest extends Request {
             }
 
             /**
-             * The number of entries to return on each page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -202,6 +222,12 @@ public class ListSQLReviewOriginSQLRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSQLReviewOriginSQLRequest} extends {@link TeaModel}
+     *
+     * <p>ListSQLReviewOriginSQLRequest</p>
+     */
     public static class OrderActionDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckStatusResult")
         private String checkStatusResult;
@@ -265,15 +291,18 @@ public class ListSQLReviewOriginSQLRequest extends Request {
             private String SQLReviewResult; 
 
             /**
-             * The review status of the SQL statement. Valid values:
-             * <p>
+             * <p>The review status of the SQL statement. Valid values:</p>
+             * <ul>
+             * <li><strong>new</strong>: The SQL statement was waiting to be reviewed.</li>
+             * <li><strong>unknown</strong>: The SQL statement cannot be parsed.</li>
+             * <li><strong>check_not_pass</strong>: The SQL statement failed to pass the review.</li>
+             * <li><strong>check_pass</strong>: The SQL statement passed the review.</li>
+             * <li><strong>force_pass</strong>: The SQL statement passed the manual review.</li>
+             * <li><strong>force_not_pass</strong>: The SQL statement failed to pass the manual review.</li>
+             * </ul>
              * 
-             * *   **new**: The SQL statement is pending for analysis.
-             * *   **unknown**: The SQL statement failed to be parsed.
-             * *   **check_not_pass**: The SQL statement failed the review.
-             * *   **check_pass**: The SQL statement passed the review.
-             * *   **force_pass**: The SQL statement passed the review by manual effort.
-             * *   **force_not_pass**: The SQL statement failed the review by manual effort.
+             * <strong>example:</strong>
+             * <p>check_not_pass</p>
              */
             public Builder checkStatusResult(String checkStatusResult) {
                 this.checkStatusResult = checkStatusResult;
@@ -281,7 +310,10 @@ public class ListSQLReviewOriginSQLRequest extends Request {
             }
 
             /**
-             * The ID of the file.
+             * <p>The ID of the file that contains the SQL statements to be reviewed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123345</p>
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -289,7 +321,7 @@ public class ListSQLReviewOriginSQLRequest extends Request {
             }
 
             /**
-             * The paging settings.
+             * <p>The pagination information.</p>
              */
             public Builder page(Page page) {
                 this.page = page;
@@ -297,15 +329,18 @@ public class ListSQLReviewOriginSQLRequest extends Request {
             }
 
             /**
-             * The optimization suggestion for the SQL statement. Valid values:
-             * <p>
+             * <p>The optimization suggestion for the SQL statement. Valid values:</p>
+             * <ul>
+             * <li><strong>MUST_IMPROVE</strong>: The SQL statement must be optimized.</li>
+             * <li><strong>POTENTIAL_ISSUE</strong>: The SQL statement contains potential issues.</li>
+             * <li><strong>SUGGEST_IMPROVE</strong>: We recommend that you optimize the SQL statement.</li>
+             * <li><strong>USE_DMS_TOOLKIT</strong>: We recommend that you change schemas without locking tables.</li>
+             * <li><strong>USE_DMS_DML_UNLOCK</strong>: We recommend that you change data without locking tables.</li>
+             * <li><strong>TABLE_INDEX_SUGGEST</strong>: We recommend that you optimize indexes for the SQL statement.</li>
+             * </ul>
              * 
-             * *   **MUST_IMPROVE**: The SQL statement must be improved.
-             * *   **POTENTIAL_ISSUE**: The SQL statement contains potential issues.
-             * *   **SUGGEST_IMPROVE**: We recommend that you improve the SQL statement.
-             * *   **USE_DMS_TOOLKIT**: We recommend that you change schemas without locking tables.
-             * *   **USE_DMS_DML_UNLOCK**: We recommend that you change data without locking tables.
-             * *   **TABLE_INDEX_SUGGEST**: We recommend that you use SQL statements that use indexes.
+             * <strong>example:</strong>
+             * <p>MUST_IMPROVE</p>
              */
             public Builder SQLReviewResult(String SQLReviewResult) {
                 this.SQLReviewResult = SQLReviewResult;

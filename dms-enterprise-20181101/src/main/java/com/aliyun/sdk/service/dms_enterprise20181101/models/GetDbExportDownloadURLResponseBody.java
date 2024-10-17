@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDbExportDownloadURLResponseBody} extends {@link TeaModel}
  *
  * <p>GetDbExportDownloadURLResponseBody</p>
@@ -130,6 +131,12 @@ public class GetDbExportDownloadURLResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDbExportDownloadURLResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDbExportDownloadURLResponseBody</p>
+     */
     public static class DownloadURLResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HasResult")
         private Boolean hasResult;

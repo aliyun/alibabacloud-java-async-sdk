@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataCorrectRollbackFileResponseBody} extends {@link TeaModel}
  *
  * <p>GetDataCorrectRollbackFileResponseBody</p>
@@ -85,7 +86,10 @@ public class GetDataCorrectRollbackFileResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class GetDataCorrectRollbackFileResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,10 @@ public class GetDataCorrectRollbackFileResponseBody extends TeaModel {
         }
 
         /**
-         * The download URL of the attachment.
+         * <p>The download URL of the attachment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://dmsxxx">https://dmsxxx</a></p>
          */
         public Builder fileUrl(String fileUrl) {
             this.fileUrl = fileUrl;
@@ -109,7 +119,10 @@ public class GetDataCorrectRollbackFileResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3CDB8601-AD74-4A47-8114-08E08CD6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +130,14 @@ public class GetDataCorrectRollbackFileResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

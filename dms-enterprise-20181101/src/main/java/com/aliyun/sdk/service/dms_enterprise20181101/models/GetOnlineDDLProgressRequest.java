@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOnlineDDLProgressRequest} extends {@link RequestModel}
  *
  * <p>GetOnlineDDLProgressRequest</p>
@@ -92,7 +93,11 @@ public class GetOnlineDDLProgressRequest extends Request {
         }
 
         /**
-         * The ID of the OnlineDDL SQL task details. You can call the [ListDBTaskSQLJobDetail](~~207073~~) operation to obtain the task detail ID.
+         * <p>The ID of the OnlineDDL SQL task details. You can call the <a href="https://help.aliyun.com/document_detail/207073.html">ListDBTaskSQLJobDetail</a> operation to obtain the task detail ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15***</p>
          */
         public Builder jobDetailId(Long jobDetailId) {
             this.putQueryParameter("JobDetailId", jobDetailId);
@@ -101,10 +106,13 @@ public class GetOnlineDDLProgressRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p>To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see the &quot;View information about the current tenant&quot; section of the <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a> topic.</p>
+         * </blockquote>
          * 
-         * > To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

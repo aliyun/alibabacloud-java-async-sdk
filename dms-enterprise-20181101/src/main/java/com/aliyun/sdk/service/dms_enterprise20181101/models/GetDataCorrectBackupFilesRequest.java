@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataCorrectBackupFilesRequest} extends {@link RequestModel}
  *
  * <p>GetDataCorrectBackupFilesRequest</p>
@@ -105,7 +106,10 @@ public class GetDataCorrectBackupFilesRequest extends Request {
         }
 
         /**
-         * The parameters that are required to perform the operation. You do not need to specify this parameter.
+         * <p>The parameters that are required to perform the operation. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder actionDetail(java.util.Map < String, ? > actionDetail) {
             String actionDetailShrink = shrink(actionDetail, "ActionDetail", "json");
@@ -115,7 +119,11 @@ public class GetDataCorrectBackupFilesRequest extends Request {
         }
 
         /**
-         * The ID of the ticket. You can call the [ListOrders](~~144643~~) operation to obtain the ticket ID.
+         * <p>The ID of the ticket. You can call the <a href="https://help.aliyun.com/document_detail/144643.html">ListOrders</a> operation to obtain the ticket ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4200000</p>
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -124,7 +132,10 @@ public class GetDataCorrectBackupFilesRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSQLReviewCheckResultStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetSQLReviewCheckResultStatusResponseBody</p>
@@ -85,7 +86,7 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The result of the SQL review.
+         * <p>The result of the SQL review.</p>
          */
         public Builder checkResultStatus(CheckResultStatus checkResultStatus) {
             this.checkResultStatus = checkResultStatus;
@@ -93,7 +94,10 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -101,7 +105,10 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -109,7 +116,10 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSQLReviewCheckResultStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSQLReviewCheckResultStatusResponseBody</p>
+     */
     public static class CheckStatusResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckNotPass")
         private Long checkNotPass;
@@ -217,7 +236,10 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
             private Long unknown; 
 
             /**
-             * The number of SQL statements that failed to pass the review.
+             * <p>The number of SQL statements that failed to pass the review.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder checkNotPass(Long checkNotPass) {
                 this.checkNotPass = checkNotPass;
@@ -225,7 +247,10 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of SQL statements that passed the review.
+             * <p>The number of SQL statements that passed the review.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder checkPass(Long checkPass) {
                 this.checkPass = checkPass;
@@ -233,7 +258,10 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of SQL statements that failed to pass the manual review.
+             * <p>The number of SQL statements that failed to pass the manual review.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder forceNotPass(Long forceNotPass) {
                 this.forceNotPass = forceNotPass;
@@ -241,7 +269,10 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of SQL statements that passed the manual review.
+             * <p>The number of SQL statements that passed the manual review.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder forcePass(Long forcePass) {
                 this.forcePass = forcePass;
@@ -249,7 +280,10 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of SQL statements to be reviewed.
+             * <p>The number of SQL statements to be reviewed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder _new(Long _new) {
                 this._new = _new;
@@ -257,7 +291,10 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of abnormal SQL statements.
+             * <p>The number of abnormal SQL statements.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder unknown(Long unknown) {
                 this.unknown = unknown;
@@ -271,6 +308,12 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSQLReviewCheckResultStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSQLReviewCheckResultStatusResponseBody</p>
+     */
     public static class SQLReviewResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MustImprove")
         private Long mustImprove;
@@ -358,7 +401,10 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
             private Long useDmsToolkit; 
 
             /**
-             * The number of SQL statements that must be modified.
+             * <p>The number of SQL statements that must be modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder mustImprove(Long mustImprove) {
                 this.mustImprove = mustImprove;
@@ -366,7 +412,10 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of SQL statements that have potential issues.
+             * <p>The number of SQL statements that have potential issues.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder potentialIssue(Long potentialIssue) {
                 this.potentialIssue = potentialIssue;
@@ -374,7 +423,10 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of SQL statements that can be modified.
+             * <p>The number of SQL statements that can be modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder suggestImprove(Long suggestImprove) {
                 this.suggestImprove = suggestImprove;
@@ -382,7 +434,10 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of SQL statements that can use indexes.
+             * <p>The number of SQL statements that can use indexes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder tableIndexSuggest(Long tableIndexSuggest) {
                 this.tableIndexSuggest = tableIndexSuggest;
@@ -390,7 +445,10 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of SQL statements that can be used for lock-free data changes.
+             * <p>The number of SQL statements that can be used for lock-free data changes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder useDmsDmlUnlock(Long useDmsDmlUnlock) {
                 this.useDmsDmlUnlock = useDmsDmlUnlock;
@@ -398,7 +456,10 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of SQL statements that can be used for lock-free schema changes.
+             * <p>The number of SQL statements that can be used for lock-free schema changes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder useDmsToolkit(Long useDmsToolkit) {
                 this.useDmsToolkit = useDmsToolkit;
@@ -412,6 +473,12 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSQLReviewCheckResultStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSQLReviewCheckResultStatusResponseBody</p>
+     */
     public static class CheckResultStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckStatusResult")
         private CheckStatusResult checkStatusResult;
@@ -475,7 +542,7 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
             private Long totalSQLCount; 
 
             /**
-             * The result of the SQL status check.
+             * <p>The result of the SQL status check.</p>
              */
             public Builder checkStatusResult(CheckStatusResult checkStatusResult) {
                 this.checkStatusResult = checkStatusResult;
@@ -483,7 +550,10 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of SQL statements that were reviewed.
+             * <p>The number of SQL statements that were reviewed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder checkedCount(Long checkedCount) {
                 this.checkedCount = checkedCount;
@@ -491,7 +561,7 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The optimization suggestion for SQL statements.
+             * <p>The optimization suggestion for SQL statements.</p>
              */
             public Builder SQLReviewResult(SQLReviewResult SQLReviewResult) {
                 this.SQLReviewResult = SQLReviewResult;
@@ -499,7 +569,10 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of SQL statements.
+             * <p>The total number of SQL statements.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalSQLCount(Long totalSQLCount) {
                 this.totalSQLCount = totalSQLCount;

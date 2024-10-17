@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTaskFlowGraphResponseBody} extends {@link TeaModel}
  *
  * <p>GetTaskFlowGraphResponseBody</p>
@@ -85,7 +86,10 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
         private TaskFlowGraph taskFlowGraph; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,10 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D9D91166-A626-5F4E-9CA6-7AB10C59DBD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,11 +119,14 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -121,7 +134,7 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
         }
 
         /**
-         * The list of DAG variables of the task flow.
+         * <p>The list of DAG variables of the task flow.</p>
          */
         public Builder taskFlowGraph(TaskFlowGraph taskFlowGraph) {
             this.taskFlowGraph = taskFlowGraph;
@@ -134,6 +147,12 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTaskFlowGraphResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTaskFlowGraphResponseBody</p>
+     */
     public static class Edge extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DagId")
         private Long dagId;
@@ -197,7 +216,10 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             private Long nodeFrom; 
 
             /**
-             * The ID of the task flow.
+             * <p>The ID of the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15***</p>
              */
             public Builder dagId(Long dagId) {
                 this.dagId = dagId;
@@ -205,7 +227,10 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task flow edge.
+             * <p>The ID of the task flow edge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24***</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -213,7 +238,10 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the end node on the edge.
+             * <p>The ID of the end node on the edge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44***</p>
              */
             public Builder nodeEnd(Long nodeEnd) {
                 this.nodeEnd = nodeEnd;
@@ -221,7 +249,10 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the start node on the edge.
+             * <p>The ID of the start node on the edge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44***</p>
              */
             public Builder nodeFrom(Long nodeFrom) {
                 this.nodeFrom = nodeFrom;
@@ -235,6 +266,12 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTaskFlowGraphResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTaskFlowGraphResponseBody</p>
+     */
     public static class Edges extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Edge")
         private java.util.List < Edge> edge;
@@ -276,6 +313,12 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTaskFlowGraphResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTaskFlowGraphResponseBody</p>
+     */
     public static class Node extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DagId")
         private Long dagId;
@@ -387,7 +430,10 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             private String timeVariables; 
 
             /**
-             * The ID of the task flow.
+             * <p>The ID of the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15***</p>
              */
             public Builder dagId(Long dagId) {
                 this.dagId = dagId;
@@ -395,7 +441,10 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The position of the node in the DAG.
+             * <p>The position of the node in the DAG.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;x&quot;:541,&quot;y&quot;:322,&quot;layoutType&quot;:&quot;Horizontal&quot;}</p>
              */
             public Builder graphParam(String graphParam) {
                 this.graphParam = graphParam;
@@ -403,7 +452,7 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The advanced configuration of the node.
+             * <p>The advanced configuration of the node.</p>
              */
             public Builder nodeConfig(String nodeConfig) {
                 this.nodeConfig = nodeConfig;
@@ -411,7 +460,10 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the node.
+             * <p>The configuration of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ODI3OTNRVC****UHVFT29&quot;}</p>
              */
             public Builder nodeContent(String nodeContent) {
                 this.nodeContent = nodeContent;
@@ -419,7 +471,10 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44***</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -427,7 +482,10 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -435,7 +493,10 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node. For more information about the valid values for this parameter, see [NodeType parameter](~~424705~~).
+             * <p>The type of the node. For more information about the valid values for this parameter, see <a href="https://help.aliyun.com/document_detail/424705.html">NodeType parameter</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36</p>
              */
             public Builder nodeType(Long nodeType) {
                 this.nodeType = nodeType;
@@ -443,7 +504,10 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The time variables for the node.
+             * <p>The time variables for the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;variables&quot;:[{&quot;name&quot;:&quot;Today&quot;,&quot;pattern&quot;:&quot;yyyy-MM-dd|+1d&quot;}]}</p>
              */
             public Builder timeVariables(String timeVariables) {
                 this.timeVariables = timeVariables;
@@ -457,6 +521,12 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTaskFlowGraphResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTaskFlowGraphResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Node")
         private java.util.List < Node> node;
@@ -498,6 +568,12 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTaskFlowGraphResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTaskFlowGraphResponseBody</p>
+     */
     public static class TaskFlowGraph extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CanEdit")
         private Boolean canEdit;
@@ -573,11 +649,14 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             private Long status; 
 
             /**
-             * Indicates whether the task flow is editable. Valid values:
-             * <p>
+             * <p>Indicates whether the task flow is editable. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: editable</li>
+             * <li><strong>false</strong>: non-editable</li>
+             * </ul>
              * 
-             * - **true**: editable
-             * - **false**: non-editable
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder canEdit(Boolean canEdit) {
                 this.canEdit = canEdit;
@@ -585,7 +664,10 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task flow.
+             * <p>The name of the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder dagName(String dagName) {
                 this.dagName = dagName;
@@ -593,7 +675,7 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The list of task flow edges.
+             * <p>The list of task flow edges.</p>
              */
             public Builder edges(Edges edges) {
                 this.edges = edges;
@@ -601,7 +683,7 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The node list of the task flow.
+             * <p>The node list of the task flow.</p>
              */
             public Builder nodes(Nodes nodes) {
                 this.nodes = nodes;
@@ -609,12 +691,15 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task flow. Valid values:
-             * <p>
+             * <p>The status of the task flow. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: invalid</li>
+             * <li><strong>1</strong>: not scheduled</li>
+             * <li><strong>2</strong>: to be scheduled</li>
+             * </ul>
              * 
-             * - **0**: invalid
-             * - **1**: not scheduled
-             * - **2**: to be scheduled
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(Long status) {
                 this.status = status;

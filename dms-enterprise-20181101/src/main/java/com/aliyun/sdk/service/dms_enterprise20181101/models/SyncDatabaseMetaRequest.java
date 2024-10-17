@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SyncDatabaseMetaRequest} extends {@link RequestModel}
  *
  * <p>SyncDatabaseMetaRequest</p>
@@ -105,7 +106,11 @@ public class SyncDatabaseMetaRequest extends Request {
         }
 
         /**
-         * The ID of the database.
+         * <p>The ID of the database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder dbId(String dbId) {
             this.putQueryParameter("DbId", dbId);
@@ -114,7 +119,10 @@ public class SyncDatabaseMetaRequest extends Request {
         }
 
         /**
-         * Specifies whether the database is a logical database.
+         * <p>Specifies whether the database is a logical database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder logic(Boolean logic) {
             this.putQueryParameter("Logic", logic);
@@ -123,10 +131,13 @@ public class SyncDatabaseMetaRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p>To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a>.</p>
+         * </blockquote>
          * 
-         * > To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

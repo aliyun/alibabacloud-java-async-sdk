@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EditLogicDatabaseRequest} extends {@link RequestModel}
  *
  * <p>EditLogicDatabaseRequest</p>
@@ -122,9 +123,14 @@ public class EditLogicDatabaseRequest extends Request {
         }
 
         /**
-         * - The alias of the logical database. If you want to change the alias, specify a new alias.
-         * <p>
-         * - If you do not need to change the alias of the logical database, call the [GetLogicDatabase](https://www.alibabacloud.com/help/en/data-management-service/latest/getlogicdatabase) or [GetDBTopology](https://www.alibabacloud.com/help/en/data-management-service/latest/getdbtopology) operation to query the alias of the logical database.
+         * <ul>
+         * <li>The alias of the logical database. If you want to change the alias, specify a new alias.</li>
+         * <li>If you do not need to change the alias of the logical database, call the <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/getlogicdatabase">GetLogicDatabase</a> or <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/getdbtopology">GetDBTopology</a> operation to query the alias of the logical database.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_logic_db</p>
          */
         public Builder alias(String alias) {
             this.putQueryParameter("Alias", alias);
@@ -133,9 +139,11 @@ public class EditLogicDatabaseRequest extends Request {
         }
 
         /**
-         * - The IDs of the physical databases that compose the logical database. If you want to change the physical databases, you can call the [ListDatabases](https://www.alibabacloud.com/help/en/data-management-service/latest/listdatabases) or [SearchDatabase](https://www.alibabacloud.com/help/en/data-management-service/latest/searchdatabase) operation to query the IDs of the new physical databases that you want to specify.
-         * <p>
-         * - If you do not want to change the physical databases, you can call the [GetDBTopology](https://www.alibabacloud.com/help/en/data-management-service/latest/getdbtopology) operation to query the IDs of the physical databases that compose the logical database.
+         * <ul>
+         * <li>The IDs of the physical databases that compose the logical database. If you want to change the physical databases, you can call the <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/listdatabases">ListDatabases</a> or <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/searchdatabase">SearchDatabase</a> operation to query the IDs of the new physical databases that you want to specify.</li>
+         * <li>If you do not want to change the physical databases, you can call the <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/getdbtopology">GetDBTopology</a> operation to query the IDs of the physical databases that compose the logical database.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          */
         public Builder databaseIds(java.util.List < Long > databaseIds) {
             String databaseIdsShrink = shrink(databaseIds, "DatabaseIds", "json");
@@ -145,7 +153,11 @@ public class EditLogicDatabaseRequest extends Request {
         }
 
         /**
-         * The ID of the logical database. You can call the [ListLogicDatabases](https://www.alibabacloud.com/help/en/data-management-service/latest/listlogicdatabases) operation to query the ID of the logical database.
+         * <p>The ID of the logical database. You can call the <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/listlogicdatabases">ListLogicDatabases</a> operation to query the ID of the logical database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1***</p>
          */
         public Builder logicDbId(Long logicDbId) {
             this.putQueryParameter("LogicDbId", logicDbId);
@@ -154,10 +166,13 @@ public class EditLogicDatabaseRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. 
-         * <p>
+         * <p>The ID of the tenant. </p>
+         * <blockquote>
+         * <p> To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the &quot;View information about the current tenant&quot; section of the <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/manage-dms-tenants">Manage DMS tenants</a> topic.</p>
+         * </blockquote>
          * 
-         * >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](https://www.alibabacloud.com/help/en/data-management-service/latest/manage-dms-tenants) topic.
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

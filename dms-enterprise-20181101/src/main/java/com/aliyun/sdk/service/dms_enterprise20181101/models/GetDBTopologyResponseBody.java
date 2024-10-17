@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDBTopologyResponseBody} extends {@link TeaModel}
  *
  * <p>GetDBTopologyResponseBody</p>
@@ -85,7 +86,7 @@ public class GetDBTopologyResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The topology of the data table.
+         * <p>The topology of the data table.</p>
          */
         public Builder DBTopology(DBTopology DBTopology) {
             this.DBTopology = DBTopology;
@@ -93,7 +94,10 @@ public class GetDBTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -101,7 +105,10 @@ public class GetDBTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -109,7 +116,10 @@ public class GetDBTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C5B8E84B-42B6-4374-AD5A-6264E1753378</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class GetDBTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
+         * </ul>
          * 
-         * *   **true**: The request is successful.
-         * *   **false**: The request fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class GetDBTopologyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDBTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDBTopologyResponseBody</p>
+     */
     public static class DBTopologyInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CatalogName")
         private String catalogName;
@@ -269,10 +288,13 @@ public class GetDBTopologyResponseBody extends TeaModel {
             private String searchName; 
 
             /**
-             * The name of the catalog to which the database belongs.
-             * <p>
+             * <p>The name of the catalog to which the database belongs.</p>
+             * <blockquote>
+             * <p>If the database is a PostgreSQL database, the value of this parameter is the name of the database.</p>
+             * </blockquote>
              * 
-             * > If the database is a PostgreSQL database, the value of this parameter is the name of the database.
+             * <strong>example:</strong>
+             * <p>def</p>
              */
             public Builder catalogName(String catalogName) {
                 this.catalogName = catalogName;
@@ -280,7 +302,10 @@ public class GetDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the database for which the schema design is executed.
+             * <p>The ID of the database for which the schema design is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>423532</p>
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -288,7 +313,10 @@ public class GetDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database engine.
+             * <p>The type of the database engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polardb</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -296,17 +324,20 @@ public class GetDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the environment to which the database belongs. Valid values:
-             * <p>
+             * <p>The type of the environment to which the database belongs. Valid values:</p>
+             * <ul>
+             * <li>product: production environment</li>
+             * <li>dev: development environment</li>
+             * <li>pre: staging environment</li>
+             * <li>test: test environment</li>
+             * <li>sit: SIT environment</li>
+             * <li>uat: user acceptance testing (UAT) environment</li>
+             * <li>pet: stress testing environment</li>
+             * <li>stag: STAG environment</li>
+             * </ul>
              * 
-             * *   product: production environment
-             * *   dev: development environment
-             * *   pre: staging environment
-             * *   test: test environment
-             * *   sit: SIT environment
-             * *   uat: user acceptance testing (UAT) environment
-             * *   pet: stress testing environment
-             * *   stag: STAG environment
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -314,7 +345,10 @@ public class GetDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance. The valid value is returned if you call the ListInstances operation. The instance ID is not the ID of the RDS instance.
+             * <p>The ID of the instance. The valid value is returned if you call the ListInstances operation. The instance ID is not the ID of the RDS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4325325</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -322,7 +356,10 @@ public class GetDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Instance resource ID.
+             * <p>Instance resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-xxx</p>
              */
             public Builder instanceResourceId(String instanceResourceId) {
                 this.instanceResourceId = instanceResourceId;
@@ -330,13 +367,16 @@ public class GetDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the database instance. Valid values:
-             * <p>
+             * <p>The source of the database instance. Valid values:</p>
+             * <ul>
+             * <li><strong>PUBLIC_OWN:</strong> a self-managed database instance that is deployed on the Internet</li>
+             * <li><strong>RDS:</strong> an ApsaraDB RDS instance</li>
+             * <li><strong>ECS_OWN:</strong> a self-managed database that is deployed on an Elastic Compute Service (ECS) instance</li>
+             * <li><strong>VPC_IDC:</strong> a self-managed database instance that is deployed in a data center connected over a virtual private cloud (VPC)</li>
+             * </ul>
              * 
-             * *   **PUBLIC_OWN:** a self-managed database instance that is deployed on the Internet
-             * *   **RDS:** an ApsaraDB RDS instance
-             * *   **ECS_OWN:** a self-managed database that is deployed on an Elastic Compute Service (ECS) instance
-             * *   **VPC_IDC:** a self-managed database instance that is deployed in a data center connected over a virtual private cloud (VPC)
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder instanceSource(String instanceSource) {
                 this.instanceSource = instanceSource;
@@ -344,7 +384,10 @@ public class GetDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the instance resides.
+             * <p>The ID of the region in which the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -352,10 +395,13 @@ public class GetDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the logical database.
-             * <p>
+             * <p>The name of the logical database.</p>
+             * <blockquote>
+             * <p>If the database is a PostgreSQL database, the value of this parameter is the name of the database schema.</p>
+             * </blockquote>
              * 
-             * > If the database is a PostgreSQL database, the value of this parameter is the name of the database schema.
+             * <strong>example:</strong>
+             * <p>db_test@rm-xxx:3306</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -363,7 +409,10 @@ public class GetDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the saved search.
+             * <p>The name of the saved search.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>db_test</p>
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -377,6 +426,12 @@ public class GetDBTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDBTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDBTopologyResponseBody</p>
+     */
     public static class DBTopology extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
@@ -476,7 +531,10 @@ public class GetDBTopologyResponseBody extends TeaModel {
             private String searchName; 
 
             /**
-             * The alias of the access point.
+             * <p>The alias of the access point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logic_db_test</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -484,7 +542,7 @@ public class GetDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The list of database splitting topology information.
+             * <p>The list of database splitting topology information.</p>
              */
             public Builder DBTopologyInfoList(java.util.List < DBTopologyInfoList> DBTopologyInfoList) {
                 this.DBTopologyInfoList = DBTopologyInfoList;
@@ -492,7 +550,10 @@ public class GetDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database engine.
+             * <p>The type of the database engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polardb</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -500,17 +561,20 @@ public class GetDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the environment in which the database instance is deployed. Valid values:
-             * <p>
+             * <p>The type of the environment in which the database instance is deployed. Valid values:</p>
+             * <ul>
+             * <li>product: production environment</li>
+             * <li>dev: development environment</li>
+             * <li>pre: pre-release environment</li>
+             * <li>test: test environment</li>
+             * <li>sit: system integration testing (SIT) environment</li>
+             * <li>uat: user acceptance testing (UAT) environment</li>
+             * <li>pet: stress testing environment</li>
+             * <li>stag: staging environment</li>
+             * </ul>
              * 
-             * *   product: production environment
-             * *   dev: development environment
-             * *   pre: pre-release environment
-             * *   test: test environment
-             * *   sit: system integration testing (SIT) environment
-             * *   uat: user acceptance testing (UAT) environment
-             * *   pet: stress testing environment
-             * *   stag: staging environment
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -518,7 +582,10 @@ public class GetDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the logical database.
+             * <p>The ID of the logical database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder logicDbId(Long logicDbId) {
                 this.logicDbId = logicDbId;
@@ -526,7 +593,10 @@ public class GetDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Logical database name.
+             * <p>Logical database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logic_db_test</p>
              */
             public Builder logicDbName(String logicDbName) {
                 this.logicDbName = logicDbName;
@@ -534,7 +604,10 @@ public class GetDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the saved search.
+             * <p>The name of the saved search.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logic_db_test</p>
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;

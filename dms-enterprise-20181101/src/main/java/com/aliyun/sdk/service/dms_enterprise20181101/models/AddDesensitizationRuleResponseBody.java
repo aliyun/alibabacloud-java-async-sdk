@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddDesensitizationRuleResponseBody} extends {@link TeaModel}
  *
  * <p>AddDesensitizationRuleResponseBody</p>
@@ -85,7 +86,10 @@ public class AddDesensitizationRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code that is returned.
+         * <p>The error code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class AddDesensitizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned.
+         * <p>The error message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,10 @@ public class AddDesensitizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,10 @@ public class AddDesensitizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID generated for the data masking rule.
+         * <p>The ID generated for the data masking rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35***</p>
          */
         public Builder ruleId(Integer ruleId) {
             this.ruleId = ruleId;
@@ -117,11 +130,14 @@ public class AddDesensitizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

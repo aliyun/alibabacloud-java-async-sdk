@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReDeployLhDagVersionResponseBody} extends {@link TeaModel}
  *
  * <p>ReDeployLhDagVersionResponseBody</p>
@@ -85,7 +86,10 @@ public class ReDeployLhDagVersionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the deployment record.
+         * <p>The ID of the deployment record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15990</p>
          */
         public Builder deployId(Long deployId) {
             this.deployId = deployId;
@@ -93,7 +97,10 @@ public class ReDeployLhDagVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request fails.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -101,7 +108,10 @@ public class ReDeployLhDagVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request fails.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -109,7 +119,10 @@ public class ReDeployLhDagVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>035C92E0-2EAD-50E5-A6DD-550F5F73D7CE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +130,14 @@ public class ReDeployLhDagVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
+         * </ul>
          * 
-         * *   **true**: The request is successful.
-         * *   **false**: The request fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

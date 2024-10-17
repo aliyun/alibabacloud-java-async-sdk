@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRuleNumLimitOfSLAResponseBody} extends {@link TeaModel}
  *
  * <p>GetRuleNumLimitOfSLAResponseBody</p>
@@ -85,7 +86,10 @@ public class GetRuleNumLimitOfSLAResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class GetRuleNumLimitOfSLAResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,10 @@ public class GetRuleNumLimitOfSLAResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
+         * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D05B3EE1-B6D3-5B17-8CA6-A8054828E5B2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,10 @@ public class GetRuleNumLimitOfSLAResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of SLA rules.
+         * <p>The maximum number of SLA rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder ruleNumLimit(Integer ruleNumLimit) {
             this.ruleNumLimit = ruleNumLimit;
@@ -117,11 +130,14 @@ public class GetRuleNumLimitOfSLAResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

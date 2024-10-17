@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDataExportOrderRequest} extends {@link RequestModel}
  *
  * <p>CreateDataExportOrderRequest</p>
@@ -162,7 +163,10 @@ public class CreateDataExportOrderRequest extends Request {
         }
 
         /**
-         * The key of the attachment that provides more instructions for the ticket. You can call the [GetUserUploadFileJob](~~206069~~) operation to obtain the attachment key.
+         * <p>The key of the attachment that provides more instructions for the ticket. You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to obtain the attachment key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order_attachment.txt</p>
          */
         public Builder attachmentKey(String attachmentKey) {
             this.putQueryParameter("AttachmentKey", attachmentKey);
@@ -171,7 +175,11 @@ public class CreateDataExportOrderRequest extends Request {
         }
 
         /**
-         * The purpose or objective of the ticket. This parameter helps reduce unnecessary communication.
+         * <p>The purpose or objective of the ticket. This parameter helps reduce unnecessary communication.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>business_test</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -180,7 +188,10 @@ public class CreateDataExportOrderRequest extends Request {
         }
 
         /**
-         * The ID of the parent ticket.
+         * <p>The ID of the parent ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>877****</p>
          */
         public Builder parentId(Long parentId) {
             this.putQueryParameter("ParentId", parentId);
@@ -189,7 +200,8 @@ public class CreateDataExportOrderRequest extends Request {
         }
 
         /**
-         * The parameters of the ticket.
+         * <p>The parameters of the ticket.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder pluginParam(PluginParam pluginParam) {
             String pluginParamShrink = shrink(pluginParam, "PluginParam", "json");
@@ -199,7 +211,10 @@ public class CreateDataExportOrderRequest extends Request {
         }
 
         /**
-         * RealLoginUserUid.
+         * <p>The UID of the Alibaba Cloud account that actually calls the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21400447956867****</p>
          */
         public Builder realLoginUserUid(String realLoginUserUid) {
             this.putQueryParameter("RealLoginUserUid", realLoginUserUid);
@@ -208,7 +223,7 @@ public class CreateDataExportOrderRequest extends Request {
         }
 
         /**
-         * The stakeholders involved in this operation.
+         * <p>The stakeholders involved in this operation.</p>
          */
         public Builder relatedUserList(java.util.List < Long > relatedUserList) {
             String relatedUserListShrink = shrink(relatedUserList, "RelatedUserList", "json");
@@ -218,10 +233,13 @@ public class CreateDataExportOrderRequest extends Request {
         }
 
         /**
-         * The tenant ID.
-         * <p>
+         * <p>The tenant ID.</p>
+         * <blockquote>
+         * <p>To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the &quot;Manage DMS tenants&quot; topic.</p>
+         * </blockquote>
          * 
-         * > To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the [View information about the current tenant](~~181330~~) section of the "Manage DMS tenants" topic.
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -236,6 +254,12 @@ public class CreateDataExportOrderRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDataExportOrderRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDataExportOrderRequest</p>
+     */
     public static class Watermark extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
@@ -311,7 +335,10 @@ public class CreateDataExportOrderRequest extends Request {
             private java.util.List < String > watermarkTypes; 
 
             /**
-             * The field into which the watermark is to be embedded.
+             * <p>The field into which the watermark is to be embedded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_number</p>
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -319,7 +346,10 @@ public class CreateDataExportOrderRequest extends Request {
             }
 
             /**
-             * The information to be embedded as a watermark into data.
+             * <p>The information to be embedded as a watermark into data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder dataWatermark(String dataWatermark) {
                 this.dataWatermark = dataWatermark;
@@ -327,7 +357,10 @@ public class CreateDataExportOrderRequest extends Request {
             }
 
             /**
-             * The information to be embedded as a watermark into files.
+             * <p>The information to be embedded as a watermark into files.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder fileWatermark(String fileWatermark) {
                 this.fileWatermark = fileWatermark;
@@ -335,7 +368,7 @@ public class CreateDataExportOrderRequest extends Request {
             }
 
             /**
-             * One or more primary keys or unique keys.
+             * <p>One or more primary keys or unique keys.</p>
              */
             public Builder keys(java.util.List < String > keys) {
                 this.keys = keys;
@@ -343,7 +376,7 @@ public class CreateDataExportOrderRequest extends Request {
             }
 
             /**
-             * The methods in which the watermark is embedded.
+             * <p>The methods in which the watermark is embedded.</p>
              */
             public Builder watermarkTypes(java.util.List < String > watermarkTypes) {
                 this.watermarkTypes = watermarkTypes;
@@ -357,6 +390,12 @@ public class CreateDataExportOrderRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateDataExportOrderRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDataExportOrderRequest</p>
+     */
     public static class PluginParam extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AffectRows")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -487,7 +526,11 @@ public class CreateDataExportOrderRequest extends Request {
             private Watermark watermark; 
 
             /**
-             * The estimated number of data rows to be affected.
+             * <p>The estimated number of data rows to be affected.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder affectRows(Long affectRows) {
                 this.affectRows = affectRows;
@@ -495,7 +538,11 @@ public class CreateDataExportOrderRequest extends Request {
             }
 
             /**
-             * The reason for the export ticket.
+             * <p>The reason for the export ticket.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder classify(String classify) {
                 this.classify = classify;
@@ -503,7 +550,11 @@ public class CreateDataExportOrderRequest extends Request {
             }
 
             /**
-             * The database ID.
+             * <p>The database ID.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18****</p>
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -511,7 +562,12 @@ public class CreateDataExportOrderRequest extends Request {
             }
 
             /**
-             * The SQL statements that can be executed.
+             * <p>The SQL statements that can be executed.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT * FROM DMS_test
+             *  LIMIT 20;</p>
              */
             public Builder exeSQL(String exeSQL) {
                 this.exeSQL = exeSQL;
@@ -519,11 +575,15 @@ public class CreateDataExportOrderRequest extends Request {
             }
 
             /**
-             * Specifies whether to skip verification. Valid values:
-             * <p>
+             * <p>Specifies whether to skip verification. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ignoreAffectRows(Boolean ignoreAffectRows) {
                 this.ignoreAffectRows = ignoreAffectRows;
@@ -531,7 +591,10 @@ public class CreateDataExportOrderRequest extends Request {
             }
 
             /**
-             * The reason for skipping verification. This parameter is required if you set IgnoreAffectRows to true.
+             * <p>The reason for skipping verification. This parameter is required if you set IgnoreAffectRows to true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test only, does not affect the business, and does not require verification.</p>
              */
             public Builder ignoreAffectRowsReason(String ignoreAffectRowsReason) {
                 this.ignoreAffectRowsReason = ignoreAffectRowsReason;
@@ -539,7 +602,11 @@ public class CreateDataExportOrderRequest extends Request {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>132****</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -547,13 +614,18 @@ public class CreateDataExportOrderRequest extends Request {
             }
 
             /**
-             * Specifies whether the database is a logical database. Valid values:
-             * <p>
+             * <p>Specifies whether the database is a logical database. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p>If you set this parameter to <strong>true</strong>, the database that you specify must be a logical database.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * *   **true**
-             * *   **false**
-             * 
-             * > If you set this parameter to **true**, the database that you specify must be a logical database.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -561,7 +633,7 @@ public class CreateDataExportOrderRequest extends Request {
             }
 
             /**
-             * The information about the watermarks.
+             * <p>The information about the watermarks.</p>
              */
             public Builder watermark(Watermark watermark) {
                 this.watermark = watermark;

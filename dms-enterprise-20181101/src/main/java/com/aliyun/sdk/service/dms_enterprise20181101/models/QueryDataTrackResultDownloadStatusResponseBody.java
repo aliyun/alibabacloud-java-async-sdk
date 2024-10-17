@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDataTrackResultDownloadStatusResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDataTrackResultDownloadStatusResponseBody</p>
@@ -85,7 +86,10 @@ public class QueryDataTrackResultDownloadStatusResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class QueryDataTrackResultDownloadStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,10 @@ public class QueryDataTrackResultDownloadStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class QueryDataTrackResultDownloadStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the download progress.
+         * <p>The information about the download progress.</p>
          */
         public Builder statusResult(StatusResult statusResult) {
             this.statusResult = statusResult;
@@ -117,11 +127,14 @@ public class QueryDataTrackResultDownloadStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class QueryDataTrackResultDownloadStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDataTrackResultDownloadStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDataTrackResultDownloadStatusResponseBody</p>
+     */
     public static class StatusResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DownloadStatus")
         private String downloadStatus;
@@ -197,14 +216,17 @@ public class QueryDataTrackResultDownloadStatusResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The status of the download task. Valid values:
-             * <p>
+             * <p>The status of the download task. Valid values:</p>
+             * <ul>
+             * <li><strong>INIT</strong>: The download task is being initialized.</li>
+             * <li><strong>LISTING</strong>: The download task is in a transient intermediate state during the initialization.</li>
+             * <li><strong>DOWNLOADING</strong>: The download task is being processed.</li>
+             * <li><strong>DOWNLOAD_SUCCESS</strong>: The download task was successfully processed.</li>
+             * <li><strong>DOWNLOAD_FAIL</strong>: The download task failed.</li>
+             * </ul>
              * 
-             * *   **INIT**: The download task is being initialized.
-             * *   **LISTING**: The download task is in a transient intermediate state during the initialization.
-             * *   **DOWNLOADING**: The download task is being processed.
-             * *   **DOWNLOAD_SUCCESS**: The download task was successfully processed.
-             * *   **DOWNLOAD_FAIL**: The download task failed.
+             * <strong>example:</strong>
+             * <p>DOWNLOAD_SUCCESS</p>
              */
             public Builder downloadStatus(String downloadStatus) {
                 this.downloadStatus = downloadStatus;
@@ -212,7 +234,10 @@ public class QueryDataTrackResultDownloadStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The URL that is used to download data tracking logs. This parameter is returned only when the value of DownloadStatus is DOWNLOAD_SUCCESS.
+             * <p>The URL that is used to download data tracking logs. This parameter is returned only when the value of DownloadStatus is DOWNLOAD_SUCCESS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://idbsaasstore.oss-cn-zhangjiakou.aliyuncs.com/****_REDO_31201_207.zip?Expires=1682239593&OSSAccessKeyId=****&Signature=">https://idbsaasstore.oss-cn-zhangjiakou.aliyuncs.com/****_REDO_31201_207.zip?Expires=1682239593&amp;OSSAccessKeyId=****&amp;Signature=</a>****</p>
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -220,7 +245,10 @@ public class QueryDataTrackResultDownloadStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the state.
+             * <p>The description of the state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -228,7 +256,10 @@ public class QueryDataTrackResultDownloadStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

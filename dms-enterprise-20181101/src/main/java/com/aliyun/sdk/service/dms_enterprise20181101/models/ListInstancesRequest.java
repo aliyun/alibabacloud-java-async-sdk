@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstancesRequest} extends {@link RequestModel}
  *
  * <p>ListInstancesRequest</p>
@@ -188,7 +189,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
+         * <p>The type of the database. For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/198106.html">DbType parameter</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder dbType(String dbType) {
             this.putQueryParameter("DbType", dbType);
@@ -197,17 +201,20 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The type of the environment to which the database instance belongs. Valid values:
-         * <p>
+         * <p>The type of the environment to which the database instance belongs. Valid values:</p>
+         * <ul>
+         * <li><strong>product:</strong> production environment</li>
+         * <li><strong>dev</strong>: development environment</li>
+         * <li><strong>pre</strong>: pre-release environment</li>
+         * <li><strong>test</strong>: test environment</li>
+         * <li><strong>sit</strong>: system integration testing (SIT) environment</li>
+         * <li><strong>uat</strong>: user acceptance testing (UAT) environment</li>
+         * <li><strong>pet</strong>: stress testing environment</li>
+         * <li><strong>stag:</strong> staging environment</li>
+         * </ul>
          * 
-         * *   **product:** production environment
-         * *   **dev**: development environment
-         * *   **pre**: pre-release environment
-         * *   **test**: test environment
-         * *   **sit**: system integration testing (SIT) environment
-         * *   **uat**: user acceptance testing (UAT) environment
-         * *   **pet**: stress testing environment
-         * *   **stag:** staging environment
+         * <strong>example:</strong>
+         * <p>product</p>
          */
         public Builder envType(String envType) {
             this.putQueryParameter("EnvType", envType);
@@ -216,13 +223,16 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The source of the database instance. Valid values:
-         * <p>
+         * <p>The source of the database instance. Valid values:</p>
+         * <ul>
+         * <li><strong>PUBLIC_OWN</strong>: a self-managed database instance that is deployed on the Internet</li>
+         * <li><strong>RDS</strong>: an ApsaraDB RDS instance</li>
+         * <li><strong>ECS_OWN</strong>: a self-managed database that is deployed on an Elastic Compute Service (ECS) instance</li>
+         * <li><strong>VPC_IDC</strong>: a self-managed database instance that is deployed in a data center connected over a virtual private cloud (VPC)</li>
+         * </ul>
          * 
-         * *   **PUBLIC_OWN**: a self-managed database instance that is deployed on the Internet
-         * *   **RDS**: an ApsaraDB RDS instance
-         * *   **ECS_OWN**: a self-managed database that is deployed on an Elastic Compute Service (ECS) instance
-         * *   **VPC_IDC**: a self-managed database instance that is deployed in a data center connected over a virtual private cloud (VPC)
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         public Builder instanceSource(String instanceSource) {
             this.putQueryParameter("InstanceSource", instanceSource);
@@ -231,11 +241,14 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The status of the database instance. Valid values:
-         * <p>
+         * <p>The status of the database instance. Valid values:</p>
+         * <ul>
+         * <li><strong>NORMAL</strong></li>
+         * <li><strong>DISABLE</strong></li>
+         * </ul>
          * 
-         * *   **NORMAL**
-         * *   **DISABLE**
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder instanceState(String instanceState) {
             this.putQueryParameter("InstanceState", instanceState);
@@ -244,11 +257,14 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The network type of the database instance. Valid values:
-         * <p>
+         * <p>The network type of the database instance. Valid values:</p>
+         * <ul>
+         * <li><strong>CLASSIC:</strong> classic network</li>
+         * <li><strong>VPC:</strong> VPC</li>
+         * </ul>
          * 
-         * *   **CLASSIC:** classic network
-         * *   **VPC:** VPC
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder netType(String netType) {
             this.putQueryParameter("NetType", netType);
@@ -257,7 +273,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -266,7 +285,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. The number cannot exceed 100.
+         * <p>The number of entries to return on each page. The number cannot exceed 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -275,7 +297,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The keyword that is used to search for database instances.
+         * <p>The keyword that is used to search for database instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -284,7 +309,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to obtain the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

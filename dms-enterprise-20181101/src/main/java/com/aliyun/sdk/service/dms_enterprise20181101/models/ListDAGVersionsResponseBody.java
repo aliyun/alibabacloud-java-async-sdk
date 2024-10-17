@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDAGVersionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDAGVersionsResponseBody</p>
@@ -97,7 +98,7 @@ public class ListDAGVersionsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about the published versions.
+         * <p>The information about the published versions.</p>
          */
         public Builder dagVersionList(DagVersionList dagVersionList) {
             this.dagVersionList = dagVersionList;
@@ -105,7 +106,10 @@ public class ListDAGVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request fails.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class ListDAGVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request fails.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class ListDAGVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C7775630-7901-51B9-8782-9B585EC0799A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,11 +139,14 @@ public class ListDAGVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
+         * </ul>
          * 
-         * *   **true**: The request is successful.
-         * *   **false**: The request fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -141,7 +154,10 @@ public class ListDAGVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -154,6 +170,12 @@ public class ListDAGVersionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDAGVersionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDAGVersionsResponseBody</p>
+     */
     public static class DagVersion extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DagName")
         private String dagName;
@@ -241,7 +263,10 @@ public class ListDAGVersionsResponseBody extends TeaModel {
             private Long versionId; 
 
             /**
-             * The name of the task flow.
+             * <p>The name of the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Spark SQL</p>
              */
             public Builder dagName(String dagName) {
                 this.dagName = dagName;
@@ -249,7 +274,10 @@ public class ListDAGVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task flow owner.
+             * <p>The ID of the task flow owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51****</p>
              */
             public Builder dagOwnerId(String dagOwnerId) {
                 this.dagOwnerId = dagOwnerId;
@@ -257,7 +285,10 @@ public class ListDAGVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task flow owner.
+             * <p>The name of the task flow owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder dagOwnerNickName(String dagOwnerNickName) {
                 this.dagOwnerNickName = dagOwnerNickName;
@@ -265,7 +296,10 @@ public class ListDAGVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the previously published version.
+             * <p>The ID of the previously published version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2****</p>
              */
             public Builder lastVersionId(Long lastVersionId) {
                 this.lastVersionId = lastVersionId;
@@ -273,7 +307,10 @@ public class ListDAGVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the version.
+             * <p>The description of the version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_OSS</p>
              */
             public Builder versionComments(String versionComments) {
                 this.versionComments = versionComments;
@@ -281,7 +318,10 @@ public class ListDAGVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the version.
+             * <p>The ID of the version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2****</p>
              */
             public Builder versionId(Long versionId) {
                 this.versionId = versionId;
@@ -295,6 +335,12 @@ public class ListDAGVersionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDAGVersionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDAGVersionsResponseBody</p>
+     */
     public static class DagVersionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DagVersion")
         private java.util.List < DagVersion> dagVersion;

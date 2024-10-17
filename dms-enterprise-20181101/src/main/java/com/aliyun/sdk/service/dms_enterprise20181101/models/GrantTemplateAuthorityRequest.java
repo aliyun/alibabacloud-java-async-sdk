@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GrantTemplateAuthorityRequest} extends {@link RequestModel}
  *
  * <p>GrantTemplateAuthorityRequest</p>
@@ -135,7 +136,10 @@ public class GrantTemplateAuthorityRequest extends Request {
         }
 
         /**
-         * The reason why you want to grant permissions on resources to the users by using the permission template.
+         * <p>The reason why you want to grant permissions on resources to the users by using the permission template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Business test.</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -144,7 +148,11 @@ public class GrantTemplateAuthorityRequest extends Request {
         }
 
         /**
-         * The time when the permission expires. Specify the time in the yyyy-MM-DD HH:mm:ss format.
+         * <p>The time when the permission expires. Specify the time in the yyyy-MM-DD HH:mm:ss format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-08 17:58:53</p>
          */
         public Builder expireDate(String expireDate) {
             this.putQueryParameter("ExpireDate", expireDate);
@@ -153,7 +161,11 @@ public class GrantTemplateAuthorityRequest extends Request {
         }
 
         /**
-         * The ID of the permission template.
+         * <p>The ID of the permission template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1563</p>
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -162,7 +174,10 @@ public class GrantTemplateAuthorityRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to query the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -171,7 +186,11 @@ public class GrantTemplateAuthorityRequest extends Request {
         }
 
         /**
-         * The IDs of users to which you want to grant permissions on resources by using the permission template.
+         * <p>The IDs of users to which you want to grant permissions on resources by using the permission template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[12***,34***,56***]</p>
          */
         public Builder userIds(String userIds) {
             this.putQueryParameter("UserIds", userIds);

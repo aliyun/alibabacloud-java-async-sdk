@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSQLReviewCheckResultStatusRequest} extends {@link RequestModel}
  *
  * <p>GetSQLReviewCheckResultStatusRequest</p>
@@ -92,7 +93,11 @@ public class GetSQLReviewCheckResultStatusRequest extends Request {
         }
 
         /**
-         * The ID of the ticket. You can obtain the ticket ID from the response parameters of the [CreateSQLReviewOrder](~~257777~~) operation.
+         * <p>The ID of the ticket. You can obtain the ticket ID from the response parameters of the <a href="https://help.aliyun.com/document_detail/257777.html">CreateSQLReviewOrder</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123321</p>
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -101,7 +106,10 @@ public class GetSQLReviewCheckResultStatusRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the ID of the tenant.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

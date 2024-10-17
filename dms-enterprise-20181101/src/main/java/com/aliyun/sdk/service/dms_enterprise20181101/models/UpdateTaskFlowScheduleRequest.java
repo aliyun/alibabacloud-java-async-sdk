@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTaskFlowScheduleRequest} extends {@link RequestModel}
  *
  * <p>UpdateTaskFlowScheduleRequest</p>
@@ -207,7 +208,10 @@ public class UpdateTaskFlowScheduleRequest extends Request {
         }
 
         /**
-         * The start of the time range for scheduling.
+         * <p>The start of the time range for scheduling.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CronBeginDate_test</p>
          */
         public Builder cronBeginDate(String cronBeginDate) {
             this.putQueryParameter("CronBeginDate", cronBeginDate);
@@ -216,7 +220,10 @@ public class UpdateTaskFlowScheduleRequest extends Request {
         }
 
         /**
-         * The end of the time range for scheduling.
+         * <p>The end of the time range for scheduling.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CronEndDate_test</p>
          */
         public Builder cronEndDate(String cronEndDate) {
             this.putQueryParameter("CronEndDate", cronEndDate);
@@ -225,7 +232,10 @@ public class UpdateTaskFlowScheduleRequest extends Request {
         }
 
         /**
-         * The cron expression for timed scheduling.
+         * <p>The cron expression for timed scheduling.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CronStr_test</p>
          */
         public Builder cronStr(String cronStr) {
             this.putQueryParameter("CronStr", cronStr);
@@ -234,14 +244,17 @@ public class UpdateTaskFlowScheduleRequest extends Request {
         }
 
         /**
-         * The type of the scheduling cycle. Valid values:
-         * <p>
+         * <p>The type of the scheduling cycle. Valid values:</p>
+         * <ul>
+         * <li><strong>MINUTE</strong>: scheduling by minute</li>
+         * <li><strong>HOUR</strong>: scheduling by hour</li>
+         * <li><strong>DAY</strong>: scheduling by day</li>
+         * <li><strong>WEEK</strong>: scheduling by week</li>
+         * <li><strong>MONTH</strong>: scheduling by month</li>
+         * </ul>
          * 
-         * *   **MINUTE**: scheduling by minute
-         * *   **HOUR**: scheduling by hour
-         * *   **DAY**: scheduling by day
-         * *   **WEEK**: scheduling by week
-         * *   **MONTH**: scheduling by month
+         * <strong>example:</strong>
+         * <p>HOUR</p>
          */
         public Builder cronType(String cronType) {
             this.putQueryParameter("CronType", cronType);
@@ -250,7 +263,11 @@ public class UpdateTaskFlowScheduleRequest extends Request {
         }
 
         /**
-         * The ID of the task flow.
+         * <p>The ID of the task flow.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7***</p>
          */
         public Builder dagId(Long dagId) {
             this.putQueryParameter("DagId", dagId);
@@ -259,7 +276,11 @@ public class UpdateTaskFlowScheduleRequest extends Request {
         }
 
         /**
-         * The event scheduling configuration. The value of this parameter is a JSON string.
+         * <p>The event scheduling configuration. The value of this parameter is a JSON string.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ScheduleParam_test</p>
          */
         public Builder scheduleParam(String scheduleParam) {
             this.putQueryParameter("ScheduleParam", scheduleParam);
@@ -268,11 +289,15 @@ public class UpdateTaskFlowScheduleRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable scheduling. Valid values:
-         * <p>
+         * <p>Specifies whether to enable scheduling. Valid values:</p>
+         * <ul>
+         * <li><strong>Enable</strong></li>
+         * <li><strong>Disable</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Enable**
-         * *   **Disable**
+         * <strong>example:</strong>
+         * <p>Disable</p>
          */
         public Builder scheduleSwitch(Boolean scheduleSwitch) {
             this.putQueryParameter("ScheduleSwitch", scheduleSwitch);
@@ -281,10 +306,13 @@ public class UpdateTaskFlowScheduleRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p>: To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a>.</p>
+         * </blockquote>
          * 
-         * > : To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -293,7 +321,10 @@ public class UpdateTaskFlowScheduleRequest extends Request {
         }
 
         /**
-         * The time zone. The default time zone is UTC+8 (Asia/Shanghai).
+         * <p>The time zone. The default time zone is UTC+8 (Asia/Shanghai).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
          */
         public Builder timeZoneId(String timeZoneId) {
             this.putQueryParameter("TimeZoneId", timeZoneId);
@@ -302,11 +333,15 @@ public class UpdateTaskFlowScheduleRequest extends Request {
         }
 
         /**
-         * The mode in which the task flow is triggered. Valid values:
-         * <p>
+         * <p>The mode in which the task flow is triggered. Valid values:</p>
+         * <ul>
+         * <li><strong>Cron</strong>: The task flow is triggered based on timed scheduling.</li>
+         * <li><strong>Event</strong>: The task flow is triggered by events.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Cron**: The task flow is triggered based on timed scheduling.
-         * *   **Event**: The task flow is triggered by events.
+         * <strong>example:</strong>
+         * <p>Event</p>
          */
         public Builder triggerType(String triggerType) {
             this.putQueryParameter("TriggerType", triggerType);

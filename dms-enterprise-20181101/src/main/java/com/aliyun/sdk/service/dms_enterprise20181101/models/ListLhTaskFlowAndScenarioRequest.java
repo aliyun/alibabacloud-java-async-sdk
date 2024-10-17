@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLhTaskFlowAndScenarioRequest} extends {@link RequestModel}
  *
  * <p>ListLhTaskFlowAndScenarioRequest</p>
@@ -106,7 +107,11 @@ public class ListLhTaskFlowAndScenarioRequest extends Request {
         }
 
         /**
-         * The ID of the workspace. You can call the [GetLhSpaceByName](~~424379~~) operation to obtain the workspace ID.
+         * <p>The ID of the workspace. You can call the <a href="https://help.aliyun.com/document_detail/424379.html">GetLhSpaceByName</a> operation to obtain the workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
          */
         public Builder spaceId(Long spaceId) {
             this.putQueryParameter("SpaceId", spaceId);
@@ -115,7 +120,10 @@ public class ListLhTaskFlowAndScenarioRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -124,7 +132,10 @@ public class ListLhTaskFlowAndScenarioRequest extends Request {
         }
 
         /**
-         * The ID of the user. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain the user ID.
+         * <p>The ID of the user. You can call the <a href="https://help.aliyun.com/document_detail/141938.html">ListUsers</a> or <a href="https://help.aliyun.com/document_detail/147098.html">GetUser</a> operation to obtain the user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51****</p>
          */
         public Builder userId(Long userId) {
             this.putQueryParameter("UserId", userId);

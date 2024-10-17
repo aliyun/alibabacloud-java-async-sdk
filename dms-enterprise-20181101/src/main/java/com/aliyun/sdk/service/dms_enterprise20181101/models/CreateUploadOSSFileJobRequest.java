@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUploadOSSFileJobRequest} extends {@link RequestModel}
  *
  * <p>CreateUploadOSSFileJobRequest</p>
@@ -122,10 +123,14 @@ public class CreateUploadOSSFileJobRequest extends Request {
         }
 
         /**
-         * The name of the file.
-         * <p>
+         * <p>The name of the file.</p>
+         * <blockquote>
+         * <p>The file name must end with .txt or .sql. For example, the file name can be text.txt.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The file name must end with .txt or .sql. For example, the file name can be text.txt.
+         * <strong>example:</strong>
+         * <p>test.sql</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -134,13 +139,17 @@ public class CreateUploadOSSFileJobRequest extends Request {
         }
 
         /**
-         * The purpose of the file upload task. Valid values:
-         * <p>
+         * <p>The purpose of the file upload task. Valid values:</p>
+         * <ul>
+         * <li><strong>datacorrect</strong>: The file is uploaded to change data.</li>
+         * <li><strong>order_info_attachment</strong>: The file is uploaded as an attachment in a ticket.</li>
+         * <li><strong>big-file</strong>: The file is uploaded to import multiple data records at a time.</li>
+         * <li><strong>sqlreview</strong>: The file is uploaded for SQL review.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **datacorrect**: The file is uploaded to change data.
-         * *   **order_info_attachment**: The file is uploaded as an attachment in a ticket.
-         * *   **big-file**: The file is uploaded to import multiple data records at a time.
-         * *   **sqlreview**: The file is uploaded for SQL review.
+         * <strong>example:</strong>
+         * <p>datacorrect</p>
          */
         public Builder fileSource(String fileSource) {
             this.putQueryParameter("FileSource", fileSource);
@@ -149,10 +158,13 @@ public class CreateUploadOSSFileJobRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p>To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the &quot;View information about the current tenant&quot; section of the <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a> topic.</p>
+         * </blockquote>
          * 
-         * > To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -161,7 +173,8 @@ public class CreateUploadOSSFileJobRequest extends Request {
         }
 
         /**
-         * The information about the OSS file to be uploaded.
+         * <p>The information about the OSS file to be uploaded.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder uploadTarget(UploadTarget uploadTarget) {
             String uploadTargetShrink = shrink(uploadTarget, "UploadTarget", "json");
@@ -177,6 +190,12 @@ public class CreateUploadOSSFileJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateUploadOSSFileJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateUploadOSSFileJobRequest</p>
+     */
     public static class UploadTarget extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BucketName")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -231,7 +250,11 @@ public class CreateUploadOSSFileJobRequest extends Request {
             private String objectName; 
 
             /**
-             * The name of the OSS bucket.
+             * <p>The name of the OSS bucket.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_bucket</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -239,7 +262,11 @@ public class CreateUploadOSSFileJobRequest extends Request {
             }
 
             /**
-             * The endpoint of the OSS bucket.
+             * <p>The endpoint of the OSS bucket.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://oss-cn-hangzhou.aliyuncs.com">http://oss-cn-hangzhou.aliyuncs.com</a></p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -247,7 +274,11 @@ public class CreateUploadOSSFileJobRequest extends Request {
             }
 
             /**
-             * The name of the OSS object.
+             * <p>The name of the OSS object.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.sql</p>
              */
             public Builder objectName(String objectName) {
                 this.objectName = objectName;

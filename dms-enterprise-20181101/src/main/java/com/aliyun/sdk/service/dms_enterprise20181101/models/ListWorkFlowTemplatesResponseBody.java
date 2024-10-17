@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWorkFlowTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListWorkFlowTemplatesResponseBody</p>
@@ -85,7 +86,10 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
         private WorkFlowTemplates workFlowTemplates; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,10 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>41067071-0243-4AAB-B3CF-4DE6D54F53B4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,10 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -117,7 +130,7 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The approval templates.
+         * <p>The approval templates.</p>
          */
         public Builder workFlowTemplates(WorkFlowTemplates workFlowTemplates) {
             this.workFlowTemplates = workFlowTemplates;
@@ -130,6 +143,12 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListWorkFlowTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkFlowTemplatesResponseBody</p>
+     */
     public static class WorkflowNode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
@@ -229,7 +248,10 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             private Long templateId; 
 
             /**
-             * The description of the approval node.
+             * <p>The description of the approval node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -237,7 +259,10 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the creator.
+             * <p>The ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder createUserId(Long createUserId) {
                 this.createUserId = createUserId;
@@ -245,7 +270,10 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the approval node.
+             * <p>The ID of the approval node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -253,7 +281,10 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the approval node.
+             * <p>The name of the approval node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -261,11 +292,14 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the approval node. Valid values:
-             * <p>
+             * <p>The type of the approval node. Valid values:</p>
+             * <ul>
+             * <li>SYS: The approval node is predefined by the system.</li>
+             * <li>USER_LIST: The approval node is created by a user.</li>
+             * </ul>
              * 
-             * *   SYS: The approval node is predefined by the system.
-             * *   USER_LIST: The approval node is created by a user.
+             * <strong>example:</strong>
+             * <p>SYS</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -273,7 +307,10 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The position of the approval node.
+             * <p>The position of the approval node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder position(Integer position) {
                 this.position = position;
@@ -281,7 +318,10 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the template.
+             * <p>The ID of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;
@@ -295,6 +335,12 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWorkFlowTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkFlowTemplatesResponseBody</p>
+     */
     public static class WorkflowNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WorkflowNode")
         private java.util.List < WorkflowNode> workflowNode;
@@ -336,6 +382,12 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWorkFlowTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkFlowTemplatesResponseBody</p>
+     */
     public static class WorkFlowTemplate extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
@@ -435,7 +487,10 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             private WorkflowNodes workflowNodes; 
 
             /**
-             * The description of the approval template.
+             * <p>The description of the approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -443,7 +498,10 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the creator.
+             * <p>The ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder createUserId(Long createUserId) {
                 this.createUserId = createUserId;
@@ -451,11 +509,14 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the approval template is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the approval template is enabled. Valid values:</p>
+             * <ul>
+             * <li>Y: The approval template is enabled.</li>
+             * <li>N: The approval template is disabled.</li>
+             * </ul>
              * 
-             * *   Y: The approval template is enabled.
-             * *   N: The approval template is disabled.
+             * <strong>example:</strong>
+             * <p>Y</p>
              */
             public Builder enabled(String enabled) {
                 this.enabled = enabled;
@@ -463,11 +524,14 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the approval template is predefined by the system. Valid values:
-             * <p>
+             * <p>Indicates whether the approval template is predefined by the system. Valid values:</p>
+             * <ul>
+             * <li>1: The approval template is predefined by the system.</li>
+             * <li>0: The approval template is not predefined by the system.</li>
+             * </ul>
              * 
-             * *   1: The approval template is predefined by the system.
-             * *   0: The approval template is not predefined by the system.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isSystem(Integer isSystem) {
                 this.isSystem = isSystem;
@@ -475,7 +539,10 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the approval template.
+             * <p>The ID of the approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;
@@ -483,7 +550,10 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the approval template.
+             * <p>The name of the approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Admin</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -491,7 +561,7 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The details of approval nodes.
+             * <p>The details of approval nodes.</p>
              */
             public Builder workflowNodes(WorkflowNodes workflowNodes) {
                 this.workflowNodes = workflowNodes;
@@ -505,6 +575,12 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWorkFlowTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkFlowTemplatesResponseBody</p>
+     */
     public static class WorkFlowTemplates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WorkFlowTemplate")
         private java.util.List < WorkFlowTemplate> workFlowTemplate;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSensitiveColumnInfoResponseBody} extends {@link TeaModel}
  *
  * <p>ListSensitiveColumnInfoResponseBody</p>
@@ -150,6 +151,12 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSensitiveColumnInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSensitiveColumnInfoResponseBody</p>
+     */
     public static class DefaultDesensitizationRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
@@ -211,6 +218,12 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSensitiveColumnInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSensitiveColumnInfoResponseBody</p>
+     */
     public static class SemiDesensitizationRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
@@ -272,6 +285,12 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSensitiveColumnInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSensitiveColumnInfoResponseBody</p>
+     */
     public static class SemiDesensitizationRuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SemiDesensitizationRule")
         private java.util.List < SemiDesensitizationRule> semiDesensitizationRule;
@@ -313,6 +332,12 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSensitiveColumnInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSensitiveColumnInfoResponseBody</p>
+     */
     public static class SensitiveColumn extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CategoryName")
         private String categoryName;
@@ -554,6 +579,12 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSensitiveColumnInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSensitiveColumnInfoResponseBody</p>
+     */
     public static class SensitiveColumnList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SensitiveColumn")
         private java.util.List < SensitiveColumn> sensitiveColumn;

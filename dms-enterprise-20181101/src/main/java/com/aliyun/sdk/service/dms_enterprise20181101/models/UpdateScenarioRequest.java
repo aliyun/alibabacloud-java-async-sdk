@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateScenarioRequest} extends {@link RequestModel}
  *
  * <p>UpdateScenarioRequest</p>
@@ -121,7 +122,10 @@ public class UpdateScenarioRequest extends Request {
         }
 
         /**
-         * The description of the business scenario.
+         * <p>The description of the business scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -130,7 +134,11 @@ public class UpdateScenarioRequest extends Request {
         }
 
         /**
-         * The ID of the business scenario.
+         * <p>The ID of the business scenario.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12***</p>
          */
         public Builder scenarioId(String scenarioId) {
             this.putQueryParameter("ScenarioId", scenarioId);
@@ -139,7 +147,11 @@ public class UpdateScenarioRequest extends Request {
         }
 
         /**
-         * The name of the business scenario.
+         * <p>The name of the business scenario.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Business scenario - test</p>
          */
         public Builder scenarioName(String scenarioName) {
             this.putQueryParameter("ScenarioName", scenarioName);
@@ -148,10 +160,13 @@ public class UpdateScenarioRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p>: To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a>.</p>
+         * </blockquote>
          * 
-         * > : To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

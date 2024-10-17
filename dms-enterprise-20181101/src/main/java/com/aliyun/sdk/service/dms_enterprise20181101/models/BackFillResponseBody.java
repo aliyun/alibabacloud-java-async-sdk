@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BackFillResponseBody} extends {@link TeaModel}
  *
  * <p>BackFillResponseBody</p>
@@ -97,7 +98,10 @@ public class BackFillResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the execution record of the task flow.
+         * <p>The ID of the execution record of the task flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47****</p>
          */
         public Builder dagInstanceId(Long dagInstanceId) {
             this.dagInstanceId = dagInstanceId;
@@ -105,7 +109,10 @@ public class BackFillResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +120,10 @@ public class BackFillResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +131,10 @@ public class BackFillResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the node.
+         * <p>The ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43****</p>
          */
         public Builder nodeId(Long nodeId) {
             this.nodeId = nodeId;
@@ -129,7 +142,10 @@ public class BackFillResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7FAD400F-7A5C-4193-8F9A-39D86C4F0231</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +153,14 @@ public class BackFillResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

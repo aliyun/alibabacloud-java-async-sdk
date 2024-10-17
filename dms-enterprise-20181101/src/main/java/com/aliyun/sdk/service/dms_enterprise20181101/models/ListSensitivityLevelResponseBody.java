@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSensitivityLevelResponseBody} extends {@link TeaModel}
  *
  * <p>ListSensitivityLevelResponseBody</p>
@@ -85,7 +86,10 @@ public class ListSensitivityLevelResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class ListSensitivityLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,10 @@ public class ListSensitivityLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can use the ID to query logs and troubleshoot issues.
+         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4E1D2B4D-3E53-4ABC-999D-1D2520B3471A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class ListSensitivityLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The sensitivity levels.
+         * <p>The sensitivity levels.</p>
          */
         public Builder sensitivityLevelList(java.util.List < SensitivityLevelList> sensitivityLevelList) {
             this.sensitivityLevelList = sensitivityLevelList;
@@ -117,11 +127,14 @@ public class ListSensitivityLevelResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class ListSensitivityLevelResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSensitivityLevelResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSensitivityLevelResponseBody</p>
+     */
     public static class SensitivityLevelList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsPlain")
         private Boolean isPlain;
@@ -197,7 +216,10 @@ public class ListSensitivityLevelResponseBody extends TeaModel {
             private String templateType; 
 
             /**
-             * Indicates whether the fields of the sensitive level are displayed in plaintext.
+             * <p>Indicates whether the fields of the sensitive level are displayed in plaintext.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isPlain(Boolean isPlain) {
                 this.isPlain = isPlain;
@@ -205,7 +227,10 @@ public class ListSensitivityLevelResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the sensitive level.
+             * <p>The name of the sensitive level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S2</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -213,7 +238,10 @@ public class ListSensitivityLevelResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the classification template.
+             * <p>The ID of the classification template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1070</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -221,11 +249,14 @@ public class ListSensitivityLevelResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the classification template. Valid values:
-             * <p>
+             * <p>The type of the classification template. Valid values:</p>
+             * <ul>
+             * <li><strong>INNER</strong>: a built-in template.</li>
+             * <li><strong>USER_DEFINE</strong>: a custom template.</li>
+             * </ul>
              * 
-             * *   **INNER**: a built-in template.
-             * *   **USER_DEFINE**: a custom template.
+             * <strong>example:</strong>
+             * <p>INNER</p>
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;

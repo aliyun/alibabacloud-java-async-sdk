@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstancesResponseBody</p>
@@ -97,7 +98,10 @@ public class ListInstancesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The error code that is returned.
+         * <p>The error code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -105,7 +109,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned.
+         * <p>The error message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -113,7 +120,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the database instances that are returned.
+         * <p>The information about the database instances that are returned.</p>
          */
         public Builder instanceList(InstanceList instanceList) {
             this.instanceList = instanceList;
@@ -121,7 +128,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4B07137-F6AE-4756-8474-7F92BB6C4E04</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,11 +139,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -141,7 +154,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of database instances that are returned.
+         * <p>The total number of database instances that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -154,6 +170,12 @@ public class ListInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class OwnerIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OwnerIds")
         private java.util.List < String > ownerIds;
@@ -195,6 +217,12 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class OwnerNameList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OwnerNames")
         private java.util.List < String > ownerNames;
@@ -236,6 +264,12 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class StandardGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupMode")
         private String groupMode;
@@ -275,12 +309,15 @@ public class ListInstancesResponseBody extends TeaModel {
             private String groupName; 
 
             /**
-             * The type of the control mode. Valid values:
-             * <p>
+             * <p>The type of the control mode. Valid values:</p>
+             * <ul>
+             * <li><strong>COMMON</strong>: Security Collaboration</li>
+             * <li><strong>NONE_CONTROL</strong>: Flexible Management</li>
+             * <li><strong>STABLE</strong>: Stable Change</li>
+             * </ul>
              * 
-             * *   **COMMON**: Security Collaboration
-             * *   **NONE_CONTROL**: Flexible Management
-             * *   **STABLE**: Stable Change
+             * <strong>example:</strong>
+             * <p>COMMON</p>
              */
             public Builder groupMode(String groupMode) {
                 this.groupMode = groupMode;
@@ -288,7 +325,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the security rule corresponding to the control mode.
+             * <p>The name of the security rule corresponding to the control mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -302,6 +342,12 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class Instance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataLinkName")
         private String dataLinkName;
@@ -629,7 +675,10 @@ public class ListInstancesResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The name of the database link for the database instance.
+             * <p>The name of the database link for the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dblink_test</p>
              */
             public Builder dataLinkName(String dataLinkName) {
                 this.dataLinkName = dataLinkName;
@@ -637,7 +686,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The password that is used to log on to the database instance.
+             * <p>The password that is used to log on to the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder databasePassword(String databasePassword) {
                 this.databasePassword = databasePassword;
@@ -645,7 +697,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The account that is used to log on to the database.
+             * <p>The account that is used to log on to the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dbUser</p>
              */
             public Builder databaseUser(String databaseUser) {
                 this.databaseUser = databaseUser;
@@ -653,7 +708,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the database administrator (DBA) of the database instance.
+             * <p>The ID of the database administrator (DBA) of the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>31****</p>
              */
             public Builder dbaId(String dbaId) {
                 this.dbaId = dbaId;
@@ -661,7 +719,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The nickname of the DBA of the instance.
+             * <p>The nickname of the DBA of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dbaName</p>
              */
             public Builder dbaNickName(String dbaNickName) {
                 this.dbaNickName = dbaNickName;
@@ -669,7 +730,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the lock-free schema change feature is enabled for the database instance.
+             * <p>Indicates whether the lock-free schema change feature is enabled for the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ddlOnline(Integer ddlOnline) {
                 this.ddlOnline = ddlOnline;
@@ -677,7 +741,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance on which the database instance is deployed.
+             * <p>The ID of the ECS instance on which the database instance is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>150****</p>
              */
             public Builder ecsInstanceId(String ecsInstanceId) {
                 this.ecsInstanceId = ecsInstanceId;
@@ -685,7 +752,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the database instance resides.
+             * <p>The ID of the region in which the database instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder ecsRegion(String ecsRegion) {
                 this.ecsRegion = ecsRegion;
@@ -693,17 +763,20 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the environment to which the database instance belongs. Valid values:
-             * <p>
+             * <p>The type of the environment to which the database instance belongs. Valid values:</p>
+             * <ul>
+             * <li><strong>product:</strong> production environment</li>
+             * <li><strong>dev</strong>: development environment</li>
+             * <li><strong>pre</strong>: pre-release environment</li>
+             * <li><strong>test</strong>: test environment</li>
+             * <li><strong>sit</strong>: SIT environment</li>
+             * <li><strong>uat</strong>: UAT environment</li>
+             * <li><strong>pet</strong>: stress testing environment</li>
+             * <li><strong>stag:</strong> staging environment</li>
+             * </ul>
              * 
-             * *   **product:** production environment
-             * *   **dev**: development environment
-             * *   **pre**: pre-release environment
-             * *   **test**: test environment
-             * *   **sit**: SIT environment
-             * *   **uat**: UAT environment
-             * *   **pet**: stress testing environment
-             * *   **stag:** staging environment
+             * <strong>example:</strong>
+             * <p>product</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -711,7 +784,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period for exporting data from the database instance.
+             * <p>The timeout period for exporting data from the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86400</p>
              */
             public Builder exportTimeout(Integer exportTimeout) {
                 this.exportTimeout = exportTimeout;
@@ -719,7 +795,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The host address that is used to connect to the database instance.
+             * <p>The host address that is used to connect to the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>****.mysql.rds.aliyuncs.com</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -727,7 +806,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the database instance.
+             * <p>The alias of the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder instanceAlias(String instanceAlias) {
                 this.instanceAlias = instanceAlias;
@@ -735,7 +817,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>150***</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -743,7 +828,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the database instance.
+             * <p>The source of the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder instanceSource(String instanceSource) {
                 this.instanceSource = instanceSource;
@@ -751,7 +839,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database instance.
+             * <p>The type of the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -759,7 +850,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the owners of the database instance.
+             * <p>The IDs of the owners of the database instance.</p>
              */
             public Builder ownerIdList(OwnerIdList ownerIdList) {
                 this.ownerIdList = ownerIdList;
@@ -767,7 +858,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The nicknames of the owners of the database instance.
+             * <p>The nicknames of the owners of the database instance.</p>
              */
             public Builder ownerNameList(OwnerNameList ownerNameList) {
                 this.ownerNameList = ownerNameList;
@@ -775,7 +866,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The port number that is used to connect to the database instance.
+             * <p>The port number that is used to connect to the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -783,7 +877,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period for querying data in the database instance.
+             * <p>The timeout period for querying data in the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder queryTimeout(Integer queryTimeout) {
                 this.queryTimeout = queryTimeout;
@@ -791,7 +888,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security rule set of the database instance.
+             * <p>The ID of the security rule set of the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder safeRuleId(String safeRuleId) {
                 this.safeRuleId = safeRuleId;
@@ -799,11 +899,14 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the sensitive data protection feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the sensitive data protection feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sellSitd(Boolean sellSitd) {
                 this.sellSitd = sellSitd;
@@ -811,7 +914,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The system ID (SID) of the database instance.
+             * <p>The system ID (SID) of the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder sid(String sid) {
                 this.sid = sid;
@@ -819,7 +925,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The control mode of the database instance.
+             * <p>The control mode of the database instance.</p>
              */
             public Builder standardGroup(StandardGroup standardGroup) {
                 this.standardGroup = standardGroup;
@@ -827,7 +933,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the database instance.
+             * <p>The status of the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -835,11 +944,14 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the cross-database query feature is enabled for the database instance. Valid values:
-             * <p>
+             * <p>Indicates whether the cross-database query feature is enabled for the database instance. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1:</strong>: enabled</li>
+             * </ul>
              * 
-             * *   **0**: disabled
-             * *   **1:**: enabled
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder useDsql(Integer useDsql) {
                 this.useDsql = useDsql;
@@ -847,7 +959,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC to which the database instance belongs.
+             * <p>The ID of the VPC to which the database instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-o6wrloqsdqc9io3mg****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -861,6 +976,12 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class InstanceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Instance")
         private java.util.List < Instance> instance;

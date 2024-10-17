@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListColumnsResponseBody} extends {@link TeaModel}
  *
  * <p>ListColumnsResponseBody</p>
@@ -85,7 +86,7 @@ public class ListColumnsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details about columns.
+         * <p>The details about columns.</p>
          */
         public Builder columnList(ColumnList columnList) {
             this.columnList = columnList;
@@ -93,7 +94,10 @@ public class ListColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -101,7 +105,10 @@ public class ListColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -109,7 +116,10 @@ public class ListColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AD9AC55-5873-474A-9F33-4285806A3619</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class ListColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class ListColumnsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListColumnsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListColumnsResponseBody</p>
+     */
     public static class Column extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoIncrement")
         private Boolean autoIncrement;
@@ -305,11 +324,14 @@ public class ListColumnsResponseBody extends TeaModel {
             private Boolean sensitive; 
 
             /**
-             * Indicates whether the column is an auto-increment column. Valid values:
-             * <p>
+             * <p>Indicates whether the column is an auto-increment column. Valid values:</p>
+             * <ul>
+             * <li>true: The column is an auto-increment column.</li>
+             * <li>false: The column is not an auto-increment column.</li>
+             * </ul>
              * 
-             * *   true: The column is an auto-increment column.
-             * *   false: The column is not an auto-increment column.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoIncrement(Boolean autoIncrement) {
                 this.autoIncrement = autoIncrement;
@@ -317,7 +339,10 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the column.
+             * <p>The ID of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>62589****</p>
              */
             public Builder columnId(String columnId) {
                 this.columnId = columnId;
@@ -325,7 +350,10 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the column.
+             * <p>The name of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -333,7 +361,10 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the column.
+             * <p>The data type of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>varchar</p>
              */
             public Builder columnType(String columnType) {
                 this.columnType = columnType;
@@ -341,7 +372,10 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * The length of the field.
+             * <p>The length of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder dataLength(Long dataLength) {
                 this.dataLength = dataLength;
@@ -349,7 +383,10 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of valid digits for the field.
+             * <p>The number of valid digits for the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dataPrecision(Integer dataPrecision) {
                 this.dataPrecision = dataPrecision;
@@ -357,7 +394,10 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of decimal places for the field.
+             * <p>The number of decimal places for the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dataScale(Integer dataScale) {
                 this.dataScale = dataScale;
@@ -365,7 +405,10 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * The default value of the column.
+             * <p>The default value of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>def_value</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -373,7 +416,10 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the column.
+             * <p>The description of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -381,13 +427,16 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the masking algorithm that is used for the field. Valid values:
-             * <p>
+             * <p>The type of the masking algorithm that is used for the field. Valid values:</p>
+             * <ul>
+             * <li>null: No masking algorithm is used.</li>
+             * <li>DEFAULT: A full masking algorithm is used.</li>
+             * <li>FIX_POS: The fixed position is masked.</li>
+             * <li>FIX_CHAR: The fixed characters are replaced.</li>
+             * </ul>
              * 
-             * *   null: No masking algorithm is used.
-             * *   DEFAULT: A full masking algorithm is used.
-             * *   FIX_POS: The fixed position is masked.
-             * *   FIX_CHAR: The fixed characters are replaced.
+             * <strong>example:</strong>
+             * <p>DEFAULT</p>
              */
             public Builder functionType(String functionType) {
                 this.functionType = functionType;
@@ -395,11 +444,14 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the column can be empty. Valid values:
-             * <p>
+             * <p>Indicates whether the column can be empty. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The column can be empty.</li>
+             * <li><strong>false</strong>: The column cannot be empty.</li>
+             * </ul>
              * 
-             * *   **true**: The column can be empty.
-             * *   **false**: The column cannot be empty.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder nullable(Boolean nullable) {
                 this.nullable = nullable;
@@ -407,14 +459,18 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * The security level of the column. Valid values:
-             * <p>
+             * <p>The security level of the column. Valid values:</p>
+             * <ul>
+             * <li>INNER: The column is an internal column but not sensitive.</li>
+             * <li>SENSITIVE: The column is a sensitive column.</li>
+             * <li>CONFIDENTIAL: The column is a confidential column.</li>
+             * </ul>
+             * <blockquote>
+             * <p>For more information, see <a href="https://help.aliyun.com/document_detail/66091.html">Sensitivity levels of fields</a>.</p>
+             * </blockquote>
              * 
-             * *   INNER: The column is an internal column but not sensitive.
-             * *   SENSITIVE: The column is a sensitive column.
-             * *   CONFIDENTIAL: The column is a confidential column.
-             * 
-             * > For more information, see [Sensitivity levels of fields](~~66091~~).
+             * <strong>example:</strong>
+             * <p>INNER</p>
              */
             public Builder securityLevel(String securityLevel) {
                 this.securityLevel = securityLevel;
@@ -422,11 +478,14 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the column is a sensitive column. Valid values:
-             * <p>
+             * <p>Indicates whether the column is a sensitive column. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The column is a sensitive column.</li>
+             * <li><strong>false</strong>: The column is not a sensitive column.</li>
+             * </ul>
              * 
-             * *   **true**: The column is a sensitive column.
-             * *   **false**: The column is not a sensitive column.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder sensitive(Boolean sensitive) {
                 this.sensitive = sensitive;
@@ -440,6 +499,12 @@ public class ListColumnsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListColumnsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListColumnsResponseBody</p>
+     */
     public static class ColumnList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Column")
         private java.util.List < Column> column;

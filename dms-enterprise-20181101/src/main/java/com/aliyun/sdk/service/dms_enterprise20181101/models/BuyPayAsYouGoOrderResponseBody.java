@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BuyPayAsYouGoOrderResponseBody} extends {@link TeaModel}
  *
  * <p>BuyPayAsYouGoOrderResponseBody</p>
@@ -85,7 +86,10 @@ public class BuyPayAsYouGoOrderResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class BuyPayAsYouGoOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,10 @@ public class BuyPayAsYouGoOrderResponseBody extends TeaModel {
         }
 
         /**
-         * If the purchase is successful, the ID of the purchased instance is returned.
+         * <p>If the purchase is successful, the ID of the purchased instance is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dms_pre_public_cn-nif23l****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -109,7 +119,10 @@ public class BuyPayAsYouGoOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C51420E3-144A-4A94-B473-8662FCF4AD10</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +130,14 @@ public class BuyPayAsYouGoOrderResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

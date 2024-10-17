@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataTrackJobTableMetaResponseBody} extends {@link TeaModel}
  *
  * <p>GetDataTrackJobTableMetaResponseBody</p>
@@ -85,7 +86,10 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
         private java.util.List < TableMetaList> tableMetaList; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,10 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,11 +119,14 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -121,7 +134,7 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
         }
 
         /**
-         * The metadata of tables.
+         * <p>The metadata of tables.</p>
          */
         public Builder tableMetaList(java.util.List < TableMetaList> tableMetaList) {
             this.tableMetaList = tableMetaList;
@@ -134,6 +147,12 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDataTrackJobTableMetaResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataTrackJobTableMetaResponseBody</p>
+     */
     public static class Columns extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Charset")
         private String charset;
@@ -209,7 +228,10 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
             private Boolean fictive; 
 
             /**
-             * The name of the character set.
+             * <p>The name of the character set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>utf8mb4</p>
              */
             public Builder charset(String charset) {
                 this.charset = charset;
@@ -217,7 +239,10 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the column.
+             * <p>The name of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>claimantno</p>
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -225,7 +250,10 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The position of the column.
+             * <p>The position of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder columnPosition(Integer columnPosition) {
                 this.columnPosition = columnPosition;
@@ -233,7 +261,10 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the column. Examples: BIGINT, INT, and VARCHAR.
+             * <p>The data type of the column. Examples: BIGINT, INT, and VARCHAR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BIGINT</p>
              */
             public Builder columnType(String columnType) {
                 this.columnType = columnType;
@@ -241,11 +272,14 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the column is a virtual column. Valid values:
-             * <p>
+             * <p>Indicates whether the column is a virtual column. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder fictive(Boolean fictive) {
                 this.fictive = fictive;
@@ -259,6 +293,12 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataTrackJobTableMetaResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataTrackJobTableMetaResponseBody</p>
+     */
     public static class TableMetaList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Columns")
         private java.util.List < Columns> columns;
@@ -310,7 +350,7 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The information about columns.
+             * <p>The information about columns.</p>
              */
             public Builder columns(java.util.List < Columns> columns) {
                 this.columns = columns;
@@ -318,7 +358,10 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DB165</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -326,7 +369,10 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>live_stat</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

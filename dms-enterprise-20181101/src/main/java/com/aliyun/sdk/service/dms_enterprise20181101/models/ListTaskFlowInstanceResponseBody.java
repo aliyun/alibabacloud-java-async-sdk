@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTaskFlowInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>ListTaskFlowInstanceResponseBody</p>
@@ -97,7 +98,7 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about the execution records returned.
+         * <p>The information about the execution records returned.</p>
          */
         public Builder DAGInstanceList(DAGInstanceList DAGInstanceList) {
             this.DAGInstanceList = DAGInstanceList;
@@ -105,7 +106,10 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request fails.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request fails.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8CFF2295-8249-5287-B888-DBD4F0D76CB0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,11 +139,14 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
+         * </ul>
          * 
-         * *   **true**: The request is successful.
-         * *   **false**: The request fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -141,7 +154,10 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of execution records returned.
+         * <p>The total number of execution records returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -154,6 +170,12 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTaskFlowInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskFlowInstanceResponseBody</p>
+     */
     public static class DAGInstance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BusinessTime")
         private String businessTime;
@@ -313,7 +335,10 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * The business time of the task flow. The time is displayed in the yyyy-MM-DD HH:mm:ss format.
+             * <p>The business time of the task flow. The time is displayed in the yyyy-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-10 14:37:26</p>
              */
             public Builder businessTime(String businessTime) {
                 this.businessTime = businessTime;
@@ -321,7 +346,10 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task flow.
+             * <p>The ID of the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7***</p>
              */
             public Builder dagId(String dagId) {
                 this.dagId = dagId;
@@ -329,7 +357,10 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task flow.
+             * <p>The name of the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Spark_SQL_test</p>
              */
             public Builder dagName(String dagName) {
                 this.dagName = dagName;
@@ -337,7 +368,10 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the task flow.
+             * <p>The version of the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder dagVersion(String dagVersion) {
                 this.dagVersion = dagVersion;
@@ -345,7 +379,10 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the execution of the task flow was complete. The time is displayed in the yyyy-MM-DD HH:mm:ss format.
+             * <p>The time when the execution of the task flow was complete. The time is displayed in the yyyy-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-11 14:38:57</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -353,7 +390,10 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the previously published version of the task flow.
+             * <p>The ID of the previously published version of the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2****</p>
              */
             public Builder historyDagId(Long historyDagId) {
                 this.historyDagId = historyDagId;
@@ -361,7 +401,10 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the execution record.
+             * <p>The ID of the execution record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9234</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -369,7 +412,10 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the task.
+             * <p>The description of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -377,7 +423,10 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task flow owner.
+             * <p>The name of the task flow owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_name</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -385,15 +434,18 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task flow. Valid values:
-             * <p>
+             * <p>The status of the task flow. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The task flow is waiting to be scheduled.</li>
+             * <li><strong>1</strong>: The task flow is being executed.</li>
+             * <li><strong>2</strong>: The task flow is paused.</li>
+             * <li><strong>3</strong>: The task flow failed.</li>
+             * <li><strong>4</strong>: The task flow is executed.</li>
+             * <li><strong>5</strong>: The task flow is complete.</li>
+             * </ul>
              * 
-             * *   **0**: The task flow is waiting to be scheduled.
-             * *   **1**: The task flow is being executed.
-             * *   **2**: The task flow is paused.
-             * *   **3**: The task flow failed.
-             * *   **4**: The task flow is executed.
-             * *   **5**: The task flow is complete.
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -401,11 +453,14 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The mode in which the task flow is triggered. Valid values:
-             * <p>
+             * <p>The mode in which the task flow is triggered. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The task flow is automatically triggered based on periodic scheduling.</li>
+             * <li><strong>1</strong>: The task flow is manually triggered.</li>
+             * </ul>
              * 
-             * *   **0**: The task flow is automatically triggered based on periodic scheduling.
-             * *   **1**: The task flow is manually triggered.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder triggerType(Integer triggerType) {
                 this.triggerType = triggerType;
@@ -413,7 +468,10 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the execution of the task flow was start. The time is displayed in the yyyy-MM-DD HH:mm:ss format.
+             * <p>The time when the execution of the task flow was start. The time is displayed in the yyyy-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-11 14:35:57</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -427,6 +485,12 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskFlowInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskFlowInstanceResponseBody</p>
+     */
     public static class DAGInstanceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DAGInstance")
         private java.util.List < DAGInstance> DAGInstance;

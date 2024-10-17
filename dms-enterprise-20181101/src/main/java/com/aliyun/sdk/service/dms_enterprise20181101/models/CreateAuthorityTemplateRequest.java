@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAuthorityTemplateRequest} extends {@link RequestModel}
  *
  * <p>CreateAuthorityTemplateRequest</p>
@@ -105,7 +106,10 @@ public class CreateAuthorityTemplateRequest extends Request {
         }
 
         /**
-         * The description of the permission template.
+         * <p>The description of the permission template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This template is used for business testing.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -114,7 +118,11 @@ public class CreateAuthorityTemplateRequest extends Request {
         }
 
         /**
-         * The name of the permission template.
+         * <p>The name of the permission template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test template.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -123,7 +131,10 @@ public class CreateAuthorityTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to query the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

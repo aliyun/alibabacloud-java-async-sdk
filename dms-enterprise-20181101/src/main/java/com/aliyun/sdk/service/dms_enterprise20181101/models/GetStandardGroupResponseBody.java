@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetStandardGroupResponseBody} extends {@link TeaModel}
  *
  * <p>GetStandardGroupResponseBody</p>
@@ -130,6 +131,12 @@ public class GetStandardGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetStandardGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStandardGroupResponseBody</p>
+     */
     public static class StandardGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;

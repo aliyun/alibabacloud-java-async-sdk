@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateProxyAccessResponseBody} extends {@link TeaModel}
  *
  * <p>CreateProxyAccessResponseBody</p>
@@ -85,7 +86,10 @@ public class CreateProxyAccessResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned to the query task.
+         * <p>The error code returned to the query task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class CreateProxyAccessResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned.
+         * <p>The error message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,10 @@ public class CreateProxyAccessResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the security protection authorization. After the security protection agent authorizes the target user, the system automatically generates a security protection authorization ID. The ID is globally unique.
+         * <p>The ID of the security protection authorization. After the security protection agent authorizes the target user, the system automatically generates a security protection authorization ID. The ID is globally unique.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder proxyAccessId(Long proxyAccessId) {
             this.proxyAccessId = proxyAccessId;
@@ -109,7 +119,10 @@ public class CreateProxyAccessResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +130,10 @@ public class CreateProxyAccessResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

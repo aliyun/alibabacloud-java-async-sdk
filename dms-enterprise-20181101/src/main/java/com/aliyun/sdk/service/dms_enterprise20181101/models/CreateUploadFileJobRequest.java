@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUploadFileJobRequest} extends {@link RequestModel}
  *
  * <p>CreateUploadFileJobRequest</p>
@@ -122,10 +123,14 @@ public class CreateUploadFileJobRequest extends Request {
         }
 
         /**
-         * The name of the attachment file.
-         * <p>
+         * <p>The name of the attachment file.</p>
+         * <blockquote>
+         * <p> The file name must end with .txt or .sql. For example, the file name can be test.txt or test.sql.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The file name must end with .txt or .sql. For example, the file name can be test.txt or test.sql.
+         * <strong>example:</strong>
+         * <p>test.txt</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -134,13 +139,17 @@ public class CreateUploadFileJobRequest extends Request {
         }
 
         /**
-         * The purpose of the attachment file. Valid values:
-         * <p>
+         * <p>The purpose of the attachment file. Valid values:</p>
+         * <ul>
+         * <li><strong>datacorrect</strong>: The file is uploaded to change data.</li>
+         * <li><strong>order_info_attachment</strong>: The file is uploaded as an attachment in a ticket.</li>
+         * <li><strong>big-file</strong>: The file is uploaded to import multiple data records at a time.</li>
+         * <li><strong>sqlreview</strong>: The file is uploaded for SQL review.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **datacorrect**: The file is uploaded to change data.
-         * *   **order_info_attachment**: The file is uploaded as an attachment in a ticket.
-         * *   **big-file**: The file is uploaded to import multiple data records at a time.
-         * *   **sqlreview**: The file is uploaded for SQL review.
+         * <strong>example:</strong>
+         * <p>datacorrect</p>
          */
         public Builder fileSource(String fileSource) {
             this.putQueryParameter("FileSource", fileSource);
@@ -149,10 +158,13 @@ public class CreateUploadFileJobRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to query the tenant ID.</p>
+         * </blockquote>
          * 
-         * >  You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -161,10 +173,14 @@ public class CreateUploadFileJobRequest extends Request {
         }
 
         /**
-         * The URL of the attachment file. The URL must be an HTTP URL or an HTTPS URL.
-         * <p>
+         * <p>The URL of the attachment file. The URL must be an HTTP URL or an HTTPS URL.</p>
+         * <blockquote>
+         * <p> You can upload the attachment file to an Object Storage Service (OSS) bucket and obtain the URL of the file in the OSS console. For more information, see <a href="https://help.aliyun.com/document_detail/195674.html">Share objects</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can upload the attachment file to an Object Storage Service (OSS) bucket and obtain the URL of the file in the OSS console. For more information, see [Share objects](~~195674~~).
+         * <strong>example:</strong>
+         * <p><a href="https://XXX.oss-cn-hangzhou.aliyuncs.com/test.txt">https://XXX.oss-cn-hangzhou.aliyuncs.com/test.txt</a></p>
          */
         public Builder uploadURL(String uploadURL) {
             this.putQueryParameter("UploadURL", uploadURL);

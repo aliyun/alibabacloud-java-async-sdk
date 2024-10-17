@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListScenariosResponseBody} extends {@link TeaModel}
  *
  * <p>ListScenariosResponseBody</p>
@@ -85,7 +86,10 @@ public class ListScenariosResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class ListScenariosResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,10 @@ public class ListScenariosResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7FAD400F-7A5C-4193-8F9A-39D86C4F0231</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class ListScenariosResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the returned business scenarios.
+         * <p>The details of the returned business scenarios.</p>
          */
         public Builder scenarioList(java.util.List < ScenarioList> scenarioList) {
             this.scenarioList = scenarioList;
@@ -117,11 +127,14 @@ public class ListScenariosResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class ListScenariosResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListScenariosResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListScenariosResponseBody</p>
+     */
     public static class ScenarioList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatorId")
         private String creatorId;
@@ -197,7 +216,10 @@ public class ListScenariosResponseBody extends TeaModel {
             private String scenarioName; 
 
             /**
-             * The ID of the user who created the business scenario.
+             * <p>The ID of the user who created the business scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23***</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -205,7 +227,10 @@ public class ListScenariosResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the business scenario.
+             * <p>The description of the business scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -213,7 +238,10 @@ public class ListScenariosResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the business scenario.
+             * <p>The ID of the business scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>41***</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -221,7 +249,10 @@ public class ListScenariosResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the business scenario.
+             * <p>The name of the business scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder scenarioName(String scenarioName) {
                 this.scenarioName = scenarioName;

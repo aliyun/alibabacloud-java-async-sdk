@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataArchiveCountRequest} extends {@link RequestModel}
  *
  * <p>GetDataArchiveCountRequest</p>
@@ -119,7 +120,10 @@ public class GetDataArchiveCountRequest extends Request {
         }
 
         /**
-         * The type of the identity. Default value: AS_ADMIN.
+         * <p>The type of the identity. Default value: AS_ADMIN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AS_ADMIN</p>
          */
         public Builder orderResultType(String orderResultType) {
             this.putQueryParameter("OrderResultType", orderResultType);
@@ -128,7 +132,10 @@ public class GetDataArchiveCountRequest extends Request {
         }
 
         /**
-         * The plugin type. Default value: DATA_ARCHIVE.
+         * <p>The plugin type. Default value: DATA_ARCHIVE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DATA_ARCHIVE</p>
          */
         public Builder pluginType(String pluginType) {
             this.putQueryParameter("PluginType", pluginType);
@@ -137,7 +144,10 @@ public class GetDataArchiveCountRequest extends Request {
         }
 
         /**
-         * The time when the ticket is modified or created. The statistics of data archiving tickets are calculated based on the creation time.
+         * <p>The time when the ticket is modified or created. The statistics of data archiving tickets are calculated based on the creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE_TIME</p>
          */
         public Builder searchDateType(String searchDateType) {
             this.putQueryParameter("SearchDateType", searchDateType);
@@ -146,10 +156,13 @@ public class GetDataArchiveCountRequest extends Request {
         }
 
         /**
-         * The tenant ID.
-         * <p>
+         * <p>The tenant ID.</p>
+         * <blockquote>
+         * <p> To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a>.</p>
+         * </blockquote>
          * 
-         * >  To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).
+         * <strong>example:</strong>
+         * <p>2****</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

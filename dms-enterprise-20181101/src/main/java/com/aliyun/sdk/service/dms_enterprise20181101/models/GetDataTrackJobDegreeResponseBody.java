@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataTrackJobDegreeResponseBody} extends {@link TeaModel}
  *
  * <p>GetDataTrackJobDegreeResponseBody</p>
@@ -85,7 +86,10 @@ public class GetDataTrackJobDegreeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class GetDataTrackJobDegreeResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,7 @@ public class GetDataTrackJobDegreeResponseBody extends TeaModel {
         }
 
         /**
-         * The progress details of the data tracking task.
+         * <p>The progress details of the data tracking task.</p>
          */
         public Builder jobDegree(JobDegree jobDegree) {
             this.jobDegree = jobDegree;
@@ -109,7 +116,10 @@ public class GetDataTrackJobDegreeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C51420E3-144A-4A94-B473-8662FCF4AD10</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class GetDataTrackJobDegreeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class GetDataTrackJobDegreeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDataTrackJobDegreeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataTrackJobDegreeResponseBody</p>
+     */
     public static class JobDegree extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DownloadCompletionDegree")
         private Double downloadCompletionDegree;
@@ -209,7 +228,10 @@ public class GetDataTrackJobDegreeResponseBody extends TeaModel {
             private String statusDesc; 
 
             /**
-             * The progress of binary log download. Valid values: 0 to 1. A value of 1 indicates that binary log download is complete.
+             * <p>The progress of binary log download. Valid values: 0 to 1. A value of 1 indicates that binary log download is complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder downloadCompletionDegree(Double downloadCompletionDegree) {
                 this.downloadCompletionDegree = downloadCompletionDegree;
@@ -217,7 +239,10 @@ public class GetDataTrackJobDegreeResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of binary log parsing. Valid values: 0 to 1. A value of 1 indicates that binary log parsing is complete.
+             * <p>The progress of binary log parsing. Valid values: 0 to 1. A value of 1 indicates that binary log parsing is complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder filterCompletionDegree(Double filterCompletionDegree) {
                 this.filterCompletionDegree = filterCompletionDegree;
@@ -225,18 +250,21 @@ public class GetDataTrackJobDegreeResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the data tracking task. Valid values:
-             * <p>
+             * <p>The status of the data tracking task. Valid values:</p>
+             * <ul>
+             * <li><strong>INIT</strong>: The task is being initialized.</li>
+             * <li><strong>LISTING</strong>: The binary logs are being obtained.</li>
+             * <li><strong>LIST_SUCCESS</strong>: The binary logs are successfully obtained.</li>
+             * <li><strong>DOWNLOADING</strong>: The binary logs are being downloaded.</li>
+             * <li><strong>DOWNLOAD_FAIL</strong>: The binary logs failed to be downloaded.</li>
+             * <li><strong>DOWNLOAD_SUCCESS</strong>: The binary logs are successfully downloaded.</li>
+             * <li><strong>FILTERING</strong>: The binary logs are being parsed.</li>
+             * <li><strong>FILTER_FAIL</strong>: The binary logs failed to be parsed.</li>
+             * <li><strong>FILTER_SUCCESS</strong>: The binary logs are successfully parsed.</li>
+             * </ul>
              * 
-             * *   **INIT**: The task is being initialized.
-             * *   **LISTING**: The binary logs are being obtained.
-             * *   **LIST_SUCCESS**: The binary logs are successfully obtained.
-             * *   **DOWNLOADING**: The binary logs are being downloaded.
-             * *   **DOWNLOAD_FAIL**: The binary logs failed to be downloaded.
-             * *   **DOWNLOAD_SUCCESS**: The binary logs are successfully downloaded.
-             * *   **FILTERING**: The binary logs are being parsed.
-             * *   **FILTER_FAIL**: The binary logs failed to be parsed.
-             * *   **FILTER_SUCCESS**: The binary logs are successfully parsed.
+             * <strong>example:</strong>
+             * <p>FILTER_SUCCESS</p>
              */
             public Builder jobStatus(String jobStatus) {
                 this.jobStatus = jobStatus;
@@ -244,7 +272,10 @@ public class GetDataTrackJobDegreeResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of binary log obtaining. Valid values: 0 to 1. A value of 1 indicates that binary log obtaining is complete.
+             * <p>The progress of binary log obtaining. Valid values: 0 to 1. A value of 1 indicates that binary log obtaining is complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder listCompletionDegree(Double listCompletionDegree) {
                 this.listCompletionDegree = listCompletionDegree;
@@ -252,7 +283,10 @@ public class GetDataTrackJobDegreeResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the task status.
+             * <p>The description of the task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>searching success</p>
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateProxyRequest} extends {@link RequestModel}
  *
  * <p>CreateProxyRequest</p>
@@ -122,7 +123,11 @@ public class CreateProxyRequest extends Request {
         }
 
         /**
-         * The ID of the database instance. You can call the [ListInstances](https://www.alibabacloud.com/help/en/data-management-service/latest/listinstances) or [GetInstance](https://www.alibabacloud.com/help/en/data-management-service/latest/getinstance) operation to query the database instance ID.
+         * <p>The ID of the database instance. You can call the <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/listinstances">ListInstances</a> or <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/getinstance">GetInstance</a> operation to query the database instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>183****</p>
          */
         public Builder instanceId(Long instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -131,7 +136,11 @@ public class CreateProxyRequest extends Request {
         }
 
         /**
-         * The password of the database account.
+         * <p>The password of the database account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -140,7 +149,10 @@ public class CreateProxyRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant) operation to query the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant">GetUserActiveTenant</a> operation to query the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -149,7 +161,11 @@ public class CreateProxyRequest extends Request {
         }
 
         /**
-         * The username of the database account.
+         * <p>The username of the database account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>username</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

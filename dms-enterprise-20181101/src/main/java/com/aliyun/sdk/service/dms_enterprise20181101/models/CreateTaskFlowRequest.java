@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTaskFlowRequest} extends {@link RequestModel}
  *
  * <p>CreateTaskFlowRequest</p>
@@ -120,7 +121,11 @@ public class CreateTaskFlowRequest extends Request {
         }
 
         /**
-         * The name of the task flow.
+         * <p>The name of the task flow.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dag_Name</p>
          */
         public Builder dagName(String dagName) {
             this.putQueryParameter("DagName", dagName);
@@ -129,7 +134,10 @@ public class CreateTaskFlowRequest extends Request {
         }
 
         /**
-         * The description of the task flow.
+         * <p>The description of the task flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zht_test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -138,7 +146,10 @@ public class CreateTaskFlowRequest extends Request {
         }
 
         /**
-         * The ID of the scenario.
+         * <p>The ID of the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2**</p>
          */
         public Builder scenarioId(Long scenarioId) {
             this.putQueryParameter("ScenarioId", scenarioId);
@@ -147,7 +158,10 @@ public class CreateTaskFlowRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to query the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

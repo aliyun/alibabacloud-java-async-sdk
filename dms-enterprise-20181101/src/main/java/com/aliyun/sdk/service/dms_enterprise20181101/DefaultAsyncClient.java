@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AddDesensitizationRule  AddDesensitizationRuleRequest
+     * @return AddDesensitizationRuleResponse
+     */
     @Override
     public CompletableFuture<AddDesensitizationRuleResponse> addDesensitizationRule(AddDesensitizationRuleRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddInstance  AddInstanceRequest
+     * @return AddInstanceResponse
+     */
     @Override
     public CompletableFuture<AddInstanceResponse> addInstance(AddInstanceRequest request) {
         try {
@@ -68,12 +76,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You must call this operation as a DMS administrator, a database administrator (DBA), or a workspace administrator.
-      * Usage notes:
-      * *   Before you call this operation to add a user as a task flow developer, make sure that you have added the user as a workspace member.
-      * *   You cannot call this operation to transfer the ownership of a task flow. To transfer the ownership of a task flow, call the [ChangLhDagOwner](~~424761~~) operation.
-      * *   For more information about workspace roles and permissions, see [Manage permissions on a workspace](~~410893~~).
-      *
+     * <b>description</b> :
+     * <p>You must call this operation as a DMS administrator, a database administrator (DBA), or a workspace administrator.
+     * Usage notes:</p>
+     * <ul>
+     * <li>Before you call this operation to add a user as a task flow developer, make sure that you have added the user as a workspace member.</li>
+     * <li>You cannot call this operation to transfer the ownership of a task flow. To transfer the ownership of a task flow, call the <a href="https://help.aliyun.com/document_detail/424761.html">ChangLhDagOwner</a> operation.</li>
+     * <li>For more information about workspace roles and permissions, see <a href="https://help.aliyun.com/document_detail/410893.html">Manage permissions on a workspace</a>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AddLhMembers  AddLhMembersRequest
+     * @return AddLhMembersResponse
      */
     @Override
     public CompletableFuture<AddLhMembersResponse> addLhMembers(AddLhMembersRequest request) {
@@ -89,6 +102,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddLogicTableRouteConfig  AddLogicTableRouteConfigRequest
+     * @return AddLogicTableRouteConfigResponse
+     */
     @Override
     public CompletableFuture<AddLogicTableRouteConfigResponse> addLogicTableRouteConfig(AddLogicTableRouteConfigRequest request) {
         try {
@@ -104,10 +121,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you add directed edges for a task node, take note of the following limits:
-      * 1. The endpoints of the specified edge exist in the Directed Acyclic Graph (DAG) of the task flow specified by DagId.
-      * 2. After a backward edge is added, the DAG does not contain loops.
-      *
+     * <b>description</b> :
+     * <p>When you add directed edges for a task node, take note of the following limits:</p>
+     * <ol>
+     * <li>The endpoints of the specified edge exist in the Directed Acyclic Graph (DAG) of the task flow specified by DagId.</li>
+     * <li>After a backward edge is added, the DAG does not contain loops.</li>
+     * </ol>
+     * 
+     * @param request the request parameters of AddTaskFlowEdges  AddTaskFlowEdgesRequest
+     * @return AddTaskFlowEdgesResponse
      */
     @Override
     public CompletableFuture<AddTaskFlowEdgesResponse> addTaskFlowEdges(AddTaskFlowEdgesRequest request) {
@@ -124,10 +146,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The following conditions must be met before you call this API operation.
-      * *   The database instance is of one of the following types: ApsaraDB RDS for MySQL, PolarDB for MySQL, AnalyticDB for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for PostgreSQL, AnalyticDB for PostgreSQL, Oracle, and openGauss.
-      * *   A database instance is managed in Security Collaboration mode. For more information about control modes, see [Control modes](~~151629~~).
-      *
+     * <b>description</b> :
+     * <p>The following conditions must be met before you call this API operation.</p>
+     * <ul>
+     * <li>The database instance is of one of the following types: ApsaraDB RDS for MySQL, PolarDB for MySQL, AnalyticDB for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for PostgreSQL, AnalyticDB for PostgreSQL, Oracle, and openGauss.</li>
+     * <li>A database instance is managed in Security Collaboration mode. For more information about control modes, see <a href="https://help.aliyun.com/document_detail/151629.html">Control modes</a>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AnalyzeSQLLineage  AnalyzeSQLLineageRequest
+     * @return AnalyzeSQLLineageResponse
      */
     @Override
     public CompletableFuture<AnalyzeSQLLineageResponse> analyzeSQLLineage(AnalyzeSQLLineageRequest request) {
@@ -143,6 +170,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ApproveOrder  ApproveOrderRequest
+     * @return ApproveOrderResponse
+     */
     @Override
     public CompletableFuture<ApproveOrderResponse> approveOrder(ApproveOrderRequest request) {
         try {
@@ -158,8 +189,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * During a data backfill, task flows are run in sequence based on their dates. You can specify whether task flows are run in chronological or reverse chronological order. After the data backfill is complete, you can specify a date or date range, and a node range to run task flows.
-      *
+     * <b>description</b> :
+     * <p>During a data backfill, task flows are run in sequence based on their dates. You can specify whether task flows are run in chronological or reverse chronological order. After the data backfill is complete, you can specify a date or date range, and a node range to run task flows.</p>
+     * 
+     * @param request the request parameters of BackFill  BackFillRequest
+     * @return BackFillResponse
      */
     @Override
     public CompletableFuture<BackFillResponse> backFill(BackFillRequest request) {
@@ -175,6 +209,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BuyPayAsYouGoOrder  BuyPayAsYouGoOrderRequest
+     * @return BuyPayAsYouGoOrderResponse
+     */
     @Override
     public CompletableFuture<BuyPayAsYouGoOrderResponse> buyPayAsYouGoOrder(BuyPayAsYouGoOrderRequest request) {
         try {
@@ -189,6 +227,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeColumnSecLevel  ChangeColumnSecLevelRequest
+     * @return ChangeColumnSecLevelResponse
+     */
     @Override
     public CompletableFuture<ChangeColumnSecLevelResponse> changeColumnSecLevel(ChangeColumnSecLevelRequest request) {
         try {
@@ -203,6 +245,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeColumnSecurityLevel  ChangeColumnSecurityLevelRequest
+     * @return ChangeColumnSecurityLevelResponse
+     */
     @Override
     public CompletableFuture<ChangeColumnSecurityLevelResponse> changeColumnSecurityLevel(ChangeColumnSecurityLevelRequest request) {
         try {
@@ -218,10 +264,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Usage notes:
-      * *   If you call this operation to transfer the ownership of a published task flow, the ownership transfer does not take effect.
-      * *   You can call the [ReDeployLhDagVersion](~~424712~~) operation to redeploy a published version of a task flow.
-      *
+     * <b>description</b> :
+     * <p>Usage notes:</p>
+     * <ul>
+     * <li>If you call this operation to transfer the ownership of a published task flow, the ownership transfer does not take effect.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/424712.html">ReDeployLhDagVersion</a> operation to redeploy a published version of a task flow.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ChangeLhDagOwner  ChangeLhDagOwnerRequest
+     * @return ChangeLhDagOwnerResponse
      */
     @Override
     public CompletableFuture<ChangeLhDagOwnerResponse> changeLhDagOwner(ChangeLhDagOwnerRequest request) {
@@ -237,6 +288,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CloseOrder  CloseOrderRequest
+     * @return CloseOrderResponse
+     */
     @Override
     public CompletableFuture<CloseOrderResponse> closeOrder(CloseOrderRequest request) {
         try {
@@ -252,8 +307,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
-      *
+     * <b>description</b> :
+     * <p>You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see <a href="https://help.aliyun.com/document_detail/324212.html">View system roles</a>.</p>
+     * 
+     * @param request the request parameters of CreateAuthorityTemplate  CreateAuthorityTemplateRequest
+     * @return CreateAuthorityTemplateResponse
      */
     @Override
     public CompletableFuture<CreateAuthorityTemplateResponse> createAuthorityTemplate(CreateAuthorityTemplateRequest request) {
@@ -270,8 +328,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation only for database instances that are managed in Security Collaboration mode.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation only for database instances that are managed in Security Collaboration mode.</p>
+     * 
+     * @param request the request parameters of CreateDataArchiveOrder  CreateDataArchiveOrderRequest
+     * @return CreateDataArchiveOrderResponse
      */
     @Override
     public CompletableFuture<CreateDataArchiveOrderResponse> createDataArchiveOrder(CreateDataArchiveOrderRequest request) {
@@ -288,8 +349,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For more information about the Normal Data Modify feature, see [Change regular data](~~58419~~).
-      *
+     * <b>description</b> :
+     * <p>For more information about the Normal Data Modify feature, see <a href="https://help.aliyun.com/document_detail/58419.html">Change regular data</a>.</p>
+     * 
+     * @param request the request parameters of CreateDataCorrectOrder  CreateDataCorrectOrderRequest
+     * @return CreateDataCorrectOrderResponse
      */
     @Override
     public CompletableFuture<CreateDataCorrectOrderResponse> createDataCorrectOrder(CreateDataCorrectOrderRequest request) {
@@ -306,9 +370,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For more information about the historical data cleaning, see [Clear historical data](~~162507~~).
-      * This operation can be used only for MySQL databases.
-      *
+     * <b>description</b> :
+     * <p>For more information about the historical data cleaning, see <a href="https://help.aliyun.com/document_detail/162507.html">Clear historical data</a>.
+     * This operation can be used only for MySQL databases.</p>
+     * 
+     * @param request the request parameters of CreateDataCronClearOrder  CreateDataCronClearOrderRequest
+     * @return CreateDataCronClearOrderResponse
      */
     @Override
     public CompletableFuture<CreateDataCronClearOrderResponse> createDataCronClearOrder(CreateDataCronClearOrderRequest request) {
@@ -324,6 +391,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDataExportOrder  CreateDataExportOrderRequest
+     * @return CreateDataExportOrderResponse
+     */
     @Override
     public CompletableFuture<CreateDataExportOrderResponse> createDataExportOrder(CreateDataExportOrderRequest request) {
         try {
@@ -339,8 +410,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For more information about the Large Data Import feature, see [Import data](~~161439~~).
-      *
+     * <b>description</b> :
+     * <p>For more information about the Large Data Import feature, see <a href="https://help.aliyun.com/document_detail/161439.html">Import data</a>.</p>
+     * 
+     * @param request the request parameters of CreateDataImportOrder  CreateDataImportOrderRequest
+     * @return CreateDataImportOrderResponse
      */
     @Override
     public CompletableFuture<CreateDataImportOrderResponse> createDataImportOrder(CreateDataImportOrderRequest request) {
@@ -357,8 +431,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This operation is available only for instances that are managed in Security Collaboration mode.
-      *
+     * <b>description</b> :
+     * <p>This operation is available only for instances that are managed in Security Collaboration mode.</p>
+     * 
+     * @param request the request parameters of CreateDataTrackOrder  CreateDataTrackOrderRequest
+     * @return CreateDataTrackOrderResponse
      */
     @Override
     public CompletableFuture<CreateDataTrackOrderResponse> createDataTrackOrder(CreateDataTrackOrderRequest request) {
@@ -374,6 +451,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDatabaseExportOrder  CreateDatabaseExportOrderRequest
+     * @return CreateDatabaseExportOrderResponse
+     */
     @Override
     public CompletableFuture<CreateDatabaseExportOrderResponse> createDatabaseExportOrder(CreateDatabaseExportOrderRequest request) {
         try {
@@ -389,9 +470,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For more information about the lock-free change feature, see [Overview](~~207847~~).
-      * This operation can be used only for instances that are managed in Stable Change or Security Collaboration mode. For more information, see [Change data without the need to lock tables](~~96145~~) and [Change schemas without locking tables](~~98373~~).
-      *
+     * <b>description</b> :
+     * <p>For more information about the lock-free change feature, see <a href="https://help.aliyun.com/document_detail/207847.html">Overview</a>.
+     * This operation can be used only for instances that are managed in Stable Change or Security Collaboration mode. For more information, see <a href="https://help.aliyun.com/document_detail/96145.html">Change data without the need to lock tables</a> and <a href="https://help.aliyun.com/document_detail/98373.html">Change schemas without locking tables</a>.</p>
+     * 
+     * @param request the request parameters of CreateFreeLockCorrectOrder  CreateFreeLockCorrectOrderRequest
+     * @return CreateFreeLockCorrectOrderResponse
      */
     @Override
     public CompletableFuture<CreateFreeLockCorrectOrderResponse> createFreeLockCorrectOrder(CreateFreeLockCorrectOrderRequest request) {
@@ -408,9 +492,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   The workspace name must be unique within a tenant. If a workspace with the same name already exists within the tenant, the call may fail.
-      * *   You can call the [GetLhSpaceByName](~~424379~~) operation to query whether a workspace with a specific name already exists as a DMS administrator or database administrator (DBA).
-      *
+     * <b>description</b> :
+     * <p>  The workspace name must be unique within a tenant. If a workspace with the same name already exists within the tenant, the call may fail.</p>
+     * <ul>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/424379.html">GetLhSpaceByName</a> operation to query whether a workspace with a specific name already exists as a DMS administrator or database administrator (DBA).</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateLakeHouseSpace  CreateLakeHouseSpaceRequest
+     * @return CreateLakeHouseSpaceResponse
      */
     @Override
     public CompletableFuture<CreateLakeHouseSpaceResponse> createLakeHouseSpace(CreateLakeHouseSpaceRequest request) {
@@ -426,6 +515,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateLogicDatabase  CreateLogicDatabaseRequest
+     * @return CreateLogicDatabaseResponse
+     */
     @Override
     public CompletableFuture<CreateLogicDatabaseResponse> createLogicDatabase(CreateLogicDatabaseRequest request) {
         try {
@@ -441,12 +534,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * To facilitate ticket creation, you can call the following dedicated operations to create some types of tickets:
-      * *   [CreateDataCorrectOrder](~~208388~~): creates a regular data change ticket.
-      * *   [CreateDataCronClearOrder](~~208385~~): creates a ticket to clear historical data.
-      * *   [CreateDataImportOrder](~~208387~~): creates a data import ticket.
-      * *   [CreateFreeLockCorrectOrder](~~208386~~): creates a lock-free change ticket.
-      *
+     * <b>description</b> :
+     * <p>To facilitate ticket creation, you can call the following dedicated operations to create some types of tickets:</p>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/208388.html">CreateDataCorrectOrder</a>: creates a regular data change ticket.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/208385.html">CreateDataCronClearOrder</a>: creates a ticket to clear historical data.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/208387.html">CreateDataImportOrder</a>: creates a data import ticket.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/208386.html">CreateFreeLockCorrectOrder</a>: creates a lock-free change ticket.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateOrder  CreateOrderRequest
+     * @return CreateOrderResponse
      */
     @Override
     public CompletableFuture<CreateOrderResponse> createOrder(CreateOrderRequest request) {
@@ -462,6 +560,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateProcCorrectOrder  CreateProcCorrectOrderRequest
+     * @return CreateProcCorrectOrderResponse
+     */
     @Override
     public CompletableFuture<CreateProcCorrectOrderResponse> createProcCorrectOrder(CreateProcCorrectOrderRequest request) {
         try {
@@ -477,10 +579,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * - The database instance runs the MySQL or MariaDB database engine. For example, the database instance can be an ApsaraDB RDS for MySQL instance, a PolarDB for MySQL cluster, a Distributed Relational Database Service (DRDS) cluster, or an AnalyticDB for MySQL cluster. The database instance can also be a self-managed MySQL or MariaDB database, or a MySQL or MariaDB database in a third-party cloud.
-      * - The database instance resides in the China (Hangzhou) or China (Beijing) region.
-      * - You are a Data Management (DMS) administrator, a database administrator (DBA), or the owner of the database instance.
-      *
+     * <b>description</b> :
+     * <ul>
+     * <li>The database instance runs the MySQL or MariaDB database engine. For example, the database instance can be an ApsaraDB RDS for MySQL instance, a PolarDB for MySQL cluster, a Distributed Relational Database Service (DRDS) cluster, or an AnalyticDB for MySQL cluster. The database instance can also be a self-managed MySQL or MariaDB database, or a MySQL or MariaDB database in a third-party cloud.</li>
+     * <li>The database instance resides in the China (Hangzhou) or China (Beijing) region.</li>
+     * <li>You are a Data Management (DMS) administrator, a database administrator (DBA), or the owner of the database instance.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateProxy  CreateProxyRequest
+     * @return CreateProxyResponse
      */
     @Override
     public CompletableFuture<CreateProxyResponse> createProxy(CreateProxyRequest request) {
@@ -497,9 +604,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * - The data security protection feature is enabled for the instance.
-      * - Your user role is the administrator role, DBA role, or the owner of data security protection for the current instance.
-      *
+     * <b>description</b> :
+     * <ul>
+     * <li>The data security protection feature is enabled for the instance.</li>
+     * <li>Your user role is the administrator role, DBA role, or the owner of data security protection for the current instance.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateProxyAccess  CreateProxyAccessRequest
+     * @return CreateProxyAccessResponse
      */
     @Override
     public CompletableFuture<CreateProxyAccessResponse> createProxyAccess(CreateProxyAccessRequest request) {
@@ -515,6 +627,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreatePublishGroupTask  CreatePublishGroupTaskRequest
+     * @return CreatePublishGroupTaskResponse
+     */
     @Override
     public CompletableFuture<CreatePublishGroupTaskResponse> createPublishGroupTask(CreatePublishGroupTaskRequest request) {
         try {
@@ -530,9 +646,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation only for database instances that are managed in Security Collaboration mode.
-      * For more information about the SQL review feature, see [SQL review](~~60374~~).
-      *
+     * <b>description</b> :
+     * <p>You can call this operation only for database instances that are managed in Security Collaboration mode.
+     * For more information about the SQL review feature, see <a href="https://help.aliyun.com/document_detail/60374.html">SQL review</a>.</p>
+     * 
+     * @param request the request parameters of CreateSQLReviewOrder  CreateSQLReviewOrderRequest
+     * @return CreateSQLReviewOrderResponse
      */
     @Override
     public CompletableFuture<CreateSQLReviewOrderResponse> createSQLReviewOrder(CreateSQLReviewOrderRequest request) {
@@ -548,6 +667,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateScenario  CreateScenarioRequest
+     * @return CreateScenarioResponse
+     */
     @Override
     public CompletableFuture<CreateScenarioResponse> createScenario(CreateScenarioRequest request) {
         try {
@@ -562,6 +685,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateStandardGroup  CreateStandardGroupRequest
+     * @return CreateStandardGroupResponse
+     */
     @Override
     public CompletableFuture<CreateStandardGroupResponse> createStandardGroup(CreateStandardGroupRequest request) {
         try {
@@ -576,6 +703,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateStructSyncOrder  CreateStructSyncOrderRequest
+     * @return CreateStructSyncOrderResponse
+     */
     @Override
     public CompletableFuture<CreateStructSyncOrderResponse> createStructSyncOrder(CreateStructSyncOrderRequest request) {
         try {
@@ -590,6 +721,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateTask  CreateTaskRequest
+     * @return CreateTaskResponse
+     */
     @Override
     public CompletableFuture<CreateTaskResponse> createTask(CreateTaskRequest request) {
         try {
@@ -604,6 +739,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateTaskFlow  CreateTaskFlowRequest
+     * @return CreateTaskFlowResponse
+     */
     @Override
     public CompletableFuture<CreateTaskFlowResponse> createTaskFlow(CreateTaskFlowRequest request) {
         try {
@@ -618,6 +757,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateUploadFileJob  CreateUploadFileJobRequest
+     * @return CreateUploadFileJobResponse
+     */
     @Override
     public CompletableFuture<CreateUploadFileJobResponse> createUploadFileJob(CreateUploadFileJobRequest request) {
         try {
@@ -632,6 +775,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateUploadOSSFileJob  CreateUploadOSSFileJobRequest
+     * @return CreateUploadOSSFileJobResponse
+     */
     @Override
     public CompletableFuture<CreateUploadOSSFileJobResponse> createUploadOSSFileJob(CreateUploadOSSFileJobRequest request) {
         try {
@@ -646,6 +793,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAuthorityTemplate  DeleteAuthorityTemplateRequest
+     * @return DeleteAuthorityTemplateResponse
+     */
     @Override
     public CompletableFuture<DeleteAuthorityTemplateResponse> deleteAuthorityTemplate(DeleteAuthorityTemplateRequest request) {
         try {
@@ -661,8 +812,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Note: You can call this operation only to remove a database instance from the instance list of DMS. The instance is not deleted or shut down.
-      *
+     * <b>description</b> :
+     * <p>Note: You can call this operation only to remove a database instance from the instance list of DMS. The instance is not deleted or shut down.</p>
+     * 
+     * @param request the request parameters of DeleteInstance  DeleteInstanceRequest
+     * @return DeleteInstanceResponse
      */
     @Override
     public CompletableFuture<DeleteInstanceResponse> deleteInstance(DeleteInstanceRequest request) {
@@ -678,6 +832,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteLakeHouseSpace  DeleteLakeHouseSpaceRequest
+     * @return DeleteLakeHouseSpaceResponse
+     */
     @Override
     public CompletableFuture<DeleteLakeHouseSpaceResponse> deleteLakeHouseSpace(DeleteLakeHouseSpaceRequest request) {
         try {
@@ -693,9 +851,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You must call this operation as a DMS administrator, a database administrator (DBA), or a workspace administrator.
-      * You cannot call this operation to transfer the ownership of a task flow. To transfer the ownership of a task flow, call the [ChangLhDagOwner](~~424761~~) operation.
-      *
+     * <b>description</b> :
+     * <p>You must call this operation as a DMS administrator, a database administrator (DBA), or a workspace administrator.
+     * You cannot call this operation to transfer the ownership of a task flow. To transfer the ownership of a task flow, call the <a href="https://help.aliyun.com/document_detail/424761.html">ChangLhDagOwner</a> operation.</p>
+     * 
+     * @param request the request parameters of DeleteLhMembers  DeleteLhMembersRequest
+     * @return DeleteLhMembersResponse
      */
     @Override
     public CompletableFuture<DeleteLhMembersResponse> deleteLhMembers(DeleteLhMembersRequest request) {
@@ -711,6 +872,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteLogicDatabase  DeleteLogicDatabaseRequest
+     * @return DeleteLogicDatabaseResponse
+     */
     @Override
     public CompletableFuture<DeleteLogicDatabaseResponse> deleteLogicDatabase(DeleteLogicDatabaseRequest request) {
         try {
@@ -725,6 +890,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteLogicTableRouteConfig  DeleteLogicTableRouteConfigRequest
+     * @return DeleteLogicTableRouteConfigResponse
+     */
     @Override
     public CompletableFuture<DeleteLogicTableRouteConfigResponse> deleteLogicTableRouteConfig(DeleteLogicTableRouteConfigRequest request) {
         try {
@@ -740,8 +909,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After you disable this feature, your DB instance loses the JDBC protocol. All authorization information is recycled.
-      *
+     * <b>description</b> :
+     * <p>After you disable this feature, your DB instance loses the JDBC protocol. All authorization information is recycled.</p>
+     * 
+     * @param request the request parameters of DeleteProxy  DeleteProxyRequest
+     * @return DeleteProxyResponse
      */
     @Override
     public CompletableFuture<DeleteProxyResponse> deleteProxy(DeleteProxyRequest request) {
@@ -757,6 +929,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteProxyAccess  DeleteProxyAccessRequest
+     * @return DeleteProxyAccessResponse
+     */
     @Override
     public CompletableFuture<DeleteProxyAccessResponse> deleteProxyAccess(DeleteProxyAccessRequest request) {
         try {
@@ -772,8 +948,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call this operation, make sure that no task flow is specified in the business scenario.
-      *
+     * <b>description</b> :
+     * <p>When you call this operation, make sure that no task flow is specified in the business scenario.</p>
+     * 
+     * @param request the request parameters of DeleteScenario  DeleteScenarioRequest
+     * @return DeleteScenarioResponse
      */
     @Override
     public CompletableFuture<DeleteScenarioResponse> deleteScenario(DeleteScenarioRequest request) {
@@ -789,6 +968,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteStandardGroup  DeleteStandardGroupRequest
+     * @return DeleteStandardGroupResponse
+     */
     @Override
     public CompletableFuture<DeleteStandardGroupResponse> deleteStandardGroup(DeleteStandardGroupRequest request) {
         try {
@@ -803,6 +986,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteTask  DeleteTaskRequest
+     * @return DeleteTaskResponse
+     */
     @Override
     public CompletableFuture<DeleteTaskResponse> deleteTask(DeleteTaskRequest request) {
         try {
@@ -817,6 +1004,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteTaskFlow  DeleteTaskFlowRequest
+     * @return DeleteTaskFlowResponse
+     */
     @Override
     public CompletableFuture<DeleteTaskFlowResponse> deleteTaskFlow(DeleteTaskFlowRequest request) {
         try {
@@ -832,8 +1023,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This operation is used for multi-condition query. You can call it to delete the edges of a specified task flow that meet all specified conditions.
-      *
+     * <b>description</b> :
+     * <p>This operation is used for multi-condition query. You can call it to delete the edges of a specified task flow that meet all specified conditions.</p>
+     * 
+     * @param request the request parameters of DeleteTaskFlowEdgesByCondition  DeleteTaskFlowEdgesByConditionRequest
+     * @return DeleteTaskFlowEdgesByConditionResponse
      */
     @Override
     public CompletableFuture<DeleteTaskFlowEdgesByConditionResponse> deleteTaskFlowEdgesByCondition(DeleteTaskFlowEdgesByConditionRequest request) {
@@ -850,9 +1044,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The effect of deleting a user by calling this operation is the same as that of deleting a user by choosing System Management > User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to delete a user that is no longer used from DMS Enterprise. After the user is deleted, the data source permission, data owner configuration, and database administrator (DBA) configuration of the corresponding Alibaba Cloud account or Resource Access Management (RAM) user are revoked and become invalid.
-      * >  This operation only removes the association of the Alibaba Cloud account or RAM user with DMS Enterprise of the enterprise, rather than actually deleting the Alibaba Cloud account or RAM user. After the user is deleted, the Alibaba Cloud account or RAM user cannot log on to DMS Enterprise, unless the user is added to DMS Enterprise again.
-      *
+     * <b>description</b> :
+     * <p>The effect of deleting a user by calling this operation is the same as that of deleting a user by choosing System Management &gt; User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to delete a user that is no longer used from DMS Enterprise. After the user is deleted, the data source permission, data owner configuration, and database administrator (DBA) configuration of the corresponding Alibaba Cloud account or Resource Access Management (RAM) user are revoked and become invalid.</p>
+     * <blockquote>
+     * <p> This operation only removes the association of the Alibaba Cloud account or RAM user with DMS Enterprise of the enterprise, rather than actually deleting the Alibaba Cloud account or RAM user. After the user is deleted, the Alibaba Cloud account or RAM user cannot log on to DMS Enterprise, unless the user is added to DMS Enterprise again.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DeleteUser  DeleteUserRequest
+     * @return DeleteUserResponse
      */
     @Override
     public CompletableFuture<DeleteUserResponse> deleteUser(DeleteUserRequest request) {
@@ -869,9 +1068,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The effect of disabling a user by calling this operation is the same as that of disabling a user by choosing System Management > User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to disable a user that is temporarily not used in DMS Enterprise. After the user is disabled, the data source permission, data owner configuration, and database administrator (DBA) configuration of the corresponding Alibaba Cloud account or Resource Access Management (RAM) user are revoked and become invalid.
-      * >  This operation only stops the Alibaba Cloud account or RAM user from logging on to DMS Enterprise of the enterprise, rather than actually disabling the Alibaba Cloud account or RAM user. After the user is disabled, the Alibaba Cloud account or RAM user cannot log on to DMS Enterprise, unless the user is enabled again. The disabled user, however, still exists in DMS Enterprise.
-      *
+     * <b>description</b> :
+     * <p>The effect of disabling a user by calling this operation is the same as that of disabling a user by choosing System Management &gt; User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to disable a user that is temporarily not used in DMS Enterprise. After the user is disabled, the data source permission, data owner configuration, and database administrator (DBA) configuration of the corresponding Alibaba Cloud account or Resource Access Management (RAM) user are revoked and become invalid.</p>
+     * <blockquote>
+     * <p> This operation only stops the Alibaba Cloud account or RAM user from logging on to DMS Enterprise of the enterprise, rather than actually disabling the Alibaba Cloud account or RAM user. After the user is disabled, the Alibaba Cloud account or RAM user cannot log on to DMS Enterprise, unless the user is enabled again. The disabled user, however, still exists in DMS Enterprise.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DisableUser  DisableUserRequest
+     * @return DisableUserResponse
      */
     @Override
     public CompletableFuture<DisableUserResponse> disableUser(DisableUserRequest request) {
@@ -887,6 +1091,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DownloadDataTrackResult  DownloadDataTrackResultRequest
+     * @return DownloadDataTrackResultResponse
+     */
     @Override
     public CompletableFuture<DownloadDataTrackResultResponse> downloadDataTrackResult(DownloadDataTrackResultRequest request) {
         try {
@@ -901,6 +1109,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EditLogicDatabase  EditLogicDatabaseRequest
+     * @return EditLogicDatabaseResponse
+     */
     @Override
     public CompletableFuture<EditLogicDatabaseResponse> editLogicDatabase(EditLogicDatabaseRequest request) {
         try {
@@ -916,9 +1128,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The effect of enabling a user by calling this operation is the same as that of enabling a user by choosing System Management > User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to enable a user that has been disabled in DMS Enterprise. After the user is enabled, the corresponding Alibaba Cloud account or Resource Access Management (RAM) user can continue to log on to DMS Enterprise and perform relevant operations.
-      * >  This operation only enables the Alibaba Cloud account or RAM user to log on to DMS Enterprise of the enterprise and perform relevant operations, rather than granting other permissions to the Alibaba Cloud account or RAM user.
-      *
+     * <b>description</b> :
+     * <p>The effect of enabling a user by calling this operation is the same as that of enabling a user by choosing System Management &gt; User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to enable a user that has been disabled in DMS Enterprise. After the user is enabled, the corresponding Alibaba Cloud account or Resource Access Management (RAM) user can continue to log on to DMS Enterprise and perform relevant operations.</p>
+     * <blockquote>
+     * <p> This operation only enables the Alibaba Cloud account or RAM user to log on to DMS Enterprise of the enterprise and perform relevant operations, rather than granting other permissions to the Alibaba Cloud account or RAM user.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of EnableUser  EnableUserRequest
+     * @return EnableUserResponse
      */
     @Override
     public CompletableFuture<EnableUserResponse> enableUser(EnableUserRequest request) {
@@ -934,6 +1151,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExecuteDataCorrect  ExecuteDataCorrectRequest
+     * @return ExecuteDataCorrectResponse
+     */
     @Override
     public CompletableFuture<ExecuteDataCorrectResponse> executeDataCorrect(ExecuteDataCorrectRequest request) {
         try {
@@ -948,6 +1169,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExecuteDataExport  ExecuteDataExportRequest
+     * @return ExecuteDataExportResponse
+     */
     @Override
     public CompletableFuture<ExecuteDataExportResponse> executeDataExport(ExecuteDataExportRequest request) {
         try {
@@ -963,8 +1188,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation only for instances that are managed in Security Collaboration mode.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation only for instances that are managed in Security Collaboration mode.</p>
+     * 
+     * @param request the request parameters of ExecuteScript  ExecuteScriptRequest
+     * @return ExecuteScriptResponse
      */
     @Override
     public CompletableFuture<ExecuteScriptResponse> executeScript(ExecuteScriptRequest request) {
@@ -981,9 +1209,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If the security rules of an instance indicate that a ticket must be approved before you perform schema synchronization, you can call the [SubmitStructSyncOrderApproval](~~206166~~) operation to submit the ticket for approval.
-      * >  You can call the [GetStructSyncJobDetail](~~206160~~) operation to query whether you need to submit a ticket for approval.
-      *
+     * <b>description</b> :
+     * <p>If the security rules of an instance indicate that a ticket must be approved before you perform schema synchronization, you can call the <a href="https://help.aliyun.com/document_detail/206166.html">SubmitStructSyncOrderApproval</a> operation to submit the ticket for approval.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/206160.html">GetStructSyncJobDetail</a> operation to query whether you need to submit a ticket for approval.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ExecuteStructSync  ExecuteStructSyncRequest
+     * @return ExecuteStructSyncResponse
      */
     @Override
     public CompletableFuture<ExecuteStructSyncResponse> executeStructSync(ExecuteStructSyncRequest request) {
@@ -999,6 +1232,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetApprovalDetail  GetApprovalDetailRequest
+     * @return GetApprovalDetailResponse
+     */
     @Override
     public CompletableFuture<GetApprovalDetailResponse> getApprovalDetail(GetApprovalDetailRequest request) {
         try {
@@ -1014,8 +1251,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You must be a Data Management (DMS) administrator or a database administrator (DBA). For more information about how to view system roles, see [View system roles](~~324212~~).
-      *
+     * <b>description</b> :
+     * <p>You must be a Data Management (DMS) administrator or a database administrator (DBA). For more information about how to view system roles, see <a href="https://help.aliyun.com/document_detail/324212.html">View system roles</a>.</p>
+     * 
+     * @param request the request parameters of GetAuthorityTemplate  GetAuthorityTemplateRequest
+     * @return GetAuthorityTemplateResponse
      */
     @Override
     public CompletableFuture<GetAuthorityTemplateResponse> getAuthorityTemplate(GetAuthorityTemplateRequest request) {
@@ -1032,8 +1272,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
-      *
+     * <b>description</b> :
+     * <p>You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see <a href="https://help.aliyun.com/document_detail/324212.html">View system roles</a>.</p>
+     * 
+     * @param request the request parameters of GetAuthorityTemplateItem  GetAuthorityTemplateItemRequest
+     * @return GetAuthorityTemplateItemResponse
      */
     @Override
     public CompletableFuture<GetAuthorityTemplateItemResponse> getAuthorityTemplateItem(GetAuthorityTemplateItemRequest request) {
@@ -1049,6 +1292,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetClassificationTemplate  GetClassificationTemplateRequest
+     * @return GetClassificationTemplateResponse
+     */
     @Override
     public CompletableFuture<GetClassificationTemplateResponse> getClassificationTemplate(GetClassificationTemplateRequest request) {
         try {
@@ -1063,6 +1310,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDBTaskSQLJobLog  GetDBTaskSQLJobLogRequest
+     * @return GetDBTaskSQLJobLogResponse
+     */
     @Override
     public CompletableFuture<GetDBTaskSQLJobLogResponse> getDBTaskSQLJobLog(GetDBTaskSQLJobLogRequest request) {
         try {
@@ -1077,6 +1328,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDBTopology  GetDBTopologyRequest
+     * @return GetDBTopologyResponse
+     */
     @Override
     public CompletableFuture<GetDBTopologyResponse> getDBTopology(GetDBTopologyRequest request) {
         try {
@@ -1091,6 +1346,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDataArchiveCount  GetDataArchiveCountRequest
+     * @return GetDataArchiveCountResponse
+     */
     @Override
     public CompletableFuture<GetDataArchiveCountResponse> getDataArchiveCount(GetDataArchiveCountRequest request) {
         try {
@@ -1105,6 +1364,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDataArchiveOrderDetail  GetDataArchiveOrderDetailRequest
+     * @return GetDataArchiveOrderDetailResponse
+     */
     @Override
     public CompletableFuture<GetDataArchiveOrderDetailResponse> getDataArchiveOrderDetail(GetDataArchiveOrderDetailRequest request) {
         try {
@@ -1119,6 +1382,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDataCorrectBackupFiles  GetDataCorrectBackupFilesRequest
+     * @return GetDataCorrectBackupFilesResponse
+     */
     @Override
     public CompletableFuture<GetDataCorrectBackupFilesResponse> getDataCorrectBackupFiles(GetDataCorrectBackupFilesRequest request) {
         try {
@@ -1133,6 +1400,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDataCorrectOrderDetail  GetDataCorrectOrderDetailRequest
+     * @return GetDataCorrectOrderDetailResponse
+     */
     @Override
     public CompletableFuture<GetDataCorrectOrderDetailResponse> getDataCorrectOrderDetail(GetDataCorrectOrderDetailRequest request) {
         try {
@@ -1147,6 +1418,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDataCorrectRollbackFile  GetDataCorrectRollbackFileRequest
+     * @return GetDataCorrectRollbackFileResponse
+     */
     @Override
     public CompletableFuture<GetDataCorrectRollbackFileResponse> getDataCorrectRollbackFile(GetDataCorrectRollbackFileRequest request) {
         try {
@@ -1162,8 +1437,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This operation applies to [regular data change](~~58419~~) and [batch data import](~~144643~~).
-      *
+     * <b>description</b> :
+     * <p>This operation applies to <a href="https://help.aliyun.com/document_detail/58419.html">regular data change</a> and <a href="https://help.aliyun.com/document_detail/144643.html">batch data import</a>.</p>
+     * 
+     * @param request the request parameters of GetDataCorrectSQLFile  GetDataCorrectSQLFileRequest
+     * @return GetDataCorrectSQLFileResponse
      */
     @Override
     public CompletableFuture<GetDataCorrectSQLFileResponse> getDataCorrectSQLFile(GetDataCorrectSQLFileRequest request) {
@@ -1179,6 +1457,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDataCorrectTaskDetail  GetDataCorrectTaskDetailRequest
+     * @return GetDataCorrectTaskDetailResponse
+     */
     @Override
     public CompletableFuture<GetDataCorrectTaskDetailResponse> getDataCorrectTaskDetail(GetDataCorrectTaskDetailRequest request) {
         try {
@@ -1193,6 +1475,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDataCronClearConfig  GetDataCronClearConfigRequest
+     * @return GetDataCronClearConfigResponse
+     */
     @Override
     public CompletableFuture<GetDataCronClearConfigResponse> getDataCronClearConfig(GetDataCronClearConfigRequest request) {
         try {
@@ -1207,6 +1493,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDataCronClearTaskDetailList  GetDataCronClearTaskDetailListRequest
+     * @return GetDataCronClearTaskDetailListResponse
+     */
     @Override
     public CompletableFuture<GetDataCronClearTaskDetailListResponse> getDataCronClearTaskDetailList(GetDataCronClearTaskDetailListRequest request) {
         try {
@@ -1221,6 +1511,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDataExportDownloadURL  GetDataExportDownloadURLRequest
+     * @return GetDataExportDownloadURLResponse
+     */
     @Override
     public CompletableFuture<GetDataExportDownloadURLResponse> getDataExportDownloadURL(GetDataExportDownloadURLRequest request) {
         try {
@@ -1235,6 +1529,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDataExportOrderDetail  GetDataExportOrderDetailRequest
+     * @return GetDataExportOrderDetailResponse
+     */
     @Override
     public CompletableFuture<GetDataExportOrderDetailResponse> getDataExportOrderDetail(GetDataExportOrderDetailRequest request) {
         try {
@@ -1249,6 +1547,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDataExportPreCheckDetail  GetDataExportPreCheckDetailRequest
+     * @return GetDataExportPreCheckDetailResponse
+     */
     @Override
     public CompletableFuture<GetDataExportPreCheckDetailResponse> getDataExportPreCheckDetail(GetDataExportPreCheckDetailRequest request) {
         try {
@@ -1264,8 +1566,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation only if the data is imported in security mode in your data import ticket.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation only if the data is imported in security mode in your data import ticket.</p>
+     * 
+     * @param request the request parameters of GetDataImportSQL  GetDataImportSQLRequest
+     * @return GetDataImportSQLResponse
      */
     @Override
     public CompletableFuture<GetDataImportSQLResponse> getDataImportSQL(GetDataImportSQLRequest request) {
@@ -1281,6 +1586,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDataTrackJobDegree  GetDataTrackJobDegreeRequest
+     * @return GetDataTrackJobDegreeResponse
+     */
     @Override
     public CompletableFuture<GetDataTrackJobDegreeResponse> getDataTrackJobDegree(GetDataTrackJobDegreeRequest request) {
         try {
@@ -1295,6 +1604,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDataTrackJobTableMeta  GetDataTrackJobTableMetaRequest
+     * @return GetDataTrackJobTableMetaResponse
+     */
     @Override
     public CompletableFuture<GetDataTrackJobTableMetaResponse> getDataTrackJobTableMeta(GetDataTrackJobTableMetaRequest request) {
         try {
@@ -1309,6 +1622,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDataTrackOrderDetail  GetDataTrackOrderDetailRequest
+     * @return GetDataTrackOrderDetailResponse
+     */
     @Override
     public CompletableFuture<GetDataTrackOrderDetailResponse> getDataTrackOrderDetail(GetDataTrackOrderDetailRequest request) {
         try {
@@ -1323,6 +1640,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDatabase  GetDatabaseRequest
+     * @return GetDatabaseResponse
+     */
     @Override
     public CompletableFuture<GetDatabaseResponse> getDatabase(GetDatabaseRequest request) {
         try {
@@ -1337,6 +1658,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDatabaseExportOrderDetail  GetDatabaseExportOrderDetailRequest
+     * @return GetDatabaseExportOrderDetailResponse
+     */
     @Override
     public CompletableFuture<GetDatabaseExportOrderDetailResponse> getDatabaseExportOrderDetail(GetDatabaseExportOrderDetailRequest request) {
         try {
@@ -1351,6 +1676,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDbExportDownloadURL  GetDbExportDownloadURLRequest
+     * @return GetDbExportDownloadURLResponse
+     */
     @Override
     public CompletableFuture<GetDbExportDownloadURLResponse> getDbExportDownloadURL(GetDbExportDownloadURLRequest request) {
         try {
@@ -1365,6 +1694,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetInstance  GetInstanceRequest
+     * @return GetInstanceResponse
+     */
     @Override
     public CompletableFuture<GetInstanceResponse> getInstance(GetInstanceRequest request) {
         try {
@@ -1380,8 +1713,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The scheduling cycle of a task flow must be greater than the minimum scheduling cycle configured in the SLA rule for the task flow.
-      *
+     * <b>description</b> :
+     * <p>The scheduling cycle of a task flow must be greater than the minimum scheduling cycle configured in the SLA rule for the task flow.</p>
+     * 
+     * @param request the request parameters of GetIntervalLimitOfSLA  GetIntervalLimitOfSLARequest
+     * @return GetIntervalLimitOfSLAResponse
      */
     @Override
     public CompletableFuture<GetIntervalLimitOfSLAResponse> getIntervalLimitOfSLA(GetIntervalLimitOfSLARequest request) {
@@ -1398,8 +1734,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You are a DMS administrator or a database administrator (DBA).
-      *
+     * <b>description</b> :
+     * <p>You are a DMS administrator or a database administrator (DBA).</p>
+     * 
+     * @param request the request parameters of GetLhSpaceByName  GetLhSpaceByNameRequest
+     * @return GetLhSpaceByNameResponse
      */
     @Override
     public CompletableFuture<GetLhSpaceByNameResponse> getLhSpaceByName(GetLhSpaceByNameRequest request) {
@@ -1415,6 +1754,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetLogicDatabase  GetLogicDatabaseRequest
+     * @return GetLogicDatabaseResponse
+     */
     @Override
     public CompletableFuture<GetLogicDatabaseResponse> getLogicDatabase(GetLogicDatabaseRequest request) {
         try {
@@ -1430,8 +1773,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation only for database instances whose control mode is Security Collaboration.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation only for database instances whose control mode is Security Collaboration.</p>
+     * 
+     * @param request the request parameters of GetMetaTableColumn  GetMetaTableColumnRequest
+     * @return GetMetaTableColumnResponse
      */
     @Override
     public CompletableFuture<GetMetaTableColumnResponse> getMetaTableColumn(GetMetaTableColumnRequest request) {
@@ -1448,8 +1794,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation only for database instances whose control mode is Security Collaboration.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation only for database instances whose control mode is Security Collaboration.</p>
+     * 
+     * @param request the request parameters of GetMetaTableDetailInfo  GetMetaTableDetailInfoRequest
+     * @return GetMetaTableDetailInfoResponse
      */
     @Override
     public CompletableFuture<GetMetaTableDetailInfoResponse> getMetaTableDetailInfo(GetMetaTableDetailInfoRequest request) {
@@ -1465,6 +1814,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetOnlineDDLProgress  GetOnlineDDLProgressRequest
+     * @return GetOnlineDDLProgressResponse
+     */
     @Override
     public CompletableFuture<GetOnlineDDLProgressResponse> getOnlineDDLProgress(GetOnlineDDLProgressRequest request) {
         try {
@@ -1480,8 +1833,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Prerequisites: You are an administrator of Data Management (DMS) or a security administrator. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain your user role from the RoleIdList parameter that is returned.
-      *
+     * <b>description</b> :
+     * <p>Prerequisites: You are an administrator of Data Management (DMS) or a security administrator. You can call the <a href="https://help.aliyun.com/document_detail/141938.html">ListUsers</a> or <a href="https://help.aliyun.com/document_detail/147098.html">GetUser</a> operation to obtain your user role from the RoleIdList parameter that is returned.</p>
+     * 
+     * @param request the request parameters of GetOpLog  GetOpLogRequest
+     * @return GetOpLogResponse
      */
     @Override
     public CompletableFuture<GetOpLogResponse> getOpLog(GetOpLogRequest request) {
@@ -1497,6 +1853,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetOrderAttachmentFile  GetOrderAttachmentFileRequest
+     * @return GetOrderAttachmentFileResponse
+     */
     @Override
     public CompletableFuture<GetOrderAttachmentFileResponse> getOrderAttachmentFile(GetOrderAttachmentFileRequest request) {
         try {
@@ -1511,6 +1871,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetOrderBaseInfo  GetOrderBaseInfoRequest
+     * @return GetOrderBaseInfoResponse
+     */
     @Override
     public CompletableFuture<GetOrderBaseInfoResponse> getOrderBaseInfo(GetOrderBaseInfoRequest request) {
         try {
@@ -1525,6 +1889,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetOwnerApplyOrderDetail  GetOwnerApplyOrderDetailRequest
+     * @return GetOwnerApplyOrderDetailResponse
+     */
     @Override
     public CompletableFuture<GetOwnerApplyOrderDetailResponse> getOwnerApplyOrderDetail(GetOwnerApplyOrderDetailRequest request) {
         try {
@@ -1539,6 +1907,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPagedInstance  GetPagedInstanceRequest
+     * @return GetPagedInstanceResponse
+     */
     @Override
     public CompletableFuture<GetPagedInstanceResponse> getPagedInstance(GetPagedInstanceRequest request) {
         try {
@@ -1554,8 +1926,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to query the information about tickets that apply for permissions on databases, tables, and sensitive columns.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to query the information about tickets that apply for permissions on databases, tables, and sensitive columns.</p>
+     * 
+     * @param request the request parameters of GetPermApplyOrderDetail  GetPermApplyOrderDetailRequest
+     * @return GetPermApplyOrderDetailResponse
      */
     @Override
     public CompletableFuture<GetPermApplyOrderDetailResponse> getPermApplyOrderDetail(GetPermApplyOrderDetailRequest request) {
@@ -1571,6 +1946,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPhysicalDatabase  GetPhysicalDatabaseRequest
+     * @return GetPhysicalDatabaseResponse
+     */
     @Override
     public CompletableFuture<GetPhysicalDatabaseResponse> getPhysicalDatabase(GetPhysicalDatabaseRequest request) {
         try {
@@ -1585,6 +1964,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetProxy  GetProxyRequest
+     * @return GetProxyResponse
+     */
     @Override
     public CompletableFuture<GetProxyResponse> getProxy(GetProxyRequest request) {
         try {
@@ -1599,6 +1982,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetProxyAccess  GetProxyAccessRequest
+     * @return GetProxyAccessResponse
+     */
     @Override
     public CompletableFuture<GetProxyAccessResponse> getProxyAccess(GetProxyAccessRequest request) {
         try {
@@ -1613,6 +2000,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRuleNumLimitOfSLA  GetRuleNumLimitOfSLARequest
+     * @return GetRuleNumLimitOfSLAResponse
+     */
     @Override
     public CompletableFuture<GetRuleNumLimitOfSLAResponse> getRuleNumLimitOfSLA(GetRuleNumLimitOfSLARequest request) {
         try {
@@ -1628,8 +2019,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For more information about the SQL review feature, see [SQL review](~~60374~~).
-      *
+     * <b>description</b> :
+     * <p>For more information about the SQL review feature, see <a href="https://help.aliyun.com/document_detail/60374.html">SQL review</a>.</p>
+     * 
+     * @param request the request parameters of GetSQLReviewCheckResultStatus  GetSQLReviewCheckResultStatusRequest
+     * @return GetSQLReviewCheckResultStatusResponse
      */
     @Override
     public CompletableFuture<GetSQLReviewCheckResultStatusResponse> getSQLReviewCheckResultStatus(GetSQLReviewCheckResultStatusRequest request) {
@@ -1646,8 +2040,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For more information about the SQL review feature, see [SQL review](~~60374~~).
-      *
+     * <b>description</b> :
+     * <p>For more information about the SQL review feature, see <a href="https://help.aliyun.com/document_detail/60374.html">SQL review</a>.</p>
+     * 
+     * @param request the request parameters of GetSQLReviewOptimizeDetail  GetSQLReviewOptimizeDetailRequest
+     * @return GetSQLReviewOptimizeDetailResponse
      */
     @Override
     public CompletableFuture<GetSQLReviewOptimizeDetailResponse> getSQLReviewOptimizeDetail(GetSQLReviewOptimizeDetailRequest request) {
@@ -1663,6 +2060,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetStandardGroup  GetStandardGroupRequest
+     * @return GetStandardGroupResponse
+     */
     @Override
     public CompletableFuture<GetStandardGroupResponse> getStandardGroup(GetStandardGroupRequest request) {
         try {
@@ -1677,6 +2078,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetStructSyncExecSqlDetail  GetStructSyncExecSqlDetailRequest
+     * @return GetStructSyncExecSqlDetailResponse
+     */
     @Override
     public CompletableFuture<GetStructSyncExecSqlDetailResponse> getStructSyncExecSqlDetail(GetStructSyncExecSqlDetailRequest request) {
         try {
@@ -1691,6 +2096,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetStructSyncJobAnalyzeResult  GetStructSyncJobAnalyzeResultRequest
+     * @return GetStructSyncJobAnalyzeResultResponse
+     */
     @Override
     public CompletableFuture<GetStructSyncJobAnalyzeResultResponse> getStructSyncJobAnalyzeResult(GetStructSyncJobAnalyzeResultRequest request) {
         try {
@@ -1705,6 +2114,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetStructSyncJobDetail  GetStructSyncJobDetailRequest
+     * @return GetStructSyncJobDetailResponse
+     */
     @Override
     public CompletableFuture<GetStructSyncJobDetailResponse> getStructSyncJobDetail(GetStructSyncJobDetailRequest request) {
         try {
@@ -1719,6 +2132,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetStructSyncOrderDetail  GetStructSyncOrderDetailRequest
+     * @return GetStructSyncOrderDetailResponse
+     */
     @Override
     public CompletableFuture<GetStructSyncOrderDetailResponse> getStructSyncOrderDetail(GetStructSyncOrderDetailRequest request) {
         try {
@@ -1733,6 +2150,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTableDBTopology  GetTableDBTopologyRequest
+     * @return GetTableDBTopologyResponse
+     */
     @Override
     public CompletableFuture<GetTableDBTopologyResponse> getTableDBTopology(GetTableDBTopologyRequest request) {
         try {
@@ -1747,6 +2168,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTableDesignProjectFlow  GetTableDesignProjectFlowRequest
+     * @return GetTableDesignProjectFlowResponse
+     */
     @Override
     public CompletableFuture<GetTableDesignProjectFlowResponse> getTableDesignProjectFlow(GetTableDesignProjectFlowRequest request) {
         try {
@@ -1761,6 +2186,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTableDesignProjectInfo  GetTableDesignProjectInfoRequest
+     * @return GetTableDesignProjectInfoResponse
+     */
     @Override
     public CompletableFuture<GetTableDesignProjectInfoResponse> getTableDesignProjectInfo(GetTableDesignProjectInfoRequest request) {
         try {
@@ -1775,6 +2204,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTableTopology  GetTableTopologyRequest
+     * @return GetTableTopologyResponse
+     */
     @Override
     public CompletableFuture<GetTableTopologyResponse> getTableTopology(GetTableTopologyRequest request) {
         try {
@@ -1789,6 +2222,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTask  GetTaskRequest
+     * @return GetTaskResponse
+     */
     @Override
     public CompletableFuture<GetTaskResponse> getTask(GetTaskRequest request) {
         try {
@@ -1803,6 +2240,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTaskFlowGraph  GetTaskFlowGraphRequest
+     * @return GetTaskFlowGraphResponse
+     */
     @Override
     public CompletableFuture<GetTaskFlowGraphResponse> getTaskFlowGraph(GetTaskFlowGraphRequest request) {
         try {
@@ -1817,6 +2258,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTaskFlowNotification  GetTaskFlowNotificationRequest
+     * @return GetTaskFlowNotificationResponse
+     */
     @Override
     public CompletableFuture<GetTaskFlowNotificationResponse> getTaskFlowNotification(GetTaskFlowNotificationRequest request) {
         try {
@@ -1831,6 +2276,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTaskInstanceRelation  GetTaskInstanceRelationRequest
+     * @return GetTaskInstanceRelationResponse
+     */
     @Override
     public CompletableFuture<GetTaskInstanceRelationResponse> getTaskInstanceRelation(GetTaskInstanceRelationRequest request) {
         try {
@@ -1845,6 +2294,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUser  GetUserRequest
+     * @return GetUserResponse
+     */
     @Override
     public CompletableFuture<GetUserResponse> getUser(GetUserRequest request) {
         try {
@@ -1859,6 +2312,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUserActiveTenant  GetUserActiveTenantRequest
+     * @return GetUserActiveTenantResponse
+     */
     @Override
     public CompletableFuture<GetUserActiveTenantResponse> getUserActiveTenant(GetUserActiveTenantRequest request) {
         try {
@@ -1873,6 +2330,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUserUploadFileJob  GetUserUploadFileJobRequest
+     * @return GetUserUploadFileJobResponse
+     */
     @Override
     public CompletableFuture<GetUserUploadFileJobResponse> getUserUploadFileJob(GetUserUploadFileJobRequest request) {
         try {
@@ -1888,8 +2349,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You must be a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
-      *
+     * <b>description</b> :
+     * <p>You must be a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see <a href="https://help.aliyun.com/document_detail/324212.html">View system roles</a>.</p>
+     * 
+     * @param request the request parameters of GrantTemplateAuthority  GrantTemplateAuthorityRequest
+     * @return GrantTemplateAuthorityResponse
      */
     @Override
     public CompletableFuture<GrantTemplateAuthorityResponse> grantTemplateAuthority(GrantTemplateAuthorityRequest request) {
@@ -1905,6 +2369,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GrantUserPermission  GrantUserPermissionRequest
+     * @return GrantUserPermissionResponse
+     */
     @Override
     public CompletableFuture<GrantUserPermissionResponse> grantUserPermission(GrantUserPermissionRequest request) {
         try {
@@ -1919,6 +2387,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InspectProxyAccessSecret  InspectProxyAccessSecretRequest
+     * @return InspectProxyAccessSecretResponse
+     */
     @Override
     public CompletableFuture<InspectProxyAccessSecretResponse> inspectProxyAccessSecret(InspectProxyAccessSecretRequest request) {
         try {
@@ -1933,6 +2405,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAuthorityTemplate  ListAuthorityTemplateRequest
+     * @return ListAuthorityTemplateResponse
+     */
     @Override
     public CompletableFuture<ListAuthorityTemplateResponse> listAuthorityTemplate(ListAuthorityTemplateRequest request) {
         try {
@@ -1947,6 +2423,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListClassificationTemplates  ListClassificationTemplatesRequest
+     * @return ListClassificationTemplatesResponse
+     */
     @Override
     public CompletableFuture<ListClassificationTemplatesResponse> listClassificationTemplates(ListClassificationTemplatesRequest request) {
         try {
@@ -1962,8 +2442,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation only for database instances whose control mode is Security Collaboration.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation only for database instances whose control mode is Security Collaboration.</p>
+     * 
+     * @param request the request parameters of ListColumns  ListColumnsRequest
+     * @return ListColumnsResponse
      */
     @Override
     public CompletableFuture<ListColumnsResponse> listColumns(ListColumnsRequest request) {
@@ -1979,6 +2462,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDAGVersions  ListDAGVersionsRequest
+     * @return ListDAGVersionsResponse
+     */
     @Override
     public CompletableFuture<ListDAGVersionsResponse> listDAGVersions(ListDAGVersionsRequest request) {
         try {
@@ -1993,6 +2480,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDBTaskSQLJob  ListDBTaskSQLJobRequest
+     * @return ListDBTaskSQLJobResponse
+     */
     @Override
     public CompletableFuture<ListDBTaskSQLJobResponse> listDBTaskSQLJob(ListDBTaskSQLJobRequest request) {
         try {
@@ -2007,6 +2498,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDBTaskSQLJobDetail  ListDBTaskSQLJobDetailRequest
+     * @return ListDBTaskSQLJobDetailResponse
+     */
     @Override
     public CompletableFuture<ListDBTaskSQLJobDetailResponse> listDBTaskSQLJobDetail(ListDBTaskSQLJobDetailRequest request) {
         try {
@@ -2021,6 +2516,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDDLPublishRecords  ListDDLPublishRecordsRequest
+     * @return ListDDLPublishRecordsResponse
+     */
     @Override
     public CompletableFuture<ListDDLPublishRecordsResponse> listDDLPublishRecords(ListDDLPublishRecordsRequest request) {
         try {
@@ -2036,8 +2535,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For more information about the Normal Data Modify feature, see [Change regular data](~~58419~~).
-      *
+     * <b>description</b> :
+     * <p>For more information about the Normal Data Modify feature, see <a href="https://help.aliyun.com/document_detail/58419.html">Change regular data</a>.</p>
+     * 
+     * @param request the request parameters of ListDataCorrectPreCheckDB  ListDataCorrectPreCheckDBRequest
+     * @return ListDataCorrectPreCheckDBResponse
      */
     @Override
     public CompletableFuture<ListDataCorrectPreCheckDBResponse> listDataCorrectPreCheckDB(ListDataCorrectPreCheckDBRequest request) {
@@ -2054,8 +2556,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For more information about the Normal Data Modify feature, see [Change regular data](~~58419~~).
-      *
+     * <b>description</b> :
+     * <p>For more information about the Normal Data Modify feature, see <a href="https://help.aliyun.com/document_detail/58419.html">Change regular data</a>.</p>
+     * 
+     * @param request the request parameters of ListDataCorrectPreCheckSQL  ListDataCorrectPreCheckSQLRequest
+     * @return ListDataCorrectPreCheckSQLResponse
      */
     @Override
     public CompletableFuture<ListDataCorrectPreCheckSQLResponse> listDataCorrectPreCheckSQL(ListDataCorrectPreCheckSQLRequest request) {
@@ -2072,8 +2577,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation only if the data is imported in security mode in your data import ticket.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation only if the data is imported in security mode in your data import ticket.</p>
+     * 
+     * @param request the request parameters of ListDataImportSQLPreCheckDetail  ListDataImportSQLPreCheckDetailRequest
+     * @return ListDataImportSQLPreCheckDetailResponse
      */
     @Override
     public CompletableFuture<ListDataImportSQLPreCheckDetailResponse> listDataImportSQLPreCheckDetail(ListDataImportSQLPreCheckDetailRequest request) {
@@ -2090,8 +2598,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation only if the data is imported in security mode in your data import ticket.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation only if the data is imported in security mode in your data import ticket.</p>
+     * 
+     * @param request the request parameters of ListDataImportSQLType  ListDataImportSQLTypeRequest
+     * @return ListDataImportSQLTypeResponse
      */
     @Override
     public CompletableFuture<ListDataImportSQLTypeResponse> listDataImportSQLType(ListDataImportSQLTypeRequest request) {
@@ -2107,6 +2618,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDatabaseUserPermssions  ListDatabaseUserPermssionsRequest
+     * @return ListDatabaseUserPermssionsResponse
+     */
     @Override
     public CompletableFuture<ListDatabaseUserPermssionsResponse> listDatabaseUserPermssions(ListDatabaseUserPermssionsRequest request) {
         try {
@@ -2121,6 +2636,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDatabases  ListDatabasesRequest
+     * @return ListDatabasesResponse
+     */
     @Override
     public CompletableFuture<ListDatabasesResponse> listDatabases(ListDatabasesRequest request) {
         try {
@@ -2135,6 +2654,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDefaultSLARules  ListDefaultSLARulesRequest
+     * @return ListDefaultSLARulesResponse
+     */
     @Override
     public CompletableFuture<ListDefaultSLARulesResponse> listDefaultSLARules(ListDefaultSLARulesRequest request) {
         try {
@@ -2149,6 +2672,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDesensitizationRule  ListDesensitizationRuleRequest
+     * @return ListDesensitizationRuleResponse
+     */
     @Override
     public CompletableFuture<ListDesensitizationRuleResponse> listDesensitizationRule(ListDesensitizationRuleRequest request) {
         try {
@@ -2163,6 +2690,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEffectiveOrders  ListEffectiveOrdersRequest
+     * @return ListEffectiveOrdersResponse
+     */
     @Override
     public CompletableFuture<ListEffectiveOrdersResponse> listEffectiveOrders(ListEffectiveOrdersRequest request) {
         try {
@@ -2177,6 +2708,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListIndexes  ListIndexesRequest
+     * @return ListIndexesResponse
+     */
     @Override
     public CompletableFuture<ListIndexesResponse> listIndexes(ListIndexesRequest request) {
         try {
@@ -2191,6 +2726,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInstanceLoginAuditLog  ListInstanceLoginAuditLogRequest
+     * @return ListInstanceLoginAuditLogResponse
+     */
     @Override
     public CompletableFuture<ListInstanceLoginAuditLogResponse> listInstanceLoginAuditLog(ListInstanceLoginAuditLogRequest request) {
         try {
@@ -2205,6 +2744,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInstanceUserPermissions  ListInstanceUserPermissionsRequest
+     * @return ListInstanceUserPermissionsResponse
+     */
     @Override
     public CompletableFuture<ListInstanceUserPermissionsResponse> listInstanceUserPermissions(ListInstanceUserPermissionsRequest request) {
         try {
@@ -2219,6 +2762,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInstances  ListInstancesRequest
+     * @return ListInstancesResponse
+     */
     @Override
     public CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request) {
         try {
@@ -2234,9 +2781,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Before you call this operation, make sure that you have the access permissions on the workspace. If you do not have the access permissions on the workspace, you can contact a DMS administrator, database administrator (DBA), or workspace administrator to add you as a member of the workspace. The [AddLhMembers](~~424759~~) operation can be called to add a workspace member.
-      * *   If you are a DMS administrator or a workspace administrator, you can query the business scenarios and task flows related to a user in a workspace based on the user ID.
-      *
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you have the access permissions on the workspace. If you do not have the access permissions on the workspace, you can contact a DMS administrator, database administrator (DBA), or workspace administrator to add you as a member of the workspace. The <a href="https://help.aliyun.com/document_detail/424759.html">AddLhMembers</a> operation can be called to add a workspace member.</p>
+     * <ul>
+     * <li>If you are a DMS administrator or a workspace administrator, you can query the business scenarios and task flows related to a user in a workspace based on the user ID.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListLhTaskFlowAndScenario  ListLhTaskFlowAndScenarioRequest
+     * @return ListLhTaskFlowAndScenarioResponse
      */
     @Override
     public CompletableFuture<ListLhTaskFlowAndScenarioResponse> listLhTaskFlowAndScenario(ListLhTaskFlowAndScenarioRequest request) {
@@ -2252,6 +2804,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListLogicDatabases  ListLogicDatabasesRequest
+     * @return ListLogicDatabasesResponse
+     */
     @Override
     public CompletableFuture<ListLogicDatabasesResponse> listLogicDatabases(ListLogicDatabasesRequest request) {
         try {
@@ -2266,6 +2822,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListLogicTableRouteConfig  ListLogicTableRouteConfigRequest
+     * @return ListLogicTableRouteConfigResponse
+     */
     @Override
     public CompletableFuture<ListLogicTableRouteConfigResponse> listLogicTableRouteConfig(ListLogicTableRouteConfigRequest request) {
         try {
@@ -2280,6 +2840,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListLogicTables  ListLogicTablesRequest
+     * @return ListLogicTablesResponse
+     */
     @Override
     public CompletableFuture<ListLogicTablesResponse> listLogicTables(ListLogicTablesRequest request) {
         try {
@@ -2294,6 +2858,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListOrders  ListOrdersRequest
+     * @return ListOrdersResponse
+     */
     @Override
     public CompletableFuture<ListOrdersResponse> listOrders(ListOrdersRequest request) {
         try {
@@ -2308,6 +2876,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListProxies  ListProxiesRequest
+     * @return ListProxiesResponse
+     */
     @Override
     public CompletableFuture<ListProxiesResponse> listProxies(ListProxiesRequest request) {
         try {
@@ -2322,6 +2894,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListProxyAccesses  ListProxyAccessesRequest
+     * @return ListProxyAccessesResponse
+     */
     @Override
     public CompletableFuture<ListProxyAccessesResponse> listProxyAccesses(ListProxyAccessesRequest request) {
         try {
@@ -2336,6 +2912,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListProxySQLExecAuditLog  ListProxySQLExecAuditLogRequest
+     * @return ListProxySQLExecAuditLogResponse
+     */
     @Override
     public CompletableFuture<ListProxySQLExecAuditLogResponse> listProxySQLExecAuditLog(ListProxySQLExecAuditLogRequest request) {
         try {
@@ -2350,6 +2930,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSLARules  ListSLARulesRequest
+     * @return ListSLARulesResponse
+     */
     @Override
     public CompletableFuture<ListSLARulesResponse> listSLARules(ListSLARulesRequest request) {
         try {
@@ -2364,6 +2948,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSQLExecAuditLog  ListSQLExecAuditLogRequest
+     * @return ListSQLExecAuditLogResponse
+     */
     @Override
     public CompletableFuture<ListSQLExecAuditLogResponse> listSQLExecAuditLog(ListSQLExecAuditLogRequest request) {
         try {
@@ -2379,8 +2967,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For more information about the SQL review feature, see [SQL review](~~60374~~).
-      *
+     * <b>description</b> :
+     * <p>For more information about the SQL review feature, see <a href="https://help.aliyun.com/document_detail/60374.html">SQL review</a>.</p>
+     * 
+     * @param request the request parameters of ListSQLReviewOriginSQL  ListSQLReviewOriginSQLRequest
+     * @return ListSQLReviewOriginSQLResponse
      */
     @Override
     public CompletableFuture<ListSQLReviewOriginSQLResponse> listSQLReviewOriginSQL(ListSQLReviewOriginSQLRequest request) {
@@ -2396,6 +2987,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListScenarios  ListScenariosRequest
+     * @return ListScenariosResponse
+     */
     @Override
     public CompletableFuture<ListScenariosResponse> listScenarios(ListScenariosRequest request) {
         try {
@@ -2410,6 +3005,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSensitiveColumnInfo  ListSensitiveColumnInfoRequest
+     * @return ListSensitiveColumnInfoResponse
+     */
     @Override
     public CompletableFuture<ListSensitiveColumnInfoResponse> listSensitiveColumnInfo(ListSensitiveColumnInfoRequest request) {
         try {
@@ -2424,6 +3023,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSensitiveColumns  ListSensitiveColumnsRequest
+     * @return ListSensitiveColumnsResponse
+     */
     @Override
     public CompletableFuture<ListSensitiveColumnsResponse> listSensitiveColumns(ListSensitiveColumnsRequest request) {
         try {
@@ -2438,6 +3041,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSensitiveColumnsDetail  ListSensitiveColumnsDetailRequest
+     * @return ListSensitiveColumnsDetailResponse
+     */
     @Override
     public CompletableFuture<ListSensitiveColumnsDetailResponse> listSensitiveColumnsDetail(ListSensitiveColumnsDetailRequest request) {
         try {
@@ -2452,6 +3059,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSensitiveDataAuditLog  ListSensitiveDataAuditLogRequest
+     * @return ListSensitiveDataAuditLogResponse
+     */
     @Override
     public CompletableFuture<ListSensitiveDataAuditLogResponse> listSensitiveDataAuditLog(ListSensitiveDataAuditLogRequest request) {
         try {
@@ -2466,6 +3077,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSensitivityLevel  ListSensitivityLevelRequest
+     * @return ListSensitivityLevelResponse
+     */
     @Override
     public CompletableFuture<ListSensitivityLevelResponse> listSensitivityLevel(ListSensitivityLevelRequest request) {
         try {
@@ -2480,6 +3095,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListStandardGroups  ListStandardGroupsRequest
+     * @return ListStandardGroupsResponse
+     */
     @Override
     public CompletableFuture<ListStandardGroupsResponse> listStandardGroups(ListStandardGroupsRequest request) {
         try {
@@ -2495,8 +3114,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation only for database instances whose control mode is Security Collaboration.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation only for database instances whose control mode is Security Collaboration.</p>
+     * 
+     * @param request the request parameters of ListTables  ListTablesRequest
+     * @return ListTablesResponse
      */
     @Override
     public CompletableFuture<ListTablesResponse> listTables(ListTablesRequest request) {
@@ -2512,6 +3134,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTaskFlow  ListTaskFlowRequest
+     * @return ListTaskFlowResponse
+     */
     @Override
     public CompletableFuture<ListTaskFlowResponse> listTaskFlow(ListTaskFlowRequest request) {
         try {
@@ -2526,6 +3152,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTaskFlowConstants  ListTaskFlowConstantsRequest
+     * @return ListTaskFlowConstantsResponse
+     */
     @Override
     public CompletableFuture<ListTaskFlowConstantsResponse> listTaskFlowConstants(ListTaskFlowConstantsRequest request) {
         try {
@@ -2540,6 +3170,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTaskFlowCooperators  ListTaskFlowCooperatorsRequest
+     * @return ListTaskFlowCooperatorsResponse
+     */
     @Override
     public CompletableFuture<ListTaskFlowCooperatorsResponse> listTaskFlowCooperators(ListTaskFlowCooperatorsRequest request) {
         try {
@@ -2555,8 +3189,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This operation is used for multi-condition query. You can call this operation to query the edges of a specified task flow that meet all specified conditions.
-      *
+     * <b>description</b> :
+     * <p>This operation is used for multi-condition query. You can call this operation to query the edges of a specified task flow that meet all specified conditions.</p>
+     * 
+     * @param request the request parameters of ListTaskFlowEdgesByCondition  ListTaskFlowEdgesByConditionRequest
+     * @return ListTaskFlowEdgesByConditionResponse
      */
     @Override
     public CompletableFuture<ListTaskFlowEdgesByConditionResponse> listTaskFlowEdgesByCondition(ListTaskFlowEdgesByConditionRequest request) {
@@ -2572,6 +3209,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTaskFlowInstance  ListTaskFlowInstanceRequest
+     * @return ListTaskFlowInstanceResponse
+     */
     @Override
     public CompletableFuture<ListTaskFlowInstanceResponse> listTaskFlowInstance(ListTaskFlowInstanceRequest request) {
         try {
@@ -2586,6 +3227,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTaskFlowTimeVariables  ListTaskFlowTimeVariablesRequest
+     * @return ListTaskFlowTimeVariablesResponse
+     */
     @Override
     public CompletableFuture<ListTaskFlowTimeVariablesResponse> listTaskFlowTimeVariables(ListTaskFlowTimeVariablesRequest request) {
         try {
@@ -2600,6 +3245,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTaskFlowsByPage  ListTaskFlowsByPageRequest
+     * @return ListTaskFlowsByPageResponse
+     */
     @Override
     public CompletableFuture<ListTaskFlowsByPageResponse> listTaskFlowsByPage(ListTaskFlowsByPageRequest request) {
         try {
@@ -2614,6 +3263,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTasksInTaskFlow  ListTasksInTaskFlowRequest
+     * @return ListTasksInTaskFlowResponse
+     */
     @Override
     public CompletableFuture<ListTasksInTaskFlowResponse> listTasksInTaskFlow(ListTasksInTaskFlowRequest request) {
         try {
@@ -2628,6 +3281,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUserPermissions  ListUserPermissionsRequest
+     * @return ListUserPermissionsResponse
+     */
     @Override
     public CompletableFuture<ListUserPermissionsResponse> listUserPermissions(ListUserPermissionsRequest request) {
         try {
@@ -2642,6 +3299,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUserTenants  ListUserTenantsRequest
+     * @return ListUserTenantsResponse
+     */
     @Override
     public CompletableFuture<ListUserTenantsResponse> listUserTenants(ListUserTenantsRequest request) {
         try {
@@ -2656,6 +3317,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUsers  ListUsersRequest
+     * @return ListUsersResponse
+     */
     @Override
     public CompletableFuture<ListUsersResponse> listUsers(ListUsersRequest request) {
         try {
@@ -2670,6 +3335,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListWorkFlowNodes  ListWorkFlowNodesRequest
+     * @return ListWorkFlowNodesResponse
+     */
     @Override
     public CompletableFuture<ListWorkFlowNodesResponse> listWorkFlowNodes(ListWorkFlowNodesRequest request) {
         try {
@@ -2684,6 +3353,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListWorkFlowTemplates  ListWorkFlowTemplatesRequest
+     * @return ListWorkFlowTemplatesResponse
+     */
     @Override
     public CompletableFuture<ListWorkFlowTemplatesResponse> listWorkFlowTemplates(ListWorkFlowTemplatesRequest request) {
         try {
@@ -2698,6 +3371,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of MakeTaskFlowInstanceSuccess  MakeTaskFlowInstanceSuccessRequest
+     * @return MakeTaskFlowInstanceSuccessResponse
+     */
     @Override
     public CompletableFuture<MakeTaskFlowInstanceSuccessResponse> makeTaskFlowInstanceSuccess(MakeTaskFlowInstanceSuccessRequest request) {
         try {
@@ -2712,6 +3389,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDataCorrectExecSQL  ModifyDataCorrectExecSQLRequest
+     * @return ModifyDataCorrectExecSQLResponse
+     */
     @Override
     public CompletableFuture<ModifyDataCorrectExecSQLResponse> modifyDataCorrectExecSQL(ModifyDataCorrectExecSQLRequest request) {
         try {
@@ -2726,6 +3407,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDesensitizationStrategy  ModifyDesensitizationStrategyRequest
+     * @return ModifyDesensitizationStrategyResponse
+     */
     @Override
     public CompletableFuture<ModifyDesensitizationStrategyResponse> modifyDesensitizationStrategy(ModifyDesensitizationStrategyRequest request) {
         try {
@@ -2740,6 +3425,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyInstance  ModifyInstanceRequest
+     * @return ModifyInstanceResponse
+     */
     @Override
     public CompletableFuture<ModifyInstanceResponse> modifyInstance(ModifyInstanceRequest request) {
         try {
@@ -2754,6 +3443,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of MoveTaskFlowToScenario  MoveTaskFlowToScenarioRequest
+     * @return MoveTaskFlowToScenarioResponse
+     */
     @Override
     public CompletableFuture<MoveTaskFlowToScenarioResponse> moveTaskFlowToScenario(MoveTaskFlowToScenarioRequest request) {
         try {
@@ -2768,6 +3461,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OfflineTaskFlow  OfflineTaskFlowRequest
+     * @return OfflineTaskFlowResponse
+     */
     @Override
     public CompletableFuture<OfflineTaskFlowResponse> offlineTaskFlow(OfflineTaskFlowRequest request) {
         try {
@@ -2783,8 +3480,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation only for database instances that are managed in Security Collaboration mode.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation only for database instances that are managed in Security Collaboration mode.</p>
+     * 
+     * @param request the request parameters of PauseDataCorrectSQLJob  PauseDataCorrectSQLJobRequest
+     * @return PauseDataCorrectSQLJobResponse
      */
     @Override
     public CompletableFuture<PauseDataCorrectSQLJobResponse> pauseDataCorrectSQLJob(PauseDataCorrectSQLJobRequest request) {
@@ -2800,6 +3500,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PauseDataExportJob  PauseDataExportJobRequest
+     * @return PauseDataExportJobResponse
+     */
+    @Override
+    public CompletableFuture<PauseDataExportJobResponse> pauseDataExportJob(PauseDataExportJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("PauseDataExportJob").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PauseDataExportJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PauseDataExportJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of PreviewWorkflow  PreviewWorkflowRequest
+     * @return PreviewWorkflowResponse
+     */
     @Override
     public CompletableFuture<PreviewWorkflowResponse> previewWorkflow(PreviewWorkflowRequest request) {
         try {
@@ -2814,6 +3536,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PublishAndDeployTaskFlow  PublishAndDeployTaskFlowRequest
+     * @return PublishAndDeployTaskFlowResponse
+     */
     @Override
     public CompletableFuture<PublishAndDeployTaskFlowResponse> publishAndDeployTaskFlow(PublishAndDeployTaskFlowRequest request) {
         try {
@@ -2828,6 +3554,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryDataTrackResultDownloadStatus  QueryDataTrackResultDownloadStatusRequest
+     * @return QueryDataTrackResultDownloadStatusResponse
+     */
     @Override
     public CompletableFuture<QueryDataTrackResultDownloadStatusResponse> queryDataTrackResultDownloadStatus(QueryDataTrackResultDownloadStatusRequest request) {
         try {
@@ -2842,6 +3572,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReDeployLhDagVersion  ReDeployLhDagVersionRequest
+     * @return ReDeployLhDagVersionResponse
+     */
     @Override
     public CompletableFuture<ReDeployLhDagVersionResponse> reDeployLhDagVersion(ReDeployLhDagVersionRequest request) {
         try {
@@ -2856,6 +3590,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReRunTaskFlowInstance  ReRunTaskFlowInstanceRequest
+     * @return ReRunTaskFlowInstanceResponse
+     */
     @Override
     public CompletableFuture<ReRunTaskFlowInstanceResponse> reRunTaskFlowInstance(ReRunTaskFlowInstanceRequest request) {
         try {
@@ -2870,6 +3608,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RefundPayAsYouGoOrder  RefundPayAsYouGoOrderRequest
+     * @return RefundPayAsYouGoOrderResponse
+     */
     @Override
     public CompletableFuture<RefundPayAsYouGoOrderResponse> refundPayAsYouGoOrder(RefundPayAsYouGoOrderRequest request) {
         try {
@@ -2885,8 +3627,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Prerequisites: You are a DMS administrator or a database administrator (DBA). You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to query your user role from the RoleIdList parameter that is returned.
-      *
+     * <b>description</b> :
+     * <p>Prerequisites: You are a DMS administrator or a database administrator (DBA). You can call the <a href="https://help.aliyun.com/document_detail/141938.html">ListUsers</a> or <a href="https://help.aliyun.com/document_detail/147098.html">GetUser</a> operation to query your user role from the RoleIdList parameter that is returned.</p>
+     * 
+     * @param request the request parameters of RegisterInstance  RegisterInstanceRequest
+     * @return RegisterInstanceResponse
      */
     @Override
     public CompletableFuture<RegisterInstanceResponse> registerInstance(RegisterInstanceRequest request) {
@@ -2903,8 +3648,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you are an **administrator** in Data Management (DMS), you can call this operation to register a user for your enterprise. To view users that are assigned the administrator role, perform the following steps: Log on to the DMS console. In the top navigation bar, click O&M. In the left-side navigation pane, click User.
-      *
+     * <b>description</b> :
+     * <p>If you are an <strong>administrator</strong> in Data Management (DMS), you can call this operation to register a user for your enterprise. To view users that are assigned the administrator role, perform the following steps: Log on to the DMS console. In the top navigation bar, click O&amp;M. In the left-side navigation pane, click User.</p>
+     * 
+     * @param request the request parameters of RegisterUser  RegisterUserRequest
+     * @return RegisterUserResponse
      */
     @Override
     public CompletableFuture<RegisterUserResponse> registerUser(RegisterUserRequest request) {
@@ -2920,6 +3668,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveDataExportJob  RemoveDataExportJobRequest
+     * @return RemoveDataExportJobResponse
+     */
+    @Override
+    public CompletableFuture<RemoveDataExportJobResponse> removeDataExportJob(RemoveDataExportJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RemoveDataExportJob").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RemoveDataExportJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RemoveDataExportJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RestartDataCorrectSQLJob  RestartDataCorrectSQLJobRequest
+     * @return RestartDataCorrectSQLJobResponse
+     */
     @Override
     public CompletableFuture<RestartDataCorrectSQLJobResponse> restartDataCorrectSQLJob(RestartDataCorrectSQLJobRequest request) {
         try {
@@ -2935,8 +3705,29 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation only for task flows that are suspended.
-      *
+     * @param request the request parameters of RestartDataExportJob  RestartDataExportJobRequest
+     * @return RestartDataExportJobResponse
+     */
+    @Override
+    public CompletableFuture<RestartDataExportJobResponse> restartDataExportJob(RestartDataExportJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RestartDataExportJob").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RestartDataExportJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RestartDataExportJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can call this operation only for task flows that are suspended.</p>
+     * 
+     * @param request the request parameters of ResumeTaskFlowInstance  ResumeTaskFlowInstanceRequest
+     * @return ResumeTaskFlowInstanceResponse
      */
     @Override
     public CompletableFuture<ResumeTaskFlowInstanceResponse> resumeTaskFlowInstance(ResumeTaskFlowInstanceRequest request) {
@@ -2952,6 +3743,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RetryDataCorrectPreCheck  RetryDataCorrectPreCheckRequest
+     * @return RetryDataCorrectPreCheckResponse
+     */
     @Override
     public CompletableFuture<RetryDataCorrectPreCheckResponse> retryDataCorrectPreCheck(RetryDataCorrectPreCheckRequest request) {
         try {
@@ -2967,8 +3762,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You must be a database administrator (DBA) or a DMS administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
-      *
+     * <b>description</b> :
+     * <p>You must be a database administrator (DBA) or a DMS administrator. For more information about how to view system roles, see <a href="https://help.aliyun.com/document_detail/324212.html">View system roles</a>.</p>
+     * 
+     * @param request the request parameters of RevokeTemplateAuthority  RevokeTemplateAuthorityRequest
+     * @return RevokeTemplateAuthorityResponse
      */
     @Override
     public CompletableFuture<RevokeTemplateAuthorityResponse> revokeTemplateAuthority(RevokeTemplateAuthorityRequest request) {
@@ -2984,6 +3782,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RevokeUserPermission  RevokeUserPermissionRequest
+     * @return RevokeUserPermissionResponse
+     */
     @Override
     public CompletableFuture<RevokeUserPermissionResponse> revokeUserPermission(RevokeUserPermissionRequest request) {
         try {
@@ -2998,6 +3800,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SearchDataTrackResult  SearchDataTrackResultRequest
+     * @return SearchDataTrackResultResponse
+     */
     @Override
     public CompletableFuture<SearchDataTrackResultResponse> searchDataTrackResult(SearchDataTrackResultRequest request) {
         try {
@@ -3012,6 +3818,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SearchDatabase  SearchDatabaseRequest
+     * @return SearchDatabaseResponse
+     */
     @Override
     public CompletableFuture<SearchDatabaseResponse> searchDatabase(SearchDatabaseRequest request) {
         try {
@@ -3027,8 +3837,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation only for database instances that are managed in Security Collaboration mode.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation only for database instances that are managed in Security Collaboration mode.</p>
+     * 
+     * @param request the request parameters of SearchTable  SearchTableRequest
+     * @return SearchTableResponse
      */
     @Override
     public CompletableFuture<SearchTableResponse> searchTable(SearchTableRequest request) {
@@ -3044,6 +3857,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetOwners  SetOwnersRequest
+     * @return SetOwnersResponse
+     */
     @Override
     public CompletableFuture<SetOwnersResponse> setOwners(SetOwnersRequest request) {
         try {
@@ -3058,6 +3875,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SkipDataCorrectRowCheck  SkipDataCorrectRowCheckRequest
+     * @return SkipDataCorrectRowCheckResponse
+     */
     @Override
     public CompletableFuture<SkipDataCorrectRowCheckResponse> skipDataCorrectRowCheck(SkipDataCorrectRowCheckRequest request) {
         try {
@@ -3072,6 +3893,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopTaskFlowInstance  StopTaskFlowInstanceRequest
+     * @return StopTaskFlowInstanceResponse
+     */
     @Override
     public CompletableFuture<StopTaskFlowInstanceResponse> stopTaskFlowInstance(StopTaskFlowInstanceRequest request) {
         try {
@@ -3086,6 +3911,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitOrderApproval  SubmitOrderApprovalRequest
+     * @return SubmitOrderApprovalResponse
+     */
     @Override
     public CompletableFuture<SubmitOrderApprovalResponse> submitOrderApproval(SubmitOrderApprovalRequest request) {
         try {
@@ -3100,6 +3929,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitStructSyncOrderApproval  SubmitStructSyncOrderApprovalRequest
+     * @return SubmitStructSyncOrderApprovalResponse
+     */
     @Override
     public CompletableFuture<SubmitStructSyncOrderApprovalResponse> submitStructSyncOrderApproval(SubmitStructSyncOrderApprovalRequest request) {
         try {
@@ -3114,6 +3947,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SuspendDataExportJob  SuspendDataExportJobRequest
+     * @return SuspendDataExportJobResponse
+     */
+    @Override
+    public CompletableFuture<SuspendDataExportJobResponse> suspendDataExportJob(SuspendDataExportJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SuspendDataExportJob").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SuspendDataExportJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SuspendDataExportJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SuspendTaskFlowInstance  SuspendTaskFlowInstanceRequest
+     * @return SuspendTaskFlowInstanceResponse
+     */
     @Override
     public CompletableFuture<SuspendTaskFlowInstanceResponse> suspendTaskFlowInstance(SuspendTaskFlowInstanceRequest request) {
         try {
@@ -3128,6 +3983,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SyncDatabaseMeta  SyncDatabaseMetaRequest
+     * @return SyncDatabaseMetaResponse
+     */
     @Override
     public CompletableFuture<SyncDatabaseMetaResponse> syncDatabaseMeta(SyncDatabaseMetaRequest request) {
         try {
@@ -3143,8 +4002,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation only for database instances whose control mode is Security Collaboration.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation only for database instances whose control mode is Security Collaboration.</p>
+     * 
+     * @param request the request parameters of SyncInstanceMeta  SyncInstanceMetaRequest
+     * @return SyncInstanceMetaResponse
      */
     @Override
     public CompletableFuture<SyncInstanceMetaResponse> syncInstanceMeta(SyncInstanceMetaRequest request) {
@@ -3161,8 +4023,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
-      *
+     * <b>description</b> :
+     * <p>You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see <a href="https://help.aliyun.com/document_detail/324212.html">View system roles</a>.</p>
+     * 
+     * @param request the request parameters of UpdateAuthorityTemplate  UpdateAuthorityTemplateRequest
+     * @return UpdateAuthorityTemplateResponse
      */
     @Override
     public CompletableFuture<UpdateAuthorityTemplateResponse> updateAuthorityTemplate(UpdateAuthorityTemplateRequest request) {
@@ -3179,8 +4044,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call the UpdateInstance operation, call the [GetInstance](~~141567~~) or [ListInstances](~~141936~~) operation to obtain the complete information about the instance.
-      *
+     * <b>description</b> :
+     * <p>Before you call the UpdateInstance operation, call the <a href="https://help.aliyun.com/document_detail/141567.html">GetInstance</a> or <a href="https://help.aliyun.com/document_detail/141936.html">ListInstances</a> operation to obtain the complete information about the instance.</p>
+     * 
+     * @param request the request parameters of UpdateInstance  UpdateInstanceRequest
+     * @return UpdateInstanceResponse
      */
     @Override
     public CompletableFuture<UpdateInstanceResponse> updateInstance(UpdateInstanceRequest request) {
@@ -3197,8 +4065,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * SLA rules take effect after task flows are deployed and published.
-      *
+     * <b>description</b> :
+     * <p>SLA rules take effect after task flows are deployed and published.</p>
+     * 
+     * @param request the request parameters of UpdateSLARules  UpdateSLARulesRequest
+     * @return UpdateSLARulesResponse
      */
     @Override
     public CompletableFuture<UpdateSLARulesResponse> updateSLARules(UpdateSLARulesRequest request) {
@@ -3214,6 +4085,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateScenario  UpdateScenarioRequest
+     * @return UpdateScenarioResponse
+     */
     @Override
     public CompletableFuture<UpdateScenarioResponse> updateScenario(UpdateScenarioRequest request) {
         try {
@@ -3228,6 +4103,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateStandardGroup  UpdateStandardGroupRequest
+     * @return UpdateStandardGroupResponse
+     */
     @Override
     public CompletableFuture<UpdateStandardGroupResponse> updateStandardGroup(UpdateStandardGroupRequest request) {
         try {
@@ -3243,8 +4122,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to configure a failed task or rerun a task.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to configure a failed task or rerun a task.</p>
+     * 
+     * @param request the request parameters of UpdateTaskConfig  UpdateTaskConfigRequest
+     * @return UpdateTaskConfigResponse
      */
     @Override
     public CompletableFuture<UpdateTaskConfigResponse> updateTaskConfig(UpdateTaskConfigRequest request) {
@@ -3261,8 +4143,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to modify node configurations.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to modify node configurations.</p>
+     * 
+     * @param request the request parameters of UpdateTaskContent  UpdateTaskContentRequest
+     * @return UpdateTaskContentResponse
      */
     @Override
     public CompletableFuture<UpdateTaskContentResponse> updateTaskContent(UpdateTaskContentRequest request) {
@@ -3278,6 +4163,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateTaskFlowConstants  UpdateTaskFlowConstantsRequest
+     * @return UpdateTaskFlowConstantsResponse
+     */
     @Override
     public CompletableFuture<UpdateTaskFlowConstantsResponse> updateTaskFlowConstants(UpdateTaskFlowConstantsRequest request) {
         try {
@@ -3292,6 +4181,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateTaskFlowCooperators  UpdateTaskFlowCooperatorsRequest
+     * @return UpdateTaskFlowCooperatorsResponse
+     */
     @Override
     public CompletableFuture<UpdateTaskFlowCooperatorsResponse> updateTaskFlowCooperators(UpdateTaskFlowCooperatorsRequest request) {
         try {
@@ -3307,12 +4200,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ###
-      * The edges can be updated only when the following conditions are met:
-      * 1.  The specified edge exists in the directed acyclic graph (DAG) of the task flow specified by DagId.
-      * 2.  The specified edge nodes exist in the DAG of the task flow specified by DagId.
-      * 3.  After the update, rings do not exist in the DAG.
-      *
+     * <b>description</b> :
+     * <h3></h3>
+     * <p>The edges can be updated only when the following conditions are met:</p>
+     * <ol>
+     * <li>The specified edge exists in the directed acyclic graph (DAG) of the task flow specified by DagId.</li>
+     * <li>The specified edge nodes exist in the DAG of the task flow specified by DagId.</li>
+     * <li>After the update, rings do not exist in the DAG.</li>
+     * </ol>
+     * 
+     * @param request the request parameters of UpdateTaskFlowEdges  UpdateTaskFlowEdgesRequest
+     * @return UpdateTaskFlowEdgesResponse
      */
     @Override
     public CompletableFuture<UpdateTaskFlowEdgesResponse> updateTaskFlowEdges(UpdateTaskFlowEdgesRequest request) {
@@ -3328,6 +4226,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateTaskFlowNameAndDesc  UpdateTaskFlowNameAndDescRequest
+     * @return UpdateTaskFlowNameAndDescResponse
+     */
     @Override
     public CompletableFuture<UpdateTaskFlowNameAndDescResponse> updateTaskFlowNameAndDesc(UpdateTaskFlowNameAndDescRequest request) {
         try {
@@ -3342,6 +4244,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateTaskFlowNotification  UpdateTaskFlowNotificationRequest
+     * @return UpdateTaskFlowNotificationResponse
+     */
     @Override
     public CompletableFuture<UpdateTaskFlowNotificationResponse> updateTaskFlowNotification(UpdateTaskFlowNotificationRequest request) {
         try {
@@ -3357,8 +4263,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Note: The new owner of the task flow must belong to the same tenant as the previous owner.
-      *
+     * <b>description</b> :
+     * <p>Note: The new owner of the task flow must belong to the same tenant as the previous owner.</p>
+     * 
+     * @param request the request parameters of UpdateTaskFlowOwner  UpdateTaskFlowOwnerRequest
+     * @return UpdateTaskFlowOwnerResponse
      */
     @Override
     public CompletableFuture<UpdateTaskFlowOwnerResponse> updateTaskFlowOwner(UpdateTaskFlowOwnerRequest request) {
@@ -3375,8 +4284,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to perform a full update. For incremental updates, see AddTaskFlowEdges, UpdateTaskFlowEdges, and DeleteTaskFlowEdgesByMultiCondition.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to perform a full update. For incremental updates, see AddTaskFlowEdges, UpdateTaskFlowEdges, and DeleteTaskFlowEdgesByMultiCondition.</p>
+     * 
+     * @param request the request parameters of UpdateTaskFlowRelations  UpdateTaskFlowRelationsRequest
+     * @return UpdateTaskFlowRelationsResponse
      */
     @Override
     public CompletableFuture<UpdateTaskFlowRelationsResponse> updateTaskFlowRelations(UpdateTaskFlowRelationsRequest request) {
@@ -3393,9 +4305,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to update the scheduling properties for a task flow in the editing state. You can configure a **timed scheduling** task flow or an **event scheduling** task flow. When you configure a **timed scheduling** task flow, you can choose from one-time scheduling or periodic scheduling. When you configure an **event scheduling** task flow, you can subscribe to task flows or task flow nodes.****\\
-      * After you update the scheduling properties, you need to publish and deploy the task flow again. The new task flow instance will run based on the updated scheduling properties.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to update the scheduling properties for a task flow in the editing state. You can configure a <strong>timed scheduling</strong> task flow or an <strong>event scheduling</strong> task flow. When you configure a <strong>timed scheduling</strong> task flow, you can choose from one-time scheduling or periodic scheduling. When you configure an <strong>event scheduling</strong> task flow, you can subscribe to task flows or task flow nodes.****\
+     * After you update the scheduling properties, you need to publish and deploy the task flow again. The new task flow instance will run based on the updated scheduling properties.</p>
+     * 
+     * @param request the request parameters of UpdateTaskFlowSchedule  UpdateTaskFlowScheduleRequest
+     * @return UpdateTaskFlowScheduleResponse
      */
     @Override
     public CompletableFuture<UpdateTaskFlowScheduleResponse> updateTaskFlowSchedule(UpdateTaskFlowScheduleRequest request) {
@@ -3411,6 +4326,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateTaskFlowTimeVariables  UpdateTaskFlowTimeVariablesRequest
+     * @return UpdateTaskFlowTimeVariablesResponse
+     */
     @Override
     public CompletableFuture<UpdateTaskFlowTimeVariablesResponse> updateTaskFlowTimeVariables(UpdateTaskFlowTimeVariablesRequest request) {
         try {
@@ -3425,6 +4344,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateTaskName  UpdateTaskNameRequest
+     * @return UpdateTaskNameResponse
+     */
     @Override
     public CompletableFuture<UpdateTaskNameResponse> updateTaskName(UpdateTaskNameRequest request) {
         try {
@@ -3440,8 +4363,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Only nodes of single-instance SQL assignment, script code, and ECS remote command have output variables.
-      *
+     * <b>description</b> :
+     * <p>Only nodes of single-instance SQL assignment, script code, and ECS remote command have output variables.</p>
+     * 
+     * @param request the request parameters of UpdateTaskOutput  UpdateTaskOutputRequest
+     * @return UpdateTaskOutputResponse
      */
     @Override
     public CompletableFuture<UpdateTaskOutputResponse> updateTaskOutput(UpdateTaskOutputRequest request) {
@@ -3457,6 +4383,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateTaskTimeVariables  UpdateTaskTimeVariablesRequest
+     * @return UpdateTaskTimeVariablesResponse
+     */
     @Override
     public CompletableFuture<UpdateTaskTimeVariablesResponse> updateTaskTimeVariables(UpdateTaskTimeVariablesRequest request) {
         try {
@@ -3471,6 +4401,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateUser  UpdateUserRequest
+     * @return UpdateUserResponse
+     */
     @Override
     public CompletableFuture<UpdateUserResponse> updateUser(UpdateUserRequest request) {
         try {

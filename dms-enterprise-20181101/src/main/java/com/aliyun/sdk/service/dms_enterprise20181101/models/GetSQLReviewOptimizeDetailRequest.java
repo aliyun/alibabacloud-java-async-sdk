@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSQLReviewOptimizeDetailRequest} extends {@link RequestModel}
  *
  * <p>GetSQLReviewOptimizeDetailRequest</p>
@@ -92,7 +93,11 @@ public class GetSQLReviewOptimizeDetailRequest extends Request {
         }
 
         /**
-         * The key that is used to query the details of optimization suggestions. You can call the [ListSQLReviewOriginSQL](~~257870~~) operation to query the key.
+         * <p>The key that is used to query the details of optimization suggestions. You can call the <a href="https://help.aliyun.com/document_detail/257870.html">ListSQLReviewOriginSQL</a> operation to query the key.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a57e54ec5433475ea3082d882fdb****</p>
          */
         public Builder SQLReviewQueryKey(String SQLReviewQueryKey) {
             this.putQueryParameter("SQLReviewQueryKey", SQLReviewQueryKey);
@@ -101,7 +106,10 @@ public class GetSQLReviewOptimizeDetailRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the ID of the tenant.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to query the ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

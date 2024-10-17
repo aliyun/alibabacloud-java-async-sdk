@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetStructSyncJobDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetStructSyncJobDetailResponseBody</p>
@@ -85,7 +86,10 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +108,10 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48602B78-0DDF-414C-8688-70CAB6070115</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the schema synchronization task.
+         * <p>The details of the schema synchronization task.</p>
          */
         public Builder structSyncJobDetail(StructSyncJobDetail structSyncJobDetail) {
             this.structSyncJobDetail = structSyncJobDetail;
@@ -117,7 +127,10 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetStructSyncJobDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStructSyncJobDetailResponseBody</p>
+     */
     public static class StructSyncJobDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBTaskGroupId")
         private Long DBTaskGroupId;
@@ -241,7 +260,10 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
             private Long tableCount; 
 
             /**
-             * The ID of the SQL task group.
+             * <p>The ID of the SQL task group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder DBTaskGroupId(Long DBTaskGroupId) {
                 this.DBTaskGroupId = DBTaskGroupId;
@@ -249,7 +271,10 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of SQL statements that have been executed.
+             * <p>The number of SQL statements that have been executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder executeCount(Long executeCount) {
                 this.executeCount = executeCount;
@@ -257,18 +282,21 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task. Valid values:
-             * <p>
+             * <p>The status of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>NEW</strong>: The task was created.</li>
+             * <li><strong>COMPARING</strong>: The schemas of tables were being compared.</li>
+             * <li><strong>COMPARE_BREAK</strong>: The schema comparison was interrupted.</li>
+             * <li><strong>COMPARE_FINISH</strong>: The comparison was finished.</li>
+             * <li><strong>NOT_SCRIPTS</strong>: The comparison was finished but no executable script was available.</li>
+             * <li><strong>SUBMITED_DBTASK</strong>: The task was submitted.</li>
+             * <li><strong>DBTASK_SUCCESS</strong>: The task was complete.</li>
+             * <li><strong>SUBMITED_WORKFLOW</strong>: The ticket was submitted.</li>
+             * <li><strong>WORKFLOW_SUCCESS</strong>: The ticket was approved.</li>
+             * </ul>
              * 
-             * *   **NEW**: The task was created.
-             * *   **COMPARING**: The schemas of tables were being compared.
-             * *   **COMPARE_BREAK**: The schema comparison was interrupted.
-             * *   **COMPARE_FINISH**: The comparison was finished.
-             * *   **NOT_SCRIPTS**: The comparison was finished but no executable script was available.
-             * *   **SUBMITED_DBTASK**: The task was submitted.
-             * *   **DBTASK_SUCCESS**: The task was complete.
-             * *   **SUBMITED_WORKFLOW**: The ticket was submitted.
-             * *   **WORKFLOW_SUCCESS**: The ticket was approved.
+             * <strong>example:</strong>
+             * <p>DBTASK_SUCCESS</p>
              */
             public Builder jobStatus(String jobStatus) {
                 this.jobStatus = jobStatus;
@@ -276,7 +304,10 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the task.
+             * <p>The description of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -284,12 +315,15 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of security rule. Valid values:
-             * <p>
+             * <p>The type of security rule. Valid values:</p>
+             * <ul>
+             * <li><strong>CANNOT_SYNC</strong>: Synchronization cannot be performed.</li>
+             * <li><strong>WITH_APPROVE</strong>: The schema synchronization can be performed after the ticket is approved. You can call the <a href="https://help.aliyun.com/document_detail/206166.html">SubmitStructSyncOrderApproval</a> operation to submit the ticket for approval.</li>
+             * <li><strong>WITHOUT_APPROVE</strong>: The schema synchronization can be performed without approval.</li>
+             * </ul>
              * 
-             * *   **CANNOT_SYNC**: Synchronization cannot be performed.
-             * *   **WITH_APPROVE**: The schema synchronization can be performed after the ticket is approved. You can call the [SubmitStructSyncOrderApproval](~~206166~~) operation to submit the ticket for approval.
-             * *   **WITHOUT_APPROVE**: The schema synchronization can be performed without approval.
+             * <strong>example:</strong>
+             * <p>WITHOUT_APPROVE</p>
              */
             public Builder securityRule(String securityRule) {
                 this.securityRule = securityRule;
@@ -297,7 +331,10 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of SQL statements.
+             * <p>The total number of SQL statements.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sqlCount(Long sqlCount) {
                 this.sqlCount = sqlCount;
@@ -305,7 +342,10 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of tables that have been analyzed.
+             * <p>The number of tables that have been analyzed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder tableAnalyzed(Long tableAnalyzed) {
                 this.tableAnalyzed = tableAnalyzed;
@@ -313,7 +353,10 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of tables.
+             * <p>The total number of tables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder tableCount(Long tableCount) {
                 this.tableCount = tableCount;
