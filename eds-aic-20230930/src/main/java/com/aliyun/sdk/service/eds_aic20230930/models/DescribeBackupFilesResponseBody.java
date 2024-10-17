@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupFilesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupFilesResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupFilesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AndroidInstanceId")
         private String androidInstanceId;

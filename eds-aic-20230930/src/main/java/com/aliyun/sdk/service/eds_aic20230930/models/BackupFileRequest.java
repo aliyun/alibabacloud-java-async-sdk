@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BackupFileRequest} extends {@link RequestModel}
  *
  * <p>BackupFileRequest</p>
@@ -126,7 +127,7 @@ public class BackupFileRequest extends Request {
         } 
 
         /**
-         * AndroidInstanceIdList.
+         * <p>This parameter is required.</p>
          */
         public Builder androidInstanceIdList(java.util.List < String > androidInstanceIdList) {
             this.putQueryParameter("AndroidInstanceIdList", androidInstanceIdList);
@@ -135,7 +136,7 @@ public class BackupFileRequest extends Request {
         }
 
         /**
-         * BackupFilePath.
+         * <p>This parameter is required.</p>
          */
         public Builder backupFilePath(String backupFilePath) {
             this.putQueryParameter("BackupFilePath", backupFilePath);
@@ -153,7 +154,7 @@ public class BackupFileRequest extends Request {
         }
 
         /**
-         * SourceFilePathList.
+         * <p>This parameter is required.</p>
          */
         public Builder sourceFilePathList(java.util.List < String > sourceFilePathList) {
             this.putQueryParameter("SourceFilePathList", sourceFilePathList);

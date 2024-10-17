@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AttachKeyPair  AttachKeyPairRequest
+     * @return AttachKeyPairResponse
+     */
     @Override
     public CompletableFuture<AttachKeyPairResponse> attachKeyPair(AttachKeyPairRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AuthorizeAndroidInstance  AuthorizeAndroidInstanceRequest
+     * @return AuthorizeAndroidInstanceResponse
+     */
     @Override
     public CompletableFuture<AuthorizeAndroidInstanceResponse> authorizeAndroidInstance(AuthorizeAndroidInstanceRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BackupFile  BackupFileRequest
+     * @return BackupFileResponse
+     */
     @Override
     public CompletableFuture<BackupFileResponse> backupFile(BackupFileRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckResourceStock  CheckResourceStockRequest
+     * @return CheckResourceStockResponse
+     */
     @Override
     public CompletableFuture<CheckResourceStockResponse> checkResourceStock(CheckResourceStockRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAndroidInstanceGroup  CreateAndroidInstanceGroupRequest
+     * @return CreateAndroidInstanceGroupResponse
+     */
     @Override
     public CompletableFuture<CreateAndroidInstanceGroupResponse> createAndroidInstanceGroup(CreateAndroidInstanceGroupRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateApp  CreateAppRequest
+     * @return CreateAppResponse
+     */
     @Override
     public CompletableFuture<CreateAppResponse> createApp(CreateAppRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateCustomImage  CreateCustomImageRequest
+     * @return CreateCustomImageResponse
+     */
     @Override
     public CompletableFuture<CreateCustomImageResponse> createCustomImage(CreateCustomImageRequest request) {
         try {
@@ -137,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateKeyPair  CreateKeyPairRequest
+     * @return CreateKeyPairResponse
+     */
     @Override
     public CompletableFuture<CreateKeyPairResponse> createKeyPair(CreateKeyPairRequest request) {
         try {
@@ -151,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreatePolicyGroup  CreatePolicyGroupRequest
+     * @return CreatePolicyGroupResponse
+     */
     @Override
     public CompletableFuture<CreatePolicyGroupResponse> createPolicyGroup(CreatePolicyGroupRequest request) {
         try {
@@ -165,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAndroidInstanceGroup  DeleteAndroidInstanceGroupRequest
+     * @return DeleteAndroidInstanceGroupResponse
+     */
     @Override
     public CompletableFuture<DeleteAndroidInstanceGroupResponse> deleteAndroidInstanceGroup(DeleteAndroidInstanceGroupRequest request) {
         try {
@@ -179,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteApps  DeleteAppsRequest
+     * @return DeleteAppsResponse
+     */
     @Override
     public CompletableFuture<DeleteAppsResponse> deleteApps(DeleteAppsRequest request) {
         try {
@@ -193,6 +237,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteImages  DeleteImagesRequest
+     * @return DeleteImagesResponse
+     */
     @Override
     public CompletableFuture<DeleteImagesResponse> deleteImages(DeleteImagesRequest request) {
         try {
@@ -207,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteKeyPairs  DeleteKeyPairsRequest
+     * @return DeleteKeyPairsResponse
+     */
     @Override
     public CompletableFuture<DeleteKeyPairsResponse> deleteKeyPairs(DeleteKeyPairsRequest request) {
         try {
@@ -221,6 +273,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeletePolicyGroup  DeletePolicyGroupRequest
+     * @return DeletePolicyGroupResponse
+     */
     @Override
     public CompletableFuture<DeletePolicyGroupResponse> deletePolicyGroup(DeletePolicyGroupRequest request) {
         try {
@@ -235,6 +291,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAndroidInstanceGroups  DescribeAndroidInstanceGroupsRequest
+     * @return DescribeAndroidInstanceGroupsResponse
+     */
     @Override
     public CompletableFuture<DescribeAndroidInstanceGroupsResponse> describeAndroidInstanceGroups(DescribeAndroidInstanceGroupsRequest request) {
         try {
@@ -249,6 +309,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAndroidInstances  DescribeAndroidInstancesRequest
+     * @return DescribeAndroidInstancesResponse
+     */
     @Override
     public CompletableFuture<DescribeAndroidInstancesResponse> describeAndroidInstances(DescribeAndroidInstancesRequest request) {
         try {
@@ -263,6 +327,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeApps  DescribeAppsRequest
+     * @return DescribeAppsResponse
+     */
     @Override
     public CompletableFuture<DescribeAppsResponse> describeApps(DescribeAppsRequest request) {
         try {
@@ -277,6 +345,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBackupFiles  DescribeBackupFilesRequest
+     * @return DescribeBackupFilesResponse
+     */
     @Override
     public CompletableFuture<DescribeBackupFilesResponse> describeBackupFiles(DescribeBackupFilesRequest request) {
         try {
@@ -291,6 +363,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImageList  DescribeImageListRequest
+     * @return DescribeImageListResponse
+     */
     @Override
     public CompletableFuture<DescribeImageListResponse> describeImageList(DescribeImageListRequest request) {
         try {
@@ -305,6 +381,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInvocations  DescribeInvocationsRequest
+     * @return DescribeInvocationsResponse
+     */
     @Override
     public CompletableFuture<DescribeInvocationsResponse> describeInvocations(DescribeInvocationsRequest request) {
         try {
@@ -319,6 +399,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeKeyPairs  DescribeKeyPairsRequest
+     * @return DescribeKeyPairsResponse
+     */
     @Override
     public CompletableFuture<DescribeKeyPairsResponse> describeKeyPairs(DescribeKeyPairsRequest request) {
         try {
@@ -333,6 +417,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
     @Override
     public CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request) {
         try {
@@ -347,6 +435,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSpec  DescribeSpecRequest
+     * @return DescribeSpecResponse
+     */
     @Override
     public CompletableFuture<DescribeSpecResponse> describeSpec(DescribeSpecRequest request) {
         try {
@@ -361,6 +453,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeTasks  DescribeTasksRequest
+     * @return DescribeTasksResponse
+     */
     @Override
     public CompletableFuture<DescribeTasksResponse> describeTasks(DescribeTasksRequest request) {
         try {
@@ -375,6 +471,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DetachKeyPair  DetachKeyPairRequest
+     * @return DetachKeyPairResponse
+     */
     @Override
     public CompletableFuture<DetachKeyPairResponse> detachKeyPair(DetachKeyPairRequest request) {
         try {
@@ -389,6 +489,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DistributeImage  DistributeImageRequest
+     * @return DistributeImageResponse
+     */
     @Override
     public CompletableFuture<DistributeImageResponse> distributeImage(DistributeImageRequest request) {
         try {
@@ -403,6 +507,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DowngradeAndroidInstanceGroup  DowngradeAndroidInstanceGroupRequest
+     * @return DowngradeAndroidInstanceGroupResponse
+     */
     @Override
     public CompletableFuture<DowngradeAndroidInstanceGroupResponse> downgradeAndroidInstanceGroup(DowngradeAndroidInstanceGroupRequest request) {
         try {
@@ -417,6 +525,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FetchFile  FetchFileRequest
+     * @return FetchFileResponse
+     */
     @Override
     public CompletableFuture<FetchFileResponse> fetchFile(FetchFileRequest request) {
         try {
@@ -431,6 +543,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAdbSecure  GetAdbSecureRequest
+     * @return GetAdbSecureResponse
+     */
     @Override
     public CompletableFuture<GetAdbSecureResponse> getAdbSecure(GetAdbSecureRequest request) {
         try {
@@ -445,6 +561,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ImportKeyPair  ImportKeyPairRequest
+     * @return ImportKeyPairResponse
+     */
     @Override
     public CompletableFuture<ImportKeyPairResponse> importKeyPair(ImportKeyPairRequest request) {
         try {
@@ -459,6 +579,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InstallApp  InstallAppRequest
+     * @return InstallAppResponse
+     */
     @Override
     public CompletableFuture<InstallAppResponse> installApp(InstallAppRequest request) {
         try {
@@ -473,6 +597,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPolicyGroups  ListPolicyGroupsRequest
+     * @return ListPolicyGroupsResponse
+     */
     @Override
     public CompletableFuture<ListPolicyGroupsResponse> listPolicyGroups(ListPolicyGroupsRequest request) {
         try {
@@ -487,6 +615,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAndroidInstance  ModifyAndroidInstanceRequest
+     * @return ModifyAndroidInstanceResponse
+     */
     @Override
     public CompletableFuture<ModifyAndroidInstanceResponse> modifyAndroidInstance(ModifyAndroidInstanceRequest request) {
         try {
@@ -501,6 +633,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAndroidInstanceGroup  ModifyAndroidInstanceGroupRequest
+     * @return ModifyAndroidInstanceGroupResponse
+     */
     @Override
     public CompletableFuture<ModifyAndroidInstanceGroupResponse> modifyAndroidInstanceGroup(ModifyAndroidInstanceGroupRequest request) {
         try {
@@ -515,6 +651,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyApp  ModifyAppRequest
+     * @return ModifyAppResponse
+     */
     @Override
     public CompletableFuture<ModifyAppResponse> modifyApp(ModifyAppRequest request) {
         try {
@@ -529,6 +669,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyKeyPairName  ModifyKeyPairNameRequest
+     * @return ModifyKeyPairNameResponse
+     */
     @Override
     public CompletableFuture<ModifyKeyPairNameResponse> modifyKeyPairName(ModifyKeyPairNameRequest request) {
         try {
@@ -543,6 +687,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyPolicyGroup  ModifyPolicyGroupRequest
+     * @return ModifyPolicyGroupResponse
+     */
     @Override
     public CompletableFuture<ModifyPolicyGroupResponse> modifyPolicyGroup(ModifyPolicyGroupRequest request) {
         try {
@@ -557,6 +705,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RebootAndroidInstancesInGroup  RebootAndroidInstancesInGroupRequest
+     * @return RebootAndroidInstancesInGroupResponse
+     */
     @Override
     public CompletableFuture<RebootAndroidInstancesInGroupResponse> rebootAndroidInstancesInGroup(RebootAndroidInstancesInGroupRequest request) {
         try {
@@ -571,6 +723,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecoveryFile  RecoveryFileRequest
+     * @return RecoveryFileResponse
+     */
     @Override
     public CompletableFuture<RecoveryFileResponse> recoveryFile(RecoveryFileRequest request) {
         try {
@@ -585,6 +741,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RenewAndroidInstanceGroups  RenewAndroidInstanceGroupsRequest
+     * @return RenewAndroidInstanceGroupsResponse
+     */
     @Override
     public CompletableFuture<RenewAndroidInstanceGroupsResponse> renewAndroidInstanceGroups(RenewAndroidInstanceGroupsRequest request) {
         try {
@@ -599,6 +759,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResetAndroidInstancesInGroup  ResetAndroidInstancesInGroupRequest
+     * @return ResetAndroidInstancesInGroupResponse
+     */
     @Override
     public CompletableFuture<ResetAndroidInstancesInGroupResponse> resetAndroidInstancesInGroup(ResetAndroidInstancesInGroupRequest request) {
         try {
@@ -613,6 +777,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RunCommand  RunCommandRequest
+     * @return RunCommandResponse
+     */
     @Override
     public CompletableFuture<RunCommandResponse> runCommand(RunCommandRequest request) {
         try {
@@ -627,6 +795,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SendFile  SendFileRequest
+     * @return SendFileResponse
+     */
     @Override
     public CompletableFuture<SendFileResponse> sendFile(SendFileRequest request) {
         try {
@@ -641,6 +813,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetAdbSecure  SetAdbSecureRequest
+     * @return SetAdbSecureResponse
+     */
     @Override
     public CompletableFuture<SetAdbSecureResponse> setAdbSecure(SetAdbSecureRequest request) {
         try {
@@ -655,6 +831,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartAndroidInstance  StartAndroidInstanceRequest
+     * @return StartAndroidInstanceResponse
+     */
     @Override
     public CompletableFuture<StartAndroidInstanceResponse> startAndroidInstance(StartAndroidInstanceRequest request) {
         try {
@@ -669,6 +849,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopAndroidInstance  StopAndroidInstanceRequest
+     * @return StopAndroidInstanceResponse
+     */
     @Override
     public CompletableFuture<StopAndroidInstanceResponse> stopAndroidInstance(StopAndroidInstanceRequest request) {
         try {
@@ -683,6 +867,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UninstallApp  UninstallAppRequest
+     * @return UninstallAppResponse
+     */
     @Override
     public CompletableFuture<UninstallAppResponse> uninstallApp(UninstallAppRequest request) {
         try {
@@ -697,6 +885,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateCustomImageName  UpdateCustomImageNameRequest
+     * @return UpdateCustomImageNameResponse
+     */
     @Override
     public CompletableFuture<UpdateCustomImageNameResponse> updateCustomImageName(UpdateCustomImageNameRequest request) {
         try {
@@ -711,6 +903,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateInstanceGroupImage  UpdateInstanceGroupImageRequest
+     * @return UpdateInstanceGroupImageResponse
+     */
     @Override
     public CompletableFuture<UpdateInstanceGroupImageResponse> updateInstanceGroupImage(UpdateInstanceGroupImageRequest request) {
         try {
@@ -725,6 +921,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpgradeAndroidInstanceGroup  UpgradeAndroidInstanceGroupRequest
+     * @return UpgradeAndroidInstanceGroupResponse
+     */
     @Override
     public CompletableFuture<UpgradeAndroidInstanceGroupResponse> upgradeAndroidInstanceGroup(UpgradeAndroidInstanceGroupRequest request) {
         try {

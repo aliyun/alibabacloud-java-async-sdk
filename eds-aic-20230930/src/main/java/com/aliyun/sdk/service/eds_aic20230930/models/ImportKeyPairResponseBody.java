@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportKeyPairResponseBody} extends {@link TeaModel}
  *
  * <p>ImportKeyPairResponseBody</p>
@@ -70,6 +71,12 @@ public class ImportKeyPairResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ImportKeyPairResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImportKeyPairResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtCreated")
         private String gmtCreated;

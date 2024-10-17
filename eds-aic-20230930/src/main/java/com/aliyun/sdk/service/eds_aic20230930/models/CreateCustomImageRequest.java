@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCustomImageRequest} extends {@link RequestModel}
  *
  * <p>CreateCustomImageRequest</p>
@@ -116,7 +117,10 @@ public class CreateCustomImageRequest extends Request {
         }
 
         /**
-         * ImageName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom image name</p>
          */
         public Builder imageName(String imageName) {
             this.putBodyParameter("ImageName", imageName);
@@ -125,7 +129,10 @@ public class CreateCustomImageRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acp-2zecay9ponatdc4m****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

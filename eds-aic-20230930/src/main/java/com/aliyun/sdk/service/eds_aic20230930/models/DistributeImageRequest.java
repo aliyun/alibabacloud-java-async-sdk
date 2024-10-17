@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DistributeImageRequest} extends {@link RequestModel}
  *
  * <p>DistributeImageRequest</p>
@@ -69,7 +70,7 @@ public class DistributeImageRequest extends Request {
         } 
 
         /**
-         * DistributeRegionList.
+         * <p>This parameter is required.</p>
          */
         public Builder distributeRegionList(java.util.List < String > distributeRegionList) {
             this.putBodyParameter("DistributeRegionList", distributeRegionList);
@@ -78,7 +79,10 @@ public class DistributeImageRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>imgc-075cllfeuazh0****</p>
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("ImageId", imageId);

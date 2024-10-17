@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateInstanceGroupImageRequest} extends {@link RequestModel}
  *
  * <p>UpdateInstanceGroupImageRequest</p>
@@ -69,7 +70,10 @@ public class UpdateInstanceGroupImageRequest extends Request {
         } 
 
         /**
-         * ImageId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>imgc-075cllfeuazh****</p>
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("ImageId", imageId);
@@ -78,7 +82,7 @@ public class UpdateInstanceGroupImageRequest extends Request {
         }
 
         /**
-         * InstanceGroupIds.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceGroupIds(java.util.List < String > instanceGroupIds) {
             this.putBodyParameter("InstanceGroupIds", instanceGroupIds);

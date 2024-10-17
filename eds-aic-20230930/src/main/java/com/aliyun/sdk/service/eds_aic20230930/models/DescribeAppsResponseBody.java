@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAppsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAppsResponseBody</p>
@@ -110,6 +111,12 @@ public class DescribeAppsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AndroidAppVersion")
         private String androidAppVersion;
@@ -141,6 +148,9 @@ public class DescribeAppsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceGroupList")
         private java.util.List < String > instanceGroupList;
 
+        @com.aliyun.core.annotation.NameInMap("PackageName")
+        private String packageName;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -155,6 +165,7 @@ public class DescribeAppsResponseBody extends TeaModel {
             this.iconUrl = builder.iconUrl;
             this.installationStatus = builder.installationStatus;
             this.instanceGroupList = builder.instanceGroupList;
+            this.packageName = builder.packageName;
             this.status = builder.status;
         }
 
@@ -237,6 +248,13 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
+         * @return packageName
+         */
+        public String getPackageName() {
+            return this.packageName;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -254,6 +272,7 @@ public class DescribeAppsResponseBody extends TeaModel {
             private String iconUrl; 
             private String installationStatus; 
             private java.util.List < String > instanceGroupList; 
+            private String packageName; 
             private String status; 
 
             /**
@@ -333,6 +352,14 @@ public class DescribeAppsResponseBody extends TeaModel {
              */
             public Builder instanceGroupList(java.util.List < String > instanceGroupList) {
                 this.instanceGroupList = instanceGroupList;
+                return this;
+            }
+
+            /**
+             * PackageName.
+             */
+            public Builder packageName(String packageName) {
+                this.packageName = packageName;
                 return this;
             }
 

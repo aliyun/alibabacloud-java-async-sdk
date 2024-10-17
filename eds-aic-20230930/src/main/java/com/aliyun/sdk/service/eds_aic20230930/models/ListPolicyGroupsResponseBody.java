@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPolicyGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListPolicyGroupsResponseBody</p>
@@ -110,6 +111,12 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPolicyGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPolicyGroupsResponseBody</p>
+     */
     public static class NetRedirectPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetRedirect")
         private String netRedirect;
@@ -151,6 +158,12 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPolicyGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPolicyGroupsResponseBody</p>
+     */
     public static class PolicyGroupModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CameraRedirect")
         private String cameraRedirect;
@@ -166,6 +179,9 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("LocalDrive")
         private String localDrive;
+
+        @com.aliyun.core.annotation.NameInMap("LockResolution")
+        private String lockResolution;
 
         @com.aliyun.core.annotation.NameInMap("NetRedirectPolicy")
         private NetRedirectPolicy netRedirectPolicy;
@@ -188,6 +204,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             this.gmtCreate = builder.gmtCreate;
             this.html5FileTransfer = builder.html5FileTransfer;
             this.localDrive = builder.localDrive;
+            this.lockResolution = builder.lockResolution;
             this.netRedirectPolicy = builder.netRedirectPolicy;
             this.policyGroupId = builder.policyGroupId;
             this.policyGroupName = builder.policyGroupName;
@@ -239,6 +256,13 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return lockResolution
+         */
+        public String getLockResolution() {
+            return this.lockResolution;
+        }
+
+        /**
          * @return netRedirectPolicy
          */
         public NetRedirectPolicy getNetRedirectPolicy() {
@@ -279,6 +303,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             private String gmtCreate; 
             private String html5FileTransfer; 
             private String localDrive; 
+            private String lockResolution; 
             private NetRedirectPolicy netRedirectPolicy; 
             private String policyGroupId; 
             private String policyGroupName; 
@@ -322,6 +347,14 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
              */
             public Builder localDrive(String localDrive) {
                 this.localDrive = localDrive;
+                return this;
+            }
+
+            /**
+             * LockResolution.
+             */
+            public Builder lockResolution(String lockResolution) {
+                this.lockResolution = lockResolution;
                 return this;
             }
 

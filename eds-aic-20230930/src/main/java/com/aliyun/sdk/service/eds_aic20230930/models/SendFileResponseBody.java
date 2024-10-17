@@ -6,13 +6,14 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendFileResponseBody} extends {@link TeaModel}
  *
  * <p>SendFileResponseBody</p>
  */
 public class SendFileResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private String data;
+    private java.util.List < Data> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -33,7 +34,7 @@ public class SendFileResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public String getData() {
+    public java.util.List < Data> getData() {
         return this.data;
     }
 
@@ -45,13 +46,13 @@ public class SendFileResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String data; 
+        private java.util.List < Data> data; 
         private String requestId; 
 
         /**
          * Data.
          */
-        public Builder data(String data) {
+        public Builder data(java.util.List < Data> data) {
             this.data = data;
             return this;
         }
@@ -70,4 +71,71 @@ public class SendFileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SendFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>SendFileResponseBody</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AndroidInstanceId")
+        private String androidInstanceId;
+
+        @com.aliyun.core.annotation.NameInMap("TaskId")
+        private String taskId;
+
+        private Data(Builder builder) {
+            this.androidInstanceId = builder.androidInstanceId;
+            this.taskId = builder.taskId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return androidInstanceId
+         */
+        public String getAndroidInstanceId() {
+            return this.androidInstanceId;
+        }
+
+        /**
+         * @return taskId
+         */
+        public String getTaskId() {
+            return this.taskId;
+        }
+
+        public static final class Builder {
+            private String androidInstanceId; 
+            private String taskId; 
+
+            /**
+             * AndroidInstanceId.
+             */
+            public Builder androidInstanceId(String androidInstanceId) {
+                this.androidInstanceId = androidInstanceId;
+                return this;
+            }
+
+            /**
+             * TaskId.
+             */
+            public Builder taskId(String taskId) {
+                this.taskId = taskId;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
 }

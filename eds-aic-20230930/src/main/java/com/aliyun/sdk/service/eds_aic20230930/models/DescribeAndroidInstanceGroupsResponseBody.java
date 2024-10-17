@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAndroidInstanceGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAndroidInstanceGroupsResponseBody</p>
@@ -110,6 +111,12 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAndroidInstanceGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAndroidInstanceGroupsResponseBody</p>
+     */
     public static class Disks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiskSize")
         private Integer diskSize;
@@ -171,6 +178,12 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAndroidInstanceGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAndroidInstanceGroupsResponseBody</p>
+     */
     public static class InstanceGroupModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppInstanceGroupId")
         private String appInstanceGroupId;

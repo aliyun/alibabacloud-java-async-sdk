@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DowngradeAndroidInstanceGroupRequest} extends {@link RequestModel}
  *
  * <p>DowngradeAndroidInstanceGroupRequest</p>
@@ -100,7 +101,10 @@ public class DowngradeAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * InstanceGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ag-cuv4scs4obxhs****</p>
          */
         public Builder instanceGroupId(String instanceGroupId) {
             this.putQueryParameter("InstanceGroupId", instanceGroupId);

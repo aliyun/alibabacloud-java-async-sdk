@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeletePolicyGroupRequest} extends {@link RequestModel}
  *
  * <p>DeletePolicyGroupRequest</p>
@@ -54,7 +55,7 @@ public class DeletePolicyGroupRequest extends Request {
         } 
 
         /**
-         * PolicyGroupIds.
+         * <p>This parameter is required.</p>
          */
         public Builder policyGroupIds(java.util.List < String > policyGroupIds) {
             this.putQueryParameter("PolicyGroupIds", policyGroupIds);

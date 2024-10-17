@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAndroidInstanceGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAndroidInstanceGroupResponseBody</p>
@@ -110,6 +111,12 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAndroidInstanceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateAndroidInstanceGroupResponseBody</p>
+     */
     public static class InstanceGroupInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceGroupId")
         private String instanceGroupId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachKeyPairResponseBody} extends {@link TeaModel}
  *
  * <p>DetachKeyPairResponseBody</p>
@@ -70,6 +71,12 @@ public class DetachKeyPairResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DetachKeyPairResponseBody} extends {@link TeaModel}
+     *
+     * <p>DetachKeyPairResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DetachedInstanceIds")
         private java.util.List < String > detachedInstanceIds;

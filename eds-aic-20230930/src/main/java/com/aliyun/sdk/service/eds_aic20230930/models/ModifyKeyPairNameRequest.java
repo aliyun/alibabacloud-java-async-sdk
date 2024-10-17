@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyKeyPairNameRequest} extends {@link RequestModel}
  *
  * <p>ModifyKeyPairNameRequest</p>
@@ -69,7 +70,10 @@ public class ModifyKeyPairNameRequest extends Request {
         } 
 
         /**
-         * KeyPairId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kp-6v2q33ae4tw3a****</p>
          */
         public Builder keyPairId(String keyPairId) {
             this.putQueryParameter("KeyPairId", keyPairId);
@@ -78,7 +82,10 @@ public class ModifyKeyPairNameRequest extends Request {
         }
 
         /**
-         * NewKeyPairName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>newKeyPairName</p>
          */
         public Builder newKeyPairName(String newKeyPairName) {
             this.putQueryParameter("NewKeyPairName", newKeyPairName);

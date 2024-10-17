@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePolicyGroupRequest} extends {@link RequestModel}
  *
  * <p>CreatePolicyGroupRequest</p>
@@ -26,6 +27,10 @@ public class CreatePolicyGroupRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("LocalDrive")
     private String localDrive;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LockResolution")
+    private String lockResolution;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NetRedirectPolicy")
@@ -49,6 +54,7 @@ public class CreatePolicyGroupRequest extends Request {
         this.clipboard = builder.clipboard;
         this.html5FileTransfer = builder.html5FileTransfer;
         this.localDrive = builder.localDrive;
+        this.lockResolution = builder.lockResolution;
         this.netRedirectPolicy = builder.netRedirectPolicy;
         this.policyGroupName = builder.policyGroupName;
         this.resolutionHeight = builder.resolutionHeight;
@@ -97,6 +103,13 @@ public class CreatePolicyGroupRequest extends Request {
     }
 
     /**
+     * @return lockResolution
+     */
+    public String getLockResolution() {
+        return this.lockResolution;
+    }
+
+    /**
      * @return netRedirectPolicy
      */
     public NetRedirectPolicy getNetRedirectPolicy() {
@@ -129,6 +142,7 @@ public class CreatePolicyGroupRequest extends Request {
         private String clipboard; 
         private String html5FileTransfer; 
         private String localDrive; 
+        private String lockResolution; 
         private NetRedirectPolicy netRedirectPolicy; 
         private String policyGroupName; 
         private Integer resolutionHeight; 
@@ -144,6 +158,7 @@ public class CreatePolicyGroupRequest extends Request {
             this.clipboard = request.clipboard;
             this.html5FileTransfer = request.html5FileTransfer;
             this.localDrive = request.localDrive;
+            this.lockResolution = request.lockResolution;
             this.netRedirectPolicy = request.netRedirectPolicy;
             this.policyGroupName = request.policyGroupName;
             this.resolutionHeight = request.resolutionHeight;
@@ -183,6 +198,15 @@ public class CreatePolicyGroupRequest extends Request {
         public Builder localDrive(String localDrive) {
             this.putBodyParameter("LocalDrive", localDrive);
             this.localDrive = localDrive;
+            return this;
+        }
+
+        /**
+         * LockResolution.
+         */
+        public Builder lockResolution(String lockResolution) {
+            this.putBodyParameter("LockResolution", lockResolution);
+            this.lockResolution = lockResolution;
             return this;
         }
 
@@ -230,6 +254,12 @@ public class CreatePolicyGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePolicyGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePolicyGroupRequest</p>
+     */
     public static class NetRedirectPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetRedirect")
         private String netRedirect;

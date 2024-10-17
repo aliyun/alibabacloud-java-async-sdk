@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckResourceStockRequest} extends {@link RequestModel}
  *
  * <p>CheckResourceStockRequest</p>
@@ -128,7 +129,10 @@ public class CheckResourceStockRequest extends Request {
         }
 
         /**
-         * BizRegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder bizRegionId(String bizRegionId) {
             this.putQueryParameter("BizRegionId", bizRegionId);

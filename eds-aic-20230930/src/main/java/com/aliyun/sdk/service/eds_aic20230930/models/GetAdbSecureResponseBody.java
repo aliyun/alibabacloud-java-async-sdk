@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAdbSecureResponseBody} extends {@link TeaModel}
  *
  * <p>GetAdbSecureResponseBody</p>
@@ -70,6 +71,12 @@ public class GetAdbSecureResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAdbSecureResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAdbSecureResponseBody</p>
+     */
     public static class AdbSecureList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -131,6 +138,12 @@ public class GetAdbSecureResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAdbSecureResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAdbSecureResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdbSecureList")
         private java.util.List < AdbSecureList> adbSecureList;

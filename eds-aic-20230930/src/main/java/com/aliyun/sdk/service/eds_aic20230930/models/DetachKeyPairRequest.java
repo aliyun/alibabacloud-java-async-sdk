@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachKeyPairRequest} extends {@link RequestModel}
  *
  * <p>DetachKeyPairRequest</p>
@@ -77,7 +78,10 @@ public class DetachKeyPairRequest extends Request {
         }
 
         /**
-         * KeyPairId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kp-6v2q33ae4tw3a****</p>
          */
         public Builder keyPairId(String keyPairId) {
             this.putQueryParameter("KeyPairId", keyPairId);

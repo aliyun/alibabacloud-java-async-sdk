@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateKeyPairRequest} extends {@link RequestModel}
  *
  * <p>CreateKeyPairRequest</p>
@@ -54,7 +55,10 @@ public class CreateKeyPairRequest extends Request {
         } 
 
         /**
-         * KeyPairName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testKeyPairName</p>
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);

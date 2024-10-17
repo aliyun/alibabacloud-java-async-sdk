@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecoveryFileRequest} extends {@link RequestModel}
  *
  * <p>RecoveryFileRequest</p>
@@ -110,7 +111,7 @@ public class RecoveryFileRequest extends Request {
         } 
 
         /**
-         * AndroidInstanceIdList.
+         * <p>This parameter is required.</p>
          */
         public Builder androidInstanceIdList(java.util.List < String > androidInstanceIdList) {
             this.putQueryParameter("AndroidInstanceIdList", androidInstanceIdList);

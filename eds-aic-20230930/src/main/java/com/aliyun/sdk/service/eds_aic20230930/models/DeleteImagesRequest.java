@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteImagesRequest} extends {@link RequestModel}
  *
  * <p>DeleteImagesRequest</p>
@@ -54,7 +55,7 @@ public class DeleteImagesRequest extends Request {
         } 
 
         /**
-         * ImageIds.
+         * <p>This parameter is required.</p>
          */
         public Builder imageIds(java.util.List < String > imageIds) {
             String imageIdsShrink = shrink(imageIds, "ImageIds", "json");

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageListRequest} extends {@link RequestModel}
  *
  * <p>DescribeImageListRequest</p>
@@ -143,7 +144,10 @@ public class DescribeImageListRequest extends Request {
         }
 
         /**
-         * ImageType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         public Builder imageType(String imageType) {
             this.putBodyParameter("ImageType", imageType);

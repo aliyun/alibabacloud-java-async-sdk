@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FetchFileRequest} extends {@link RequestModel}
  *
  * <p>FetchFileRequest</p>
@@ -114,7 +115,7 @@ public class FetchFileRequest extends Request {
         } 
 
         /**
-         * AndroidInstanceIdList.
+         * <p>This parameter is required.</p>
          */
         public Builder androidInstanceIdList(java.util.List < String > androidInstanceIdList) {
             this.putQueryParameter("AndroidInstanceIdList", androidInstanceIdList);
@@ -123,7 +124,10 @@ public class FetchFileRequest extends Request {
         }
 
         /**
-         * SourceFilePath.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/data/a.txt</p>
          */
         public Builder sourceFilePath(String sourceFilePath) {
             this.putQueryParameter("SourceFilePath", sourceFilePath);
@@ -132,7 +136,10 @@ public class FetchFileRequest extends Request {
         }
 
         /**
-         * UploadEndpoint.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-hangzhou.aliyuncs.com</p>
          */
         public Builder uploadEndpoint(String uploadEndpoint) {
             this.putQueryParameter("UploadEndpoint", uploadEndpoint);
@@ -141,7 +148,10 @@ public class FetchFileRequest extends Request {
         }
 
         /**
-         * UploadType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder uploadType(String uploadType) {
             this.putQueryParameter("UploadType", uploadType);
@@ -150,7 +160,7 @@ public class FetchFileRequest extends Request {
         }
 
         /**
-         * UploadUrl.
+         * <p>This parameter is required.</p>
          */
         public Builder uploadUrl(String uploadUrl) {
             this.putQueryParameter("UploadUrl", uploadUrl);

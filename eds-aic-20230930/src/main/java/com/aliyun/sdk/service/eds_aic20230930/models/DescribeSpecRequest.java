@@ -6,11 +6,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSpecRequest} extends {@link RequestModel}
  *
  * <p>DescribeSpecRequest</p>
  */
 public class DescribeSpecRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizRegionId")
+    private String bizRegionId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     @com.aliyun.core.annotation.Validation(maximum = 100)
@@ -34,6 +39,7 @@ public class DescribeSpecRequest extends Request {
 
     private DescribeSpecRequest(Builder builder) {
         super(builder);
+        this.bizRegionId = builder.bizRegionId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.specIds = builder.specIds;
@@ -52,6 +58,13 @@ public class DescribeSpecRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bizRegionId
+     */
+    public String getBizRegionId() {
+        return this.bizRegionId;
     }
 
     /**
@@ -90,6 +103,7 @@ public class DescribeSpecRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeSpecRequest, Builder> {
+        private String bizRegionId; 
         private Integer maxResults; 
         private String nextToken; 
         private java.util.List < String > specIds; 
@@ -102,12 +116,22 @@ public class DescribeSpecRequest extends Request {
 
         private Builder(DescribeSpecRequest request) {
             super(request);
+            this.bizRegionId = request.bizRegionId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.specIds = request.specIds;
             this.specStatus = request.specStatus;
             this.specType = request.specType;
         } 
+
+        /**
+         * BizRegionId.
+         */
+        public Builder bizRegionId(String bizRegionId) {
+            this.putQueryParameter("BizRegionId", bizRegionId);
+            this.bizRegionId = bizRegionId;
+            return this;
+        }
 
         /**
          * MaxResults.

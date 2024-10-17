@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAndroidInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeAndroidInstancesRequest</p>
@@ -20,12 +21,20 @@ public class DescribeAndroidInstancesRequest extends Request {
     private String androidInstanceName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
+    private String chargeType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceGroupId")
     private String instanceGroupId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceGroupIds")
     private java.util.List < String > instanceGroupIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceGroupName")
+    private String instanceGroupName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KeyPairId")
@@ -51,8 +60,10 @@ public class DescribeAndroidInstancesRequest extends Request {
         super(builder);
         this.androidInstanceIds = builder.androidInstanceIds;
         this.androidInstanceName = builder.androidInstanceName;
+        this.chargeType = builder.chargeType;
         this.instanceGroupId = builder.instanceGroupId;
         this.instanceGroupIds = builder.instanceGroupIds;
+        this.instanceGroupName = builder.instanceGroupName;
         this.keyPairId = builder.keyPairId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -88,6 +99,13 @@ public class DescribeAndroidInstancesRequest extends Request {
     }
 
     /**
+     * @return chargeType
+     */
+    public String getChargeType() {
+        return this.chargeType;
+    }
+
+    /**
      * @return instanceGroupId
      */
     public String getInstanceGroupId() {
@@ -99,6 +117,13 @@ public class DescribeAndroidInstancesRequest extends Request {
      */
     public java.util.List < String > getInstanceGroupIds() {
         return this.instanceGroupIds;
+    }
+
+    /**
+     * @return instanceGroupName
+     */
+    public String getInstanceGroupName() {
+        return this.instanceGroupName;
     }
 
     /**
@@ -139,8 +164,10 @@ public class DescribeAndroidInstancesRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeAndroidInstancesRequest, Builder> {
         private java.util.List < String > androidInstanceIds; 
         private String androidInstanceName; 
+        private String chargeType; 
         private String instanceGroupId; 
         private java.util.List < String > instanceGroupIds; 
+        private String instanceGroupName; 
         private String keyPairId; 
         private Integer maxResults; 
         private String nextToken; 
@@ -155,8 +182,10 @@ public class DescribeAndroidInstancesRequest extends Request {
             super(request);
             this.androidInstanceIds = request.androidInstanceIds;
             this.androidInstanceName = request.androidInstanceName;
+            this.chargeType = request.chargeType;
             this.instanceGroupId = request.instanceGroupId;
             this.instanceGroupIds = request.instanceGroupIds;
+            this.instanceGroupName = request.instanceGroupName;
             this.keyPairId = request.keyPairId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -183,6 +212,15 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
+         * ChargeType.
+         */
+        public Builder chargeType(String chargeType) {
+            this.putQueryParameter("ChargeType", chargeType);
+            this.chargeType = chargeType;
+            return this;
+        }
+
+        /**
          * InstanceGroupId.
          */
         public Builder instanceGroupId(String instanceGroupId) {
@@ -197,6 +235,15 @@ public class DescribeAndroidInstancesRequest extends Request {
         public Builder instanceGroupIds(java.util.List < String > instanceGroupIds) {
             this.putQueryParameter("InstanceGroupIds", instanceGroupIds);
             this.instanceGroupIds = instanceGroupIds;
+            return this;
+        }
+
+        /**
+         * InstanceGroupName.
+         */
+        public Builder instanceGroupName(String instanceGroupName) {
+            this.putQueryParameter("InstanceGroupName", instanceGroupName);
+            this.instanceGroupName = instanceGroupName;
             return this;
         }
 

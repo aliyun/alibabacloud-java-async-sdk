@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAndroidInstanceGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateAndroidInstanceGroupRequest</p>
@@ -296,7 +297,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * BizRegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder bizRegionId(String bizRegionId) {
             this.putQueryParameter("BizRegionId", bizRegionId);
@@ -332,7 +336,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>imgc-06zyt9m93zwax****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -350,7 +357,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * InstanceGroupSpec.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acp.basic.small</p>
          */
         public Builder instanceGroupSpec(String instanceGroupSpec) {
             this.putQueryParameter("InstanceGroupSpec", instanceGroupSpec);
@@ -395,7 +405,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * PolicyGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-b7bxrrwxkijjh****</p>
          */
         public Builder policyGroupId(String policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);

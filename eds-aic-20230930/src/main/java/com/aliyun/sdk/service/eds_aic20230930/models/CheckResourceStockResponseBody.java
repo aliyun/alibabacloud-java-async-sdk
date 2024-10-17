@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckResourceStockResponseBody} extends {@link TeaModel}
  *
  * <p>CheckResourceStockResponseBody</p>
@@ -70,6 +71,12 @@ public class CheckResourceStockResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CheckResourceStockResponseBody} extends {@link TeaModel}
+     *
+     * <p>CheckResourceStockResponseBody</p>
+     */
     public static class ResourceStockModels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
