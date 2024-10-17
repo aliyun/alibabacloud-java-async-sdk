@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PurchaseIntlDomainRequest} extends {@link RequestModel}
  *
  * <p>PurchaseIntlDomainRequest</p>
@@ -84,7 +85,7 @@ public class PurchaseIntlDomainRequest extends Request {
         } 
 
         /**
-         * AuctionId.
+         * <p>This parameter is required.</p>
          */
         public Builder auctionId(String auctionId) {
             this.putBodyParameter("AuctionId", auctionId);
@@ -93,7 +94,7 @@ public class PurchaseIntlDomainRequest extends Request {
         }
 
         /**
-         * Currency.
+         * <p>This parameter is required.</p>
          */
         public Builder currency(String currency) {
             this.putBodyParameter("Currency", currency);
@@ -102,7 +103,7 @@ public class PurchaseIntlDomainRequest extends Request {
         }
 
         /**
-         * Price.
+         * <p>This parameter is required.</p>
          */
         public Builder price(Double price) {
             this.putBodyParameter("Price", price);

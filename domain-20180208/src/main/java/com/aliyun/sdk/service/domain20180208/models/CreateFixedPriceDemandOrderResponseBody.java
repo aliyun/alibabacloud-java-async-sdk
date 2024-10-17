@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFixedPriceDemandOrderResponseBody} extends {@link TeaModel}
  *
  * <p>CreateFixedPriceDemandOrderResponseBody</p>
@@ -130,6 +131,12 @@ public class CreateFixedPriceDemandOrderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateFixedPriceDemandOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateFixedPriceDemandOrderResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;

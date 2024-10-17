@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPurchasedDomainsResponseBody} extends {@link TeaModel}
  *
  * <p>QueryPurchasedDomainsResponseBody</p>
@@ -150,6 +151,12 @@ public class QueryPurchasedDomainsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryPurchasedDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPurchasedDomainsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeliveryTime")
         private String deliveryTime;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryBidRecordsRequest} extends {@link RequestModel}
  *
  * <p>QueryBidRecordsRequest</p>
@@ -83,7 +84,10 @@ public class QueryBidRecordsRequest extends Request {
         } 
 
         /**
-         * AuctionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder auctionId(String auctionId) {
             this.putBodyParameter("AuctionId", auctionId);

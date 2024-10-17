@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SelectedDomainListResponseBody} extends {@link TeaModel}
  *
  * <p>SelectedDomainListResponseBody</p>
@@ -89,7 +90,10 @@ public class SelectedDomainListResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80011ABC-F573-4795-B0E8-377BFBBA3422</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +114,12 @@ public class SelectedDomainListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SelectedDomainListResponseBody} extends {@link TeaModel}
+     *
+     * <p>SelectedDomainListResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DownloadUrl")
         private String downloadUrl;

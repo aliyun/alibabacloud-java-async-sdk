@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BidDomainRequest} extends {@link RequestModel}
  *
  * <p>BidDomainRequest</p>
@@ -84,7 +85,10 @@ public class BidDomainRequest extends Request {
         } 
 
         /**
-         * AuctionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678</p>
          */
         public Builder auctionId(String auctionId) {
             this.putBodyParameter("AuctionId", auctionId);
@@ -93,7 +97,10 @@ public class BidDomainRequest extends Request {
         }
 
         /**
-         * Currency.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RMB</p>
          */
         public Builder currency(String currency) {
             this.putBodyParameter("Currency", currency);
@@ -102,7 +109,10 @@ public class BidDomainRequest extends Request {
         }
 
         /**
-         * MaxBid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxBid(Float maxBid) {
             this.putBodyParameter("MaxBid", maxBid);

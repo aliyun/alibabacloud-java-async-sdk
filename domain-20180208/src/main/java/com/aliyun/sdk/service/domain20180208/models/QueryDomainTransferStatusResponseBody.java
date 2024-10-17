@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDomainTransferStatusResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDomainTransferStatusResponseBody</p>
@@ -70,6 +71,12 @@ public class QueryDomainTransferStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDomainTransferStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDomainTransferStatusResponseBody</p>
+     */
     public static class DomainTransferStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;

@@ -7,19 +7,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ReserveDomainResponseBody} extends {@link TeaModel}
+ * {@link QueryExchangeRateResponseBody} extends {@link TeaModel}
  *
- * <p>ReserveDomainResponseBody</p>
+ * <p>QueryExchangeRateResponseBody</p>
  */
-public class ReserveDomainResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("AuctionId")
-    private String auctionId;
+public class QueryExchangeRateResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("ExchangeRate")
+    private Double exchangeRate;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private ReserveDomainResponseBody(Builder builder) {
-        this.auctionId = builder.auctionId;
+    private QueryExchangeRateResponseBody(Builder builder) {
+        this.exchangeRate = builder.exchangeRate;
         this.requestId = builder.requestId;
     }
 
@@ -27,15 +27,15 @@ public class ReserveDomainResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ReserveDomainResponseBody create() {
+    public static QueryExchangeRateResponseBody create() {
         return builder().build();
     }
 
     /**
-     * @return auctionId
+     * @return exchangeRate
      */
-    public String getAuctionId() {
-        return this.auctionId;
+    public Double getExchangeRate() {
+        return this.exchangeRate;
     }
 
     /**
@@ -46,14 +46,14 @@ public class ReserveDomainResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String auctionId; 
+        private Double exchangeRate; 
         private String requestId; 
 
         /**
-         * AuctionId.
+         * ExchangeRate.
          */
-        public Builder auctionId(String auctionId) {
-            this.auctionId = auctionId;
+        public Builder exchangeRate(Double exchangeRate) {
+            this.exchangeRate = exchangeRate;
             return this;
         }
 
@@ -65,8 +65,8 @@ public class ReserveDomainResponseBody extends TeaModel {
             return this;
         }
 
-        public ReserveDomainResponseBody build() {
-            return new ReserveDomainResponseBody(this);
+        public QueryExchangeRateResponseBody build() {
+            return new QueryExchangeRateResponseBody(this);
         } 
 
     } 

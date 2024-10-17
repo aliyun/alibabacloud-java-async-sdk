@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryBrokerDemandRecordResponseBody} extends {@link TeaModel}
  *
  * <p>QueryBrokerDemandRecordResponseBody</p>
@@ -150,6 +151,12 @@ public class QueryBrokerDemandRecordResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryBrokerDemandRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryBrokerDemandRecordResponseBody</p>
+     */
     public static class BrokerDemandRecord extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BizId")
         private String bizId;
@@ -231,6 +238,12 @@ public class QueryBrokerDemandRecordResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryBrokerDemandRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryBrokerDemandRecordResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BrokerDemandRecord")
         private java.util.List < BrokerDemandRecord> brokerDemandRecord;

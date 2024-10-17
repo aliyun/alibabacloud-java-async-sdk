@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryBrokerDemandResponseBody} extends {@link TeaModel}
  *
  * <p>QueryBrokerDemandResponseBody</p>
@@ -150,6 +151,12 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryBrokerDemandResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryBrokerDemandResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuditStatus")
         private Integer auditStatus;

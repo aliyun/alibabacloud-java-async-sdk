@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeAuctionRequest} extends {@link RequestModel}
  *
  * <p>ChangeAuctionRequest</p>
@@ -68,6 +69,12 @@ public class ChangeAuctionRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ChangeAuctionRequest} extends {@link TeaModel}
+     *
+     * <p>ChangeAuctionRequest</p>
+     */
     public static class BidRecords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -122,7 +129,7 @@ public class ChangeAuctionRequest extends Request {
             private String userId; 
 
             /**
-             * CreateTime.
+             * <p>This parameter is required.</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -130,7 +137,7 @@ public class ChangeAuctionRequest extends Request {
             }
 
             /**
-             * Price.
+             * <p>This parameter is required.</p>
              */
             public Builder price(Float price) {
                 this.price = price;
@@ -138,7 +145,7 @@ public class ChangeAuctionRequest extends Request {
             }
 
             /**
-             * UserId.
+             * <p>This parameter is required.</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -152,6 +159,12 @@ public class ChangeAuctionRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ChangeAuctionRequest} extends {@link TeaModel}
+     *
+     * <p>ChangeAuctionRequest</p>
+     */
     public static class AuctionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BidRecords")
         private java.util.List < BidRecords> bidRecords;
@@ -299,7 +312,7 @@ public class ChangeAuctionRequest extends Request {
             }
 
             /**
-             * DomainName.
+             * <p>This parameter is required.</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -307,7 +320,7 @@ public class ChangeAuctionRequest extends Request {
             }
 
             /**
-             * EndTime.
+             * <p>This parameter is required.</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -355,7 +368,7 @@ public class ChangeAuctionRequest extends Request {
             }
 
             /**
-             * Winner.
+             * <p>This parameter is required.</p>
              */
             public Builder winner(String winner) {
                 this.winner = winner;
@@ -363,7 +376,7 @@ public class ChangeAuctionRequest extends Request {
             }
 
             /**
-             * WinnerPrice.
+             * <p>This parameter is required.</p>
              */
             public Builder winnerPrice(Float winnerPrice) {
                 this.winnerPrice = winnerPrice;

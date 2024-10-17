@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RecordDemandResponse} extends {@link TeaModel}
+ * {@link QueryExchangeRateResponse} extends {@link TeaModel}
  *
- * <p>RecordDemandResponse</p>
+ * <p>QueryExchangeRateResponse</p>
  */
-public class RecordDemandResponse extends Response {
+public class QueryExchangeRateResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class RecordDemandResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private RecordDemandResponseBody body;
+    private QueryExchangeRateResponseBody body;
 
-    private RecordDemandResponse(BuilderImpl builder) {
+    private QueryExchangeRateResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static RecordDemandResponse create() {
+    public static QueryExchangeRateResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class RecordDemandResponse extends Response {
     /**
      * @return body
      */
-    public RecordDemandResponseBody getBody() {
+    public QueryExchangeRateResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<RecordDemandResponse, Builder> {
+    public interface Builder extends Response.Builder<QueryExchangeRateResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(RecordDemandResponseBody body);
+        Builder body(QueryExchangeRateResponseBody body);
 
         @Override
-        RecordDemandResponse build();
+        QueryExchangeRateResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<RecordDemandResponse, Builder>
+            extends Response.BuilderImpl<QueryExchangeRateResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private RecordDemandResponseBody body; 
+        private QueryExchangeRateResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(RecordDemandResponse response) {
+        private BuilderImpl(QueryExchangeRateResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class RecordDemandResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(RecordDemandResponseBody body) {
+        public Builder body(QueryExchangeRateResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public RecordDemandResponse build() {
-            return new RecordDemandResponse(this);
+        public QueryExchangeRateResponse build() {
+            return new QueryExchangeRateResponse(this);
         } 
 
     } 

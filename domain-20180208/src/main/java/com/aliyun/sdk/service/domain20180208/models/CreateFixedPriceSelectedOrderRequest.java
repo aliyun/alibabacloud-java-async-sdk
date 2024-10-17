@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFixedPriceSelectedOrderRequest} extends {@link RequestModel}
  *
  * <p>CreateFixedPriceSelectedOrderRequest</p>
@@ -121,7 +122,10 @@ public class CreateFixedPriceSelectedOrderRequest extends Request {
         }
 
         /**
-         * ContactId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11935401</p>
          */
         public Builder contactId(String contactId) {
             this.putQueryParameter("ContactId", contactId);
@@ -130,7 +134,10 @@ public class CreateFixedPriceSelectedOrderRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -139,7 +146,10 @@ public class CreateFixedPriceSelectedOrderRequest extends Request {
         }
 
         /**
-         * ExpectedPrice.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20.00</p>
          */
         public Builder expectedPrice(Double expectedPrice) {
             this.putQueryParameter("ExpectedPrice", expectedPrice);

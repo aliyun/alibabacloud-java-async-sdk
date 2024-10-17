@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePartnerReservePriceRequest} extends {@link RequestModel}
  *
  * <p>UpdatePartnerReservePriceRequest</p>
@@ -99,7 +100,7 @@ public class UpdatePartnerReservePriceRequest extends Request {
         } 
 
         /**
-         * BiddingId.
+         * <p>This parameter is required.</p>
          */
         public Builder biddingId(Integer biddingId) {
             this.putBodyParameter("BiddingId", biddingId);
@@ -108,7 +109,7 @@ public class UpdatePartnerReservePriceRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
          */
         public Builder domainName(String domainName) {
             this.putBodyParameter("DomainName", domainName);
@@ -117,7 +118,7 @@ public class UpdatePartnerReservePriceRequest extends Request {
         }
 
         /**
-         * PartnerType.
+         * <p>This parameter is required.</p>
          */
         public Builder partnerType(String partnerType) {
             this.putBodyParameter("PartnerType", partnerType);
@@ -126,7 +127,7 @@ public class UpdatePartnerReservePriceRequest extends Request {
         }
 
         /**
-         * ReservePrice.
+         * <p>This parameter is required.</p>
          */
         public Builder reservePrice(Double reservePrice) {
             this.putBodyParameter("ReservePrice", reservePrice);

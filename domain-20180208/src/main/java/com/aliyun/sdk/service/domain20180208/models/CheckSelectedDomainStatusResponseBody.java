@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckSelectedDomainStatusResponseBody} extends {@link TeaModel}
  *
  * <p>CheckSelectedDomainStatusResponseBody</p>
@@ -130,6 +131,12 @@ public class CheckSelectedDomainStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CheckSelectedDomainStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>CheckSelectedDomainStatusResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeadDate")
         private Long deadDate;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckDomainStatusRequest} extends {@link RequestModel}
  *
  * <p>CheckDomainStatusRequest</p>
@@ -54,7 +55,7 @@ public class CheckDomainStatusRequest extends Request {
         } 
 
         /**
-         * Domain.
+         * <p>This parameter is required.</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);

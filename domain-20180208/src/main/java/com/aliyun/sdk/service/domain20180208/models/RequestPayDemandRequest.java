@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RequestPayDemandRequest} extends {@link RequestModel}
  *
  * <p>RequestPayDemandRequest</p>
@@ -112,7 +113,10 @@ public class RequestPayDemandRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SE20183A0Q7C5556</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -121,7 +125,10 @@ public class RequestPayDemandRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -139,7 +146,10 @@ public class RequestPayDemandRequest extends Request {
         }
 
         /**
-         * Price.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder price(Float price) {
             this.putQueryParameter("Price", price);

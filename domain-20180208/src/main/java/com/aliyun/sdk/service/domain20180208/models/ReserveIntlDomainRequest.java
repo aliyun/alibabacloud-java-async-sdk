@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReserveIntlDomainRequest} extends {@link RequestModel}
  *
  * <p>ReserveIntlDomainRequest</p>
@@ -54,7 +55,7 @@ public class ReserveIntlDomainRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
          */
         public Builder domainName(String domainName) {
             this.putBodyParameter("DomainName", domainName);
