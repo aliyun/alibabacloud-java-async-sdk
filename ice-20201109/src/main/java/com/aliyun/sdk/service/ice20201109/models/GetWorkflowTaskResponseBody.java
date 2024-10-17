@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWorkflowTaskResponseBody} extends {@link TeaModel}
  *
  * <p>GetWorkflowTaskResponseBody</p>
@@ -49,7 +50,10 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
         private WorkflowTask workflowTask; 
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>0C-7870-15FE-B96F-8880BB</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetWorkflowTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkflowTaskResponseBody</p>
+     */
     public static class Workflow extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -211,6 +221,12 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetWorkflowTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkflowTaskResponseBody</p>
+     */
     public static class WorkflowTask extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActivityResults")
         private String activityResults;

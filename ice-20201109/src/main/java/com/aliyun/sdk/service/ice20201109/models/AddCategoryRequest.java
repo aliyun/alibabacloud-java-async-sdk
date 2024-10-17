@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddCategoryRequest} extends {@link RequestModel}
  *
  * <p>AddCategoryRequest</p>
@@ -105,7 +106,12 @@ public class AddCategoryRequest extends Request {
         }
 
         /**
-         * CateName.
+         * <p>The category name.</p>
+         * <ul>
+         * <li>The value can be up to 64 bytes in length.</li>
+         * <li>The value must be encoded in UTF-8.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          */
         public Builder cateName(String cateName) {
             this.putQueryParameter("CateName", cateName);
@@ -114,7 +120,10 @@ public class AddCategoryRequest extends Request {
         }
 
         /**
-         * ParentId.
+         * <p>The ID of the parent category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder parentId(Long parentId) {
             this.putQueryParameter("ParentId", parentId);
@@ -123,7 +132,14 @@ public class AddCategoryRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The type of the category. Valid values:</p>
+         * <ul>
+         * <li>default: audio, video, and image files. This is the default value.</li>
+         * <li>material: short video materials.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

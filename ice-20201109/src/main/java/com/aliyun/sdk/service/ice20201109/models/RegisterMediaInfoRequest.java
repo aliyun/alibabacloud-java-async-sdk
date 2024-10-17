@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RegisterMediaInfoRequest} extends {@link RequestModel}
  *
  * <p>RegisterMediaInfoRequest</p>
@@ -273,7 +274,17 @@ public class RegisterMediaInfoRequest extends Request {
         }
 
         /**
-         * BusinessType.
+         * <p>The business type of the media asset. Valid values:</p>
+         * <ul>
+         * <li>subtitles</li>
+         * <li>watermark</li>
+         * <li>opening</li>
+         * <li>ending</li>
+         * <li>general</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>opening</p>
          */
         public Builder businessType(String businessType) {
             this.putQueryParameter("BusinessType", businessType);
@@ -282,7 +293,10 @@ public class RegisterMediaInfoRequest extends Request {
         }
 
         /**
-         * CateId.
+         * <p>The category ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3048</p>
          */
         public Builder cateId(Long cateId) {
             this.putQueryParameter("CateId", cateId);
@@ -291,7 +305,10 @@ public class RegisterMediaInfoRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. The value must be a UUID that contains 32 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>0311a423d11a5f7dee713535</strong></strong></p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -300,7 +317,14 @@ public class RegisterMediaInfoRequest extends Request {
         }
 
         /**
-         * CoverURL.
+         * <p>The thumbnail URL of the media asset.</p>
+         * <ul>
+         * <li>The value can be up to 128 bytes in length.</li>
+         * <li>The value must be encoded in UTF-8.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png</a></p>
          */
         public Builder coverURL(String coverURL) {
             this.putQueryParameter("CoverURL", coverURL);
@@ -309,7 +333,14 @@ public class RegisterMediaInfoRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the media asset.</p>
+         * <ul>
+         * <li>The value can be up to 1,024 bytes in length.</li>
+         * <li>The value must be encoded in UTF-8.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>defaultDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -318,7 +349,17 @@ public class RegisterMediaInfoRequest extends Request {
         }
 
         /**
-         * InputURL.
+         * <p>The URL of the media asset in another service. The URL is associated with the ID of the media asset in IMS. The URL cannot be modified once registered. The following types of URLs are supported:</p>
+         * <ul>
+         * <li>OSS URL in one of the following formats:</li>
+         * </ul>
+         * <p>http(s)://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</p>
+         * <p>oss://example-bucket/example.mp4: In this format, it is considered by default that the region of the OSS bucket in which the media asset resides is the same as the region in which IMS is activated.</p>
+         * <ul>
+         * <li>URL of an ApsaraVideo VOD media asset</li>
+         * </ul>
+         * <p>vod://***20b48fb04483915d4f2cd8ac****</p>
+         * <p>This parameter is required.</p>
          */
         public Builder inputURL(String inputURL) {
             this.putQueryParameter("InputURL", inputURL);
@@ -327,7 +368,16 @@ public class RegisterMediaInfoRequest extends Request {
         }
 
         /**
-         * MediaTags.
+         * <p>The tags of the media asset.</p>
+         * <ul>
+         * <li>Up to 16 tags are supported.</li>
+         * <li>Separate multiple tags with commas (,).</li>
+         * <li>Each tag can be up to 32 bytes in length.</li>
+         * <li>The value must be encoded in UTF-8.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>tag1,tag2</p>
          */
         public Builder mediaTags(String mediaTags) {
             this.putQueryParameter("MediaTags", mediaTags);
@@ -336,7 +386,18 @@ public class RegisterMediaInfoRequest extends Request {
         }
 
         /**
-         * MediaType.
+         * <p>The type of the media asset. Valid values:</p>
+         * <ul>
+         * <li>image</li>
+         * <li>video</li>
+         * <li>audio</li>
+         * <li>text</li>
+         * </ul>
+         * <p>We recommend that you specify this parameter based on your business requirements. If you set InputURL to an OSS URL, the media asset type can be automatically determined based on the file name extension. For more information
+         * &lt;props=&quot;china&quot;&gt;, see <a href="https://help.aliyun.com/document_detail/466207.html">File formats</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>video</p>
          */
         public Builder mediaType(String mediaType) {
             this.putQueryParameter("MediaType", mediaType);
@@ -345,7 +406,12 @@ public class RegisterMediaInfoRequest extends Request {
         }
 
         /**
-         * Overwrite.
+         * <p>Specifies whether to overwrite the media asset that has been registered by using the same URL. Default value: false. Valid values:</p>
+         * <p>- true: If a media asset has been registered by using the same URL, the original media asset is deleted and the new media asset is registered.</p>
+         * <p>- false: If a media asset has been registered by using the same URL, the new media asset is not registered. A URL cannot be used to register multiple media assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder overwrite(Boolean overwrite) {
             this.putQueryParameter("Overwrite", overwrite);
@@ -354,7 +420,10 @@ public class RegisterMediaInfoRequest extends Request {
         }
 
         /**
-         * ReferenceId.
+         * <p>The custom ID. The ID can be 6 to 64 characters in length and can contain only letters, digits, hyphens (-), and underscores (_). Make sure that the ID is unique among users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123-123</p>
          */
         public Builder referenceId(String referenceId) {
             this.putQueryParameter("ReferenceId", referenceId);
@@ -363,7 +432,14 @@ public class RegisterMediaInfoRequest extends Request {
         }
 
         /**
-         * RegisterConfig.
+         * <p>The registration configurations.</p>
+         * <p>By default, a sprite is generated for the media asset. You can set NeedSprite to false to disable automatic sprite generation.</p>
+         * <p>By default, a snapshot is generated for the media asset. You can set NeedSnapshot to false to disable automatic snapshot generation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;NeedSprite&quot;: &quot;false&quot;
+         * }</p>
          */
         public Builder registerConfig(String registerConfig) {
             this.putQueryParameter("RegisterConfig", registerConfig);
@@ -372,7 +448,16 @@ public class RegisterMediaInfoRequest extends Request {
         }
 
         /**
-         * SmartTagTemplateId.
+         * <p>The ID of the smart tagging template. Valid values:</p>
+         * <ul>
+         * <li>S00000101-300080: the system template that supports natural language processing (NLP) for content recognition.</li>
+         * <li>S00000103-000001: the system template that supports NLP for content recognition and all tagging capabilities.</li>
+         * <li>S00000103-000002: the system template that supports all tagging capabilities but does not support NLP for content recognition.</li>
+         * </ul>
+         * <p>After you configure this parameter, a smart tag analysis task is automatically initiated after the media asset is registered. For more information about the billable items&lt;props=&quot;china&quot;&gt;, see <a href="https://help.aliyun.com/zh/ims/media-ai-billing?spm=a2c4g.11186623.0.0.3147392dWwlSjL#p-k38-3rb-dug">Smart tagging</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S00000101-300080</p>
          */
         public Builder smartTagTemplateId(String smartTagTemplateId) {
             this.putQueryParameter("SmartTagTemplateId", smartTagTemplateId);
@@ -381,7 +466,14 @@ public class RegisterMediaInfoRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>The title. If you do not specify this parameter, a default title is automatically generated based on the date.</p>
+         * <ul>
+         * <li>The value can be up to 128 bytes in length.</li>
+         * <li>The value must be encoded in UTF-8.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>defaultTitle</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -390,7 +482,12 @@ public class RegisterMediaInfoRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The user data. You can specify a custom callback URL. For more information&lt;props=&quot;china&quot;&gt; ,see <a href="https://help.aliyun.com/document_detail/451631.html">Configure a callback upon editing completion</a>.</p>
+         * <ul>
+         * <li>The value can be up to 1,024 bytes in length.</li>
+         * <li>The value must be encoded in UTF-8.</li>
+         * <li>The value must be in the JSON format.</li>
+         * </ul>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -399,7 +496,10 @@ public class RegisterMediaInfoRequest extends Request {
         }
 
         /**
-         * WorkflowId.
+         * <p>The workflow ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>b4fb044839815d4f2cd8</strong></strong></strong></p>
          */
         public Builder workflowId(String workflowId) {
             this.putQueryParameter("WorkflowId", workflowId);

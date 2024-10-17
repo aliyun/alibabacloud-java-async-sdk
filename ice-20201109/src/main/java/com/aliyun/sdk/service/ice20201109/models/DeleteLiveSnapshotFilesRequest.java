@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLiveSnapshotFilesRequest} extends {@link RequestModel}
  *
  * <p>DeleteLiveSnapshotFilesRequest</p>
@@ -83,7 +84,7 @@ public class DeleteLiveSnapshotFilesRequest extends Request {
         } 
 
         /**
-         * CreateTimestampList.
+         * <p>This parameter is required.</p>
          */
         public Builder createTimestampList(java.util.List < Long > createTimestampList) {
             String createTimestampListShrink = shrink(createTimestampList, "CreateTimestampList", "json");
@@ -102,7 +103,10 @@ public class DeleteLiveSnapshotFilesRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

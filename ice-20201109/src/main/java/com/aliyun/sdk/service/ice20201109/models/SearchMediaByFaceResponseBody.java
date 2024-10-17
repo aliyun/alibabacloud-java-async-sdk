@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchMediaByFaceResponseBody} extends {@link TeaModel}
  *
  * <p>SearchMediaByFaceResponseBody</p>
@@ -85,7 +86,10 @@ public class SearchMediaByFaceResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * Code.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class SearchMediaByFaceResponseBody extends TeaModel {
         }
 
         /**
-         * MediaInfoList.
+         * <p>The media assets that meet the conditions.</p>
          */
         public Builder mediaInfoList(java.util.List < MediaInfoList> mediaInfoList) {
             this.mediaInfoList = mediaInfoList;
@@ -101,7 +105,10 @@ public class SearchMediaByFaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7CA7D615-CFB1-5437-9A12-2D185C3EE6CB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +116,10 @@ public class SearchMediaByFaceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values: true false</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -117,7 +127,10 @@ public class SearchMediaByFaceResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of data records that meet the specified filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>163</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -130,6 +143,12 @@ public class SearchMediaByFaceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchMediaByFaceResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchMediaByFaceResponseBody</p>
+     */
     public static class MediaInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
@@ -157,7 +176,10 @@ public class SearchMediaByFaceResponseBody extends TeaModel {
             private String mediaId; 
 
             /**
-             * MediaId.
+             * <p>The ID of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3b187b3620c8490886cfc2a9578c****</p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;

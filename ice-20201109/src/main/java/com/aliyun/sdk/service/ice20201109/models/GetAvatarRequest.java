@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAvatarRequest} extends {@link RequestModel}
  *
  * <p>GetAvatarRequest</p>
@@ -54,7 +55,10 @@ public class GetAvatarRequest extends Request {
         } 
 
         /**
-         * AvatarId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Avatar-XXXX</p>
          */
         public Builder avatarId(String avatarId) {
             this.putQueryParameter("AvatarId", avatarId);

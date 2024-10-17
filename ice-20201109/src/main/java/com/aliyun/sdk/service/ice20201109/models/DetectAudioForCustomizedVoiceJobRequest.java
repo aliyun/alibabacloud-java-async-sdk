@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetectAudioForCustomizedVoiceJobRequest} extends {@link RequestModel}
  *
  * <p>DetectAudioForCustomizedVoiceJobRequest</p>
@@ -84,7 +85,10 @@ public class DetectAudioForCustomizedVoiceJobRequest extends Request {
         } 
 
         /**
-         * AudioRecordId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder audioRecordId(Integer audioRecordId) {
             this.putQueryParameter("AudioRecordId", audioRecordId);
@@ -93,7 +97,10 @@ public class DetectAudioForCustomizedVoiceJobRequest extends Request {
         }
 
         /**
-         * RecordUrl.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://your-bucket.oss-cn-hangzhou.aliyuncs.com/record1.wav">https://your-bucket.oss-cn-hangzhou.aliyuncs.com/record1.wav</a></p>
          */
         public Builder recordUrl(String recordUrl) {
             this.putQueryParameter("RecordUrl", recordUrl);
@@ -102,7 +109,10 @@ public class DetectAudioForCustomizedVoiceJobRequest extends Request {
         }
 
         /**
-         * VoiceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xiaozhuan</p>
          */
         public Builder voiceId(String voiceId) {
             this.putQueryParameter("VoiceId", voiceId);

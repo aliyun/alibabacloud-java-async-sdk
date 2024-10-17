@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitLiveRecordJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitLiveRecordJobRequest</p>
@@ -113,7 +114,11 @@ public class SubmitLiveRecordJobRequest extends Request {
         } 
 
         /**
-         * 代表资源名称的资源属性字段
+         * <p>代表资源名称的资源属性字段</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>live stream record 1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -122,7 +127,10 @@ public class SubmitLiveRecordJobRequest extends Request {
         }
 
         /**
-         * 回调地址
+         * <p>回调地址</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/imsnotify">https://example.com/imsnotify</a></p>
          */
         public Builder notifyUrl(String notifyUrl) {
             this.putBodyParameter("NotifyUrl", notifyUrl);
@@ -131,7 +139,7 @@ public class SubmitLiveRecordJobRequest extends Request {
         }
 
         /**
-         * RecordOutput.
+         * <p>This parameter is required.</p>
          */
         public Builder recordOutput(RecordOutput recordOutput) {
             String recordOutputShrink = shrink(recordOutput, "RecordOutput", "json");
@@ -141,7 +149,7 @@ public class SubmitLiveRecordJobRequest extends Request {
         }
 
         /**
-         * StreamInput.
+         * <p>This parameter is required.</p>
          */
         public Builder streamInput(StreamInput streamInput) {
             String streamInputShrink = shrink(streamInput, "StreamInput", "json");
@@ -151,7 +159,11 @@ public class SubmitLiveRecordJobRequest extends Request {
         }
 
         /**
-         * 录制模板ID
+         * <p>录制模板ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69e1f9fe-1e97-11ed-ba64-0c42a1b73d66</p>
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("TemplateId", templateId);
@@ -166,6 +178,12 @@ public class SubmitLiveRecordJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitLiveRecordJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitLiveRecordJobRequest</p>
+     */
     public static class RecordOutput extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
@@ -234,7 +252,10 @@ public class SubmitLiveRecordJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -248,6 +269,12 @@ public class SubmitLiveRecordJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitLiveRecordJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitLiveRecordJobRequest</p>
+     */
     public static class StreamInput extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Type")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -288,7 +315,10 @@ public class SubmitLiveRecordJobRequest extends Request {
             private String url; 
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp</p>
              */
             public Builder type(String type) {
                 this.type = type;

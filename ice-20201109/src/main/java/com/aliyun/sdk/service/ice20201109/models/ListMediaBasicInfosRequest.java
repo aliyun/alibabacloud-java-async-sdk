@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMediaBasicInfosRequest} extends {@link RequestModel}
  *
  * <p>ListMediaBasicInfosRequest</p>
@@ -217,7 +218,15 @@ public class ListMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * BusinessType.
+         * <p>The business type of the media asset. Valid values:</p>
+         * <p>- subtitles</p>
+         * <p>- watermark</p>
+         * <p>- opening</p>
+         * <p>- ending</p>
+         * <p>- general</p>
+         * 
+         * <strong>example:</strong>
+         * <p>opening</p>
          */
         public Builder businessType(String businessType) {
             this.putQueryParameter("BusinessType", businessType);
@@ -226,7 +235,12 @@ public class ListMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of utcCreated.</p>
+         * <p>- The value is the end of the left-open right-closed interval.</p>
+         * <p>- Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. For example, 2017-01-11T12:00:00Z indicates 20:00:00 on January 11, 2017 (UTC +8).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-20T13:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -235,7 +249,10 @@ public class ListMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * IncludeFileBasicInfo.
+         * <p>Specifies whether to return the basic information of the source file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeFileBasicInfo(Boolean includeFileBasicInfo) {
             this.putQueryParameter("IncludeFileBasicInfo", includeFileBasicInfo);
@@ -244,7 +261,11 @@ public class ListMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return.</p>
+         * <p>Maximum value: 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -253,7 +274,10 @@ public class ListMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * MediaId.
+         * <p>The ID of the media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>019b82e24b37a1c2958dec38</strong></strong></p>
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);
@@ -262,7 +286,14 @@ public class ListMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * MediaType.
+         * <p>The type of the media asset. Valid values:</p>
+         * <p>- image</p>
+         * <p>- video</p>
+         * <p>- audio</p>
+         * <p>- text</p>
+         * 
+         * <strong>example:</strong>
+         * <p>video</p>
          */
         public Builder mediaType(String mediaType) {
             this.putQueryParameter("MediaType", mediaType);
@@ -271,7 +302,10 @@ public class ListMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pSa1SQ0wCe5pzVrQ6mWZEw==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -280,7 +314,12 @@ public class ListMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The order of sorting by utcCreated. Default value: desc. Valid values:</p>
+         * <p>- desc</p>
+         * <p>- asc</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -289,7 +328,14 @@ public class ListMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The source of the media asset. Valid values:</p>
+         * <p>- oss: Object Storage Service (OSS).</p>
+         * <p>- vod: ApsaraVideo VOD.</p>
+         * <p>- live: ApsaraVideo Live.</p>
+         * <p>- general: other sources. This is the default value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -298,7 +344,12 @@ public class ListMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of utcCreated.</p>
+         * <p>- The value is the beginning of a left-open right-closed interval.</p>
+         * <p>- Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. For example, 2017-01-11T12:00:00Z indicates 20:00:00 on January 11, 2017 (UTC +8).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-20T12:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -307,7 +358,14 @@ public class ListMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the media asset. Valid values:</p>
+         * <p>- Init: the initial state, which indicates that the source file is not ready.</p>
+         * <p>- Preparing: The source file is being prepared. For example, the file is being uploaded or edited.</p>
+         * <p>- PrepareFail: The source file failed to be prepared. For example, the information of the source file failed to be obtained.</p>
+         * <p>- Normal: The source file is ready.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

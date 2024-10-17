@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLiveTranscodeTemplateRequest} extends {@link RequestModel}
  *
  * <p>DeleteLiveTranscodeTemplateRequest</p>
@@ -54,7 +55,10 @@ public class DeleteLiveTranscodeTemplateRequest extends Request {
         } 
 
         /**
-         * TemplateId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAIAgentInstanceRequest} extends {@link RequestModel}
  *
  * <p>ListAIAgentInstanceRequest</p>
@@ -110,7 +111,10 @@ public class ListAIAgentInstanceRequest extends Request {
         } 
 
         /**
-         * AIAgentId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39f8e0bc005e4f309379701645f4***</p>
          */
         public Builder AIAgentId(String AIAgentId) {
             this.putQueryParameter("AIAgentId", AIAgentId);

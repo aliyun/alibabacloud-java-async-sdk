@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSmartSysAvatarModelsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSmartSysAvatarModelsResponseBody</p>
@@ -90,6 +91,12 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSmartSysAvatarModelsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSmartSysAvatarModelsResponseBody</p>
+     */
     public static class SmartSysAvatarModelList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvatarId")
         private String avatarId;

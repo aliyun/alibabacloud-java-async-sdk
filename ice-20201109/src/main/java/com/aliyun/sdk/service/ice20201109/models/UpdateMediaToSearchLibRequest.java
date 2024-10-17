@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMediaToSearchLibRequest} extends {@link RequestModel}
  *
  * <p>UpdateMediaToSearchLibRequest</p>
@@ -106,7 +107,11 @@ public class UpdateMediaToSearchLibRequest extends Request {
         }
 
         /**
-         * MediaId.
+         * <p>The ID of the media asset.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>019b82e24b37a1c2958dec38</strong></strong></p>
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);
@@ -115,7 +120,11 @@ public class UpdateMediaToSearchLibRequest extends Request {
         }
 
         /**
-         * MsgBody.
+         * <p>The message body.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder msgBody(String msgBody) {
             this.putQueryParameter("MsgBody", msgBody);
@@ -124,7 +133,10 @@ public class UpdateMediaToSearchLibRequest extends Request {
         }
 
         /**
-         * SearchLibName.
+         * <p>The name of the search library. Default value: ims-default-search-lib.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder searchLibName(String searchLibName) {
             this.putQueryParameter("SearchLibName", searchLibName);

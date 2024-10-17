@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRtcRobotInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRtcRobotInstanceResponseBody</p>
@@ -133,7 +134,10 @@ public class DescribeRtcRobotInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20B3A1B6-4BD2-5DE6-BCBC-098C9B4F4E91</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,6 +174,12 @@ public class DescribeRtcRobotInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRtcRobotInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRtcRobotInstanceResponseBody</p>
+     */
     public static class Config extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableVoiceInterrupt")
         private Boolean enableVoiceInterrupt;

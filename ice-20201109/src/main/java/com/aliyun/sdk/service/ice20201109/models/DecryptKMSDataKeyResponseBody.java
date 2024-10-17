@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DecryptKMSDataKeyResponseBody} extends {@link TeaModel}
  *
  * <p>DecryptKMSDataKeyResponseBody</p>
@@ -70,6 +71,12 @@ public class DecryptKMSDataKeyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DecryptKMSDataKeyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DecryptKMSDataKeyResponseBody</p>
+     */
     public static class DataKey extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeyId")
         private String keyId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLiveTranscodeTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>GetLiveTranscodeTemplateResponseBody</p>
@@ -70,6 +71,12 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetLiveTranscodeTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLiveTranscodeTemplateResponseBody</p>
+     */
     public static class AudioParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
@@ -191,6 +198,12 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetLiveTranscodeTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLiveTranscodeTemplateResponseBody</p>
+     */
     public static class VideoParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
@@ -352,6 +365,12 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetLiveTranscodeTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLiveTranscodeTemplateResponseBody</p>
+     */
     public static class TemplateConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AudioParams")
         private AudioParams audioParams;
@@ -413,6 +432,12 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetLiveTranscodeTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLiveTranscodeTemplateResponseBody</p>
+     */
     public static class TemplateContent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;

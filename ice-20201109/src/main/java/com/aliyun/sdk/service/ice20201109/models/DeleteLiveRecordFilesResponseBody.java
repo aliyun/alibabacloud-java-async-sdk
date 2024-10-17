@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLiveRecordFilesResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteLiveRecordFilesResponseBody</p>
@@ -77,7 +78,10 @@ public class DeleteLiveRecordFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13cbb83e-043c-4728-ac35-*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class DeleteLiveRecordFilesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteLiveRecordFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteLiveRecordFilesResponseBody</p>
+     */
     public static class DeleteFileInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;

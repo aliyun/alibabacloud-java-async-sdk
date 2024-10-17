@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAIAgentInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAIAgentInstanceResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAIAgentInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAIAgentInstanceResponseBody</p>
+     */
     public static class Instance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CallLogUrl")
         private String callLogUrl;

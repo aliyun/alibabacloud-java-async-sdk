@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSmartJobsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSmartJobsResponseBody</p>
@@ -130,6 +131,12 @@ public class ListSmartJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSmartJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSmartJobsResponseBody</p>
+     */
     public static class InputConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InputFile")
         private String inputFile;
@@ -191,6 +198,12 @@ public class ListSmartJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSmartJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSmartJobsResponseBody</p>
+     */
     public static class OutputConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
@@ -230,7 +243,10 @@ public class ListSmartJobsResponseBody extends TeaModel {
             private String object; 
 
             /**
-             * OSS Bucket
+             * <p>OSS Bucket</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-bucket</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -238,7 +254,10 @@ public class ListSmartJobsResponseBody extends TeaModel {
             }
 
             /**
-             * OSS Object
+             * <p>OSS Object</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-object</p>
              */
             public Builder object(String object) {
                 this.object = object;
@@ -252,6 +271,12 @@ public class ListSmartJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSmartJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSmartJobsResponseBody</p>
+     */
     public static class SmartJobList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;

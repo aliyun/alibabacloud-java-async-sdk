@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWorkflowTaskResponse} extends {@link TeaModel}
  *
  * <p>GetWorkflowTaskResponse</p>

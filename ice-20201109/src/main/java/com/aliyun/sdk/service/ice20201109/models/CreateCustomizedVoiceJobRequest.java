@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCustomizedVoiceJobRequest} extends {@link RequestModel}
  *
  * <p>CreateCustomizedVoiceJobRequest</p>
@@ -114,7 +115,10 @@ public class CreateCustomizedVoiceJobRequest extends Request {
         } 
 
         /**
-         * Gender.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>female</p>
          */
         public Builder gender(String gender) {
             this.putQueryParameter("Gender", gender);
@@ -123,7 +127,10 @@ public class CreateCustomizedVoiceJobRequest extends Request {
         }
 
         /**
-         * Scenario.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>story</p>
          */
         public Builder scenario(String scenario) {
             this.putQueryParameter("Scenario", scenario);
@@ -141,7 +148,10 @@ public class CreateCustomizedVoiceJobRequest extends Request {
         }
 
         /**
-         * VoiceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xiaozhuan</p>
          */
         public Builder voiceId(String voiceId) {
             this.putQueryParameter("VoiceId", voiceId);

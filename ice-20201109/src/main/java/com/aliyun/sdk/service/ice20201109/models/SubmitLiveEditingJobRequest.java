@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitLiveEditingJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitLiveEditingJobRequest</p>
@@ -161,7 +162,10 @@ public class SubmitLiveEditingJobRequest extends Request {
         }
 
         /**
-         * Clips.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;StartTime&quot;: &quot; 2021-06-21T08:01:00Z&quot;,  &quot;EndTime&quot;: &quot; 2021-06-21T08:03:00Z&quot; ,  &quot;AppName&quot;: &quot;app&quot;, &quot;DomainName&quot;: &quot;domain.com&quot;, &quot;StreamName&quot;: &quot;stream&quot;},  {&quot;StartTime&quot;: &quot; 2021-06-21T08:05:00Z&quot;,  &quot;EndTime&quot;: &quot; 2021-06-21T08:09:00Z&quot; }]</p>
          */
         public Builder clips(String clips) {
             this.putQueryParameter("Clips", clips);

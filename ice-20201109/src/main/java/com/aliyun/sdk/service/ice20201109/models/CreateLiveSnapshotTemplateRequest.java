@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLiveSnapshotTemplateRequest} extends {@link RequestModel}
  *
  * <p>CreateLiveSnapshotTemplateRequest</p>
@@ -115,7 +116,7 @@ public class CreateLiveSnapshotTemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>This parameter is required.</p>
          */
         public Builder templateName(String templateName) {
             this.putBodyParameter("TemplateName", templateName);
@@ -124,7 +125,10 @@ public class CreateLiveSnapshotTemplateRequest extends Request {
         }
 
         /**
-         * TimeInterval.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder timeInterval(Integer timeInterval) {
             this.putBodyParameter("TimeInterval", timeInterval);

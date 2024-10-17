@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchMediaClipByFaceResponseBody} extends {@link TeaModel}
  *
  * <p>SearchMediaClipByFaceResponseBody</p>
@@ -85,7 +86,10 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * Code.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
         }
 
         /**
-         * MediaClipList.
+         * <p>The media asset clips that meet the requirements.</p>
          */
         public Builder mediaClipList(java.util.List < MediaClipList> mediaClipList) {
             this.mediaClipList = mediaClipList;
@@ -101,7 +105,10 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E44FFACD-9E90-555A-A09A-6FD3B7335E39</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +116,10 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -117,7 +127,10 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of media asset clips that meet the conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -130,6 +143,12 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchMediaClipByFaceResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchMediaClipByFaceResponseBody</p>
+     */
     public static class BoxPosition extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("H")
         private Integer h;
@@ -193,7 +212,10 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
             private Integer y; 
 
             /**
-             * H.
+             * <p>The height of the rectangle frame. Unit: pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>168</p>
              */
             public Builder h(Integer h) {
                 this.h = h;
@@ -201,7 +223,10 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
             }
 
             /**
-             * W.
+             * <p>The width of the rectangle frame. Unit: pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128</p>
              */
             public Builder w(Integer w) {
                 this.w = w;
@@ -209,7 +234,10 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
             }
 
             /**
-             * X.
+             * <p>The x-axis coordinate of the upper-left corner. Unit: pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>517</p>
              */
             public Builder x(Integer x) {
                 this.x = x;
@@ -217,7 +245,10 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
             }
 
             /**
-             * Y.
+             * <p>The y-axis coordinate of the upper-left corner. Unit: pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>409</p>
              */
             public Builder y(Integer y) {
                 this.y = y;
@@ -231,6 +262,12 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchMediaClipByFaceResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchMediaClipByFaceResponseBody</p>
+     */
     public static class TrackData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BoxPosition")
         private BoxPosition boxPosition;
@@ -270,7 +307,7 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
             private Float timestamp; 
 
             /**
-             * BoxPosition.
+             * <p>The coordinates of the face.</p>
              */
             public Builder boxPosition(BoxPosition boxPosition) {
                 this.boxPosition = boxPosition;
@@ -278,7 +315,10 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>The timestamp when the face appears in the clip. Unit: seconds. The value is of the Float type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>62.03302</p>
              */
             public Builder timestamp(Float timestamp) {
                 this.timestamp = timestamp;
@@ -292,6 +332,12 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchMediaClipByFaceResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchMediaClipByFaceResponseBody</p>
+     */
     public static class OccurrencesInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Float endTime;
@@ -343,7 +389,10 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
             private java.util.List < TrackData> trackData; 
 
             /**
-             * EndTime.
+             * <p>The end time of the clip. Unit: seconds. The value is of the Float type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69.06635</p>
              */
             public Builder endTime(Float endTime) {
                 this.endTime = endTime;
@@ -351,7 +400,10 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the clip. Unit: seconds. The value is of the Float type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>61.066353</p>
              */
             public Builder startTime(Float startTime) {
                 this.startTime = startTime;
@@ -359,7 +411,7 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
             }
 
             /**
-             * TrackData.
+             * <p>The information about the face in the clip.</p>
              */
             public Builder trackData(java.util.List < TrackData> trackData) {
                 this.trackData = trackData;
@@ -373,6 +425,12 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchMediaClipByFaceResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchMediaClipByFaceResponseBody</p>
+     */
     public static class MediaClipList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -448,7 +506,10 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
             private Float score; 
 
             /**
-             * Category.
+             * <p>The type of the character. Valid values: celebrity sensitive politician custom unknown</p>
+             * 
+             * <strong>example:</strong>
+             * <p>celebrity</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -456,7 +517,10 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
             }
 
             /**
-             * EntityId.
+             * <p>The ID of the entity, which is the same as the entity ID returned in tag analysis.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1031025****</p>
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -464,7 +528,7 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
             }
 
             /**
-             * LabelName.
+             * <p>The name of the entity.</p>
              */
             public Builder labelName(String labelName) {
                 this.labelName = labelName;
@@ -472,7 +536,7 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
             }
 
             /**
-             * OccurrencesInfos.
+             * <p>The information about clips related to the face.</p>
              */
             public Builder occurrencesInfos(java.util.List < OccurrencesInfos> occurrencesInfos) {
                 this.occurrencesInfos = occurrencesInfos;
@@ -480,7 +544,10 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * <p>The score of the clip. The value is of the Float type. The value is in the range of [0,1].</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.99041677</p>
              */
             public Builder score(Float score) {
                 this.score = score;

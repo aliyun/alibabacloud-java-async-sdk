@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitMediaProducingJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitMediaProducingJobRequest</p>
@@ -267,7 +268,10 @@ public class SubmitMediaProducingJobRequest extends Request {
         }
 
         /**
-         * OutputMediaConfig.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;MediaURL&quot;:&quot;<a href="https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4%22%7D">https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4&quot;}</a></p>
          */
         public Builder outputMediaConfig(String outputMediaConfig) {
             this.putQueryParameter("OutputMediaConfig", outputMediaConfig);

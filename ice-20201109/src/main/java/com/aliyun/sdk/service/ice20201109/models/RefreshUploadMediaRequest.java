@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefreshUploadMediaRequest} extends {@link RequestModel}
  *
  * <p>RefreshUploadMediaRequest</p>
@@ -76,7 +77,10 @@ public class RefreshUploadMediaRequest extends Request {
         }
 
         /**
-         * MediaId.
+         * <p>The ID of the media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>411bed50018971edb60b0764a0ec6***</p>
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);

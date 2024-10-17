@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPlayInfoRequest} extends {@link RequestModel}
  *
  * <p>GetPlayInfoRequest</p>
@@ -90,7 +91,10 @@ public class GetPlayInfoRequest extends Request {
         }
 
         /**
-         * InputURL.
+         * <p>The input URL that you specified for the media asset when you registered the media asset. For more information, see <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a>.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the MediaId and InputURL parameters.</p>
+         * </blockquote>
          */
         public Builder inputURL(String inputURL) {
             this.putQueryParameter("InputURL", inputURL);
@@ -99,7 +103,13 @@ public class GetPlayInfoRequest extends Request {
         }
 
         /**
-         * MediaId.
+         * <p>The ID of the media asset.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the MediaId and InputURL parameters.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>86434e152b7d4f20be480574439fe***</p>
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);

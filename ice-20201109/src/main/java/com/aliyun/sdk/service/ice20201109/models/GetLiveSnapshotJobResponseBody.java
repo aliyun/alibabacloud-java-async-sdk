@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLiveSnapshotJobResponseBody} extends {@link TeaModel}
  *
  * <p>GetLiveSnapshotJobResponseBody</p>
@@ -310,6 +311,12 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetLiveSnapshotJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLiveSnapshotJobResponseBody</p>
+     */
     public static class SnapshotOutput extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
@@ -391,6 +398,12 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetLiveSnapshotJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLiveSnapshotJobResponseBody</p>
+     */
     public static class StreamInput extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;

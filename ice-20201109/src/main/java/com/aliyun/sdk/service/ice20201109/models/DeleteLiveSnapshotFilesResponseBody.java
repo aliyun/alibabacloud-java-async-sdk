@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLiveSnapshotFilesResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteLiveSnapshotFilesResponseBody</p>
@@ -70,6 +71,12 @@ public class DeleteLiveSnapshotFilesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteLiveSnapshotFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteLiveSnapshotFilesResponseBody</p>
+     */
     public static class DeleteFileResultList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;

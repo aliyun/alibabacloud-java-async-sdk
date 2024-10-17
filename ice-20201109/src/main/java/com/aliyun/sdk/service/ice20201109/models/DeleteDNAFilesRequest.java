@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDNAFilesRequest} extends {@link RequestModel}
  *
  * <p>DeleteDNAFilesRequest</p>
@@ -125,7 +126,10 @@ public class DeleteDNAFilesRequest extends Request {
         } 
 
         /**
-         * DBId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fb712a6890464059b1b2ea7c8647****</p>
          */
         public Builder DBId(String DBId) {
             this.putQueryParameter("DBId", DBId);
@@ -152,7 +156,10 @@ public class DeleteDNAFilesRequest extends Request {
         }
 
         /**
-         * PrimaryKeys.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>41e6536e4f2250e2e9bf26cdea19****</p>
          */
         public Builder primaryKeys(String primaryKeys) {
             this.putQueryParameter("PrimaryKeys", primaryKeys);

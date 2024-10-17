@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLiveSnapshotFilesResponseBody} extends {@link TeaModel}
  *
  * <p>ListLiveSnapshotFilesResponseBody</p>
@@ -90,6 +91,12 @@ public class ListLiveSnapshotFilesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLiveSnapshotFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLiveSnapshotFilesResponseBody</p>
+     */
     public static class FileList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -201,7 +208,10 @@ public class ListLiveSnapshotFilesResponseBody extends TeaModel {
             }
 
             /**
-             * OSS bucket。
+             * <p>OSS bucket。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testbucket</p>
              */
             public Builder ossBucket(String ossBucket) {
                 this.ossBucket = ossBucket;

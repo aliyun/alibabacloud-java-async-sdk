@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AlterSearchIndexRequest} extends {@link RequestModel}
  *
  * <p>AlterSearchIndexRequest</p>
@@ -119,7 +120,13 @@ public class AlterSearchIndexRequest extends Request {
         }
 
         /**
-         * IndexConfig.
+         * <p>The configurations of the index.</p>
+         * <blockquote>
+         * <p> You must specify either IndexStatus or IndexConfig.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder indexConfig(String indexConfig) {
             this.putQueryParameter("IndexConfig", indexConfig);
@@ -128,7 +135,17 @@ public class AlterSearchIndexRequest extends Request {
         }
 
         /**
-         * IndexStatus.
+         * <p>The state of the index. Valid values:</p>
+         * <ul>
+         * <li>active (default): the index is enabled.</li>
+         * <li>Deactive: the index is not enabled.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You must specify either IndexStatus or IndexConfig.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder indexStatus(String indexStatus) {
             this.putQueryParameter("IndexStatus", indexStatus);
@@ -137,7 +154,16 @@ public class AlterSearchIndexRequest extends Request {
         }
 
         /**
-         * IndexType.
+         * <p>The category of the index. Valid values:</p>
+         * <ul>
+         * <li>mm: large visual model.</li>
+         * <li>face: face recognition.</li>
+         * <li>aiLabel: smart tagging.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mm</p>
          */
         public Builder indexType(String indexType) {
             this.putQueryParameter("IndexType", indexType);
@@ -146,7 +172,14 @@ public class AlterSearchIndexRequest extends Request {
         }
 
         /**
-         * SearchLibName.
+         * <p>The name of the search library.</p>
+         * <ul>
+         * <li>If you leave this parameter empty, the search index is created in the default search library of Intelligent Media Service (IMS). Default value: ims-default-search-lib.</li>
+         * <li>To query information about an existing search library, call the <a href="https://help.aliyun.com/document_detail/2584455.html">QuerySearchLib</a> API operation.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder searchLibName(String searchLibName) {
             this.putQueryParameter("SearchLibName", searchLibName);

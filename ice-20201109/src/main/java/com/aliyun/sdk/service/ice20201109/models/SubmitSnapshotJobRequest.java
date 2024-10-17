@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitSnapshotJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitSnapshotJobRequest</p>
@@ -126,7 +127,7 @@ public class SubmitSnapshotJobRequest extends Request {
         } 
 
         /**
-         * Input.
+         * <p>This parameter is required.</p>
          */
         public Builder input(Input input) {
             String inputShrink = shrink(input, "Input", "json");
@@ -145,7 +146,7 @@ public class SubmitSnapshotJobRequest extends Request {
         }
 
         /**
-         * Output.
+         * <p>This parameter is required.</p>
          */
         public Builder output(Output output) {
             String outputShrink = shrink(output, "Output", "json");
@@ -165,7 +166,7 @@ public class SubmitSnapshotJobRequest extends Request {
         }
 
         /**
-         * TemplateConfig.
+         * <p>This parameter is required.</p>
          */
         public Builder templateConfig(TemplateConfig templateConfig) {
             String templateConfigShrink = shrink(templateConfig, "TemplateConfig", "json");
@@ -190,6 +191,12 @@ public class SubmitSnapshotJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitSnapshotJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitSnapshotJobRequest</p>
+     */
     public static class Input extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Media")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -231,7 +238,10 @@ public class SubmitSnapshotJobRequest extends Request {
             private String type; 
 
             /**
-             * Media.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/object.mp4</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -239,7 +249,10 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Media</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -253,6 +266,12 @@ public class SubmitSnapshotJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitSnapshotJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitSnapshotJobRequest</p>
+     */
     public static class Output extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Media")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -294,7 +313,10 @@ public class SubmitSnapshotJobRequest extends Request {
             private String type; 
 
             /**
-             * Media.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://test-bucket/output-{Count}.jpg</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -302,7 +324,10 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -316,6 +341,12 @@ public class SubmitSnapshotJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitSnapshotJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitSnapshotJobRequest</p>
+     */
     public static class ScheduleConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;
@@ -357,6 +388,12 @@ public class SubmitSnapshotJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitSnapshotJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitSnapshotJobRequest</p>
+     */
     public static class SpriteSnapshotConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CellHeight")
         private Integer cellHeight;
@@ -518,6 +555,12 @@ public class SubmitSnapshotJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitSnapshotJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitSnapshotJobRequest</p>
+     */
     public static class OverwriteParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlackLevel")
         private Integer blackLevel;
@@ -737,7 +780,10 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -759,6 +805,12 @@ public class SubmitSnapshotJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitSnapshotJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitSnapshotJobRequest</p>
+     */
     public static class TemplateConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OverwriteParams")
         private OverwriteParams overwriteParams;
@@ -807,7 +859,10 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * TemplateId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;

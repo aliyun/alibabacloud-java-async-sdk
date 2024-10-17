@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendLiveSnapshotJobCommandResponseBody} extends {@link TeaModel}
  *
  * <p>SendLiveSnapshotJobCommandResponseBody</p>

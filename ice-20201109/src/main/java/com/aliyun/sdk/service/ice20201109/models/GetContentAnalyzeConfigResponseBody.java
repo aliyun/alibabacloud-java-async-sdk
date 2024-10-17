@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetContentAnalyzeConfigResponseBody} extends {@link TeaModel}
  *
  * <p>GetContentAnalyzeConfigResponseBody</p>
@@ -70,6 +71,12 @@ public class GetContentAnalyzeConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetContentAnalyzeConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetContentAnalyzeConfigResponseBody</p>
+     */
     public static class ContentAnalyzeConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Auto")
         private Boolean auto;

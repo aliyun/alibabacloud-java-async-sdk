@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchMediaByHybridResponseBody} extends {@link TeaModel}
  *
  * <p>SearchMediaByHybridResponseBody</p>
@@ -130,6 +131,12 @@ public class SearchMediaByHybridResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchMediaByHybridResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchMediaByHybridResponseBody</p>
+     */
     public static class ClipInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("From")
         private Double from;
@@ -211,6 +218,12 @@ public class SearchMediaByHybridResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchMediaByHybridResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchMediaByHybridResponseBody</p>
+     */
     public static class MediaList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClipInfo")
         private java.util.List < ClipInfo> clipInfo;

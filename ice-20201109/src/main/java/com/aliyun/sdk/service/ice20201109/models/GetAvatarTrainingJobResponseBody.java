@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAvatarTrainingJobResponseBody} extends {@link TeaModel}
  *
  * <p>GetAvatarTrainingJobResponseBody</p>
@@ -90,6 +91,12 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAvatarTrainingJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAvatarTrainingJobResponseBody</p>
+     */
     public static class AvatarTrainingJob extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvatarDescription")
         private String avatarDescription;
@@ -371,6 +378,12 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAvatarTrainingJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAvatarTrainingJobResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvatarTrainingJob")
         private AvatarTrainingJob avatarTrainingJob;

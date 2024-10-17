@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLiveTranscodeTemplateRequest} extends {@link RequestModel}
  *
  * <p>CreateLiveTranscodeTemplateRequest</p>
@@ -83,7 +84,10 @@ public class CreateLiveTranscodeTemplateRequest extends Request {
         } 
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my template</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -102,7 +106,10 @@ public class CreateLiveTranscodeTemplateRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -117,6 +124,12 @@ public class CreateLiveTranscodeTemplateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateLiveTranscodeTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>CreateLiveTranscodeTemplateRequest</p>
+     */
     public static class AudioParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
@@ -238,6 +251,12 @@ public class CreateLiveTranscodeTemplateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateLiveTranscodeTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>CreateLiveTranscodeTemplateRequest</p>
+     */
     public static class VideoParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
@@ -399,6 +418,12 @@ public class CreateLiveTranscodeTemplateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateLiveTranscodeTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>CreateLiveTranscodeTemplateRequest</p>
+     */
     public static class TemplateConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AudioParams")
         private AudioParams audioParams;

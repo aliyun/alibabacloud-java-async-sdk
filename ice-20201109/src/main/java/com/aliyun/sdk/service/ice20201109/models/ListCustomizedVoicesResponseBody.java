@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCustomizedVoicesResponseBody} extends {@link TeaModel}
  *
  * <p>ListCustomizedVoicesResponseBody</p>
@@ -90,6 +91,12 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCustomizedVoicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomizedVoicesResponseBody</p>
+     */
     public static class CustomizedVoiceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DemoAudioMediaId")
         private String demoAudioMediaId;
@@ -251,6 +258,12 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCustomizedVoicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomizedVoicesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomizedVoiceList")
         private java.util.List < CustomizedVoiceList> customizedVoiceList;

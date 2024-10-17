@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePlayListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePlayListResponseBody</p>
@@ -109,7 +110,10 @@ public class DescribePlayListResponseBody extends TeaModel {
         }
 
         /**
-         * Id
+         * <p>Id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B960580D-26FA-5547-8AFC-3CDC812DBF27</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,6 +134,12 @@ public class DescribePlayListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePlayListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePlayListResponseBody</p>
+     */
     public static class PlayList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FirstFrameDuration")
         private String firstFrameDuration;

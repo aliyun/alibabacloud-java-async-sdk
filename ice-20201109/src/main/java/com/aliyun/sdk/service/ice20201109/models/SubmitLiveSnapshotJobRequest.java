@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitLiveSnapshotJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitLiveSnapshotJobRequest</p>
@@ -122,7 +123,7 @@ public class SubmitLiveSnapshotJobRequest extends Request {
         }
 
         /**
-         * JobName.
+         * <p>This parameter is required.</p>
          */
         public Builder jobName(String jobName) {
             this.putBodyParameter("JobName", jobName);
@@ -131,7 +132,7 @@ public class SubmitLiveSnapshotJobRequest extends Request {
         }
 
         /**
-         * SnapshotOutput.
+         * <p>This parameter is required.</p>
          */
         public Builder snapshotOutput(SnapshotOutput snapshotOutput) {
             String snapshotOutputShrink = shrink(snapshotOutput, "SnapshotOutput", "json");
@@ -141,7 +142,7 @@ public class SubmitLiveSnapshotJobRequest extends Request {
         }
 
         /**
-         * StreamInput.
+         * <p>This parameter is required.</p>
          */
         public Builder streamInput(StreamInput streamInput) {
             String streamInputShrink = shrink(streamInput, "StreamInput", "json");
@@ -151,7 +152,10 @@ public class SubmitLiveSnapshotJobRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("TemplateId", templateId);
@@ -166,6 +170,12 @@ public class SubmitLiveSnapshotJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitLiveSnapshotJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitLiveSnapshotJobRequest</p>
+     */
     public static class SnapshotOutput extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bucket")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -220,7 +230,10 @@ public class SubmitLiveSnapshotJobRequest extends Request {
             private String storageType; 
 
             /**
-             * Bucket.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testbucket</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -228,7 +241,10 @@ public class SubmitLiveSnapshotJobRequest extends Request {
             }
 
             /**
-             * Endpoint.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-shanghai.aliyuncs.com</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -236,7 +252,10 @@ public class SubmitLiveSnapshotJobRequest extends Request {
             }
 
             /**
-             * StorageType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -250,6 +269,12 @@ public class SubmitLiveSnapshotJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitLiveSnapshotJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitLiveSnapshotJobRequest</p>
+     */
     public static class StreamInput extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Type")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -291,7 +316,10 @@ public class SubmitLiveSnapshotJobRequest extends Request {
             private String url; 
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -299,7 +327,10 @@ public class SubmitLiveSnapshotJobRequest extends Request {
             }
 
             /**
-             * Url.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp://<a href="http://www.aliyun.com/stream">www.aliyun.com/stream</a></p>
              */
             public Builder url(String url) {
                 this.url = url;

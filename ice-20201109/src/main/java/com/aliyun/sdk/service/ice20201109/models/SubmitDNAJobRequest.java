@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitDNAJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitDNAJobRequest</p>
@@ -205,7 +206,10 @@ public class SubmitDNAJobRequest extends Request {
         }
 
         /**
-         * DBId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2288c6ca184c0e47098a5b665e2a12****</p>
          */
         public Builder DBId(String DBId) {
             this.putQueryParameter("DBId", DBId);
@@ -214,7 +218,7 @@ public class SubmitDNAJobRequest extends Request {
         }
 
         /**
-         * Input.
+         * <p>This parameter is required.</p>
          */
         public Builder input(Input input) {
             String inputShrink = shrink(input, "Input", "json");
@@ -251,7 +255,10 @@ public class SubmitDNAJobRequest extends Request {
         }
 
         /**
-         * PrimaryKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3ca84a39a9024f19853b21be9cf9****</p>
          */
         public Builder primaryKey(String primaryKey) {
             this.putQueryParameter("PrimaryKey", primaryKey);
@@ -302,6 +309,12 @@ public class SubmitDNAJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitDNAJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitDNAJobRequest</p>
+     */
     public static class Input extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Media")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -343,7 +356,10 @@ public class SubmitDNAJobRequest extends Request {
             private String type; 
 
             /**
-             * Media.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1b1b9cd148034739af413150fded****</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -351,7 +367,10 @@ public class SubmitDNAJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Media</p>
              */
             public Builder type(String type) {
                 this.type = type;

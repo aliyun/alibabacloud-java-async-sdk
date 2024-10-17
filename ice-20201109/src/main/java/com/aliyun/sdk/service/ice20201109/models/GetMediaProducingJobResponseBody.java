@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMediaProducingJobResponseBody} extends {@link TeaModel}
  *
  * <p>GetMediaProducingJobResponseBody</p>
@@ -70,6 +71,12 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMediaProducingJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaProducingJobResponseBody</p>
+     */
     public static class MediaProducingJob extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClipsParam")
         private String clipsParam;

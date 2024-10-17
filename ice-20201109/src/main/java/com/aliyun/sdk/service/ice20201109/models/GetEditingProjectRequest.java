@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEditingProjectRequest} extends {@link RequestModel}
  *
  * <p>GetEditingProjectRequest</p>
@@ -91,7 +92,11 @@ public class GetEditingProjectRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The ID of the online editing project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>fb2101bf24b2754cb318787dc</strong></strong></p>
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -100,7 +105,12 @@ public class GetEditingProjectRequest extends Request {
         }
 
         /**
-         * RequestSource.
+         * <p>The ID of the request source. Valid values:</p>
+         * <p>- OpenAPI (default): Timeline conversion is not performed.</p>
+         * <p>- WebSDK: If you specify this value, the project timeline is automatically converted into the frontend style, and the materials in the timeline are associated with the project to enable preview by using frontend web SDKs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WebSDK</p>
          */
         public Builder requestSource(String requestSource) {
             this.putQueryParameter("RequestSource", requestSource);

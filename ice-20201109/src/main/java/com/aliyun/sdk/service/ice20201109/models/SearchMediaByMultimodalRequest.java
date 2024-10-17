@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchMediaByMultimodalRequest} extends {@link RequestModel}
  *
  * <p>SearchMediaByMultimodalRequest</p>
@@ -132,7 +133,15 @@ public class SearchMediaByMultimodalRequest extends Request {
         }
 
         /**
-         * MediaType.
+         * <p>The type of the media assets.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>image</li>
+         * <li>video (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>video</p>
          */
         public Builder mediaType(String mediaType) {
             this.putQueryParameter("MediaType", mediaType);
@@ -141,7 +150,10 @@ public class SearchMediaByMultimodalRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -150,7 +162,10 @@ public class SearchMediaByMultimodalRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -159,7 +174,10 @@ public class SearchMediaByMultimodalRequest extends Request {
         }
 
         /**
-         * SearchLibName.
+         * <p>The search library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-1</p>
          */
         public Builder searchLibName(String searchLibName) {
             this.putQueryParameter("SearchLibName", searchLibName);
@@ -168,7 +186,7 @@ public class SearchMediaByMultimodalRequest extends Request {
         }
 
         /**
-         * Text.
+         * <p>The content that you want to query. You can describe the content in natural language.</p>
          */
         public Builder text(String text) {
             this.putQueryParameter("Text", text);

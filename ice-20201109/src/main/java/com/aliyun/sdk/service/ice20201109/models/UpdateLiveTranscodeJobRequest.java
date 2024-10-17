@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateLiveTranscodeJobRequest} extends {@link RequestModel}
  *
  * <p>UpdateLiveTranscodeJobRequest</p>
@@ -111,7 +112,10 @@ public class UpdateLiveTranscodeJobRequest extends Request {
         } 
 
         /**
-         * JobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -165,6 +169,12 @@ public class UpdateLiveTranscodeJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateLiveTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateLiveTranscodeJobRequest</p>
+     */
     public static class StreamInput extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InputUrl")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -206,7 +216,10 @@ public class UpdateLiveTranscodeJobRequest extends Request {
             private String type; 
 
             /**
-             * InputUrl.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp://mydomain/app/stream1</p>
              */
             public Builder inputUrl(String inputUrl) {
                 this.inputUrl = inputUrl;
@@ -214,7 +227,10 @@ public class UpdateLiveTranscodeJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -228,6 +244,12 @@ public class UpdateLiveTranscodeJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateLiveTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateLiveTranscodeJobRequest</p>
+     */
     public static class TimedConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
@@ -289,6 +311,12 @@ public class UpdateLiveTranscodeJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateLiveTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateLiveTranscodeJobRequest</p>
+     */
     public static class TranscodeOutput extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainName")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -330,7 +358,10 @@ public class UpdateLiveTranscodeJobRequest extends Request {
             private String type; 
 
             /**
-             * DomainName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mydomain</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -338,7 +369,10 @@ public class UpdateLiveTranscodeJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LiveCenter</p>
              */
             public Builder type(String type) {
                 this.type = type;

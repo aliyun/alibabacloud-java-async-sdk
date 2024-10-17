@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSearchLibRequest} extends {@link RequestModel}
  *
  * <p>CreateSearchLibRequest</p>
@@ -77,7 +78,11 @@ public class CreateSearchLibRequest extends Request {
         }
 
         /**
-         * SearchLibName.
+         * <p>The name of the search library. The name can contain letters and digits and must start with a letter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder searchLibName(String searchLibName) {
             this.putQueryParameter("SearchLibName", searchLibName);

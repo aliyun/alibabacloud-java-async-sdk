@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSearchLibResponseBody} extends {@link TeaModel}
  *
  * <p>ListSearchLibResponseBody</p>
@@ -110,6 +111,12 @@ public class ListSearchLibResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSearchLibResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSearchLibResponseBody</p>
+     */
     public static class SearchLibInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SearchLibName")
         private String searchLibName;

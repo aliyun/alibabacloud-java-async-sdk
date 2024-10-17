@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchPublicMediaInfoResponseBody} extends {@link TeaModel}
  *
  * <p>SearchPublicMediaInfoResponseBody</p>
@@ -90,6 +91,12 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchPublicMediaInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchPublicMediaInfoResponseBody</p>
+     */
     public static class DynamicMetaData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
@@ -151,6 +158,12 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchPublicMediaInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchPublicMediaInfoResponseBody</p>
+     */
     public static class MediaBasicInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BusinessType")
         private String businessType;
@@ -394,7 +407,10 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId
+             * <p>MediaId</p>
+             * 
+             * <strong>example:</strong>
+             * <p>icepublic-<strong><strong>87b921bb4a55908a72a0537e</strong></strong></p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -472,6 +488,12 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchPublicMediaInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchPublicMediaInfoResponseBody</p>
+     */
     public static class MediaInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DynamicMetaData")
         private DynamicMetaData dynamicMetaData;
@@ -531,7 +553,7 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * BasicInfo
+             * <p>BasicInfo</p>
              */
             public Builder mediaBasicInfo(MediaBasicInfo mediaBasicInfo) {
                 this.mediaBasicInfo = mediaBasicInfo;
@@ -539,7 +561,10 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId
+             * <p>MediaId</p>
+             * 
+             * <strong>example:</strong>
+             * <p>icepublic-<strong><strong>87b921bb4a55908a72a0537e</strong></strong></p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -553,6 +578,12 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchPublicMediaInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchPublicMediaInfoResponseBody</p>
+     */
     public static class PublicMediaInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Authorized")
         private Boolean authorized;

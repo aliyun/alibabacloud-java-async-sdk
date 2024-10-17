@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPublicMediaInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetPublicMediaInfoResponseBody</p>
@@ -57,7 +58,10 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId
+         * <p>RequestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPublicMediaInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPublicMediaInfoResponseBody</p>
+     */
     public static class DynamicMetaData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
@@ -131,6 +141,12 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPublicMediaInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPublicMediaInfoResponseBody</p>
+     */
     public static class AudioStreamInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
@@ -512,6 +528,12 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPublicMediaInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPublicMediaInfoResponseBody</p>
+     */
     public static class FileBasicInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
@@ -753,6 +775,12 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPublicMediaInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPublicMediaInfoResponseBody</p>
+     */
     public static class SubtitleStreamInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CodecLongName")
         private String codecLongName;
@@ -974,6 +1002,12 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPublicMediaInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPublicMediaInfoResponseBody</p>
+     */
     public static class VideoStreamInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvgFPS")
         private String avgFPS;
@@ -1475,6 +1509,12 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPublicMediaInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPublicMediaInfoResponseBody</p>
+     */
     public static class FileInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AudioStreamInfoList")
         private java.util.List < AudioStreamInfoList> audioStreamInfoList;
@@ -1576,6 +1616,12 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPublicMediaInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPublicMediaInfoResponseBody</p>
+     */
     public static class MediaBasicInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BusinessType")
         private String businessType;
@@ -1819,7 +1865,10 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId
+             * <p>MediaId</p>
+             * 
+             * <strong>example:</strong>
+             * <p>icepublic-<strong><strong>14e501538aeef0a3140176f6</strong></strong></p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -1897,6 +1946,12 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPublicMediaInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPublicMediaInfoResponseBody</p>
+     */
     public static class MediaInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DynamicMetaData")
         private DynamicMetaData dynamicMetaData;
@@ -1968,7 +2023,7 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FileInfos
+             * <p>FileInfos</p>
              */
             public Builder fileInfoList(java.util.List < FileInfoList> fileInfoList) {
                 this.fileInfoList = fileInfoList;
@@ -1976,7 +2031,7 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * BasicInfo
+             * <p>BasicInfo</p>
              */
             public Builder mediaBasicInfo(MediaBasicInfo mediaBasicInfo) {
                 this.mediaBasicInfo = mediaBasicInfo;
@@ -1984,7 +2039,10 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId
+             * <p>MediaId</p>
+             * 
+             * <strong>example:</strong>
+             * <p>icepublic-<strong><strong>14e501538aeef0a3140176f6</strong></strong></p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;

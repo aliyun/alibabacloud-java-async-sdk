@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMediaCensorJobDetailRequest} extends {@link RequestModel}
  *
  * <p>QueryMediaCensorJobDetailRequest</p>
@@ -138,7 +139,10 @@ public class QueryMediaCensorJobDetailRequest extends Request {
         } 
 
         /**
-         * JobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2288c6ca184c0e47098a5b665e2a12****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

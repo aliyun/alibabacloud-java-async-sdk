@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCustomTemplateRequest} extends {@link RequestModel}
  *
  * <p>CreateCustomTemplateRequest</p>
@@ -98,7 +99,10 @@ public class CreateCustomTemplateRequest extends Request {
         } 
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-template</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -116,7 +120,10 @@ public class CreateCustomTemplateRequest extends Request {
         }
 
         /**
-         * TemplateConfig.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Container&quot;:{&quot;Format&quot;:&quot;flv&quot;},&quot;Video&quot;:{},&quot;Audio&quot;:{}}</p>
          */
         public Builder templateConfig(String templateConfig) {
             this.putQueryParameter("TemplateConfig", templateConfig);
@@ -125,7 +132,10 @@ public class CreateCustomTemplateRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder type(Integer type) {
             this.putQueryParameter("Type", type);

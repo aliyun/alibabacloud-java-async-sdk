@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitMediaAiAnalysisJobResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitMediaAiAnalysisJobResponseBody</p>
@@ -49,7 +50,10 @@ public class SubmitMediaAiAnalysisJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MediaId.
+         * <p>The ID of the media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>b48fb04483915d4f2cd8</strong></strong></strong></p>
          */
         public Builder mediaId(String mediaId) {
             this.mediaId = mediaId;
@@ -57,7 +61,10 @@ public class SubmitMediaAiAnalysisJobResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

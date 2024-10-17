@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySearchIndexResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySearchIndexResponseBody</p>
@@ -109,7 +110,10 @@ public class QuerySearchIndexResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,7 +121,14 @@ public class QuerySearchIndexResponseBody extends TeaModel {
         }
 
         /**
-         * IndexStatus.
+         * <p>The state of the index. Valid values:</p>
+         * <ul>
+         * <li>active: the index is enabled.</li>
+         * <li>Deactive: the index is not enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder indexStatus(String indexStatus) {
             this.indexStatus = indexStatus;
@@ -125,7 +136,15 @@ public class QuerySearchIndexResponseBody extends TeaModel {
         }
 
         /**
-         * IndexType.
+         * <p>The category of the index. Valid values:</p>
+         * <ul>
+         * <li>mm: large visual model.</li>
+         * <li>face: face recognition.</li>
+         * <li>aiLabel: smart tagging.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>mm</p>
          */
         public Builder indexType(String indexType) {
             this.indexType = indexType;
@@ -133,7 +152,10 @@ public class QuerySearchIndexResponseBody extends TeaModel {
         }
 
         /**
-         * MediaTotal.
+         * <p>The total number of media assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder mediaTotal(String mediaTotal) {
             this.mediaTotal = mediaTotal;
@@ -141,7 +163,10 @@ public class QuerySearchIndexResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4E84BE44-58A7-<strong><strong>-</strong></strong>-FBEBEA16EF94</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -149,7 +174,10 @@ public class QuerySearchIndexResponseBody extends TeaModel {
         }
 
         /**
-         * SearchLibName.
+         * <p>The name of the search library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder searchLibName(String searchLibName) {
             this.searchLibName = searchLibName;
@@ -157,7 +185,14 @@ public class QuerySearchIndexResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

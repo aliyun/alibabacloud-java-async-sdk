@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitPackageJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitPackageJobRequest</p>
@@ -111,7 +112,7 @@ public class SubmitPackageJobRequest extends Request {
         } 
 
         /**
-         * Inputs.
+         * <p>This parameter is required.</p>
          */
         public Builder inputs(java.util.List < Inputs> inputs) {
             String inputsShrink = shrink(inputs, "Inputs", "json");
@@ -130,7 +131,7 @@ public class SubmitPackageJobRequest extends Request {
         }
 
         /**
-         * Output.
+         * <p>This parameter is required.</p>
          */
         public Builder output(Output output) {
             String outputShrink = shrink(output, "Output", "json");
@@ -165,6 +166,12 @@ public class SubmitPackageJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitPackageJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitPackageJobRequest</p>
+     */
     public static class Input extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Media")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -206,7 +213,10 @@ public class SubmitPackageJobRequest extends Request {
             private String type; 
 
             /**
-             * Media.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/path/to/video.mp4</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -214,7 +224,10 @@ public class SubmitPackageJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -228,6 +241,12 @@ public class SubmitPackageJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitPackageJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitPackageJobRequest</p>
+     */
     public static class Inputs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Input")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -256,7 +275,7 @@ public class SubmitPackageJobRequest extends Request {
             private Input input; 
 
             /**
-             * Input.
+             * <p>This parameter is required.</p>
              */
             public Builder input(Input input) {
                 this.input = input;
@@ -270,6 +289,12 @@ public class SubmitPackageJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitPackageJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitPackageJobRequest</p>
+     */
     public static class Output extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Media")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -311,7 +336,10 @@ public class SubmitPackageJobRequest extends Request {
             private String type; 
 
             /**
-             * Media.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/path/to/video.mp4</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -319,7 +347,10 @@ public class SubmitPackageJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -333,6 +364,12 @@ public class SubmitPackageJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitPackageJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitPackageJobRequest</p>
+     */
     public static class ScheduleConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMediaInfoJobRequest} extends {@link RequestModel}
  *
  * <p>GetMediaInfoJobRequest</p>

@@ -19,438 +19,1393 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    /**
+     * <b>description</b> :
+     * <p>You can create at most three levels of categories. Each category level can contain a maximum of 100 subcategories.</p>
+     * 
+     * @param request the request parameters of AddCategory  AddCategoryRequest
+     * @return AddCategoryResponse
+     */
     CompletableFuture<AddCategoryResponse> addCategory(AddCategoryRequest request);
 
+    /**
+     * @param request the request parameters of AddEditingProjectMaterials  AddEditingProjectMaterialsRequest
+     * @return AddEditingProjectMaterialsResponse
+     */
     CompletableFuture<AddEditingProjectMaterialsResponse> addEditingProjectMaterials(AddEditingProjectMaterialsRequest request);
 
+    /**
+     * @param request the request parameters of AddFavoritePublicMedia  AddFavoritePublicMediaRequest
+     * @return AddFavoritePublicMediaResponse
+     */
     CompletableFuture<AddFavoritePublicMediaResponse> addFavoritePublicMedia(AddFavoritePublicMediaRequest request);
 
+    /**
+     * @param request the request parameters of AddMediaMarks  AddMediaMarksRequest
+     * @return AddMediaMarksResponse
+     */
     CompletableFuture<AddMediaMarksResponse> addMediaMarks(AddMediaMarksRequest request);
 
+    /**
+     * @param request the request parameters of AddTemplate  AddTemplateRequest
+     * @return AddTemplateResponse
+     */
     CompletableFuture<AddTemplateResponse> addTemplate(AddTemplateRequest request);
 
+    /**
+     * @param request the request parameters of AlterSearchIndex  AlterSearchIndexRequest
+     * @return AlterSearchIndexResponse
+     */
     CompletableFuture<AlterSearchIndexResponse> alterSearchIndex(AlterSearchIndexRequest request);
 
+    /**
+     * @param request the request parameters of BatchGetMediaInfos  BatchGetMediaInfosRequest
+     * @return BatchGetMediaInfosResponse
+     */
     CompletableFuture<BatchGetMediaInfosResponse> batchGetMediaInfos(BatchGetMediaInfosRequest request);
 
+    /**
+     * @param request the request parameters of CancelDNAJob  CancelDNAJobRequest
+     * @return CancelDNAJobResponse
+     */
     CompletableFuture<CancelDNAJobResponse> cancelDNAJob(CancelDNAJobRequest request);
 
+    /**
+     * @param request the request parameters of CancelFavoritePublicMedia  CancelFavoritePublicMediaRequest
+     * @return CancelFavoritePublicMediaResponse
+     */
     CompletableFuture<CancelFavoritePublicMediaResponse> cancelFavoritePublicMedia(CancelFavoritePublicMediaRequest request);
 
+    /**
+     * @param request the request parameters of CreateAudit  CreateAuditRequest
+     * @return CreateAuditResponse
+     */
     CompletableFuture<CreateAuditResponse> createAudit(CreateAuditRequest request);
 
+    /**
+     * @param request the request parameters of CreateAvatarTrainingJob  CreateAvatarTrainingJobRequest
+     * @return CreateAvatarTrainingJobResponse
+     */
     CompletableFuture<CreateAvatarTrainingJobResponse> createAvatarTrainingJob(CreateAvatarTrainingJobRequest request);
 
+    /**
+     * @param request the request parameters of CreateCustomTemplate  CreateCustomTemplateRequest
+     * @return CreateCustomTemplateResponse
+     */
     CompletableFuture<CreateCustomTemplateResponse> createCustomTemplate(CreateCustomTemplateRequest request);
 
+    /**
+     * @param request the request parameters of CreateCustomizedVoiceJob  CreateCustomizedVoiceJobRequest
+     * @return CreateCustomizedVoiceJobResponse
+     */
     CompletableFuture<CreateCustomizedVoiceJobResponse> createCustomizedVoiceJob(CreateCustomizedVoiceJobRequest request);
 
+    /**
+     * @param request the request parameters of CreateDNADB  CreateDNADBRequest
+     * @return CreateDNADBResponse
+     */
     CompletableFuture<CreateDNADBResponse> createDNADB(CreateDNADBRequest request);
 
+    /**
+     * @param request the request parameters of CreateEditingProject  CreateEditingProjectRequest
+     * @return CreateEditingProjectResponse
+     */
     CompletableFuture<CreateEditingProjectResponse> createEditingProject(CreateEditingProjectRequest request);
 
+    /**
+     * @param request the request parameters of CreateLiveRecordTemplate  CreateLiveRecordTemplateRequest
+     * @return CreateLiveRecordTemplateResponse
+     */
     CompletableFuture<CreateLiveRecordTemplateResponse> createLiveRecordTemplate(CreateLiveRecordTemplateRequest request);
 
+    /**
+     * @param request the request parameters of CreateLiveSnapshotTemplate  CreateLiveSnapshotTemplateRequest
+     * @return CreateLiveSnapshotTemplateResponse
+     */
     CompletableFuture<CreateLiveSnapshotTemplateResponse> createLiveSnapshotTemplate(CreateLiveSnapshotTemplateRequest request);
 
+    /**
+     * @param request the request parameters of CreateLiveTranscodeTemplate  CreateLiveTranscodeTemplateRequest
+     * @return CreateLiveTranscodeTemplateResponse
+     */
     CompletableFuture<CreateLiveTranscodeTemplateResponse> createLiveTranscodeTemplate(CreateLiveTranscodeTemplateRequest request);
 
+    /**
+     * @param request the request parameters of CreatePipeline  CreatePipelineRequest
+     * @return CreatePipelineResponse
+     */
     CompletableFuture<CreatePipelineResponse> createPipeline(CreatePipelineRequest request);
 
+    /**
+     * <b>description</b> :
+     * <p>The large visual model feature is still in the public preview phase. You can use this feature for free for 1,000 hours of videos.</p>
+     * 
+     * @param request the request parameters of CreateSearchIndex  CreateSearchIndexRequest
+     * @return CreateSearchIndexResponse
+     */
     CompletableFuture<CreateSearchIndexResponse> createSearchIndex(CreateSearchIndexRequest request);
 
+    /**
+     * @param request the request parameters of CreateSearchLib  CreateSearchLibRequest
+     * @return CreateSearchLibResponse
+     */
     CompletableFuture<CreateSearchLibResponse> createSearchLib(CreateSearchLibRequest request);
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation to obtain the upload URLs and credentials of audio and video files. You can also call this operation to obtain the upload URLs and credentials of images and auxiliary media assets.</p>
+     * <ul>
+     * <li>Obtaining an upload URL and credential is essential for Intelligent Media Services (IMS) and is required in each upload operation.</li>
+     * <li>If the video upload credential expires, you can call the RefreshUploadMedia operation to obtain a new upload credential. The default validity period of a video upload credential is 3,000 seconds.</li>
+     * <li>After you upload a media asset, you can configure a callback to receive upload event notifications or call the GetMediaInfo operation to determine whether the media asset is uploaded based on the returned status.</li>
+     * <li>The MediaId parameter returned by this operation can be used for media asset lifecycle management or media processing.</li>
+     * <li>You can call this operation to upload media assets only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media asset to your own OSS bucket, you can upload the file to your OSS bucket by using <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then call the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the file in the OSS bucket with the media asset library.</li>
+     * <li>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateUploadMedia  CreateUploadMediaRequest
+     * @return CreateUploadMediaResponse
+     */
     CompletableFuture<CreateUploadMediaResponse> createUploadMedia(CreateUploadMediaRequest request);
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation to upload only a local media stream. After the media stream is uploaded, it is associated with the specified media asset ID.</p>
+     * <ul>
+     * <li>You can call this operation to upload media streams only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media stream to your own OSS bucket, you can upload the file to your OSS bucket by using <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then call the <a href="https://help.aliyun.com/document_detail/440765.html">RegisterMediaStream</a> operation to associate the media stream with the specified media asset ID.</li>
+     * <li>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateUploadStream  CreateUploadStreamRequest
+     * @return CreateUploadStreamResponse
+     */
     CompletableFuture<CreateUploadStreamResponse> createUploadStream(CreateUploadStreamRequest request);
 
+    /**
+     * @param request the request parameters of DecryptKMSDataKey  DecryptKMSDataKeyRequest
+     * @return DecryptKMSDataKeyResponse
+     */
     CompletableFuture<DecryptKMSDataKeyResponse> decryptKMSDataKey(DecryptKMSDataKeyRequest request);
 
+    /**
+     * @param request the request parameters of DeleteAvatarTrainingJob  DeleteAvatarTrainingJobRequest
+     * @return DeleteAvatarTrainingJobResponse
+     */
     CompletableFuture<DeleteAvatarTrainingJobResponse> deleteAvatarTrainingJob(DeleteAvatarTrainingJobRequest request);
 
+    /**
+     * <b>description</b> :
+     * <p>This operation also deletes the subcategories, including the level-2 and level-3 categories, of the category.</p>
+     * 
+     * @param request the request parameters of DeleteCategory  DeleteCategoryRequest
+     * @return DeleteCategoryResponse
+     */
     CompletableFuture<DeleteCategoryResponse> deleteCategory(DeleteCategoryRequest request);
 
+    /**
+     * @param request the request parameters of DeleteCustomTemplate  DeleteCustomTemplateRequest
+     * @return DeleteCustomTemplateResponse
+     */
     CompletableFuture<DeleteCustomTemplateResponse> deleteCustomTemplate(DeleteCustomTemplateRequest request);
 
+    /**
+     * @param request the request parameters of DeleteCustomizedVoiceJob  DeleteCustomizedVoiceJobRequest
+     * @return DeleteCustomizedVoiceJobResponse
+     */
     CompletableFuture<DeleteCustomizedVoiceJobResponse> deleteCustomizedVoiceJob(DeleteCustomizedVoiceJobRequest request);
 
+    /**
+     * @param request the request parameters of DeleteDNADB  DeleteDNADBRequest
+     * @return DeleteDNADBResponse
+     */
     CompletableFuture<DeleteDNADBResponse> deleteDNADB(DeleteDNADBRequest request);
 
+    /**
+     * @param request the request parameters of DeleteDNAFiles  DeleteDNAFilesRequest
+     * @return DeleteDNAFilesResponse
+     */
     CompletableFuture<DeleteDNAFilesResponse> deleteDNAFiles(DeleteDNAFilesRequest request);
 
+    /**
+     * @param request the request parameters of DeleteEditingProjectMaterials  DeleteEditingProjectMaterialsRequest
+     * @return DeleteEditingProjectMaterialsResponse
+     */
     CompletableFuture<DeleteEditingProjectMaterialsResponse> deleteEditingProjectMaterials(DeleteEditingProjectMaterialsRequest request);
 
+    /**
+     * @param request the request parameters of DeleteEditingProjects  DeleteEditingProjectsRequest
+     * @return DeleteEditingProjectsResponse
+     */
     CompletableFuture<DeleteEditingProjectsResponse> deleteEditingProjects(DeleteEditingProjectsRequest request);
 
+    /**
+     * @param request the request parameters of DeleteLiveRecordFiles  DeleteLiveRecordFilesRequest
+     * @return DeleteLiveRecordFilesResponse
+     */
     CompletableFuture<DeleteLiveRecordFilesResponse> deleteLiveRecordFiles(DeleteLiveRecordFilesRequest request);
 
+    /**
+     * @param request the request parameters of DeleteLiveRecordTemplate  DeleteLiveRecordTemplateRequest
+     * @return DeleteLiveRecordTemplateResponse
+     */
     CompletableFuture<DeleteLiveRecordTemplateResponse> deleteLiveRecordTemplate(DeleteLiveRecordTemplateRequest request);
 
+    /**
+     * @param request the request parameters of DeleteLiveSnapshotFiles  DeleteLiveSnapshotFilesRequest
+     * @return DeleteLiveSnapshotFilesResponse
+     */
     CompletableFuture<DeleteLiveSnapshotFilesResponse> deleteLiveSnapshotFiles(DeleteLiveSnapshotFilesRequest request);
 
+    /**
+     * @param request the request parameters of DeleteLiveSnapshotTemplate  DeleteLiveSnapshotTemplateRequest
+     * @return DeleteLiveSnapshotTemplateResponse
+     */
     CompletableFuture<DeleteLiveSnapshotTemplateResponse> deleteLiveSnapshotTemplate(DeleteLiveSnapshotTemplateRequest request);
 
+    /**
+     * @param request the request parameters of DeleteLiveTranscodeJob  DeleteLiveTranscodeJobRequest
+     * @return DeleteLiveTranscodeJobResponse
+     */
     CompletableFuture<DeleteLiveTranscodeJobResponse> deleteLiveTranscodeJob(DeleteLiveTranscodeJobRequest request);
 
+    /**
+     * @param request the request parameters of DeleteLiveTranscodeTemplate  DeleteLiveTranscodeTemplateRequest
+     * @return DeleteLiveTranscodeTemplateResponse
+     */
     CompletableFuture<DeleteLiveTranscodeTemplateResponse> deleteLiveTranscodeTemplate(DeleteLiveTranscodeTemplateRequest request);
 
+    /**
+     * @param request the request parameters of DeleteMediaFromSearchLib  DeleteMediaFromSearchLibRequest
+     * @return DeleteMediaFromSearchLibResponse
+     */
     CompletableFuture<DeleteMediaFromSearchLibResponse> deleteMediaFromSearchLib(DeleteMediaFromSearchLibRequest request);
 
+    /**
+     * @param request the request parameters of DeleteMediaInfos  DeleteMediaInfosRequest
+     * @return DeleteMediaInfosResponse
+     */
     CompletableFuture<DeleteMediaInfosResponse> deleteMediaInfos(DeleteMediaInfosRequest request);
 
+    /**
+     * @param request the request parameters of DeleteMediaMarks  DeleteMediaMarksRequest
+     * @return DeleteMediaMarksResponse
+     */
     CompletableFuture<DeleteMediaMarksResponse> deleteMediaMarks(DeleteMediaMarksRequest request);
 
+    /**
+     * @param request the request parameters of DeletePipeline  DeletePipelineRequest
+     * @return DeletePipelineResponse
+     */
     CompletableFuture<DeletePipelineResponse> deletePipeline(DeletePipelineRequest request);
 
+    /**
+     * <b>description</b> :
+     * <p>You can call this operation to delete multiple media streams at a time.</p>
+     * 
+     * @param request the request parameters of DeletePlayInfo  DeletePlayInfoRequest
+     * @return DeletePlayInfoResponse
+     */
     CompletableFuture<DeletePlayInfoResponse> deletePlayInfo(DeletePlayInfoRequest request);
 
+    /**
+     * @param request the request parameters of DeleteSmartJob  DeleteSmartJobRequest
+     * @return DeleteSmartJobResponse
+     */
     CompletableFuture<DeleteSmartJobResponse> deleteSmartJob(DeleteSmartJobRequest request);
 
+    /**
+     * @param request the request parameters of DeleteTemplate  DeleteTemplateRequest
+     * @return DeleteTemplateResponse
+     */
     CompletableFuture<DeleteTemplateResponse> deleteTemplate(DeleteTemplateRequest request);
 
+    /**
+     * @param request the request parameters of DescribeAIAgentInstance  DescribeAIAgentInstanceRequest
+     * @return DescribeAIAgentInstanceResponse
+     */
     CompletableFuture<DescribeAIAgentInstanceResponse> describeAIAgentInstance(DescribeAIAgentInstanceRequest request);
 
+    /**
+     * @param request the request parameters of DescribeMeterImsEditUsage  DescribeMeterImsEditUsageRequest
+     * @return DescribeMeterImsEditUsageResponse
+     */
     CompletableFuture<DescribeMeterImsEditUsageResponse> describeMeterImsEditUsage(DescribeMeterImsEditUsageRequest request);
 
+    /**
+     * @param request the request parameters of DescribeMeterImsMediaConvertUHDUsage  DescribeMeterImsMediaConvertUHDUsageRequest
+     * @return DescribeMeterImsMediaConvertUHDUsageResponse
+     */
     CompletableFuture<DescribeMeterImsMediaConvertUHDUsageResponse> describeMeterImsMediaConvertUHDUsage(DescribeMeterImsMediaConvertUHDUsageRequest request);
 
+    /**
+     * @param request the request parameters of DescribeMeterImsMediaConvertUsage  DescribeMeterImsMediaConvertUsageRequest
+     * @return DescribeMeterImsMediaConvertUsageResponse
+     */
     CompletableFuture<DescribeMeterImsMediaConvertUsageResponse> describeMeterImsMediaConvertUsage(DescribeMeterImsMediaConvertUsageRequest request);
 
+    /**
+     * @param request the request parameters of DescribeMeterImsMpsAiUsage  DescribeMeterImsMpsAiUsageRequest
+     * @return DescribeMeterImsMpsAiUsageResponse
+     */
     CompletableFuture<DescribeMeterImsMpsAiUsageResponse> describeMeterImsMpsAiUsage(DescribeMeterImsMpsAiUsageRequest request);
 
+    /**
+     * @param request the request parameters of DescribeMeterImsSummary  DescribeMeterImsSummaryRequest
+     * @return DescribeMeterImsSummaryResponse
+     */
     CompletableFuture<DescribeMeterImsSummaryResponse> describeMeterImsSummary(DescribeMeterImsSummaryRequest request);
 
+    /**
+     * @param request the request parameters of DescribeNotifyConfig  DescribeNotifyConfigRequest
+     * @return DescribeNotifyConfigResponse
+     */
     CompletableFuture<DescribeNotifyConfigResponse> describeNotifyConfig(DescribeNotifyConfigRequest request);
 
+    /**
+     * @param request the request parameters of DescribePlayList  DescribePlayListRequest
+     * @return DescribePlayListResponse
+     */
     CompletableFuture<DescribePlayListResponse> describePlayList(DescribePlayListRequest request);
 
+    /**
+     * @param request the request parameters of DescribeRtcRobotInstance  DescribeRtcRobotInstanceRequest
+     * @return DescribeRtcRobotInstanceResponse
+     */
     CompletableFuture<DescribeRtcRobotInstanceResponse> describeRtcRobotInstance(DescribeRtcRobotInstanceRequest request);
 
+    /**
+     * @param request the request parameters of DetectAudioForCustomizedVoiceJob  DetectAudioForCustomizedVoiceJobRequest
+     * @return DetectAudioForCustomizedVoiceJobResponse
+     */
     CompletableFuture<DetectAudioForCustomizedVoiceJobResponse> detectAudioForCustomizedVoiceJob(DetectAudioForCustomizedVoiceJobRequest request);
 
+    /**
+     * @param request the request parameters of DropSearchIndex  DropSearchIndexRequest
+     * @return DropSearchIndexResponse
+     */
     CompletableFuture<DropSearchIndexResponse> dropSearchIndex(DropSearchIndexRequest request);
 
+    /**
+     * @param request the request parameters of DropSearchLib  DropSearchLibRequest
+     * @return DropSearchLibResponse
+     */
     CompletableFuture<DropSearchLibResponse> dropSearchLib(DropSearchLibRequest request);
 
+    /**
+     * @param request the request parameters of GenerateAIAgentCall  GenerateAIAgentCallRequest
+     * @return GenerateAIAgentCallResponse
+     */
     CompletableFuture<GenerateAIAgentCallResponse> generateAIAgentCall(GenerateAIAgentCallRequest request);
 
+    /**
+     * @param request the request parameters of GenerateKMSDataKey  GenerateKMSDataKeyRequest
+     * @return GenerateKMSDataKeyResponse
+     */
     CompletableFuture<GenerateKMSDataKeyResponse> generateKMSDataKey(GenerateKMSDataKeyRequest request);
 
+    /**
+     * @param request the request parameters of GetAvatar  GetAvatarRequest
+     * @return GetAvatarResponse
+     */
     CompletableFuture<GetAvatarResponse> getAvatar(GetAvatarRequest request);
 
+    /**
+     * @param request the request parameters of GetAvatarTrainingJob  GetAvatarTrainingJobRequest
+     * @return GetAvatarTrainingJobResponse
+     */
     CompletableFuture<GetAvatarTrainingJobResponse> getAvatarTrainingJob(GetAvatarTrainingJobRequest request);
 
+    /**
+     * @param request the request parameters of GetBatchMediaProducingJob  GetBatchMediaProducingJobRequest
+     * @return GetBatchMediaProducingJobResponse
+     */
     CompletableFuture<GetBatchMediaProducingJobResponse> getBatchMediaProducingJob(GetBatchMediaProducingJobRequest request);
 
+    /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the information about a category and its subcategories based on the category ID and category type.</p>
+     * 
+     * @param request the request parameters of GetCategories  GetCategoriesRequest
+     * @return GetCategoriesResponse
+     */
     CompletableFuture<GetCategoriesResponse> getCategories(GetCategoriesRequest request);
 
+    /**
+     * @param request the request parameters of GetContentAnalyzeConfig  GetContentAnalyzeConfigRequest
+     * @return GetContentAnalyzeConfigResponse
+     */
     CompletableFuture<GetContentAnalyzeConfigResponse> getContentAnalyzeConfig(GetContentAnalyzeConfigRequest request);
 
+    /**
+     * @param request the request parameters of GetCustomTemplate  GetCustomTemplateRequest
+     * @return GetCustomTemplateResponse
+     */
     CompletableFuture<GetCustomTemplateResponse> getCustomTemplate(GetCustomTemplateRequest request);
 
+    /**
+     * @param request the request parameters of GetCustomizedVoice  GetCustomizedVoiceRequest
+     * @return GetCustomizedVoiceResponse
+     */
     CompletableFuture<GetCustomizedVoiceResponse> getCustomizedVoice(GetCustomizedVoiceRequest request);
 
+    /**
+     * @param request the request parameters of GetCustomizedVoiceJob  GetCustomizedVoiceJobRequest
+     * @return GetCustomizedVoiceJobResponse
+     */
     CompletableFuture<GetCustomizedVoiceJobResponse> getCustomizedVoiceJob(GetCustomizedVoiceJobRequest request);
 
+    /**
+     * @param request the request parameters of GetDefaultStorageLocation  GetDefaultStorageLocationRequest
+     * @return GetDefaultStorageLocationResponse
+     */
     CompletableFuture<GetDefaultStorageLocationResponse> getDefaultStorageLocation(GetDefaultStorageLocationRequest request);
 
+    /**
+     * @param request the request parameters of GetDemonstrationForCustomizedVoiceJob  GetDemonstrationForCustomizedVoiceJobRequest
+     * @return GetDemonstrationForCustomizedVoiceJobResponse
+     */
     CompletableFuture<GetDemonstrationForCustomizedVoiceJobResponse> getDemonstrationForCustomizedVoiceJob(GetDemonstrationForCustomizedVoiceJobRequest request);
 
+    /**
+     * @param request the request parameters of GetDynamicImageJob  GetDynamicImageJobRequest
+     * @return GetDynamicImageJobResponse
+     */
     CompletableFuture<GetDynamicImageJobResponse> getDynamicImageJob(GetDynamicImageJobRequest request);
 
+    /**
+     * @param request the request parameters of GetEditingProject  GetEditingProjectRequest
+     * @return GetEditingProjectResponse
+     */
     CompletableFuture<GetEditingProjectResponse> getEditingProject(GetEditingProjectRequest request);
 
+    /**
+     * @param request the request parameters of GetEditingProjectMaterials  GetEditingProjectMaterialsRequest
+     * @return GetEditingProjectMaterialsResponse
+     */
     CompletableFuture<GetEditingProjectMaterialsResponse> getEditingProjectMaterials(GetEditingProjectMaterialsRequest request);
 
+    /**
+     * @param request the request parameters of GetEventCallback  GetEventCallbackRequest
+     * @return GetEventCallbackResponse
+     */
     CompletableFuture<GetEventCallbackResponse> getEventCallback(GetEventCallbackRequest request);
 
+    /**
+     * @param request the request parameters of GetLiveEditingIndexFile  GetLiveEditingIndexFileRequest
+     * @return GetLiveEditingIndexFileResponse
+     */
     CompletableFuture<GetLiveEditingIndexFileResponse> getLiveEditingIndexFile(GetLiveEditingIndexFileRequest request);
 
+    /**
+     * @param request the request parameters of GetLiveEditingJob  GetLiveEditingJobRequest
+     * @return GetLiveEditingJobResponse
+     */
     CompletableFuture<GetLiveEditingJobResponse> getLiveEditingJob(GetLiveEditingJobRequest request);
 
+    /**
+     * @param request the request parameters of GetLiveRecordJob  GetLiveRecordJobRequest
+     * @return GetLiveRecordJobResponse
+     */
     CompletableFuture<GetLiveRecordJobResponse> getLiveRecordJob(GetLiveRecordJobRequest request);
 
+    /**
+     * @param request the request parameters of GetLiveRecordTemplate  GetLiveRecordTemplateRequest
+     * @return GetLiveRecordTemplateResponse
+     */
     CompletableFuture<GetLiveRecordTemplateResponse> getLiveRecordTemplate(GetLiveRecordTemplateRequest request);
 
+    /**
+     * @param request the request parameters of GetLiveSnapshotJob  GetLiveSnapshotJobRequest
+     * @return GetLiveSnapshotJobResponse
+     */
     CompletableFuture<GetLiveSnapshotJobResponse> getLiveSnapshotJob(GetLiveSnapshotJobRequest request);
 
+    /**
+     * @param request the request parameters of GetLiveSnapshotTemplate  GetLiveSnapshotTemplateRequest
+     * @return GetLiveSnapshotTemplateResponse
+     */
     CompletableFuture<GetLiveSnapshotTemplateResponse> getLiveSnapshotTemplate(GetLiveSnapshotTemplateRequest request);
 
+    /**
+     * @param request the request parameters of GetLiveTranscodeJob  GetLiveTranscodeJobRequest
+     * @return GetLiveTranscodeJobResponse
+     */
     CompletableFuture<GetLiveTranscodeJobResponse> getLiveTranscodeJob(GetLiveTranscodeJobRequest request);
 
+    /**
+     * @param request the request parameters of GetLiveTranscodeTemplate  GetLiveTranscodeTemplateRequest
+     * @return GetLiveTranscodeTemplateResponse
+     */
     CompletableFuture<GetLiveTranscodeTemplateResponse> getLiveTranscodeTemplate(GetLiveTranscodeTemplateRequest request);
 
+    /**
+     * <b>description</b> :
+     * <p>If the MediaId parameter is specified, the MediaId parameter is preferentially used for the query. If the MediaId parameter is left empty, the InputURL parameter must be specified.</p>
+     * 
+     * @param request the request parameters of GetMediaInfo  GetMediaInfoRequest
+     * @return GetMediaInfoResponse
+     */
     CompletableFuture<GetMediaInfoResponse> getMediaInfo(GetMediaInfoRequest request);
 
+    /**
+     * @param request the request parameters of GetMediaInfoJob  GetMediaInfoJobRequest
+     * @return GetMediaInfoJobResponse
+     */
     CompletableFuture<GetMediaInfoJobResponse> getMediaInfoJob(GetMediaInfoJobRequest request);
 
+    /**
+     * @param request the request parameters of GetMediaMarks  GetMediaMarksRequest
+     * @return GetMediaMarksResponse
+     */
     CompletableFuture<GetMediaMarksResponse> getMediaMarks(GetMediaMarksRequest request);
 
+    /**
+     * @param request the request parameters of GetMediaProducingJob  GetMediaProducingJobRequest
+     * @return GetMediaProducingJobResponse
+     */
     CompletableFuture<GetMediaProducingJobResponse> getMediaProducingJob(GetMediaProducingJobRequest request);
 
+    /**
+     * @param request the request parameters of GetPackageJob  GetPackageJobRequest
+     * @return GetPackageJobResponse
+     */
     CompletableFuture<GetPackageJobResponse> getPackageJob(GetPackageJobRequest request);
 
+    /**
+     * @param request the request parameters of GetPipeline  GetPipelineRequest
+     * @return GetPipelineResponse
+     */
     CompletableFuture<GetPipelineResponse> getPipeline(GetPipelineRequest request);
 
+    /**
+     * <b>description</b> :
+     * <p>You use the ID of a video or audio file to query the playback URL of the file. Then, you can use the playback URL to play the audio or video in ApsaraVideo Player SDK (for URL-based playback) or a third-party player.</p>
+     * 
+     * @param request the request parameters of GetPlayInfo  GetPlayInfoRequest
+     * @return GetPlayInfoResponse
+     */
     CompletableFuture<GetPlayInfoResponse> getPlayInfo(GetPlayInfoRequest request);
 
+    /**
+     * @param request the request parameters of GetPublicMediaInfo  GetPublicMediaInfoRequest
+     * @return GetPublicMediaInfoResponse
+     */
     CompletableFuture<GetPublicMediaInfoResponse> getPublicMediaInfo(GetPublicMediaInfoRequest request);
 
+    /**
+     * @param request the request parameters of GetSmartHandleJob  GetSmartHandleJobRequest
+     * @return GetSmartHandleJobResponse
+     */
     CompletableFuture<GetSmartHandleJobResponse> getSmartHandleJob(GetSmartHandleJobRequest request);
 
+    /**
+     * @param request the request parameters of GetSnapshotJob  GetSnapshotJobRequest
+     * @return GetSnapshotJobResponse
+     */
     CompletableFuture<GetSnapshotJobResponse> getSnapshotJob(GetSnapshotJobRequest request);
 
+    /**
+     * @param request the request parameters of GetSnapshotUrls  GetSnapshotUrlsRequest
+     * @return GetSnapshotUrlsResponse
+     */
     CompletableFuture<GetSnapshotUrlsResponse> getSnapshotUrls(GetSnapshotUrlsRequest request);
 
+    /**
+     * @param request the request parameters of GetStorageList  GetStorageListRequest
+     * @return GetStorageListResponse
+     */
     CompletableFuture<GetStorageListResponse> getStorageList(GetStorageListRequest request);
 
+    /**
+     * @param request the request parameters of GetSystemTemplate  GetSystemTemplateRequest
+     * @return GetSystemTemplateResponse
+     */
     CompletableFuture<GetSystemTemplateResponse> getSystemTemplate(GetSystemTemplateRequest request);
 
+    /**
+     * @param request the request parameters of GetTemplate  GetTemplateRequest
+     * @return GetTemplateResponse
+     */
     CompletableFuture<GetTemplateResponse> getTemplate(GetTemplateRequest request);
 
+    /**
+     * @param request the request parameters of GetTemplateMaterials  GetTemplateMaterialsRequest
+     * @return GetTemplateMaterialsResponse
+     */
     CompletableFuture<GetTemplateMaterialsResponse> getTemplateMaterials(GetTemplateMaterialsRequest request);
 
+    /**
+     * @param request the request parameters of GetTemplateParams  GetTemplateParamsRequest
+     * @return GetTemplateParamsResponse
+     */
     CompletableFuture<GetTemplateParamsResponse> getTemplateParams(GetTemplateParamsRequest request);
 
+    /**
+     * @param request the request parameters of GetTranscodeJob  GetTranscodeJobRequest
+     * @return GetTranscodeJobResponse
+     */
     CompletableFuture<GetTranscodeJobResponse> getTranscodeJob(GetTranscodeJobRequest request);
 
+    /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the information, including the upload status, user data, creation time, and completion time, about URL-based upload jobs based on the returned job IDs or the URLs used during the upload.
+     * If an upload job fails, you can view the error code and error message. If an upload job is successful, you can obtain the video ID.</p>
+     * 
+     * @param request the request parameters of GetUrlUploadInfos  GetUrlUploadInfosRequest
+     * @return GetUrlUploadInfosResponse
+     */
     CompletableFuture<GetUrlUploadInfosResponse> getUrlUploadInfos(GetUrlUploadInfosRequest request);
 
+    /**
+     * <b>description</b> :
+     * <p>You can call this operation to query information about up to the first 5,000 audio and video files based on the filter condition, such as the status or category ID of the file. We recommend that you set the StartTime and EndTime parameters to narrow down the time range and perform multiple queries to obtain data.</p>
+     * 
+     * @param request the request parameters of GetVideoList  GetVideoListRequest
+     * @return GetVideoListResponse
+     */
     CompletableFuture<GetVideoListResponse> getVideoList(GetVideoListRequest request);
 
+    /**
+     * @param request the request parameters of GetWorkflowTask  GetWorkflowTaskRequest
+     * @return GetWorkflowTaskResponse
+     */
     CompletableFuture<GetWorkflowTaskResponse> getWorkflowTask(GetWorkflowTaskRequest request);
 
+    /**
+     * @param request the request parameters of InsertMediaToSearchLib  InsertMediaToSearchLibRequest
+     * @return InsertMediaToSearchLibResponse
+     */
     CompletableFuture<InsertMediaToSearchLibResponse> insertMediaToSearchLib(InsertMediaToSearchLibRequest request);
 
+    /**
+     * @param request the request parameters of ListAIAgentInstance  ListAIAgentInstanceRequest
+     * @return ListAIAgentInstanceResponse
+     */
     CompletableFuture<ListAIAgentInstanceResponse> listAIAgentInstance(ListAIAgentInstanceRequest request);
 
+    /**
+     * @param request the request parameters of ListAllPublicMediaTags  ListAllPublicMediaTagsRequest
+     * @return ListAllPublicMediaTagsResponse
+     */
     CompletableFuture<ListAllPublicMediaTagsResponse> listAllPublicMediaTags(ListAllPublicMediaTagsRequest request);
 
+    /**
+     * @param request the request parameters of ListAvatarTrainingJobs  ListAvatarTrainingJobsRequest
+     * @return ListAvatarTrainingJobsResponse
+     */
     CompletableFuture<ListAvatarTrainingJobsResponse> listAvatarTrainingJobs(ListAvatarTrainingJobsRequest request);
 
+    /**
+     * @param request the request parameters of ListAvatars  ListAvatarsRequest
+     * @return ListAvatarsResponse
+     */
     CompletableFuture<ListAvatarsResponse> listAvatars(ListAvatarsRequest request);
 
+    /**
+     * @param request the request parameters of ListBatchMediaProducingJobs  ListBatchMediaProducingJobsRequest
+     * @return ListBatchMediaProducingJobsResponse
+     */
     CompletableFuture<ListBatchMediaProducingJobsResponse> listBatchMediaProducingJobs(ListBatchMediaProducingJobsRequest request);
 
+    /**
+     * @param request the request parameters of ListCustomTemplates  ListCustomTemplatesRequest
+     * @return ListCustomTemplatesResponse
+     */
     CompletableFuture<ListCustomTemplatesResponse> listCustomTemplates(ListCustomTemplatesRequest request);
 
+    /**
+     * @param request the request parameters of ListCustomizedVoiceJobs  ListCustomizedVoiceJobsRequest
+     * @return ListCustomizedVoiceJobsResponse
+     */
     CompletableFuture<ListCustomizedVoiceJobsResponse> listCustomizedVoiceJobs(ListCustomizedVoiceJobsRequest request);
 
+    /**
+     * @param request the request parameters of ListCustomizedVoices  ListCustomizedVoicesRequest
+     * @return ListCustomizedVoicesResponse
+     */
     CompletableFuture<ListCustomizedVoicesResponse> listCustomizedVoices(ListCustomizedVoicesRequest request);
 
+    /**
+     * @param request the request parameters of ListDNADB  ListDNADBRequest
+     * @return ListDNADBResponse
+     */
     CompletableFuture<ListDNADBResponse> listDNADB(ListDNADBRequest request);
 
+    /**
+     * @param request the request parameters of ListDNAFiles  ListDNAFilesRequest
+     * @return ListDNAFilesResponse
+     */
     CompletableFuture<ListDNAFilesResponse> listDNAFiles(ListDNAFilesRequest request);
 
+    /**
+     * @param request the request parameters of ListDynamicImageJobs  ListDynamicImageJobsRequest
+     * @return ListDynamicImageJobsResponse
+     */
     CompletableFuture<ListDynamicImageJobsResponse> listDynamicImageJobs(ListDynamicImageJobsRequest request);
 
+    /**
+     * @param request the request parameters of ListEditingProjects  ListEditingProjectsRequest
+     * @return ListEditingProjectsResponse
+     */
     CompletableFuture<ListEditingProjectsResponse> listEditingProjects(ListEditingProjectsRequest request);
 
+    /**
+     * @param request the request parameters of ListLiveRecordFiles  ListLiveRecordFilesRequest
+     * @return ListLiveRecordFilesResponse
+     */
     CompletableFuture<ListLiveRecordFilesResponse> listLiveRecordFiles(ListLiveRecordFilesRequest request);
 
+    /**
+     * @param request the request parameters of ListLiveRecordJobs  ListLiveRecordJobsRequest
+     * @return ListLiveRecordJobsResponse
+     */
     CompletableFuture<ListLiveRecordJobsResponse> listLiveRecordJobs(ListLiveRecordJobsRequest request);
 
+    /**
+     * @param request the request parameters of ListLiveRecordTemplates  ListLiveRecordTemplatesRequest
+     * @return ListLiveRecordTemplatesResponse
+     */
     CompletableFuture<ListLiveRecordTemplatesResponse> listLiveRecordTemplates(ListLiveRecordTemplatesRequest request);
 
+    /**
+     * @param request the request parameters of ListLiveSnapshotFiles  ListLiveSnapshotFilesRequest
+     * @return ListLiveSnapshotFilesResponse
+     */
     CompletableFuture<ListLiveSnapshotFilesResponse> listLiveSnapshotFiles(ListLiveSnapshotFilesRequest request);
 
+    /**
+     * @param request the request parameters of ListLiveSnapshotJobs  ListLiveSnapshotJobsRequest
+     * @return ListLiveSnapshotJobsResponse
+     */
     CompletableFuture<ListLiveSnapshotJobsResponse> listLiveSnapshotJobs(ListLiveSnapshotJobsRequest request);
 
+    /**
+     * @param request the request parameters of ListLiveSnapshotTemplates  ListLiveSnapshotTemplatesRequest
+     * @return ListLiveSnapshotTemplatesResponse
+     */
     CompletableFuture<ListLiveSnapshotTemplatesResponse> listLiveSnapshotTemplates(ListLiveSnapshotTemplatesRequest request);
 
+    /**
+     * @param request the request parameters of ListLiveTranscodeJobs  ListLiveTranscodeJobsRequest
+     * @return ListLiveTranscodeJobsResponse
+     */
     CompletableFuture<ListLiveTranscodeJobsResponse> listLiveTranscodeJobs(ListLiveTranscodeJobsRequest request);
 
+    /**
+     * @param request the request parameters of ListLiveTranscodeTemplates  ListLiveTranscodeTemplatesRequest
+     * @return ListLiveTranscodeTemplatesResponse
+     */
     CompletableFuture<ListLiveTranscodeTemplatesResponse> listLiveTranscodeTemplates(ListLiveTranscodeTemplatesRequest request);
 
+    /**
+     * <b>description</b> :
+     * <p>If includeFileBasicInfo is set to true, the basic information, such as the duration and file size, of the source file is also returned. At most the first 100 entries that meet the specified conditions are returned. All media assets must exactly match all non-empty fields. The fields that support exact match include MediaType, Source, BusinessType, Category, and Status. If all information cannot be returned at a time, you can use NextToken to initiate a request to retrieve a new page of results.</p>
+     * 
+     * @param request the request parameters of ListMediaBasicInfos  ListMediaBasicInfosRequest
+     * @return ListMediaBasicInfosResponse
+     */
     CompletableFuture<ListMediaBasicInfosResponse> listMediaBasicInfos(ListMediaBasicInfosRequest request);
 
+    /**
+     * @param request the request parameters of ListMediaInfoJobs  ListMediaInfoJobsRequest
+     * @return ListMediaInfoJobsResponse
+     */
     CompletableFuture<ListMediaInfoJobsResponse> listMediaInfoJobs(ListMediaInfoJobsRequest request);
 
+    /**
+     * @param request the request parameters of ListMediaMarks  ListMediaMarksRequest
+     * @return ListMediaMarksResponse
+     */
     CompletableFuture<ListMediaMarksResponse> listMediaMarks(ListMediaMarksRequest request);
 
+    /**
+     * @param request the request parameters of ListMediaProducingJobs  ListMediaProducingJobsRequest
+     * @return ListMediaProducingJobsResponse
+     */
     CompletableFuture<ListMediaProducingJobsResponse> listMediaProducingJobs(ListMediaProducingJobsRequest request);
 
+    /**
+     * @param request the request parameters of ListPackageJobs  ListPackageJobsRequest
+     * @return ListPackageJobsResponse
+     */
     CompletableFuture<ListPackageJobsResponse> listPackageJobs(ListPackageJobsRequest request);
 
+    /**
+     * @param request the request parameters of ListPipelines  ListPipelinesRequest
+     * @return ListPipelinesResponse
+     */
     CompletableFuture<ListPipelinesResponse> listPipelines(ListPipelinesRequest request);
 
+    /**
+     * @param request the request parameters of ListPublicMediaBasicInfos  ListPublicMediaBasicInfosRequest
+     * @return ListPublicMediaBasicInfosResponse
+     */
     CompletableFuture<ListPublicMediaBasicInfosResponse> listPublicMediaBasicInfos(ListPublicMediaBasicInfosRequest request);
 
+    /**
+     * @param request the request parameters of ListSearchLib  ListSearchLibRequest
+     * @return ListSearchLibResponse
+     */
     CompletableFuture<ListSearchLibResponse> listSearchLib(ListSearchLibRequest request);
 
+    /**
+     * @param request the request parameters of ListSmartJobs  ListSmartJobsRequest
+     * @return ListSmartJobsResponse
+     */
     CompletableFuture<ListSmartJobsResponse> listSmartJobs(ListSmartJobsRequest request);
 
+    /**
+     * @param request the request parameters of ListSmartSysAvatarModels  ListSmartSysAvatarModelsRequest
+     * @return ListSmartSysAvatarModelsResponse
+     */
     CompletableFuture<ListSmartSysAvatarModelsResponse> listSmartSysAvatarModels(ListSmartSysAvatarModelsRequest request);
 
+    /**
+     * @param request the request parameters of ListSmartVoiceGroups  ListSmartVoiceGroupsRequest
+     * @return ListSmartVoiceGroupsResponse
+     */
     CompletableFuture<ListSmartVoiceGroupsResponse> listSmartVoiceGroups(ListSmartVoiceGroupsRequest request);
 
+    /**
+     * @param request the request parameters of ListSnapshotJobs  ListSnapshotJobsRequest
+     * @return ListSnapshotJobsResponse
+     */
     CompletableFuture<ListSnapshotJobsResponse> listSnapshotJobs(ListSnapshotJobsRequest request);
 
+    /**
+     * @param request the request parameters of ListSystemTemplates  ListSystemTemplatesRequest
+     * @return ListSystemTemplatesResponse
+     */
     CompletableFuture<ListSystemTemplatesResponse> listSystemTemplates(ListSystemTemplatesRequest request);
 
+    /**
+     * @param request the request parameters of ListTemplates  ListTemplatesRequest
+     * @return ListTemplatesResponse
+     */
     CompletableFuture<ListTemplatesResponse> listTemplates(ListTemplatesRequest request);
 
+    /**
+     * @param request the request parameters of ListTranscodeJobs  ListTranscodeJobsRequest
+     * @return ListTranscodeJobsResponse
+     */
     CompletableFuture<ListTranscodeJobsResponse> listTranscodeJobs(ListTranscodeJobsRequest request);
 
+    /**
+     * @param request the request parameters of QueryDNAJobList  QueryDNAJobListRequest
+     * @return QueryDNAJobListResponse
+     */
     CompletableFuture<QueryDNAJobListResponse> queryDNAJobList(QueryDNAJobListRequest request);
 
+    /**
+     * @param request the request parameters of QueryIProductionJob  QueryIProductionJobRequest
+     * @return QueryIProductionJobResponse
+     */
     CompletableFuture<QueryIProductionJobResponse> queryIProductionJob(QueryIProductionJobRequest request);
 
+    /**
+     * @param request the request parameters of QueryMediaCensorJobDetail  QueryMediaCensorJobDetailRequest
+     * @return QueryMediaCensorJobDetailResponse
+     */
     CompletableFuture<QueryMediaCensorJobDetailResponse> queryMediaCensorJobDetail(QueryMediaCensorJobDetailRequest request);
 
+    /**
+     * @param request the request parameters of QueryMediaCensorJobList  QueryMediaCensorJobListRequest
+     * @return QueryMediaCensorJobListResponse
+     */
     CompletableFuture<QueryMediaCensorJobListResponse> queryMediaCensorJobList(QueryMediaCensorJobListRequest request);
 
+    /**
+     * @param request the request parameters of QueryMediaIndexJob  QueryMediaIndexJobRequest
+     * @return QueryMediaIndexJobResponse
+     */
     CompletableFuture<QueryMediaIndexJobResponse> queryMediaIndexJob(QueryMediaIndexJobRequest request);
 
+    /**
+     * @param request the request parameters of QuerySearchIndex  QuerySearchIndexRequest
+     * @return QuerySearchIndexResponse
+     */
     CompletableFuture<QuerySearchIndexResponse> querySearchIndex(QuerySearchIndexRequest request);
 
+    /**
+     * @param request the request parameters of QuerySearchLib  QuerySearchLibRequest
+     * @return QuerySearchLibResponse
+     */
     CompletableFuture<QuerySearchLibResponse> querySearchLib(QuerySearchLibRequest request);
 
+    /**
+     * @param request the request parameters of QuerySmarttagJob  QuerySmarttagJobRequest
+     * @return QuerySmarttagJobResponse
+     */
     CompletableFuture<QuerySmarttagJobResponse> querySmarttagJob(QuerySmarttagJobRequest request);
 
+    /**
+     * <b>description</b> :
+     * <p>You can also call this operation to overwrite media files. After you obtain the upload URL of a media file, you can upload the media file again without changing the audio or video ID.</p>
+     * 
+     * @param request the request parameters of RefreshUploadMedia  RefreshUploadMediaRequest
+     * @return RefreshUploadMediaResponse
+     */
     CompletableFuture<RefreshUploadMediaResponse> refreshUploadMedia(RefreshUploadMediaRequest request);
 
+    /**
+     * <b>description</b> :
+     * <p>Registering a media asset is an asynchronous job that takes 2 to 3 seconds. When the operation returns the ID of the media asset, the registration may have not be completed. If you call the GetMediaInfo operation at this time, you may fail to obtain the information about the media asset.</p>
+     * 
+     * @param request the request parameters of RegisterMediaInfo  RegisterMediaInfoRequest
+     * @return RegisterMediaInfoResponse
+     */
     CompletableFuture<RegisterMediaInfoResponse> registerMediaInfo(RegisterMediaInfoRequest request);
 
+    /**
+     * <b>description</b> :
+     * <p>You can call this operation to register a media stream file in an Object Storage Service (OSS) bucket with Intelligent Media Services (IMS) and associate the media stream with the specified media asset ID.</p>
+     * 
+     * @param request the request parameters of RegisterMediaStream  RegisterMediaStreamRequest
+     * @return RegisterMediaStreamResponse
+     */
     CompletableFuture<RegisterMediaStreamResponse> registerMediaStream(RegisterMediaStreamRequest request);
 
+    /**
+     * @param request the request parameters of SearchEditingProject  SearchEditingProjectRequest
+     * @return SearchEditingProjectResponse
+     */
     CompletableFuture<SearchEditingProjectResponse> searchEditingProject(SearchEditingProjectRequest request);
 
+    /**
+     * @param request the request parameters of SearchIndexJobRerun  SearchIndexJobRerunRequest
+     * @return SearchIndexJobRerunResponse
+     */
     CompletableFuture<SearchIndexJobRerunResponse> searchIndexJobRerun(SearchIndexJobRerunRequest request);
 
     /**
-      * If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).
-      *
+     * <b>description</b> :
+     * <p>If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).</p>
+     * 
+     * @param request the request parameters of SearchMedia  SearchMediaRequest
+     * @return SearchMediaResponse
      */
     CompletableFuture<SearchMediaResponse> searchMedia(SearchMediaRequest request);
 
+    /**
+     * <b>description</b> :
+     * <p>You can call this operation to query media assets or media asset clips based on character names, subtitles, or AI categories.</p>
+     * 
+     * @param request the request parameters of SearchMediaByAILabel  SearchMediaByAILabelRequest
+     * @return SearchMediaByAILabelResponse
+     */
     CompletableFuture<SearchMediaByAILabelResponse> searchMediaByAILabel(SearchMediaByAILabelRequest request);
 
+    /**
+     * <b>description</b> :
+     * <p>If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).</p>
+     * 
+     * @param request the request parameters of SearchMediaByFace  SearchMediaByFaceRequest
+     * @return SearchMediaByFaceResponse
+     */
     CompletableFuture<SearchMediaByFaceResponse> searchMediaByFace(SearchMediaByFaceRequest request);
 
+    /**
+     * @param request the request parameters of SearchMediaByHybrid  SearchMediaByHybridRequest
+     * @return SearchMediaByHybridResponse
+     */
     CompletableFuture<SearchMediaByHybridResponse> searchMediaByHybrid(SearchMediaByHybridRequest request);
 
+    /**
+     * <b>description</b> :
+     * <p>If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).</p>
+     * 
+     * @param request the request parameters of SearchMediaByMultimodal  SearchMediaByMultimodalRequest
+     * @return SearchMediaByMultimodalResponse
+     */
     CompletableFuture<SearchMediaByMultimodalResponse> searchMediaByMultimodal(SearchMediaByMultimodalRequest request);
 
+    /**
+     * <b>description</b> :
+     * <p>If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).</p>
+     * 
+     * @param request the request parameters of SearchMediaClipByFace  SearchMediaClipByFaceRequest
+     * @return SearchMediaClipByFaceResponse
+     */
     CompletableFuture<SearchMediaClipByFaceResponse> searchMediaClipByFace(SearchMediaClipByFaceRequest request);
 
+    /**
+     * @param request the request parameters of SearchPublicMediaInfo  SearchPublicMediaInfoRequest
+     * @return SearchPublicMediaInfoResponse
+     */
     CompletableFuture<SearchPublicMediaInfoResponse> searchPublicMediaInfo(SearchPublicMediaInfoRequest request);
 
+    /**
+     * @param request the request parameters of SendAIAgentSpeech  SendAIAgentSpeechRequest
+     * @return SendAIAgentSpeechResponse
+     */
     CompletableFuture<SendAIAgentSpeechResponse> sendAIAgentSpeech(SendAIAgentSpeechRequest request);
 
+    /**
+     * @param request the request parameters of SendLiveSnapshotJobCommand  SendLiveSnapshotJobCommandRequest
+     * @return SendLiveSnapshotJobCommandResponse
+     */
     CompletableFuture<SendLiveSnapshotJobCommandResponse> sendLiveSnapshotJobCommand(SendLiveSnapshotJobCommandRequest request);
 
+    /**
+     * @param request the request parameters of SendLiveTranscodeJobCommand  SendLiveTranscodeJobCommandRequest
+     * @return SendLiveTranscodeJobCommandResponse
+     */
     CompletableFuture<SendLiveTranscodeJobCommandResponse> sendLiveTranscodeJobCommand(SendLiveTranscodeJobCommandRequest request);
 
+    /**
+     * @param request the request parameters of SetContentAnalyzeConfig  SetContentAnalyzeConfigRequest
+     * @return SetContentAnalyzeConfigResponse
+     */
     CompletableFuture<SetContentAnalyzeConfigResponse> setContentAnalyzeConfig(SetContentAnalyzeConfigRequest request);
 
+    /**
+     * @param request the request parameters of SetDefaultCustomTemplate  SetDefaultCustomTemplateRequest
+     * @return SetDefaultCustomTemplateResponse
+     */
     CompletableFuture<SetDefaultCustomTemplateResponse> setDefaultCustomTemplate(SetDefaultCustomTemplateRequest request);
 
+    /**
+     * @param request the request parameters of SetDefaultStorageLocation  SetDefaultStorageLocationRequest
+     * @return SetDefaultStorageLocationResponse
+     */
     CompletableFuture<SetDefaultStorageLocationResponse> setDefaultStorageLocation(SetDefaultStorageLocationRequest request);
 
+    /**
+     * @param request the request parameters of SetEventCallback  SetEventCallbackRequest
+     * @return SetEventCallbackResponse
+     */
     CompletableFuture<SetEventCallbackResponse> setEventCallback(SetEventCallbackRequest request);
 
+    /**
+     * @param request the request parameters of SetNotifyConfig  SetNotifyConfigRequest
+     * @return SetNotifyConfigResponse
+     */
     CompletableFuture<SetNotifyConfigResponse> setNotifyConfig(SetNotifyConfigRequest request);
 
+    /**
+     * @param request the request parameters of StartAIAgentInstance  StartAIAgentInstanceRequest
+     * @return StartAIAgentInstanceResponse
+     */
     CompletableFuture<StartAIAgentInstanceResponse> startAIAgentInstance(StartAIAgentInstanceRequest request);
 
+    /**
+     * @param request the request parameters of StartRtcRobotInstance  StartRtcRobotInstanceRequest
+     * @return StartRtcRobotInstanceResponse
+     */
     CompletableFuture<StartRtcRobotInstanceResponse> startRtcRobotInstance(StartRtcRobotInstanceRequest request);
 
+    /**
+     * @param request the request parameters of StartWorkflow  StartWorkflowRequest
+     * @return StartWorkflowResponse
+     */
     CompletableFuture<StartWorkflowResponse> startWorkflow(StartWorkflowRequest request);
 
+    /**
+     * @param request the request parameters of StopAIAgentInstance  StopAIAgentInstanceRequest
+     * @return StopAIAgentInstanceResponse
+     */
     CompletableFuture<StopAIAgentInstanceResponse> stopAIAgentInstance(StopAIAgentInstanceRequest request);
 
+    /**
+     * @param request the request parameters of StopRtcRobotInstance  StopRtcRobotInstanceRequest
+     * @return StopRtcRobotInstanceResponse
+     */
     CompletableFuture<StopRtcRobotInstanceResponse> stopRtcRobotInstance(StopRtcRobotInstanceRequest request);
 
+    /**
+     * @param request the request parameters of SubmitASRJob  SubmitASRJobRequest
+     * @return SubmitASRJobResponse
+     */
     CompletableFuture<SubmitASRJobResponse> submitASRJob(SubmitASRJobRequest request);
 
+    /**
+     * @param request the request parameters of SubmitAudioProduceJob  SubmitAudioProduceJobRequest
+     * @return SubmitAudioProduceJobResponse
+     */
     CompletableFuture<SubmitAudioProduceJobResponse> submitAudioProduceJob(SubmitAudioProduceJobRequest request);
 
+    /**
+     * @param request the request parameters of SubmitAvatarTrainingJob  SubmitAvatarTrainingJobRequest
+     * @return SubmitAvatarTrainingJobResponse
+     */
     CompletableFuture<SubmitAvatarTrainingJobResponse> submitAvatarTrainingJob(SubmitAvatarTrainingJobRequest request);
 
+    /**
+     * @param request the request parameters of SubmitAvatarVideoJob  SubmitAvatarVideoJobRequest
+     * @return SubmitAvatarVideoJobResponse
+     */
     CompletableFuture<SubmitAvatarVideoJobResponse> submitAvatarVideoJob(SubmitAvatarVideoJobRequest request);
 
+    /**
+     * @param request the request parameters of SubmitBatchMediaProducingJob  SubmitBatchMediaProducingJobRequest
+     * @return SubmitBatchMediaProducingJobResponse
+     */
     CompletableFuture<SubmitBatchMediaProducingJobResponse> submitBatchMediaProducingJob(SubmitBatchMediaProducingJobRequest request);
 
+    /**
+     * @param request the request parameters of SubmitCustomizedVoiceJob  SubmitCustomizedVoiceJobRequest
+     * @return SubmitCustomizedVoiceJobResponse
+     */
     CompletableFuture<SubmitCustomizedVoiceJobResponse> submitCustomizedVoiceJob(SubmitCustomizedVoiceJobRequest request);
 
+    /**
+     * @param request the request parameters of SubmitDNAJob  SubmitDNAJobRequest
+     * @return SubmitDNAJobResponse
+     */
     CompletableFuture<SubmitDNAJobResponse> submitDNAJob(SubmitDNAJobRequest request);
 
+    /**
+     * @param request the request parameters of SubmitDynamicChartJob  SubmitDynamicChartJobRequest
+     * @return SubmitDynamicChartJobResponse
+     */
     CompletableFuture<SubmitDynamicChartJobResponse> submitDynamicChartJob(SubmitDynamicChartJobRequest request);
 
+    /**
+     * @param request the request parameters of SubmitDynamicImageJob  SubmitDynamicImageJobRequest
+     * @return SubmitDynamicImageJobResponse
+     */
     CompletableFuture<SubmitDynamicImageJobResponse> submitDynamicImageJob(SubmitDynamicImageJobRequest request);
 
+    /**
+     * @param request the request parameters of SubmitIProductionJob  SubmitIProductionJobRequest
+     * @return SubmitIProductionJobResponse
+     */
     CompletableFuture<SubmitIProductionJobResponse> submitIProductionJob(SubmitIProductionJobRequest request);
 
+    /**
+     * @param request the request parameters of SubmitLiveEditingJob  SubmitLiveEditingJobRequest
+     * @return SubmitLiveEditingJobResponse
+     */
     CompletableFuture<SubmitLiveEditingJobResponse> submitLiveEditingJob(SubmitLiveEditingJobRequest request);
 
+    /**
+     * @param request the request parameters of SubmitLiveRecordJob  SubmitLiveRecordJobRequest
+     * @return SubmitLiveRecordJobResponse
+     */
     CompletableFuture<SubmitLiveRecordJobResponse> submitLiveRecordJob(SubmitLiveRecordJobRequest request);
 
+    /**
+     * @param request the request parameters of SubmitLiveSnapshotJob  SubmitLiveSnapshotJobRequest
+     * @return SubmitLiveSnapshotJobResponse
+     */
     CompletableFuture<SubmitLiveSnapshotJobResponse> submitLiveSnapshotJob(SubmitLiveSnapshotJobRequest request);
 
+    /**
+     * @param request the request parameters of SubmitLiveTranscodeJob  SubmitLiveTranscodeJobRequest
+     * @return SubmitLiveTranscodeJobResponse
+     */
     CompletableFuture<SubmitLiveTranscodeJobResponse> submitLiveTranscodeJob(SubmitLiveTranscodeJobRequest request);
 
+    /**
+     * @param request the request parameters of SubmitMediaAiAnalysisJob  SubmitMediaAiAnalysisJobRequest
+     * @return SubmitMediaAiAnalysisJobResponse
+     */
     CompletableFuture<SubmitMediaAiAnalysisJobResponse> submitMediaAiAnalysisJob(SubmitMediaAiAnalysisJobRequest request);
 
+    /**
+     * @param request the request parameters of SubmitMediaCensorJob  SubmitMediaCensorJobRequest
+     * @return SubmitMediaCensorJobResponse
+     */
     CompletableFuture<SubmitMediaCensorJobResponse> submitMediaCensorJob(SubmitMediaCensorJobRequest request);
 
+    /**
+     * @param request the request parameters of SubmitMediaInfoJob  SubmitMediaInfoJobRequest
+     * @return SubmitMediaInfoJobResponse
+     */
     CompletableFuture<SubmitMediaInfoJobResponse> submitMediaInfoJob(SubmitMediaInfoJobRequest request);
 
+    /**
+     * @param request the request parameters of SubmitMediaProducingJob  SubmitMediaProducingJobRequest
+     * @return SubmitMediaProducingJobResponse
+     */
     CompletableFuture<SubmitMediaProducingJobResponse> submitMediaProducingJob(SubmitMediaProducingJobRequest request);
 
+    /**
+     * @param request the request parameters of SubmitPackageJob  SubmitPackageJobRequest
+     * @return SubmitPackageJobResponse
+     */
     CompletableFuture<SubmitPackageJobResponse> submitPackageJob(SubmitPackageJobRequest request);
 
+    /**
+     * @param request the request parameters of SubmitSmarttagJob  SubmitSmarttagJobRequest
+     * @return SubmitSmarttagJobResponse
+     */
     CompletableFuture<SubmitSmarttagJobResponse> submitSmarttagJob(SubmitSmarttagJobRequest request);
 
+    /**
+     * @param request the request parameters of SubmitSnapshotJob  SubmitSnapshotJobRequest
+     * @return SubmitSnapshotJobResponse
+     */
     CompletableFuture<SubmitSnapshotJobResponse> submitSnapshotJob(SubmitSnapshotJobRequest request);
 
+    /**
+     * @param request the request parameters of SubmitSportsHighlightsJob  SubmitSportsHighlightsJobRequest
+     * @return SubmitSportsHighlightsJobResponse
+     */
     CompletableFuture<SubmitSportsHighlightsJobResponse> submitSportsHighlightsJob(SubmitSportsHighlightsJobRequest request);
 
+    /**
+     * @param request the request parameters of SubmitStandardCustomizedVoiceJob  SubmitStandardCustomizedVoiceJobRequest
+     * @return SubmitStandardCustomizedVoiceJobResponse
+     */
     CompletableFuture<SubmitStandardCustomizedVoiceJobResponse> submitStandardCustomizedVoiceJob(SubmitStandardCustomizedVoiceJobRequest request);
 
+    /**
+     * @param request the request parameters of SubmitSyncMediaInfoJob  SubmitSyncMediaInfoJobRequest
+     * @return SubmitSyncMediaInfoJobResponse
+     */
     CompletableFuture<SubmitSyncMediaInfoJobResponse> submitSyncMediaInfoJob(SubmitSyncMediaInfoJobRequest request);
 
+    /**
+     * @param request the request parameters of SubmitTextGenerateJob  SubmitTextGenerateJobRequest
+     * @return SubmitTextGenerateJobResponse
+     */
     CompletableFuture<SubmitTextGenerateJobResponse> submitTextGenerateJob(SubmitTextGenerateJobRequest request);
 
+    /**
+     * @param request the request parameters of SubmitTranscodeJob  SubmitTranscodeJobRequest
+     * @return SubmitTranscodeJobResponse
+     */
     CompletableFuture<SubmitTranscodeJobResponse> submitTranscodeJob(SubmitTranscodeJobRequest request);
 
+    /**
+     * <b>description</b> :
+     * <p>After you call this operation to submit a video translation job, the system returns a job ID. You can call the GetSmartHandleJob operation based on the job ID to obtain the status and result information of the job.</p>
+     * 
+     * @param request the request parameters of SubmitVideoTranslationJob  SubmitVideoTranslationJobRequest
+     * @return SubmitVideoTranslationJobResponse
+     */
     CompletableFuture<SubmitVideoTranslationJobResponse> submitVideoTranslationJob(SubmitVideoTranslationJobRequest request);
 
+    /**
+     * @param request the request parameters of UpdateAIAgentInstance  UpdateAIAgentInstanceRequest
+     * @return UpdateAIAgentInstanceResponse
+     */
     CompletableFuture<UpdateAIAgentInstanceResponse> updateAIAgentInstance(UpdateAIAgentInstanceRequest request);
 
+    /**
+     * @param request the request parameters of UpdateAvatarTrainingJob  UpdateAvatarTrainingJobRequest
+     * @return UpdateAvatarTrainingJobResponse
+     */
     CompletableFuture<UpdateAvatarTrainingJobResponse> updateAvatarTrainingJob(UpdateAvatarTrainingJobRequest request);
 
+    /**
+     * <b>description</b> :
+     * <p>After you create a media asset category, you can call this operation to find the category based on the category ID and change the name of the category.</p>
+     * 
+     * @param request the request parameters of UpdateCategory  UpdateCategoryRequest
+     * @return UpdateCategoryResponse
+     */
     CompletableFuture<UpdateCategoryResponse> updateCategory(UpdateCategoryRequest request);
 
+    /**
+     * @param request the request parameters of UpdateCustomTemplate  UpdateCustomTemplateRequest
+     * @return UpdateCustomTemplateResponse
+     */
     CompletableFuture<UpdateCustomTemplateResponse> updateCustomTemplate(UpdateCustomTemplateRequest request);
 
+    /**
+     * @param request the request parameters of UpdateCustomizedVoice  UpdateCustomizedVoiceRequest
+     * @return UpdateCustomizedVoiceResponse
+     */
     CompletableFuture<UpdateCustomizedVoiceResponse> updateCustomizedVoice(UpdateCustomizedVoiceRequest request);
 
+    /**
+     * @param request the request parameters of UpdateEditingProject  UpdateEditingProjectRequest
+     * @return UpdateEditingProjectResponse
+     */
     CompletableFuture<UpdateEditingProjectResponse> updateEditingProject(UpdateEditingProjectRequest request);
 
+    /**
+     * @param request the request parameters of UpdateLiveRecordTemplate  UpdateLiveRecordTemplateRequest
+     * @return UpdateLiveRecordTemplateResponse
+     */
     CompletableFuture<UpdateLiveRecordTemplateResponse> updateLiveRecordTemplate(UpdateLiveRecordTemplateRequest request);
 
+    /**
+     * @param request the request parameters of UpdateLiveSnapshotTemplate  UpdateLiveSnapshotTemplateRequest
+     * @return UpdateLiveSnapshotTemplateResponse
+     */
     CompletableFuture<UpdateLiveSnapshotTemplateResponse> updateLiveSnapshotTemplate(UpdateLiveSnapshotTemplateRequest request);
 
+    /**
+     * @param request the request parameters of UpdateLiveTranscodeJob  UpdateLiveTranscodeJobRequest
+     * @return UpdateLiveTranscodeJobResponse
+     */
     CompletableFuture<UpdateLiveTranscodeJobResponse> updateLiveTranscodeJob(UpdateLiveTranscodeJobRequest request);
 
+    /**
+     * @param request the request parameters of UpdateLiveTranscodeTemplate  UpdateLiveTranscodeTemplateRequest
+     * @return UpdateLiveTranscodeTemplateResponse
+     */
     CompletableFuture<UpdateLiveTranscodeTemplateResponse> updateLiveTranscodeTemplate(UpdateLiveTranscodeTemplateRequest request);
 
+    /**
+     * <b>description</b> :
+     * <p>If the MediaId parameter is specified, the MediaId parameter is preferentially used for the query. If the MediaId parameter is left empty, the InputURL parameter must be specified. The request ID and media asset ID are returned. You cannot modify the input URL of a media asset by specifying the ID of the media asset.</p>
+     * 
+     * @param request the request parameters of UpdateMediaInfo  UpdateMediaInfoRequest
+     * @return UpdateMediaInfoResponse
+     */
     CompletableFuture<UpdateMediaInfoResponse> updateMediaInfo(UpdateMediaInfoRequest request);
 
+    /**
+     * @param request the request parameters of UpdateMediaMarks  UpdateMediaMarksRequest
+     * @return UpdateMediaMarksResponse
+     */
     CompletableFuture<UpdateMediaMarksResponse> updateMediaMarks(UpdateMediaMarksRequest request);
 
+    /**
+     * @param request the request parameters of UpdateMediaToSearchLib  UpdateMediaToSearchLibRequest
+     * @return UpdateMediaToSearchLibResponse
+     */
     CompletableFuture<UpdateMediaToSearchLibResponse> updateMediaToSearchLib(UpdateMediaToSearchLibRequest request);
 
+    /**
+     * @param request the request parameters of UpdatePipeline  UpdatePipelineRequest
+     * @return UpdatePipelineResponse
+     */
     CompletableFuture<UpdatePipelineResponse> updatePipeline(UpdatePipelineRequest request);
 
+    /**
+     * @param request the request parameters of UpdateRtcRobotInstance  UpdateRtcRobotInstanceRequest
+     * @return UpdateRtcRobotInstanceResponse
+     */
     CompletableFuture<UpdateRtcRobotInstanceResponse> updateRtcRobotInstance(UpdateRtcRobotInstanceRequest request);
 
+    /**
+     * @param request the request parameters of UpdateTemplate  UpdateTemplateRequest
+     * @return UpdateTemplateResponse
+     */
     CompletableFuture<UpdateTemplateResponse> updateTemplate(UpdateTemplateRequest request);
 
+    /**
+     * <b>description</b> :
+     * <p>  If a callback is configured, you will receive an UploadByURLComplete event notification after the file is uploaded. You can query the upload status by calling the GetURLUploadInfos operation.</p>
+     * <ul>
+     * <li>After a request is submitted, the upload job is queued as an asynchronous job in the cloud. You can query the status of the upload job based on information such as the URL and media asset ID that are returned in the event notification.</li>
+     * <li>You can call this operation to upload media files that are not stored on a local server or device and must be uploaded by using URLs that are accessible over the Internet.</li>
+     * <li>You can call this operation to upload media files only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media file to an OSS bucket, pull the file to a local directory, use <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a> to upload the file to an OSS bucket, and then call the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the file in the OSS bucket with the media asset library.</li>
+     * <li>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</li>
+     * <li>You can call this operation to upload only audio and video files.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UploadMediaByURL  UploadMediaByURLRequest
+     * @return UploadMediaByURLResponse
+     */
     CompletableFuture<UploadMediaByURLResponse> uploadMediaByURL(UploadMediaByURLRequest request);
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation to pull a media stream file based on a URL and upload the file. After the media stream file is uploaded, the media stream is associated with the specified media asset ID.</p>
+     * <ul>
+     * <li>You can call this operation to upload media stream files only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media stream file to an OSS bucket, pull the file to a local directory, use <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a> to upload the file to an OSS bucket, and then call the <a href="https://help.aliyun.com/document_detail/440765.html">RegisterMediaStream</a> operation to associate the media stream with the specified media asset ID.</li>
+     * <li>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UploadStreamByURL  UploadStreamByURLRequest
+     * @return UploadStreamByURLResponse
+     */
     CompletableFuture<UploadStreamByURLResponse> uploadStreamByURL(UploadStreamByURLRequest request);
 
 }

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendAIAgentSpeechRequest} extends {@link RequestModel}
  *
  * <p>SendAIAgentSpeechRequest</p>
@@ -92,7 +93,10 @@ public class SendAIAgentSpeechRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39f8e0bc005e4f309379701645f4****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -101,7 +105,7 @@ public class SendAIAgentSpeechRequest extends Request {
         }
 
         /**
-         * Text.
+         * <p>This parameter is required.</p>
          */
         public Builder text(String text) {
             this.putQueryParameter("Text", text);

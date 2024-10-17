@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPlayInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetPlayInfoResponseBody</p>
@@ -61,7 +62,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MediaBase.
+         * <p>The information about the media asset.</p>
          */
         public Builder mediaBase(MediaBase mediaBase) {
             this.mediaBase = mediaBase;
@@ -69,7 +70,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         }
 
         /**
-         * PlayInfoList.
+         * <p>The information about the audio or video stream.</p>
          */
         public Builder playInfoList(java.util.List < PlayInfoList> playInfoList) {
             this.playInfoList = playInfoList;
@@ -77,7 +78,10 @@ public class GetPlayInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class GetPlayInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPlayInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPlayInfoResponseBody</p>
+     */
     public static class MediaBase extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CateId")
         private Long cateId;
@@ -213,7 +223,15 @@ public class GetPlayInfoResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * CateId.
+             * <p>The category ID. You can use one of the following methods to obtain the ID:</p>
+             * <ul>
+             * <li>Log on to the <a href="https://ims.console.aliyun.com">Intelligent Media Services (IMS) console</a> and choose <strong>Media Asset Management</strong> &gt; <strong>Category Management</strong> to view the category ID.</li>
+             * <li>View the value of the CateId parameter returned by the AddCategory operation that you called to create a category.</li>
+             * <li>View the value of the CateId parameter returned by the GetCategories operation that you called to query a category.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>4220</p>
              */
             public Builder cateId(Long cateId) {
                 this.cateId = cateId;
@@ -221,7 +239,10 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CoverURL.
+             * <p>The URL of the thumbnail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https://***.oss-cn-shanghai.aliyuncs.com/cover/281c64d6-b5fb-4c57-97cd-84da56a8b151_large_cover_url.jpg</p>
              */
             public Builder coverURL(String coverURL) {
                 this.coverURL = coverURL;
@@ -229,7 +250,10 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The time when the media asset was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-22T10:07:31+08:00</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -237,7 +261,10 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The content description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desc</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -245,7 +272,10 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId.
+             * <p>The ID of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2eea77a61c7b4ddd95bec34a6f65b***</p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -253,7 +283,16 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MediaTags.
+             * <p>The tags.</p>
+             * <ul>
+             * <li>Up to 16 tags are supported.</li>
+             * <li>Multiple tags are separated by commas (,).</li>
+             * <li>Each tag can be up to 32 bytes in length.</li>
+             * <li>The value is encoded in UTF-8.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>test,ccc</p>
              */
             public Builder mediaTags(String mediaTags) {
                 this.mediaTags = mediaTags;
@@ -261,7 +300,11 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MediaType.
+             * <p>The type of the media asset. Valid values:</p>
+             * <p>video audio</p>
+             * 
+             * <strong>example:</strong>
+             * <p>video</p>
              */
             public Builder mediaType(String mediaType) {
                 this.mediaType = mediaType;
@@ -269,7 +312,14 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The resource status. Valid values:</p>
+             * <p>Init: the initial state, which indicates that the source file is not ready.</p>
+             * <p>Preparing: The source file is being prepared. For example, the file is being uploaded or edited.</p>
+             * <p>PrepareFail: The source file failed to be prepared. For example, the information of the source file failed to be obtained.</p>
+             * <p>Normal: The source file is ready.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -277,7 +327,10 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testTitle</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -291,6 +344,12 @@ public class GetPlayInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPlayInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPlayInfoResponseBody</p>
+     */
     public static class PlayInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BitDepth")
         private Integer bitDepth;
@@ -582,7 +641,10 @@ public class GetPlayInfoResponseBody extends TeaModel {
             private Long width; 
 
             /**
-             * BitDepth.
+             * <p>The color depth.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder bitDepth(Integer bitDepth) {
                 this.bitDepth = bitDepth;
@@ -590,7 +652,10 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Bitrate.
+             * <p>The bitrate of the media stream. Unit: Kbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -598,7 +663,10 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The time when the media stream was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-10T02:28:49Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -606,7 +674,22 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Definition.
+             * <p>The quality of the media stream. Valid values:</p>
+             * <ul>
+             * <li><strong>FD</strong>: low definition</li>
+             * <li><strong>LD</strong>: standard definition</li>
+             * <li><strong>SD</strong>: high definition</li>
+             * <li><strong>HD</strong>: ultra-high definition</li>
+             * <li><strong>OD</strong>: original definition</li>
+             * <li><strong>2K</strong></li>
+             * <li><strong>4K</strong></li>
+             * <li><strong>SQ</strong>: standard sound quality</li>
+             * <li><strong>HQ</strong>: high sound quality</li>
+             * <li><strong>AUTO</strong>: adaptive bitrate</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>HD</p>
              */
             public Builder definition(String definition) {
                 this.definition = definition;
@@ -614,7 +697,10 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration of the media stream. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9.0464</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -622,7 +708,14 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Encrypt.
+             * <p>Indicates whether the media stream is encrypted. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The media stream is not encrypted.</li>
+             * <li><strong>1</strong>: The media stream is encrypted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder encrypt(Long encrypt) {
                 this.encrypt = encrypt;
@@ -630,7 +723,17 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EncryptType.
+             * <p>The encryption type of the media stream. Valid values:</p>
+             * <ul>
+             * <li><strong>AliyunVoDEncryption</strong>: Alibaba Cloud proprietary cryptography</li>
+             * <li><strong>HLSEncryption</strong>: HTTP Live Streaming (HLS) encryption</li>
+             * </ul>
+             * <blockquote>
+             * <p> If the encryption type is AliyunVoDEncryption, only ApsaraVideo Player SDK can be used to play videos.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunVoDEncryption</p>
              */
             public Builder encryptType(String encryptType) {
                 this.encryptType = encryptType;
@@ -638,7 +741,10 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FileURL.
+             * <p>The OSS URL of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://outin-***.oss-cn-shanghai.aliyuncs.com/sv/43a68ee9-181809b6aba/43a68ee9-181809b6aba.mpeg">http://outin-***.oss-cn-shanghai.aliyuncs.com/sv/43a68ee9-181809b6aba/43a68ee9-181809b6aba.mpeg</a></p>
              */
             public Builder fileURL(String fileURL) {
                 this.fileURL = fileURL;
@@ -646,7 +752,14 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Format.
+             * <p>The format of the media stream.</p>
+             * <ul>
+             * <li>If the media asset is a video file, the valid values are <strong>mp4</strong> and <strong>m3u8</strong>.</li>
+             * <li>If the media asset is an audio-only file, the value is <strong>mp3</strong>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>mp4</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -654,7 +767,10 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Fps.
+             * <p>The frame rate of the media stream. Unit: frames per second (FPS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -662,7 +778,18 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * HDRType.
+             * <p>The high dynamic range (HDR) type of the media stream. Valid values:</p>
+             * <ul>
+             * <li>HDR</li>
+             * <li>HDR10</li>
+             * <li>HLG</li>
+             * <li>DolbyVision</li>
+             * <li>HDRVivid</li>
+             * <li>SDR+</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>HDR</p>
              */
             public Builder HDRType(String HDRType) {
                 this.HDRType = HDRType;
@@ -670,7 +797,10 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The height of the media stream. Unit: pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1080</p>
              */
             public Builder height(Long height) {
                 this.height = height;
@@ -678,7 +808,10 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36c9d38e70bf43ed9f7f8f48d6356***</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -686,7 +819,10 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ModificationTime.
+             * <p>The time when the media stream was updated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-13T11:39:41.714+08:00</p>
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -694,7 +830,16 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NarrowBandType.
+             * <p>The type of Narrowband HD™ transcoding. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: standard transcoding</li>
+             * <li><strong>1.0</strong>: Narrowband HD™ 1.0 transcoding</li>
+             * <li><strong>2.0</strong>: Narrowband HD™ 2.0 transcoding</li>
+             * </ul>
+             * <p>This parameter is returned only when a definition that is available in the built-in Narrowband HD™ 1.0 transcoding template is specified. For more information, see the <a href="https://help.aliyun.com/document_detail/52839.html">Definition parameter in TranscodeTemplate</a> table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder narrowBandType(String narrowBandType) {
                 this.narrowBandType = narrowBandType;
@@ -702,7 +847,10 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PlayURL.
+             * <p>The playback URL of the media stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https://***.aliyuncdn.com/sv/756bee1-17f980f0945/756bee1-17f980f0945.mp4</p>
              */
             public Builder playURL(String playURL) {
                 this.playURL = playURL;
@@ -710,7 +858,10 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The size of the media stream. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>418112</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -718,7 +869,14 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the media stream. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong></li>
+             * <li><strong>Invisible</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -726,7 +884,10 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StreamTags.
+             * <p>The tags of the media stream, which are used to identify the transcoding type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;{&quot;ims.audioServiceType&quot;: &quot;AudioEnhancement&quot;}&quot;</p>
              */
             public Builder streamTags(String streamTags) {
                 this.streamTags = streamTags;
@@ -734,7 +895,10 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StreamType.
+             * <p>The type of the media stream. If the media stream is a video stream, the value is <strong>video</strong>. If the media stream is an audio-only stream, the value is <strong>audio</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>video</p>
              */
             public Builder streamType(String streamType) {
                 this.streamType = streamType;
@@ -742,7 +906,18 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TransTemplateType.
+             * <p>The type of the transcoding template. Valid values:</p>
+             * <ul>
+             * <li>Normal: standard transcoding</li>
+             * <li>AudioTranscode: audio transcoding</li>
+             * <li>Remux: container format conversion</li>
+             * <li>NarrowBandV1: Narrowband HD™ 1.0</li>
+             * <li>NarrowBandV2: Narrowband HD™ 2.0</li>
+             * <li>UHD: audio and video enhancement (ultra-high definition)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder transTemplateType(String transTemplateType) {
                 this.transTemplateType = transTemplateType;
@@ -750,7 +925,10 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * WatermarkId.
+             * <p>The ID of the watermark that is associated with the media stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5bed88672b1e2520ead228935ed51***</p>
              */
             public Builder watermarkId(String watermarkId) {
                 this.watermarkId = watermarkId;
@@ -758,7 +936,10 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The width of the media stream. Unit: pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder width(Long width) {
                 this.width = width;

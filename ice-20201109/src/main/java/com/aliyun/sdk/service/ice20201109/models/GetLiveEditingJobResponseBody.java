@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLiveEditingJobResponseBody} extends {@link TeaModel}
  *
  * <p>GetLiveEditingJobResponseBody</p>
@@ -70,6 +71,12 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetLiveEditingJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLiveEditingJobResponseBody</p>
+     */
     public static class LiveStreamConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
@@ -151,6 +158,12 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetLiveEditingJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLiveEditingJobResponseBody</p>
+     */
     public static class MediaProduceConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
@@ -192,6 +205,12 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetLiveEditingJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLiveEditingJobResponseBody</p>
+     */
     public static class OutputMediaConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bitrate")
         private Long bitrate;
@@ -353,6 +372,12 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetLiveEditingJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLiveEditingJobResponseBody</p>
+     */
     public static class LiveEditingJob extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Clips")
         private String clips;

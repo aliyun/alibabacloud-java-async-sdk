@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLiveRecordTemplateRequest} extends {@link RequestModel}
  *
  * <p>DeleteLiveRecordTemplateRequest</p>
@@ -54,7 +55,11 @@ public class DeleteLiveRecordTemplateRequest extends Request {
         } 
 
         /**
-         * 代表资源一级ID的资源属性字段
+         * <p>代表资源一级ID的资源属性字段</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69e1f9fe-1e97-11ed-ba64-0c42a1b73d66</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

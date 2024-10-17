@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLiveRecordJobRequest} extends {@link RequestModel}
  *
  * <p>GetLiveRecordJobRequest</p>
@@ -54,7 +55,10 @@ public class GetLiveRecordJobRequest extends Request {
         } 
 
         /**
-         * JobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ab0e3e76-1e9d-11ed-ba64-0c42a1b73d66</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

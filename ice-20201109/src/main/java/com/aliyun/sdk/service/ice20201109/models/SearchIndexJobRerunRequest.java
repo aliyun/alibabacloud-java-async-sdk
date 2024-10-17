@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchIndexJobRerunRequest} extends {@link RequestModel}
  *
  * <p>SearchIndexJobRerunRequest</p>
@@ -105,7 +106,10 @@ public class SearchIndexJobRerunRequest extends Request {
         }
 
         /**
-         * MediaIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>b48fb04483915d4f2cd8</strong></strong></strong>,<strong><strong><strong>c48fb37407365d4f2cd8</strong></strong></strong></p>
          */
         public Builder mediaIds(String mediaIds) {
             this.putQueryParameter("MediaIds", mediaIds);

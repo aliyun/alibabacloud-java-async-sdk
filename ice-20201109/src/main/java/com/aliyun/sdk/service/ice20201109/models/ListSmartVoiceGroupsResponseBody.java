@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSmartVoiceGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSmartVoiceGroupsResponseBody</p>
@@ -49,7 +50,7 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
         private java.util.List < VoiceGroups> voiceGroups; 
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +71,12 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSmartVoiceGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSmartVoiceGroupsResponseBody</p>
+     */
     public static class VoiceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
@@ -251,6 +258,12 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSmartVoiceGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSmartVoiceGroupsResponseBody</p>
+     */
     public static class VoiceGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateKMSDataKeyResponseBody} extends {@link TeaModel}
  *
  * <p>GenerateKMSDataKeyResponseBody</p>
@@ -70,6 +71,12 @@ public class GenerateKMSDataKeyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GenerateKMSDataKeyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GenerateKMSDataKeyResponseBody</p>
+     */
     public static class DataKey extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CiphertextBlob")
         private String ciphertextBlob;

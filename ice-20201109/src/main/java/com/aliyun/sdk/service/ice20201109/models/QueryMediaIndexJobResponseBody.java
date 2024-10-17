@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMediaIndexJobResponseBody} extends {@link TeaModel}
  *
  * <p>QueryMediaIndexJobResponseBody</p>
@@ -73,7 +74,10 @@ public class QueryMediaIndexJobResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class QueryMediaIndexJobResponseBody extends TeaModel {
         }
 
         /**
-         * IndexJobInfoList.
+         * <p>The indexing jobs enabled for the media asset.</p>
          */
         public Builder indexJobInfoList(java.util.List < IndexJobInfoList> indexJobInfoList) {
             this.indexJobInfoList = indexJobInfoList;
@@ -89,7 +93,10 @@ public class QueryMediaIndexJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4E84BE44-58A7-<strong><strong>-</strong></strong>-FBEBEA16EF94</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +104,14 @@ public class QueryMediaIndexJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -110,6 +124,12 @@ public class QueryMediaIndexJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryMediaIndexJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaIndexJobResponseBody</p>
+     */
     public static class IndexJobInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtFinish")
         private String gmtFinish;
@@ -173,7 +193,10 @@ public class QueryMediaIndexJobResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * GmtFinish.
+             * <p>The end time of the indexing job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-11-21 11:33:51</p>
              */
             public Builder gmtFinish(String gmtFinish) {
                 this.gmtFinish = gmtFinish;
@@ -181,7 +204,10 @@ public class QueryMediaIndexJobResponseBody extends TeaModel {
             }
 
             /**
-             * GmtSubmit.
+             * <p>The time when the index job was submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-11-21 11:33:50</p>
              */
             public Builder gmtSubmit(String gmtSubmit) {
                 this.gmtSubmit = gmtSubmit;
@@ -189,7 +215,15 @@ public class QueryMediaIndexJobResponseBody extends TeaModel {
             }
 
             /**
-             * IndexType.
+             * <p>The index type. Valid values:</p>
+             * <ul>
+             * <li>mm: large visual model.</li>
+             * <li>face: face recognition.</li>
+             * <li>aiLabel: smart tagging.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>mm</p>
              */
             public Builder indexType(String indexType) {
                 this.indexType = indexType;
@@ -197,7 +231,15 @@ public class QueryMediaIndexJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The job status. Valid values:</p>
+             * <ul>
+             * <li>Running</li>
+             * <li>Success</li>
+             * <li>Fail</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;

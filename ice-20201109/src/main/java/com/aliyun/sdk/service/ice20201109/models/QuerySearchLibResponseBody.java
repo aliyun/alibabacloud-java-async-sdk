@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySearchLibResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySearchLibResponseBody</p>
@@ -85,7 +86,10 @@ public class QuerySearchLibResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,10 @@ public class QuerySearchLibResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +108,10 @@ public class QuerySearchLibResponseBody extends TeaModel {
         }
 
         /**
-         * SearchLibName.
+         * <p>The name of the search library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder searchLibName(String searchLibName) {
             this.searchLibName = searchLibName;
@@ -109,7 +119,16 @@ public class QuerySearchLibResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the search library.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>normal</li>
+         * <li>deleting</li>
+         * <li>deleteFail</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -117,7 +136,14 @@ public class QuerySearchLibResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

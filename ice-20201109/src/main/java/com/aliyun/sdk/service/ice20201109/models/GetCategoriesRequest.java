@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCategoriesRequest} extends {@link RequestModel}
  *
  * <p>GetCategoriesRequest</p>
@@ -132,7 +133,15 @@ public class GetCategoriesRequest extends Request {
         }
 
         /**
-         * CateId.
+         * <p>The category ID. You can use one of the following methods to obtain the ID:</p>
+         * <ul>
+         * <li>Log on to the <a href="https://ims.console.aliyun.com">Intelligent Media Services (IMS) console</a> and choose <strong>Media Asset Management</strong> &gt; <strong>Category Management</strong> to view the category ID.</li>
+         * <li>View the value of CateId returned by the AddCategory operation that you called to create a category.</li>
+         * <li>View the value of CateId returned by the GetCategories operation that you called to query a category.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>33</p>
          */
         public Builder cateId(Long cateId) {
             this.putQueryParameter("CateId", cateId);
@@ -141,7 +150,10 @@ public class GetCategoriesRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -150,7 +162,10 @@ public class GetCategoriesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 10 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -159,7 +174,12 @@ public class GetCategoriesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting rule of results. Valid values:</p>
+         * <p>- CreationTime:Desc (default): The results are sorted in reverse chronological order based on the creation time.</p>
+         * <p>- CreationTime:Asc: The results are sorted in chronological order based on the creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreationTime:Desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -168,7 +188,10 @@ public class GetCategoriesRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The type of the category. Valid values: default and material. A value of default indicates audio, video, and image files. This is the default value. A value of material indicates short video materials.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCustomizedVoiceJobsResponseBody} extends {@link TeaModel}
  *
  * <p>ListCustomizedVoiceJobsResponseBody</p>
@@ -90,6 +91,12 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCustomizedVoiceJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomizedVoiceJobsResponseBody</p>
+     */
     public static class CustomizedVoiceJobList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -331,6 +338,12 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCustomizedVoiceJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomizedVoiceJobsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomizedVoiceJobList")
         private java.util.List < CustomizedVoiceJobList> customizedVoiceJobList;

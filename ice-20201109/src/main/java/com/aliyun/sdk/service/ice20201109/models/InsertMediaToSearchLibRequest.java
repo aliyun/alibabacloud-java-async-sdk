@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsertMediaToSearchLibRequest} extends {@link RequestModel}
  *
  * <p>InsertMediaToSearchLibRequest</p>
@@ -133,7 +134,14 @@ public class InsertMediaToSearchLibRequest extends Request {
         }
 
         /**
-         * Input.
+         * <p>The URL of the video, audio, or image file that you want to import to the search library.</p>
+         * <p>Note: Make sure that you specify a correct file name and the bucket in which the file resides is in the same region where this operation is called. Otherwise, the file cannot be found or the operation may fail.</p>
+         * <p>Specify an Object Storage Service (OSS) URL in the following format: oss://[Bucket name]/[File path]. For example, you can specify oss://[example-bucket-<strong><strong>]/[object_path-</strong></strong>].</p>
+         * <p>Specify an HTTP URL in the following format: public endpoint. For example, you can specify <a href="http://example-test-%5C*%5C*%5C*%5C*.mp4">http://example-test-\*\*\*\*.mp4</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example-test-****.mp4">http://example-test-****.mp4</a></p>
          */
         public Builder input(String input) {
             this.putQueryParameter("Input", input);
@@ -142,7 +150,10 @@ public class InsertMediaToSearchLibRequest extends Request {
         }
 
         /**
-         * MediaId.
+         * <p>The ID of the media asset. Each media ID is unique. If you leave this parameter empty, a media ID is automatically generated for this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>411bed50018971edb60b0764a0ec6***</p>
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);
@@ -151,7 +162,15 @@ public class InsertMediaToSearchLibRequest extends Request {
         }
 
         /**
-         * MediaType.
+         * <p>The type of the media asset. Valid values:</p>
+         * <ul>
+         * <li>video (default)</li>
+         * <li>image</li>
+         * <li>audio</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>video</p>
          */
         public Builder mediaType(String mediaType) {
             this.putQueryParameter("MediaType", mediaType);
@@ -160,7 +179,10 @@ public class InsertMediaToSearchLibRequest extends Request {
         }
 
         /**
-         * MsgBody.
+         * <p>The message body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder msgBody(String msgBody) {
             this.putQueryParameter("MsgBody", msgBody);
@@ -169,7 +191,10 @@ public class InsertMediaToSearchLibRequest extends Request {
         }
 
         /**
-         * SearchLibName.
+         * <p>The name of the search library. Default value: ims-default-search-lib.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder searchLibName(String searchLibName) {
             this.putQueryParameter("SearchLibName", searchLibName);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMeterImsEditUsageRequest} extends {@link RequestModel}
  *
  * <p>DescribeMeterImsEditUsageRequest</p>
@@ -98,7 +99,10 @@ public class DescribeMeterImsEditUsageRequest extends Request {
         } 
 
         /**
-         * EndTs.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1656995036</p>
          */
         public Builder endTs(Long endTs) {
             this.putQueryParameter("EndTs", endTs);
@@ -107,7 +111,10 @@ public class DescribeMeterImsEditUsageRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
          */
         public Builder interval(Long interval) {
             this.putQueryParameter("Interval", interval);
@@ -125,7 +132,10 @@ public class DescribeMeterImsEditUsageRequest extends Request {
         }
 
         /**
-         * StartTs.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1654403036</p>
          */
         public Builder startTs(Long startTs) {
             this.putQueryParameter("StartTs", startTs);

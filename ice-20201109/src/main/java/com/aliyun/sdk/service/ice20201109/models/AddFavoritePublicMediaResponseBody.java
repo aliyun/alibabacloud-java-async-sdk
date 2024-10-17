@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddFavoritePublicMediaResponseBody} extends {@link TeaModel}
  *
  * <p>AddFavoritePublicMediaResponseBody</p>

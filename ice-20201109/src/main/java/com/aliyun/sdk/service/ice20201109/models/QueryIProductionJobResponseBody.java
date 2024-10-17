@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryIProductionJobResponseBody} extends {@link TeaModel}
  *
  * <p>QueryIProductionJobResponseBody</p>
@@ -350,6 +351,12 @@ public class QueryIProductionJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryIProductionJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryIProductionJobResponseBody</p>
+     */
     public static class Input extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Media")
         private String media;
@@ -411,6 +418,12 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryIProductionJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryIProductionJobResponseBody</p>
+     */
     public static class Output extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Media")
         private String media;
@@ -472,6 +485,12 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryIProductionJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryIProductionJobResponseBody</p>
+     */
     public static class ScheduleConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;

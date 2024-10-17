@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMeterImsSummaryRequest} extends {@link RequestModel}
  *
  * <p>DescribeMeterImsSummaryRequest</p>
@@ -83,7 +84,10 @@ public class DescribeMeterImsSummaryRequest extends Request {
         } 
 
         /**
-         * EndTs.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1656995036</p>
          */
         public Builder endTs(Long endTs) {
             this.putQueryParameter("EndTs", endTs);
@@ -101,7 +105,10 @@ public class DescribeMeterImsSummaryRequest extends Request {
         }
 
         /**
-         * StartTs.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1654403036</p>
          */
         public Builder startTs(Long startTs) {
             this.putQueryParameter("StartTs", startTs);

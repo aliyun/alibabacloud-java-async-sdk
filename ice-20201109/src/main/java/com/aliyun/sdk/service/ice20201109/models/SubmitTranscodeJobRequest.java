@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitTranscodeJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitTranscodeJobRequest</p>
@@ -134,7 +135,7 @@ public class SubmitTranscodeJobRequest extends Request {
         }
 
         /**
-         * InputGroup.
+         * <p>This parameter is required.</p>
          */
         public Builder inputGroup(java.util.List < InputGroup> inputGroup) {
             String inputGroupShrink = shrink(inputGroup, "InputGroup", "json");
@@ -153,7 +154,7 @@ public class SubmitTranscodeJobRequest extends Request {
         }
 
         /**
-         * OutputGroup.
+         * <p>This parameter is required.</p>
          */
         public Builder outputGroup(java.util.List < OutputGroup> outputGroup) {
             String outputGroupShrink = shrink(outputGroup, "OutputGroup", "json");
@@ -188,6 +189,12 @@ public class SubmitTranscodeJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitTranscodeJobRequest</p>
+     */
     public static class InputGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InputUrl")
         private String inputUrl;
@@ -249,7 +256,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Media.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/path/to/video.mp4</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -257,7 +267,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -271,6 +284,12 @@ public class SubmitTranscodeJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitTranscodeJobRequest</p>
+     */
     public static class Output extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Media")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -324,7 +343,10 @@ public class SubmitTranscodeJobRequest extends Request {
             private String type; 
 
             /**
-             * Media.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/path/to/video.mp4</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -340,7 +362,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -354,6 +379,12 @@ public class SubmitTranscodeJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitTranscodeJobRequest</p>
+     */
     public static class CombineConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AudioIndex")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -419,7 +450,10 @@ public class SubmitTranscodeJobRequest extends Request {
             private String videoIndex; 
 
             /**
-             * AudioIndex.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 或 exclude</p>
              */
             public Builder audioIndex(String audioIndex) {
                 this.audioIndex = audioIndex;
@@ -443,7 +477,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * VideoIndex.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 或 exclude</p>
              */
             public Builder videoIndex(String videoIndex) {
                 this.videoIndex = videoIndex;
@@ -457,6 +494,12 @@ public class SubmitTranscodeJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitTranscodeJobRequest</p>
+     */
     public static class Encryption extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CipherText")
         private String cipherText;
@@ -558,6 +601,12 @@ public class SubmitTranscodeJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitTranscodeJobRequest</p>
+     */
     public static class File extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Media")
         private String media;
@@ -597,7 +646,10 @@ public class SubmitTranscodeJobRequest extends Request {
             private String type; 
 
             /**
-             * Media.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/path/to/video.mp4</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -605,7 +657,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -619,6 +674,12 @@ public class SubmitTranscodeJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitTranscodeJobRequest</p>
+     */
     public static class Timeline extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
@@ -680,6 +741,12 @@ public class SubmitTranscodeJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitTranscodeJobRequest</p>
+     */
     public static class OverwriteParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dx")
         private String dx;
@@ -841,6 +908,12 @@ public class SubmitTranscodeJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitTranscodeJobRequest</p>
+     */
     public static class ImageWatermarks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OverwriteParams")
         private OverwriteParams overwriteParams;
@@ -889,7 +962,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * TemplateId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9547c6ad97cb4f2aaa29683ebd18d410</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -903,6 +979,12 @@ public class SubmitTranscodeJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitTranscodeJobRequest</p>
+     */
     public static class OverwriteParamsFile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Media")
         private String media;
@@ -942,7 +1024,10 @@ public class SubmitTranscodeJobRequest extends Request {
             private String type; 
 
             /**
-             * Media.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/path/to/video.mp4</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -950,7 +1035,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -964,6 +1052,12 @@ public class SubmitTranscodeJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitTranscodeJobRequest</p>
+     */
     public static class SubtitlesOverwriteParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CharEnc")
         private String charEnc;
@@ -1045,6 +1139,12 @@ public class SubmitTranscodeJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitTranscodeJobRequest</p>
+     */
     public static class Subtitles extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OverwriteParams")
         private SubtitlesOverwriteParams overwriteParams;
@@ -1093,7 +1193,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * TemplateId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9547c6ad97cb4f2aaa29683ebd18d410</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -1107,6 +1210,12 @@ public class SubmitTranscodeJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitTranscodeJobRequest</p>
+     */
     public static class TextWatermarksOverwriteParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Adaptive")
         private String adaptive;
@@ -1328,6 +1437,12 @@ public class SubmitTranscodeJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitTranscodeJobRequest</p>
+     */
     public static class TextWatermarks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OverwriteParams")
         private TextWatermarksOverwriteParams overwriteParams;
@@ -1376,7 +1491,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * TemplateId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9547c6ad97cb4f2aaa29683ebd18d410</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -1390,6 +1508,12 @@ public class SubmitTranscodeJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitTranscodeJobRequest</p>
+     */
     public static class Volume extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IntegratedLoudnessTarget")
         private String integratedLoudnessTarget;
@@ -1491,6 +1615,12 @@ public class SubmitTranscodeJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitTranscodeJobRequest</p>
+     */
     public static class Audio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
@@ -1652,6 +1782,12 @@ public class SubmitTranscodeJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitTranscodeJobRequest</p>
+     */
     public static class Container extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
@@ -1693,6 +1829,12 @@ public class SubmitTranscodeJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitTranscodeJobRequest</p>
+     */
     public static class Segment extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
@@ -1754,6 +1896,12 @@ public class SubmitTranscodeJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitTranscodeJobRequest</p>
+     */
     public static class MuxConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Segment")
         private Segment segment;
@@ -1795,6 +1943,12 @@ public class SubmitTranscodeJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitTranscodeJobRequest</p>
+     */
     public static class TransConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdjDarMethod")
         private String adjDarMethod;
@@ -1976,6 +2130,12 @@ public class SubmitTranscodeJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitTranscodeJobRequest</p>
+     */
     public static class Video extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AbrMax")
         private String abrMax;
@@ -2357,6 +2517,12 @@ public class SubmitTranscodeJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitTranscodeJobRequest</p>
+     */
     public static class TranscodeOverwriteParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Audio")
         private Audio audio;
@@ -2478,6 +2644,12 @@ public class SubmitTranscodeJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitTranscodeJobRequest</p>
+     */
     public static class Transcode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OverwriteParams")
         private TranscodeOverwriteParams overwriteParams;
@@ -2526,7 +2698,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * TemplateId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9547c6ad97cb4f2aaa29683ebd18d410</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -2540,6 +2715,12 @@ public class SubmitTranscodeJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitTranscodeJobRequest</p>
+     */
     public static class ProcessConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CombineConfigs")
         private java.util.List < CombineConfigs> combineConfigs;
@@ -2668,7 +2849,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Transcode.
+             * <p>This parameter is required.</p>
              */
             public Builder transcode(Transcode transcode) {
                 this.transcode = transcode;
@@ -2682,6 +2863,12 @@ public class SubmitTranscodeJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitTranscodeJobRequest</p>
+     */
     public static class OutputGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Output")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -2723,7 +2910,7 @@ public class SubmitTranscodeJobRequest extends Request {
             private ProcessConfig processConfig; 
 
             /**
-             * Output.
+             * <p>This parameter is required.</p>
              */
             public Builder output(Output output) {
                 this.output = output;
@@ -2731,7 +2918,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * ProcessConfig.
+             * <p>This parameter is required.</p>
              */
             public Builder processConfig(ProcessConfig processConfig) {
                 this.processConfig = processConfig;
@@ -2745,6 +2932,12 @@ public class SubmitTranscodeJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitTranscodeJobRequest</p>
+     */
     public static class ScheduleConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;

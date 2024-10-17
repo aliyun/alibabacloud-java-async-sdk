@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLiveRecordFilesRequest} extends {@link RequestModel}
  *
  * <p>DeleteLiveRecordFilesRequest</p>
@@ -68,7 +69,7 @@ public class DeleteLiveRecordFilesRequest extends Request {
         } 
 
         /**
-         * RecordIds.
+         * <p>This parameter is required.</p>
          */
         public Builder recordIds(java.util.List < String > recordIds) {
             this.putQueryParameter("RecordIds", recordIds);

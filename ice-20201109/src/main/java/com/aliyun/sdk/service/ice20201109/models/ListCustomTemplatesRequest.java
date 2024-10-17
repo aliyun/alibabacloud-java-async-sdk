@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCustomTemplatesRequest} extends {@link RequestModel}
  *
  * <p>ListCustomTemplatesRequest</p>
@@ -192,7 +193,10 @@ public class ListCustomTemplatesRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitAudioProduceJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitAudioProduceJobRequest</p>
@@ -149,7 +150,10 @@ public class SubmitAudioProduceJobRequest extends Request {
         }
 
         /**
-         * EditingConfig.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;voice&quot;:&quot;Siqi&quot;,&quot;format&quot;:&quot;MP3&quot;,&quot;volume&quot;:50}</p>
          */
         public Builder editingConfig(String editingConfig) {
             this.putQueryParameter("EditingConfig", editingConfig);
@@ -158,7 +162,10 @@ public class SubmitAudioProduceJobRequest extends Request {
         }
 
         /**
-         * InputConfig.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试文本</p>
          */
         public Builder inputConfig(String inputConfig) {
             this.putQueryParameter("InputConfig", inputConfig);
@@ -167,7 +174,10 @@ public class SubmitAudioProduceJobRequest extends Request {
         }
 
         /**
-         * OutputConfig.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;bucket&quot;:&quot;bucket&quot;,&quot;object&quot;:&quot;objeck&quot;}</p>
          */
         public Builder outputConfig(String outputConfig) {
             this.putQueryParameter("OutputConfig", outputConfig);

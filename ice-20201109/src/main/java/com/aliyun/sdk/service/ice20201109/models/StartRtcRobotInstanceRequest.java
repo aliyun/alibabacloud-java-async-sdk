@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartRtcRobotInstanceRequest} extends {@link RequestModel}
  *
  * <p>StartRtcRobotInstanceRequest</p>
@@ -127,7 +128,10 @@ public class StartRtcRobotInstanceRequest extends Request {
         } 
 
         /**
-         * AuthToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder authToken(String authToken) {
             this.putQueryParameter("AuthToken", authToken);
@@ -136,7 +140,10 @@ public class StartRtcRobotInstanceRequest extends Request {
         }
 
         /**
-         * ChannelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testId</p>
          */
         public Builder channelId(String channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -155,7 +162,10 @@ public class StartRtcRobotInstanceRequest extends Request {
         }
 
         /**
-         * RobotId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca28b08ad3464ebcb42e5c0f7c6d2e89</p>
          */
         public Builder robotId(String robotId) {
             this.putQueryParameter("RobotId", robotId);
@@ -173,7 +183,10 @@ public class StartRtcRobotInstanceRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-robot</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -188,6 +201,12 @@ public class StartRtcRobotInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link StartRtcRobotInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>StartRtcRobotInstanceRequest</p>
+     */
     public static class Config extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableVoiceInterrupt")
         private Boolean enableVoiceInterrupt;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDNAFilesResponseBody} extends {@link TeaModel}
  *
  * <p>ListDNAFilesResponseBody</p>
@@ -90,6 +91,12 @@ public class ListDNAFilesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDNAFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDNAFilesResponseBody</p>
+     */
     public static class InputFile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
@@ -171,6 +178,12 @@ public class ListDNAFilesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDNAFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDNAFilesResponseBody</p>
+     */
     public static class FileList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InputFile")
         private InputFile inputFile;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitMediaAiAnalysisJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitMediaAiAnalysisJobRequest</p>
@@ -67,7 +68,10 @@ public class SubmitMediaAiAnalysisJobRequest extends Request {
         } 
 
         /**
-         * AnalysisParams.
+         * <p>The analysis parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;nlpParams&quot;:{&quot;sourceLanguage&quot;:&quot;cn&quot;,&quot;diarizationEnabled&quot;:true,&quot;speakerCount&quot;:0,&quot;summarizationEnabled&quot;:false,&quot;translationEnabled&quot;:false}}</p>
          */
         public Builder analysisParams(String analysisParams) {
             this.putQueryParameter("AnalysisParams", analysisParams);
@@ -76,7 +80,10 @@ public class SubmitMediaAiAnalysisJobRequest extends Request {
         }
 
         /**
-         * Input.
+         * <p>The media asset that you want to analyze. You can specify an Object Storage Service (OSS) URL, a media asset ID, or an external URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;MediaType&quot;:&quot;video&quot;,&quot;Media&quot;:&quot;<a href="https://xxx.com/your_movie.mp4%22%7D">https://xxx.com/your_movie.mp4&quot;}</a></p>
          */
         public Builder input(String input) {
             this.putQueryParameter("Input", input);

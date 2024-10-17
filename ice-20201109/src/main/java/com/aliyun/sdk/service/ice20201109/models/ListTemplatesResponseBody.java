@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTemplatesResponseBody</p>
@@ -90,6 +91,12 @@ public class ListTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTemplatesResponseBody</p>
+     */
     public static class Templates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClipsParam")
         private String clipsParam;
@@ -261,7 +268,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * ClipsParam
+             * <p>ClipsParam</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Media1&quot;:&quot;mediaId&quot;,&quot;Text1&quot;:&quot;text&quot;}</p>
              */
             public Builder clipsParam(String clipsParam) {
                 this.clipsParam = clipsParam;

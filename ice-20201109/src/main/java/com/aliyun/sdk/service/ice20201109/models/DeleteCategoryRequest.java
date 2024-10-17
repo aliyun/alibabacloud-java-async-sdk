@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCategoryRequest} extends {@link RequestModel}
  *
  * <p>DeleteCategoryRequest</p>
@@ -77,7 +78,16 @@ public class DeleteCategoryRequest extends Request {
         }
 
         /**
-         * CateId.
+         * <p>The category ID. You can use one of the following methods to obtain the ID:</p>
+         * <ul>
+         * <li>Log on to the <a href="https://ims.console.aliyun.com">Intelligent Media Services (IMS) console</a> and choose <strong>Media Asset Management</strong> &gt; <strong>Category Management</strong> to view the category ID.</li>
+         * <li>View the value of CateId returned by the AddCategory operation that you called to create a category.</li>
+         * <li>View the value of CateId returned by the GetCategories operation that you called to query a category.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46</p>
          */
         public Builder cateId(Long cateId) {
             this.putQueryParameter("CateId", cateId);

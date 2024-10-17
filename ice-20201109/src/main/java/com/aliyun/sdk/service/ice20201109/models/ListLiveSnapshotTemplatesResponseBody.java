@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLiveSnapshotTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListLiveSnapshotTemplatesResponseBody</p>
@@ -150,6 +151,12 @@ public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLiveSnapshotTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLiveSnapshotTemplatesResponseBody</p>
+     */
     public static class TemplateList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;

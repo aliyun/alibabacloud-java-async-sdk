@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLiveRecordTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>GetLiveRecordTemplateResponseBody</p>
@@ -49,7 +50,7 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 录制模板
+         * <p>录制模板</p>
          */
         public Builder recordTemplate(RecordTemplate recordTemplate) {
             this.recordTemplate = recordTemplate;
@@ -70,6 +71,12 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetLiveRecordTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLiveRecordTemplateResponseBody</p>
+     */
     public static class RecordFormatList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CycleDuration")
         private Integer cycleDuration;
@@ -153,7 +160,10 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 格式
+             * <p>格式</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m3u8</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -161,7 +171,10 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Oss对象名，不包含后缀
+             * <p>Oss对象名，不包含后缀</p>
+             * 
+             * <strong>example:</strong>
+             * <p>record/{JobId}/{Sequence}{EscapedStartTime}{EscapedEndTime}</p>
              */
             public Builder ossObjectPrefix(String ossObjectPrefix) {
                 this.ossObjectPrefix = ossObjectPrefix;
@@ -177,7 +190,10 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 切片Oss对象名，不包含后缀
+             * <p>切片Oss对象名，不包含后缀</p>
+             * 
+             * <strong>example:</strong>
+             * <p>record/{JobId}/{UnixTimestamp}_{Sequence}</p>
              */
             public Builder sliceOssObjectPrefix(String sliceOssObjectPrefix) {
                 this.sliceOssObjectPrefix = sliceOssObjectPrefix;
@@ -191,6 +207,12 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetLiveRecordTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLiveRecordTemplateResponseBody</p>
+     */
     public static class RecordTemplate extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -278,7 +300,11 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * 代表创建时间的资源属性字段
+             * <p>代表创建时间的资源属性字段</p>
+             * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-20T03:26:36Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -286,7 +312,11 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 代表创建时间的资源属性字段
+             * <p>代表创建时间的资源属性字段</p>
+             * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-20T03:26:36Z</p>
              */
             public Builder lastModified(String lastModified) {
                 this.lastModified = lastModified;
@@ -294,7 +324,10 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 代表资源名称的资源属性字段
+             * <p>代表资源名称的资源属性字段</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test template</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -302,7 +335,7 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 录制格式
+             * <p>录制格式</p>
              */
             public Builder recordFormatList(java.util.List < RecordFormatList> recordFormatList) {
                 this.recordFormatList = recordFormatList;
@@ -310,7 +343,10 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 代表资源一级ID的资源属性字段
+             * <p>代表资源一级ID的资源属性字段</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69e1f9fe-1e97-11ed-ba64-0c42a1b73d66</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -318,7 +354,10 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 代表资源名称的资源属性字段
+             * <p>代表资源名称的资源属性字段</p>
+             * 
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder type(String type) {
                 this.type = type;

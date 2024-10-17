@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitLiveTranscodeJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitLiveTranscodeJobRequest</p>
@@ -128,7 +129,10 @@ public class SubmitLiveTranscodeJobRequest extends Request {
         } 
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -137,7 +141,10 @@ public class SubmitLiveTranscodeJobRequest extends Request {
         }
 
         /**
-         * StartMode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder startMode(Integer startMode) {
             this.putQueryParameter("StartMode", startMode);
@@ -146,7 +153,7 @@ public class SubmitLiveTranscodeJobRequest extends Request {
         }
 
         /**
-         * StreamInput.
+         * <p>This parameter is required.</p>
          */
         public Builder streamInput(StreamInput streamInput) {
             String streamInputShrink = shrink(streamInput, "StreamInput", "json");
@@ -156,7 +163,10 @@ public class SubmitLiveTranscodeJobRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -175,7 +185,7 @@ public class SubmitLiveTranscodeJobRequest extends Request {
         }
 
         /**
-         * TranscodeOutput.
+         * <p>This parameter is required.</p>
          */
         public Builder transcodeOutput(TranscodeOutput transcodeOutput) {
             String transcodeOutputShrink = shrink(transcodeOutput, "TranscodeOutput", "json");
@@ -191,6 +201,12 @@ public class SubmitLiveTranscodeJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitLiveTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitLiveTranscodeJobRequest</p>
+     */
     public static class StreamInput extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InputUrl")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -232,7 +248,10 @@ public class SubmitLiveTranscodeJobRequest extends Request {
             private String type; 
 
             /**
-             * InputUrl.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp://mydomain/app/stream1</p>
              */
             public Builder inputUrl(String inputUrl) {
                 this.inputUrl = inputUrl;
@@ -240,7 +259,10 @@ public class SubmitLiveTranscodeJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -254,6 +276,12 @@ public class SubmitLiveTranscodeJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitLiveTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitLiveTranscodeJobRequest</p>
+     */
     public static class TimedConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
@@ -315,6 +343,12 @@ public class SubmitLiveTranscodeJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitLiveTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitLiveTranscodeJobRequest</p>
+     */
     public static class TranscodeOutput extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
@@ -363,7 +397,10 @@ public class SubmitLiveTranscodeJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LiveCenter</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetNotifyConfigRequest} extends {@link RequestModel}
  *
  * <p>SetNotifyConfigRequest</p>
@@ -111,7 +112,10 @@ public class SetNotifyConfigRequest extends Request {
         } 
 
         /**
-         * AIAgentId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39f8e0bc005e4f309379701645f4****</p>
          */
         public Builder AIAgentId(String AIAgentId) {
             this.putQueryParameter("AIAgentId", AIAgentId);
@@ -129,7 +133,10 @@ public class SetNotifyConfigRequest extends Request {
         }
 
         /**
-         * EnableNotify.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableNotify(Boolean enableNotify) {
             this.putQueryParameter("EnableNotify", enableNotify);

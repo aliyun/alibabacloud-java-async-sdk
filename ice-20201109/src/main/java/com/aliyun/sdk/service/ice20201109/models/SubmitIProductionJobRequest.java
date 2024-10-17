@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitIProductionJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitIProductionJobRequest</p>
@@ -154,7 +155,10 @@ public class SubmitIProductionJobRequest extends Request {
         } 
 
         /**
-         * FunctionName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cover</p>
          */
         public Builder functionName(String functionName) {
             this.putQueryParameter("FunctionName", functionName);
@@ -163,7 +167,7 @@ public class SubmitIProductionJobRequest extends Request {
         }
 
         /**
-         * Input.
+         * <p>This parameter is required.</p>
          */
         public Builder input(Input input) {
             String inputShrink = shrink(input, "Input", "json");
@@ -191,7 +195,7 @@ public class SubmitIProductionJobRequest extends Request {
         }
 
         /**
-         * Output.
+         * <p>This parameter is required.</p>
          */
         public Builder output(Output output) {
             String outputShrink = shrink(output, "Output", "json");
@@ -235,6 +239,12 @@ public class SubmitIProductionJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitIProductionJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitIProductionJobRequest</p>
+     */
     public static class Input extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Media")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -276,7 +286,10 @@ public class SubmitIProductionJobRequest extends Request {
             private String type; 
 
             /**
-             * Media.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/object</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -284,7 +297,10 @@ public class SubmitIProductionJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -298,6 +314,12 @@ public class SubmitIProductionJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitIProductionJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitIProductionJobRequest</p>
+     */
     public static class Output extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Media")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -339,7 +361,10 @@ public class SubmitIProductionJobRequest extends Request {
             private String type; 
 
             /**
-             * Media.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/object</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -347,7 +372,10 @@ public class SubmitIProductionJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -361,6 +389,12 @@ public class SubmitIProductionJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitIProductionJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitIProductionJobRequest</p>
+     */
     public static class ScheduleConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;

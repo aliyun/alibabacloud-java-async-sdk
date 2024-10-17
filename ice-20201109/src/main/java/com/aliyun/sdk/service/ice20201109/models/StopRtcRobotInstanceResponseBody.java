@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopRtcRobotInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>StopRtcRobotInstanceResponseBody</p>
@@ -37,7 +38,10 @@ public class StopRtcRobotInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AC84E5DD-AB56-56C0-A992-07ECB82008CA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

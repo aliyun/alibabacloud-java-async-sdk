@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePipelineRequest} extends {@link RequestModel}
  *
  * <p>CreatePipelineRequest</p>
@@ -83,7 +84,10 @@ public class CreatePipelineRequest extends Request {
         } 
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-pipeline</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -101,7 +105,10 @@ public class CreatePipelineRequest extends Request {
         }
 
         /**
-         * Speed.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder speed(String speed) {
             this.putQueryParameter("Speed", speed);

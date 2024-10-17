@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVideoListResponseBody} extends {@link TeaModel}
  *
  * <p>GetVideoListResponseBody</p>
@@ -85,7 +86,10 @@ public class GetVideoListResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * Code.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class GetVideoListResponseBody extends TeaModel {
         }
 
         /**
-         * MediaList.
+         * <p>The information about the audio and video files.</p>
          */
         public Builder mediaList(java.util.List < MediaList> mediaList) {
             this.mediaList = mediaList;
@@ -101,7 +105,10 @@ public class GetVideoListResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request。
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +116,14 @@ public class GetVideoListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -117,7 +131,10 @@ public class GetVideoListResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of audio and video files that meet the conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>163</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -130,6 +147,12 @@ public class GetVideoListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetVideoListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVideoListResponseBody</p>
+     */
     public static class MediaList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -325,7 +348,10 @@ public class GetVideoListResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * AppId.
+             * <p>The ID of the application. Default value: app-1000000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app-1000000</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -333,7 +359,10 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * CateId.
+             * <p>The ID of the category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3679</p>
              */
             public Builder cateId(Long cateId) {
                 this.cateId = cateId;
@@ -341,7 +370,7 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * CateName.
+             * <p>The name of the category.</p>
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -349,7 +378,10 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * CoverUrl.
+             * <p>The URL of the thumbnail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example.aliyundoc.com/snapshot/****.jpg?auth_key=1498476426-0-0-f00b9455c49a423ce69cf4e27333">http://example.aliyundoc.com/snapshot/****.jpg?auth_key=1498476426-0-0-f00b9455c49a423ce69cf4e27333</a>****</p>
              */
             public Builder coverUrl(String coverUrl) {
                 this.coverUrl = coverUrl;
@@ -357,7 +389,10 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The time when the audio or video file was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-11-14T09:15:50Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -365,7 +400,7 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the audio or video file.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -373,7 +408,10 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>135.6</p>
              */
             public Builder duration(Float duration) {
                 this.duration = duration;
@@ -381,7 +419,10 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId.
+             * <p>The ID of the audio or video file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1c6ce34007d571ed94667630a6bc****</p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -389,7 +430,10 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * ModificationTime.
+             * <p>The time when the audio or video file was updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-11-14T09:16:50Z</p>
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -397,7 +441,10 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The size of the source file. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10897890</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -405,7 +452,7 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * Snapshots.
+             * <p>The array of video snapshot URLs.</p>
              */
             public Builder snapshots(java.util.List < String > snapshots) {
                 this.snapshots = snapshots;
@@ -413,7 +460,24 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the video.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>PrepareFail: The file is abnormal.</li>
+             * <li>UploadFail: The video failed to be uploaded.</li>
+             * <li>UploadSucc: The video is uploaded.</li>
+             * <li>Transcoding: The video is being transcoded.</li>
+             * <li>TranscodeFail: The video failed to be transcoded.</li>
+             * <li>ProduceFail: The video failed to be produced.</li>
+             * <li>Normal: The video is normal.</li>
+             * <li>Uploading: The video is being uploaded.</li>
+             * <li>Preparing: The file is being generated.</li>
+             * <li>Blocked: The video is blocked.</li>
+             * <li>checking: The video is being reviewed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -421,7 +485,10 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * StorageLocation.
+             * <p>The storage address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>out-****.oss-cn-shanghai.aliyuncs.com</p>
              */
             public Builder storageLocation(String storageLocation) {
                 this.storageLocation = storageLocation;
@@ -429,7 +496,7 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags of the audio or video file.</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -437,7 +504,7 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The title of the audio or video file.</p>
              */
             public Builder title(String title) {
                 this.title = title;

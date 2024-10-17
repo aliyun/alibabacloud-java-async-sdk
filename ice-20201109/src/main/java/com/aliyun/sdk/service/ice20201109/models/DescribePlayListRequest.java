@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePlayListRequest} extends {@link RequestModel}
  *
  * <p>DescribePlayListRequest</p>
@@ -169,7 +170,10 @@ public class DescribePlayListRequest extends Request {
         } 
 
         /**
-         * BeginTs.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1676170500011</p>
          */
         public Builder beginTs(String beginTs) {
             this.putQueryParameter("BeginTs", beginTs);
@@ -178,7 +182,10 @@ public class DescribePlayListRequest extends Request {
         }
 
         /**
-         * EndTs.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1682474405173</p>
          */
         public Builder endTs(String endTs) {
             this.putQueryParameter("EndTs", endTs);
@@ -205,7 +212,10 @@ public class DescribePlayListRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -214,7 +224,10 @@ public class DescribePlayListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

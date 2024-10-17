@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSystemTemplatesRequest} extends {@link RequestModel}
  *
  * <p>ListSystemTemplatesRequest</p>
@@ -192,7 +193,10 @@ public class ListSystemTemplatesRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

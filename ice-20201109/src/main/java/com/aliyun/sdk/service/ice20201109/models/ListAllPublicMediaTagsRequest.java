@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAllPublicMediaTagsRequest} extends {@link RequestModel}
  *
  * <p>ListAllPublicMediaTagsRequest</p>
@@ -90,7 +91,10 @@ public class ListAllPublicMediaTagsRequest extends Request {
         }
 
         /**
-         * BusinessType.
+         * <p>The business type of the media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;sticker&quot;</p>
          */
         public Builder businessType(String businessType) {
             this.putQueryParameter("BusinessType", businessType);
@@ -99,7 +103,11 @@ public class ListAllPublicMediaTagsRequest extends Request {
         }
 
         /**
-         * EntityId.
+         * <p>The entity ID, which is used to distinguish between media assets of different types in the public domain.</p>
+         * <p>Set this parameter to Copyright_Music, which indicates music in the public domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Copyright_Music</p>
          */
         public Builder entityId(String entityId) {
             this.putQueryParameter("EntityId", entityId);

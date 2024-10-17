@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDemonstrationForCustomizedVoiceJobResponseBody} extends {@link TeaModel}
  *
  * <p>GetDemonstrationForCustomizedVoiceJobResponseBody</p>
@@ -90,6 +91,12 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link GetDemonstrationForCustomizedVoiceJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDemonstrationForCustomizedVoiceJobResponseBody</p>
+     */
     public static class DemonstrationList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AudioId")
         private Integer audioId;
@@ -171,6 +178,12 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link GetDemonstrationForCustomizedVoiceJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDemonstrationForCustomizedVoiceJobResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DemonstrationList")
         private java.util.List < DemonstrationList> demonstrationList;

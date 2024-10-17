@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMeterImsMediaConvertUsageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMeterImsMediaConvertUsageResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeMeterImsMediaConvertUsageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMeterImsMediaConvertUsageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMeterImsMediaConvertUsageResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitDynamicChartJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitDynamicChartJobRequest</p>
@@ -283,7 +284,10 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * ChartType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Line</p>
          */
         public Builder chartType(String chartType) {
             this.putQueryParameter("ChartType", chartType);
@@ -310,7 +314,10 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * Input.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;XlsFile&quot;:&quot;<a href="https://your-bucket.oss-cn-shanghai.aliyuncs.com/obj.xls%22%7D">https://your-bucket.oss-cn-shanghai.aliyuncs.com/obj.xls&quot;}</a></p>
          */
         public Builder input(String input) {
             this.putQueryParameter("Input", input);
@@ -319,7 +326,10 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * OutputConfig.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;MediaURL&quot;:&quot;<a href="https://your-bucket.oss-cn-shanghai.aliyuncs.com/obj.mp4%22,%22Bitrate%22:2000,%22Width%22:800,%22Height%22:680%7D">https://your-bucket.oss-cn-shanghai.aliyuncs.com/obj.mp4&quot;,&quot;Bitrate&quot;:2000,&quot;Width&quot;:800,&quot;Height&quot;:680}</a></p>
          */
         public Builder outputConfig(String outputConfig) {
             this.putQueryParameter("OutputConfig", outputConfig);

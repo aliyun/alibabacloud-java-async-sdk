@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetBatchMediaProducingJobResponseBody} extends {@link TeaModel}
  *
  * <p>GetBatchMediaProducingJobResponseBody</p>
@@ -70,6 +71,12 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetBatchMediaProducingJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetBatchMediaProducingJobResponseBody</p>
+     */
     public static class SubJobList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -231,6 +238,12 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetBatchMediaProducingJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetBatchMediaProducingJobResponseBody</p>
+     */
     public static class EditingBatchJob extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CompleteTime")
         private String completeTime;

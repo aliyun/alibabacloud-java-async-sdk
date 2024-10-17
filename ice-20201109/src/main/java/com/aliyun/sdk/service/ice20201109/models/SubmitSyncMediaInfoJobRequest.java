@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitSyncMediaInfoJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitSyncMediaInfoJobRequest</p>
@@ -96,7 +97,7 @@ public class SubmitSyncMediaInfoJobRequest extends Request {
         } 
 
         /**
-         * Input.
+         * <p>This parameter is required.</p>
          */
         public Builder input(Input input) {
             String inputShrink = shrink(input, "Input", "json");
@@ -140,6 +141,12 @@ public class SubmitSyncMediaInfoJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitSyncMediaInfoJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitSyncMediaInfoJobRequest</p>
+     */
     public static class Input extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Media")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -181,7 +188,10 @@ public class SubmitSyncMediaInfoJobRequest extends Request {
             private String type; 
 
             /**
-             * Media.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/path/to/video.mp4</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -189,7 +199,10 @@ public class SubmitSyncMediaInfoJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -203,6 +216,12 @@ public class SubmitSyncMediaInfoJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitSyncMediaInfoJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitSyncMediaInfoJobRequest</p>
+     */
     public static class ScheduleConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;

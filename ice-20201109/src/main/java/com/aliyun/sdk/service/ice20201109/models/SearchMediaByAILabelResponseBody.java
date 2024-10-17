@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchMediaByAILabelResponseBody} extends {@link TeaModel}
  *
  * <p>SearchMediaByAILabelResponseBody</p>
@@ -85,7 +86,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * Code.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
         }
 
         /**
-         * MediaList.
+         * <p>The media assets that contain the specified content.</p>
          */
         public Builder mediaList(java.util.List < MediaList> mediaList) {
             this.mediaList = mediaList;
@@ -101,7 +105,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +116,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -117,7 +127,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of audio and video files that meet the conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -130,6 +143,12 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchMediaByAILabelResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchMediaByAILabelResponseBody</p>
+     */
     public static class Tracks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Position")
         private String position;
@@ -181,7 +200,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             private Double timestamp; 
 
             /**
-             * Position.
+             * <p>The coordinates of the bounding box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>468.0;67.0;615.0;267.0</p>
              */
             public Builder position(String position) {
                 this.position = position;
@@ -189,7 +211,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The size of the bounding box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder size(Double size) {
                 this.size = size;
@@ -197,7 +222,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>The timestamp of the track.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.4</p>
              */
             public Builder timestamp(Double timestamp) {
                 this.timestamp = timestamp;
@@ -211,6 +239,12 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchMediaByAILabelResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchMediaByAILabelResponseBody</p>
+     */
     public static class Occurrences extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClipId")
         private String clipId;
@@ -346,7 +380,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             private java.util.List < Tracks> tracks; 
 
             /**
-             * ClipId.
+             * <p>The ID of the clip.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>158730355E4B82257D8AA1583A58****</p>
              */
             public Builder clipId(String clipId) {
                 this.clipId = clipId;
@@ -354,7 +391,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>The content of the text.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -362,7 +399,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * FinegrainId.
+             * <p>The fine-grained ID of the entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>103102503**</p>
              */
             public Builder finegrainId(String finegrainId) {
                 this.finegrainId = finegrainId;
@@ -370,7 +410,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * FinegrainName.
+             * <p>The fine-grained name of the entity.</p>
              */
             public Builder finegrainName(String finegrainName) {
                 this.finegrainName = finegrainName;
@@ -378,7 +418,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * From.
+             * <p>The start time of the clip.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.4</p>
              */
             public Builder from(Double from) {
                 this.from = from;
@@ -386,7 +429,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * Image.
+             * <p>The image that contains the most face information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://service-****-public.oss-cn-hangzhou.aliyuncs.com/1563457****438522/service-image/f788974f-9595-43b2-a478-7c7a1afb****.jpg">https://service-****-public.oss-cn-hangzhou.aliyuncs.com/1563457****438522/service-image/f788974f-9595-43b2-a478-7c7a1afb****.jpg</a></p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -394,7 +440,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * <p>The score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.75287705</p>
              */
             public Builder score(Double score) {
                 this.score = score;
@@ -402,7 +451,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * TableBatchSeqId.
+             * <p>The sequence ID of the vector table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>85010D1**</p>
              */
             public Builder tableBatchSeqId(String tableBatchSeqId) {
                 this.tableBatchSeqId = tableBatchSeqId;
@@ -410,7 +462,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * To.
+             * <p>The end time of the clip.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.5</p>
              */
             public Builder to(Double to) {
                 this.to = to;
@@ -418,7 +473,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * Tracks.
+             * <p>The tracks.</p>
              */
             public Builder tracks(java.util.List < Tracks> tracks) {
                 this.tracks = tracks;
@@ -432,6 +487,12 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchMediaByAILabelResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchMediaByAILabelResponseBody</p>
+     */
     public static class AiLabelInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -531,7 +592,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             private String source; 
 
             /**
-             * Category.
+             * <p>The category.</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -539,7 +600,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * FaceId.
+             * <p>The ID of the face.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5FE19530C7A422197535FE74F5DB****</p>
              */
             public Builder faceId(String faceId) {
                 this.faceId = faceId;
@@ -547,7 +611,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * LabelId.
+             * <p>The ID of the entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>103102503**</p>
              */
             public Builder labelId(String labelId) {
                 this.labelId = labelId;
@@ -555,7 +622,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * LabelName.
+             * <p>The name of the entity.</p>
              */
             public Builder labelName(String labelName) {
                 this.labelName = labelName;
@@ -563,7 +630,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * LabelType.
+             * <p>The type of the tag.</p>
              */
             public Builder labelType(String labelType) {
                 this.labelType = labelType;
@@ -571,7 +638,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * Occurrences.
+             * <p>The information about the clips.</p>
              */
             public Builder occurrences(java.util.List < Occurrences> occurrences) {
                 this.occurrences = occurrences;
@@ -579,7 +646,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vision</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -593,6 +663,12 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchMediaByAILabelResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchMediaByAILabelResponseBody</p>
+     */
     public static class AsrInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClipId")
         private String clipId;
@@ -668,7 +744,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             private Double to; 
 
             /**
-             * ClipId.
+             * <p>The ID of the clip.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5FE19530C7A422197535FE74F5DB****</p>
              */
             public Builder clipId(String clipId) {
                 this.clipId = clipId;
@@ -676,7 +755,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>The content of the audio.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -684,7 +763,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * From.
+             * <p>The start time of the clip.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.4</p>
              */
             public Builder from(Double from) {
                 this.from = from;
@@ -692,7 +774,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>The timestamp of the clip.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.4</p>
              */
             public Builder timestamp(Double timestamp) {
                 this.timestamp = timestamp;
@@ -700,7 +785,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * To.
+             * <p>The end time of the clip.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.5</p>
              */
             public Builder to(Double to) {
                 this.to = to;
@@ -714,6 +802,12 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchMediaByAILabelResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchMediaByAILabelResponseBody</p>
+     */
     public static class OcrInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClipId")
         private String clipId;
@@ -789,7 +883,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             private Double to; 
 
             /**
-             * ClipId.
+             * <p>The ID of the clip.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5FE19530C7A422197535FE74F5DB****</p>
              */
             public Builder clipId(String clipId) {
                 this.clipId = clipId;
@@ -797,7 +894,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>The content of the text.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -805,7 +902,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * From.
+             * <p>The start time of the clip.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.4</p>
              */
             public Builder from(Double from) {
                 this.from = from;
@@ -813,7 +913,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>The timestamp of the clip.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.4</p>
              */
             public Builder timestamp(Double timestamp) {
                 this.timestamp = timestamp;
@@ -821,7 +924,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * To.
+             * <p>The end time of the clip.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.5</p>
              */
             public Builder to(Double to) {
                 this.to = to;
@@ -835,6 +941,12 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchMediaByAILabelResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchMediaByAILabelResponseBody</p>
+     */
     public static class AiData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AiLabelInfo")
         private java.util.List < AiLabelInfo> aiLabelInfo;
@@ -886,7 +998,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             private java.util.List < OcrInfo> ocrInfo; 
 
             /**
-             * AiLabelInfo.
+             * <p>The tags of the AI job.</p>
              */
             public Builder aiLabelInfo(java.util.List < AiLabelInfo> aiLabelInfo) {
                 this.aiLabelInfo = aiLabelInfo;
@@ -894,7 +1006,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * AsrInfo.
+             * <p>The information about audio files.</p>
              */
             public Builder asrInfo(java.util.List < AsrInfo> asrInfo) {
                 this.asrInfo = asrInfo;
@@ -902,7 +1014,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * OcrInfo.
+             * <p>The information about subtitle files.</p>
              */
             public Builder ocrInfo(java.util.List < OcrInfo> ocrInfo) {
                 this.ocrInfo = ocrInfo;
@@ -916,6 +1028,12 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchMediaByAILabelResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchMediaByAILabelResponseBody</p>
+     */
     public static class MediaList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AiData")
         private AiData aiData;
@@ -1099,7 +1217,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * AiData.
+             * <p>The details of the AI job.</p>
              */
             public Builder aiData(AiData aiData) {
                 this.aiData = aiData;
@@ -1107,7 +1225,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * AppId.
+             * <p>The ID of the application. Default value: app-1000000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app-1000000</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -1115,7 +1236,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * CoverUrl.
+             * <p>The URL of the thumbnail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example.aliyundoc.com/snapshot/****.jpg?auth_key=1498476426-0-0-f00b9455c49a423ce69cf4e27333">http://example.aliyundoc.com/snapshot/****.jpg?auth_key=1498476426-0-0-f00b9455c49a423ce69cf4e27333</a>****</p>
              */
             public Builder coverUrl(String coverUrl) {
                 this.coverUrl = coverUrl;
@@ -1123,7 +1247,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The time when the media asset was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-11-14T09:15:50Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1131,7 +1258,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the media asset.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1139,7 +1266,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12.2</p>
              */
             public Builder duration(Float duration) {
                 this.duration = duration;
@@ -1147,7 +1277,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId.
+             * <p>The ID of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1c6ce34007d571ed94667630a6bc****</p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -1155,7 +1288,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * ModificationTime.
+             * <p>The time when the media asset was updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-11-14T09:15:50Z</p>
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -1163,7 +1299,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The size of the source file. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10897890</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -1171,7 +1310,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * Snapshots.
+             * <p>The array of video snapshot URLs.</p>
              */
             public Builder snapshots(java.util.List < String > snapshots) {
                 this.snapshots = snapshots;
@@ -1179,7 +1318,25 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the video.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>PrepareFail</li>
+             * <li>UploadFail</li>
+             * <li>Init</li>
+             * <li>UploadSucc</li>
+             * <li>Transcoding</li>
+             * <li>TranscodeFail</li>
+             * <li>Deleted</li>
+             * <li>Normal</li>
+             * <li>Uploading</li>
+             * <li>Preparing</li>
+             * <li>Blocked</li>
+             * <li>Checking</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1187,7 +1344,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * StorageLocation.
+             * <p>The storage address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>out-****.oss-cn-shanghai.aliyuncs.com</p>
              */
             public Builder storageLocation(String storageLocation) {
                 this.storageLocation = storageLocation;
@@ -1195,7 +1355,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags of the media asset.</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -1203,7 +1363,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The title of the media asset.</p>
              */
             public Builder title(String title) {
                 this.title = title;

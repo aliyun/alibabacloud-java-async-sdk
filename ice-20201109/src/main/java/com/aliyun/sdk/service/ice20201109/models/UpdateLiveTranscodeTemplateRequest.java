@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateLiveTranscodeTemplateRequest} extends {@link RequestModel}
  *
  * <p>UpdateLiveTranscodeTemplateRequest</p>
@@ -101,7 +102,10 @@ public class UpdateLiveTranscodeTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -116,6 +120,12 @@ public class UpdateLiveTranscodeTemplateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateLiveTranscodeTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateLiveTranscodeTemplateRequest</p>
+     */
     public static class AudioParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
@@ -237,6 +247,12 @@ public class UpdateLiveTranscodeTemplateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateLiveTranscodeTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateLiveTranscodeTemplateRequest</p>
+     */
     public static class VideoParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
@@ -398,6 +414,12 @@ public class UpdateLiveTranscodeTemplateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateLiveTranscodeTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateLiveTranscodeTemplateRequest</p>
+     */
     public static class TemplateConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AudioParams")
         private AudioParams audioParams;

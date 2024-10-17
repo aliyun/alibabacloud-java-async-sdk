@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateLiveRecordTemplateRequest} extends {@link RequestModel}
  *
  * <p>UpdateLiveRecordTemplateRequest</p>
@@ -84,7 +85,11 @@ public class UpdateLiveRecordTemplateRequest extends Request {
         } 
 
         /**
-         * 代表资源名称的资源属性字段
+         * <p>代表资源名称的资源属性字段</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test template</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -93,7 +98,8 @@ public class UpdateLiveRecordTemplateRequest extends Request {
         }
 
         /**
-         * 录制格式
+         * <p>录制格式</p>
+         * <p>This parameter is required.</p>
          */
         public Builder recordFormat(java.util.List < RecordFormat> recordFormat) {
             String recordFormatShrink = shrink(recordFormat, "RecordFormat", "json");
@@ -103,7 +109,11 @@ public class UpdateLiveRecordTemplateRequest extends Request {
         }
 
         /**
-         * 代表资源一级ID的资源属性字段
+         * <p>代表资源一级ID的资源属性字段</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69e1f9fe-1e97-11ed-ba64-0c42a1b73d66</p>
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("TemplateId", templateId);
@@ -118,6 +128,12 @@ public class UpdateLiveRecordTemplateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateLiveRecordTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateLiveRecordTemplateRequest</p>
+     */
     public static class RecordFormat extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CycleDuration")
         private Integer cycleDuration;
@@ -202,7 +218,11 @@ public class UpdateLiveRecordTemplateRequest extends Request {
             }
 
             /**
-             * 格式
+             * <p>格式</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m3u8</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -210,7 +230,10 @@ public class UpdateLiveRecordTemplateRequest extends Request {
             }
 
             /**
-             * Oss对象名，不包含后缀
+             * <p>Oss对象名，不包含后缀</p>
+             * 
+             * <strong>example:</strong>
+             * <p>record/{JobId}/{Sequence}<em>{EscapedStartTime}</em>{EscapedEndTime}</p>
              */
             public Builder ossObjectPrefix(String ossObjectPrefix) {
                 this.ossObjectPrefix = ossObjectPrefix;
@@ -218,7 +241,10 @@ public class UpdateLiveRecordTemplateRequest extends Request {
             }
 
             /**
-             * 切片时长
+             * <p>切片时长</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder sliceDuration(Integer sliceDuration) {
                 this.sliceDuration = sliceDuration;
@@ -226,7 +252,10 @@ public class UpdateLiveRecordTemplateRequest extends Request {
             }
 
             /**
-             * 切片Oss对象名，不包含后缀
+             * <p>切片Oss对象名，不包含后缀</p>
+             * 
+             * <strong>example:</strong>
+             * <p>record/{JobId}/{UnixTimestamp}_{Sequence}</p>
              */
             public Builder sliceOssObjectPrefix(String sliceOssObjectPrefix) {
                 this.sliceOssObjectPrefix = sliceOssObjectPrefix;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAvatarsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAvatarsResponseBody</p>
@@ -90,6 +91,12 @@ public class ListAvatarsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAvatarsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAvatarsResponseBody</p>
+     */
     public static class AvatarList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvatarDescription")
         private String avatarDescription;
@@ -251,6 +258,12 @@ public class ListAvatarsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAvatarsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAvatarsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvatarList")
         private java.util.List < AvatarList> avatarList;

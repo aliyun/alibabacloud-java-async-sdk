@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchIndexJobRerunResponseBody} extends {@link TeaModel}
  *
  * <p>SearchIndexJobRerunResponseBody</p>
@@ -110,6 +111,12 @@ public class SearchIndexJobRerunResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchIndexJobRerunResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchIndexJobRerunResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MediaIdsNoExist")
         private java.util.List < String > mediaIdsNoExist;

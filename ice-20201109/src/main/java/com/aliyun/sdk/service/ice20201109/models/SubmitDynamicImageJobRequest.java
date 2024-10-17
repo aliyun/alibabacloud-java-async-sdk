@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitDynamicImageJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitDynamicImageJobRequest</p>
@@ -126,7 +127,7 @@ public class SubmitDynamicImageJobRequest extends Request {
         } 
 
         /**
-         * Input.
+         * <p>This parameter is required.</p>
          */
         public Builder input(Input input) {
             String inputShrink = shrink(input, "Input", "json");
@@ -145,7 +146,7 @@ public class SubmitDynamicImageJobRequest extends Request {
         }
 
         /**
-         * Output.
+         * <p>This parameter is required.</p>
          */
         public Builder output(Output output) {
             String outputShrink = shrink(output, "Output", "json");
@@ -165,7 +166,7 @@ public class SubmitDynamicImageJobRequest extends Request {
         }
 
         /**
-         * TemplateConfig.
+         * <p>This parameter is required.</p>
          */
         public Builder templateConfig(TemplateConfig templateConfig) {
             String templateConfigShrink = shrink(templateConfig, "TemplateConfig", "json");
@@ -190,6 +191,12 @@ public class SubmitDynamicImageJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitDynamicImageJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitDynamicImageJobRequest</p>
+     */
     public static class Input extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Media")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -231,7 +238,10 @@ public class SubmitDynamicImageJobRequest extends Request {
             private String type; 
 
             /**
-             * Media.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/object.mp4</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -239,7 +249,10 @@ public class SubmitDynamicImageJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -253,6 +266,12 @@ public class SubmitDynamicImageJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitDynamicImageJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitDynamicImageJobRequest</p>
+     */
     public static class Output extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Media")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -294,7 +313,10 @@ public class SubmitDynamicImageJobRequest extends Request {
             private String type; 
 
             /**
-             * Media.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -302,7 +324,10 @@ public class SubmitDynamicImageJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Media</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -316,6 +341,12 @@ public class SubmitDynamicImageJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitDynamicImageJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitDynamicImageJobRequest</p>
+     */
     public static class ScheduleConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;
@@ -377,6 +408,12 @@ public class SubmitDynamicImageJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitDynamicImageJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitDynamicImageJobRequest</p>
+     */
     public static class TimeSpan extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
@@ -458,6 +495,12 @@ public class SubmitDynamicImageJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitDynamicImageJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitDynamicImageJobRequest</p>
+     */
     public static class OverwriteParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
@@ -619,6 +662,12 @@ public class SubmitDynamicImageJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitDynamicImageJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitDynamicImageJobRequest</p>
+     */
     public static class TemplateConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OverwriteParams")
         private OverwriteParams overwriteParams;
@@ -667,7 +716,10 @@ public class SubmitDynamicImageJobRequest extends Request {
             }
 
             /**
-             * TemplateId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;

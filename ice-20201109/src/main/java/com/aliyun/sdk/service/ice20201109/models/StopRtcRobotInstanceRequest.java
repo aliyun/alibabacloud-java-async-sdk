@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopRtcRobotInstanceRequest} extends {@link RequestModel}
  *
  * <p>StopRtcRobotInstanceRequest</p>
@@ -54,7 +55,10 @@ public class StopRtcRobotInstanceRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>727dc0e296014bb58670940a3da95592</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

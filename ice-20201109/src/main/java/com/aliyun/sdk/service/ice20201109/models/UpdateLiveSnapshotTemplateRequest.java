@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateLiveSnapshotTemplateRequest} extends {@link RequestModel}
  *
  * <p>UpdateLiveSnapshotTemplateRequest</p>
@@ -130,7 +131,10 @@ public class UpdateLiveSnapshotTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("TemplateId", templateId);
@@ -139,7 +143,7 @@ public class UpdateLiveSnapshotTemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>This parameter is required.</p>
          */
         public Builder templateName(String templateName) {
             this.putBodyParameter("TemplateName", templateName);
@@ -148,7 +152,10 @@ public class UpdateLiveSnapshotTemplateRequest extends Request {
         }
 
         /**
-         * TimeInterval.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder timeInterval(Integer timeInterval) {
             this.putBodyParameter("TimeInterval", timeInterval);

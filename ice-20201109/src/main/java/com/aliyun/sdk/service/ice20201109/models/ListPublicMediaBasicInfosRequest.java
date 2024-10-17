@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPublicMediaBasicInfosRequest} extends {@link RequestModel}
  *
  * <p>ListPublicMediaBasicInfosRequest</p>
@@ -163,7 +164,15 @@ public class ListPublicMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * BusinessType.
+         * <p>The business type of the media asset. Valid values:</p>
+         * <ul>
+         * <li>sticker</li>
+         * <li>bgm</li>
+         * <li>bgi</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>sticker</p>
          */
         public Builder businessType(String businessType) {
             this.putQueryParameter("BusinessType", businessType);
@@ -172,7 +181,10 @@ public class ListPublicMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * IncludeFileBasicInfo.
+         * <p>Specifies whether to return the basic information of the media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeFileBasicInfo(Boolean includeFileBasicInfo) {
             this.putQueryParameter("IncludeFileBasicInfo", includeFileBasicInfo);
@@ -181,7 +193,11 @@ public class ListPublicMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return.</p>
+         * <p>Maximum value: 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -190,7 +206,41 @@ public class ListPublicMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * MediaTagId.
+         * <p>The media tag. All media assets that contain the specified media tag are returned. Valid values:</p>
+         * <ul>
+         * <li><p>Sticker tags:</p>
+         * <ul>
+         * <li>sticker-atmosphere</li>
+         * <li>sticker-bubble</li>
+         * <li>sticker-cute</li>
+         * <li>sticker-daily</li>
+         * <li>sticker-expression</li>
+         * <li>sticker-gif</li>
+         * </ul>
+         * </li>
+         * <li><p>Background music (BGM) tags:</p>
+         * <ul>
+         * <li>bgm-romantic</li>
+         * <li>bgm-cuisine</li>
+         * <li>bgm-chinese-style</li>
+         * <li>bgm-upbeat</li>
+         * <li>bgm-dynamic</li>
+         * <li>bgm-relaxing</li>
+         * <li>bgm-quirky</li>
+         * <li>bgm-beauty</li>
+         * </ul>
+         * </li>
+         * <li><p>Background image (BGI) tags:</p>
+         * <ul>
+         * <li>bgi-grad</li>
+         * <li>bgi-solid</li>
+         * <li>bgi-pic</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ticker-atmosphere</p>
          */
         public Builder mediaTagId(String mediaTagId) {
             this.putQueryParameter("MediaTagId", mediaTagId);
@@ -199,7 +249,10 @@ public class ListPublicMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pSa1SQ0wCe5pzVrQ6mWZEw==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -208,7 +261,10 @@ public class ListPublicMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -217,7 +273,10 @@ public class ListPublicMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

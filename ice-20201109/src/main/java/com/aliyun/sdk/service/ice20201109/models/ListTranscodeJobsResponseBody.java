@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTranscodeJobsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTranscodeJobsResponseBody</p>
@@ -90,6 +91,12 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTranscodeJobsResponseBody</p>
+     */
     public static class InputGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InputUrl")
         private String inputUrl;
@@ -171,6 +178,12 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTranscodeJobsResponseBody</p>
+     */
     public static class Output extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Media")
         private String media;
@@ -252,6 +265,12 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTranscodeJobsResponseBody</p>
+     */
     public static class CombineConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AudioIndex")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -317,7 +336,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             private String videoIndex; 
 
             /**
-             * AudioIndex.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 或 exclude</p>
              */
             public Builder audioIndex(String audioIndex) {
                 this.audioIndex = audioIndex;
@@ -341,7 +363,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * VideoIndex.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 或 exclude</p>
              */
             public Builder videoIndex(String videoIndex) {
                 this.videoIndex = videoIndex;
@@ -355,6 +380,12 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTranscodeJobsResponseBody</p>
+     */
     public static class Encryption extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CipherText")
         private String cipherText;
@@ -436,6 +467,12 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTranscodeJobsResponseBody</p>
+     */
     public static class File extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Media")
         private String media;
@@ -497,6 +534,12 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTranscodeJobsResponseBody</p>
+     */
     public static class Timeline extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
@@ -558,6 +601,12 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTranscodeJobsResponseBody</p>
+     */
     public static class OverwriteParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dx")
         private String dx;
@@ -719,6 +768,12 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTranscodeJobsResponseBody</p>
+     */
     public static class ImageWatermarks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OverwriteParams")
         private OverwriteParams overwriteParams;
@@ -780,6 +835,12 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTranscodeJobsResponseBody</p>
+     */
     public static class OverwriteParamsFile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Media")
         private String media;
@@ -841,6 +902,12 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTranscodeJobsResponseBody</p>
+     */
     public static class SubtitlesOverwriteParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CharEnc")
         private String charEnc;
@@ -922,6 +989,12 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTranscodeJobsResponseBody</p>
+     */
     public static class Subtitles extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OverwriteParams")
         private SubtitlesOverwriteParams overwriteParams;
@@ -983,6 +1056,12 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTranscodeJobsResponseBody</p>
+     */
     public static class TextWatermarksOverwriteParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Adaptive")
         private String adaptive;
@@ -1204,6 +1283,12 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTranscodeJobsResponseBody</p>
+     */
     public static class TextWatermarks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OverwriteParams")
         private TextWatermarksOverwriteParams overwriteParams;
@@ -1265,6 +1350,12 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTranscodeJobsResponseBody</p>
+     */
     public static class Volume extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IntegratedLoudnessTarget")
         private String integratedLoudnessTarget;
@@ -1366,6 +1457,12 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTranscodeJobsResponseBody</p>
+     */
     public static class Audio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
@@ -1527,6 +1624,12 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTranscodeJobsResponseBody</p>
+     */
     public static class Container extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
@@ -1568,6 +1671,12 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTranscodeJobsResponseBody</p>
+     */
     public static class Segment extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
@@ -1629,6 +1738,12 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTranscodeJobsResponseBody</p>
+     */
     public static class MuxConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Segment")
         private Segment segment;
@@ -1670,6 +1785,12 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTranscodeJobsResponseBody</p>
+     */
     public static class Video extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AbrMax")
         private String abrMax;
@@ -2051,6 +2172,12 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTranscodeJobsResponseBody</p>
+     */
     public static class TranscodeOverwriteParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Audio")
         private Audio audio;
@@ -2172,6 +2299,12 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTranscodeJobsResponseBody</p>
+     */
     public static class Transcode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OverwriteParams")
         private TranscodeOverwriteParams overwriteParams;
@@ -2233,6 +2366,12 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTranscodeJobsResponseBody</p>
+     */
     public static class ProcessConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CombineConfigs")
         private java.util.List < CombineConfigs> combineConfigs;
@@ -2394,6 +2533,12 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTranscodeJobsResponseBody</p>
+     */
     public static class OutputGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Output")
         private Output output;
@@ -2455,6 +2600,12 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTranscodeJobsResponseBody</p>
+     */
     public static class ScheduleConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;
@@ -2516,6 +2667,12 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTranscodeJobsResponseBody</p>
+     */
     public static class Jobs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;

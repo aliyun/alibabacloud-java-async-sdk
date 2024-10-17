@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateLiveRecordTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateLiveRecordTemplateResponseBody</p>
@@ -37,7 +38,10 @@ public class UpdateLiveRecordTemplateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 代表资源一级ID的资源属性字段
+         * <p>代表资源一级ID的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0F3D5C03-4B6E-5F40-B7F6-B1956776E7D3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

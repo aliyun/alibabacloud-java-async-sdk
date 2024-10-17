@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMediaInfosResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteMediaInfosResponseBody</p>
@@ -61,7 +62,7 @@ public class DeleteMediaInfosResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ForbiddenList.
+         * <p>The IDs or URLs of media assets that cannot be deleted. Generally, media assets cannot be deleted if you do not have the required permissions.</p>
          */
         public Builder forbiddenList(java.util.List < String > forbiddenList) {
             this.forbiddenList = forbiddenList;
@@ -69,7 +70,7 @@ public class DeleteMediaInfosResponseBody extends TeaModel {
         }
 
         /**
-         * IgnoredList.
+         * <p>The IDs or URLs of ignored media assets. An error occurred while obtaining such media assets.</p>
          */
         public Builder ignoredList(java.util.List < String > ignoredList) {
             this.ignoredList = ignoredList;
@@ -77,7 +78,10 @@ public class DeleteMediaInfosResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0622C702-41BE-467E-AF2E-883D4517962E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

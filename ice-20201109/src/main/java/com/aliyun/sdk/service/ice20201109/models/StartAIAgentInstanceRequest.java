@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartAIAgentInstanceRequest} extends {@link RequestModel}
  *
  * <p>StartAIAgentInstanceRequest</p>
@@ -97,7 +98,10 @@ public class StartAIAgentInstanceRequest extends Request {
         } 
 
         /**
-         * AIAgentId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39f8e0bc005e4f309379701645f4****</p>
          */
         public Builder AIAgentId(String AIAgentId) {
             this.putQueryParameter("AIAgentId", AIAgentId);
@@ -106,7 +110,7 @@ public class StartAIAgentInstanceRequest extends Request {
         }
 
         /**
-         * RuntimeConfig.
+         * <p>This parameter is required.</p>
          */
         public Builder runtimeConfig(AIAgentRuntimeConfig runtimeConfig) {
             String runtimeConfigShrink = shrink(runtimeConfig, "RuntimeConfig", "json");

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendLiveSnapshotJobCommandRequest} extends {@link RequestModel}
  *
  * <p>SendLiveSnapshotJobCommandRequest</p>
@@ -69,7 +70,10 @@ public class SendLiveSnapshotJobCommandRequest extends Request {
         } 
 
         /**
-         * Command.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>start</p>
          */
         public Builder command(String command) {
             this.putBodyParameter("Command", command);
@@ -78,7 +82,10 @@ public class SendLiveSnapshotJobCommandRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.putBodyParameter("JobId", jobId);

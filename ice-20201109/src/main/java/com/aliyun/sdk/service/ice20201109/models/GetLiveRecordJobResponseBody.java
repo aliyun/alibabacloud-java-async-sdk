@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLiveRecordJobResponseBody} extends {@link TeaModel}
  *
  * <p>GetLiveRecordJobResponseBody</p>
@@ -49,7 +50,7 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 录制任务
+         * <p>录制任务</p>
          */
         public Builder recordJob(RecordJob recordJob) {
             this.recordJob = recordJob;
@@ -70,6 +71,12 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetLiveRecordJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLiveRecordJobResponseBody</p>
+     */
     public static class RecordOutput extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
@@ -151,6 +158,12 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetLiveRecordJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLiveRecordJobResponseBody</p>
+     */
     public static class StreamInput extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -212,6 +225,12 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetLiveRecordJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLiveRecordJobResponseBody</p>
+     */
     public static class RecordJob extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -335,7 +354,11 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
             private String templateName; 
 
             /**
-             * 代表创建时间的资源属性字段
+             * <p>代表创建时间的资源属性字段</p>
+             * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-20T02:48:58Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -343,7 +366,10 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
             }
 
             /**
-             * 代表资源名称的资源属性字段
+             * <p>代表资源名称的资源属性字段</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ab0e3e76-1e9d-11ed-ba64-0c42a1b73d66</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -351,7 +377,7 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
             }
 
             /**
-             * 代表资源名称的资源属性字段
+             * <p>代表资源名称的资源属性字段</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -359,7 +385,10 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
             }
 
             /**
-             * 回调地址
+             * <p>回调地址</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/imsnotify">https://example.com/imsnotify</a></p>
              */
             public Builder notifyUrl(String notifyUrl) {
                 this.notifyUrl = notifyUrl;
@@ -375,7 +404,10 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
             }
 
             /**
-             * 代表资源名称的资源属性字段
+             * <p>代表资源名称的资源属性字段</p>
+             * 
+             * <strong>example:</strong>
+             * <p>paused</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -391,7 +423,10 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
             }
 
             /**
-             * 录制模板ID
+             * <p>录制模板ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69e1f9fe-1e97-11ed-ba64-0c42a1b73d66</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -399,7 +434,10 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
             }
 
             /**
-             * 录制模板ID
+             * <p>录制模板ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test template</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;

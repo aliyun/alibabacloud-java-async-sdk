@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMediaCensorJobDetailResponseBody} extends {@link TeaModel}
  *
  * <p>QueryMediaCensorJobDetailResponseBody</p>
@@ -70,6 +71,12 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryMediaCensorJobDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobDetailResponseBody</p>
+     */
     public static class BarrageCensorResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -171,6 +178,12 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobDetailResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -272,6 +285,12 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobDetailResponseBody</p>
+     */
     public static class Results extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Result")
         private java.util.List < Result> result;
@@ -313,6 +332,12 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobDetailResponseBody</p>
+     */
     public static class CoverImageCensorResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
@@ -414,6 +439,12 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobDetailResponseBody</p>
+     */
     public static class CoverImageCensorResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CoverImageCensorResult")
         private java.util.List < CoverImageCensorResult> coverImageCensorResult;
@@ -455,6 +486,12 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobDetailResponseBody</p>
+     */
     public static class DescCensorResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -556,6 +593,12 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobDetailResponseBody</p>
+     */
     public static class Input extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
@@ -637,6 +680,12 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobDetailResponseBody</p>
+     */
     public static class TitleCensorResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -738,6 +787,12 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobDetailResponseBody</p>
+     */
     public static class CensorResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -839,6 +894,12 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobDetailResponseBody</p>
+     */
     public static class CensorResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CensorResult")
         private java.util.List < CensorResult> censorResult;
@@ -880,6 +941,12 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobDetailResponseBody</p>
+     */
     public static class CensorResultsCensorResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -981,6 +1048,12 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobDetailResponseBody</p>
+     */
     public static class VideoTimelineCensorResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CensorResult")
         private java.util.List < CensorResultsCensorResult> censorResult;
@@ -1022,6 +1095,12 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobDetailResponseBody</p>
+     */
     public static class VideoTimeline extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CensorResults")
         private VideoTimelineCensorResults censorResults;
@@ -1103,6 +1182,12 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobDetailResponseBody</p>
+     */
     public static class VideoTimelines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VideoTimeline")
         private java.util.List < VideoTimeline> videoTimeline;
@@ -1144,6 +1229,12 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobDetailResponseBody</p>
+     */
     public static class VensorCensorResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CensorResults")
         private CensorResults censorResults;
@@ -1225,6 +1316,12 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobDetailResponseBody</p>
+     */
     public static class OutputFile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
@@ -1306,6 +1403,12 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobDetailResponseBody</p>
+     */
     public static class VideoCensorConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BizType")
         private String bizType;
@@ -1387,6 +1490,12 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobDetailResponseBody</p>
+     */
     public static class MediaCensorJobDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BarrageCensorResult")
         private BarrageCensorResult barrageCensorResult;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLiveSnapshotTemplateRequest} extends {@link RequestModel}
  *
  * <p>DeleteLiveSnapshotTemplateRequest</p>
@@ -54,7 +55,10 @@ public class DeleteLiveSnapshotTemplateRequest extends Request {
         } 
 
         /**
-         * TemplateId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("TemplateId", templateId);

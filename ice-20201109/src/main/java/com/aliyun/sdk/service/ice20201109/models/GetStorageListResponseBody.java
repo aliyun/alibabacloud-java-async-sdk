@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetStorageListResponseBody} extends {@link TeaModel}
  *
  * <p>GetStorageListResponseBody</p>
@@ -49,7 +50,10 @@ public class GetStorageListResponseBody extends TeaModel {
         private java.util.List < StorageInfoList> storageInfoList; 
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>73-8B78-5D86-A50C-49B96C</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetStorageListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetStorageListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStorageListResponseBody</p>
+     */
     public static class StorageInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;

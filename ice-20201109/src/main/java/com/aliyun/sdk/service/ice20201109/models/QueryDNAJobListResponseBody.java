@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDNAJobListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDNAJobListResponseBody</p>
@@ -70,6 +71,12 @@ public class QueryDNAJobListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDNAJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDNAJobListResponseBody</p>
+     */
     public static class Input extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Media")
         private String media;
@@ -131,6 +138,12 @@ public class QueryDNAJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDNAJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDNAJobListResponseBody</p>
+     */
     public static class JobList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;

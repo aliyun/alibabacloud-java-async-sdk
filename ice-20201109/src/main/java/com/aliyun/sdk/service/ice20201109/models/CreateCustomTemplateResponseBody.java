@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCustomTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCustomTemplateResponseBody</p>
@@ -70,6 +71,12 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateCustomTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateCustomTemplateResponseBody</p>
+     */
     public static class CustomTemplate extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;

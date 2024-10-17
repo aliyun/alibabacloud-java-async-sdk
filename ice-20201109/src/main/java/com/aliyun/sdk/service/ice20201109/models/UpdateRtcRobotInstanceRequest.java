@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRtcRobotInstanceRequest} extends {@link RequestModel}
  *
  * <p>UpdateRtcRobotInstanceRequest</p>
@@ -78,7 +79,10 @@ public class UpdateRtcRobotInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>727dc0e296014bb58670940a3da95592</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -93,6 +97,12 @@ public class UpdateRtcRobotInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateRtcRobotInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateRtcRobotInstanceRequest</p>
+     */
     public static class Config extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableVoiceInterrupt")
         private Boolean enableVoiceInterrupt;

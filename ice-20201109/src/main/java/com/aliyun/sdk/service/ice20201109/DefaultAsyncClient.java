@@ -96,6 +96,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * <b>description</b> :
+     * <p>You can create at most three levels of categories. Each category level can contain a maximum of 100 subcategories.</p>
+     * 
+     * @param request the request parameters of AddCategory  AddCategoryRequest
+     * @return AddCategoryResponse
+     */
     @Override
     public CompletableFuture<AddCategoryResponse> addCategory(AddCategoryRequest request) {
         try {
@@ -110,6 +117,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddEditingProjectMaterials  AddEditingProjectMaterialsRequest
+     * @return AddEditingProjectMaterialsResponse
+     */
     @Override
     public CompletableFuture<AddEditingProjectMaterialsResponse> addEditingProjectMaterials(AddEditingProjectMaterialsRequest request) {
         try {
@@ -124,6 +135,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddFavoritePublicMedia  AddFavoritePublicMediaRequest
+     * @return AddFavoritePublicMediaResponse
+     */
     @Override
     public CompletableFuture<AddFavoritePublicMediaResponse> addFavoritePublicMedia(AddFavoritePublicMediaRequest request) {
         try {
@@ -138,6 +153,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddMediaMarks  AddMediaMarksRequest
+     * @return AddMediaMarksResponse
+     */
     @Override
     public CompletableFuture<AddMediaMarksResponse> addMediaMarks(AddMediaMarksRequest request) {
         try {
@@ -152,6 +171,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddTemplate  AddTemplateRequest
+     * @return AddTemplateResponse
+     */
     @Override
     public CompletableFuture<AddTemplateResponse> addTemplate(AddTemplateRequest request) {
         try {
@@ -166,6 +189,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AlterSearchIndex  AlterSearchIndexRequest
+     * @return AlterSearchIndexResponse
+     */
     @Override
     public CompletableFuture<AlterSearchIndexResponse> alterSearchIndex(AlterSearchIndexRequest request) {
         try {
@@ -180,6 +207,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchGetMediaInfos  BatchGetMediaInfosRequest
+     * @return BatchGetMediaInfosResponse
+     */
     @Override
     public CompletableFuture<BatchGetMediaInfosResponse> batchGetMediaInfos(BatchGetMediaInfosRequest request) {
         try {
@@ -194,6 +225,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelDNAJob  CancelDNAJobRequest
+     * @return CancelDNAJobResponse
+     */
     @Override
     public CompletableFuture<CancelDNAJobResponse> cancelDNAJob(CancelDNAJobRequest request) {
         try {
@@ -208,6 +243,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelFavoritePublicMedia  CancelFavoritePublicMediaRequest
+     * @return CancelFavoritePublicMediaResponse
+     */
     @Override
     public CompletableFuture<CancelFavoritePublicMediaResponse> cancelFavoritePublicMedia(CancelFavoritePublicMediaRequest request) {
         try {
@@ -222,6 +261,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAudit  CreateAuditRequest
+     * @return CreateAuditResponse
+     */
     @Override
     public CompletableFuture<CreateAuditResponse> createAudit(CreateAuditRequest request) {
         try {
@@ -236,6 +279,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAvatarTrainingJob  CreateAvatarTrainingJobRequest
+     * @return CreateAvatarTrainingJobResponse
+     */
     @Override
     public CompletableFuture<CreateAvatarTrainingJobResponse> createAvatarTrainingJob(CreateAvatarTrainingJobRequest request) {
         try {
@@ -250,6 +297,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateCustomTemplate  CreateCustomTemplateRequest
+     * @return CreateCustomTemplateResponse
+     */
     @Override
     public CompletableFuture<CreateCustomTemplateResponse> createCustomTemplate(CreateCustomTemplateRequest request) {
         try {
@@ -264,6 +315,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateCustomizedVoiceJob  CreateCustomizedVoiceJobRequest
+     * @return CreateCustomizedVoiceJobResponse
+     */
     @Override
     public CompletableFuture<CreateCustomizedVoiceJobResponse> createCustomizedVoiceJob(CreateCustomizedVoiceJobRequest request) {
         try {
@@ -278,6 +333,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDNADB  CreateDNADBRequest
+     * @return CreateDNADBResponse
+     */
     @Override
     public CompletableFuture<CreateDNADBResponse> createDNADB(CreateDNADBRequest request) {
         try {
@@ -292,6 +351,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateEditingProject  CreateEditingProjectRequest
+     * @return CreateEditingProjectResponse
+     */
     @Override
     public CompletableFuture<CreateEditingProjectResponse> createEditingProject(CreateEditingProjectRequest request) {
         try {
@@ -306,6 +369,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateLiveRecordTemplate  CreateLiveRecordTemplateRequest
+     * @return CreateLiveRecordTemplateResponse
+     */
     @Override
     public CompletableFuture<CreateLiveRecordTemplateResponse> createLiveRecordTemplate(CreateLiveRecordTemplateRequest request) {
         try {
@@ -320,6 +387,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateLiveSnapshotTemplate  CreateLiveSnapshotTemplateRequest
+     * @return CreateLiveSnapshotTemplateResponse
+     */
     @Override
     public CompletableFuture<CreateLiveSnapshotTemplateResponse> createLiveSnapshotTemplate(CreateLiveSnapshotTemplateRequest request) {
         try {
@@ -334,6 +405,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateLiveTranscodeTemplate  CreateLiveTranscodeTemplateRequest
+     * @return CreateLiveTranscodeTemplateResponse
+     */
     @Override
     public CompletableFuture<CreateLiveTranscodeTemplateResponse> createLiveTranscodeTemplate(CreateLiveTranscodeTemplateRequest request) {
         try {
@@ -348,6 +423,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreatePipeline  CreatePipelineRequest
+     * @return CreatePipelineResponse
+     */
     @Override
     public CompletableFuture<CreatePipelineResponse> createPipeline(CreatePipelineRequest request) {
         try {
@@ -362,6 +441,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>The large visual model feature is still in the public preview phase. You can use this feature for free for 1,000 hours of videos.</p>
+     * 
+     * @param request the request parameters of CreateSearchIndex  CreateSearchIndexRequest
+     * @return CreateSearchIndexResponse
+     */
     @Override
     public CompletableFuture<CreateSearchIndexResponse> createSearchIndex(CreateSearchIndexRequest request) {
         try {
@@ -376,6 +462,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateSearchLib  CreateSearchLibRequest
+     * @return CreateSearchLibResponse
+     */
     @Override
     public CompletableFuture<CreateSearchLibResponse> createSearchLib(CreateSearchLibRequest request) {
         try {
@@ -390,6 +480,21 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation to obtain the upload URLs and credentials of audio and video files. You can also call this operation to obtain the upload URLs and credentials of images and auxiliary media assets.</p>
+     * <ul>
+     * <li>Obtaining an upload URL and credential is essential for Intelligent Media Services (IMS) and is required in each upload operation.</li>
+     * <li>If the video upload credential expires, you can call the RefreshUploadMedia operation to obtain a new upload credential. The default validity period of a video upload credential is 3,000 seconds.</li>
+     * <li>After you upload a media asset, you can configure a callback to receive upload event notifications or call the GetMediaInfo operation to determine whether the media asset is uploaded based on the returned status.</li>
+     * <li>The MediaId parameter returned by this operation can be used for media asset lifecycle management or media processing.</li>
+     * <li>You can call this operation to upload media assets only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media asset to your own OSS bucket, you can upload the file to your OSS bucket by using <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then call the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the file in the OSS bucket with the media asset library.</li>
+     * <li>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateUploadMedia  CreateUploadMediaRequest
+     * @return CreateUploadMediaResponse
+     */
     @Override
     public CompletableFuture<CreateUploadMediaResponse> createUploadMedia(CreateUploadMediaRequest request) {
         try {
@@ -404,6 +509,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation to upload only a local media stream. After the media stream is uploaded, it is associated with the specified media asset ID.</p>
+     * <ul>
+     * <li>You can call this operation to upload media streams only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media stream to your own OSS bucket, you can upload the file to your OSS bucket by using <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then call the <a href="https://help.aliyun.com/document_detail/440765.html">RegisterMediaStream</a> operation to associate the media stream with the specified media asset ID.</li>
+     * <li>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateUploadStream  CreateUploadStreamRequest
+     * @return CreateUploadStreamResponse
+     */
     @Override
     public CompletableFuture<CreateUploadStreamResponse> createUploadStream(CreateUploadStreamRequest request) {
         try {
@@ -418,6 +534,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DecryptKMSDataKey  DecryptKMSDataKeyRequest
+     * @return DecryptKMSDataKeyResponse
+     */
     @Override
     public CompletableFuture<DecryptKMSDataKeyResponse> decryptKMSDataKey(DecryptKMSDataKeyRequest request) {
         try {
@@ -432,6 +552,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAvatarTrainingJob  DeleteAvatarTrainingJobRequest
+     * @return DeleteAvatarTrainingJobResponse
+     */
     @Override
     public CompletableFuture<DeleteAvatarTrainingJobResponse> deleteAvatarTrainingJob(DeleteAvatarTrainingJobRequest request) {
         try {
@@ -446,6 +570,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>This operation also deletes the subcategories, including the level-2 and level-3 categories, of the category.</p>
+     * 
+     * @param request the request parameters of DeleteCategory  DeleteCategoryRequest
+     * @return DeleteCategoryResponse
+     */
     @Override
     public CompletableFuture<DeleteCategoryResponse> deleteCategory(DeleteCategoryRequest request) {
         try {
@@ -460,6 +591,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCustomTemplate  DeleteCustomTemplateRequest
+     * @return DeleteCustomTemplateResponse
+     */
     @Override
     public CompletableFuture<DeleteCustomTemplateResponse> deleteCustomTemplate(DeleteCustomTemplateRequest request) {
         try {
@@ -474,6 +609,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCustomizedVoiceJob  DeleteCustomizedVoiceJobRequest
+     * @return DeleteCustomizedVoiceJobResponse
+     */
     @Override
     public CompletableFuture<DeleteCustomizedVoiceJobResponse> deleteCustomizedVoiceJob(DeleteCustomizedVoiceJobRequest request) {
         try {
@@ -488,6 +627,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDNADB  DeleteDNADBRequest
+     * @return DeleteDNADBResponse
+     */
     @Override
     public CompletableFuture<DeleteDNADBResponse> deleteDNADB(DeleteDNADBRequest request) {
         try {
@@ -502,6 +645,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDNAFiles  DeleteDNAFilesRequest
+     * @return DeleteDNAFilesResponse
+     */
     @Override
     public CompletableFuture<DeleteDNAFilesResponse> deleteDNAFiles(DeleteDNAFilesRequest request) {
         try {
@@ -516,6 +663,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteEditingProjectMaterials  DeleteEditingProjectMaterialsRequest
+     * @return DeleteEditingProjectMaterialsResponse
+     */
     @Override
     public CompletableFuture<DeleteEditingProjectMaterialsResponse> deleteEditingProjectMaterials(DeleteEditingProjectMaterialsRequest request) {
         try {
@@ -530,6 +681,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteEditingProjects  DeleteEditingProjectsRequest
+     * @return DeleteEditingProjectsResponse
+     */
     @Override
     public CompletableFuture<DeleteEditingProjectsResponse> deleteEditingProjects(DeleteEditingProjectsRequest request) {
         try {
@@ -544,6 +699,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteLiveRecordFiles  DeleteLiveRecordFilesRequest
+     * @return DeleteLiveRecordFilesResponse
+     */
     @Override
     public CompletableFuture<DeleteLiveRecordFilesResponse> deleteLiveRecordFiles(DeleteLiveRecordFilesRequest request) {
         try {
@@ -558,6 +717,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteLiveRecordTemplate  DeleteLiveRecordTemplateRequest
+     * @return DeleteLiveRecordTemplateResponse
+     */
     @Override
     public CompletableFuture<DeleteLiveRecordTemplateResponse> deleteLiveRecordTemplate(DeleteLiveRecordTemplateRequest request) {
         try {
@@ -572,6 +735,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteLiveSnapshotFiles  DeleteLiveSnapshotFilesRequest
+     * @return DeleteLiveSnapshotFilesResponse
+     */
     @Override
     public CompletableFuture<DeleteLiveSnapshotFilesResponse> deleteLiveSnapshotFiles(DeleteLiveSnapshotFilesRequest request) {
         try {
@@ -586,6 +753,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteLiveSnapshotTemplate  DeleteLiveSnapshotTemplateRequest
+     * @return DeleteLiveSnapshotTemplateResponse
+     */
     @Override
     public CompletableFuture<DeleteLiveSnapshotTemplateResponse> deleteLiveSnapshotTemplate(DeleteLiveSnapshotTemplateRequest request) {
         try {
@@ -600,6 +771,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteLiveTranscodeJob  DeleteLiveTranscodeJobRequest
+     * @return DeleteLiveTranscodeJobResponse
+     */
     @Override
     public CompletableFuture<DeleteLiveTranscodeJobResponse> deleteLiveTranscodeJob(DeleteLiveTranscodeJobRequest request) {
         try {
@@ -614,6 +789,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteLiveTranscodeTemplate  DeleteLiveTranscodeTemplateRequest
+     * @return DeleteLiveTranscodeTemplateResponse
+     */
     @Override
     public CompletableFuture<DeleteLiveTranscodeTemplateResponse> deleteLiveTranscodeTemplate(DeleteLiveTranscodeTemplateRequest request) {
         try {
@@ -628,6 +807,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteMediaFromSearchLib  DeleteMediaFromSearchLibRequest
+     * @return DeleteMediaFromSearchLibResponse
+     */
     @Override
     public CompletableFuture<DeleteMediaFromSearchLibResponse> deleteMediaFromSearchLib(DeleteMediaFromSearchLibRequest request) {
         try {
@@ -642,6 +825,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteMediaInfos  DeleteMediaInfosRequest
+     * @return DeleteMediaInfosResponse
+     */
     @Override
     public CompletableFuture<DeleteMediaInfosResponse> deleteMediaInfos(DeleteMediaInfosRequest request) {
         try {
@@ -656,6 +843,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteMediaMarks  DeleteMediaMarksRequest
+     * @return DeleteMediaMarksResponse
+     */
     @Override
     public CompletableFuture<DeleteMediaMarksResponse> deleteMediaMarks(DeleteMediaMarksRequest request) {
         try {
@@ -670,6 +861,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeletePipeline  DeletePipelineRequest
+     * @return DeletePipelineResponse
+     */
     @Override
     public CompletableFuture<DeletePipelineResponse> deletePipeline(DeletePipelineRequest request) {
         try {
@@ -684,6 +879,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>You can call this operation to delete multiple media streams at a time.</p>
+     * 
+     * @param request the request parameters of DeletePlayInfo  DeletePlayInfoRequest
+     * @return DeletePlayInfoResponse
+     */
     @Override
     public CompletableFuture<DeletePlayInfoResponse> deletePlayInfo(DeletePlayInfoRequest request) {
         try {
@@ -698,6 +900,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteSmartJob  DeleteSmartJobRequest
+     * @return DeleteSmartJobResponse
+     */
     @Override
     public CompletableFuture<DeleteSmartJobResponse> deleteSmartJob(DeleteSmartJobRequest request) {
         try {
@@ -712,6 +918,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteTemplate  DeleteTemplateRequest
+     * @return DeleteTemplateResponse
+     */
     @Override
     public CompletableFuture<DeleteTemplateResponse> deleteTemplate(DeleteTemplateRequest request) {
         try {
@@ -726,6 +936,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAIAgentInstance  DescribeAIAgentInstanceRequest
+     * @return DescribeAIAgentInstanceResponse
+     */
     @Override
     public CompletableFuture<DescribeAIAgentInstanceResponse> describeAIAgentInstance(DescribeAIAgentInstanceRequest request) {
         try {
@@ -740,6 +954,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeMeterImsEditUsage  DescribeMeterImsEditUsageRequest
+     * @return DescribeMeterImsEditUsageResponse
+     */
     @Override
     public CompletableFuture<DescribeMeterImsEditUsageResponse> describeMeterImsEditUsage(DescribeMeterImsEditUsageRequest request) {
         try {
@@ -754,6 +972,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeMeterImsMediaConvertUHDUsage  DescribeMeterImsMediaConvertUHDUsageRequest
+     * @return DescribeMeterImsMediaConvertUHDUsageResponse
+     */
     @Override
     public CompletableFuture<DescribeMeterImsMediaConvertUHDUsageResponse> describeMeterImsMediaConvertUHDUsage(DescribeMeterImsMediaConvertUHDUsageRequest request) {
         try {
@@ -768,6 +990,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeMeterImsMediaConvertUsage  DescribeMeterImsMediaConvertUsageRequest
+     * @return DescribeMeterImsMediaConvertUsageResponse
+     */
     @Override
     public CompletableFuture<DescribeMeterImsMediaConvertUsageResponse> describeMeterImsMediaConvertUsage(DescribeMeterImsMediaConvertUsageRequest request) {
         try {
@@ -782,6 +1008,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeMeterImsMpsAiUsage  DescribeMeterImsMpsAiUsageRequest
+     * @return DescribeMeterImsMpsAiUsageResponse
+     */
     @Override
     public CompletableFuture<DescribeMeterImsMpsAiUsageResponse> describeMeterImsMpsAiUsage(DescribeMeterImsMpsAiUsageRequest request) {
         try {
@@ -796,6 +1026,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeMeterImsSummary  DescribeMeterImsSummaryRequest
+     * @return DescribeMeterImsSummaryResponse
+     */
     @Override
     public CompletableFuture<DescribeMeterImsSummaryResponse> describeMeterImsSummary(DescribeMeterImsSummaryRequest request) {
         try {
@@ -810,6 +1044,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNotifyConfig  DescribeNotifyConfigRequest
+     * @return DescribeNotifyConfigResponse
+     */
     @Override
     public CompletableFuture<DescribeNotifyConfigResponse> describeNotifyConfig(DescribeNotifyConfigRequest request) {
         try {
@@ -824,6 +1062,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePlayList  DescribePlayListRequest
+     * @return DescribePlayListResponse
+     */
     @Override
     public CompletableFuture<DescribePlayListResponse> describePlayList(DescribePlayListRequest request) {
         try {
@@ -838,6 +1080,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRtcRobotInstance  DescribeRtcRobotInstanceRequest
+     * @return DescribeRtcRobotInstanceResponse
+     */
     @Override
     public CompletableFuture<DescribeRtcRobotInstanceResponse> describeRtcRobotInstance(DescribeRtcRobotInstanceRequest request) {
         try {
@@ -852,6 +1098,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DetectAudioForCustomizedVoiceJob  DetectAudioForCustomizedVoiceJobRequest
+     * @return DetectAudioForCustomizedVoiceJobResponse
+     */
     @Override
     public CompletableFuture<DetectAudioForCustomizedVoiceJobResponse> detectAudioForCustomizedVoiceJob(DetectAudioForCustomizedVoiceJobRequest request) {
         try {
@@ -866,6 +1116,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DropSearchIndex  DropSearchIndexRequest
+     * @return DropSearchIndexResponse
+     */
     @Override
     public CompletableFuture<DropSearchIndexResponse> dropSearchIndex(DropSearchIndexRequest request) {
         try {
@@ -880,6 +1134,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DropSearchLib  DropSearchLibRequest
+     * @return DropSearchLibResponse
+     */
     @Override
     public CompletableFuture<DropSearchLibResponse> dropSearchLib(DropSearchLibRequest request) {
         try {
@@ -894,6 +1152,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GenerateAIAgentCall  GenerateAIAgentCallRequest
+     * @return GenerateAIAgentCallResponse
+     */
     @Override
     public CompletableFuture<GenerateAIAgentCallResponse> generateAIAgentCall(GenerateAIAgentCallRequest request) {
         try {
@@ -908,6 +1170,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GenerateKMSDataKey  GenerateKMSDataKeyRequest
+     * @return GenerateKMSDataKeyResponse
+     */
     @Override
     public CompletableFuture<GenerateKMSDataKeyResponse> generateKMSDataKey(GenerateKMSDataKeyRequest request) {
         try {
@@ -922,6 +1188,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAvatar  GetAvatarRequest
+     * @return GetAvatarResponse
+     */
     @Override
     public CompletableFuture<GetAvatarResponse> getAvatar(GetAvatarRequest request) {
         try {
@@ -936,6 +1206,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAvatarTrainingJob  GetAvatarTrainingJobRequest
+     * @return GetAvatarTrainingJobResponse
+     */
     @Override
     public CompletableFuture<GetAvatarTrainingJobResponse> getAvatarTrainingJob(GetAvatarTrainingJobRequest request) {
         try {
@@ -950,6 +1224,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetBatchMediaProducingJob  GetBatchMediaProducingJobRequest
+     * @return GetBatchMediaProducingJobResponse
+     */
     @Override
     public CompletableFuture<GetBatchMediaProducingJobResponse> getBatchMediaProducingJob(GetBatchMediaProducingJobRequest request) {
         try {
@@ -964,6 +1242,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the information about a category and its subcategories based on the category ID and category type.</p>
+     * 
+     * @param request the request parameters of GetCategories  GetCategoriesRequest
+     * @return GetCategoriesResponse
+     */
     @Override
     public CompletableFuture<GetCategoriesResponse> getCategories(GetCategoriesRequest request) {
         try {
@@ -978,6 +1263,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetContentAnalyzeConfig  GetContentAnalyzeConfigRequest
+     * @return GetContentAnalyzeConfigResponse
+     */
     @Override
     public CompletableFuture<GetContentAnalyzeConfigResponse> getContentAnalyzeConfig(GetContentAnalyzeConfigRequest request) {
         try {
@@ -992,6 +1281,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCustomTemplate  GetCustomTemplateRequest
+     * @return GetCustomTemplateResponse
+     */
     @Override
     public CompletableFuture<GetCustomTemplateResponse> getCustomTemplate(GetCustomTemplateRequest request) {
         try {
@@ -1006,6 +1299,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCustomizedVoice  GetCustomizedVoiceRequest
+     * @return GetCustomizedVoiceResponse
+     */
     @Override
     public CompletableFuture<GetCustomizedVoiceResponse> getCustomizedVoice(GetCustomizedVoiceRequest request) {
         try {
@@ -1020,6 +1317,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCustomizedVoiceJob  GetCustomizedVoiceJobRequest
+     * @return GetCustomizedVoiceJobResponse
+     */
     @Override
     public CompletableFuture<GetCustomizedVoiceJobResponse> getCustomizedVoiceJob(GetCustomizedVoiceJobRequest request) {
         try {
@@ -1034,6 +1335,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDefaultStorageLocation  GetDefaultStorageLocationRequest
+     * @return GetDefaultStorageLocationResponse
+     */
     @Override
     public CompletableFuture<GetDefaultStorageLocationResponse> getDefaultStorageLocation(GetDefaultStorageLocationRequest request) {
         try {
@@ -1048,6 +1353,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDemonstrationForCustomizedVoiceJob  GetDemonstrationForCustomizedVoiceJobRequest
+     * @return GetDemonstrationForCustomizedVoiceJobResponse
+     */
     @Override
     public CompletableFuture<GetDemonstrationForCustomizedVoiceJobResponse> getDemonstrationForCustomizedVoiceJob(GetDemonstrationForCustomizedVoiceJobRequest request) {
         try {
@@ -1062,6 +1371,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDynamicImageJob  GetDynamicImageJobRequest
+     * @return GetDynamicImageJobResponse
+     */
     @Override
     public CompletableFuture<GetDynamicImageJobResponse> getDynamicImageJob(GetDynamicImageJobRequest request) {
         try {
@@ -1076,6 +1389,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetEditingProject  GetEditingProjectRequest
+     * @return GetEditingProjectResponse
+     */
     @Override
     public CompletableFuture<GetEditingProjectResponse> getEditingProject(GetEditingProjectRequest request) {
         try {
@@ -1090,6 +1407,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetEditingProjectMaterials  GetEditingProjectMaterialsRequest
+     * @return GetEditingProjectMaterialsResponse
+     */
     @Override
     public CompletableFuture<GetEditingProjectMaterialsResponse> getEditingProjectMaterials(GetEditingProjectMaterialsRequest request) {
         try {
@@ -1104,6 +1425,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetEventCallback  GetEventCallbackRequest
+     * @return GetEventCallbackResponse
+     */
     @Override
     public CompletableFuture<GetEventCallbackResponse> getEventCallback(GetEventCallbackRequest request) {
         try {
@@ -1118,6 +1443,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetLiveEditingIndexFile  GetLiveEditingIndexFileRequest
+     * @return GetLiveEditingIndexFileResponse
+     */
     @Override
     public CompletableFuture<GetLiveEditingIndexFileResponse> getLiveEditingIndexFile(GetLiveEditingIndexFileRequest request) {
         try {
@@ -1132,6 +1461,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetLiveEditingJob  GetLiveEditingJobRequest
+     * @return GetLiveEditingJobResponse
+     */
     @Override
     public CompletableFuture<GetLiveEditingJobResponse> getLiveEditingJob(GetLiveEditingJobRequest request) {
         try {
@@ -1146,6 +1479,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetLiveRecordJob  GetLiveRecordJobRequest
+     * @return GetLiveRecordJobResponse
+     */
     @Override
     public CompletableFuture<GetLiveRecordJobResponse> getLiveRecordJob(GetLiveRecordJobRequest request) {
         try {
@@ -1160,6 +1497,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetLiveRecordTemplate  GetLiveRecordTemplateRequest
+     * @return GetLiveRecordTemplateResponse
+     */
     @Override
     public CompletableFuture<GetLiveRecordTemplateResponse> getLiveRecordTemplate(GetLiveRecordTemplateRequest request) {
         try {
@@ -1174,6 +1515,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetLiveSnapshotJob  GetLiveSnapshotJobRequest
+     * @return GetLiveSnapshotJobResponse
+     */
     @Override
     public CompletableFuture<GetLiveSnapshotJobResponse> getLiveSnapshotJob(GetLiveSnapshotJobRequest request) {
         try {
@@ -1188,6 +1533,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetLiveSnapshotTemplate  GetLiveSnapshotTemplateRequest
+     * @return GetLiveSnapshotTemplateResponse
+     */
     @Override
     public CompletableFuture<GetLiveSnapshotTemplateResponse> getLiveSnapshotTemplate(GetLiveSnapshotTemplateRequest request) {
         try {
@@ -1202,6 +1551,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetLiveTranscodeJob  GetLiveTranscodeJobRequest
+     * @return GetLiveTranscodeJobResponse
+     */
     @Override
     public CompletableFuture<GetLiveTranscodeJobResponse> getLiveTranscodeJob(GetLiveTranscodeJobRequest request) {
         try {
@@ -1216,6 +1569,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetLiveTranscodeTemplate  GetLiveTranscodeTemplateRequest
+     * @return GetLiveTranscodeTemplateResponse
+     */
     @Override
     public CompletableFuture<GetLiveTranscodeTemplateResponse> getLiveTranscodeTemplate(GetLiveTranscodeTemplateRequest request) {
         try {
@@ -1230,6 +1587,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>If the MediaId parameter is specified, the MediaId parameter is preferentially used for the query. If the MediaId parameter is left empty, the InputURL parameter must be specified.</p>
+     * 
+     * @param request the request parameters of GetMediaInfo  GetMediaInfoRequest
+     * @return GetMediaInfoResponse
+     */
     @Override
     public CompletableFuture<GetMediaInfoResponse> getMediaInfo(GetMediaInfoRequest request) {
         try {
@@ -1244,6 +1608,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetMediaInfoJob  GetMediaInfoJobRequest
+     * @return GetMediaInfoJobResponse
+     */
     @Override
     public CompletableFuture<GetMediaInfoJobResponse> getMediaInfoJob(GetMediaInfoJobRequest request) {
         try {
@@ -1258,6 +1626,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetMediaMarks  GetMediaMarksRequest
+     * @return GetMediaMarksResponse
+     */
     @Override
     public CompletableFuture<GetMediaMarksResponse> getMediaMarks(GetMediaMarksRequest request) {
         try {
@@ -1272,6 +1644,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetMediaProducingJob  GetMediaProducingJobRequest
+     * @return GetMediaProducingJobResponse
+     */
     @Override
     public CompletableFuture<GetMediaProducingJobResponse> getMediaProducingJob(GetMediaProducingJobRequest request) {
         try {
@@ -1286,6 +1662,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPackageJob  GetPackageJobRequest
+     * @return GetPackageJobResponse
+     */
     @Override
     public CompletableFuture<GetPackageJobResponse> getPackageJob(GetPackageJobRequest request) {
         try {
@@ -1300,6 +1680,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPipeline  GetPipelineRequest
+     * @return GetPipelineResponse
+     */
     @Override
     public CompletableFuture<GetPipelineResponse> getPipeline(GetPipelineRequest request) {
         try {
@@ -1314,6 +1698,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>You use the ID of a video or audio file to query the playback URL of the file. Then, you can use the playback URL to play the audio or video in ApsaraVideo Player SDK (for URL-based playback) or a third-party player.</p>
+     * 
+     * @param request the request parameters of GetPlayInfo  GetPlayInfoRequest
+     * @return GetPlayInfoResponse
+     */
     @Override
     public CompletableFuture<GetPlayInfoResponse> getPlayInfo(GetPlayInfoRequest request) {
         try {
@@ -1328,6 +1719,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPublicMediaInfo  GetPublicMediaInfoRequest
+     * @return GetPublicMediaInfoResponse
+     */
     @Override
     public CompletableFuture<GetPublicMediaInfoResponse> getPublicMediaInfo(GetPublicMediaInfoRequest request) {
         try {
@@ -1342,6 +1737,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSmartHandleJob  GetSmartHandleJobRequest
+     * @return GetSmartHandleJobResponse
+     */
     @Override
     public CompletableFuture<GetSmartHandleJobResponse> getSmartHandleJob(GetSmartHandleJobRequest request) {
         try {
@@ -1356,6 +1755,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSnapshotJob  GetSnapshotJobRequest
+     * @return GetSnapshotJobResponse
+     */
     @Override
     public CompletableFuture<GetSnapshotJobResponse> getSnapshotJob(GetSnapshotJobRequest request) {
         try {
@@ -1370,6 +1773,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSnapshotUrls  GetSnapshotUrlsRequest
+     * @return GetSnapshotUrlsResponse
+     */
     @Override
     public CompletableFuture<GetSnapshotUrlsResponse> getSnapshotUrls(GetSnapshotUrlsRequest request) {
         try {
@@ -1384,6 +1791,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetStorageList  GetStorageListRequest
+     * @return GetStorageListResponse
+     */
     @Override
     public CompletableFuture<GetStorageListResponse> getStorageList(GetStorageListRequest request) {
         try {
@@ -1398,6 +1809,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSystemTemplate  GetSystemTemplateRequest
+     * @return GetSystemTemplateResponse
+     */
     @Override
     public CompletableFuture<GetSystemTemplateResponse> getSystemTemplate(GetSystemTemplateRequest request) {
         try {
@@ -1412,6 +1827,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTemplate  GetTemplateRequest
+     * @return GetTemplateResponse
+     */
     @Override
     public CompletableFuture<GetTemplateResponse> getTemplate(GetTemplateRequest request) {
         try {
@@ -1426,6 +1845,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTemplateMaterials  GetTemplateMaterialsRequest
+     * @return GetTemplateMaterialsResponse
+     */
     @Override
     public CompletableFuture<GetTemplateMaterialsResponse> getTemplateMaterials(GetTemplateMaterialsRequest request) {
         try {
@@ -1440,6 +1863,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTemplateParams  GetTemplateParamsRequest
+     * @return GetTemplateParamsResponse
+     */
     @Override
     public CompletableFuture<GetTemplateParamsResponse> getTemplateParams(GetTemplateParamsRequest request) {
         try {
@@ -1454,6 +1881,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTranscodeJob  GetTranscodeJobRequest
+     * @return GetTranscodeJobResponse
+     */
     @Override
     public CompletableFuture<GetTranscodeJobResponse> getTranscodeJob(GetTranscodeJobRequest request) {
         try {
@@ -1468,6 +1899,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the information, including the upload status, user data, creation time, and completion time, about URL-based upload jobs based on the returned job IDs or the URLs used during the upload.
+     * If an upload job fails, you can view the error code and error message. If an upload job is successful, you can obtain the video ID.</p>
+     * 
+     * @param request the request parameters of GetUrlUploadInfos  GetUrlUploadInfosRequest
+     * @return GetUrlUploadInfosResponse
+     */
     @Override
     public CompletableFuture<GetUrlUploadInfosResponse> getUrlUploadInfos(GetUrlUploadInfosRequest request) {
         try {
@@ -1482,6 +1921,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>You can call this operation to query information about up to the first 5,000 audio and video files based on the filter condition, such as the status or category ID of the file. We recommend that you set the StartTime and EndTime parameters to narrow down the time range and perform multiple queries to obtain data.</p>
+     * 
+     * @param request the request parameters of GetVideoList  GetVideoListRequest
+     * @return GetVideoListResponse
+     */
     @Override
     public CompletableFuture<GetVideoListResponse> getVideoList(GetVideoListRequest request) {
         try {
@@ -1496,6 +1942,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetWorkflowTask  GetWorkflowTaskRequest
+     * @return GetWorkflowTaskResponse
+     */
     @Override
     public CompletableFuture<GetWorkflowTaskResponse> getWorkflowTask(GetWorkflowTaskRequest request) {
         try {
@@ -1510,6 +1960,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InsertMediaToSearchLib  InsertMediaToSearchLibRequest
+     * @return InsertMediaToSearchLibResponse
+     */
     @Override
     public CompletableFuture<InsertMediaToSearchLibResponse> insertMediaToSearchLib(InsertMediaToSearchLibRequest request) {
         try {
@@ -1524,6 +1978,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAIAgentInstance  ListAIAgentInstanceRequest
+     * @return ListAIAgentInstanceResponse
+     */
     @Override
     public CompletableFuture<ListAIAgentInstanceResponse> listAIAgentInstance(ListAIAgentInstanceRequest request) {
         try {
@@ -1538,6 +1996,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAllPublicMediaTags  ListAllPublicMediaTagsRequest
+     * @return ListAllPublicMediaTagsResponse
+     */
     @Override
     public CompletableFuture<ListAllPublicMediaTagsResponse> listAllPublicMediaTags(ListAllPublicMediaTagsRequest request) {
         try {
@@ -1552,6 +2014,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAvatarTrainingJobs  ListAvatarTrainingJobsRequest
+     * @return ListAvatarTrainingJobsResponse
+     */
     @Override
     public CompletableFuture<ListAvatarTrainingJobsResponse> listAvatarTrainingJobs(ListAvatarTrainingJobsRequest request) {
         try {
@@ -1566,6 +2032,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAvatars  ListAvatarsRequest
+     * @return ListAvatarsResponse
+     */
     @Override
     public CompletableFuture<ListAvatarsResponse> listAvatars(ListAvatarsRequest request) {
         try {
@@ -1580,6 +2050,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListBatchMediaProducingJobs  ListBatchMediaProducingJobsRequest
+     * @return ListBatchMediaProducingJobsResponse
+     */
     @Override
     public CompletableFuture<ListBatchMediaProducingJobsResponse> listBatchMediaProducingJobs(ListBatchMediaProducingJobsRequest request) {
         try {
@@ -1594,6 +2068,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCustomTemplates  ListCustomTemplatesRequest
+     * @return ListCustomTemplatesResponse
+     */
     @Override
     public CompletableFuture<ListCustomTemplatesResponse> listCustomTemplates(ListCustomTemplatesRequest request) {
         try {
@@ -1608,6 +2086,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCustomizedVoiceJobs  ListCustomizedVoiceJobsRequest
+     * @return ListCustomizedVoiceJobsResponse
+     */
     @Override
     public CompletableFuture<ListCustomizedVoiceJobsResponse> listCustomizedVoiceJobs(ListCustomizedVoiceJobsRequest request) {
         try {
@@ -1622,6 +2104,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCustomizedVoices  ListCustomizedVoicesRequest
+     * @return ListCustomizedVoicesResponse
+     */
     @Override
     public CompletableFuture<ListCustomizedVoicesResponse> listCustomizedVoices(ListCustomizedVoicesRequest request) {
         try {
@@ -1636,6 +2122,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDNADB  ListDNADBRequest
+     * @return ListDNADBResponse
+     */
     @Override
     public CompletableFuture<ListDNADBResponse> listDNADB(ListDNADBRequest request) {
         try {
@@ -1650,6 +2140,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDNAFiles  ListDNAFilesRequest
+     * @return ListDNAFilesResponse
+     */
     @Override
     public CompletableFuture<ListDNAFilesResponse> listDNAFiles(ListDNAFilesRequest request) {
         try {
@@ -1664,6 +2158,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDynamicImageJobs  ListDynamicImageJobsRequest
+     * @return ListDynamicImageJobsResponse
+     */
     @Override
     public CompletableFuture<ListDynamicImageJobsResponse> listDynamicImageJobs(ListDynamicImageJobsRequest request) {
         try {
@@ -1678,6 +2176,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEditingProjects  ListEditingProjectsRequest
+     * @return ListEditingProjectsResponse
+     */
     @Override
     public CompletableFuture<ListEditingProjectsResponse> listEditingProjects(ListEditingProjectsRequest request) {
         try {
@@ -1692,6 +2194,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListLiveRecordFiles  ListLiveRecordFilesRequest
+     * @return ListLiveRecordFilesResponse
+     */
     @Override
     public CompletableFuture<ListLiveRecordFilesResponse> listLiveRecordFiles(ListLiveRecordFilesRequest request) {
         try {
@@ -1706,6 +2212,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListLiveRecordJobs  ListLiveRecordJobsRequest
+     * @return ListLiveRecordJobsResponse
+     */
     @Override
     public CompletableFuture<ListLiveRecordJobsResponse> listLiveRecordJobs(ListLiveRecordJobsRequest request) {
         try {
@@ -1720,6 +2230,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListLiveRecordTemplates  ListLiveRecordTemplatesRequest
+     * @return ListLiveRecordTemplatesResponse
+     */
     @Override
     public CompletableFuture<ListLiveRecordTemplatesResponse> listLiveRecordTemplates(ListLiveRecordTemplatesRequest request) {
         try {
@@ -1734,6 +2248,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListLiveSnapshotFiles  ListLiveSnapshotFilesRequest
+     * @return ListLiveSnapshotFilesResponse
+     */
     @Override
     public CompletableFuture<ListLiveSnapshotFilesResponse> listLiveSnapshotFiles(ListLiveSnapshotFilesRequest request) {
         try {
@@ -1748,6 +2266,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListLiveSnapshotJobs  ListLiveSnapshotJobsRequest
+     * @return ListLiveSnapshotJobsResponse
+     */
     @Override
     public CompletableFuture<ListLiveSnapshotJobsResponse> listLiveSnapshotJobs(ListLiveSnapshotJobsRequest request) {
         try {
@@ -1762,6 +2284,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListLiveSnapshotTemplates  ListLiveSnapshotTemplatesRequest
+     * @return ListLiveSnapshotTemplatesResponse
+     */
     @Override
     public CompletableFuture<ListLiveSnapshotTemplatesResponse> listLiveSnapshotTemplates(ListLiveSnapshotTemplatesRequest request) {
         try {
@@ -1776,6 +2302,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListLiveTranscodeJobs  ListLiveTranscodeJobsRequest
+     * @return ListLiveTranscodeJobsResponse
+     */
     @Override
     public CompletableFuture<ListLiveTranscodeJobsResponse> listLiveTranscodeJobs(ListLiveTranscodeJobsRequest request) {
         try {
@@ -1790,6 +2320,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListLiveTranscodeTemplates  ListLiveTranscodeTemplatesRequest
+     * @return ListLiveTranscodeTemplatesResponse
+     */
     @Override
     public CompletableFuture<ListLiveTranscodeTemplatesResponse> listLiveTranscodeTemplates(ListLiveTranscodeTemplatesRequest request) {
         try {
@@ -1804,6 +2338,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>If includeFileBasicInfo is set to true, the basic information, such as the duration and file size, of the source file is also returned. At most the first 100 entries that meet the specified conditions are returned. All media assets must exactly match all non-empty fields. The fields that support exact match include MediaType, Source, BusinessType, Category, and Status. If all information cannot be returned at a time, you can use NextToken to initiate a request to retrieve a new page of results.</p>
+     * 
+     * @param request the request parameters of ListMediaBasicInfos  ListMediaBasicInfosRequest
+     * @return ListMediaBasicInfosResponse
+     */
     @Override
     public CompletableFuture<ListMediaBasicInfosResponse> listMediaBasicInfos(ListMediaBasicInfosRequest request) {
         try {
@@ -1818,6 +2359,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListMediaInfoJobs  ListMediaInfoJobsRequest
+     * @return ListMediaInfoJobsResponse
+     */
     @Override
     public CompletableFuture<ListMediaInfoJobsResponse> listMediaInfoJobs(ListMediaInfoJobsRequest request) {
         try {
@@ -1832,6 +2377,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListMediaMarks  ListMediaMarksRequest
+     * @return ListMediaMarksResponse
+     */
     @Override
     public CompletableFuture<ListMediaMarksResponse> listMediaMarks(ListMediaMarksRequest request) {
         try {
@@ -1846,6 +2395,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListMediaProducingJobs  ListMediaProducingJobsRequest
+     * @return ListMediaProducingJobsResponse
+     */
     @Override
     public CompletableFuture<ListMediaProducingJobsResponse> listMediaProducingJobs(ListMediaProducingJobsRequest request) {
         try {
@@ -1860,6 +2413,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPackageJobs  ListPackageJobsRequest
+     * @return ListPackageJobsResponse
+     */
     @Override
     public CompletableFuture<ListPackageJobsResponse> listPackageJobs(ListPackageJobsRequest request) {
         try {
@@ -1874,6 +2431,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPipelines  ListPipelinesRequest
+     * @return ListPipelinesResponse
+     */
     @Override
     public CompletableFuture<ListPipelinesResponse> listPipelines(ListPipelinesRequest request) {
         try {
@@ -1888,6 +2449,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPublicMediaBasicInfos  ListPublicMediaBasicInfosRequest
+     * @return ListPublicMediaBasicInfosResponse
+     */
     @Override
     public CompletableFuture<ListPublicMediaBasicInfosResponse> listPublicMediaBasicInfos(ListPublicMediaBasicInfosRequest request) {
         try {
@@ -1902,6 +2467,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSearchLib  ListSearchLibRequest
+     * @return ListSearchLibResponse
+     */
     @Override
     public CompletableFuture<ListSearchLibResponse> listSearchLib(ListSearchLibRequest request) {
         try {
@@ -1916,6 +2485,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSmartJobs  ListSmartJobsRequest
+     * @return ListSmartJobsResponse
+     */
     @Override
     public CompletableFuture<ListSmartJobsResponse> listSmartJobs(ListSmartJobsRequest request) {
         try {
@@ -1930,6 +2503,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSmartSysAvatarModels  ListSmartSysAvatarModelsRequest
+     * @return ListSmartSysAvatarModelsResponse
+     */
     @Override
     public CompletableFuture<ListSmartSysAvatarModelsResponse> listSmartSysAvatarModels(ListSmartSysAvatarModelsRequest request) {
         try {
@@ -1944,6 +2521,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSmartVoiceGroups  ListSmartVoiceGroupsRequest
+     * @return ListSmartVoiceGroupsResponse
+     */
     @Override
     public CompletableFuture<ListSmartVoiceGroupsResponse> listSmartVoiceGroups(ListSmartVoiceGroupsRequest request) {
         try {
@@ -1958,6 +2539,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSnapshotJobs  ListSnapshotJobsRequest
+     * @return ListSnapshotJobsResponse
+     */
     @Override
     public CompletableFuture<ListSnapshotJobsResponse> listSnapshotJobs(ListSnapshotJobsRequest request) {
         try {
@@ -1972,6 +2557,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSystemTemplates  ListSystemTemplatesRequest
+     * @return ListSystemTemplatesResponse
+     */
     @Override
     public CompletableFuture<ListSystemTemplatesResponse> listSystemTemplates(ListSystemTemplatesRequest request) {
         try {
@@ -1986,6 +2575,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTemplates  ListTemplatesRequest
+     * @return ListTemplatesResponse
+     */
     @Override
     public CompletableFuture<ListTemplatesResponse> listTemplates(ListTemplatesRequest request) {
         try {
@@ -2000,6 +2593,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTranscodeJobs  ListTranscodeJobsRequest
+     * @return ListTranscodeJobsResponse
+     */
     @Override
     public CompletableFuture<ListTranscodeJobsResponse> listTranscodeJobs(ListTranscodeJobsRequest request) {
         try {
@@ -2014,6 +2611,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryDNAJobList  QueryDNAJobListRequest
+     * @return QueryDNAJobListResponse
+     */
     @Override
     public CompletableFuture<QueryDNAJobListResponse> queryDNAJobList(QueryDNAJobListRequest request) {
         try {
@@ -2028,6 +2629,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryIProductionJob  QueryIProductionJobRequest
+     * @return QueryIProductionJobResponse
+     */
     @Override
     public CompletableFuture<QueryIProductionJobResponse> queryIProductionJob(QueryIProductionJobRequest request) {
         try {
@@ -2042,6 +2647,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryMediaCensorJobDetail  QueryMediaCensorJobDetailRequest
+     * @return QueryMediaCensorJobDetailResponse
+     */
     @Override
     public CompletableFuture<QueryMediaCensorJobDetailResponse> queryMediaCensorJobDetail(QueryMediaCensorJobDetailRequest request) {
         try {
@@ -2056,6 +2665,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryMediaCensorJobList  QueryMediaCensorJobListRequest
+     * @return QueryMediaCensorJobListResponse
+     */
     @Override
     public CompletableFuture<QueryMediaCensorJobListResponse> queryMediaCensorJobList(QueryMediaCensorJobListRequest request) {
         try {
@@ -2070,6 +2683,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryMediaIndexJob  QueryMediaIndexJobRequest
+     * @return QueryMediaIndexJobResponse
+     */
     @Override
     public CompletableFuture<QueryMediaIndexJobResponse> queryMediaIndexJob(QueryMediaIndexJobRequest request) {
         try {
@@ -2084,6 +2701,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QuerySearchIndex  QuerySearchIndexRequest
+     * @return QuerySearchIndexResponse
+     */
     @Override
     public CompletableFuture<QuerySearchIndexResponse> querySearchIndex(QuerySearchIndexRequest request) {
         try {
@@ -2098,6 +2719,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QuerySearchLib  QuerySearchLibRequest
+     * @return QuerySearchLibResponse
+     */
     @Override
     public CompletableFuture<QuerySearchLibResponse> querySearchLib(QuerySearchLibRequest request) {
         try {
@@ -2112,6 +2737,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QuerySmarttagJob  QuerySmarttagJobRequest
+     * @return QuerySmarttagJobResponse
+     */
     @Override
     public CompletableFuture<QuerySmarttagJobResponse> querySmarttagJob(QuerySmarttagJobRequest request) {
         try {
@@ -2126,6 +2755,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>You can also call this operation to overwrite media files. After you obtain the upload URL of a media file, you can upload the media file again without changing the audio or video ID.</p>
+     * 
+     * @param request the request parameters of RefreshUploadMedia  RefreshUploadMediaRequest
+     * @return RefreshUploadMediaResponse
+     */
     @Override
     public CompletableFuture<RefreshUploadMediaResponse> refreshUploadMedia(RefreshUploadMediaRequest request) {
         try {
@@ -2140,6 +2776,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Registering a media asset is an asynchronous job that takes 2 to 3 seconds. When the operation returns the ID of the media asset, the registration may have not be completed. If you call the GetMediaInfo operation at this time, you may fail to obtain the information about the media asset.</p>
+     * 
+     * @param request the request parameters of RegisterMediaInfo  RegisterMediaInfoRequest
+     * @return RegisterMediaInfoResponse
+     */
     @Override
     public CompletableFuture<RegisterMediaInfoResponse> registerMediaInfo(RegisterMediaInfoRequest request) {
         try {
@@ -2154,6 +2797,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>You can call this operation to register a media stream file in an Object Storage Service (OSS) bucket with Intelligent Media Services (IMS) and associate the media stream with the specified media asset ID.</p>
+     * 
+     * @param request the request parameters of RegisterMediaStream  RegisterMediaStreamRequest
+     * @return RegisterMediaStreamResponse
+     */
     @Override
     public CompletableFuture<RegisterMediaStreamResponse> registerMediaStream(RegisterMediaStreamRequest request) {
         try {
@@ -2168,6 +2818,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SearchEditingProject  SearchEditingProjectRequest
+     * @return SearchEditingProjectResponse
+     */
     @Override
     public CompletableFuture<SearchEditingProjectResponse> searchEditingProject(SearchEditingProjectRequest request) {
         try {
@@ -2182,6 +2836,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SearchIndexJobRerun  SearchIndexJobRerunRequest
+     * @return SearchIndexJobRerunResponse
+     */
     @Override
     public CompletableFuture<SearchIndexJobRerunResponse> searchIndexJobRerun(SearchIndexJobRerunRequest request) {
         try {
@@ -2197,8 +2855,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).
-      *
+     * <b>description</b> :
+     * <p>If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).</p>
+     * 
+     * @param request the request parameters of SearchMedia  SearchMediaRequest
+     * @return SearchMediaResponse
      */
     @Override
     public CompletableFuture<SearchMediaResponse> searchMedia(SearchMediaRequest request) {
@@ -2214,6 +2875,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>You can call this operation to query media assets or media asset clips based on character names, subtitles, or AI categories.</p>
+     * 
+     * @param request the request parameters of SearchMediaByAILabel  SearchMediaByAILabelRequest
+     * @return SearchMediaByAILabelResponse
+     */
     @Override
     public CompletableFuture<SearchMediaByAILabelResponse> searchMediaByAILabel(SearchMediaByAILabelRequest request) {
         try {
@@ -2228,6 +2896,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).</p>
+     * 
+     * @param request the request parameters of SearchMediaByFace  SearchMediaByFaceRequest
+     * @return SearchMediaByFaceResponse
+     */
     @Override
     public CompletableFuture<SearchMediaByFaceResponse> searchMediaByFace(SearchMediaByFaceRequest request) {
         try {
@@ -2242,6 +2917,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SearchMediaByHybrid  SearchMediaByHybridRequest
+     * @return SearchMediaByHybridResponse
+     */
     @Override
     public CompletableFuture<SearchMediaByHybridResponse> searchMediaByHybrid(SearchMediaByHybridRequest request) {
         try {
@@ -2256,6 +2935,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).</p>
+     * 
+     * @param request the request parameters of SearchMediaByMultimodal  SearchMediaByMultimodalRequest
+     * @return SearchMediaByMultimodalResponse
+     */
     @Override
     public CompletableFuture<SearchMediaByMultimodalResponse> searchMediaByMultimodal(SearchMediaByMultimodalRequest request) {
         try {
@@ -2270,6 +2956,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).</p>
+     * 
+     * @param request the request parameters of SearchMediaClipByFace  SearchMediaClipByFaceRequest
+     * @return SearchMediaClipByFaceResponse
+     */
     @Override
     public CompletableFuture<SearchMediaClipByFaceResponse> searchMediaClipByFace(SearchMediaClipByFaceRequest request) {
         try {
@@ -2284,6 +2977,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SearchPublicMediaInfo  SearchPublicMediaInfoRequest
+     * @return SearchPublicMediaInfoResponse
+     */
     @Override
     public CompletableFuture<SearchPublicMediaInfoResponse> searchPublicMediaInfo(SearchPublicMediaInfoRequest request) {
         try {
@@ -2298,6 +2995,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SendAIAgentSpeech  SendAIAgentSpeechRequest
+     * @return SendAIAgentSpeechResponse
+     */
     @Override
     public CompletableFuture<SendAIAgentSpeechResponse> sendAIAgentSpeech(SendAIAgentSpeechRequest request) {
         try {
@@ -2312,6 +3013,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SendLiveSnapshotJobCommand  SendLiveSnapshotJobCommandRequest
+     * @return SendLiveSnapshotJobCommandResponse
+     */
     @Override
     public CompletableFuture<SendLiveSnapshotJobCommandResponse> sendLiveSnapshotJobCommand(SendLiveSnapshotJobCommandRequest request) {
         try {
@@ -2326,6 +3031,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SendLiveTranscodeJobCommand  SendLiveTranscodeJobCommandRequest
+     * @return SendLiveTranscodeJobCommandResponse
+     */
     @Override
     public CompletableFuture<SendLiveTranscodeJobCommandResponse> sendLiveTranscodeJobCommand(SendLiveTranscodeJobCommandRequest request) {
         try {
@@ -2340,6 +3049,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetContentAnalyzeConfig  SetContentAnalyzeConfigRequest
+     * @return SetContentAnalyzeConfigResponse
+     */
     @Override
     public CompletableFuture<SetContentAnalyzeConfigResponse> setContentAnalyzeConfig(SetContentAnalyzeConfigRequest request) {
         try {
@@ -2354,6 +3067,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetDefaultCustomTemplate  SetDefaultCustomTemplateRequest
+     * @return SetDefaultCustomTemplateResponse
+     */
     @Override
     public CompletableFuture<SetDefaultCustomTemplateResponse> setDefaultCustomTemplate(SetDefaultCustomTemplateRequest request) {
         try {
@@ -2368,6 +3085,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetDefaultStorageLocation  SetDefaultStorageLocationRequest
+     * @return SetDefaultStorageLocationResponse
+     */
     @Override
     public CompletableFuture<SetDefaultStorageLocationResponse> setDefaultStorageLocation(SetDefaultStorageLocationRequest request) {
         try {
@@ -2382,6 +3103,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetEventCallback  SetEventCallbackRequest
+     * @return SetEventCallbackResponse
+     */
     @Override
     public CompletableFuture<SetEventCallbackResponse> setEventCallback(SetEventCallbackRequest request) {
         try {
@@ -2396,6 +3121,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetNotifyConfig  SetNotifyConfigRequest
+     * @return SetNotifyConfigResponse
+     */
     @Override
     public CompletableFuture<SetNotifyConfigResponse> setNotifyConfig(SetNotifyConfigRequest request) {
         try {
@@ -2410,6 +3139,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartAIAgentInstance  StartAIAgentInstanceRequest
+     * @return StartAIAgentInstanceResponse
+     */
     @Override
     public CompletableFuture<StartAIAgentInstanceResponse> startAIAgentInstance(StartAIAgentInstanceRequest request) {
         try {
@@ -2424,6 +3157,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartRtcRobotInstance  StartRtcRobotInstanceRequest
+     * @return StartRtcRobotInstanceResponse
+     */
     @Override
     public CompletableFuture<StartRtcRobotInstanceResponse> startRtcRobotInstance(StartRtcRobotInstanceRequest request) {
         try {
@@ -2438,6 +3175,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartWorkflow  StartWorkflowRequest
+     * @return StartWorkflowResponse
+     */
     @Override
     public CompletableFuture<StartWorkflowResponse> startWorkflow(StartWorkflowRequest request) {
         try {
@@ -2452,6 +3193,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopAIAgentInstance  StopAIAgentInstanceRequest
+     * @return StopAIAgentInstanceResponse
+     */
     @Override
     public CompletableFuture<StopAIAgentInstanceResponse> stopAIAgentInstance(StopAIAgentInstanceRequest request) {
         try {
@@ -2466,6 +3211,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopRtcRobotInstance  StopRtcRobotInstanceRequest
+     * @return StopRtcRobotInstanceResponse
+     */
     @Override
     public CompletableFuture<StopRtcRobotInstanceResponse> stopRtcRobotInstance(StopRtcRobotInstanceRequest request) {
         try {
@@ -2480,6 +3229,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitASRJob  SubmitASRJobRequest
+     * @return SubmitASRJobResponse
+     */
     @Override
     public CompletableFuture<SubmitASRJobResponse> submitASRJob(SubmitASRJobRequest request) {
         try {
@@ -2494,6 +3247,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitAudioProduceJob  SubmitAudioProduceJobRequest
+     * @return SubmitAudioProduceJobResponse
+     */
     @Override
     public CompletableFuture<SubmitAudioProduceJobResponse> submitAudioProduceJob(SubmitAudioProduceJobRequest request) {
         try {
@@ -2508,6 +3265,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitAvatarTrainingJob  SubmitAvatarTrainingJobRequest
+     * @return SubmitAvatarTrainingJobResponse
+     */
     @Override
     public CompletableFuture<SubmitAvatarTrainingJobResponse> submitAvatarTrainingJob(SubmitAvatarTrainingJobRequest request) {
         try {
@@ -2522,6 +3283,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitAvatarVideoJob  SubmitAvatarVideoJobRequest
+     * @return SubmitAvatarVideoJobResponse
+     */
     @Override
     public CompletableFuture<SubmitAvatarVideoJobResponse> submitAvatarVideoJob(SubmitAvatarVideoJobRequest request) {
         try {
@@ -2536,6 +3301,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitBatchMediaProducingJob  SubmitBatchMediaProducingJobRequest
+     * @return SubmitBatchMediaProducingJobResponse
+     */
     @Override
     public CompletableFuture<SubmitBatchMediaProducingJobResponse> submitBatchMediaProducingJob(SubmitBatchMediaProducingJobRequest request) {
         try {
@@ -2550,6 +3319,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitCustomizedVoiceJob  SubmitCustomizedVoiceJobRequest
+     * @return SubmitCustomizedVoiceJobResponse
+     */
     @Override
     public CompletableFuture<SubmitCustomizedVoiceJobResponse> submitCustomizedVoiceJob(SubmitCustomizedVoiceJobRequest request) {
         try {
@@ -2564,6 +3337,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitDNAJob  SubmitDNAJobRequest
+     * @return SubmitDNAJobResponse
+     */
     @Override
     public CompletableFuture<SubmitDNAJobResponse> submitDNAJob(SubmitDNAJobRequest request) {
         try {
@@ -2578,6 +3355,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitDynamicChartJob  SubmitDynamicChartJobRequest
+     * @return SubmitDynamicChartJobResponse
+     */
     @Override
     public CompletableFuture<SubmitDynamicChartJobResponse> submitDynamicChartJob(SubmitDynamicChartJobRequest request) {
         try {
@@ -2592,6 +3373,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitDynamicImageJob  SubmitDynamicImageJobRequest
+     * @return SubmitDynamicImageJobResponse
+     */
     @Override
     public CompletableFuture<SubmitDynamicImageJobResponse> submitDynamicImageJob(SubmitDynamicImageJobRequest request) {
         try {
@@ -2606,6 +3391,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitIProductionJob  SubmitIProductionJobRequest
+     * @return SubmitIProductionJobResponse
+     */
     @Override
     public CompletableFuture<SubmitIProductionJobResponse> submitIProductionJob(SubmitIProductionJobRequest request) {
         try {
@@ -2620,6 +3409,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitLiveEditingJob  SubmitLiveEditingJobRequest
+     * @return SubmitLiveEditingJobResponse
+     */
     @Override
     public CompletableFuture<SubmitLiveEditingJobResponse> submitLiveEditingJob(SubmitLiveEditingJobRequest request) {
         try {
@@ -2634,6 +3427,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitLiveRecordJob  SubmitLiveRecordJobRequest
+     * @return SubmitLiveRecordJobResponse
+     */
     @Override
     public CompletableFuture<SubmitLiveRecordJobResponse> submitLiveRecordJob(SubmitLiveRecordJobRequest request) {
         try {
@@ -2648,6 +3445,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitLiveSnapshotJob  SubmitLiveSnapshotJobRequest
+     * @return SubmitLiveSnapshotJobResponse
+     */
     @Override
     public CompletableFuture<SubmitLiveSnapshotJobResponse> submitLiveSnapshotJob(SubmitLiveSnapshotJobRequest request) {
         try {
@@ -2662,6 +3463,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitLiveTranscodeJob  SubmitLiveTranscodeJobRequest
+     * @return SubmitLiveTranscodeJobResponse
+     */
     @Override
     public CompletableFuture<SubmitLiveTranscodeJobResponse> submitLiveTranscodeJob(SubmitLiveTranscodeJobRequest request) {
         try {
@@ -2676,6 +3481,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitMediaAiAnalysisJob  SubmitMediaAiAnalysisJobRequest
+     * @return SubmitMediaAiAnalysisJobResponse
+     */
     @Override
     public CompletableFuture<SubmitMediaAiAnalysisJobResponse> submitMediaAiAnalysisJob(SubmitMediaAiAnalysisJobRequest request) {
         try {
@@ -2690,6 +3499,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitMediaCensorJob  SubmitMediaCensorJobRequest
+     * @return SubmitMediaCensorJobResponse
+     */
     @Override
     public CompletableFuture<SubmitMediaCensorJobResponse> submitMediaCensorJob(SubmitMediaCensorJobRequest request) {
         try {
@@ -2704,6 +3517,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitMediaInfoJob  SubmitMediaInfoJobRequest
+     * @return SubmitMediaInfoJobResponse
+     */
     @Override
     public CompletableFuture<SubmitMediaInfoJobResponse> submitMediaInfoJob(SubmitMediaInfoJobRequest request) {
         try {
@@ -2718,6 +3535,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitMediaProducingJob  SubmitMediaProducingJobRequest
+     * @return SubmitMediaProducingJobResponse
+     */
     @Override
     public CompletableFuture<SubmitMediaProducingJobResponse> submitMediaProducingJob(SubmitMediaProducingJobRequest request) {
         try {
@@ -2732,6 +3553,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitPackageJob  SubmitPackageJobRequest
+     * @return SubmitPackageJobResponse
+     */
     @Override
     public CompletableFuture<SubmitPackageJobResponse> submitPackageJob(SubmitPackageJobRequest request) {
         try {
@@ -2746,6 +3571,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitSmarttagJob  SubmitSmarttagJobRequest
+     * @return SubmitSmarttagJobResponse
+     */
     @Override
     public CompletableFuture<SubmitSmarttagJobResponse> submitSmarttagJob(SubmitSmarttagJobRequest request) {
         try {
@@ -2760,6 +3589,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitSnapshotJob  SubmitSnapshotJobRequest
+     * @return SubmitSnapshotJobResponse
+     */
     @Override
     public CompletableFuture<SubmitSnapshotJobResponse> submitSnapshotJob(SubmitSnapshotJobRequest request) {
         try {
@@ -2774,6 +3607,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitSportsHighlightsJob  SubmitSportsHighlightsJobRequest
+     * @return SubmitSportsHighlightsJobResponse
+     */
     @Override
     public CompletableFuture<SubmitSportsHighlightsJobResponse> submitSportsHighlightsJob(SubmitSportsHighlightsJobRequest request) {
         try {
@@ -2788,6 +3625,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitStandardCustomizedVoiceJob  SubmitStandardCustomizedVoiceJobRequest
+     * @return SubmitStandardCustomizedVoiceJobResponse
+     */
     @Override
     public CompletableFuture<SubmitStandardCustomizedVoiceJobResponse> submitStandardCustomizedVoiceJob(SubmitStandardCustomizedVoiceJobRequest request) {
         try {
@@ -2802,6 +3643,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitSyncMediaInfoJob  SubmitSyncMediaInfoJobRequest
+     * @return SubmitSyncMediaInfoJobResponse
+     */
     @Override
     public CompletableFuture<SubmitSyncMediaInfoJobResponse> submitSyncMediaInfoJob(SubmitSyncMediaInfoJobRequest request) {
         try {
@@ -2816,6 +3661,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitTextGenerateJob  SubmitTextGenerateJobRequest
+     * @return SubmitTextGenerateJobResponse
+     */
     @Override
     public CompletableFuture<SubmitTextGenerateJobResponse> submitTextGenerateJob(SubmitTextGenerateJobRequest request) {
         try {
@@ -2830,6 +3679,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitTranscodeJob  SubmitTranscodeJobRequest
+     * @return SubmitTranscodeJobResponse
+     */
     @Override
     public CompletableFuture<SubmitTranscodeJobResponse> submitTranscodeJob(SubmitTranscodeJobRequest request) {
         try {
@@ -2844,6 +3697,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>After you call this operation to submit a video translation job, the system returns a job ID. You can call the GetSmartHandleJob operation based on the job ID to obtain the status and result information of the job.</p>
+     * 
+     * @param request the request parameters of SubmitVideoTranslationJob  SubmitVideoTranslationJobRequest
+     * @return SubmitVideoTranslationJobResponse
+     */
     @Override
     public CompletableFuture<SubmitVideoTranslationJobResponse> submitVideoTranslationJob(SubmitVideoTranslationJobRequest request) {
         try {
@@ -2858,6 +3718,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateAIAgentInstance  UpdateAIAgentInstanceRequest
+     * @return UpdateAIAgentInstanceResponse
+     */
     @Override
     public CompletableFuture<UpdateAIAgentInstanceResponse> updateAIAgentInstance(UpdateAIAgentInstanceRequest request) {
         try {
@@ -2872,6 +3736,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateAvatarTrainingJob  UpdateAvatarTrainingJobRequest
+     * @return UpdateAvatarTrainingJobResponse
+     */
     @Override
     public CompletableFuture<UpdateAvatarTrainingJobResponse> updateAvatarTrainingJob(UpdateAvatarTrainingJobRequest request) {
         try {
@@ -2886,6 +3754,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>After you create a media asset category, you can call this operation to find the category based on the category ID and change the name of the category.</p>
+     * 
+     * @param request the request parameters of UpdateCategory  UpdateCategoryRequest
+     * @return UpdateCategoryResponse
+     */
     @Override
     public CompletableFuture<UpdateCategoryResponse> updateCategory(UpdateCategoryRequest request) {
         try {
@@ -2900,6 +3775,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateCustomTemplate  UpdateCustomTemplateRequest
+     * @return UpdateCustomTemplateResponse
+     */
     @Override
     public CompletableFuture<UpdateCustomTemplateResponse> updateCustomTemplate(UpdateCustomTemplateRequest request) {
         try {
@@ -2914,6 +3793,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateCustomizedVoice  UpdateCustomizedVoiceRequest
+     * @return UpdateCustomizedVoiceResponse
+     */
     @Override
     public CompletableFuture<UpdateCustomizedVoiceResponse> updateCustomizedVoice(UpdateCustomizedVoiceRequest request) {
         try {
@@ -2928,6 +3811,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateEditingProject  UpdateEditingProjectRequest
+     * @return UpdateEditingProjectResponse
+     */
     @Override
     public CompletableFuture<UpdateEditingProjectResponse> updateEditingProject(UpdateEditingProjectRequest request) {
         try {
@@ -2942,6 +3829,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateLiveRecordTemplate  UpdateLiveRecordTemplateRequest
+     * @return UpdateLiveRecordTemplateResponse
+     */
     @Override
     public CompletableFuture<UpdateLiveRecordTemplateResponse> updateLiveRecordTemplate(UpdateLiveRecordTemplateRequest request) {
         try {
@@ -2956,6 +3847,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateLiveSnapshotTemplate  UpdateLiveSnapshotTemplateRequest
+     * @return UpdateLiveSnapshotTemplateResponse
+     */
     @Override
     public CompletableFuture<UpdateLiveSnapshotTemplateResponse> updateLiveSnapshotTemplate(UpdateLiveSnapshotTemplateRequest request) {
         try {
@@ -2970,6 +3865,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateLiveTranscodeJob  UpdateLiveTranscodeJobRequest
+     * @return UpdateLiveTranscodeJobResponse
+     */
     @Override
     public CompletableFuture<UpdateLiveTranscodeJobResponse> updateLiveTranscodeJob(UpdateLiveTranscodeJobRequest request) {
         try {
@@ -2984,6 +3883,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateLiveTranscodeTemplate  UpdateLiveTranscodeTemplateRequest
+     * @return UpdateLiveTranscodeTemplateResponse
+     */
     @Override
     public CompletableFuture<UpdateLiveTranscodeTemplateResponse> updateLiveTranscodeTemplate(UpdateLiveTranscodeTemplateRequest request) {
         try {
@@ -2998,6 +3901,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>If the MediaId parameter is specified, the MediaId parameter is preferentially used for the query. If the MediaId parameter is left empty, the InputURL parameter must be specified. The request ID and media asset ID are returned. You cannot modify the input URL of a media asset by specifying the ID of the media asset.</p>
+     * 
+     * @param request the request parameters of UpdateMediaInfo  UpdateMediaInfoRequest
+     * @return UpdateMediaInfoResponse
+     */
     @Override
     public CompletableFuture<UpdateMediaInfoResponse> updateMediaInfo(UpdateMediaInfoRequest request) {
         try {
@@ -3012,6 +3922,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateMediaMarks  UpdateMediaMarksRequest
+     * @return UpdateMediaMarksResponse
+     */
     @Override
     public CompletableFuture<UpdateMediaMarksResponse> updateMediaMarks(UpdateMediaMarksRequest request) {
         try {
@@ -3026,6 +3940,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateMediaToSearchLib  UpdateMediaToSearchLibRequest
+     * @return UpdateMediaToSearchLibResponse
+     */
     @Override
     public CompletableFuture<UpdateMediaToSearchLibResponse> updateMediaToSearchLib(UpdateMediaToSearchLibRequest request) {
         try {
@@ -3040,6 +3958,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdatePipeline  UpdatePipelineRequest
+     * @return UpdatePipelineResponse
+     */
     @Override
     public CompletableFuture<UpdatePipelineResponse> updatePipeline(UpdatePipelineRequest request) {
         try {
@@ -3054,6 +3976,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateRtcRobotInstance  UpdateRtcRobotInstanceRequest
+     * @return UpdateRtcRobotInstanceResponse
+     */
     @Override
     public CompletableFuture<UpdateRtcRobotInstanceResponse> updateRtcRobotInstance(UpdateRtcRobotInstanceRequest request) {
         try {
@@ -3068,6 +3994,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateTemplate  UpdateTemplateRequest
+     * @return UpdateTemplateResponse
+     */
     @Override
     public CompletableFuture<UpdateTemplateResponse> updateTemplate(UpdateTemplateRequest request) {
         try {
@@ -3082,6 +4012,20 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  If a callback is configured, you will receive an UploadByURLComplete event notification after the file is uploaded. You can query the upload status by calling the GetURLUploadInfos operation.</p>
+     * <ul>
+     * <li>After a request is submitted, the upload job is queued as an asynchronous job in the cloud. You can query the status of the upload job based on information such as the URL and media asset ID that are returned in the event notification.</li>
+     * <li>You can call this operation to upload media files that are not stored on a local server or device and must be uploaded by using URLs that are accessible over the Internet.</li>
+     * <li>You can call this operation to upload media files only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media file to an OSS bucket, pull the file to a local directory, use <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a> to upload the file to an OSS bucket, and then call the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the file in the OSS bucket with the media asset library.</li>
+     * <li>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</li>
+     * <li>You can call this operation to upload only audio and video files.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UploadMediaByURL  UploadMediaByURLRequest
+     * @return UploadMediaByURLResponse
+     */
     @Override
     public CompletableFuture<UploadMediaByURLResponse> uploadMediaByURL(UploadMediaByURLRequest request) {
         try {
@@ -3096,6 +4040,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation to pull a media stream file based on a URL and upload the file. After the media stream file is uploaded, the media stream is associated with the specified media asset ID.</p>
+     * <ul>
+     * <li>You can call this operation to upload media stream files only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media stream file to an OSS bucket, pull the file to a local directory, use <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a> to upload the file to an OSS bucket, and then call the <a href="https://help.aliyun.com/document_detail/440765.html">RegisterMediaStream</a> operation to associate the media stream with the specified media asset ID.</li>
+     * <li>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UploadStreamByURL  UploadStreamByURLRequest
+     * @return UploadStreamByURLResponse
+     */
     @Override
     public CompletableFuture<UploadStreamByURLResponse> uploadStreamByURL(UploadStreamByURLRequest request) {
         try {

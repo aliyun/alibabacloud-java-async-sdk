@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPackageJobResponseBody} extends {@link TeaModel}
  *
  * <p>GetPackageJobResponseBody</p>
@@ -70,6 +71,12 @@ public class GetPackageJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPackageJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPackageJobResponseBody</p>
+     */
     public static class Input extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Media")
         private String media;
@@ -131,6 +138,12 @@ public class GetPackageJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPackageJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPackageJobResponseBody</p>
+     */
     public static class Inputs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Input")
         private Input input;
@@ -172,6 +185,12 @@ public class GetPackageJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPackageJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPackageJobResponseBody</p>
+     */
     public static class Output extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Media")
         private String media;
@@ -233,6 +252,12 @@ public class GetPackageJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPackageJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPackageJobResponseBody</p>
+     */
     public static class PackageJob extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;

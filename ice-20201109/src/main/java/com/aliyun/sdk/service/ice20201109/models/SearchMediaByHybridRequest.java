@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchMediaByHybridRequest} extends {@link RequestModel}
  *
  * <p>SearchMediaByHybridRequest</p>
@@ -146,7 +147,10 @@ public class SearchMediaByHybridRequest extends Request {
         }
 
         /**
-         * MediaId.
+         * <p>The ID of the media asset. The details of the media asset are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>c469e944b5a856828dc2</strong></strong></p>
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLiveTranscodeJobsResponseBody} extends {@link TeaModel}
  *
  * <p>ListLiveTranscodeJobsResponseBody</p>
@@ -90,6 +91,12 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLiveTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLiveTranscodeJobsResponseBody</p>
+     */
     public static class StreamInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OutputUrl")
         private String outputUrl;
@@ -151,6 +158,12 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLiveTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLiveTranscodeJobsResponseBody</p>
+     */
     public static class OutputStream extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StreamInfos")
         private java.util.List < StreamInfos> streamInfos;
@@ -192,6 +205,12 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLiveTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLiveTranscodeJobsResponseBody</p>
+     */
     public static class StreamInput extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InputUrl")
         private String inputUrl;
@@ -253,6 +272,12 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLiveTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLiveTranscodeJobsResponseBody</p>
+     */
     public static class JobList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;

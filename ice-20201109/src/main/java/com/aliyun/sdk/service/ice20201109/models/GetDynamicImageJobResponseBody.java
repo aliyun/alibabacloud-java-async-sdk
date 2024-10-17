@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDynamicImageJobResponseBody} extends {@link TeaModel}
  *
  * <p>GetDynamicImageJobResponseBody</p>
@@ -70,6 +71,12 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDynamicImageJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDynamicImageJobResponseBody</p>
+     */
     public static class OssFile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
@@ -121,7 +128,10 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             private String object; 
 
             /**
-             * OSS Bucket
+             * <p>OSS Bucket</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-bucket</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -129,7 +139,10 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * OSS Location
+             * <p>OSS Location</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-shanghai</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -137,7 +150,10 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * OSS Object
+             * <p>OSS Object</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sample-input.mp4</p>
              */
             public Builder object(String object) {
                 this.object = object;
@@ -151,6 +167,12 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDynamicImageJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDynamicImageJobResponseBody</p>
+     */
     public static class Input extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Media")
         private String media;
@@ -232,6 +254,12 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDynamicImageJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDynamicImageJobResponseBody</p>
+     */
     public static class OutputOssFile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
@@ -283,7 +311,10 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             private String object; 
 
             /**
-             * OSS Bucket
+             * <p>OSS Bucket</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sample-bucket</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -291,7 +322,10 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * OSS Location
+             * <p>OSS Location</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-shanghai</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -299,7 +333,10 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * OSS Object
+             * <p>OSS Object</p>
+             * 
+             * <strong>example:</strong>
+             * <p>path/to/object</p>
              */
             public Builder object(String object) {
                 this.object = object;
@@ -313,6 +350,12 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDynamicImageJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDynamicImageJobResponseBody</p>
+     */
     public static class Output extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Media")
         private String media;
@@ -394,6 +437,12 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDynamicImageJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDynamicImageJobResponseBody</p>
+     */
     public static class DynamicImageJob extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;

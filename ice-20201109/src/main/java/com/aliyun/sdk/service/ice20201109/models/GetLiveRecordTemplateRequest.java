@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLiveRecordTemplateRequest} extends {@link RequestModel}
  *
  * <p>GetLiveRecordTemplateRequest</p>
@@ -77,7 +78,10 @@ public class GetLiveRecordTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69e1f9fe-1e97-11ed-ba64-0c42a1b73d66</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

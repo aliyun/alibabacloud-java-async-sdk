@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAvatarTrainingJobResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateAvatarTrainingJobResponseBody</p>
@@ -90,6 +91,12 @@ public class UpdateAvatarTrainingJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateAvatarTrainingJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateAvatarTrainingJobResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;

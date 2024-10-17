@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDemonstrationForCustomizedVoiceJobRequest} extends {@link RequestModel}
  *
  * <p>GetDemonstrationForCustomizedVoiceJobRequest</p>
@@ -54,7 +55,10 @@ public class GetDemonstrationForCustomizedVoiceJobRequest extends Request {
         } 
 
         /**
-         * Scenario.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>story</p>
          */
         public Builder scenario(String scenario) {
             this.putQueryParameter("Scenario", scenario);

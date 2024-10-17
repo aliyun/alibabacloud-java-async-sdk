@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSmartHandleJobResponseBody} extends {@link TeaModel}
  *
  * <p>GetSmartHandleJobResponseBody</p>
@@ -170,6 +171,12 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSmartHandleJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSmartHandleJobResponseBody</p>
+     */
     public static class JobResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AiResult")
         private String aiResult;
@@ -221,7 +228,10 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             private String usage; 
 
             /**
-             * 智能分析结果
+             * <p>智能分析结果</p>
+             * 
+             * <strong>example:</strong>
+             * <p>拆条或智能标签信息</p>
              */
             public Builder aiResult(String aiResult) {
                 this.aiResult = aiResult;
@@ -229,7 +239,10 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             }
 
             /**
-             * 媒资Id
+             * <p>媒资Id</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -251,6 +264,12 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSmartHandleJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSmartHandleJobResponseBody</p>
+     */
     public static class InputConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InputFile")
         private String inputFile;
@@ -292,6 +311,12 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSmartHandleJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSmartHandleJobResponseBody</p>
+     */
     public static class OutputConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
@@ -331,7 +356,10 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             private String object; 
 
             /**
-             * OSS Bucket
+             * <p>OSS Bucket</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-bucket</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -339,7 +367,10 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             }
 
             /**
-             * OSS Object
+             * <p>OSS Object</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-object</p>
              */
             public Builder object(String object) {
                 this.object = object;
@@ -353,6 +384,12 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSmartHandleJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSmartHandleJobResponseBody</p>
+     */
     public static class SmartJobInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -520,7 +557,10 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             }
 
             /**
-             * userid。
+             * <p>userid。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1974526429******</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

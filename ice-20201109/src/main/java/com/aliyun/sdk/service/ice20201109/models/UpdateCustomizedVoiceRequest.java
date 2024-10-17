@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCustomizedVoiceRequest} extends {@link RequestModel}
  *
  * <p>UpdateCustomizedVoiceRequest</p>
@@ -77,7 +78,10 @@ public class UpdateCustomizedVoiceRequest extends Request {
         }
 
         /**
-         * VoiceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xiaozhuan</p>
          */
         public Builder voiceId(String voiceId) {
             this.putQueryParameter("VoiceId", voiceId);

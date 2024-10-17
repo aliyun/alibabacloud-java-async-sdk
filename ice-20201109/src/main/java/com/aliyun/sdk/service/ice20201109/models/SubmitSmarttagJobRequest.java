@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitSmarttagJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitSmarttagJobRequest</p>
@@ -206,7 +207,7 @@ public class SubmitSmarttagJobRequest extends Request {
         }
 
         /**
-         * input
+         * <p>input</p>
          */
         public Builder input(Input input) {
             String inputShrink = shrink(input, "Input", "json");
@@ -234,7 +235,7 @@ public class SubmitSmarttagJobRequest extends Request {
         }
 
         /**
-         * scheduleConfig
+         * <p>scheduleConfig</p>
          */
         public Builder scheduleConfig(ScheduleConfig scheduleConfig) {
             String scheduleConfigShrink = shrink(scheduleConfig, "ScheduleConfig", "json");
@@ -277,6 +278,12 @@ public class SubmitSmarttagJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitSmarttagJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitSmarttagJobRequest</p>
+     */
     public static class Input extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Media")
         private String media;
@@ -338,6 +345,12 @@ public class SubmitSmarttagJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitSmarttagJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitSmarttagJobRequest</p>
+     */
     public static class ScheduleConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;

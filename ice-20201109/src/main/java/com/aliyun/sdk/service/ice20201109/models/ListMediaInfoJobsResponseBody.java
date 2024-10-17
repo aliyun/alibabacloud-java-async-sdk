@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMediaInfoJobsResponseBody} extends {@link TeaModel}
  *
  * <p>ListMediaInfoJobsResponseBody</p>
@@ -90,6 +91,12 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMediaInfoJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMediaInfoJobsResponseBody</p>
+     */
     public static class Input extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Media")
         private String media;
@@ -151,6 +158,12 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMediaInfoJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMediaInfoJobsResponseBody</p>
+     */
     public static class AudioStreamInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
@@ -472,6 +485,12 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMediaInfoJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMediaInfoJobsResponseBody</p>
+     */
     public static class FileBasicInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
@@ -733,6 +752,12 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMediaInfoJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMediaInfoJobsResponseBody</p>
+     */
     public static class VideoStreamInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Avg_fps")
         private String avgFps;
@@ -1214,6 +1239,12 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMediaInfoJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMediaInfoJobsResponseBody</p>
+     */
     public static class MediaInfoProperty extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AudioStreamInfoList")
         private java.util.List < AudioStreamInfoList> audioStreamInfoList;
@@ -1295,6 +1326,12 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMediaInfoJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMediaInfoJobsResponseBody</p>
+     */
     public static class ScheduleConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;
@@ -1356,6 +1393,12 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMediaInfoJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMediaInfoJobsResponseBody</p>
+     */
     public static class Jobs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Async")
         private Boolean async;

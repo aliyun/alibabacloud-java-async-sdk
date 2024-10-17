@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadMediaByURLResponseBody} extends {@link TeaModel}
  *
  * <p>UploadMediaByURLResponseBody</p>
@@ -49,7 +50,10 @@ public class UploadMediaByURLResponseBody extends TeaModel {
         private java.util.List < UploadJobs> uploadJobs; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>83B7-7F87-4792-BFE9-63CD2137</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class UploadMediaByURLResponseBody extends TeaModel {
         }
 
         /**
-         * UploadJobs.
+         * <p>The information about upload jobs.</p>
          */
         public Builder uploadJobs(java.util.List < UploadJobs> uploadJobs) {
             this.uploadJobs = uploadJobs;
@@ -70,6 +74,12 @@ public class UploadMediaByURLResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UploadMediaByURLResponseBody} extends {@link TeaModel}
+     *
+     * <p>UploadMediaByURLResponseBody</p>
+     */
     public static class UploadJobs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
@@ -121,7 +131,10 @@ public class UploadMediaByURLResponseBody extends TeaModel {
             private String sourceURL; 
 
             /**
-             * JobId.
+             * <p>The ID of the upload job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20ce1e05dba64576b96e9683879f0***</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -129,7 +142,10 @@ public class UploadMediaByURLResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId.
+             * <p>The ID of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f476988629f54a7b8a4ba90d1a6c7***</p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -137,7 +153,10 @@ public class UploadMediaByURLResponseBody extends TeaModel {
             }
 
             /**
-             * SourceURL.
+             * <p>The URL of the source file that is uploaded in the upload job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example****.mp4">http://example****.mp4</a></p>
              */
             public Builder sourceURL(String sourceURL) {
                 this.sourceURL = sourceURL;

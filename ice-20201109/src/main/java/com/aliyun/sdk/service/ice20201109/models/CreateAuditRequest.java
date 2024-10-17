@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAuditRequest} extends {@link RequestModel}
  *
  * <p>CreateAuditRequest</p>
@@ -77,7 +78,21 @@ public class CreateAuditRequest extends Request {
         }
 
         /**
-         * AuditContent.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *       {
+         *             &quot;MediaId&quot;: &quot;93ab850b4f<em><strong><strong>b54b6e91d24d81d4&quot;,
+         *             &quot;Status&quot;: &quot;Normal&quot;
+         *       },
+         *       {
+         *             &quot;MediaId&quot;: &quot;f867fbfb58</strong></strong></em>8bbab65c4480ae1d&quot;,
+         *             &quot;Status&quot;: &quot;Blocked&quot;,
+         *             &quot;Reason&quot;: &quot;xxxx&quot;,
+         *             &quot;Comment&quot;: &quot;xxxx&quot;
+         *       }
+         * ]</p>
          */
         public Builder auditContent(String auditContent) {
             this.putQueryParameter("AuditContent", auditContent);

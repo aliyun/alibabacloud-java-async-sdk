@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchGetMediaInfosRequest} extends {@link RequestModel}
  *
  * <p>BatchGetMediaInfosRequest</p>
@@ -90,7 +91,12 @@ public class BatchGetMediaInfosRequest extends Request {
         }
 
         /**
-         * AdditionType.
+         * <p>The additional information that you want to query about the media assets. By default, only BasicInfo is returned. The following additional information can be queried:</p>
+         * <p>- FileInfo</p>
+         * <p>- DynamicMetaData</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FileInfo,DynamicMetaData</p>
          */
         public Builder additionType(String additionType) {
             this.putQueryParameter("AdditionType", additionType);
@@ -99,7 +105,10 @@ public class BatchGetMediaInfosRequest extends Request {
         }
 
         /**
-         * MediaIds.
+         * <p>The IDs of the media assets that you want to query. Separate the IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>b48fb04483915d4f2cd8</strong></strong></strong>,<strong><strong><strong>c48fb37407365d4f2cd8</strong></strong></strong></p>
          */
         public Builder mediaIds(String mediaIds) {
             this.putQueryParameter("MediaIds", mediaIds);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitMediaCensorJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitMediaCensorJobRequest</p>
@@ -277,6 +278,12 @@ public class SubmitMediaCensorJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitMediaCensorJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitMediaCensorJobRequest</p>
+     */
     public static class Input extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Media")
         private String media;
@@ -338,6 +345,12 @@ public class SubmitMediaCensorJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitMediaCensorJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitMediaCensorJobRequest</p>
+     */
     public static class ScheduleConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;

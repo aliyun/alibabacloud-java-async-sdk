@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitVideoTranslationJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitVideoTranslationJobRequest</p>
@@ -137,7 +138,9 @@ public class SubmitVideoTranslationJobRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <ul>
+         * <li>The client token.</li>
+         * </ul>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -146,7 +149,9 @@ public class SubmitVideoTranslationJobRequest extends Request {
         }
 
         /**
-         * Description.
+         * <ul>
+         * <li>The job description.</li>
+         * </ul>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -155,7 +160,13 @@ public class SubmitVideoTranslationJobRequest extends Request {
         }
 
         /**
-         * EditingConfig.
+         * <ul>
+         * <li>The configuration parameters of the video translation job.</li>
+         * <li>The value must be in the JSON format.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;SourceLanguage&quot;:&quot;zh&quot;,&quot;TargetLanguage&quot;:&quot;en&quot;,&quot;DetextArea&quot;:&quot;Auto&quot;}</p>
          */
         public Builder editingConfig(String editingConfig) {
             this.putQueryParameter("EditingConfig", editingConfig);
@@ -164,7 +175,14 @@ public class SubmitVideoTranslationJobRequest extends Request {
         }
 
         /**
-         * InputConfig.
+         * <ul>
+         * <li>The input parameters of the video translation job.</li>
+         * <li>A video translation job takes a video or subtitle file as the input.</li>
+         * <li>The value must be in the JSON format.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Type&quot;:&quot;Video&quot;,&quot;Media&quot;:&quot;<a href="https://your-bucket.oss-cn-shanghai.aliyuncs.com/xxx.mp4%22%7D">https://your-bucket.oss-cn-shanghai.aliyuncs.com/xxx.mp4&quot;}</a></p>
          */
         public Builder inputConfig(String inputConfig) {
             this.putQueryParameter("InputConfig", inputConfig);
@@ -173,7 +191,13 @@ public class SubmitVideoTranslationJobRequest extends Request {
         }
 
         /**
-         * OutputConfig.
+         * <ul>
+         * <li>The output parameters of the video translation job.</li>
+         * <li>A video translation job can generate a video or subtitle file as the output.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;MediaURL&quot;: &quot;<a href="https://your-bucket.oss-cn-shanghai.aliyuncs.com/your-object.mp4%22%7D">https://your-bucket.oss-cn-shanghai.aliyuncs.com/your-object.mp4&quot;}</a></p>
          */
         public Builder outputConfig(String outputConfig) {
             this.putQueryParameter("OutputConfig", outputConfig);
@@ -182,7 +206,9 @@ public class SubmitVideoTranslationJobRequest extends Request {
         }
 
         /**
-         * Title.
+         * <ul>
+         * <li>The job title.</li>
+         * </ul>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -191,7 +217,9 @@ public class SubmitVideoTranslationJobRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <ul>
+         * <li>The user data.</li>
+         * </ul>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

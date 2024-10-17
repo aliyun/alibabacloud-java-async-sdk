@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSnapshotJobsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSnapshotJobsResponseBody</p>
@@ -90,6 +91,12 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSnapshotJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSnapshotJobsResponseBody</p>
+     */
     public static class Input extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Media")
         private String media;
@@ -151,6 +158,12 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSnapshotJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSnapshotJobsResponseBody</p>
+     */
     public static class Output extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Media")
         private String media;
@@ -212,6 +225,12 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSnapshotJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSnapshotJobsResponseBody</p>
+     */
     public static class Jobs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Async")
         private Boolean async;

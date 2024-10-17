@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLiveRecordJobsRequest} extends {@link RequestModel}
  *
  * <p>ListLiveRecordJobsRequest</p>
@@ -137,7 +138,10 @@ public class ListLiveRecordJobsRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-11T08:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -182,7 +186,10 @@ public class ListLiveRecordJobsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-15T08:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
