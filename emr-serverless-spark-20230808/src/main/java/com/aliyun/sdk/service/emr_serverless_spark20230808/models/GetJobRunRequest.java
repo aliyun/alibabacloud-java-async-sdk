@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetJobRunRequest} extends {@link RequestModel}
  *
  * <p>GetJobRunRequest</p>
@@ -83,7 +84,11 @@ public class GetJobRunRequest extends Request {
         } 
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-1234abcd</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -92,7 +97,11 @@ public class GetJobRunRequest extends Request {
         }
 
         /**
-         * The job ID.
+         * <p>The job ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jr-231231</p>
          */
         public Builder jobRunId(String jobRunId) {
             this.putPathParameter("jobRunId", jobRunId);
@@ -101,7 +110,10 @@ public class GetJobRunRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);

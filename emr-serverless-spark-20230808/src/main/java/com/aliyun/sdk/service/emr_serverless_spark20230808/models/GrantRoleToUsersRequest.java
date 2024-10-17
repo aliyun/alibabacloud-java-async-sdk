@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GrantRoleToUsersRequest} extends {@link RequestModel}
  *
  * <p>GrantRoleToUsersRequest</p>
@@ -81,7 +82,10 @@ public class GrantRoleToUsersRequest extends Request {
         } 
 
         /**
-         * The Alibaba Cloud Resource Name (ARN) of the role.
+         * <p>The Alibaba Cloud Resource Name (ARN) of the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:emr::w-975bcfda9625****:role/Owner</p>
          */
         public Builder roleArn(String roleArn) {
             this.putBodyParameter("roleArn", roleArn);
@@ -99,7 +103,10 @@ public class GrantRoleToUsersRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);

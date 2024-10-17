@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWorkspacesRequest} extends {@link RequestModel}
  *
  * <p>ListWorkspacesRequest</p>
@@ -109,7 +110,10 @@ public class ListWorkspacesRequest extends Request {
         } 
 
         /**
-         * The maximum number of entries to return.
+         * <p>The maximum number of entries to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -118,7 +122,10 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * Fuzzy match is supported.
+         * <p>Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_workspace</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -127,7 +134,10 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -136,7 +146,10 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
@@ -145,7 +158,10 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * The workspace status.
+         * <p>The workspace status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("state", state);

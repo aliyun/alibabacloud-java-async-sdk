@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Credential} extends {@link TeaModel}
  *
  * <p>Credential</p>
@@ -116,7 +117,7 @@ public class Credential extends TeaModel {
         private String signature; 
 
         /**
-         * accessId.
+         * <p>This parameter is required.</p>
          */
         public Builder accessId(String accessId) {
             this.accessId = accessId;
@@ -124,7 +125,7 @@ public class Credential extends TeaModel {
         }
 
         /**
-         * dir.
+         * <p>This parameter is required.</p>
          */
         public Builder dir(String dir) {
             this.dir = dir;
@@ -132,7 +133,7 @@ public class Credential extends TeaModel {
         }
 
         /**
-         * expire.
+         * <p>This parameter is required.</p>
          */
         public Builder expire(String expire) {
             this.expire = expire;
@@ -140,7 +141,7 @@ public class Credential extends TeaModel {
         }
 
         /**
-         * host.
+         * <p>This parameter is required.</p>
          */
         public Builder host(String host) {
             this.host = host;
@@ -148,7 +149,7 @@ public class Credential extends TeaModel {
         }
 
         /**
-         * policy.
+         * <p>This parameter is required.</p>
          */
         public Builder policy(String policy) {
             this.policy = policy;
@@ -156,7 +157,7 @@ public class Credential extends TeaModel {
         }
 
         /**
-         * securityToken.
+         * <p>This parameter is required.</p>
          */
         public Builder securityToken(String securityToken) {
             this.securityToken = securityToken;
@@ -164,7 +165,7 @@ public class Credential extends TeaModel {
         }
 
         /**
-         * signature.
+         * <p>This parameter is required.</p>
          */
         public Builder signature(String signature) {
             this.signature = signature;

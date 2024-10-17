@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSqlStatementResponseBody} extends {@link TeaModel}
  *
  * <p>GetSqlStatementResponseBody</p>
@@ -49,7 +50,7 @@ public class GetSqlStatementResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetSqlStatementResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetSqlStatementResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSqlStatementResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSqlStatementResponseBody</p>
+     */
     public static class SqlOutputs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("rows")
         private String rows;
@@ -109,7 +119,10 @@ public class GetSqlStatementResponseBody extends TeaModel {
             private String schema; 
 
             /**
-             * The queried data, which is a string in the JSON format.
+             * <p>The queried data, which is a string in the JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;values&quot;:[&quot;test_db&quot;,&quot;test_table&quot;,false]}</p>
              */
             public Builder rows(String rows) {
                 this.rows = rows;
@@ -117,7 +130,10 @@ public class GetSqlStatementResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the schema, which is a string in the JSON format.
+             * <p>The information about the schema, which is a string in the JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;type&quot;:&quot;struct&quot;,&quot;fields&quot;:[{&quot;name&quot;:&quot;namespace&quot;,&quot;type&quot;:&quot;string&quot;,&quot;nullable&quot;:false,&quot;metadata&quot;:{}},{&quot;name&quot;:&quot;tableName&quot;,&quot;type&quot;:&quot;string&quot;,&quot;nullable&quot;:false,&quot;metadata&quot;:{}},{&quot;name&quot;:&quot;isTemporary&quot;,&quot;type&quot;:&quot;boolean&quot;,&quot;nullable&quot;:false,&quot;metadata&quot;:{}}]}</p>
              */
             public Builder schema(String schema) {
                 this.schema = schema;
@@ -131,6 +147,12 @@ public class GetSqlStatementResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSqlStatementResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSqlStatementResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("executionTime")
         private java.util.List < Long > executionTime;
@@ -218,7 +240,7 @@ public class GetSqlStatementResponseBody extends TeaModel {
             private String statementId; 
 
             /**
-             * The list of time that is consumed by SQL queries.
+             * <p>The list of time that is consumed by SQL queries.</p>
              */
             public Builder executionTime(java.util.List < Long > executionTime) {
                 this.executionTime = executionTime;
@@ -226,7 +248,10 @@ public class GetSqlStatementResponseBody extends TeaModel {
             }
 
             /**
-             * The error code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ERROR-102</p>
              */
             public Builder sqlErrorCode(String sqlErrorCode) {
                 this.sqlErrorCode = sqlErrorCode;
@@ -234,7 +259,10 @@ public class GetSqlStatementResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>error message</p>
              */
             public Builder sqlErrorMessage(String sqlErrorMessage) {
                 this.sqlErrorMessage = sqlErrorMessage;
@@ -242,7 +270,7 @@ public class GetSqlStatementResponseBody extends TeaModel {
             }
 
             /**
-             * The query results.
+             * <p>The query results.</p>
              */
             public Builder sqlOutputs(java.util.List < SqlOutputs> sqlOutputs) {
                 this.sqlOutputs = sqlOutputs;
@@ -250,16 +278,18 @@ public class GetSqlStatementResponseBody extends TeaModel {
             }
 
             /**
-             * The query status.
-             * <p>
+             * <p>The query status.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>running</li>
+             * <li>available</li>
+             * <li>cancelled</li>
+             * <li>error</li>
+             * <li>cancelling</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   running
-             * *   available
-             * *   cancelled
-             * *   error
-             * *   cancelling
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -267,7 +297,10 @@ public class GetSqlStatementResponseBody extends TeaModel {
             }
 
             /**
-             * The query ID.
+             * <p>The query ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>st-1231311abadfaa</p>
              */
             public Builder statementId(String statementId) {
                 this.statementId = statementId;

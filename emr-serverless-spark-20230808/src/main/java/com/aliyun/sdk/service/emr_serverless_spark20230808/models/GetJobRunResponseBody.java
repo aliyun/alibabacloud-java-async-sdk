@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetJobRunResponseBody} extends {@link TeaModel}
  *
  * <p>GetJobRunResponseBody</p>
@@ -49,7 +50,7 @@ public class GetJobRunResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the job.
+         * <p>The details of the job.</p>
          */
         public Builder jobRun(JobRun jobRun) {
             this.jobRun = jobRun;
@@ -57,7 +58,10 @@ public class GetJobRunResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetJobRunResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetJobRunResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobRunResponseBody</p>
+     */
     public static class ConfigurationOverrides extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("configurations")
         private java.util.List < Configuration > configurations;
@@ -97,7 +107,7 @@ public class GetJobRunResponseBody extends TeaModel {
             private java.util.List < Configuration > configurations; 
 
             /**
-             * The configurations.
+             * <p>The configurations.</p>
              */
             public Builder configurations(java.util.List < Configuration > configurations) {
                 this.configurations = configurations;
@@ -111,6 +121,12 @@ public class GetJobRunResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetJobRunResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobRunResponseBody</p>
+     */
     public static class StateChangeReason extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
@@ -150,7 +166,10 @@ public class GetJobRunResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * The error code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ERR-100000</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -158,7 +177,10 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>connection refused</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -172,6 +194,12 @@ public class GetJobRunResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetJobRunResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobRunResponseBody</p>
+     */
     public static class JobRun extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("codeType")
         private String codeType;
@@ -415,12 +443,15 @@ public class GetJobRunResponseBody extends TeaModel {
             private String workspaceId; 
 
             /**
-             * The code type of the job. Valid values:
-             * <p>
+             * <p>The code type of the job. Valid values:</p>
+             * <ul>
+             * <li>SQL</li>
+             * <li>JAR</li>
+             * <li>PYTHON</li>
+             * </ul>
              * 
-             * *   SQL
-             * *   JAR
-             * *   PYTHON
+             * <strong>example:</strong>
+             * <p>SQL</p>
              */
             public Builder codeType(String codeType) {
                 this.codeType = codeType;
@@ -428,7 +459,7 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * The job configurations of Spark.
+             * <p>The job configurations of Spark.</p>
              */
             public Builder configurationOverrides(ConfigurationOverrides configurationOverrides) {
                 this.configurationOverrides = configurationOverrides;
@@ -444,7 +475,10 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the job.
+             * <p>The end time of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1684119314000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -452,7 +486,10 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of the job.
+             * <p>The timeout period of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder executionTimeoutSeconds(Integer executionTimeoutSeconds) {
                 this.executionTimeoutSeconds = executionTimeoutSeconds;
@@ -468,7 +505,7 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * The information about Spark Driver.
+             * <p>The information about Spark Driver.</p>
              */
             public Builder jobDriver(JobDriver jobDriver) {
                 this.jobDriver = jobDriver;
@@ -476,7 +513,10 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * The job ID.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jr-231231</p>
              */
             public Builder jobRunId(String jobRunId) {
                 this.jobRunId = jobRunId;
@@ -484,7 +524,7 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * The path where the operational logs are stored.
+             * <p>The path where the operational logs are stored.</p>
              */
             public Builder log(RunLog log) {
                 this.log = log;
@@ -492,7 +532,10 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * The job name.
+             * <p>The job name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jobName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -500,7 +543,10 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the Spark engine on which the job runs.
+             * <p>The version of the Spark engine on which the job runs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>esr-3.3.1</p>
              */
             public Builder releaseVersion(String releaseVersion) {
                 this.releaseVersion = releaseVersion;
@@ -508,7 +554,10 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who created the job.
+             * <p>The ID of the user who created the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1509789347011222</p>
              */
             public Builder resourceOwnerId(String resourceOwnerId) {
                 this.resourceOwnerId = resourceOwnerId;
@@ -516,7 +565,10 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the queue on which the job runs.
+             * <p>The name of the queue on which the job runs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root_queue</p>
              */
             public Builder resourceQueueId(String resourceQueueId) {
                 this.resourceQueueId = resourceQueueId;
@@ -524,7 +576,10 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * The job state.
+             * <p>The job state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -532,7 +587,7 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * The reason of the job status change.
+             * <p>The reason of the job status change.</p>
              */
             public Builder stateChangeReason(StateChangeReason stateChangeReason) {
                 this.stateChangeReason = stateChangeReason;
@@ -540,7 +595,10 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job was submitted.
+             * <p>The time when the job was submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1684119314000</p>
              */
             public Builder submitTime(Long submitTime) {
                 this.submitTime = submitTime;
@@ -548,7 +606,7 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the job.
+             * <p>The tags of the job.</p>
              */
             public Builder tags(java.util.List < Tag > tags) {
                 this.tags = tags;
@@ -556,7 +614,10 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * The web UI of the job.
+             * <p>The web UI of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://spark-ui">http://spark-ui</a></p>
              */
             public Builder webUI(String webUI) {
                 this.webUI = webUI;
@@ -564,7 +625,10 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * The workspace ID.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>w-1234abcd</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

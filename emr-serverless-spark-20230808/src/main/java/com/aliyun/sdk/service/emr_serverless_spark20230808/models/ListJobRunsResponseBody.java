@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListJobRunsResponseBody} extends {@link TeaModel}
  *
  * <p>ListJobRunsResponseBody</p>
@@ -85,7 +86,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The list of Spark jobs.
+         * <p>The list of Spark jobs.</p>
          */
         public Builder jobRuns(java.util.List < JobRuns> jobRuns) {
             this.jobRuns = jobRuns;
@@ -93,7 +94,10 @@ public class ListJobRunsResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of entries returned.
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +105,10 @@ public class ListJobRunsResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +116,10 @@ public class ListJobRunsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListJobRunsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListJobRunsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListJobRunsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobRunsResponseBody</p>
+     */
     public static class ConfigurationOverrides extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("configurations")
         private java.util.List < Configuration > configurations;
@@ -157,7 +176,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             private java.util.List < Configuration > configurations; 
 
             /**
-             * The SparkConf objects.
+             * <p>The SparkConf objects.</p>
              */
             public Builder configurations(java.util.List < Configuration > configurations) {
                 this.configurations = configurations;
@@ -171,6 +190,12 @@ public class ListJobRunsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListJobRunsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobRunsResponseBody</p>
+     */
     public static class StateChangeReason extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
@@ -210,7 +235,10 @@ public class ListJobRunsResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * The error code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -218,7 +246,10 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -232,6 +263,12 @@ public class ListJobRunsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListJobRunsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobRunsResponseBody</p>
+     */
     public static class JobRuns extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("codeType")
         private String codeType;
@@ -463,14 +500,13 @@ public class ListJobRunsResponseBody extends TeaModel {
             private String workspaceId; 
 
             /**
-             * The code type of the job. Valid values:
-             * <p>
+             * <p>The code type of the job. Valid values:</p>
+             * <p>SQL</p>
+             * <p>JAR</p>
+             * <p>PYTHON</p>
              * 
-             * SQL
-             * 
-             * JAR
-             * 
-             * PYTHON
+             * <strong>example:</strong>
+             * <p>SQL</p>
              */
             public Builder codeType(String codeType) {
                 this.codeType = codeType;
@@ -478,7 +514,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * The advanced configurations of Spark.
+             * <p>The advanced configurations of Spark.</p>
              */
             public Builder configurationOverrides(ConfigurationOverrides configurationOverrides) {
                 this.configurationOverrides = configurationOverrides;
@@ -486,7 +522,10 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who created the job.
+             * <p>The ID of the user who created the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1509789347011222</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -502,7 +541,10 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the job.
+             * <p>The end time of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1684119314000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -510,7 +552,10 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of the job.
+             * <p>The timeout period of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder executionTimeoutSeconds(Integer executionTimeoutSeconds) {
                 this.executionTimeoutSeconds = executionTimeoutSeconds;
@@ -526,7 +571,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about Spark Driver.
+             * <p>The information about Spark Driver.</p>
              */
             public Builder jobDriver(JobDriver jobDriver) {
                 this.jobDriver = jobDriver;
@@ -534,7 +579,10 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * The job ID.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jr-231231</p>
              */
             public Builder jobRunId(String jobRunId) {
                 this.jobRunId = jobRunId;
@@ -542,7 +590,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * The path where the operational logs are stored.
+             * <p>The path where the operational logs are stored.</p>
              */
             public Builder log(RunLog log) {
                 this.log = log;
@@ -550,7 +598,10 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * The job name.
+             * <p>The job name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jobName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -558,7 +609,10 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * The version of Spark on which the jobs run.
+             * <p>The version of Spark on which the jobs run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>esr-native-3.4.0</p>
              */
             public Builder releaseVersion(String releaseVersion) {
                 this.releaseVersion = releaseVersion;
@@ -566,7 +620,10 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * The job state.
+             * <p>The job state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -574,7 +631,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * The reason of the job status change.
+             * <p>The reason of the job status change.</p>
              */
             public Builder stateChangeReason(StateChangeReason stateChangeReason) {
                 this.stateChangeReason = stateChangeReason;
@@ -582,7 +639,10 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job was submitted.
+             * <p>The time when the job was submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1684119314000</p>
              */
             public Builder submitTime(Long submitTime) {
                 this.submitTime = submitTime;
@@ -590,7 +650,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the job.
+             * <p>The tags of the job.</p>
              */
             public Builder tags(java.util.List < Tag > tags) {
                 this.tags = tags;
@@ -598,7 +658,10 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * The web UI of the job.
+             * <p>The web UI of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://spark-ui">http://spark-ui</a></p>
              */
             public Builder webUI(String webUI) {
                 this.webUI = webUI;
@@ -606,7 +669,10 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * The workspace ID.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>w-1234abcd</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

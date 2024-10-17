@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Template} extends {@link TeaModel}
  *
  * <p>Template</p>
@@ -216,7 +217,7 @@ public class Template extends TeaModel {
         private String templateType; 
 
         /**
-         * creator.
+         * <p>This parameter is required.</p>
          */
         public Builder creator(Long creator) {
             this.creator = creator;
@@ -240,7 +241,7 @@ public class Template extends TeaModel {
         }
 
         /**
-         * gmtCreated.
+         * <p>This parameter is required.</p>
          */
         public Builder gmtCreated(String gmtCreated) {
             this.gmtCreated = gmtCreated;
@@ -248,7 +249,7 @@ public class Template extends TeaModel {
         }
 
         /**
-         * gmtModified.
+         * <p>This parameter is required.</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -256,7 +257,7 @@ public class Template extends TeaModel {
         }
 
         /**
-         * modifier.
+         * <p>This parameter is required.</p>
          */
         public Builder modifier(Long modifier) {
             this.modifier = modifier;
@@ -272,7 +273,7 @@ public class Template extends TeaModel {
         }
 
         /**
-         * sparkDriverCores.
+         * <p>This parameter is required.</p>
          */
         public Builder sparkDriverCores(Integer sparkDriverCores) {
             this.sparkDriverCores = sparkDriverCores;
@@ -280,7 +281,7 @@ public class Template extends TeaModel {
         }
 
         /**
-         * sparkDriverMemory.
+         * <p>This parameter is required.</p>
          */
         public Builder sparkDriverMemory(Long sparkDriverMemory) {
             this.sparkDriverMemory = sparkDriverMemory;
@@ -288,7 +289,7 @@ public class Template extends TeaModel {
         }
 
         /**
-         * sparkExecutorCores.
+         * <p>This parameter is required.</p>
          */
         public Builder sparkExecutorCores(Integer sparkExecutorCores) {
             this.sparkExecutorCores = sparkExecutorCores;
@@ -296,7 +297,7 @@ public class Template extends TeaModel {
         }
 
         /**
-         * sparkExecutorMemory.
+         * <p>This parameter is required.</p>
          */
         public Builder sparkExecutorMemory(Long sparkExecutorMemory) {
             this.sparkExecutorMemory = sparkExecutorMemory;
@@ -304,7 +305,7 @@ public class Template extends TeaModel {
         }
 
         /**
-         * sparkLogLevel.
+         * <p>This parameter is required.</p>
          */
         public Builder sparkLogLevel(String sparkLogLevel) {
             this.sparkLogLevel = sparkLogLevel;
@@ -312,7 +313,7 @@ public class Template extends TeaModel {
         }
 
         /**
-         * sparkLogPath.
+         * <p>This parameter is required.</p>
          */
         public Builder sparkLogPath(String sparkLogPath) {
             this.sparkLogPath = sparkLogPath;
@@ -320,7 +321,7 @@ public class Template extends TeaModel {
         }
 
         /**
-         * sparkVersion.
+         * <p>This parameter is required.</p>
          */
         public Builder sparkVersion(String sparkVersion) {
             this.sparkVersion = sparkVersion;

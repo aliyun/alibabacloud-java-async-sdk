@@ -7,29 +7,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CancelJobRunRequest} extends {@link RequestModel}
+ * {@link StopSessionClusterRequest} extends {@link RequestModel}
  *
- * <p>CancelJobRunRequest</p>
+ * <p>StopSessionClusterRequest</p>
  */
-public class CancelJobRunRequest extends Request {
+public class StopSessionClusterRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("workspaceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
-    @com.aliyun.core.annotation.Path
-    @com.aliyun.core.annotation.NameInMap("jobRunId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String jobRunId;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("queueName")
+    private String queueName;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sessionClusterId")
+    private String sessionClusterId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
 
-    private CancelJobRunRequest(Builder builder) {
+    private StopSessionClusterRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
-        this.jobRunId = builder.jobRunId;
+        this.queueName = builder.queueName;
+        this.sessionClusterId = builder.sessionClusterId;
         this.regionId = builder.regionId;
     }
 
@@ -37,7 +40,7 @@ public class CancelJobRunRequest extends Request {
         return new Builder();
     }
 
-    public static CancelJobRunRequest create() {
+    public static StopSessionClusterRequest create() {
         return builder().build();
     }
 
@@ -54,10 +57,17 @@ public class CancelJobRunRequest extends Request {
     }
 
     /**
-     * @return jobRunId
+     * @return queueName
      */
-    public String getJobRunId() {
-        return this.jobRunId;
+    public String getQueueName() {
+        return this.queueName;
+    }
+
+    /**
+     * @return sessionClusterId
+     */
+    public String getSessionClusterId() {
+        return this.sessionClusterId;
     }
 
     /**
@@ -67,28 +77,26 @@ public class CancelJobRunRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<CancelJobRunRequest, Builder> {
+    public static final class Builder extends Request.Builder<StopSessionClusterRequest, Builder> {
         private String workspaceId; 
-        private String jobRunId; 
+        private String queueName; 
+        private String sessionClusterId; 
         private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CancelJobRunRequest request) {
+        private Builder(StopSessionClusterRequest request) {
             super(request);
             this.workspaceId = request.workspaceId;
-            this.jobRunId = request.jobRunId;
+            this.queueName = request.queueName;
+            this.sessionClusterId = request.sessionClusterId;
             this.regionId = request.regionId;
         } 
 
         /**
-         * <p>The workspace ID.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>w-1234abcd</p>
+         * workspaceId.
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -97,23 +105,25 @@ public class CancelJobRunRequest extends Request {
         }
 
         /**
-         * <p>The job ID.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>jr-231231</p>
+         * queueName.
          */
-        public Builder jobRunId(String jobRunId) {
-            this.putPathParameter("jobRunId", jobRunId);
-            this.jobRunId = jobRunId;
+        public Builder queueName(String queueName) {
+            this.putBodyParameter("queueName", queueName);
+            this.queueName = queueName;
             return this;
         }
 
         /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * sessionClusterId.
+         */
+        public Builder sessionClusterId(String sessionClusterId) {
+            this.putBodyParameter("sessionClusterId", sessionClusterId);
+            this.sessionClusterId = sessionClusterId;
+            return this;
+        }
+
+        /**
+         * regionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
@@ -122,8 +132,8 @@ public class CancelJobRunRequest extends Request {
         }
 
         @Override
-        public CancelJobRunRequest build() {
-            return new CancelJobRunRequest(this);
+        public StopSessionClusterRequest build() {
+            return new StopSessionClusterRequest(this);
         } 
 
     } 

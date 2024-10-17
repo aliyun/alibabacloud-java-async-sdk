@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWorkspaceQueuesRequest} extends {@link RequestModel}
  *
  * <p>ListWorkspaceQueuesRequest</p>
@@ -81,7 +82,10 @@ public class ListWorkspaceQueuesRequest extends Request {
         } 
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-26ca1703f6d71e6e</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -90,13 +94,15 @@ public class ListWorkspaceQueuesRequest extends Request {
         }
 
         /**
-         * The environment type.
-         * <p>
+         * <p>The environment type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>dev</li>
+         * <li>production</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   dev
-         * *   production
+         * <strong>example:</strong>
+         * <p>production</p>
          */
         public Builder environment(String environment) {
             this.putQueryParameter("environment", environment);
@@ -105,7 +111,10 @@ public class ListWorkspaceQueuesRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListReleaseVersionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListReleaseVersionsResponseBody</p>
@@ -85,7 +86,10 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The maximum number of entries returned.
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,7 +97,10 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,7 +108,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The versions.
+         * <p>The versions.</p>
          */
         public Builder releaseVersions(java.util.List < ReleaseVersions> releaseVersions) {
             this.releaseVersions = releaseVersions;
@@ -109,7 +116,10 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListReleaseVersionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListReleaseVersionsResponseBody</p>
+     */
     public static class ReleaseVersions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("communityVersion")
         private String communityVersion;
@@ -265,7 +284,10 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The version number of open source Spark.
+             * <p>The version number of open source Spark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Spark 3.3.1</p>
              */
             public Builder communityVersion(String communityVersion) {
                 this.communityVersion = communityVersion;
@@ -273,7 +295,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The CPU architectures.
+             * <p>The CPU architectures.</p>
              */
             public Builder cpuArchitectures(java.util.List < String > cpuArchitectures) {
                 this.cpuArchitectures = cpuArchitectures;
@@ -281,7 +303,10 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * displayReleaseVersion.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>esr-2.1 (Spark 3.3.1, Scala 2.12)</p>
              */
             public Builder displayReleaseVersion(String displayReleaseVersion) {
                 this.displayReleaseVersion = displayReleaseVersion;
@@ -289,7 +314,10 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * fusion.
+             * <p>Indicates whether the Fusion engine is used for acceleration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder fusion(Boolean fusion) {
                 this.fusion = fusion;
@@ -297,7 +325,10 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1716215854101</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -305,7 +336,10 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the Infrastructure as a Service (IaaS) layer.
+             * <p>The type of the Infrastructure as a Service (IaaS) layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ASI</p>
              */
             public Builder iaasType(String iaasType) {
                 this.iaasType = iaasType;
@@ -313,7 +347,10 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>esr-2.1 (Spark 3.3.1, Scala 2.12, Java Runtime)</p>
              */
             public Builder releaseVersion(String releaseVersion) {
                 this.releaseVersion = releaseVersion;
@@ -321,7 +358,10 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The version of Scala.
+             * <p>The version of Scala.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.12</p>
              */
             public Builder scalaVersion(String scalaVersion) {
                 this.scalaVersion = scalaVersion;
@@ -329,7 +369,10 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the version.
+             * <p>The status of the version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ONLINE</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -337,7 +380,10 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the version.
+             * <p>The type of the version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stable</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListJobRunsRequest} extends {@link RequestModel}
  *
  * <p>ListJobRunsRequest</p>
@@ -222,7 +223,11 @@ public class ListJobRunsRequest extends Request {
         } 
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-1234abcd</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -231,7 +236,10 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * The ID of the user who creates a Spark job.
+         * <p>The ID of the user who created the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1509789347011222</p>
          */
         public Builder creator(String creator) {
             this.putQueryParameter("creator", creator);
@@ -240,7 +248,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * The range of end time.
+         * <p>The range of end time.</p>
          */
         public Builder endTime(EndTime endTime) {
             String endTimeShrink = shrink(endTime, "endTime", "json");
@@ -259,7 +267,10 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * The job ID.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>j-xxx</p>
          */
         public Builder jobRunId(String jobRunId) {
             this.putQueryParameter("jobRunId", jobRunId);
@@ -268,7 +279,10 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return.
+         * <p>The maximum number of entries to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -277,7 +291,10 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * The job name.
+         * <p>The job name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emr-spark-demo-job</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -286,7 +303,10 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the request to retrieve a new page of results.
+         * <p>The pagination token that is used in the request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -295,7 +315,10 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
@@ -304,7 +327,10 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * The name of the resource queue on which the Spark jobs run.
+         * <p>The name of the resource queue on which the Spark jobs run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev_queue</p>
          */
         public Builder resourceQueueId(String resourceQueueId) {
             this.putQueryParameter("resourceQueueId", resourceQueueId);
@@ -313,7 +339,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * The range of start time.
+         * <p>The range of start time.</p>
          */
         public Builder startTime(StartTime startTime) {
             String startTimeShrink = shrink(startTime, "startTime", "json");
@@ -323,7 +349,10 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * The job states.
+         * <p>The job states.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;Running&quot;,&quot;Submitted&quot;]</p>
          */
         public Builder states(java.util.List < String > states) {
             String statesShrink = shrink(states, "states", "json");
@@ -333,7 +362,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * The tags of the job.
+         * <p>The tags of the job.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             String tagsShrink = shrink(tags, "tags", "json");
@@ -349,6 +378,12 @@ public class ListJobRunsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListJobRunsRequest} extends {@link TeaModel}
+     *
+     * <p>ListJobRunsRequest</p>
+     */
     public static class EndTime extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("endTime")
         private Long endTime;
@@ -388,7 +423,10 @@ public class ListJobRunsRequest extends Request {
             private Long startTime; 
 
             /**
-             * The end of the end time range.
+             * <p>The end of the end time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710432000000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -396,7 +434,10 @@ public class ListJobRunsRequest extends Request {
             }
 
             /**
-             * The beginning of the end time range.
+             * <p>The beginning of the end time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1709740800000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -410,6 +451,12 @@ public class ListJobRunsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ListJobRunsRequest} extends {@link TeaModel}
+     *
+     * <p>ListJobRunsRequest</p>
+     */
     public static class StartTime extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("endTime")
         private Long endTime;
@@ -449,7 +496,10 @@ public class ListJobRunsRequest extends Request {
             private Long startTime; 
 
             /**
-             * The end of the start time range.
+             * <p>The end of the start time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710432000000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -457,7 +507,10 @@ public class ListJobRunsRequest extends Request {
             }
 
             /**
-             * The beginning of the start time range.
+             * <p>The beginning of the start time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1709740800000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -471,6 +524,12 @@ public class ListJobRunsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ListJobRunsRequest} extends {@link TeaModel}
+     *
+     * <p>ListJobRunsRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
@@ -510,7 +569,10 @@ public class ListJobRunsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N.
+             * <p>The key of tag N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag_key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -518,7 +580,10 @@ public class ListJobRunsRequest extends Request {
             }
 
             /**
-             * The value of tag N.
+             * <p>The value of tag N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

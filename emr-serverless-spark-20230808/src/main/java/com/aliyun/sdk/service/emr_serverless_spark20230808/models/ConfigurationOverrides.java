@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigurationOverrides} extends {@link TeaModel}
  *
  * <p>ConfigurationOverrides</p>
@@ -50,6 +51,12 @@ public class ConfigurationOverrides extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ConfigurationOverrides} extends {@link TeaModel}
+     *
+     * <p>ConfigurationOverrides</p>
+     */
     public static class Configurations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("configFileName")
         private String configFileName;

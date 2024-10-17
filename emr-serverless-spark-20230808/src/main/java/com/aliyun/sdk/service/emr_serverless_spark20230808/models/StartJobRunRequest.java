@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartJobRunRequest} extends {@link RequestModel}
  *
  * <p>StartJobRunRequest</p>
@@ -236,7 +237,11 @@ public class StartJobRunRequest extends Request {
         } 
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-123213123131</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -245,7 +250,10 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8e6aae2810c8f67229ca70bb31cd6028</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -254,12 +262,15 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * The code type of the job. Valid values:
-         * <p>
+         * <p>The code type of the job. Valid values:</p>
+         * <ul>
+         * <li>SQL</li>
+         * <li>JAR</li>
+         * <li>PYTHON</li>
+         * </ul>
          * 
-         * *   SQL
-         * *   JAR
-         * *   PYTHON
+         * <strong>example:</strong>
+         * <p>SQL</p>
          */
         public Builder codeType(String codeType) {
             this.putBodyParameter("codeType", codeType);
@@ -268,7 +279,7 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * The advanced configurations of Spark.
+         * <p>The advanced configurations of Spark.</p>
          */
         public Builder configurationOverrides(ConfigurationOverrides configurationOverrides) {
             this.putBodyParameter("configurationOverrides", configurationOverrides);
@@ -286,7 +297,10 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * The timeout period of the job.
+         * <p>The timeout period of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder executionTimeoutSeconds(Integer executionTimeoutSeconds) {
             this.putBodyParameter("executionTimeoutSeconds", executionTimeoutSeconds);
@@ -304,7 +318,7 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * The information about Spark Driver.
+         * <p>The information about Spark Driver.</p>
          */
         public Builder jobDriver(JobDriver jobDriver) {
             this.putBodyParameter("jobDriver", jobDriver);
@@ -313,7 +327,10 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * The job ID.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jr-12345</p>
          */
         public Builder jobId(String jobId) {
             this.putBodyParameter("jobId", jobId);
@@ -322,7 +339,10 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * The job name.
+         * <p>The job name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spark_job_name</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -331,7 +351,10 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * The version number of Spark.
+         * <p>The version number of Spark.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esr-3.3.1</p>
          */
         public Builder releaseVersion(String releaseVersion) {
             this.putBodyParameter("releaseVersion", releaseVersion);
@@ -340,7 +363,10 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * The name of the resource queue on which the Spark job runs.
+         * <p>The name of the resource queue on which the Spark job runs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev_queue</p>
          */
         public Builder resourceQueueId(String resourceQueueId) {
             this.putBodyParameter("resourceQueueId", resourceQueueId);
@@ -349,7 +375,7 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * The tags of the job.
+         * <p>The tags of the job.</p>
          */
         public Builder tags(java.util.List < Tag > tags) {
             this.putBodyParameter("tags", tags);
@@ -358,7 +384,10 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
@@ -373,6 +402,12 @@ public class StartJobRunRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link StartJobRunRequest} extends {@link TeaModel}
+     *
+     * <p>StartJobRunRequest</p>
+     */
     public static class Configurations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("configFileName")
         private String configFileName;
@@ -424,7 +459,10 @@ public class StartJobRunRequest extends Request {
             private String configItemValue; 
 
             /**
-             * The configuration file of SparkConf.
+             * <p>The configuration file of SparkConf.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spark-default.conf</p>
              */
             public Builder configFileName(String configFileName) {
                 this.configFileName = configFileName;
@@ -432,7 +470,10 @@ public class StartJobRunRequest extends Request {
             }
 
             /**
-             * The key of SparkConf.
+             * <p>The key of SparkConf.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spark.app.name</p>
              */
             public Builder configItemKey(String configItemKey) {
                 this.configItemKey = configItemKey;
@@ -440,7 +481,10 @@ public class StartJobRunRequest extends Request {
             }
 
             /**
-             * The value of SparkConf.
+             * <p>The value of SparkConf.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_app</p>
              */
             public Builder configItemValue(String configItemValue) {
                 this.configItemValue = configItemValue;
@@ -454,6 +498,12 @@ public class StartJobRunRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link StartJobRunRequest} extends {@link TeaModel}
+     *
+     * <p>StartJobRunRequest</p>
+     */
     public static class ConfigurationOverrides extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("configurations")
         private java.util.List < Configurations> configurations;
@@ -481,7 +531,7 @@ public class StartJobRunRequest extends Request {
             private java.util.List < Configurations> configurations; 
 
             /**
-             * The SparkConf objects.
+             * <p>The SparkConf objects.</p>
              */
             public Builder configurations(java.util.List < Configurations> configurations) {
                 this.configurations = configurations;

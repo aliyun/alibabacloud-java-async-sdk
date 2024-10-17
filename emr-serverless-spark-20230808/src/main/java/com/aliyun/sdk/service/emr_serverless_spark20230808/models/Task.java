@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Task} extends {@link TeaModel}
  *
  * <p>Task</p>
@@ -136,6 +137,9 @@ public class Task extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("tags")
     private java.util.Map < String, String > tags;
 
+    @com.aliyun.core.annotation.NameInMap("timeout")
+    private Integer timeout;
+
     @com.aliyun.core.annotation.NameInMap("type")
     @com.aliyun.core.annotation.Validation(required = true)
     private String type;
@@ -178,6 +182,7 @@ public class Task extends TeaModel {
         this.sparkSubmitClause = builder.sparkSubmitClause;
         this.sparkVersion = builder.sparkVersion;
         this.tags = builder.tags;
+        this.timeout = builder.timeout;
         this.type = builder.type;
     }
 
@@ -449,6 +454,13 @@ public class Task extends TeaModel {
     }
 
     /**
+     * @return timeout
+     */
+    public Integer getTimeout() {
+        return this.timeout;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -493,6 +505,7 @@ public class Task extends TeaModel {
         private String sparkSubmitClause; 
         private String sparkVersion; 
         private java.util.Map < String, String > tags; 
+        private Integer timeout; 
         private String type; 
 
         /**
@@ -512,7 +525,7 @@ public class Task extends TeaModel {
         }
 
         /**
-         * bizId.
+         * <p>This parameter is required.</p>
          */
         public Builder bizId(String bizId) {
             this.bizId = bizId;
@@ -536,7 +549,7 @@ public class Task extends TeaModel {
         }
 
         /**
-         * creator.
+         * <p>This parameter is required.</p>
          */
         public Builder creator(Long creator) {
             this.creator = creator;
@@ -616,7 +629,7 @@ public class Task extends TeaModel {
         }
 
         /**
-         * gmtCreated.
+         * <p>This parameter is required.</p>
          */
         public Builder gmtCreated(String gmtCreated) {
             this.gmtCreated = gmtCreated;
@@ -624,7 +637,7 @@ public class Task extends TeaModel {
         }
 
         /**
-         * gmtModified.
+         * <p>This parameter is required.</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -640,7 +653,7 @@ public class Task extends TeaModel {
         }
 
         /**
-         * hasCommited.
+         * <p>This parameter is required.</p>
          */
         public Builder hasCommited(Boolean hasCommited) {
             this.hasCommited = hasCommited;
@@ -672,7 +685,7 @@ public class Task extends TeaModel {
         }
 
         /**
-         * modifier.
+         * <p>This parameter is required.</p>
          */
         public Builder modifier(Long modifier) {
             this.modifier = modifier;
@@ -680,7 +693,7 @@ public class Task extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -712,7 +725,7 @@ public class Task extends TeaModel {
         }
 
         /**
-         * sparkDriverCores.
+         * <p>This parameter is required.</p>
          */
         public Builder sparkDriverCores(Integer sparkDriverCores) {
             this.sparkDriverCores = sparkDriverCores;
@@ -720,7 +733,7 @@ public class Task extends TeaModel {
         }
 
         /**
-         * sparkDriverMemory.
+         * <p>This parameter is required.</p>
          */
         public Builder sparkDriverMemory(Long sparkDriverMemory) {
             this.sparkDriverMemory = sparkDriverMemory;
@@ -736,7 +749,7 @@ public class Task extends TeaModel {
         }
 
         /**
-         * sparkExecutorCores.
+         * <p>This parameter is required.</p>
          */
         public Builder sparkExecutorCores(Integer sparkExecutorCores) {
             this.sparkExecutorCores = sparkExecutorCores;
@@ -744,7 +757,7 @@ public class Task extends TeaModel {
         }
 
         /**
-         * sparkExecutorMemory.
+         * <p>This parameter is required.</p>
          */
         public Builder sparkExecutorMemory(Long sparkExecutorMemory) {
             this.sparkExecutorMemory = sparkExecutorMemory;
@@ -752,7 +765,7 @@ public class Task extends TeaModel {
         }
 
         /**
-         * sparkLogLevel.
+         * <p>This parameter is required.</p>
          */
         public Builder sparkLogLevel(String sparkLogLevel) {
             this.sparkLogLevel = sparkLogLevel;
@@ -760,7 +773,7 @@ public class Task extends TeaModel {
         }
 
         /**
-         * sparkLogPath.
+         * <p>This parameter is required.</p>
          */
         public Builder sparkLogPath(String sparkLogPath) {
             this.sparkLogPath = sparkLogPath;
@@ -776,7 +789,7 @@ public class Task extends TeaModel {
         }
 
         /**
-         * sparkVersion.
+         * <p>This parameter is required.</p>
          */
         public Builder sparkVersion(String sparkVersion) {
             this.sparkVersion = sparkVersion;
@@ -792,7 +805,15 @@ public class Task extends TeaModel {
         }
 
         /**
-         * type.
+         * timeout.
+         */
+        public Builder timeout(Integer timeout) {
+            this.timeout = timeout;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
          */
         public Builder type(String type) {
             this.type = type;

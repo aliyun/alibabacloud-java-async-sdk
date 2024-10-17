@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TerminateSqlStatementRequest} extends {@link RequestModel}
  *
  * <p>TerminateSqlStatementRequest</p>
@@ -81,7 +82,10 @@ public class TerminateSqlStatementRequest extends Request {
         } 
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-d2d82aa09155****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -90,7 +94,10 @@ public class TerminateSqlStatementRequest extends Request {
         }
 
         /**
-         * The interactive query ID.
+         * <p>The interactive query ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>st-abcadfadf12****</p>
          */
         public Builder statementId(String statementId) {
             this.putPathParameter("statementId", statementId);
@@ -99,7 +106,10 @@ public class TerminateSqlStatementRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);

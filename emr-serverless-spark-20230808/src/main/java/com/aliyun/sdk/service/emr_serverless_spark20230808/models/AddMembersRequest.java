@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddMembersRequest} extends {@link RequestModel}
  *
  * <p>AddMembersRequest</p>
@@ -83,7 +84,7 @@ public class AddMembersRequest extends Request {
         } 
 
         /**
-         * memberArns.
+         * <p>This parameter is required.</p>
          */
         public Builder memberArns(java.util.List < String > memberArns) {
             this.putBodyParameter("memberArns", memberArns);
@@ -92,7 +93,11 @@ public class AddMembersRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-975bcfda9625****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("workspaceId", workspaceId);
@@ -101,7 +106,10 @@ public class AddMembersRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);

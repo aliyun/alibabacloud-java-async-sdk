@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AddMembers  AddMembersRequest
+     * @return AddMembersResponse
+     */
     @Override
     public CompletableFuture<AddMembersResponse> addMembers(AddMembersRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelJobRun  CancelJobRunRequest
+     * @return CancelJobRunResponse
+     */
     @Override
     public CompletableFuture<CancelJobRunResponse> cancelJobRun(CancelJobRunRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateSqlStatement  CreateSqlStatementRequest
+     * @return CreateSqlStatementResponse
+     */
     @Override
     public CompletableFuture<CreateSqlStatementResponse> createSqlStatement(CreateSqlStatementRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetJobRun  GetJobRunRequest
+     * @return GetJobRunResponse
+     */
     @Override
     public CompletableFuture<GetJobRunResponse> getJobRun(GetJobRunRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSqlStatement  GetSqlStatementRequest
+     * @return GetSqlStatementResponse
+     */
     @Override
     public CompletableFuture<GetSqlStatementResponse> getSqlStatement(GetSqlStatementRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GrantRoleToUsers  GrantRoleToUsersRequest
+     * @return GrantRoleToUsersResponse
+     */
     @Override
     public CompletableFuture<GrantRoleToUsersResponse> grantRoleToUsers(GrantRoleToUsersRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListJobRuns  ListJobRunsRequest
+     * @return ListJobRunsResponse
+     */
     @Override
     public CompletableFuture<ListJobRunsResponse> listJobRuns(ListJobRunsRequest request) {
         try {
@@ -137,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListReleaseVersions  ListReleaseVersionsRequest
+     * @return ListReleaseVersionsResponse
+     */
     @Override
     public CompletableFuture<ListReleaseVersionsResponse> listReleaseVersions(ListReleaseVersionsRequest request) {
         try {
@@ -151,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSessionClusters  ListSessionClustersRequest
+     * @return ListSessionClustersResponse
+     */
     @Override
     public CompletableFuture<ListSessionClustersResponse> listSessionClusters(ListSessionClustersRequest request) {
         try {
@@ -165,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListWorkspaceQueues  ListWorkspaceQueuesRequest
+     * @return ListWorkspaceQueuesResponse
+     */
     @Override
     public CompletableFuture<ListWorkspaceQueuesResponse> listWorkspaceQueues(ListWorkspaceQueuesRequest request) {
         try {
@@ -179,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListWorkspaces  ListWorkspacesRequest
+     * @return ListWorkspacesResponse
+     */
     @Override
     public CompletableFuture<ListWorkspacesResponse> listWorkspaces(ListWorkspacesRequest request) {
         try {
@@ -193,6 +237,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartJobRun  StartJobRunRequest
+     * @return StartJobRunResponse
+     */
     @Override
     public CompletableFuture<StartJobRunResponse> startJobRun(StartJobRunRequest request) {
         try {
@@ -207,6 +255,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartSessionCluster  StartSessionClusterRequest
+     * @return StartSessionClusterResponse
+     */
+    @Override
+    public CompletableFuture<StartSessionClusterResponse> startSessionCluster(StartSessionClusterRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StartSessionCluster").setMethod(HttpMethod.POST).setPathRegex("/api/v1/workspaces/{workspaceId}/sessionClusters/action/startSessionCluster").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StartSessionClusterResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StartSessionClusterResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of StopSessionCluster  StopSessionClusterRequest
+     * @return StopSessionClusterResponse
+     */
+    @Override
+    public CompletableFuture<StopSessionClusterResponse> stopSessionCluster(StopSessionClusterRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StopSessionCluster").setMethod(HttpMethod.POST).setPathRegex("/api/v1/workspaces/{workspaceId}/sessionClusters/action/stopSessionCluster").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopSessionClusterResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StopSessionClusterResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TerminateSqlStatement  TerminateSqlStatementRequest
+     * @return TerminateSqlStatementResponse
+     */
     @Override
     public CompletableFuture<TerminateSqlStatementResponse> terminateSqlStatement(TerminateSqlStatementRequest request) {
         try {

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSessionClustersRequest} extends {@link RequestModel}
  *
  * <p>ListSessionClustersRequest</p>
@@ -137,7 +138,10 @@ public class ListSessionClustersRequest extends Request {
         } 
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-1234abcd</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -155,7 +159,10 @@ public class ListSessionClustersRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return.
+         * <p>The maximum number of entries to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -164,7 +171,10 @@ public class ListSessionClustersRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the request to retrieve a new page of results.
+         * <p>The pagination token that is used in the request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -173,7 +183,10 @@ public class ListSessionClustersRequest extends Request {
         }
 
         /**
-         * The name of the queue.
+         * <p>The name of the queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         public Builder queueName(String queueName) {
             this.putQueryParameter("queueName", queueName);
@@ -182,7 +195,10 @@ public class ListSessionClustersRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
@@ -191,7 +207,10 @@ public class ListSessionClustersRequest extends Request {
         }
 
         /**
-         * The name of the job.
+         * <p>The name of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emr-spark-demo-job</p>
          */
         public Builder sessionClusterId(String sessionClusterId) {
             this.putQueryParameter("sessionClusterId", sessionClusterId);

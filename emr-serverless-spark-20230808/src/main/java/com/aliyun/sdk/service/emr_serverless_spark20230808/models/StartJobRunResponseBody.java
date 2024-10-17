@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartJobRunResponseBody} extends {@link TeaModel}
  *
  * <p>StartJobRunResponseBody</p>
@@ -49,7 +50,10 @@ public class StartJobRunResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The job ID.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jr-54321</p>
          */
         public Builder jobRunId(String jobRunId) {
             this.jobRunId = jobRunId;
@@ -57,7 +61,10 @@ public class StartJobRunResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

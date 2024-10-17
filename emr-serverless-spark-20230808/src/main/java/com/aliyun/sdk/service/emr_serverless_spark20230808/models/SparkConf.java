@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SparkConf} extends {@link TeaModel}
  *
  * <p>SparkConf</p>
@@ -51,7 +52,7 @@ public class SparkConf extends TeaModel {
         private String value; 
 
         /**
-         * key.
+         * <p>This parameter is required.</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -59,7 +60,7 @@ public class SparkConf extends TeaModel {
         }
 
         /**
-         * value.
+         * <p>This parameter is required.</p>
          */
         public Builder value(String value) {
             this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SqlOutput} extends {@link TeaModel}
  *
  * <p>SqlOutput</p>
@@ -70,6 +71,12 @@ public class SqlOutput extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SqlOutput} extends {@link TeaModel}
+     *
+     * <p>SqlOutput</p>
+     */
     public static class Rows extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("values")
         private java.util.List < String > values;
@@ -111,6 +118,12 @@ public class SqlOutput extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SqlOutput} extends {@link TeaModel}
+     *
+     * <p>SqlOutput</p>
+     */
     public static class Fields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -192,6 +205,12 @@ public class SqlOutput extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SqlOutput} extends {@link TeaModel}
+     *
+     * <p>SqlOutput</p>
+     */
     public static class Schema extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fields")
         private java.util.List < Fields> fields;

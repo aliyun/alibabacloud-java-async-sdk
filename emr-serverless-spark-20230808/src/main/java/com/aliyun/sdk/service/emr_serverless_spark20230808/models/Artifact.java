@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Artifact} extends {@link TeaModel}
  *
  * <p>Artifact</p>
@@ -128,7 +129,7 @@ public class Artifact extends TeaModel {
         private String name; 
 
         /**
-         * bizId.
+         * <p>This parameter is required.</p>
          */
         public Builder bizId(String bizId) {
             this.bizId = bizId;
@@ -136,7 +137,7 @@ public class Artifact extends TeaModel {
         }
 
         /**
-         * creator.
+         * <p>This parameter is required.</p>
          */
         public Builder creator(Long creator) {
             this.creator = creator;
@@ -152,7 +153,7 @@ public class Artifact extends TeaModel {
         }
 
         /**
-         * gmtCreated.
+         * <p>This parameter is required.</p>
          */
         public Builder gmtCreated(String gmtCreated) {
             this.gmtCreated = gmtCreated;
@@ -160,7 +161,7 @@ public class Artifact extends TeaModel {
         }
 
         /**
-         * gmtModified.
+         * <p>This parameter is required.</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -168,7 +169,7 @@ public class Artifact extends TeaModel {
         }
 
         /**
-         * location.
+         * <p>This parameter is required.</p>
          */
         public Builder location(String location) {
             this.location = location;
@@ -176,7 +177,7 @@ public class Artifact extends TeaModel {
         }
 
         /**
-         * modifier.
+         * <p>This parameter is required.</p>
          */
         public Builder modifier(Long modifier) {
             this.modifier = modifier;
@@ -184,7 +185,7 @@ public class Artifact extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.name = name;

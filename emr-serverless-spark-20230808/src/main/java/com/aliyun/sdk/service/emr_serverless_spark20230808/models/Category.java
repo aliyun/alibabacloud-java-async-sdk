@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Category} extends {@link TeaModel}
  *
  * <p>Category</p>
@@ -128,7 +129,7 @@ public class Category extends TeaModel {
         private String type; 
 
         /**
-         * bizId.
+         * <p>This parameter is required.</p>
          */
         public Builder bizId(String bizId) {
             this.bizId = bizId;
@@ -136,7 +137,7 @@ public class Category extends TeaModel {
         }
 
         /**
-         * creator.
+         * <p>This parameter is required.</p>
          */
         public Builder creator(Long creator) {
             this.creator = creator;
@@ -144,7 +145,7 @@ public class Category extends TeaModel {
         }
 
         /**
-         * gmtCreated.
+         * <p>This parameter is required.</p>
          */
         public Builder gmtCreated(String gmtCreated) {
             this.gmtCreated = gmtCreated;
@@ -152,7 +153,7 @@ public class Category extends TeaModel {
         }
 
         /**
-         * gmtModified.
+         * <p>This parameter is required.</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -160,7 +161,7 @@ public class Category extends TeaModel {
         }
 
         /**
-         * modifier.
+         * <p>This parameter is required.</p>
          */
         public Builder modifier(Long modifier) {
             this.modifier = modifier;
@@ -168,7 +169,7 @@ public class Category extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -184,7 +185,7 @@ public class Category extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>This parameter is required.</p>
          */
         public Builder type(String type) {
             this.type = type;

@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateSqlStatementResponse} extends {@link TeaModel}
+ * {@link StartSessionClusterResponse} extends {@link TeaModel}
  *
- * <p>CreateSqlStatementResponse</p>
+ * <p>StartSessionClusterResponse</p>
  */
-public class CreateSqlStatementResponse extends Response {
+public class StartSessionClusterResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class CreateSqlStatementResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private CreateSqlStatementResponseBody body;
+    private StartSessionClusterResponseBody body;
 
-    private CreateSqlStatementResponse(BuilderImpl builder) {
+    private StartSessionClusterResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreateSqlStatementResponse create() {
+    public static StartSessionClusterResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class CreateSqlStatementResponse extends Response {
     /**
      * @return body
      */
-    public CreateSqlStatementResponseBody getBody() {
+    public StartSessionClusterResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateSqlStatementResponse, Builder> {
+    public interface Builder extends Response.Builder<StartSessionClusterResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CreateSqlStatementResponseBody body);
+        Builder body(StartSessionClusterResponseBody body);
 
         @Override
-        CreateSqlStatementResponse build();
+        StartSessionClusterResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateSqlStatementResponse, Builder>
+            extends Response.BuilderImpl<StartSessionClusterResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private CreateSqlStatementResponseBody body; 
+        private StartSessionClusterResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateSqlStatementResponse response) {
+        private BuilderImpl(StartSessionClusterResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class CreateSqlStatementResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateSqlStatementResponseBody body) {
+        public Builder body(StartSessionClusterResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateSqlStatementResponse build() {
-            return new CreateSqlStatementResponse(this);
+        public StartSessionClusterResponse build() {
+            return new StartSessionClusterResponse(this);
         } 
 
     } 

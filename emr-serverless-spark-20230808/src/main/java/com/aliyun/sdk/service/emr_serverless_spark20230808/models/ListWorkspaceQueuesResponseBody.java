@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWorkspaceQueuesResponseBody} extends {@link TeaModel}
  *
  * <p>ListWorkspaceQueuesResponseBody</p>
@@ -85,7 +86,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The maximum number of entries returned.
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,7 +97,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,7 +108,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of queues.
+         * <p>The list of queues.</p>
          */
         public Builder queues(java.util.List < Queues> queues) {
             this.queues = queues;
@@ -109,7 +116,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListWorkspaceQueuesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkspaceQueuesResponseBody</p>
+     */
     public static class AllowActions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("actionArn")
         private String actionArn;
@@ -205,7 +224,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             private String displayName; 
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of a behavior.
+             * <p>The Alibaba Cloud Resource Name (ARN) of a behavior.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:emr::workspaceId:action/create_queue</p>
              */
             public Builder actionArn(String actionArn) {
                 this.actionArn = actionArn;
@@ -213,7 +235,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the permission.
+             * <p>The name of the permission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>view</p>
              */
             public Builder actionName(String actionName) {
                 this.actionName = actionName;
@@ -221,7 +246,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The dependencies of the operation.
+             * <p>The dependencies of the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;view&quot;]</p>
              */
             public Builder dependencies(java.util.List < String > dependencies) {
                 this.dependencies = dependencies;
@@ -229,7 +257,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the operation.
+             * <p>The description of the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>文件目录遍历、文件浏览</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -237,7 +268,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the permission.
+             * <p>The display name of the permission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>文件目录遍历、文件浏览</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -251,6 +285,12 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWorkspaceQueuesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkspaceQueuesResponseBody</p>
+     */
     public static class Queues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("allowActions")
         private java.util.List < AllowActions> allowActions;
@@ -422,7 +462,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             private String workspaceId; 
 
             /**
-             * The operations allowed for the queue.
+             * <p>The operations allowed for the queue.</p>
              */
             public Builder allowActions(java.util.List < AllowActions> allowActions) {
                 this.allowActions = allowActions;
@@ -430,7 +470,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who created the queue.
+             * <p>The ID of the user who created the queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>237109</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -438,7 +481,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The environment types of the queue.
+             * <p>The environment types of the queue.</p>
              */
             public Builder environments(java.util.List < String > environments) {
                 this.environments = environments;
@@ -446,7 +489,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum capacity of resources that can be used in the queue.
+             * <p>The maximum capacity of resources that can be used in the queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;cpu&quot;: &quot;2&quot;,&quot;memory&quot;: &quot;2Gi&quot;}</p>
              */
             public Builder maxResource(String maxResource) {
                 this.maxResource = maxResource;
@@ -454,7 +500,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum capacity of resources that can be used in the queue.
+             * <p>The minimum capacity of resources that can be used in the queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;cpu&quot;: &quot;2&quot;,&quot;memory&quot;: &quot;2Gi&quot;}</p>
              */
             public Builder minResource(String minResource) {
                 this.minResource = minResource;
@@ -462,7 +511,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The queue label.
+             * <p>The queue label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev_queue</p>
              */
             public Builder properties(String properties) {
                 this.properties = properties;
@@ -470,7 +522,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the queue.
+             * <p>The name of the queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev_queue</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -478,7 +533,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The queue architecture.
+             * <p>The queue architecture.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;arch&quot;: &quot;x86&quot;}</p>
              */
             public Builder queueScope(String queueScope) {
                 this.queueScope = queueScope;
@@ -486,7 +544,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the queue.
+             * <p>The status of the queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder queueStatus(String queueStatus) {
                 this.queueStatus = queueStatus;
@@ -494,7 +555,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The queue type.
+             * <p>The queue type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance, instanceChildren</p>
              */
             public Builder queueType(String queueType) {
                 this.queueType = queueType;
@@ -502,7 +566,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -510,7 +577,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The capacity of resources that are used in the queue.
+             * <p>The capacity of resources that are used in the queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;cpu&quot;: &quot;2&quot;,&quot;memory&quot;: &quot;2Gi&quot;}</p>
              */
             public Builder usedResource(String usedResource) {
                 this.usedResource = usedResource;
@@ -518,7 +588,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The workspace ID.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>w-1234abcd</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSqlStatementRequest} extends {@link RequestModel}
  *
  * <p>CreateSqlStatementRequest</p>
@@ -137,7 +138,10 @@ public class CreateSqlStatementRequest extends Request {
         } 
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-26ca1703f6d****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -146,7 +150,10 @@ public class CreateSqlStatementRequest extends Request {
         }
 
         /**
-         * The SQL code. You can specify one or more SQL statements.
+         * <p>The SQL code. You can specify one or more SQL statements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SHOW TABLES</p>
          */
         public Builder codeContent(String codeContent) {
             this.putBodyParameter("codeContent", codeContent);
@@ -155,7 +162,10 @@ public class CreateSqlStatementRequest extends Request {
         }
 
         /**
-         * The default Data Lake Formation (DLF) catalog ID.
+         * <p>The default Data Lake Formation (DLF) catalog ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default_catalog</p>
          */
         public Builder defaultCatalog(String defaultCatalog) {
             this.putBodyParameter("defaultCatalog", defaultCatalog);
@@ -164,7 +174,10 @@ public class CreateSqlStatementRequest extends Request {
         }
 
         /**
-         * The name of the default database.
+         * <p>The name of the default database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder defaultDatabase(String defaultDatabase) {
             this.putBodyParameter("defaultDatabase", defaultDatabase);
@@ -173,7 +186,10 @@ public class CreateSqlStatementRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return. Valid values: 1 to 10000.
+         * <p>The maximum number of entries to return. Valid values: 1 to 10000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder limit(Integer limit) {
             this.putBodyParameter("limit", limit);
@@ -182,7 +198,10 @@ public class CreateSqlStatementRequest extends Request {
         }
 
         /**
-         * The SQL compute ID. You can create an SQL compute in the workspace created in EMR Serverless Spark.
+         * <p>The SQL compute ID. You can create an SQL compute in the workspace created in EMR Serverless Spark.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sc-dfahdfjafhajd****</p>
          */
         public Builder sqlComputeId(String sqlComputeId) {
             this.putBodyParameter("sqlComputeId", sqlComputeId);
@@ -191,7 +210,10 @@ public class CreateSqlStatementRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);

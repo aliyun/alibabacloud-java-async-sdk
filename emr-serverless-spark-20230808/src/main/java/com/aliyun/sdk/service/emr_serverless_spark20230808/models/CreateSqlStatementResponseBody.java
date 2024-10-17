@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSqlStatementResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSqlStatementResponseBody</p>
@@ -49,7 +50,7 @@ public class CreateSqlStatementResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class CreateSqlStatementResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class CreateSqlStatementResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSqlStatementResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateSqlStatementResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("statementId")
         private String statementId;
@@ -97,7 +107,10 @@ public class CreateSqlStatementResponseBody extends TeaModel {
             private String statementId; 
 
             /**
-             * The ID of the SQL query.
+             * <p>The ID of the SQL query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>st-1231dfafadfa***</p>
              */
             public Builder statementId(String statementId) {
                 this.statementId = statementId;

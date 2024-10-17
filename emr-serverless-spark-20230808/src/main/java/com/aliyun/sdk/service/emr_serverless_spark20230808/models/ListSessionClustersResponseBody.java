@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSessionClustersResponseBody} extends {@link TeaModel}
  *
  * <p>ListSessionClustersResponseBody</p>
@@ -85,7 +86,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The maximum number of entries returned.
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,7 +97,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,7 +108,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The SQL computes.
+         * <p>The SQL computes.</p>
          */
         public Builder sessionClusters(java.util.List < SessionClusters> sessionClusters) {
             this.sessionClusters = sessionClusters;
@@ -117,7 +127,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListSessionClustersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSessionClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSessionClustersResponseBody</p>
+     */
     public static class ApplicationConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("configFileName")
         private String configFileName;
@@ -181,7 +200,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
             private String configItemValue; 
 
             /**
-             * The name of the configuration file.
+             * <p>The name of the configuration file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spark-default.conf</p>
              */
             public Builder configFileName(String configFileName) {
                 this.configFileName = configFileName;
@@ -189,7 +211,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the configuration item.
+             * <p>The key of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spark.app.name</p>
              */
             public Builder configItemKey(String configItemKey) {
                 this.configItemKey = configItemKey;
@@ -197,7 +222,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the configuration item.
+             * <p>The value of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_application</p>
              */
             public Builder configItemValue(String configItemValue) {
                 this.configItemValue = configItemValue;
@@ -211,6 +239,12 @@ public class ListSessionClustersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSessionClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSessionClustersResponseBody</p>
+     */
     public static class AutoStartConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enable")
         private Boolean enable;
@@ -238,7 +272,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
             private Boolean enable; 
 
             /**
-             * Indicates whether automatic startup is enabled.
+             * <p>Indicates whether automatic startup is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -252,6 +289,12 @@ public class ListSessionClustersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSessionClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSessionClustersResponseBody</p>
+     */
     public static class AutoStopConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enable")
         private Boolean enable;
@@ -291,7 +334,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
             private Integer idleTimeoutMinutes; 
 
             /**
-             * Indicates whether automatic termination is enabled.
+             * <p>Indicates whether automatic termination is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -299,7 +345,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The idle timeout period. The SQL Compute is automatically terminated if the idle timeout period is exceeded.
+             * <p>The idle timeout period. The SQL Compute is automatically terminated if the idle timeout period is exceeded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45</p>
              */
             public Builder idleTimeoutMinutes(Integer idleTimeoutMinutes) {
                 this.idleTimeoutMinutes = idleTimeoutMinutes;
@@ -313,6 +362,12 @@ public class ListSessionClustersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSessionClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSessionClustersResponseBody</p>
+     */
     public static class StateChangeReason extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
@@ -352,7 +407,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * The status change code.
+             * <p>The status change code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -360,7 +418,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The status change message.
+             * <p>The status change message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -374,6 +435,12 @@ public class ListSessionClustersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSessionClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSessionClustersResponseBody</p>
+     */
     public static class SessionClusters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("applicationConfigs")
         private java.util.List < ApplicationConfigs> applicationConfigs;
@@ -605,7 +672,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             private String workspaceId; 
 
             /**
-             * The SQL Compute configurations, which are equivalent to the configurations of the Spark job.
+             * <p>The SQL Compute configurations, which are equivalent to the configurations of the Spark job.</p>
              */
             public Builder applicationConfigs(java.util.List < ApplicationConfigs> applicationConfigs) {
                 this.applicationConfigs = applicationConfigs;
@@ -613,7 +680,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The automatic startup configurations.
+             * <p>The automatic startup configurations.</p>
              */
             public Builder autoStartConfiguration(AutoStartConfiguration autoStartConfiguration) {
                 this.autoStartConfiguration = autoStartConfiguration;
@@ -621,7 +688,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The automatic termination configurations.
+             * <p>The automatic termination configurations.</p>
              */
             public Builder autoStopConfiguration(AutoStopConfiguration autoStopConfiguration) {
                 this.autoStopConfiguration = autoStopConfiguration;
@@ -669,7 +736,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the SQL Compute.
+             * <p>The name of the SQL Compute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adhoc_query</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -677,7 +747,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the queue on which the SQL Compute runs.
+             * <p>The name of the queue on which the SQL Compute runs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev_queue</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -693,7 +766,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL Compute ID.
+             * <p>The SQL Compute ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sc-123131</p>
              */
             public Builder sessionClusterId(String sessionClusterId) {
                 this.sessionClusterId = sessionClusterId;
@@ -701,7 +777,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the SQL Compute.
+             * <p>The status of the SQL Compute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -709,7 +788,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the last status change of the SQL Compute.
+             * <p>The details of the last status change of the SQL Compute.</p>
              */
             public Builder stateChangeReason(StateChangeReason stateChangeReason) {
                 this.stateChangeReason = stateChangeReason;
@@ -717,7 +796,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123131</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -725,7 +807,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user.
+             * <p>The name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_user</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -741,7 +826,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The workspace ID.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>w-1234abcd</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

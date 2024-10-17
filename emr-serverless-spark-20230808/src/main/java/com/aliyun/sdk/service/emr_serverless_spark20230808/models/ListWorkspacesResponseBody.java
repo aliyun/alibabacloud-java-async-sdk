@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWorkspacesResponseBody} extends {@link TeaModel}
  *
  * <p>ListWorkspacesResponseBody</p>
@@ -85,7 +86,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         private java.util.List < Workspaces> workspaces; 
 
         /**
-         * The maximum number of entries returned.
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,7 +97,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,7 +108,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -117,7 +130,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * The workspaces.
+         * <p>The workspaces.</p>
          */
         public Builder workspaces(java.util.List < Workspaces> workspaces) {
             this.workspaces = workspaces;
@@ -130,6 +143,12 @@ public class ListWorkspacesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListWorkspacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkspacesResponseBody</p>
+     */
     public static class StateChangeReason extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
@@ -169,7 +188,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * The error code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -177,7 +199,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -191,6 +216,12 @@ public class ListWorkspacesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWorkspacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkspacesResponseBody</p>
+     */
     public static class Workspaces extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("autoRenew")
         private Boolean autoRenew;
@@ -446,7 +477,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             private String workspaceStatus; 
 
             /**
-             * Indicates whether auto-renewal is enabled. This parameter is required only if the paymentType parameter is set to Subscription.
+             * <p>Indicates whether auto-renewal is enabled. This parameter is required only if the paymentType parameter is set to Subscription.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoRenew(Boolean autoRenew) {
                 this.autoRenew = autoRenew;
@@ -454,7 +488,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * The auto-renewal duration. This parameter is required only if the paymentType parameter is set to Subscription.
+             * <p>The auto-renewal duration. This parameter is required only if the paymentType parameter is set to Subscription.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder autoRenewPeriod(Integer autoRenewPeriod) {
                 this.autoRenewPeriod = autoRenewPeriod;
@@ -462,7 +499,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the auto-renewal duration. This parameter is required only if the paymentType parameter is set to Subscription.
+             * <p>The unit of the auto-renewal duration. This parameter is required only if the paymentType parameter is set to Subscription.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>YEAR, MONTH, WEEK, DAY, HOUR, MINUTE</p>
              */
             public Builder autoRenewPeriodUnit(String autoRenewPeriodUnit) {
                 this.autoRenewPeriodUnit = autoRenewPeriodUnit;
@@ -470,7 +510,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the workspace was created.
+             * <p>The time when the workspace was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1684115879955</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -478,7 +521,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the Data Lake Formation (DLF) catalog.
+             * <p>The information of the Data Lake Formation (DLF) catalog.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder dlfCatalogId(String dlfCatalogId) {
                 this.dlfCatalogId = dlfCatalogId;
@@ -494,7 +540,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * The subscription period. This parameter is required only if the paymentType parameter is set to Subscription.
+             * <p>The subscription period. This parameter is required only if the paymentType parameter is set to Subscription.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -502,7 +551,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the workspace was released.
+             * <p>The time when the workspace was released.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1687103999999</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -510,7 +562,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * The reason for the failure.
+             * <p>The reason for the failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>out of stock</p>
              */
             public Builder failReason(String failReason) {
                 this.failReason = failReason;
@@ -518,7 +573,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the subscription duration. This parameter is required only if the paymentType parameter is set to Subscription.
+             * <p>The unit of the subscription duration. This parameter is required only if the paymentType parameter is set to Subscription.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>YEAR, MONTH, WEEK, DAY, HOUR, MINUTE</p>
              */
             public Builder paymentDurationUnit(String paymentDurationUnit) {
                 this.paymentDurationUnit = paymentDurationUnit;
@@ -526,7 +584,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the payment.
+             * <p>The status of the payment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PAID/UNPAID</p>
              */
             public Builder paymentStatus(String paymentStatus) {
                 this.paymentStatus = paymentStatus;
@@ -534,7 +595,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * The payment type.
+             * <p>The payment type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PayAsYouGo or Subscription</p>
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
@@ -542,7 +606,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -550,7 +617,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the workspace is released.
+             * <p>The reason why the workspace is released.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SERVICE_RELEASE</p>
              */
             public Builder releaseType(String releaseType) {
                 this.releaseType = releaseType;
@@ -558,7 +628,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource specifications.
+             * <p>The resource specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100cu</p>
              */
             public Builder resourceSpec(String resourceSpec) {
                 this.resourceSpec = resourceSpec;
@@ -566,7 +639,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the workspace status change.
+             * <p>The information about the workspace status change.</p>
              */
             public Builder stateChangeReason(StateChangeReason stateChangeReason) {
                 this.stateChangeReason = stateChangeReason;
@@ -574,7 +647,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * The Object Storage Service (OSS) path.
+             * <p>The Object Storage Service (OSS) path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spark-result</p>
              */
             public Builder storage(String storage) {
                 this.storage = storage;
@@ -582,7 +658,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * The workspace ID.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>w-******</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -590,7 +669,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the workspace.
+             * <p>The name of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spark批作业空间-1</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;
@@ -598,7 +680,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * The workspace status.
+             * <p>The workspace status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STARTING,RUNNING,TERMINATED</p>
              */
             public Builder workspaceStatus(String workspaceStatus) {
                 this.workspaceStatus = workspaceStatus;
